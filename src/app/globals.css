@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #09090b;
+  --foreground: #fafafa;
 }
 
 @theme inline {
@@ -12,15 +12,95 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Markdown styles for research pages */
+.prose-research h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fafafa;
+}
+
+.prose-research h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #e4e4e7;
+  border-bottom: 1px solid #27272a;
+  padding-bottom: 0.5rem;
+}
+
+.prose-research h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #d4d4d8;
+}
+
+.prose-research p {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #a1a1aa;
+}
+
+.prose-research strong {
+  color: #fafafa;
+}
+
+.prose-research ul,
+.prose-research ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose-research li {
+  margin-bottom: 0.25rem;
+  color: #a1a1aa;
+}
+
+.prose-research table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.prose-research th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid #27272a;
+  color: #e4e4e7;
+  font-size: 0.875rem;
+}
+
+.prose-research td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #18181b;
+  color: #a1a1aa;
+  font-size: 0.875rem;
+}
+
+.prose-research blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #71717a;
+  font-style: italic;
+}
+
+.prose-research hr {
+  border-color: #27272a;
+  margin: 2rem 0;
+}
+
+.prose-research code {
+  background: #18181b;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
 }
