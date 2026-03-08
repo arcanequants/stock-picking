@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import MobileNav from "@/components/MobileNav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-950 text-white min-h-screen`}
       >
         {/* Navigation */}
-        <nav className="border-b border-zinc-800 sticky top-0 bg-zinc-950/80 backdrop-blur-md z-50">
+        <nav className="border-b border-zinc-800 sticky top-0 bg-zinc-950/80 backdrop-blur-md z-50 relative">
           <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-sm font-bold">
@@ -39,7 +40,8 @@ export default function RootLayout({
               <span className="font-semibold text-lg">Vectorial Data</span>
             </Link>
 
-            <div className="flex items-center gap-6 text-sm">
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center gap-6 text-sm">
               <Link
                 href="/"
                 className="text-zinc-400 hover:text-white transition-colors"
@@ -65,6 +67,9 @@ export default function RootLayout({
                 Join $1.99/mo
               </Link>
             </div>
+
+            {/* Mobile Nav */}
+            <MobileNav />
           </div>
         </nav>
 

@@ -1,9 +1,32 @@
 import { stocks } from "@/data/stocks";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 export function generateStaticParams() {
   return stocks.map((stock) => ({ ticker: stock.ticker }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ ticker: string }>;
+}): Promise<Metadata> {
+  const { ticker } = await params;
+  const stock = stocks.find(
+    (s) => s.ticker.toLowerCase() === ticker.toLowerCase()
+  );
+  if (!stock) return { title: "Stock Not Found | Vectorial Data" };
+
+  return {
+    title: `${stock.ticker} — ${stock.name} | Vectorial Data Research`,
+    description: stock.summary_short,
+    openGraph: {
+      title: `${stock.ticker} — ${stock.name}`,
+      description: stock.summary_short,
+      type: "article",
+    },
+  };
 }
 
 export default async function StockResearchPage({

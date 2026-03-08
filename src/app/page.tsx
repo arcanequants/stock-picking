@@ -1,13 +1,20 @@
 import StockCard from "@/components/StockCard";
 import PortfolioDashboard from "@/components/PortfolioDashboard";
 import CycleTracker from "@/components/CycleTracker";
-import { stocks, cycles } from "@/data/stocks";
+import { stocks, cycles, transactions } from "@/data/stocks";
 import Link from "next/link";
 
 export default function Home() {
   const activeStocks = stocks.filter((s) => s.status === "active");
   const latestPick = activeStocks[0];
   const currentCycle = cycles[0];
+  const latestTx = transactions[transactions.length - 1];
+  const latestDate = new Date(latestTx.date).toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+  const pickType = latestTx.type === "new" ? "New Position" : "Rebuy";
 
   return (
     <div className="space-y-10">
@@ -25,9 +32,9 @@ export default function Home() {
         <section className="border border-blue-500/30 bg-blue-500/5 rounded-xl p-6">
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-medium">
-              Latest Pick — 4 Mar 2026
+              Latest Pick — {latestDate}
             </span>
-            <span className="text-xs text-zinc-500">New Position</span>
+            <span className="text-xs text-zinc-500">{pickType}</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
             <div>
@@ -69,7 +76,7 @@ export default function Home() {
       <CycleTracker cycle={currentCycle} />
 
       {/* Dashboard */}
-      <PortfolioDashboard stocks={stocks} />
+      <PortfolioDashboard stocks={stocks} cycle={currentCycle} />
 
       {/* How it Works */}
       <section className="border border-zinc-800 rounded-xl p-6">

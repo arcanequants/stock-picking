@@ -1,10 +1,17 @@
 import { Stock } from "@/lib/types";
 
-interface Props {
-  stocks: Stock[];
+interface Cycle {
+  type: "new" | "rebuy";
+  current_count: number;
+  target_count: number;
 }
 
-export default function PortfolioDashboard({ stocks }: Props) {
+interface Props {
+  stocks: Stock[];
+  cycle: Cycle;
+}
+
+export default function PortfolioDashboard({ stocks, cycle }: Props) {
   const activeStocks = stocks.filter((s) => s.status === "active");
   const watchlistStocks = stocks.filter((s) => s.status === "watchlist");
 
@@ -17,7 +24,7 @@ export default function PortfolioDashboard({ stocks }: Props) {
   // Region allocation
   const regionMap = new Map<string, number>();
   activeStocks.forEach((s) => {
-    sectorMap.set(s.region, (regionMap.get(s.region) || 0) + 1);
+    regionMap.set(s.region, (regionMap.get(s.region) || 0) + 1);
   });
 
   // Avg dividend yield
@@ -34,6 +41,8 @@ export default function PortfolioDashboard({ stocks }: Props) {
         activeStocks.length
       : 0;
 
+  const remaining = cycle.target_count - cycle.current_count;
+
   const sectorColors: Record<string, string> = {
     Financials: "bg-blue-500",
     Technology: "bg-purple-500",
@@ -46,6 +55,16 @@ export default function PortfolioDashboard({ stocks }: Props) {
     "Real Estate": "bg-cyan-500",
     "Communication Services": "bg-indigo-500",
     "Consumer Discretionary": "bg-rose-500",
+  };
+
+  const regionColors: Record<string, string> = {
+    "North America": "bg-blue-500",
+    Europe: "bg-emerald-500",
+    Asia: "bg-amber-500",
+    LatAm: "bg-purple-500",
+    "Middle East": "bg-orange-500",
+    Africa: "bg-red-500",
+    Oceania: "bg-teal-500",
   };
 
   return (
@@ -61,40 +80,68 @@ export default function PortfolioDashboard({ stocks }: Props) {
         <StatBox label="Avg Upside" value={`${avgUpside.toFixed(0)}%`} />
         <StatBox
           label="Cycle"
-          value="1 of 5 (New)"
-          subtitle="Next: 4 new picks"
+          value={`${cycle.current_count} of ${cycle.target_count} (${cycle.type === "new" ? "New" : "Rebuy"})`}
+          subtitle={`${remaining} ${cycle.type === "new" ? "new picks" : "rebuys"} remaining`}
         />
       </div>
 
-      {/* Sector Allocation */}
+      {/* Allocations */}
       {activeStocks.length > 0 && (
-        <div className="border border-zinc-800 rounded-xl p-5">
-          <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
-            Sector Allocation
-          </h3>
-          <div className="space-y-3">
-            {Array.from(sectorMap.entries()).map(([sector, count]) => {
-              const pct =
-                activeStocks.length > 0
-                  ? (count / activeStocks.length) * 100
-                  : 0;
-              return (
-                <div key={sector}>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span className="text-zinc-300">{sector}</span>
-                    <span className="text-zinc-400 font-mono">
-                      {pct.toFixed(0)}% ({count})
-                    </span>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Sector Allocation */}
+          <div className="border border-zinc-800 rounded-xl p-5">
+            <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+              Sector Allocation
+            </h3>
+            <div className="space-y-3">
+              {Array.from(sectorMap.entries()).map(([sector, count]) => {
+                const pct = (count / activeStocks.length) * 100;
+                return (
+                  <div key={sector}>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-zinc-300">{sector}</span>
+                      <span className="text-zinc-400 font-mono">
+                        {pct.toFixed(0)}% ({count})
+                      </span>
+                    </div>
+                    <div className="w-full bg-zinc-800 rounded-full h-2">
+                      <div
+                        className={`h-2 rounded-full ${sectorColors[sector] || "bg-zinc-500"}`}
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
                   </div>
-                  <div className="w-full bg-zinc-800 rounded-full h-2">
-                    <div
-                      className={`h-2 rounded-full ${sectorColors[sector] || "bg-zinc-500"}`}
-                      style={{ width: `${pct}%` }}
-                    />
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Region Allocation */}
+          <div className="border border-zinc-800 rounded-xl p-5">
+            <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+              Region Allocation
+            </h3>
+            <div className="space-y-3">
+              {Array.from(regionMap.entries()).map(([region, count]) => {
+                const pct = (count / activeStocks.length) * 100;
+                return (
+                  <div key={region}>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-zinc-300">{region}</span>
+                      <span className="text-zinc-400 font-mono">
+                        {pct.toFixed(0)}% ({count})
+                      </span>
+                    </div>
+                    <div className="w-full bg-zinc-800 rounded-full h-2">
+                      <div
+                        className={`h-2 rounded-full ${regionColors[region] || "bg-zinc-500"}`}
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       )}

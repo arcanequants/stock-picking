@@ -17,7 +17,7 @@ export default function PortfolioPage() {
 
       <CycleTracker cycle={currentCycle} />
 
-      <PortfolioDashboard stocks={stocks} />
+      <PortfolioDashboard stocks={stocks} cycle={currentCycle} />
 
       {/* Transaction History */}
       <section className="border border-zinc-800 rounded-xl p-5">
