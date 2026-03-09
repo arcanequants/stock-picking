@@ -4,7 +4,7 @@ import { stocks, transactions, cycles } from "@/data/stocks";
 
 export default function PortfolioPage() {
   const activeStocks = stocks.filter((s) => s.status === "active");
-  const currentCycle = cycles[0];
+  const currentCycle = cycles[0] ?? null;
 
   return (
     <div className="space-y-10">

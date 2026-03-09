@@ -7,14 +7,16 @@ import Link from "next/link";
 export default function Home() {
   const activeStocks = stocks.filter((s) => s.status === "active");
   const latestPick = activeStocks[0];
-  const currentCycle = cycles[0];
-  const latestTx = transactions[transactions.length - 1];
-  const latestDate = new Date(latestTx.date).toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
-  const pickType = latestTx.type === "new" ? "New Position" : "Rebuy";
+  const currentCycle = cycles[0] ?? null;
+  const latestTx = transactions.length > 0 ? transactions[transactions.length - 1] : null;
+  const latestDate = latestTx
+    ? new Date(latestTx.date).toLocaleDateString("en-US", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      })
+    : null;
+  const pickType = latestTx?.type === "new" ? "New Position" : "Rebuy";
 
   return (
     <div className="space-y-10">
@@ -28,7 +30,7 @@ export default function Home() {
       </section>
 
       {/* Latest Pick Highlight */}
-      {latestPick && (
+      {latestPick && latestTx && (
         <section className="border border-blue-500/30 bg-blue-500/5 rounded-xl p-6">
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-medium">

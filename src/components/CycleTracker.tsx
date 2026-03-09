@@ -4,7 +4,20 @@ interface Cycle {
   target_count: number;
 }
 
-export default function CycleTracker({ cycle }: { cycle: Cycle }) {
+export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
+  if (!cycle) {
+    return (
+      <div className="border border-zinc-800 rounded-xl p-5">
+        <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">
+          Current Cycle
+        </h3>
+        <p className="text-sm text-zinc-500 mt-3">
+          No active cycle. Waiting for the next round of picks.
+        </p>
+      </div>
+    );
+  }
+
   const dots = Array.from({ length: cycle.target_count }, (_, i) => i);
 
   return (

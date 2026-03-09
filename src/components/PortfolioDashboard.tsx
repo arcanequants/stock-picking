@@ -8,7 +8,7 @@ interface Cycle {
 
 interface Props {
   stocks: Stock[];
-  cycle: Cycle;
+  cycle: Cycle | null;
 }
 
 export default function PortfolioDashboard({ stocks, cycle }: Props) {
@@ -41,7 +41,7 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
         activeStocks.length
       : 0;
 
-  const remaining = cycle.target_count - cycle.current_count;
+  const remaining = cycle ? cycle.target_count - cycle.current_count : 0;
 
   const sectorColors: Record<string, string> = {
     Financials: "bg-blue-500",
@@ -80,8 +80,8 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
         <StatBox label="Avg Upside" value={`${avgUpside.toFixed(0)}%`} />
         <StatBox
           label="Cycle"
-          value={`${cycle.current_count} of ${cycle.target_count} (${cycle.type === "new" ? "New" : "Rebuy"})`}
-          subtitle={`${remaining} ${cycle.type === "new" ? "new picks" : "rebuys"} remaining`}
+          value={cycle ? `${cycle.current_count} of ${cycle.target_count} (${cycle.type === "new" ? "New" : "Rebuy"})` : "—"}
+          subtitle={cycle ? `${remaining} ${cycle.type === "new" ? "new picks" : "rebuys"} remaining` : "No active cycle"}
         />
       </div>
 
