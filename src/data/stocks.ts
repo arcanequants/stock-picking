@@ -124,7 +124,7 @@ UBS Group AG es el **banco más grande de Suiza** y el **wealth manager #1 del m
     analyst_consensus: "Buy",
     analyst_target: 49.43,
     analyst_upside: 19.0,
-    status: "watchlist",
+    status: "active",
     first_researched_at: "2026-03-04T00:00:00Z",
     last_updated_at: "2026-03-04T00:00:00Z",
     next_review_at: "2026-09-04T00:00:00Z",
@@ -350,7 +350,7 @@ VGK es un ETF de Vanguard que rastrea el **FTSE Developed Europe All Cap Index**
     analyst_consensus: "N/A (ETF)",
     analyst_target: null,
     analyst_upside: null,
-    status: "watchlist",
+    status: "active",
     first_researched_at: "2026-03-09T00:00:00Z",
     last_updated_at: "2026-03-09T00:00:00Z",
     next_review_at: "2026-09-09T00:00:00Z",
@@ -450,7 +450,7 @@ VPL es un ETF de Vanguard que rastrea el **FTSE Developed Asia Pacific All Cap I
     analyst_consensus: "N/A (ETF)",
     analyst_target: null,
     analyst_upside: null,
-    status: "watchlist",
+    status: "active",
     first_researched_at: "2026-03-09T00:00:00Z",
     last_updated_at: "2026-03-09T00:00:00Z",
     next_review_at: "2026-09-09T00:00:00Z",
@@ -558,30 +558,67 @@ ARM está transitando de "la empresa de chips para celulares" a "la empresa de c
     analyst_consensus: "Strong Buy",
     analyst_target: 160.63,
     analyst_upside: 29.0,
-    status: "watchlist",
+    status: "active",
     first_researched_at: "2026-03-09T00:00:00Z",
     last_updated_at: "2026-03-09T00:00:00Z",
     next_review_at: "2026-09-09T00:00:00Z",
   },
 ];
 
-export const transactions: {
-  id: number;
-  stock_id: number;
-  ticker: string;
-  type: "new" | "rebuy";
-  cycle_number: number;
-  price: number;
-  date: string;
-  day_of_week: string;
-  wa_message: string;
-}[] = [];
+export const transactions = [
+  {
+    id: 1,
+    stock_id: 1,
+    ticker: "UBS",
+    type: "new" as const,
+    cycle_number: 1,
+    price: 41.53,
+    date: "2026-03-04",
+    day_of_week: "tuesday",
+    wa_message: "",
+  },
+  {
+    id: 2,
+    stock_id: 6,
+    ticker: "VGK",
+    type: "new" as const,
+    cycle_number: 1,
+    price: 84.25,
+    date: "2026-03-09",
+    day_of_week: "sunday",
+    wa_message: "",
+  },
+  {
+    id: 3,
+    stock_id: 7,
+    ticker: "VPL",
+    type: "new" as const,
+    cycle_number: 1,
+    price: 108.61,
+    date: "2026-03-09",
+    day_of_week: "sunday",
+    wa_message: "",
+  },
+  {
+    id: 4,
+    stock_id: 8,
+    ticker: "ARM",
+    type: "new" as const,
+    cycle_number: 1,
+    price: 125.28,
+    date: "2026-03-09",
+    day_of_week: "sunday",
+    wa_message: "",
+  },
+];
 
-export const cycles: {
-  id: number;
-  cycle_number: number;
-  type: "new" | "rebuy";
-  target_count: number;
-  current_count: number;
-  status: "active" | "completed";
-}[] = [];
+export const cycles = [
+  {
+    id: 1,
+    cycle_number: 1,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 4,
+    status: "active" as const,
+  },
+];

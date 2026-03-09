@@ -7,10 +7,12 @@ import Link from "next/link";
 export default function Home() {
   const activeStocks = stocks.filter((s) => s.status === "active");
   const watchlistStocks = stocks.filter((s) => s.status === "watchlist");
-  const latestPick = activeStocks[0];
   const currentCycle = cycles[0] ?? null;
   const latestTx =
     transactions.length > 0 ? transactions[transactions.length - 1] : null;
+  const latestPick = latestTx
+    ? stocks.find((s) => s.ticker === latestTx.ticker) ?? null
+    : null;
   const latestDate = latestTx
     ? new Date(latestTx.date).toLocaleDateString("en-US", {
         day: "numeric",
