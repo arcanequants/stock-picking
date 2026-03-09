@@ -6,9 +6,11 @@ import Link from "next/link";
 
 export default function Home() {
   const activeStocks = stocks.filter((s) => s.status === "active");
+  const watchlistStocks = stocks.filter((s) => s.status === "watchlist");
   const latestPick = activeStocks[0];
   const currentCycle = cycles[0] ?? null;
-  const latestTx = transactions.length > 0 ? transactions[transactions.length - 1] : null;
+  const latestTx =
+    transactions.length > 0 ? transactions[transactions.length - 1] : null;
   const latestDate = latestTx
     ? new Date(latestTx.date).toLocaleDateString("en-US", {
         day: "numeric",
@@ -74,11 +76,13 @@ export default function Home() {
         </section>
       )}
 
-      {/* Cycle Tracker */}
-      <CycleTracker cycle={currentCycle} />
+      {/* Cycle Tracker — only when active */}
+      {currentCycle && <CycleTracker cycle={currentCycle} />}
 
-      {/* Dashboard */}
-      <PortfolioDashboard stocks={stocks} cycle={currentCycle} />
+      {/* Dashboard — only when there are active positions */}
+      {activeStocks.length > 0 && (
+        <PortfolioDashboard stocks={stocks} cycle={currentCycle} />
+      )}
 
       {/* How it Works */}
       <section className="border border-zinc-800 rounded-xl p-6">
@@ -111,36 +115,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* All Active Stocks */}
-      <section>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">Active Positions</h2>
-          <Link
-            href="/stocks"
-            className="text-sm text-blue-400 hover:text-blue-300"
-          >
-            Ver todas →
-          </Link>
-        </div>
-        <div className="grid md:grid-cols-2 gap-4">
-          {stocks
-            .filter((s) => s.status === "active")
-            .map((stock) => (
+      {/* Active Positions — only when there are any */}
+      {activeStocks.length > 0 && (
+        <section>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold">Active Positions</h2>
+            <Link
+              href="/stocks"
+              className="text-sm text-blue-400 hover:text-blue-300"
+            >
+              Ver todas →
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {activeStocks.map((stock) => (
               <StockCard key={stock.ticker} stock={stock} />
             ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* Watchlist */}
-      {stocks.filter((s) => s.status === "watchlist").length > 0 && (
+      {watchlistStocks.length > 0 && (
         <section>
-          <h2 className="text-xl font-bold mb-4">Watchlist</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold">Research</h2>
+            <Link
+              href="/stocks"
+              className="text-sm text-blue-400 hover:text-blue-300"
+            >
+              Ver todas →
+            </Link>
+          </div>
           <div className="grid md:grid-cols-2 gap-4">
-            {stocks
-              .filter((s) => s.status === "watchlist")
-              .map((stock) => (
-                <StockCard key={stock.ticker} stock={stock} />
-              ))}
+            {watchlistStocks.map((stock) => (
+              <StockCard key={stock.ticker} stock={stock} />
+            ))}
           </div>
         </section>
       )}
