@@ -9,18 +9,17 @@ export function generateNewPickMessage(
   pickNumber: number,
   totalInCycle: number = 5
 ): string {
-  const upside =
-    stock.analyst_upside && stock.analyst_upside > 0
-      ? `+${stock.analyst_upside}%`
-      : `${stock.analyst_upside}%`;
+  const upsideLine =
+    stock.analyst_target != null
+      ? `📈 Upside analistas: ${stock.analyst_upside && stock.analyst_upside > 0 ? "+" : ""}${stock.analyst_upside}% (target $${stock.analyst_target.toFixed(2)})`
+      : null;
 
   return `📊 STOCK PICK #${pickNumber} — ${formatDate(new Date())}
 
 🏢 ${stock.name} (${stock.ticker}) — $${stock.price?.toFixed(2)}
 🔹 Qué hace: ${stock.summary_what}
 
-💰 Dividendo: ${stock.dividend_yield || 0}%
-📈 Upside analistas: ${upside} (target $${stock.analyst_target?.toFixed(2)})
+💰 Dividendo: ${stock.dividend_yield || 0}%${upsideLine ? `\n${upsideLine}` : ""}
 ⭐ Por qué: ${stock.summary_why}
 ⚠️ Riesgo: ${stock.summary_risk}
 

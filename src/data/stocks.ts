@@ -257,6 +257,312 @@ UBS Group AG es el **banco más grande de Suiza** y el **wealth manager #1 del m
     last_updated_at: "2026-03-03T00:00:00Z",
     next_review_at: "2026-09-03T00:00:00Z",
   },
+  {
+    id: 6,
+    ticker: "VGK",
+    name: "Vanguard FTSE Europe ETF",
+    sector: "Broad Market ETF",
+    industry: "European Equities",
+    country: "Multi-Country",
+    region: "Europe",
+    currency: "USD",
+    price: 84.25,
+    pe_ratio: 14.0,
+    pe_forward: 13.2,
+    dividend_yield: 3.7,
+    market_cap_b: 19.0,
+    eps: null,
+    summary_short:
+      "ETF de Vanguard con 1,246 empresas europeas por solo 0.06% de comisión. Dividendo del 3.7% — más del doble que el S&P 500. Europa cotiza a un 33% de descuento vs EUA.",
+    summary_what:
+      "VGK rastrea el FTSE Developed Europe All Cap Index. Te da exposición a 1,246 empresas en 16 países europeos: UK (22%), Francia, Suiza, Alemania, Países Bajos, y más. Incluye líderes globales como ASML, Roche, Nestlé, SAP, y AstraZeneca.",
+    summary_why:
+      "Diversificación geográfica barata (0.06% expense ratio). Europa paga dividendos generosos (3.7%). Valuaciones atractivas a P/E ~14x vs S&P 500 a ~21x. Hedge natural contra debilidad del dólar.",
+    summary_risk:
+      "Crecimiento económico europeo históricamente más lento que EUA. Riesgo divisa EUR/GBP/CHF. No tiene mega-cap tech americanas que han dominado returns.",
+    research_full: `# VGK — Vanguard FTSE Europe ETF — Research Completo
+
+## Precio: $84.25 | Expense Ratio: 0.06% | Div Yield: 3.7% | AUM: $19B+
+
+---
+
+## ¿Qué es VGK?
+
+VGK es un ETF de Vanguard que rastrea el **FTSE Developed Europe All Cap Index**. Ofrece exposición diversificada a más de **1,246 empresas** en 16 países europeos desarrollados. Es una de las formas más baratas y eficientes de invertir en el mercado europeo.
+
+## Composición por País
+
+| País | % del ETF |
+|------|-----------|
+| **Reino Unido** | ~22% |
+| **Francia** | ~16% |
+| **Suiza** | ~14% |
+| **Alemania** | ~13% |
+| **Países Bajos** | ~8% |
+| **Otros (11 países)** | ~27% |
+
+## Top 10 Holdings
+
+| Empresa | Ticker | % del ETF |
+|---------|--------|-----------|
+| **ASML Holding** | ASML | 2.83% |
+| **Roche** | ROG | 1.93% |
+| **AstraZeneca** | AZN | 1.85% |
+| **Nestlé** | NESN | 1.76% |
+| **Novartis** | NOVN | 1.68% |
+| **SAP** | SAP | 1.62% |
+| **Shell** | SHEL | 1.58% |
+| **HSBC** | HSBA | 1.31% |
+| **Novo Nordisk** | NOVO | 1.28% |
+| **TotalEnergies** | TTE | 1.20% |
+
+## Distribución por Sector
+
+| Sector | % |
+|--------|---|
+| **Financials** | ~20% |
+| **Industrials** | ~16% |
+| **Healthcare** | ~14% |
+| **Consumer Discretionary** | ~11% |
+| **Technology** | ~9% |
+| **Otros** | ~30% |
+
+## ¿Por Qué Nos Gusta?
+
+1. **Diversificación geográfica** — 16 países, 1246 empresas. Reduce riesgo concentración en EUA
+2. **Expense ratio de 0.06%** — prácticamente gratis. Pagas $0.60 por cada $1,000 invertidos
+3. **Dividendo del 3.7%** — más del doble que el S&P 500. Europa paga dividendos generosos
+4. **Valuaciones atractivas** — Europa cotiza a P/E ~14x vs S&P 500 a ~21x. Descuento del 33%
+5. **Exposición a líderes globales** — ASML (monopolio en litografía), Nestlé, Roche, SAP, Novo Nordisk
+6. **Hedge contra dólar débil** — si el USD se debilita, activos en EUR/GBP/CHF se aprecian en USD
+
+## Riesgos
+
+1. **Crecimiento económico europeo más lento** que EUA históricamente
+2. **Riesgo divisa** — EUR/GBP/CHF pueden debilitarse vs USD
+3. **Exposición a UK post-Brexit** — 22% del fondo está en UK
+4. **Sin tech mega-caps** — no tiene las "Magnificent 7" americanas que han dominado returns
+
+---
+
+*Research fecha: 9 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "N/A (ETF)",
+    analyst_target: null,
+    analyst_upside: null,
+    status: "active",
+    first_researched_at: "2026-03-09T00:00:00Z",
+    last_updated_at: "2026-03-09T00:00:00Z",
+    next_review_at: "2026-09-09T00:00:00Z",
+  },
+  {
+    id: 7,
+    ticker: "VPL",
+    name: "Vanguard FTSE Pacific ETF",
+    sector: "Broad Market ETF",
+    industry: "Asia-Pacific Equities",
+    country: "Multi-Country",
+    region: "Asia-Pacific",
+    currency: "USD",
+    price: 108.61,
+    pe_ratio: 14.0,
+    pe_forward: 13.0,
+    dividend_yield: 2.3,
+    market_cap_b: 7.0,
+    eps: null,
+    summary_short:
+      "ETF de Vanguard con 2,363 empresas de Asia-Pacífico por 0.07%. Samsung, Toyota, SK Hynix — exposición directa al boom de AI y semiconductores asiáticos.",
+    summary_what:
+      "VPL rastrea el FTSE Developed Asia Pacific All Cap Index. Cubre 2,363 empresas en Japón (53%), Australia (17%), Corea del Sur (14%), Hong Kong, Singapur y Nueva Zelanda. Top holdings: Samsung, SK Hynix, Toyota, Sony.",
+    summary_why:
+      "Asia-Pacífico es la región de mayor crecimiento global. Samsung + SK Hynix (7.7% del fondo) son los líderes de memoria/semiconductores — exposición directa a AI. Japón reformándose con mejor corporate governance. Complemento perfecto a VGK para diversificar fuera de EUA.",
+    summary_risk:
+      "Concentración en Japón (53%) con población envejeciente. Tensiones geopolíticas (China/Taiwan, Corea del Norte). Yen japonés altamente volátil.",
+    research_full: `# VPL — Vanguard FTSE Pacific ETF — Research Completo
+
+## Precio: $108.61 | Expense Ratio: 0.07% | Div Yield: 2.3% | AUM: $7B+
+
+---
+
+## ¿Qué es VPL?
+
+VPL es un ETF de Vanguard que rastrea el **FTSE Developed Asia Pacific All Cap Index**. Ofrece exposición a más de **2,363 empresas** en la región Asia-Pacífico desarrollada, incluyendo Japón, Australia, Corea del Sur, Hong Kong, Singapur y Nueva Zelanda.
+
+## Composición por País
+
+| País | % del ETF |
+|------|-----------|
+| **Japón** | ~53% |
+| **Australia** | ~17% |
+| **Corea del Sur** | ~14% |
+| **Hong Kong** | ~7% |
+| **Singapur** | ~4% |
+| **Nueva Zelanda** | ~2% |
+| **Otros** | ~3% |
+
+## Top 10 Holdings
+
+| Empresa | Ticker | % del ETF |
+|---------|--------|-----------|
+| **Samsung Electronics** | 005930 | 4.66% |
+| **SK Hynix** | 000660 | 3.04% |
+| **Toyota Motor** | 7203 | 2.16% |
+| **Sony Group** | 6758 | 1.28% |
+| **Mitsubishi UFJ Financial** | 8306 | 1.25% |
+| **Commonwealth Bank** | CBA | 1.22% |
+| **BHP Group** | BHP | 1.05% |
+| **Hitachi** | 6501 | 1.02% |
+| **Recruit Holdings** | 6098 | 0.95% |
+| **Keyence** | 6861 | 0.89% |
+
+## Distribución por Sector
+
+| Sector | % |
+|--------|---|
+| **Technology** | ~22% |
+| **Financials** | ~18% |
+| **Industrials** | ~17% |
+| **Consumer Discretionary** | ~13% |
+| **Healthcare** | ~7% |
+| **Otros** | ~23% |
+
+## ¿Por Qué Nos Gusta?
+
+1. **Diversificación Asia-Pacífico** — la región de mayor crecimiento económico global
+2. **Samsung + SK Hynix** — ~7.7% del fondo en los 2 líderes de memoria/semiconductores. Exposición directa al boom de AI
+3. **Japón reformándose** — Tokyo Stock Exchange está forzando mejores returns a accionistas. Corporate governance mejorando
+4. **Australia = commodities** — BHP, Rio Tinto. Exposición a minerales críticos para transición energética
+5. **Expense ratio 0.07%** — casi gratis
+6. **Corea del Sur** — Samsung, SK Hynix, Hyundai. Potencias tecnológicas a valuaciones de mercado emergente
+7. **Complemento perfecto a VGK** — VGK cubre Europa, VPL cubre Asia-Pacífico. Juntos diversifican globalmente fuera de EUA
+
+## Riesgos
+
+1. **Concentración en Japón (53%)** — economía con deflación histórica, población envejeciente
+2. **Tensiones geopolíticas** — China/Taiwan, Corea del Norte, disputas comerciales
+3. **Riesgo divisa** — yen japonés altamente volátil
+4. **No incluye China continental** — pierde el mercado de consumo más grande de Asia
+
+---
+
+*Research fecha: 9 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "N/A (ETF)",
+    analyst_target: null,
+    analyst_upside: null,
+    status: "active",
+    first_researched_at: "2026-03-09T00:00:00Z",
+    last_updated_at: "2026-03-09T00:00:00Z",
+    next_review_at: "2026-09-09T00:00:00Z",
+  },
+  {
+    id: 8,
+    ticker: "ARM",
+    name: "ARM Holdings PLC",
+    sector: "Technology",
+    industry: "Semiconductors / Chip Design",
+    country: "United Kingdom",
+    region: "Europe",
+    currency: "USD",
+    price: 125.28,
+    pe_ratio: 169.0,
+    pe_forward: 64.66,
+    dividend_yield: 0,
+    market_cap_b: 134.76,
+    eps: 0.74,
+    summary_short:
+      "Diseñan la arquitectura de procesadores que usan el 99% de smartphones, y ahora data centers, autos y PCs. Modelo asset-light puro: solo cobran licencias y regalías por cada chip vendido.",
+    summary_what:
+      "ARM no fabrica chips — diseña la arquitectura de procesadores y cobra licencias y regalías. Apple, Qualcomm, Samsung, Google, Amazon, Nvidia, todos pagan a ARM por usar sus diseños. 99%+ de smartphones corren ARM. Ahora expandiéndose a data centers (AWS Graviton), AI inference, automotive, y PCs.",
+    summary_why:
+      "Monopolio de facto en arquitectura de procesadores móviles. Revenue recurrente tipo SaaS — cada chip vendido paga regalías. AI tailwind masivo: hyperscalers migrando de x86 a ARM. 90% de analistas dicen Buy. Crecimiento ~20% YoY.",
+    summary_risk:
+      "Valuación cara: P/E trailing 169x, forward 65x. Necesita ejecutar impecablemente. Softbank controla ~90%. RISC-V podría erosionar market share a largo plazo.",
+    research_full: `# ARM Holdings (ARM) — Research Completo
+
+## Precio: $125.28 | P/E: 169 | P/E Forward: 64.7 | Div Yield: 0% | Market Cap: $134.8B
+
+---
+
+## ¿Qué es ARM?
+
+ARM Holdings diseña la **arquitectura de procesadores más utilizada del mundo**. No fabrican chips — diseñan la "receta" y cobran licencias y regalías a todas las empresas que fabrican chips basados en ARM: Apple, Qualcomm, Samsung, Google, Amazon, Nvidia, y prácticamente todos los fabricantes de smartphones, IoT, y cada vez más data centers y PCs.
+
+## Modelo de Negocio
+
+| Segmento | Descripción | % Revenue |
+|----------|-------------|-----------|
+| **Royalties** | Cobran por cada chip vendido basado en ARM | ~65% |
+| **Licensing** | Cobran por acceso a nuevos diseños de arquitectura | ~35% |
+
+### Por Qué es Especial:
+- **99%+ de smartphones** usan chips ARM
+- **Cero fábricas** — modelo asset-light puro. Solo diseñan IP
+- **Revenue recurrente** — cada chip vendido en el mundo les paga regalías
+- **Margen operativo ~25%** y subiendo
+
+## Resultados Financieros (FY2026 Q3, dic 2025)
+
+- **Revenue trimestral: $983M** (+19% YoY)
+- **Revenue anual estimado: $4.67B**
+- **EPS: $0.39** (trimestral)
+- **Guidance FY2027:** Revenue $4.8-5.2B (~20% growth)
+- **Margen operativo:** Expandiéndose
+
+## El Catalizador: AI y Data Centers
+
+ARM está transitando de "la empresa de chips para celulares" a "la empresa de chips para TODO":
+
+1. **Neoverse (Data Centers)** — Google, Microsoft, Amazon ya usan ARM en sus servidores. AWS Graviton (ARM) es ~40% más eficiente que x86
+2. **AI Inference** — chips ARM son ideales para inferencia AI por su eficiencia energética
+3. **Automotive** — ADAS, infotainment. ARM está en casi todos los coches nuevos
+4. **PCs** — Apple M-series demostró que ARM puede dominar laptops. Qualcomm Snapdragon X ya compite con Intel/AMD
+5. **IoT** — billones de dispositivos conectados, casi todos corren ARM
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Strong Buy** |
+| % Buy | 90% |
+| % Hold | 10% |
+| % Sell | 0% |
+| Price Target Promedio | **$160.63** |
+| Price Target Alto | $210 |
+| Price Target Bajo | $100 |
+| **Upside al Target** | **+29%** |
+
+## ¿Por Qué Nos Gusta?
+
+1. **Monopolio de facto** — 99% de smartphones, creciendo en servers, autos, PCs, IoT
+2. **Asset-light** — no necesitan fábricas de $20B como TSMC o Intel. Solo diseñan IP
+3. **Revenue recurrente** — cada chip vendido les paga regalías. Modelo tipo SaaS pero para hardware
+4. **AI tailwind masivo** — los hyperscalers están migrando de x86 a ARM. Esto apenas empieza
+5. **90% de analistas dicen Buy** — consenso prácticamente unánime
+6. **Crecimiento ~20% YoY** — guidance fuerte para FY2027
+7. **No hay competencia real** — RISC-V es años atrás en ecosistema y madurez
+
+## Riesgos
+
+1. **Valuación cara** — P/E trailing de 169x. Cualquier miss en earnings castiga fuerte
+2. **Concentración en clientes** — top 5 clientes representan porcentaje significativo de revenue
+3. **RISC-V a largo plazo** — arquitectura open-source que podría erosionar market share en IoT/bajo costo
+4. **Softbank ownership** — Softbank controla ~90%. Puede tomar decisiones que no favorezcan a minoritarios
+5. **Geopolítica** — empresa británica, IP crítica. Sujeta a restricciones de exportación (China)
+6. **Forward P/E de 65x** — necesita ejecutar impecablemente para justificar la valuación
+
+---
+
+*Research fecha: 9 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 160.63,
+    analyst_upside: 29.0,
+    status: "active",
+    first_researched_at: "2026-03-09T00:00:00Z",
+    last_updated_at: "2026-03-09T00:00:00Z",
+    next_review_at: "2026-09-09T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -271,6 +577,39 @@ export const transactions = [
     day_of_week: "tuesday",
     wa_message: "",
   },
+  {
+    id: 2,
+    stock_id: 6,
+    ticker: "VGK",
+    type: "new" as const,
+    cycle_number: 1,
+    price: 84.25,
+    date: "2026-03-09",
+    day_of_week: "sunday",
+    wa_message: "",
+  },
+  {
+    id: 3,
+    stock_id: 7,
+    ticker: "VPL",
+    type: "new" as const,
+    cycle_number: 1,
+    price: 108.61,
+    date: "2026-03-09",
+    day_of_week: "sunday",
+    wa_message: "",
+  },
+  {
+    id: 4,
+    stock_id: 8,
+    ticker: "ARM",
+    type: "new" as const,
+    cycle_number: 1,
+    price: 125.28,
+    date: "2026-03-09",
+    day_of_week: "sunday",
+    wa_message: "",
+  },
 ];
 
 export const cycles = [
@@ -279,7 +618,7 @@ export const cycles = [
     cycle_number: 1,
     type: "new" as const,
     target_count: 5,
-    current_count: 1, // UBS is first
+    current_count: 4, // UBS, VGK, VPL, ARM
     status: "active" as const,
   },
 ];
