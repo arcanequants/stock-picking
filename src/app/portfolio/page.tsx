@@ -1,5 +1,7 @@
 import PortfolioDashboard from "@/components/PortfolioDashboard";
 import CycleTracker from "@/components/CycleTracker";
+import PerformanceMetrics from "@/components/PerformanceMetrics";
+import PerformanceChart from "@/components/PerformanceChart";
 import { stocks, transactions, cycles } from "@/data/stocks";
 
 export default function PortfolioPage() {
@@ -17,14 +19,9 @@ export default function PortfolioPage() {
         </p>
       </section>
 
-      {!hasActivity && (
-        <section className="border border-zinc-800 rounded-xl p-8 text-center">
-          <p className="text-zinc-500 text-lg">
-            No active positions yet. When we start a new cycle, all the data
-            will appear here.
-          </p>
-        </section>
-      )}
+      {/* Performance */}
+      <PerformanceMetrics />
+      <PerformanceChart />
 
       {currentCycle && <CycleTracker cycle={currentCycle} />}
 
