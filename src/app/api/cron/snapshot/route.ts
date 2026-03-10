@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import YahooFinance from "yahoo-finance2";
 
@@ -61,7 +61,7 @@ export async function GET(request: Request) {
     const today = new Date().toISOString().split("T")[0];
 
     // Upsert snapshot (update if date exists, insert if not)
-    const { error } = await supabaseAdmin
+    const { error } = await getSupabaseAdmin()
       .from("portfolio_snapshots")
       .upsert(
         {
