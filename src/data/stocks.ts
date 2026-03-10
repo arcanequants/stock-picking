@@ -730,7 +730,7 @@ export const transactions = [
     price: 25.13,
     date: "2026-03-10",
     day_of_week: "monday",
-    wa_message: "",
+    wa_message: `📊 STOCK PICK #5 — Mar 10, 2026\n\n🏢 Associated British Foods PLC (ASBFY) — $25.13\n🔹 Qué hace: Associated British Foods es un conglomerado con 5 segmentos: Retail (Primark — £9.5B en ventas, 384 tiendas en 13 países), Grocery (marcas como Twinings, Ovaltine, Kingsmill), Ingredients (levaduras y enzimas), Sugar (Illovo en África, British Sugar en UK), y Agriculture. Primark es el negocio estrella — fast fashion de bajo costo sin tienda online.\n\n💰 Dividendo: 3.38%\n⭐ Por qué: P/E de 13x y forward de 11x — baratísima para lo que es. Dividend yield de 3.4%. La junta directiva anunció revisión estructural que podría resultar en spin-off de Primark (valorada en ~£13B). Si se separa, cada negocio se valoraría más individualmente. Primark sigue creciendo con ~4% en nuevas tiendas. Margen operativo de Primark de 11.9%.\n⚠️ Riesgo: Primark no tiene tienda online — depende 100% de tráfico en tienda física. Europa continental con consumo débil. Segmento de azúcar en breakeven. Revenue total cayó 3% en 2025. La familia Weston controla la empresa vía Wittington Investments.\n\n🆕 COMPRA NUEVA — Posición #5 de 5\n\n🔗 Research: https://vectorialdata.com/stocks/ASBFY`,
   },
 ];
 
