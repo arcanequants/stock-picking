@@ -6,7 +6,9 @@
  */
 
 import { createClient } from "@supabase/supabase-js";
-import yahooFinance from "yahoo-finance2";
+import YahooFinance from "yahoo-finance2";
+
+const yahooFinance = new YahooFinance();
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
