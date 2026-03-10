@@ -563,6 +563,117 @@ ARM está transitando de "la empresa de chips para celulares" a "la empresa de c
     last_updated_at: "2026-03-09T00:00:00Z",
     next_review_at: "2026-09-09T00:00:00Z",
   },
+  {
+    id: 9,
+    ticker: "ASBFY",
+    name: "Associated British Foods PLC",
+    sector: "Consumer Staples",
+    industry: "Diversified Consumer / Retail (Primark)",
+    country: "United Kingdom",
+    region: "Europe",
+    currency: "USD",
+    price: 25.13,
+    pe_ratio: 13.23,
+    pe_forward: 10.88,
+    dividend_yield: 3.38,
+    market_cap_b: 17.72,
+    eps: 1.9,
+    summary_short:
+      "Conglomerado británico dueño de Primark (fast fashion #1 de Europa) + negocios de alimentos, azúcar e ingredientes. Están evaluando separar Primark del negocio de alimentos para desbloquear valor.",
+    summary_what:
+      "Associated British Foods es un conglomerado con 5 segmentos: Retail (Primark — £9.5B en ventas, 384 tiendas en 13 países), Grocery (marcas como Twinings, Ovaltine, Kingsmill), Ingredients (levaduras y enzimas), Sugar (Illovo en África, British Sugar en UK), y Agriculture. Primark es el negocio estrella — fast fashion de bajo costo sin tienda online.",
+    summary_why:
+      "P/E de 13x y forward de 11x — baratísima para lo que es. Dividend yield de 3.4%. La junta directiva anunció revisión estructural que podría resultar en spin-off de Primark (valorada en ~£13B). Si se separa, cada negocio se valoraría más individualmente. Primark sigue creciendo con ~4% en nuevas tiendas. Margen operativo de Primark de 11.9%.",
+    summary_risk:
+      "Primark no tiene tienda online — depende 100% de tráfico en tienda física. Europa continental con consumo débil. Segmento de azúcar en breakeven. Revenue total cayó 3% en 2025. La familia Weston controla la empresa vía Wittington Investments.",
+    research_full: `# Associated British Foods (ASBFY) — Research Completo
+
+## Precio: $25.13 | P/E: 13.2 | P/E Forward: 10.9 | Div Yield: 3.4% | Market Cap: $17.7B
+
+---
+
+## ¿Qué es ABF?
+
+Associated British Foods es un **conglomerado diversificado** británico con operaciones en alimentos, ingredientes, azúcar, agricultura, y retail (Primark). Fundada en 1935, es controlada por la familia Weston a través de Wittington Investments.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | Revenue aprox |
+|----------|-------------|---------------|
+| **Retail (Primark)** | Fast fashion de bajo costo, 384 tiendas en 13 países | £9.5B (~49%) |
+| **Grocery** | Twinings, Ovaltine, Kingsmill, Jordans, Dorset | ~20% |
+| **Ingredients** | AB Mauri (levaduras), ABF Ingredients (enzimas) | ~12% |
+| **Sugar** | Illovo (África), British Sugar (UK) | ~12% |
+| **Agriculture** | AB Agri — nutrición animal | ~7% |
+
+## Primark — El Negocio Estrella
+
+Primark es el **retailer de fast fashion #1 en Europa por valor**:
+- **384 tiendas** en 13 países (UK, Irlanda, España, Alemania, Francia, Italia, EE.UU., etc.)
+- **Ventas: £9.5B** con margen operativo de **11.9%**
+- **Operating profit: £1.1B** (+2% YoY)
+- **Sin tienda online** — todo el negocio es tráfico en tienda
+- Precios ultra-bajos: compite con Zara y H&M pero más barato
+- Expansión: ~4% crecimiento por nuevas tiendas
+
+## Resultados 2025
+
+- **Revenue total: £19.5B** (-3% actual, -1% constante)
+- **Operating Profit ajustado: £1.7B** (-12% constante)
+- **EPS ajustado: 174.9p** (-11%)
+- **Free Cash Flow: £648M**
+- Primark sólida, Sugar y Grocery con presión
+
+## El Catalizador: Spin-off de Primark
+
+La junta directiva anunció una **revisión estructural** que podría resultar en la **separación de Primark del negocio de alimentos**:
+- Primark sola podría valer **£13B+**
+- El negocio de alimentos/ingredientes tendría valoración independiente
+- **Sum-of-parts analysis** sugiere que ABF está infravalorada como conglomerado
+- Si se separa, los inversores podrían valorar cada parte de forma más eficiente
+
+## Valoración
+
+| Métrica | Valor |
+|---------|-------|
+| P/E Trailing | **13.2x** |
+| P/E Forward | **10.9x** |
+| Dividend Yield | **3.4%** |
+| Price/Sales | ~0.7x |
+| EV/EBITDA | ~8x |
+
+Esto es **muy barato** para una empresa con un retailer de £9.5B en ventas y marcas premium de alimentos.
+
+## ¿Por Qué Nos Gusta?
+
+1. **Primark es una máquina de cash flow** — £1.1B en operating profit, creciendo
+2. **Valoración ridículamente baja** — P/E 13x con catalyst de spin-off
+3. **Spin-off potencial** — desbloquearía valor significativo
+4. **Dividendo de 3.4%** — te pagan por esperar
+5. **Diversificación** — si Primark tiene un mal trimestre, los otros segmentos amortiguan
+6. **Todos usan Primark** — los clientes de Primark se vuelven nuestros clientes
+
+## Riesgos
+
+1. **Sin ecommerce** — Primark no vende online. 100% dependiente de tráfico en tienda
+2. **Europa débil** — consumo en Europa continental sigue presionado
+3. **Azúcar en problemas** — segmento en breakeven, restructuración en curso
+4. **Familia Weston controla** — pueden tomar decisiones que no favorezcan a minoritarios
+5. **Revenue total cayendo** — -3% en 2025, necesita revertir tendencia
+6. **Spin-off no garantizado** — la revisión puede no resultar en separación
+
+---
+
+*Research fecha: 10 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: null,
+    analyst_upside: null,
+    status: "active",
+    first_researched_at: "2026-03-10T00:00:00Z",
+    last_updated_at: "2026-03-10T00:00:00Z",
+    next_review_at: "2026-09-10T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -610,6 +721,17 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: "",
   },
+  {
+    id: 5,
+    stock_id: 9,
+    ticker: "ASBFY",
+    type: "new" as const,
+    cycle_number: 1,
+    price: 25.13,
+    date: "2026-03-10",
+    day_of_week: "monday",
+    wa_message: "",
+  },
 ];
 
 export const cycles = [
@@ -618,7 +740,7 @@ export const cycles = [
     cycle_number: 1,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
-    status: "active" as const,
+    current_count: 5,
+    status: "completed" as const,
   },
 ];

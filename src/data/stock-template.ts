@@ -48,7 +48,7 @@ export function createStock(
  * Useful for Claude Code to quickly determine pick type and count.
  */
 export function getNextPickInfo() {
-  const activeCycle = cycles.find((c) => c.status === "active");
+  const activeCycle = cycles.find((c) => (c.status as string) === "active");
   if (!activeCycle) {
     return {
       cycleType: "new" as const,
