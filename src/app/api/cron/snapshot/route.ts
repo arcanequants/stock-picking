@@ -44,13 +44,15 @@ export async function GET(request: Request) {
       }
     }
 
-    // Calculate portfolio value
+    // Calculate portfolio value ($50 per position)
+    const INVESTMENT_PER_POSITION = 50;
     let totalInvested = 0;
     let totalValue = 0;
 
     for (const tx of transactions) {
-      totalInvested += tx.price;
-      totalValue += prices[tx.ticker] ?? tx.price;
+      const shares = INVESTMENT_PER_POSITION / tx.price;
+      totalInvested += INVESTMENT_PER_POSITION;
+      totalValue += shares * (prices[tx.ticker] ?? tx.price);
     }
 
     const returnPct =

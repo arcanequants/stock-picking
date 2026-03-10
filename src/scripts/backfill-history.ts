@@ -100,15 +100,17 @@ async function backfill() {
       }
     }
 
-    // Calculate portfolio value
+    // Calculate portfolio value ($50 per position)
+    const INVESTMENT_PER_POSITION = 50;
     let totalInvested = 0;
     let totalValue = 0;
     const prices: Record<string, number> = {};
 
     for (const tx of activeTxs) {
-      totalInvested += tx.price;
+      const shares = INVESTMENT_PER_POSITION / tx.price;
+      totalInvested += INVESTMENT_PER_POSITION;
       const currentPrice = lastKnownPrice[tx.ticker] ?? tx.price;
-      totalValue += currentPrice;
+      totalValue += shares * currentPrice;
       prices[tx.ticker] = currentPrice;
     }
 

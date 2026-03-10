@@ -12,6 +12,7 @@ interface Snapshot {
 export default function PerformanceMetrics() {
   const [latest, setLatest] = useState<Snapshot | null>(null);
   const [firstDate, setFirstDate] = useState<string | null>(null);
+  const [totalSnapshots, setTotalSnapshots] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function PerformanceMetrics() {
         if (data.length > 0) {
           setLatest(data[data.length - 1]);
           setFirstDate(data[0].date);
+          setTotalSnapshots(data.length);
         }
       })
       .catch(() => {})
@@ -29,8 +31,8 @@ export default function PerformanceMetrics() {
 
   if (loading) {
     return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-pulse">
-        {[...Array(4)].map((_, i) => (
+      <div className="grid grid-cols-3 gap-4 animate-pulse">
+        {[...Array(3)].map((_, i) => (
           <div key={i} className="border border-zinc-800 rounded-xl p-4 h-24" />
         ))}
       </div>
@@ -39,29 +41,11 @@ export default function PerformanceMetrics() {
 
   if (!latest) return null;
 
-  const gain = latest.total_value - latest.total_invested;
-  const isPositive = gain >= 0;
+  const isPositive = latest.return_pct >= 0;
+  const positions = Math.round(latest.total_invested / 50);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div className="border border-zinc-800 rounded-xl p-4">
-        <p className="text-xs text-zinc-500 uppercase tracking-wider">
-          Total Invested
-        </p>
-        <p className="text-2xl font-bold font-mono text-white mt-1">
-          ${latest.total_invested.toFixed(2)}
-        </p>
-      </div>
-
-      <div className="border border-zinc-800 rounded-xl p-4">
-        <p className="text-xs text-zinc-500 uppercase tracking-wider">
-          Current Value
-        </p>
-        <p className="text-2xl font-bold font-mono text-white mt-1">
-          ${latest.total_value.toFixed(2)}
-        </p>
-      </div>
-
+    <div className="grid grid-cols-3 gap-4">
       <div
         className={`border rounded-xl p-4 ${
           isPositive
@@ -80,19 +64,23 @@ export default function PerformanceMetrics() {
           {isPositive ? "+" : ""}
           {latest.return_pct.toFixed(2)}%
         </p>
-        <p
-          className={`text-xs font-mono mt-0.5 ${
-            isPositive ? "text-emerald-400/70" : "text-red-400/70"
-          }`}
-        >
-          {isPositive ? "+$" : "-$"}
-          {Math.abs(gain).toFixed(2)}
+      </div>
+
+      <div className="border border-zinc-800 rounded-xl p-4">
+        <p className="text-xs text-zinc-500 uppercase tracking-wider">
+          Positions
+        </p>
+        <p className="text-2xl font-bold font-mono text-white mt-1">
+          {positions}
+        </p>
+        <p className="text-xs text-zinc-500 mt-0.5">
+          $50 each
         </p>
       </div>
 
       <div className="border border-zinc-800 rounded-xl p-4">
         <p className="text-xs text-zinc-500 uppercase tracking-wider">
-          Investment to Date
+          Since
         </p>
         <p className="text-lg font-bold text-white mt-1">
           {firstDate
@@ -104,7 +92,7 @@ export default function PerformanceMetrics() {
             : "—"}
         </p>
         <p className="text-xs text-zinc-500 mt-0.5">
-          {latest ? `${Math.ceil((Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000)} days` : ""}
+          {firstDate ? `${Math.ceil((Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000)} days` : ""}
         </p>
       </div>
     </div>
