@@ -74,7 +74,7 @@ export default function PerformanceMetrics() {
           {positions}
         </p>
         <p className="text-xs text-zinc-500 mt-0.5">
-          $50 each
+          active
         </p>
       </div>
 
