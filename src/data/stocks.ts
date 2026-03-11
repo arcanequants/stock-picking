@@ -674,6 +674,220 @@ Esto es **muy barato** para una empresa con un retailer de £9.5B en ventas y ma
     last_updated_at: "2026-03-10T00:00:00Z",
     next_review_at: "2026-09-10T00:00:00Z",
   },
+  {
+    id: 10,
+    ticker: "AVGO",
+    name: "Broadcom Inc.",
+    sector: "Technology",
+    industry: "Semiconductors / Networking",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 342.69,
+    pe_ratio: 66.67,
+    pe_forward: 19.54,
+    dividend_yield: 0.76,
+    market_cap_b: 1624.79,
+    eps: 5.14,
+    summary_short:
+      "Gigante de semiconductores y software. Dueños de VMware, hacen los chips de Wi-Fi y networking que conectan el mundo. Crecimiento explosivo por AI — sus chips custom están en los data centers de Google, Meta y Apple.",
+    summary_what:
+      "Broadcom diseña chips semiconductores y software de infraestructura. Sus chips están en tu iPhone (Wi-Fi), en routers empresariales, en switches de data centers, y en servidores de AI. Compraron VMware en 2023 por $69B — ahora también son gigantes en software de virtualización y cloud. Clientes: Apple, Google, Meta, Amazon, Microsoft.",
+    summary_why:
+      "AI networking es el nuevo boom — Broadcom hace los chips que conectan GPUs de Nvidia en data centers. Revenue de AI se triplicó. VMware genera $13B+ anuales en software recurrente. Forward P/E de 19x es razonable para una empresa creciendo 40%+. Dividendo de 0.76% y creciendo.",
+    summary_risk:
+      "Apple está reemplazando chips Wi-Fi de Broadcom con sus propios chips (N1) en iPhone 17. Valuación trailing cara (P/E 67x). Dependencia alta de pocos clientes grandes. Deuda significativa por la compra de VMware.",
+    research_full: `# Broadcom Inc. (AVGO) — Research Completo
+
+## Precio: $342.69 | P/E: 66.7 | P/E Forward: 19.5 | Div Yield: 0.76% | Market Cap: $1,625B
+
+---
+
+## ¿Qué es Broadcom?
+
+Broadcom es un **gigante de semiconductores y software de infraestructura** con sede en Palo Alto, California. Diseñan chips para networking, wireless, storage, y broadband. En 2023 compraron VMware por $69B, convirtiéndose también en una potencia de software empresarial.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | % Revenue aprox |
+|----------|-------------|-----------------|
+| **Semiconductor Solutions** | Chips de networking, wireless (Wi-Fi/Bluetooth), storage, broadband | ~55% |
+| **Infrastructure Software** | VMware, CA Technologies, Symantec Enterprise | ~45% |
+
+### Productos que Usas Sin Saberlo:
+- **Wi-Fi de tu iPhone** — Broadcom hace los chips Wi-Fi y Bluetooth (hasta iPhone 16)
+- **Tu router de casa** — probablemente tiene un chip Broadcom
+- **Netflix/YouTube** — los data centers que los sirven usan switches Broadcom
+- **VMware** — el 70% de empresas Fortune 500 virtualizan sus servidores con VMware
+
+## Resultados Financieros (FY2025, oct 2025)
+
+- **Revenue: $51.6B** (+44% YoY — incluye VMware full year)
+- **AI Revenue: $12.2B** (triplicado vs año anterior)
+- **Operating Income ajustado: ~$32B** (margen ~62%)
+- **Free Cash Flow: ~$20B**
+- **EPS: $5.14** (TTM)
+
+## El Catalizador: AI Networking
+
+Broadcom es el **proveedor #1 de chips de networking para data centers AI**:
+
+1. **Custom AI chips (XPUs)** — diseñan chips custom para Google (TPU), Meta, y otros hyperscalers
+2. **Ethernet switching** — sus Memory → chips Jericho y Ramon conectan clusters de miles de GPUs Nvidia
+3. **VMware** — software recurrente de $13B+/año con margen altísimo. Transicionando a suscripción
+4. **Revenue de AI triplicado** — de ~$4B a $12.2B en un año
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Strong Buy** |
+| % Buy | 88% |
+| % Hold | 12% |
+| % Sell | 0% |
+| Price Target Promedio | **$460** |
+| Price Target Alto | $550 |
+| Price Target Bajo | $350 |
+| **Upside al Target** | **+34%** |
+
+## ¿Por Qué Nos Gusta?
+
+1. **AI networking líder** — conecta las GPUs que entrenan modelos de AI. Broadcom es el "plomero" de AI
+2. **VMware = software recurrente** — $13B+ en revenue casi garantizado cada año
+3. **Diversificación** — no depende de un solo producto. Semis + software
+4. **Forward P/E de 19x** — razonable para una empresa creciendo 40%+
+5. **Custom chips para hyperscalers** — Google, Meta diseñan sus propios chips... con Broadcom
+6. **Free cash flow de $20B** — máquina de generar efectivo
+
+## Riesgos
+
+1. **Apple dejando Broadcom** — iPhone 17 usará chip Wi-Fi propio de Apple (~$2.7B revenue en riesgo)
+2. **P/E trailing de 67x** — inflado por costos de integración de VMware
+3. **Concentración de clientes** — top 5 clientes representan ~35% de revenue
+4. **Deuda por VMware** — ~$40B en deuda, aunque la están pagando rápido
+5. **Competencia en AI** — Marvell, Intel, y los propios hyperscalers podrían internalizar diseños
+6. **Regulación** — restricciones de exportación a China pueden afectar
+
+---
+
+*Research fecha: 11 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 460.0,
+    analyst_upside: 34.0,
+    status: "active",
+    first_researched_at: "2026-03-11T00:00:00Z",
+    last_updated_at: "2026-03-11T00:00:00Z",
+    next_review_at: "2026-09-11T00:00:00Z",
+  },
+  {
+    id: 11,
+    ticker: "ASML",
+    name: "ASML Holding N.V.",
+    sector: "Technology",
+    industry: "Semiconductor Equipment / Lithography",
+    country: "Netherlands",
+    region: "Europe",
+    currency: "USD",
+    price: 1390.20,
+    pe_ratio: 48.78,
+    pe_forward: 31.91,
+    dividend_yield: 0.64,
+    market_cap_b: 545.87,
+    eps: 28.5,
+    summary_short:
+      "ASML es un MONOPOLIO. Son la ÚNICA empresa en el mundo que fabrica las máquinas que hacen chips avanzados. Sin ASML, no hay iPhones, no hay Nvidia, no hay AI. Punto.",
+    summary_what:
+      "ASML fabrica las máquinas de litografía que los fabricantes de chips (TSMC, Samsung, Intel) necesitan para producir semiconductores. Su tecnología EUV (Extreme Ultraviolet) es la única en el mundo capaz de hacer chips de 5nm, 3nm y 2nm. Sin estas máquinas, no existen los chips modernos — ni para smartphones, ni para AI, ni para nada.",
+    summary_why:
+      "Monopolio literal — no hay competidor #2. Cada máquina EUV cuesta $380M+ y tienen backlog de años. Revenue de €32.7B en 2025 (+16% YoY). Net income de €9.6B. Guidance 2026: €34-39B. El boom de AI necesita más chips, y más chips = más máquinas ASML. Además €8.2B en servicio recurrente por mantenimiento.",
+    summary_risk:
+      "Valuación cara (P/E 49x). China representó 33% de revenue en 2025 pero las restricciones de exportación están reduciendo eso. Ciclos de semiconductores pueden crear volatilidad. Solo tienen un producto principal.",
+    research_full: `# ASML Holding (ASML) — Research Completo
+
+## Precio: $1,390.20 | P/E: 48.8 | P/E Forward: 31.9 | Div Yield: 0.64% | Market Cap: $545.9B
+
+---
+
+## ¿Qué es ASML?
+
+ASML es una empresa holandesa que fabrica las **máquinas de litografía más avanzadas del mundo**. Estas máquinas son esenciales para producir semiconductores — los chips que están en tu teléfono, computadora, coche, y en los servidores que entrenan modelos de AI.
+
+**Son un MONOPOLIO.** No existe otra empresa en el mundo que pueda fabricar máquinas EUV (Extreme Ultraviolet Lithography).
+
+## Productos
+
+| Producto | Descripción | Precio aprox |
+|----------|-------------|-------------|
+| **EUV (NXE:3800E)** | Litografía ultravioleta extrema para chips de 5nm/3nm | ~$380M por máquina |
+| **High-NA EUV (EXE:5200)** | Siguiente generación para chips de 2nm y menores | ~$400M+ por máquina |
+| **DUV** | Litografía deep ultraviolet para chips menos avanzados | ~$100M por máquina |
+| **Installed Base Mgmt** | Servicio, mantenimiento y upgrades de máquinas instaladas | €8.2B/año |
+
+### ¿Quiénes son sus clientes?
+- **TSMC** (hace chips para Apple, Nvidia, AMD, Qualcomm)
+- **Samsung** (hace chips para sí mismo y para otros)
+- **Intel** (fabricante de chips de PC y servidor)
+- **SK Hynix, Micron** (memoria)
+
+## Resultados 2025
+
+- **Revenue: €32.7B** (+16% YoY)
+- **Net Income: €9.6B** (+26% YoY)
+- **Gross Margin: 52.8%**
+- **EPS: €24.73** (anual)
+- **48 máquinas EUV** vendidas (incluyendo High-NA)
+- **Bookings Q4: €13.2B** (€7.4B EUV + €5.8B DUV)
+- **Installed Base Management: €8.2B** (+26% YoY) — revenue recurrente
+
+## Distribución Geográfica (2025)
+
+| Región | % Revenue |
+|--------|-----------|
+| **China** | ~33% (bajando por restricciones) |
+| **Corea del Sur** | ~25% |
+| **Taiwan** | ~22% |
+| **EE.UU.** | ~10% |
+| **Japón** | ~5% |
+| **Europa** | ~5% |
+
+## Guidance 2026
+
+- **Revenue: €34B - €39B** (hasta +19% crecimiento)
+- **Gross Margin: 51% - 53%**
+- **Q1 2026: €8.2B - €8.9B**
+- Nuevo programa de recompra de acciones anunciado
+
+## ¿Por Qué Nos Gusta?
+
+1. **MONOPOLIO** — no hay competidor #2 en EUV. Es imposible replicar esta tecnología en menos de 10-15 años
+2. **AI = más chips = más máquinas ASML** — el boom de AI es directamente proporcional a más compras de ASML
+3. **Revenue recurrente de €8.2B** — una vez instalada una máquina, el cliente paga servicio por décadas
+4. **Margins brutales** — 52.8% gross margin, mejorando
+5. **Backlog de años** — las máquinas están vendidas antes de fabricarse
+6. **Dividendo creciente** — 0.64% pero lo aumentan cada año. Más recompras anunciadas
+
+## Riesgos
+
+1. **Valuación cara** — P/E de 49x. Cualquier miss en earnings castiga fuerte
+2. **China** — 33% del revenue viene de China. Restricciones de exportación en aumento
+3. **Ciclicidad** — la industria de semis tiene ciclos. Si los clientes reducen capex, ASML sufre
+4. **Concentración de clientes** — TSMC + Samsung + Intel = casi todo el revenue
+5. **Geopolítica** — empresa europea con tecnología estratégica. Sujeta a presiones de EE.UU. y Europa
+6. **Un solo producto** — si alguien inventara una alternativa a litografía (improbable pero no imposible), ASML quedaría obsoleta
+
+---
+
+*Research fecha: 11 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 900.0,
+    analyst_upside: null,
+    status: "active",
+    first_researched_at: "2026-03-11T00:00:00Z",
+    last_updated_at: "2026-03-11T00:00:00Z",
+    next_review_at: "2026-09-11T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -732,6 +946,28 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #5* — Mar 10, 2026\n\n🏢 *Associated British Foods* (ASBFY) — $25.13\n\n🛍️ *Sus marcas*: Primark (ropa), Twinings (té), Ovaltine, Kingsmill (pan)\n\n🌍 *Presencia*: UK, Irlanda, España, Alemania, Francia, Italia, Países Bajos, Portugal, EE.UU. — 384 tiendas\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.38% anual* solo por ser dueño. Cada vez que alguien compra ropa en Primark, toma un Twinings o compra pan Kingsmill — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Primark no tiene tienda online — depende 100% de tráfico en tienda física.\n\n🆕 Posición #5\n🔗 https://vectorialdata.com/stocks/ASBFY\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
   },
+  {
+    id: 6,
+    stock_id: 10,
+    ticker: "AVGO",
+    type: "new" as const,
+    cycle_number: 2,
+    price: 342.69,
+    date: "2026-03-11",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #6* — Mar 11, 2026\n\n🏢 *Broadcom* (AVGO) — $342.69\n\n🛍️ *Sus productos*: Wi-Fi de tu iPhone, VMware (software empresarial), chips de networking para data centers de AI\n\n🌍 *Presencia*: EE.UU., con clientes globales — Apple, Google, Meta, Amazon, Microsoft\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.76% anual* de dividendo. Cada vez que alguien usa Wi-Fi, Netflix en un data center, o una empresa usa VMware — Broadcom gana. Y su revenue de AI se triplicó en un año.\n\n⚠️ *El riesgo*: Apple está empezando a hacer sus propios chips Wi-Fi para reemplazar a Broadcom.\n\n🆕 Posición #6\n🔗 https://vectorialdata.com/stocks/AVGO\n\n💡 Recuerda: tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual.`,
+  },
+  {
+    id: 7,
+    stock_id: 11,
+    ticker: "ASML",
+    type: "new" as const,
+    cycle_number: 2,
+    price: 1390.20,
+    date: "2026-03-11",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #7* — Mar 11, 2026\n\n🏢 *ASML* (ASML) — $1,390.20\n\n🛍️ *Su producto*: Las ÚNICAS máquinas en el mundo que fabrican chips avanzados. Sin ASML no hay iPhones, no hay Nvidia, no hay AI.\n\n🌍 *Presencia*: Holanda (HQ), con clientes en Taiwan (TSMC), Corea (Samsung), EE.UU. (Intel), y todo el mundo\n\n💵 *Tu participación*: ASML paga *0.64% anual* de dividendo y sube cada año. Pero la verdadera ganancia es el crecimiento — cada nuevo chip de AI necesita sus máquinas de $380 millones. Es un monopolio literal.\n\n⚠️ *El riesgo*: La acción es cara y China (33% de sus ventas) enfrenta restricciones de exportación.\n\n🆕 Posición #7\n🔗 https://vectorialdata.com/stocks/ASML\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+  },
 ];
 
 export const cycles = [
@@ -742,5 +978,13 @@ export const cycles = [
     target_count: 5,
     current_count: 5,
     status: "completed" as const,
+  },
+  {
+    id: 2,
+    cycle_number: 2,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 2,
+    status: "active" as const,
   },
 ];
