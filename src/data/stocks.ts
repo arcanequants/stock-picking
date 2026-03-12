@@ -888,6 +888,158 @@ ASML es una empresa holandesa que fabrica las **máquinas de litografía más av
     last_updated_at: "2026-03-11T00:00:00Z",
     next_review_at: "2026-09-11T00:00:00Z",
   },
+  {
+    id: 12,
+    ticker: "AWK",
+    name: "American Water Works Company",
+    sector: "Utilities",
+    industry: "Water & Wastewater Utilities",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 138.25,
+    pe_ratio: 21.76,
+    pe_forward: 22.6,
+    dividend_yield: 2.46,
+    market_cap_b: 25.93,
+    eps: 5.64,
+    summary_short:
+      "La empresa de agua más grande de EE.UU. Dueños de los tubos, plantas de tratamiento y infraestructura que lleva agua limpia a 14 millones de personas en 14 estados + 18 bases militares. Monopolio regulado con dividendo creciente 18 años consecutivos.",
+    summary_what:
+      "American Water Works es la utility de agua privada más grande de EE.UU. Poseen y operan la infraestructura de agua y alcantarillado: 80+ plantas de tratamiento de agua superficial, 520+ plantas de agua subterránea, 190+ plantas de aguas residuales, y 54,500 millas de tubería. También operan sistemas de agua en 18 bases militares del Departamento de Defensa con contratos de 50 años.",
+    summary_why:
+      "Monopolio regulado — sin competencia en cada territorio que sirven. El agua es la utilidad más esencial (nadie deja de usar agua). Dividendo creciendo ~8% anual por 18 años consecutivos. La infraestructura de agua de EE.UU. necesita $1.3 trillones en inversión — AWK es el mayor inversor privado. Fusión con Essential Utilities aprobada (cierre Q1 2027) expandirá a 17 estados.",
+    summary_risk:
+      "Depende de reguladores estatales para aprobar aumentos de tarifas — pueden recortar lo solicitado. Valuación premium para utility (P/E ~22x). Alta deuda necesaria para financiar $46-48B en inversión a 2035. Fusión con Essential Utilities aún pendiente de aprobaciones regulatorias.",
+    research_full: `# American Water Works Company (AWK) — Research Completo
+
+## Precio: $138.25 | P/E: 21.8 | P/E Forward: 22.6 | Div Yield: 2.46% | Market Cap: $25.9B
+
+---
+
+## ¿Qué es American Water Works?
+
+American Water Works es la **utility de agua privada más grande de Estados Unidos**. En términos simples: son dueños de los tubos, plantas de tratamiento e infraestructura que llevan agua limpia a tu casa y se llevan las aguas residuales para tratarlas. En los territorios donde operan, son **monopolio** — si vives ahí, ellos son tu compañía de agua.
+
+## Infraestructura que Poseen
+
+- ~80 plantas de tratamiento de agua superficial
+- ~520 plantas de tratamiento de agua subterránea
+- ~190 plantas de tratamiento de aguas residuales
+- ~54,500 millas de tubería
+- ~1,200 pozos de agua subterránea
+- ~1,800 estaciones de bombeo
+- ~1,100 instalaciones de almacenamiento de agua tratada
+- ~75 presas
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | % Earnings aprox |
+|----------|-------------|------------------|
+| **Regulated Utilities** | Servicio de agua y alcantarillado regulado por estado | ~95% |
+| **Military Services** | Contratos de 50 años con el Dept. de Defensa en 18 bases | ~5% |
+
+El segmento militar tiene un backlog de **$7.4 mil millones** en obligaciones pendientes con un plazo promedio restante de 38 años.
+
+## Subsidiarias por Estado (Las Marcas en tu Recibo de Agua)
+
+| Subsidiaria | Estado |
+|---|---|
+| New Jersey American Water | New Jersey |
+| Pennsylvania American Water | Pennsylvania |
+| Missouri American Water | Missouri |
+| Illinois American Water | Illinois |
+| Indiana American Water | Indiana |
+| California American Water | California |
+| West Virginia American Water | West Virginia |
+| Virginia American Water | Virginia |
+| Kentucky American Water | Kentucky |
+| Iowa American Water | Iowa |
+| Maryland American Water | Maryland |
+| Hawaii American Water | Hawaii |
+| Tennessee American Water | Tennessee |
+
+Sirven **14 millones de personas** a través de **~3.4 millones de conexiones** en ~1,700 comunidades.
+
+## Resultados Financieros 2025
+
+| Métrica | 2024 | 2025 | Cambio |
+|---------|------|------|--------|
+| **Revenue** | $4.68B | $5.14B | **+9.1%** |
+| **Operating Income** | — | ~$1.88B | — |
+| **Adjusted EPS** | $5.18 | $5.64 | **+8.9%** |
+| **GAAP EPS** | $5.39 | $5.69 | +5.6% |
+| **Capital Investment** | — | $3.2B | — |
+| **Dividendo/Acción** | — | $3.31 anualizado | ~8% growth |
+
+## Guidance 2026 y Objetivos a Largo Plazo
+
+- **EPS 2026:** $6.02 - $6.12 (crecimiento ~7-8%)
+- **Rate base growth:** 8-9% anual
+- **Dividendo growth:** 7-9% anual
+- **Capital investment:** $19-20B (2026-2030); $46-48B (2026-2035)
+
+## Fusión con Essential Utilities
+
+Fusión all-stock anunciada en octubre 2025:
+- Combina las dos utilities de agua más grandes de EE.UU.
+- Empresa combinada servirá **4.7+ millones de conexiones en 17 estados**
+- Accionistas de ambas empresas aprobaron con ~99% (AWK) y ~95% (WTRG) de votos
+- **Cierre esperado: Q1 2027** (pendiente aprobaciones regulatorias)
+- Essential shareholders recibirán 0.305 acciones de AWK por cada acción de WTRG
+
+## Dividendo — 18 Años Consecutivos de Crecimiento
+
+- **Dividendo anual:** $3.31/acción ($0.83 trimestral)
+- **Yield:** 2.46%
+- **Growth rate promedio:** 8-9% anual en la última década
+- **Payout ratio:** ~56%
+- 18 años consecutivos de aumento
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Hold / Neutral** |
+| Price Target Promedio | **~$140** |
+| Price Target Alto | $157 |
+| Price Target Bajo | $114 |
+| Upside al Target | ~2% |
+| Analistas | 11-18 |
+| Split | ~3 Buy / 8-9 Hold / 3-4 Sell |
+
+El consenso es que AWK es una utility de altísima calidad que ya está **justamente valorada** a precios actuales.
+
+## ¿Por Qué Nos Gusta?
+
+1. **Servicio esencial irreemplazable** — nadie deja de usar agua. Demanda estable sin importar la economía
+2. **Monopolio regulado** — sin competencia en cada territorio. Ingresos predecibles y resistentes a recesión
+3. **$1.3 trillones en inversión necesaria** — la infraestructura de agua de EE.UU. tiene 50-100+ años. AWK es el mayor inversor privado
+4. **Dividendo creciente 18 años** — ~8% de crecimiento anual con payout ratio sostenible del 56%
+5. **Fusión transformativa** — Essential Utilities expande a 17 estados y 4.7M+ conexiones
+6. **Crecimiento por adquisiciones** — 19 adquisiciones bajo acuerdo ($267M, ~58,000 nuevas conexiones)
+
+## Riesgos
+
+1. **Riesgo regulatorio** — depende de comisiones estatales para aprobar aumentos de tarifas. West Virginia recortó un aumento solicitado de 22.5% a solo 8% en 2023
+2. **Valuación premium** — P/E ~22x. No es barata, pero tampoco excesiva para una utility de esta calidad
+3. **Intensiva en capital / Deuda** — necesita financiar $46-48B a 2035. Tasas de interés altas aumentan costos
+4. **Riesgo de fusión** — pendiente aprobación de múltiples comisiones estatales (PA, NJ, y otras)
+5. **Riesgo ambiental** — costos de limpieza de PFAS, regulaciones de calidad de agua, sequías, inundaciones
+6. **Riesgo político** — la privatización del agua es políticamente sensible. Puede haber presión para municipalizar
+
+---
+
+*Research fecha: 12 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: 140.0,
+    analyst_upside: 2.0,
+    status: "active",
+    first_researched_at: "2026-03-12T00:00:00Z",
+    last_updated_at: "2026-03-12T00:00:00Z",
+    next_review_at: "2026-09-12T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -968,6 +1120,17 @@ export const transactions = [
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #7* — Mar 11, 2026\n\n🏢 *ASML* (ASML) — $1,390.20\n\n🛍️ *Su producto*: Las ÚNICAS máquinas en el mundo que fabrican chips avanzados. Sin ASML no hay iPhones, no hay Nvidia, no hay AI.\n\n🌍 *Presencia*: Holanda (HQ), con clientes en Taiwan (TSMC), Corea (Samsung), EE.UU. (Intel), y todo el mundo\n\n💵 *Tu participación*: ASML paga *0.64% anual* de dividendo y sube cada año. Pero la verdadera ganancia es el crecimiento — cada nuevo chip de AI necesita sus máquinas de $380 millones. Es un monopolio literal.\n\n⚠️ *El riesgo*: La acción es cara y China (33% de sus ventas) enfrenta restricciones de exportación.\n\n🆕 Posición #7\n🔗 https://vectorialdata.com/stocks/ASML\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
   },
+  {
+    id: 8,
+    stock_id: 12,
+    ticker: "AWK",
+    type: "new" as const,
+    cycle_number: 2,
+    price: 138.25,
+    date: "2026-03-12",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #8* — Mar 12, 2026\n\n🏢 *American Water Works* (AWK) — $138.25\n\n🛍️ *Sus marcas*: New Jersey American Water, Pennsylvania American Water, California American Water, Missouri American Water — el nombre que ves en tu recibo de agua\n\n🌍 *Presencia*: 14 estados de EE.UU. + 18 bases militares del Departamento de Defensa\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.46% anual* solo por ser dueño. Cada vez que alguien paga su recibo de agua en cualquiera de los 14 estados donde operan — parte de ese dinero llega a ti como dividendo. Y lo llevan subiendo 18 años seguidos.\n\n⚠️ *El riesgo*: Depende de reguladores estatales para aprobar aumentos de tarifas.\n\n🆕 Posición #8\n🔗 https://vectorialdata.com/stocks/AWK\n\n💡 No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.`,
+  },
 ];
 
 export const cycles = [
@@ -984,7 +1147,7 @@ export const cycles = [
     cycle_number: 2,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 3,
     status: "active" as const,
   },
 ];
