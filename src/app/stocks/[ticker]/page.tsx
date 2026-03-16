@@ -16,7 +16,7 @@ export async function generateMetadata({
   const stock = stocks.find(
     (s) => s.ticker.toLowerCase() === ticker.toLowerCase()
   );
-  if (!stock) return { title: "Stock Not Found | Vectorial Data" };
+  if (!stock) return { title: "Acción no encontrada | Vectorial Data" };
 
   return {
     title: `${stock.ticker} — ${stock.name} | Vectorial Data Research`,
@@ -178,7 +178,7 @@ export default async function StockResearchPage({
       {/* Breadcrumb */}
       <div className="text-sm text-text-faint mb-6">
         <Link href="/stocks" className="hover:text-text-secondary">
-          Stocks
+          Acciones
         </Link>
         <span className="mx-2">/</span>
         <span className="text-text-secondary">{stock.ticker}</span>
@@ -210,7 +210,7 @@ export default async function StockResearchPage({
             ${stock.price?.toFixed(2)}
           </p>
           <p className="text-sm text-text-muted mt-1">
-            Target: ${stock.analyst_target?.toFixed(2)} (
+            Objetivo: ${stock.analyst_target?.toFixed(2)} (
             {stock.analyst_upside && stock.analyst_upside > 0 ? "+" : ""}
             {stock.analyst_upside}%)
           </p>
@@ -222,34 +222,34 @@ export default async function StockResearchPage({
         <MetricBox label="P/E Ratio" value={stock.pe_ratio?.toFixed(1)} />
         <MetricBox label="P/E Forward" value={stock.pe_forward?.toFixed(1)} />
         <MetricBox
-          label="Div Yield"
+          label="Dividendo"
           value={stock.dividend_yield ? `${stock.dividend_yield}%` : "—"}
         />
         <MetricBox
-          label="Market Cap"
+          label="Cap. Mercado"
           value={stock.market_cap_b ? `$${stock.market_cap_b}B` : "—"}
         />
         <MetricBox label="EPS" value={stock.eps ? `$${stock.eps}` : "—"} />
-        <MetricBox label="Consensus" value={stock.analyst_consensus} />
+        <MetricBox label="Consenso" value={stock.analyst_consensus} />
       </div>
 
       {/* Quick Summary */}
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         <div className="border border-border rounded-xl p-4">
           <h3 className="text-xs text-text-faint uppercase tracking-wider mb-2">
-            What they do
+            Qué hacen
           </h3>
           <p className="text-sm text-text-secondary">{stock.summary_what}</p>
         </div>
         <div className="border border-emerald-500/20 rounded-xl p-4 bg-emerald-500/5">
           <h3 className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">
-            Why we like it
+            Por qué nos gusta
           </h3>
           <p className="text-sm text-text-secondary">{stock.summary_why}</p>
         </div>
         <div className="border border-red-500/20 rounded-xl p-4 bg-red-500/5">
           <h3 className="text-xs text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">
-            Key Risk
+            Riesgo Principal
           </h3>
           <p className="text-sm text-text-secondary">{stock.summary_risk}</p>
         </div>
@@ -258,7 +258,7 @@ export default async function StockResearchPage({
       {/* Full Research */}
       {researchHtml && (
         <div className="border border-border rounded-xl p-6 md:p-8">
-          <h2 className="text-xl font-bold mb-6">Full Research</h2>
+          <h2 className="text-xl font-bold mb-6">Research Completo</h2>
           <div
             className="prose-research"
             dangerouslySetInnerHTML={{ __html: researchHtml }}
@@ -269,23 +269,23 @@ export default async function StockResearchPage({
       {/* Metadata */}
       <div className="mt-8 text-xs text-text-faint flex gap-4">
         <span>
-          First researched:{" "}
-          {new Date(stock.first_researched_at).toLocaleDateString()}
+          Investigado:{" "}
+          {new Date(stock.first_researched_at).toLocaleDateString("es-MX")}
         </span>
         <span>
-          Last updated:{" "}
-          {new Date(stock.last_updated_at).toLocaleDateString()}
+          Actualizado:{" "}
+          {new Date(stock.last_updated_at).toLocaleDateString("es-MX")}
         </span>
         {stock.next_review_at && (
           <span>
-            Next review:{" "}
-            {new Date(stock.next_review_at).toLocaleDateString()}
+            Próxima revisión:{" "}
+            {new Date(stock.next_review_at).toLocaleDateString("es-MX")}
           </span>
         )}
       </div>
 
       <p className="mt-4 text-xs text-text-faint italic">
-        This is not financial advice. Consult a licensed financial advisor.
+        Esto no es asesoría financiera. Consulta con un asesor financiero certificado.
       </p>
     </div>
   );

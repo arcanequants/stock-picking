@@ -52,7 +52,7 @@ export default function PerformanceMetrics() {
         }`}
       >
         <p className="text-xs text-text-faint uppercase tracking-wider">
-          Return
+          Retorno
         </p>
         <p
           className={`text-2xl font-bold font-mono mt-1 ${
@@ -66,23 +66,23 @@ export default function PerformanceMetrics() {
 
       <div className="border border-border rounded-xl p-4">
         <p className="text-xs text-text-faint uppercase tracking-wider">
-          Positions
+          Posiciones
         </p>
         <p className="text-2xl font-bold font-mono text-foreground mt-1">
           {positions}
         </p>
         <p className="text-xs text-text-faint mt-0.5">
-          active
+          activas
         </p>
       </div>
 
       <div className="border border-border rounded-xl p-4">
         <p className="text-xs text-text-faint uppercase tracking-wider">
-          Since
+          Desde
         </p>
         <p className="text-lg font-bold text-foreground mt-1">
           {firstDate
-            ? new Date(firstDate + "T00:00:00").toLocaleDateString("en-US", {
+            ? new Date(firstDate + "T00:00:00").toLocaleDateString("es-MX", {
                 day: "numeric",
                 month: "short",
                 year: "numeric",
@@ -90,7 +90,7 @@ export default function PerformanceMetrics() {
             : "—"}
         </p>
         <p className="text-xs text-text-faint mt-0.5">
-          {firstDate ? `${Math.ceil((Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000)} days` : ""}
+          {firstDate ? `${Math.ceil((Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000)} días` : ""}
         </p>
       </div>
     </div>

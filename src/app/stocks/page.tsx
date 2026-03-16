@@ -9,9 +9,9 @@ export default function StocksPage() {
   return (
     <div className="space-y-10">
       <section>
-        <h1 className="text-3xl font-bold mb-2">All Stocks</h1>
+        <h1 className="text-3xl font-bold mb-2">Todas las Acciones</h1>
         <p className="text-text-muted">
-          {stocks.length} stocks tracked. {active.length} active positions.
+          {stocks.length} acciones analizadas. {active.length} posiciones activas.
         </p>
       </section>
 
@@ -20,7 +20,7 @@ export default function StocksPage() {
         <section>
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <span className="w-3 h-3 bg-emerald-500 rounded-full" />
-            Active Positions ({active.length})
+            Posiciones Activas ({active.length})
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {active.map((stock) => (
@@ -35,7 +35,7 @@ export default function StocksPage() {
         <section>
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <span className="w-3 h-3 bg-yellow-500 rounded-full" />
-            Watchlist ({watchlist.length})
+            En Lista de Espera ({watchlist.length})
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {watchlist.map((stock) => (
@@ -50,7 +50,7 @@ export default function StocksPage() {
         <section>
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <span className="w-3 h-3 bg-red-500 rounded-full" />
-            Avoid ({avoid.length})
+            Evitar ({avoid.length})
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {avoid.map((stock) => (

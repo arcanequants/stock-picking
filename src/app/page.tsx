@@ -313,7 +313,7 @@ export default function Home() {
         </div>
 
         <p className="text-xs text-text-faint mt-8">
-          Vectorial Data — Stock Picking Portfolio. Not financial advice.
+          Vectorial Data — Portafolio de Acciones. Esto no es asesoría financiera.
         </p>
       </section>
     </div>

@@ -11,9 +11,9 @@ export default function PortfolioPage() {
   return (
     <div className="space-y-10">
       <section>
-        <h1 className="text-3xl font-bold mb-2">Portfolio Dashboard</h1>
+        <h1 className="text-3xl font-bold mb-2">Panel del Portafolio</h1>
         <p className="text-text-muted">
-          Overview of our positions, allocations, and cycle progress.
+          Resumen de posiciones, distribución y progreso del ciclo.
         </p>
       </section>
 
@@ -31,17 +31,17 @@ export default function PortfolioPage() {
       {transactions.length > 0 && (
         <section className="border border-border rounded-xl p-5">
           <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
-            Transaction History
+            Historial de Transacciones
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-border">
-                  <th className="text-left py-2 px-3 text-text-faint">Date</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Fecha</th>
                   <th className="text-left py-2 px-3 text-text-faint">Ticker</th>
-                  <th className="text-left py-2 px-3 text-text-faint">Type</th>
-                  <th className="text-left py-2 px-3 text-text-faint">Cycle</th>
-                  <th className="text-right py-2 px-3 text-text-faint">Price</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Tipo</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Ciclo</th>
+                  <th className="text-right py-2 px-3 text-text-faint">Precio</th>
                 </tr>
               </thead>
               <tbody>
@@ -64,7 +64,7 @@ export default function PortfolioPage() {
                             : "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400"
                         }`}
                       >
-                        {tx.type === "new" ? "New" : "Rebuy"}
+                        {tx.type === "new" ? "Nueva" : "Recompra"}
                       </span>
                     </td>
                     <td className="py-2 px-3 text-text-muted">
@@ -85,24 +85,24 @@ export default function PortfolioPage() {
       {activeStocks.length > 0 && (
         <section className="border border-border rounded-xl p-5">
           <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
-            Active Positions
+            Posiciones Activas
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-border">
                   <th className="text-left py-2 px-3 text-text-faint">Ticker</th>
-                  <th className="text-left py-2 px-3 text-text-faint">Name</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Nombre</th>
                   <th className="text-left py-2 px-3 text-text-faint">Sector</th>
-                  <th className="text-right py-2 px-3 text-text-faint">Price</th>
+                  <th className="text-right py-2 px-3 text-text-faint">Precio</th>
                   <th className="text-right py-2 px-3 text-text-faint">
-                    Div Yield
+                    Dividendo
                   </th>
                   <th className="text-right py-2 px-3 text-text-faint">
-                    Upside
+                    Potencial
                   </th>
                   <th className="text-right py-2 px-3 text-text-faint">
-                    Rating
+                    Consenso
                   </th>
                 </tr>
               </thead>

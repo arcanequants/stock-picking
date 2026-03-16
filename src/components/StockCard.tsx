@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { Stock } from "@/lib/types";
 
+const statusLabels: Record<string, string> = {
+  active: "activa",
+  watchlist: "en lista",
+  avoid: "evitar",
+};
+
 function statusBadge(status: string) {
   const colors: Record<string, string> = {
     active: "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
@@ -23,7 +29,7 @@ export default function StockCard({ stock }: { stock: Stock }) {
               <span
                 className={`text-xs px-2 py-0.5 rounded-full border ${statusBadge(stock.status)}`}
               >
-                {stock.status}
+                {statusLabels[stock.status] || stock.status}
               </span>
             </div>
             <p className="text-sm text-text-muted">{stock.name}</p>
@@ -37,7 +43,7 @@ export default function StockCard({ stock }: { stock: Stock }) {
                 className={`text-xs font-mono ${stock.analyst_upside > 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}
               >
                 {stock.analyst_upside > 0 ? "+" : ""}
-                {stock.analyst_upside}% upside
+                {stock.analyst_upside}% potencial
               </p>
             )}
           </div>
@@ -55,19 +61,19 @@ export default function StockCard({ stock }: { stock: Stock }) {
             </p>
           </div>
           <div>
-            <p className="text-xs text-text-faint">Div Yield</p>
+            <p className="text-xs text-text-faint">Dividendo</p>
             <p className="text-sm font-mono text-text-secondary">
               {stock.dividend_yield ? `${stock.dividend_yield}%` : "—"}
             </p>
           </div>
           <div>
-            <p className="text-xs text-text-faint">Mkt Cap</p>
+            <p className="text-xs text-text-faint">Cap. Mercado</p>
             <p className="text-sm font-mono text-text-secondary">
               {stock.market_cap_b ? `$${stock.market_cap_b}B` : "—"}
             </p>
           </div>
           <div>
-            <p className="text-xs text-text-faint">Rating</p>
+            <p className="text-xs text-text-faint">Consenso</p>
             <p className="text-sm font-mono text-text-secondary">
               {stock.analyst_consensus || "—"}
             </p>

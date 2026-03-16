@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vectorial Data — Stock Picking Portfolio",
+  title: "Vectorial Data — Portafolio de Acciones",
   description:
-    "Curated stock picks focused on dividends and capital appreciation. Updated daily.",
+    "Picks de acciones enfocados en dividendos y apreciación de capital. Actualizado diariamente.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground min-h-screen`}
       >
@@ -49,26 +49,26 @@ export default function RootLayout({
                   href="/"
                   className="text-text-muted hover:text-foreground transition-colors"
                 >
-                  Home
+                  Inicio
                 </Link>
                 <Link
                   href="/portfolio"
                   className="text-text-muted hover:text-foreground transition-colors"
                 >
-                  Portfolio
+                  Portafolio
                 </Link>
                 <Link
                   href="/stocks"
                   className="text-text-muted hover:text-foreground transition-colors"
                 >
-                  Stocks
+                  Acciones
                 </Link>
                 <ThemeToggle />
                 <Link
                   href="/join"
                   className="bg-brand hover:bg-brand-hover text-white px-4 py-1.5 rounded-lg transition-colors font-medium"
                 >
-                  Join $1/mo
+                  Únete $1/mes
                 </Link>
               </div>
 
@@ -86,9 +86,9 @@ export default function RootLayout({
           <footer className="border-t border-border mt-16">
             <div className="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-text-faint">
               <p>
-                Vectorial Data — Stock Picking Portfolio. Not financial advice.
+                Vectorial Data — Portafolio de Acciones. Esto no es asesoría financiera.
               </p>
-              <p className="mt-1">All prices in USD.</p>
+              <p className="mt-1">Todos los precios en USD.</p>
             </div>
           </footer>
         </ThemeProvider>

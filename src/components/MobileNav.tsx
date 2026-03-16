@@ -11,7 +11,7 @@ export default function MobileNav() {
       <button
         onClick={() => setOpen(!open)}
         className="text-text-muted hover:text-foreground p-2"
-        aria-label="Toggle menu"
+        aria-label="Abrir menú"
       >
         {open ? (
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -31,28 +31,28 @@ export default function MobileNav() {
             onClick={() => setOpen(false)}
             className="block text-text-secondary hover:text-foreground py-2"
           >
-            Home
+            Inicio
           </Link>
           <Link
             href="/portfolio"
             onClick={() => setOpen(false)}
             className="block text-text-secondary hover:text-foreground py-2"
           >
-            Portfolio
+            Portafolio
           </Link>
           <Link
             href="/stocks"
             onClick={() => setOpen(false)}
             className="block text-text-secondary hover:text-foreground py-2"
           >
-            Stocks
+            Acciones
           </Link>
           <Link
             href="/join"
             onClick={() => setOpen(false)}
             className="block bg-brand hover:bg-brand-hover text-white px-4 py-2 rounded-lg text-center font-medium"
           >
-            Join $1/mo
+            Únete $1/mes
           </Link>
         </div>
       )}

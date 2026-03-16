@@ -40,7 +40,7 @@ export default function HeroMetrics({ avgDivYield }: { avgDivYield: number }) {
             <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isPositive ? "bg-emerald-400" : "bg-red-400"}`} />
             <span className={`relative inline-flex rounded-full h-2 w-2 ${isPositive ? "bg-emerald-500" : "bg-red-500"}`} />
           </span>
-          Portfolio: {isPositive ? "+" : ""}{returnPct.toFixed(2)}%
+          Portafolio: {isPositive ? "+" : ""}{returnPct.toFixed(2)}%
         </div>
       )}
 
@@ -50,7 +50,7 @@ export default function HeroMetrics({ avgDivYield }: { avgDivYield: number }) {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
           </svg>
-          Div Yield: {avgDivYield.toFixed(1)}%
+          Dividendos: {avgDivYield.toFixed(1)}%
         </div>
       )}
     </div>

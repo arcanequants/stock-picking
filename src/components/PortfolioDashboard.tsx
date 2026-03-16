@@ -72,16 +72,16 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
       {/* Stats Row */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <StatBox
-          label="Active Positions"
+          label="Posiciones Activas"
           value={activeStocks.length.toString()}
         />
-        <StatBox label="Watchlist" value={watchlistStocks.length.toString()} />
-        <StatBox label="Avg Div Yield" value={`${avgDivYield.toFixed(1)}%`} />
-        <StatBox label="Avg Upside" value={`${avgUpside.toFixed(0)}%`} />
+        <StatBox label="En Lista" value={watchlistStocks.length.toString()} />
+        <StatBox label="Dividendo Prom." value={`${avgDivYield.toFixed(1)}%`} />
+        <StatBox label="Potencial Prom." value={`${avgUpside.toFixed(0)}%`} />
         <StatBox
-          label="Cycle"
-          value={cycle ? `${cycle.current_count} of ${cycle.target_count} (${cycle.type === "new" ? "New" : "Rebuy"})` : "—"}
-          subtitle={cycle ? `${remaining} ${cycle.type === "new" ? "new picks" : "rebuys"} remaining` : "No active cycle"}
+          label="Ciclo"
+          value={cycle ? `${cycle.current_count} de ${cycle.target_count} (${cycle.type === "new" ? "Nuevas" : "Recompras"})` : "—"}
+          subtitle={cycle ? `Faltan ${remaining} ${cycle.type === "new" ? "picks nuevos" : "recompras"}` : "Sin ciclo activo"}
         />
       </div>
 
@@ -91,7 +91,7 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
           {/* Sector Allocation */}
           <div className="border border-border rounded-xl p-5">
             <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
-              Sector Allocation
+              Distribución por Sector
             </h3>
             <div className="space-y-3">
               {Array.from(sectorMap.entries()).map(([sector, count]) => {
@@ -119,7 +119,7 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
           {/* Region Allocation */}
           <div className="border border-border rounded-xl p-5">
             <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
-              Region Allocation
+              Distribución por Región
             </h3>
             <div className="space-y-3">
               {Array.from(regionMap.entries()).map(([region, count]) => {
