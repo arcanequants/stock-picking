@@ -56,7 +56,8 @@ export default async function RootLayout({
             <nav className="border-b border-border sticky top-0 backdrop-blur-md z-50 relative" style={{ background: 'var(--nav-bg)' }}>
               <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
-                  <Image src="/logo.png" alt="Vectorial Data" width={32} height={32} className="rounded-full" />
+                  <Image src="/logo.png" alt="Vectorial Data" width={32} height={32} className="hidden md:block" />
+                  <Image src="/logo.png" alt="Vectorial Data" width={28} height={28} className="block md:hidden" />
                   <span className="font-semibold text-lg">Vectorial Data</span>
                 </Link>
 
@@ -104,6 +105,10 @@ export default async function RootLayout({
             {/* Footer */}
             <footer className="border-t border-border mt-16">
               <div className="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-text-faint">
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <Image src="/logo.png" alt="Vectorial Data" width={24} height={24} />
+                  <span className="font-semibold text-text-muted">Vectorial Data</span>
+                </div>
                 <p>{tFooter("disclaimer")}</p>
                 <p className="mt-1">{tFooter("prices")}</p>
               </div>

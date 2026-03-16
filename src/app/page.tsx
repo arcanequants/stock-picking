@@ -1,5 +1,6 @@
 import { stocks, transactions } from "@/data/stocks";
 import Link from "next/link";
+import Image from "next/image";
 import HeroMetrics from "@/components/HeroMetrics";
 import { getTranslations } from "next-intl/server";
 
@@ -27,6 +28,13 @@ export default async function Home() {
     <div className="space-y-24">
       {/* HERO */}
       <section className="text-center pt-8 md:pt-16">
+        <div className="flex justify-center mb-6">
+          <div className="relative">
+            <Image src="/logo.png" alt="Vectorial Data" width={64} height={64} className="relative z-10" />
+            <div className="absolute inset-0 rounded-full bg-emerald-400/20 blur-xl z-0" />
+          </div>
+        </div>
+
         <HeroMetrics avgDivYield={avgDivYield} />
 
         <h1 className="text-4xl md:text-6xl font-bold mt-6 tracking-tight">
