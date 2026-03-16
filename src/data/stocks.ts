@@ -1165,6 +1165,138 @@ La fusión con Bankia en 2021 fue la mayor operación bancaria en España:
     last_updated_at: "2026-03-16T00:00:00Z",
     next_review_at: "2026-09-16T00:00:00Z",
   },
+  {
+    id: 14,
+    ticker: "ROL",
+    name: "Rollins, Inc.",
+    sector: "Industrials",
+    industry: "Pest Control Services",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 55.33,
+    pe_ratio: 50.76,
+    pe_forward: 39.29,
+    dividend_yield: 1.32,
+    market_cap_b: 26.6,
+    eps: 1.12,
+    summary_short:
+      "Dueños de Orkin — la marca #1 de control de plagas del mundo. 24 años consecutivos de crecimiento de revenue. Morningstar le da 'Wide Moat' (ventaja competitiva amplia). Servicio esencial: las cucarachas no entienden de recesiones.",
+    summary_what:
+      "Rollins es la segunda empresa de control de plagas más grande del mundo. Su marca principal es Orkin, pero también operan HomeTeam Pest Defense, Clark Pest Control, Northwest Exterminating, Western Pest Services, Critter Control, y más. Ofrecen control de plagas residencial y comercial, fumigación de termitas, control de vida silvestre, y servicios de mosquitos. Crecen comprando empresas pequeñas locales ('tuck-in acquisitions').",
+    summary_why:
+      "Servicio esencial que no depende de la economía — las plagas no desaparecen en recesión. 24 años consecutivos de crecimiento de revenue. Revenue de $3.8B (+11% YoY). EPS creciendo 13% anual. Morningstar 'Wide Moat' por ventajas de costo y marca Orkin. Su sistema BOSS optimiza rutas y reduce costos. 35 años pagando dividendo sin interrupción.",
+    summary_risk:
+      "Valuación cara: P/E de 51x (industria promedio 25x). Q4 2025 falló estimados por clima invernal temprano. Estacionalidad fuerte — gana más en verano. Necesita ejecutar impecablemente para justificar el precio.",
+    research_full: `# Rollins, Inc. (ROL) — Research Completo
+
+## Precio: $55.33 | P/E: 50.8 | P/E Forward: 39.3 | Div Yield: 1.32% | Market Cap: $26.6B
+
+---
+
+## ¿Qué es Rollins?
+
+Rollins es la **segunda empresa de control de plagas más grande del mundo** (detrás de Rentokil Initial). Su marca estrella es **Orkin**, que es sinónimo de control de plagas en Estados Unidos — como Kleenex es a los pañuelos.
+
+En términos simples: si tienes cucarachas, termitas, ratas, mosquitos, o cualquier bicho no deseado en tu casa o negocio, llamas a una de las marcas de Rollins y ellos lo resuelven.
+
+## Marcas y Subsidiarias
+
+| Marca | Especialidad |
+|-------|-------------|
+| **Orkin** | Control de plagas #1 en EE.UU. (residencial y comercial) |
+| **HomeTeam Pest Defense** | Control de plagas en comunidades residenciales nuevas |
+| **Clark Pest Control** | Líder en California |
+| **Northwest Exterminating** | Sureste de EE.UU. |
+| **Western Pest Services** | Noreste de EE.UU. |
+| **Critter Control** | Control de vida silvestre (mapaches, ardillas, etc.) |
+| **Trutech Wildlife Service** | Remoción de animales |
+| **ABC Home & Commercial** | Texas y Florida |
+| **Orkin Canada** | Operaciones canadienses |
+| **Safeguard** | Australia |
+
+## Modelo de Negocio
+
+Rollins gana dinero de dos formas:
+1. **Contratos recurrentes** — la mayoría de clientes pagan mensual o trimestralmente por servicio continuo de prevención. Revenue predecible.
+2. **Servicios puntuales** — llamadas por infestaciones, tratamientos de termitas, fumigaciones.
+
+~80% del revenue es recurrente. Las plagas no desaparecen — los clientes renuevan año tras año.
+
+### Estrategia de Crecimiento: Tuck-in Acquisitions
+Rollins crece comprando empresas locales pequeñas de pest control e integrándolas bajo sus marcas. Es un mercado muy fragmentado — miles de operadores locales. Rollins los compra, les da la tecnología y marca Orkin, y mejora sus márgenes.
+
+## Resultados 2025
+
+| Métrica | 2025 | vs 2024 |
+|---------|------|---------|
+| **Revenue** | $3.8B | **+11%** |
+| **Operating Income** | $726M | **+10.5%** |
+| **Adjusted EBITDA** | $854M | **+10.8%** |
+| **Adjusted EPS** | $1.12 | **+13.1%** |
+
+- **24 años consecutivos de crecimiento de revenue**
+- Q4 2025 fue débil por clima invernal temprano que redujo demanda estacional
+
+## Ventaja Competitiva (Wide Moat — Morningstar)
+
+Morningstar otorga a Rollins un **"Wide Moat"** (ventaja competitiva amplia) por dos razones:
+
+1. **Ventaja de costos por escala** — la densidad de rutas locales permite repartir costos fijos entre más clientes. Más clientes en un área = menos costo por visita.
+2. **Marca Orkin** — reconocimiento de marca líder en la industria. La gente busca "Orkin" cuando tiene plagas, no "control de plagas". Esto reduce el costo de adquisición de clientes.
+
+El sistema **BOSS** (Branch Operating Support System) optimiza rutas, programa técnicos, y gestiona costos — es su arma secreta operativa.
+
+## Dividendo
+
+- **Dividendo anual:** $0.73/acción
+- **Yield:** 1.32%
+- **35 años consecutivos** pagando dividendo (desde 1991)
+- **6 años consecutivos** de aumentos
+- Payout ratio: ~65%
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Hold / Mixed** |
+| Price Target Promedio | ~$52-55 |
+| Morningstar Rating | Wide Moat |
+| Morningstar Fair Value | Overvalued a precios actuales |
+
+Los analistas reconocen la calidad del negocio pero la valuación (P/E 51x) limita el upside.
+
+## ¿Por Qué Nos Gusta?
+
+1. **Servicio esencial** — las plagas no entienden de recesiones. Demanda estable siempre
+2. **Revenue 80% recurrente** — contratos mensuales/trimestrales. Predecible
+3. **24 años de crecimiento** — nunca ha tenido un año de revenue a la baja en 24 años
+4. **Wide Moat de Morningstar** — ventaja competitiva reconocida por la mejor firma de análisis
+5. **Marca Orkin** — la más reconocida en pest control del mundo
+6. **Mercado fragmentado** — miles de empresas pequeñas por adquirir. Runway de crecimiento enorme
+7. **35 años de dividendo** — consistencia probada
+
+## Riesgos
+
+1. **Valuación cara** — P/E de 51x es el doble del promedio de la industria (25x). Cualquier decepción castiga fuerte
+2. **Estacionalidad** — gana mucho más en primavera/verano. Q1 y Q4 son débiles
+3. **Clima** — un invierno temprano o verano frío reduce demanda. Q4 2025 ya lo demostró
+4. **Competencia** — Rentokil (tras comprar Terminix) es más grande. Presión competitiva
+5. **Dependencia de mano de obra** — necesitan miles de técnicos. Escasez de trabajadores puede presionar salarios
+6. **Morningstar dice "overvalued"** — reconocen el moat pero dicen que el precio ya lo refleja
+
+---
+
+*Research fecha: 16 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: 53.0,
+    analyst_upside: -4.0,
+    status: "active",
+    first_researched_at: "2026-03-16T00:00:00Z",
+    last_updated_at: "2026-03-16T00:00:00Z",
+    next_review_at: "2026-09-16T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -1267,6 +1399,17 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #9* — Mar 16, 2026\n\n🏢 *CaixaBank* (CAIXY) — $3.69\n\n🛍️ *Sus marcas*: CaixaBank (banco #1 de España), imagin (banco digital para jóvenes), VidaCaixa (seguros), BPI (banco en Portugal), Fundación "la Caixa"\n\n🌍 *Presencia*: España (18 millones de clientes) + Portugal (via BPI). Premiado "Mejor Banco para Consumidores en Europa" por Euromoney 2025\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.1% anual* solo por ser dueño. Cada vez que alguien en España paga su hipoteca, usa su tarjeta, o contrata un seguro con CaixaBank — parte de ese dinero llega a ti como dividendo. Y el dividendo creció 117% en 3 años.\n\n⚠️ *El riesgo*: Concentrado en España — si la economía española baja, CaixaBank lo siente.\n\n🆕 Posición #9\n🔗 https://vectorialdata.com/stocks/CAIXY\n\n💡 Recuerda: tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual.`,
   },
+  {
+    id: 10,
+    stock_id: 14,
+    ticker: "ROL",
+    type: "new" as const,
+    cycle_number: 2,
+    price: 55.33,
+    date: "2026-03-16",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #10* — Mar 16, 2026\n\n🏢 *Rollins / Orkin* (ROL) — $55.33\n\n🛍️ *Sus marcas*: Orkin (#1 en control de plagas), HomeTeam Pest Defense, Clark Pest Control, Critter Control, Western Pest Services\n\n🌍 *Presencia*: EE.UU. (líder nacional), Canadá, Australia. 24 años consecutivos creciendo ventas.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.32% anual* de dividendo — 35 años sin fallar un solo pago. Cada vez que alguien llama a Orkin porque tiene cucarachas, termitas o ratones — parte de ese dinero llega a ti. Y las plagas no entienden de recesiones.\n\n⚠️ *El riesgo*: La acción es cara (P/E de 51x, el doble de su industria).\n\n🆕 Posición #10\n🔗 https://vectorialdata.com/stocks/ROL\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+  },
 ];
 
 export const cycles = [
@@ -1283,7 +1426,7 @@ export const cycles = [
     cycle_number: 2,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
-    status: "active" as const,
+    current_count: 5,
+    status: "completed" as const,
   },
 ];
