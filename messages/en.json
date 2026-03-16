@@ -189,5 +189,16 @@
     "noCycleActive": "No active cycle",
     "sectorAllocation": "Sector Allocation",
     "regionAllocation": "Region Allocation"
+  },
+  "Premium": {
+    "badge": "PRO",
+    "unlockChart": "Unlock full performance history",
+    "unlockChartDesc": "See the complete return chart from day one. Analyze trends and track progress.",
+    "unlockPositions": "See all position details",
+    "unlockPositionsDesc": "Access buy prices, dividends, analyst targets, and consensus for every stock.",
+    "unlockTransactions": "View full transaction history",
+    "unlockTransactionsDesc": "Every buy and rebuy with exact prices and dates.",
+    "cta": "Unlock for $1/mo",
+    "includes": "Includes daily picks via WhatsApp"
   }
 }

@@ -27,7 +27,7 @@ export default async function JoinPage() {
           ))}
         </ul>
 
-        <a href="#" className="block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center">
+        <a href={process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "#"} className="cta-glow block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center">
           {t("cta")}
         </a>
         <p className="text-xs text-text-faint mt-3">{t("disclaimer")}</p>

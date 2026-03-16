@@ -178,6 +178,45 @@ body {
 .scroll-reveal-delay-2 { transition-delay: 0.2s; }
 .scroll-reveal-delay-3 { transition-delay: 0.3s; }
 
+/* ===== PREMIUM GATING ===== */
+
+.premium-blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.premium-table-fade {
+  position: relative;
+}
+
+.premium-table-fade::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent 0%, var(--background) 100%);
+  pointer-events: none;
+}
+
+.pro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: var(--brand-subtle);
+  color: var(--brand-text);
+  border: 1px solid var(--brand-border);
+}
+
 /* Markdown styles for research pages */
 .prose-research h1 {
   font-size: 1.5rem;

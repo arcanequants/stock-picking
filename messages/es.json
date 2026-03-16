@@ -189,5 +189,16 @@
     "noCycleActive": "Sin ciclo activo",
     "sectorAllocation": "Distribución por Sector",
     "regionAllocation": "Distribución por Región"
+  },
+  "Premium": {
+    "badge": "PRO",
+    "unlockChart": "Desbloquea el historial completo",
+    "unlockChartDesc": "Ve la gráfica de rendimiento desde el primer día. Analiza tendencias y sigue el progreso.",
+    "unlockPositions": "Ve los detalles de cada posición",
+    "unlockPositionsDesc": "Accede a precios de compra, dividendos, potencial y consenso de analistas.",
+    "unlockTransactions": "Ve el historial completo de transacciones",
+    "unlockTransactionsDesc": "Todas las compras y recompras con precios exactos y fechas.",
+    "cta": "Desbloquear por $1/mes",
+    "includes": "Incluye picks diarios por WhatsApp"
   }
 }

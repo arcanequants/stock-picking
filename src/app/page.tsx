@@ -235,9 +235,9 @@ export default async function Home() {
               <span className="text-text-muted text-lg">{t("pricingPeriod")}</span>
             </div>
             <p className="text-text-faint text-sm mt-2">{t("pricingSubtitle")}</p>
-            <Link href="/join" className="cta-glow block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center mt-6">
+            <a href={process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "/join"} className="cta-glow block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center mt-6">
               {t("pricingCta")}
-            </Link>
+            </a>
             <p className="text-xs text-text-faint mt-3">{t("pricingDisclaimer")}</p>
           </div>
         </section>

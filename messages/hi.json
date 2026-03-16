@@ -189,5 +189,16 @@
     "noCycleActive": "कोई सक्रिय चक्र नहीं",
     "sectorAllocation": "सेक्टर वितरण",
     "regionAllocation": "क्षेत्र वितरण"
+  },
+  "Premium": {
+    "badge": "PRO",
+    "unlockChart": "पूरा प्रदर्शन इतिहास अनलॉक करें",
+    "unlockChartDesc": "पहले दिन से पूरा रिटर्न चार्ट देखें। रुझानों का विश्लेषण करें।",
+    "unlockPositions": "सभी पोजीशन विवरण देखें",
+    "unlockPositionsDesc": "खरीद मूल्य, लाभांश, विश्लेषक लक्ष्य और सहमति तक पहुंचें।",
+    "unlockTransactions": "पूरा लेनदेन इतिहास देखें",
+    "unlockTransactionsDesc": "सटीक कीमतों और तारीखों के साथ हर खरीद और पुनर्खरीद।",
+    "cta": "$1/माह में अनलॉक करें",
+    "includes": "WhatsApp पर दैनिक पिक्स शामिल"
   }
 }
