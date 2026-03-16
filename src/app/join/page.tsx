@@ -1,80 +1,45 @@
-export default function JoinPage() {
+import { getTranslations } from "next-intl/server";
+
+export default async function JoinPage() {
+  const t = await getTranslations("Join");
+
   return (
     <div className="max-w-2xl mx-auto text-center space-y-8">
       <section>
-        <h1 className="text-4xl font-bold mb-4">Empieza a generar ingresos</h1>
-        <p className="text-text-muted text-lg">
-          Recibe picks diarios en tu WhatsApp. Empresas que te pagan dividendos
-          por ser dueño. Research completo incluido.
-        </p>
+        <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
+        <p className="text-text-muted text-lg">{t("subtitle")}</p>
       </section>
 
-      {/* Pricing Card */}
       <div className="border border-brand-border bg-brand-subtle rounded-2xl p-8 mx-auto max-w-md">
-        <p className="text-sm text-brand-text font-medium uppercase tracking-wider mb-2">
-          Membresía mensual
-        </p>
+        <p className="text-sm text-brand-text font-medium uppercase tracking-wider mb-2">{t("pricingLabel")}</p>
         <div className="flex items-baseline justify-center gap-1 mb-2">
           <span className="text-5xl font-bold">$1</span>
           <span className="text-text-muted">/mes</span>
         </div>
-        <p className="text-text-faint text-sm mb-6">Un peso al mes. Sin truco.</p>
+        <p className="text-text-faint text-sm mb-6">{t("pricingSubtitle")}</p>
 
         <ul className="text-left space-y-3 mb-8 text-sm">
-          <li className="flex items-start gap-2 text-text-secondary">
-            <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Pick diario con research completo (7 por semana)
-          </li>
-          <li className="flex items-start gap-2 text-text-secondary">
-            <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Empresas que pagan dividendos cada trimestre
-          </li>
-          <li className="flex items-start gap-2 text-text-secondary">
-            <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Portfolio dashboard en tiempo real
-          </li>
-          <li className="flex items-start gap-2 text-text-secondary">
-            <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Diversificación global (múltiples regiones)
-          </li>
-          <li className="flex items-start gap-2 text-text-secondary">
-            <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Grupo privado de WhatsApp
-          </li>
+          {[t("feature1"), t("feature2"), t("feature3"), t("feature4"), t("feature5")].map((item) => (
+            <li key={item} className="flex items-start gap-2 text-text-secondary">
+              <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
+              {item}
+            </li>
+          ))}
         </ul>
 
-        <a
-          href="#"
-          className="block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center"
-        >
-          Empieza ahora
+        <a href="#" className="block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center">
+          {t("cta")}
         </a>
-        <p className="text-xs text-text-faint mt-3">Cancela cuando quieras. Sin compromiso.</p>
+        <p className="text-xs text-text-faint mt-3">{t("disclaimer")}</p>
       </div>
 
-      {/* FAQ */}
       <section className="text-left space-y-4 mt-12">
-        <h2 className="text-xl font-bold text-center mb-6">Preguntas frecuentes</h2>
-        <FaqItem
-          q="¿Qué son los dividendos?"
-          a="Son pagos que las empresas te hacen por ser accionista. Compras una fracción de una empresa, y cada trimestre recibes dinero en tu cuenta por las ganancias que generó."
-        />
-        <FaqItem
-          q="¿Cuántos picks recibo por semana?"
-          a="7 picks por semana: 2 el lunes, 2 el martes, 1 el miércoles, 1 el jueves, 1 el viernes. Alternamos entre empresas nuevas y recompras en ciclos de 5."
-        />
-        <FaqItem
-          q="¿Qué tipo de empresas seleccionan?"
-          a="Empresas que generan flujo de efectivo a través de dividendos Y tienen potencial de apreciación. Negocios de calidad con fundamentos sólidos en todos los sectores y regiones."
-        />
-        <FaqItem
-          q="¿Es consejo financiero?"
-          a="No. Esto es educacional e informativo. Siempre consulta con un asesor financiero antes de invertir."
-        />
-        <FaqItem
-          q="¿Cómo recibo los picks?"
-          a="Directo en tu WhatsApp. Recibes un resumen de cada pick con un link al research completo en nuestra página."
-        />
+        <h2 className="text-xl font-bold text-center mb-6">{t("faqTitle")}</h2>
+        <FaqItem q={t("faq1Q")} a={t("faq1A")} />
+        <FaqItem q={t("faq2Q")} a={t("faq2A")} />
+        <FaqItem q={t("faq3Q")} a={t("faq3A")} />
+        <FaqItem q={t("faq4Q")} a={t("faq4A")} />
+        <FaqItem q={t("faq5Q")} a={t("faq5A")} />
       </section>
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 
 interface Snapshot {
   date: string;
@@ -9,10 +10,20 @@ interface Snapshot {
   return_pct: number;
 }
 
+const localeMap: Record<string, string> = {
+  es: "es-MX",
+  en: "en-US",
+  pt: "pt-BR",
+  hi: "hi-IN",
+};
+
 export default function PerformanceMetrics() {
   const [latest, setLatest] = useState<Snapshot | null>(null);
   const [firstDate, setFirstDate] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const t = useTranslations("Components");
+  const locale = useLocale();
+  const dateLocale = localeMap[locale] || "es-MX";
 
   useEffect(() => {
     fetch("/api/portfolio/history")
@@ -52,7 +63,7 @@ export default function PerformanceMetrics() {
         }`}
       >
         <p className="text-xs text-text-faint uppercase tracking-wider">
-          Retorno
+          {t("return")}
         </p>
         <p
           className={`text-2xl font-bold font-mono mt-1 ${
@@ -66,23 +77,23 @@ export default function PerformanceMetrics() {
 
       <div className="border border-border rounded-xl p-4">
         <p className="text-xs text-text-faint uppercase tracking-wider">
-          Posiciones
+          {t("positions")}
         </p>
         <p className="text-2xl font-bold font-mono text-foreground mt-1">
           {positions}
         </p>
         <p className="text-xs text-text-faint mt-0.5">
-          activas
+          {t("active")}
         </p>
       </div>
 
       <div className="border border-border rounded-xl p-4">
         <p className="text-xs text-text-faint uppercase tracking-wider">
-          Desde
+          {t("since")}
         </p>
         <p className="text-lg font-bold text-foreground mt-1">
           {firstDate
-            ? new Date(firstDate + "T00:00:00").toLocaleDateString("es-MX", {
+            ? new Date(firstDate + "T00:00:00").toLocaleDateString(dateLocale, {
                 day: "numeric",
                 month: "short",
                 year: "numeric",
@@ -90,7 +101,7 @@ export default function PerformanceMetrics() {
             : "—"}
         </p>
         <p className="text-xs text-text-faint mt-0.5">
-          {firstDate ? `${Math.ceil((Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000)} días` : ""}
+          {firstDate ? `${Math.ceil((Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000)} ${t("days")}` : ""}
         </p>
       </div>
     </div>

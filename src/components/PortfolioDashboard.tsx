@@ -1,4 +1,5 @@
 import { Stock } from "@/lib/types";
+import { getTranslations } from "next-intl/server";
 
 interface Cycle {
   type: "new" | "rebuy";
@@ -11,30 +12,27 @@ interface Props {
   cycle: Cycle | null;
 }
 
-export default function PortfolioDashboard({ stocks, cycle }: Props) {
+export default async function PortfolioDashboard({ stocks, cycle }: Props) {
+  const t = await getTranslations("Components");
   const activeStocks = stocks.filter((s) => s.status === "active");
   const watchlistStocks = stocks.filter((s) => s.status === "watchlist");
 
-  // Sector allocation
   const sectorMap = new Map<string, number>();
   activeStocks.forEach((s) => {
     sectorMap.set(s.sector, (sectorMap.get(s.sector) || 0) + 1);
   });
 
-  // Region allocation
   const regionMap = new Map<string, number>();
   activeStocks.forEach((s) => {
     regionMap.set(s.region, (regionMap.get(s.region) || 0) + 1);
   });
 
-  // Avg dividend yield
   const avgDivYield =
     activeStocks.length > 0
       ? activeStocks.reduce((sum, s) => sum + (s.dividend_yield || 0), 0) /
         activeStocks.length
       : 0;
 
-  // Avg upside
   const avgUpside =
     activeStocks.length > 0
       ? activeStocks.reduce((sum, s) => sum + (s.analyst_upside || 0), 0) /
@@ -69,29 +67,23 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
 
   return (
     <div className="space-y-6">
-      {/* Stats Row */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <StatBox label={t("activePositionsLabel")} value={activeStocks.length.toString()} />
+        <StatBox label={t("watchlistLabel")} value={watchlistStocks.length.toString()} />
+        <StatBox label={t("avgDivYield")} value={`${avgDivYield.toFixed(1)}%`} />
+        <StatBox label={t("avgPotential")} value={`${avgUpside.toFixed(0)}%`} />
         <StatBox
-          label="Posiciones Activas"
-          value={activeStocks.length.toString()}
-        />
-        <StatBox label="En Lista" value={watchlistStocks.length.toString()} />
-        <StatBox label="Dividendo Prom." value={`${avgDivYield.toFixed(1)}%`} />
-        <StatBox label="Potencial Prom." value={`${avgUpside.toFixed(0)}%`} />
-        <StatBox
-          label="Ciclo"
-          value={cycle ? `${cycle.current_count} de ${cycle.target_count} (${cycle.type === "new" ? "Nuevas" : "Recompras"})` : "—"}
-          subtitle={cycle ? `Faltan ${remaining} ${cycle.type === "new" ? "picks nuevos" : "recompras"}` : "Sin ciclo activo"}
+          label={t("cycleLabel")}
+          value={cycle ? t("cycleValue", { current: cycle.current_count, target: cycle.target_count, type: cycle.type === "new" ? t("cycleNew") : t("cycleRebuy") }) : "—"}
+          subtitle={cycle ? t("cycleSubtitle", { remaining, type: cycle.type === "new" ? t("picksNew") : t("picksRebuy") }) : t("noCycleActive")}
         />
       </div>
 
-      {/* Allocations */}
       {activeStocks.length > 0 && (
         <div className="grid md:grid-cols-2 gap-6">
-          {/* Sector Allocation */}
           <div className="border border-border rounded-xl p-5">
             <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
-              Distribución por Sector
+              {t("sectorAllocation")}
             </h3>
             <div className="space-y-3">
               {Array.from(sectorMap.entries()).map(([sector, count]) => {
@@ -100,15 +92,10 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
                   <div key={sector}>
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-text-secondary">{sector}</span>
-                      <span className="text-text-muted font-mono">
-                        {pct.toFixed(0)}% ({count})
-                      </span>
+                      <span className="text-text-muted font-mono">{pct.toFixed(0)}% ({count})</span>
                     </div>
                     <div className="w-full bg-progress-bg rounded-full h-2">
-                      <div
-                        className={`h-2 rounded-full ${sectorColors[sector] || "bg-zinc-500"}`}
-                        style={{ width: `${pct}%` }}
-                      />
+                      <div className={`h-2 rounded-full ${sectorColors[sector] || "bg-zinc-500"}`} style={{ width: `${pct}%` }} />
                     </div>
                   </div>
                 );
@@ -116,10 +103,9 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
             </div>
           </div>
 
-          {/* Region Allocation */}
           <div className="border border-border rounded-xl p-5">
             <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
-              Distribución por Región
+              {t("regionAllocation")}
             </h3>
             <div className="space-y-3">
               {Array.from(regionMap.entries()).map(([region, count]) => {
@@ -128,15 +114,10 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
                   <div key={region}>
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-text-secondary">{region}</span>
-                      <span className="text-text-muted font-mono">
-                        {pct.toFixed(0)}% ({count})
-                      </span>
+                      <span className="text-text-muted font-mono">{pct.toFixed(0)}% ({count})</span>
                     </div>
                     <div className="w-full bg-progress-bg rounded-full h-2">
-                      <div
-                        className={`h-2 rounded-full ${regionColors[region] || "bg-zinc-500"}`}
-                        style={{ width: `${pct}%` }}
-                      />
+                      <div className={`h-2 rounded-full ${regionColors[region] || "bg-zinc-500"}`} style={{ width: `${pct}%` }} />
                     </div>
                   </div>
                 );
@@ -149,15 +130,7 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
   );
 }
 
-function StatBox({
-  label,
-  value,
-  subtitle,
-}: {
-  label: string;
-  value: string;
-  subtitle?: string;
-}) {
+function StatBox({ label, value, subtitle }: { label: string; value: string; subtitle?: string }) {
   return (
     <div className="border border-border rounded-xl p-4">
       <p className="text-xs text-text-faint uppercase tracking-wider">{label}</p>

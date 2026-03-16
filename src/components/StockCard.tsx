@@ -1,11 +1,6 @@
 import Link from "next/link";
 import { Stock } from "@/lib/types";
-
-const statusLabels: Record<string, string> = {
-  active: "activa",
-  watchlist: "en lista",
-  avoid: "evitar",
-};
+import { getTranslations } from "next-intl/server";
 
 function statusBadge(status: string) {
   const colors: Record<string, string> = {
@@ -16,7 +11,15 @@ function statusBadge(status: string) {
   return colors[status] || colors.watchlist;
 }
 
-export default function StockCard({ stock }: { stock: Stock }) {
+export default async function StockCard({ stock }: { stock: Stock }) {
+  const t = await getTranslations("Components");
+
+  const statusLabels: Record<string, string> = {
+    active: t("statusActive"),
+    watchlist: t("statusWatchlist"),
+    avoid: t("statusAvoid"),
+  };
+
   return (
     <Link href={`/stocks/${stock.ticker}`}>
       <div className="border border-border rounded-xl p-5 hover:border-border-secondary transition-all hover:bg-card-hover cursor-pointer group">
@@ -43,7 +46,7 @@ export default function StockCard({ stock }: { stock: Stock }) {
                 className={`text-xs font-mono ${stock.analyst_upside > 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}
               >
                 {stock.analyst_upside > 0 ? "+" : ""}
-                {stock.analyst_upside}% potencial
+                {stock.analyst_upside}% {t("potential")}
               </p>
             )}
           </div>
@@ -55,25 +58,25 @@ export default function StockCard({ stock }: { stock: Stock }) {
 
         <div className="grid grid-cols-4 gap-3 text-center">
           <div>
-            <p className="text-xs text-text-faint">P/E</p>
+            <p className="text-xs text-text-faint">{t("pe")}</p>
             <p className="text-sm font-mono text-text-secondary">
               {stock.pe_forward?.toFixed(1) || "—"}
             </p>
           </div>
           <div>
-            <p className="text-xs text-text-faint">Dividendo</p>
+            <p className="text-xs text-text-faint">{t("divYield")}</p>
             <p className="text-sm font-mono text-text-secondary">
               {stock.dividend_yield ? `${stock.dividend_yield}%` : "—"}
             </p>
           </div>
           <div>
-            <p className="text-xs text-text-faint">Cap. Mercado</p>
+            <p className="text-xs text-text-faint">{t("mktCap")}</p>
             <p className="text-sm font-mono text-text-secondary">
               {stock.market_cap_b ? `$${stock.market_cap_b}B` : "—"}
             </p>
           </div>
           <div>
-            <p className="text-xs text-text-faint">Consenso</p>
+            <p className="text-xs text-text-faint">{t("rating")}</p>
             <p className="text-sm font-mono text-text-secondary">
               {stock.analyst_consensus || "—"}
             </p>

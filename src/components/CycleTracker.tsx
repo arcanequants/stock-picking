@@ -1,30 +1,35 @@
+import { getTranslations } from "next-intl/server";
+
 interface Cycle {
   type: "new" | "rebuy";
   current_count: number;
   target_count: number;
 }
 
-export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
+export default async function CycleTracker({ cycle }: { cycle: Cycle | null }) {
+  const t = await getTranslations("Components");
+
   if (!cycle) {
     return (
       <div className="border border-border rounded-xl p-5">
         <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-          Ciclo Actual
+          {t("currentCycle")}
         </h3>
         <p className="text-sm text-text-faint mt-3">
-          Sin ciclo activo. Esperando la siguiente ronda de picks.
+          {t("noCycle")}
         </p>
       </div>
     );
   }
 
   const dots = Array.from({ length: cycle.target_count }, (_, i) => i);
+  const typeLabel = cycle.type === "new" ? t("cycleTypeNew") : t("cycleTypeRebuy");
 
   return (
     <div className="border border-border rounded-xl p-5">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-          Ciclo Actual
+          {t("currentCycle")}
         </h3>
         <span
           className={`text-xs px-3 py-1 rounded-full font-medium ${
@@ -33,7 +38,7 @@ export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
               : "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30"
           }`}
         >
-          {cycle.type === "new" ? "Nuevas" : "Recompras"}
+          {cycle.type === "new" ? t("newStocks") : t("rebuys")}
         </span>
       </div>
 
@@ -55,9 +60,12 @@ export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
       </div>
 
       <p className="text-sm text-text-muted mt-4">
-        {cycle.current_count} de {cycle.target_count}{" "}
-        {cycle.type === "new" ? "acciones nuevas" : "recompras"} completadas.{" "}
-        Faltan {cycle.target_count - cycle.current_count}.
+        {t("cycleProgress", {
+          current: cycle.current_count,
+          target: cycle.target_count,
+          type: typeLabel,
+          remaining: cycle.target_count - cycle.current_count,
+        })}
       </p>
     </div>
   );

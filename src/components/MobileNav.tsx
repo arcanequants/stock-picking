@@ -2,16 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("Nav");
 
   return (
     <div className="md:hidden">
       <button
         onClick={() => setOpen(!open)}
         className="text-text-muted hover:text-foreground p-2"
-        aria-label="Abrir menú"
+        aria-label={t("openMenu")}
       >
         {open ? (
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -26,33 +28,17 @@ export default function MobileNav() {
 
       {open && (
         <div className="absolute top-full left-0 right-0 bg-background border-b border-border py-4 px-4 space-y-3">
-          <Link
-            href="/"
-            onClick={() => setOpen(false)}
-            className="block text-text-secondary hover:text-foreground py-2"
-          >
-            Inicio
+          <Link href="/" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
+            {t("home")}
           </Link>
-          <Link
-            href="/portfolio"
-            onClick={() => setOpen(false)}
-            className="block text-text-secondary hover:text-foreground py-2"
-          >
-            Portafolio
+          <Link href="/portfolio" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
+            {t("portfolio")}
           </Link>
-          <Link
-            href="/stocks"
-            onClick={() => setOpen(false)}
-            className="block text-text-secondary hover:text-foreground py-2"
-          >
-            Acciones
+          <Link href="/stocks" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
+            {t("stocks")}
           </Link>
-          <Link
-            href="/join"
-            onClick={() => setOpen(false)}
-            className="block bg-brand hover:bg-brand-hover text-white px-4 py-2 rounded-lg text-center font-medium"
-          >
-            Únete $1/mes
+          <Link href="/join" onClick={() => setOpen(false)} className="block bg-brand hover:bg-brand-hover text-white px-4 py-2 rounded-lg text-center font-medium">
+            {t("join")}
           </Link>
         </div>
       )}

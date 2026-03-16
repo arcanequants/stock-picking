@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import {
   ResponsiveContainer,
   LineChart,
@@ -19,9 +20,19 @@ interface Snapshot {
   return_pct: number;
 }
 
+const localeMap: Record<string, string> = {
+  es: "es-MX",
+  en: "en-US",
+  pt: "pt-BR",
+  hi: "hi-IN",
+};
+
 export default function PerformanceChart() {
   const [data, setData] = useState<Snapshot[]>([]);
   const [loading, setLoading] = useState(true);
+  const t = useTranslations("Components");
+  const locale = useLocale();
+  const dateLocale = localeMap[locale] || "es-MX";
 
   useEffect(() => {
     fetch("/api/portfolio/history")
@@ -43,17 +54,17 @@ export default function PerformanceChart() {
     return (
       <div className="border border-border rounded-xl p-6">
         <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
-          Rendimiento del Portafolio
+          {t("performanceTitle")}
         </h3>
         <p className="text-sm text-text-faint">
-          Aún no hay datos de rendimiento. Aparecerán después del primer snapshot diario.
+          {t("noDataYet")}
         </p>
       </div>
     );
   }
 
   const chartData = data.map((s) => ({
-    date: new Date(s.date + "T00:00:00").toLocaleDateString("es-MX", {
+    date: new Date(s.date + "T00:00:00").toLocaleDateString(dateLocale, {
       month: "short",
       day: "numeric",
     }),
@@ -68,7 +79,7 @@ export default function PerformanceChart() {
     <div className="border border-border rounded-xl p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-          Rendimiento del Portafolio
+          {t("performanceTitle")}
         </h3>
         <span
           className={`text-sm font-mono font-bold ${
@@ -105,7 +116,7 @@ export default function PerformanceChart() {
             }}
             formatter={(value) => {
               const v = Number(value);
-              return [`${v >= 0 ? "+" : ""}${v.toFixed(2)}%`, "Retorno"];
+              return [`${v >= 0 ? "+" : ""}${v.toFixed(2)}%`, t("returnLabel")];
             }}
           />
           <ReferenceLine y={0} stroke="var(--border-secondary)" strokeDasharray="3 3" />
