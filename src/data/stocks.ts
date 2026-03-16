@@ -1040,6 +1040,131 @@ El consenso es que AWK es una utility de altísima calidad que ya está **justam
     last_updated_at: "2026-03-12T00:00:00Z",
     next_review_at: "2026-09-12T00:00:00Z",
   },
+  {
+    id: 13,
+    ticker: "CAIXY",
+    name: "CaixaBank S.A.",
+    sector: "Financials",
+    industry: "Retail Banking",
+    country: "Spain",
+    region: "Europe",
+    currency: "USD",
+    price: 3.69,
+    pe_ratio: 11.7,
+    pe_forward: 10.5,
+    dividend_yield: 5.1,
+    market_cap_b: 69.0,
+    eps: 0.84,
+    summary_short:
+      "El banco #1 de España con 18 millones de clientes. Premiado como 'Mejor Banco para Consumidores en Europa' por Euromoney 2025. Dividendo del 5.1% — creciendo 15% anual. Absorbieron Bankia y son dueños de BPI en Portugal.",
+    summary_what:
+      "CaixaBank es el banco retail más grande de España. Con 18 millones de clientes, ofrece cuentas bancarias, hipotecas, seguros (VidaCaixa), fondos de inversión, y banca privada. Absorbieron Bankia en 2021 convirtiéndose en el líder indiscutible del mercado español. También operan en Portugal a través de BPI. La Fundación 'la Caixa' es la mayor fundación privada de Europa.",
+    summary_why:
+      "Banco #1 de España con escala masiva (€1.1 trillones en volumen de negocio). P/E de 11.7x — barato. Dividendo del 5.1% creciendo agresivamente (+15% en 2025). ROTE del 17.5% — rentabilidad excepcional. Cost/income de 39.4% — eficiencia bancaria de élite. Premiado como mejor banco de consumo en Europa.",
+    summary_risk:
+      "Concentrado en España (~90% de ingresos). Tasas de interés del BCE bajando podrían comprimir márgenes. ADR en OTC con menor liquidez que la acción principal en Madrid. Regulación bancaria europea en constante cambio.",
+    research_full: `# CaixaBank S.A. (CAIXY) — Research Completo
+
+## Precio ADR: $3.69 | Precio Madrid: €9.83 | P/E: 11.7 | Div Yield: 5.1% | Market Cap: €69B
+
+---
+
+## ¿Qué es CaixaBank?
+
+CaixaBank es el **banco retail más grande de España** con más de **18 millones de clientes**. Nació de la fusión de dos instituciones financieras históricas y se consolidó como líder absoluto al absorber Bankia en 2021. Opera principalmente en España y Portugal (a través de BPI).
+
+## Segmentos de Negocio
+
+| Segmento | Descripción |
+|----------|-------------|
+| **Banca Retail** | Cuentas, tarjetas, hipotecas, préstamos personales — 18M+ clientes |
+| **Banca Privada** | Gestión de patrimonio — €50B+ bajo asesoramiento independiente |
+| **Seguros (VidaCaixa)** | Seguros de vida, pensiones, ahorro — líder en España |
+| **Banca Empresarial** | Financiamiento a empresas y comercio exterior |
+| **BPI (Portugal)** | Banco completo en Portugal |
+| **Fundación "la Caixa"** | Mayor fundación privada de Europa (obra social) |
+
+## Marcas que la Gente Reconoce
+
+- **CaixaBank** — el banco en sí, sucursales por toda España
+- **imagin** — banco digital para jóvenes (app gratuita)
+- **VidaCaixa** — seguros y pensiones (#1 en España)
+- **BPI** — banco en Portugal
+- **Fundación "la Caixa"** — obra social, museos CaixaForum, CosmoCaixa
+- **CaixaBank Payments & Consumer** — tarjetas y financiación al consumo
+
+## Resultados 2025
+
+| Métrica | 2025 | vs 2024 |
+|---------|------|---------|
+| **Net Profit** | €5.89B | **+1.8%** |
+| **Gross Income** | €16.27B | **+2.5%** |
+| **Pre-Impairment Income** | €9.86B | +0.9% |
+| **ROTE** | 17.5% | — |
+| **CET1 Ratio** | 12.25% | Sólido |
+| **Cost/Income** | 39.4% | Eficiente |
+| **Business Volume** | €1.1 trillion | **+6.9%** |
+
+## Dividendo — Crecimiento Explosivo
+
+| Año | Dividendo/Acción | Cambio |
+|-----|-----------------|--------|
+| 2022 | €0.2306 | — |
+| 2023 | €0.3919 | **+70%** |
+| 2024 | €0.4352 | **+11%** |
+| 2025 | €0.5000 | **+15%** |
+
+- **Payout ratio:** 59.4%
+- **Total distribuido 2025:** €3.5 mil millones
+- **Política 2026:** Mantener payout de 50-60%
+
+## Premios y Reconocimientos (2025)
+
+- **"Mejor Banco para Consumidores en Europa"** — Euromoney
+- **"Mejor Banco de España"** — Euromoney
+- **"Mejor Banco Digital de España"** — Euromoney
+- **"Mejor Banco para Diversidad e Inclusión en Europa"** — Euromoney
+- **"Mejor Banco Privado Digital en Europa"** — PWM (Financial Times)
+- 8 premios Euromoney totales (5 CaixaBank + 3 BPI)
+
+## Adquisición de Bankia (2021)
+
+La fusión con Bankia en 2021 fue la mayor operación bancaria en España:
+- Creó un banco con **€664B en activos** y **~20% de cuota de mercado**
+- Sinergias de costos ya materializadas
+- Consolidó posición como #1 indiscutible en banca retail española
+
+## ¿Por Qué Nos Gusta?
+
+1. **Banco #1 de España** — 18M clientes, escala masiva, posición dominante
+2. **Dividendo del 5.1%** — de los más altos entre bancos europeos grandes
+3. **Crecimiento de dividendo brutal** — de €0.23 en 2022 a €0.50 en 2025 (117% en 3 años)
+4. **P/E de 11.7x** — barato para un banco tan rentable
+5. **ROTE de 17.5%** — rentabilidad excepcional
+6. **Cost/income de 39.4%** — eficiencia operativa de élite entre bancos europeos
+7. **Premiado como mejor banco de consumo en Europa** — reconocimiento objetivo
+
+## Riesgos
+
+1. **Concentración en España** — ~90% del negocio depende de la economía española
+2. **Tasas de interés bajando** — el BCE está reduciendo tasas, lo que comprime márgenes de interés
+3. **ADR en OTC** — CAIXY tiene menor liquidez que CABK en Madrid. Spreads más amplios
+4. **Regulación bancaria** — requerimientos de capital pueden aumentar
+5. **Competencia fintech** — nuevos bancos digitales compiten por clientes jóvenes
+6. **Riesgo divisa** — el ADR cotiza en USD pero los resultados son en EUR
+
+---
+
+*Research fecha: 16 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: null,
+    analyst_upside: null,
+    status: "active",
+    first_researched_at: "2026-03-16T00:00:00Z",
+    last_updated_at: "2026-03-16T00:00:00Z",
+    next_review_at: "2026-09-16T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -1131,6 +1256,17 @@ export const transactions = [
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #8* — Mar 12, 2026\n\n🏢 *American Water Works* (AWK) — $138.25\n\n🛍️ *Sus marcas*: New Jersey American Water, Pennsylvania American Water, California American Water, Missouri American Water — el nombre que ves en tu recibo de agua\n\n🌍 *Presencia*: 14 estados de EE.UU. + 18 bases militares del Departamento de Defensa\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.46% anual* solo por ser dueño. Cada vez que alguien paga su recibo de agua en cualquiera de los 14 estados donde operan — parte de ese dinero llega a ti como dividendo. Y lo llevan subiendo 18 años seguidos.\n\n⚠️ *El riesgo*: Depende de reguladores estatales para aprobar aumentos de tarifas.\n\n🆕 Posición #8\n🔗 https://vectorialdata.com/stocks/AWK\n\n💡 No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.`,
   },
+  {
+    id: 9,
+    stock_id: 13,
+    ticker: "CAIXY",
+    type: "new" as const,
+    cycle_number: 2,
+    price: 3.69,
+    date: "2026-03-16",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #9* — Mar 16, 2026\n\n🏢 *CaixaBank* (CAIXY) — $3.69\n\n🛍️ *Sus marcas*: CaixaBank (banco #1 de España), imagin (banco digital para jóvenes), VidaCaixa (seguros), BPI (banco en Portugal), Fundación "la Caixa"\n\n🌍 *Presencia*: España (18 millones de clientes) + Portugal (via BPI). Premiado "Mejor Banco para Consumidores en Europa" por Euromoney 2025\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.1% anual* solo por ser dueño. Cada vez que alguien en España paga su hipoteca, usa su tarjeta, o contrata un seguro con CaixaBank — parte de ese dinero llega a ti como dividendo. Y el dividendo creció 117% en 3 años.\n\n⚠️ *El riesgo*: Concentrado en España — si la economía española baja, CaixaBank lo siente.\n\n🆕 Posición #9\n🔗 https://vectorialdata.com/stocks/CAIXY\n\n💡 Recuerda: tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual.`,
+  },
 ];
 
 export const cycles = [
@@ -1147,7 +1283,7 @@ export const cycles = [
     cycle_number: 2,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 4,
     status: "active" as const,
   },
 ];
