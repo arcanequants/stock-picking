@@ -68,7 +68,7 @@ export default function RootLayout({
                   href="/join"
                   className="bg-brand hover:bg-brand-hover text-white px-4 py-1.5 rounded-lg transition-colors font-medium"
                 >
-                  Join $1.99/mo
+                  Join $1/mo
                 </Link>
               </div>
 

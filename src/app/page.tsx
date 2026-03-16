@@ -13,6 +13,13 @@ export default function Home() {
       })
     : null;
 
+  // Average dividend yield of active positions
+  const avgDivYield =
+    activeStocks.length > 0
+      ? activeStocks.reduce((sum, s) => sum + (s.dividend_yield || 0), 0) /
+        activeStocks.length
+      : 0;
+
   // Sample pick for preview (oldest active stock)
   const samplePick = activeStocks[0];
 
@@ -20,22 +27,22 @@ export default function Home() {
     <div className="space-y-24">
       {/* ── SECTION 1: HERO ── */}
       <section className="text-center pt-8 md:pt-16">
-        <HeroMetrics />
+        <HeroMetrics avgDivYield={avgDivYield} />
 
         <h1 className="text-4xl md:text-6xl font-bold mt-6 tracking-tight">
-          Un pick de acciones al día.
+          Genera ingresos por ser dueño de empresas.
         </h1>
         <p className="text-text-muted text-lg md:text-xl max-w-2xl mx-auto mt-4">
-          Seleccionamos una acción cada día. Tú compras $3 o $50 — lo que puedas.
-          Tu portafolio crece.
+          Cada vez que alguien compra un producto de tus empresas, tú ganas dinero.
+          Se llaman dividendos. Nosotros elegimos las empresas por ti.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm text-text-faint">
-          <span>{activeStocks.length} posiciones</span>
+          <span>{activeStocks.length} empresas</span>
           <span className="w-1 h-1 rounded-full bg-text-faint" />
           <span>{regions} regiones</span>
           <span className="w-1 h-1 rounded-full bg-text-faint" />
-          <span>Desde {firstDate}</span>
+          <span>{avgDivYield.toFixed(1)}% dividend yield promedio</span>
         </div>
 
         <div className="mt-8">
@@ -43,7 +50,7 @@ export default function Home() {
             href="/join"
             className="inline-block bg-brand hover:bg-brand-hover text-white px-8 py-3 rounded-xl font-semibold text-lg transition-colors"
           >
-            Empieza por $1.99/mes
+            Empieza por $1/mes
           </Link>
         </div>
 
@@ -61,21 +68,36 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
           <div className="border border-border rounded-xl p-5">
-            <div className="text-2xl mb-3">?</div>
+            <div className="w-10 h-10 rounded-lg bg-brand-subtle flex items-center justify-center mb-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-brand-text" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+                <path d="M11 8v6M8 11h6" />
+              </svg>
+            </div>
             <h3 className="font-semibold mb-1">Demasiado ruido</h3>
             <p className="text-sm text-text-muted">
               Miles de acciones, cientos de opiniones. No sabes cuál comprar.
             </p>
           </div>
           <div className="border border-border rounded-xl p-5">
-            <div className="text-2xl mb-3">&#9203;</div>
+            <div className="w-10 h-10 rounded-lg bg-brand-subtle flex items-center justify-center mb-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-brand-text" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
             <h3 className="font-semibold mb-1">Sin tiempo</h3>
             <p className="text-sm text-text-muted">
               Analizar una acción toma horas. Tú tienes trabajo, familia, vida.
             </p>
           </div>
           <div className="border border-border rounded-xl p-5">
-            <div className="text-2xl mb-3">&#9888;&#65039;</div>
+            <div className="w-10 h-10 rounded-lg bg-brand-subtle flex items-center justify-center mb-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-brand-text" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
             <h3 className="font-semibold mb-1">Miedo a perder</h3>
             <p className="text-sm text-text-muted">
               Sin guía, invertir se siente como apostar. No debería ser así.
@@ -97,7 +119,7 @@ export default function Home() {
             </div>
             <h3 className="font-semibold mt-4 mb-2">Recibes un pick</h3>
             <p className="text-sm text-text-muted">
-              Cada día te llega una acción seleccionada directo a tu WhatsApp. Con research incluido.
+              Cada día te llega una empresa seleccionada directo a tu WhatsApp. Con research incluido.
             </p>
           </div>
           <div className="text-center">
@@ -106,16 +128,16 @@ export default function Home() {
             </div>
             <h3 className="font-semibold mt-4 mb-2">Compras tu fracción</h3>
             <p className="text-sm text-text-muted">
-              $3, $5, $10 — lo que puedas sostener cada mes. Siempre la misma cantidad.
+              $3, $5, $50 — lo que puedas. Compras una fracción y ya eres dueño de esa empresa.
             </p>
           </div>
           <div className="text-center">
             <div className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center text-xl font-bold mx-auto">
               3
             </div>
-            <h3 className="font-semibold mt-4 mb-2">Tu portafolio crece</h3>
+            <h3 className="font-semibold mt-4 mb-2">Cobras dividendos</h3>
             <p className="text-sm text-text-muted">
-              Dividendos que te pagan por ser dueño + apreciación del precio. Automático.
+              Las empresas te pagan por ser dueño. Cada trimestre recibes dinero en tu cuenta. Automático.
             </p>
           </div>
         </div>
@@ -130,15 +152,15 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-4 mb-8">
           <div className="border border-border rounded-xl p-5 text-center">
             <p className="text-3xl font-bold font-mono">{activeStocks.length}</p>
-            <p className="text-sm text-text-muted mt-1">Posiciones activas</p>
+            <p className="text-sm text-text-muted mt-1">Empresas en portafolio</p>
+          </div>
+          <div className="border border-border rounded-xl p-5 text-center">
+            <p className="text-3xl font-bold font-mono text-amber-600 dark:text-amber-400">{avgDivYield.toFixed(1)}%</p>
+            <p className="text-sm text-text-muted mt-1">Dividend yield promedio</p>
           </div>
           <div className="border border-border rounded-xl p-5 text-center">
             <p className="text-3xl font-bold font-mono">{regions}</p>
             <p className="text-sm text-text-muted mt-1">Regiones del mundo</p>
-          </div>
-          <div className="border border-border rounded-xl p-5 text-center">
-            <p className="text-3xl font-bold font-mono">7</p>
-            <p className="text-sm text-text-muted mt-1">Picks por semana</p>
           </div>
         </div>
 
@@ -160,12 +182,19 @@ export default function Home() {
             <p className="text-xs text-text-faint uppercase tracking-wider mb-3">
               Ejemplo de pick
             </p>
-            <h3 className="text-lg font-bold">
-              {samplePick.ticker}{" "}
-              <span className="text-text-muted font-normal">
-                — {samplePick.name}
-              </span>
-            </h3>
+            <div className="flex items-start justify-between mb-2">
+              <h3 className="text-lg font-bold">
+                {samplePick.ticker}{" "}
+                <span className="text-text-muted font-normal">
+                  — {samplePick.name}
+                </span>
+              </h3>
+              {(samplePick.dividend_yield ?? 0) > 0 && (
+                <span className="text-xs font-mono px-2 py-1 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                  {samplePick.dividend_yield}% div yield
+                </span>
+              )}
+            </div>
             <p className="text-sm text-text-secondary mt-2">
               {samplePick.summary_short}
             </p>
@@ -190,15 +219,15 @@ export default function Home() {
       {/* ── SECTION 5: QUE INCLUYE ── */}
       <section className="max-w-2xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-          Todo lo que necesitas para invertir
+          Todo lo que necesitas para generar ingresos
         </h2>
 
         <div className="space-y-4">
           {[
             "Pick diario con research completo",
+            "Empresas que pagan dividendos cada trimestre",
             "Grupo privado de WhatsApp",
             "Portfolio dashboard en tiempo real",
-            "Acciones de dividendos + crecimiento",
             `Diversificación global (${regions} regiones)`,
             "Historial de todas las transacciones",
           ].map((item) => (
@@ -217,10 +246,10 @@ export default function Home() {
             Membresía mensual
           </p>
           <div className="flex items-baseline justify-center gap-1">
-            <span className="text-6xl font-bold">$1.99</span>
+            <span className="text-6xl font-bold">$1</span>
             <span className="text-text-muted text-lg">/mes</span>
           </div>
-          <p className="text-text-faint text-sm mt-2">Menos que un café</p>
+          <p className="text-text-faint text-sm mt-2">Un peso al mes. Sin truco.</p>
 
           <Link
             href="/join"
@@ -243,8 +272,12 @@ export default function Home() {
 
         <div className="space-y-4">
           <FaqItem
+            q="¿Qué son los dividendos?"
+            a="Son pagos que las empresas te hacen por ser accionista. Compras una fracción de Coca-Cola, y cada vez que alguien compra una Coca, una parte de esa ganancia llega a tu cuenta. Así de simple."
+          />
+          <FaqItem
             q="¿Cuánto necesito para empezar a invertir?"
-            a="Con $3 por pick es suficiente. Lo importante no es cuánto, sino que sea consistente cada mes. $90/mes = $3 por pick. $300/mes = $10 por pick."
+            a="Con $3 por pick es suficiente. Compras una fracción de la acción y ya eres dueño. Lo importante es ser consistente."
           />
           <FaqItem
             q="¿Es consejo financiero?"
@@ -275,7 +308,7 @@ export default function Home() {
             href="/join"
             className="inline-block bg-brand hover:bg-brand-hover text-white px-8 py-3 rounded-xl font-semibold text-lg transition-colors"
           >
-            Empieza por $1.99/mes
+            Empieza por $1/mes
           </Link>
         </div>
 

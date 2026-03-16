@@ -52,7 +52,7 @@ export default function MobileNav() {
             onClick={() => setOpen(false)}
             className="block bg-brand hover:bg-brand-hover text-white px-4 py-2 rounded-lg text-center font-medium"
           >
-            Join $1.99/mo
+            Join $1/mo
           </Link>
         </div>
       )}

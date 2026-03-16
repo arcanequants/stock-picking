@@ -2,43 +2,44 @@ export default function JoinPage() {
   return (
     <div className="max-w-2xl mx-auto text-center space-y-8">
       <section>
-        <h1 className="text-4xl font-bold mb-4">Join the Community</h1>
+        <h1 className="text-4xl font-bold mb-4">Empieza a generar ingresos</h1>
         <p className="text-text-muted text-lg">
-          Recibe picks diarios directamente en tu Telegram. Accede a research
-          exclusivo y construye tu portafolio paso a paso.
+          Recibe picks diarios en tu WhatsApp. Empresas que te pagan dividendos
+          por ser dueño. Research completo incluido.
         </p>
       </section>
 
       {/* Pricing Card */}
       <div className="border border-brand-border bg-brand-subtle rounded-2xl p-8 mx-auto max-w-md">
         <p className="text-sm text-brand-text font-medium uppercase tracking-wider mb-2">
-          Monthly Membership
+          Membresía mensual
         </p>
-        <div className="flex items-baseline justify-center gap-1 mb-4">
-          <span className="text-5xl font-bold">$1.99</span>
-          <span className="text-text-muted">/month</span>
+        <div className="flex items-baseline justify-center gap-1 mb-2">
+          <span className="text-5xl font-bold">$1</span>
+          <span className="text-text-muted">/mes</span>
         </div>
+        <p className="text-text-faint text-sm mb-6">Un peso al mes. Sin truco.</p>
 
         <ul className="text-left space-y-3 mb-8 text-sm">
           <li className="flex items-start gap-2 text-text-secondary">
             <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Daily stock picks (7 per week)
+            Pick diario con research completo (7 por semana)
           </li>
           <li className="flex items-start gap-2 text-text-secondary">
             <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Full research reports for every stock
+            Empresas que pagan dividendos cada trimestre
           </li>
           <li className="flex items-start gap-2 text-text-secondary">
             <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Portfolio dashboard with allocations
+            Portfolio dashboard en tiempo real
           </li>
           <li className="flex items-start gap-2 text-text-secondary">
             <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Dividend-focused strategy
+            Diversificación global (múltiples regiones)
           </li>
           <li className="flex items-start gap-2 text-text-secondary">
             <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-            Private Telegram group access
+            Grupo privado de WhatsApp
           </li>
         </ul>
 
@@ -46,29 +47,33 @@ export default function JoinPage() {
           href="#"
           className="block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center"
         >
-          Join Now
+          Empieza ahora
         </a>
-        <p className="text-xs text-text-faint mt-3">Cancel anytime. No lock-in.</p>
+        <p className="text-xs text-text-faint mt-3">Cancela cuando quieras. Sin compromiso.</p>
       </div>
 
       {/* FAQ */}
       <section className="text-left space-y-4 mt-12">
-        <h2 className="text-xl font-bold text-center mb-6">FAQ</h2>
+        <h2 className="text-xl font-bold text-center mb-6">Preguntas frecuentes</h2>
         <FaqItem
-          q="How many stocks do you pick per week?"
-          a="7 picks per week: 2 on Monday, 2 on Tuesday, 1 on Wednesday, 1 on Thursday, 1 on Friday. Alternating between new stocks and rebuys in cycles of 5."
+          q="¿Qué son los dividendos?"
+          a="Son pagos que las empresas te hacen por ser accionista. Compras una fracción de una empresa, y cada trimestre recibes dinero en tu cuenta por las ganancias que generó."
         />
         <FaqItem
-          q="What kind of stocks do you pick?"
-          a="We focus on stocks that generate cash flow through dividends AND have capital appreciation potential. Quality businesses with strong fundamentals across all sectors and regions."
+          q="¿Cuántos picks recibo por semana?"
+          a="7 picks por semana: 2 el lunes, 2 el martes, 1 el miércoles, 1 el jueves, 1 el viernes. Alternamos entre empresas nuevas y recompras en ciclos de 5."
         />
         <FaqItem
-          q="Is this financial advice?"
-          a="No. This is for educational and informational purposes only. Always consult a licensed financial advisor before making investment decisions."
+          q="¿Qué tipo de empresas seleccionan?"
+          a="Empresas que generan flujo de efectivo a través de dividendos Y tienen potencial de apreciación. Negocios de calidad con fundamentos sólidos en todos los sectores y regiones."
         />
         <FaqItem
-          q="How do I receive the picks?"
-          a="Through our private Telegram group. You'll get a brief summary message for each pick plus a link to the full research on our website."
+          q="¿Es consejo financiero?"
+          a="No. Esto es educacional e informativo. Siempre consulta con un asesor financiero antes de invertir."
+        />
+        <FaqItem
+          q="¿Cómo recibo los picks?"
+          a="Directo en tu WhatsApp. Recibes un resumen de cada pick con un link al research completo en nuestra página."
         />
       </section>
     </div>
