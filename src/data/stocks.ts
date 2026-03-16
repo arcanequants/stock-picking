@@ -1297,6 +1297,123 @@ Los analistas reconocen la calidad del negocio pero la valuación (P/E 51x) limi
     last_updated_at: "2026-03-16T00:00:00Z",
     next_review_at: "2026-09-16T00:00:00Z",
   },
+  {
+    id: 15,
+    ticker: "GFI",
+    name: "Gold Fields Limited",
+    sector: "Materials",
+    industry: "Gold Mining",
+    country: "South Africa",
+    region: "Africa / Global",
+    currency: "USD",
+    price: 47.72,
+    pe_ratio: 12.11,
+    pe_forward: 8.46,
+    dividend_yield: 5.09,
+    market_cap_b: 42.7,
+    eps: 3.99,
+    summary_short:
+      "Minera de oro sudafricana con minas en 5 países. Profit se triplicó en 2025 a $3.57B. Dividendo del 5.1% + dividendo especial + recompra de acciones = $1.7B devueltos al accionista. El oro está en máximos históricos por demanda de bancos centrales.",
+    summary_what:
+      "Gold Fields extrae oro de minas en Sudáfrica, Ghana, Australia, Perú y Chile. Producen 2.44 millones de onzas al año. También están construyendo una nueva mina en Canadá (Windfall) que arranca a finales de 2026. El oro es el refugio universal contra inflación, incertidumbre y devaluación de monedas — los bancos centrales del mundo están comprando cantidades récord.",
+    summary_why:
+      "Profit se triplicó de $1.25B a $3.57B en 2025. Free cash flow de $2.97B (5x más que 2024). P/E de 12x con forward de 8.5x — baratísima. Dividendo del 5.1% más dividendo especial. Devolvieron $1.7B al accionista. Nueva mina Windfall en Canadá (300K oz/año a costo ultra bajo de $758/oz). Oro en máximos con JP Morgan proyectando $5,055/oz para Q4 2026.",
+    summary_risk:
+      "El precio del oro puede caer si la incertidumbre global disminuye. Riesgo geopolítico en Sudáfrica (electricidad, regulación) y Ghana. Minería es inherentemente peligrosa y costosa. Acción volátil: rango 52 semanas de $19 a $62.",
+    research_full: `# Gold Fields Limited (GFI) — Research Completo
+
+## Precio: $47.72 | P/E: 12.1 | P/E Forward: 8.5 | Div Yield: 5.1% | Market Cap: $42.7B
+
+---
+
+## ¿Qué es Gold Fields?
+
+Gold Fields es una de las **mineras de oro más grandes del mundo**, con sede en Johannesburgo, Sudáfrica. Extraen oro de minas subterráneas y a cielo abierto en 5 países. Es simple: sacan oro de la tierra, lo refinan, y lo venden al precio de mercado.
+
+## Minas y Operaciones
+
+| Mina | País | Tipo | Producción aprox |
+|------|------|------|-----------------|
+| **South Deep** | Sudáfrica | Subterránea (3.2km profundidad) | ~280-305K oz/año |
+| **Tarkwa** | Ghana | Cielo abierto | ~500K oz/año |
+| **Damang** | Ghana | Cielo abierto | ~150K oz/año |
+| **St Ives** | Australia | Mixta | ~400K oz/año |
+| **Granny Smith** | Australia | Subterránea | ~300K oz/año |
+| **Agnew** | Australia | Subterránea | ~200K oz/año |
+| **Cerro Corona** | Perú | Cielo abierto (oro + cobre) | ~150K oz/año |
+| **Salares Norte** | Chile | Cielo abierto (nueva) | Ramp-up en 2025 |
+| **Windfall** | Canadá (Quebec) | Subterránea (en construcción) | ~300K oz/año (desde 2027) |
+
+**Producción total 2025:** 2.44 millones de onzas (+18% YoY)
+**AISC (costo todo incluido):** $1,645/oz
+
+## Resultados 2025 — Récord Histórico
+
+| Métrica | 2024 | 2025 | Cambio |
+|---------|------|------|--------|
+| **Profit** | $1.25B | $3.57B | **+186%** |
+| **EPS** | ~$1.40 | $3.99 | **+185%** |
+| **Free Cash Flow** | $605M | $2.97B | **+391%** |
+| **Producción** | 2.07M oz | 2.44M oz | **+18%** |
+| **AISC** | $1,629/oz | $1,645/oz | +1% |
+
+## Capital Return — $1.7 Mil Millones al Accionista
+
+Gold Fields anunció un programa de retorno de capital masivo:
+- **Dividendo final:** 1,850 SA centavos/acción
+- **Dividendo especial:** 450 SA centavos/acción
+- **Recompra de acciones:** $100M
+- **Total:** $1.7B (54% del free cash flow ajustado)
+
+## El Catalizador: Oro en Máximos Históricos
+
+El precio del oro está en niveles récord por múltiples factores:
+- **Bancos centrales comprando récord** — 585 toneladas/trimestre en 2026
+- **Incertidumbre geopolítica** — guerras, tensiones comerciales, deuda de EE.UU.
+- **Inflación persistente** — el oro es la cobertura clásica contra inflación
+- **JP Morgan proyecta $5,055/oz** para Q4 2026 (actualmente ~$2,900-3,000/oz)
+
+## Proyecto Windfall (Canadá) — El Futuro
+
+Gold Fields compró Osisko Mining en 2024 por C$1.93B, obteniendo 100% del proyecto Windfall en Quebec:
+- **Reservas:** 3.2M oz a 8.1 g/t (grado altísimo — top 10 global)
+- **Producción esperada:** ~300K oz/año
+- **AISC esperado:** $758/oz (menos de la mitad del promedio de la empresa)
+- **Inicio:** Finales de 2026 / inicio 2027
+- **Alimentado por hidroelectricidad** — huella de carbono baja
+
+## ¿Por Qué Nos Gusta?
+
+1. **Profit se triplicó** — de $1.25B a $3.57B. Free cash flow 5x mayor
+2. **Dividendo del 5.1%** + dividendo especial + recompras = $1.7B devueltos
+3. **P/E de 12x, forward de 8.5x** — baratísima para lo que genera
+4. **Oro en máximos** — bancos centrales comprando récord, JP Morgan ve $5,055/oz
+5. **Diversificación geográfica** — 5 países, no depende de un solo lugar
+6. **Windfall** — nueva mina en Canadá de bajo costo va a aumentar producción y bajar AISC
+7. **Cobertura contra inflación** — el oro sube cuando todo lo demás baja
+
+## Riesgos
+
+1. **Dependencia del precio del oro** — si el oro cae, Gold Fields cae más fuerte (apalancamiento operativo)
+2. **Sudáfrica** — problemas de electricidad (loadshedding), regulación minera, inestabilidad política
+3. **Ghana** — riesgo geopolítico, regulación cambiante
+4. **Volatilidad extrema** — rango 52 semanas de $19.21 a $61.64. No es para cardíacos
+5. **Costos de minería suben** — energía, mano de obra, equipos. AISC puede aumentar
+6. **Windfall capex alto** — C$1.7-1.9B de inversión, riesgo de sobrecostos
+7. **Dividendo variable** — depende del precio del oro y del cash flow, no es fijo
+
+---
+
+*Research fecha: 16 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 55.0,
+    analyst_upside: 15.0,
+    status: "active",
+    first_researched_at: "2026-03-16T00:00:00Z",
+    last_updated_at: "2026-03-16T00:00:00Z",
+    next_review_at: "2026-09-16T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -1410,6 +1527,17 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #10* — Mar 16, 2026\n\n🏢 *Rollins / Orkin* (ROL) — $55.33\n\n🛍️ *Sus marcas*: Orkin (#1 en control de plagas), HomeTeam Pest Defense, Clark Pest Control, Critter Control, Western Pest Services\n\n🌍 *Presencia*: EE.UU. (líder nacional), Canadá, Australia. 24 años consecutivos creciendo ventas.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.32% anual* de dividendo — 35 años sin fallar un solo pago. Cada vez que alguien llama a Orkin porque tiene cucarachas, termitas o ratones — parte de ese dinero llega a ti. Y las plagas no entienden de recesiones.\n\n⚠️ *El riesgo*: La acción es cara (P/E de 51x, el doble de su industria).\n\n🆕 Posición #10\n🔗 https://vectorialdata.com/stocks/ROL\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
   },
+  {
+    id: 11,
+    stock_id: 15,
+    ticker: "GFI",
+    type: "new" as const,
+    cycle_number: 3,
+    price: 47.72,
+    date: "2026-03-16",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #11* — Mar 16, 2026\n\n🏢 *Gold Fields* (GFI) — $47.72\n\n🛍️ *Su producto*: Oro. Extraen 2.44 millones de onzas al año de minas en Sudáfrica, Ghana, Australia, Perú y Chile. Están construyendo una nueva mina en Canadá.\n\n🌍 *Presencia*: 5 países — Sudáfrica, Ghana, Australia, Perú, Chile + nueva mina en Canadá (2027)\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.1% anual* de dividendo — más un dividendo especial este año. Su profit se TRIPLICÓ en 2025. Devolvieron $1.7 mil millones al accionista. Cada vez que el oro sube, tu inversión crece.\n\n⚠️ *El riesgo*: La acción es muy volátil (rango de $19 a $62 en un año). Si el oro baja, Gold Fields baja más fuerte.\n\n🆕 Posición #11\n🔗 https://vectorialdata.com/stocks/GFI\n\n💡 ¿Cuánto invertir? Lo que puedas mantener CADA MES. $90/mes = $3 por pick. $300/mes = $10 por pick.`,
+  },
 ];
 
 export const cycles = [
@@ -1428,5 +1556,13 @@ export const cycles = [
     target_count: 5,
     current_count: 5,
     status: "completed" as const,
+  },
+  {
+    id: 3,
+    cycle_number: 3,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 1,
+    status: "active" as const,
   },
 ];
