@@ -7,11 +7,11 @@ interface Cycle {
 export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
   if (!cycle) {
     return (
-      <div className="border border-zinc-800 rounded-xl p-5">
-        <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">
+      <div className="border border-border rounded-xl p-5">
+        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
           Current Cycle
         </h3>
-        <p className="text-sm text-zinc-500 mt-3">
+        <p className="text-sm text-text-faint mt-3">
           No active cycle. Waiting for the next round of picks.
         </p>
       </div>
@@ -21,16 +21,16 @@ export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
   const dots = Array.from({ length: cycle.target_count }, (_, i) => i);
 
   return (
-    <div className="border border-zinc-800 rounded-xl p-5">
+    <div className="border border-border rounded-xl p-5">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">
+        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
           Current Cycle
         </h3>
         <span
           className={`text-xs px-3 py-1 rounded-full font-medium ${
             cycle.type === "new"
-              ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-              : "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+              ? "bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30"
+              : "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30"
           }`}
         >
           {cycle.type === "new" ? "New Stocks" : "Rebuys"}
@@ -46,15 +46,15 @@ export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
                   ? cycle.type === "new"
                     ? "bg-blue-500"
                     : "bg-emerald-500"
-                  : "bg-zinc-800"
+                  : "bg-progress-bg"
               }`}
             />
-            <span className="text-xs text-zinc-500">{i + 1}</span>
+            <span className="text-xs text-text-faint">{i + 1}</span>
           </div>
         ))}
       </div>
 
-      <p className="text-sm text-zinc-400 mt-4">
+      <p className="text-sm text-text-muted mt-4">
         {cycle.current_count} of {cycle.target_count}{" "}
         {cycle.type === "new" ? "new stocks" : "rebuys"} completed.{" "}
         {cycle.target_count - cycle.current_count} remaining.

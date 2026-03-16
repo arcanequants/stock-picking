@@ -12,7 +12,6 @@ interface Snapshot {
 export default function PerformanceMetrics() {
   const [latest, setLatest] = useState<Snapshot | null>(null);
   const [firstDate, setFirstDate] = useState<string | null>(null);
-  const [totalSnapshots, setTotalSnapshots] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,7 +21,6 @@ export default function PerformanceMetrics() {
         if (data.length > 0) {
           setLatest(data[data.length - 1]);
           setFirstDate(data[0].date);
-          setTotalSnapshots(data.length);
         }
       })
       .catch(() => {})
@@ -33,7 +31,7 @@ export default function PerformanceMetrics() {
     return (
       <div className="grid grid-cols-3 gap-4 animate-pulse">
         {[...Array(3)].map((_, i) => (
-          <div key={i} className="border border-zinc-800 rounded-xl p-4 h-24" />
+          <div key={i} className="border border-border rounded-xl p-4 h-24" />
         ))}
       </div>
     );
@@ -53,12 +51,12 @@ export default function PerformanceMetrics() {
             : "border-red-500/30 bg-red-500/5"
         }`}
       >
-        <p className="text-xs text-zinc-500 uppercase tracking-wider">
+        <p className="text-xs text-text-faint uppercase tracking-wider">
           Return
         </p>
         <p
           className={`text-2xl font-bold font-mono mt-1 ${
-            isPositive ? "text-emerald-400" : "text-red-400"
+            isPositive ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"
           }`}
         >
           {isPositive ? "+" : ""}
@@ -66,23 +64,23 @@ export default function PerformanceMetrics() {
         </p>
       </div>
 
-      <div className="border border-zinc-800 rounded-xl p-4">
-        <p className="text-xs text-zinc-500 uppercase tracking-wider">
+      <div className="border border-border rounded-xl p-4">
+        <p className="text-xs text-text-faint uppercase tracking-wider">
           Positions
         </p>
-        <p className="text-2xl font-bold font-mono text-white mt-1">
+        <p className="text-2xl font-bold font-mono text-foreground mt-1">
           {positions}
         </p>
-        <p className="text-xs text-zinc-500 mt-0.5">
+        <p className="text-xs text-text-faint mt-0.5">
           active
         </p>
       </div>
 
-      <div className="border border-zinc-800 rounded-xl p-4">
-        <p className="text-xs text-zinc-500 uppercase tracking-wider">
+      <div className="border border-border rounded-xl p-4">
+        <p className="text-xs text-text-faint uppercase tracking-wider">
           Since
         </p>
-        <p className="text-lg font-bold text-white mt-1">
+        <p className="text-lg font-bold text-foreground mt-1">
           {firstDate
             ? new Date(firstDate + "T00:00:00").toLocaleDateString("en-US", {
                 day: "numeric",
@@ -91,7 +89,7 @@ export default function PerformanceMetrics() {
               })
             : "—"}
         </p>
-        <p className="text-xs text-zinc-500 mt-0.5">
+        <p className="text-xs text-text-faint mt-0.5">
           {firstDate ? `${Math.ceil((Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000)} days` : ""}
         </p>
       </div>

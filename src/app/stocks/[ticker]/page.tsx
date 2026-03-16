@@ -176,12 +176,12 @@ export default async function StockResearchPage({
   return (
     <div className="max-w-4xl mx-auto">
       {/* Breadcrumb */}
-      <div className="text-sm text-zinc-500 mb-6">
-        <Link href="/stocks" className="hover:text-zinc-300">
+      <div className="text-sm text-text-faint mb-6">
+        <Link href="/stocks" className="hover:text-text-secondary">
           Stocks
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-zinc-300">{stock.ticker}</span>
+        <span className="text-text-secondary">{stock.ticker}</span>
       </div>
 
       {/* Header */}
@@ -189,18 +189,18 @@ export default async function StockResearchPage({
         <div>
           <h1 className="text-3xl font-bold">
             {stock.ticker}{" "}
-            <span className="text-zinc-400 font-normal text-xl">
+            <span className="text-text-muted font-normal text-xl">
               — {stock.name}
             </span>
           </h1>
           <div className="flex gap-2 mt-2">
-            <span className="text-xs px-2 py-1 rounded bg-zinc-800 text-zinc-400">
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">
               {stock.sector}
             </span>
-            <span className="text-xs px-2 py-1 rounded bg-zinc-800 text-zinc-400">
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">
               {stock.region}
             </span>
-            <span className="text-xs px-2 py-1 rounded bg-zinc-800 text-zinc-400">
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">
               {stock.country}
             </span>
           </div>
@@ -209,7 +209,7 @@ export default async function StockResearchPage({
           <p className="text-3xl font-mono font-bold">
             ${stock.price?.toFixed(2)}
           </p>
-          <p className="text-sm text-zinc-400 mt-1">
+          <p className="text-sm text-text-muted mt-1">
             Target: ${stock.analyst_target?.toFixed(2)} (
             {stock.analyst_upside && stock.analyst_upside > 0 ? "+" : ""}
             {stock.analyst_upside}%)
@@ -235,29 +235,29 @@ export default async function StockResearchPage({
 
       {/* Quick Summary */}
       <div className="grid md:grid-cols-3 gap-4 mb-8">
-        <div className="border border-zinc-800 rounded-xl p-4">
-          <h3 className="text-xs text-zinc-500 uppercase tracking-wider mb-2">
+        <div className="border border-border rounded-xl p-4">
+          <h3 className="text-xs text-text-faint uppercase tracking-wider mb-2">
             What they do
           </h3>
-          <p className="text-sm text-zinc-300">{stock.summary_what}</p>
+          <p className="text-sm text-text-secondary">{stock.summary_what}</p>
         </div>
         <div className="border border-emerald-500/20 rounded-xl p-4 bg-emerald-500/5">
-          <h3 className="text-xs text-emerald-400 uppercase tracking-wider mb-2">
+          <h3 className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">
             Why we like it
           </h3>
-          <p className="text-sm text-zinc-300">{stock.summary_why}</p>
+          <p className="text-sm text-text-secondary">{stock.summary_why}</p>
         </div>
         <div className="border border-red-500/20 rounded-xl p-4 bg-red-500/5">
-          <h3 className="text-xs text-red-400 uppercase tracking-wider mb-2">
+          <h3 className="text-xs text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">
             Key Risk
           </h3>
-          <p className="text-sm text-zinc-300">{stock.summary_risk}</p>
+          <p className="text-sm text-text-secondary">{stock.summary_risk}</p>
         </div>
       </div>
 
       {/* Full Research */}
       {researchHtml && (
-        <div className="border border-zinc-800 rounded-xl p-6 md:p-8">
+        <div className="border border-border rounded-xl p-6 md:p-8">
           <h2 className="text-xl font-bold mb-6">Full Research</h2>
           <div
             className="prose-research"
@@ -267,7 +267,7 @@ export default async function StockResearchPage({
       )}
 
       {/* Metadata */}
-      <div className="mt-8 text-xs text-zinc-600 flex gap-4">
+      <div className="mt-8 text-xs text-text-faint flex gap-4">
         <span>
           First researched:{" "}
           {new Date(stock.first_researched_at).toLocaleDateString()}
@@ -284,7 +284,7 @@ export default async function StockResearchPage({
         )}
       </div>
 
-      <p className="mt-4 text-xs text-zinc-600 italic">
+      <p className="mt-4 text-xs text-text-faint italic">
         This is not financial advice. Consult a licensed financial advisor.
       </p>
     </div>
@@ -299,9 +299,9 @@ function MetricBox({
   value: string | undefined;
 }) {
   return (
-    <div className="border border-zinc-800 rounded-lg p-3">
-      <p className="text-xs text-zinc-500">{label}</p>
-      <p className="text-lg font-mono font-bold text-white mt-1">
+    <div className="border border-border rounded-lg p-3">
+      <p className="text-xs text-text-faint">{label}</p>
+      <p className="text-lg font-mono font-bold text-foreground mt-1">
         {value || "—"}
       </p>
     </div>

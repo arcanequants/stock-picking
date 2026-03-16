@@ -10,7 +10,7 @@ export default function MobileNav() {
     <div className="md:hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="text-zinc-400 hover:text-white p-2"
+        className="text-text-muted hover:text-foreground p-2"
         aria-label="Toggle menu"
       >
         {open ? (
@@ -25,25 +25,25 @@ export default function MobileNav() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 right-0 bg-zinc-950 border-b border-zinc-800 py-4 px-4 space-y-3">
+        <div className="absolute top-full left-0 right-0 bg-background border-b border-border py-4 px-4 space-y-3">
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="block text-zinc-300 hover:text-white py-2"
+            className="block text-text-secondary hover:text-foreground py-2"
           >
             Home
           </Link>
           <Link
             href="/portfolio"
             onClick={() => setOpen(false)}
-            className="block text-zinc-300 hover:text-white py-2"
+            className="block text-text-secondary hover:text-foreground py-2"
           >
             Portfolio
           </Link>
           <Link
             href="/stocks"
             onClick={() => setOpen(false)}
-            className="block text-zinc-300 hover:text-white py-2"
+            className="block text-text-secondary hover:text-foreground py-2"
           >
             Stocks
           </Link>

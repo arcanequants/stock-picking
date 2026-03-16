@@ -35,17 +35,17 @@ export default function PerformanceChart() {
 
   if (loading) {
     return (
-      <div className="border border-zinc-800 rounded-xl p-6 h-80 animate-pulse" />
+      <div className="border border-border rounded-xl p-6 h-80 animate-pulse" />
     );
   }
 
   if (data.length === 0) {
     return (
-      <div className="border border-zinc-800 rounded-xl p-6">
-        <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+      <div className="border border-border rounded-xl p-6">
+        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
           Portfolio Performance
         </h3>
-        <p className="text-sm text-zinc-500">
+        <p className="text-sm text-text-faint">
           No performance data yet. Data will appear after the first daily
           snapshot.
         </p>
@@ -66,14 +66,14 @@ export default function PerformanceChart() {
   const lineColor = latestReturn >= 0 ? "#34d399" : "#f87171";
 
   return (
-    <div className="border border-zinc-800 rounded-xl p-6">
+    <div className="border border-border rounded-xl p-6">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">
+        <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
           Portfolio Performance
         </h3>
         <span
           className={`text-sm font-mono font-bold ${
-            latestReturn >= 0 ? "text-emerald-400" : "text-red-400"
+            latestReturn >= 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"
           }`}
         >
           {latestReturn >= 0 ? "+" : ""}
@@ -83,25 +83,25 @@ export default function PerformanceChart() {
 
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
+          <CartesianGrid strokeDasharray="3 3" stroke="var(--grid-stroke)" />
           <XAxis
             dataKey="date"
-            tick={{ fill: "#71717a", fontSize: 12 }}
-            axisLine={{ stroke: "#27272a" }}
+            tick={{ fill: "var(--tick-fill)", fontSize: 12 }}
+            axisLine={{ stroke: "var(--axis-stroke)" }}
             tickLine={false}
           />
           <YAxis
-            tick={{ fill: "#71717a", fontSize: 12 }}
-            axisLine={{ stroke: "#27272a" }}
+            tick={{ fill: "var(--tick-fill)", fontSize: 12 }}
+            axisLine={{ stroke: "var(--axis-stroke)" }}
             tickLine={false}
             tickFormatter={(v) => `${v}%`}
           />
           <Tooltip
             contentStyle={{
-              backgroundColor: "#18181b",
-              border: "1px solid #3f3f46",
+              backgroundColor: "var(--tooltip-bg)",
+              border: "1px solid var(--tooltip-border)",
               borderRadius: "8px",
-              color: "#fafafa",
+              color: "var(--foreground)",
               fontSize: "13px",
             }}
             formatter={(value) => {
@@ -109,7 +109,7 @@ export default function PerformanceChart() {
               return [`${v >= 0 ? "+" : ""}${v.toFixed(2)}%`, "Return"];
             }}
           />
-          <ReferenceLine y={0} stroke="#3f3f46" strokeDasharray="3 3" />
+          <ReferenceLine y={0} stroke="var(--border-secondary)" strokeDasharray="3 3" />
           <Line
             type="monotone"
             dataKey="return_pct"

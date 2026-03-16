@@ -89,8 +89,8 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
       {activeStocks.length > 0 && (
         <div className="grid md:grid-cols-2 gap-6">
           {/* Sector Allocation */}
-          <div className="border border-zinc-800 rounded-xl p-5">
-            <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+          <div className="border border-border rounded-xl p-5">
+            <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
               Sector Allocation
             </h3>
             <div className="space-y-3">
@@ -99,12 +99,12 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
                 return (
                   <div key={sector}>
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-zinc-300">{sector}</span>
-                      <span className="text-zinc-400 font-mono">
+                      <span className="text-text-secondary">{sector}</span>
+                      <span className="text-text-muted font-mono">
                         {pct.toFixed(0)}% ({count})
                       </span>
                     </div>
-                    <div className="w-full bg-zinc-800 rounded-full h-2">
+                    <div className="w-full bg-progress-bg rounded-full h-2">
                       <div
                         className={`h-2 rounded-full ${sectorColors[sector] || "bg-zinc-500"}`}
                         style={{ width: `${pct}%` }}
@@ -117,8 +117,8 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
           </div>
 
           {/* Region Allocation */}
-          <div className="border border-zinc-800 rounded-xl p-5">
-            <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+          <div className="border border-border rounded-xl p-5">
+            <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
               Region Allocation
             </h3>
             <div className="space-y-3">
@@ -127,12 +127,12 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
                 return (
                   <div key={region}>
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-zinc-300">{region}</span>
-                      <span className="text-zinc-400 font-mono">
+                      <span className="text-text-secondary">{region}</span>
+                      <span className="text-text-muted font-mono">
                         {pct.toFixed(0)}% ({count})
                       </span>
                     </div>
-                    <div className="w-full bg-zinc-800 rounded-full h-2">
+                    <div className="w-full bg-progress-bg rounded-full h-2">
                       <div
                         className={`h-2 rounded-full ${regionColors[region] || "bg-zinc-500"}`}
                         style={{ width: `${pct}%` }}
@@ -159,10 +159,10 @@ function StatBox({
   subtitle?: string;
 }) {
   return (
-    <div className="border border-zinc-800 rounded-xl p-4">
-      <p className="text-xs text-zinc-500 uppercase tracking-wider">{label}</p>
-      <p className="text-2xl font-bold text-white mt-1">{value}</p>
-      {subtitle && <p className="text-xs text-zinc-500 mt-1">{subtitle}</p>}
+    <div className="border border-border rounded-xl p-4">
+      <p className="text-xs text-text-faint uppercase tracking-wider">{label}</p>
+      <p className="text-2xl font-bold text-foreground mt-1">{value}</p>
+      {subtitle && <p className="text-xs text-text-faint mt-1">{subtitle}</p>}
     </div>
   );
 }

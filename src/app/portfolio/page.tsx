@@ -7,14 +7,12 @@ import { stocks, transactions, cycles } from "@/data/stocks";
 export default function PortfolioPage() {
   const activeStocks = stocks.filter((s) => s.status === "active");
   const currentCycle = cycles[0] ?? null;
-  const hasActivity =
-    activeStocks.length > 0 || transactions.length > 0 || currentCycle;
 
   return (
     <div className="space-y-10">
       <section>
         <h1 className="text-3xl font-bold mb-2">Portfolio Dashboard</h1>
-        <p className="text-zinc-400">
+        <p className="text-text-muted">
           Overview of our positions, allocations, and cycle progress.
         </p>
       </section>
@@ -31,48 +29,48 @@ export default function PortfolioPage() {
 
       {/* Transaction History */}
       {transactions.length > 0 && (
-        <section className="border border-zinc-800 rounded-xl p-5">
-          <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+        <section className="border border-border rounded-xl p-5">
+          <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
             Transaction History
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-zinc-800">
-                  <th className="text-left py-2 px-3 text-zinc-500">Date</th>
-                  <th className="text-left py-2 px-3 text-zinc-500">Ticker</th>
-                  <th className="text-left py-2 px-3 text-zinc-500">Type</th>
-                  <th className="text-left py-2 px-3 text-zinc-500">Cycle</th>
-                  <th className="text-right py-2 px-3 text-zinc-500">Price</th>
+                <tr className="border-b border-border">
+                  <th className="text-left py-2 px-3 text-text-faint">Date</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Ticker</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Type</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Cycle</th>
+                  <th className="text-right py-2 px-3 text-text-faint">Price</th>
                 </tr>
               </thead>
               <tbody>
                 {transactions.map((tx) => (
                   <tr
                     key={tx.id}
-                    className="border-b border-zinc-800/50 hover:bg-zinc-900/50"
+                    className="border-b border-border/50 hover:bg-card-hover"
                   >
-                    <td className="py-2 px-3 font-mono text-zinc-300">
+                    <td className="py-2 px-3 font-mono text-text-secondary">
                       {tx.date}
                     </td>
-                    <td className="py-2 px-3 font-bold text-white">
+                    <td className="py-2 px-3 font-bold text-foreground">
                       {tx.ticker}
                     </td>
                     <td className="py-2 px-3">
                       <span
                         className={`text-xs px-2 py-0.5 rounded-full ${
                           tx.type === "new"
-                            ? "bg-blue-500/20 text-blue-400"
-                            : "bg-emerald-500/20 text-emerald-400"
+                            ? "bg-blue-500/20 text-blue-600 dark:text-blue-400"
+                            : "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400"
                         }`}
                       >
                         {tx.type === "new" ? "New" : "Rebuy"}
                       </span>
                     </td>
-                    <td className="py-2 px-3 text-zinc-400">
+                    <td className="py-2 px-3 text-text-muted">
                       #{tx.cycle_number}
                     </td>
-                    <td className="py-2 px-3 text-right font-mono text-white">
+                    <td className="py-2 px-3 text-right font-mono text-foreground">
                       ${tx.price.toFixed(2)}
                     </td>
                   </tr>
@@ -85,25 +83,25 @@ export default function PortfolioPage() {
 
       {/* Active Positions Table */}
       {activeStocks.length > 0 && (
-        <section className="border border-zinc-800 rounded-xl p-5">
-          <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+        <section className="border border-border rounded-xl p-5">
+          <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
             Active Positions
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-zinc-800">
-                  <th className="text-left py-2 px-3 text-zinc-500">Ticker</th>
-                  <th className="text-left py-2 px-3 text-zinc-500">Name</th>
-                  <th className="text-left py-2 px-3 text-zinc-500">Sector</th>
-                  <th className="text-right py-2 px-3 text-zinc-500">Price</th>
-                  <th className="text-right py-2 px-3 text-zinc-500">
+                <tr className="border-b border-border">
+                  <th className="text-left py-2 px-3 text-text-faint">Ticker</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Name</th>
+                  <th className="text-left py-2 px-3 text-text-faint">Sector</th>
+                  <th className="text-right py-2 px-3 text-text-faint">Price</th>
+                  <th className="text-right py-2 px-3 text-text-faint">
                     Div Yield
                   </th>
-                  <th className="text-right py-2 px-3 text-zinc-500">
+                  <th className="text-right py-2 px-3 text-text-faint">
                     Upside
                   </th>
-                  <th className="text-right py-2 px-3 text-zinc-500">
+                  <th className="text-right py-2 px-3 text-text-faint">
                     Rating
                   </th>
                 </tr>
@@ -112,30 +110,30 @@ export default function PortfolioPage() {
                 {activeStocks.map((s) => (
                   <tr
                     key={s.ticker}
-                    className="border-b border-zinc-800/50 hover:bg-zinc-900/50"
+                    className="border-b border-border/50 hover:bg-card-hover"
                   >
-                    <td className="py-2 px-3 font-bold text-white">
+                    <td className="py-2 px-3 font-bold text-foreground">
                       {s.ticker}
                     </td>
-                    <td className="py-2 px-3 text-zinc-300">{s.name}</td>
-                    <td className="py-2 px-3 text-zinc-400">{s.sector}</td>
-                    <td className="py-2 px-3 text-right font-mono text-white">
+                    <td className="py-2 px-3 text-text-secondary">{s.name}</td>
+                    <td className="py-2 px-3 text-text-muted">{s.sector}</td>
+                    <td className="py-2 px-3 text-right font-mono text-foreground">
                       ${s.price?.toFixed(2)}
                     </td>
-                    <td className="py-2 px-3 text-right font-mono text-zinc-300">
+                    <td className="py-2 px-3 text-right font-mono text-text-secondary">
                       {s.dividend_yield}%
                     </td>
                     <td
                       className={`py-2 px-3 text-right font-mono ${
                         (s.analyst_upside || 0) > 0
-                          ? "text-emerald-400"
-                          : "text-red-400"
+                          ? "text-emerald-600 dark:text-emerald-400"
+                          : "text-red-600 dark:text-red-400"
                       }`}
                     >
                       {s.analyst_upside && s.analyst_upside > 0 ? "+" : ""}
                       {s.analyst_upside}%
                     </td>
-                    <td className="py-2 px-3 text-right text-zinc-300">
+                    <td className="py-2 px-3 text-right text-text-secondary">
                       {s.analyst_consensus}
                     </td>
                   </tr>

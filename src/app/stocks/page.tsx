@@ -10,7 +10,7 @@ export default function StocksPage() {
     <div className="space-y-10">
       <section>
         <h1 className="text-3xl font-bold mb-2">All Stocks</h1>
-        <p className="text-zinc-400">
+        <p className="text-text-muted">
           {stocks.length} stocks tracked. {active.length} active positions.
         </p>
       </section>
