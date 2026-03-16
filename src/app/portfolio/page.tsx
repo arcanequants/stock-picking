@@ -60,7 +60,7 @@ export default function PortfolioPage() {
                       <span
                         className={`text-xs px-2 py-0.5 rounded-full ${
                           tx.type === "new"
-                            ? "bg-blue-500/20 text-blue-600 dark:text-blue-400"
+                            ? "bg-brand-subtle text-brand-text"
                             : "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400"
                         }`}
                       >

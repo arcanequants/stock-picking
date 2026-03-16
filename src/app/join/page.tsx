@@ -10,8 +10,8 @@ export default function JoinPage() {
       </section>
 
       {/* Pricing Card */}
-      <div className="border border-blue-500/30 bg-blue-500/5 rounded-2xl p-8 mx-auto max-w-md">
-        <p className="text-sm text-blue-600 dark:text-blue-400 font-medium uppercase tracking-wider mb-2">
+      <div className="border border-brand-border bg-brand-subtle rounded-2xl p-8 mx-auto max-w-md">
+        <p className="text-sm text-brand-text font-medium uppercase tracking-wider mb-2">
           Monthly Membership
         </p>
         <div className="flex items-baseline justify-center gap-1 mb-4">
@@ -44,7 +44,7 @@ export default function JoinPage() {
 
         <a
           href="#"
-          className="block w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-semibold transition-colors text-center"
+          className="block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center"
         >
           Join Now
         </a>

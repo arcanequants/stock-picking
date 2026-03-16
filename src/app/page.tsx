@@ -41,7 +41,7 @@ export default function Home() {
         <div className="mt-8">
           <Link
             href="/join"
-            className="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-colors"
+            className="inline-block bg-brand hover:bg-brand-hover text-white px-8 py-3 rounded-xl font-semibold text-lg transition-colors"
           >
             Empieza por $1.99/mes
           </Link>
@@ -92,7 +92,7 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold mx-auto">
+            <div className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center text-xl font-bold mx-auto">
               1
             </div>
             <h3 className="font-semibold mt-4 mb-2">Recibes un pick</h3>
@@ -101,7 +101,7 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center">
-            <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold mx-auto">
+            <div className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center text-xl font-bold mx-auto">
               2
             </div>
             <h3 className="font-semibold mt-4 mb-2">Compras tu fracción</h3>
@@ -110,7 +110,7 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center">
-            <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold mx-auto">
+            <div className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center text-xl font-bold mx-auto">
               3
             </div>
             <h3 className="font-semibold mt-4 mb-2">Tu portafolio crece</h3>
@@ -178,7 +178,7 @@ export default function Home() {
               </p>
               <Link
                 href="/join"
-                className="text-sm text-blue-600 dark:text-blue-400 font-medium hover:text-blue-500 dark:hover:text-blue-300"
+                className="text-sm text-brand-text font-medium hover:text-brand-hover"
               >
                 Ver más →
               </Link>
@@ -212,8 +212,8 @@ export default function Home() {
 
       {/* ── SECTION 6: PRICING ── */}
       <section className="text-center">
-        <div className="border border-blue-500/30 bg-blue-500/5 rounded-2xl p-10 max-w-md mx-auto">
-          <p className="text-sm text-blue-600 dark:text-blue-400 font-medium uppercase tracking-wider mb-3">
+        <div className="border border-brand-border bg-brand-subtle rounded-2xl p-10 max-w-md mx-auto">
+          <p className="text-sm text-brand-text font-medium uppercase tracking-wider mb-3">
             Membresía mensual
           </p>
           <div className="flex items-baseline justify-center gap-1">
@@ -224,7 +224,7 @@ export default function Home() {
 
           <Link
             href="/join"
-            className="block w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-semibold transition-colors text-center mt-6"
+            className="block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center mt-6"
           >
             Empieza ahora
           </Link>
@@ -273,7 +273,7 @@ export default function Home() {
         <div className="mt-6">
           <Link
             href="/join"
-            className="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-colors"
+            className="inline-block bg-brand hover:bg-brand-hover text-white px-8 py-3 rounded-xl font-semibold text-lg transition-colors"
           >
             Empieza por $1.99/mes
           </Link>

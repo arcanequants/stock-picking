@@ -17,7 +17,7 @@ export default function StockCard({ stock }: { stock: Stock }) {
         <div className="flex items-start justify-between mb-3">
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="text-lg font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <h3 className="text-lg font-bold text-foreground group-hover:text-brand-text transition-colors">
                 {stock.ticker}
               </h3>
               <span

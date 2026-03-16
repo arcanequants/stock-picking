@@ -29,7 +29,7 @@ export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
         <span
           className={`text-xs px-3 py-1 rounded-full font-medium ${
             cycle.type === "new"
-              ? "bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30"
+              ? "bg-brand-subtle text-brand-text border border-brand-border"
               : "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30"
           }`}
         >
@@ -44,7 +44,7 @@ export default function CycleTracker({ cycle }: { cycle: Cycle | null }) {
               className={`w-full h-3 rounded-full transition-all ${
                 i < cycle.current_count
                   ? cycle.type === "new"
-                    ? "bg-blue-500"
+                    ? "bg-brand"
                     : "bg-emerald-500"
                   : "bg-progress-bg"
               }`}

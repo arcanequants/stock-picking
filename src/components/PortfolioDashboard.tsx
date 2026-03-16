@@ -44,7 +44,7 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
   const remaining = cycle ? cycle.target_count - cycle.current_count : 0;
 
   const sectorColors: Record<string, string> = {
-    Financials: "bg-blue-500",
+    Financials: "bg-indigo-500",
     Technology: "bg-purple-500",
     Industrials: "bg-amber-500",
     Materials: "bg-green-500",
@@ -58,7 +58,7 @@ export default function PortfolioDashboard({ stocks, cycle }: Props) {
   };
 
   const regionColors: Record<string, string> = {
-    "North America": "bg-blue-500",
+    "North America": "bg-indigo-500",
     Europe: "bg-emerald-500",
     Asia: "bg-amber-500",
     LatAm: "bg-purple-500",

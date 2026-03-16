@@ -37,7 +37,7 @@ export default function RootLayout({
           <nav className="border-b border-border sticky top-0 backdrop-blur-md z-50 relative" style={{ background: 'var(--nav-bg)' }}>
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
               <Link href="/" className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-sm font-bold text-white">
+                <div className="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-sm font-bold text-white">
                   VD
                 </div>
                 <span className="font-semibold text-lg">Vectorial Data</span>
@@ -66,7 +66,7 @@ export default function RootLayout({
                 <ThemeToggle />
                 <Link
                   href="/join"
-                  className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-1.5 rounded-lg transition-colors font-medium"
+                  className="bg-brand hover:bg-brand-hover text-white px-4 py-1.5 rounded-lg transition-colors font-medium"
                 >
                   Join $1.99/mo
                 </Link>

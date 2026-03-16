@@ -21,6 +21,12 @@
   --grid-stroke: #e4e4e7;
   --axis-stroke: #d4d4d8;
   --tick-fill: #71717a;
+  /* Brand */
+  --brand: #4f46e5;
+  --brand-hover: #4338ca;
+  --brand-subtle: #eef2ff;
+  --brand-border: rgba(79, 70, 229, 0.3);
+  --brand-text: #4f46e5;
 }
 
 .dark {
@@ -41,6 +47,12 @@
   --grid-stroke: #27272a;
   --axis-stroke: #27272a;
   --tick-fill: #71717a;
+  /* Brand */
+  --brand: #818cf8;
+  --brand-hover: #a5b4fc;
+  --brand-subtle: rgba(79, 70, 229, 0.1);
+  --brand-border: rgba(129, 140, 248, 0.3);
+  --brand-text: #818cf8;
 }
 
 @theme inline {
@@ -55,6 +67,11 @@
   --color-text-faint: var(--text-faint);
   --color-tag-bg: var(--tag-bg);
   --color-progress-bg: var(--progress-bg);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-subtle: var(--brand-subtle);
+  --color-brand-border: var(--brand-border);
+  --color-brand-text: var(--brand-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -133,7 +150,7 @@ body {
 }
 
 .prose-research blockquote {
-  border-left: 3px solid #3b82f6;
+  border-left: 3px solid var(--brand);
   padding-left: 1rem;
   margin: 1rem 0;
   color: var(--text-faint);

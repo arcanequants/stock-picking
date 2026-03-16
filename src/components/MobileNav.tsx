@@ -50,7 +50,7 @@ export default function MobileNav() {
           <Link
             href="/join"
             onClick={() => setOpen(false)}
-            className="block bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-center font-medium"
+            className="block bg-brand hover:bg-brand-hover text-white px-4 py-2 rounded-lg text-center font-medium"
           >
             Join $1.99/mo
           </Link>
