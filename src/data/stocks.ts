@@ -1414,6 +1414,155 @@ Gold Fields compró Osisko Mining en 2024 por C$1.93B, obteniendo 100% del proye
     last_updated_at: "2026-03-16T00:00:00Z",
     next_review_at: "2026-09-16T00:00:00Z",
   },
+  {
+    id: 16,
+    ticker: "WAL",
+    name: "Western Alliance Bancorporation",
+    sector: "Financials",
+    industry: "Regional Banking",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 68.16,
+    pe_ratio: 7.81,
+    pe_forward: 5.75,
+    dividend_yield: 2.48,
+    market_cap_b: 7.5,
+    eps: 8.73,
+    summary_short:
+      "Banco comercial especializado en nichos de alto crecimiento (tech, startups, real estate). Sobrevivió la crisis de SVB en 2023 y reportó récord de ingresos en 2025 con EPS +23%. Forward P/E de 5.75x con ROE de 16.9% — baratísimo para la calidad que ofrece.",
+    summary_what:
+      "Western Alliance es un banco comercial regional de EE.UU. que opera diferente a los bancos tradicionales: en lugar de sucursales, se especializa en líneas de negocio verticales para industrias específicas — tecnología, startups, capital privado, legal, gaming, real estate y warehouse lending. Con $93B en activos, son el banco #1 para PYMEs en el suroeste de EE.UU.",
+    summary_why:
+      "Crecieron depósitos $15B en 2025 tras recuperarse de la crisis de SVB. Q4 2025: revenue +17% YoY, EPS $2.59 (+33% YoY), ROE de 16.9%. Proyectan +$6B en préstamos y +$8B en depósitos para 2026. Su modelo de banca especializada genera márgenes superiores (NIM 3.51%) y son líderes nacionales en warehouse lending.",
+    summary_risk:
+      "Van a cruzar los $100B en activos en 2-3 años, lo que trae regulación más estricta. Exposición a sectores cíclicos como tech y real estate. Memoria fresca de la crisis bancaria de 2023 cuando perdieron $9.5B en depósitos en días.",
+    research_full: `# Western Alliance Bancorporation (WAL) — Research Completo
+
+## Precio: $68.16 | P/E: 7.8 | P/E Forward: 5.75 | Div Yield: 2.48% | Market Cap: $7.5B
+
+---
+
+## ¿Qué es Western Alliance?
+
+Western Alliance Bancorporation es un **banco comercial regional** con sede en Phoenix, Arizona, que opera de forma completamente diferente a los bancos tradicionales. En lugar de tener cientos de sucursales físicas, **se especializan en líneas de negocio verticales** dirigidas a industrias específicas: tecnología, startups financiadas por VCs, legal, gaming, hospitality, real estate construction, y warehouse lending (préstamos para originadores de hipotecas).
+
+Con **$93 mil millones en activos** (Q4 2025) y presencia en mercados clave como California, Nueva York, Texas y Nevada, Western Alliance es el banco #1 para PYMEs en el suroeste de Estados Unidos según Global Finance.
+
+## Modelo de Negocio — Banca Especializada
+
+Western Alliance no compite por clientes retail ni tiene cajeros automáticos. Su modelo es **"banca de relación especializada"**:
+
+- Loan Production Offices (LPOs) en lugar de sucursales retail
+- Equipos especializados por industria con deep expertise
+- Relaciones directas con CFOs, founders de startups, firmas legales y desarrolladores inmobiliarios
+
+### Líneas de Negocio Especializadas
+
+| Línea | Descripción |
+|-------|-------------|
+| **Tech & Innovation** | Banca para startups, VC-backed companies, fintech |
+| **Mortgage Warehouse Lending** | Préstamos corto plazo para originadores de hipotecas — **líderes nacionales** |
+| **Juris Banking** | Especializado en firmas legales |
+| **Gaming Finance** | Casinos y hospitality |
+| **Private Equity & VC** | Banking para fondos de inversión |
+| **Real Estate Construction** | Préstamos para desarrollos comerciales y multifamily |
+| **Healthcare & Life Sciences** | Biotech, dispositivos médicos |
+
+## Resultados Q4 2025 y Full Year 2025
+
+### Q4 2025
+
+| Métrica | Q4 2025 | Q4 2024 | Cambio |
+|---------|---------|---------|--------|
+| **EPS** | $2.59 | $1.95 | **+33%** |
+| **Revenue** | $976.2M | $833M | **+17%** |
+| **Net Interest Income** | $766.2M | $666M | **+15%** |
+| **NIM** | 3.51% | 3.48% | +3 bps |
+| **ROA** | 1.23% | — | — |
+| **ROTCE** | 16.9% | — | — |
+
+### Full Year 2025 — Récords Históricos
+
+- **Net Interest Income: $2.9B** — récord
+- **Net Revenue: $3.5B** — récord
+- **Full Year EPS: $8.73** (+23% vs 2024)
+- **Activos Totales: $93B**
+- **Deposit Growth: $15B+** desde los mínimos post-SVB
+
+## La Crisis de SVB y la Recuperación Épica
+
+### Marzo 2023: La Pesadilla
+
+Cuando Silicon Valley Bank (SVB) colapsó, Western Alliance fue golpeado por el pánico:
+
+- **$9.5B en fuga de depósitos** en 48 horas
+- Acción cayó -75% en días
+- El mercado lo daba por muerto
+
+### 2024-2025: La Recuperación
+
+- **$15B+ en nuevos depósitos** recuperados
+- Management demostró que el modelo es sólido
+- El pánico fue irracional — los fundamentales nunca estuvieron en riesgo
+
+## Guidance 2026
+
+- **Loan Growth: +$6B** (lidera el peer group)
+- **Deposit Growth: +$8B**
+- **Net Charge-offs: 25-30 bps** (elevados en H1, mejorando en H2)
+- Management espera "otro año de fuerte momentum en earnings"
+
+## Ventajas Competitivas
+
+1. **Especialización en nichos** — warehouse lending (top 3 nacional), tech banking (llenaron vacío de SVB), legal banking
+2. **Márgenes superiores** — NIM de 3.51% vs promedio de 3.2% en bancos regionales
+3. **Modelo de bajo costo** — sin red de sucursales costosas
+4. **ROE de 16.9%** — top tier, promedio del sector es 10-12%
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Strong Buy** |
+| # Analistas Buy | 15 |
+| # Analistas Hold | 0 |
+| # Analistas Sell | 1 |
+| Price Target Promedio | **$101** |
+| Price Target Alto | $118 |
+| Price Target Bajo | $85 |
+| **Upside al Target** | **+49%** |
+
+## ¿Por Qué Nos Gusta?
+
+1. **Recuperación post-crisis** — sobrevivió pérdida de $9.5B en depósitos y salió más fuerte
+2. **Crecimiento líder** — $6B en loans + $8B en deposits proyectados para 2026
+3. **ROE de 16.9%** — uno de los más altos del sector bancario
+4. **Forward P/E de 5.75x** — absurdamente barato para esta calidad
+5. **EPS creciendo +23%** — momentum fuerte en earnings
+6. **Upside de +49%** — analistas ven target de $101 vs precio actual de $68
+7. **Dividendo de 2.48%** — income mientras esperas el crecimiento
+
+## Riesgos
+
+1. **Umbral de $100B** — al cruzar esa cifra en 2-3 años, entra regulación más estricta (stress tests CCAR)
+2. **Sectores cíclicos** — exposición a tech, real estate y startups que pueden sufrir en recesión
+3. **Memoria de SVB** — cualquier señal de estrés en depósitos puede causar pánico
+4. **Net charge-offs elevados** — 25-30 bps proyectados en 2026
+5. **Competencia en tech banking** — tras SVB, todos quieren este nicho (JPM, First Republic)
+
+---
+
+*Research fecha: 17 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 101.0,
+    analyst_upside: 49.0,
+    status: "active",
+    first_researched_at: "2026-03-17T00:00:00Z",
+    last_updated_at: "2026-03-17T00:00:00Z",
+    next_review_at: "2026-09-17T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -1538,6 +1687,17 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #11* — Mar 16, 2026\n\n🏢 *Gold Fields* (GFI) — $47.72\n\n🛍️ *Su producto*: Oro. Extraen 2.44 millones de onzas al año de minas en Sudáfrica, Ghana, Australia, Perú y Chile. Están construyendo una nueva mina en Canadá.\n\n🌍 *Presencia*: 5 países — Sudáfrica, Ghana, Australia, Perú, Chile + nueva mina en Canadá (2027)\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.1% anual* de dividendo — más un dividendo especial este año. Su profit se TRIPLICÓ en 2025. Devolvieron $1.7 mil millones al accionista. Cada vez que el oro sube, tu inversión crece.\n\n⚠️ *El riesgo*: La acción es muy volátil (rango de $19 a $62 en un año). Si el oro baja, Gold Fields baja más fuerte.\n\n🆕 Posición #11\n🔗 https://vectorialdata.com/stocks/GFI\n\n💡 ¿Cuánto invertir? Lo que puedas mantener CADA MES. $90/mes = $3 por pick. $300/mes = $10 por pick.`,
   },
+  {
+    id: 12,
+    stock_id: 16,
+    ticker: "WAL",
+    type: "new" as const,
+    cycle_number: 3,
+    price: 68.16,
+    date: "2026-03-17",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #12* — Mar 17, 2026\n\n🏢 *Western Alliance Bank* (WAL) — $68.16\n\n🛍️ *Sus líneas*: Banca para startups tech, warehouse lending (#1 nacional), gaming, firmas legales, real estate — no es un banco de sucursales, es un banco de nichos especializados\n\n🌍 *Presencia*: EE.UU. — Arizona, California, Nueva York, Texas, Nevada. $93B en activos. Banco #1 para PYMEs en el suroeste de EE.UU.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.48% anual* de dividendo. Cada vez que una startup tech paga su línea de crédito, un casino refinancia, o un originador de hipotecas usa warehouse lending — parte de ese dinero llega a ti. Su profit creció 23% en 2025 y los analistas ven +49% de upside.\n\n⚠️ *El riesgo*: En 2023 perdieron $9.5B en depósitos en 48 horas por el pánico de SVB. Se recuperaron, pero el mercado tiene memoria.\n\n🆕 Posición #12\n🔗 https://vectorialdata.com/stocks/WAL\n\n💡 No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.`,
+  },
 ];
 
 export const cycles = [
@@ -1562,7 +1722,7 @@ export const cycles = [
     cycle_number: 3,
     type: "new" as const,
     target_count: 5,
-    current_count: 1,
+    current_count: 2,
     status: "active" as const,
   },
 ];
