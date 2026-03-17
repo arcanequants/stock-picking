@@ -1563,6 +1563,131 @@ Cuando Silicon Valley Bank (SVB) colapsó, Western Alliance fue golpeado por el 
     last_updated_at: "2026-03-17T00:00:00Z",
     next_review_at: "2026-09-17T00:00:00Z",
   },
+  {
+    id: 17,
+    ticker: "SIEGY",
+    name: "Siemens AG",
+    sector: "Industrials",
+    industry: "Industrial Automation / Infrastructure",
+    country: "Germany",
+    region: "Europe",
+    currency: "USD",
+    price: 126.60,
+    pe_ratio: 22.02,
+    pe_forward: 17.28,
+    dividend_yield: 2.50,
+    market_cap_b: 197.6,
+    eps: 5.75,
+    summary_short:
+      "Gigante industrial alemán de 177 años líder en automatización, infraestructura inteligente y trenes. Cartera récord de €120B en órdenes pendientes. Crecimiento de 35% en centros de datos por el boom de IA. Dividendo del 2.5% con alianzas con NVIDIA y Microsoft.",
+    summary_what:
+      "Siemens fabrica tecnología de automatización industrial, infraestructura inteligente para edificios y centros de datos, y sistemas de transporte ferroviario. Opera en tres segmentos: Digital Industries (software y automatización), Smart Infrastructure (edificios, data centers, redes eléctricas) y Mobility (trenes y metros). Con $198B de market cap, es uno de los industriales más grandes del mundo.",
+    summary_why:
+      "Posicionada para el boom de IA e infraestructura digital — Smart Infrastructure creció 35% en centros de datos con €1,800M en contratos en EE.UU. Cartera récord de €120B en órdenes garantiza ingresos futuros. Q1 2026: órdenes +10%, revenue +8%, margen industrial 15.6%. Alianzas con NVIDIA y Microsoft para IA industrial. Elevaron guía de EPS para FY2026.",
+    summary_risk:
+      "Competencia intensa de Schneider Electric, ABB y gigantes tech entrando al mercado industrial. Efectos cambiarios adversos pesan sobre el crecimiento. El spin-off planeado del 30% de Siemens Healthineers puede generar volatilidad.",
+    research_full: `# Siemens AG (SIEGY) — Research Completo
+
+## Precio: $126.60 | P/E: 22.0 | P/E Forward: 17.3 | Div Yield: 2.5% | Market Cap: $197.6B
+
+---
+
+## ¿Qué es Siemens?
+
+Siemens AG es una **potencia industrial alemana de 177 años** que se ha reinventado como líder en tecnología industrial digital. Desarrolla y fabrica sistemas de automatización, infraestructura inteligente para edificios y redes eléctricas, y tecnología de transporte ferroviario.
+
+A diferencia de un fabricante industrial tradicional, Siemens combina equipos físicos con software avanzado, gemelos digitales e inteligencia artificial industrial.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | Crecimiento Guía FY2026 | Margen Esperado |
+|----------|-------------|------------------------|-----------------|
+| **Digital Industries** | Software de automatización, controladores, manufactura digital | 5% - 10% | 15% - 19% |
+| **Smart Infrastructure** | Edificios inteligentes, centros de datos, redes eléctricas | 6% - 9% | 18% - 19% |
+| **Mobility** | Trenes, metros, señalización ferroviaria | 8% - 10% | Sólido |
+
+### Participaciones Estratégicas
+- **Siemens Healthineers** — 67% de participación (plan de deconsolidar 30% en 2026)
+- **Siemens Energy** — ya separada como empresa independiente
+
+## Resultados FY2025 (terminó Sept 2025)
+
+| Métrica | Valor |
+|---------|-------|
+| **Ingresos** | €78.9B (+4%) |
+| **Órdenes** | €88.4B |
+| **Utilidad Industrial** | €11.8B (+3%) — récord |
+| **Free Cash Flow** | Récord histórico |
+| **Book-to-bill** | 1.12 |
+
+## Q1 FY2026 (Oct-Dic 2025)
+
+| Métrica | Valor | Cambio |
+|---------|-------|--------|
+| **Órdenes** | €21.4B | **+10% comparable** |
+| **Ingresos** | €19.1B | **+8% comparable** |
+| **Utilidad Industrial** | €2.9B | — |
+| **Margen** | 15.6% | Sólido |
+| **Cartera de órdenes** | €120B | **Récord histórico** |
+
+### Guía Elevada FY2026
+- **EPS:** €10.70 - €11.10 (subida desde €10.40 - €11.00)
+- **Crecimiento revenue:** 6% - 8%
+
+## El Boom de Centros de Datos
+
+Smart Infrastructure está en modo cohete:
+- **+35% de crecimiento** en soluciones de centros de datos
+- **€1,800M en contratos** en EE.UU. para infraestructura de IA y cloud
+- La IA necesita data centers → data centers necesitan infraestructura eléctrica → Siemens provee eso
+
+## Alianzas Estratégicas
+- **NVIDIA** — integración de IA en procesos industriales
+- **Microsoft** — gemelos digitales y automatización con Azure
+- Desarrollando **fábricas autónomas** con IA como control central
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| # Analistas Buy | 16 |
+| # Analistas Hold | 5 |
+| # Analistas Sell | 3 |
+| Price Target Promedio | **~$140** |
+| **Upside al Target** | **+10.5%** |
+
+## ¿Por Qué Nos Gusta?
+
+1. **Boom de IA = boom para Siemens** — la infraestructura detrás de la IA es exactamente donde son fuertes
+2. **Cartera récord de €120B** — órdenes pendientes garantizan ingresos para años
+3. **Smart Infrastructure creciendo 35%** en data centers
+4. **Alianzas con NVIDIA y Microsoft** — validan la estrategia de IA industrial
+5. **Márgenes industriales de 15.6%** — negocio rentable y mejorando
+6. **Dividendo del 2.5%** — income estable
+7. **Diversificación global** — Europa, Asia, EE.UU.
+
+## Riesgos
+
+1. **Competencia intensa** — Schneider Electric, ABB, y gigantes tech atacan el mercado
+2. **Efectos cambiarios** — Siemens advirtió sobre cargas sustanciales de tipo de cambio en FY2026
+3. **Exposición geopolítica** — opera en todo el mundo, vulnerable a restricciones comerciales
+4. **Spin-off de Healthineers** — deconsolidación del 30% es compleja, puede generar volatilidad
+5. **P/E de 22x** — no es barata, necesita ejecutar bien
+6. **Mobility más débil** — el segmento de trenes desaceleró
+
+---
+
+*Research fecha: 17 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 140.0,
+    analyst_upside: 10.5,
+    status: "active",
+    first_researched_at: "2026-03-17T00:00:00Z",
+    last_updated_at: "2026-03-17T00:00:00Z",
+    next_review_at: "2026-09-17T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -1698,6 +1823,17 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #12* — Mar 17, 2026\n\n🏢 *Western Alliance Bank* (WAL) — $68.16\n\n🛍️ *Sus líneas*: Banca para startups tech, warehouse lending (#1 nacional), gaming, firmas legales, real estate — no es un banco de sucursales, es un banco de nichos especializados\n\n🌍 *Presencia*: EE.UU. — Arizona, California, Nueva York, Texas, Nevada. $93B en activos. Banco #1 para PYMEs en el suroeste de EE.UU.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.48% anual* de dividendo. Cada vez que una startup tech paga su línea de crédito, un casino refinancia, o un originador de hipotecas usa warehouse lending — parte de ese dinero llega a ti. Su profit creció 23% en 2025 y los analistas ven +49% de upside.\n\n⚠️ *El riesgo*: En 2023 perdieron $9.5B en depósitos en 48 horas por el pánico de SVB. Se recuperaron, pero el mercado tiene memoria.\n\n🆕 Posición #12\n🔗 https://vectorialdata.com/stocks/WAL\n\n💡 No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.`,
   },
+  {
+    id: 13,
+    stock_id: 17,
+    ticker: "SIEGY",
+    type: "new" as const,
+    cycle_number: 3,
+    price: 126.60,
+    date: "2026-03-17",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #13* — Mar 17, 2026\n\n🏢 *Siemens* (SIEGY) — $126.60\n\n🛍️ *Sus productos*: Automatización de fábricas, infraestructura para centros de datos, trenes y metros. 177 años de historia. Alianzas con NVIDIA y Microsoft para IA industrial.\n\n🌍 *Presencia*: Global — Alemania (HQ), EE.UU., China, y prácticamente todo el mundo. €120 mil millones en órdenes pendientes.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.5% anual* de dividendo. Cada vez que se construye un centro de datos para IA, se automatiza una fábrica, o un metro nuevo opera — Siemens gana. Su negocio de infraestructura para data centers creció 35% el último trimestre.\n\n⚠️ *El riesgo*: No es barata (P/E de 22x). Competencia fuerte de Schneider Electric y ABB.\n\n🆕 Posición #13\n🔗 https://vectorialdata.com/stocks/SIEGY\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+  },
 ];
 
 export const cycles = [
@@ -1722,7 +1858,7 @@ export const cycles = [
     cycle_number: 3,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 3,
     status: "active" as const,
   },
 ];
