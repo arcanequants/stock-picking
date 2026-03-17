@@ -200,5 +200,26 @@
     "unlockTransactionsDesc": "Every buy and rebuy with exact prices and dates.",
     "cta": "Unlock for $1/mo",
     "includes": "Includes daily picks via WhatsApp"
+  },
+  "Auth": {
+    "login": "Log in",
+    "logout": "Log out",
+    "cancel": "Cancel",
+    "manageSubscription": "Manage subscription",
+    "magicLinkPrompt": "Enter the email you used to subscribe",
+    "emailPlaceholder": "your@email.com",
+    "sendLink": "Send magic link",
+    "checkEmail": "Check your email for a login link!"
+  },
+  "Welcome": {
+    "title": "Welcome to Vectorial Data!",
+    "subtitle": "Your subscription is active. Here's how to get started.",
+    "step1Title": "Join the WhatsApp group",
+    "step1Desc": "This is where you'll receive your daily stock picks. Tap the button to join.",
+    "joinWhatsApp": "Join WhatsApp Group",
+    "step2Title": "Unlock premium content",
+    "step2Desc": "Log in with your email to access the full performance chart, positions, and transactions.",
+    "goToPortfolio": "Go to Portfolio",
+    "tip": "Tip: Picks arrive Monday through Friday. Use the same email you paid with to log in."
   }
 }

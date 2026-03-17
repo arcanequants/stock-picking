@@ -5,8 +5,10 @@ import PerformanceChart from "@/components/PerformanceChart";
 import PremiumGate from "@/components/PremiumGate";
 import { stocks, transactions, cycles } from "@/data/stocks";
 import { getTranslations } from "next-intl/server";
+import { getAuthState } from "@/lib/auth";
 
 export default async function PortfolioPage() {
+  const { isSubscribed } = await getAuthState();
   const t = await getTranslations("Portfolio");
   const tPremium = await getTranslations("Premium");
   const activeStocks = stocks.filter((s) => s.status === "active");
@@ -32,6 +34,7 @@ export default async function PortfolioPage() {
         icon="chart"
         variant="blur"
         showBadge
+        isSubscribed={isSubscribed}
       >
         <PerformanceChart />
       </PremiumGate>
@@ -91,6 +94,7 @@ export default async function PortfolioPage() {
               description={tPremium("unlockTransactionsDesc")}
               icon="table"
               variant="fade"
+              isSubscribed={isSubscribed}
             >
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -141,6 +145,7 @@ export default async function PortfolioPage() {
             description={tPremium("unlockPositionsDesc")}
             icon="table"
             variant="blur"
+            isSubscribed={isSubscribed}
           >
             <div className="overflow-x-auto">
               <table className="w-full text-sm">

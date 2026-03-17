@@ -10,6 +10,7 @@ interface PremiumGateProps {
   variant?: "blur" | "fade";
   showBadge?: boolean;
   freeContent?: React.ReactNode;
+  isSubscribed?: boolean;
 }
 
 const icons = {
@@ -38,9 +39,20 @@ export default function PremiumGate({
   variant = "blur",
   showBadge = false,
   freeContent,
+  isSubscribed = false,
 }: PremiumGateProps) {
   const t = useTranslations("Premium");
   const stripeLink = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "/join";
+
+  // If subscribed, render children directly
+  if (isSubscribed) {
+    return (
+      <div>
+        {freeContent && <div className="mb-0">{freeContent}</div>}
+        {children}
+      </div>
+    );
+  }
 
   return (
     <div>

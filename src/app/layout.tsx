@@ -4,8 +4,10 @@ import { Noto_Sans_Devanagari } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
+import AuthButton from "@/components/AuthButton";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { getAuthState } from "@/lib/auth";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
@@ -44,6 +46,7 @@ export default async function RootLayout({
   const messages = await getMessages();
   const t = await getTranslations("Nav");
   const tFooter = await getTranslations("Footer");
+  const { user, isSubscribed } = await getAuthState();
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -83,19 +86,28 @@ export default async function RootLayout({
                   </Link>
                   <LanguageSwitcher />
                   <ThemeToggle />
-                  <Link
-                    href="/join"
-                    className="bg-brand hover:bg-brand-hover text-white px-4 py-1.5 rounded-lg transition-colors font-medium"
-                  >
-                    {t("join")}
-                  </Link>
+                  <AuthButton
+                    userEmail={user?.email ?? null}
+                    isSubscribed={isSubscribed}
+                  />
+                  {!isSubscribed && (
+                    <Link
+                      href="/join"
+                      className="bg-brand hover:bg-brand-hover text-white px-4 py-1.5 rounded-lg transition-colors font-medium"
+                    >
+                      {t("join")}
+                    </Link>
+                  )}
                 </div>
 
                 {/* Mobile Nav */}
                 <div className="flex md:hidden items-center gap-2">
                   <LanguageSwitcher />
                   <ThemeToggle />
-                  <MobileNav />
+                  <MobileNav
+                    userEmail={user?.email ?? null}
+                    isSubscribed={isSubscribed}
+                  />
                 </div>
               </div>
             </nav>

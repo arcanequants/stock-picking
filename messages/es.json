@@ -200,5 +200,26 @@
     "unlockTransactionsDesc": "Todas las compras y recompras con precios exactos y fechas.",
     "cta": "Desbloquear por $1/mes",
     "includes": "Incluye picks diarios por WhatsApp"
+  },
+  "Auth": {
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "cancel": "Cancelar",
+    "manageSubscription": "Gestionar suscripción",
+    "magicLinkPrompt": "Ingresa el email con el que te suscribiste",
+    "emailPlaceholder": "tu@email.com",
+    "sendLink": "Enviar link mágico",
+    "checkEmail": "Revisa tu email para iniciar sesión"
+  },
+  "Welcome": {
+    "title": "Bienvenido a Vectorial Data!",
+    "subtitle": "Tu suscripción está activa. Esto es lo que sigue.",
+    "step1Title": "Únete al grupo de WhatsApp",
+    "step1Desc": "Aquí recibirás tus picks diarios de acciones. Toca el botón para unirte.",
+    "joinWhatsApp": "Unirme al grupo de WhatsApp",
+    "step2Title": "Desbloquea el contenido premium",
+    "step2Desc": "Inicia sesión con tu email para ver la gráfica completa, posiciones y transacciones.",
+    "goToPortfolio": "Ir al Portafolio",
+    "tip": "Tip: Los picks llegan de lunes a viernes. Usa el mismo email con el que pagaste para iniciar sesión."
   }
 }
