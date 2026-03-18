@@ -211,6 +211,21 @@
     "sendLink": "मैजिक लिंक भेजें",
     "checkEmail": "लॉगिन लिंक के लिए अपना ईमेल जांचें!"
   },
+  "Returns": {
+    "positionReturns": "पोजीशन रिटर्न",
+    "name": "कंपनी",
+    "buyPrice": "खरीद",
+    "currentPrice": "वर्तमान",
+    "return": "रिटर्न",
+    "daysHeld": "दिन",
+    "subscribeToSee": "सटीक रिटर्न देखने के लिए सदस्यता लें"
+  },
+  "Share": {
+    "sharePortfolio": "शेयर करें",
+    "shareStock": "पिक शेयर करें",
+    "copyLink": "लिंक कॉपी करें",
+    "linkCopied": "लिंक कॉपी हो गया!"
+  },
   "Welcome": {
     "title": "Vectorial Data में स्वागत है!",
     "subtitle": "आपकी सदस्यता सक्रिय है। शुरू करने का तरीका यहां है।",

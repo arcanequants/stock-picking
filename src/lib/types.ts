@@ -74,3 +74,13 @@ export interface RegionAllocation {
   num_stocks: number;
   pct_of_portfolio: number;
 }
+
+export interface PositionReturn {
+  ticker: string;
+  name: string;
+  buy_price: number;
+  current_price: number;
+  return_pct: number;
+  days_held: number;
+  date_bought: string;
+}

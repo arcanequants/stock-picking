@@ -211,6 +211,21 @@
     "sendLink": "Send magic link",
     "checkEmail": "Check your email for a login link!"
   },
+  "Returns": {
+    "positionReturns": "Position Returns",
+    "name": "Company",
+    "buyPrice": "Buy",
+    "currentPrice": "Current",
+    "return": "Return",
+    "daysHeld": "Days",
+    "subscribeToSee": "Subscribe to see exact returns"
+  },
+  "Share": {
+    "sharePortfolio": "Share",
+    "shareStock": "Share pick",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!"
+  },
   "Welcome": {
     "title": "Welcome to Vectorial Data!",
     "subtitle": "Your subscription is active. Here's how to get started.",

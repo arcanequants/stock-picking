@@ -211,6 +211,21 @@
     "sendLink": "Enviar link mágico",
     "checkEmail": "Revisa tu email para iniciar sesión"
   },
+  "Returns": {
+    "positionReturns": "Returns por posición",
+    "name": "Empresa",
+    "buyPrice": "Compra",
+    "currentPrice": "Actual",
+    "return": "Return",
+    "daysHeld": "Dias",
+    "subscribeToSee": "Suscribete para ver returns exactos"
+  },
+  "Share": {
+    "sharePortfolio": "Compartir",
+    "shareStock": "Compartir pick",
+    "copyLink": "Copiar link",
+    "linkCopied": "Link copiado!"
+  },
   "Welcome": {
     "title": "Bienvenido a Vectorial Data!",
     "subtitle": "Tu suscripción está activa. Esto es lo que sigue.",

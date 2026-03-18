@@ -1,0 +1,170 @@
+import { getSupabase } from "@/lib/supabase";
+import { stocks, transactions } from "@/data/stocks";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const dynamic = "force-dynamic";
+
+async function getStockData(ticker: string) {
+  const upperTicker = ticker.toUpperCase();
+  const tx = transactions.find((t) => t.ticker === upperTicker);
+  const stock = stocks.find((s) => s.ticker === upperTicker);
+
+  if (!tx || !stock) return null;
+
+  const { data: snapshots } = await getSupabase()
+    .from("portfolio_snapshots")
+    .select("prices")
+    .order("date", { ascending: false })
+    .limit(1);
+
+  const latestPrices: Record<string, number> =
+    (snapshots?.[0]?.prices as Record<string, number>) ?? {};
+
+  const currentPrice = latestPrices[upperTicker] ?? stock.price;
+  const returnPct = ((currentPrice - tx.price) / tx.price) * 100;
+  const daysHeld = Math.ceil(
+    (Date.now() - new Date(tx.date + "T00:00:00").getTime()) / 86400000
+  );
+  const pickNumber = transactions.indexOf(tx) + 1;
+
+  return {
+    ticker: upperTicker,
+    name: stock.name,
+    buyPrice: tx.price,
+    currentPrice: Math.round(currentPrice * 100) / 100,
+    returnPct: Math.round(returnPct * 100) / 100,
+    daysHeld,
+    pickNumber,
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ ticker: string }>;
+}): Promise<Metadata> {
+  const { ticker } = await params;
+  const data = await getStockData(ticker);
+  if (!data) return { title: "Not Found" };
+
+  const sign = data.returnPct >= 0 ? "+" : "";
+  return {
+    title: `${data.ticker} ${sign}${data.returnPct.toFixed(1)}% | Vectorial Data`,
+    description: `${data.name} — Comprado a $${data.buyPrice.toFixed(2)}, actualmente $${data.currentPrice.toFixed(2)}. ${sign}${data.returnPct.toFixed(1)}% en ${data.daysHeld} dias.`,
+    openGraph: {
+      title: `${data.ticker} — ${sign}${data.returnPct.toFixed(1)}% en ${data.daysHeld} dias`,
+      description: `${data.name} — Pick #${data.pickNumber} de Vectorial Data`,
+      images: [
+        {
+          url: `/api/og/stock/${data.ticker}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+      type: "article",
+    },
+    twitter: { card: "summary_large_image" },
+  };
+}
+
+export default async function ShareStockPage({
+  params,
+}: {
+  params: Promise<{ ticker: string }>;
+}) {
+  const { ticker } = await params;
+  const data = await getStockData(ticker);
+  if (!data) notFound();
+
+  const isPositive = data.returnPct >= 0;
+  const paymentLink =
+    process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "/join";
+
+  return (
+    <div className="max-w-lg mx-auto py-16 px-4 text-center space-y-8">
+      {/* Pick badge */}
+      <span className="inline-block text-xs font-semibold uppercase tracking-wider text-text-muted border border-border rounded-full px-4 py-1">
+        Pick #{data.pickNumber}
+      </span>
+
+      {/* Stock info */}
+      <div>
+        <h1 className="text-5xl font-extrabold text-foreground">
+          {data.ticker}
+        </h1>
+        <p className="text-lg text-text-muted mt-1">{data.name}</p>
+      </div>
+
+      {/* Return card */}
+      <div className="border border-border rounded-xl p-6 space-y-4">
+        <div className="grid grid-cols-2 gap-4 text-left">
+          <div>
+            <p className="text-xs text-text-faint uppercase tracking-wider">
+              Comprado
+            </p>
+            <p className="text-xl font-mono font-semibold text-text-secondary">
+              ${data.buyPrice.toFixed(2)}
+            </p>
+          </div>
+          <div>
+            <p className="text-xs text-text-faint uppercase tracking-wider">
+              Actual
+            </p>
+            <p className="text-xl font-mono font-semibold text-foreground">
+              ${data.currentPrice.toFixed(2)}
+            </p>
+          </div>
+        </div>
+
+        <div className="border-t border-border pt-4 flex items-center justify-between">
+          <div>
+            <p className="text-xs text-text-faint uppercase tracking-wider">
+              Return
+            </p>
+            <p
+              className={`text-4xl font-extrabold font-mono ${
+                isPositive
+                  ? "text-emerald-600 dark:text-emerald-400"
+                  : "text-red-600 dark:text-red-400"
+              }`}
+            >
+              {isPositive ? "+" : ""}
+              {data.returnPct.toFixed(1)}%
+            </p>
+          </div>
+          <div className="text-right">
+            <p className="text-xs text-text-faint uppercase tracking-wider">
+              Dias
+            </p>
+            <p className="text-2xl font-bold font-mono text-text-secondary">
+              {data.daysHeld}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* CTAs */}
+      <div className="space-y-3">
+        <Link
+          href={`/stocks/${data.ticker}`}
+          className="block w-full border border-border hover:border-brand-border text-foreground py-3 rounded-xl font-semibold transition-colors"
+        >
+          Ver research completo →
+        </Link>
+        <a
+          href={paymentLink}
+          className="block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold text-lg transition-colors cta-glow"
+        >
+          Suscribete — $1.99/mo
+        </a>
+      </div>
+
+      <p className="text-xs text-text-faint">
+        Stock picks diarios de lunes a viernes. Cada pick incluye research
+        completo.
+      </p>
+    </div>
+  );
+}

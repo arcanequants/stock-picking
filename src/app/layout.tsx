@@ -34,6 +34,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+    openGraph: {
+      images: [{ url: "/api/og/portfolio", width: 1200, height: 630 }],
+      siteName: "Vectorial Data",
+    },
+    twitter: { card: "summary_large_image" },
   };
 }
 

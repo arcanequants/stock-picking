@@ -33,8 +33,10 @@ export async function generateMetadata({
     openGraph: {
       title: `${stock.ticker} — ${stock.name}`,
       description: stock.summary_short,
+      images: [{ url: `/api/og/stock/${stock.ticker}`, width: 1200, height: 630 }],
       type: "article",
     },
+    twitter: { card: "summary_large_image" },
   };
 }
 

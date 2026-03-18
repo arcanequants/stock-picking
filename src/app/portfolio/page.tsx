@@ -2,6 +2,7 @@ import PortfolioDashboard from "@/components/PortfolioDashboard";
 import CycleTracker from "@/components/CycleTracker";
 import PerformanceMetrics from "@/components/PerformanceMetrics";
 import PerformanceChart from "@/components/PerformanceChart";
+import PositionReturns from "@/components/PositionReturns";
 import PremiumGate from "@/components/PremiumGate";
 import { stocks, transactions, cycles } from "@/data/stocks";
 import { getTranslations } from "next-intl/server";
@@ -26,6 +27,9 @@ export default async function PortfolioPage() {
 
       {/* FREE: Performance Metrics */}
       <PerformanceMetrics />
+
+      {/* Position Returns with sharing */}
+      <PositionReturns isSubscribed={isSubscribed} />
 
       {/* PREMIUM: Performance Chart (blurred) */}
       <PremiumGate
