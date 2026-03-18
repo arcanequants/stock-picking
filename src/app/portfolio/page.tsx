@@ -75,17 +75,8 @@ export default async function PortfolioPage() {
       {/* 2. Position returns with sharing — the conversion driver */}
       <PositionReturns isSubscribed={isSubscribed} />
 
-      {/* 3. Performance chart (premium — blur) */}
-      <PremiumGate
-        title={tPremium("unlockChart")}
-        description={tPremium("unlockChartDesc")}
-        icon="chart"
-        variant="blur"
-        showBadge
-        isSubscribed={isSubscribed}
-      >
-        <PerformanceChart />
-      </PremiumGate>
+      {/* 3. Performance chart — always free (social proof, not product) */}
+      <PerformanceChart />
 
       {/* 4. Transaction history (partial free + premium fade) */}
       {transactions.length > 0 && (

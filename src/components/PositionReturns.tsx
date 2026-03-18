@@ -18,32 +18,6 @@ interface PositionsData {
   since: string | null;
 }
 
-function ReturnBar({ value }: { value: number }) {
-  const maxWidth = 60;
-  const abs = Math.abs(value);
-  const width = Math.min(abs * 3, maxWidth);
-  const isPositive = value > 0;
-
-  let bgColor: string;
-  if (abs < 1) bgColor = "bg-zinc-400 dark:bg-zinc-600";
-  else if (isPositive) bgColor = "bg-emerald-500";
-  else bgColor = "bg-red-500";
-
-  return (
-    <div className="flex items-center gap-2">
-      <div className="w-16 h-2 bg-tag-bg rounded-full overflow-hidden">
-        <div
-          className={`h-full rounded-full ${bgColor}`}
-          style={{ width: `${Math.max(width, 4)}%` }}
-        />
-      </div>
-      <span className="text-xs text-text-muted">
-        {isPositive ? "↑" : value < -1 ? "↓" : "—"}
-      </span>
-    </div>
-  );
-}
-
 export default function PositionReturns({
   isSubscribed,
 }: PositionReturnsProps) {
@@ -91,18 +65,9 @@ export default function PositionReturns({
         <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
           {t("positionReturns")}
         </h3>
-        <div className="flex items-center gap-2">
-          {isSubscribed && (
-            <ShareButton
-              url="/share/portfolio"
-              title={`Vectorial Data: ${data.total_return_pct >= 0 ? "+" : ""}${data.total_return_pct}%`}
-              variant="button"
-            />
-          )}
-          {!isSubscribed && (
-            <span className="pro-badge">{tPremium("badge")}</span>
-          )}
-        </div>
+        {!isSubscribed && (
+          <span className="pro-badge">{tPremium("badge")}</span>
+        )}
       </div>
 
       <div className="overflow-x-auto">
@@ -179,28 +144,7 @@ export default function PositionReturns({
                   </>
                 ) : (
                   <td className="py-2 px-3 text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      <ReturnBar value={pos.return_pct} />
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        className="text-text-faint"
-                      >
-                        <rect
-                          x="3"
-                          y="11"
-                          width="18"
-                          height="11"
-                          rx="2"
-                          ry="2"
-                        />
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                      </svg>
-                    </div>
+                    <ReturnBadge value={pos.return_pct} />
                   </td>
                 )}
               </tr>

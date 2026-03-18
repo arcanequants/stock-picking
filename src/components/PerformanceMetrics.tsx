@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import ShareButton from "./ShareButton";
 
 interface Snapshot {
   date: string;
@@ -100,6 +101,15 @@ export default function PerformanceMetrics({ positionCount }: { positionCount?: 
         <span>
           {days} {t("days")}
         </span>
+      </div>
+
+      {/* Share button — available to everyone */}
+      <div className="mt-4">
+        <ShareButton
+          url="/share/portfolio"
+          title={`Vectorial Data: ${isPositive ? "+" : ""}${latest.return_pct.toFixed(2)}%`}
+          variant="button"
+        />
       </div>
     </div>
   );
