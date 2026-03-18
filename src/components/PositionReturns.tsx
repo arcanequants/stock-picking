@@ -76,6 +76,15 @@ export default function PositionReturns({
   const paymentLink =
     process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "/join";
 
+  // Free users: only show top 3 positions as teaser
+  const FREE_PREVIEW_COUNT = 3;
+  const visiblePositions = isSubscribed
+    ? data.positions
+    : data.positions.slice(0, FREE_PREVIEW_COUNT);
+  const hiddenCount = isSubscribed
+    ? 0
+    : data.positions.length - FREE_PREVIEW_COUNT;
+
   return (
     <section className="border border-border rounded-xl p-5">
       <div className="flex items-center justify-between mb-4">
@@ -83,11 +92,13 @@ export default function PositionReturns({
           {t("positionReturns")}
         </h3>
         <div className="flex items-center gap-2">
-          <ShareButton
-            url="/share/portfolio"
-            title={`Vectorial Data: ${data.total_return_pct >= 0 ? "+" : ""}${data.total_return_pct}%`}
-            variant="button"
-          />
+          {isSubscribed && (
+            <ShareButton
+              url="/share/portfolio"
+              title={`Vectorial Data: ${data.total_return_pct >= 0 ? "+" : ""}${data.total_return_pct}%`}
+              variant="button"
+            />
+          )}
           {!isSubscribed && (
             <span className="pro-badge">{tPremium("badge")}</span>
           )}
@@ -128,7 +139,7 @@ export default function PositionReturns({
             </tr>
           </thead>
           <tbody>
-            {data.positions.map((pos) => (
+            {visiblePositions.map((pos) => (
               <tr
                 key={pos.ticker}
                 className="border-b border-border/50 hover:bg-card-hover"
@@ -198,25 +209,33 @@ export default function PositionReturns({
         </table>
       </div>
 
+      {/* Free: show hidden count + CTA */}
       {!isSubscribed && (
-        <div className="mt-4 text-center">
-          <a
-            href={paymentLink}
-            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-          >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
+        <div className="mt-2 relative">
+          {hiddenCount > 0 && (
+            <p className="text-center text-xs text-text-faint mb-3">
+              {t("andMore", { count: hiddenCount })}
+            </p>
+          )}
+          <div className="text-center">
+            <a
+              href={paymentLink}
+              className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
             >
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg>
-            {t("subscribeToSee")}
-          </a>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              {t("subscribeToSee")}
+            </a>
+          </div>
         </div>
       )}
     </section>

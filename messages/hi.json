@@ -220,7 +220,8 @@
     "currentPrice": "वर्तमान",
     "return": "रिटर्न",
     "daysHeld": "दिन",
-    "subscribeToSee": "सटीक रिटर्न देखने के लिए सदस्यता लें"
+    "subscribeToSee": "सटीक रिटर्न देखने के लिए सदस्यता लें",
+    "andMore": "+ {count} और पोजीशन"
   },
   "Share": {
     "sharePortfolio": "शेयर करें",

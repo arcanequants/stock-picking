@@ -70,7 +70,7 @@ export default async function PortfolioPage() {
       </section>
 
       {/* 1. Return total hero — the emotional hook */}
-      <PerformanceMetrics />
+      <PerformanceMetrics positionCount={transactions.length} />
 
       {/* 2. Position returns with sharing — the conversion driver */}
       <PositionReturns isSubscribed={isSubscribed} />

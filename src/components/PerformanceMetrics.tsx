@@ -17,7 +17,7 @@ const localeMap: Record<string, string> = {
   hi: "hi-IN",
 };
 
-export default function PerformanceMetrics() {
+export default function PerformanceMetrics({ positionCount }: { positionCount?: number }) {
   const [latest, setLatest] = useState<Snapshot | null>(null);
   const [firstDate, setFirstDate] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -50,7 +50,7 @@ export default function PerformanceMetrics() {
   if (!latest) return null;
 
   const isPositive = latest.return_pct >= 0;
-  const positions = Math.round(latest.total_invested / 50);
+  const positions = positionCount ?? Math.round(latest.total_invested / 50);
   const days = firstDate
     ? Math.ceil(
         (Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000

@@ -220,7 +220,8 @@
     "currentPrice": "Atual",
     "return": "Retorno",
     "daysHeld": "Dias",
-    "subscribeToSee": "Assine para ver retornos exatos"
+    "subscribeToSee": "Assine para ver retornos exatos",
+    "andMore": "+ {count} posições mais"
   },
   "Share": {
     "sharePortfolio": "Compartilhar",
