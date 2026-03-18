@@ -1,38 +1,48 @@
 import { Stock } from "@/lib/types";
 
 // WhatsApp tip rotation — (pickNumber - 1) % tips.length
-// Categories: 💰 budget, 🧠 mindset, ⏳ patience, 📈 compounding, 🏢 ownership, 😤 behavior
-export const tips = [
+// Each tip is a function that receives the stock context for personalization
+// Usage: tips[index]({ name, ticker, dividend_yield, price, sector, country })
+interface TipContext {
+  name: string;
+  ticker: string;
+  dividend_yield: number;
+  price: number;
+  sector: string;
+  country: string;
+}
+
+export const tips: ((ctx: TipContext) => string)[] = [
   // 💰 Budget & consistency
-  "Recuerda: tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual.",
-  "Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.",
-  "No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.",
-  "¿Cuánto invertir? Lo que puedas mantener CADA MES. $90/mes = $3 por pick. $300/mes = $10 por pick.",
+  (ctx) => `Con $3 compras una fracción de ${ctx.name}. Con $50 también. Lo que importa no es cuánto, es que lo hagas SIEMPRE.`,
+  () => `Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+  () => `Tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual. Así de simple.`,
+  () => `¿Cuánto invertir? Lo que puedas mantener CADA MES. $90/mes = $3 por pick. $300/mes = $10 por pick.`,
   // 🏢 Ownership mindset
-  "No estás comprando acciones. Estás comprando un pedacito de un negocio real que genera dinero mientras duermes.",
-  "Si alguien te dijera que por $3 puedes ser dueño de Coca-Cola, ¿dirías que no? Eso es exactamente lo que son las fracciones.",
-  "Cada empresa de tu portafolio tiene miles de empleados trabajando para generar ganancias. Tú solo tuviste que comprar una fracción.",
+  (ctx) => `Acabas de comprar un pedacito de ${ctx.name}. Ahora eres dueño. Cada vez que generan dinero, una parte es tuya.`,
+  (ctx) => `${ctx.name} tiene oficinas, empleados, y clientes pagando cada día. Tú solo tuviste que comprar una fracción para ser parte de eso.`,
+  (ctx) => `Si alguien te dijera que por $3 puedes ser dueño de ${ctx.name}, ¿dirías que no? Eso es exactamente lo que acabas de hacer.`,
+  (ctx) => `No compraste un ticker. Compraste un pedacito de un negocio real en ${ctx.country} que genera dinero mientras duermes.`,
   // ⏳ Patience & long term
-  "Warren Buffett hizo el 99% de su fortuna después de los 50 años. La paciencia no es una virtud — es la estrategia.",
-  "El mejor momento para invertir fue hace 10 años. El segundo mejor momento es hoy.",
-  "Nadie se hizo rico comprando y vendiendo. Se hicieron ricos comprando y ESPERANDO.",
-  "Tu yo de 60 años te va a agradecer lo que estás haciendo hoy. Cada fracción cuenta.",
+  () => `Warren Buffett hizo el 99% de su fortuna después de los 50 años. La paciencia no es una virtud — es la estrategia.`,
+  () => `El mejor momento para invertir fue hace 10 años. El segundo mejor momento es hoy. Ya lo estás haciendo.`,
+  () => `Nadie se hizo rico comprando y vendiendo. Se hicieron ricos comprando y ESPERANDO.`,
+  () => `Tu yo de 60 años te va a agradecer lo que estás haciendo hoy. Cada fracción cuenta.`,
   // 📈 Compounding & dividends
-  "Cada dividendo que recibes es dinero que NO requirió tu tiempo. Tus empresas trabajaron por ti.",
-  "Tus dividendos reinvertidos compran más acciones. Esas acciones generan más dividendos. Esos dividendos compran más acciones. Eso es interés compuesto.",
-  "Una acción que paga 4% de dividendo duplica tu dinero solo en dividendos en 18 años. Sin que suba de precio.",
-  "El S&P 500 ha dado ~10% anual durante 100 años. Pero solo si NO vendiste en los días malos.",
+  (ctx) => `${ctx.name} paga ${ctx.dividend_yield}% anual de dividendo. Eso es dinero que llega a tu cuenta sin que hagas nada. Automático.`,
+  (ctx) => `Con ${ctx.dividend_yield}% de dividendo, ${ctx.ticker} duplica tu inversión solo en dividendos en ~${Math.round(72 / ctx.dividend_yield)} años. Sin que suba de precio.`,
+  (ctx) => `El dividendo de ${ctx.ticker} se reinvierte → compra más fracciones → genera más dividendo → compra más fracciones. Eso es interés compuesto.`,
+  () => `El S&P 500 ha dado ~10% anual durante 100 años. Pero solo si NO vendiste en los días malos.`,
   // 😤 Behavior & psychology
-  "No revises tu portafolio todos los días. Las empresas no cambian de valor en 24 horas — tu ansiedad sí.",
-  "El mercado ha caído 50%+ varias veces en la historia. Y SIEMPRE se recuperó. Los que vendieron en pánico perdieron. Los que mantuvieron ganaron.",
-  "Los ricos no invierten cuando les sobra. Invierten PRIMERO y viven con lo que queda.",
+  (ctx) => `No revises ${ctx.ticker} todos los días. ${ctx.name} no cambia de valor en 24 horas — tu ansiedad sí.`,
+  () => `El mercado ha caído 50%+ varias veces en la historia. Y SIEMPRE se recuperó. Los que vendieron en pánico perdieron. Los que mantuvieron ganaron.`,
+  () => `Los ricos no invierten cuando les sobra. Invierten PRIMERO y viven con lo que queda.`,
+  (ctx) => `Si ${ctx.ticker} baja mañana, no pasa nada. Tú no compraste para mañana. Compraste para dentro de 5, 10, 20 años.`,
   // 🔄 Perspective shifts
-  "Un café diario = $150/mes. $5 por pick = portafolio de 30 empresas generando dividendos. Misma plata, diferente futuro.",
-  "Invertir no es un evento. Es un hábito. Como ir al gym — los resultados llegan con el tiempo, no con la intensidad.",
-  "No necesitas entender todo de una empresa para ser dueño. ¿Entiendes todo de tu banco? Aún así tienes cuenta ahí.",
-  "Cada pick es una semilla. Algunas crecen rápido, otras lento. Pero un jardín de 30 semillas siempre da frutos.",
-  "La diferencia entre alguien que invierte y alguien que no, no es el dinero. Es la decisión de empezar.",
-  "Tu portafolio es como una playlist: no necesitas que cada canción sea tu favorita. Necesitas que juntas suenen bien.",
+  () => `Un café diario = $150/mes. $5 por pick = portafolio de 30 empresas pagándote dividendos. Misma plata, diferente futuro.`,
+  () => `Invertir no es un evento. Es un hábito. Como ir al gym — los resultados llegan con el tiempo, no con la intensidad.`,
+  (ctx) => `Miles de personas en ${ctx.country} trabajan para ${ctx.name} hoy. Generan ingresos, pagan dividendos, y tú eres dueño. Así funciona.`,
+  () => `La diferencia entre alguien que invierte y alguien que no, no es el dinero. Es la decisión de empezar.`,
 ];
 
 // Hardcoded data - will migrate to Supabase once connected
@@ -1987,7 +1997,7 @@ export const transactions = [
     price: 45.09,
     date: "2026-03-18",
     day_of_week: "wednesday",
-    wa_message: `📊 *STOCK PICK #14* — Mar 18, 2026\n\n🏢 *AXA* (AXAHY) — $45.09\n\n🛍️ *Sus marcas*: AXA (seguros #1 de Europa), AXA XL (reaseguro comercial global), AXA Investment Managers, y operaciones en ~50 países con 92 millones de clientes\n\n🌍 *Presencia*: Francia (HQ), Alemania, Suiza, UK, España, Italia, Japón, EE.UU. y más. La aseguradora más grande de Europa.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.4% anual* solo por ser dueño — uno de los dividendos más altos del portafolio. Cada vez que alguien paga su seguro de auto, de casa, de salud, o de vida en cualquiera de los 50 países donde operan — parte de ese dinero llega a ti. Y devuelven 75% de su profit al accionista entre dividendos y recompras.\n\n⚠️ *El riesgo*: Catástrofes naturales por cambio climático pueden aumentar los costos de siniestros.\n\n🆕 Posición #14\n🔗 https://vectorialdata.com/stocks/AXAHY\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+    wa_message: `📊 *STOCK PICK #14* — Mar 18, 2026\n\n🏢 *AXA* (AXAHY) — $45.09\n\n🛍️ *Sus marcas*: AXA (seguros #1 de Europa), AXA XL (reaseguro comercial global), AXA Investment Managers, y operaciones en ~50 países con 92 millones de clientes\n\n🌍 *Presencia*: Francia (HQ), Alemania, Suiza, UK, España, Italia, Japón, EE.UU. y más. La aseguradora más grande de Europa.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.4% anual* solo por ser dueño — uno de los dividendos más altos del portafolio. Cada vez que alguien paga su seguro de auto, de casa, de salud, o de vida en cualquiera de los 50 países donde operan — parte de ese dinero llega a ti. Y devuelven 75% de su profit al accionista entre dividendos y recompras.\n\n⚠️ *El riesgo*: Catástrofes naturales por cambio climático pueden aumentar los costos de siniestros.\n\n🆕 Posición #14\n🔗 https://vectorialdata.com/stocks/AXAHY\n\n💡 Con 5.4% de dividendo, AXAHY duplica tu inversión solo en dividendos en ~13 años. Sin que suba de precio.`,
   },
 ];
 
