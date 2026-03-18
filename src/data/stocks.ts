@@ -1,5 +1,40 @@
 import { Stock } from "@/lib/types";
 
+// WhatsApp tip rotation — (pickNumber - 1) % tips.length
+// Categories: 💰 budget, 🧠 mindset, ⏳ patience, 📈 compounding, 🏢 ownership, 😤 behavior
+export const tips = [
+  // 💰 Budget & consistency
+  "Recuerda: tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual.",
+  "Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.",
+  "No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.",
+  "¿Cuánto invertir? Lo que puedas mantener CADA MES. $90/mes = $3 por pick. $300/mes = $10 por pick.",
+  // 🏢 Ownership mindset
+  "No estás comprando acciones. Estás comprando un pedacito de un negocio real que genera dinero mientras duermes.",
+  "Si alguien te dijera que por $3 puedes ser dueño de Coca-Cola, ¿dirías que no? Eso es exactamente lo que son las fracciones.",
+  "Cada empresa de tu portafolio tiene miles de empleados trabajando para generar ganancias. Tú solo tuviste que comprar una fracción.",
+  // ⏳ Patience & long term
+  "Warren Buffett hizo el 99% de su fortuna después de los 50 años. La paciencia no es una virtud — es la estrategia.",
+  "El mejor momento para invertir fue hace 10 años. El segundo mejor momento es hoy.",
+  "Nadie se hizo rico comprando y vendiendo. Se hicieron ricos comprando y ESPERANDO.",
+  "Tu yo de 60 años te va a agradecer lo que estás haciendo hoy. Cada fracción cuenta.",
+  // 📈 Compounding & dividends
+  "Cada dividendo que recibes es dinero que NO requirió tu tiempo. Tus empresas trabajaron por ti.",
+  "Tus dividendos reinvertidos compran más acciones. Esas acciones generan más dividendos. Esos dividendos compran más acciones. Eso es interés compuesto.",
+  "Una acción que paga 4% de dividendo duplica tu dinero solo en dividendos en 18 años. Sin que suba de precio.",
+  "El S&P 500 ha dado ~10% anual durante 100 años. Pero solo si NO vendiste en los días malos.",
+  // 😤 Behavior & psychology
+  "No revises tu portafolio todos los días. Las empresas no cambian de valor en 24 horas — tu ansiedad sí.",
+  "El mercado ha caído 50%+ varias veces en la historia. Y SIEMPRE se recuperó. Los que vendieron en pánico perdieron. Los que mantuvieron ganaron.",
+  "Los ricos no invierten cuando les sobra. Invierten PRIMERO y viven con lo que queda.",
+  // 🔄 Perspective shifts
+  "Un café diario = $150/mes. $5 por pick = portafolio de 30 empresas generando dividendos. Misma plata, diferente futuro.",
+  "Invertir no es un evento. Es un hábito. Como ir al gym — los resultados llegan con el tiempo, no con la intensidad.",
+  "No necesitas entender todo de una empresa para ser dueño. ¿Entiendes todo de tu banco? Aún así tienes cuenta ahí.",
+  "Cada pick es una semilla. Algunas crecen rápido, otras lento. Pero un jardín de 30 semillas siempre da frutos.",
+  "La diferencia entre alguien que invierte y alguien que no, no es el dinero. Es la decisión de empezar.",
+  "Tu portafolio es como una playlist: no necesitas que cada canción sea tu favorita. Necesitas que juntas suenen bien.",
+];
+
 // Hardcoded data - will migrate to Supabase once connected
 export const stocks: Stock[] = [
   {
