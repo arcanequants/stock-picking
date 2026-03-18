@@ -1688,6 +1688,115 @@ Smart Infrastructure está en modo cohete:
     last_updated_at: "2026-03-17T00:00:00Z",
     next_review_at: "2026-09-17T00:00:00Z",
   },
+  {
+    id: 18,
+    ticker: "AXAHY",
+    name: "AXA SA",
+    sector: "Financials",
+    industry: "Insurance (Life, P&C, Health)",
+    country: "France",
+    region: "Europe",
+    currency: "USD",
+    price: 45.09,
+    pe_ratio: 8.41,
+    pe_forward: 8.70,
+    dividend_yield: 5.39,
+    market_cap_b: 94.3,
+    eps: 5.36,
+    summary_short:
+      "Aseguradora global #1 de Europa con 92 millones de clientes en 50 países. P/E forward de solo 8.7x con dividendo del 5.4% y política de devolver 75% del profit al accionista. Plan estratégico 2024-2026 apunta al rango alto de crecimiento de EPS del 6-8%.",
+    summary_what:
+      "AXA es una de las aseguradoras más grandes del mundo. Opera en seguros de propiedad y casualidad (autos, hogar, responsabilidad), seguros de vida y ahorro, seguros de salud, y gestión de activos. AXA XL es su brazo de líneas comerciales/specialty a nivel global. Con 156,000 empleados y presencia en ~50 países, es un gigante financiero diversificado.",
+    summary_why:
+      "Cotiza a solo 8.7x forward P/E — absurdamente barata para una aseguradora global dominante. Dividendo del 5.4% respaldado por una política disciplinada de 75% de payout total (60% dividendo + recompras anuales). El plan 'Unlock the Future' 2024-2026 apunta al rango alto de crecimiento de EPS del 6-8%. ROE objetivo del 14-16% y beta de solo 0.65 — compounding defensivo con upside real.",
+    summary_risk:
+      "Catástrofes naturales por cambio climático pueden aumentar costos de siniestros significativamente, especialmente en AXA XL. Regulación compleja en 50+ jurisdicciones.",
+    research_full: `# AXA SA (AXAHY) — Research Completo
+
+## Precio: $45.09 | P/E: 8.4 | P/E Forward: 8.7 | Div Yield: 5.4% | Market Cap: $94.3B
+
+---
+
+## ¿Qué es AXA?
+
+AXA SA es una de las **aseguradoras más grandes del mundo** y la **#1 de Europa**. Con sede en París, Francia, opera en ~50 países con 92 millones de clientes y 156,000 empleados. Ofrece seguros de propiedad, vida, salud, y gestión de activos.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | Presencia |
+|----------|-------------|-----------|
+| **France** | Seguros P&C, vida, salud — mercado doméstico | Francia |
+| **Europe** | Operaciones en Alemania, Suiza, Bélgica, Italia, España, UK, Irlanda | Europa Continental + UK |
+| **AXA XL** | Líneas comerciales y specialty (reaseguro, grandes riesgos) | Global (principalmente EE.UU.) |
+| **Asia** | Seguros de vida, salud, P&C | Japón, Hong Kong, Tailandia |
+| **Africa & EME-LATAM** | Mercados emergentes | África, Medio Oriente, Latam |
+| **AXA Investment Managers** | Gestión de activos institucional | Global |
+
+## Resultados 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | ~€110B+ |
+| **Underlying Earnings** | Crecimiento sólido vs 2024 |
+| **ROE** | ~15% (dentro del objetivo 14-16%) |
+| **Solvency II Ratio** | ~220% (muy bien capitalizado) |
+| **Free Cash Flow** | Fuerte generación orgánica |
+
+## Plan Estratégico "Unlock the Future" 2024-2026
+
+- **EPS CAGR objetivo:** 6-8% (guiando al rango alto para 2026)
+- **ROE objetivo:** 14-16%
+- **Payout total:** 75% del profit (60% dividendo + recompras)
+- **Generación de caja orgánica:** €21B acumulados 2024-2026
+- **Foco:** Crecimiento en P&C comercial, plataforma digital, salud y employee benefits
+
+## Capital Return — Muy Generoso
+
+- **Dividendo forward:** $2.44/acción (5.4% yield)
+- **Política:** 75% de payout total
+- **Recompras anuales** complementan el dividendo
+- **Yield total al accionista:** ~7-8% anual estimado
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Strong Buy** |
+| Price Target Promedio | **$49.34** |
+| Price Target Alto | $58.26 |
+| Price Target Bajo | $44.00 |
+| **Upside al Target** | **+9.4%** |
+
+## ¿Por Qué Nos Gusta?
+
+1. **P/E forward de 8.7x** — ridículamente barata para la aseguradora #1 de Europa
+2. **Dividendo del 5.4%** — uno de los más altos del portafolio, bien cubierto
+3. **75% de payout total** — política disciplinada de devolver dinero al accionista
+4. **Beta de 0.65** — menos volátil que el mercado, compounding defensivo
+5. **ROE del 14-16%** — generación de valor superior
+6. **Diversificación global** — 50 países, 92M clientes, múltiples líneas de negocio
+7. **€21B en generación de caja** en 3 años — máquina de cash
+
+## Riesgos
+
+1. **Catástrofes naturales** — el cambio climático aumenta frecuencia y severidad de siniestros
+2. **Regulación compleja** — opera en 50+ jurisdicciones con reglas diferentes
+3. **Tasas de interés** — caídas en tasas pueden afectar rendimientos de inversión
+4. **AXA XL volatilidad** — líneas comerciales/specialty son cíclicas
+5. **Exposición a mercados emergentes** — riesgo político y cambiario
+
+---
+
+*Research fecha: 18 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 49.34,
+    analyst_upside: 9.4,
+    status: "active",
+    first_researched_at: "2026-03-18T00:00:00Z",
+    last_updated_at: "2026-03-18T00:00:00Z",
+    next_review_at: "2026-09-18T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -1834,6 +1943,17 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #13* — Mar 17, 2026\n\n🏢 *Siemens* (SIEGY) — $126.60\n\n🛍️ *Sus productos*: Automatización de fábricas, infraestructura para centros de datos, trenes y metros. 177 años de historia. Alianzas con NVIDIA y Microsoft para IA industrial.\n\n🌍 *Presencia*: Global — Alemania (HQ), EE.UU., China, y prácticamente todo el mundo. €120 mil millones en órdenes pendientes.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.5% anual* de dividendo. Cada vez que se construye un centro de datos para IA, se automatiza una fábrica, o un metro nuevo opera — Siemens gana. Su negocio de infraestructura para data centers creció 35% el último trimestre.\n\n⚠️ *El riesgo*: No es barata (P/E de 22x). Competencia fuerte de Schneider Electric y ABB.\n\n🆕 Posición #13\n🔗 https://vectorialdata.com/stocks/SIEGY\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
   },
+  {
+    id: 14,
+    stock_id: 18,
+    ticker: "AXAHY",
+    type: "new" as const,
+    cycle_number: 3,
+    price: 45.09,
+    date: "2026-03-18",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #14* — Mar 18, 2026\n\n🏢 *AXA* (AXAHY) — $45.09\n\n🛍️ *Sus marcas*: AXA (seguros #1 de Europa), AXA XL (reaseguro comercial global), AXA Investment Managers, y operaciones en ~50 países con 92 millones de clientes\n\n🌍 *Presencia*: Francia (HQ), Alemania, Suiza, UK, España, Italia, Japón, EE.UU. y más. La aseguradora más grande de Europa.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.4% anual* solo por ser dueño — uno de los dividendos más altos del portafolio. Cada vez que alguien paga su seguro de auto, de casa, de salud, o de vida en cualquiera de los 50 países donde operan — parte de ese dinero llega a ti. Y devuelven 75% de su profit al accionista entre dividendos y recompras.\n\n⚠️ *El riesgo*: Catástrofes naturales por cambio climático pueden aumentar los costos de siniestros.\n\n🆕 Posición #14\n🔗 https://vectorialdata.com/stocks/AXAHY\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+  },
 ];
 
 export const cycles = [
@@ -1858,7 +1978,7 @@ export const cycles = [
     cycle_number: 3,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 4,
     status: "active" as const,
   },
 ];
