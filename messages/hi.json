@@ -226,7 +226,21 @@
     "sharePortfolio": "शेयर करें",
     "shareStock": "पिक शेयर करें",
     "copyLink": "लिंक कॉपी करें",
-    "linkCopied": "लिंक कॉपी हो गया!"
+    "linkCopied": "लिंक कॉपी हो गया!",
+    "portfolioHeader": "Vectorial Data पोर्टफोलियो",
+    "positionCount": "{count} पोजीशन · {date} से",
+    "andMore": "+ {count} और पोजीशन",
+    "subscribeCta": "$1/माह से शुरू करें",
+    "seePortfolio": "पूरा पोर्टफोलियो देखें →",
+    "pageFooter": "सोमवार से शुक्रवार दैनिक स्टॉक पिक्स। हर पिक के साथ पूरा रिसर्च शामिल।",
+    "pickBadge": "पिक #{number}",
+    "returnLabel": "रिटर्न",
+    "daysLabel": "दिन",
+    "seeResearch": "पूरा रिसर्च देखें →",
+    "metaPositions": "{count} सक्रिय पोजीशन। $1/माह पर दैनिक स्टॉक पिक्स।",
+    "metaPortfolio": "Vectorial Data पोर्टफोलियो: {return}",
+    "metaStockDesc": "{name} — Vectorial Data का पिक #{number}",
+    "metaStockReturn": "{ticker} — {days} दिनों में {return}"
   },
   "Welcome": {
     "title": "Vectorial Data में स्वागत है!",

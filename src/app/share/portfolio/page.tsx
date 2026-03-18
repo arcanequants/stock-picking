@@ -2,6 +2,7 @@ import { getSupabase } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 export const dynamic = "force-dynamic";
 
@@ -45,13 +46,16 @@ async function getPortfolioData() {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { totalReturnPct, positions } = await getPortfolioData();
+  const t = await getTranslations("Share");
   const sign = totalReturnPct >= 0 ? "+" : "";
+  const returnStr = `${sign}${totalReturnPct.toFixed(1)}%`;
+
   return {
-    title: `Portafolio ${sign}${totalReturnPct.toFixed(1)}% | Vectorial Data`,
-    description: `${positions.length} posiciones activas. Stock picks diarios por $1.99/mo.`,
+    title: `${t("metaPortfolio", { return: returnStr })}`,
+    description: t("metaPositions", { count: positions.length }),
     openGraph: {
-      title: `Portafolio Vectorial Data: ${sign}${totalReturnPct.toFixed(1)}%`,
-      description: `${positions.length} posiciones activas. Stock picks diarios por $1.99/mo.`,
+      title: t("metaPortfolio", { return: returnStr }),
+      description: t("metaPositions", { count: positions.length }),
       images: [{ url: "/api/og/portfolio", width: 1200, height: 630 }],
       type: "website",
     },
@@ -61,6 +65,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function SharePortfolioPage() {
   const { positions, totalReturnPct } = await getPortfolioData();
+  const t = await getTranslations("Share");
   const isPositive = totalReturnPct >= 0;
   const top5 = positions.slice(0, 5);
   const remaining = positions.length - 5;
@@ -70,10 +75,10 @@ export default async function SharePortfolioPage() {
 
   return (
     <div className="max-w-lg mx-auto py-16 px-4 text-center space-y-8">
-      {/* Return hero */}
+      {/* Return hero — the hook */}
       <div>
         <p className="text-sm text-text-faint uppercase tracking-wider mb-2">
-          Vectorial Data Portfolio
+          {t("portfolioHeader")}
         </p>
         <p
           className={`text-6xl font-extrabold font-mono ${
@@ -86,11 +91,11 @@ export default async function SharePortfolioPage() {
           {totalReturnPct.toFixed(1)}%
         </p>
         <p className="text-text-muted mt-2">
-          {positions.length} posiciones · desde {since}
+          {t("positionCount", { count: positions.length, date: since })}
         </p>
       </div>
 
-      {/* Position bars */}
+      {/* Position bars — NO exact returns, only direction + color */}
       <div className="border border-border rounded-xl p-5 text-left space-y-3">
         {top5.map((pos) => {
           const posPositive = pos.return_pct > 0;
@@ -108,22 +113,15 @@ export default async function SharePortfolioPage() {
                   style={{ width: `${Math.max(barWidth, 3)}%` }}
                 />
               </div>
-              <span
-                className={`text-sm font-mono font-semibold w-16 text-right ${
-                  posPositive
-                    ? "text-emerald-600 dark:text-emerald-400"
-                    : "text-red-600 dark:text-red-400"
-                }`}
-              >
-                {posPositive ? "+" : ""}
-                {pos.return_pct.toFixed(1)}%
+              <span className="text-sm text-text-muted w-6 text-right">
+                {posPositive ? "↑" : pos.return_pct < -1 ? "↓" : "—"}
               </span>
             </div>
           );
         })}
         {remaining > 0 && (
           <p className="text-xs text-text-faint text-center pt-1">
-            + {remaining} posiciones mas
+            {t("andMore", { count: remaining })}
           </p>
         )}
       </div>
@@ -134,19 +132,18 @@ export default async function SharePortfolioPage() {
           href={paymentLink}
           className="block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold text-lg transition-colors cta-glow"
         >
-          Suscribete — $1.99/mo
+          {t("subscribeCta")}
         </a>
         <Link
           href="/portfolio"
           className="block text-sm text-text-muted hover:text-foreground transition-colors"
         >
-          Ver portafolio completo →
+          {t("seePortfolio")}
         </Link>
       </div>
 
       <p className="text-xs text-text-faint">
-        Stock picks diarios de lunes a viernes. Cada pick incluye research
-        completo.
+        {t("pageFooter")}
       </p>
     </div>
   );

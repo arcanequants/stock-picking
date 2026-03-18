@@ -226,7 +226,21 @@
     "sharePortfolio": "Compartilhar",
     "shareStock": "Compartilhar pick",
     "copyLink": "Copiar link",
-    "linkCopied": "Link copiado!"
+    "linkCopied": "Link copiado!",
+    "portfolioHeader": "Portfólio Vectorial Data",
+    "positionCount": "{count} posições · desde {date}",
+    "andMore": "+ {count} posições mais",
+    "subscribeCta": "Comece por $1/mês",
+    "seePortfolio": "Ver portfólio completo →",
+    "pageFooter": "Picks de ações diários de segunda a sexta. Research completo incluso em cada pick.",
+    "pickBadge": "Pick #{number}",
+    "returnLabel": "Retorno",
+    "daysLabel": "Dias",
+    "seeResearch": "Ver research completo →",
+    "metaPositions": "{count} posições ativas. Picks de ações diários por $1/mês.",
+    "metaPortfolio": "Portfólio Vectorial Data: {return}",
+    "metaStockDesc": "{name} — Pick #{number} da Vectorial Data",
+    "metaStockReturn": "{ticker} — {return} em {days} dias"
   },
   "Welcome": {
     "title": "Bem-vindo ao Vectorial Data!",

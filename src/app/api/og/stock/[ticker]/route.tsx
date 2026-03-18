@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/og";
-import { getSupabase } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 
 export const dynamic = "force-dynamic";
@@ -18,22 +17,9 @@ export async function GET(
     return new Response("Not found", { status: 404 });
   }
 
-  // Get latest price
-  const { data: snapshots } = await getSupabase()
-    .from("portfolio_snapshots")
-    .select("prices")
-    .order("date", { ascending: false })
-    .limit(1);
-
-  const latestPrices: Record<string, number> =
-    (snapshots?.[0]?.prices as Record<string, number>) ?? {};
-
-  const currentPrice = latestPrices[upperTicker] ?? stock.price;
-  const returnPct = ((currentPrice - tx.price) / tx.price) * 100;
   const daysHeld = Math.ceil(
     (Date.now() - new Date(tx.date + "T00:00:00").getTime()) / 86400000
   );
-  const isPositive = returnPct >= 0;
   const pickNumber = transactions.indexOf(tx) + 1;
 
   return new ImageResponse(
@@ -84,7 +70,7 @@ export async function GET(
 
         {/* Stock info */}
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-          <div style={{ fontSize: "64px", fontWeight: 800, lineHeight: 1 }}>
+          <div style={{ fontSize: "72px", fontWeight: 800, lineHeight: 1 }}>
             {upperTicker}
           </div>
           <div style={{ fontSize: "28px", color: "#a1a1aa" }}>
@@ -92,38 +78,45 @@ export async function GET(
           </div>
         </div>
 
-        {/* Returns */}
+        {/* Teaser — days held + lock icon hint */}
         <div style={{ display: "flex", gap: "60px", alignItems: "flex-end" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-            <div style={{ fontSize: "16px", color: "#71717a" }}>Comprado</div>
+            <div style={{ fontSize: "16px", color: "#71717a" }}>Days held</div>
             <div style={{ fontSize: "36px", fontWeight: 600, color: "#d4d4d8" }}>
-              ${tx.price.toFixed(2)}
-            </div>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-            <div style={{ fontSize: "16px", color: "#71717a" }}>Actual</div>
-            <div style={{ fontSize: "36px", fontWeight: 600, color: "#fafafa" }}>
-              ${currentPrice.toFixed(2)}
+              {daysHeld}
             </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
             <div style={{ fontSize: "16px", color: "#71717a" }}>Return</div>
             <div
               style={{
-                fontSize: "48px",
-                fontWeight: 800,
-                color: isPositive ? "#34d399" : "#f87171",
-                lineHeight: 1,
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
               }}
             >
-              {isPositive ? "+" : ""}
-              {returnPct.toFixed(1)}%
-            </div>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-            <div style={{ fontSize: "16px", color: "#71717a" }}>Dias</div>
-            <div style={{ fontSize: "36px", fontWeight: 600, color: "#d4d4d8" }}>
-              {daysHeld}
+              <div
+                style={{
+                  width: "120px",
+                  height: "20px",
+                  borderRadius: "10px",
+                  backgroundColor: "#27272a",
+                  overflow: "hidden",
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    width: "75%",
+                    height: "100%",
+                    borderRadius: "10px",
+                    backgroundColor: "#34d399",
+                  }}
+                />
+              </div>
+              <div style={{ fontSize: "24px", color: "#71717a" }}>
+                🔒
+              </div>
             </div>
           </div>
         </div>
@@ -148,7 +141,7 @@ export async function GET(
               border: "1px solid rgba(129, 140, 248, 0.3)",
             }}
           >
-            $1.99/mo · stock picks diarios
+            $1/mo · daily stock picks
           </div>
         </div>
       </div>

@@ -88,11 +88,11 @@ export async function GET() {
             {totalReturnPct.toFixed(1)}%
           </div>
           <div style={{ fontSize: "22px", color: "#a1a1aa" }}>
-            {positions.length} posiciones · desde {since}
+            {positions.length} positions · since {since}
           </div>
         </div>
 
-        {/* Position bars */}
+        {/* Position bars — NO exact return numbers, just tickers + colored bars */}
         <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
           {top5.map((pos) => {
             const posPositive = pos.return_pct > 0;
@@ -126,20 +126,18 @@ export async function GET() {
                 />
                 <div
                   style={{
-                    fontSize: "18px",
-                    fontWeight: 600,
+                    fontSize: "16px",
                     color: posPositive ? "#34d399" : "#f87171",
                   }}
                 >
-                  {posPositive ? "+" : ""}
-                  {pos.return_pct.toFixed(1)}%
+                  {posPositive ? "↑" : "↓"}
                 </div>
               </div>
             );
           })}
           {remaining > 0 && (
             <div style={{ fontSize: "16px", color: "#71717a", marginTop: "4px" }}>
-              ... y {remaining} posiciones mas
+              + {remaining} more
             </div>
           )}
         </div>
@@ -164,7 +162,7 @@ export async function GET() {
               border: "1px solid rgba(129, 140, 248, 0.3)",
             }}
           >
-            $1.99/mo · stock picks diarios
+            $1/mo · daily stock picks
           </div>
         </div>
       </div>
