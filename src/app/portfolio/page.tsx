@@ -33,11 +33,14 @@ export default async function PortfolioPage() {
   const currentCycle =
     cycles.find((c) => c.status === "active") ?? cycles[cycles.length - 1] ?? null;
 
-  // Urgency: last pick date and next pick hint
+  // Urgency: last pick date (no ticker — that's premium info)
   const lastTx = transactions[transactions.length - 1];
   const lastPickDate = lastTx ? lastTx.date : null;
   const today = new Date().toISOString().split("T")[0];
   const isLastPickToday = lastPickDate === today;
+  const daysSinceLastPick = lastPickDate
+    ? Math.ceil((Date.now() - new Date(lastPickDate + "T00:00:00").getTime()) / 86400000)
+    : 0;
 
   const freeTransactions = transactions.slice(0, 3);
   const hasPremiumTransactions = transactions.length > 3;
@@ -54,14 +57,14 @@ export default async function PortfolioPage() {
               <>
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-emerald-600 dark:text-emerald-400 font-medium">
-                  {t("lastPickToday")} — {lastTx.ticker}
+                  {t("lastPickToday")}
                 </span>
               </>
             ) : (
               <>
                 <span className="w-2 h-2 rounded-full bg-brand" />
                 <span className="text-text-muted">
-                  {t("lastPick")}: {lastPickDate} — {lastTx.ticker}
+                  {t("lastPick", { days: daysSinceLastPick })}
                 </span>
               </>
             )}

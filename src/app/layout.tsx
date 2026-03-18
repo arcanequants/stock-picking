@@ -32,6 +32,12 @@ const notoDevanagari = Noto_Sans_Devanagari({
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata");
   return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : "https://www.vectorialdata.com")
+    ),
     title: t("title"),
     description: t("description"),
     openGraph: {

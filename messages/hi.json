@@ -123,7 +123,7 @@
     "potential": "संभावना",
     "consensus": "सर्वसम्मति",
     "lastPickToday": "आज नया पिक",
-    "lastPick": "आखिरी पिक"
+    "lastPick": "आखिरी पिक: {days} दिन पहले"
   },
   "Stocks": {
     "title": "सभी स्टॉक्स",
@@ -220,7 +220,7 @@
     "currentPrice": "वर्तमान",
     "return": "रिटर्न",
     "daysHeld": "दिन",
-    "subscribeToSee": "सटीक रिटर्न देखने के लिए सदस्यता लें",
+    "subscribeToSee": "शेष {count} पोजीशन देखें",
     "andMore": "+ {count} और पोजीशन"
   },
   "Share": {

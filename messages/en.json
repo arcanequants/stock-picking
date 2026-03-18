@@ -123,7 +123,7 @@
     "potential": "Potential",
     "consensus": "Consensus",
     "lastPickToday": "New pick today",
-    "lastPick": "Last pick"
+    "lastPick": "Last pick: {days} day(s) ago"
   },
   "Stocks": {
     "title": "All Stocks",
@@ -220,7 +220,7 @@
     "currentPrice": "Current",
     "return": "Return",
     "daysHeld": "Days",
-    "subscribeToSee": "Subscribe to see exact returns",
+    "subscribeToSee": "See the {count} remaining positions",
     "andMore": "+ {count} more positions"
   },
   "Share": {

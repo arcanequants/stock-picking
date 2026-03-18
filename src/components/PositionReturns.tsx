@@ -94,13 +94,11 @@ export default function PositionReturns({
                 {t("return")}
               </th>
               {isSubscribed && (
-                <>
-                  <th className="text-right py-2 px-3 text-text-faint hidden sm:table-cell">
-                    {t("daysHeld")}
-                  </th>
-                  <th className="py-2 px-3 text-text-faint w-8" />
-                </>
+                <th className="text-right py-2 px-3 text-text-faint hidden sm:table-cell">
+                  {t("daysHeld")}
+                </th>
               )}
+              <th className="py-2 px-3 text-text-faint w-8" />
             </tr>
           </thead>
           <tbody>
@@ -143,9 +141,18 @@ export default function PositionReturns({
                     </td>
                   </>
                 ) : (
-                  <td className="py-2 px-3 text-right">
-                    <ReturnBadge value={pos.return_pct} />
-                  </td>
+                  <>
+                    <td className="py-2 px-3 text-right">
+                      <ReturnBadge value={pos.return_pct} />
+                    </td>
+                    <td className="py-2 px-3">
+                      <ShareButton
+                        url={`/share/${pos.ticker}`}
+                        title={`${pos.ticker} ${pos.return_pct >= 0 ? "+" : ""}${pos.return_pct.toFixed(1)}%`}
+                        variant="icon"
+                      />
+                    </td>
+                  </>
                 )}
               </tr>
             ))}
@@ -154,17 +161,15 @@ export default function PositionReturns({
       </div>
 
       {/* Free: show hidden count + CTA */}
-      {!isSubscribed && (
-        <div className="mt-2 relative">
-          {hiddenCount > 0 && (
-            <p className="text-center text-xs text-text-faint mb-3">
-              {t("andMore", { count: hiddenCount })}
-            </p>
-          )}
+      {!isSubscribed && hiddenCount > 0 && (
+        <div className="mt-3 relative">
+          <p className="text-center text-sm text-text-muted font-medium mb-3">
+            {t("andMore", { count: hiddenCount })}
+          </p>
           <div className="text-center">
             <a
               href={paymentLink}
-              className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+              className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors cta-glow"
             >
               <svg
                 width="14"
@@ -177,7 +182,7 @@ export default function PositionReturns({
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" />
               </svg>
-              {t("subscribeToSee")}
+              {t("subscribeToSee", { count: hiddenCount })}
             </a>
           </div>
         </div>
