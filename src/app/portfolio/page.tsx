@@ -7,31 +7,75 @@ import PremiumGate from "@/components/PremiumGate";
 import { stocks, transactions, cycles } from "@/data/stocks";
 import { getTranslations } from "next-intl/server";
 import { getAuthState } from "@/lib/auth";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Portfolio");
+  return {
+    title: `${t("title")} | Vectorial Data`,
+    description: t("subtitle"),
+    openGraph: {
+      title: `${t("title")} | Vectorial Data`,
+      description: t("subtitle"),
+      images: [{ url: "/api/og/portfolio", width: 1200, height: 630 }],
+      type: "website",
+    },
+    twitter: { card: "summary_large_image" },
+  };
+}
 
 export default async function PortfolioPage() {
   const { isSubscribed } = await getAuthState();
   const t = await getTranslations("Portfolio");
   const tPremium = await getTranslations("Premium");
   const activeStocks = stocks.filter((s) => s.status === "active");
-  const currentCycle = cycles[0] ?? null;
+  // Fix: use active cycle, not cycles[0]
+  const currentCycle =
+    cycles.find((c) => c.status === "active") ?? cycles[cycles.length - 1] ?? null;
+
+  // Urgency: last pick date and next pick hint
+  const lastTx = transactions[transactions.length - 1];
+  const lastPickDate = lastTx ? lastTx.date : null;
+  const today = new Date().toISOString().split("T")[0];
+  const isLastPickToday = lastPickDate === today;
 
   const freeTransactions = transactions.slice(0, 3);
   const hasPremiumTransactions = transactions.length > 3;
 
   return (
     <div className="space-y-10">
+      {/* Hero: title + urgency indicator */}
       <section>
         <h1 className="text-3xl font-bold mb-2">{t("title")}</h1>
         <p className="text-text-muted">{t("subtitle")}</p>
+        {lastPickDate && (
+          <div className="mt-3 inline-flex items-center gap-2 text-sm border border-border rounded-lg px-3 py-1.5">
+            {isLastPickToday ? (
+              <>
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-emerald-600 dark:text-emerald-400 font-medium">
+                  {t("lastPickToday")} — {lastTx.ticker}
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="w-2 h-2 rounded-full bg-brand" />
+                <span className="text-text-muted">
+                  {t("lastPick")}: {lastPickDate} — {lastTx.ticker}
+                </span>
+              </>
+            )}
+          </div>
+        )}
       </section>
 
-      {/* FREE: Performance Metrics */}
+      {/* 1. Return total hero — the emotional hook */}
       <PerformanceMetrics />
 
-      {/* Position Returns with sharing */}
+      {/* 2. Position returns with sharing — the conversion driver */}
       <PositionReturns isSubscribed={isSubscribed} />
 
-      {/* PREMIUM: Performance Chart (blurred) */}
+      {/* 3. Performance chart (premium — blur) */}
       <PremiumGate
         title={tPremium("unlockChart")}
         description={tPremium("unlockChartDesc")}
@@ -43,15 +87,7 @@ export default async function PortfolioPage() {
         <PerformanceChart />
       </PremiumGate>
 
-      {/* FREE: Cycle Tracker */}
-      {currentCycle && <CycleTracker cycle={currentCycle} />}
-
-      {/* FREE: Dashboard (sector/region allocation) */}
-      {activeStocks.length > 0 && (
-        <PortfolioDashboard stocks={stocks} cycle={currentCycle} />
-      )}
-
-      {/* PARTIAL FREE + PREMIUM: Transaction History */}
+      {/* 4. Transaction history (partial free + premium fade) */}
       {transactions.length > 0 && (
         <section className="border border-border rounded-xl p-5">
           <div className="flex items-center justify-between mb-4">
@@ -91,7 +127,7 @@ export default async function PortfolioPage() {
             </table>
           </div>
 
-          {/* Premium: remaining transactions (blurred with fade) */}
+          {/* Premium: remaining transactions (fade effect) */}
           {hasPremiumTransactions && (
             <PremiumGate
               title={tPremium("unlockTransactions")}
@@ -124,65 +160,11 @@ export default async function PortfolioPage() {
         </section>
       )}
 
-      {/* PREMIUM: Active Positions (ticker pills free, table blurred) */}
+      {/* 5. Cycle Tracker + Dashboard (less prominent, at the bottom) */}
+      {currentCycle && <CycleTracker cycle={currentCycle} />}
+
       {activeStocks.length > 0 && (
-        <section className="border border-border rounded-xl p-5">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
-              {t("activePositions")}
-            </h3>
-            <span className="pro-badge">{tPremium("badge")}</span>
-          </div>
-
-          {/* Free: ticker pills */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {activeStocks.map((s) => (
-              <span key={s.ticker} className="text-xs font-mono px-3 py-1.5 rounded-full bg-tag-bg text-text-muted border border-border">
-                {s.ticker}
-              </span>
-            ))}
-          </div>
-
-          {/* Premium: full table (blurred) */}
-          <PremiumGate
-            title={tPremium("unlockPositions")}
-            description={tPremium("unlockPositionsDesc")}
-            icon="table"
-            variant="blur"
-            isSubscribed={isSubscribed}
-          >
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="text-left py-2 px-3 text-text-faint">{t("ticker")}</th>
-                    <th className="text-left py-2 px-3 text-text-faint">{t("name")}</th>
-                    <th className="text-left py-2 px-3 text-text-faint">{t("sector")}</th>
-                    <th className="text-right py-2 px-3 text-text-faint">{t("price")}</th>
-                    <th className="text-right py-2 px-3 text-text-faint">{t("dividend")}</th>
-                    <th className="text-right py-2 px-3 text-text-faint">{t("potential")}</th>
-                    <th className="text-right py-2 px-3 text-text-faint">{t("consensus")}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {activeStocks.map((s) => (
-                    <tr key={s.ticker} className="border-b border-border/50 hover:bg-card-hover">
-                      <td className="py-2 px-3 font-bold text-foreground">{s.ticker}</td>
-                      <td className="py-2 px-3 text-text-secondary">{s.name}</td>
-                      <td className="py-2 px-3 text-text-muted">{s.sector}</td>
-                      <td className="py-2 px-3 text-right font-mono text-foreground">${s.price?.toFixed(2)}</td>
-                      <td className="py-2 px-3 text-right font-mono text-text-secondary">{s.dividend_yield}%</td>
-                      <td className={`py-2 px-3 text-right font-mono ${(s.analyst_upside || 0) > 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}>
-                        {s.analyst_upside && s.analyst_upside > 0 ? "+" : ""}{s.analyst_upside}%
-                      </td>
-                      <td className="py-2 px-3 text-right text-text-secondary">{s.analyst_consensus}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </PremiumGate>
-        </section>
+        <PortfolioDashboard stocks={stocks} cycle={currentCycle} />
       )}
     </div>
   );

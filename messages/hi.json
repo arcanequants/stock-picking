@@ -121,7 +121,9 @@
     "sector": "सेक्टर",
     "dividend": "लाभांश",
     "potential": "संभावना",
-    "consensus": "सर्वसम्मति"
+    "consensus": "सर्वसम्मति",
+    "lastPickToday": "आज नया पिक",
+    "lastPick": "आखिरी पिक"
   },
   "Stocks": {
     "title": "सभी स्टॉक्स",

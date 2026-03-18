@@ -40,10 +40,9 @@ export default function PerformanceMetrics() {
 
   if (loading) {
     return (
-      <div className="grid grid-cols-3 gap-4 animate-pulse">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="border border-border rounded-xl p-4 h-24" />
-        ))}
+      <div className="border border-border rounded-xl p-6 animate-pulse">
+        <div className="h-12 bg-tag-bg rounded w-32 mx-auto mb-4" />
+        <div className="h-4 bg-tag-bg rounded w-48 mx-auto" />
       </div>
     );
   }
@@ -52,57 +51,55 @@ export default function PerformanceMetrics() {
 
   const isPositive = latest.return_pct >= 0;
   const positions = Math.round(latest.total_invested / 50);
+  const days = firstDate
+    ? Math.ceil(
+        (Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000
+      )
+    : 0;
 
   return (
-    <div className="grid grid-cols-3 gap-4">
-      <div
-        className={`border rounded-xl p-4 ${
+    <div
+      className={`border rounded-xl p-6 text-center ${
+        isPositive
+          ? "border-emerald-500/30 bg-emerald-500/5"
+          : "border-red-500/30 bg-red-500/5"
+      }`}
+    >
+      {/* Big return number — the emotional hook */}
+      <p className="text-xs text-text-faint uppercase tracking-wider mb-1">
+        {t("return")}
+      </p>
+      <p
+        className={`text-5xl sm:text-6xl font-extrabold font-mono ${
           isPositive
-            ? "border-emerald-500/30 bg-emerald-500/5"
-            : "border-red-500/30 bg-red-500/5"
+            ? "text-emerald-600 dark:text-emerald-400"
+            : "text-red-600 dark:text-red-400"
         }`}
       >
-        <p className="text-xs text-text-faint uppercase tracking-wider">
-          {t("return")}
-        </p>
-        <p
-          className={`text-2xl font-bold font-mono mt-1 ${
-            isPositive ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"
-          }`}
-        >
-          {isPositive ? "+" : ""}
-          {latest.return_pct.toFixed(2)}%
-        </p>
-      </div>
+        {isPositive ? "+" : ""}
+        {latest.return_pct.toFixed(2)}%
+      </p>
 
-      <div className="border border-border rounded-xl p-4">
-        <p className="text-xs text-text-faint uppercase tracking-wider">
-          {t("positions")}
-        </p>
-        <p className="text-2xl font-bold font-mono text-foreground mt-1">
+      {/* Supporting stats inline */}
+      <div className="flex items-center justify-center gap-4 mt-3 text-sm text-text-muted">
+        <span className="font-mono font-semibold text-foreground">
           {positions}
-        </p>
-        <p className="text-xs text-text-faint mt-0.5">
-          {t("active")}
-        </p>
-      </div>
-
-      <div className="border border-border rounded-xl p-4">
-        <p className="text-xs text-text-faint uppercase tracking-wider">
-          {t("since")}
-        </p>
-        <p className="text-lg font-bold text-foreground mt-1">
+        </span>{" "}
+        {t("positions").toLowerCase()}
+        <span className="text-text-faint">·</span>
+        <span>
+          {t("since").toLowerCase()}{" "}
           {firstDate
-            ? new Date(firstDate + "T00:00:00").toLocaleDateString(dateLocale, {
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              })
+            ? new Date(firstDate + "T00:00:00").toLocaleDateString(
+                dateLocale,
+                { day: "numeric", month: "short", year: "numeric" }
+              )
             : "—"}
-        </p>
-        <p className="text-xs text-text-faint mt-0.5">
-          {firstDate ? `${Math.ceil((Date.now() - new Date(firstDate + "T00:00:00").getTime()) / 86400000)} ${t("days")}` : ""}
-        </p>
+        </span>
+        <span className="text-text-faint">·</span>
+        <span>
+          {days} {t("days")}
+        </span>
       </div>
     </div>
   );

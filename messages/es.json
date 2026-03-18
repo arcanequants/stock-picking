@@ -121,7 +121,9 @@
     "sector": "Sector",
     "dividend": "Dividendo",
     "potential": "Potencial",
-    "consensus": "Consenso"
+    "consensus": "Consenso",
+    "lastPickToday": "Nuevo pick hoy",
+    "lastPick": "Último pick"
   },
   "Stocks": {
     "title": "Todas las Acciones",
