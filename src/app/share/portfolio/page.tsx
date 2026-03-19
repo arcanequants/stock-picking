@@ -66,6 +66,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function SharePortfolioPage() {
   const { positions, totalReturnPct } = await getPortfolioData();
   const t = await getTranslations("Share");
+  const tLegal = await getTranslations("Legal");
   const isPositive = totalReturnPct >= 0;
   const top5 = positions.slice(0, 5);
   const remaining = positions.length - 5;
@@ -144,6 +145,9 @@ export default async function SharePortfolioPage() {
 
       <p className="text-xs text-text-faint">
         {t("pageFooter")}
+      </p>
+      <p className="text-xs text-text-faint italic">
+        {tLegal("pastPerformance")} {tLegal("notFinancialAdvice")}
       </p>
     </div>
   );

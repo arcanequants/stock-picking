@@ -7,6 +7,7 @@ import MobileNav from "@/components/MobileNav";
 import AuthButton from "@/components/AuthButton";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import CookieConsent from "@/components/CookieConsent";
 import { getAuthState } from "@/lib/auth";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NextIntlClientProvider } from "next-intl";
@@ -132,10 +133,20 @@ export default async function RootLayout({
                   <Image src="/logo.png" alt="Vectorial Data" width={24} height={24} />
                   <span className="font-semibold text-text-muted">Vectorial Data</span>
                 </div>
+                <div className="flex items-center justify-center gap-3 mb-3 text-text-muted">
+                  <Link href="/terms" className="hover:text-foreground transition-colors">{tFooter("terms")}</Link>
+                  <span className="text-border">·</span>
+                  <Link href="/privacy" className="hover:text-foreground transition-colors">{tFooter("privacy")}</Link>
+                  <span className="text-border">·</span>
+                  <Link href="/disclaimer" className="hover:text-foreground transition-colors">{tFooter("financialDisclaimer")}</Link>
+                </div>
                 <p>{tFooter("disclaimer")}</p>
                 <p className="mt-1">{tFooter("prices")}</p>
+                <p className="mt-1">{tFooter("copyright", { year: new Date().getFullYear() })}</p>
               </div>
             </footer>
+
+            <CookieConsent />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

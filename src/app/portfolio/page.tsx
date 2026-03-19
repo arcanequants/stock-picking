@@ -28,6 +28,7 @@ export default async function PortfolioPage() {
   const { isSubscribed } = await getAuthState();
   const t = await getTranslations("Portfolio");
   const tPremium = await getTranslations("Premium");
+  const tLegal = await getTranslations("Legal");
   const activeStocks = stocks.filter((s) => s.status === "active");
   // Fix: use active cycle, not cycles[0]
   const currentCycle =
@@ -74,6 +75,9 @@ export default async function PortfolioPage() {
 
       {/* 1. Return total hero — the emotional hook */}
       <PerformanceMetrics positionCount={transactions.length} />
+
+      {/* Past performance disclaimer */}
+      <p className="text-xs text-text-faint italic -mt-6">{tLegal("pastPerformance")} {tLegal("notFinancialAdvice")}</p>
 
       {/* 2. Position returns with sharing — the conversion driver */}
       <PositionReturns isSubscribed={isSubscribed} />

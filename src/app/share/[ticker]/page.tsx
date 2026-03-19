@@ -82,6 +82,7 @@ export default async function ShareStockPage({
   if (!data) notFound();
 
   const t = await getTranslations("Share");
+  const tLegal = await getTranslations("Legal");
   const isPositive = data.returnPct >= 0;
   const paymentLink =
     process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "/join";
@@ -154,6 +155,9 @@ export default async function ShareStockPage({
 
       <p className="text-xs text-text-muted">
         {t("pageFooter")}
+      </p>
+      <p className="text-xs text-text-faint italic">
+        {tLegal("pastPerformance")} {tLegal("notFinancialAdvice")}
       </p>
     </div>
   );

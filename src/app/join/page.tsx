@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
 export default async function JoinPage() {
   const t = await getTranslations("Join");
@@ -31,6 +32,12 @@ export default async function JoinPage() {
           {t("cta")}
         </a>
         <p className="text-xs text-text-faint mt-3">{t("disclaimer")}</p>
+        <p className="text-xs text-text-faint mt-2">
+          {t.rich("consent", {
+            terms: (chunks) => <Link href="/terms" className="underline hover:text-text-muted">{chunks}</Link>,
+            privacy: (chunks) => <Link href="/privacy" className="underline hover:text-text-muted">{chunks}</Link>,
+          })}
+        </p>
       </div>
 
       <section className="text-left space-y-4 mt-12">

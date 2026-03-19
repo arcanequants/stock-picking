@@ -53,6 +53,7 @@ export default async function StockResearchPage({
   if (!stock) return notFound();
 
   const t = await getTranslations("StockDetail");
+  const tLegal = await getTranslations("Legal");
   const locale = await getLocale();
   const dateLocale = localeMap[locale] || "es-MX";
 
@@ -164,6 +165,11 @@ export default async function StockResearchPage({
         </div>
       </div>
 
+      {/* Disclaimer above the fold */}
+      <p className="text-xs text-text-faint italic border-t border-border pt-3 mb-8">
+        {tLegal("notFinancialAdvice")} {tLegal("consultAdvisor")}
+      </p>
+
       {researchHtml && (
         <div className="border border-border rounded-xl p-6 md:p-8">
           <h2 className="text-xl font-bold mb-6">{t("fullResearch")}</h2>
@@ -180,6 +186,13 @@ export default async function StockResearchPage({
       </div>
 
       <p className="mt-4 text-xs text-text-faint italic">{t("legalDisclaimer")}</p>
+      <p className="mt-1 text-xs text-text-faint">{tLegal("holdPositions")}</p>
+      <p className="mt-1 text-xs text-text-faint">{tLegal("pastPerformance")}</p>
+      {locale === "hi" && (
+        <p className="mt-2 text-xs text-text-faint border border-border rounded-lg p-3">
+          {tLegal("sebiDisclaimer")}
+        </p>
+      )}
     </div>
   );
 }

@@ -117,26 +117,31 @@ export async function GET(
         </div>
 
         {/* Footer */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ fontSize: "18px", color: "#71717a" }}>
-            vectorialdata.com/stocks/{upperTicker}
-          </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
           <div
             style={{
-              fontSize: "16px",
-              color: "#818cf8",
-              padding: "8px 16px",
-              borderRadius: "8px",
-              border: "1px solid rgba(129, 140, 248, 0.3)",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            $1/mo · daily stock picks
+            <div style={{ fontSize: "18px", color: "#71717a" }}>
+              vectorialdata.com/stocks/{upperTicker}
+            </div>
+            <div
+              style={{
+                fontSize: "16px",
+                color: "#818cf8",
+                padding: "8px 16px",
+                borderRadius: "8px",
+                border: "1px solid rgba(129, 140, 248, 0.3)",
+              }}
+            >
+              $1/mo · daily stock picks
+            </div>
+          </div>
+          <div style={{ fontSize: "12px", color: "#52525b" }}>
+            Past performance ≠ future results · Not financial advice
           </div>
         </div>
       </div>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /welcome
+
+Sitemap: https://www.vectorialdata.com/sitemap.xml
