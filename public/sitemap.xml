@@ -27,4 +27,5 @@
   <url><loc>https://www.vectorialdata.com/stocks/WAL</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.vectorialdata.com/stocks/SIEGY</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.vectorialdata.com/stocks/AXAHY</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.vectorialdata.com/stocks/B</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

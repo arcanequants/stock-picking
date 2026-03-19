@@ -1842,6 +1842,125 @@ AXA SA es una de las **aseguradoras más grandes del mundo** y la **#1 de Europa
     last_updated_at: "2026-03-18T00:00:00Z",
     next_review_at: "2026-09-18T00:00:00Z",
   },
+  {
+    id: 19,
+    ticker: "B",
+    name: "Barrick Mining",
+    sector: "Materials",
+    industry: "Gold Mining",
+    region: "North America",
+    country: "Canada",
+    currency: "USD",
+    price: 37.40,
+    dividend_yield: 4.15,
+    pe_ratio: 12.76,
+    pe_forward: 8.61,
+    eps: 2.93,
+    market_cap_b: 63.0,
+    summary_short: "Una de las mineras de oro y cobre más grandes del mundo. 3.26M oz de oro y 220K ton de cobre en 2025. Revenue de $16.96B.",
+    summary_what: "Barrick Mining (antes Barrick Gold) extrae oro y cobre en 17 países. Opera Nevada Gold Mines (JV con Newmont), Pueblo Viejo (Rep. Dominicana), Loulo-Gounkoto (Mali), Lumwana (Zambia), y está construyendo el megaproyecto Reko Diq en Pakistán.",
+    summary_why: "Márgenes enormes con oro a $5,000+/oz (AISC de $1,637/oz). Free cash flow creció 194% a $3.87B. Nueva política de dividendo: 50% del FCF. Pipeline de crecimiento único: Reko Diq (cobre-oro), Lumwana Super Pit, y Fourmile (Nevada). Producción +30% hacia 2030.",
+    summary_risk: "100% expuesto al precio del oro sin cobertura. Opera en jurisdicciones de alto riesgo político (Mali, Pakistán, DRC). Disputa con Newmont por la IPO de activos norteamericanos podría bloquear un catalizador clave.",
+    research_full: `# Barrick Mining Corporation (B) — Research Completo
+
+## Precio: $37.40 | P/E: 12.8 | P/E Forward: 8.6 | Div Yield: 4.15% | Market Cap: $63B
+
+---
+
+## Qué es Barrick?
+
+Barrick Mining Corporation (antes Barrick Gold, ticker GOLD; renombrada mayo 2025, nuevo ticker NYSE: B) es una de las **mineras de oro y cobre más grandes del mundo**. Opera minas en 17 países incluyendo EE.UU., Canadá, Zambia, Pakistán, Mali, Tanzania, y República Dominicana. Produjo 3.26 millones de onzas de oro y 220,000 toneladas de cobre en 2025 con revenue de $16.96 mil millones.
+
+El cambio de nombre refleja la evolución de Barrick de una compañía puramente de oro a una minera diversificada con una creciente cartera de cobre.
+
+## Minas y Operaciones Principales
+
+| Operación | País | Producto | Notas |
+|-----------|------|----------|-------|
+| **Nevada Gold Mines** (61.5%) | EE.UU. | Oro | JV con Newmont (38.5%). Incluye Carlin, Cortez, Turquoise Ridge, Goldstrike |
+| **Pueblo Viejo** | Rep. Dominicana | Oro | Record de throughput en 2025. Expansión en progreso |
+| **Loulo-Gounkoto** | Mali | Oro | Resuelta disputa con gobierno de Mali (feb 2026). Producción 2026: 260-290K oz |
+| **Lumwana** | Zambia | Cobre | Expansión "Super Pit" de $2B. Duplicará producción a 240K ton/año para 2027 |
+| **Reko Diq** | Pakistán | Cobre + Oro | Megaproyecto. Fase 1 en 2028. Producirá 460K ton Cu + 520K oz Au al año |
+| **Fourmile** | EE.UU. (Nevada) | Oro | 100% Barrick. Grados el doble que Goldrush. Potencial mina Tier One |
+
+**Producción 2025:** 3.26M oz oro + 220K ton cobre
+**Guía 2026:** 2.90-3.25M oz oro + 190-220K ton cobre
+**AISC 2025:** $1,637/oz
+
+## Resultados Financieros 2025 — Año Récord
+
+| Métrica | 2024 | 2025 | Cambio |
+|---------|------|------|--------|
+| **Revenue** | $12.92B | $16.96B | **+31%** |
+| **Net Earnings** | $2.14B ($1.22/acción) | $4.99B ($2.93/acción) | **+133%** |
+| **Operating Cash Flow** | $4.49B | $7.69B | **+71%** |
+| **Free Cash Flow** | $1.32B | $3.87B | **+194%** |
+| **Operating Margin** | ~38% | **50%** | +12pp |
+
+## Exposición al Precio del Oro
+
+Barrick NO cubre (hedge) su producción — está 100% expuesto al precio spot del oro.
+
+- **Precio actual del oro:** ~$5,000+/oz
+- **AISC de Barrick:** $1,637/oz
+- **Margen por onza:** ~$3,400+ (margen operativo enorme)
+- **JP Morgan proyecta:** $6,300/oz para fin de 2026
+- **Drivers:** Compra récord de bancos centrales, geopolítica, inflación, deuda de EE.UU.
+
+Cada $100/oz de aumento en el precio del oro agrega ~$326M en revenue anual adicional.
+
+## Dividendo — Política Nueva y Generosa
+
+**Nueva política (desde Q4 2025):** Dividendo base fijo de $0.175/trimestre ($0.70/año) + componente de performance basado en 50% del FCF anual. A precios actuales del oro, el payout total podría ser significativamente mayor.
+
+**Buybacks 2025:** $1.5B en recompras (51.9M acciones, ~3% del float).
+
+## Catalizadores de Crecimiento
+
+1. **Reko Diq (Pakistán)** — Megaproyecto cobre-oro. Primera producción 2028. Top 10 depósito de cobre del mundo.
+2. **Lumwana Super Pit (Zambia)** — Expansión de $2B. Duplica producción de cobre para 2027.
+3. **Fourmile (Nevada)** — 100% Barrick. Grados superiores a Goldrush. Potencial Tier One.
+4. **IPO de activos norteamericanos** — Valoración potencial de ~$42B. Pero Newmont ejerce derechos de bloqueo.
+5. **Loulo-Gounkoto reinicio** — Disputa con Mali resuelta. 260-290K oz adicionales en 2026.
+6. **Objetivo +30% de producción para 2030.**
+
+## Posición Competitiva
+
+| Métrica | Barrick (B) | Newmont (NEM) | Gold Fields (GFI) |
+|---------|-------------|---------------|-------------------|
+| **Producción oro** | 3.26M oz | ~5.5M oz | 2.44M oz |
+| **Market Cap** | $63B | ~$80B+ | $42.7B |
+| **P/E** | 12.8x | ~15-16x | 12.1x |
+| **Dividend Yield** | 4.15% | ~2-2.5% | 5.1% |
+| **Cobre exposure** | SI (fuerte) | Limitada | Limitada |
+
+**Ventaja principal de Barrick:** Única major con exposición significativa y creciente a cobre + mayor pipeline de crecimiento orgánico.
+
+## Riesgos Principales
+
+1. **Dependencia del precio del oro** — Sin hedge. Si el oro cae, los márgenes caen más fuerte
+2. **Riesgo jurisdiccional** — Mali (confiscación previa), Pakistán, DRC
+3. **Disputa con Newmont** — Podría bloquear la IPO de NewCo
+4. **AISC guía 2026 más alta** — $1,760-1,950/oz, 7-19% más que 2025
+5. **Ejecución de megaproyectos** — Reko Diq ($7B+) y Lumwana ($2B) con riesgo de sobrecostos
+
+## Conclusión
+
+Barrick Mining es una apuesta de alta convicción al oro y cobre con un pipeline de crecimiento que ningún otro major gold miner tiene. Márgenes enormes ($3,400+/oz), crecimiento de producción del 30% hacia 2030, diversificación hacia cobre, y política generosa de retorno al accionista (50% del FCF). Cotiza a 8.6x forward earnings — la más barata del portafolio. Consenso: Strong Buy, +47% upside.
+
+---
+
+*Research fecha: 19 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 55.25,
+    analyst_upside: 47.7,
+    status: "active",
+    first_researched_at: "2026-03-19T00:00:00Z",
+    last_updated_at: "2026-03-19T00:00:00Z",
+    next_review_at: "2026-09-19T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -1999,6 +2118,17 @@ export const transactions = [
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #14* — Mar 18, 2026\n\n🏢 *AXA* (AXAHY) — $45.09\n\n🛍️ *Sus marcas*: AXA (seguros #1 de Europa), AXA XL (reaseguro comercial global), AXA Investment Managers, y operaciones en ~50 países con 92 millones de clientes\n\n🌍 *Presencia*: Francia (HQ), Alemania, Suiza, UK, España, Italia, Japón, EE.UU. y más. La aseguradora más grande de Europa.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.4% anual* solo por ser dueño — uno de los dividendos más altos del portafolio. Cada vez que alguien paga su seguro de auto, de casa, de salud, o de vida en cualquiera de los 50 países donde operan — parte de ese dinero llega a ti. Y devuelven 75% de su profit al accionista entre dividendos y recompras.\n\n⚠️ *El riesgo*: Catástrofes naturales por cambio climático pueden aumentar los costos de siniestros.\n\n🆕 Posición #14\n🔗 https://vectorialdata.com/stocks/AXAHY\n\n💡 Con 5.4% de dividendo, AXAHY duplica tu inversión solo en dividendos en ~13 años. Sin que suba de precio.`,
   },
+  {
+    id: 15,
+    stock_id: 19,
+    ticker: "B",
+    type: "new" as const,
+    cycle_number: 3,
+    price: 37.40,
+    date: "2026-03-19",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #15* — Mar 19, 2026\n\n🏢 *Barrick Mining* (B) — $37.40\n\n⛏️ *Su producto*: Oro y cobre. Extraen 3.26 millones de onzas de oro al año de minas en 17 países: EE.UU. (Nevada Gold Mines), Canadá, Rep. Dominicana, Mali, Zambia, Tanzania, y Pakistán.\n\n🌍 *Presencia*: 17 países — Canadá (HQ), EE.UU., Zambia, Pakistán, Mali, Tanzania, Rep. Dominicana y más. Antes se llamaba Barrick Gold.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.15% anual* solo por ser dueño. Su free cash flow creció 194% en 2025 a $3.87 mil millones. Nueva política: devuelven 50% de su cash flow al accionista. Con oro arriba de $5,000/oz y su costo de producción en $1,637/oz, el margen por onza es enorme.\n\n⚠️ *El riesgo*: 100% expuesto al precio del oro sin cobertura. Si el oro baja, Barrick baja más fuerte. Opera en países con riesgo político (Mali, Pakistán).\n\n🆕 Posición #15 — Cierra Ciclo 3\n🔗 https://vectorialdata.com/stocks/B\n\n💡 El dividendo de B se reinvierte → compra más fracciones → genera más dividendo → compra más fracciones. Eso es interés compuesto.`,
+  },
 ];
 
 export const cycles = [
@@ -2023,7 +2153,15 @@ export const cycles = [
     cycle_number: 3,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 4,
+    cycle_number: 4,
+    type: "rebuy" as const,
+    target_count: 5,
+    current_count: 0,
     status: "active" as const,
   },
 ];
