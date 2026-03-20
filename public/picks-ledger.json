@@ -1,0 +1,122 @@
+[
+  {
+    "pick_number": 1,
+    "ticker": "UBS",
+    "price": 39.76,
+    "date": "2026-03-04",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "a6cedc77391539cd8653bb1a61430ca3fb2fd5abbf58cc00185e35e065e7892d"
+  },
+  {
+    "pick_number": 2,
+    "ticker": "VGK",
+    "price": 84.64,
+    "date": "2026-03-09",
+    "previous_hash": "a6cedc77391539cd8653bb1a61430ca3fb2fd5abbf58cc00185e35e065e7892d",
+    "hash": "f4b6e76399594eb74d48801bffc91bd4710efb49d5881d53e3cdf05effc86e7c"
+  },
+  {
+    "pick_number": 3,
+    "ticker": "VPL",
+    "price": 100.53,
+    "date": "2026-03-09",
+    "previous_hash": "f4b6e76399594eb74d48801bffc91bd4710efb49d5881d53e3cdf05effc86e7c",
+    "hash": "ffb0a8bba7caa1ad7908e30992b35086dd836a0a80b59569250a211d1d8d1aaf"
+  },
+  {
+    "pick_number": 4,
+    "ticker": "ARM",
+    "price": 117.63,
+    "date": "2026-03-09",
+    "previous_hash": "ffb0a8bba7caa1ad7908e30992b35086dd836a0a80b59569250a211d1d8d1aaf",
+    "hash": "65ecefb2e5e1bd32b256f86276b08d240e82cc99c75be7040dacbfd26ce976bc"
+  },
+  {
+    "pick_number": 5,
+    "ticker": "ASBFY",
+    "price": 25.13,
+    "date": "2026-03-10",
+    "previous_hash": "65ecefb2e5e1bd32b256f86276b08d240e82cc99c75be7040dacbfd26ce976bc",
+    "hash": "16f639e2fc219ab6eee3030dfa83e8c47a859b88a31c399b9f02481900a3f8a5"
+  },
+  {
+    "pick_number": 6,
+    "ticker": "AVGO",
+    "price": 342.69,
+    "date": "2026-03-11",
+    "previous_hash": "16f639e2fc219ab6eee3030dfa83e8c47a859b88a31c399b9f02481900a3f8a5",
+    "hash": "266d9794965d63ca6416a23092fc44985b44dd2e81e278e03ba6a5448c7f94a1"
+  },
+  {
+    "pick_number": 7,
+    "ticker": "ASML",
+    "price": 1390.2,
+    "date": "2026-03-11",
+    "previous_hash": "266d9794965d63ca6416a23092fc44985b44dd2e81e278e03ba6a5448c7f94a1",
+    "hash": "01763a2e2adaf648a2c0829ed18395f3d0340c79552e88a64dcc88b1f776bdb8"
+  },
+  {
+    "pick_number": 8,
+    "ticker": "AWK",
+    "price": 138.25,
+    "date": "2026-03-12",
+    "previous_hash": "01763a2e2adaf648a2c0829ed18395f3d0340c79552e88a64dcc88b1f776bdb8",
+    "hash": "d6a09a7cbd171c83f90e6da1a9fe11e42aeb718819ad9db708c565a70ce40e3d"
+  },
+  {
+    "pick_number": 9,
+    "ticker": "CAIXY",
+    "price": 3.69,
+    "date": "2026-03-16",
+    "previous_hash": "d6a09a7cbd171c83f90e6da1a9fe11e42aeb718819ad9db708c565a70ce40e3d",
+    "hash": "5c19d44a7210962095cd9a2e82cfd25b12ed16b8ef94f3e8a184e4bbfd85473e"
+  },
+  {
+    "pick_number": 10,
+    "ticker": "ROL",
+    "price": 55.33,
+    "date": "2026-03-16",
+    "previous_hash": "5c19d44a7210962095cd9a2e82cfd25b12ed16b8ef94f3e8a184e4bbfd85473e",
+    "hash": "9907dc9f793f5af5b466ce12f8da9c41e18e6c09712b35292ccecbc4482d7845"
+  },
+  {
+    "pick_number": 11,
+    "ticker": "GFI",
+    "price": 47.72,
+    "date": "2026-03-16",
+    "previous_hash": "9907dc9f793f5af5b466ce12f8da9c41e18e6c09712b35292ccecbc4482d7845",
+    "hash": "c02d79bf0361bb62fd692ba97eaf2034e8a731439704c80a8d603c0025f7955c"
+  },
+  {
+    "pick_number": 12,
+    "ticker": "WAL",
+    "price": 68.16,
+    "date": "2026-03-17",
+    "previous_hash": "c02d79bf0361bb62fd692ba97eaf2034e8a731439704c80a8d603c0025f7955c",
+    "hash": "94480427a8535299f01fb4e92768476f3954bd7ff985fbe56981092888962b5d"
+  },
+  {
+    "pick_number": 13,
+    "ticker": "SIEGY",
+    "price": 126.6,
+    "date": "2026-03-17",
+    "previous_hash": "94480427a8535299f01fb4e92768476f3954bd7ff985fbe56981092888962b5d",
+    "hash": "19bcd6f9e3fb303e7ab4af30d112664202309bba409cc62675b254e7fdcab380"
+  },
+  {
+    "pick_number": 14,
+    "ticker": "AXAHY",
+    "price": 45.09,
+    "date": "2026-03-18",
+    "previous_hash": "19bcd6f9e3fb303e7ab4af30d112664202309bba409cc62675b254e7fdcab380",
+    "hash": "0b2f99bc68f5d9fcd6c1556513d3ffecfad54c090e82a949addbb99e99ddf340"
+  },
+  {
+    "pick_number": 15,
+    "ticker": "B",
+    "price": 37.4,
+    "date": "2026-03-19",
+    "previous_hash": "0b2f99bc68f5d9fcd6c1556513d3ffecfad54c090e82a949addbb99e99ddf340",
+    "hash": "1414ed493cca19497d8606254dadb2b72d66cf2d9890c4881324e79fb13a126c"
+  }
+]

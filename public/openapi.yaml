@@ -1,0 +1,365 @@
+openapi: "3.1.0"
+info:
+  title: Vectorial Data API
+  description: AI-native stock picking service with verifiable track record. Daily researched picks, portfolio tracking, and fundamental analysis for autonomous portfolio agents.
+  version: "1.0.0"
+  contact:
+    name: Vectorial Data
+    url: https://vectorialdata.com
+  license:
+    name: Proprietary
+
+servers:
+  - url: https://vectorialdata.com/api/v1
+    description: Production
+
+security:
+  - BearerAuth: []
+
+paths:
+  /info:
+    get:
+      operationId: getServiceInfo
+      summary: Service discovery
+      description: Returns service capabilities, pricing, and available endpoints. No authentication required.
+      security: []
+      responses:
+        "200":
+          description: Service info
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ServiceInfo"
+
+  /auth/register:
+    post:
+      operationId: registerApiKey
+      summary: Register for a free API key
+      security: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                wallet_address:
+                  type: string
+                  description: Ethereum wallet address
+                name:
+                  type: string
+      responses:
+        "200":
+          description: API key created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      api_key:
+                        type: string
+                      tier:
+                        type: string
+                      daily_limit:
+                        type: integer
+
+  /picks:
+    get:
+      operationId: getPicks
+      summary: Get stock picks
+      description: Returns stock picks with current returns. Free tier gets latest 3; pro gets all.
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List of picks
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+  /picks/latest:
+    get:
+      operationId: getLatestPick
+      summary: Get most recent pick
+      responses:
+        "200":
+          description: Latest pick
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+  /research/{ticker}:
+    get:
+      operationId: getResearch
+      summary: Get research for a stock
+      description: Free tier gets summaries; pro gets full research.
+      parameters:
+        - name: ticker
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Stock research
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+        "404":
+          description: Stock not found
+
+  /portfolio:
+    get:
+      operationId: getPortfolio
+      summary: Portfolio performance summary
+      responses:
+        "200":
+          description: Portfolio summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+  /portfolio/positions:
+    get:
+      operationId: getPositions
+      summary: All positions with live returns
+      responses:
+        "200":
+          description: Position list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+  /portfolio/history:
+    get:
+      operationId: getPortfolioHistory
+      summary: Historical daily snapshots
+      description: Free tier gets last 7 days; pro gets full history.
+      responses:
+        "200":
+          description: Historical snapshots
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+  /sectors:
+    get:
+      operationId: getSectors
+      summary: Sector allocation
+      responses:
+        "200":
+          description: Sector breakdown
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+  /regions:
+    get:
+      operationId: getRegions
+      summary: Region allocation
+      responses:
+        "200":
+          description: Region breakdown
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+  /stocks:
+    get:
+      operationId: getStocks
+      summary: All researched stocks
+      parameters:
+        - name: ticker
+          in: query
+          schema:
+            type: string
+        - name: sector
+          in: query
+          schema:
+            type: string
+        - name: region
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Stock list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
+  /verify/picks:
+    get:
+      operationId: verifyPicks
+      summary: Verifiable pick history
+      description: Returns SHA-256 hash chain of all picks for tamper-proof verification.
+      security: []
+      responses:
+        "200":
+          description: Hash chain ledger
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PicksLedger"
+
+  /verify/pick/{ticker}:
+    get:
+      operationId: verifyPick
+      summary: Verify a single pick
+      security: []
+      parameters:
+        - name: ticker
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Verified pick
+        "404":
+          description: Pick not found
+
+  /payments/verify:
+    post:
+      operationId: verifyPayment
+      summary: Verify USDC payment and upgrade to pro
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - tx_hash
+              properties:
+                tx_hash:
+                  type: string
+                  description: Transaction hash from Base L2 USDC transfer
+      responses:
+        "200":
+          description: Payment verified, API key upgraded
+        "400":
+          description: Verification failed
+        "409":
+          description: Transaction already used
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: API key obtained from POST /auth/register
+
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        data:
+          description: Response payload
+        meta:
+          type: object
+          properties:
+            tier:
+              type: string
+              enum: [free, pro, enterprise]
+            requests_remaining:
+              type: integer
+            timestamp:
+              type: string
+              format: date-time
+
+    ServiceInfo:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        version:
+          type: string
+        api_base:
+          type: string
+        pricing:
+          type: object
+        payment_methods:
+          type: array
+          items:
+            type: string
+        capabilities:
+          type: array
+          items:
+            type: string
+        endpoints:
+          type: object
+
+    Pick:
+      type: object
+      properties:
+        pick_number:
+          type: integer
+        ticker:
+          type: string
+        name:
+          type: string
+        sector:
+          type: string
+        region:
+          type: string
+        price_at_pick:
+          type: number
+        current_price:
+          type: number
+        return_pct:
+          type: number
+        date:
+          type: string
+          format: date
+        type:
+          type: string
+          enum: [new, rebuy]
+
+    PicksLedger:
+      type: object
+      properties:
+        valid:
+          type: boolean
+        chain_length:
+          type: integer
+        latest_hash:
+          type: string
+        algorithm:
+          type: string
+        picks:
+          type: array
+          items:
+            type: object
+            properties:
+              pick_number:
+                type: integer
+              ticker:
+                type: string
+              price:
+                type: number
+              date:
+                type: string
+              previous_hash:
+                type: string
+              hash:
+                type: string

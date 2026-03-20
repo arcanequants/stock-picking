@@ -1,0 +1,265 @@
+# Vectorial Data — Full API Documentation
+
+> AI-native stock picking service with verifiable track record. Built for autonomous portfolio agents.
+
+## Overview
+
+Vectorial Data publishes daily stock picks with deep fundamental research covering global equities across all sectors and regions. Every pick is tracked in a SHA-256 hash chain committed to git for tamper-proof verification.
+
+Portfolio model: $50 per position (fractional shares). Returns shown as percentages only.
+
+## Authentication
+
+All endpoints (except /api/v1/info) require an API key via Bearer token:
+
+```
+Authorization: Bearer vd_live_abc123...
+```
+
+### Register (Free)
+
+```
+POST https://vectorialdata.com/api/v1/auth/register
+Content-Type: application/json
+
+{"email": "agent@example.com", "name": "My Portfolio Agent"}
+```
+
+Response:
+```json
+{
+  "data": {
+    "api_key": "vd_live_abc123...",
+    "tier": "free",
+    "daily_limit": 10
+  }
+}
+```
+
+### Upgrade to Pro
+
+1. Send 5 USDC to our wallet on Base L2
+2. Call:
+
+```
+POST https://vectorialdata.com/api/v1/auth/upgrade
+Authorization: Bearer vd_live_abc123...
+Content-Type: application/json
+
+{"tx_hash": "0x..."}
+```
+
+Response:
+```json
+{
+  "data": {
+    "success": true,
+    "tier": "pro",
+    "daily_limit": 1000,
+    "expires_at": "2026-04-19T..."
+  }
+}
+```
+
+## Response Format
+
+All authenticated endpoints return:
+```json
+{
+  "data": { ... },
+  "meta": {
+    "tier": "free",
+    "requests_remaining": 7,
+    "timestamp": "2026-03-20T..."
+  }
+}
+```
+
+Headers on every response:
+- X-VD-Tier: free|pro
+- X-VD-Remaining: requests left today
+- X-VD-Version: 1
+
+## Endpoints
+
+### GET /api/v1/info (Public, no auth)
+
+Service discovery for agents. Returns capabilities, pricing, endpoints.
+
+```
+curl https://vectorialdata.com/api/v1/info
+```
+
+### GET /api/v1/picks
+
+All stock picks with current returns.
+
+Query params:
+- limit (optional): Number of picks to return
+
+Free tier: latest 3 picks only. Pro tier: all picks.
+
+```
+curl -H "Authorization: Bearer vd_live_xxx" https://vectorialdata.com/api/v1/picks
+```
+
+Response data shape:
+```json
+[
+  {
+    "pick_number": 15,
+    "ticker": "B",
+    "name": "Barrick Mining",
+    "sector": "Materials",
+    "region": "North America",
+    "country": "Canada",
+    "price_at_pick": 37.40,
+    "current_price": 37.80,
+    "return_pct": 1.07,
+    "date": "2026-03-19",
+    "type": "new",
+    "cycle_number": 3,
+    "research_url": "/api/v1/research/B"
+  }
+]
+```
+
+### GET /api/v1/picks/latest
+
+Most recent pick only.
+
+### GET /api/v1/research/{ticker}
+
+Full research for a stock.
+
+Free tier: summaries only (summary_short, summary_what, summary_why, summary_risk).
+Pro tier: includes research_full (complete markdown analysis).
+
+```
+curl -H "Authorization: Bearer vd_live_xxx" https://vectorialdata.com/api/v1/research/UBS
+```
+
+### GET /api/v1/portfolio
+
+Portfolio performance summary.
+
+```json
+{
+  "total_return_pct": -1.51,
+  "total_positions": 15,
+  "total_invested_usd": 750,
+  "since": "2026-03-04",
+  "current_cycle": { "cycle_number": 4, "type": "rebuy", "status": "active" }
+}
+```
+
+### GET /api/v1/portfolio/positions
+
+All positions with live returns, sorted by return (best first).
+
+### GET /api/v1/portfolio/history
+
+Historical daily snapshots.
+
+Free tier: last 7 days. Pro tier: full history.
+
+### GET /api/v1/sectors
+
+Sector allocation.
+
+```json
+[
+  { "sector": "Financials", "num_stocks": 5, "pct_of_portfolio": 33.33 }
+]
+```
+
+### GET /api/v1/regions
+
+Region allocation.
+
+### GET /api/v1/stocks
+
+All researched stocks with metrics.
+
+Query params:
+- ticker (optional): Filter by ticker
+- sector (optional): Filter by sector
+- region (optional): Filter by region
+
+### GET /api/v1/verify/picks
+
+Verifiable pick history. Returns SHA-256 hash chain of all picks.
+
+```json
+{
+  "valid": true,
+  "chain_length": 15,
+  "latest_hash": "abc123...",
+  "algorithm": "SHA-256(ticker|price|date|previous_hash)",
+  "picks": [
+    {
+      "pick_number": 1,
+      "ticker": "UBS",
+      "price": 39.76,
+      "date": "2026-03-04",
+      "previous_hash": "000...000",
+      "hash": "abc123..."
+    }
+  ]
+}
+```
+
+### GET /api/v1/verify/pick/{ticker}
+
+Verify a single pick in the hash chain.
+
+### POST /api/v1/payments/verify
+
+Verify a USDC payment on Base L2 and upgrade API key to pro tier.
+
+## Rate Limits
+
+- Free: 10 requests/day
+- Pro: 1000 requests/day
+- Resets daily at 00:00 UTC
+- Returns 429 when exceeded
+
+## Tier Comparison
+
+| Feature | Free | Pro (5 USDC/mo) |
+|---------|------|-----------------|
+| Picks | Latest 3 | All |
+| Research | Summaries | Full analysis |
+| History | 7 days | Full |
+| Requests/day | 10 | 1,000 |
+| Verification | Yes | Yes |
+
+## MCP Server
+
+For Claude, GPT, and other LLM-based agents:
+
+```json
+{
+  "mcpServers": {
+    "vectorialdata": {
+      "command": "npx",
+      "args": ["@vectorialdata/mcp-server"],
+      "env": { "VD_API_KEY": "vd_live_xxx" }
+    }
+  }
+}
+```
+
+Tools: get_latest_picks, get_research, get_portfolio_performance, search_stocks, get_stock_info
+
+## Hash Verification Algorithm
+
+Each pick is hashed: SHA-256(ticker|price|date|previous_hash)
+First pick uses previous_hash = 64 zeros.
+The picks-ledger.json file is committed to git for immutability.
+Agents can verify by recomputing the hash chain from the API response.
+
+## Contact
+
+Website: https://vectorialdata.com
+API Docs: https://vectorialdata.com/developers

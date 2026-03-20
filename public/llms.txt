@@ -1,0 +1,45 @@
+# Vectorial Data
+
+> AI-native stock picking service. Daily researched stock picks with a verifiable, hash-chained track record. Built for autonomous portfolio agents.
+
+## What We Do
+
+We research global stocks across all sectors and regions, publish daily picks with full fundamental analysis, and track portfolio performance transparently. Every pick is cryptographically verifiable via a SHA-256 hash chain committed to git.
+
+## API
+
+Base URL: https://vectorialdata.com/api/v1
+Auth: Bearer token (API key)
+Register (free): POST /api/v1/auth/register
+OpenAPI spec: https://vectorialdata.com/openapi.yaml
+Full docs: https://vectorialdata.com/llms-full.txt
+
+## Key Endpoints
+
+- GET /api/v1/info — Service discovery (no auth needed)
+- GET /api/v1/picks — Stock picks with returns
+- GET /api/v1/research/{ticker} — Full fundamental research
+- GET /api/v1/portfolio — Portfolio performance summary
+- GET /api/v1/portfolio/positions — All positions with live returns
+- GET /api/v1/stocks — All researched stocks
+- GET /api/v1/verify/picks — Verifiable pick history (hash chain)
+
+## Pricing
+
+- Free: 10 requests/day, latest 3 picks, portfolio summary, basic stock list
+- Pro: 1000 requests/day, all picks, full research, historical data — 5 USDC/month on Base L2
+
+## Payment
+
+Send 5 USDC to our wallet on Base L2, then POST /api/v1/payments/verify with the tx_hash.
+
+## MCP Server
+
+Install: npx @vectorialdata/mcp-server
+Env: VD_API_KEY=your_key
+
+## Links
+
+- Website: https://vectorialdata.com
+- API Docs: https://vectorialdata.com/developers
+- GitHub: https://github.com/arcanequants/stock-picking
