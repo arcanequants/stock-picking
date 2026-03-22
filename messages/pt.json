@@ -131,8 +131,8 @@
     "lastPick": "Último pick: há {days} dia(s)"
   },
   "Stocks": {
-    "title": "Todas as Ações",
-    "subtitle": "{total} ações analisadas. {active} posições ativas.",
+    "title": "Nosso Portfólio",
+    "subtitle": "{total} empresas pesquisadas. {active} gerando retornos para você.",
     "activePositions": "Posições Ativas",
     "inPortfolio": "No Portfólio",
     "watchlist": "Lista de Espera",
@@ -154,9 +154,13 @@
     "statusActive": "Ativa",
     "statusWatchlist": "Em espera",
     "statusAvoid": "Evitar",
-    "ctaText": "Receba escolhas diárias no seu WhatsApp",
+    "ctaText": "Não perca a próxima escolha",
     "ctaButton": "Assine $1/mês",
-    "apiText": "Acesse esses dados programaticamente"
+    "apiText": "Acesse esses dados programaticamente",
+    "gatingCount": "posições mais",
+    "gatingText": "Assine para ver todas as posições e a pesquisa completa de cada empresa.",
+    "shareLabel": "Compartilhar",
+    "shareCopied": "Link copiado"
   },
   "StockDetail": {
     "stockNotFound": "Ação não encontrada",

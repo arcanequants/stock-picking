@@ -61,7 +61,10 @@ interface Props {
     statusAvoid: string;
     ctaText: string;
     ctaButton: string;
-    apiText: string;
+    gatingCount: string;
+    gatingText: string;
+    shareLabel: string;
+    shareCopied: string;
   };
 }
 
@@ -75,8 +78,7 @@ function statusBadgeClass(status: string) {
 }
 
 function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
-  const [displayed, setDisplayed] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
+  const [displayed, setDisplayed] = useState(value);
 
   useEffect(() => {
     let frame: number;
@@ -92,7 +94,7 @@ function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string
     return () => cancelAnimationFrame(frame);
   }, [value]);
 
-  return <span ref={ref}>{displayed}{suffix}</span>;
+  return <span>{displayed}{suffix}</span>;
 }
 
 export default function StocksView({ stocks, picks, latestPick, currentPrices, sectors, regions, countries, labels }: Props) {
@@ -100,6 +102,22 @@ export default function StocksView({ stocks, picks, latestPick, currentPrices, s
   const [showCta, setShowCta] = useState(false);
   const [ctaDismissed, setCtaDismissed] = useState(false);
   const cardsRef = useRef<HTMLDivElement>(null);
+  const [shareMsg, setShareMsg] = useState("");
+
+  const FREE_VISIBLE = 5;
+
+  const handleShare = async () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: labels.title, url });
+      } catch { /* user cancelled */ }
+    } else {
+      await navigator.clipboard.writeText(url);
+      setShareMsg(labels.shareCopied);
+      setTimeout(() => setShareMsg(""), 2000);
+    }
+  };
 
   // Calculate days since latest pick
   const daysSinceLastPick = latestPick
@@ -198,6 +216,15 @@ export default function StocksView({ stocks, picks, latestPick, currentPrices, s
             </span>
           </div>
         )}
+        <button
+          onClick={handleShare}
+          className="flex items-center gap-1.5 text-text-muted hover:text-foreground transition-colors ml-auto"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" />
+          </svg>
+          <span className="text-xs">{shareMsg || labels.shareLabel}</span>
+        </button>
       </div>
 
       {/* Hero Card — Latest Pick */}
@@ -266,7 +293,7 @@ export default function StocksView({ stocks, picks, latestPick, currentPrices, s
             {labels.inPortfolio} ({filterStocks(active).length})
           </h2>
           <div ref={cardsRef} className="grid md:grid-cols-2 gap-4">
-            {filterStocks(active).map((stock, idx) => {
+            {filterStocks(active).slice(0, FREE_VISIBLE).map((stock, idx) => {
               const pickInfo = getPickInfo(stock.ticker);
               const returnPct = getReturn(stock.ticker);
               const isLatest = stock.ticker === latestPick?.ticker;
@@ -354,6 +381,18 @@ export default function StocksView({ stocks, picks, latestPick, currentPrices, s
                 </Link>
               );
             })}
+            {filterStocks(active).length > FREE_VISIBLE && (
+              <div className="col-span-full border-2 border-brand/30 rounded-2xl p-8 text-center bg-gradient-to-b from-brand/5 to-transparent">
+                <p className="text-xl font-bold mb-2">+{filterStocks(active).length - FREE_VISIBLE} {labels.gatingCount}</p>
+                <p className="text-text-muted text-sm mb-4">{labels.gatingText}</p>
+                <Link
+                  href="/join"
+                  className="inline-block bg-brand hover:bg-brand-hover text-white px-6 py-2.5 rounded-lg font-medium transition-colors cta-glow"
+                >
+                  {labels.ctaButton}
+                </Link>
+              </div>
+            )}
           </div>
         </section>
       )}
@@ -439,20 +478,6 @@ export default function StocksView({ stocks, picks, latestPick, currentPrices, s
           </div>
         </section>
       )}
-
-      {/* API Banner */}
-      <div className="border border-border rounded-xl p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3 bg-brand/5">
-        <div>
-          <p className="text-sm font-semibold">{labels.apiText}</p>
-          <p className="text-xs text-text-muted">REST API · MCP Server · OpenAPI</p>
-        </div>
-        <Link
-          href="/developers"
-          className="text-sm text-brand hover:text-brand-hover font-medium transition-colors"
-        >
-          /developers →
-        </Link>
-      </div>
 
       {/* Sticky CTA */}
       {showCta && !ctaDismissed && (

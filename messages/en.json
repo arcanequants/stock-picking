@@ -131,8 +131,8 @@
     "lastPick": "Last pick: {days} day(s) ago"
   },
   "Stocks": {
-    "title": "All Stocks",
-    "subtitle": "{total} stocks analyzed. {active} active positions.",
+    "title": "Our Portfolio",
+    "subtitle": "{total} companies researched. {active} generating returns for you.",
     "activePositions": "Active Positions",
     "inPortfolio": "In Portfolio",
     "watchlist": "Watchlist",
@@ -154,9 +154,13 @@
     "statusActive": "Active",
     "statusWatchlist": "Watchlist",
     "statusAvoid": "Avoid",
-    "ctaText": "Get daily picks on your WhatsApp",
+    "ctaText": "Don't miss the next pick",
     "ctaButton": "Join $1/mo",
-    "apiText": "Access this data programmatically"
+    "apiText": "Access this data programmatically",
+    "gatingCount": "more positions",
+    "gatingText": "Subscribe to see all positions and full research for every company.",
+    "shareLabel": "Share",
+    "shareCopied": "Link copied"
   },
   "StockDetail": {
     "stockNotFound": "Stock not found",

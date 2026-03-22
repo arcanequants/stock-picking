@@ -92,7 +92,10 @@ export default async function StocksPage() {
     statusAvoid: t("statusAvoid"),
     ctaText: t("ctaText"),
     ctaButton: t("ctaButton"),
-    apiText: t("apiText"),
+    gatingCount: t("gatingCount"),
+    gatingText: t("gatingText"),
+    shareLabel: t("shareLabel"),
+    shareCopied: t("shareCopied"),
   };
 
   return (
