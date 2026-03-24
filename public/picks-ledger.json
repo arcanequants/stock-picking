@@ -118,5 +118,21 @@
     "date": "2026-03-19",
     "previous_hash": "0b2f99bc68f5d9fcd6c1556513d3ffecfad54c090e82a949addbb99e99ddf340",
     "hash": "1414ed493cca19497d8606254dadb2b72d66cf2d9890c4881324e79fb13a126c"
+  },
+  {
+    "pick_number": 16,
+    "ticker": "BABA",
+    "price": 122.41,
+    "date": "2026-03-20",
+    "previous_hash": "1414ed493cca19497d8606254dadb2b72d66cf2d9890c4881324e79fb13a126c",
+    "hash": "16d18858b2b5a3b2c75074879cdccdcff3a3f17e6c8794b5d1dc9a21d7dedd77"
+  },
+  {
+    "pick_number": 17,
+    "ticker": "BAC",
+    "price": 47.52,
+    "date": "2026-03-23",
+    "previous_hash": "16d18858b2b5a3b2c75074879cdccdcff3a3f17e6c8794b5d1dc9a21d7dedd77",
+    "hash": "027c0bf62e240c220cd6d21ed66fc6ceda43a890e4764f71a958dfbb1fc5a0db"
   }
 ]

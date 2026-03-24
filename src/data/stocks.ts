@@ -2097,6 +2097,138 @@ Alibaba a $122 es una **compra contrarian de alta convicción** para inversores 
     last_updated_at: "2026-03-20T00:00:00Z",
     next_review_at: "2026-09-20T00:00:00Z",
   },
+  {
+    id: 21,
+    ticker: "BAC",
+    name: "Bank of America",
+    sector: "Financials",
+    industry: "Diversified Banks",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 47.52,
+    pe_ratio: 13.55,
+    pe_forward: 10.86,
+    dividend_yield: 2.37,
+    market_cap_b: 384.0,
+    eps: 3.81,
+    summary_short:
+      "El segundo banco más grande de EE.UU. con $384B de market cap. Consumer banking, wealth management (Merrill Lynch), trading y banca corporativa. Revenue de $113B en 2025, profit de $30.5B.",
+    summary_what:
+      "Bank of America es uno de los 'Big Four' de la banca estadounidense. Opera en 4 segmentos: Consumer Banking (depósitos, tarjetas, créditos), Wealth Management (Merrill Lynch, Private Bank), Global Markets (trading de equities y renta fija — año récord en 2025), y Global Banking (banca corporativa e investment banking). 66 millones de clientes consumer y small business.",
+    summary_why:
+      "EPS creció 19% en 2025 a $3.81. Forward P/E de 10.86x — el más barato de los Big Four después de Citi. NII guiado a crecer 5-7% en 2026. Devolvieron $30B al accionista en 2025. Payout ratio de solo 29% — mucho espacio para subir dividendo. Global Markets tuvo su mejor año de la historia.",
+    summary_risk:
+      "Sensible a tasas de interés — si la Fed corta más de lo esperado, NII se comprime. Riesgo crediticio si la economía desacelera. Propuestas de caps en tasas de tarjetas de crédito afectarían Consumer Banking.",
+    research_full: `# Bank of America (BAC) — Research Completo
+
+## Precio: $47.52 | P/E: 13.6 | P/E Forward: 10.9 | Div Yield: 2.37% | Market Cap: $384B
+
+---
+
+## ¿Qué es Bank of America?
+
+Bank of America es el **segundo banco más grande de Estados Unidos** por activos y market cap, solo detrás de JPMorgan Chase. Con más de **66 millones de clientes** consumer y small business, es uno de los pilares del sistema financiero estadounidense.
+
+## Segmentos de Negocio
+
+| Segmento | Revenue FY2025 (est.) | Descripción |
+|----------|----------------------|-------------|
+| **Consumer Banking** | ~$44B (~39%) | Depósitos, tarjetas de crédito, préstamos, small business |
+| **Wealth Management** | ~$25B (~22%) | Merrill Lynch, Private Bank — advisory, brokerage, retirement |
+| **Global Markets** | ~$21B (~19%) | Trading de equities y FICC — año récord en 2025 |
+| **Global Banking** | ~$23B (~20%) | Banca corporativa, investment banking, treasury services |
+
+## Resultados 2025 (Full Year)
+
+- **Revenue total: $113.1B** (+7% YoY)
+- **Net Income: $30.5B** (+13% YoY)
+- **EPS: $3.81** (+19% YoY)
+- **Net Interest Income: $62B** (+8% YoY)
+- **Operating Leverage Q4: +330 bps** — ingresos crecen más rápido que gastos
+- **Return to shareholders: $30B** (dividendos + recompras)
+
+### Q4 2025 Highlights:
+
+- Revenue: $28.53B (+7.1% YoY)
+- Net Income: $7.6B (+12%)
+- EPS: $0.98 (beat estimado de $0.96)
+- Investment banking fees: las más altas desde 2020
+
+## Dividendo y Retorno al Accionista
+
+- **Dividendo anual:** $1.12/acción (~2.37% yield)
+- **Años consecutivos de aumento:** 13
+- **Crecimiento dividendo 5 años:** 8.7% CAGR
+- **Payout ratio:** ~29% (muy bajo = mucho espacio para crecer)
+- **Total devuelto en 2025:** $30B entre dividendos y buybacks
+
+## Ventajas Competitivas (Moat)
+
+1. **Escala masiva:** 66M de clientes, $3.3T en activos — economías de escala imbatibles
+2. **Franchise de depósitos:** Base de depósitos estable y barata — funding advantage vs bancos más chicos
+3. **Merrill Lynch:** Brand premium en wealth management con décadas de relaciones
+4. **Tecnología:** Uno de los mayores inversores en tech bancaria + AI entre los grandes bancos
+5. **Diversificación:** 4 segmentos complementarios reducen ciclicidad
+
+## Catalizadores
+
+1. **NII guiado a crecer 5-7% en 2026** — Incluso con recortes de tasas esperados
+2. **Forward P/E de 10.86x** — Más barato que JPM (13.5x), similar a WFC (11.1x)
+3. **Operating leverage de ~200 bps guiado para 2026** — Eficiencia mejorando
+4. **Global Markets en racha** — 15 trimestres consecutivos de mejora, récord en 2025
+5. **EPS 2026 estimado: $4.38** (+15% crecimiento) — Compresión de múltiplo si entrega
+6. **Buybacks agresivos** — Payout ratio de 29% deja mucho capital para recompras
+
+## Riesgos Principales
+
+1. **Sensibilidad a tasas** — Si la Fed corta más rápido de lo esperado, NII guidance de 5-7% no se cumple
+2. **Calidad crediticia** — Desaceleración económica aumentaría pérdidas en consumer y commercial real estate
+3. **Regulación** — Propuestas de caps en tasas de tarjetas de crédito presionarían Consumer Banking. Basel III endgame puede aumentar requerimientos de capital
+4. **Ciclicidad de IB** — Investment banking fees dependen de deal activity (M&A, IPOs)
+5. **Geopolítica** — Tensiones comerciales EE.UU.-China, aranceles pueden afectar capital markets
+
+## Posición Competitiva (Big Four)
+
+| Métrica | BAC | JPM | WFC | C |
+|---------|-----|-----|-----|---|
+| **Market Cap** | $384B | $801B | $264B | $192B |
+| **P/E (TTM)** | 13.6x | 14.3x | 12.4x | 13.9x |
+| **Forward P/E** | 10.9x | 13.5x | 11.1x | 10.6x |
+| **Revenue FY2025** | $113B | $175B | $81.5B | $82B |
+| **Dividend Yield** | 2.37% | 2.1% | 2.3% | 3.2% |
+
+BAC ocupa el "sweet spot" — más barato que JPM en forward P/E, mejor calidad que WFC y C, dividend yield competitivo.
+
+## Consenso de Analistas
+
+- **Rating:** Buy (19-24 analistas)
+- **Price target promedio:** $57.60
+- **Rango targets:** $43.50 - $74.55
+- **Upside implícito:** +21% desde $47.52
+
+## Guía 2026
+
+- **NII Growth:** 5-7% YoY (asume dos recortes de la Fed)
+- **Operating Leverage:** ~200 bps
+- **EPS Consenso:** $4.38 (+15% crecimiento)
+
+## Conclusión
+
+Bank of America a $47.52 es una **compra sólida de valor** en el sector financiero. A 10.9x forward earnings, estás comprando el segundo banco más grande de EE.UU. con 13 años consecutivos de aumento de dividendo, $30B devueltos al accionista, y un negocio de trading en su mejor momento histórico. El riesgo es cíclico (tasas, crédito), pero la diversificación de segmentos y la base de depósitos estable proporcionan un piso sólido.
+
+---
+
+*Research fecha: 23 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 57.60,
+    analyst_upside: 21.2,
+    status: "active",
+    first_researched_at: "2026-03-23T00:00:00Z",
+    last_updated_at: "2026-03-23T00:00:00Z",
+    next_review_at: "2026-09-23T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -2276,6 +2408,17 @@ export const transactions = [
     day_of_week: "thursday",
     wa_message: `📊 *STOCK PICK #16* — Mar 20, 2026\n\n🏢 *Alibaba Group* (BABA) — $122.41\n\n🛍️ *Sus plataformas*: Taobao y Tmall (e-commerce #1 de China), Alibaba Cloud (#1 cloud de China), AliExpress (internacional), Ele.me (delivery), y los modelos de IA Qwen con 600M+ descargas\n\n🌍 *Presencia*: China (HQ), con operaciones en 200+ países. 800M+ usuarios activos. La empresa tech más grande de China.\n\n💵 *Tu nuevo ingreso*: Alibaba paga *0.83% anual* de dividendo — modesto pero creciendo 26% anual. La verdadera jugada es el crecimiento: están invirtiendo $52 mil millones en infraestructura de AI en 3 años. Su cloud crece 36% y AI en triple dígito. A 16x forward earnings, estás comprando la empresa de AI/cloud más grande de China a precio de value stock.\n\n⚠️ *El riesgo*: China. Geopolítica, regulación impredecible, y el Pentágono brevemente lo puso en una lista militar (luego lo quitó). Si toleras el "China discount", el upside es enorme.\n\n🆕 Posición #16 — Ciclo 4\n🔗 https://vectorialdata.com/stocks/BABA\n\n💡 El S&P 500 ha dado ~10% anual durante 100 años. Pero solo si NO vendiste en los días malos.`,
   },
+  {
+    id: 17,
+    stock_id: 21,
+    ticker: "BAC",
+    type: "new" as const,
+    cycle_number: 4,
+    price: 47.52,
+    date: "2026-03-23",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #17* — Mar 23, 2026\n\n🏢 *Bank of America* (BAC) — $47.52\n\n🛍️ *Sus líneas*: Consumer Banking (depósitos, tarjetas), Merrill Lynch (wealth management), Global Markets (trading — año récord en 2025), Global Banking (corporativos e investment banking)\n\n🌍 *Presencia*: EE.UU. — 66 millones de clientes, $384B de market cap. El segundo banco más grande de Estados Unidos, solo detrás de JPMorgan.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.37% anual* de dividendo — 13 años seguidos subiéndolo. Su profit fue $30.5 mil millones en 2025 y devolvieron $30B al accionista. Cada vez que alguien paga su tarjeta de crédito, invierte con Merrill Lynch, o una empresa usa sus servicios de treasury — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: Sensible a tasas de interés — si la Fed corta más de lo esperado, su ingreso por intereses baja.\n\n🆕 Posición #17 — Ciclo 4\n🔗 https://vectorialdata.com/stocks/BAC\n\n💡 No revises BAC todos los días. Bank of America no cambia de valor en 24 horas — tu ansiedad sí.`,
+  },
 ];
 
 export const cycles = [
@@ -2308,7 +2451,7 @@ export const cycles = [
     cycle_number: 4,
     type: "rebuy" as const,
     target_count: 5,
-    current_count: 1,
+    current_count: 2,
     status: "active" as const,
   },
 ];
