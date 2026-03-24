@@ -1961,6 +1961,142 @@ Barrick Mining es una apuesta de alta convicción al oro y cobre con un pipeline
     last_updated_at: "2026-03-19T00:00:00Z",
     next_review_at: "2026-09-19T00:00:00Z",
   },
+  {
+    id: 20,
+    ticker: "BABA",
+    name: "Alibaba Group",
+    sector: "Technology",
+    industry: "E-Commerce / Cloud Computing",
+    country: "China",
+    region: "Asia",
+    currency: "USD",
+    price: 122.41,
+    pe_ratio: 22.25,
+    pe_forward: 15.87,
+    dividend_yield: 0.83,
+    market_cap_b: 298.6,
+    eps: 5.62,
+    summary_short:
+      "El gigante del e-commerce y cloud de China. Taobao, Tmall, Alibaba Cloud, Alipay. 800M+ de usuarios activos y el cloud #1 de China con AI creciendo triple dígito.",
+    summary_what:
+      "Alibaba es la empresa de e-commerce más grande del mundo por volumen y el proveedor de cloud #1 de China. Opera Taobao (C2C), Tmall (B2C), Alibaba Cloud + DingTalk, AliExpress (internacional), Ele.me (delivery), y Cainiao (logística). Sus modelos de IA open-source Qwen tienen 600M+ descargas.",
+    summary_why:
+      "Cloud creciendo 36% con AI en triple dígito por 10 trimestres. Invirtiendo $52B en infraestructura AI en 3 años. Forward P/E de 16x — precio de value stock para la empresa de AI/cloud más grande de China. Analistas ven +35% de upside. Balance sólido: $52B en cash, deuda baja.",
+    summary_risk:
+      "Riesgo geopolítico China-EE.UU. siempre presente. Pentágono lo añadió brevemente a lista militar (luego lo retiró). FCF temporalmente negativo por el ciclo de inversión masivo en AI. Market share de e-commerce bajó de 52% a 41% por PDD y Douyin.",
+    research_full: `# Alibaba Group (BABA) — Research Completo
+
+## Precio: $122.41 | P/E: 22.3 | P/E Forward: 15.9 | Div Yield: 0.83% | Market Cap: $299B
+
+---
+
+## ¿Qué es Alibaba?
+
+Alibaba Group es la **empresa de e-commerce más grande del mundo** por volumen de mercancía y el **proveedor de cloud #1 de China**. Fundada en 1999 por Jack Ma, opera las plataformas Taobao y Tmall que juntas tienen más de 800 millones de usuarios activos mensuales.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | Revenue Q3 FY2026 |
+|----------|-------------|-------------------|
+| **China Commerce (Taobao/Tmall)** | E-commerce B2C y C2C, #1 en China | RMB 159.3B (+6%) |
+| **Cloud Intelligence** | Alibaba Cloud + DingTalk + AI | RMB 43.3B (+36%) |
+| **International Commerce** | AliExpress, Lazada, Trendyol | RMB 6.9B (+10%) |
+| **Local Services** | Ele.me (delivery), quick commerce | RMB 20.8B (+56%) |
+| **Cainiao** | Logística — next-day en 90%+ de China | Incluido en otros |
+
+Revenue total Q3 FY2026: RMB 284.8B. Crecimiento like-for-like: +9%.
+
+## La Apuesta de $52B en AI
+
+Este es el dato más importante: Alibaba está invirtiendo **$52 mil millones** en infraestructura de AI y cloud en 3 años — la mayor inversión de cualquier empresa tech china.
+
+- **Cloud AI revenue:** Triple dígito de crecimiento por 10 trimestres consecutivos
+- **Qwen (modelos open-source):** 600M+ descargas — el modelo open-source más usado del mundo
+- **Token consumption:** 6x aumento en 3 meses
+- **Objetivo:** $100B en revenue de AI/cloud para FY2031 (5x actual)
+
+## Financieros Clave
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue Q3 FY2026** | RMB 284.8B (~$40B) |
+| **Non-GAAP Net Income Q3** | $2.39B |
+| **FCF Anual FY2025** | $22.87B |
+| **Cash** | $52.47B |
+| **Deuda Total** | $42.55B |
+| **Cash Neto** | $9.92B ($4.16/acción) |
+| **Debt/Equity** | 0.23 (conservador) |
+| **Forward EPS FY2027E** | $8.57 (+50% crecimiento) |
+
+**Balance es una fortaleza:** $52B en cash, apalancamiento bajo.
+
+## Dividendo y Retorno al Accionista
+
+- **Dividendo anual:** $1.05/ADS (~0.83% yield)
+- **Payout ratio:** 27% (muy sostenible, espacio para crecer)
+- **Buyback yield:** 1.69%
+- **Total shareholder yield:** ~2.5%
+- **Crecimiento dividendo 3 años:** 25.6% CAGR
+
+## Ventajas Competitivas (Moat)
+
+1. **Efectos de red:** 800M+ usuarios + 10M vendedores = marketplace auto-reforzante
+2. **Cloud #1 China:** Alibaba Cloud líder con ecosistema Qwen/AI creando lock-in
+3. **Cainiao logística:** Next-day delivery en 90%+ del PIB de China
+4. **Plataforma publicitaria:** Alto intent de compra = ROI fuerte para vendedores
+5. **Alipay/Ant Group:** Infraestructura de pagos trusted
+
+**Erosión del moat:** PDD demostró que social commerce puede capturar market share rápido. El moat de e-commerce es menos durable de lo que se creía. El moat de cloud/AI puede ser más defensible.
+
+## Catalizadores
+
+1. **Cloud 36% crecimiento y acelerando** — Esto solo podría justificar gran parte del market cap
+2. **$52B inversión en AI** — All-in en la tecnología más importante de la generación
+3. **Anti-Involution Law (AUCL)** — China limita guerras de precios destructivas, favorece a Alibaba
+4. **Desinversiones estratégicas** — Vendió Sun Art y Intime para enfocarse en tech/commerce/cloud
+5. **Forward P/E 16x** — Precio de value stock con crecimiento de growth stock
+
+## Riesgos Principales
+
+1. **Geopolítica China-EE.UU.** — Pentagon military list, posible delisting, restricciones de chips
+2. **FCF temporalmente negativo** — El ciclo de capex de $52B comprime cash flow por 2-3 años
+3. **Market share e-commerce bajando** — De 52% (2021) a 41% (2024) por PDD, JD, Douyin
+4. **Macro China débil** — Sector inmobiliario, desempleo juvenil, presiones deflacionarias
+5. **Regulación impredecible** — Aunque el crackdown tech aflojó, puede volver sin aviso
+
+## Posición Competitiva
+
+| Métrica | Alibaba | PDD | JD.com |
+|---------|---------|-----|--------|
+| **Market Share China** | ~41% | ~23% | ~18% |
+| **Cloud** | #1 China | No | No |
+| **AI Investment** | $52B/3 años | Limitado | Limitado |
+| **Dividend Yield** | 0.83% | 0% | 2.1% |
+| **Forward P/E** | 16x | 11x | 9x |
+
+## Consenso de Analistas
+
+- **Rating:** Strong Buy (8 Buy, 1 Hold, 0 Sell)
+- **Price target promedio:** $197-$205
+- **Upside implícito:** +60% desde $122
+- **Rango targets:** $121 - $285
+
+## Conclusión
+
+Alibaba a $122 es una **compra contrarian de alta convicción** para inversores con horizonte de 2-3 años y tolerancia al riesgo geopolítico. El negocio de cloud/AI solo podría justificar una porción significativa del market cap en 2-3 años. El riesgo principal no es fundamental — es político. Si puedes tolerar el "China discount", el risk/reward está fuertemente sesgado al alza.
+
+---
+
+*Research fecha: 20 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 200.0,
+    analyst_upside: 63.4,
+    status: "active",
+    first_researched_at: "2026-03-20T00:00:00Z",
+    last_updated_at: "2026-03-20T00:00:00Z",
+    next_review_at: "2026-09-20T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -2129,6 +2265,17 @@ export const transactions = [
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #15* — Mar 19, 2026\n\n🏢 *Barrick Mining* (B) — $37.40\n\n⛏️ *Su producto*: Oro y cobre. Extraen 3.26 millones de onzas de oro al año de minas en 17 países: EE.UU. (Nevada Gold Mines), Canadá, Rep. Dominicana, Mali, Zambia, Tanzania, y Pakistán.\n\n🌍 *Presencia*: 17 países — Canadá (HQ), EE.UU., Zambia, Pakistán, Mali, Tanzania, Rep. Dominicana y más. Antes se llamaba Barrick Gold.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.15% anual* solo por ser dueño. Su free cash flow creció 194% en 2025 a $3.87 mil millones. Nueva política: devuelven 50% de su cash flow al accionista. Con oro arriba de $5,000/oz y su costo de producción en $1,637/oz, el margen por onza es enorme.\n\n⚠️ *El riesgo*: 100% expuesto al precio del oro sin cobertura. Si el oro baja, Barrick baja más fuerte. Opera en países con riesgo político (Mali, Pakistán).\n\n🆕 Posición #15 — Cierra Ciclo 3\n🔗 https://vectorialdata.com/stocks/B\n\n💡 El dividendo de B se reinvierte → compra más fracciones → genera más dividendo → compra más fracciones. Eso es interés compuesto.`,
   },
+  {
+    id: 16,
+    stock_id: 20,
+    ticker: "BABA",
+    type: "new" as const,
+    cycle_number: 4,
+    price: 122.41,
+    date: "2026-03-20",
+    day_of_week: "thursday",
+    wa_message: `📊 *STOCK PICK #16* — Mar 20, 2026\n\n🏢 *Alibaba Group* (BABA) — $122.41\n\n🛍️ *Sus plataformas*: Taobao y Tmall (e-commerce #1 de China), Alibaba Cloud (#1 cloud de China), AliExpress (internacional), Ele.me (delivery), y los modelos de IA Qwen con 600M+ descargas\n\n🌍 *Presencia*: China (HQ), con operaciones en 200+ países. 800M+ usuarios activos. La empresa tech más grande de China.\n\n💵 *Tu nuevo ingreso*: Alibaba paga *0.83% anual* de dividendo — modesto pero creciendo 26% anual. La verdadera jugada es el crecimiento: están invirtiendo $52 mil millones en infraestructura de AI en 3 años. Su cloud crece 36% y AI en triple dígito. A 16x forward earnings, estás comprando la empresa de AI/cloud más grande de China a precio de value stock.\n\n⚠️ *El riesgo*: China. Geopolítica, regulación impredecible, y el Pentágono brevemente lo puso en una lista militar (luego lo quitó). Si toleras el "China discount", el upside es enorme.\n\n🆕 Posición #16 — Ciclo 4\n🔗 https://vectorialdata.com/stocks/BABA\n\n💡 El S&P 500 ha dado ~10% anual durante 100 años. Pero solo si NO vendiste en los días malos.`,
+  },
 ];
 
 export const cycles = [
@@ -2161,7 +2308,7 @@ export const cycles = [
     cycle_number: 4,
     type: "rebuy" as const,
     target_count: 5,
-    current_count: 0,
+    current_count: 1,
     status: "active" as const,
   },
 ];
