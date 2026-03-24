@@ -2510,6 +2510,158 @@ FCX a $56.48 es una **apuesta directa a la megatendencia del cobre** — IA, dat
     last_updated_at: "2026-03-24T00:00:00Z",
     next_review_at: "2026-09-24T00:00:00Z",
   },
+  {
+    id: 24,
+    ticker: "LMT",
+    name: "Lockheed Martin",
+    sector: "Industrials",
+    industry: "Aerospace & Defense",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 610.17,
+    pe_ratio: 28.4,
+    pe_forward: 20.5,
+    dividend_yield: 2.26,
+    market_cap_b: 141.0,
+    eps: 21.49,
+    summary_short:
+      "El contratista de defensa #1 del mundo. Fabricante del F-35 (el caza más avanzado del mundo), HIMARS, PAC-3, helicópteros Sikorsky, y la nave Orion de la NASA. Backlog récord de $194 mil millones.",
+    summary_what:
+      "Lockheed Martin es el mayor contratista de defensa del Pentágono y del mundo. Opera en 4 segmentos: Aeronautics (F-35, F-16, C-130J — 40% revenue), Missiles & Fire Control (HIMARS, PAC-3, JASSM — 19%), Rotary & Mission Systems (Sikorsky, Aegis, radares — 23%), y Space (Orion, GPS III, defensa de misiles — 17%). 100% enfocado en defensa.",
+    summary_why:
+      "Backlog récord de $194B (2.6x ventas anuales). NATO se comprometió a subir gasto a 5% del PIB para 2035. EPS 2026 guiado a $29.80 (+39% vs 2025). Presupuesto de defensa de EE.UU. sube ~15% en FY2026. Demanda sin precedentes de misiles por conflictos en Ucrania y Medio Oriente. 24 años consecutivos de dividendo creciente.",
+    summary_risk:
+      "Pentágono recortó compras de F-35 casi 50% en FY2026, cambiando enfoque a sostenimiento. Block 4/TR-3 tiene $6B de sobrecosto y años de retraso. F-35 es ~30% del revenue — concentración alta.",
+    research_full: `# Lockheed Martin (LMT) — Research Completo
+
+## Precio: $610.17 | P/E: 28.4 | P/E Forward: 20.5 | Div Yield: 2.26% | Market Cap: $141B
+
+---
+
+## ¿Qué es Lockheed Martin?
+
+Lockheed Martin es el **contratista de defensa #1 del mundo** y el mayor proveedor del Pentágono. Fabrican el **F-35 Lightning II** (el caza de quinta generación más avanzado y producido del mundo), el **HIMARS** (el sistema de artillería que cambió la guerra en Ucrania), y la **nave Orion** de la NASA. Con un backlog de **$194 mil millones**, tienen trabajo asegurado para años.
+
+## Segmentos de Negocio (FY2025)
+
+| Segmento | Revenue | % Total | Crecimiento | Programas Clave |
+|----------|---------|---------|-------------|-----------------|
+| **Aeronautics** | $30.3B | 40% | +5.7% | F-35, F-16, C-130J, F-22 sustainment |
+| **Missiles & Fire Control** | $14.5B | 19% | +13.9% | HIMARS/GMLRS, PAC-3 MSE, JASSM, hipersónicos |
+| **Rotary & Mission Systems** | $17.3B | 23% | +0.3% | Sikorsky (CH-53K, Black Hawk), Aegis, radares, cyber |
+| **Space** | $13.0B | 17% | +4.4% | Orion, GPS III, hipersónicos, defensa de misiles |
+
+## Resultados 2025 (Full Year)
+
+- **Revenue: $75.0B** (+6% YoY)
+- **Segment Operating Profit: $6.7B** (+11%)
+- **Net Income: $5.0B**
+- **EPS: $21.49** (-4% por cargo de pensiones de $479M)
+- **Free Cash Flow: $6.9B**
+- **Backlog: $194B** (récord — 4to año consecutivo de crecimiento)
+- **Book-to-Bill: 1.2x** (reciben más órdenes de las que entregan)
+- **Recompras: $3.0B** (6.6M acciones)
+
+### Entregas Clave 2025:
+- **F-35:** 191 jets entregados (récord)
+- **PAC-3 MSE:** 620 interceptores (récord)
+
+## Guía 2026
+
+- **Revenue:** $77.5B - $80.0B
+- **EPS:** $29.35 - $30.25 (+39% vs 2025)
+- **Free Cash Flow:** $6.5B - $6.8B
+- **Inversión de Capital:** ~$5B (+35% vs 2025)
+
+## Dividendo y Retorno al Accionista
+
+- **Dividendo anual:** $13.80/acción (~2.26% yield)
+- **Años consecutivos de aumento:** 24
+- **Crecimiento dividendo 5 años:** 6.38% CAGR
+- **Payout ratio:** ~63%
+- **Total devuelto en 2025:** $6.1B (dividendos + recompras)
+- **Beta:** 0.20 — volatilidad muy baja
+
+## Backlog por Segmento
+
+| Segmento | Backlog |
+|----------|---------|
+| **Aeronautics** | $59.4B |
+| **Missiles & Fire Control** | $46.7B |
+| **Rotary & Mission Systems** | $47.7B |
+| **Space** | $39.8B |
+| **Total** | **$194B** |
+
+$194B = 2.6x ventas anuales. Solo en H2 2025 recibieron $65B+ en nuevas órdenes.
+
+## Ventajas Competitivas (Moat)
+
+1. **Monopolio del F-35:** No hay otro caza de 5ta generación en producción occidental. 3,500+ aviones contratados
+2. **Relación con el Pentágono:** #1 contratista con $313B en contratos (2020-2024)
+3. **Backlog de $194B:** Visibilidad de revenue de 2.6 años
+4. **Switching costs extremos:** Los países que compran F-35 quedan locked-in por décadas
+5. **Seguridad nacional:** Programas clasificados son imposibles de replicar por competidores
+6. **Escala de producción:** La curva de aprendizaje del F-35 reduce costos cada año
+
+## La Megatendencia de Defensa
+
+- **NATO sube a 5% del PIB para 2035** (antes era 2%). Multiplicará presupuestos de defensa en Europa
+- **EE.UU. sube defensa ~15% en FY2026**
+- **Conflictos activos** (Ucrania, Medio Oriente) aceleran reposición de municiones
+- **Nuevas amenazas** (hipersónicos, drones) requieren inversión masiva en defensa
+
+## Catalizadores
+
+1. **NATO 5% GDP** — 32 países multiplicando gasto de defensa, F-35 es el estándar
+2. **EPS 2026E: $29.80** — +39% crecimiento con guidance firme
+3. **Backlog récord $194B** — 2.6x ventas, pipeline asegurado
+4. **Reposición de municiones** — HIMARS, PAC-3, JASSM con demanda sin precedentes
+5. **F-35 internacional** — Grecia, Rumania, Rep. Checa, más países en fila
+6. **Presupuesto defensa EE.UU. +15%** — LMT es el #1 beneficiario
+
+## Riesgos Principales
+
+1. **Recorte de compras F-35:** Pentágono cortó casi 50% en FY2026 (Air Force de 48 a 24, Navy de 17 a 12)
+2. **Block 4/TR-3 con problemas:** $6B de sobrecosto, años de retraso, 4,000+ partes faltantes
+3. **Costos de sostenimiento F-35:** Lifecycle cost proyectado a exceder $2 trillones (GAO)
+4. **Concentración en F-35:** ~30% del revenue total. Cualquier disrupción tiene impacto desproporcionado
+5. **Cambio político:** Recortes de defensa o iniciativas de eficiencia gubernamental podrían afectar
+
+## Posición Competitiva
+
+| Métrica | LMT | RTX | NOC | GD |
+|---------|-----|-----|-----|-----|
+| **Revenue** | $75B | $85B | $42B | $46B |
+| **Backlog** | $194B | $217B | $90B | $92B |
+| **Dividend Yield** | 2.26% | 2.2% | 1.7% | 2.0% |
+| **Contratos Pentágono (5 años)** | $313B | $145B | $81B | $116B |
+| **Enfoque defensa** | 100% | 65% | 90% | 65% |
+
+## Consenso de Analistas
+
+- **Rating:** Hold / Neutral (dividido)
+- **Price target promedio:** $596 - $665 (varía por fuente)
+- **Mediana:** $660
+- **Rango targets:** $432 - $740
+- **Upside implícito:** +8% al target mediano ($660)
+
+## Conclusión
+
+LMT a $610.17 es una **compra defensiva en el sentido literal** — el contratista de defensa más grande del mundo con visibilidad de ingresos de 2.6 años y 24 años de dividendo creciente. El contexto geopolítico (NATO al 5%, conflictos activos, presupuesto de EE.UU. +15%) es el más favorable para defensa en décadas. El riesgo principal es la ejecución del F-35 Block 4 y la concentración en un solo programa. Pero con EPS guiado a +39% en 2026 y beta de 0.20, es una de las posiciones más estables del portafolio.
+
+---
+
+*Research fecha: 24 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: 660.0,
+    analyst_upside: 8.2,
+    status: "active",
+    first_researched_at: "2026-03-24T00:00:00Z",
+    last_updated_at: "2026-03-24T00:00:00Z",
+    next_review_at: "2026-09-24T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -2722,6 +2874,17 @@ export const transactions = [
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #19* — Mar 24, 2026\n\n🏢 *Freeport-McMoRan* (FCX) — $56.48\n\n⛏️ *Su producto*: Cobre, oro y molibdeno. La mina de cobre más grande de Norteamérica (Morenci, Arizona) y el megayacimiento Grasberg en Indonesia — uno de los más grandes del mundo.\n\n🌍 *Presencia*: EE.UU. (Arizona, Nuevo México), Indonesia, Perú, Chile. El mayor productor de cobre que cotiza en bolsa del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.06% anual* solo por ser dueño. Cada vez que se construye un data center para IA, se fabrica un auto eléctrico, o se moderniza una red eléctrica — se necesita cobre masivamente, y Freeport lo produce. Parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Mud rush en Grasberg (sept 2025) cortó producción ~35% y causó 7 fatalidades.\n\n🆕 Posición #19\n🔗 https://vectorialdata.com/stocks/FCX\n\n💡 Los ricos no invierten cuando les sobra. Invierten PRIMERO y viven con lo que queda.`,
   },
+  {
+    id: 20,
+    stock_id: 24,
+    ticker: "LMT",
+    type: "new" as const,
+    cycle_number: 4,
+    price: 610.17,
+    date: "2026-03-24",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #20* — Mar 24, 2026\n\n🏢 *Lockheed Martin* (LMT) — $610.17\n\n🛍️ *Sus productos*: F-35 Lightning II (el caza más avanzado del mundo), HIMARS (el sistema que cambió la guerra en Ucrania), PAC-3 (defensa antimisiles), helicópteros Sikorsky, y la nave Orion de la NASA\n\n🌍 *Presencia*: EE.UU. (HQ), con contratos en ~50 países aliados. El contratista de defensa #1 del Pentágono y del mundo. Backlog récord de $194 mil millones.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.26% anual* solo por ser dueño — 24 años seguidos subiéndolo. Cada vez que un país aliado compra un F-35, un ejército reabastece misiles HIMARS, o la NASA lanza una misión con Orion — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Pentágono recortó compras de F-35 casi 50% en FY2026, cambiando enfoque a sostenimiento.\n\n🆕 Posición #20\n🔗 https://vectorialdata.com/stocks/LMT\n\n💡 Si LMT baja mañana, no pasa nada. Tú no compraste para mañana. Compraste para dentro de 5, 10, 20 años.`,
+  },
 ];
 
 export const cycles = [
@@ -2754,7 +2917,15 @@ export const cycles = [
     cycle_number: 4,
     type: "rebuy" as const,
     target_count: 5,
-    current_count: 4,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 5,
+    cycle_number: 5,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 0,
     status: "active" as const,
   },
 ];
