@@ -2359,6 +2359,157 @@ BDX a $156.23 es una **compra de valor en healthcare** con protección defensiva
     last_updated_at: "2026-03-23T00:00:00Z",
     next_review_at: "2026-09-23T00:00:00Z",
   },
+  {
+    id: 23,
+    ticker: "FCX",
+    name: "Freeport-McMoRan",
+    sector: "Materials",
+    industry: "Copper Mining / Metals & Mining",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 56.48,
+    pe_ratio: 37.0,
+    pe_forward: 19.1,
+    dividend_yield: 1.06,
+    market_cap_b: 81.0,
+    eps: 1.53,
+    summary_short:
+      "El productor de cobre #1 de EE.UU. y dueño del megayacimiento Grasberg en Indonesia (cobre + oro). Megatendencia: IA, data centers y EVs necesitan cantidades masivas de cobre.",
+    summary_what:
+      "Freeport-McMoRan mina cobre, oro y molibdeno en EE.UU. (Morenci, Arizona — la mina de cobre más grande de Norteamérica), Indonesia (Grasberg — uno de los mayores yacimientos de cobre y oro del mundo), Perú (Cerro Verde) y Chile (El Abra). Produce ~3.4 mil millones de libras de cobre y ~1 millón de onzas de oro al año.",
+    summary_why:
+      "Megatendencia secular del cobre: data centers de IA podrían consumir 1.1M toneladas anuales para 2030. Déficit de oferta proyectado 2026+. Grasberg reiniciando producción en Q2 2026 — catalizador fuerte de earnings. EPS 2026E de $2.95 (+93% vs 2025). JPMorgan proyecta cobre a $5.67/lb en Q2 2026.",
+    summary_risk:
+      "Mud rush en Grasberg (sept 2025) cortó producción ~35% y causó 7 fatalidades. Regulación Indonesia puede endurecer exportaciones de concentrado. Precio del cobre es volátil — cada $0.10/lb = ~$400M en EBITDA.",
+    research_full: `# Freeport-McMoRan (FCX) — Research Completo
+
+## Precio: $56.48 | P/E: 37.0 | P/E Forward: 19.1 | Div Yield: 1.06% | Market Cap: $81B
+
+---
+
+## ¿Qué es Freeport-McMoRan?
+
+Freeport-McMoRan es el **mayor productor de cobre que cotiza en bolsa del mundo** y el **#1 de EE.UU.** Opera minas en cuatro países, siendo la más importante **Grasberg en Indonesia** — uno de los yacimientos de cobre y oro más grandes del planeta.
+
+## Operaciones Principales
+
+| Mina | País | Tipo | Notas |
+|------|------|------|-------|
+| **Grasberg Block Cave** | Indonesia | Subterránea cobre/oro | Mega yacimiento. Dañada por mud rush sept 2025. Reinicio Q2 2026 |
+| **Morenci** | EE.UU. (Arizona) | Open-pit cobre | Mina de cobre más grande de Norteamérica (FCX 72%) |
+| **Cerro Verde** | Perú | Open-pit cobre/molibdeno | FCX 53.56% |
+| **Bagdad** | EE.UU. (Arizona) | Open-pit cobre/molibdeno | Expansión planeada |
+| **Safford/Lone Star** | EE.UU. (Arizona) | Open-pit cobre | Producción creciendo |
+| **El Abra** | Chile | Open-pit cobre | FCX 51% |
+
+## Revenue por Producto (FY2025)
+
+| Producto | Revenue | % Total |
+|----------|---------|---------|
+| **Cobre (cátodo)** | $8.1B | 31.5% |
+| **Cobre (concentrado)** | $6.3B | 24.5% |
+| **Cobre (refinado)** | $4.4B | 17.1% |
+| **Oro** | $3.9B | 15.2% |
+| **Molibdeno** | $2.0B | 7.8% |
+| **Otros** | $1.0B | 3.9% |
+| **Total** | ~$25.7B | 100% |
+
+Cobre = 73% del revenue. Es fundamentalmente una apuesta al cobre.
+
+## Producción (FY2025)
+
+- **Cobre:** ~3.4 mil millones de libras (bajo guidance de 3.95B por Grasberg)
+- **Oro:** ~1.0 millón de onzas (bajo guidance de 1.3M por Grasberg)
+- **Molibdeno:** ~92 millones de libras (arriba de guidance)
+
+## Resultados 2025 (Full Year)
+
+- **Revenue: ~$25.7B**
+- **Net Income: $2.20B** (+16.7% YoY)
+- **EPS GAAP: $1.53** (+16.7%)
+
+### Q4 2025:
+- Revenue: $5.63B (beat estimado de $5.18B)
+- EPS ajustado: $0.47 (beat estimado de $0.28 — +67.9% surprise)
+- Net Income: $406M (+48.2% YoY)
+
+## Incidente Grasberg — Mud Rush (Sept 8, 2025)
+
+Este es el evento más importante para entender FCX hoy:
+- ~800,000 toneladas de material húmedo entraron a la mina Grasberg Block Cave
+- 7 fatalidades
+- Producción de cobre en Indonesia cayó ~39%, oro cayó ~85%
+- Acción cayó 20.4% inmediatamente
+- DMLZ y Big Gossan reiniciaron en oct 2025
+- Grasberg Block Cave reinicio por fases desde Q2 2026
+- 85% de producción total a tasas normales esperado para H2 2026
+
+## Dividendo
+
+- **Dividendo anual:** $0.60/acción (~1.06% yield)
+- **Política:** Ligado a precio del cobre y free cash flow
+- **Historia:** Cortado en 2015-2020 por crisis de commodities y pandemia. Reinstalado 2021
+- **NO es Dividend Aristocrat** — el dividendo es cíclico
+- **Payout ratio:** ~39%
+
+## La Megatendencia del Cobre
+
+1. **IA y Data Centers:** Podrían consumir 500K-1.1M toneladas de cobre anuales para 2030
+2. **Vehículos Eléctricos:** Usan 2.9x más cobre que autos convencionales
+3. **Electrificación:** Modernización de redes, energía renovable, infraestructura limpia
+4. **Demanda global:** +24% para 2035 (Wood Mackenzie)
+5. **Déficit de oferta:** Se proyecta déficit de 150K-400K+ toneladas para 2026
+
+## Catalizadores
+
+1. **Reinicio Grasberg Q2 2026** — Earnings se disparan al normalizar producción
+2. **Copper para IA** — Data centers, chips, cooling, todo requiere cobre masivamente
+3. **Precio del cobre subiendo** — JPMorgan: $5.67/lb en Q2 2026. UBS: $5.90/lb a fin de 2026
+4. **EPS 2026E: $2.95** — Casi el doble del 2025 ($1.53)
+5. **Mayor productor de cobre en EE.UU.** — Beneficio de política de "minerales críticos"
+6. **Déficit de oferta estructural** — Pocos proyectos nuevos de cobre en producción
+
+## Riesgos Principales
+
+1. **Volatilidad del cobre:** Cada $0.10/lb = ~$400M en EBITDA. Recesión global tumba el precio
+2. **Indonesia:** Gobierno prohíbe exportación de concentrado. Nacionalismo de recursos
+3. **Riesgo operacional Grasberg:** Mud rush demostró riesgo catastrófico. Timeline incierto
+4. **China = 50% de demanda global:** Desaceleración china impacta cobre directamente
+5. **P/E trailing alto (37x):** Solo tiene sentido si 2026E se materializa
+
+## Posición Competitiva
+
+| Métrica | FCX | SCCO | TECK | BHP |
+|---------|-----|------|------|-----|
+| **Market Cap** | $81B | $90B+ | $25B | $160B |
+| **Producción cobre** | 3.4B lbs | 2.3B lbs | ~700M lbs | ~3.7B lbs |
+| **Dividend Yield** | 1.06% | 6%+ | 0.8% | 5%+ |
+| **Margen operativo** | ~25% | ~52% | ~30% | ~45% |
+
+## Consenso de Analistas
+
+- **Rating:** Buy / Strong Buy (15-16 analistas)
+- **Price target promedio:** $56 - $63
+- **Rango targets:** $42 - $72
+- **Upside implícito:** +11% al target medio (~$63)
+
+## Conclusión
+
+FCX a $56.48 es una **apuesta directa a la megatendencia del cobre** — IA, data centers, EVs, y electrificación. El reinicio de Grasberg en Q2-H2 2026 es el catalizador principal que debería casi duplicar el EPS. El riesgo es real (Grasberg, Indonesia, volatilidad), pero si crees que el mundo necesita más cobre (y lo necesita), FCX es la forma más directa de apostar a eso.
+
+---
+
+*Research fecha: 24 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 63.0,
+    analyst_upside: 11.5,
+    status: "active",
+    first_researched_at: "2026-03-24T00:00:00Z",
+    last_updated_at: "2026-03-24T00:00:00Z",
+    next_review_at: "2026-09-24T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -2560,6 +2711,17 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #18* — Mar 23, 2026\n\n🏢 *Becton Dickinson* (BDX) — $156.23\n\n🛍️ *Sus productos*: BD Vacutainer (tubos de sangre en cada hospital), jeringas BD (las más usadas del mundo), bombas de infusión BD Alaris, dispensadores automáticos BD Pyxis\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones en ~50 países, productos en ~200 países. 80%+ del market share en tubos de sangre en EE.UU.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.69% anual* solo por ser dueño — 54 años seguidos subiéndolo, Dividend Aristocrat. Cada vez que un doctor te saca sangre, un hospital conecta una bomba de infusión, o una farmacéutica usa sus jeringas para Ozempic o Mounjaro — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Aranceles impactan 370 puntos base en FY2026 por manufactura en México.\n\n🆕 Posición #18\n🔗 https://vectorialdata.com/stocks/BDX\n\n💡 El mercado ha caído 50%+ varias veces en la historia. Y SIEMPRE se recuperó. Los que vendieron en pánico perdieron. Los que mantuvieron ganaron.`,
   },
+  {
+    id: 19,
+    stock_id: 23,
+    ticker: "FCX",
+    type: "new" as const,
+    cycle_number: 4,
+    price: 56.48,
+    date: "2026-03-24",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #19* — Mar 24, 2026\n\n🏢 *Freeport-McMoRan* (FCX) — $56.48\n\n⛏️ *Su producto*: Cobre, oro y molibdeno. La mina de cobre más grande de Norteamérica (Morenci, Arizona) y el megayacimiento Grasberg en Indonesia — uno de los más grandes del mundo.\n\n🌍 *Presencia*: EE.UU. (Arizona, Nuevo México), Indonesia, Perú, Chile. El mayor productor de cobre que cotiza en bolsa del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.06% anual* solo por ser dueño. Cada vez que se construye un data center para IA, se fabrica un auto eléctrico, o se moderniza una red eléctrica — se necesita cobre masivamente, y Freeport lo produce. Parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Mud rush en Grasberg (sept 2025) cortó producción ~35% y causó 7 fatalidades.\n\n🆕 Posición #19\n🔗 https://vectorialdata.com/stocks/FCX\n\n💡 Los ricos no invierten cuando les sobra. Invierten PRIMERO y viven con lo que queda.`,
+  },
 ];
 
 export const cycles = [
@@ -2592,7 +2754,7 @@ export const cycles = [
     cycle_number: 4,
     type: "rebuy" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 4,
     status: "active" as const,
   },
 ];
