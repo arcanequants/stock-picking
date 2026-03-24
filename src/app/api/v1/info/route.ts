@@ -33,7 +33,25 @@ export async function GET() {
         features: ["All picks", "Full research", "Historical data", "Verifiable track record"],
       },
     },
-    payment_methods: ["USDC on Base L2"],
+    payment_methods: [
+      "USDC on Base L2 (subscription)",
+      "x402 pay-per-request (USDC on Base)",
+    ],
+    x402: {
+      description: "Pay-per-request access — no API key needed. The payment IS the authentication.",
+      info: "/api/v1/x402/info",
+      endpoints: {
+        picks: "GET /api/v1/x402/picks ($0.005)",
+        latest_pick: "GET /api/v1/x402/picks/latest ($0.001)",
+        research: "GET /api/v1/x402/research/{ticker} ($0.01)",
+        portfolio: "GET /api/v1/x402/portfolio ($0.002)",
+        positions: "GET /api/v1/x402/portfolio/positions ($0.003)",
+        history: "GET /api/v1/x402/portfolio/history ($0.005)",
+        sectors: "GET /api/v1/x402/sectors ($0.001)",
+        regions: "GET /api/v1/x402/regions ($0.001)",
+        stocks: "GET /api/v1/x402/stocks ($0.005)",
+      },
+    },
     capabilities: [
       "stock_picks",
       "fundamental_research",

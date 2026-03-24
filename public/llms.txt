@@ -28,10 +28,27 @@ Full docs: https://vectorialdata.com/llms-full.txt
 
 - Free: 10 requests/day, latest 3 picks, portfolio summary, basic stock list
 - Pro: 1000 requests/day, all picks, full research, historical data — 5 USDC/month on Base L2
+- x402: Pay-per-request, no API key needed — USDC on Base
 
 ## Payment
 
+### Subscription
 Send 5 USDC to our wallet on Base L2, then POST /api/v1/payments/verify with the tx_hash.
+
+### x402 Pay-Per-Request (for AI agents)
+No registration needed. Just call any /api/v1/x402/* endpoint. You'll get an HTTP 402 with payment instructions. Pay USDC on Base, retry with proof. Pro-tier data, per request.
+
+x402 info: GET /api/v1/x402/info
+x402 endpoints:
+- GET /api/v1/x402/picks ($0.005)
+- GET /api/v1/x402/picks/latest ($0.001)
+- GET /api/v1/x402/research/{ticker} ($0.01)
+- GET /api/v1/x402/portfolio ($0.002)
+- GET /api/v1/x402/portfolio/positions ($0.003)
+- GET /api/v1/x402/portfolio/history ($0.005)
+- GET /api/v1/x402/sectors ($0.001)
+- GET /api/v1/x402/regions ($0.001)
+- GET /api/v1/x402/stocks ($0.005)
 
 ## MCP Server
 

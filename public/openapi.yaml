@@ -236,6 +236,130 @@ paths:
         "404":
           description: Pick not found
 
+  # x402 Pay-Per-Request Endpoints (no API key — payment IS auth)
+  /x402/info:
+    get:
+      operationId: getX402Info
+      summary: x402 endpoint discovery
+      description: Lists all x402 pay-per-request endpoints with pricing. No authentication required.
+      security: []
+      responses:
+        "200":
+          description: x402 endpoint info
+
+  /x402/picks:
+    get:
+      operationId: getX402Picks
+      summary: All picks via x402 ($0.005 USDC)
+      description: Pay $0.005 USDC per request via x402 protocol. Returns pro-tier data.
+      security: []
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List of picks (pro tier)
+        "402":
+          description: Payment required — follow x402 instructions in response headers
+
+  /x402/picks/latest:
+    get:
+      operationId: getX402LatestPick
+      summary: Latest pick via x402 ($0.001 USDC)
+      security: []
+      responses:
+        "200":
+          description: Latest pick (pro tier)
+        "402":
+          description: Payment required
+
+  /x402/research/{ticker}:
+    get:
+      operationId: getX402Research
+      summary: Full research via x402 ($0.01 USDC)
+      security: []
+      parameters:
+        - name: ticker
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Full stock research (pro tier)
+        "402":
+          description: Payment required
+        "404":
+          description: Stock not found
+
+  /x402/portfolio:
+    get:
+      operationId: getX402Portfolio
+      summary: Portfolio summary via x402 ($0.002 USDC)
+      security: []
+      responses:
+        "200":
+          description: Portfolio summary
+        "402":
+          description: Payment required
+
+  /x402/portfolio/positions:
+    get:
+      operationId: getX402Positions
+      summary: All positions via x402 ($0.003 USDC)
+      security: []
+      responses:
+        "200":
+          description: Position list
+        "402":
+          description: Payment required
+
+  /x402/portfolio/history:
+    get:
+      operationId: getX402History
+      summary: Portfolio history via x402 ($0.005 USDC)
+      security: []
+      responses:
+        "200":
+          description: Historical snapshots (pro tier)
+        "402":
+          description: Payment required
+
+  /x402/sectors:
+    get:
+      operationId: getX402Sectors
+      summary: Sector allocation via x402 ($0.001 USDC)
+      security: []
+      responses:
+        "200":
+          description: Sector breakdown
+        "402":
+          description: Payment required
+
+  /x402/regions:
+    get:
+      operationId: getX402Regions
+      summary: Region allocation via x402 ($0.001 USDC)
+      security: []
+      responses:
+        "200":
+          description: Region breakdown
+        "402":
+          description: Payment required
+
+  /x402/stocks:
+    get:
+      operationId: getX402Stocks
+      summary: All stocks via x402 ($0.005 USDC)
+      security: []
+      responses:
+        "200":
+          description: Stock list (pro tier)
+        "402":
+          description: Payment required
+
   /payments/verify:
     post:
       operationId: verifyPayment

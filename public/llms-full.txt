@@ -217,6 +217,66 @@ Verify a single pick in the hash chain.
 
 Verify a USDC payment on Base L2 and upgrade API key to pro tier.
 
+## x402 Pay-Per-Request (No API Key Needed)
+
+x402 is a native HTTP payment protocol. AI agents can access pro-tier data by paying per request — no registration, no API key, no subscription.
+
+### How It Works
+
+1. `GET /api/v1/x402/picks` → HTTP 402 with payment instructions in headers
+2. Agent pays USDC on Base to the specified address
+3. Agent retries with payment proof in `X-PAYMENT` header
+4. Server verifies payment via facilitator → delivers pro-tier data
+5. Agent is only charged if the response is successful (< 400 status)
+
+### x402 Discovery
+
+```
+GET https://vectorialdata.com/api/v1/x402/info
+```
+
+Returns all x402 endpoints with pricing, network, and payment flow.
+
+### x402 Endpoints & Pricing
+
+| Endpoint | Price | Description |
+|----------|-------|-------------|
+| GET /api/v1/x402/picks | $0.005 | All stock picks with returns |
+| GET /api/v1/x402/picks/latest | $0.001 | Latest stock pick |
+| GET /api/v1/x402/research/{ticker} | $0.01 | Full stock research report |
+| GET /api/v1/x402/portfolio | $0.002 | Portfolio summary |
+| GET /api/v1/x402/portfolio/positions | $0.003 | All portfolio positions |
+| GET /api/v1/x402/portfolio/history | $0.005 | Portfolio performance history |
+| GET /api/v1/x402/sectors | $0.001 | Sector allocation breakdown |
+| GET /api/v1/x402/regions | $0.001 | Region allocation breakdown |
+| GET /api/v1/x402/stocks | $0.005 | Full list of researched stocks |
+
+All x402 endpoints return pro-tier data. Total cost for all endpoints: $0.029.
+
+### x402 Response Format
+
+```json
+{
+  "data": { ... },
+  "meta": {
+    "payment": "x402",
+    "tier": "pro",
+    "timestamp": "2026-03-20T..."
+  }
+}
+```
+
+### Agent Example (Python)
+
+```python
+import httpx
+from x402.client import x402_client
+
+client = x402_client(httpx.Client(), wallet)
+response = client.get("https://vectorialdata.com/api/v1/x402/picks")
+# Payment is handled automatically — agent pays, gets data
+```
+
 ## Rate Limits
 
 - Free: 10 requests/day

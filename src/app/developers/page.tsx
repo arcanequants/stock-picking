@@ -190,9 +190,103 @@ print(f"Chain valid: {ledger['valid']}, {ledger['chain_length']} picks")`}
         </div>
       </div>
 
+      {/* x402 Pay-Per-Request */}
+      <div className="border border-emerald-500/30 rounded-xl p-6 mb-8 bg-emerald-500/5">
+        <div className="flex items-center gap-2 mb-4">
+          <h2 className="text-xl font-bold">x402 Pay-Per-Request</h2>
+          <span className="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full">NEW</span>
+        </div>
+        <p className="text-sm text-text-secondary mb-4">
+          No API key needed. No registration. No subscription. Your AI agent pays USDC on Base per request
+          and gets pro-tier data instantly. The payment IS the authentication.
+        </p>
+
+        <div className="space-y-3 mb-4">
+          <div className="flex items-start gap-3">
+            <span className="text-xs bg-tag-bg rounded-full w-6 h-6 flex items-center justify-center shrink-0 mt-0.5">1</span>
+            <p className="text-sm text-text-secondary"><code className="bg-tag-bg px-1 rounded">GET /api/v1/x402/picks</code> — server responds HTTP 402 with payment instructions</p>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="text-xs bg-tag-bg rounded-full w-6 h-6 flex items-center justify-center shrink-0 mt-0.5">2</span>
+            <p className="text-sm text-text-secondary">Agent pays USDC on Base to the address in the 402 response</p>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="text-xs bg-tag-bg rounded-full w-6 h-6 flex items-center justify-center shrink-0 mt-0.5">3</span>
+            <p className="text-sm text-text-secondary">Agent retries with payment proof in <code className="bg-tag-bg px-1 rounded">X-PAYMENT</code> header</p>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="text-xs bg-tag-bg rounded-full w-6 h-6 flex items-center justify-center shrink-0 mt-0.5">4</span>
+            <p className="text-sm text-text-secondary">Server verifies via Coinbase facilitator — delivers pro-tier data. Agent only charged if successful.</p>
+          </div>
+        </div>
+
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="text-left py-2 pr-4">Endpoint</th>
+                <th className="text-left py-2 pr-4">Price</th>
+                <th className="text-left py-2">Description</th>
+              </tr>
+            </thead>
+            <tbody className="text-text-secondary">
+              <tr className="border-b border-border/50">
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/picks</td>
+                <td className="py-1.5 pr-4">$0.005</td>
+                <td className="py-1.5">All picks with returns</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/picks/latest</td>
+                <td className="py-1.5 pr-4">$0.001</td>
+                <td className="py-1.5">Latest pick</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/research/{"{ticker}"}</td>
+                <td className="py-1.5 pr-4">$0.01</td>
+                <td className="py-1.5">Full research report</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/portfolio</td>
+                <td className="py-1.5 pr-4">$0.002</td>
+                <td className="py-1.5">Portfolio summary</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/portfolio/positions</td>
+                <td className="py-1.5 pr-4">$0.003</td>
+                <td className="py-1.5">All positions</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/portfolio/history</td>
+                <td className="py-1.5 pr-4">$0.005</td>
+                <td className="py-1.5">Performance history</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/sectors</td>
+                <td className="py-1.5 pr-4">$0.001</td>
+                <td className="py-1.5">Sector breakdown</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/regions</td>
+                <td className="py-1.5 pr-4">$0.001</td>
+                <td className="py-1.5">Region breakdown</td>
+              </tr>
+              <tr>
+                <td className="py-1.5 pr-4 font-mono text-xs">GET /x402/stocks</td>
+                <td className="py-1.5 pr-4">$0.005</td>
+                <td className="py-1.5">All researched stocks</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-text-faint">
+          All endpoints prefixed with <code className="text-text-muted">/api/v1</code>. Discovery: <code className="text-text-muted">GET /api/v1/x402/info</code>. Powered by{" "}
+          <a href="https://github.com/coinbase/x402" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">x402 protocol</a> (Coinbase).
+        </p>
+      </div>
+
       {/* Payment Instructions */}
       <div className="border border-border rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4">Crypto Payment</h2>
+        <h2 className="text-xl font-bold mb-4">Subscription Payment</h2>
         <ol className="text-sm text-text-secondary space-y-2 list-decimal list-inside">
           <li>Send <strong>5 USDC</strong> on <strong>Base L2</strong> to our wallet address</li>
           <li>Copy the transaction hash</li>
