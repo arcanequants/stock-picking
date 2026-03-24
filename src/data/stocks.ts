@@ -2229,6 +2229,136 @@ Bank of America a $47.52 es una **compra sólida de valor** en el sector financi
     last_updated_at: "2026-03-23T00:00:00Z",
     next_review_at: "2026-09-23T00:00:00Z",
   },
+  {
+    id: 22,
+    ticker: "BDX",
+    name: "Becton Dickinson",
+    sector: "Healthcare",
+    industry: "Medical Devices / Supplies",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 156.23,
+    pe_ratio: 25.5,
+    pe_forward: 12.5,
+    dividend_yield: 2.69,
+    market_cap_b: 44.4,
+    eps: 5.82,
+    summary_short:
+      "El fabricante de dispositivos médicos más esencial del mundo. BD Vacutainer (tubos de sangre), jeringas, bombas de infusión BD Alaris, y dispensadores BD Pyxis. 54 años consecutivos subiendo dividendo — Dividend Aristocrat.",
+    summary_what:
+      "Becton Dickinson fabrica los dispositivos médicos que usan todos los hospitales del mundo. Opera en 4 segmentos: Medical Essentials (jeringas, agujas, Vacutainer — 34% revenue), Interventional (cirugía, urología, critical care — 28%), Connected Care (bombas BD Alaris, dispensadores BD Pyxis — 25%), y BioPharma Systems (jeringas prefabricadas para GLP-1s y biológicos — 13%). Presente en ~200 países.",
+    summary_why:
+      "Forward P/E de 12.5x — barato para medtech (sector cotiza a 18-25x). Dividend Aristocrat con 54 años de aumentos. Spin-off de Life Sciences completado en Feb 2026 generó $4B en cash para recompras y deuda. BD Alaris recibió aprobación FDA completa — desbloquea ciclo de upgrades. BioPharma se beneficia del boom de GLP-1 (Ozempic, Mounjaro).",
+    summary_risk:
+      "Aranceles impactan 370 puntos base en FY2026 por manufactura en México. China presiona precios con políticas de compra por volumen. Crecimiento orgánico Q1 fue solo 1.6%, necesita acelerar.",
+    research_full: `# Becton Dickinson (BDX) — Research Completo
+
+## Precio: $156.23 | P/E: 25.5 | P/E Forward: 12.5 | Div Yield: 2.69% | Market Cap: $44.4B
+
+---
+
+## ¿Qué es Becton Dickinson?
+
+Becton Dickinson es el **fabricante de dispositivos médicos más esencial del mundo**. Cada vez que un doctor te saca sangre, usa un tubo BD Vacutainer. Cada vez que te ponen una inyección, probablemente es con una jeringa BD. Con 54 años consecutivos de aumento de dividendo, es uno de los **Dividend Aristocrats** más confiables del S&P 500.
+
+## Segmentos de Negocio (Post Spin-Off, Feb 2026)
+
+| Segmento | Revenue Est. | % Total | Descripción |
+|----------|-------------|---------|-------------|
+| **Medical Essentials** | ~$6.1B | 34% | Jeringas, agujas, BD Vacutainer, catéteres IV, acceso vascular |
+| **Interventional** | ~$5.0B | 28% | Cirugía, urología, critical care, reparación de hernias |
+| **Connected Care** | ~$4.5B | 25% | Bombas BD Alaris, dispensadores BD Pyxis, monitoreo de pacientes |
+| **BioPharma Systems** | ~$2.3B | 13% | Jeringas prefabricadas para biológicos/GLP-1s, auto-inyectores |
+
+Revenue total New BD (pro forma): ~$17.8B. TAM: $70B+ creciendo ~5%.
+
+## Resultados Recientes
+
+### FY2025 (año fiscal terminó Sep 30, 2025):
+- **Revenue: $21.84B** (+8.24% YoY)
+- **Net Income (GAAP): $1.68B**
+- **EPS GAAP: $5.82** | **EPS Ajustado: ~$13.14**
+- La diferencia GAAP vs ajustado refleja costos del spin-off y amortización de adquisiciones
+
+### Q1 FY2026 (trimestre terminó Dic 31, 2025):
+- Revenue: $5.25B (+1.6%)
+- EPS ajustado: $2.91
+- EPS GAAP: $1.34 (+28.8% YoY)
+
+### Guía FY2026:
+- Revenue growth: low single-digit
+- EPS ajustado: $12.35 - $12.65 (~6% crecimiento)
+- Impacto aranceles: ~370 bps headwind
+
+## Dividendo y Retorno al Accionista
+
+- **Dividendo anual:** $4.20/acción (~2.69% yield)
+- **Años consecutivos de aumento:** 54 — Dividend Aristocrat
+- **Crecimiento dividendo 5 años:** 5.4% CAGR
+- **Payout ratio (sobre EPS ajustado):** ~34% (muy conservador)
+- **Spin-off generó $4B** en cash para recompras de acciones y reducción de deuda
+
+## Ventajas Competitivas (Moat)
+
+1. **Dominio en blood collection:** BD Vacutainer tiene 80%+ de market share en EE.UU.
+2. **Escala de manufactura:** Producen miles de millones de dispositivos desechables al año — costos imposibles de replicar
+3. **BD Alaris:** Instalado en ~50% de camas de hospital en EE.UU. — alto switching cost
+4. **BD Pyxis:** Dispensadores automáticos en farmacias hospitalarias — locked-in
+5. **Regulación como barrera:** Aprobaciones FDA crean barreras de entrada de años para competidores
+6. **BioPharma:** Las farmacéuticas dependen de BD para jeringas prefabricadas de biológicos — no cambias de proveedor fácilmente
+
+## Catalizadores
+
+1. **Spin-off completado (Feb 2026)** — BD recibió $4B en cash, empresa más enfocada en medtech puro
+2. **BD Alaris aprobación FDA completa** — Desbloquea ciclo masivo de upgrades en hospitales
+3. **Boom GLP-1** — Ozempic, Mounjaro, Zepbound todos necesitan jeringas prefabricadas que BD manufactura
+4. **Forward P/E de 12.5x** — Medtech normalmente cotiza a 18-25x, BD está con descuento por transición
+5. **$4B para recompras** — A estos precios deprimidos, las recompras son muy acretivas
+6. **Integración Edwards Critical Care** — Monitoreo de pacientes con AI en 10,000+ hospitales
+
+## Riesgos Principales
+
+1. **Aranceles:** 370 bps de headwind en FY2026 por manufactura en México y otras localidades
+2. **China VBP:** Políticas de compra por volumen presionan precios de Vacutainer y otros productos
+3. **Crecimiento orgánico lento:** Q1 FY2026 fue solo +1.6%, necesita acelerar a mid-single-digit
+4. **Deuda elevada:** Adquisiciones de C.R. Bard ($24B) y Edwards ($4.2B) dejaron deuda significativa
+5. **Competencia en bombas de infusión:** ICU Medical y Baxter invierten en nueva generación de smart pumps
+
+## Posición Competitiva
+
+| Métrica | BDX | ABT | MDT | BAX |
+|---------|-----|-----|-----|-----|
+| **Market Cap** | $44B | $200B | $110B | $15B |
+| **Dividend Yield** | 2.69% | 1.8% | 3.2% | 2.8% |
+| **Años dividendo creciente** | 54 | 52 | 47 | 5 |
+| **Forward P/E** | 12.5x | 22x | 15x | 10x |
+
+BDX es el más barato de los Dividend Aristocrats en medtech.
+
+## Consenso de Analistas
+
+- **Rating:** Buy (Moderate Buy)
+- **Price target promedio:** $200 - $212
+- **Rango targets:** $183 - $270
+- **Upside implícito:** +28% desde $156.23
+
+## Conclusión
+
+BDX a $156.23 es una **compra de valor en healthcare** con protección defensiva excepcional. A 12.5x forward earnings, estás comprando el fabricante dominante de dispositivos médicos esenciales — con 54 años de dividendo creciente, moats regulatorios fuertes, y múltiples catalizadores post spin-off. El riesgo principal es de corto plazo (aranceles, crecimiento lento), pero el negocio subyacente es casi inmune a recesiones — los hospitales no dejan de comprar jeringas y tubos de sangre.
+
+---
+
+*Research fecha: 23 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 200.0,
+    analyst_upside: 28.0,
+    status: "active",
+    first_researched_at: "2026-03-23T00:00:00Z",
+    last_updated_at: "2026-03-23T00:00:00Z",
+    next_review_at: "2026-09-23T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -2419,6 +2549,17 @@ export const transactions = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #17* — Mar 23, 2026\n\n🏢 *Bank of America* (BAC) — $47.52\n\n🛍️ *Sus líneas*: Consumer Banking (depósitos, tarjetas, small business), Merrill Lynch (wealth management), Global Markets (trading), Global Banking (banca corporativa e investment banking)\n\n🌍 *Presencia*: EE.UU. — 66 millones de clientes. El segundo banco más grande de Estados Unidos, solo detrás de JPMorgan.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.37% anual* solo por ser dueño — 13 años seguidos subiéndolo. Cada vez que alguien paga su tarjeta de crédito, invierte con Merrill Lynch, o una empresa usa sus servicios de treasury — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Sensible a tasas de interés — si la Fed corta más de lo esperado, su ingreso por intereses baja.\n\n🆕 Posición #17\n🔗 https://vectorialdata.com/stocks/BAC\n\n💡 No revises BAC todos los días. Bank of America no cambia de valor en 24 horas — tu ansiedad sí.`,
   },
+  {
+    id: 18,
+    stock_id: 22,
+    ticker: "BDX",
+    type: "new" as const,
+    cycle_number: 4,
+    price: 156.23,
+    date: "2026-03-23",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #18* — Mar 23, 2026\n\n🏢 *Becton Dickinson* (BDX) — $156.23\n\n🛍️ *Sus productos*: BD Vacutainer (tubos de sangre en cada hospital), jeringas BD (las más usadas del mundo), bombas de infusión BD Alaris, dispensadores automáticos BD Pyxis\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones en ~50 países, productos en ~200 países. 80%+ del market share en tubos de sangre en EE.UU.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.69% anual* solo por ser dueño — 54 años seguidos subiéndolo, Dividend Aristocrat. Cada vez que un doctor te saca sangre, un hospital conecta una bomba de infusión, o una farmacéutica usa sus jeringas para Ozempic o Mounjaro — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Aranceles impactan 370 puntos base en FY2026 por manufactura en México.\n\n🆕 Posición #18\n🔗 https://vectorialdata.com/stocks/BDX\n\n💡 El mercado ha caído 50%+ varias veces en la historia. Y SIEMPRE se recuperó. Los que vendieron en pánico perdieron. Los que mantuvieron ganaron.`,
+  },
 ];
 
 export const cycles = [
@@ -2451,7 +2592,7 @@ export const cycles = [
     cycle_number: 4,
     type: "rebuy" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 3,
     status: "active" as const,
   },
 ];
