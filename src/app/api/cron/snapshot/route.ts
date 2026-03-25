@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
+import { createEvent } from "@/lib/notifications";
 import YahooFinance from "yahoo-finance2";
 
 const yahooFinance = new YahooFinance();
@@ -81,6 +82,42 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
+    // --- Price move detection (>5% daily change) ---
+    const priceMoveEvents: string[] = [];
+    try {
+      const { data: prevSnapshots } = await getSupabaseAdmin()
+        .from("portfolio_snapshots")
+        .select("prices")
+        .order("date", { ascending: false })
+        .neq("date", today)
+        .limit(1);
+
+      const prevPrices = (prevSnapshots?.[0]?.prices as Record<string, number>) ?? {};
+
+      for (const ticker of activeTickers) {
+        const curr = prices[ticker];
+        const prev = prevPrices[ticker];
+        if (!curr || !prev || prev === 0) continue;
+
+        const changePct = ((curr - prev) / prev) * 100;
+        if (Math.abs(changePct) >= 5) {
+          const isUp = changePct > 0;
+          await createEvent({
+            ticker,
+            event_type: "price_move",
+            title_key: isUp ? "notifications.priceUp" : "notifications.priceDown",
+            params: {
+              ticker,
+              pct: Math.abs(changePct).toFixed(1),
+            },
+          });
+          priceMoveEvents.push(`${ticker}: ${changePct > 0 ? "+" : ""}${changePct.toFixed(1)}%`);
+        }
+      }
+    } catch (e) {
+      console.error("Price move detection error:", e);
+    }
+
     return NextResponse.json({
       success: true,
       date: today,
@@ -88,6 +125,7 @@ export async function GET(request: Request) {
       total_value: Math.round(totalValue * 100) / 100,
       return_pct: Math.round(returnPct * 100) / 100,
       prices,
+      price_move_events: priceMoveEvents,
     });
   } catch (error) {
     console.error("Cron snapshot error:", error);

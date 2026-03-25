@@ -357,3 +357,34 @@ body {
   border-radius: 0.25rem;
   font-size: 0.875rem;
 }
+
+/* ===== NOTIFICATIONS ===== */
+
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 9999px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.notification-unread {
+  border-left: 3px solid var(--brand);
+  background: var(--brand-subtle);
+}
+
+.notification-item {
+  transition: background 0.15s ease;
+}
+
+.notification-item:hover {
+  background: var(--card-hover);
+}

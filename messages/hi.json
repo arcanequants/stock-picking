@@ -4,7 +4,8 @@
     "portfolio": "पोर्टफोलियो",
     "stocks": "स्टॉक्स",
     "join": "जुड़ें $1/माह",
-    "openMenu": "मेनू खोलें"
+    "openMenu": "मेनू खोलें",
+    "notifications": "सूचनाएं"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — स्टॉक पोर्टफोलियो। यह वित्तीय सलाह नहीं है।",
@@ -295,6 +296,22 @@
     "step2Desc": "पूरा प्रदर्शन चार्ट, पोजीशन और लेनदेन देखने के लिए अपने ईमेल से लॉग इन करें।",
     "goToPortfolio": "पोर्टफोलियो पर जाएं",
     "tip": "सुझाव: पिक्स सोमवार से शुक्रवार आते हैं। लॉग इन के लिए वही ईमेल उपयोग करें जिससे आपने भुगतान किया।"
+  },
+  "Notifications": {
+    "title": "सूचनाएं",
+    "empty": "अभी तक कोई सूचना नहीं",
+    "markAllRead": "सभी पढ़ा हुआ चिह्नित करें",
+    "seeAll": "सभी देखें",
+    "loadMore": "और लोड करें",
+    "bellLabel": "सूचनाएं",
+    "priceUp": "{ticker} आज {pct}% बढ़ा",
+    "priceDown": "{ticker} आज {pct}% गिरा",
+    "dividendPaid": "{ticker} ने {amount} का लाभांश दिया",
+    "earningsReport": "{ticker} ने कमाई रिपोर्ट की: {summary}",
+    "analystUpgrade": "{analyst} ने {ticker} को {rating} में अपग्रेड किया",
+    "analystDowngrade": "{analyst} ने {ticker} को {rating} में डाउनग्रेड किया",
+    "newsAlert": "{ticker}: {headline}",
+    "weeklyDigestSubject": "इस सप्ताह आपका पोर्टफोलियो"
   },
   "Legal": {
     "termsTitle": "सेवा की शर्तें",

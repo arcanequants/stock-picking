@@ -4,7 +4,8 @@
     "portfolio": "Portfólio",
     "stocks": "Ações",
     "join": "Assine $1/mês",
-    "openMenu": "Abrir menu"
+    "openMenu": "Abrir menu",
+    "notifications": "Notificações"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Portfólio de Ações. Isso não é assessoria financeira.",
@@ -295,6 +296,22 @@
     "step2Desc": "Faça login com seu email para acessar o gráfico completo, posições e transações.",
     "goToPortfolio": "Ir ao Portfólio",
     "tip": "Dica: Os picks chegam de segunda a sexta. Use o mesmo email com que você pagou para fazer login."
+  },
+  "Notifications": {
+    "title": "Notificações",
+    "empty": "Nenhuma notificação ainda",
+    "markAllRead": "Marcar tudo como lido",
+    "seeAll": "Ver todas",
+    "loadMore": "Carregar mais",
+    "bellLabel": "Notificações",
+    "priceUp": "{ticker} subiu {pct}% hoje",
+    "priceDown": "{ticker} caiu {pct}% hoje",
+    "dividendPaid": "{ticker} pagou um dividendo de {amount}",
+    "earningsReport": "{ticker} reportou resultados: {summary}",
+    "analystUpgrade": "{ticker} foi elevado para {rating} por {analyst}",
+    "analystDowngrade": "{ticker} foi rebaixado para {rating} por {analyst}",
+    "newsAlert": "{ticker}: {headline}",
+    "weeklyDigestSubject": "Seu portfólio esta semana"
   },
   "Legal": {
     "termsTitle": "Termos de Serviço",

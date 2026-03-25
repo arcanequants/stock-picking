@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 import AuthButton from "@/components/AuthButton";
+import NotificationBell from "@/components/NotificationBell";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import CookieConsent from "@/components/CookieConsent";
@@ -104,6 +105,7 @@ export default async function RootLayout({
                   </Link>
                   <LanguageSwitcher />
                   <ThemeToggle />
+                  <NotificationBell isSubscribed={isSubscribed} />
                   <AuthButton
                     userEmail={user?.email ?? null}
                     isSubscribed={isSubscribed}

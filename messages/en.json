@@ -4,7 +4,8 @@
     "portfolio": "Portfolio",
     "stocks": "Stocks",
     "join": "Join $1/mo",
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "notifications": "Notifications"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Stock Portfolio. This is not financial advice.",
@@ -295,6 +296,22 @@
     "step2Desc": "Log in with your email to access the full performance chart, positions, and transactions.",
     "goToPortfolio": "Go to Portfolio",
     "tip": "Tip: Picks arrive Monday through Friday. Use the same email you paid with to log in."
+  },
+  "Notifications": {
+    "title": "Notifications",
+    "empty": "No notifications yet",
+    "markAllRead": "Mark all read",
+    "seeAll": "See all",
+    "loadMore": "Load more",
+    "bellLabel": "Notifications",
+    "priceUp": "{ticker} rose {pct}% today",
+    "priceDown": "{ticker} fell {pct}% today",
+    "dividendPaid": "{ticker} paid a dividend of {amount}",
+    "earningsReport": "{ticker} reported earnings: {summary}",
+    "analystUpgrade": "{ticker} upgraded to {rating} by {analyst}",
+    "analystDowngrade": "{ticker} downgraded to {rating} by {analyst}",
+    "newsAlert": "{ticker}: {headline}",
+    "weeklyDigestSubject": "Your portfolio this week"
   },
   "Legal": {
     "termsTitle": "Terms of Service",

@@ -84,3 +84,20 @@ export interface PositionReturn {
   days_held: number;
   date_bought: string;
 }
+
+// --- Notifications ---
+
+export type EventType = "price_move" | "dividend" | "earnings" | "analyst" | "news";
+
+export interface PortfolioEvent {
+  id: string;
+  ticker: string;
+  event_type: EventType;
+  title_key: string;
+  params: Record<string, string>;
+  created_at: string;
+}
+
+export interface NotificationWithRead extends PortfolioEvent {
+  is_read: boolean;
+}
