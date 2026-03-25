@@ -229,6 +229,47 @@ body {
   border: 1px solid var(--brand-border);
 }
 
+/* Locked stock card — glassmorphism for hidden stocks */
+.stock-card-locked {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.stock-card-locked::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(var(--background-rgb, 0 0 0), 0.5);
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.stock-card-locked-inner {
+  filter: blur(4px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.stock-card-locked-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Placeholder bar for hidden data */
+.data-placeholder {
+  display: inline-block;
+  height: 0.875rem;
+  border-radius: 0.25rem;
+  background: var(--tag-bg, hsl(0 0% 50% / 0.15));
+}
+
 /* Markdown styles for research pages */
 .prose-research h1 {
   font-size: 1.5rem;

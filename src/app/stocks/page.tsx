@@ -1,10 +1,13 @@
 import { getSupabase } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import { getTranslations } from "next-intl/server";
+import { getAuthState } from "@/lib/auth";
+import { getRotationSeed, selectVisible, selectShowcase, selectFeatured } from "@/lib/rotation";
 import StocksView from "@/components/StocksView";
 
 export default async function StocksPage() {
   const t = await getTranslations("Stocks");
+  const { isSubscribed } = await getAuthState();
 
   // Fetch current prices from latest snapshot
   const { data: snapshots } = await getSupabase()
@@ -50,22 +53,78 @@ export default async function StocksPage() {
   const regions = [...new Set(activeStocks.map((s) => s.region))];
   const countries = new Set(activeStocks.map((s) => s.country)).size;
 
+  // --- Rotation logic (only matters for free users, but compute always for SSR consistency) ---
+  const now = new Date();
+  const seed48 = getRotationSeed("48h", now);
+  const seed72 = getRotationSeed("72h", now);
+  const seed7d = getRotationSeed("7d", now);
+
+  // Which active stocks are visible vs hidden for free users
+  const activeData = activeStocks.map((s) => ({ ticker: s.ticker }));
+  const { visible: visibleItems, hidden: hiddenItems } = selectVisible(activeData, seed48, 0.3);
+  const visibleTickers = new Set(visibleItems.map((i) => i.ticker));
+
+  // Showcase stocks (from visible pool) — full data + research preview
+  const showcaseItems = selectShowcase(visibleItems, seed7d, 2);
+  const showcaseTickers = new Set(showcaseItems.map((i) => i.ticker));
+
+  // Featured pick — random from active, NOT the latest
+  const featuredItem = selectFeatured(activeData, seed72, latestPick?.ticker);
+
+  // Picks this week (for FOMO counter)
+  const oneWeekAgo = new Date(now);
+  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+  const picksThisWeek = transactions.filter(
+    (tx) => new Date(tx.date) >= oneWeekAgo
+  ).length;
+
+  // Build showcase research data (only for showcase tickers — minimize data sent to client)
+  const showcaseResearch: Record<string, { what: string; whyPreview: string }> = {};
+  for (const ticker of showcaseTickers) {
+    const stock = stocks.find((s) => s.ticker === ticker);
+    if (stock) {
+      const firstParagraph = stock.summary_why?.split("\n")[0] || stock.summary_why?.substring(0, 200) || "";
+      showcaseResearch[ticker] = {
+        what: stock.summary_what || "",
+        whyPreview: firstParagraph,
+      };
+    }
+  }
+
   // Map stocks to the StockData shape expected by client component
-  const stockData = stocks.map((s) => ({
-    ticker: s.ticker,
-    name: s.name,
-    sector: s.sector,
-    region: s.region,
-    country: s.country,
-    price: s.price,
-    pe_forward: s.pe_forward,
-    dividend_yield: s.dividend_yield,
-    market_cap_b: s.market_cap_b,
-    analyst_consensus: s.analyst_consensus,
-    analyst_upside: s.analyst_upside,
-    summary_short: s.summary_short,
-    status: s.status,
-  }));
+  // For free users: don't send financial data for hidden stocks (no data leakage)
+  const stockData = stocks.map((s) => {
+    const isVisible = isSubscribed || visibleTickers.has(s.ticker) || s.status !== "active";
+    return {
+      ticker: s.ticker,
+      name: isVisible ? s.name : "",
+      sector: s.sector,
+      region: s.region,
+      country: s.country,
+      price: isVisible ? s.price : 0,
+      pe_forward: isVisible ? s.pe_forward : null,
+      dividend_yield: isVisible ? s.dividend_yield : null,
+      market_cap_b: isVisible ? s.market_cap_b : null,
+      analyst_consensus: isVisible ? s.analyst_consensus : "",
+      analyst_upside: isVisible ? s.analyst_upside : null,
+      summary_short: isVisible ? s.summary_short : "",
+      status: s.status,
+    };
+  });
+
+  // Featured pick stock data (always send full data for this one card)
+  const featuredStock = featuredItem
+    ? stocks.find((s) => s.ticker === featuredItem.ticker)
+    : null;
+  const featuredPickData = featuredStock && featuredItem
+    ? {
+        ticker: featuredStock.ticker,
+        name: featuredStock.name,
+        sector: featuredStock.sector,
+        region: featuredStock.region,
+        summary_short: featuredStock.summary_short,
+      }
+    : null;
 
   const labels = {
     title: t("title"),
@@ -96,6 +155,18 @@ export default async function StocksPage() {
     gatingText: t("gatingText"),
     shareLabel: t("shareLabel"),
     shareCopied: t("shareCopied"),
+    hiddenCount: t("hiddenCount", { count: hiddenItems.length }),
+    missedPicks: t("missedPicks", { count: picksThisWeek }),
+    returnPositive: t("returnPositive"),
+    returnNegative: t("returnNegative"),
+    featuredLabel: t("featuredLabel"),
+    showcaseLabel: t("showcaseLabel"),
+    showcaseWhat: t("showcaseWhat"),
+    showcaseWhy: t("showcaseWhy"),
+    subscribeForData: t("subscribeForData"),
+    lockedTicker: t("lockedTicker"),
+    unlockAll: t("unlockAll", { count: activeStocks.length }),
+    selectionRotates: t("selectionRotates"),
   };
 
   return (
@@ -114,6 +185,12 @@ export default async function StocksPage() {
         regions={regions}
         countries={countries}
         labels={labels}
+        isSubscribed={isSubscribed}
+        visibleTickers={[...visibleTickers]}
+        showcaseTickers={[...showcaseTickers]}
+        showcaseResearch={showcaseResearch}
+        featuredPick={featuredPickData}
+        hiddenCount={hiddenItems.length}
       />
     </div>
   );

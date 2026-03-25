@@ -160,7 +160,19 @@
     "gatingCount": "और पोज़ीशन",
     "gatingText": "सभी पोज़ीशन और हर कंपनी की पूरी रिसर्च देखने के लिए सब्सक्राइब करें।",
     "shareLabel": "शेयर करें",
-    "shareCopied": "लिंक कॉपी हुआ"
+    "shareCopied": "लिंक कॉपी हुआ",
+    "hiddenCount": "{count} पोज़ीशन छिपी हुई",
+    "missedPicks": "इस हफ़्ते {count} पिक्स मिस हुई",
+    "returnPositive": "सकारात्मक",
+    "returnNegative": "नकारात्मक",
+    "featuredLabel": "विशेष",
+    "showcaseLabel": "रिसर्च प्रीव्यू",
+    "showcaseWhat": "ये क्या करते हैं",
+    "showcaseWhy": "हमें क्यों पसंद है",
+    "subscribeForData": "वित्तीय डेटा देखने के लिए सब्सक्राइब करें",
+    "lockedTicker": "???",
+    "unlockAll": "सभी {count} पोज़ीशन देखें",
+    "selectionRotates": "चयन समय-समय पर बदलता है"
   },
   "StockDetail": {
     "stockNotFound": "स्टॉक नहीं मिला",

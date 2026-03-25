@@ -160,7 +160,19 @@
     "gatingCount": "posiciones más",
     "gatingText": "Suscríbete para ver todas las posiciones y el research completo de cada empresa.",
     "shareLabel": "Compartir",
-    "shareCopied": "Enlace copiado"
+    "shareCopied": "Enlace copiado",
+    "hiddenCount": "{count} posiciones ocultas",
+    "missedPicks": "{count} picks esta semana que te perdiste",
+    "returnPositive": "Positivo",
+    "returnNegative": "Negativo",
+    "featuredLabel": "DESTACADO",
+    "showcaseLabel": "Preview del Research",
+    "showcaseWhat": "Qué hacen",
+    "showcaseWhy": "Por qué nos gusta",
+    "subscribeForData": "Suscríbete para ver datos financieros",
+    "lockedTicker": "???",
+    "unlockAll": "Ver las {count} posiciones",
+    "selectionRotates": "La selección rota periódicamente"
   },
   "StockDetail": {
     "stockNotFound": "Acción no encontrada",
