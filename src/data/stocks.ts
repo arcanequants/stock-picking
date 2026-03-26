@@ -2662,6 +2662,169 @@ LMT a $610.17 es una **compra defensiva en el sentido literal** — el contratis
     last_updated_at: "2026-03-24T00:00:00Z",
     next_review_at: "2026-09-24T00:00:00Z",
   },
+  {
+    id: 25,
+    ticker: "NOC",
+    name: "Northrop Grumman Corporation",
+    sector: "Industrials",
+    industry: "Aerospace & Defense",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 691.43,
+    pe_ratio: 23.46,
+    pe_forward: 24.43,
+    dividend_yield: 1.35,
+    market_cap_b: 98.0,
+    eps: 29.08,
+    summary_short:
+      "El fabricante del B-21 Raider (el bombardero stealth más avanzado del mundo) y del ICBM Sentinel. Contratista de defensa #2 de EE.UU. con backlog récord de $95.7 mil millones y ventas internacionales creciendo 20%.",
+    summary_what:
+      "Northrop Grumman diseña y fabrica sistemas de defensa avanzados. Opera en 4 segmentos: Aeronautics (B-21 Raider, drones — 29% revenue), Mission Systems (radares, ciberseguridad, C4ISR — 28%), Space Systems (satélites, GEM 63, misiles — 24%), y Defense Systems (municiones, logística — 18%). Es el contratista principal del B-21 y del ICBM Sentinel de nueva generación.",
+    summary_why:
+      "Backlog récord de $95.7B con book-to-bill de 1.10x. El B-21 Raider acaba de asegurar expansión de producción de $4.5B (+25% capacidad). Free cash flow subió 26% a $3.3B en 2025. Ventas internacionales crecieron 20%. Contexto geopolítico (NATO al 5% PIB, conflictos activos) impulsa gasto de defensa sin precedentes.",
+    summary_risk:
+      "El programa Sentinel ICBM tiene sobrecostos masivos ($141B+) y reestructuración en curso. A P/E forward de 24.4x, la valuación es exigente para ~4% crecimiento de ventas y EPS 2026 guiado a la baja.",
+    research_full: `# Northrop Grumman Corporation (NOC) — Research Completo
+
+## Precio: $691.43 | P/E: 23.46 | P/E Forward: 24.43 | Div Yield: 1.35% | Market Cap: $98B
+
+---
+
+## ¿Qué es Northrop Grumman?
+
+Northrop Grumman es el **segundo contratista de defensa más grande de EE.UU.** y el fabricante del **B-21 Raider**, el bombardero stealth de nueva generación más avanzado del mundo. También es el contratista principal del **ICBM Sentinel**, el reemplazo del Minuteman III. Con un backlog de **$95.7 mil millones**, la empresa tiene visibilidad de ingresos para años.
+
+## Segmentos de Negocio (FY2025)
+
+| Segmento | Revenue | % Total | Programas Clave |
+|----------|---------|---------|-----------------|
+| **Aeronautics Systems** | $13.0B | 29% | B-21 Raider, Global Hawk, Triton, drones autónomos |
+| **Mission Systems** | $12.5B | 28% | Radares, ciberseguridad, C4ISR, sensores avanzados |
+| **Space Systems** | $10.8B | 24% | Satélites, GEM 63, misiles balísticos, Sentinel ICBM |
+| **Defense Systems** | $8.0B | 18% | Municiones, IBCS, logística, entrenamiento |
+
+## Resultados 2025 (Full Year)
+
+- **Revenue: $42.0B** (+2% YoY)
+- **Q4 Revenue: $11.71B** (+9.6% YoY) — aceleración significativa
+- **EPS (Adjusted): $29.08**
+- **Free Cash Flow: $3.3B** (+26% YoY — tercer año consecutivo de crecimiento 25%+)
+- **Backlog: $95.7B** (récord)
+- **Book-to-Bill: 1.10x** (reciben más órdenes de las que entregan)
+- **Net Awards: $46B+** en 2025
+- **Ventas internacionales: +20%** en 2025
+
+## Guía 2026
+
+- **Revenue:** $43.5B - $44.0B (~4% crecimiento)
+- **EPS Adjusted:** $27.40 - $27.90 (consenso analistas: $28.05)
+- **Nota:** EPS baja vs 2025 por mayores inversiones de capital y costos de producción B-21
+
+## El B-21 Raider — El Game Changer
+
+El B-21 Raider es el **programa de bombardero más grande en 30 años**:
+
+- **Contrato de expansión de $4.5B** acordado en Feb 2026 para aumentar capacidad de producción +25%
+- **Northrop invirtiendo $2-3B adicionales** de su propio capital para acelerar
+- **Producción actual:** ~8 aviones/año, subiendo a ~10/año
+- **Programa mínimo:** 100 aviones (potencial de más)
+- **Primer avión operacional:** Llegará a Ellsworth AFB en 2027
+- **$5B+ invertidos** en infraestructura digital y manufactura
+- El programa aún no está completamente reflejado en guidance — **mayor upside no capturado**
+
+## El ICBM Sentinel — El Riesgo Conocido
+
+- **Sobrecosto Nunn-McCurdy:** Costo estimado supera $141B, se excedió el umbral legal
+- **Reestructuración en curso:** Se espera concluir a finales de 2026
+- **Vuelo de prueba retrasado:** De 2026 a marzo 2028
+- **Problemas de software** y diseño de silos complican timeline
+- **Capacidad operacional:** No antes de inicio de los 2030s
+- **Mitigante:** Congreso agregó $2.5B para actividades de reducción de riesgo
+
+## Dividendo y Retorno al Accionista
+
+- **Dividendo anual:** $9.24/acción (~1.35% yield)
+- **Años consecutivos de aumento:** 23
+- **Último aumento:** +12% en mayo 2025
+- **Buybacks 2025:** ~$1.7B en recompras
+- **Autorización vigente:** $4.2B en recompras pendientes
+- **Estrategia:** Devolver >100% del FCF a accionistas
+
+## Ventajas Competitivas (Moat)
+
+1. **Monopolio del B-21:** Único fabricante del bombardero stealth de nueva generación
+2. **Contratista #2 del Pentágono:** Solo detrás de Lockheed Martin
+3. **Backlog de $95.7B:** ~2.3x ventas anuales de visibilidad
+4. **Programas clasificados:** Múltiples programas "black" imposibles de replicar
+5. **Posicionamiento temprano en ciclo:** B-21 y Sentinel están en fase de inversión — el revenue fuerte viene en los próximos años
+6. **Liderazgo en ciberseguridad y C4ISR:** Capacidades críticas para guerra moderna
+
+## La Megatendencia de Defensa
+
+- **NATO sube a 5% del PIB para 2035** — multiplica presupuestos de defensa en Europa
+- **EE.UU. sube defensa ~15% en FY2026** — NOC es beneficiario directo
+- **Conflictos activos** (Ucrania, Medio Oriente) aceleran demanda
+- **Ventas internacionales creciendo 20%** — book-to-bill internacional >1 esperado en 2026
+- **Nuevas amenazas** (hipersónicos, ciberataques, drones) requieren exactamente lo que NOC fabrica
+
+## Catalizadores
+
+1. **B-21 Raider expansión** — $4.5B en capacidad adicional, producción +25%, primer avión operacional en 2027
+2. **Backlog récord $95.7B** — visibilidad de ~2.3 años de revenue
+3. **Free cash flow acelerando** — +26% en 2025, tercer año de crecimiento 25%+
+4. **Ventas internacionales +20%** — mercado en expansión por NATO 5%
+5. **Presupuesto defensa EE.UU. +15%** — viento de cola secular
+6. **Programas clasificados** — upside no visible en guidance público
+
+## Riesgos Principales
+
+1. **Sentinel ICBM en problemas:** Sobrecostos de $141B+, reestructuración, retrasos de 4 años
+2. **Valuación exigente:** P/E forward de 24.4x es premium para ~4% crecimiento de ventas
+3. **EPS 2026 baja vs 2025:** Guidance de $27.65 vs $29.08 logrados
+4. **Dependencia del presupuesto de defensa:** Cambios políticos o recortes podrían afectar pipeline
+5. **Riesgo de ejecución B-21:** Programa masivo en ramp-up
+
+## Posición Competitiva
+
+| Métrica | NOC | LMT | RTX | GD |
+|---------|-----|-----|-----|-----|
+| **Revenue** | $42B | $75B | $85B | $46B |
+| **Backlog** | $95.7B | $194B | $217B | $92B |
+| **Dividend Yield** | 1.35% | 2.26% | 2.2% | 2.0% |
+| **P/E Forward** | 24.4x | 20.5x | ~22x | ~20x |
+| **Enfoque defensa** | 90% | 100% | 65% | 65% |
+
+## Consenso de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Rating | **Buy** (17 analistas) |
+| Strong Buy | 5 |
+| Buy | 5 |
+| Hold | 7 |
+| Sell | 0 |
+| Price Target Promedio | **$675.29** |
+| Price Target Alto | $815 |
+| Price Target Bajo | $521 |
+| **Upside al Target** | **-2.2%** |
+
+## Conclusión
+
+NOC a $691.43 es una **apuesta al futuro de la defensa aérea y espacial de EE.UU.** El B-21 Raider es el programa de defensa más importante de la próxima década, y NOC es el único fabricante. Con backlog récord de $95.7B, FCF acelerando, y ventas internacionales creciendo 20%, la empresa tiene fundamentos sólidos. El riesgo principal es la valuación premium (24.4x forward P/E) junto con EPS que baja en 2026 por inversiones en capacidad. Sin embargo, estas inversiones son las que generarán el crecimiento futuro. Para un portafolio diversificado de defensa (complementando a LMT), NOC ofrece exposición única a bombarderos stealth, ciberseguridad, y sistemas espaciales.
+
+---
+
+*Research fecha: 25 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 675.29,
+    analyst_upside: -2.2,
+    status: "active",
+    first_researched_at: "2026-03-25T00:00:00Z",
+    last_updated_at: "2026-03-25T00:00:00Z",
+    next_review_at: "2026-09-25T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -2885,6 +3048,17 @@ export const transactions = [
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #20* — Mar 24, 2026\n\n🏢 *Lockheed Martin* (LMT) — $610.17\n\n🛍️ *Sus productos*: F-35 Lightning II (el caza más avanzado del mundo), HIMARS (el sistema que cambió la guerra en Ucrania), PAC-3 (defensa antimisiles), helicópteros Sikorsky, y la nave Orion de la NASA\n\n🌍 *Presencia*: EE.UU. (HQ), con contratos en ~50 países aliados. El contratista de defensa #1 del Pentágono y del mundo. Backlog récord de $194 mil millones.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.26% anual* solo por ser dueño — 24 años seguidos subiéndolo. Cada vez que un país aliado compra un F-35, un ejército reabastece misiles HIMARS, o la NASA lanza una misión con Orion — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Pentágono recortó compras de F-35 casi 50% en FY2026, cambiando enfoque a sostenimiento.\n\n🆕 Posición #20\n🔗 https://vectorialdata.com/stocks/LMT\n\n💡 Si LMT baja mañana, no pasa nada. Tú no compraste para mañana. Compraste para dentro de 5, 10, 20 años.`,
   },
+  {
+    id: 21,
+    stock_id: 25,
+    ticker: "NOC",
+    type: "new" as const,
+    cycle_number: 5,
+    price: 691.43,
+    date: "2026-03-25",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #21* — Mar 25, 2026\n\n🏢 *Northrop Grumman* (NOC) — $691.43\n\n🛍️ *Sus productos*: B-21 Raider (el bombardero stealth más avanzado del mundo), ICBM Sentinel, drones Global Hawk y Triton, radares, satélites, sistemas de ciberseguridad\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones de defensa y espacio en múltiples países aliados. El contratista de defensa #2 del Pentágono. Backlog récord de $95.7 mil millones.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.35% anual* solo por ser dueño — 23 años seguidos subiéndolo. Cada vez que un país aliado necesita un bombardero stealth, un satélite espacial, o un sistema de ciberseguridad — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El programa Sentinel ICBM tiene sobrecostos masivos y reestructuración en curso.\n\n🆕 Posición #21\n🔗 https://vectorialdata.com/stocks/NOC\n\n💡 Un café diario = $150/mes. $5 por pick = portafolio de 30 empresas pagándote dividendos. Misma plata, diferente futuro.`,
+  },
 ];
 
 export const cycles = [
@@ -2925,7 +3099,7 @@ export const cycles = [
     cycle_number: 5,
     type: "new" as const,
     target_count: 5,
-    current_count: 0,
+    current_count: 1,
     status: "active" as const,
   },
 ];
