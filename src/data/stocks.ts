@@ -2825,6 +2825,173 @@ NOC a $691.43 es una **apuesta al futuro de la defensa aérea y espacial de EE.U
     last_updated_at: "2026-03-25T00:00:00Z",
     next_review_at: "2026-09-25T00:00:00Z",
   },
+  {
+    id: 26,
+    ticker: "GE",
+    name: "GE Aerospace",
+    sector: "Industrials",
+    industry: "Aerospace & Defense / Aircraft Engines",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 288.68,
+    pe_ratio: 35.91,
+    pe_forward: 33.72,
+    dividend_yield: 0.63,
+    market_cap_b: 303.0,
+    eps: 8.04,
+    summary_short:
+      "El fabricante de motores de avión #1 del mundo. Tras separarse de GE Vernova en 2024, GE Aerospace es una empresa pura de aviación con 44,000+ motores comerciales instalados, backlog récord de ~$190 mil millones y el superciclo de MRO como viento de cola.",
+    summary_what:
+      "GE Aerospace diseña, fabrica y da servicio a motores de avión comerciales y militares. Opera en 2 segmentos: Commercial Engines & Services (CES, ~72% revenue) — motores LEAP (vía CFM International, JV 50/50 con Safran) para Boeing 737 MAX y Airbus A320neo, GE9X para el 777X, GEnx, CF6 — y Defense & Propulsion Technologies (DPT, ~28%) — motores T700 para helicópteros, F110, F414 para cazas. Su base instalada de 44,000+ motores genera ingresos recurrentes masivos en mantenimiento (MRO).",
+    summary_why:
+      "Revenue 2025 creció 21% a $42.3B y operating profit subió 25% a $9.1B. Free cash flow récord de $7.7B (+24%). Backlog de ~$190B (+$20B en un año). El superciclo de MRO (flota envejecida + demanda récord de viajes aéreos) impulsa servicios comerciales +26%. LEAP alcanzó entregas récord de 1,802 motores. Guía 2026 apunta a $9.85B-$10.25B en operating profit.",
+    summary_risk:
+      "Boeing 737 MAX sigue con problemas de producción que limitan entregas de motores LEAP. Valuación premium (P/E forward 33.7x) requiere ejecución impecable. Problema de durabilidad del sello interno del GE9X podría retrasar certificación del 777X.",
+    research_full: `# GE Aerospace (GE) — Research Completo
+
+## Precio: $288.68 | P/E: 35.91 | P/E Forward: 33.72 | Div Yield: 0.63% | EPS: $8.04 | Market Cap: $303B
+
+---
+
+## ¿Qué es GE Aerospace?
+
+GE Aerospace es el **fabricante de motores de avión #1 del mundo**. En abril de 2024, completó su separación de GE Vernova (negocio de energía), convirtiéndose en una **empresa pura de aviación**. Con una base instalada de más de **44,000 motores comerciales** y un backlog de aproximadamente **$190 mil millones**, GE Aerospace domina el mercado global de propulsión aérea tanto comercial como militar.
+
+La empresa es heredera de más de 100 años de ingeniería aeronáutica. A través de **CFM International** — su joint venture 50/50 con la francesa **Safran** — fabrica el motor LEAP, que impulsa los dos aviones más vendidos de la historia: el **Boeing 737 MAX** y el **Airbus A320neo**.
+
+## Segmentos de Negocio (FY2025)
+
+| Segmento | Revenue | % Total | Crecimiento | Productos Clave |
+|----------|---------|---------|-------------|-----------------|
+| **Commercial Engines & Services (CES)** | ~$32B | ~72% | +24% | LEAP (737 MAX / A320neo), GE9X (777X), GEnx (787/747-8), CF6, servicios MRO |
+| **Defense & Propulsion Technologies (DPT)** | ~$12.2B | ~28% | +11% | T700 (helicópteros Black Hawk/Apache), F110 (F-16/F-15), F414 (F/A-18), motores de combate |
+
+### Productos Clave en Detalle
+
+- **LEAP (CFM International):** Motor estrella para narrowbodies. Entregó **1,802 motores** en 2025 (récord, +28%). Backlog de +10,000 motores. Objetivo de **2,000 entregas en 2026**
+- **GE9X:** El motor de avión más grande y eficiente del mundo. Diseñado exclusivamente para el **Boeing 777X**. Certificado por la FAA en 2020, con primera entrega del avión estimada para 2027
+- **GEnx:** Motor del Boeing 787 Dreamliner y 747-8. Base instalada masiva generando MRO recurrente
+- **CF6:** Motor legacy en miles de aviones widebody. Fuente enorme de ingresos de servicios
+- **T700:** Motor de helicóptero para Black Hawk, Apache, y Seahawk. Contrato del Ejército de EE.UU. por hasta $1.1B para producción continua hasta 2029
+
+## Resultados Financieros 2025 (Full Year)
+
+- **Total Orders:** $66.2B (+32% YoY)
+- **Revenue Ajustado:** $42.3B (+21% YoY)
+- **Revenue Total (GAAP):** $45.9B (+18%)
+- **Operating Profit:** $9.1B (+25%)
+- **Adjusted EPS:** $6.37 (+38%)
+- **Free Cash Flow:** $7.7B (+24%)
+- **FCF Conversion:** >100%
+- **Backlog:** ~$190B (+$20B en el año)
+
+### Por Segmento:
+
+**Commercial Engines & Services (CES):**
+- Revenue: ~$32B (+24%)
+- Operating Profit: $8.9B (+26%)
+- Margen operativo: 26.6% (+40 bps)
+- Servicios comerciales: +26%
+- Entregas de motores comerciales: +25%
+- Entregas LEAP: 1,802 (récord, +28%)
+- Repuestos: +25%
+
+**Defense & Propulsion Technologies (DPT):**
+- Revenue: ~$12.2B (+11%)
+- Operating Profit: $1.3B (+22%)
+- Entregas de motores militares: +30%
+- Orders: +19%
+
+## Guía 2026
+
+- **Revenue:** Crecimiento low double-digit
+- **Operating Profit:** $9.85B - $10.25B (~$1B de crecimiento al midpoint)
+- **Adjusted EPS:** $7.10 - $7.40 (~15% crecimiento al midpoint)
+- **Free Cash Flow:** $8.0B - $8.4B
+- **CES Revenue:** Mid-teens growth (servicios mid-teens, equipo mid-to-high teens)
+- **Entregas LEAP 2026:** 2,000 (récord, +15% vs 2025)
+- **DPT Revenue:** Mid-to-high single digit growth
+
+## Dividendo y Retorno al Accionista
+
+- **Dividendo trimestral:** $0.47/acción ($1.88 anualizado)
+- **Dividend Yield:** 0.63%
+- **Aumento en 2026:** +30% vs 2025 ($1.44 anualizado en 2025)
+- **Plan de retorno 2024-2026:** ~$24B total (+20% vs plan original)
+- **Programa de recompra:** $19B autorizado en buybacks
+- **Política futura:** Retornar al menos 70% del FCF vía dividendos y recompras
+
+## Ventajas Competitivas (Moat)
+
+1. **Base instalada de 44,000+ motores:** Cada motor genera décadas de ingresos recurrentes de MRO. Los motores se venden casi al costo — el negocio real es el servicio
+2. **Duopolio en motores comerciales:** GE/CFM y Pratt & Whitney (RTX) dominan el 100% del mercado de narrowbodies. No hay tercer competidor viable
+3. **CFM International (JV con Safran):** El LEAP es el motor más producido del mundo para narrowbodies. Backlog de +10,000 motores
+4. **Switching costs extremos:** Cambiar de motor en un programa de avión es prácticamente imposible una vez seleccionado. Los programas duran 30+ años
+5. **Superciclo de MRO:** Flota envejecida + retiros retrasados + demanda récord de viajes = shop visits en niveles históricos. Esto es revenue de alto margen
+6. **Barrera de entrada insuperable:** Desarrollar un motor de avión cuesta $10B+ y 10-15 años. La certificación y track record operacional son barreras infranqueables
+
+## Catalizadores
+
+1. **Superciclo de MRO:** Servicios comerciales crecieron +26% en 2025. Flota envejecida y retiros retrasados garantizan años de demanda elevada
+2. **Rampa de producción LEAP:** De 1,802 en 2025 a 2,000 objetivo en 2026. Cada motor vendido genera $10-15M+ en servicios lifecycle
+3. **GE9X y Boeing 777X:** Primer avión previsto para 2027. Programa exclusivo de GE para widebody de nueva generación
+4. **Programa RISE (CFM):** Motor open-fan de próxima generación con 20% menos consumo. Vuelos de prueba previstos mid-2020s, entrada en servicio mid-2030s. Asegura liderazgo futuro
+5. **Expansión de defensa:** Presupuesto militar EE.UU. +15%, NATO al 5% del PIB. DPT creció 11% con entregas militares +30%
+6. **Capital return masivo:** ~$24B en retorno al accionista (2024-2026), +30% aumento de dividendo, buybacks agresivos reducen shares outstanding
+
+## Riesgos Principales
+
+1. **Boeing 737 MAX:** Los problemas de producción de Boeing limitan directamente las entregas de motores LEAP. El ritmo de producción del MAX sigue por debajo de lo planeado, lo que frena el potencial de revenue de CES
+2. **Valuación premium:** A P/E forward de 33.7x, GE cotiza con una prima significativa vs su histórico y vs peers. Cualquier miss en guidance o desaceleración de servicios podría causar una corrección fuerte
+3. **Problema de durabilidad GE9X:** En enero 2026, Boeing confirmó un problema con un sello interno del GE9X que podría afectar durabilidad. Aunque la certificación del 777X continúa, cualquier retraso adicional afectaría a GE
+4. **Restricciones de cadena de suministro:** La rampa de producción de LEAP depende de proveedores de piezas forjadas y materiales especializados que siguen bajo presión
+5. **Concentración en aviación comercial:** Al ser una empresa pura de aviación, una recesión global que reduzca el tráfico aéreo impactaría desproporcionadamente
+
+## Posición Competitiva
+
+| Métrica | **GE Aerospace** | RTX (Pratt & Whitney) | Safran | Rolls-Royce |
+|---------|-------------------|----------------------|--------|-------------|
+| **Revenue** | $42.3B | $83B (total RTX) | €30.5B | £17.8B |
+| **Motor Narrowbody** | LEAP (CFM, 50%) | GTF (PW1000G) | LEAP (CFM, 50%) | — |
+| **Motor Widebody** | GE9X, GEnx, CF6 | — | — | Trent XWB, Trent 7000 |
+| **Base instalada comercial** | 44,000+ | ~15,000 | Compartida vía CFM | ~4,500 |
+| **Backlog** | ~$190B | $217B | €52B+ | £14.1B civil |
+| **Margen operativo (aviación)** | ~21% | ~16% (RTX total) | ~17% | ~18% |
+| **Dividend Yield** | 0.63% | 2.2% | ~1.3% | ~0.8% |
+| **P/E Forward** | 33.7x | ~22x | ~30x | ~27x |
+| **Próxima gen** | RISE (open fan, CFM) | GTF Advantage | RISE (open fan, CFM) | UltraFan |
+
+**Nota:** GE Aerospace tiene la base instalada comercial más grande del mundo, lo que le da una ventaja estructural en el negocio de servicios de alto margen. Safran es socio (no competidor) en CFM International. RTX (Pratt & Whitney) es el principal competidor directo en narrowbodies con el motor GTF, que ha tenido sus propios problemas de durabilidad en discos de turbina.
+
+## Consenso de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Rating | **Strong Buy** |
+| Price Target Promedio | **$337.50** |
+| Precio Actual | $288.68 |
+| **Upside al Target** | **+16.8%** |
+| EPS (TTM) | $8.04 |
+| EPS Forward (Guía 2026) | $7.10 - $7.40 |
+| Free Cash Flow 2026E | $8.0B - $8.4B |
+
+## Conclusión
+
+GE Aerospace a $288.68 es la **empresa pura de aviación dominante a nivel global** — con la base instalada de motores comerciales más grande del mundo (44,000+) y el superciclo de MRO como viento de cola secular. Los números de 2025 fueron excepcionales: revenue +21%, operating profit +25%, FCF +24%, LEAP en entregas récord. La guía 2026 apunta a otro año de crecimiento de doble dígito con $9.85B-$10.25B en operating profit y $8.0B-$8.4B en FCF. El riesgo principal es la valuación: a P/E forward de 33.7x, el mercado ya descuenta mucho del crecimiento. Sin embargo, la calidad del negocio — ingresos recurrentes de MRO, duopolio en motores, switching costs de 30 años, y el programa RISE como puente al futuro — justifica una prima. Para un portafolio diversificado, GE Aerospace ofrece exposición al mejor negocio de aviación del mundo con un catalyst claro en el superciclo de MRO que apenas está comenzando.
+
+---
+
+*Research fecha: 25 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 337.50,
+    analyst_upside: 16.8,
+    status: "active",
+    first_researched_at: "2026-03-25T00:00:00Z",
+    last_updated_at: "2026-03-25T00:00:00Z",
+    next_review_at: "2026-09-25T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -3056,8 +3223,19 @@ export const transactions = [
     cycle_number: 5,
     price: 691.43,
     date: "2026-03-25",
-    day_of_week: "tuesday",
+    day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #21* — Mar 25, 2026\n\n🏢 *Northrop Grumman* (NOC) — $691.43\n\n🛍️ *Sus productos*: B-21 Raider (el bombardero stealth más avanzado del mundo), ICBM Sentinel, drones Global Hawk y Triton, radares, satélites, sistemas de ciberseguridad\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones de defensa y espacio en múltiples países aliados. El contratista de defensa #2 del Pentágono. Backlog récord de $95.7 mil millones.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.35% anual* solo por ser dueño — 23 años seguidos subiéndolo. Cada vez que un país aliado necesita un bombardero stealth, un satélite espacial, o un sistema de ciberseguridad — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El programa Sentinel ICBM tiene sobrecostos masivos y reestructuración en curso.\n\n🆕 Posición #21\n🔗 https://vectorialdata.com/stocks/NOC\n\n💡 Un café diario = $150/mes. $5 por pick = portafolio de 30 empresas pagándote dividendos. Misma plata, diferente futuro.`,
+  },
+  {
+    id: 22,
+    stock_id: 26,
+    ticker: "GE",
+    type: "new" as const,
+    cycle_number: 5,
+    price: 288.68,
+    date: "2026-03-25",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #22* — Mar 25, 2026\n\n🏢 *GE Aerospace* (GE) — $288.68\n\n🛍️ *Sus productos*: Motores LEAP (Boeing 737 MAX / Airbus A320neo), GE9X (el motor más grande del mundo para el 777X), GEnx (Boeing 787), motores T700 para helicópteros militares\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones globales. El fabricante de motores de avión #1 del mundo con 44,000+ motores instalados. JV con Safran (CFM International).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.63% anual* solo por ser dueño. Cada vez que un avión despega con motores LEAP, GEnx o GE9X — y necesita mantenimiento después de miles de horas de vuelo — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Boeing 737 MAX sigue con problemas de producción que limitan entregas de motores LEAP.\n\n🆕 Posición #22\n🔗 https://vectorialdata.com/stocks/GE\n\n💡 Invertir no es un evento. Es un hábito. Como ir al gym — los resultados llegan con el tiempo, no con la intensidad.`,
   },
 ];
 
@@ -3099,7 +3277,7 @@ export const cycles = [
     cycle_number: 5,
     type: "new" as const,
     target_count: 5,
-    current_count: 1,
+    current_count: 2,
     status: "active" as const,
   },
 ];
