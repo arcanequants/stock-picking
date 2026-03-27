@@ -388,3 +388,9 @@ body {
 .notification-item:hover {
   background: var(--card-hover);
 }
+
+.explanation-blur {
+  filter: blur(6px);
+  user-select: none;
+  pointer-events: none;
+}

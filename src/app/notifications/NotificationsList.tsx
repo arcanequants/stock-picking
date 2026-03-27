@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
-import type { NotificationWithRead } from "@/lib/types";
+import type { PortfolioEvent, EventExplanation } from "@/lib/types";
 
 const EVENT_ICONS: Record<string, string> = {
   price_move: "\u{1F4C8}",
@@ -12,69 +13,59 @@ const EVENT_ICONS: Record<string, string> = {
   news: "\u{1F4F0}",
 };
 
-export default function NotificationsList() {
+interface Props {
+  initialEvents: PortfolioEvent[];
+  isSubscribed: boolean;
+  isLoggedIn: boolean;
+  locale: string;
+}
+
+export default function NotificationsList({
+  initialEvents,
+  isSubscribed,
+  isLoggedIn,
+  locale,
+}: Props) {
   const t = useTranslations("Notifications");
-  const [events, setEvents] = useState<NotificationWithRead[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [markingAll, setMarkingAll] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(0);
+  const [events, setEvents] = useState(initialEvents);
 
-  const fetchNotifications = useCallback(async () => {
-    try {
-      const res = await fetch("/api/notifications");
-      if (!res.ok) return;
-      const data = await res.json();
-      setEvents(data.events ?? []);
-      setUnreadCount(data.unreadCount ?? 0);
-    } catch {
-      // Silently fail
-    }
-    setLoading(false);
-  }, []);
-
+  // Poll for premium users only (they have read tracking)
   useEffect(() => {
-    fetchNotifications();
-  }, [fetchNotifications]);
+    if (!isSubscribed) return;
+    const interval = setInterval(async () => {
+      try {
+        const res = await fetch("/api/notifications");
+        if (!res.ok) return;
+        const data = await res.json();
+        setEvents(data.events ?? []);
+      } catch {
+        // Silently fail
+      }
+    }, 60000);
+    return () => clearInterval(interval);
+  }, [isSubscribed]);
 
-  // Mark visible unread events as read after 2 seconds
+  // Auto-mark-as-read for premium users
   useEffect(() => {
-    const unread = events.filter((e) => !e.is_read);
-    if (unread.length === 0) return;
+    if (!isSubscribed || !isLoggedIn) return;
+    const unreadIds = events.filter((e) => !(e as PortfolioEvent & { is_read?: boolean }).is_read).map((e) => e.id);
+    if (unreadIds.length === 0) return;
 
     const timer = setTimeout(async () => {
       try {
         await fetch("/api/notifications/read", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ eventIds: unread.map((e) => e.id) }),
+          body: JSON.stringify({ eventIds: unreadIds }),
         });
-        setEvents((prev) => prev.map((e) => ({ ...e, is_read: true })));
-        setUnreadCount(0);
       } catch {
         // Silently fail
       }
     }, 2000);
-
     return () => clearTimeout(timer);
-  }, [events]);
+  }, [events, isSubscribed, isLoggedIn]);
 
-  const handleMarkAllRead = async () => {
-    setMarkingAll(true);
-    try {
-      await fetch("/api/notifications/read", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ all: true }),
-      });
-      setEvents((prev) => prev.map((e) => ({ ...e, is_read: true })));
-      setUnreadCount(0);
-    } catch {
-      // Silently fail
-    }
-    setMarkingAll(false);
-  };
-
-  const renderEventText = (event: NotificationWithRead) => {
+  const renderEventText = (event: PortfolioEvent) => {
     const key = event.title_key.replace("notifications.", "");
     try {
       return t(key, event.params);
@@ -89,78 +80,144 @@ export default function NotificationsList() {
 
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
-    return date.toLocaleDateString(undefined, {
+    return date.toLocaleDateString(locale, {
       weekday: "short",
       month: "short",
       day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
     });
   };
 
-  if (loading) {
+  const getExplanation = (event: PortfolioEvent): EventExplanation | null => {
+    if (!event.explanations || Object.keys(event.explanations).length === 0) {
+      return null;
+    }
     return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <div key={i} className="animate-pulse bg-card border border-border rounded-xl p-4">
-            <div className="h-4 bg-tag-bg rounded w-3/4 mb-2" />
-            <div className="h-3 bg-tag-bg rounded w-1/4" />
-          </div>
-        ))}
+      event.explanations[locale as "en" | "es" | "pt" | "hi"] ??
+      event.explanations["en"] ??
+      null
+    );
+  };
+
+  // FOMO counter: events this week with explanations
+  const oneWeekAgo = new Date();
+  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+  const eventsThisWeek = events.filter(
+    (e) => new Date(e.created_at) >= oneWeekAgo
+  );
+  const withExplanations = eventsThisWeek.filter(
+    (e) => e.explanations && Object.keys(e.explanations).length > 0
+  );
+  const understoodCount = isSubscribed
+    ? withExplanations.length
+    : Math.min(1, withExplanations.length);
+
+  if (events.length === 0) {
+    return (
+      <div className="text-center py-16">
+        <div className="text-4xl mb-4">{"\u{1F514}"}</div>
+        <p className="text-text-muted">{t("empty")}</p>
       </div>
     );
   }
 
   return (
     <div>
-      {/* Header actions */}
-      {unreadCount > 0 && (
-        <div className="flex justify-end mb-4">
-          <button
-            onClick={handleMarkAllRead}
-            disabled={markingAll}
-            className="text-sm text-brand hover:text-brand-hover transition-colors disabled:opacity-50"
+      {/* FOMO counter for free users */}
+      {!isSubscribed && withExplanations.length > 1 && (
+        <div className="bg-brand-subtle border border-brand-border rounded-xl p-4 mb-6 text-center">
+          <p className="text-sm text-foreground">
+            {t("fomoCounter", {
+              understood: String(understoodCount),
+              total: String(withExplanations.length),
+            })}
+          </p>
+          <Link
+            href="/join"
+            className="text-sm font-medium text-brand hover:text-brand-hover mt-1 inline-block"
           >
-            {t("markAllRead")}
-          </button>
+            {t("understandAll")} {"\u2192"}
+          </Link>
         </div>
       )}
 
-      {/* Events list */}
-      {events.length === 0 ? (
-        <div className="text-center py-16">
-          <div className="text-4xl mb-4">{"\u{1F514}"}</div>
-          <p className="text-text-muted">{t("empty")}</p>
-        </div>
-      ) : (
-        <div className="space-y-2">
-          {events.map((event) => (
+      <div className="space-y-3">
+        {events.map((event, index) => {
+          const explanation = getExplanation(event);
+          const isLatest = index === 0;
+          const showExplanation = isSubscribed || isLatest;
+          const hasExplanation = explanation !== null;
+
+          return (
             <div
               key={event.id}
-              className={`bg-card border border-border rounded-xl p-4 notification-item ${
-                !event.is_read ? "notification-unread" : ""
-              }`}
+              className="bg-card border border-border rounded-xl overflow-hidden notification-item"
             >
-              <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">
-                  {EVENT_ICONS[event.event_type] ?? "\u{1F4CC}"}
-                </span>
-                <div className="flex-1">
-                  <p className="text-sm text-foreground leading-relaxed">
-                    {renderEventText(event)}
-                  </p>
-                  <p className="text-xs text-text-faint mt-1.5">
-                    {formatDate(event.created_at)}
-                  </p>
+              {/* Layer 1: Headline (always visible) */}
+              <div className="p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-xl mt-0.5">
+                    {EVENT_ICONS[event.event_type] ?? "\u{1F4CC}"}
+                  </span>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-foreground leading-relaxed">
+                      {renderEventText(event)}
+                    </p>
+                    <p className="text-xs text-text-faint mt-1.5">
+                      {formatDate(event.created_at)}
+                    </p>
+                  </div>
+                  <span className="text-xs font-medium text-text-faint uppercase tracking-wide mt-1">
+                    {event.ticker}
+                  </span>
                 </div>
-                <span className="text-xs font-medium text-text-faint uppercase tracking-wide mt-1">
-                  {event.ticker}
-                </span>
               </div>
+
+              {/* Layer 2+3: Full explanation (premium or latest event) */}
+              {hasExplanation && showExplanation && (
+                <div className="border-t border-border bg-background px-4 py-3 space-y-3">
+                  <div>
+                    <p className="text-xs font-semibold text-brand-text uppercase tracking-wide mb-1">
+                      {t("whatItMeans")}
+                    </p>
+                    <p className="text-sm text-text-muted leading-relaxed">
+                      {explanation.meaning}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-brand-text uppercase tracking-wide mb-1">
+                      {t("whatToDo")}
+                    </p>
+                    <p className="text-sm text-text-muted leading-relaxed">
+                      {explanation.action}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Blurred explanation with CTA (free users, non-latest) */}
+              {hasExplanation && !showExplanation && (
+                <div className="border-t border-border relative">
+                  <div className="px-4 py-3 explanation-blur">
+                    <div className="space-y-2">
+                      <div className="h-3 bg-tag-bg rounded w-full" />
+                      <div className="h-3 bg-tag-bg rounded w-4/5" />
+                      <div className="h-3 bg-tag-bg rounded w-3/5" />
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center bg-background/60 backdrop-blur-[2px]">
+                    <Link
+                      href="/join"
+                      className="text-sm font-medium text-brand hover:text-brand-hover transition-colors"
+                    >
+                      {t("blurCTA")} {"\u2192"}
+                    </Link>
+                  </div>
+                </div>
+              )}
             </div>
-          ))}
-        </div>
-      )}
+          );
+        })}
+      </div>
     </div>
   );
 }

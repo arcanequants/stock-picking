@@ -89,12 +89,20 @@ export interface PositionReturn {
 
 export type EventType = "price_move" | "dividend" | "earnings" | "analyst" | "news";
 
+export interface EventExplanation {
+  meaning: string;
+  action: string;
+}
+
+export type EventExplanations = Partial<Record<"en" | "es" | "pt" | "hi", EventExplanation>>;
+
 export interface PortfolioEvent {
   id: string;
   ticker: string;
   event_type: EventType;
   title_key: string;
   params: Record<string, string>;
+  explanations: EventExplanations;
   created_at: string;
 }
 

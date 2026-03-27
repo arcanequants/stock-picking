@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { getAuthState } from "@/lib/auth";
 import { getRotationSeed, selectVisible, selectShowcase, selectFeatured } from "@/lib/rotation";
 import StocksView from "@/components/StocksView";
+import NotificationsBanner from "@/components/NotificationsBanner";
 
 export default async function StocksPage() {
   const t = await getTranslations("Stocks");
@@ -171,6 +172,8 @@ export default async function StocksPage() {
 
   return (
     <div className="space-y-10">
+      {!isSubscribed && <NotificationsBanner />}
+
       <section>
         <h1 className="text-3xl font-bold mb-2">{labels.title}</h1>
         <p className="text-text-muted">{labels.subtitle}</p>

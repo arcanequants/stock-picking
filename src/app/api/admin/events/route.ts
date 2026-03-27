@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createEvent } from "@/lib/notifications";
+import { createEventWithExplanations } from "@/lib/notifications";
 import type { EventType } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       );
     }
 
-    await createEvent({
+    await createEventWithExplanations({
       ticker,
       event_type,
       title_key,

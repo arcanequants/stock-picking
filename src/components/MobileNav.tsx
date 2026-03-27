@@ -74,11 +74,9 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
           <Link href="/stocks" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
             {t("stocks")}
           </Link>
-          {isSubscribed && (
-            <Link href="/notifications" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
-              {t("notifications")}
-            </Link>
-          )}
+          <Link href="/notifications" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
+            {t("noticias")}
+          </Link>
 
           {/* Auth section */}
           {userEmail ? (

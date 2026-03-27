@@ -5,7 +5,8 @@
     "stocks": "Stocks",
     "join": "Join $1/mo",
     "openMenu": "Open menu",
-    "notifications": "Notifications"
+    "notifications": "Notifications",
+    "noticias": "News"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Stock Portfolio. This is not financial advice.",
@@ -311,7 +312,16 @@
     "analystUpgrade": "{ticker} upgraded to {rating} by {analyst}",
     "analystDowngrade": "{ticker} downgraded to {rating} by {analyst}",
     "newsAlert": "{ticker}: {headline}",
-    "weeklyDigestSubject": "Your portfolio this week"
+    "weeklyDigestSubject": "Your portfolio this week",
+    "pageTitle": "Portfolio News",
+    "pageSubtitle": "What's happening with your stocks — explained simply",
+    "whatItMeans": "What it means",
+    "whatToDo": "For your portfolio",
+    "fomoCounter": "You understood {understood} of {total} news this week",
+    "blurCTA": "Understand for $1/mo",
+    "bannerCTA": "See explanation",
+    "understandAll": "Understand all news",
+    "empty": "No news yet. When something happens, we'll explain it here."
   },
   "Legal": {
     "termsTitle": "Terms of Service",

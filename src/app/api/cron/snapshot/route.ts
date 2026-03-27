@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
-import { createEvent } from "@/lib/notifications";
+import { createEventWithExplanations } from "@/lib/notifications";
 import YahooFinance from "yahoo-finance2";
 
 const yahooFinance = new YahooFinance();
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 export async function GET(request: Request) {
   // Verify cron secret in production
@@ -102,7 +102,7 @@ export async function GET(request: Request) {
         const changePct = ((curr - prev) / prev) * 100;
         if (Math.abs(changePct) >= 5) {
           const isUp = changePct > 0;
-          await createEvent({
+          await createEventWithExplanations({
             ticker,
             event_type: "price_move",
             title_key: isUp ? "notifications.priceUp" : "notifications.priceDown",

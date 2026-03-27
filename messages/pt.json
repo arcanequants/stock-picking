@@ -5,7 +5,8 @@
     "stocks": "Ações",
     "join": "Assine $1/mês",
     "openMenu": "Abrir menu",
-    "notifications": "Notificações"
+    "notifications": "Notificações",
+    "noticias": "Notícias"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Portfólio de Ações. Isso não é assessoria financeira.",
@@ -311,7 +312,16 @@
     "analystUpgrade": "{ticker} foi elevado para {rating} por {analyst}",
     "analystDowngrade": "{ticker} foi rebaixado para {rating} por {analyst}",
     "newsAlert": "{ticker}: {headline}",
-    "weeklyDigestSubject": "Seu portfólio esta semana"
+    "weeklyDigestSubject": "Seu portfólio esta semana",
+    "pageTitle": "Notícias do Portfólio",
+    "pageSubtitle": "O que está acontecendo com suas ações — explicado de forma simples",
+    "whatItMeans": "O que significa",
+    "whatToDo": "Para seu portfólio",
+    "fomoCounter": "Você entendeu {understood} de {total} notícias esta semana",
+    "blurCTA": "Entender por $1/mês",
+    "bannerCTA": "Ver explicação",
+    "understandAll": "Entender todas as notícias",
+    "empty": "Ainda não há notícias. Quando algo acontecer, explicamos aqui."
   },
   "Legal": {
     "termsTitle": "Termos de Serviço",

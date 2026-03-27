@@ -118,10 +118,96 @@ function buildDigestHtml(events: PortfolioEvent[], locale: string): string {
 </html>`;
 }
 
+function buildFreeDigestHtml(events: PortfolioEvent[], locale: string): string {
+  const titles: Record<string, string> = {
+    en: "What happened with your stocks",
+    es: "Qué pasó con tus acciones",
+    pt: "O que aconteceu com suas ações",
+    hi: "आपके स्टॉक्स में क्या हुआ",
+  };
+
+  const ctaLabels: Record<string, string> = {
+    en: "Understand all news for $1/mo",
+    es: "Entiende todas las noticias por $1/mes",
+    pt: "Entenda todas as notícias por $1/mês",
+    hi: "सभी समाचार समझें $1/माह में",
+  };
+
+  const moreLabels: Record<string, string> = {
+    en: "more events this week",
+    es: "eventos más esta semana",
+    pt: "eventos a mais esta semana",
+    hi: "और इवेंट इस सप्ताह",
+  };
+
+  const lang = titles[locale] ? locale : "en";
+  const title = titles[lang];
+  const ctaLabel = ctaLabels[lang];
+  const moreLabel = moreLabels[lang];
+
+  // Latest event gets full explanation
+  const latest = events[0];
+  const icon = EVENT_ICONS[latest.event_type] ?? "📌";
+  const headline = renderEventText(latest, locale);
+  const explanation = latest.explanations?.[locale as "en" | "es" | "pt" | "hi"] ?? latest.explanations?.["en"];
+
+  let explanationHtml = "";
+  if (explanation) {
+    const meaningLabels: Record<string, string> = { en: "What it means", es: "Qué significa", pt: "O que significa", hi: "इसका मतलब" };
+    const actionLabels: Record<string, string> = { en: "For your portfolio", es: "Para tu portafolio", pt: "Para seu portfólio", hi: "आपके पोर्टफोलियो के लिए" };
+    explanationHtml = `
+      <div style="background:#f0f0ff;border-radius:8px;padding:12px 16px;margin-top:12px;">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:600;color:#4f46e5;text-transform:uppercase;">${meaningLabels[lang]}</p>
+        <p style="margin:0 0 10px;font-size:13px;color:#374151;line-height:1.5;">${explanation.meaning}</p>
+        <p style="margin:0 0 4px;font-size:11px;font-weight:600;color:#4f46e5;text-transform:uppercase;">${actionLabels[lang]}</p>
+        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">${explanation.action}</p>
+      </div>`;
+  }
+
+  // Remaining events: headlines only (muted)
+  const restRows = events.slice(1).map((e) => {
+    const eIcon = EVENT_ICONS[e.event_type] ?? "📌";
+    const text = renderEventText(e, locale);
+    return `<tr><td style="padding:6px 0;font-size:13px;color:#9ca3af;">${eIcon} ${text}</td></tr>`;
+  }).join("");
+
+  const restSection = events.length > 1 ? `
+    <div style="margin-top:16px;padding-top:12px;border-top:1px solid #e4e4e7;">
+      <p style="margin:0 0 8px;font-size:12px;color:#9ca3af;font-weight:500;">+${events.length - 1} ${moreLabel}</p>
+      <table style="width:100%;border-collapse:collapse;">${restRows}</table>
+    </div>` : "";
+
+  return `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
+  <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+    <div style="background:#4f46e5;padding:20px 24px;">
+      <h1 style="margin:0;color:#fff;font-size:18px;font-weight:600;">${title}</h1>
+      <p style="margin:4px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Vectorial Data</p>
+    </div>
+    <div style="padding:16px 24px;">
+      <p style="margin:0 0 4px;font-size:15px;font-weight:600;color:#111827;">${icon} ${headline}</p>
+      ${explanationHtml}
+      ${restSection}
+    </div>
+    <div style="padding:16px 24px;border-top:1px solid #e4e4e7;text-align:center;">
+      <a href="https://www.vectorialdata.com/join" style="display:inline-block;background:#4f46e5;color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;">${ctaLabel}</a>
+    </div>
+    <div style="padding:12px 24px;text-align:center;font-size:11px;color:#a1a1aa;">
+      <p style="margin:0;">Vectorial Data — Stock Portfolio</p>
+      <p style="margin:4px 0 0;">This is not financial advice.</p>
+    </div>
+  </div>
+</body>
+</html>`;
+}
+
 export async function sendDigestEmail(
   to: string,
   events: PortfolioEvent[],
-  locale = "en"
+  locale = "en",
+  isSubscribed = true
 ) {
   const subjectLines: Record<string, string> = {
     en: "Your portfolio this week — Vectorial Data",
@@ -136,7 +222,7 @@ export async function sendDigestEmail(
     from: "Vectorial Data <notifications@vectorialdata.com>",
     to,
     subject: subjectLines[lang],
-    html: buildDigestHtml(events, locale),
+    html: isSubscribed ? buildDigestHtml(events, locale) : buildFreeDigestHtml(events, locale),
   });
 
   if (error) throw new Error(`Failed to send digest: ${error.message}`);

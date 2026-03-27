@@ -5,7 +5,8 @@
     "stocks": "स्टॉक्स",
     "join": "जुड़ें $1/माह",
     "openMenu": "मेनू खोलें",
-    "notifications": "सूचनाएं"
+    "notifications": "सूचनाएं",
+    "noticias": "समाचार"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — स्टॉक पोर्टफोलियो। यह वित्तीय सलाह नहीं है।",
@@ -311,7 +312,16 @@
     "analystUpgrade": "{analyst} ने {ticker} को {rating} में अपग्रेड किया",
     "analystDowngrade": "{analyst} ने {ticker} को {rating} में डाउनग्रेड किया",
     "newsAlert": "{ticker}: {headline}",
-    "weeklyDigestSubject": "इस सप्ताह आपका पोर्टफोलियो"
+    "weeklyDigestSubject": "इस सप्ताह आपका पोर्टफोलियो",
+    "pageTitle": "पोर्टफोलियो समाचार",
+    "pageSubtitle": "आपके स्टॉक्स में क्या हो रहा है — सरल भाषा में",
+    "whatItMeans": "इसका मतलब क्या है",
+    "whatToDo": "आपके पोर्टफोलियो के लिए",
+    "fomoCounter": "आपने इस सप्ताह {total} में से {understood} समाचार समझे",
+    "blurCTA": "$1/माह में समझें",
+    "bannerCTA": "व्याख्या देखें",
+    "understandAll": "सभी समाचार समझें",
+    "empty": "अभी कोई समाचार नहीं है। जब कुछ होगा, हम यहाँ समझाएंगे।"
   },
   "Legal": {
     "termsTitle": "सेवा की शर्तें",

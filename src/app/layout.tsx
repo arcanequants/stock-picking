@@ -98,6 +98,12 @@ export default async function RootLayout({
                     {t("stocks")}
                   </Link>
                   <Link
+                    href="/notifications"
+                    className="text-text-muted hover:text-foreground transition-colors"
+                  >
+                    {t("noticias")}
+                  </Link>
+                  <Link
                     href="/developers"
                     className="text-text-muted hover:text-foreground transition-colors"
                   >

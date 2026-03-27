@@ -1,5 +1,7 @@
 import { getSupabaseAdmin } from "@/lib/supabase";
-import type { EventType, PortfolioEvent } from "@/lib/types";
+import { generateExplanations } from "@/lib/ai-explainer";
+import { stocks } from "@/data/stocks";
+import type { EventType, EventExplanations, PortfolioEvent } from "@/lib/types";
 
 // --- Create event (admin/cron use) ---
 
@@ -8,12 +10,60 @@ export async function createEvent(event: {
   event_type: EventType;
   title_key: string;
   params: Record<string, string>;
+  explanations?: EventExplanations;
 }) {
   const { error } = await getSupabaseAdmin()
     .from("portfolio_events")
-    .insert(event);
+    .insert({
+      ticker: event.ticker,
+      event_type: event.event_type,
+      title_key: event.title_key,
+      params: event.params,
+      explanations: event.explanations ?? {},
+    });
 
   if (error) throw new Error(`Failed to create event: ${error.message}`);
+}
+
+// --- Create event with AI-generated explanations ---
+
+export async function createEventWithExplanations(event: {
+  ticker: string;
+  event_type: EventType;
+  title_key: string;
+  params: Record<string, string>;
+}) {
+  const stock = stocks.find((s) => s.ticker === event.ticker);
+  const researchFull = stock?.research_full ?? "";
+
+  let explanations: EventExplanations = {};
+  if (researchFull) {
+    try {
+      explanations = await generateExplanations(
+        event.ticker,
+        event.event_type,
+        event.params,
+        researchFull
+      );
+    } catch (e) {
+      console.error(`AI explanation failed for ${event.ticker}:`, e);
+    }
+  }
+
+  await createEvent({ ...event, explanations });
+}
+
+// --- Public events (no auth needed) ---
+
+export async function getPublicEvents(limit = 20): Promise<PortfolioEvent[]> {
+  const { data, error } = await getSupabaseAdmin()
+    .from("portfolio_events")
+    .select("*")
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (error) throw new Error(`Failed to fetch public events: ${error.message}`);
+  return (data ?? []) as PortfolioEvent[];
 }
 
 // --- Read events ---
