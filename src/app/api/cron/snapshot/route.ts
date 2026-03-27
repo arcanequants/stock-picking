@@ -82,7 +82,7 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    // --- Price move detection (>5% daily change) ---
+    // --- Price move detection (>3% daily change) ---
     const priceMoveEvents: string[] = [];
     try {
       const { data: prevSnapshots } = await getSupabaseAdmin()
@@ -100,7 +100,7 @@ export async function GET(request: Request) {
         if (!curr || !prev || prev === 0) continue;
 
         const changePct = ((curr - prev) / prev) * 100;
-        if (Math.abs(changePct) >= 5) {
+        if (Math.abs(changePct) >= 3) {
           const isUp = changePct > 0;
           await createEventWithExplanations({
             ticker,

@@ -30,6 +30,10 @@ function renderEventText(event: PortfolioEvent, locale: string): string {
       "notifications.earningsReport": "{ticker} reported earnings: {summary}",
       "notifications.analystUpgrade": "{ticker} upgraded to {rating} by {analyst}",
       "notifications.analystDowngrade": "{ticker} downgraded to {rating} by {analyst}",
+      "notifications.earningsUpcoming": "{ticker} reports earnings on {date} (in {days} days)",
+      "notifications.dividendExDate": "{ticker} goes ex-dividend on {date} ({yield}% yield)",
+      "notifications.analystConsensusUp": "Analysts upgraded {ticker} — {buyPct}% now rate Buy ({analysts} analysts)",
+      "notifications.analystConsensusDown": "Analysts downgraded {ticker} — only {buyPct}% rate Buy ({analysts} analysts)",
       "notifications.newsAlert": "{ticker}: {headline}",
     },
     es: {
@@ -39,6 +43,10 @@ function renderEventText(event: PortfolioEvent, locale: string): string {
       "notifications.earningsReport": "{ticker} reportó ganancias: {summary}",
       "notifications.analystUpgrade": "{ticker} fue mejorado a {rating} por {analyst}",
       "notifications.analystDowngrade": "{ticker} fue degradado a {rating} por {analyst}",
+      "notifications.earningsUpcoming": "{ticker} reporta resultados el {date} (en {days} días)",
+      "notifications.dividendExDate": "{ticker} pasa a ex-dividendo el {date} ({yield}% de rendimiento)",
+      "notifications.analystConsensusUp": "Analistas mejoraron {ticker} — {buyPct}% ahora lo recomiendan comprar ({analysts} analistas)",
+      "notifications.analystConsensusDown": "Analistas bajaron {ticker} — solo {buyPct}% lo recomiendan comprar ({analysts} analistas)",
       "notifications.newsAlert": "{ticker}: {headline}",
     },
     pt: {
@@ -48,6 +56,10 @@ function renderEventText(event: PortfolioEvent, locale: string): string {
       "notifications.earningsReport": "{ticker} reportou resultados: {summary}",
       "notifications.analystUpgrade": "{ticker} foi elevado para {rating} por {analyst}",
       "notifications.analystDowngrade": "{ticker} foi rebaixado para {rating} por {analyst}",
+      "notifications.earningsUpcoming": "{ticker} reporta resultados em {date} (em {days} dias)",
+      "notifications.dividendExDate": "{ticker} fica ex-dividendo em {date} ({yield}% de rendimento)",
+      "notifications.analystConsensusUp": "Analistas melhoraram {ticker} — {buyPct}% agora recomendam compra ({analysts} analistas)",
+      "notifications.analystConsensusDown": "Analistas rebaixaram {ticker} — apenas {buyPct}% recomendam compra ({analysts} analistas)",
       "notifications.newsAlert": "{ticker}: {headline}",
     },
     hi: {
@@ -57,6 +69,10 @@ function renderEventText(event: PortfolioEvent, locale: string): string {
       "notifications.earningsReport": "{ticker} ने कमाई रिपोर्ट की: {summary}",
       "notifications.analystUpgrade": "{analyst} ने {ticker} को {rating} में अपग्रेड किया",
       "notifications.analystDowngrade": "{analyst} ने {ticker} को {rating} में डाउनग्रेड किया",
+      "notifications.earningsUpcoming": "{ticker} {date} को कमाई रिपोर्ट करेगा ({days} दिन में)",
+      "notifications.dividendExDate": "{ticker} {date} को एक्स-डिविडेंड होगा ({yield}% यील्ड)",
+      "notifications.analystConsensusUp": "विश्लेषकों ने {ticker} को अपग्रेड किया — {buyPct}% अब खरीदने की सलाह देते हैं ({analysts} विश्लेषक)",
+      "notifications.analystConsensusDown": "विश्लेषकों ने {ticker} को डाउनग्रेड किया — केवल {buyPct}% खरीदने की सलाह देते हैं ({analysts} विश्लेषक)",
       "notifications.newsAlert": "{ticker}: {headline}",
     },
   };
