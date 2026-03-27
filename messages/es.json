@@ -315,6 +315,8 @@
     "dividendExDate": "{ticker} pasa a ex-dividendo el {date} ({yield}% de rendimiento)",
     "analystConsensusUp": "Analistas mejoraron {ticker} — {buyPct}% ahora lo recomiendan comprar ({analysts} analistas)",
     "analystConsensusDown": "Analistas bajaron {ticker} — solo {buyPct}% lo recomiendan comprar ({analysts} analistas)",
+    "near52High": "{ticker} está a solo {pct}% de su máximo de 52 semanas (${high})",
+    "near52Low": "{ticker} está solo {pct}% arriba de su mínimo de 52 semanas (${low})",
     "newsAlert": "{ticker}: {headline}",
     "weeklyDigestSubject": "Tu portafolio esta semana",
     "pageTitle": "Noticias del Portafolio",

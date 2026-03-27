@@ -34,6 +34,8 @@ function renderEventText(event: PortfolioEvent, locale: string): string {
       "notifications.dividendExDate": "{ticker} goes ex-dividend on {date} ({yield}% yield)",
       "notifications.analystConsensusUp": "Analysts upgraded {ticker} — {buyPct}% now rate Buy ({analysts} analysts)",
       "notifications.analystConsensusDown": "Analysts downgraded {ticker} — only {buyPct}% rate Buy ({analysts} analysts)",
+      "notifications.near52High": "{ticker} is just {pct}% from its 52-week high of ${high}",
+      "notifications.near52Low": "{ticker} is only {pct}% above its 52-week low of ${low}",
       "notifications.newsAlert": "{ticker}: {headline}",
     },
     es: {
@@ -47,6 +49,8 @@ function renderEventText(event: PortfolioEvent, locale: string): string {
       "notifications.dividendExDate": "{ticker} pasa a ex-dividendo el {date} ({yield}% de rendimiento)",
       "notifications.analystConsensusUp": "Analistas mejoraron {ticker} — {buyPct}% ahora lo recomiendan comprar ({analysts} analistas)",
       "notifications.analystConsensusDown": "Analistas bajaron {ticker} — solo {buyPct}% lo recomiendan comprar ({analysts} analistas)",
+      "notifications.near52High": "{ticker} está a solo {pct}% de su máximo de 52 semanas (${high})",
+      "notifications.near52Low": "{ticker} está solo {pct}% arriba de su mínimo de 52 semanas (${low})",
       "notifications.newsAlert": "{ticker}: {headline}",
     },
     pt: {
@@ -60,6 +64,8 @@ function renderEventText(event: PortfolioEvent, locale: string): string {
       "notifications.dividendExDate": "{ticker} fica ex-dividendo em {date} ({yield}% de rendimento)",
       "notifications.analystConsensusUp": "Analistas melhoraram {ticker} — {buyPct}% agora recomendam compra ({analysts} analistas)",
       "notifications.analystConsensusDown": "Analistas rebaixaram {ticker} — apenas {buyPct}% recomendam compra ({analysts} analistas)",
+      "notifications.near52High": "{ticker} está a apenas {pct}% da máxima de 52 semanas (${high})",
+      "notifications.near52Low": "{ticker} está apenas {pct}% acima da mínima de 52 semanas (${low})",
       "notifications.newsAlert": "{ticker}: {headline}",
     },
     hi: {
@@ -73,6 +79,8 @@ function renderEventText(event: PortfolioEvent, locale: string): string {
       "notifications.dividendExDate": "{ticker} {date} को एक्स-डिविडेंड होगा ({yield}% यील्ड)",
       "notifications.analystConsensusUp": "विश्लेषकों ने {ticker} को अपग्रेड किया — {buyPct}% अब खरीदने की सलाह देते हैं ({analysts} विश्लेषक)",
       "notifications.analystConsensusDown": "विश्लेषकों ने {ticker} को डाउनग्रेड किया — केवल {buyPct}% खरीदने की सलाह देते हैं ({analysts} विश्लेषक)",
+      "notifications.near52High": "{ticker} अपने 52-सप्ताह के उच्चतम (${high}) से सिर्फ {pct}% दूर है",
+      "notifications.near52Low": "{ticker} अपने 52-सप्ताह के न्यूनतम (${low}) से सिर्फ {pct}% ऊपर है",
       "notifications.newsAlert": "{ticker}: {headline}",
     },
   };

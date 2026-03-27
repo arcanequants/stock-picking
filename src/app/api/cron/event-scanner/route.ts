@@ -2,10 +2,9 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import { createEventWithExplanations } from "@/lib/notifications";
-import type { PortfolioEvent } from "@/lib/types";
 import YahooFinance from "yahoo-finance2";
 
-const yahooFinance = new YahooFinance();
+const yahooFinance = new YahooFinance({ suppressNotices: ["yahooSurvey"] });
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -14,6 +13,7 @@ export const maxDuration = 120;
 async function eventExists(
   ticker: string,
   eventType: string,
+  titleKey: string,
   daysBack = 7
 ): Promise<boolean> {
   const since = new Date();
@@ -24,6 +24,7 @@ async function eventExists(
     .select("id")
     .eq("ticker", ticker)
     .eq("event_type", eventType)
+    .eq("title_key", titleKey)
     .gte("created_at", since.toISOString())
     .limit(1);
 
@@ -62,7 +63,7 @@ export async function GET(request: Request) {
         }>;
       } | undefined;
 
-      // --- 1. Upcoming Earnings (within next 7 days) ---
+      // --- 1. Upcoming Earnings (within next 30 days) ---
       try {
         const earnings = calendarEvents?.earnings as Record<string, unknown> | undefined;
         const earningsDates = earnings?.earningsDate as Date[] | undefined;
@@ -75,9 +76,9 @@ export async function GET(request: Request) {
             (earningsDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
           );
 
-          // Upcoming: within 7 days and not past
-          if (daysUntil >= 0 && daysUntil <= 7) {
-            const exists = await eventExists(ticker, "earnings", 14);
+          // Within 30 days and not past
+          if (daysUntil >= 0 && daysUntil <= 30) {
+            const exists = await eventExists(ticker, "earnings", "notifications.earningsUpcoming", 30);
             if (!exists) {
               const dateStr = earningsDate.toLocaleDateString("en", {
                 month: "short",
@@ -101,7 +102,7 @@ export async function GET(request: Request) {
         errors.push(`${ticker} earnings: ${e}`);
       }
 
-      // --- 2. Dividend Ex-Date (within next 7 days or just passed in last 3 days) ---
+      // --- 2. Dividend Ex-Date (within 30 days ahead or 7 past) ---
       try {
         const exDividendDate = (calendarEvents?.exDividendDate ?? summaryDetail?.exDividendDate) as Date | undefined;
         const dividendRate = summaryDetail?.dividendRate as number | undefined;
@@ -114,9 +115,8 @@ export async function GET(request: Request) {
             (exDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
           );
 
-          // Upcoming ex-dividend: within 7 days ahead or 3 days past
-          if (daysUntil >= -3 && daysUntil <= 7) {
-            const exists = await eventExists(ticker, "dividend", 30);
+          if (daysUntil >= -7 && daysUntil <= 30) {
+            const exists = await eventExists(ticker, "dividend", "notifications.dividendExDate", 60);
             if (!exists) {
               const dateStr = exDate.toLocaleDateString("en", {
                 month: "short",
@@ -140,9 +140,7 @@ export async function GET(request: Request) {
                   amount: amountStr,
                 },
               });
-              results.push(
-                `${ticker}: ex-dividend ${dateStr} (yield ${yieldStr}%)`
-              );
+              results.push(`${ticker}: ex-dividend ${dateStr} (yield ${yieldStr}%)`);
             }
           }
         }
@@ -150,45 +148,32 @@ export async function GET(request: Request) {
         errors.push(`${ticker} dividend: ${e}`);
       }
 
-      // --- 3. Analyst Consensus Change ---
+      // --- 3. Analyst Consensus (report current state, not just changes) ---
       try {
         const trend = recommendationTrend?.trend;
-        if (trend && trend.length >= 2) {
-          const current = trend[0]; // "0m" — this month
-          const previous = trend[1]; // "-1m" — last month
-
+        if (trend && trend.length >= 1) {
+          const current = trend[0];
           const totalCurr =
-            current.strongBuy +
-            current.buy +
-            current.hold +
-            current.sell +
-            current.strongSell;
-          const totalPrev =
-            previous.strongBuy +
-            previous.buy +
-            previous.hold +
-            previous.sell +
-            previous.strongSell;
+            current.strongBuy + current.buy + current.hold + current.sell + current.strongSell;
 
-          if (totalCurr > 0 && totalPrev > 0) {
-            const buyPctCurr =
-              ((current.strongBuy + current.buy) / totalCurr) * 100;
-            const buyPctPrev =
-              ((previous.strongBuy + previous.buy) / totalPrev) * 100;
-            const shift = buyPctCurr - buyPctPrev;
+          if (totalCurr > 0) {
+            const buyPctCurr = ((current.strongBuy + current.buy) / totalCurr) * 100;
 
-            // Significant shift: >15 percentage points change in buy %
-            if (Math.abs(shift) >= 15) {
-              const exists = await eventExists(ticker, "analyst", 30);
+            // Strong consensus: >80% buy or <30% buy — noteworthy
+            const isStrong = buyPctCurr >= 80;
+            const isWeak = buyPctCurr < 30;
+
+            if (isStrong || isWeak) {
+              const titleKey = isStrong
+                ? "notifications.analystConsensusUp"
+                : "notifications.analystConsensusDown";
+              const exists = await eventExists(ticker, "analyst", titleKey, 60);
               if (!exists) {
-                const isUpgrade = shift > 0;
                 const rating = buyPctCurr >= 70 ? "Buy" : buyPctCurr >= 40 ? "Hold" : "Sell";
                 await createEventWithExplanations({
                   ticker,
                   event_type: "analyst",
-                  title_key: isUpgrade
-                    ? "notifications.analystConsensusUp"
-                    : "notifications.analystConsensusDown",
+                  title_key: titleKey,
                   params: {
                     ticker,
                     rating,
@@ -196,15 +181,67 @@ export async function GET(request: Request) {
                     analysts: String(totalCurr),
                   },
                 });
-                results.push(
-                  `${ticker}: analyst consensus ${isUpgrade ? "up" : "down"} (${buyPctCurr.toFixed(0)}% buy)`
-                );
+                results.push(`${ticker}: analyst consensus ${buyPctCurr.toFixed(0)}% buy (${totalCurr} analysts)`);
               }
             }
           }
         }
       } catch (e) {
         errors.push(`${ticker} analyst: ${e}`);
+      }
+
+      // --- 4. Near 52-week high/low ---
+      try {
+        const sd = summaryDetail as Record<string, unknown> | undefined;
+        const fiftyTwoWeekHigh = sd?.fiftyTwoWeekHigh as number | undefined;
+        const fiftyTwoWeekLow = sd?.fiftyTwoWeekLow as number | undefined;
+        const currentPrice = sd?.previousClose as number | undefined;
+
+        if (fiftyTwoWeekHigh && fiftyTwoWeekLow && currentPrice && currentPrice > 0) {
+          const range = fiftyTwoWeekHigh - fiftyTwoWeekLow;
+          if (range > 0) {
+            const pctFromHigh = ((fiftyTwoWeekHigh - currentPrice) / fiftyTwoWeekHigh) * 100;
+            const pctFromLow = ((currentPrice - fiftyTwoWeekLow) / fiftyTwoWeekLow) * 100;
+
+            // Within 5% of 52-week high
+            if (pctFromHigh <= 5) {
+              const exists = await eventExists(ticker, "price_move", "notifications.near52High", 30);
+              if (!exists) {
+                await createEventWithExplanations({
+                  ticker,
+                  event_type: "price_move",
+                  title_key: "notifications.near52High",
+                  params: {
+                    ticker,
+                    pct: pctFromHigh.toFixed(1),
+                    high: fiftyTwoWeekHigh.toFixed(2),
+                  },
+                });
+                results.push(`${ticker}: near 52w high (${pctFromHigh.toFixed(1)}% away)`);
+              }
+            }
+
+            // Within 5% of 52-week low
+            if (pctFromLow <= 5) {
+              const exists = await eventExists(ticker, "price_move", "notifications.near52Low", 30);
+              if (!exists) {
+                await createEventWithExplanations({
+                  ticker,
+                  event_type: "price_move",
+                  title_key: "notifications.near52Low",
+                  params: {
+                    ticker,
+                    pct: pctFromLow.toFixed(1),
+                    low: fiftyTwoWeekLow.toFixed(2),
+                  },
+                });
+                results.push(`${ticker}: near 52w low (${pctFromLow.toFixed(1)}% above)`);
+              }
+            }
+          }
+        }
+      } catch (e) {
+        errors.push(`${ticker} 52week: ${e}`);
       }
     } catch (e) {
       errors.push(`${ticker} quoteSummary: ${e}`);

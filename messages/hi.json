@@ -315,6 +315,8 @@
     "dividendExDate": "{ticker} {date} को एक्स-डिविडेंड होगा ({yield}% यील्ड)",
     "analystConsensusUp": "विश्लेषकों ने {ticker} को अपग्रेड किया — {buyPct}% अब खरीदने की सलाह देते हैं ({analysts} विश्लेषक)",
     "analystConsensusDown": "विश्लेषकों ने {ticker} को डाउनग्रेड किया — केवल {buyPct}% खरीदने की सलाह देते हैं ({analysts} विश्लेषक)",
+    "near52High": "{ticker} अपने 52-सप्ताह के उच्चतम (${high}) से सिर्फ {pct}% दूर है",
+    "near52Low": "{ticker} अपने 52-सप्ताह के न्यूनतम (${low}) से सिर्फ {pct}% ऊपर है",
     "newsAlert": "{ticker}: {headline}",
     "weeklyDigestSubject": "इस सप्ताह आपका पोर्टफोलियो",
     "pageTitle": "पोर्टफोलियो समाचार",
