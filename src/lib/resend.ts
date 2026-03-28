@@ -15,8 +15,8 @@ function getResend() {
 const SITE = "https://www.vectorialdata.com";
 const FROM = "Vectorial Data <notifications@mail.vectorialdata.com>";
 
+// Icons: keep for dividend, earnings, analyst, news — price moves use colored text instead
 const EVENT_ICONS: Record<string, string> = {
-  price_move: "📈",
   dividend: "💰",
   earnings: "📊",
   analyst: "⭐",
@@ -31,41 +31,45 @@ const L: Record<string, Record<string, string>> = {
     portfolioLabel: "Nuestro portafolio esta semana",
     best: "Mejor",
     worst: "Peor",
-    priceMoves: "Movimientos fuertes",
-    dividends: "Dividendos",
-    earnings: "Earnings proximos",
-    analysts: "Opinion de analistas",
-    analystSummary: "{up} de nuestras empresas tienen consenso de compra",
-    viewAll: "Ver noticias + explicaciones AI",
-    footer: "Esto no es consejo de inversion.",
-    freeTitle: "Que paso con nuestras acciones",
+    priceMoves: "Lo que se movió",
+    dividends: "Dinero que llega",
+    earnings: "La próxima semana",
+    analysts: "Qué dicen los analistas",
+    viewAll: "Ver qué significan estos movimientos",
+    footer: "Esto no es consejo de inversión.",
+    greeting: "Hola — así le fue a nuestro portafolio esta semana.",
+    bottomLine: "En resumen",
+    signoff: "— El equipo de Vectorial Data",
+    freeTitle: "Qué pasó con nuestras acciones",
     freeCta: "Entiende TODO por $1/mes",
-    freeMore: "eventos mas esta semana",
-    meaningLabel: "Que significa",
+    freeMore: "eventos más esta semana",
+    meaningLabel: "Qué significa",
     actionLabel: "Para nuestro portafolio",
-    up: "subio",
-    down: "bajo",
+    up: "subió",
+    down: "bajó",
     exDiv: "ex-dividendo",
     yield: "rendimiento",
     reportsOn: "reporta resultados el",
-    inDays: "en {days} dias",
+    inDays: "en {days} días",
     analystUp: "recomiendan comprar",
     analystDown: "recomiendan comprar",
-    near52High: "cerca de maximo 52 semanas",
-    near52Low: "cerca de minimo 52 semanas",
+    near52High: "cerca de máximo 52 semanas",
+    near52Low: "cerca de mínimo 52 semanas",
   },
   en: {
     title: "Weekly Summary",
     portfolioLabel: "Our portfolio this week",
     best: "Best",
     worst: "Worst",
-    priceMoves: "Big moves",
-    dividends: "Dividends",
-    earnings: "Upcoming earnings",
-    analysts: "Analyst opinions",
-    analystSummary: "{up} of our companies have a Buy consensus",
-    viewAll: "View news + AI explanations",
+    priceMoves: "What moved",
+    dividends: "Money coming in",
+    earnings: "Next week",
+    analysts: "What analysts say",
+    viewAll: "See what these moves mean",
     footer: "This is not investment advice.",
+    greeting: "Hi — here's how our portfolio did this week.",
+    bottomLine: "Bottom line",
+    signoff: "— The Vectorial Data team",
     freeTitle: "What happened with our stocks",
     freeCta: "Understand EVERYTHING for $1/mo",
     freeMore: "more events this week",
@@ -84,21 +88,23 @@ const L: Record<string, Record<string, string>> = {
   },
   pt: {
     title: "Resumo Semanal",
-    portfolioLabel: "Nosso portfolio esta semana",
+    portfolioLabel: "Nosso portfólio esta semana",
     best: "Melhor",
     worst: "Pior",
-    priceMoves: "Movimentos fortes",
-    dividends: "Dividendos",
-    earnings: "Resultados proximos",
-    analysts: "Opiniao dos analistas",
-    analystSummary: "{up} das nossas empresas tem consenso de compra",
-    viewAll: "Ver noticias + explicacoes AI",
-    footer: "Isto nao e conselho de investimento.",
-    freeTitle: "O que aconteceu com nossas acoes",
-    freeCta: "Entenda TUDO por $1/mes",
+    priceMoves: "O que se moveu",
+    dividends: "Dinheiro chegando",
+    earnings: "Próxima semana",
+    analysts: "O que dizem os analistas",
+    viewAll: "Veja o que esses movimentos significam",
+    footer: "Isto não é conselho de investimento.",
+    greeting: "Olá — veja como nosso portfólio foi esta semana.",
+    bottomLine: "Resumindo",
+    signoff: "— A equipe Vectorial Data",
+    freeTitle: "O que aconteceu com nossas ações",
+    freeCta: "Entenda TUDO por $1/mês",
     freeMore: "eventos a mais esta semana",
     meaningLabel: "O que significa",
-    actionLabel: "Para nosso portfolio",
+    actionLabel: "Para nosso portfólio",
     up: "subiu",
     down: "caiu",
     exDiv: "ex-dividendo",
@@ -107,21 +113,23 @@ const L: Record<string, Record<string, string>> = {
     inDays: "em {days} dias",
     analystUp: "recomendam compra",
     analystDown: "recomendam compra",
-    near52High: "perto da maxima de 52 semanas",
-    near52Low: "perto da minima de 52 semanas",
+    near52High: "perto da máxima de 52 semanas",
+    near52Low: "perto da mínima de 52 semanas",
   },
   hi: {
     title: "साप्ताहिक सारांश",
     portfolioLabel: "इस सप्ताह हमारा पोर्टफोलियो",
     best: "सर्वश्रेष्ठ",
     worst: "सबसे खराब",
-    priceMoves: "बड़े बदलाव",
-    dividends: "लाभांश",
-    earnings: "आगामी कमाई",
-    analysts: "विश्लेषक राय",
-    analystSummary: "{up} कंपनियों में खरीदने की सहमति है",
-    viewAll: "समाचार + AI विश्लेषण देखें",
+    priceMoves: "क्या हिला",
+    dividends: "आने वाला पैसा",
+    earnings: "अगला सप्ताह",
+    analysts: "विश्लेषक क्या कहते हैं",
+    viewAll: "इन बदलावों का मतलब देखें",
     footer: "यह निवेश सलाह नहीं है।",
+    greeting: "नमस्ते — इस सप्ताह हमारे पोर्टफोलियो का हाल।",
+    bottomLine: "सारांश",
+    signoff: "— Vectorial Data टीम",
     freeTitle: "हमारे स्टॉक्स में क्या हुआ",
     freeCta: "$1/माह में सब समझें",
     freeMore: "और इवेंट इस सप्ताह",
@@ -186,36 +194,51 @@ function getBestWorst(priceMoves: PortfolioEvent[]): {
   const sorted = [...priceMoves].sort(
     (a, b) => getSignedPct(b) - getSignedPct(a)
   );
-  return { best: sorted[0], worst: sorted[sorted.length - 1] };
+  const best = sorted[0];
+  const worst = sorted[sorted.length - 1];
+  // Show best/worst even if same ticker (single move), just show both if different
+  return { best, worst: worst === best ? null : worst };
+}
+
+// Price moves use colored arrows instead of emoji
+function renderPriceMoveLine(e: PortfolioEvent, locale: string): string {
+  const lang = L[locale] ? locale : "en";
+  const p = e.params;
+  const isUp = e.title_key.includes("Up");
+  const color = isUp ? "#16a34a" : "#dc2626";
+  const arrow = isUp ? "&#9650;" : "&#9660;";
+  const verb = isUp ? t(lang, "up") : t(lang, "down");
+
+  if (e.title_key.includes("near52High") || e.title_key.includes("near52Low")) {
+    const label = e.title_key.includes("High")
+      ? t(lang, "near52High")
+      : t(lang, "near52Low");
+    return `<span style="color:${color};font-weight:700;">${arrow}</span> <a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${label} (${p.pct}%)`;
+  }
+
+  return `<span style="color:${color};font-weight:700;">${arrow}</span> <a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> ${verb} <span style="color:${color};font-weight:600;">${p.pct}%</span>`;
 }
 
 function renderDigestLine(e: PortfolioEvent, locale: string): string {
   const lang = L[locale] ? locale : "en";
-  const tk = e.title_key;
   const p = e.params;
 
-  if (tk.includes("priceUp"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> ${t(lang, "up")} ${p.pct}%`;
-  if (tk.includes("priceDown"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> ${t(lang, "down")} ${p.pct}%`;
-  if (tk.includes("dividendExDate"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${t(lang, "exDiv")} ${p.date} (${p.yield}% ${t(lang, "yield")})`;
-  if (tk.includes("dividendPaid"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${p.amount}`;
-  if (tk.includes("earningsUpcoming"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${t(lang, "reportsOn")} ${p.date}`;
-  if (tk.includes("ConsensusUp"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${p.buyPct}% ${t(lang, "analystUp")} (${p.analysts} ${parseInt(p.analysts) === 1 ? "analista" : "analistas"})`;
-  if (tk.includes("ConsensusDown"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${p.buyPct}% ${t(lang, "analystDown")} (${p.analysts} ${parseInt(p.analysts) === 1 ? "analista" : "analistas"})`;
-  if (tk.includes("near52High"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${t(lang, "near52High")} (${p.pct}%)`;
-  if (tk.includes("near52Low"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${t(lang, "near52Low")} (${p.pct}%)`;
-  if (tk.includes("newsAlert"))
-    return `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${p.headline}`;
+  // Price moves handled separately with colors
+  if (e.event_type === "price_move") return renderPriceMoveLine(e, locale);
 
-  // Fallback: use old renderEventText logic
+  const tickerLink = `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a>`;
+
+  if (e.title_key.includes("dividendExDate"))
+    return `${tickerLink} — ${t(lang, "exDiv")} ${p.date} (${p.yield}% ${t(lang, "yield")})`;
+  if (e.title_key.includes("dividendPaid"))
+    return `${tickerLink} — ${p.amount}`;
+  if (e.title_key.includes("earningsUpcoming"))
+    return `${tickerLink} — ${t(lang, "reportsOn")} ${p.date}`;
+  if (e.title_key.includes("ConsensusUp") || e.title_key.includes("ConsensusDown"))
+    return `${tickerLink} — ${p.buyPct}% ${t(lang, "analystUp")} (${parseInt(p.analysts) === 1 ? "1 analista" : `${p.analysts} analistas`})`;
+  if (e.title_key.includes("newsAlert"))
+    return `${tickerLink} — ${p.headline}`;
+
   return `<strong>${p.ticker || ""}</strong>`;
 }
 
@@ -229,20 +252,23 @@ function buildSectionHtml(
   const shown = events.slice(0, limit);
   const rows = shown
     .map((e) => {
-      const icon = EVENT_ICONS[e.event_type] ?? "📌";
+      const icon =
+        e.event_type === "price_move"
+          ? ""
+          : (EVENT_ICONS[e.event_type] ?? "📌") + " ";
       const line = renderDigestLine(e, locale);
-      return `<tr><td style="padding:6px 0;font-size:14px;line-height:1.4;">${icon} ${line}</td></tr>`;
+      return `<tr><td style="padding:6px 0;font-size:14px;line-height:1.5;">${icon}${line}</td></tr>`;
     })
     .join("");
 
   const moreText =
     events.length > limit
-      ? `<tr><td style="padding:4px 0;font-size:12px;color:#9ca3af;">+${events.length - limit} mas</td></tr>`
+      ? `<tr><td style="padding:4px 0;font-size:12px;color:#9ca3af;">+${events.length - limit} más</td></tr>`
       : "";
 
   return `
-    <div style="margin-top:20px;">
-      <p style="margin:0 0 8px;font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">${title}</p>
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.8px;">${title}</p>
       <table style="width:100%;border-collapse:collapse;">${rows}${moreText}</table>
     </div>`;
 }
@@ -263,20 +289,83 @@ function buildSummaryHtml(
   const color = pct >= 0 ? "#16a34a" : "#dc2626";
 
   let details = "";
-  if (best && worst && best.params.ticker !== worst.params.ticker) {
+  if (best) {
     const bestPct = best.params.pct;
-    const worstPct = worst.params.pct;
     const bestDir = best.title_key.includes("Up") ? "+" : "-";
-    const worstDir = worst.title_key.includes("Up") ? "+" : "-";
-    details = `<span style="color:#6b7280;font-size:13px;">${t(lang, "best")}: <strong>${best.params.ticker}</strong> ${bestDir}${bestPct}% · ${t(lang, "worst")}: <strong>${worst.params.ticker}</strong> ${worstDir}${worstPct}%</span>`;
+    let detailParts = `${t(lang, "best")}: <strong>${best.params.ticker}</strong> ${bestDir}${bestPct}%`;
+    if (worst) {
+      const worstPct = worst.params.pct;
+      const worstDir = worst.title_key.includes("Up") ? "+" : "-";
+      detailParts += ` · ${t(lang, "worst")}: <strong>${worst.params.ticker}</strong> ${worstDir}${worstPct}%`;
+    }
+    details = `<p style="margin:6px 0 0;font-size:13px;color:#6b7280;">${detailParts}</p>`;
   }
 
   return `
-    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:14px 16px;margin-bottom:8px;">
+    <div style="background-color:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:14px 16px;margin-bottom:8px;">
       <p style="margin:0;font-size:13px;color:#374151;font-weight:500;">${t(lang, "portfolioLabel")}</p>
       <p style="margin:4px 0 0;font-size:28px;font-weight:700;color:${color};letter-spacing:-0.5px;">${sign}${pct.toFixed(2)}%</p>
-      ${details ? `<p style="margin:6px 0 0;">${details}</p>` : ""}
+      ${details}
     </div>`;
+}
+
+function buildBottomLine(
+  events: PortfolioEvent[],
+  summary: DigestSummary | null,
+  locale: string
+): string {
+  const lang = L[locale] ? locale : "en";
+  const grouped = groupEvents(events);
+  const { best, worst } = getBestWorst(grouped.priceMoves);
+
+  const parts: string[] = [];
+
+  // Portfolio direction
+  if (summary?.weeklyChangePct != null) {
+    parts.push(
+      summary.weeklyChangePct >= 0
+        ? (lang === "es" ? "semana positiva" : lang === "pt" ? "semana positiva" : lang === "hi" ? "अच्छा सप्ताह" : "positive week")
+        : (lang === "es" ? "semana difícil" : lang === "pt" ? "semana difícil" : lang === "hi" ? "कठिन सप्ताह" : "tough week")
+    );
+  }
+
+  // Dividends coming
+  if (grouped.dividends.length > 0) {
+    const divCount = grouped.dividends.length;
+    parts.push(
+      lang === "es" ? `${divCount} dividendo${divCount > 1 ? "s" : ""} en camino`
+        : lang === "pt" ? `${divCount} dividendo${divCount > 1 ? "s" : ""} a caminho`
+        : lang === "hi" ? `${divCount} लाभांश आ रहा है`
+        : `${divCount} dividend${divCount > 1 ? "s" : ""} coming`
+    );
+  }
+
+  // Notable move
+  if (best && worst) {
+    parts.push(
+      lang === "es" ? `ojo con ${best.params.ticker} y ${worst.params.ticker}`
+        : lang === "pt" ? `fique de olho em ${best.params.ticker} e ${worst.params.ticker}`
+        : lang === "hi" ? `${best.params.ticker} और ${worst.params.ticker} पर नज़र रखें`
+        : `watch ${best.params.ticker} and ${worst.params.ticker}`
+    );
+  }
+
+  if (parts.length === 0) return "";
+
+  const sentence = parts[0].charAt(0).toUpperCase() + parts[0].slice(1) +
+    (parts.length > 1 ? ", " + parts.slice(1).join(", y ") : "") + ".";
+
+  return `
+    <div style="margin-top:24px;padding:12px 16px;background-color:#fafafa;border-radius:8px;">
+      <p style="margin:0;font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">${t(lang, "bottomLine")}</p>
+      <p style="margin:4px 0 0;font-size:14px;color:#374151;line-height:1.5;">${sentence}</p>
+    </div>`;
+}
+
+// Hidden preview text for email clients (shows after subject line)
+function previewText(text: string): string {
+  // Hidden text + whitespace padding to push default preview text away
+  return `<div style="display:none;font-size:1px;color:#f9fafb;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${text}${"&nbsp;".repeat(80)}</div>`;
 }
 
 function generateDynamicSubject(
@@ -294,9 +383,9 @@ function generateDynamicSubject(
     const arrow = isUp ? "+" : "-";
     const rest = events.length - 1;
     const moreText: Record<string, string> = {
-      es: `y ${rest} noticias mas`,
+      es: `y ${rest} noticias más`,
       en: `and ${rest} more updates`,
-      pt: `e ${rest} noticias mais`,
+      pt: `e ${rest} notícias mais`,
       hi: `और ${rest} अपडेट`,
     };
     const lang = moreText[locale] ? locale : "en";
@@ -305,7 +394,7 @@ function generateDynamicSubject(
   const fallback: Record<string, string> = {
     es: `${events.length} noticias de nuestro portafolio — Vectorial Data`,
     en: `${events.length} updates from our portfolio — Vectorial Data`,
-    pt: `${events.length} noticias do nosso portfolio — Vectorial Data`,
+    pt: `${events.length} notícias do nosso portfólio — Vectorial Data`,
     hi: `${events.length} पोर्टफोलियो अपडेट — Vectorial Data`,
   };
   const lang = fallback[locale] ? locale : "en";
@@ -322,6 +411,10 @@ function buildDigestHtml(
   const lang = L[locale] ? locale : "en";
   const grouped = groupEvents(events);
   const { best, worst } = getBestWorst(grouped.priceMoves);
+
+  const preview = summary?.weeklyChangePct != null
+    ? `${summary.weeklyChangePct >= 0 ? "+" : ""}${summary.weeklyChangePct.toFixed(2)}% esta semana. ${grouped.priceMoves.length} movimientos, ${grouped.dividends.length} dividendos, ${grouped.earnings.length} earnings.`
+    : `${events.length} eventos esta semana en nuestro portafolio.`;
 
   const summaryHtml = buildSummaryHtml(locale, summary, best, worst);
   const priceSection = buildSectionHtml(
@@ -343,7 +436,7 @@ function buildDigestHtml(
     6
   );
 
-  // Analysts: show top 3 most extreme (highest or lowest buyPct)
+  // Analysts: show top 3 most extreme
   const notableAnalysts = [...grouped.analysts]
     .sort((a, b) => {
       const aExtr = Math.abs(parseFloat(a.params.buyPct || "50") - 50);
@@ -359,26 +452,33 @@ function buildDigestHtml(
   );
 
   const newsSection = buildSectionHtml("News", grouped.news, locale, 3);
+  const bottomLine = buildBottomLine(events, summary, locale);
 
   return `<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
+  ${previewText(preview)}
   <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
     <div style="background:#4f46e5;padding:20px 24px;">
       <h1 style="margin:0;color:#fff;font-size:18px;font-weight:600;">${t(lang, "title")}</h1>
       <p style="margin:4px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Vectorial Data</p>
     </div>
-    <div style="padding:16px 24px;">
+    <div style="padding:20px 24px;">
+      <p style="margin:0 0 16px;font-size:14px;color:#374151;line-height:1.5;">${t(lang, "greeting")}</p>
       ${summaryHtml}
       ${priceSection}
       ${divSection}
       ${earnSection}
       ${analystSection}
       ${newsSection}
+      ${bottomLine}
     </div>
     <div style="padding:16px 24px;border-top:1px solid #e4e4e7;text-align:center;">
       <a href="${SITE}/notifications" style="display:inline-block;background:#4f46e5;color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;">${t(lang, "viewAll")}</a>
+    </div>
+    <div style="padding:16px 24px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0;font-size:13px;color:#6b7280;">${t(lang, "signoff")}</p>
     </div>
     <div style="padding:12px 24px;text-align:center;font-size:11px;color:#a1a1aa;">
       <p style="margin:0;">Vectorial Data — <a href="${SITE}" style="color:#a1a1aa;">vectorialdata.com</a></p>
@@ -400,12 +500,19 @@ function buildFreeDigestHtml(
   const grouped = groupEvents(events);
   const { best, worst } = getBestWorst(grouped.priceMoves);
 
+  const preview = summary?.weeklyChangePct != null
+    ? `${summary.weeklyChangePct >= 0 ? "+" : ""}${summary.weeklyChangePct.toFixed(2)}% esta semana. Abre para ver qué pasó.`
+    : `${events.length} eventos esta semana. Abre para ver qué pasó.`;
+
   const summaryHtml = buildSummaryHtml(locale, summary, best, worst);
 
   // Show 1 featured event with AI explanation
   const featured = events[0];
-  const featIcon = EVENT_ICONS[featured.event_type] ?? "📌";
   const featLine = renderDigestLine(featured, locale);
+  const featIcon =
+    featured.event_type === "price_move"
+      ? ""
+      : (EVENT_ICONS[featured.event_type] ?? "📌") + " ";
   const explanation =
     featured.explanations?.[locale as "en" | "es" | "pt" | "hi"] ??
     featured.explanations?.["en"];
@@ -413,7 +520,7 @@ function buildFreeDigestHtml(
   let explanationHtml = "";
   if (explanation) {
     explanationHtml = `
-      <div style="background:#f0f0ff;border-radius:8px;padding:12px 16px;margin-top:10px;">
+      <div style="background-color:#f0f0ff;border-radius:8px;padding:12px 16px;margin-top:10px;">
         <p style="margin:0 0 4px;font-size:11px;font-weight:600;color:#4f46e5;text-transform:uppercase;">${t(lang, "meaningLabel")}</p>
         <p style="margin:0 0 10px;font-size:13px;color:#374151;line-height:1.5;">${explanation.meaning}</p>
         <p style="margin:0 0 4px;font-size:11px;font-weight:600;color:#4f46e5;text-transform:uppercase;">${t(lang, "actionLabel")}</p>
@@ -422,11 +529,14 @@ function buildFreeDigestHtml(
   }
 
   // Muted preview of 4 more events
-  const preview = events.slice(1, 5);
-  const previewRows = preview
+  const previewEvts = events.slice(1, 5);
+  const previewRows = previewEvts
     .map((e) => {
-      const icon = EVENT_ICONS[e.event_type] ?? "📌";
-      return `<tr><td style="padding:4px 0;font-size:13px;color:#9ca3af;">${icon} ${renderDigestLine(e, locale)}</td></tr>`;
+      const icon =
+        e.event_type === "price_move"
+          ? ""
+          : (EVENT_ICONS[e.event_type] ?? "📌") + " ";
+      return `<tr><td style="padding:4px 0;font-size:13px;color:#9ca3af;">${icon}${renderDigestLine(e, locale)}</td></tr>`;
     })
     .join("");
 
@@ -440,22 +550,27 @@ function buildFreeDigestHtml(
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
+  ${previewText(preview)}
   <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
     <div style="background:#4f46e5;padding:20px 24px;">
       <h1 style="margin:0;color:#fff;font-size:18px;font-weight:600;">${t(lang, "freeTitle")}</h1>
       <p style="margin:4px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Vectorial Data</p>
     </div>
-    <div style="padding:16px 24px;">
+    <div style="padding:20px 24px;">
+      <p style="margin:0 0 16px;font-size:14px;color:#374151;line-height:1.5;">${t(lang, "greeting")}</p>
       ${summaryHtml}
-      <p style="margin:16px 0 4px;font-size:15px;font-weight:600;color:#111827;">${featIcon} ${featLine}</p>
+      <p style="margin:16px 0 4px;font-size:15px;font-weight:600;color:#111827;">${featIcon}${featLine}</p>
       ${explanationHtml}
-      ${preview.length > 0 ? `
+      ${previewEvts.length > 0 ? `
       <div style="margin-top:16px;padding-top:12px;border-top:1px solid #e4e4e7;">
         <table style="width:100%;border-collapse:collapse;">${previewRows}${moreRow}</table>
       </div>` : ""}
     </div>
     <div style="padding:16px 24px;border-top:1px solid #e4e4e7;text-align:center;">
       <a href="${SITE}/join" style="display:inline-block;background:#4f46e5;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:15px;font-weight:600;">${t(lang, "freeCta")}</a>
+    </div>
+    <div style="padding:16px 24px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0;font-size:13px;color:#6b7280;">${t(lang, "signoff")}</p>
     </div>
     <div style="padding:12px 24px;text-align:center;font-size:11px;color:#a1a1aa;">
       <p style="margin:0;">Vectorial Data — <a href="${SITE}" style="color:#a1a1aa;">vectorialdata.com</a></p>
@@ -478,7 +593,6 @@ export async function sendDigestApprovalEmail(
   summary: DigestSummary | null
 ) {
   const freeCount = recipientCount - premiumCount;
-  // Show the actual premium digest as preview
   const digestPreview = buildDigestHtml(events, "es", summary);
 
   const html = `<!DOCTYPE html>
@@ -488,20 +602,20 @@ export async function sendDigestApprovalEmail(
   <div style="max-width:600px;margin:0 auto;">
     <div style="background:#f59e0b;border-radius:12px 12px 0 0;padding:20px 24px;">
       <h1 style="margin:0;color:#fff;font-size:18px;font-weight:600;">PREVIEW — Digest ${weekKey}</h1>
-      <p style="margin:4px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Esperando tu aprobacion para enviar</p>
+      <p style="margin:4px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Esperando tu aprobación para enviar</p>
     </div>
     <div style="background:#fff;padding:16px 24px;border-left:1px solid #e4e4e7;border-right:1px solid #e4e4e7;">
       <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:12px 16px;margin-bottom:16px;">
         <p style="margin:0;font-size:13px;color:#92400e;font-weight:500;">${events.length} eventos | ${recipientCount} destinatarios (${premiumCount} premium, ${freeCount} free)</p>
       </div>
-      <p style="margin:0 0 12px;font-size:12px;color:#71717a;font-weight:600;text-transform:uppercase;">Asi se vera el digest premium:</p>
+      <p style="margin:0 0 12px;font-size:12px;color:#71717a;font-weight:600;text-transform:uppercase;">Así se verá el digest premium:</p>
     </div>
     <div style="border:2px dashed #d4d4d8;border-radius:8px;margin:0 0 16px;overflow:hidden;">
       ${digestPreview}
     </div>
     <div style="text-align:center;padding:16px;">
       <a href="${approveUrl}" style="display:inline-block;background:#16a34a;color:#fff;padding:14px 40px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Aprobar y Enviar</a>
-      <p style="margin:12px 0 0;font-size:12px;color:#9ca3af;">Si no apruebas, no se envia nada.</p>
+      <p style="margin:12px 0 0;font-size:12px;color:#9ca3af;">Si no apruebas, no se envía nada.</p>
     </div>
   </div>
 </body>

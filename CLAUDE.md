@@ -14,7 +14,7 @@ When adding a new stock: fetch live Yahoo Finance price → research → add to 
 
 ## Worker System — Automatic Orchestration
 
-I have a team of 20 specialized workers in `.claude/workers/`. **I must automatically invoke the right worker(s) based on the task** — the user should never have to tell me which one to use.
+I have a team of 23 specialized workers in `.claude/workers/`. **I must automatically invoke the right worker(s) based on the task** — the user should never have to tell me which one to use.
 
 ### Product & Design Workers (7)
 
@@ -27,6 +27,14 @@ I have a team of 20 specialized workers in `.claude/workers/`. **I must automati
 | **Copywriter** (Apple/Stripe) | `copywriter.md` | Headlines, page copy, CTAs, microcopy, error messages, WhatsApp messages, marketing text |
 | **Product Manager** (Shreyas Doshi) | `product-manager.md` | Feature prioritization, what to build/not build, PRDs, MVP scope, roadmap |
 | **Growth Hacker** (Lenny Rachitsky) | `growth-hacker.md` | User acquisition, retention, pricing strategy, analytics, A/B tests, channel strategy |
+
+### Email & Communications Workers (3)
+
+| Worker | File | Invoke When |
+|--------|------|-------------|
+| **El Newsletter** (Morning Brew / The Hustle) | `newsletter.md` | Email digest content, subject lines, editorial voice, newsletter strategy, open rates, email copy |
+| **El Email Designer** (Really Good Emails / Litmus) | `email-designer.md` | Email HTML/CSS, email template design, dark mode, client compatibility (Outlook/Gmail), email component library |
+| **El Retention** (Sahil Bloom / James Clear) | `retention.md` | Churn prevention, re-engagement, email sequences, user lifecycle, retention metrics, onboarding emails |
 
 ### Legal Workers (13)
 
@@ -55,6 +63,16 @@ I have a team of 20 specialized workers in `.claude/workers/`. **I must automati
 5. **Always state who's active** — prefix responses with the worker name so the user knows who's "speaking"
 
 ### Routing Rules
+
+**Email & Communications (NEW — use these for anything email/newsletter-related):**
+- **"review/redesign the email digest"** → Newsletter + Email Designer + Retention
+- **"improve open rates / subject lines"** → Newsletter
+- **"email looks broken in Outlook/Gmail"** → Email Designer
+- **"users are churning / not opening emails"** → Retention + Newsletter
+- **"design an email template"** → Email Designer + Copywriter
+- **"write email copy / onboarding sequence"** → Newsletter + Retention + Copywriter
+- **"welcome email / re-engagement"** → Retention + Newsletter
+- **"email digest content strategy"** → Newsletter + Product Manager
 
 **Product & Design:**
 - **"redesign the homepage"** → Landing & Conversion + UI/UX Designer + Copywriter
