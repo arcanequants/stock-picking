@@ -2992,6 +2992,155 @@ GE Aerospace a $288.68 es la **empresa pura de aviación dominante a nivel globa
     last_updated_at: "2026-03-25T00:00:00Z",
     next_review_at: "2026-09-25T00:00:00Z",
   },
+  {
+    id: 27,
+    ticker: "HWM",
+    name: "Howmet Aerospace",
+    sector: "Industrials",
+    industry: "Aerospace & Defense / Engineered Components",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 227.90,
+    pe_ratio: 61.43,
+    pe_forward: 41.46,
+    dividend_yield: 0.2,
+    market_cap_b: 91.7,
+    eps: 3.71,
+    summary_short:
+      "El líder mundial en componentes de ingeniería aeroespacial. Fabrican las piezas críticas dentro de los motores de avión — los álabes que giran a 2,000° grados — para Boeing, Airbus, Pratt & Whitney y GE Aerospace. Revenue récord de $8.25B en 2025 con márgenes EBITDA de 30%.",
+    summary_what:
+      "Howmet Aerospace diseña y fabrica componentes de alta precisión para la industria aeroespacial y de defensa. Opera en 4 segmentos: Engine Products (álabes y anillos para motores de avión — la joya de la corona), Fastening Systems (sujetadores y conexiones aeroespaciales), Engineered Structures (piezas de titanio para fuselajes y trenes de aterrizaje), y Forged Wheels (ruedas para camiones pesados). Se separó de Alcoa en 2020.",
+    summary_why:
+      "Revenue récord de $8.25B en 2025 (+11% YoY). Q4 fue el trimestre más fuerte con $2.2B (+15%). Adjusted EBITDA margins de 30.1% (récord). Adjusted EPS creció 42%. Guía 2026 apunta a ~$9.1B en revenue (~10% crecimiento) y EPS de $4.35-$4.55. Acaba de anunciar la adquisición de Consolidated Aerospace Manufacturing por $1.8B para reforzar Fastening Systems.",
+    summary_risk:
+      "La acción cotiza a P/E forward de 41x — está priced for perfection. Cualquier tropiezo en earnings o problemas de producción de Boeing podrían causar una corrección significativa. La acción ya bajó ~12% desde máximos de febrero.",
+    research_full: `# Howmet Aerospace (HWM) — Research Completo
+
+## Precio: $227.90 | P/E: 61.43 | P/E Forward: 41.46 | Div Yield: 0.2% | EPS: $3.71 | Market Cap: $91.7B
+
+---
+
+## ¿Qué es Howmet Aerospace?
+
+Howmet Aerospace es el **líder mundial en componentes de ingeniería aeroespacial**. Fabrican las piezas críticas que van DENTRO de los motores de avión — los álabes (blades) que giran a temperaturas extremas de 2,000+ grados. Si Boeing, Airbus, Pratt & Whitney, o GE Aerospace construyen un avión o motor, hay una altísima probabilidad de que Howmet fabricó algunas de las piezas más importantes.
+
+Fundada en 1888, Howmet fue parte de Alcoa antes de separarse en 2020 como empresa independiente enfocada 100% en componentes aeroespaciales de alta precisión.
+
+## Segmentos de Negocio (4 Divisiones)
+
+| Segmento | Revenue | Descripción | Crecimiento 2025 |
+|----------|---------|-------------|-----------------|
+| **Engine Products** | ~35% | Álabes, anillos, piezas rotativas para motores de avión | +20% |
+| **Fastening Systems** | ~25% | Sujetadores, pernos, conexiones aeroespaciales | Crecimiento sólido |
+| **Engineered Structures** | ~25% | Lingotes de titanio, forjas para fuselajes y trenes de aterrizaje | Enfocado en defensa |
+| **Forged Wheels** | ~15% | Ruedas de aluminio forjado para camiones pesados | Generador de cash estable |
+
+## Resultados 2025 (Full Year)
+
+- **Revenue récord: $8.25B** (+11% YoY)
+- **Q4 Revenue: $2.2B** (+15% YoY — trimestre más fuerte)
+- **Net Income Q4: $372M** (+18% YoY)
+- **Adjusted EBITDA Margins: 30.1%** (récord de la empresa)
+- **Adjusted EPS: $1.05 en Q4** (+42% YoY)
+- **Full Year EPS: $3.71**
+- **Engine Products creció +20%** en el último trimestre
+- Comercial creció 13%, defensa 20%, turbinas de gas 32%
+
+## Guía 2026
+
+- **Revenue: ~$9.1B** (~10% crecimiento)
+- **Adjusted EPS: $4.35 - $4.55** (~20% crecimiento)
+- **Objetivo de EBITDA margins: 30%+** para fin de año
+- Fuerte demanda continua de aviación comercial y defensa
+
+## Adquisición de CAM ($1.8B)
+
+- **Consolidated Aerospace Manufacturing** de Stanley Black & Decker
+- **Precio: $1.8 mil millones**
+- **Revenue de CAM: ~$490M** anuales
+- **Productos:** Sujetadores de precisión y conexiones para aeroespacial/defensa
+- **Marcas:** Bristol Industries, 3V Fasteners, Moeller, Aerofit, Voss Industries
+- **Cierre esperado:** H1 2026
+- Refuerza significativamente el segmento Fastening Systems
+
+## Dividendo y Retorno al Accionista
+
+- **Dividendo anual: $0.48/acción** (~0.2% yield)
+- **Aumentos consecutivos:** 5 años
+- **Pago trimestral:** $0.12
+- La empresa prioriza crecimiento sobre dividendo — es una historia de crecimiento
+
+## Ventajas Competitivas (Moat)
+
+1. **Líder mundial en álabes aeroespaciales:** Las piezas que giran dentro de motores a 2,000+ grados requieren metalurgia de precisión extrema — pocos en el mundo pueden hacerlo
+2. **Clientes cautivos:** Una vez que un motor es diseñado con piezas de Howmet, cambiar de proveedor es prácticamente imposible. Programas de 30+ años
+3. **Relaciones con todos los OEMs:** Boeing, Airbus, Pratt & Whitney, GE Aerospace, Rolls-Royce — todos dependen de Howmet
+4. **Superciclo aeroespacial:** Record de órdenes de aviones + flota envejecida = demanda de piezas por años
+5. **Márgenes expandiéndose:** EBITDA margins subieron a 30.1% — pricing power real
+6. **Barrera de entrada altísima:** Certificaciones, metalurgia avanzada, y décadas de track record
+
+## Catalizadores
+
+1. **Superciclo de aviación comercial** — Backlog récord de Boeing + Airbus = años de demanda de piezas
+2. **Adquisición CAM ($1.8B)** — Añade $490M de revenue y fortalece posición en fasteners
+3. **Márgenes expandiéndose** — Objetivo de 30%+ EBITDA margins
+4. **Crecimiento de defensa +20%** — Presupuestos militares subiendo globalmente
+5. **EPS creciendo 20%+ anual** — Guía de $4.35-$4.55 para 2026
+6. **Turbinas de gas industriales +32%** — Demanda energética impulsa este segmento
+
+## Riesgos Principales
+
+1. **Valuación exigente:** P/E forward de 41x es muy caro — priced for perfection
+2. **Dependencia de Boeing:** Si Boeing sigue con problemas de producción, limita entregas de piezas
+3. **Corrección reciente:** Ya bajó ~12% desde máximos de febrero — podría seguir bajando si el mercado se pone nervioso
+4. **Integración de CAM:** Adquisiciones grandes siempre tienen riesgo de ejecución
+5. **Ciclo económico:** Si la demanda de viajes aéreos baja (recesión), la demanda de piezas nuevas baja también
+
+## Presencia Geográfica
+
+Opera en **13+ países** con **38 plantas** en todo el mundo:
+- **EE.UU.:** 15 estados (HQ en Pittsburgh, Pennsylvania)
+- **Europa:** Francia, Alemania, UK, Hungría, República Checa, Países Bajos, Marruecos
+- **Américas:** Canadá, México, Brasil
+- **Asia-Pacífico:** Japón, China, Australia
+
+## Posición Competitiva
+
+| Métrica | **HWM** | TDG (TransDigm) | SPR (Spirit Aero) | HEI (HEICO) |
+|---------|---------|-----|-----|-----|
+| **Revenue** | $8.25B | $8.5B | $7.4B | $4.1B |
+| **EBITDA Margin** | 30.1% | 49% | ~12% | ~25% |
+| **P/E Forward** | 41x | 37x | N/A | 55x |
+| **Dividend Yield** | 0.2% | 0% | 0% | 0.1% |
+| **Enfoque** | Componentes motor + estructura | Componentes aftermarket | Fuselajes | Componentes electrónicos/vuelo |
+
+## Consenso de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Rating | **Strong Buy** |
+| Price Target Promedio | **~$280** |
+| Precio Actual | $227.90 |
+| **Upside al Target** | **~23%** |
+| EPS 2026 Guía | $4.35 - $4.55 |
+
+## Conclusión
+
+HWM a $227.90 es una **apuesta al superciclo aeroespacial** — la empresa que fabrica las piezas más críticas dentro de los motores de avión que impulsan a Boeing y Airbus. Con revenue récord, márgenes de 30%, EPS creciendo 20%+ anual, y la adquisición de CAM como catalizador, Howmet tiene un negocio excepcional. El riesgo principal es la valuación: a P/E forward de 41x, el mercado ya descuenta mucho del crecimiento. Para un portafolio diversificado, HWM complementa nuestra posición en GE Aerospace — si GE hace los motores, Howmet hace las piezas críticas dentro de ellos.
+
+---
+
+*Research fecha: 27 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 280,
+    analyst_upside: 22.9,
+    status: "active",
+    first_researched_at: "2026-03-27T00:00:00Z",
+    last_updated_at: "2026-03-27T00:00:00Z",
+    next_review_at: "2026-09-27T00:00:00Z",
+  },
 ];
 
 export const transactions = [
@@ -3237,6 +3386,17 @@ export const transactions = [
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #22* — Mar 25, 2026\n\n🏢 *GE Aerospace* (GE) — $288.68\n\n🛍️ *Sus productos*: Motores LEAP (Boeing 737 MAX / Airbus A320neo), GE9X (el motor más grande del mundo para el 777X), GEnx (Boeing 787), motores T700 para helicópteros militares\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones globales. El fabricante de motores de avión #1 del mundo con 44,000+ motores instalados. JV con Safran (CFM International).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.63% anual* solo por ser dueño. Cada vez que un avión despega con motores LEAP, GEnx o GE9X — y necesita mantenimiento después de miles de horas de vuelo — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Boeing 737 MAX sigue con problemas de producción que limitan entregas de motores LEAP.\n\n🆕 Posición #22\n🔗 https://vectorialdata.com/stocks/GE\n\n💡 Invertir no es un evento. Es un hábito. Como ir al gym — los resultados llegan con el tiempo, no con la intensidad.`,
   },
+  {
+    id: 23,
+    stock_id: 27,
+    ticker: "HWM",
+    type: "new" as const,
+    cycle_number: 5,
+    price: 227.90,
+    date: "2026-03-27",
+    day_of_week: "friday",
+    wa_message: `📊 *STOCK PICK #23* — Mar 27, 2026\n\n🏢 *Howmet Aerospace* (HWM) — $227.90\n\n🛍️ *Sus productos*: Las piezas críticas DENTRO de los motores de avión — álabes que giran a 2,000° grados, sujetadores aeroespaciales, estructuras de titanio para fuselajes, y ruedas forjadas para camiones\n\n🌍 *Presencia*: EE.UU. (Pittsburgh), Francia, Alemania, UK, Japón, China, Australia — 38 plantas en 13+ países. Si un avión de Boeing o Airbus vuela, muy probablemente lleva piezas de Howmet.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.2% anual* solo por ser dueño — poco dividendo, pero la ganancia real está en el crecimiento. Cada vez que Boeing o Airbus necesitan piezas de motor que soporten temperaturas extremas, solo un puñado de empresas en el mundo pueden fabricarlas, y Howmet es la líder. Parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La acción cotiza a P/E de 61x — está priced for perfection. Cualquier tropiezo en earnings puede causar una caída fuerte.\n\n🆕 Posición #23\n🔗 https://vectorialdata.com/stocks/HWM\n\n💡 Miles de personas en United States trabajan para Howmet Aerospace hoy. Generan ingresos, pagan dividendos, y tú eres dueño. Así funciona.`,
+  },
 ];
 
 export const cycles = [
@@ -3277,7 +3437,7 @@ export const cycles = [
     cycle_number: 5,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 3,
     status: "active" as const,
   },
 ];
