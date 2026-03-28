@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { getEventsForDigest } from "@/lib/notifications";
 import { sendDigestApprovalEmail } from "@/lib/resend";
+import type { DigestSummary } from "@/lib/resend";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -13,6 +14,39 @@ export function generateApprovalToken(weekKey: string): string {
   const secret = process.env.RESEND_API_KEY;
   if (!secret) throw new Error("RESEND_API_KEY not configured");
   return crypto.createHmac("sha256", secret).update(weekKey).digest("hex");
+}
+
+export async function getWeeklyPerformance(): Promise<DigestSummary | null> {
+  const supabase = getSupabaseAdmin();
+
+  // Latest snapshot
+  const { data: latest } = await supabase
+    .from("portfolio_snapshots")
+    .select("return_pct, date")
+    .order("date", { ascending: false })
+    .limit(1);
+
+  if (!latest?.length) return null;
+
+  // Snapshot from ~7 days ago
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  const dateStr = sevenDaysAgo.toISOString().split("T")[0];
+
+  const { data: weekAgo } = await supabase
+    .from("portfolio_snapshots")
+    .select("return_pct, date")
+    .lte("date", dateStr)
+    .order("date", { ascending: false })
+    .limit(1);
+
+  const currentReturn = latest[0].return_pct as number;
+  const previousReturn = (weekAgo?.[0]?.return_pct as number) ?? 0;
+
+  return {
+    weeklyChangePct: Math.round((currentReturn - previousReturn) * 100) / 100,
+    totalReturnPct: Math.round(currentReturn * 100) / 100,
+  };
 }
 
 export async function GET(request: Request) {
@@ -55,6 +89,9 @@ export async function GET(request: Request) {
       return NextResponse.json({ message: "Digest already sent this week", week_key: weekKey });
     }
 
+    // Get portfolio performance
+    const summary = await getWeeklyPerformance();
+
     // Count recipients for the preview
     const { data: subscribers } = await getSupabaseAdmin()
       .from("subscribers")
@@ -93,7 +130,8 @@ export async function GET(request: Request) {
       approveUrl,
       weekKey,
       recipientCount,
-      premiumCount
+      premiumCount,
+      summary
     );
 
     return NextResponse.json({
@@ -104,6 +142,7 @@ export async function GET(request: Request) {
       recipients: recipientCount,
       premium: premiumCount,
       free: recipientCount - premiumCount,
+      portfolio: summary,
     });
   } catch (error) {
     console.error("Email digest cron error:", error);

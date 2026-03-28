@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { getEventsForDigest } from "@/lib/notifications";
 import { sendDigestEmail } from "@/lib/resend";
-import { generateApprovalToken } from "../route";
+import { generateApprovalToken, getWeeklyPerformance } from "../route";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -82,6 +82,9 @@ export async function GET(request: Request) {
       return htmlResponse("Sin eventos", "No hay eventos esta semana para enviar.", "#f59e0b");
     }
 
+    // Get portfolio performance
+    const summary = await getWeeklyPerformance();
+
     // Get premium subscribers
     const { data: subscribers } = await supabaseAdmin
       .from("subscribers")
@@ -125,7 +128,7 @@ export async function GET(request: Request) {
     for (const user of uniqueRecipients) {
       try {
         const isPremium = premiumEmails.has(user.email);
-        await sendDigestEmail(user.email, events, "es", isPremium);
+        await sendDigestEmail(user.email, events, "es", isPremium, summary);
 
         await supabaseAdmin
           .from("email_digest_log")
