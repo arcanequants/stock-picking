@@ -93,7 +93,9 @@
     "trackCtaButton": "Ver portfólio",
     "andMore": "e mais {count}",
     "noticiasTitle": "Notícias do seu portfólio",
-    "noticiasCta": "Ver todas as notícias"
+    "noticiasCta": "Ver todas as notícias",
+    "samplePickSentDate": "Enviamos este pick em {date}.",
+    "samplePickFomo": "O que compramos hoje? →"
   },
   "Join": {
     "title": "Comece a gerar renda",

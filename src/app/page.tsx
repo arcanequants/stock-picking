@@ -24,13 +24,16 @@ export default async function Home() {
         activeStocks.length
       : 0;
 
-  const lastTx = transactions[transactions.length - 1];
-  const samplePick = lastTx
-    ? activeStocks.find((s) => s.ticker === lastTx.ticker) ?? activeStocks[0]
+  // Rotating sample pick: exclude last 5 (premium), rotate daily among older picks
+  const olderTxs = transactions.slice(0, Math.max(1, transactions.length - 5));
+  const dayIndex = Math.floor(Date.now() / 86400000) % olderTxs.length;
+  const sampleTx = olderTxs[dayIndex];
+  const samplePick = sampleTx
+    ? activeStocks.find((s) => s.ticker === sampleTx.ticker) ?? activeStocks[0]
     : activeStocks[0];
-  const samplePickNumber = lastTx?.id ?? 1;
-  const samplePickDate = lastTx
-    ? new Date(lastTx.date).toLocaleDateString("en-US", {
+  const samplePickNumber = sampleTx?.id ?? 1;
+  const samplePickDate = sampleTx
+    ? new Date(sampleTx.date).toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
       })
@@ -196,13 +199,13 @@ export default async function Home() {
             </div>
           </ScrollReveal>
 
-          {/* Latest pick card */}
+          {/* Rotating sample pick card */}
           {samplePick && (
             <ScrollReveal>
               <div className="border border-border rounded-xl p-6 max-w-2xl mx-auto card-hover">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-brand bg-brand-subtle px-2.5 py-0.5 rounded-full border border-brand-border">
-                    {t("latestPickLabel")}
+                  <span className="text-xs font-semibold uppercase tracking-wider text-text-faint">
+                    {t("samplePickLabel")}
                   </span>
                   {samplePickDate && (
                     <span className="text-xs text-text-faint font-mono">
@@ -221,10 +224,9 @@ export default async function Home() {
                   )}
                 </div>
                 <p className="text-sm text-text-secondary mt-2">{samplePick.summary_short}</p>
-                <p className="text-sm text-text-muted mt-3">{samplePick.summary_what}</p>
                 <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
-                  <p className="text-xs text-text-faint">{t("samplePickFooter")}</p>
-                  <Link href={`/stocks/${samplePick.ticker}`} className="text-sm text-brand-text font-medium hover:text-brand-hover">{t("seeMore")}</Link>
+                  <p className="text-xs text-text-faint italic">{t("samplePickSentDate", { date: samplePickDate ?? "" })}</p>
+                  <Link href="/join" className="text-sm text-brand font-medium hover:text-brand-hover">{t("samplePickFomo")}</Link>
                 </div>
               </div>
             </ScrollReveal>

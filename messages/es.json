@@ -93,7 +93,9 @@
     "trackCtaButton": "Ver portafolio",
     "andMore": "y {count} más",
     "noticiasTitle": "Noticias de tu portafolio",
-    "noticiasCta": "Ver todas las noticias"
+    "noticiasCta": "Ver todas las noticias",
+    "samplePickSentDate": "Este pick lo mandamos el {date}.",
+    "samplePickFomo": "¿Qué compramos hoy? →"
   },
   "Join": {
     "title": "Empieza a generar ingresos",

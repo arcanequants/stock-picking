@@ -93,7 +93,9 @@
     "trackCtaButton": "View portfolio",
     "andMore": "and {count} more",
     "noticiasTitle": "News from your portfolio",
-    "noticiasCta": "See all news"
+    "noticiasCta": "See all news",
+    "samplePickSentDate": "We sent this pick on {date}.",
+    "samplePickFomo": "What did we buy today? →"
   },
   "Join": {
     "title": "Start earning income",

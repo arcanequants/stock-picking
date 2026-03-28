@@ -93,7 +93,9 @@
     "trackCtaButton": "पोर्टफोलियो देखें",
     "andMore": "और {count} अधिक",
     "noticiasTitle": "आपके पोर्टफोलियो की खबरें",
-    "noticiasCta": "सभी समाचार देखें"
+    "noticiasCta": "सभी समाचार देखें",
+    "samplePickSentDate": "यह पिक हमने {date} को भेजा था।",
+    "samplePickFomo": "आज हमने क्या खरीदा? →"
   },
   "Join": {
     "title": "आय कमाना शुरू करें",
