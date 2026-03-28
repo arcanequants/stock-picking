@@ -1,10 +1,19 @@
+import crypto from "crypto";
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { getEventsForDigest } from "@/lib/notifications";
-import { sendDigestEmail } from "@/lib/resend";
+import { sendDigestApprovalEmail } from "@/lib/resend";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const maxDuration = 30;
+
+const ADMIN_EMAIL = "0138078@up.edu.mx";
+
+export function generateApprovalToken(weekKey: string): string {
+  const secret = process.env.RESEND_API_KEY;
+  if (!secret) throw new Error("RESEND_API_KEY not configured");
+  return crypto.createHmac("sha256", secret).update(weekKey).digest("hex");
+}
 
 export async function GET(request: Request) {
   // Verify cron secret
@@ -35,22 +44,29 @@ export async function GET(request: Request) {
     );
     const weekKey = `${now.getFullYear()}-W${String(weekNum).padStart(2, "0")}`;
 
-    // Get premium subscribers
+    // Check if already sent this week
+    const { data: alreadySent } = await getSupabaseAdmin()
+      .from("email_digest_log")
+      .select("user_email")
+      .eq("week_key", weekKey)
+      .limit(1);
+
+    if (alreadySent && alreadySent.length > 0) {
+      return NextResponse.json({ message: "Digest already sent this week", week_key: weekKey });
+    }
+
+    // Count recipients for the preview
     const { data: subscribers } = await getSupabaseAdmin()
       .from("subscribers")
       .select("email, subscription_status")
       .in("subscription_status", ["active", "trialing"]);
 
-    const premiumEmails = new Set(
-      (subscribers ?? []).map((s) => s.email.toLowerCase())
-    );
+    const premiumCount = (subscribers ?? []).length;
 
-    // Get ALL registered users (free + premium)
     const supabaseAdmin = getSupabaseAdmin();
-    const allUsers: { email: string }[] = [];
+    const allUsers: string[] = [];
     let page = 1;
     const perPage = 1000;
-    // eslint-disable-next-line no-constant-condition
     while (true) {
       const { data: { users }, error } = await supabaseAdmin.auth.admin.listUsers({
         page,
@@ -58,69 +74,41 @@ export async function GET(request: Request) {
       });
       if (error || !users?.length) break;
       for (const u of users) {
-        if (u.email) allUsers.push({ email: u.email.toLowerCase() });
+        if (u.email) allUsers.push(u.email.toLowerCase());
       }
       if (users.length < perPage) break;
       page++;
     }
+    const recipientCount = new Set(allUsers).size;
 
-    // Deduplicate
-    const uniqueRecipients = [...new Map(allUsers.map((u) => [u.email, u])).values()];
+    // Generate HMAC approval token
+    const token = generateApprovalToken(weekKey);
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.vectorialdata.com";
+    const approveUrl = `${baseUrl}/api/cron/email-digest/approve?week=${encodeURIComponent(weekKey)}&token=${token}`;
 
-    if (uniqueRecipients.length === 0) {
-      return NextResponse.json({ message: "No registered users" });
-    }
-
-    // Check digest log for already-sent
-    const { data: alreadySent } = await supabaseAdmin
-      .from("email_digest_log")
-      .select("user_email")
-      .eq("week_key", weekKey);
-
-    const sentEmails = new Set((alreadySent ?? []).map((r) => r.user_email));
-    const toSend = uniqueRecipients.filter((u) => !sentEmails.has(u.email));
-
-    if (toSend.length === 0) {
-      return NextResponse.json({ message: "All digests already sent this week" });
-    }
-
-    // Send digests
-    let sent = 0;
-    let failed = 0;
-
-    for (const user of toSend) {
-      try {
-        const isPremium = premiumEmails.has(user.email);
-        // Default to Spanish locale (most users)
-        await sendDigestEmail(user.email, events, "es", isPremium);
-
-        // Log sent
-        await supabaseAdmin
-          .from("email_digest_log")
-          .insert({ user_email: user.email, week_key: weekKey });
-
-        sent++;
-      } catch (e) {
-        console.error(`Failed to send digest to ${user.email}:`, e);
-        failed++;
-      }
-    }
+    // Send preview to admin only
+    await sendDigestApprovalEmail(
+      ADMIN_EMAIL,
+      events,
+      approveUrl,
+      weekKey,
+      recipientCount,
+      premiumCount
+    );
 
     return NextResponse.json({
       success: true,
+      preview_sent_to: ADMIN_EMAIL,
       week_key: weekKey,
       events_count: events.length,
-      sent,
-      failed,
-      skipped: sentEmails.size,
-      total_recipients: uniqueRecipients.length,
-      premium: premiumEmails.size,
-      free: uniqueRecipients.length - premiumEmails.size,
+      recipients: recipientCount,
+      premium: premiumCount,
+      free: recipientCount - premiumCount,
     });
   } catch (error) {
     console.error("Email digest cron error:", error);
     return NextResponse.json(
-      { error: "Failed to send digest" },
+      { error: "Failed to send digest preview" },
       { status: 500 }
     );
   }

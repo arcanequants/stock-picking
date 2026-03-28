@@ -227,6 +227,63 @@ function buildFreeDigestHtml(events: PortfolioEvent[], locale: string): string {
 </html>`;
 }
 
+export async function sendDigestApprovalEmail(
+  adminEmail: string,
+  events: PortfolioEvent[],
+  approveUrl: string,
+  weekKey: string,
+  recipientCount: number,
+  premiumCount: number
+) {
+  // Build a preview of what premium users will see
+  const previewRows = events
+    .map((e) => {
+      const icon = EVENT_ICONS[e.event_type] ?? "\u{1F4CC}";
+      const text = renderEventText(e, "es");
+      const date = new Date(e.created_at).toLocaleDateString("es", {
+        month: "short",
+        day: "numeric",
+      });
+      return `<tr><td style="padding:8px 12px;border-bottom:1px solid #e4e4e7;font-size:14px;">${icon} ${text}</td><td style="padding:8px 12px;border-bottom:1px solid #e4e4e7;font-size:12px;color:#71717a;white-space:nowrap;">${date}</td></tr>`;
+    })
+    .join("");
+
+  const freeCount = recipientCount - premiumCount;
+
+  const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
+  <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+    <div style="background:#f59e0b;padding:20px 24px;">
+      <h1 style="margin:0;color:#fff;font-size:18px;font-weight:600;">PREVIEW — Digest ${weekKey}</h1>
+      <p style="margin:4px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Esperando tu aprobacion para enviar</p>
+    </div>
+    <div style="padding:16px 24px;">
+      <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:12px 16px;margin-bottom:16px;">
+        <p style="margin:0;font-size:13px;color:#92400e;font-weight:500;">${events.length} eventos | ${recipientCount} destinatarios (${premiumCount} premium, ${freeCount} free)</p>
+      </div>
+      <p style="margin:0 0 8px;font-size:12px;color:#71717a;font-weight:600;text-transform:uppercase;">Preview del digest premium:</p>
+      <table style="width:100%;border-collapse:collapse;">${previewRows}</table>
+    </div>
+    <div style="padding:16px 24px;border-top:1px solid #e4e4e7;text-align:center;">
+      <a href="${approveUrl}" style="display:inline-block;background:#16a34a;color:#fff;padding:12px 32px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Aprobar y Enviar</a>
+      <p style="margin:12px 0 0;font-size:12px;color:#9ca3af;">Si no apruebas, no se envia nada.</p>
+    </div>
+  </div>
+</body>
+</html>`;
+
+  const { error } = await getResend().emails.send({
+    from: "Vectorial Data <notifications@mail.vectorialdata.com>",
+    to: adminEmail,
+    subject: `[APROBAR] Digest semanal ${weekKey} — ${events.length} eventos, ${recipientCount} usuarios`,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send approval email: ${error.message}`);
+}
+
 export async function sendDigestEmail(
   to: string,
   events: PortfolioEvent[],
@@ -243,7 +300,7 @@ export async function sendDigestEmail(
   const lang = subjectLines[locale] ? locale : "en";
 
   const { error } = await getResend().emails.send({
-    from: "Vectorial Data <notifications@vectorialdata.com>",
+    from: "Vectorial Data <notifications@mail.vectorialdata.com>",
     to,
     subject: subjectLines[lang],
     html: isSubscribed ? buildDigestHtml(events, locale) : buildFreeDigestHtml(events, locale),
