@@ -320,14 +320,19 @@
     "newsAlert": "{ticker}: {headline}",
     "weeklyDigestSubject": "Tu portafolio esta semana",
     "pageTitle": "Noticias del Portafolio",
-    "pageSubtitle": "Qué está pasando con tus acciones — explicado de forma simple",
+    "pageSubtitle": "Tus acciones se mueven — aquí entiendes por qué",
     "whatItMeans": "Qué significa",
     "whatToDo": "Para tu portafolio",
     "fomoCounter": "Entiendes {understood} de {total} noticias esta semana",
-    "blurCTA": "Entender por $1/mes",
+    "blurCTA": "Desbloquear — $1/mes",
     "bannerCTA": "Ver explicación",
     "understandAll": "Entender todas las noticias",
-    "empty": "Todavía no hay noticias. Cuando pase algo, te lo explicamos aquí."
+    "empty": "Cuando tus acciones se muevan, aquí te lo explicamos.",
+    "dateToday": "Hoy",
+    "dateYesterday": "Ayer",
+    "bottomCTATitle": "No te quedes con la duda",
+    "bottomCTADescription": "Entiende cada movimiento de tu portafolio. Explicaciones claras, sin jerga financiera.",
+    "bottomCTAButton": "Desbloquear todo por $1/mes"
   },
   "Legal": {
     "termsTitle": "Términos de Servicio",

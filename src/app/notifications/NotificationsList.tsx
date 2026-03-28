@@ -87,6 +87,24 @@ export default function NotificationsList({
     });
   };
 
+  // Date label for separators: "Hoy", "Ayer", or formatted date
+  const getDateLabel = (dateStr: string) => {
+    const date = new Date(dateStr);
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+    const eventDay = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+    if (eventDay.getTime() === today.getTime()) return t("dateToday");
+    if (eventDay.getTime() === yesterday.getTime()) return t("dateYesterday");
+    return date.toLocaleDateString(locale, {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    });
+  };
+
   const getExplanation = (event: PortfolioEvent): EventExplanation | null => {
     if (!event.explanations || Object.keys(event.explanations).length === 0) {
       return null;
@@ -114,11 +132,14 @@ export default function NotificationsList({
   if (events.length === 0) {
     return (
       <div className="text-center py-16">
-        <div className="text-4xl mb-4">{"\u{1F514}"}</div>
+        <div className="text-4xl mb-4">{"\u{1F4E1}"}</div>
         <p className="text-text-muted">{t("empty")}</p>
       </div>
     );
   }
+
+  // Group events by date for separators
+  let lastDateLabel = "";
 
   return (
     <div>
@@ -147,77 +168,112 @@ export default function NotificationsList({
           const showExplanation = isSubscribed || isLatest;
           const hasExplanation = explanation !== null;
 
-          return (
-            <div
-              key={event.id}
-              className="bg-card border border-border rounded-xl overflow-hidden notification-item"
-            >
-              {/* Layer 1: Headline (always visible) */}
-              <div className="p-4">
-                <div className="flex items-start gap-3">
-                  <span className="text-xl mt-0.5">
-                    {EVENT_ICONS[event.event_type] ?? "\u{1F4CC}"}
-                  </span>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-foreground leading-relaxed">
-                      {renderEventText(event)}
-                    </p>
-                    <p className="text-xs text-text-faint mt-1.5">
-                      {formatDate(event.created_at)}
-                    </p>
-                  </div>
-                  <span className="text-xs font-medium text-text-faint uppercase tracking-wide mt-1">
-                    {event.ticker}
-                  </span>
-                </div>
-              </div>
+          // Date separator
+          const dateLabel = getDateLabel(event.created_at);
+          const showDateSeparator = dateLabel !== lastDateLabel;
+          lastDateLabel = dateLabel;
 
-              {/* Layer 2+3: Full explanation (premium or latest event) */}
-              {hasExplanation && showExplanation && (
-                <div className="border-t border-border bg-background px-4 py-3 space-y-3">
-                  <div>
-                    <p className="text-xs font-semibold text-brand-text uppercase tracking-wide mb-1">
-                      {t("whatItMeans")}
-                    </p>
-                    <p className="text-sm text-text-muted leading-relaxed">
-                      {explanation.meaning}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-brand-text uppercase tracking-wide mb-1">
-                      {t("whatToDo")}
-                    </p>
-                    <p className="text-sm text-text-muted leading-relaxed">
-                      {explanation.action}
-                    </p>
-                  </div>
+          return (
+            <div key={event.id}>
+              {/* Date separator */}
+              {showDateSeparator && (
+                <div className="flex items-center gap-3 pt-4 pb-1 first:pt-0">
+                  <div className="h-px flex-1 bg-border" />
+                  <span className="text-xs font-medium text-text-faint uppercase tracking-wide">
+                    {dateLabel}
+                  </span>
+                  <div className="h-px flex-1 bg-border" />
                 </div>
               )}
 
-              {/* Blurred explanation with CTA (free users, non-latest) */}
-              {hasExplanation && !showExplanation && (
-                <div className="border-t border-border relative">
-                  <div className="px-4 py-3 explanation-blur">
-                    <div className="space-y-2">
-                      <div className="h-3 bg-tag-bg rounded w-full" />
-                      <div className="h-3 bg-tag-bg rounded w-4/5" />
-                      <div className="h-3 bg-tag-bg rounded w-3/5" />
+              <div className="bg-card border border-border rounded-xl overflow-hidden notification-item">
+                {/* Layer 1: Headline (always visible) */}
+                <div className="p-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl mt-0.5">
+                      {EVENT_ICONS[event.event_type] ?? "\u{1F4CC}"}
+                    </span>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-foreground leading-relaxed">
+                        {renderEventText(event)}
+                      </p>
+                      <p className="text-xs text-text-faint mt-1.5">
+                        {formatDate(event.created_at)}
+                      </p>
+                    </div>
+                    <span className="text-xs font-medium text-text-faint uppercase tracking-wide mt-1">
+                      {event.ticker}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Layer 2+3: Full explanation (premium or latest event) */}
+                {hasExplanation && showExplanation && (
+                  <div className="border-t border-border bg-background px-4 py-3 space-y-3">
+                    <div>
+                      <p className="text-xs font-semibold text-brand-text uppercase tracking-wide mb-1">
+                        {t("whatItMeans")}
+                      </p>
+                      <p className="text-sm text-text-muted leading-relaxed">
+                        {explanation.meaning}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-brand-text uppercase tracking-wide mb-1">
+                        {t("whatToDo")}
+                      </p>
+                      <p className="text-sm text-text-muted leading-relaxed">
+                        {explanation.action}
+                      </p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center bg-background/60 backdrop-blur-[2px]">
-                    <Link
-                      href="/join"
-                      className="text-sm font-medium text-brand hover:text-brand-hover transition-colors"
-                    >
-                      {t("blurCTA")} {"\u2192"}
-                    </Link>
+                )}
+
+                {/* Blurred explanation with CTA (free users, non-latest) */}
+                {hasExplanation && !showExplanation && (
+                  <div className="border-t border-border relative">
+                    <div className="px-4 py-3 explanation-blur bg-brand-subtle/30">
+                      <div className="space-y-2">
+                        <div className="h-3 bg-brand/10 rounded w-full" />
+                        <div className="h-3 bg-brand/10 rounded w-4/5" />
+                        <div className="h-3 bg-brand/8 rounded w-3/5" />
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center bg-brand-subtle/40 backdrop-blur-[2px]">
+                      <Link
+                        href="/join"
+                        className="text-sm font-medium text-brand hover:text-brand-hover transition-colors bg-background/80 px-4 py-1.5 rounded-full border border-brand-border"
+                      >
+                        {t("blurCTA")} {"\u2192"}
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           );
         })}
       </div>
+
+      {/* Bottom CTA for free users */}
+      {!isSubscribed && (
+        <div className="mt-8 text-center">
+          <div className="bg-brand-subtle border border-brand-border rounded-xl p-6">
+            <p className="text-base font-semibold text-foreground mb-2">
+              {t("bottomCTATitle")}
+            </p>
+            <p className="text-sm text-text-muted mb-4">
+              {t("bottomCTADescription")}
+            </p>
+            <Link
+              href="/join"
+              className="inline-block bg-brand hover:bg-brand-hover text-white px-6 py-2.5 rounded-lg transition-colors font-medium text-sm"
+            >
+              {t("bottomCTAButton")}
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

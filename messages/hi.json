@@ -320,14 +320,19 @@
     "newsAlert": "{ticker}: {headline}",
     "weeklyDigestSubject": "इस सप्ताह आपका पोर्टफोलियो",
     "pageTitle": "पोर्टफोलियो समाचार",
-    "pageSubtitle": "आपके स्टॉक्स में क्या हो रहा है — सरल भाषा में",
+    "pageSubtitle": "आपके स्टॉक्स हिल रहे हैं — समझें क्यों",
     "whatItMeans": "इसका मतलब क्या है",
     "whatToDo": "आपके पोर्टफोलियो के लिए",
     "fomoCounter": "आपने इस सप्ताह {total} में से {understood} समाचार समझे",
-    "blurCTA": "$1/माह में समझें",
+    "blurCTA": "अनलॉक — $1/माह",
     "bannerCTA": "व्याख्या देखें",
     "understandAll": "सभी समाचार समझें",
-    "empty": "अभी कोई समाचार नहीं है। जब कुछ होगा, हम यहाँ समझाएंगे।"
+    "empty": "जब आपके स्टॉक्स हिलेंगे, हम यहाँ समझाएंगे।",
+    "dateToday": "आज",
+    "dateYesterday": "कल",
+    "bottomCTATitle": "अंधेरे में न रहें",
+    "bottomCTADescription": "अपने पोर्टफोलियो की हर हलचल समझें। स्पष्ट व्याख्या, बिना वित्तीय शब्दजाल।",
+    "bottomCTAButton": "$1/माह में सब कुछ अनलॉक करें"
   },
   "Legal": {
     "termsTitle": "सेवा की शर्तें",

@@ -320,14 +320,19 @@
     "newsAlert": "{ticker}: {headline}",
     "weeklyDigestSubject": "Your portfolio this week",
     "pageTitle": "Portfolio News",
-    "pageSubtitle": "What's happening with your stocks — explained simply",
+    "pageSubtitle": "Your stocks are moving — understand why",
     "whatItMeans": "What it means",
     "whatToDo": "For your portfolio",
     "fomoCounter": "You understood {understood} of {total} news this week",
-    "blurCTA": "Understand for $1/mo",
+    "blurCTA": "Unlock — $1/mo",
     "bannerCTA": "See explanation",
     "understandAll": "Understand all news",
-    "empty": "No news yet. When something happens, we'll explain it here."
+    "empty": "When your stocks move, we'll explain it here.",
+    "dateToday": "Today",
+    "dateYesterday": "Yesterday",
+    "bottomCTATitle": "Don't stay in the dark",
+    "bottomCTADescription": "Understand every move in your portfolio. Clear explanations, no financial jargon.",
+    "bottomCTAButton": "Unlock everything for $1/mo"
   },
   "Legal": {
     "termsTitle": "Terms of Service",

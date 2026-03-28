@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { getPublicEvents } from "@/lib/notifications";
 import type { EventExplanation } from "@/lib/types";
 
@@ -31,7 +31,8 @@ export default async function NotificationsBanner() {
   }
 
   const icon = EVENT_ICONS[event.event_type] ?? "\u{1F4CC}";
-  const explanation = (event.explanations?.["es"] ?? event.explanations?.["en"]) as EventExplanation | undefined;
+  const locale = await getLocale();
+  const explanation = (event.explanations?.[locale as "en" | "es" | "pt" | "hi"] ?? event.explanations?.["en"]) as EventExplanation | undefined;
 
   return (
     <Link

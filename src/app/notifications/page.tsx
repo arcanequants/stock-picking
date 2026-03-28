@@ -10,8 +10,9 @@ export default async function NotificationsPage() {
 
   const allEvents = await getPublicEvents(20);
 
-  // Sanitize for free users: only latest event gets explanations
-  const events = allEvents.map((event, index) => {
+  // Free users: limit to 10 events, only latest gets explanations
+  const limitedEvents = isSubscribed ? allEvents : allEvents.slice(0, 10);
+  const events = limitedEvents.map((event, index) => {
     if (isSubscribed || index === 0) return event;
     return { ...event, explanations: {} };
   });

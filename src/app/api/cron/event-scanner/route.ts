@@ -146,14 +146,14 @@ export async function GET(request: Request) {
       errors.push(`${ticker} dividend: ${e}`);
     }
 
-    // --- 3. Analyst Consensus (>80% buy or <30% buy) ---
+    // --- 3. Analyst Consensus (>80% buy or <30% buy, min 5 analysts) ---
     try {
       const trend = recommendationTrend?.trend;
       if (trend && trend.length >= 1) {
         const current = trend[0];
         const totalCurr = current.strongBuy + current.buy + current.hold + current.sell + current.strongSell;
 
-        if (totalCurr > 0) {
+        if (totalCurr >= 5) {
           const buyPctCurr = ((current.strongBuy + current.buy) / totalCurr) * 100;
           const isStrong = buyPctCurr >= 80;
           const isWeak = buyPctCurr < 30;
