@@ -28,8 +28,14 @@ export async function GET() {
       // Not logged in — that's fine
     }
 
-    // For free users: strip explanations from all events except the latest
-    const sanitizedEvents = events.map((event, index) => {
+    // Count events with explanations BEFORE sanitizing (for FOMO counter)
+    const totalWithExplanations = events.filter(
+      (e) => e.explanations && Object.keys(e.explanations).length > 0
+    ).length;
+
+    // Free users: limit to 10 events, only latest gets full explanations
+    const limitedEvents = isSubscribed ? events : events.slice(0, 10);
+    const sanitizedEvents = limitedEvents.map((event, index) => {
       if (isSubscribed || index === 0) {
         return event;
       }
@@ -40,6 +46,7 @@ export async function GET() {
       events: sanitizedEvents,
       isSubscribed,
       total: events.length,
+      totalWithExplanations,
     });
   } catch (error) {
     console.error("Noticias API error:", error);

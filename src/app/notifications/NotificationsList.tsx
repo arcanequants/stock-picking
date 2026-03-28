@@ -18,6 +18,7 @@ interface Props {
   isSubscribed: boolean;
   isLoggedIn: boolean;
   locale: string;
+  totalWithExplanations: number;
 }
 
 export default function NotificationsList({
@@ -25,6 +26,7 @@ export default function NotificationsList({
   isSubscribed,
   isLoggedIn,
   locale,
+  totalWithExplanations,
 }: Props) {
   const t = useTranslations("Notifications");
   const [events, setEvents] = useState(initialEvents);
@@ -116,18 +118,10 @@ export default function NotificationsList({
     );
   };
 
-  // FOMO counter: events this week with explanations
-  const oneWeekAgo = new Date();
-  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-  const eventsThisWeek = events.filter(
-    (e) => new Date(e.created_at) >= oneWeekAgo
-  );
-  const withExplanations = eventsThisWeek.filter(
-    (e) => e.explanations && Object.keys(e.explanations).length > 0
-  );
+  // FOMO counter: use server-provided count (before stripping)
   const understoodCount = isSubscribed
-    ? withExplanations.length
-    : Math.min(1, withExplanations.length);
+    ? totalWithExplanations
+    : Math.min(1, totalWithExplanations);
 
   if (events.length === 0) {
     return (
@@ -144,12 +138,12 @@ export default function NotificationsList({
   return (
     <div>
       {/* FOMO counter for free users */}
-      {!isSubscribed && withExplanations.length > 1 && (
+      {!isSubscribed && totalWithExplanations > 1 && (
         <div className="bg-brand-subtle border border-brand-border rounded-xl p-4 mb-6 text-center">
           <p className="text-sm text-foreground">
             {t("fomoCounter", {
               understood: String(understoodCount),
-              total: String(withExplanations.length),
+              total: String(totalWithExplanations),
             })}
           </p>
           <Link
@@ -230,7 +224,7 @@ export default function NotificationsList({
                 )}
 
                 {/* Blurred explanation with CTA (free users, non-latest) */}
-                {hasExplanation && !showExplanation && (
+                {!isSubscribed && !isLatest && (
                   <div className="border-t border-border relative">
                     <div className="px-4 py-3 explanation-blur bg-brand-subtle/30">
                       <div className="space-y-2">

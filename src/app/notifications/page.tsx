@@ -10,7 +10,12 @@ export default async function NotificationsPage() {
 
   const allEvents = await getPublicEvents(20);
 
-  // Free users: limit to 10 events, only latest gets explanations
+  // Count events with explanations BEFORE sanitizing (for FOMO counter)
+  const totalWithExplanations = allEvents.filter(
+    (e) => e.explanations && Object.keys(e.explanations).length > 0
+  ).length;
+
+  // Free users: limit to 10 events, only latest gets full explanations
   const limitedEvents = isSubscribed ? allEvents : allEvents.slice(0, 10);
   const events = limitedEvents.map((event, index) => {
     if (isSubscribed || index === 0) return event;
@@ -28,6 +33,7 @@ export default async function NotificationsPage() {
         isSubscribed={isSubscribed}
         isLoggedIn={!!user}
         locale={locale}
+        totalWithExplanations={totalWithExplanations}
       />
     </div>
   );
