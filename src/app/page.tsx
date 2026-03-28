@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HeroMetrics from "@/components/HeroMetrics";
 import ScrollReveal from "@/components/ScrollReveal";
+import HomeNoticiasPreview from "@/components/HomeNoticiasPreview";
 import { getTranslations } from "next-intl/server";
 
 export default async function Home() {
@@ -23,7 +24,17 @@ export default async function Home() {
         activeStocks.length
       : 0;
 
-  const samplePick = activeStocks[0];
+  const lastTx = transactions[transactions.length - 1];
+  const samplePick = lastTx
+    ? activeStocks.find((s) => s.ticker === lastTx.ticker) ?? activeStocks[0]
+    : activeStocks[0];
+  const samplePickNumber = lastTx?.id ?? 1;
+  const samplePickDate = lastTx
+    ? new Date(lastTx.date).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+      })
+    : null;
 
   return (
     <div className="space-y-24">
@@ -151,41 +162,54 @@ export default async function Home() {
       <ScrollReveal>
         <section className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">{t("trackTitle")}</h2>
-          <div className="grid grid-cols-3 gap-4 mb-8">
-            <ScrollReveal delay={100}>
-              <div className="border border-border rounded-xl p-5 text-center card-hover">
-                <p className="text-3xl font-bold font-mono">{activeStocks.length}</p>
-                <p className="text-sm text-text-muted mt-1">{t("companiesInPortfolio")}</p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="border border-border rounded-xl p-5 text-center card-hover">
-                <p className="text-3xl font-bold font-mono text-amber-600 dark:text-amber-400">{avgDivYield.toFixed(1)}%</p>
-                <p className="text-sm text-text-muted mt-1">{t("avgDivYieldLabel")}</p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={300}>
-              <div className="border border-border rounded-xl p-5 text-center card-hover">
-                <p className="text-3xl font-bold font-mono">{regions}</p>
-                <p className="text-sm text-text-muted mt-1">{t("regionsOfWorld")}</p>
-              </div>
-            </ScrollReveal>
-          </div>
 
+          {/* CTA to /stocks */}
+          <ScrollReveal delay={100}>
+            <div className="border border-brand-border bg-brand-subtle rounded-xl p-6 text-center mb-8">
+              <p className="text-lg font-semibold">{t("trackCta")}</p>
+              <p className="text-sm text-text-muted mt-1">{t("trackCtaDesc", { count: activeStocks.length })}</p>
+              <Link
+                href="/stocks"
+                className="inline-block mt-4 bg-brand hover:bg-brand-hover text-white px-6 py-2.5 rounded-lg font-medium transition-colors"
+              >
+                {t("trackCtaButton")} {"\u2192"}
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          {/* Ticker pills — show first 8 + "and X more" */}
           <ScrollReveal>
             <div className="flex flex-wrap justify-center gap-2 mb-8">
-              {tickers.map((ticker) => (
+              {tickers.slice(0, 8).map((ticker) => (
                 <span key={ticker} className="text-xs font-mono px-3 py-1.5 rounded-full bg-tag-bg text-text-muted border border-border">
                   {ticker}
                 </span>
               ))}
+              {tickers.length > 8 && (
+                <Link
+                  href="/stocks"
+                  className="text-xs font-mono px-3 py-1.5 rounded-full bg-brand-subtle text-brand border border-brand-border hover:bg-brand hover:text-white transition-colors"
+                >
+                  {t("andMore", { count: tickers.length - 8 })}
+                </Link>
+              )}
             </div>
           </ScrollReveal>
 
+          {/* Latest pick card */}
           {samplePick && (
             <ScrollReveal>
               <div className="border border-border rounded-xl p-6 max-w-2xl mx-auto card-hover">
-                <p className="text-xs text-text-faint uppercase tracking-wider mb-3">{t("samplePickLabel")}</p>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-brand bg-brand-subtle px-2.5 py-0.5 rounded-full border border-brand-border">
+                    {t("latestPickLabel")}
+                  </span>
+                  {samplePickDate && (
+                    <span className="text-xs text-text-faint font-mono">
+                      {t("pickNumber", { number: samplePickNumber, date: samplePickDate })}
+                    </span>
+                  )}
+                </div>
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="text-lg font-bold">
                     {samplePick.ticker} <span className="text-text-muted font-normal">— {samplePick.name}</span>
@@ -200,7 +224,7 @@ export default async function Home() {
                 <p className="text-sm text-text-muted mt-3">{samplePick.summary_what}</p>
                 <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
                   <p className="text-xs text-text-faint">{t("samplePickFooter")}</p>
-                  <Link href="/join" className="text-sm text-brand-text font-medium hover:text-brand-hover">{t("seeMore")}</Link>
+                  <Link href={`/stocks/${samplePick.ticker}`} className="text-sm text-brand-text font-medium hover:text-brand-hover">{t("seeMore")}</Link>
                 </div>
               </div>
             </ScrollReveal>
@@ -223,6 +247,11 @@ export default async function Home() {
             ))}
           </div>
         </section>
+      </ScrollReveal>
+
+      {/* NOTICIAS PREVIEW */}
+      <ScrollReveal>
+        <HomeNoticiasPreview />
       </ScrollReveal>
 
       {/* PRICING */}
