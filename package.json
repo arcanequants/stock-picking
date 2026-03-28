@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@coinbase/x402": "^2.1.0",
+    "@simplewebauthn/browser": "^13.3.0",
+    "@simplewebauthn/server": "^13.3.0",
     "@supabase/ssr": "^0.9.0",
     "@supabase/supabase-js": "^2.99.0",
     "@x402/core": "^2.7.0",

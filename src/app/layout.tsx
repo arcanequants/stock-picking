@@ -13,6 +13,7 @@ import { getAuthState } from "@/lib/auth";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
+import { headers } from "next/headers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -55,11 +56,17 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") || "";
+  const isMarketing = pathname.startsWith("/marketing");
+
   const locale = await getLocale();
   const messages = await getMessages();
   const t = await getTranslations("Nav");
   const tFooter = await getTranslations("Footer");
-  const { user, isSubscribed } = await getAuthState();
+  const { user, isSubscribed } = isMarketing
+    ? { user: null, isSubscribed: false }
+    : await getAuthState();
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -68,99 +75,105 @@ export default async function RootLayout({
       >
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            {/* Navigation */}
-            <nav className="border-b border-border sticky top-0 backdrop-blur-md z-50 relative" style={{ background: 'var(--nav-bg)' }}>
-              <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2">
-                  <Image src="/logo.png" alt="Vectorial Data" width={32} height={32} className="hidden md:block" />
-                  <Image src="/logo.png" alt="Vectorial Data" width={28} height={28} className="block md:hidden" />
-                  <span className="font-semibold text-lg">Vectorial Data</span>
-                </Link>
+            {/* Navigation — hidden on marketing dashboard */}
+            {!isMarketing && (
+              <nav className="border-b border-border sticky top-0 backdrop-blur-md z-50 relative" style={{ background: 'var(--nav-bg)' }}>
+                <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+                  <Link href="/" className="flex items-center gap-2">
+                    <Image src="/logo.png" alt="Vectorial Data" width={32} height={32} className="hidden md:block" />
+                    <Image src="/logo.png" alt="Vectorial Data" width={28} height={28} className="block md:hidden" />
+                    <span className="font-semibold text-lg">Vectorial Data</span>
+                  </Link>
 
-                {/* Desktop Nav */}
-                <div className="hidden md:flex items-center gap-6 text-sm">
-                  <Link
-                    href="/"
-                    className="text-text-muted hover:text-foreground transition-colors"
-                  >
-                    {t("home")}
-                  </Link>
-                  <Link
-                    href="/portfolio"
-                    className="text-text-muted hover:text-foreground transition-colors"
-                  >
-                    {t("portfolio")}
-                  </Link>
-                  <Link
-                    href="/stocks"
-                    className="text-text-muted hover:text-foreground transition-colors"
-                  >
-                    {t("stocks")}
-                  </Link>
-                  <Link
-                    href="/notifications"
-                    className="text-text-muted hover:text-foreground transition-colors"
-                  >
-                    {t("noticias")}
-                  </Link>
-                  <Link
-                    href="/developers"
-                    className="text-text-muted hover:text-foreground transition-colors"
-                  >
-                    API
-                  </Link>
-                  <LanguageSwitcher />
-                  <ThemeToggle />
-                  <NotificationBell isSubscribed={isSubscribed} />
-                  <AuthButton
-                    userEmail={user?.email ?? null}
-                    isSubscribed={isSubscribed}
-                  />
-                  {!isSubscribed && (
+                  {/* Desktop Nav */}
+                  <div className="hidden md:flex items-center gap-6 text-sm">
                     <Link
-                      href="/join"
-                      className="bg-brand hover:bg-brand-hover text-white px-4 py-1.5 rounded-lg transition-colors font-medium"
+                      href="/"
+                      className="text-text-muted hover:text-foreground transition-colors"
                     >
-                      {t("join")}
+                      {t("home")}
                     </Link>
-                  )}
-                </div>
+                    <Link
+                      href="/portfolio"
+                      className="text-text-muted hover:text-foreground transition-colors"
+                    >
+                      {t("portfolio")}
+                    </Link>
+                    <Link
+                      href="/stocks"
+                      className="text-text-muted hover:text-foreground transition-colors"
+                    >
+                      {t("stocks")}
+                    </Link>
+                    <Link
+                      href="/notifications"
+                      className="text-text-muted hover:text-foreground transition-colors"
+                    >
+                      {t("noticias")}
+                    </Link>
+                    <Link
+                      href="/developers"
+                      className="text-text-muted hover:text-foreground transition-colors"
+                    >
+                      API
+                    </Link>
+                    <LanguageSwitcher />
+                    <ThemeToggle />
+                    <NotificationBell isSubscribed={isSubscribed} />
+                    <AuthButton
+                      userEmail={user?.email ?? null}
+                      isSubscribed={isSubscribed}
+                    />
+                    {!isSubscribed && (
+                      <Link
+                        href="/join"
+                        className="bg-brand hover:bg-brand-hover text-white px-4 py-1.5 rounded-lg transition-colors font-medium"
+                      >
+                        {t("join")}
+                      </Link>
+                    )}
+                  </div>
 
-                {/* Mobile Nav */}
-                <div className="flex md:hidden items-center gap-2">
-                  <LanguageSwitcher />
-                  <ThemeToggle />
-                  <MobileNav
-                    userEmail={user?.email ?? null}
-                    isSubscribed={isSubscribed}
-                  />
+                  {/* Mobile Nav */}
+                  <div className="flex md:hidden items-center gap-2">
+                    <LanguageSwitcher />
+                    <ThemeToggle />
+                    <MobileNav
+                      userEmail={user?.email ?? null}
+                      isSubscribed={isSubscribed}
+                    />
+                  </div>
                 </div>
-              </div>
-            </nav>
+              </nav>
+            )}
 
-            <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
+            {isMarketing ? children : (
+              <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
+            )}
 
-            {/* Footer */}
-            <footer className="border-t border-border mt-16">
-              <div className="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-text-faint">
-                <div className="flex items-center justify-center gap-2 mb-3">
-                  <Image src="/logo.png" alt="Vectorial Data" width={24} height={24} />
-                  <span className="font-semibold text-text-muted">Vectorial Data</span>
+            {/* Footer — hidden on marketing dashboard */}
+            {!isMarketing && (
+              <footer className="border-t border-border mt-16">
+                <div className="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-text-faint">
+                  <div className="flex items-center justify-center gap-2 mb-3">
+                    <Image src="/logo.png" alt="Vectorial Data" width={24} height={24} />
+                    <span className="font-semibold text-text-muted">Vectorial Data</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-3 mb-3 text-text-muted">
+                    <Link href="/terms" className="hover:text-foreground transition-colors">{tFooter("terms")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/privacy" className="hover:text-foreground transition-colors">{tFooter("privacy")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/disclaimer" className="hover:text-foreground transition-colors">{tFooter("financialDisclaimer")}</Link>
+                  </div>
+                  <p>{tFooter("disclaimer")}</p>
+                  <p className="mt-1">{tFooter("prices")}</p>
+                  <p className="mt-1">{tFooter("copyright", { year: new Date().getFullYear() })}</p>
                 </div>
-                <div className="flex items-center justify-center gap-3 mb-3 text-text-muted">
-                  <Link href="/terms" className="hover:text-foreground transition-colors">{tFooter("terms")}</Link>
-                  <span className="text-border">·</span>
-                  <Link href="/privacy" className="hover:text-foreground transition-colors">{tFooter("privacy")}</Link>
-                  <span className="text-border">·</span>
-                  <Link href="/disclaimer" className="hover:text-foreground transition-colors">{tFooter("financialDisclaimer")}</Link>
-                </div>
-                <p>{tFooter("disclaimer")}</p>
-                <p className="mt-1">{tFooter("prices")}</p>
-                <p className="mt-1">{tFooter("copyright", { year: new Date().getFullYear() })}</p>
-              </div>
-            </footer>
+              </footer>
+            )}
 
-            <CookieConsent />
+            {!isMarketing && <CookieConsent />}
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
