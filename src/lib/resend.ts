@@ -59,7 +59,7 @@ const L: Record<string, Record<string, string>> = {
     down: "bajó",
     exDiv: "te paga el",
     yield: "al año",
-    reportsOn: "reporta resultados el",
+    reportsOn: "nos cuenta cómo le fue el",
     inDays: "en {days} días",
     analystUp: "recomiendan comprar",
     analystDown: "recomiendan comprar",
@@ -89,7 +89,7 @@ const L: Record<string, Record<string, string>> = {
     down: "fell",
     exDiv: "pays you on",
     yield: "per year",
-    reportsOn: "reports earnings on",
+    reportsOn: "shares how it did on",
     inDays: "in {days} days",
     analystUp: "rate Buy",
     analystDown: "rate Buy",
@@ -119,7 +119,7 @@ const L: Record<string, Record<string, string>> = {
     down: "caiu",
     exDiv: "te paga el",
     yield: "al año",
-    reportsOn: "reporta resultados em",
+    reportsOn: "nos conta como foi em",
     inDays: "em {days} dias",
     analystUp: "recomendam compra",
     analystDown: "recomendam compra",
@@ -149,7 +149,7 @@ const L: Record<string, Record<string, string>> = {
     down: "गिरा",
     exDiv: "तुम्हें भुगतान करेगा",
     yield: "सालाना",
-    reportsOn: "कमाई रिपोर्ट करेगा",
+    reportsOn: "बताएगा कैसा रहा",
     inDays: "{days} दिन में",
     analystUp: "खरीदने की सलाह",
     analystDown: "खरीदने की सलाह",
@@ -178,6 +178,22 @@ interface GroupedEvents {
 }
 
 // --- Helpers ---
+
+// Translate stored English dates ("Apr 15") to locale ("15 de abr")
+const MONTHS_ES: Record<string, string> = { Jan: "ene", Feb: "feb", Mar: "mar", Apr: "abr", May: "may", Jun: "jun", Jul: "jul", Aug: "ago", Sep: "sep", Oct: "oct", Nov: "nov", Dec: "dic" };
+const MONTHS_PT: Record<string, string> = { Jan: "jan", Feb: "fev", Mar: "mar", Apr: "abr", May: "mai", Jun: "jun", Jul: "jul", Aug: "ago", Sep: "set", Oct: "out", Nov: "nov", Dec: "dez" };
+const MONTHS_HI: Record<string, string> = { Jan: "जन", Feb: "फ़र", Mar: "मार्च", Apr: "अप्रैल", May: "मई", Jun: "जून", Jul: "जुल", Aug: "अग", Sep: "सित", Oct: "अक्ट", Nov: "नव", Dec: "दिस" };
+
+function localizeDate(dateStr: string, locale: string): string {
+  // Input: "Apr 15" → Output (es): "15 de abr"
+  const match = dateStr.match(/^(\w+)\s+(\d+)$/);
+  if (!match) return dateStr;
+  const [, month, day] = match;
+  if (locale === "es") return `${day} de ${MONTHS_ES[month] ?? month}`;
+  if (locale === "pt") return `${day} de ${MONTHS_PT[month] ?? month}`;
+  if (locale === "hi") return `${day} ${MONTHS_HI[month] ?? month}`;
+  return dateStr; // English keeps "Apr 15"
+}
 
 function groupEvents(events: PortfolioEvent[]): GroupedEvents {
   return {
@@ -251,11 +267,11 @@ function renderDigestLine(e: PortfolioEvent, locale: string): string {
   const tickerLink = `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${name}</strong></a>`;
 
   if (e.title_key.includes("dividendExDate"))
-    return `${tickerLink} — ${t(lang, "exDiv")} ${p.date} (${p.yield}% ${t(lang, "yield")})`; // e.g. "CaixaBank — te paga el Apr 8 (5.0% al año)"
+    return `${tickerLink} — ${t(lang, "exDiv")} ${localizeDate(p.date, lang)} (${p.yield}% ${t(lang, "yield")})`;
   if (e.title_key.includes("dividendPaid"))
     return `${tickerLink} — ${p.amount}`;
   if (e.title_key.includes("earningsUpcoming"))
-    return `${tickerLink} — ${t(lang, "reportsOn")} ${p.date}`;
+    return `${tickerLink} — ${t(lang, "reportsOn")} ${localizeDate(p.date, lang)}`;
   if (e.title_key.includes("ConsensusUp") || e.title_key.includes("ConsensusDown"))
     return `${tickerLink} — ${p.buyPct}% ${t(lang, "analystUp")} (${parseInt(p.analysts) === 1 ? "1 analista" : `${p.analysts} analistas`})`;
   if (e.title_key.includes("newsAlert"))
