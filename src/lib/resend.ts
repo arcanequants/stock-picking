@@ -57,8 +57,8 @@ const L: Record<string, Record<string, string>> = {
     actionLabel: "Para nuestro portafolio",
     up: "subió",
     down: "bajó",
-    exDiv: "ex-dividendo",
-    yield: "rendimiento",
+    exDiv: "te paga el",
+    yield: "al año",
     reportsOn: "reporta resultados el",
     inDays: "en {days} días",
     analystUp: "recomiendan comprar",
@@ -87,8 +87,8 @@ const L: Record<string, Record<string, string>> = {
     actionLabel: "For our portfolio",
     up: "rose",
     down: "fell",
-    exDiv: "ex-dividend",
-    yield: "yield",
+    exDiv: "pays you on",
+    yield: "per year",
     reportsOn: "reports earnings on",
     inDays: "in {days} days",
     analystUp: "rate Buy",
@@ -117,8 +117,8 @@ const L: Record<string, Record<string, string>> = {
     actionLabel: "Para nosso portfólio",
     up: "subiu",
     down: "caiu",
-    exDiv: "ex-dividendo",
-    yield: "rendimento",
+    exDiv: "te paga el",
+    yield: "al año",
     reportsOn: "reporta resultados em",
     inDays: "em {days} dias",
     analystUp: "recomendam compra",
@@ -147,8 +147,8 @@ const L: Record<string, Record<string, string>> = {
     actionLabel: "हमारे पोर्टफोलियो के लिए",
     up: "बढ़ा",
     down: "गिरा",
-    exDiv: "एक्स-डिविडेंड",
-    yield: "यील्ड",
+    exDiv: "तुम्हें भुगतान करेगा",
+    yield: "सालाना",
     reportsOn: "कमाई रिपोर्ट करेगा",
     inDays: "{days} दिन में",
     analystUp: "खरीदने की सलाह",
@@ -251,7 +251,7 @@ function renderDigestLine(e: PortfolioEvent, locale: string): string {
   const tickerLink = `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${name}</strong></a>`;
 
   if (e.title_key.includes("dividendExDate"))
-    return `${tickerLink} — ${t(lang, "exDiv")} ${p.date} (${p.yield}% ${t(lang, "yield")})`;
+    return `${tickerLink} — ${t(lang, "exDiv")} ${p.date} (${p.yield}% ${t(lang, "yield")})`; // e.g. "CaixaBank — te paga el Apr 8 (5.0% al año)"
   if (e.title_key.includes("dividendPaid"))
     return `${tickerLink} — ${p.amount}`;
   if (e.title_key.includes("earningsUpcoming"))
