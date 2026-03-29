@@ -49,6 +49,7 @@ export function getResearchData(ticker: string, tier = "free") {
   );
   if (!stock) return null;
 
+  // Free tier: basic identification + summary_short only
   const base = {
     ticker: stock.ticker,
     name: stock.name,
@@ -58,6 +59,17 @@ export function getResearchData(ticker: string, tier = "free") {
     region: stock.region,
     currency: stock.currency,
     price: stock.price,
+    summary_short: stock.summary_short,
+    status: stock.status,
+    first_researched_at: stock.first_researched_at,
+    last_updated_at: stock.last_updated_at,
+  };
+
+  if (tier === "free") return base;
+
+  // Pro: add financials + detailed summaries
+  const pro = {
+    ...base,
     pe_ratio: stock.pe_ratio,
     pe_forward: stock.pe_forward,
     dividend_yield: stock.dividend_yield,
@@ -66,20 +78,17 @@ export function getResearchData(ticker: string, tier = "free") {
     analyst_consensus: stock.analyst_consensus,
     analyst_target: stock.analyst_target,
     analyst_upside: stock.analyst_upside,
-    summary_short: stock.summary_short,
     summary_what: stock.summary_what,
     summary_why: stock.summary_why,
     summary_risk: stock.summary_risk,
-    status: stock.status,
-    first_researched_at: stock.first_researched_at,
-    last_updated_at: stock.last_updated_at,
   };
 
-  if (tier === "pro" || tier === "enterprise") {
-    return { ...base, research_full: stock.research_full };
+  // Enterprise: add full research
+  if (tier === "enterprise") {
+    return { ...pro, research_full: stock.research_full };
   }
 
-  return base;
+  return pro;
 }
 
 export async function getPortfolioSummary() {
@@ -102,13 +111,12 @@ export async function getPortfolioSummary() {
   return {
     total_return_pct: totalReturnPct,
     total_positions: transactions.length,
-    total_invested_usd: totalInvested,
     since: transactions.length > 0 ? transactions[0].date : null,
     current_cycle: cycles.find((c) => c.status === "active") ?? null,
   };
 }
 
-export async function getPositions() {
+export async function getPositions(tier = "free") {
   const prices = await getLatestPrices();
   let totalInvested = 0;
   let totalValue = 0;
@@ -137,12 +145,15 @@ export async function getPositions() {
 
   positions.sort((a, b) => b.return_pct - a.return_pct);
 
+  // Free tier: top 3 performers only
+  const finalPositions = tier === "free" ? positions.slice(0, 3) : positions;
+
   const totalReturnPct = totalInvested > 0
     ? Math.round((((totalValue - totalInvested) / totalInvested) * 100) * 100) / 100
     : 0;
 
   return {
-    positions,
+    positions: finalPositions,
     total_return_pct: totalReturnPct,
     total_positions: positions.length,
     since: transactions.length > 0 ? transactions[0].date : null,
@@ -209,7 +220,20 @@ export function getRegionAllocation() {
 
 export function getStocksList(tier = "free") {
   return stocks.map((s) => {
-    const base = {
+    // Free tier: identification only — no financials
+    if (tier === "free") {
+      return {
+        ticker: s.ticker,
+        name: s.name,
+        sector: s.sector,
+        country: s.country,
+        region: s.region,
+        status: s.status,
+      };
+    }
+
+    // Pro/Enterprise: full data
+    return {
       ticker: s.ticker,
       name: s.name,
       sector: s.sector,
@@ -227,11 +251,79 @@ export function getStocksList(tier = "free") {
       analyst_upside: s.analyst_upside,
       status: s.status,
       summary_short: s.summary_short,
+      summary_what: s.summary_what,
+      summary_why: s.summary_why,
+      summary_risk: s.summary_risk,
     };
-
-    if (tier === "pro" || tier === "enterprise") {
-      return { ...base, summary_what: s.summary_what, summary_why: s.summary_why, summary_risk: s.summary_risk };
-    }
-    return base;
   });
+}
+
+// --- Events data for API ---
+
+export async function getEventsData(tier = "free", limit?: number) {
+  const { getRecentEvents } = await import("@/lib/notifications");
+  const maxEvents = tier === "free" ? 3 : (limit || 20);
+  const events = await getRecentEvents(maxEvents);
+
+  if (tier === "free") {
+    // Strip AI explanations for free tier
+    return events.map(({ explanations: _e, ...rest }) => rest);
+  }
+
+  return events;
+}
+
+// --- Latest digest data for API ---
+
+export async function getDigestLatestData(tier = "free") {
+  const { getEventsForDigest } = await import("@/lib/notifications");
+
+  const since = new Date();
+  since.setDate(since.getDate() - 7);
+  const events = await getEventsForDigest(since);
+
+  // Get weekly performance
+  const supabase = getSupabase();
+  const { data: latest } = await supabase
+    .from("portfolio_snapshots")
+    .select("return_pct, date")
+    .order("date", { ascending: false })
+    .limit(1);
+
+  let portfolio: { weeklyChangePct: number; totalReturnPct: number } | null = null;
+  if (latest?.length) {
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    const dateStr = sevenDaysAgo.toISOString().split("T")[0];
+
+    const { data: weekAgo } = await supabase
+      .from("portfolio_snapshots")
+      .select("return_pct, date")
+      .lte("date", dateStr)
+      .order("date", { ascending: false })
+      .limit(1);
+
+    const currentReturn = latest[0].return_pct as number;
+    const previousReturn = (weekAgo?.[0]?.return_pct as number) ?? 0;
+
+    portfolio = {
+      weeklyChangePct: Math.round((currentReturn - previousReturn) * 100) / 100,
+      totalReturnPct: Math.round(currentReturn * 100) / 100,
+    };
+  }
+
+  // Free tier: summary only (counts + portfolio)
+  if (tier === "free") {
+    return {
+      events_count: events.length,
+      portfolio,
+    };
+  }
+
+  // Pro: full events with explanations + portfolio
+  return {
+    events,
+    events_count: events.length,
+    portfolio,
+  };
 }

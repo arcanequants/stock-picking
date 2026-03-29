@@ -300,13 +300,21 @@
   "Welcome": {
     "title": "Bem-vindo ao Vectorial Data!",
     "subtitle": "Sua assinatura está ativa. Veja como começar.",
-    "step1Title": "Entre no grupo do WhatsApp",
-    "step1Desc": "Aqui você receberá seus picks diários de ações. Toque no botão para entrar.",
-    "joinWhatsApp": "Entrar no grupo do WhatsApp",
+    "step1TitleNew": "Como você quer receber seus picks?",
     "step2Title": "Desbloqueie o conteúdo premium",
     "step2Desc": "Faça login com seu email para acessar o gráfico completo, posições e transações.",
     "goToPortfolio": "Ir ao Portfólio",
-    "tip": "Dica: Os picks chegam de segunda a sexta. Use o mesmo email com que você pagou para fazer login."
+    "tip": "Dica: Os picks chegam de segunda a sexta. Use o mesmo email com que você pagou para fazer login.",
+    "deliveryTitle": "Escolha seu canal de entrega",
+    "deliverySubtitle": "Você pode mudar isso a qualquer momento.",
+    "channelWhatsApp": "WhatsApp",
+    "channelWhatsAppDesc": "Receba picks no grupo do WhatsApp. Mais rápido.",
+    "channelEmail": "Email",
+    "channelEmailDesc": "Receba cada pick por email. Sem precisar do WhatsApp.",
+    "channelBoth": "Ambos",
+    "channelBothDesc": "Receba picks por WhatsApp e também por email.",
+    "deliverySaved": "Preferência salva",
+    "deliverySaving": "Salvando..."
   },
   "Notifications": {
     "title": "Notificações",

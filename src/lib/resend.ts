@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import type { PortfolioEvent } from "@/lib/types";
+import type { PortfolioEvent, Stock, Transaction } from "@/lib/types";
 import { stocks } from "@/data/stocks";
 
 // Ticker → company name map (e.g., "ARM" → "Arm Holdings")
@@ -717,4 +717,230 @@ export async function sendDigestEmail(
   });
 
   if (error) throw new Error(`Failed to send digest: ${error.message}`);
+}
+
+// --- Pick email ---
+
+const PICK_L: Record<string, Record<string, string>> = {
+  es: {
+    subject: "Stock Pick #{pick} — {name}",
+    header: "STOCK PICK #{pick}",
+    date: "{date}",
+    priceLabel: "Precio",
+    whatTheyDo: "Qué hacen",
+    income: "Tu nuevo ingreso",
+    incomeDesc: "Esta empresa te paga {yield}% anual solo por ser dueño.",
+    noDiv: "{name} no paga dividendo todavía, pero tu ganancia viene del crecimiento del negocio.",
+    risk: "El riesgo",
+    position: "Posición #{pick}",
+    viewResearch: "Ver research completo",
+    footer: "Esto no es consejo de inversión.",
+    signoff: "— El equipo de Vectorial Data",
+    type_new: "Nueva",
+    type_rebuy: "Recompra",
+  },
+  en: {
+    subject: "Stock Pick #{pick} — {name}",
+    header: "STOCK PICK #{pick}",
+    date: "{date}",
+    priceLabel: "Price",
+    whatTheyDo: "What they do",
+    income: "Your new income",
+    incomeDesc: "This company pays you {yield}% per year just for owning it.",
+    noDiv: "{name} doesn't pay a dividend yet, but your gain comes from business growth.",
+    risk: "The risk",
+    position: "Position #{pick}",
+    viewResearch: "View full research",
+    footer: "This is not investment advice.",
+    signoff: "— The Vectorial Data team",
+    type_new: "New",
+    type_rebuy: "Rebuy",
+  },
+  pt: {
+    subject: "Stock Pick #{pick} — {name}",
+    header: "STOCK PICK #{pick}",
+    date: "{date}",
+    priceLabel: "Preço",
+    whatTheyDo: "O que fazem",
+    income: "Sua nova renda",
+    incomeDesc: "Esta empresa te paga {yield}% ao ano só por ser dono.",
+    noDiv: "{name} ainda não paga dividendos, mas seu ganho vem do crescimento do negócio.",
+    risk: "O risco",
+    position: "Posição #{pick}",
+    viewResearch: "Ver research completo",
+    footer: "Isto não é conselho de investimento.",
+    signoff: "— A equipe Vectorial Data",
+    type_new: "Nova",
+    type_rebuy: "Recompra",
+  },
+  hi: {
+    subject: "Stock Pick #{pick} — {name}",
+    header: "STOCK PICK #{pick}",
+    date: "{date}",
+    priceLabel: "कीमत",
+    whatTheyDo: "यह कंपनी क्या करती है",
+    income: "आपकी नई आय",
+    incomeDesc: "यह कंपनी आपको मालिक होने के लिए सालाना {yield}% देती है।",
+    noDiv: "{name} अभी लाभांश नहीं देता, लेकिन आपका लाभ व्यवसाय वृद्धि से आता है।",
+    risk: "जोखिम",
+    position: "पोजीशन #{pick}",
+    viewResearch: "पूरा रिसर्च देखें",
+    footer: "यह निवेश सलाह नहीं है।",
+    signoff: "— Vectorial Data टीम",
+    type_new: "नई",
+    type_rebuy: "पुनर्खरीद",
+  },
+};
+
+function pickT(locale: string, key: string): string {
+  return PICK_L[locale]?.[key] ?? PICK_L.en[key] ?? key;
+}
+
+function buildPickEmailHtml(
+  stock: Stock,
+  pickNumber: number,
+  tx: Transaction,
+  locale = "es"
+): string {
+  const lang = PICK_L[locale] ? locale : "es";
+  const name = stock.name.replace(/ (PLC|Inc\.|Ltd\.|S\.A\.|AG|N\.V\.|Corporation|Company)\.?$/i, "");
+  const typeBadgeColor = tx.type === "new" ? "#4f46e5" : "#16a34a";
+  const typeLabel = tx.type === "new" ? pickT(lang, "type_new") : pickT(lang, "type_rebuy");
+
+  const incomeLine = stock.dividend_yield && stock.dividend_yield > 0
+    ? pickT(lang, "incomeDesc").replace("{yield}", stock.dividend_yield.toFixed(1))
+    : pickT(lang, "noDiv").replace("{name}", name);
+
+  const riskLine = stock.summary_risk?.split(".")[0] || "";
+
+  return `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
+  ${previewText(`Stock Pick #${pickNumber} — ${name} ($${stock.price?.toFixed(2)})`)}
+  <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+    <div style="background:#4f46e5;padding:20px 24px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <h1 style="margin:0;color:#fff;font-size:18px;font-weight:600;">${pickT(lang, "header").replace("{pick}", String(pickNumber))}</h1>
+        <span style="background:${typeBadgeColor};color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;">${typeLabel}</span>
+      </div>
+      <p style="margin:4px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">${tx.date}</p>
+    </div>
+    <div style="padding:20px 24px;">
+      <!-- Company + Price -->
+      <div style="margin-bottom:20px;">
+        <h2 style="margin:0;font-size:22px;font-weight:700;color:#111827;">${name}</h2>
+        <p style="margin:4px 0 0;font-size:14px;color:#6b7280;">${stock.ticker} · ${stock.sector} · ${stock.country}</p>
+        <p style="margin:8px 0 0;font-size:28px;font-weight:700;color:#111827;">$${stock.price?.toFixed(2)}</p>
+      </div>
+
+      <!-- What they do -->
+      ${stock.summary_what ? `
+      <div style="margin-bottom:16px;padding:12px 16px;background:#f0f0ff;border-radius:8px;">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#4f46e5;text-transform:uppercase;letter-spacing:0.5px;">${pickT(lang, "whatTheyDo")}</p>
+        <p style="margin:0;font-size:14px;color:#374151;line-height:1.5;">${stock.summary_what}</p>
+      </div>` : ""}
+
+      <!-- Income -->
+      <div style="margin-bottom:16px;padding:12px 16px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.5px;">${pickT(lang, "income")}</p>
+        <p style="margin:0;font-size:14px;color:#374151;line-height:1.5;">${incomeLine}</p>
+      </div>
+
+      <!-- Risk -->
+      ${riskLine ? `
+      <div style="margin-bottom:16px;padding:12px 16px;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#dc2626;text-transform:uppercase;letter-spacing:0.5px;">${pickT(lang, "risk")}</p>
+        <p style="margin:0;font-size:14px;color:#374151;line-height:1.5;">${riskLine}.</p>
+      </div>` : ""}
+
+      <!-- Position badge -->
+      <p style="margin:16px 0 0;font-size:13px;color:#6b7280;">${pickT(lang, "position").replace("{pick}", String(pickNumber))}</p>
+    </div>
+    <div style="padding:16px 24px;border-top:1px solid #e4e4e7;text-align:center;">
+      <a href="${SITE}/stocks/${stock.ticker}" style="display:inline-block;background:#4f46e5;color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;">${pickT(lang, "viewResearch")}</a>
+    </div>
+    <div style="padding:16px 24px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0;font-size:13px;color:#6b7280;">${pickT(lang, "signoff")}</p>
+    </div>
+    <div style="padding:12px 24px;text-align:center;font-size:11px;color:#a1a1aa;">
+      <p style="margin:0;">Vectorial Data — <a href="${SITE}" style="color:#a1a1aa;">vectorialdata.com</a></p>
+      <p style="margin:4px 0 0;">${pickT(lang, "footer")}</p>
+    </div>
+  </div>
+</body>
+</html>`;
+}
+
+export async function sendPickApprovalEmail(
+  adminEmail: string,
+  stock: Stock,
+  pickNumber: number,
+  tx: Transaction,
+  approveUrl: string,
+  recipientCount: number
+) {
+  const name = stock.name.replace(/ (PLC|Inc\.|Ltd\.|S\.A\.|AG|N\.V\.|Corporation|Company)\.?$/i, "");
+  const pickPreview = buildPickEmailHtml(stock, pickNumber, tx, "es");
+
+  const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
+  <div style="max-width:600px;margin:0 auto;">
+    <div style="background:#f59e0b;border-radius:12px 12px 0 0;padding:20px 24px;">
+      <h1 style="margin:0;color:#fff;font-size:18px;font-weight:600;">PREVIEW — Pick #${pickNumber} (${name})</h1>
+      <p style="margin:4px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Esperando tu aprobacion para enviar</p>
+    </div>
+    <div style="background:#fff;padding:16px 24px;border-left:1px solid #e4e4e7;border-right:1px solid #e4e4e7;">
+      <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:12px 16px;margin-bottom:16px;">
+        <p style="margin:0;font-size:13px;color:#92400e;font-weight:500;">${stock.ticker} · ${tx.type === "new" ? "Nueva" : "Recompra"} · $${stock.price?.toFixed(2)} · ${recipientCount} destinatarios email</p>
+      </div>
+      <p style="margin:0 0 12px;font-size:12px;color:#71717a;font-weight:600;text-transform:uppercase;">Asi se vera el email del pick:</p>
+    </div>
+    <div style="border:2px dashed #d4d4d8;border-radius:8px;margin:0 0 16px;overflow:hidden;">
+      ${pickPreview}
+    </div>
+    <div style="text-align:center;padding:16px;">
+      <a href="${approveUrl}" style="display:inline-block;background:#16a34a;color:#fff;padding:14px 40px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Aprobar y Enviar</a>
+      <p style="margin:12px 0 0;font-size:12px;color:#9ca3af;">Si no apruebas, no se envia nada.</p>
+    </div>
+  </div>
+</body>
+</html>`;
+
+  const subject = `[APROBAR] Pick #${pickNumber} — ${name} (${stock.ticker}) — ${recipientCount} usuarios`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error)
+    throw new Error(`Failed to send pick approval email: ${error.message}`);
+}
+
+export async function sendPickEmail(
+  to: string,
+  stock: Stock,
+  pickNumber: number,
+  tx: Transaction,
+  locale = "es"
+) {
+  const name = stock.name.replace(/ (PLC|Inc\.|Ltd\.|S\.A\.|AG|N\.V\.|Corporation|Company)\.?$/i, "");
+  const lang = PICK_L[locale] ? locale : "es";
+  const subject = pickT(lang, "subject")
+    .replace("{pick}", String(pickNumber))
+    .replace("{name}", name) + " — Vectorial Data";
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to,
+    subject,
+    html: buildPickEmailHtml(stock, pickNumber, tx, locale),
+  });
+
+  if (error) throw new Error(`Failed to send pick email: ${error.message}`);
 }
