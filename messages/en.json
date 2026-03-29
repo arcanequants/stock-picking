@@ -415,6 +415,13 @@
     "success": "Done! You'll receive your first summary this Sunday.",
     "alreadyRegistered": "You're already signed up. See you Sunday!",
     "error": "Something went wrong. Try again.",
-    "invalidEmail": "Enter a valid email."
+    "invalidEmail": "Enter a valid email.",
+    "homeTitle": "Every Sunday, a summary of how our companies did.",
+    "homeSubtitle": "Free. No credit card.",
+    "homeFinalAlt": "Just want to try?",
+    "homeFinalDesc": "Get the free weekly summary — no card required.",
+    "stocksTitle": "Every Sunday we send you how they did — free.",
+    "portfolioTitle": "We'll update you every Sunday on the portfolio.",
+    "portfolioSubtitle": "Get a weekly summary with the most important moves."
   }
 }

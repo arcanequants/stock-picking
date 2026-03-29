@@ -4,10 +4,12 @@ import Image from "next/image";
 import HeroMetrics from "@/components/HeroMetrics";
 import ScrollReveal from "@/components/ScrollReveal";
 import HomeNoticiasPreview from "@/components/HomeNoticiasPreview";
+import FreeSignupForm from "@/components/FreeSignupForm";
 import { getTranslations } from "next-intl/server";
 
 export default async function Home() {
   const t = await getTranslations("Home");
+  const f = await getTranslations("FreeSignup");
   const activeStocks = stocks.filter((s) => s.status === "active");
   const regions = new Set(activeStocks.map((s) => s.region)).size;
   const tickers = activeStocks.map((s) => s.ticker);
@@ -161,6 +163,15 @@ export default async function Home() {
         </section>
       </ScrollReveal>
 
+      {/* FREE DIGEST SIGNUP — after how it works */}
+      <ScrollReveal>
+        <section className="max-w-md mx-auto text-center space-y-3">
+          <p className="text-lg font-semibold text-foreground">{f("homeTitle")}</p>
+          <p className="text-sm text-text-faint">{f("homeSubtitle")}</p>
+          <FreeSignupForm />
+        </section>
+      </ScrollReveal>
+
       {/* TRACK RECORD */}
       <ScrollReveal>
         <section className="max-w-4xl mx-auto">
@@ -306,6 +317,15 @@ export default async function Home() {
             <Link href="/join" className="cta-glow inline-block bg-brand hover:bg-brand-hover text-white px-8 py-3 rounded-xl font-semibold text-lg transition-colors">
               {t("ctaCta")}
             </Link>
+          </div>
+          <div className="max-w-md mx-auto mt-8 space-y-2">
+            <div className="flex items-center gap-3">
+              <div className="flex-1 h-px bg-border" />
+              <p className="text-sm text-text-muted font-medium">{f("homeFinalAlt")}</p>
+              <div className="flex-1 h-px bg-border" />
+            </div>
+            <p className="text-sm text-text-faint">{f("homeFinalDesc")}</p>
+            <FreeSignupForm />
           </div>
           <p className="text-xs text-text-faint mt-8">{t("ctaDisclaimer")}</p>
         </section>

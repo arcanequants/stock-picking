@@ -4,6 +4,7 @@ import PerformanceMetrics from "@/components/PerformanceMetrics";
 import PerformanceChart from "@/components/PerformanceChart";
 import PositionReturns from "@/components/PositionReturns";
 import PremiumGate from "@/components/PremiumGate";
+import FreeSignupForm from "@/components/FreeSignupForm";
 import { stocks, transactions, cycles } from "@/data/stocks";
 import { getTranslations } from "next-intl/server";
 import { getAuthState } from "@/lib/auth";
@@ -29,6 +30,7 @@ export default async function PortfolioPage() {
   const t = await getTranslations("Portfolio");
   const tPremium = await getTranslations("Premium");
   const tLegal = await getTranslations("Legal");
+  const tFree = await getTranslations("FreeSignup");
   const activeStocks = stocks.filter((s) => s.status === "active");
   // Fix: use active cycle, not cycles[0]
   const currentCycle =
@@ -160,6 +162,15 @@ export default async function PortfolioPage() {
 
       {/* 5. Cycle Tracker + Dashboard (less prominent, at the bottom) */}
       {currentCycle && <CycleTracker cycle={currentCycle} />}
+
+      {/* Free digest signup — for non-subscribers */}
+      {!isSubscribed && (
+        <section className="max-w-md mx-auto text-center space-y-3 py-4">
+          <p className="text-lg font-semibold text-foreground">{tFree("portfolioTitle")}</p>
+          <p className="text-sm text-text-faint">{tFree("portfolioSubtitle")}</p>
+          <FreeSignupForm />
+        </section>
+      )}
 
       {activeStocks.length > 0 && (
         <PortfolioDashboard stocks={stocks} cycle={currentCycle} />

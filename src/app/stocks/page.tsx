@@ -5,6 +5,7 @@ import { getAuthState } from "@/lib/auth";
 import { getRotationSeed, selectVisible, selectShowcase, selectFeatured } from "@/lib/rotation";
 import StocksView from "@/components/StocksView";
 import NotificationsBanner from "@/components/NotificationsBanner";
+import FreeSignupForm from "@/components/FreeSignupForm";
 
 export default async function StocksPage() {
   const t = await getTranslations("Stocks");
@@ -170,6 +171,8 @@ export default async function StocksPage() {
     selectionRotates: t("selectionRotates"),
   };
 
+  const f = await getTranslations("FreeSignup");
+
   return (
     <div className="space-y-10">
       {!isSubscribed && <NotificationsBanner />}
@@ -195,6 +198,13 @@ export default async function StocksPage() {
         featuredPick={featuredPickData}
         hiddenCount={hiddenItems.length}
       />
+
+      {!isSubscribed && (
+        <section className="max-w-md mx-auto text-center space-y-3 py-4">
+          <p className="text-lg font-semibold text-foreground">{f("stocksTitle")}</p>
+          <FreeSignupForm />
+        </section>
+      )}
     </div>
   );
 }

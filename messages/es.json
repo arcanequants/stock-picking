@@ -415,6 +415,13 @@
     "success": "¡Listo! Este domingo recibes tu primer resumen.",
     "alreadyRegistered": "Ya estás registrado. ¡Nos vemos el domingo!",
     "error": "Algo salió mal. Intenta de nuevo.",
-    "invalidEmail": "Ingresa un email válido."
+    "invalidEmail": "Ingresa un email válido.",
+    "homeTitle": "Cada domingo, un resumen de cómo les fue a nuestras empresas.",
+    "homeSubtitle": "Gratis. Sin tarjeta.",
+    "homeFinalAlt": "¿Solo quieres probar?",
+    "homeFinalDesc": "Recibe el resumen semanal gratis — sin tarjeta.",
+    "stocksTitle": "Cada domingo te mandamos cómo les fue — gratis.",
+    "portfolioTitle": "Te avisamos cada domingo cómo va el portafolio.",
+    "portfolioSubtitle": "Recibe un resumen semanal con los movimientos más importantes."
   }
 }
