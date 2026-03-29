@@ -406,5 +406,15 @@
     "disclaimerRegionalBrazil": "Brasil: Este servicio no está registrado ante la CVM. El contenido es de carácter educativo e informativo únicamente.",
     "disclaimerSourcesTitle": "6. Fuentes de Datos",
     "disclaimerSourcesContent": "Los datos financieros se obtienen de Yahoo Finance API y fuentes públicas. Los precios pueden tener retrasos. No garantizamos la precisión o actualidad de estos datos."
+  },
+  "FreeSignup": {
+    "separator": "¿Aún no estás seguro?",
+    "description": "Recibe nuestro resumen semanal gratis y decide después.",
+    "emailPlaceholder": "Tu email",
+    "cta": "Recibe el resumen gratis",
+    "success": "¡Listo! Este domingo recibes tu primer resumen.",
+    "alreadyRegistered": "Ya estás registrado. ¡Nos vemos el domingo!",
+    "error": "Algo salió mal. Intenta de nuevo.",
+    "invalidEmail": "Ingresa un email válido."
   }
 }

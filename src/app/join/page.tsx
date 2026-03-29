@@ -1,8 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import FreeSignupForm from "@/components/FreeSignupForm";
 
 export default async function JoinPage() {
   const t = await getTranslations("Join");
+  const f = await getTranslations("FreeSignup");
 
   return (
     <div className="max-w-2xl mx-auto text-center space-y-8">
@@ -38,6 +40,16 @@ export default async function JoinPage() {
             privacy: (chunks) => <Link href="/privacy" className="underline hover:text-text-muted">{chunks}</Link>,
           })}
         </p>
+      </div>
+
+      <div className="mx-auto max-w-md space-y-3">
+        <div className="flex items-center gap-3">
+          <div className="flex-1 h-px bg-border" />
+          <p className="text-sm text-text-muted font-medium">{f("separator")}</p>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+        <p className="text-sm text-text-faint">{f("description")}</p>
+        <FreeSignupForm />
       </div>
 
       <section className="text-left space-y-4 mt-12">
