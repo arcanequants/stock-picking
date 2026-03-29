@@ -1,5 +1,15 @@
 import { Resend } from "resend";
 import type { PortfolioEvent } from "@/lib/types";
+import { stocks } from "@/data/stocks";
+
+// Ticker → company name map (e.g., "ARM" → "Arm Holdings")
+const NAMES: Record<string, string> = Object.fromEntries(
+  stocks.map((s) => [s.ticker, s.name.replace(/ (PLC|Inc\.|Ltd\.|S\.A\.|AG|N\.V\.|Corporation|Company)\.?$/i, "")])
+);
+
+function companyName(ticker: string): string {
+  return NAMES[ticker] ?? ticker;
+}
 
 let _resend: Resend | null = null;
 
@@ -28,7 +38,7 @@ const EVENT_ICONS: Record<string, string> = {
 const L: Record<string, Record<string, string>> = {
   es: {
     title: "Resumen Semanal",
-    portfolioLabel: "Nuestro portafolio esta semana",
+    portfolioLabel: "Nuestro portafolio desde que empezamos",
     best: "Mejor",
     worst: "Peor",
     priceMoves: "Lo que se movió",
@@ -58,7 +68,7 @@ const L: Record<string, Record<string, string>> = {
   },
   en: {
     title: "Weekly Summary",
-    portfolioLabel: "Our portfolio this week",
+    portfolioLabel: "Our portfolio since we started",
     best: "Best",
     worst: "Worst",
     priceMoves: "What moved",
@@ -88,7 +98,7 @@ const L: Record<string, Record<string, string>> = {
   },
   pt: {
     title: "Resumo Semanal",
-    portfolioLabel: "Nosso portfólio esta semana",
+    portfolioLabel: "Nosso portfólio desde o início",
     best: "Melhor",
     worst: "Pior",
     priceMoves: "O que se moveu",
@@ -118,7 +128,7 @@ const L: Record<string, Record<string, string>> = {
   },
   hi: {
     title: "साप्ताहिक सारांश",
-    portfolioLabel: "इस सप्ताह हमारा पोर्टफोलियो",
+    portfolioLabel: "शुरू से हमारा पोर्टफोलियो",
     best: "सर्वश्रेष्ठ",
     worst: "सबसे खराब",
     priceMoves: "क्या हिला",
@@ -191,13 +201,22 @@ function getBestWorst(priceMoves: PortfolioEvent[]): {
   worst: PortfolioEvent | null;
 } {
   if (priceMoves.length === 0) return { best: null, worst: null };
-  const sorted = [...priceMoves].sort(
+  // Deduplicate by ticker — keep the most extreme move per ticker
+  const byTicker = new Map<string, PortfolioEvent>();
+  for (const e of priceMoves) {
+    const ticker = e.params.ticker;
+    const existing = byTicker.get(ticker);
+    if (!existing || Math.abs(getSignedPct(e)) > Math.abs(getSignedPct(existing))) {
+      byTicker.set(ticker, e);
+    }
+  }
+  const unique = [...byTicker.values()].sort(
     (a, b) => getSignedPct(b) - getSignedPct(a)
   );
-  const best = sorted[0];
-  const worst = sorted[sorted.length - 1];
-  // Show best/worst even if same ticker (single move), just show both if different
-  return { best, worst: worst === best ? null : worst };
+  const best = unique[0];
+  // Worst must be a DIFFERENT ticker than best
+  const worst = unique.length > 1 ? unique[unique.length - 1] : null;
+  return { best, worst };
 }
 
 // Price moves use colored arrows instead of emoji
@@ -209,14 +228,16 @@ function renderPriceMoveLine(e: PortfolioEvent, locale: string): string {
   const arrow = isUp ? "&#9650;" : "&#9660;";
   const verb = isUp ? t(lang, "up") : t(lang, "down");
 
+  const name = companyName(p.ticker);
+
   if (e.title_key.includes("near52High") || e.title_key.includes("near52Low")) {
     const label = e.title_key.includes("High")
       ? t(lang, "near52High")
       : t(lang, "near52Low");
-    return `<span style="color:${color};font-weight:700;">${arrow}</span> <a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> — ${label} (${p.pct}%)`;
+    return `<span style="color:${color};font-weight:700;">${arrow}</span> <a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${name}</strong></a> — ${label} (${p.pct}%)`;
   }
 
-  return `<span style="color:${color};font-weight:700;">${arrow}</span> <a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a> ${verb} <span style="color:${color};font-weight:600;">${p.pct}%</span>`;
+  return `<span style="color:${color};font-weight:700;">${arrow}</span> <a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${name}</strong></a> ${verb} <span style="color:${color};font-weight:600;">${p.pct}%</span>`;
 }
 
 function renderDigestLine(e: PortfolioEvent, locale: string): string {
@@ -226,7 +247,8 @@ function renderDigestLine(e: PortfolioEvent, locale: string): string {
   // Price moves handled separately with colors
   if (e.event_type === "price_move") return renderPriceMoveLine(e, locale);
 
-  const tickerLink = `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${p.ticker}</strong></a>`;
+  const name = companyName(p.ticker);
+  const tickerLink = `<a href="${SITE}/stocks/${p.ticker}" style="color:#111827;text-decoration:none;"><strong>${name}</strong></a>`;
 
   if (e.title_key.includes("dividendExDate"))
     return `${tickerLink} — ${t(lang, "exDiv")} ${p.date} (${p.yield}% ${t(lang, "yield")})`;
@@ -239,7 +261,7 @@ function renderDigestLine(e: PortfolioEvent, locale: string): string {
   if (e.title_key.includes("newsAlert"))
     return `${tickerLink} — ${p.headline}`;
 
-  return `<strong>${p.ticker || ""}</strong>`;
+  return `<strong>${name || p.ticker || ""}</strong>`;
 }
 
 function buildSectionHtml(
@@ -281,28 +303,29 @@ function buildSummaryHtml(
 ): string {
   const lang = L[locale] ? locale : "en";
 
-  if (!summary?.weeklyChangePct && summary?.weeklyChangePct !== 0)
-    return "";
+  if (summary?.totalReturnPct == null) return "";
 
-  const pct = summary.weeklyChangePct;
+  const pct = summary.totalReturnPct;
   const sign = pct >= 0 ? "+" : "";
   const color = pct >= 0 ? "#16a34a" : "#dc2626";
+  const bgColor = pct >= 0 ? "#f0fdf4" : "#fef2f2";
+  const borderColor = pct >= 0 ? "#bbf7d0" : "#fecaca";
 
   let details = "";
   if (best) {
     const bestPct = best.params.pct;
     const bestDir = best.title_key.includes("Up") ? "+" : "-";
-    let detailParts = `${t(lang, "best")}: <strong>${best.params.ticker}</strong> ${bestDir}${bestPct}%`;
+    let detailParts = `${t(lang, "best")}: <strong>${companyName(best.params.ticker)}</strong> ${bestDir}${bestPct}%`;
     if (worst) {
       const worstPct = worst.params.pct;
       const worstDir = worst.title_key.includes("Up") ? "+" : "-";
-      detailParts += ` · ${t(lang, "worst")}: <strong>${worst.params.ticker}</strong> ${worstDir}${worstPct}%`;
+      detailParts += ` · ${t(lang, "worst")}: <strong>${companyName(worst.params.ticker)}</strong> ${worstDir}${worstPct}%`;
     }
     details = `<p style="margin:6px 0 0;font-size:13px;color:#6b7280;">${detailParts}</p>`;
   }
 
   return `
-    <div style="background-color:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:14px 16px;margin-bottom:8px;">
+    <div style="background-color:${bgColor};border:1px solid ${borderColor};border-radius:8px;padding:14px 16px;margin-bottom:8px;">
       <p style="margin:0;font-size:13px;color:#374151;font-weight:500;">${t(lang, "portfolioLabel")}</p>
       <p style="margin:4px 0 0;font-size:28px;font-weight:700;color:${color};letter-spacing:-0.5px;">${sign}${pct.toFixed(2)}%</p>
       ${details}
@@ -318,42 +341,64 @@ function buildBottomLine(
   const grouped = groupEvents(events);
   const { best, worst } = getBestWorst(grouped.priceMoves);
 
-  const parts: string[] = [];
+  // Build a compelling narrative sentence
+  const lines: string[] = [];
 
-  // Portfolio direction
-  if (summary?.weeklyChangePct != null) {
-    parts.push(
-      summary.weeklyChangePct >= 0
-        ? (lang === "es" ? "semana positiva" : lang === "pt" ? "semana positiva" : lang === "hi" ? "अच्छा सप्ताह" : "positive week")
-        : (lang === "es" ? "semana difícil" : lang === "pt" ? "semana difícil" : lang === "hi" ? "कठिन सप्ताह" : "tough week")
+  // Lead with strongest move
+  if (best) {
+    const bestName = companyName(best.params.ticker);
+    const bestPct = best.params.pct;
+    const bestUp = best.title_key.includes("Up");
+    if (bestUp) {
+      lines.push(
+        lang === "es" ? `${bestName} fue la estrella de la semana con +${bestPct}%`
+          : lang === "pt" ? `${bestName} foi a estrela da semana com +${bestPct}%`
+          : lang === "hi" ? `${bestName} इस सप्ताह +${bestPct}% के साथ स्टार रहा`
+          : `${bestName} was the star this week at +${bestPct}%`
+      );
+    }
+  }
+
+  // Contrast with worst
+  if (worst) {
+    const worstName = companyName(worst.params.ticker);
+    const worstPct = worst.params.pct;
+    lines.push(
+      lang === "es" ? `mientras ${worstName} bajó ${worstPct}%`
+        : lang === "pt" ? `enquanto ${worstName} caiu ${worstPct}%`
+        : lang === "hi" ? `जबकि ${worstName} ${worstPct}% गिरा`
+        : `while ${worstName} dropped ${worstPct}%`
     );
   }
 
-  // Dividends coming
+  // Dividends as a hook
   if (grouped.dividends.length > 0) {
-    const divCount = grouped.dividends.length;
-    parts.push(
-      lang === "es" ? `${divCount} dividendo${divCount > 1 ? "s" : ""} en camino`
-        : lang === "pt" ? `${divCount} dividendo${divCount > 1 ? "s" : ""} a caminho`
-        : lang === "hi" ? `${divCount} लाभांश आ रहा है`
-        : `${divCount} dividend${divCount > 1 ? "s" : ""} coming`
+    const divTickers = [...new Set(grouped.dividends.map((e) => companyName(e.params.ticker)))];
+    const divNames = divTickers.slice(0, 2).join(lang === "es" ? " y " : lang === "pt" ? " e " : " and ");
+    lines.push(
+      lang === "es" ? `y ${divNames} ${divTickers.length > 1 ? "traen" : "trae"} dividendos pronto`
+        : lang === "pt" ? `e ${divNames} ${divTickers.length > 1 ? "trazem" : "traz"} dividendos em breve`
+        : lang === "hi" ? `और ${divNames} जल्द लाभांश ला रहा है`
+        : `and ${divNames} ${divTickers.length > 1 ? "bring" : "brings"} dividends soon`
     );
   }
 
-  // Notable move
-  if (best && worst) {
-    parts.push(
-      lang === "es" ? `ojo con ${best.params.ticker} y ${worst.params.ticker}`
-        : lang === "pt" ? `fique de olho em ${best.params.ticker} e ${worst.params.ticker}`
-        : lang === "hi" ? `${best.params.ticker} और ${worst.params.ticker} पर नज़र रखें`
-        : `watch ${best.params.ticker} and ${worst.params.ticker}`
+  // Earnings tease
+  if (grouped.earnings.length > 0) {
+    const earningNames = [...new Set(grouped.earnings.map((e) => companyName(e.params.ticker)))].slice(0, 2);
+    lines.push(
+      lang === "es" ? `${earningNames.join(" y ")} reporta${earningNames.length > 1 ? "n" : ""} resultados la próxima semana`
+        : lang === "pt" ? `${earningNames.join(" e ")} reporta${earningNames.length > 1 ? "m" : ""} resultados na próxima semana`
+        : lang === "hi" ? `${earningNames.join(" और ")} अगले सप्ताह रिपोर्ट करेगा`
+        : `${earningNames.join(" and ")} report${earningNames.length > 1 ? "" : "s"} earnings next week`
     );
   }
 
-  if (parts.length === 0) return "";
+  if (lines.length === 0) return "";
 
-  const sentence = parts[0].charAt(0).toUpperCase() + parts[0].slice(1) +
-    (parts.length > 1 ? ", " + parts.slice(1).join(", y ") : "") + ".";
+  // Join lines into a flowing sentence
+  const sentence = lines[0].charAt(0).toUpperCase() + lines[0].slice(1) +
+    (lines.length > 1 ? ", " + lines.slice(1).join(". ") : "") + ".";
 
   return `
     <div style="margin-top:24px;padding:12px 16px;background-color:#fafafa;border-radius:8px;">
@@ -379,6 +424,7 @@ function generateDynamicSubject(
       (a, b) => parseFloat(b.params.pct) - parseFloat(a.params.pct)
     );
     const top = sorted[0];
+    const name = companyName(top.params.ticker);
     const isUp = top.title_key.includes("Up");
     const arrow = isUp ? "+" : "-";
     const rest = events.length - 1;
@@ -389,7 +435,7 @@ function generateDynamicSubject(
       hi: `और ${rest} अपडेट`,
     };
     const lang = moreText[locale] ? locale : "en";
-    return `${top.params.ticker} ${arrow}${top.params.pct}% ${moreText[lang]} — Vectorial Data`;
+    return `${name} ${arrow}${top.params.pct}% ${moreText[lang]} — Vectorial Data`;
   }
   const fallback: Record<string, string> = {
     es: `${events.length} noticias de nuestro portafolio — Vectorial Data`,
@@ -412,8 +458,8 @@ function buildDigestHtml(
   const grouped = groupEvents(events);
   const { best, worst } = getBestWorst(grouped.priceMoves);
 
-  const preview = summary?.weeklyChangePct != null
-    ? `${summary.weeklyChangePct >= 0 ? "+" : ""}${summary.weeklyChangePct.toFixed(2)}% esta semana. ${grouped.priceMoves.length} movimientos, ${grouped.dividends.length} dividendos, ${grouped.earnings.length} earnings.`
+  const preview = summary?.totalReturnPct != null
+    ? `Portafolio ${summary.totalReturnPct >= 0 ? "+" : ""}${summary.totalReturnPct.toFixed(2)}%. ${grouped.priceMoves.length} movimientos, ${grouped.dividends.length} dividendos, ${grouped.earnings.length} earnings.`
     : `${events.length} eventos esta semana en nuestro portafolio.`;
 
   const summaryHtml = buildSummaryHtml(locale, summary, best, worst);
@@ -500,8 +546,8 @@ function buildFreeDigestHtml(
   const grouped = groupEvents(events);
   const { best, worst } = getBestWorst(grouped.priceMoves);
 
-  const preview = summary?.weeklyChangePct != null
-    ? `${summary.weeklyChangePct >= 0 ? "+" : ""}${summary.weeklyChangePct.toFixed(2)}% esta semana. Abre para ver qué pasó.`
+  const preview = summary?.totalReturnPct != null
+    ? `Portafolio ${summary.totalReturnPct >= 0 ? "+" : ""}${summary.totalReturnPct.toFixed(2)}%. Abre para ver qué pasó.`
     : `${events.length} eventos esta semana. Abre para ver qué pasó.`;
 
   const summaryHtml = buildSummaryHtml(locale, summary, best, worst);
