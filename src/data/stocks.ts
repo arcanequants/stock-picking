@@ -43,6 +43,33 @@ export const tips: ((ctx: TipContext) => string)[] = [
   () => `Invertir no es un evento. Es un hábito. Como ir al gym — los resultados llegan con el tiempo, no con la intensidad.`,
   (ctx) => `Miles de personas en ${ctx.country} trabajan para ${ctx.name} hoy. Generan ingresos, pagan dividendos, y tú eres dueño. Así funciona.`,
   () => `La diferencia entre alguien que invierte y alguien que no, no es el dinero. Es la decisión de empezar.`,
+  // 🔍 Curiosity — Learn (surprising facts + incomplete explanations)
+  (ctx) => `${ctx.name} tiene una ventaja competitiva que casi nadie entiende. No es su producto. No es su marca. Es algo más aburrido — y por eso funciona mejor.`,
+  (ctx) => `De cada $100 que ${ctx.name} gana, ¿cuánto crees que se queda como ganancia? La respuesta dice TODO sobre si es buena inversión o no.`,
+  (ctx) => `Hay algo que los reportes financieros de ${ctx.name} esconden a plena vista. Se llama "operating margin" y dice más sobre el futuro de la empresa que cualquier titular de noticias.`,
+  (ctx) => `${ctx.name} paga dividendos. ¿Sabes cómo deciden cuánto pagar? Es una decisión que involucra a un grupo de personas en una sala. Y lo que deciden ese día afecta directo a tu cuenta.`,
+  (ctx) => `${ctx.country} tiene una particularidad económica que hace que las empresas de ${ctx.sector} sean más interesantes de lo que parecen. No es el PIB. No es la moneda. Es otra cosa.`,
+  (ctx) => `Pregunta incómoda: ¿por qué ${ctx.name} vale $${ctx.price.toFixed(0)} y no la mitad o el doble? La respuesta tiene menos que ver con la empresa y más con la psicología de millones de personas.`,
+  (ctx) => `${ctx.ticker} cuesta $${ctx.price.toFixed(0)} hoy. Hace 10 años costaba una fracción de eso. Pero lo interesante no es cuánto subió — es POR QUÉ subió.`,
+  (ctx) => `El CEO de ${ctx.name} gana más en un día que la mayoría en un año. Pero hay un detalle: tú puedes ganar cada vez que él gana. Así funcionan las acciones.`,
+  () => `Dato que nadie te dice: el 70% del rendimiento del S&P 500 en los últimos 30 años viene de REINVERTIR DIVIDENDOS. No de que suban los precios. El dividendo es el héroe silencioso.`,
+  () => `Hay un número mágico de acciones para tener un portafolio diversificado. No son 100. No son 50. Es más bajo de lo que piensas.`,
+  // 🔗 Curiosity — Click (curiosity gap + link to research)
+  (ctx) => `${ctx.name} genera ingresos en ${ctx.country}. Pero el dato interesante no es cuánto gana — es de QUIÉN lo gana. Su lista de clientes explica más que cualquier gráfica. → vectorialdata.com/stocks/${ctx.ticker.toLowerCase()}`,
+  (ctx) => `Algo raro pasa con los dividendos de ${ctx.ticker}. Lo explicamos en el reporte completo. → vectorialdata.com/stocks/${ctx.ticker.toLowerCase()}`,
+  (ctx) => `${ctx.name} publicó sus resultados financieros hace poco. Hay un número que a Wall Street le encantó. Y otro que no. → vectorialdata.com/stocks/${ctx.ticker.toLowerCase()}`,
+  (ctx) => `Hay un indicador que los inversionistas profesionales revisan antes que el precio. No es el P/E. No es el revenue. Lo puedes ver gratis en nuestro reporte de ${ctx.name}. → vectorialdata.com/stocks/${ctx.ticker.toLowerCase()}`,
+  (ctx) => `¿${ctx.dividend_yield}% de dividendo es mucho o poco? Depende contra quién lo compares. Spoiler: es más que lo que tu banco te da por tus ahorros. → vectorialdata.com/stocks/${ctx.ticker.toLowerCase()}`,
+  (ctx) => `Hoy investigamos ${ctx.name} por ti. P/E, dividendos, competencia, riesgos. Tú solo tuviste que abrir WhatsApp. El reporte completo: → vectorialdata.com/stocks/${ctx.ticker.toLowerCase()}`,
+  (ctx) => `¿Qué pasaría si compraras $3 de ${ctx.ticker} CADA DÍA durante un año? La respuesta no es $3 x 365. Es más. La razón tiene nombre: dollar-cost averaging. → vectorialdata.com/stocks/${ctx.ticker.toLowerCase()}`,
+  () => `Quieres ver cómo van todas las picks vs el mercado? Todo es público. → vectorialdata.com/stocks`,
+  // 📢 Curiosity — Share (mind-blowing, designed to be forwarded)
+  (ctx) => `El sector de ${ctx.sector} ha creado más millonarios silenciosos que las crypto, las startups y el real estate combinados. La diferencia es que nadie postea sobre eso en Instagram.`,
+  (ctx) => `${ctx.name} tiene más empleados que la población de muchas ciudades. Todos trabajan. Tú cobras.`,
+  (ctx) => `Hay una empresa en ${ctx.country} que le paga a sus accionistas cada 3 meses sin que hagan nada. Se llama ${ctx.name}. Y tú acabas de comprar una fracción.`,
+  () => `El S&P 500 ha caído 30%+ exactamente 8 veces desde 1950. Las 8 veces se recuperó. Las 8.`,
+  () => `Dato: tu suscripción de Netflix cuesta más al mes que todo lo que necesitas para empezar a invertir con nosotros. Uno te entretiene. El otro te genera dinero.`,
+  () => `Todos hablan de dinero. Nadie te cuenta las partes interesantes. Para eso estamos.`,
 ];
 
 // Hardcoded data - will migrate to Supabase once connected
