@@ -37,6 +37,7 @@ export interface Transaction {
   date: string;
   day_of_week: string;
   wa_message: string;
+  attestation_uid?: string;
 }
 
 export interface Cycle {

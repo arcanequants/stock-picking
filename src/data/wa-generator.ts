@@ -38,6 +38,7 @@ ${incomeLine}
 
 🆕 Posición #${pickNumber}
 🔗 https://vectorialdata.com/stocks/${stock.ticker}
+✅ Certificado por blockchain → vectorialdata.com/verify/${stock.ticker}
 
 ${getReminder(pickNumber)}`;
 }
@@ -65,6 +66,7 @@ ${incomeLine}
 
 🔄 Recompra #${rebuyNumber}
 🔗 https://vectorialdata.com/stocks/${stock.ticker}
+✅ Certificado por blockchain → vectorialdata.com/verify/${stock.ticker}
 
 ${getReminder(rebuyNumber)}`;
 }

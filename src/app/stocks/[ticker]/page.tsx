@@ -1,8 +1,9 @@
-import { stocks } from "@/data/stocks";
+import { stocks, transactions } from "@/data/stocks";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
+import BlockchainBadge from "@/components/BlockchainBadge";
 
 const localeMap: Record<string, string> = {
   es: "es-MX",
@@ -127,10 +128,14 @@ export default async function StockResearchPage({
           <h1 className="text-3xl font-bold">
             {stock.ticker} <span className="text-text-muted font-normal text-xl">— {stock.name}</span>
           </h1>
-          <div className="flex gap-2 mt-2">
+          <div className="flex gap-2 mt-2 flex-wrap">
             <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{stock.sector}</span>
             <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{stock.region}</span>
             <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{stock.country}</span>
+            <BlockchainBadge
+              ticker={stock.ticker}
+              attestationUid={transactions.find((t) => t.ticker === stock.ticker)?.attestation_uid}
+            />
           </div>
         </div>
         <div className="text-left md:text-right">

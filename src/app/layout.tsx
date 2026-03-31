@@ -159,12 +159,14 @@ export default async function RootLayout({
                     <Image src="/logo.png" alt="Vectorial Data" width={24} height={24} />
                     <span className="font-semibold text-text-muted">Vectorial Data</span>
                   </div>
-                  <div className="flex items-center justify-center gap-3 mb-3 text-text-muted">
+                  <div className="flex items-center justify-center gap-3 mb-3 text-text-muted flex-wrap">
                     <Link href="/terms" className="hover:text-foreground transition-colors">{tFooter("terms")}</Link>
                     <span className="text-border">·</span>
                     <Link href="/privacy" className="hover:text-foreground transition-colors">{tFooter("privacy")}</Link>
                     <span className="text-border">·</span>
                     <Link href="/disclaimer" className="hover:text-foreground transition-colors">{tFooter("financialDisclaimer")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/verify" className="hover:text-foreground transition-colors">{tFooter("verify")}</Link>
                   </div>
                   <p>{tFooter("disclaimer")}</p>
                   <p className="mt-1">{tFooter("prices")}</p>

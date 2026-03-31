@@ -11,6 +11,7 @@ export async function GET() {
     date: string;
     previous_hash: string;
     hash: string;
+    attestation_uid: string | null;
   }> = [];
 
   let previousHash = "0".repeat(64);
@@ -28,6 +29,7 @@ export async function GET() {
       date: tx.date,
       previous_hash: previousHash,
       hash,
+      attestation_uid: tx.attestation_uid ?? null,
     });
 
     previousHash = hash;

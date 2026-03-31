@@ -734,6 +734,8 @@ const PICK_L: Record<string, Record<string, string>> = {
     risk: "El riesgo",
     position: "Posición #{pick}",
     viewResearch: "Ver research completo",
+    verified: "Certificado por blockchain",
+    verifyLink: "Verificar",
     footer: "Esto no es consejo de inversión.",
     signoff: "— El equipo de Vectorial Data",
     type_new: "Nueva",
@@ -751,6 +753,8 @@ const PICK_L: Record<string, Record<string, string>> = {
     risk: "The risk",
     position: "Position #{pick}",
     viewResearch: "View full research",
+    verified: "Blockchain certified",
+    verifyLink: "Verify",
     footer: "This is not investment advice.",
     signoff: "— The Vectorial Data team",
     type_new: "New",
@@ -768,6 +772,8 @@ const PICK_L: Record<string, Record<string, string>> = {
     risk: "O risco",
     position: "Posição #{pick}",
     viewResearch: "Ver research completo",
+    verified: "Certificado por blockchain",
+    verifyLink: "Verificar",
     footer: "Isto não é conselho de investimento.",
     signoff: "— A equipe Vectorial Data",
     type_new: "Nova",
@@ -785,6 +791,8 @@ const PICK_L: Record<string, Record<string, string>> = {
     risk: "जोखिम",
     position: "पोजीशन #{pick}",
     viewResearch: "पूरा रिसर्च देखें",
+    verified: "ब्लॉकचेन प्रमाणित",
+    verifyLink: "सत्यापित करें",
     footer: "यह निवेश सलाह नहीं है।",
     signoff: "— Vectorial Data टीम",
     type_new: "नई",
@@ -856,6 +864,13 @@ function buildPickEmailHtml(
 
       <!-- Position badge -->
       <p style="margin:16px 0 0;font-size:13px;color:#6b7280;">${pickT(lang, "position").replace("{pick}", String(pickNumber))}</p>
+
+      <!-- Blockchain verified badge -->
+      <div style="margin:12px 0 0;padding:8px 12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;display:inline-block;">
+        <span style="font-size:13px;color:#16a34a;font-weight:500;">&#10003; ${pickT(lang, "verified")}</span>
+        <span style="font-size:12px;color:#6b7280;"> · </span>
+        <a href="${SITE}/verify/${stock.ticker}" style="font-size:12px;color:#4f46e5;text-decoration:underline;">${pickT(lang, "verifyLink")}</a>
+      </div>
     </div>
     <div style="padding:16px 24px;border-top:1px solid #e4e4e7;text-align:center;">
       <a href="${SITE}/stocks/${stock.ticker}" style="display:inline-block;background:#4f46e5;color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;">${pickT(lang, "viewResearch")}</a>

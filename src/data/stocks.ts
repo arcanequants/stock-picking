@@ -1,4 +1,4 @@
-import { Stock } from "@/lib/types";
+import { Stock, Transaction } from "@/lib/types";
 
 // WhatsApp tip rotation — (pickNumber - 1) % tips.length
 // Each tip is a function that receives the stock context for personalization
@@ -3141,9 +3141,305 @@ HWM a $227.90 es una **apuesta al superciclo aeroespacial** — la empresa que f
     last_updated_at: "2026-03-27T00:00:00Z",
     next_review_at: "2026-09-27T00:00:00Z",
   },
+  {
+    id: 28,
+    ticker: "BG",
+    name: "Bunge Global SA",
+    sector: "Consumer Staples",
+    industry: "Agribusiness / Oilseed Processing",
+    country: "Switzerland",
+    region: "Global",
+    currency: "USD",
+    price: 126.28,
+    pe_ratio: 25.71,
+    pe_forward: 15.52,
+    dividend_yield: 2.22,
+    market_cap_b: 24.44,
+    eps: 4.91,
+    summary_short:
+      "El procesador de oleaginosas #1 del mundo. Se fusionaron con Viterra, creando un gigante agroindustrial global con $70B+ en revenue y operaciones en 40+ países.",
+    summary_what:
+      "Bunge conecta a los agricultores con los consumidores a nivel global. Compran, procesan y distribuyen soya, canola, girasol, trigo y maíz. Producen aceites vegetales, harinas, margarinas, mayonesas, y materia prima para biocombustibles. Tras la fusión con Viterra (julio 2025), son el procesador de oleaginosas más grande del planeta.",
+    summary_why:
+      "La fusión con Viterra está generando sinergias por $190M+ en 2026, adelantadas al plan original. P/E forward de 15.5x es barato para la escala del negocio. Dividendo del 2.2% con payout ratio bajo (57%). EPS guiado de $7.50-$8.00 para 2026 con meta de $15 para 2030. Buyback de $3B anunciado. 7 de 7 analistas dicen Buy.",
+    summary_risk:
+      "Dependencia de los precios de commodities agrícolas que son cíclicos. Integración de Viterra aún en progreso con riesgos de ejecución. Exposición a aranceles y tensiones comerciales globales.",
+    research_full: `# Bunge Global SA (BG) — Research Completo
+
+## Precio: $126.28 | P/E: 25.7 | P/E Forward: 15.5 | Div Yield: 2.2% | EPS: $4.91 | Market Cap: $24.4B
+
+---
+
+## ¿Qué es Bunge?
+
+Bunge Global SA es la **empresa agroindustrial más grande del mundo por procesamiento de oleaginosas**. Fundada en 1818, está incorporada en Ginebra, Suiza, con sede operativa en Chesterfield, Missouri, EE.UU. Tras completar la fusión con Viterra en julio 2025, se convirtió en un coloso con más de **$70B en revenue anual**, operaciones en **40+ países** y **300+ instalaciones**.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | Productos Clave |
+|----------|-------------|-----------------|
+| **Soybean Processing & Refining** | Procesamiento y refinación de soya | Aceite de soya, harina de soya, lecitina |
+| **Softseed Processing & Refining** | Procesamiento de canola, girasol, palma | Aceites vegetales especializados, biodiesel feedstock |
+| **Other Oilseeds Processing & Refining** | Otros aceites y grasas | Aceite de palma, coco, karité, oliva |
+| **Grain Merchandising & Milling** | Comercialización y molienda de granos | Harina de trigo, maíz molido, mezclas para panadería |
+| **Sugar & Bioenergy** | Azúcar y energía renovable | Azúcar, etanol, electricidad de bagazo de caña |
+
+## Resultados 2025 (Full Year Post-Viterra)
+
+- **Revenue: $70.3B** (aumentado significativamente por consolidación de Viterra)
+- **EPS TTM: $4.91** (afectado por costos de integración)
+- **Guidance FY2026: EPS $7.50-$8.00**
+- **Meta 2030: EPS $15+**
+- **Dividendo: $2.80/acción** ($0.70 trimestral), yield 2.2%
+- **Payout ratio: 57%** — sustentable con margen de crecimiento
+- **Market Cap: $24.4B** | **Enterprise Value: $38.3B**
+- **Beta: 0.74** — menor volatilidad que el mercado
+
+## Fusión con Viterra — El Catalizador Principal
+
+La fusión con **Viterra** (completada julio 2025) transformó a Bunge de un procesador grande a **el #1 indiscutible**:
+
+- **Sinergias 2026: $190M+** (adelantadas vs plan original de $175M)
+- **"Step change" esperado en 2027** — sinergias adicionales al madurar la integración
+- Viterra aportó red logística complementaria en Canadá, Australia, y Europa del Este
+- Se asumieron $9.8B en deuda de Viterra (manejable dado el scale del negocio)
+
+## Ventajas Competitivas (Moat)
+
+1. **Escala sin rival** — Procesador de oleaginosas #1 global. Origina 75M+ de toneladas métricas anuales
+2. **Red logística global** — 300+ instalaciones en 40+ países, incluyendo puertos, elevadores, plantas procesadoras. Infraestructura prácticamente imposible de replicar
+3. **Diversificación geográfica** — Procesamiento de soya: Sudamérica 47%, Norteamérica 25%, Asia-Pacífico 15%, Europa 13%
+4. **Posición esencial en la cadena de valor** — Intermediarios entre agricultores y consumidores finales. Indispensables
+5. **Marcas de consumo en mercados emergentes** — Delicia, Primor, Soya, Cyclus (Brasil), Dalda (India)
+
+## Capital Return
+
+- **Dividendo: $2.80/acción** ($0.70 trimestral), yield 2.2%
+- **5 años consecutivos de incremento**, crecimiento promedio de 3.4% anual
+- **Programa de recompra de acciones: $3B** anunciado
+- **Payout ratio: 57%** — amplio margen para seguir incrementando
+
+## Catalizadores de Crecimiento
+
+1. **Sinergias de Viterra** — $190M en 2026, step change en 2027
+2. **Meta de EPS $15 para 2030** — Desde $4.91 actual, crecimiento compuesto agresivo
+3. **Demanda estructural de alimentos** — Población mundial creciente + clase media emergente
+4. **Biocombustibles** — Bunge produce renewable diesel feedstock. La transición energética crea demanda adicional
+5. **JPMorgan target $134, Morgan Stanley $140** — Analistas ven momentum post-fusión
+
+## Riesgos Principales
+
+1. **Ciclicidad de commodities** — Precios de soya, maíz, trigo y canola fluctúan con clima, demanda global y políticas comerciales
+2. **Integración de Viterra** — Asumieron $9.8B en deuda. Riesgo de ejecución en la integración
+3. **Aranceles y tensiones comerciales** — EE.UU.-China y otros conflictos afectan flujos de granos globales
+4. **Márgenes volátiles** — Los márgenes de crushing pueden comprimirse en periodos de baja demanda
+5. **Riesgo climático** — Sequías e inundaciones afectan producción agrícola y volúmenes
+
+## Valuación
+
+- **P/E trailing: 25.7x** — elevado por costos de integración que comprimen EPS actual
+- **P/E forward: 15.5x** — mucho más razonable basado en guidance de $7.50-$8.00
+- **PEG: 0.71** — debajo de 1.0, el crecimiento no está priced in
+- **Analyst target promedio: $130.86** — upside de ~3.6% desde niveles actuales
+- **JPMorgan: $134 | Morgan Stanley: $140 | Barclays: $135**
+- **52-week change: +65%** — rally fuerte, pero sinergias de Viterra apenas comienzan
+
+## Presencia Geográfica
+
+- **Suiza** (incorporación en Ginebra)
+- **EE.UU.** (HQ operativo en Chesterfield, Missouri)
+- **Brasil, Argentina** (Sudamérica — 47% del procesamiento de soya)
+- **Canadá** (herencia de Viterra — granos y canola)
+- **Europa** (múltiples plantas de procesamiento)
+- **India** (marca Dalda — aceites de cocina)
+- **China, Vietnam, Australia** (Asia-Pacífico — 15%)
+
+## Consenso de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Rating | **Strong Buy** |
+| Analistas | 7 de 7 Buy |
+| Price Target Promedio | **$130.86** |
+| Precio Actual | $126.28 |
+| **Upside al Target** | **3.6%** |
+| EPS 2026 Guidance | $7.50 - $8.00 |
+
+## Conclusión
+
+BG a $126.28 es una **apuesta al negocio agroindustrial más grande del planeta** — el intermediario esencial entre los agricultores y tu mesa. Con la fusión de Viterra generando sinergias reales, P/E forward de 15.5x (barato para la escala), dividendo de 2.2% creciente, y meta de EPS $15 para 2030, Bunge ofrece una combinación rara de valor + crecimiento + ingreso. El riesgo principal es la ciclicidad de commodities — pero en un mundo con más gente que alimentar cada año, el procesador de oleaginosas #1 está bien posicionado a largo plazo.
+
+---
+
+*Research fecha: 30 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 130.86,
+    analyst_upside: 3.6,
+    status: "active",
+    first_researched_at: "2026-03-30T00:00:00Z",
+    last_updated_at: "2026-03-30T00:00:00Z",
+    next_review_at: "2026-09-30T00:00:00Z",
+  },
+  {
+    id: 29,
+    ticker: "BIDU",
+    name: "Baidu, Inc.",
+    sector: "Communication Services",
+    industry: "Internet Content & Information / AI Platform",
+    country: "China",
+    region: "Asia",
+    currency: "USD",
+    price: 106.60,
+    pe_ratio: 14.2,
+    pe_forward: 19.1,
+    dividend_yield: 0,
+    market_cap_b: 31.8,
+    eps: 7.64,
+    summary_short:
+      "El Google de China y líder en IA. Domina búsquedas con 65%+ de market share, opera robotaxis autónomos (Apollo Go) con 20M+ viajes, y su chatbot ERNIE tiene 200M+ usuarios mensuales.",
+    summary_what:
+      "Baidu es el motor de búsqueda dominante en China y una de las empresas más avanzadas en inteligencia artificial del país. Opera Baidu Search, Baidu AI Cloud (~RMB 30B en revenue), Apollo Go (robotaxis autónomos en 22+ ciudades), ERNIE Bot (chatbot IA con 200M+ MAUs), y tiene participación en iQIYI (streaming de video). Su negocio está en plena transición de publicidad digital a plataforma integral de IA.",
+    summary_why:
+      "Transición a IA acelerando: AI Cloud creció 34% en 2025, Apollo Go triplicó viajes YoY, ERNIE 5.0 compite con GPT-5. P/E non-GAAP de 14x es absurdamente barato para una empresa líder en IA. $42B en caja (más que su market cap). Nuevo programa de recompra de $5B + primera política de dividendos en 2026.",
+    summary_risk:
+      "Revenue total cayó -3% en 2025. Negocio legacy de búsqueda en declive. Riesgo regulatorio chino y tensiones geopolíticas EE.UU.-China. GAAP earnings distorsionados por impairments de iQIYI.",
+    research_full: `# Baidu, Inc. (BIDU) — Research Completo
+
+## Precio: $106.60 | P/E (non-GAAP): 14.2x | P/E Forward: 19.1x | Div Yield: 0% | Market Cap: $31.8B
+
+---
+
+## ¿Qué es Baidu?
+
+Baidu, Inc. es el **motor de búsqueda dominante en China** con más del 65% de market share, y se ha transformado en una **plataforma integral de inteligencia artificial**. Fundada en 2000 por Robin Li, la empresa tiene sede en Beijing y cotiza en NASDAQ (BIDU) y en la Bolsa de Hong Kong (9888.HK).
+
+Con más de **$42B en efectivo e inversiones** (superando su propia capitalización de mercado), Baidu es una de las empresas tecnológicas más subvaloradas del mundo por métricas fundamentales.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | Revenue 2025 aprox |
+|----------|-------------|---------------------|
+| **Baidu Core - Marketing** | Publicidad digital en búsqueda y feeds | ~RMB 65B (~50% del total) |
+| **Baidu AI Cloud** | Infraestructura cloud + aplicaciones IA empresariales | ~RMB 30B (23% del total) |
+| **Apollo Go** | Robotaxis autónomos, servicios de conducción autónoma | En crecimiento acelerado |
+| **ERNIE / AI Apps** | Chatbot IA, herramientas de productividad, API | RMB 10.2B en 2025 |
+| **iQIYI** | Plataforma de streaming de video (participación ~45%) | Consolidado parcialmente |
+
+### Baidu Search (Núcleo Legacy)
+Motor de búsqueda #1 en China. Genera la mayoría del revenue vía publicidad. En declive gradual (-3% YoY en 2025) a medida que los usuarios migran a apps verticales e IA conversacional. Baidu está integrando ERNIE directamente en la búsqueda para revitalizar el producto.
+
+### Baidu AI Cloud
+- Revenue de **~RMB 30B en 2025** (infraestructura ~RMB 20B + aplicaciones ~RMB 10.2B)
+- **AI Cloud Infra creció 34% YoY**, superando el crecimiento de la industria
+- Revenue de aplicaciones IA alcanzó RMB 2.7B solo en Q4 2025
+- Margen operativo superó el 10% — ya es rentable
+- ~25% del segmento enterprise AI cloud en China (junto con Alibaba)
+
+### Apollo Go (Robotaxis Autónomos)
+- **20 millones de viajes acumulados** a febrero 2026
+- **3.4 millones de viajes completamente autónomos** en Q4 2025 (+200% YoY)
+- **300,000+ viajes semanales** en su pico de Q4 2025
+- Operando en **22+ ciudades** incluyendo Beijing, Shanghai, Wuhan, Shenzhen, Hong Kong
+- **Expansión global:** Dubai, Abu Dhabi, Corea del Sur, piloto en Londres (H1 2026), pruebas en Suiza
+- Flota de **1,000+ robotaxis**
+- Objetivo: alcanzar **rentabilidad operativa en 2026**
+
+### ERNIE Bot (Chatbot IA)
+- **202 millones de usuarios activos mensuales** a diciembre 2025
+- **ERNIE 5.0**: modelo multimodal nativo con 2.4 trillones de parámetros
+- **Ranking #1 entre modelos chinos** y #8 global en LMArena
+- API disponible para desarrolladores — ecosistema creciente
+
+## Resultados Financieros 2025 (Full Year)
+
+| Métrica | 2025 | YoY |
+|---------|------|-----|
+| **Revenue Total** | RMB 129.1B ($18.5B) | -3% |
+| **Net Income (Non-GAAP)** | RMB 18.9B | Estable |
+| **EPS (Non-GAAP)** | $7.64 | - |
+| **Non-GAAP Net Margin** | 15% | - |
+| **Adjusted EBITDA** | RMB 22.9B (18% margin) | - |
+| **Cash + Inversiones** | RMB 294.1B ($42B) | - |
+
+### Q4 2025 Highlights:
+- Revenue: RMB 32.7B ($4.68B)
+- EPS (GAAP): $1.52 (beat del 35.7% vs estimados)
+- Core AI-powered Business: >RMB 11B (43% del revenue)
+- AI Cloud Infra Q4: RMB 5.8B
+- AI Apps Q4: RMB 2.7B
+
+## Ventajas Competitivas (Moat)
+
+1. **Dominio en búsqueda china** — 65%+ market share, efecto de red masivo, datos propietarios
+2. **Liderazgo en IA** — ERNIE 5.0 es el modelo #1 en China, 202M MAUs en chatbot
+3. **Apollo Go first-mover** — La red de robotaxis más grande del mundo por número de viajes
+4. **Datos únicos** — Billones de queries de búsqueda alimentan sus modelos de IA
+5. **$42B en caja** — Más efectivo que su propia capitalización de mercado
+6. **Ecosistema integrado** — Búsqueda + Cloud + IA + Autónomos crea sinergias únicas
+
+## Catalizadores de Crecimiento
+
+1. **AI Cloud en hipercrecimiento** — 34% YoY, sector enterprise IA apenas empieza en China
+2. **Apollo Go hacia rentabilidad** — 200% crecimiento en viajes, expansión global, target profit 2026
+3. **ERNIE monetización** — 200M+ usuarios, API para empresas, integración en búsqueda
+4. **Programa de recompra $5B** — Reduce share count agresivamente hasta dic 2028
+5. **Primer dividendo en 2026** — Señal de confianza de la directiva
+6. **Venta potencial de iQIYI** — Simplificaría la estructura y liberaría capital
+7. **Expansión global de Apollo Go** — Dubai, Abu Dhabi, Corea del Sur, Londres, Suiza
+
+## Riesgos Principales
+
+1. **Revenue legacy en declive** — Búsqueda cayó -3% en 2025, la transición a IA aún no compensa
+2. **Riesgo regulatorio chino** — El gobierno puede imponer restricciones a IA, datos, o expansión internacional
+3. **Geopolítica EE.UU.-China** — Riesgo de delisting, sanciones tecnológicas, restricciones de chips
+4. **iQIYI arrastra resultados** — Impairments distorsionan earnings GAAP
+5. **Competencia feroz en IA** — Alibaba, ByteDance, Tencent, y startups como DeepSeek compiten agresivamente
+6. **Apollo Go capex intensivo** — Requiere inversión continua; timeline a rentabilidad incierto
+
+## Valuación
+
+| Métrica | Valor |
+|---------|-------|
+| Precio actual | $106.60 |
+| **P/E (Non-GAAP)** | **14.2x** |
+| P/E Forward | 19.1x |
+| Market Cap | $31.8B |
+| **Cash + Inversiones** | **$42B** |
+| **Enterprise Value** | **Negativo** (cash > market cap) |
+
+La valuación es extraordinaria: Baidu cotiza a P/E non-GAAP de 14.2x con $42B en efectivo — más que toda su capitalización. El mercado valora todo el negocio operativo en **valor negativo**. Una de las dislocaciones más extremas en tech.
+
+## Consenso de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Rating | **Buy** |
+| Analistas Buy | 28 |
+| Analistas Hold | 6 |
+| Analistas Sell | 1 |
+| Price Target Promedio | **$158.94** |
+| **Upside al Target** | **+47%** |
+
+## Conclusión
+
+BIDU a $106.60 es una **apuesta deep value al líder de IA en China** — con más caja que market cap, robotaxis autónomos que triplicaron viajes, un chatbot con 200M+ usuarios, y AI Cloud creciendo 34%. A P/E non-GAAP de 14x, el mercado básicamente te regala el negocio operativo. El riesgo principal es geopolítico y regulatorio (China), pero para un portafolio diversificado, la asimetría riesgo/recompensa es excepcional.
+
+---
+
+*Research fecha: 30 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 158.94,
+    analyst_upside: 47.0,
+    status: "active",
+    first_researched_at: "2026-03-30T00:00:00Z",
+    last_updated_at: "2026-03-30T00:00:00Z",
+    next_review_at: "2026-09-30T00:00:00Z",
+  },
 ];
 
-export const transactions = [
+export const transactions: Transaction[] = [
   {
     id: 1,
     stock_id: 1,
@@ -3397,6 +3693,28 @@ export const transactions = [
     day_of_week: "friday",
     wa_message: `📊 *STOCK PICK #23* — Mar 27, 2026\n\n🏢 *Howmet Aerospace* (HWM) — $227.90\n\n🛍️ *Sus productos*: Las piezas críticas DENTRO de los motores de avión — álabes que giran a 2,000° grados, sujetadores aeroespaciales, estructuras de titanio para fuselajes, y ruedas forjadas para camiones\n\n🌍 *Presencia*: EE.UU. (Pittsburgh), Francia, Alemania, UK, Japón, China, Australia — 38 plantas en 13+ países. Si un avión de Boeing o Airbus vuela, muy probablemente lleva piezas de Howmet.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.2% anual* solo por ser dueño — poco dividendo, pero la ganancia real está en el crecimiento. Cada vez que Boeing o Airbus necesitan piezas de motor que soporten temperaturas extremas, solo un puñado de empresas en el mundo pueden fabricarlas, y Howmet es la líder. Parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La acción cotiza a P/E de 61x — está priced for perfection. Cualquier tropiezo en earnings puede causar una caída fuerte.\n\n🆕 Posición #23\n🔗 https://vectorialdata.com/stocks/HWM\n\n💡 Miles de personas en United States trabajan para Howmet Aerospace hoy. Generan ingresos, pagan dividendos, y tú eres dueño. Así funciona.`,
   },
+  {
+    id: 24,
+    stock_id: 28,
+    ticker: "BG",
+    type: "new" as const,
+    cycle_number: 5,
+    price: 126.28,
+    date: "2026-03-30",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #24* — Mar 30, 2026\n\n🏢 *Bunge Global* (BG) — $126.28\n\n🛍️ *Sus productos*: Aceites de soya, canola, girasol y palma; harina de soya y trigo; margarina, mayonesa; materia prima para biocombustibles. Marcas: Delicia, Primor, Soya, Cyclus (Brasil), Dalda (India)\n\n🌍 *Presencia*: Suiza (sede), EE.UU. (HQ operativo), Brasil, Argentina, Canadá, Europa, India, China — 300+ instalaciones en 40+ países. El procesador de oleaginosas #1 del mundo tras fusionarse con Viterra.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.22% anual* solo por ser dueño. Cada vez que cocinas con aceite de soya, canola o girasol — ya sea en tu casa o en un restaurante — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Dependencia de los precios de commodities agrícolas que son cíclicos.\n\n🆕 Posición #24\n🔗 https://vectorialdata.com/stocks/BG\n\n💡 La diferencia entre alguien que invierte y alguien que no, no es el dinero. Es la decisión de empezar.`,
+  },
+  {
+    id: 25,
+    stock_id: 29,
+    ticker: "BIDU",
+    type: "new" as const,
+    cycle_number: 5,
+    price: 106.60,
+    date: "2026-03-30",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #25* — Mar 30, 2026\n\n🏢 *Baidu* (BIDU) — $106.60\n\n🛍️ *Sus productos*: Baidu Search (el Google de China, 65%+ market share), Baidu AI Cloud, Apollo Go (robotaxis autónomos con 20M+ viajes), ERNIE Bot (chatbot IA con 200M+ usuarios), iQIYI (streaming)\n\n🌍 *Presencia*: China (Beijing HQ), con Apollo Go expandiéndose a Dubai, Abu Dhabi, Corea del Sur, Londres y Suiza. 22+ ciudades con robotaxis autónomos.\n\n💵 *Tu nuevo ingreso*: Esta empresa acaba de anunciar su *primer dividendo en la historia* solo por ser dueño. Cada vez que alguien en China busca algo en internet, pide un robotaxi autónomo, o habla con el chatbot ERNIE — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Revenue total cayó -3% en 2025. Negocio legacy de búsqueda en declive. Riesgo regulatorio chino y tensiones geopolíticas EE.UU.-China.\n\n🆕 Posición #25\n🔗 https://vectorialdata.com/stocks/BIDU\n\n💡 Con $3 compras una fracción de Baidu. Con $50 también. Lo que importa no es cuánto, es que lo hagas SIEMPRE.`,
+  },
 ];
 
 export const cycles = [
@@ -3437,7 +3755,15 @@ export const cycles = [
     cycle_number: 5,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 6,
+    cycle_number: 6,
+    type: "rebuy" as const,
+    target_count: 5,
+    current_count: 0,
     status: "active" as const,
   },
 ];

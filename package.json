@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@coinbase/coinbase-sdk": "^0.25.0",
     "@coinbase/x402": "^2.1.0",
+    "@ethereum-attestation-service/eas-sdk": "^2.9.0",
     "@simplewebauthn/browser": "^13.3.0",
     "@simplewebauthn/server": "^13.3.0",
     "@supabase/ssr": "^0.9.0",

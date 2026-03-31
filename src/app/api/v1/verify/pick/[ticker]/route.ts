@@ -49,7 +49,16 @@ export async function GET(
       previous_hash: previousHash,
       hash,
       next_hash: nextHash,
+      attestation_uid: tx.attestation_uid ?? null,
     },
+    blockchain: tx.attestation_uid
+      ? {
+          network: "Base (Ethereum L2)",
+          protocol: "EAS (Ethereum Attestation Service)",
+          attestation_uid: tx.attestation_uid,
+          explorer_url: `https://base.easscan.org/attestation/view/${tx.attestation_uid}`,
+        }
+      : null,
     algorithm: "SHA-256(ticker|price|date|previous_hash)",
     chain_position: `${txIndex + 1} of ${transactions.length}`,
   });
