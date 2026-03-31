@@ -6,7 +6,9 @@
     "join": "Join $1/mo",
     "openMenu": "Open menu",
     "notifications": "Notifications",
-    "noticias": "News"
+    "noticias": "News",
+    "verify": "Verifiable Record",
+    "verifyTooltip": "Verifiable record — digital notary"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Stock Portfolio. This is not financial advice.",
@@ -132,7 +134,14 @@
     "noticiasTitle": "News from your portfolio",
     "noticiasCta": "See all news",
     "samplePickSentDate": "We sent this pick on {date}.",
-    "samplePickFomo": "What did we buy today? →"
+    "samplePickFomo": "What did we buy today? →",
+    "faq6Q": "How do I know you don't change the results later?",
+    "faq6A": "Every pick is sealed the same day we make it. It works like a digital notary: once recorded, nobody (not even us) can change the price or date. You can verify every pick at vectorialdata.com/verify",
+    "heroVerify": "{count} picks with digital notary. Verify we didn't change anything.",
+    "verifyCardTitle": "Digital Notary",
+    "verifyCardText": "Every pick is date-sealed. If we change anything, the chain breaks and you see it.",
+    "verifyCardCta": "View verifiable record",
+    "pricingVerify": "Results verified with digital notary"
   },
   "Join": {
     "title": "Start earning income",
@@ -177,7 +186,9 @@
     "potential": "Potential",
     "consensus": "Consensus",
     "lastPickToday": "New pick today",
-    "lastPick": "Last pick: {days} day(s) ago"
+    "lastPick": "Last pick: {days} day(s) ago",
+    "verifyBanner": "This portfolio has a verifiable record",
+    "verifyBannerCta": "View record"
   },
   "Stocks": {
     "title": "Our Portfolio",
@@ -221,7 +232,8 @@
     "subscribeForData": "Subscribe to see financials",
     "lockedTicker": "???",
     "unlockAll": "See all {count} positions",
-    "selectionRotates": "Selection rotates periodically"
+    "selectionRotates": "Selection rotates periodically",
+    "verified": "Certified"
   },
   "StockDetail": {
     "stockNotFound": "Stock not found",

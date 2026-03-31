@@ -84,6 +84,13 @@ export default async function Home() {
             </Link>
           </div>
           <p className="text-xs text-text-faint mt-4">{t("heroProof")}</p>
+          <Link href="/verify" className="inline-flex items-center gap-1.5 mt-3 text-xs font-medium px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/15 transition-colors">
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+            {t("heroVerify", { count: transactions.length })}
+          </Link>
         </ScrollReveal>
       </section>
 
@@ -242,6 +249,23 @@ export default async function Home() {
               </div>
             </ScrollReveal>
           )}
+
+          {/* Notario Digital trust card */}
+          <ScrollReveal>
+            <div className="border border-emerald-500/20 bg-emerald-500/5 rounded-xl p-5 max-w-2xl mx-auto mt-6">
+              <div className="flex items-center gap-2 mb-2">
+                <svg className="w-5 h-5 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+                <h3 className="font-semibold text-sm">{t("verifyCardTitle")}</h3>
+              </div>
+              <p className="text-sm text-text-muted">{t("verifyCardText")}</p>
+              <Link href="/verify" className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline mt-2 inline-block">
+                {t("verifyCardCta")} {"\u2192"}
+              </Link>
+            </div>
+          </ScrollReveal>
         </section>
       </ScrollReveal>
 
@@ -281,6 +305,13 @@ export default async function Home() {
               {t("pricingCta")}
             </a>
             <p className="text-xs text-text-faint mt-3">{t("pricingDisclaimer")}</p>
+            <p className="flex items-center justify-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 mt-2">
+              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              {t("pricingVerify")}
+            </p>
           </div>
         </section>
       </ScrollReveal>
@@ -296,6 +327,7 @@ export default async function Home() {
               { q: t("faq3Q"), a: t("faq3A") },
               { q: t("faq4Q"), a: t("faq4A") },
               { q: t("faq5Q"), a: t("faq5A") },
+              { q: t("faq6Q"), a: t("faq6A") },
             ].map((faq, i) => (
               <ScrollReveal key={i} delay={i * 80}>
                 <div className="border border-border rounded-xl p-4 card-hover">

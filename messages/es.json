@@ -6,7 +6,9 @@
     "join": "Únete $1/mes",
     "openMenu": "Abrir menú",
     "notifications": "Notificaciones",
-    "noticias": "Noticias"
+    "noticias": "Noticias",
+    "verify": "Registro Verificable",
+    "verifyTooltip": "Registro verificable — notario digital"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Portafolio de Acciones. Esto no es asesoría financiera.",
@@ -119,6 +121,13 @@
     "faq4A": "Directo en tu WhatsApp, cada día de lunes a viernes. Incluye el ticker, un resumen, y un link al research completo.",
     "faq5Q": "¿Puedo cancelar?",
     "faq5A": "Sí, en cualquier momento. Sin penalización, sin preguntas.",
+    "faq6Q": "¿Cómo sé que no cambian los resultados después?",
+    "faq6A": "Cada pick se sella el mismo día que lo hacemos. Funciona como un notario digital: una vez registrado, nadie (ni nosotros) puede cambiar el precio o la fecha. Puedes verificar cada pick en vectorialdata.com/verify",
+    "heroVerify": "{count} picks con notario digital. Verifica que no cambiamos nada.",
+    "verifyCardTitle": "Notario Digital",
+    "verifyCardText": "Cada pick tiene fecha sellada. Si cambiamos algo, la cadena se rompe y tú lo ves.",
+    "verifyCardCta": "Ver registro verificable",
+    "pricingVerify": "Resultados verificados con notario digital",
     "ctaTitle": "Tu próximo pick sale mañana.",
     "ctaSubtitle": "¿Vas a estar ahí?",
     "ctaCta": "Empieza por $1/mes",
@@ -177,7 +186,9 @@
     "potential": "Potencial",
     "consensus": "Consenso",
     "lastPickToday": "Nuevo pick hoy",
-    "lastPick": "Último pick: hace {days} día(s)"
+    "lastPick": "Último pick: hace {days} día(s)",
+    "verifyBanner": "Este portafolio tiene registro verificable",
+    "verifyBannerCta": "Ver registro"
   },
   "Stocks": {
     "title": "Nuestro Portafolio",
@@ -221,7 +232,8 @@
     "subscribeForData": "Suscríbete para ver datos financieros",
     "lockedTicker": "???",
     "unlockAll": "Ver las {count} posiciones",
-    "selectionRotates": "La selección rota periódicamente"
+    "selectionRotates": "La selección rota periódicamente",
+    "verified": "Certificado"
   },
   "StockDetail": {
     "stockNotFound": "Acción no encontrada",

@@ -169,6 +169,7 @@ export default async function StocksPage() {
     lockedTicker: t("lockedTicker"),
     unlockAll: t("unlockAll", { count: activeStocks.length }),
     selectionRotates: t("selectionRotates"),
+    verified: t("verified"),
   };
 
   const f = await getTranslations("FreeSignup");

@@ -6,7 +6,9 @@
     "join": "Assine $1/mês",
     "openMenu": "Abrir menu",
     "notifications": "Notificações",
-    "noticias": "Notícias"
+    "noticias": "Notícias",
+    "verify": "Registro Verificável",
+    "verifyTooltip": "Registro verificável — notário digital"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Portfólio de Ações. Isso não é assessoria financeira.",
@@ -132,7 +134,14 @@
     "noticiasTitle": "Notícias do seu portfólio",
     "noticiasCta": "Ver todas as notícias",
     "samplePickSentDate": "Enviamos este pick em {date}.",
-    "samplePickFomo": "O que compramos hoje? →"
+    "samplePickFomo": "O que compramos hoje? →",
+    "faq6Q": "Como sei que vocês não mudam os resultados depois?",
+    "faq6A": "Cada pick é selado no mesmo dia em que fazemos. Funciona como um notário digital: uma vez registrado, ninguém (nem nós) pode mudar o preço ou a data. Você pode verificar cada pick em vectorialdata.com/verify",
+    "heroVerify": "{count} picks com notário digital. Verifique que não mudamos nada.",
+    "verifyCardTitle": "Notário Digital",
+    "verifyCardText": "Cada pick tem data selada. Se mudarmos algo, a cadeia quebra e você vê.",
+    "verifyCardCta": "Ver registro verificável",
+    "pricingVerify": "Resultados verificados com notário digital"
   },
   "Join": {
     "title": "Comece a gerar renda",
@@ -177,7 +186,9 @@
     "potential": "Potencial",
     "consensus": "Consenso",
     "lastPickToday": "Novo pick hoje",
-    "lastPick": "Último pick: há {days} dia(s)"
+    "lastPick": "Último pick: há {days} dia(s)",
+    "verifyBanner": "Este portfólio tem registro verificável",
+    "verifyBannerCta": "Ver registro"
   },
   "Stocks": {
     "title": "Nosso Portfólio",
@@ -221,7 +232,8 @@
     "subscribeForData": "Assine para ver dados financeiros",
     "lockedTicker": "???",
     "unlockAll": "Ver todas as {count} posições",
-    "selectionRotates": "A seleção muda periodicamente"
+    "selectionRotates": "A seleção muda periodicamente",
+    "verified": "Certificado"
   },
   "StockDetail": {
     "stockNotFound": "Ação não encontrada",

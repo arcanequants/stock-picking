@@ -91,6 +91,7 @@ interface Props {
     lockedTicker: string;
     unlockAll: string;
     selectionRotates: string;
+    verified: string;
   };
 }
 
@@ -296,9 +297,16 @@ export default function StocksView({
             <div><p className="text-xs text-text-faint">{labels.rating}</p><p className="text-sm font-mono text-text-secondary">{stock.analyst_consensus || "—"}</p></div>
           </div>
 
-          <div className="mt-3 flex gap-2">
+          <div className="mt-3 flex flex-wrap gap-2">
             <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{stock.sector}</span>
             <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{stock.region}</span>
+            <span className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              {labels.verified}
+            </span>
           </div>
         </div>
       </Link>
