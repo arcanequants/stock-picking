@@ -3437,6 +3437,214 @@ BIDU a $106.60 es una **apuesta deep value al líder de IA en China** — con m�
     last_updated_at: "2026-03-30T00:00:00Z",
     next_review_at: "2026-09-30T00:00:00Z",
   },
+  {
+    id: 30,
+    ticker: "BKNG",
+    name: "Booking Holdings Inc.",
+    price: 4204.22,
+    currency: "USD",
+    sector: "Consumer Discretionary",
+    industry: "Online Travel",
+    region: "North America",
+    country: "United States",
+    market_cap_b: 130.5,
+    pe_ratio: 25.5,
+    pe_forward: 15.5,
+    dividend_yield: 1.02,
+    eps: 160.5,
+    summary_short:
+      "La plataforma de viajes en línea más grande del mundo. Dueños de Booking.com, Priceline, Kayak, Agoda y OpenTable. Procesan $186B al año en reservas de hoteles, vuelos, autos y restaurantes en 220+ países.",
+    summary_what:
+      "Booking Holdings es el líder mundial en viajes en línea, conectando viajeros con alojamiento, transporte, gastronomía y experiencias en más de 220 países. Opera cinco marcas: Booking.com (la plataforma de alojamiento más grande del mundo), Priceline (ofertas de viaje en Norteamérica), Agoda (Asia-Pacífico), KAYAK (buscador de precios) y OpenTable (reservas de restaurantes). En 2025 procesaron $186.1B en reservas brutas y 285 millones de noches de hotel solo en Q4.\n\nGenera ingresos por comisiones sobre reservas, revenue de su plataforma de pagos, y publicidad de sus servicios de metabúsqueda. Ha invertido agresivamente en 'Connected Trip' — un ecosistema impulsado por IA que busca manejar cada aspecto del viaje dentro de una plataforma unificada. El programa de lealtad Genius impulsa reservas directas cada vez más, reduciendo dependencia de marketing pagado.\n\nTiene sede en Norwalk, Connecticut, pero opera globalmente. Su marca más grande, Booking.com, está basada en Ámsterdam y domina Europa. Agoda lidera en el sudeste asiático y Priceline sirve el segmento de descuento en Norteamérica. Ejecutará un split 25:1 efectivo el 2 de abril de 2026.",
+    summary_why:
+      "Combinación atractiva de dividendo e ingreso por apreciación. Cotiza a P/E forward de ~15.5x, por debajo del S&P 500 y de Airbnb, a pesar de crecimiento de 15%+ en revenue y EPS. 36 analistas con consenso Buy y target de ~$5,874 (43% upside). Dividendo recién iniciado ($42/acción, ~1% yield) con payout ratio conservador de 23% — mucho espacio para crecer.\n\nTailwinds estructurales poderosos: el gasto en viajes sigue migrando a online, y Booking es el líder con escala y network effects incomparables. La estrategia Connected Trip con IA captura más gasto por viajero. $17.8B en efectivo para buybacks, dividendos y adquisiciones. Revenue 2025 de $26.9B (+13.4%), cash flow operativo +107% en Q4. Asset-light con márgenes altos — un compounder excelente.",
+    summary_risk:
+      "Regulación EU y disrupción por IA son las amenazas más significativas. El Digital Markets Act designó a Booking.com como 'gatekeeper', lo que podría forzar eliminación de cláusulas de paridad de precios — permitiendo a hoteles ofrecer tarifas más bajas directamente. Multa propuesta de $530M de autoridades españolas por conducta anticompetitiva.\n\nLa funcionalidad de 'booking nativo' de Google en búsqueda con IA (esperada en 2026) podría desintermediar a las OTAs. Riesgo macroeconómico: Oxford Economics proyecta 2026 como el crecimiento global más débil desde 2009.",
+    research_full: `# Booking Holdings Inc. (BKNG) — Research Completo
+
+## Precio: $4,204.22 | P/E Forward: 15.5 | Div Yield: 1.02% | Market Cap: $130.5B
+
+---
+
+## ¿Qué es Booking Holdings?
+
+Booking Holdings es la **plataforma de viajes en línea más grande del mundo**. Opera cinco marcas principales:
+
+- **Booking.com** — La plataforma de alojamiento online más grande del mundo (Amsterdam)
+- **Priceline** — Ofertas de viaje en Norteamérica
+- **Agoda** — Plataforma enfocada en Asia-Pacífico
+- **KAYAK** — Buscador y comparador de precios de viaje
+- **OpenTable** — Reservas de restaurantes
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | $26.9B (+13.4% YoY) |
+| **Gross Bookings** | $186.1B (+12% YoY) |
+| **Room Nights Q4** | 285 millones |
+| **Empleados** | ~24,000 |
+| **Países** | 220+ |
+
+## Estrategia Connected Trip
+
+Booking está construyendo un ecosistema impulsado por IA que maneja CADA aspecto del viaje: vuelos + hoteles + autos + atracciones + restaurantes, todo en una plataforma. El programa Genius impulsa reservas directas, mejorando márgenes.
+
+## Stock Split 25:1
+
+Efectivo 2 de abril de 2026. Precio pasará de ~$4,200 a ~$168 por acción, haciéndolo más accesible a inversionistas retail. El dividendo se ajusta proporcionalmente a ~$0.42/acción trimestral.
+
+## Dividendo
+
+- **Dividendo anual:** $42.00/acción
+- **Yield:** 1.02%
+- **Payout ratio:** 23.1%
+- Dividendo recién iniciado con MUCHO espacio para crecer
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| Analistas Buy | 30 |
+| Analistas Hold | 6 |
+| Analistas Sell | 0 |
+| Target Promedio | **$5,874** |
+| **Upside** | **+43.5%** |
+
+## Riesgos Principales
+
+1. **Digital Markets Act (UE)** — Booking.com designada como "gatekeeper", posibles restricciones a cláusulas de paridad de precios
+2. **Multa española de $530M** — Por conducta anticompetitiva
+3. **Google AI booking nativo** — Podría desintermediar OTAs en el futuro
+4. **Macro débil 2026** — Oxford Economics proyecta el crecimiento global más débil desde 2009
+5. **Deuda significativa** — Podría limitar flexibilidad en downturn
+
+## Conclusión
+
+BKNG a $4,204 es el **líder indiscutible del travel online** a P/E forward de 15.5x — barato para un compounder de 15%+. Dividendo recién iniciado con payout de solo 23%, $17.8B en efectivo, y 43% de upside según analistas. El split 25:1 del 2 de abril abre la puerta a más inversores retail. La estrategia Connected Trip con IA posiciona a Booking para capturar más del gasto total por viajero.
+
+---
+
+*Research fecha: 31 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 5874.0,
+    analyst_upside: 43.5,
+    status: "active",
+    first_researched_at: "2026-03-31T00:00:00Z",
+    last_updated_at: "2026-03-31T00:00:00Z",
+    next_review_at: "2026-09-30T00:00:00Z",
+  },
+  {
+    id: 31,
+    ticker: "BLK",
+    name: "BlackRock Inc.",
+    price: 962.11,
+    currency: "USD",
+    sector: "Financials",
+    industry: "Asset Management",
+    region: "North America",
+    country: "United States",
+    market_cap_b: 165.4,
+    pe_ratio: 20.0,
+    pe_forward: 19.5,
+    dividend_yield: 2.4,
+    eps: 48.09,
+    summary_short:
+      "El administrador de activos más grande del mundo con $14 trillones bajo gestión. Dueños de iShares (ETFs #1 global con 32% de market share), la plataforma Aladdin que maneja $25T+ en activos, y la recién adquirida HPS Investment Partners (crédito privado).",
+    summary_what:
+      "BlackRock es la firma de gestión de inversiones más grande del mundo, fundada en 1988 por Larry Fink. Gestiona ~$14 trillones en activos para clientes institucionales (fondos de pensiones, fondos soberanos, bancos centrales, aseguradoras), intermediarios financieros y inversionistas individuales en 30+ países.\n\nOpera múltiples líneas de productos: iShares es la plataforma de ETFs más grande del mundo (~32% del mercado global con $4.2T en AUM). También gestiona estrategias activas en renta variable, renta fija, multi-activos y alternativos. Su plataforma tecnológica Aladdin procesa analítica de riesgo para $25T+ en activos, generando revenue recurrente de alta margen.\n\nEn 2025 se expandió agresivamente en mercados privados con las adquisiciones de HPS Investment Partners (crédito privado) y Preqin (datos de mercados privados). Revenue 2025 de $24B (+19% YoY), flujos netos récord de $698B, y margen operativo de ~45%.",
+    summary_why:
+      "BlackRock está en la intersección de múltiples tendencias seculares: el shift de activo a pasivo (iShares), el crecimiento de mercados privados (HPS/Preqin), y la tecnologización de asset management (Aladdin). Su posición dominante crea un flywheel poderoso: escala → menores comisiones → más flujos → más escala. Flujos netos récord de $698B en 2025 demuestran consolidación de activos con BlackRock.\n\n17 años consecutivos de aumento de dividendo, yield de ~2.4% con pago anual de $22.92/acción. P/E forward de 19.5x contra EPS 2026 estimado de $54.42. Consenso Strong Buy de 27 analistas con target de $1,309 (~36% upside). Combinación rara de dividendo confiable y creciente, tailwinds seculares, y revenue tecnológico de alto margen.",
+    summary_risk:
+      "Caídas de mercado reducen directamente los ingresos de BlackRock ya que cobra comisiones como porcentaje de los activos bajo gestión — un bear market prolongado comprime earnings y valuación simultáneamente. La caída reciente de $1,220 a $960 (21% drawdown del máximo 52 semanas) ilustra esta sensibilidad.\n\nRiesgos adicionales: compresión de comisiones en ETFs con Vanguard y Schwab empujando expense ratios hacia cero; presión política y regulatoria por ESG (13 estados republicanos han acusado a BlackRock de activismo climático anticompetitivo); y riesgo de integración de las adquisiciones de HPS y Preqin.",
+    research_full: `# BlackRock Inc. (BLK) — Research Completo
+
+## Precio: $962.11 | P/E Forward: 19.5 | Div Yield: 2.4% | Market Cap: $165.4B
+
+---
+
+## ¿Qué es BlackRock?
+
+BlackRock es el **administrador de activos más grande del mundo**, gestionando ~$14 trillones en activos bajo gestión (AUM). Fundada en 1988 por Larry Fink, ha crecido de un startup de una sola oficina a la firma financiera más influyente del planeta.
+
+## Marcas y Plataformas
+
+| Marca | Descripción | AUM/Alcance |
+|-------|-------------|-------------|
+| **iShares** | Plataforma de ETFs #1 global | $4.2T AUM, ~32% market share global |
+| **Aladdin** | Plataforma de analítica de riesgo y gestión de portafolio | $25T+ en activos gestionados en la plataforma |
+| **BlackRock Funds** | Fondos mutuos e institucionales | Suite completa multi-activo |
+| **HPS Investment Partners** | Crédito privado (adquirida 2025) | Expansión en alternativos |
+| **Preqin** | Datos y analítica de mercados privados (adquirida 2025) | Infraestructura de datos |
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | $24.0B (+19% YoY) |
+| **AUM** | $14.0 trillones |
+| **Net Inflows** | $698B (récord) |
+| **Margen Operativo** | ~45% |
+| **Empleados** | ~19,000 |
+| **Países** | 30+ |
+
+## Dividendo — 17 Años Consecutivos de Crecimiento
+
+- **Dividendo anual:** $22.92/acción ($5.73 trimestral)
+- **Yield:** 2.4%
+- **Crecimiento:** 17 años consecutivos de aumento
+- El dividendo se ha más que cuadruplicado en la última década
+
+## El Flywheel de BlackRock
+
+Escala → Menores comisiones → Más atractivo para inversionistas → Más flujos → Más AUM → Más revenue → Más inversión en tecnología (Aladdin) → Mayor retención → Más escala
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Strong Buy** |
+| Analistas | 27 |
+| Target Promedio | **$1,309** |
+| Target Rango | $1,170 - $1,486 |
+| **Upside** | **+36.3%** |
+
+## Riesgos Principales
+
+1. **Sensibilidad a mercados** — Revenue = % de AUM, un bear market comprime todo
+2. **Compresión de comisiones** — Vanguard y Schwab presionan expense ratios a cero
+3. **Presión ESG política** — 13 estados republicanos vs. BlackRock
+4. **Integración HPS/Preqin** — Adquisiciones grandes conllevan riesgo de ejecución
+5. **Scrutinio antimonopolio** — El tamaño de BlackRock invita regulación
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $962.11 |
+| P/E Forward | 19.5x |
+| EPS Forward | $54.42 |
+| 52-Week High | $1,219.94 |
+| Drawdown actual | -21% del máximo |
+
+## Conclusión
+
+BLK a $962 está 21% por debajo de su máximo de 52 semanas — una oportunidad atractiva para el administrador de activos más dominante del mundo. Con $14T en AUM, flujos récord de $698B, 17 años de dividendo creciente al 2.4%, y 36% de upside según analistas. La expansión en mercados privados (HPS) y tecnología (Aladdin) diversifica el revenue más allá de comisiones de gestión tradicionales.
+
+---
+
+*Research fecha: 31 Mar 2026 | Próxima revisión: Sep 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 1309.0,
+    analyst_upside: 36.3,
+    status: "active",
+    first_researched_at: "2026-03-31T00:00:00Z",
+    last_updated_at: "2026-03-31T00:00:00Z",
+    next_review_at: "2026-09-30T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -3715,6 +3923,28 @@ export const transactions: Transaction[] = [
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #25* — Mar 30, 2026\n\n🏢 *Baidu* (BIDU) — $106.60\n\n🛍️ *Sus productos*: Baidu Search (el Google de China, 65%+ market share), Baidu AI Cloud, Apollo Go (robotaxis autónomos con 20M+ viajes), ERNIE Bot (chatbot IA con 200M+ usuarios), iQIYI (streaming)\n\n🌍 *Presencia*: China (Beijing HQ), con Apollo Go expandiéndose a Dubai, Abu Dhabi, Corea del Sur, Londres y Suiza. 22+ ciudades con robotaxis autónomos.\n\n💵 *Tu nuevo ingreso*: Esta empresa acaba de anunciar su *primer dividendo en la historia* solo por ser dueño. Cada vez que alguien en China busca algo en internet, pide un robotaxi autónomo, o habla con el chatbot ERNIE — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Revenue total cayó -3% en 2025. Negocio legacy de búsqueda en declive. Riesgo regulatorio chino y tensiones geopolíticas EE.UU.-China.\n\n🆕 Posición #25\n🔗 https://vectorialdata.com/stocks/BIDU\n\n💡 Con $3 compras una fracción de Baidu. Con $50 también. Lo que importa no es cuánto, es que lo hagas SIEMPRE.`,
   },
+  {
+    id: 26,
+    stock_id: 30,
+    ticker: "BKNG",
+    type: "new" as const,
+    cycle_number: 6,
+    price: 4204.22,
+    date: "2026-03-31",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #26* — Mar 31, 2026\n\n🏢 *Booking Holdings* (BKNG) — $4,204.22\n\n🛍️ *Sus marcas*: Booking.com, Priceline, Kayak, Agoda, OpenTable\n\n🌍 *Presencia*: EE.UU. (Norwalk, CT), Ámsterdam, y operaciones en 220+ países. La plataforma de viajes en línea más grande del mundo con $186B en reservas brutas al año.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.02% anual* solo por ser dueño. Cada vez que alguien reserva un hotel, busca un vuelo, o reserva un restaurante en Booking.com, Priceline o OpenTable — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Regulación EU (Digital Markets Act) puede forzar a Booking.com a eliminar cláusulas de paridad de precios.\n\n🆕 Posición #26\n🔗 https://vectorialdata.com/stocks/BKNG\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+  },
+  {
+    id: 27,
+    stock_id: 31,
+    ticker: "BLK",
+    type: "new" as const,
+    cycle_number: 6,
+    price: 962.11,
+    date: "2026-03-31",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #27* — Mar 31, 2026\n\n🏢 *BlackRock* (BLK) — $962.11\n\n🛍️ *Sus marcas*: iShares (ETFs #1 global), Aladdin (plataforma de riesgo para $25T+), BlackRock Funds, HPS Investment Partners\n\n🌍 *Presencia*: EE.UU. (Nueva York), con oficinas en 30+ países. El administrador de activos más grande del mundo con $14 trillones bajo gestión.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.4% anual* solo por ser dueño. Cada vez que alguien compra un ETF iShares, invierte en un fondo BlackRock, o una institución usa la plataforma Aladdin — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Caídas de mercado reducen directamente los ingresos de BlackRock ya que cobra comisiones como porcentaje de los activos bajo gestión.\n\n🆕 Posición #27\n🔗 https://vectorialdata.com/stocks/BLK\n\n💡 Tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual. Así de simple.`,
+  },
 ];
 
 export const cycles = [
@@ -3761,9 +3991,9 @@ export const cycles = [
   {
     id: 6,
     cycle_number: 6,
-    type: "rebuy" as const,
+    type: "new" as const,
     target_count: 5,
-    current_count: 0,
+    current_count: 2,
     status: "active" as const,
   },
 ];
