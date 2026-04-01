@@ -3685,6 +3685,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-04",
     day_of_week: "wednesday",
     wa_message: "",
+    attestation_uid:
+      "0x4700ba211099cdd5159136f822946fda4caf94786003daa2f31e897c4c4cc64e",
   },
   {
     id: 2,
@@ -3696,6 +3698,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-09",
     day_of_week: "monday",
     wa_message: "",
+    attestation_uid:
+      "0x6c123a1cdac305cadb4db2b2f567956dae137fabe6607920d8ad03477a031654",
   },
   {
     id: 3,
@@ -3707,6 +3711,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-09",
     day_of_week: "monday",
     wa_message: "",
+    attestation_uid:
+      "0x47b3420e81af2b6f66a83bb2610e1e78729d856c16363bcec44c70acd5773fb7",
   },
   {
     id: 4,
@@ -3718,6 +3724,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-09",
     day_of_week: "monday",
     wa_message: "",
+    attestation_uid:
+      "0x02681e36a3280be836e0486a792dfdaa4a97e59c902b74941d915ca81d46a3ad",
   },
   {
     id: 5,
@@ -3729,6 +3737,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-10",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #5* — Mar 10, 2026\n\n🏢 *Associated British Foods* (ASBFY) — $25.13\n\n🛍️ *Sus marcas*: Primark (ropa), Twinings (té), Ovaltine, Kingsmill (pan)\n\n🌍 *Presencia*: UK, Irlanda, España, Alemania, Francia, Italia, Países Bajos, Portugal, EE.UU. — 384 tiendas\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.38% anual* solo por ser dueño. Cada vez que alguien compra ropa en Primark, toma un Twinings o compra pan Kingsmill — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Primark no tiene tienda online — depende 100% de tráfico en tienda física.\n\n🆕 Posición #5\n🔗 https://vectorialdata.com/stocks/ASBFY\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+    attestation_uid:
+      "0x89d62ba653a66d178af44df5bea9e8a509da595ffc6f88b449dae759c0e1a2b7",
   },
   {
     id: 6,
@@ -3740,6 +3750,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-11",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #6* — Mar 11, 2026\n\n🏢 *Broadcom* (AVGO) — $342.69\n\n🛍️ *Sus productos*: Wi-Fi de tu iPhone, VMware (software empresarial), chips de networking para data centers de AI\n\n🌍 *Presencia*: EE.UU., con clientes globales — Apple, Google, Meta, Amazon, Microsoft\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.76% anual* de dividendo. Cada vez que alguien usa Wi-Fi, Netflix en un data center, o una empresa usa VMware — Broadcom gana. Y su revenue de AI se triplicó en un año.\n\n⚠️ *El riesgo*: Apple está empezando a hacer sus propios chips Wi-Fi para reemplazar a Broadcom.\n\n🆕 Posición #6\n🔗 https://vectorialdata.com/stocks/AVGO\n\n💡 Recuerda: tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual.`,
+    attestation_uid:
+      "0x9a62a226366cc7c362e36d5a1027adc504ab881daea37df61a29026599b83ce0",
   },
   {
     id: 7,
@@ -3751,6 +3763,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-11",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #7* — Mar 11, 2026\n\n🏢 *ASML* (ASML) — $1,390.20\n\n🛍️ *Su producto*: Las ÚNICAS máquinas en el mundo que fabrican chips avanzados. Sin ASML no hay iPhones, no hay Nvidia, no hay AI.\n\n🌍 *Presencia*: Holanda (HQ), con clientes en Taiwan (TSMC), Corea (Samsung), EE.UU. (Intel), y todo el mundo\n\n💵 *Tu participación*: ASML paga *0.64% anual* de dividendo y sube cada año. Pero la verdadera ganancia es el crecimiento — cada nuevo chip de AI necesita sus máquinas de $380 millones. Es un monopolio literal.\n\n⚠️ *El riesgo*: La acción es cara y China (33% de sus ventas) enfrenta restricciones de exportación.\n\n🆕 Posición #7\n🔗 https://vectorialdata.com/stocks/ASML\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+    attestation_uid:
+      "0xfb51525d7df6812706a2fe803cf344ae34fd3860a8966dcbc941da1d48b1e053",
   },
   {
     id: 8,
@@ -3762,6 +3776,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-12",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #8* — Mar 12, 2026\n\n🏢 *American Water Works* (AWK) — $138.25\n\n🛍️ *Sus marcas*: New Jersey American Water, Pennsylvania American Water, California American Water, Missouri American Water — el nombre que ves en tu recibo de agua\n\n🌍 *Presencia*: 14 estados de EE.UU. + 18 bases militares del Departamento de Defensa\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.46% anual* solo por ser dueño. Cada vez que alguien paga su recibo de agua en cualquiera de los 14 estados donde operan — parte de ese dinero llega a ti como dividendo. Y lo llevan subiendo 18 años seguidos.\n\n⚠️ *El riesgo*: Depende de reguladores estatales para aprobar aumentos de tarifas.\n\n🆕 Posición #8\n🔗 https://vectorialdata.com/stocks/AWK\n\n💡 No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.`,
+    attestation_uid:
+      "0x7fd0653495ceaff4d3d5bbcbfe4d213f90e50c473ab2e4ae6bf556672e8b6077",
   },
   {
     id: 9,
@@ -3773,6 +3789,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-16",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #9* — Mar 16, 2026\n\n🏢 *CaixaBank* (CAIXY) — $3.69\n\n🛍️ *Sus marcas*: CaixaBank (banco #1 de España), imagin (banco digital para jóvenes), VidaCaixa (seguros), BPI (banco en Portugal), Fundación "la Caixa"\n\n🌍 *Presencia*: España (18 millones de clientes) + Portugal (via BPI). Premiado "Mejor Banco para Consumidores en Europa" por Euromoney 2025\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.1% anual* solo por ser dueño. Cada vez que alguien en España paga su hipoteca, usa su tarjeta, o contrata un seguro con CaixaBank — parte de ese dinero llega a ti como dividendo. Y el dividendo creció 117% en 3 años.\n\n⚠️ *El riesgo*: Concentrado en España — si la economía española baja, CaixaBank lo siente.\n\n🆕 Posición #9\n🔗 https://vectorialdata.com/stocks/CAIXY\n\n💡 Recuerda: tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual.`,
+    attestation_uid:
+      "0xf772ee64fddbf3bb06315295ae611dab53d9461fff3bdfe1e48a9db5a7bbf306",
   },
   {
     id: 10,
@@ -3784,6 +3802,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-16",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #10* — Mar 16, 2026\n\n🏢 *Rollins / Orkin* (ROL) — $55.33\n\n🛍️ *Sus marcas*: Orkin (#1 en control de plagas), HomeTeam Pest Defense, Clark Pest Control, Critter Control, Western Pest Services\n\n🌍 *Presencia*: EE.UU. (líder nacional), Canadá, Australia. 24 años consecutivos creciendo ventas.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.32% anual* de dividendo — 35 años sin fallar un solo pago. Cada vez que alguien llama a Orkin porque tiene cucarachas, termitas o ratones — parte de ese dinero llega a ti. Y las plagas no entienden de recesiones.\n\n⚠️ *El riesgo*: La acción es cara (P/E de 51x, el doble de su industria).\n\n🆕 Posición #10\n🔗 https://vectorialdata.com/stocks/ROL\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+    attestation_uid:
+      "0x2c87240efb4fb0f66824a6416b8aa2563791791fffc8e9e4aa8501f36076c2f5",
   },
   {
     id: 11,
@@ -3795,6 +3815,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-16",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #11* — Mar 16, 2026\n\n🏢 *Gold Fields* (GFI) — $47.72\n\n🛍️ *Su producto*: Oro. Extraen 2.44 millones de onzas al año de minas en Sudáfrica, Ghana, Australia, Perú y Chile. Están construyendo una nueva mina en Canadá.\n\n🌍 *Presencia*: 5 países — Sudáfrica, Ghana, Australia, Perú, Chile + nueva mina en Canadá (2027)\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.1% anual* de dividendo — más un dividendo especial este año. Su profit se TRIPLICÓ en 2025. Devolvieron $1.7 mil millones al accionista. Cada vez que el oro sube, tu inversión crece.\n\n⚠️ *El riesgo*: La acción es muy volátil (rango de $19 a $62 en un año). Si el oro baja, Gold Fields baja más fuerte.\n\n🆕 Posición #11\n🔗 https://vectorialdata.com/stocks/GFI\n\n💡 ¿Cuánto invertir? Lo que puedas mantener CADA MES. $90/mes = $3 por pick. $300/mes = $10 por pick.`,
+    attestation_uid:
+      "0xe7de44a8c2cfa055c437055dd231386dbc51d858f86932cc311fbac0361ee8a9",
   },
   {
     id: 12,
@@ -3806,6 +3828,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-17",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #12* — Mar 17, 2026\n\n🏢 *Western Alliance Bank* (WAL) — $68.16\n\n🛍️ *Sus líneas*: Banca para startups tech, warehouse lending (#1 nacional), gaming, firmas legales, real estate — no es un banco de sucursales, es un banco de nichos especializados\n\n🌍 *Presencia*: EE.UU. — Arizona, California, Nueva York, Texas, Nevada. $93B en activos. Banco #1 para PYMEs en el suroeste de EE.UU.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.48% anual* de dividendo. Cada vez que una startup tech paga su línea de crédito, un casino refinancia, o un originador de hipotecas usa warehouse lending — parte de ese dinero llega a ti. Su profit creció 23% en 2025 y los analistas ven +49% de upside.\n\n⚠️ *El riesgo*: En 2023 perdieron $9.5B en depósitos en 48 horas por el pánico de SVB. Se recuperaron, pero el mercado tiene memoria.\n\n🆕 Posición #12\n🔗 https://vectorialdata.com/stocks/WAL\n\n💡 No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.`,
+    attestation_uid:
+      "0x6d4e0c3e7bcf6102cbaae84b08142f55b8697a341d1b8f40d07383bcc40d2467",
   },
   {
     id: 13,
@@ -3817,6 +3841,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-17",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #13* — Mar 17, 2026\n\n🏢 *Siemens* (SIEGY) — $126.60\n\n🛍️ *Sus productos*: Automatización de fábricas, infraestructura para centros de datos, trenes y metros. 177 años de historia. Alianzas con NVIDIA y Microsoft para IA industrial.\n\n🌍 *Presencia*: Global — Alemania (HQ), EE.UU., China, y prácticamente todo el mundo. €120 mil millones en órdenes pendientes.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.5% anual* de dividendo. Cada vez que se construye un centro de datos para IA, se automatiza una fábrica, o un metro nuevo opera — Siemens gana. Su negocio de infraestructura para data centers creció 35% el último trimestre.\n\n⚠️ *El riesgo*: No es barata (P/E de 22x). Competencia fuerte de Schneider Electric y ABB.\n\n🆕 Posición #13\n🔗 https://vectorialdata.com/stocks/SIEGY\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+    attestation_uid:
+      "0x2d858818683171e4fc887763922c3652bf02703e75166adcb1495f71eb056a1b",
   },
   {
     id: 14,
@@ -3828,6 +3854,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-18",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #14* — Mar 18, 2026\n\n🏢 *AXA* (AXAHY) — $45.09\n\n🛍️ *Sus marcas*: AXA (seguros #1 de Europa), AXA XL (reaseguro comercial global), AXA Investment Managers, y operaciones en ~50 países con 92 millones de clientes\n\n🌍 *Presencia*: Francia (HQ), Alemania, Suiza, UK, España, Italia, Japón, EE.UU. y más. La aseguradora más grande de Europa.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.4% anual* solo por ser dueño — uno de los dividendos más altos del portafolio. Cada vez que alguien paga su seguro de auto, de casa, de salud, o de vida en cualquiera de los 50 países donde operan — parte de ese dinero llega a ti. Y devuelven 75% de su profit al accionista entre dividendos y recompras.\n\n⚠️ *El riesgo*: Catástrofes naturales por cambio climático pueden aumentar los costos de siniestros.\n\n🆕 Posición #14\n🔗 https://vectorialdata.com/stocks/AXAHY\n\n💡 Con 5.4% de dividendo, AXAHY duplica tu inversión solo en dividendos en ~13 años. Sin que suba de precio.`,
+    attestation_uid:
+      "0x279373f1568ed6c422a5336c9bb3453af68f1b444eeff27df80aa090e23c7874",
   },
   {
     id: 15,
@@ -3839,6 +3867,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-19",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #15* — Mar 19, 2026\n\n🏢 *Barrick Mining* (B) — $37.40\n\n⛏️ *Su producto*: Oro y cobre. Extraen 3.26 millones de onzas de oro al año de minas en 17 países: EE.UU. (Nevada Gold Mines), Canadá, Rep. Dominicana, Mali, Zambia, Tanzania, y Pakistán.\n\n🌍 *Presencia*: 17 países — Canadá (HQ), EE.UU., Zambia, Pakistán, Mali, Tanzania, Rep. Dominicana y más. Antes se llamaba Barrick Gold.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.15% anual* solo por ser dueño. Su free cash flow creció 194% en 2025 a $3.87 mil millones. Nueva política: devuelven 50% de su cash flow al accionista. Con oro arriba de $5,000/oz y su costo de producción en $1,637/oz, el margen por onza es enorme.\n\n⚠️ *El riesgo*: 100% expuesto al precio del oro sin cobertura. Si el oro baja, Barrick baja más fuerte. Opera en países con riesgo político (Mali, Pakistán).\n\n🆕 Posición #15 — Cierra Ciclo 3\n🔗 https://vectorialdata.com/stocks/B\n\n💡 El dividendo de B se reinvierte → compra más fracciones → genera más dividendo → compra más fracciones. Eso es interés compuesto.`,
+    attestation_uid:
+      "0x9f4f3dab47c1eef663977ca14d3717ed2bef359489e2ad7c65f9fedb3b51a90d",
   },
   {
     id: 16,
@@ -3850,6 +3880,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-20",
     day_of_week: "thursday",
     wa_message: `📊 *STOCK PICK #16* — Mar 20, 2026\n\n🏢 *Alibaba Group* (BABA) — $122.41\n\n🛍️ *Sus plataformas*: Taobao y Tmall (e-commerce #1 de China), Alibaba Cloud (#1 cloud de China), AliExpress (internacional), Ele.me (delivery)\n\n🌍 *Presencia*: China (HQ), con operaciones en 200+ países. 800M+ usuarios activos. La empresa tech más grande de China.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.83% anual* solo por ser dueño — modesto pero creciendo 26% al año. Cada vez que alguien compra en Taobao, usa Alibaba Cloud, o pide delivery por Ele.me — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: China — geopolítica, regulación impredecible, y el "China discount" siempre presente.\n\n🆕 Posición #16\n🔗 https://vectorialdata.com/stocks/BABA\n\n💡 El S&P 500 ha dado ~10% anual durante 100 años. Pero solo si NO vendiste en los días malos.`,
+    attestation_uid:
+      "0xa4c87db41e597b878735a2ec56d1ed3672d94971238c8270e73bb63c2fef6311",
   },
   {
     id: 17,
@@ -3861,6 +3893,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-23",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #17* — Mar 23, 2026\n\n🏢 *Bank of America* (BAC) — $47.52\n\n🛍️ *Sus líneas*: Consumer Banking (depósitos, tarjetas, small business), Merrill Lynch (wealth management), Global Markets (trading), Global Banking (banca corporativa e investment banking)\n\n🌍 *Presencia*: EE.UU. — 66 millones de clientes. El segundo banco más grande de Estados Unidos, solo detrás de JPMorgan.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.37% anual* solo por ser dueño — 13 años seguidos subiéndolo. Cada vez que alguien paga su tarjeta de crédito, invierte con Merrill Lynch, o una empresa usa sus servicios de treasury — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Sensible a tasas de interés — si la Fed corta más de lo esperado, su ingreso por intereses baja.\n\n🆕 Posición #17\n🔗 https://vectorialdata.com/stocks/BAC\n\n💡 No revises BAC todos los días. Bank of America no cambia de valor en 24 horas — tu ansiedad sí.`,
+    attestation_uid:
+      "0x46afd01cb348e5a6afb164d6a68955ec1cb5a7ff0f1850ce3a789ff047fa66ba",
   },
   {
     id: 18,
@@ -3872,6 +3906,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-23",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #18* — Mar 23, 2026\n\n🏢 *Becton Dickinson* (BDX) — $156.23\n\n🛍️ *Sus productos*: BD Vacutainer (tubos de sangre en cada hospital), jeringas BD (las más usadas del mundo), bombas de infusión BD Alaris, dispensadores automáticos BD Pyxis\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones en ~50 países, productos en ~200 países. 80%+ del market share en tubos de sangre en EE.UU.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.69% anual* solo por ser dueño — 54 años seguidos subiéndolo, Dividend Aristocrat. Cada vez que un doctor te saca sangre, un hospital conecta una bomba de infusión, o una farmacéutica usa sus jeringas para Ozempic o Mounjaro — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Aranceles impactan 370 puntos base en FY2026 por manufactura en México.\n\n🆕 Posición #18\n🔗 https://vectorialdata.com/stocks/BDX\n\n💡 El mercado ha caído 50%+ varias veces en la historia. Y SIEMPRE se recuperó. Los que vendieron en pánico perdieron. Los que mantuvieron ganaron.`,
+    attestation_uid:
+      "0xc9d211392959bca6ee46a758c710d63255c1436bb879ab97ca5667e5711b5dd1",
   },
   {
     id: 19,
@@ -3883,6 +3919,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-24",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #19* — Mar 24, 2026\n\n🏢 *Freeport-McMoRan* (FCX) — $56.48\n\n⛏️ *Su producto*: Cobre, oro y molibdeno. La mina de cobre más grande de Norteamérica (Morenci, Arizona) y el megayacimiento Grasberg en Indonesia — uno de los más grandes del mundo.\n\n🌍 *Presencia*: EE.UU. (Arizona, Nuevo México), Indonesia, Perú, Chile. El mayor productor de cobre que cotiza en bolsa del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.06% anual* solo por ser dueño. Cada vez que se construye un data center para IA, se fabrica un auto eléctrico, o se moderniza una red eléctrica — se necesita cobre masivamente, y Freeport lo produce. Parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Mud rush en Grasberg (sept 2025) cortó producción ~35% y causó 7 fatalidades.\n\n🆕 Posición #19\n🔗 https://vectorialdata.com/stocks/FCX\n\n💡 Los ricos no invierten cuando les sobra. Invierten PRIMERO y viven con lo que queda.`,
+    attestation_uid:
+      "0x6f31b2b19ddcc6830b5b2bb1a6ea3df486f95f7df8099d7a6ace8f089e364589",
   },
   {
     id: 20,
@@ -3894,6 +3932,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-24",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #20* — Mar 24, 2026\n\n🏢 *Lockheed Martin* (LMT) — $610.17\n\n🛍️ *Sus productos*: F-35 Lightning II (el caza más avanzado del mundo), HIMARS (el sistema que cambió la guerra en Ucrania), PAC-3 (defensa antimisiles), helicópteros Sikorsky, y la nave Orion de la NASA\n\n🌍 *Presencia*: EE.UU. (HQ), con contratos en ~50 países aliados. El contratista de defensa #1 del Pentágono y del mundo. Backlog récord de $194 mil millones.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.26% anual* solo por ser dueño — 24 años seguidos subiéndolo. Cada vez que un país aliado compra un F-35, un ejército reabastece misiles HIMARS, o la NASA lanza una misión con Orion — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Pentágono recortó compras de F-35 casi 50% en FY2026, cambiando enfoque a sostenimiento.\n\n🆕 Posición #20\n🔗 https://vectorialdata.com/stocks/LMT\n\n💡 Si LMT baja mañana, no pasa nada. Tú no compraste para mañana. Compraste para dentro de 5, 10, 20 años.`,
+    attestation_uid:
+      "0x5323d77dfa5f011d892cb2c4745fcccbfdc51a98a616be491431fd34a953d5d2",
   },
   {
     id: 21,
@@ -3905,6 +3945,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-25",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #21* — Mar 25, 2026\n\n🏢 *Northrop Grumman* (NOC) — $691.43\n\n🛍️ *Sus productos*: B-21 Raider (el bombardero stealth más avanzado del mundo), ICBM Sentinel, drones Global Hawk y Triton, radares, satélites, sistemas de ciberseguridad\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones de defensa y espacio en múltiples países aliados. El contratista de defensa #2 del Pentágono. Backlog récord de $95.7 mil millones.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.35% anual* solo por ser dueño — 23 años seguidos subiéndolo. Cada vez que un país aliado necesita un bombardero stealth, un satélite espacial, o un sistema de ciberseguridad — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El programa Sentinel ICBM tiene sobrecostos masivos y reestructuración en curso.\n\n🆕 Posición #21\n🔗 https://vectorialdata.com/stocks/NOC\n\n💡 Un café diario = $150/mes. $5 por pick = portafolio de 30 empresas pagándote dividendos. Misma plata, diferente futuro.`,
+    attestation_uid:
+      "0x5ddaea5314ebb9cf86ea294e44fedefa17790aaedc609ce3fbc5b467bcfadd82",
   },
   {
     id: 22,
@@ -3916,6 +3958,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-25",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #22* — Mar 25, 2026\n\n🏢 *GE Aerospace* (GE) — $288.68\n\n🛍️ *Sus productos*: Motores LEAP (Boeing 737 MAX / Airbus A320neo), GE9X (el motor más grande del mundo para el 777X), GEnx (Boeing 787), motores T700 para helicópteros militares\n\n🌍 *Presencia*: EE.UU. (HQ), operaciones globales. El fabricante de motores de avión #1 del mundo con 44,000+ motores instalados. JV con Safran (CFM International).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.63% anual* solo por ser dueño. Cada vez que un avión despega con motores LEAP, GEnx o GE9X — y necesita mantenimiento después de miles de horas de vuelo — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Boeing 737 MAX sigue con problemas de producción que limitan entregas de motores LEAP.\n\n🆕 Posición #22\n🔗 https://vectorialdata.com/stocks/GE\n\n💡 Invertir no es un evento. Es un hábito. Como ir al gym — los resultados llegan con el tiempo, no con la intensidad.`,
+    attestation_uid:
+      "0x2cf4421d941a600c7e2ceabd98c56dbbce79cf4b141d6c96a532a9fed4a9ceac",
   },
   {
     id: 23,
@@ -3927,6 +3971,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-27",
     day_of_week: "friday",
     wa_message: `📊 *STOCK PICK #23* — Mar 27, 2026\n\n🏢 *Howmet Aerospace* (HWM) — $227.90\n\n🛍️ *Sus productos*: Las piezas críticas DENTRO de los motores de avión — álabes que giran a 2,000° grados, sujetadores aeroespaciales, estructuras de titanio para fuselajes, y ruedas forjadas para camiones\n\n🌍 *Presencia*: EE.UU. (Pittsburgh), Francia, Alemania, UK, Japón, China, Australia — 38 plantas en 13+ países. Si un avión de Boeing o Airbus vuela, muy probablemente lleva piezas de Howmet.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.2% anual* solo por ser dueño — poco dividendo, pero la ganancia real está en el crecimiento. Cada vez que Boeing o Airbus necesitan piezas de motor que soporten temperaturas extremas, solo un puñado de empresas en el mundo pueden fabricarlas, y Howmet es la líder. Parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La acción cotiza a P/E de 61x — está priced for perfection. Cualquier tropiezo en earnings puede causar una caída fuerte.\n\n🆕 Posición #23\n🔗 https://vectorialdata.com/stocks/HWM\n\n💡 Miles de personas en United States trabajan para Howmet Aerospace hoy. Generan ingresos, pagan dividendos, y tú eres dueño. Así funciona.`,
+    attestation_uid:
+      "0x91ed7c4b5460673449cfbbaadb61a1280d4dddf370232b366d73caf4c407c047",
   },
   {
     id: 24,
@@ -3938,6 +3984,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-30",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #24* — Mar 30, 2026\n\n🏢 *Bunge Global* (BG) — $126.28\n\n🛍️ *Sus productos*: Aceites de soya, canola, girasol y palma; harina de soya y trigo; margarina, mayonesa; materia prima para biocombustibles. Marcas: Delicia, Primor, Soya, Cyclus (Brasil), Dalda (India)\n\n🌍 *Presencia*: Suiza (sede), EE.UU. (HQ operativo), Brasil, Argentina, Canadá, Europa, India, China — 300+ instalaciones en 40+ países. El procesador de oleaginosas #1 del mundo tras fusionarse con Viterra.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.22% anual* solo por ser dueño. Cada vez que cocinas con aceite de soya, canola o girasol — ya sea en tu casa o en un restaurante — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Dependencia de los precios de commodities agrícolas que son cíclicos.\n\n🆕 Posición #24\n🔗 https://vectorialdata.com/stocks/BG\n\n💡 La diferencia entre alguien que invierte y alguien que no, no es el dinero. Es la decisión de empezar.`,
+    attestation_uid:
+      "0x338e6a247db294f9066e034e5b4b2797ee4f72e7a97bad4f84690d8cad3ab48f",
   },
   {
     id: 25,
@@ -3949,6 +3997,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-30",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #25* — Mar 30, 2026\n\n🏢 *Baidu* (BIDU) — $106.60\n\n🛍️ *Sus productos*: Baidu Search (el Google de China, 65%+ market share), Baidu AI Cloud, Apollo Go (robotaxis autónomos con 20M+ viajes), ERNIE Bot (chatbot IA con 200M+ usuarios), iQIYI (streaming)\n\n🌍 *Presencia*: China (Beijing HQ), con Apollo Go expandiéndose a Dubai, Abu Dhabi, Corea del Sur, Londres y Suiza. 22+ ciudades con robotaxis autónomos.\n\n💵 *Tu nuevo ingreso*: Esta empresa acaba de anunciar su *primer dividendo en la historia* solo por ser dueño. Cada vez que alguien en China busca algo en internet, pide un robotaxi autónomo, o habla con el chatbot ERNIE — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Revenue total cayó -3% en 2025. Negocio legacy de búsqueda en declive. Riesgo regulatorio chino y tensiones geopolíticas EE.UU.-China.\n\n🆕 Posición #25\n🔗 https://vectorialdata.com/stocks/BIDU\n\n💡 Con $3 compras una fracción de Baidu. Con $50 también. Lo que importa no es cuánto, es que lo hagas SIEMPRE.`,
+    attestation_uid:
+      "0x347404c4f2359227bd43524f46a6a07b9eb8f3118592055f95d57381b5dbb6a1",
   },
   {
     id: 26,
@@ -3960,6 +4010,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-31",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #26* — Mar 31, 2026\n\n🏢 *Booking Holdings* (BKNG) — $4,204.22\n\n🛍️ *Sus marcas*: Booking.com, Priceline, Kayak, Agoda, OpenTable\n\n🌍 *Presencia*: EE.UU. (Norwalk, CT), Ámsterdam, y operaciones en 220+ países. La plataforma de viajes en línea más grande del mundo con $186B en reservas brutas al año.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.02% anual* solo por ser dueño. Cada vez que alguien reserva un hotel, busca un vuelo, o reserva un restaurante en Booking.com, Priceline o OpenTable — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Regulación EU (Digital Markets Act) puede forzar a Booking.com a eliminar cláusulas de paridad de precios.\n\n🆕 Posición #26\n🔗 https://vectorialdata.com/stocks/BKNG\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
+    attestation_uid:
+      "0x3e90c1d750fc5e10a316615cd530eabfb46604ec5467c2a65ddaf509149f4510",
   },
   {
     id: 27,
@@ -3971,6 +4023,8 @@ export const transactions: Transaction[] = [
     date: "2026-03-31",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #27* — Mar 31, 2026\n\n🏢 *BlackRock* (BLK) — $962.11\n\n🛍️ *Sus marcas*: iShares (ETFs #1 global), Aladdin (plataforma de riesgo para $25T+), BlackRock Funds, HPS Investment Partners\n\n🌍 *Presencia*: EE.UU. (Nueva York), con oficinas en 30+ países. El administrador de activos más grande del mundo con $14 trillones bajo gestión.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.4% anual* solo por ser dueño. Cada vez que alguien compra un ETF iShares, invierte en un fondo BlackRock, o una institución usa la plataforma Aladdin — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Caídas de mercado reducen directamente los ingresos de BlackRock ya que cobra comisiones como porcentaje de los activos bajo gestión.\n\n🆕 Posición #27\n🔗 https://vectorialdata.com/stocks/BLK\n\n💡 Tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual. Así de simple.`,
+    attestation_uid:
+      "0x5679687dfc638864b6ffa3bc057747711218b5cbee94218e2268ebcc66a71e82",
   },
 ];
 
