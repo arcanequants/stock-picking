@@ -3672,6 +3672,122 @@ BLK a $962 está 21% por debajo de su máximo de 52 semanas — una oportunidad 
     last_updated_at: "2026-03-31T00:00:00Z",
     next_review_at: "2026-09-30T00:00:00Z",
   },
+  {
+    id: 32,
+    ticker: "BTI",
+    name: "British American Tobacco",
+    price: 57.89,
+    currency: "USD",
+    sector: "Consumer",
+    industry: "Tobacco",
+    region: "Europe",
+    country: "United Kingdom",
+    market_cap_b: 126.1,
+    pe_ratio: 15.8,
+    pe_forward: 11.0,
+    dividend_yield: 5.71,
+    eps: 3.66,
+    summary_short:
+      "La segunda tabacalera más grande del mundo. Dueños de Lucky Strike, Dunhill, Pall Mall, Camel y Kent. Líder global en productos de nueva generación (Vuse vaping, glo tabaco calentado) con presencia en 180+ mercados.",
+    summary_what:
+      "British American Tobacco es la segunda compañía de tabaco más grande del mundo por ingresos, fundada en 1902 en Londres. Opera en más de 180 mercados con marcas icónicas como Lucky Strike, Dunhill, Pall Mall, Camel, Kent y Natural American Spirit.\n\nMás allá del cigarro tradicional, BAT lidera la transición a productos de nueva generación (NGP): Vuse es el #1 mundial en vaping con ~40% del mercado global, glo compite en tabaco calentado, y Velo lidera en nicotine pouches. En 2025, las categorías de nueva generación alcanzaron ~£4B en revenue, creciendo doble dígito.\n\nRevenue total ~£27B, con margen operativo de ~43%. BAT genera flujo de caja libre masivo (~£8B anuales), lo que financia uno de los dividendos más altos del sector: 5.7% yield con historial de 25+ años de pagos consecutivos.",
+    summary_why:
+      "BTI es una máquina de dividendos a valuación de ganga. A P/E forward de 11x, paga 5.7% de dividendo — más del doble que el promedio del S&P 500. El flujo de caja libre de ~£8B anuales cubre holgadamente el dividendo con payout ratio de ~60%.\n\nLa transición a productos sin humo (Vuse, glo, Velo) reduce el riesgo regulatorio y de salud a largo plazo. Vuse es #1 global en vaping con ~40% de market share. El mercado descuenta a BAT por ser tabacalera, pero ignora que las nuevas categorías crecen doble dígito y ya representan ~15% del revenue.\n\nConsenso de analistas es Buy con target de $62, ~7% de upside más el 5.7% de dividendo = ~13% de retorno total esperado. Ideal para inversores que buscan ingreso pasivo alto con valuación defensiva.",
+    summary_risk:
+      "La regulación global contra el tabaco sigue endureciéndose — prohibiciones de sabores en vaping, restricciones publicitarias y posibles impuestos adicionales podrían frenar el crecimiento de las categorías de nueva generación que son clave para el futuro de BAT.\n\nRiesgos adicionales: volúmenes de cigarrillos tradicionales caen ~3-4% anual globalmente; litigios multimillonarios por daños a la salud siguen latentes; la deuda neta de ~£35B limita flexibilidad financiera; y la competencia de Philip Morris (IQOS) y Japan Tobacco es intensa en tabaco calentado.",
+    research_full: `# British American Tobacco (BTI) — Research Completo
+
+## Precio: $57.89 | P/E Forward: 11.0 | Div Yield: 5.71% | Market Cap: $126.1B
+
+---
+
+## ¿Qué es British American Tobacco?
+
+British American Tobacco es la **segunda tabacalera más grande del mundo**, fundada en 1902 en Londres. Opera en 180+ mercados, vendiendo productos de tabaco tradicional y productos de nueva generación (vaping, tabaco calentado, nicotine pouches).
+
+## Marcas y Productos
+
+| Marca | Categoría | Posición |
+|-------|-----------|----------|
+| **Lucky Strike** | Cigarrillos premium | Marca global icónica |
+| **Dunhill** | Cigarrillos premium | Líder en mercados asiáticos |
+| **Pall Mall** | Cigarrillos value | Top 3 global por volumen |
+| **Camel** | Cigarrillos premium | Herencia EE.UU. (ex-Reynolds) |
+| **Kent** | Cigarrillos premium | Fuerte en Europa del Este y Japón |
+| **Vuse** | Vaping | **#1 mundial, ~40% market share** |
+| **glo** | Tabaco calentado | Compite con IQOS de Philip Morris |
+| **Velo** | Nicotine pouches | Líder en categoría emergente |
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | ~£27B |
+| **Margen Operativo** | ~43% |
+| **Free Cash Flow** | ~£8B |
+| **Dividendo Anual** | ~$3.31/acción (5.71% yield) |
+| **Payout Ratio** | ~60% |
+| **Empleados** | ~46,000 |
+| **Mercados** | 180+ |
+
+## Dividendo — 25+ Años Consecutivos de Pagos
+
+- **Yield:** 5.71% — más del doble que el S&P 500
+- **Frecuencia:** Trimestral
+- **Free Cash Flow coverage:** ~1.7x (bien cubierto)
+- **Historial:** 25+ años de pagos consecutivos
+
+## La Transición a Smoke-Free
+
+BAT está invirtiendo agresivamente en categorías sin humo:
+- **Vuse** (vaping): #1 mundial con ~40% share, rentable desde 2024
+- **glo** (heated tobacco): Competidor de IQOS, fuerte en Japón y Europa
+- **Velo** (nicotine pouches): Categoría de más rápido crecimiento
+- NGP ya representan ~15% del revenue y crecen doble dígito
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| Target Promedio | **$62** |
+| **Upside** | **+7.1%** |
+| Retorno total (+ dividendo) | **~13%** |
+
+## Riesgos Principales
+
+1. **Regulación** — Prohibiciones de sabores en vaping, impuestos al tabaco
+2. **Declive de volúmenes** — Cigarrillos caen 3-4% anual globalmente
+3. **Litigios** — Demandas por daños a la salud siguen latentes
+4. **Deuda** — ~£35B de deuda neta limita flexibilidad
+5. **Competencia NGP** — Philip Morris (IQOS) domina tabaco calentado
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $57.89 |
+| P/E Forward | 11.0x |
+| Div Yield | 5.71% |
+| 52-Week High | $63.22 |
+| Drawdown actual | -8% del máximo |
+
+## Conclusión
+
+BTI a $57.89 es una **máquina de dividendos a precio de ganga**. P/E forward de 11x con 5.71% de yield — uno de los dividendos más altos entre large caps globales. La transición a productos sin humo (Vuse #1 en vaping) reduce gradualmente el riesgo regulatorio. Ideal para quien busca ingreso pasivo alto con valuación defensiva. El retorno total esperado (~13% anual entre dividendo + apreciación) compensa el riesgo del sector tabacalero.
+
+---
+
+*Research fecha: 2 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 62.0,
+    analyst_upside: 7.1,
+    status: "active",
+    first_researched_at: "2026-04-02T00:00:00Z",
+    last_updated_at: "2026-04-02T00:00:00Z",
+    next_review_at: "2026-10-02T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -4026,6 +4142,17 @@ export const transactions: Transaction[] = [
     attestation_uid:
       "0x5679687dfc638864b6ffa3bc057747711218b5cbee94218e2268ebcc66a71e82",
   },
+  {
+    id: 28,
+    stock_id: 32,
+    ticker: "BTI",
+    type: "new" as const,
+    cycle_number: 6,
+    price: 57.89,
+    date: "2026-04-02",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #28* — Apr 2, 2026\n\n🏢 *British American Tobacco* (BTI) — $57.89\n\n🛍️ *Sus marcas*: Lucky Strike, Dunhill, Pall Mall, Camel, Kent, Vuse (#1 mundial en vaping), glo (tabaco calentado), Velo (nicotine pouches)\n\n🌍 *Presencia*: Reino Unido (Londres), operando en 180+ mercados. La segunda tabacalera más grande del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.71% anual* solo por ser dueño. Cada vez que alguien enciende un Lucky Strike, usa un Vuse, o compra Dunhill en un duty-free — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La regulación global contra el tabaco sigue endureciéndose — prohibiciones de sabores en vaping, restricciones publicitarias y posibles impuestos adicionales.\n\n🆕 Posición #28\n🔗 https://vectorialdata.com/stocks/BTI\n\n💡 Miles de personas en United Kingdom trabajan para British American Tobacco hoy. Generan ingresos, pagan dividendos, y tú eres dueño. Así funciona.`,
+  },
 ];
 
 export const cycles = [
@@ -4074,7 +4201,7 @@ export const cycles = [
     cycle_number: 6,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 3,
     status: "active" as const,
   },
 ];
