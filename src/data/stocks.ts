@@ -3788,6 +3788,125 @@ BTI a $57.89 es una **máquina de dividendos a precio de ganga**. P/E forward de
     last_updated_at: "2026-04-02T00:00:00Z",
     next_review_at: "2026-10-02T00:00:00Z",
   },
+  {
+    id: 33,
+    ticker: "MDLZ",
+    name: "Mondelez International",
+    price: 57.03,
+    currency: "USD",
+    sector: "Consumer",
+    industry: "Packaged Foods",
+    region: "North America",
+    country: "United States",
+    market_cap_b: 73.6,
+    pe_ratio: 22.5,
+    pe_forward: 16.9,
+    dividend_yield: 3.5,
+    eps: 2.53,
+    summary_short:
+      "El gigante global de snacks. Dueños de Oreo (#1 mundial en galletas), Cadbury, Toblerone, Milka, Trident, Tang, Philadelphia y Ritz. Presencia en 150+ países con revenue de ~$36B.",
+    summary_what:
+      "Mondelez International es una de las compañías de snacks más grandes del mundo, creada en 2012 como spin-off de Kraft Foods. Con sede en Chicago, opera en 150+ países generando ~$36B en revenue anual.\n\nSu portafolio incluye algunas de las marcas de snacks más reconocidas globalmente: Oreo (la galleta #1 del mundo), Cadbury (chocolate icónico en UK/India/Australia), Milka (chocolate líder en Europa), Toblerone (chocolate suizo premium), Philadelphia (queso crema), Trident (chicle), Tang (bebida en polvo), Ritz (crackers), belVita (galletas de desayuno) y Halls (pastillas).\n\nMondelez genera ~75% de su revenue fuera de EE.UU., con posiciones dominantes en mercados emergentes donde el consumo de snacks crece más rápido. Margen operativo de ~17% con objetivo de expansión a 18-19%.",
+    summary_why:
+      "Mondelez es el play defensivo perfecto: marcas de snacks que la gente compra en cualquier economía. Oreo, Cadbury y Milka tienen pricing power real — son compras impulsivas de bajo costo que resisten recesiones.\n\nA $57, MDLZ cotiza a P/E forward de 16.9x — un descuento significativo vs su promedio histórico de ~22x. El drawdown de 20% desde máximos ($71) se debe a preocupaciones por costos de cacao, pero estos ya están normalizándose. Dividendo de 3.5% con 10+ años de crecimiento consecutivo y payout ratio sostenible de ~55%.\n\nConsenso Buy de 22 analistas con target promedio de ~$68 (19% upside). Mondelez combina defensa (snacks esenciales), crecimiento (mercados emergentes), e ingreso (3.5% dividend yield creciente).",
+    summary_risk:
+      "Los costos de materias primas (especialmente cacao y azúcar) han disparado presión sobre márgenes — el precio del cacao se triplicó en 2024-2025, y aunque está bajando, la volatilidad persiste y puede comprimir earnings.\n\nRiesgos adicionales: exposición cambiaria significativa (75% revenue fuera de EE.UU.) con dólar fuerte erosionando resultados reportados; creciente regulación de alimentos procesados y etiquetado en mercados clave (UE, México, India); competencia intensa de marcas locales en mercados emergentes; y riesgo de cambio en hábitos de consumo hacia snacks 'saludables' que desplacen categorías tradicionales.",
+    research_full: `# Mondelez International (MDLZ) — Research Completo
+
+## Precio: $57.03 | P/E Forward: 16.9 | Div Yield: 3.5% | Market Cap: $73.6B
+
+---
+
+## ¿Qué es Mondelez?
+
+Mondelez International es una de las **compañías de snacks más grandes del mundo**, creada en 2012 como spin-off de Kraft Foods. Opera en 150+ países con ~$36B en revenue anual y algunas de las marcas de snacks más icónicas del planeta.
+
+## Marcas y Productos
+
+| Marca | Categoría | Posición |
+|-------|-----------|----------|
+| **Oreo** | Galletas | **#1 mundial**, vendida en 100+ países |
+| **Cadbury** | Chocolate | Icónica en UK, India, Australia |
+| **Milka** | Chocolate | Líder en Europa continental |
+| **Toblerone** | Chocolate premium | Reconocimiento global (Swiss heritage) |
+| **Philadelphia** | Queso crema | Líder global en su categoría |
+| **Trident** | Chicle | Top 3 global |
+| **Tang** | Bebida en polvo | Dominante en LATAM y Asia |
+| **Ritz** | Crackers | Icónica en EE.UU. |
+| **belVita** | Galletas desayuno | Categoría que crearon ellos |
+| **Halls** | Pastillas | Líder global en throat lozenges |
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | ~$36B |
+| **Margen Operativo** | ~17% (objetivo 18-19%) |
+| **Free Cash Flow** | ~$4B |
+| **Revenue fuera EE.UU.** | ~75% |
+| **Empleados** | ~91,000 |
+| **Países** | 150+ |
+
+## Dividendo — 10+ Años de Crecimiento
+
+- **Dividendo anual:** $2.00/acción ($0.50 trimestral)
+- **Yield:** 3.5%
+- **Payout Ratio:** ~55% (sostenible)
+- **Crecimiento:** 10+ años consecutivos de aumento
+
+## Por Qué MDLZ a Estos Precios
+
+MDLZ cotiza a $57, un 20% por debajo de su máximo de 52 semanas ($71.15). Las preocupaciones:
+- Costos de cacao disparados (se triplicó en 2024-2025)
+- Presión cambiaria por dólar fuerte
+- Guidance conservador para 2026
+
+Pero los fundamentals son sólidos: marcas irreemplazables, pricing power demostrado, y el cacao ya está normalizándose.
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| Analistas | 22 |
+| Target Promedio | **$68** |
+| Target Rango | $62 - $84 |
+| **Upside** | **+19.2%** |
+
+## Riesgos Principales
+
+1. **Costos de cacao/azúcar** — Volatilidad en commodities comprime márgenes
+2. **Exposición cambiaria** — 75% revenue fuera EE.UU., dólar fuerte duele
+3. **Regulación alimentaria** — Etiquetado, restricciones a ultraprocesados
+4. **Competencia local** — Marcas regionales ganan share en emergentes
+5. **Cambio de hábitos** — Tendencia a snacks "saludables"
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $57.03 |
+| P/E Forward | 16.9x (vs histórico ~22x) |
+| Div Yield | 3.5% |
+| 52-Week High | $71.15 |
+| Drawdown actual | -20% del máximo |
+
+## Conclusión
+
+MDLZ a $57 es una oportunidad de comprar el dueño de Oreo, Cadbury y Milka a P/E de 16.9x — un descuento significativo vs su promedio histórico de ~22x. El dividendo de 3.5% es atractivo y bien cubierto (payout 55%). El miedo al cacao creó la oportunidad, pero los fundamentals (marcas irreemplazables, presencia global, pricing power) no han cambiado. Con 19% de upside según analistas más el dividendo, el retorno total esperado es ~23%.
+
+---
+
+*Research fecha: 2 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 68.0,
+    analyst_upside: 19.2,
+    status: "active",
+    first_researched_at: "2026-04-02T00:00:00Z",
+    last_updated_at: "2026-04-02T00:00:00Z",
+    next_review_at: "2026-10-02T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -4153,6 +4272,17 @@ export const transactions: Transaction[] = [
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #28* — Apr 2, 2026\n\n🏢 *British American Tobacco* (BTI) — $57.89\n\n🛍️ *Sus marcas*: Lucky Strike, Dunhill, Pall Mall, Camel, Kent, Vuse (#1 mundial en vaping), glo (tabaco calentado), Velo (nicotine pouches)\n\n🌍 *Presencia*: Reino Unido (Londres), operando en 180+ mercados. La segunda tabacalera más grande del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.71% anual* solo por ser dueño. Cada vez que alguien enciende un Lucky Strike, usa un Vuse, o compra Dunhill en un duty-free — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La regulación global contra el tabaco sigue endureciéndose — prohibiciones de sabores en vaping, restricciones publicitarias y posibles impuestos adicionales.\n\n🆕 Posición #28\n🔗 https://vectorialdata.com/stocks/BTI\n\n💡 Miles de personas en United Kingdom trabajan para British American Tobacco hoy. Generan ingresos, pagan dividendos, y tú eres dueño. Así funciona.`,
   },
+  {
+    id: 29,
+    stock_id: 33,
+    ticker: "MDLZ",
+    type: "new" as const,
+    cycle_number: 6,
+    price: 57.03,
+    date: "2026-04-02",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #29* — Apr 2, 2026\n\n🏢 *Mondelez International* (MDLZ) — $57.03\n\n🛍️ *Sus marcas*: Oreo (#1 mundial en galletas), Cadbury, Milka, Toblerone, Philadelphia, Trident, Tang, Ritz, belVita, Halls\n\n🌍 *Presencia*: Estados Unidos (Chicago), operando en 150+ países. Una de las compañías de snacks más grandes del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.5% anual* solo por ser dueño. Cada vez que alguien abre un paquete de Oreo, compra un Toblerone en el aeropuerto, o unta Philadelphia en su pan — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Los costos de materias primas (especialmente cacao y azúcar) han disparado presión sobre márgenes — el precio del cacao se triplicó en 2024-2025, y aunque está bajando, la volatilidad persiste.\n\n🆕 Posición #29\n🔗 https://vectorialdata.com/stocks/MDLZ\n\n💡 United States tiene una particularidad económica que hace que las empresas de Consumer sean más interesantes de lo que parecen. No es el PIB. No es la moneda. Es otra cosa.`,
+  },
 ];
 
 export const cycles = [
@@ -4201,7 +4331,7 @@ export const cycles = [
     cycle_number: 6,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 4,
     status: "active" as const,
   },
 ];
