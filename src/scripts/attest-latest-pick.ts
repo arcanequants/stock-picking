@@ -32,7 +32,13 @@ function writeUidToStocksFile(
   let inTargetTx = false;
   let insertAfterLine = -1;
 
-  for (let i = 0; i < lines.length; i++) {
+  // Start searching only after "export const transactions" to avoid matching stock entries
+  const txSectionStart = lines.findIndex((l) =>
+    l.includes("export const transactions")
+  );
+  const startLine = txSectionStart >= 0 ? txSectionStart : 0;
+
+  for (let i = startLine; i < lines.length; i++) {
     const line = lines[i];
 
     // Detect start of our target transaction
