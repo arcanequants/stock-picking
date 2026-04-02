@@ -1,53 +1,52 @@
 name: Attest New Picks
 
-  on:
-    push:
-      branches: [main]
-      paths:
-        - 'src/data/stocks.ts'
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/stocks.ts'
 
-  jobs:
-    attest:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  attest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-        - uses: actions/setup-node@v4
-          with:
-            node-version: '20'
-            cache: 'npm'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
-        - run: npm ci
+      - run: npm ci
 
-        - name: Check for unattested picks
-          id: check
-          run: |
-            OUTPUT=$(npx tsx src/scripts/check-attestations.ts 2>&1) || true
-            echo "$OUTPUT"
-            if echo "$OUTPUT" | grep -q "Missing attestation_uid"; then
-              echo "needs_attestation=true" >> $GITHUB_OUTPUT
-            else
-              echo "needs_attestation=false" >> $GITHUB_OUTPUT
-            fi
+      - name: Check for unattested picks
+        id: check
+        run: |
+          OUTPUT=$(npx tsx src/scripts/check-attestations.ts 2>&1) || true
+          echo "$OUTPUT"
+          if echo "$OUTPUT" | grep -q "Missing attestation_uid"; then
+            echo "needs_attestation=true" >> $GITHUB_OUTPUT
+          else
+            echo "needs_attestation=false" >> $GITHUB_OUTPUT
+          fi
 
-        - name: Attest new picks on Base L2
-          if: steps.check.outputs.needs_attestation == 'true'
-          env:
-            CDP_API_KEY_ID: ${{ secrets.CDP_API_KEY_ID }}
-            CDP_API_KEY_SECRET: ${{ secrets.CDP_API_KEY_SECRET }}
-            CDP_WALLET_SECRET: ${{ secrets.CDP_WALLET_SECRET }}
-            CDP_PAYMASTER_URL: ${{ secrets.CDP_PAYMASTER_URL }}
-            EAS_SCHEMA_UID: ${{ secrets.EAS_SCHEMA_UID }}
-          run: npx tsx src/scripts/attest-latest-pick.ts
+      - name: Attest new picks on Base L2
+        if: steps.check.outputs.needs_attestation == 'true'
+        env:
+          CDP_API_KEY_ID: ${{ secrets.CDP_API_KEY_ID }}
+          CDP_API_KEY_SECRET: ${{ secrets.CDP_API_KEY_SECRET }}
+          CDP_WALLET_SECRET: ${{ secrets.CDP_WALLET_SECRET }}
+          CDP_PAYMASTER_URL: ${{ secrets.CDP_PAYMASTER_URL }}
+          EAS_SCHEMA_UID: ${{ secrets.EAS_SCHEMA_UID }}
+        run: npx tsx src/scripts/attest-latest-pick.ts
 
-        - name: Commit attestation UIDs
-          if: steps.check.outputs.needs_attestation == 'true'
-          run: |
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add src/data/stocks.ts
-            git diff --cached --quiet && echo "No changes to commit" || git commit -m "chore: add attestation UIDs for new
-  picks [skip ci]"
-            git push
+      - name: Commit attestation UIDs
+        if: steps.check.outputs.needs_attestation == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/stocks.ts
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "chore: add attestation UIDs for new picks [skip ci]"
+          git push
