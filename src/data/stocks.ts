@@ -3307,6 +3307,8 @@ BG a $126.28 es una **apuesta al negocio agroindustrial más grande del planeta*
     first_researched_at: "2026-03-30T00:00:00Z",
     last_updated_at: "2026-03-30T00:00:00Z",
     next_review_at: "2026-09-30T00:00:00Z",
+    attestation_uid:
+      "0x20ae2de8566c6be1cb79b1f15e6ae179c7402b3b4b24c146bf0d9ccdc6882da5",
   },
   {
     id: 29,
@@ -3463,6 +3465,8 @@ BIDU a $106.60 es una **apuesta deep value al líder de IA en China** — con m�
     first_researched_at: "2026-03-30T00:00:00Z",
     last_updated_at: "2026-03-30T00:00:00Z",
     next_review_at: "2026-09-30T00:00:00Z",
+    attestation_uid:
+      "0xff834e3f7c9b40563098b014035e270626bd1641ca316f8da2b327ea984c0ee7",
   },
   {
     id: 30,
