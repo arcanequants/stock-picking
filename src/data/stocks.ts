@@ -4271,6 +4271,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-02",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #28* — Apr 2, 2026\n\n🏢 *British American Tobacco* (BTI) — $57.89\n\n🛍️ *Sus marcas*: Lucky Strike, Dunhill, Pall Mall, Camel, Kent, Vuse (#1 mundial en vaping), glo (tabaco calentado), Velo (nicotine pouches)\n\n🌍 *Presencia*: Reino Unido (Londres), operando en 180+ mercados. La segunda tabacalera más grande del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.71% anual* solo por ser dueño. Cada vez que alguien enciende un Lucky Strike, usa un Vuse, o compra Dunhill en un duty-free — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La regulación global contra el tabaco sigue endureciéndose — prohibiciones de sabores en vaping, restricciones publicitarias y posibles impuestos adicionales.\n\n🆕 Posición #28\n🔗 https://vectorialdata.com/stocks/BTI\n\n💡 Miles de personas en United Kingdom trabajan para British American Tobacco hoy. Generan ingresos, pagan dividendos, y tú eres dueño. Así funciona.`,
+    attestation_uid:
+      "0x1cdc0fa4250b258698aab7259069a9e7877dc1b6637af7784fdca74f64285d98",
   },
   {
     id: 29,
@@ -4282,6 +4284,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-02",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #29* — Apr 2, 2026\n\n🏢 *Mondelez International* (MDLZ) — $57.03\n\n🛍️ *Sus marcas*: Oreo (#1 mundial en galletas), Cadbury, Milka, Toblerone, Philadelphia, Trident, Tang, Ritz, belVita, Halls\n\n🌍 *Presencia*: Estados Unidos (Chicago), operando en 150+ países. Una de las compañías de snacks más grandes del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.5% anual* solo por ser dueño. Cada vez que alguien abre un paquete de Oreo, compra un Toblerone en el aeropuerto, o unta Philadelphia en su pan — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Los costos de materias primas (especialmente cacao y azúcar) han disparado presión sobre márgenes — el precio del cacao se triplicó en 2024-2025, y aunque está bajando, la volatilidad persiste.\n\n🆕 Posición #29\n🔗 https://vectorialdata.com/stocks/MDLZ\n\n💡 Dato: en la crisis de 2008, las ventas de Oreo SUBIERON. Cuando la economía se pone fea, la gente deja restaurantes y lujos, pero NO deja sus snacks de $2. Se llama "efecto lipstick" — y es exactamente por qué Mondelez aguanta recesiones mejor que el 90% de las empresas.`,
+    attestation_uid:
+      "0xb538f0e41529806eb85aa18e23d29eca91f94b8d6090cd1fbb89154e2b3c282f",
   },
 ];
 
