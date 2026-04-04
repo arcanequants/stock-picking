@@ -59,7 +59,11 @@
     "fomoText": "These picks are weeks old. Subscribers received them the same day.",
     "ctaButton": "Unlock all picks — $1/month",
     "ctaSubtext": "Includes daily picks via WhatsApp + full research",
-    "urgencyText": "Current cycle: {current}/{target} picks delivered. Next one drops soon."
+    "urgencyText": "Current cycle: {current}/{target} picks delivered. Next one drops soon.",
+    "statusSameDay": "Certified same day",
+    "statusRetroactive": "Certified retroactively",
+    "transparencyTitle": "Transparency note",
+    "transparencyText": "We started making picks on March 4, 2026. The digital notary system was implemented weeks later. The first 27 picks were certified retroactively — you can verify the attestation date on the blockchain explorer. From pick #28 onward, each pick is automatically certified the same day."
   },
   "Metadata": {
     "title": "Vectorial Data — Stock Portfolio",

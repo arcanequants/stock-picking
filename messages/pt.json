@@ -59,7 +59,11 @@
     "fomoText": "Esses picks têm semanas. Os assinantes os receberam no mesmo dia.",
     "ctaButton": "Desbloquear todos os picks — $1/mês",
     "ctaSubtext": "Inclui picks diários via WhatsApp + research completo",
-    "urgencyText": "Ciclo atual: {current}/{target} picks entregues. O próximo sai em breve."
+    "urgencyText": "Ciclo atual: {current}/{target} picks entregues. O próximo sai em breve.",
+    "statusSameDay": "Certificado no mesmo dia",
+    "statusRetroactive": "Certificado retroativamente",
+    "transparencyTitle": "Nota de transparência",
+    "transparencyText": "Começamos a fazer picks em 4 de março de 2026. O sistema de notário digital foi implementado semanas depois. Os primeiros 27 picks foram certificados retroativamente — você pode verificar a data do attestation no explorador de blockchain. A partir do pick #28, cada pick é certificado automaticamente no mesmo dia."
   },
   "Metadata": {
     "title": "Vectorial Data — Portfólio de Ações",

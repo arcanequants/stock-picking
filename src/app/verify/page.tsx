@@ -7,6 +7,9 @@ import { getAuthState } from "@/lib/auth";
 import { getSupabase } from "@/lib/supabase";
 
 const FREE_PICK_COUNT = 5;
+// Pick #28 (BTI, Apr 2) was the first same-day attestation via GitHub Action.
+// Picks 1-27 were attested retroactively on ~Mar 31.
+const FIRST_SAMEDAY_PICK = 28;
 
 export async function generateMetadata(): Promise<Metadata> {
   const count = transactions.length;
@@ -63,6 +66,7 @@ export default async function VerifyPage() {
       type: tx.type,
       hash,
       hasAttestation: !!tx.attestation_uid,
+      isSameDay: i + 1 >= FIRST_SAMEDAY_PICK,
       returnSincePick,
     };
     previousHash = hash;
@@ -142,6 +146,14 @@ export default async function VerifyPage() {
         </div>
       </div>
 
+      {/* Transparency note */}
+      <div className="border border-amber-500/20 bg-amber-500/5 rounded-xl p-4 mb-12 text-sm text-text-muted">
+        <p className="font-semibold text-foreground text-xs uppercase tracking-wider mb-1">
+          {t("transparencyTitle")}
+        </p>
+        <p className="text-xs leading-relaxed">{t("transparencyText")}</p>
+      </div>
+
       {/* Timeline — only visible picks */}
       <div className="relative pl-8 mb-12">
         {/* Vertical line */}
@@ -152,7 +164,9 @@ export default async function VerifyPage() {
             {/* Node circle */}
             <div
               className={`absolute left-[-21px] top-1.5 w-4 h-4 rounded-full border-2 border-background z-10 ${
-                pick.hasAttestation ? "bg-emerald-500" : "bg-text-muted"
+                pick.hasAttestation
+                  ? pick.isSameDay ? "bg-emerald-500" : "bg-amber-500"
+                  : "bg-text-muted"
               }`}
             />
 
@@ -190,12 +204,16 @@ export default async function VerifyPage() {
                 </div>
                 <div className="flex items-center gap-2 mt-1">
                   {pick.hasAttestation ? (
-                    <span className="flex items-center gap-1 text-xs text-emerald-600 dark:text-emerald-400">
+                    <span className={`flex items-center gap-1 text-xs ${
+                      pick.isSameDay
+                        ? "text-emerald-600 dark:text-emerald-400"
+                        : "text-amber-600 dark:text-amber-400"
+                    }`}>
                       <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                         <path d="M9 12l2 2 4-4" />
                       </svg>
-                      {t("statusVerified")}
+                      {pick.isSameDay ? t("statusSameDay") : t("statusRetroactive")}
                     </span>
                   ) : (
                     <span className="text-xs text-text-muted">{t("statusPending")}</span>

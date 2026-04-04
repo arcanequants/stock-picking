@@ -80,6 +80,7 @@ export default async function VerifyCertificatePage({
 
   const pickNumber = txIndex + 1;
   const hasAttestation = !!tx.attestation_uid;
+  const isSameDay = pickNumber >= 28;
   const formattedDate = new Date(tx.date + "T12:00:00").toLocaleDateString(
     localeMap[locale] ?? "es-MX",
     { day: "numeric", month: "short", year: "numeric" }
@@ -143,13 +144,25 @@ export default async function VerifyCertificatePage({
           {/* Verified status */}
           <div className="flex items-center justify-center gap-2 mb-8">
             {hasAttestation ? (
-              <div className="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2">
-                <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <div className={`flex items-center gap-2 rounded-full px-4 py-2 ${
+                isSameDay
+                  ? "bg-emerald-500/10 border border-emerald-500/20"
+                  : "bg-amber-500/10 border border-amber-500/20"
+              }`}>
+                <svg className={`w-4 h-4 ${
+                  isSameDay
+                    ? "text-emerald-600 dark:text-emerald-400"
+                    : "text-amber-600 dark:text-amber-400"
+                }`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   <path d="M9 12l2 2 4-4" />
                 </svg>
-                <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-                  {t("statusVerified")}
+                <span className={`text-sm font-medium ${
+                  isSameDay
+                    ? "text-emerald-600 dark:text-emerald-400"
+                    : "text-amber-600 dark:text-amber-400"
+                }`}>
+                  {isSameDay ? t("statusSameDay") : t("statusRetroactive")}
                 </span>
                 <span className="text-xs text-text-muted">·</span>
                 <span className="text-xs text-text-muted">{t("blockchain")}</span>
