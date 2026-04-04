@@ -76,11 +76,14 @@ export default async function VerifyPage() {
   const certifiedCount = chain.filter((c) => c.hasAttestation).length;
   const since = transactions[0]?.date ?? "";
 
-  // Server-side data filtering: free users only see the 5 oldest picks
+  // Server-side data filtering: free users see only same-day attested picks (oldest first)
+  const sameDayChain = chain.filter((c) => c.isSameDay);
   const visibleChain = isSubscribed
     ? chain
-    : chain.slice(0, FREE_PICK_COUNT);
-  const lockedCount = isSubscribed ? 0 : Math.max(0, chain.length - FREE_PICK_COUNT);
+    : sameDayChain.slice(0, FREE_PICK_COUNT);
+  const lockedCount = isSubscribed
+    ? 0
+    : Math.max(0, chain.length - visibleChain.length);
 
   const activeCycle = cycles.find((c) => c.status === "active");
   const stripeLink = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "/join";
@@ -146,13 +149,22 @@ export default async function VerifyPage() {
         </div>
       </div>
 
-      {/* Transparency note */}
-      <div className="border border-amber-500/20 bg-amber-500/5 rounded-xl p-4 mb-12 text-sm text-text-muted">
-        <p className="font-semibold text-foreground text-xs uppercase tracking-wider mb-1">
-          {t("transparencyTitle")}
+      {/* Transparency note — only for premium users who see retroactive picks */}
+      {isSubscribed && (
+        <div className="border border-amber-500/20 bg-amber-500/5 rounded-xl p-4 mb-12 text-sm text-text-muted">
+          <p className="font-semibold text-foreground text-xs uppercase tracking-wider mb-1">
+            {t("transparencyTitle")}
+          </p>
+          <p className="text-xs leading-relaxed">{t("transparencyText")}</p>
+        </div>
+      )}
+
+      {/* Interim note — when fewer than 5 same-day picks available */}
+      {!isSubscribed && visibleChain.length < FREE_PICK_COUNT && visibleChain.length > 0 && (
+        <p className="text-xs text-text-muted text-center mb-6">
+          {t("interimNote")}
         </p>
-        <p className="text-xs leading-relaxed">{t("transparencyText")}</p>
-      </div>
+      )}
 
       {/* Timeline — only visible picks */}
       <div className="relative pl-8 mb-12">

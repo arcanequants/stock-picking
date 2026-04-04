@@ -60,6 +60,7 @@
     "ctaButton": "Desbloquear todos los picks — $1/mes",
     "ctaSubtext": "Incluye picks diarios por WhatsApp + research completo",
     "urgencyText": "Ciclo actual: {current}/{target} picks entregados. El próximo sale pronto.",
+    "interimNote": "Mostrando nuestras primeras picks certificadas el mismo día. Se agregan nuevas picks diariamente.",
     "statusSameDay": "Certificado el mismo día",
     "statusRetroactive": "Certificado retroactivamente",
     "transparencyTitle": "Nota de transparencia",

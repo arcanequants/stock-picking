@@ -60,6 +60,7 @@
     "ctaButton": "Unlock all picks — $1/month",
     "ctaSubtext": "Includes daily picks via WhatsApp + full research",
     "urgencyText": "Current cycle: {current}/{target} picks delivered. Next one drops soon.",
+    "interimNote": "Showing our first same-day certified picks. New picks are added daily.",
     "statusSameDay": "Certified same day",
     "statusRetroactive": "Certified retroactively",
     "transparencyTitle": "Transparency note",
