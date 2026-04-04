@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Stock } from "@/lib/types";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { getLocalizedField } from "@/data/stock-translations";
 
 function statusBadge(status: string) {
   const colors: Record<string, string> = {
@@ -13,6 +14,7 @@ function statusBadge(status: string) {
 
 export default async function StockCard({ stock }: { stock: Stock }) {
   const t = await getTranslations("Components");
+  const locale = await getLocale();
 
   const statusLabels: Record<string, string> = {
     active: t("statusActive"),
@@ -53,7 +55,7 @@ export default async function StockCard({ stock }: { stock: Stock }) {
         </div>
 
         <p className="text-sm text-text-secondary mb-4 line-clamp-2">
-          {stock.summary_short}
+          {getLocalizedField(stock, "summary_short", locale)}
         </p>
 
         <div className="grid grid-cols-4 gap-3 text-center">

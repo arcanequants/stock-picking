@@ -1,14 +1,16 @@
 import { getSupabase } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { getAuthState } from "@/lib/auth";
 import { getRotationSeed, selectVisible, selectShowcase, selectFeatured } from "@/lib/rotation";
 import StocksView from "@/components/StocksView";
 import NotificationsBanner from "@/components/NotificationsBanner";
 import FreeSignupForm from "@/components/FreeSignupForm";
+import { getLocalizedField } from "@/data/stock-translations";
 
 export default async function StocksPage() {
   const t = await getTranslations("Stocks");
+  const locale = await getLocale();
   const { isSubscribed } = await getAuthState();
 
   // Fetch current prices from latest snapshot
@@ -85,9 +87,10 @@ export default async function StocksPage() {
   for (const ticker of showcaseTickers) {
     const stock = stocks.find((s) => s.ticker === ticker);
     if (stock) {
-      const firstParagraph = stock.summary_why?.split("\n")[0] || stock.summary_why?.substring(0, 200) || "";
+      const localizedWhy = getLocalizedField(stock, "summary_why", locale);
+      const firstParagraph = localizedWhy?.split("\n")[0] || localizedWhy?.substring(0, 200) || "";
       showcaseResearch[ticker] = {
-        what: stock.summary_what || "",
+        what: getLocalizedField(stock, "summary_what", locale),
         whyPreview: firstParagraph,
       };
     }
@@ -109,7 +112,7 @@ export default async function StocksPage() {
       market_cap_b: isVisible ? s.market_cap_b : null,
       analyst_consensus: isVisible ? s.analyst_consensus : "",
       analyst_upside: isVisible ? s.analyst_upside : null,
-      summary_short: isVisible ? s.summary_short : "",
+      summary_short: isVisible ? getLocalizedField(s, "summary_short", locale) : "",
       status: s.status,
     };
   });
@@ -124,7 +127,7 @@ export default async function StocksPage() {
         name: featuredStock.name,
         sector: featuredStock.sector,
         region: featuredStock.region,
-        summary_short: featuredStock.summary_short,
+        summary_short: getLocalizedField(featuredStock, "summary_short", locale),
       }
     : null;
 

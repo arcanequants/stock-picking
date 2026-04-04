@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
 import BlockchainBadge from "@/components/BlockchainBadge";
+import { getLocalizedField } from "@/data/stock-translations";
 
 const localeMap: Record<string, string> = {
   es: "es-MX",
@@ -26,14 +27,16 @@ export async function generateMetadata({
     (s) => s.ticker.toLowerCase() === ticker.toLowerCase()
   );
   const t = await getTranslations("StockDetail");
+  const locale = await getLocale();
   if (!stock) return { title: `${t("stockNotFound")} | Vectorial Data` };
 
+  const localizedShort = getLocalizedField(stock, "summary_short", locale);
   return {
     title: `${stock.ticker} — ${stock.name} | Vectorial Data Research`,
-    description: stock.summary_short,
+    description: localizedShort,
     openGraph: {
       title: `${stock.ticker} — ${stock.name}`,
-      description: stock.summary_short,
+      description: localizedShort,
       images: [{ url: `/api/og/stock/${stock.ticker}`, width: 1200, height: 630 }],
       type: "article",
     },
@@ -158,15 +161,15 @@ export default async function StockResearchPage({
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         <div className="border border-border rounded-xl p-4">
           <h3 className="text-xs text-text-faint uppercase tracking-wider mb-2">{t("whatTheyDo")}</h3>
-          <p className="text-sm text-text-secondary">{stock.summary_what}</p>
+          <p className="text-sm text-text-secondary">{getLocalizedField(stock, "summary_what", locale)}</p>
         </div>
         <div className="border border-emerald-500/20 rounded-xl p-4 bg-emerald-500/5">
           <h3 className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">{t("whyWeLikeIt")}</h3>
-          <p className="text-sm text-text-secondary">{stock.summary_why}</p>
+          <p className="text-sm text-text-secondary">{getLocalizedField(stock, "summary_why", locale)}</p>
         </div>
         <div className="border border-red-500/20 rounded-xl p-4 bg-red-500/5">
           <h3 className="text-xs text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">{t("keyRisk")}</h3>
-          <p className="text-sm text-text-secondary">{stock.summary_risk}</p>
+          <p className="text-sm text-text-secondary">{getLocalizedField(stock, "summary_risk", locale)}</p>
         </div>
       </div>
 

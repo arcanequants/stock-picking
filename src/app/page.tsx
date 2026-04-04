@@ -5,11 +5,13 @@ import HeroMetrics from "@/components/HeroMetrics";
 import ScrollReveal from "@/components/ScrollReveal";
 import HomeNoticiasPreview from "@/components/HomeNoticiasPreview";
 import FreeSignupForm from "@/components/FreeSignupForm";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { getLocalizedField } from "@/data/stock-translations";
 
 export default async function Home() {
   const t = await getTranslations("Home");
   const f = await getTranslations("FreeSignup");
+  const locale = await getLocale();
   const activeStocks = stocks.filter((s) => s.status === "active");
   const regions = new Set(activeStocks.map((s) => s.region)).size;
   const tickers = activeStocks.map((s) => s.ticker);
@@ -241,7 +243,7 @@ export default async function Home() {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-text-secondary mt-2">{samplePick.summary_short}</p>
+                <p className="text-sm text-text-secondary mt-2">{getLocalizedField(samplePick, "summary_short", locale)}</p>
                 <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
                   <p className="text-xs text-text-faint italic">{t("samplePickSentDate", { date: samplePickDate ?? "" })}</p>
                   <Link href="/join" className="text-sm text-brand font-medium hover:text-brand-hover">{t("samplePickFomo")}</Link>
