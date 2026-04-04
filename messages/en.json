@@ -53,7 +53,12 @@
     "step2": "Recorded on blockchain",
     "step2Desc": "The ticker, price and date are sealed in an immutable public record on Base (Ethereum L2).",
     "step3": "Anyone can verify",
-    "step3Desc": "You, an auditor, or a program can confirm we didn't change anything."
+    "step3Desc": "You, an auditor, or a program can confirm we didn't change anything.",
+    "bannerText": "{count} verified picks · Portfolio return: {returnPct}%",
+    "lockedPicksTitle": "and {count} more blockchain-verified picks",
+    "fomoText": "These picks are weeks old. Subscribers received them the same day.",
+    "ctaButton": "Unlock all picks — $1/month",
+    "ctaSubtext": "Includes daily picks via WhatsApp + full research"
   },
   "Metadata": {
     "title": "Vectorial Data — Stock Portfolio",

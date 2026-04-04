@@ -3,6 +3,10 @@ import { createHash } from "crypto";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import { getAuthState } from "@/lib/auth";
+import { getSupabase } from "@/lib/supabase";
+
+const FREE_PICK_COUNT = 5;
 
 export async function generateMetadata(): Promise<Metadata> {
   const count = transactions.length;
@@ -20,6 +24,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function VerifyPage() {
   const t = await getTranslations("Verify");
+  const { isSubscribed } = await getAuthState();
+
+  // Fetch latest portfolio return
+  let returnPct: number | null = null;
+  try {
+    const { data } = await getSupabase()
+      .from("portfolio_snapshots")
+      .select("return_pct")
+      .order("date", { ascending: false })
+      .limit(1);
+    returnPct = data?.[0]?.return_pct ?? null;
+  } catch {
+    // Graceful fallback — hide banner if unavailable
+  }
 
   // Build hash chain
   let previousHash = "0".repeat(64);
@@ -44,8 +62,32 @@ export default async function VerifyPage() {
   const certifiedCount = chain.filter((c) => c.hasAttestation).length;
   const since = transactions[0]?.date ?? "";
 
+  // Server-side data filtering: free users only see the 5 oldest picks
+  const visibleChain = isSubscribed
+    ? chain
+    : chain.slice(0, FREE_PICK_COUNT);
+  const lockedCount = isSubscribed ? 0 : Math.max(0, chain.length - FREE_PICK_COUNT);
+
+  const stripeLink = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "/join";
+
   return (
     <div className="max-w-3xl mx-auto">
+      {/* Banner — social proof */}
+      {returnPct !== null && (
+        <div className="flex items-center justify-center gap-2 text-sm border border-emerald-500/20 bg-emerald-500/5 rounded-xl px-4 py-3 mb-8 text-center">
+          <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+          <span className="font-medium text-emerald-600 dark:text-emerald-400">
+            {t("bannerText", {
+              count: certifiedCount,
+              returnPct: (returnPct >= 0 ? "+" : "") + returnPct.toFixed(1),
+            })}
+          </span>
+        </div>
+      )}
+
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold mb-3">{t("pageTitle")}</h1>
@@ -89,12 +131,12 @@ export default async function VerifyPage() {
         </div>
       </div>
 
-      {/* Timeline */}
+      {/* Timeline — only visible picks */}
       <div className="relative pl-8 mb-12">
         {/* Vertical line */}
         <div className="absolute left-[11px] top-0 bottom-0 w-0.5 bg-border" />
 
-        {chain.reverse().map((pick) => (
+        {[...visibleChain].reverse().map((pick) => (
           <div key={pick.pickNumber} className="relative pb-8 last:pb-0">
             {/* Node circle */}
             <div
@@ -147,6 +189,33 @@ export default async function VerifyPage() {
           </div>
         ))}
       </div>
+
+      {/* CTA + Locked section — free users only */}
+      {!isSubscribed && lockedCount > 0 && (
+        <div className="border border-border rounded-2xl p-6 sm:p-8 text-center mb-12 bg-card">
+          <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center mx-auto mb-4">
+            <svg className="w-6 h-6 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg>
+          </div>
+          <p className="font-semibold text-lg mb-2">
+            {t("lockedPicksTitle", { count: lockedCount })}
+          </p>
+          <p className="text-sm text-text-muted mb-6 max-w-md mx-auto">
+            {t("fomoText")}
+          </p>
+          <a
+            href={stripeLink}
+            className="inline-block bg-brand hover:bg-brand-hover text-white py-3 px-8 rounded-xl font-semibold transition-colors"
+          >
+            {t("ctaButton")}
+          </a>
+          <p className="text-xs text-text-faint mt-3">
+            {t("ctaSubtext")}
+          </p>
+        </div>
+      )}
 
       {/* Disclaimer */}
       <p className="text-xs text-text-faint text-center">{t("disclaimer")}</p>

@@ -53,7 +53,12 @@
     "step2": "Se registra en blockchain",
     "step2Desc": "El ticker, precio y fecha se sellan en un registro público inmutable en Base (Ethereum L2).",
     "step3": "Cualquiera puede verificar",
-    "step3Desc": "Tú, un auditor, o un programa puede comprobar que no cambiamos nada."
+    "step3Desc": "Tú, un auditor, o un programa puede comprobar que no cambiamos nada.",
+    "bannerText": "{count} picks verificados · Retorno del portafolio: {returnPct}%",
+    "lockedPicksTitle": "y {count} picks más verificados en blockchain",
+    "fomoText": "Estos picks tienen semanas. Los suscriptores los recibieron el mismo día.",
+    "ctaButton": "Desbloquear todos los picks — $1/mes",
+    "ctaSubtext": "Incluye picks diarios por WhatsApp + research completo"
   },
   "Metadata": {
     "title": "Vectorial Data — Portafolio de Acciones",
