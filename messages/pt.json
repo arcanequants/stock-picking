@@ -58,7 +58,8 @@
     "lockedPicksTitle": "e mais {count} picks verificados em blockchain",
     "fomoText": "Esses picks têm semanas. Os assinantes os receberam no mesmo dia.",
     "ctaButton": "Desbloquear todos os picks — $1/mês",
-    "ctaSubtext": "Inclui picks diários via WhatsApp + research completo"
+    "ctaSubtext": "Inclui picks diários via WhatsApp + research completo",
+    "urgencyText": "Ciclo atual: {current}/{target} picks entregues. O próximo sai em breve."
   },
   "Metadata": {
     "title": "Vectorial Data — Portfólio de Ações",

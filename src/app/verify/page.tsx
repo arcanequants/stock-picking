@@ -1,4 +1,4 @@
-import { transactions, stocks } from "@/data/stocks";
+import { transactions, stocks, cycles } from "@/data/stocks";
 import { createHash } from "crypto";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
@@ -68,25 +68,26 @@ export default async function VerifyPage() {
     : chain.slice(0, FREE_PICK_COUNT);
   const lockedCount = isSubscribed ? 0 : Math.max(0, chain.length - FREE_PICK_COUNT);
 
+  const activeCycle = cycles.find((c) => c.status === "active");
   const stripeLink = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "/join";
 
   return (
     <div className="max-w-3xl mx-auto">
       {/* Banner — social proof */}
-      {returnPct !== null && (
-        <div className="flex items-center justify-center gap-2 text-sm border border-emerald-500/20 bg-emerald-500/5 rounded-xl px-4 py-3 mb-8 text-center">
-          <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            <path d="M9 12l2 2 4-4" />
-          </svg>
-          <span className="font-medium text-emerald-600 dark:text-emerald-400">
-            {t("bannerText", {
-              count: certifiedCount,
-              returnPct: (returnPct >= 0 ? "+" : "") + returnPct.toFixed(1),
-            })}
-          </span>
-        </div>
-      )}
+      <div className="flex items-center justify-center gap-2 text-sm border border-emerald-500/20 bg-emerald-500/5 rounded-xl px-4 py-3 mb-8 text-center">
+        <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+        <span className="font-medium text-emerald-600 dark:text-emerald-400">
+          {returnPct !== null
+            ? t("bannerText", {
+                count: certifiedCount,
+                returnPct: (returnPct >= 0 ? "+" : "") + returnPct.toFixed(1),
+              })
+            : t("pickCount", { count: certifiedCount })}
+        </span>
+      </div>
 
       {/* Header */}
       <div className="text-center mb-12">
@@ -190,31 +191,57 @@ export default async function VerifyPage() {
         ))}
       </div>
 
-      {/* CTA + Locked section — free users only */}
+      {/* Ghost nodes + CTA — free users only */}
       {!isSubscribed && lockedCount > 0 && (
-        <div className="border border-border rounded-2xl p-6 sm:p-8 text-center mb-12 bg-card">
-          <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center mx-auto mb-4">
-            <svg className="w-6 h-6 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0110 0v4" />
-            </svg>
+        <>
+          {/* Ghost nodes — fade transition into locked section */}
+          <div className="relative pl-8 mb-8">
+            <div className="absolute left-[11px] top-0 bottom-0 w-0.5 bg-border" style={{ maskImage: "linear-gradient(to bottom, black 0%, transparent 100%)" }} />
+            {[0.5, 0.3, 0.15].map((opacity, i) => (
+              <div key={i} className="relative pb-6 last:pb-0" style={{ opacity }}>
+                <div className="absolute left-[-21px] top-1.5 w-4 h-4 rounded-full border-2 border-background bg-text-muted z-10" />
+                <div className="flex items-center gap-2">
+                  <div className="h-3 w-16 bg-text-muted/20 rounded" />
+                  <div className="h-3 w-10 bg-brand/10 rounded" />
+                  <div className="h-3 w-20 bg-text-muted/15 rounded" />
+                  <div className="h-3 w-12 bg-text-muted/10 rounded" />
+                </div>
+              </div>
+            ))}
           </div>
-          <p className="font-semibold text-lg mb-2">
-            {t("lockedPicksTitle", { count: lockedCount })}
-          </p>
-          <p className="text-sm text-text-muted mb-6 max-w-md mx-auto">
-            {t("fomoText")}
-          </p>
-          <a
-            href={stripeLink}
-            className="inline-block bg-brand hover:bg-brand-hover text-white py-3 px-8 rounded-xl font-semibold transition-colors"
-          >
-            {t("ctaButton")}
-          </a>
-          <p className="text-xs text-text-faint mt-3">
-            {t("ctaSubtext")}
-          </p>
-        </div>
+
+          {/* CTA block — emerald theme */}
+          <div className="border border-emerald-500/20 bg-emerald-500/5 rounded-2xl p-6 sm:p-8 text-center mb-12">
+            <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-4">
+              <svg className="w-6 h-6 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <rect x="10" y="12" width="4" height="5" rx="1" />
+                <path d="M12 12v-1a2 2 0 00-2-2h0a2 2 0 00-2 2v1" />
+              </svg>
+            </div>
+            <p className="font-semibold text-lg mb-2">
+              {t("lockedPicksTitle", { count: lockedCount })}
+            </p>
+            <p className="text-sm text-text-muted mb-2 max-w-md mx-auto">
+              {t("fomoText")}
+            </p>
+            <p className="text-xs text-emerald-600 dark:text-emerald-400 mb-6">
+              {t("urgencyText", {
+                current: activeCycle?.current_count ?? 0,
+                target: activeCycle?.target_count ?? 5,
+              })}
+            </p>
+            <a
+              href={stripeLink}
+              className="cta-glow inline-block bg-brand hover:bg-brand-hover text-white py-3 px-8 rounded-xl font-semibold transition-colors"
+            >
+              {t("ctaButton")}
+            </a>
+            <p className="text-xs text-text-faint mt-3">
+              {t("ctaSubtext")}
+            </p>
+          </div>
+        </>
       )}
 
       {/* Disclaimer */}
