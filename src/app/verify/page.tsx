@@ -26,15 +26,19 @@ export default async function VerifyPage() {
   const t = await getTranslations("Verify");
   const { isSubscribed } = await getAuthState();
 
-  // Fetch latest portfolio return
+  // Fetch latest portfolio snapshot (return + current prices)
   let returnPct: number | null = null;
+  let currentPrices: Record<string, number> = {};
   try {
     const { data } = await getSupabase()
       .from("portfolio_snapshots")
-      .select("return_pct")
+      .select("return_pct, prices")
       .order("date", { ascending: false })
       .limit(1);
     returnPct = data?.[0]?.return_pct ?? null;
+    if (data?.[0]?.prices && typeof data[0].prices === "object") {
+      currentPrices = data[0].prices as Record<string, number>;
+    }
   } catch {
     // Graceful fallback — hide banner if unavailable
   }
@@ -45,6 +49,11 @@ export default async function VerifyPage() {
     const input = `${tx.ticker}|${tx.price}|${tx.date}|${previousHash}`;
     const hash = createHash("sha256").update(input).digest("hex");
     const stock = stocks.find((s) => s.ticker === tx.ticker);
+    const curPrice = currentPrices[tx.ticker] ?? null;
+    const returnSincePick =
+      curPrice && tx.price > 0
+        ? ((curPrice - tx.price) / tx.price) * 100
+        : null;
     const entry = {
       pickNumber: i + 1,
       ticker: tx.ticker,
@@ -54,6 +63,7 @@ export default async function VerifyPage() {
       type: tx.type,
       hash,
       hasAttestation: !!tx.attestation_uid,
+      returnSincePick,
     };
     previousHash = hash;
     return entry;
@@ -156,6 +166,18 @@ export default async function VerifyPage() {
                   <span className="font-semibold text-sm">{pick.ticker}</span>
                   <span className="text-text-muted text-sm">{pick.name}</span>
                   <span className="text-xs text-text-muted">${pick.price}</span>
+                  {pick.returnSincePick !== null && (
+                    <span
+                      className={`text-xs font-semibold ${
+                        pick.returnSincePick >= 0
+                          ? "text-emerald-600 dark:text-emerald-400"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {pick.returnSincePick >= 0 ? "+" : ""}
+                      {pick.returnSincePick.toFixed(1)}%
+                    </span>
+                  )}
                   <span
                     className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${
                       pick.type === "new"
