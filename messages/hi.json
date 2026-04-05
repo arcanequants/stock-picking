@@ -57,7 +57,7 @@
     "bannerText": "{count} सत्यापित पिक्स · पोर्टफोलियो रिटर्न: {returnPct}%",
     "bannerTextWithRebuys": "{picks} पिक्स + {rebuys} रीबाय = {total} सत्यापित निर्णय · पोर्टफोलियो: {returnPct}%",
     "transactionCount": "{ticker}: {count} सत्यापित लेनदेन",
-    "lockedPicksTitle": "और {count} और ब्लॉकचेन-सत्यापित पिक्स",
+    "lockedPicksTitle": "{count} और ब्लॉकचेन-सत्यापित पिक्स",
     "fomoText": "ये पिक्स हफ्तों पुरानी हैं। सब्सक्राइबर्स ने इन्हें उसी दिन प्राप्त किया।",
     "ctaButton": "सभी पिक्स अनलॉक करें — $1/महीना",
     "ctaSubtext": "WhatsApp पर दैनिक पिक्स + पूर्ण रिसर्च शामिल",

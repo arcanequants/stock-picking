@@ -57,7 +57,7 @@
     "bannerText": "{count} picks verificados · Retorno del portafolio: {returnPct}%",
     "bannerTextWithRebuys": "{picks} picks + {rebuys} recompras = {total} decisiones verificadas · Portafolio: {returnPct}%",
     "transactionCount": "{ticker}: {count} transacciones verificadas",
-    "lockedPicksTitle": "y {count} picks más verificados en blockchain",
+    "lockedPicksTitle": "{count} picks más verificados en blockchain",
     "fomoText": "Estos picks tienen semanas. Los suscriptores los recibieron el mismo día.",
     "ctaButton": "Desbloquear todos los picks — $1/mes",
     "ctaSubtext": "Incluye picks diarios por WhatsApp + research completo",
