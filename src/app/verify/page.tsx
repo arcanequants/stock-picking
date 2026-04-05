@@ -74,6 +74,8 @@ export default async function VerifyPage() {
   });
 
   const certifiedCount = chain.filter((c) => c.hasAttestation).length;
+  const newPicksCount = chain.filter((c) => c.type === "new").length;
+  const rebuysCount = chain.filter((c) => c.type === "rebuy").length;
   const since = transactions[0]?.date ?? "";
 
   // Server-side data filtering: free users see only same-day attested picks (oldest first)
@@ -98,10 +100,17 @@ export default async function VerifyPage() {
         </svg>
         <span className="font-medium text-emerald-600 dark:text-emerald-400">
           {returnPct !== null
-            ? t("bannerText", {
-                count: certifiedCount,
-                returnPct: (returnPct >= 0 ? "+" : "") + returnPct.toFixed(1),
-              })
+            ? rebuysCount > 0
+              ? t("bannerTextWithRebuys", {
+                  picks: newPicksCount,
+                  rebuys: rebuysCount,
+                  total: certifiedCount,
+                  returnPct: (returnPct >= 0 ? "+" : "") + returnPct.toFixed(1),
+                })
+              : t("bannerText", {
+                  count: certifiedCount,
+                  returnPct: (returnPct >= 0 ? "+" : "") + returnPct.toFixed(1),
+                })
             : t("pickCount", { count: certifiedCount })}
         </span>
       </div>

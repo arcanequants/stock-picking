@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import ReturnBadge from "./ReturnBadge";
 import ShareButton from "./ShareButton";
-import type { PositionReturn } from "@/lib/types";
+import type { AggregatedPosition } from "@/lib/types";
 import Link from "next/link";
 
 interface PositionReturnsProps {
@@ -12,7 +12,7 @@ interface PositionReturnsProps {
 }
 
 interface PositionsData {
-  positions: PositionReturn[];
+  positions: AggregatedPosition[];
   total_return_pct: number;
   total_positions: number;
   since: string | null;
@@ -83,7 +83,7 @@ export default function PositionReturns({
               {isSubscribed && (
                 <>
                   <th className="text-right py-2 px-3 text-text-faint hidden md:table-cell">
-                    {t("buyPrice")}
+                    {t("avgPrice")}
                   </th>
                   <th className="text-right py-2 px-3 text-text-faint hidden md:table-cell">
                     {t("currentPrice")}
@@ -114,6 +114,11 @@ export default function PositionReturns({
                   >
                     {pos.ticker}
                   </Link>
+                  {pos.buys > 1 && (
+                    <span className="ml-1.5 text-[10px] font-medium bg-brand/15 text-brand-text px-1.5 py-0.5 rounded-full">
+                      ×{pos.buys}
+                    </span>
+                  )}
                 </td>
                 <td className="py-2 px-3 text-text-secondary hidden sm:table-cell">
                   {pos.name}
@@ -121,7 +126,7 @@ export default function PositionReturns({
                 {isSubscribed ? (
                   <>
                     <td className="py-2 px-3 text-right font-mono text-text-muted hidden md:table-cell">
-                      ${pos.buy_price.toFixed(2)}
+                      ${pos.avg_price.toFixed(2)}
                     </td>
                     <td className="py-2 px-3 text-right font-mono text-foreground hidden md:table-cell">
                       ${pos.current_price.toFixed(2)}

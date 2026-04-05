@@ -1,5 +1,6 @@
 import { getSupabase } from "@/lib/supabase";
 import { stocks, transactions, cycles } from "@/data/stocks";
+import { aggregatePositions } from "@/lib/position-utils";
 
 const INVESTMENT_PER_POSITION = 50;
 
@@ -93,16 +94,7 @@ export function getResearchData(ticker: string, tier = "free") {
 
 export async function getPortfolioSummary() {
   const prices = await getLatestPrices();
-  let totalInvested = 0;
-  let totalValue = 0;
-
-  transactions.forEach((tx) => {
-    const stock = stocks.find((s) => s.ticker === tx.ticker);
-    const currentPrice = prices[tx.ticker] ?? stock?.price ?? tx.price;
-    const shares = INVESTMENT_PER_POSITION / tx.price;
-    totalInvested += INVESTMENT_PER_POSITION;
-    totalValue += shares * currentPrice;
-  });
+  const { totalInvested, totalValue, positions } = aggregatePositions(transactions, prices);
 
   const totalReturnPct = totalInvested > 0
     ? Math.round((((totalValue - totalInvested) / totalInvested) * 100) * 100) / 100
@@ -110,7 +102,8 @@ export async function getPortfolioSummary() {
 
   return {
     total_return_pct: totalReturnPct,
-    total_positions: transactions.length,
+    total_positions: positions.length,
+    total_transactions: transactions.length,
     since: transactions.length > 0 ? transactions[0].date : null,
     current_cycle: cycles.find((c) => c.status === "active") ?? null,
   };
@@ -118,35 +111,14 @@ export async function getPortfolioSummary() {
 
 export async function getPositions(tier = "free") {
   const prices = await getLatestPrices();
-  let totalInvested = 0;
-  let totalValue = 0;
-
-  const positions = transactions.map((tx) => {
-    const stock = stocks.find((s) => s.ticker === tx.ticker);
-    const currentPrice = prices[tx.ticker] ?? stock?.price ?? tx.price;
-    const returnPct = ((currentPrice - tx.price) / tx.price) * 100;
-    const daysHeld = Math.ceil(
-      (Date.now() - new Date(tx.date + "T00:00:00").getTime()) / 86400000
-    );
-    const shares = INVESTMENT_PER_POSITION / tx.price;
-    totalInvested += INVESTMENT_PER_POSITION;
-    totalValue += shares * currentPrice;
-
-    return {
-      ticker: tx.ticker,
-      name: stock?.name ?? tx.ticker,
-      buy_price: tx.price,
-      current_price: Math.round(currentPrice * 100) / 100,
-      return_pct: Math.round(returnPct * 100) / 100,
-      days_held: daysHeld,
-      date_bought: tx.date,
-    };
-  });
+  const { positions, totalInvested, totalValue } = aggregatePositions(transactions, prices);
 
   positions.sort((a, b) => b.return_pct - a.return_pct);
 
-  // Free tier: top 3 performers only
-  const finalPositions = tier === "free" ? positions.slice(0, 3) : positions;
+  // Free tier: top 3 performers only, strip transaction details
+  const finalPositions = tier === "free"
+    ? positions.slice(0, 3).map(({ transactions: _txs, ...rest }) => rest)
+    : positions;
 
   const totalReturnPct = totalInvested > 0
     ? Math.round((((totalValue - totalInvested) / totalInvested) * 100) * 100) / 100

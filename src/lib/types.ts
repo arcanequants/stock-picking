@@ -86,6 +86,8 @@ export interface PositionReturn {
   date_bought: string;
 }
 
+export type { AggregatedPosition } from "@/lib/position-utils";
+
 // --- Notifications ---
 
 export type EventType = "price_move" | "dividend" | "earnings" | "analyst" | "news";

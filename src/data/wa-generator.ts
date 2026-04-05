@@ -1,14 +1,16 @@
 import { Stock } from "@/lib/types";
+import { tips } from "@/data/stocks";
 
-const REMINDERS = [
-  "💡 Recuerda: tu presupuesto mensual ÷ 30 = lo que compras de cada pick. Siempre igual.",
-  "💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.",
-  "💡 ¿Cuánto invertir? Lo que puedas mantener CADA MES. $90/mes = $3 por pick. $300/mes = $10 por pick.",
-  "💡 No importa si compras $3 o $50 de cada acción. Lo que importa es que sea lo mismo siempre y que lo puedas sostener.",
-];
-
-function getReminder(pickNumber: number): string {
-  return REMINDERS[(pickNumber - 1) % REMINDERS.length];
+function getTip(stock: Stock, pickNumber: number): string {
+  const ctx = {
+    name: stock.name,
+    ticker: stock.ticker,
+    dividend_yield: stock.dividend_yield ?? 0,
+    price: stock.price,
+    sector: stock.sector,
+    country: stock.country,
+  };
+  return `💡 ${tips[(pickNumber - 1) % tips.length](ctx)}`;
 }
 
 /**
@@ -40,11 +42,12 @@ ${incomeLine}
 🔗 https://vectorialdata.com/stocks/${stock.ticker}
 ✅ Certificado por blockchain → vectorialdata.com/verify/${stock.ticker}
 
-${getReminder(pickNumber)}`;
+${getTip(stock, pickNumber)}`;
 }
 
 /**
  * Generates a WhatsApp message for a REBUY.
+ * Includes conviction narrative for existing users + context for new subscribers.
  */
 export function generateRebuyMessage(
   stock: Stock,
@@ -63,12 +66,15 @@ export function generateRebuyMessage(
 ${options?.brands ? `🛍️ ${options.brands}` : ""}
 
 ${incomeLine}
+💪 *¿Por qué recompramos?* Nuestra convicción es tan alta que estamos aumentando la posición. Comprar a diferentes precios reduce tu riesgo promedio.
 
 🔄 Recompra #${rebuyNumber}
 🔗 https://vectorialdata.com/stocks/${stock.ticker}
 ✅ Certificado por blockchain → vectorialdata.com/verify/${stock.ticker}
 
-${getReminder(rebuyNumber)}`;
+🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en ${stock.ticker}. Ve el research completo: vectorialdata.com/stocks/${stock.ticker}
+
+${getTip(stock, rebuyNumber)}`;
 }
 
 function formatDate(date: Date): string {
