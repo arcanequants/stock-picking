@@ -1,6 +1,6 @@
 # Vectorial Data
 
-> AI-native stock picking service. Daily researched stock picks with a verifiable, hash-chained track record. Built for autonomous portfolio agents.
+> Vectorial Data is a stock picking service that publishes daily researched stock picks across global equities. Every pick is cryptographically verified via SHA-256 hash chain on Base (Ethereum L2). Subscription costs $1/month with daily WhatsApp delivery.
 
 ## What We Do
 
@@ -54,6 +54,19 @@ x402 endpoints:
 
 Install: npx @vectorialdata/mcp-server
 Env: VD_API_KEY=your_key
+
+## Content
+
+- [Stock Research](https://vectorialdata.com/stocks): Browse all researched stocks with returns, ratings, and sector analysis
+- [Portfolio Performance](https://vectorialdata.com/portfolio): Live portfolio tracking with transparent returns
+- [Verification](https://vectorialdata.com/verify): SHA-256 hash chain proof of pick history, blockchain-certified on Base L2
+- [Share Portfolio](https://vectorialdata.com/share/portfolio): Shareable portfolio performance snapshot
+
+## Optional
+
+- [Terms of Service](https://vectorialdata.com/terms): Legal terms
+- [Privacy Policy](https://vectorialdata.com/privacy): Data handling practices
+- [Financial Disclaimer](https://vectorialdata.com/disclaimer): Risk disclosures
 
 ## Links
 

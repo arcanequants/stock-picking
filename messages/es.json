@@ -70,7 +70,13 @@
   },
   "Metadata": {
     "title": "Vectorial Data — Portafolio de Acciones",
-    "description": "Picks de acciones enfocados en dividendos y apreciación de capital. Actualizado diariamente."
+    "description": "Picks de acciones enfocados en dividendos y apreciación de capital. Actualizado diariamente.",
+    "homeTitle": "Vectorial Data — Stock Picks Diarios por $1/mes",
+    "homeDescription": "Stock picks investigados diariamente, certificados en blockchain. Portafolio real, rendimientos reales.",
+    "stocksTitle": "Research de Acciones — Todos los Picks | Vectorial Data",
+    "stocksDescription": "Explora todas las acciones investigadas con rendimientos, ratings y análisis sectorial. Actualizado diariamente.",
+    "joinTitle": "Únete a Vectorial Data — Stock Picks por $1/mes",
+    "joinDescription": "Recibe stock picks investigados diariamente por WhatsApp. Research completo, tracking del portafolio, verificación blockchain. Desde $1/mes."
   },
   "Theme": {
     "light": "Cambiar a modo claro",
@@ -154,7 +160,13 @@
     "noticiasTitle": "Noticias de tu portafolio",
     "noticiasCta": "Ver todas las noticias",
     "samplePickSentDate": "Este pick lo mandamos el {date}.",
-    "samplePickFomo": "¿Qué compramos hoy? →"
+    "samplePickFomo": "¿Qué compramos hoy? →",
+    "quotableTitle": "En números",
+    "quotablePicks": "{count} stock picks verificados",
+    "quotableCountries": "Empresas en {count} países",
+    "quotableSectors": "{count} sectores cubiertos",
+    "quotableBlockchain": "Cada pick certificado en blockchain Base (Ethereum L2)",
+    "quotablePrice": "$1/mes con picks diarios por WhatsApp"
   },
   "Join": {
     "title": "Empieza a generar ingresos",
@@ -265,7 +277,9 @@
     "researched": "Investigado",
     "updated": "Actualizado",
     "nextReview": "Próxima revisión",
-    "legalDisclaimer": "Esto no es asesoría financiera. Consulta con un asesor financiero certificado."
+    "legalDisclaimer": "Esto no es asesoría financiera. Consulta con un asesor financiero certificado.",
+    "lastUpdated": "Actualizado: {date}",
+    "bluf": "Vectorial Data eligió {ticker} el {date} a ${price}."
   },
   "Components": {
     "portfolio": "Portafolio",

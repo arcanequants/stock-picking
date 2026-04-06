@@ -1,12 +1,20 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { JsonLd, getBreadcrumbSchema } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Developers");
   return {
     title: t("heroTitle") + " | Vectorial Data API",
     description: t("heroDesc"),
+    openGraph: {
+      title: t("heroTitle") + " | Vectorial Data API",
+      description: t("heroDesc"),
+      images: [{ url: "/api/og/portfolio", width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image" as const },
+    alternates: { canonical: "https://www.vectorialdata.com/developers" },
   };
 }
 
@@ -15,6 +23,10 @@ export default async function DevelopersPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      <JsonLd data={getBreadcrumbSchema([
+        { name: "Home", url: "https://www.vectorialdata.com" },
+        { name: "Developers", url: "https://www.vectorialdata.com/developers" },
+      ])} />
       {/* Hero */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">{t("heroTitle")}</h1>

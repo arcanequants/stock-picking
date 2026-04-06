@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
 import BlockchainBadge from "@/components/BlockchainBadge";
 import { getLocalizedField } from "@/data/stock-translations";
+import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 const localeMap: Record<string, string> = {
   es: "es-MX",
@@ -34,6 +35,9 @@ export async function generateMetadata({
   return {
     title: `${stock.ticker} — ${stock.name} | Vectorial Data Research`,
     description: localizedShort,
+    alternates: {
+      canonical: `https://www.vectorialdata.com/stocks/${stock.ticker}`,
+    },
     openGraph: {
       title: `${stock.ticker} — ${stock.name}`,
       description: localizedShort,
@@ -118,7 +122,23 @@ export default async function StockResearchPage({
 
   const researchHtml = renderMarkdown(stock.research_full);
 
+  const faqSchema = getFaqSchema(stock, locale);
+  const tx = transactions.find(t => t.ticker === stock.ticker);
+
   return (
+    <>
+    <JsonLd data={{
+      "@context": "https://schema.org",
+      "@graph": [
+        getArticleSchema(stock, locale),
+        ...(faqSchema ? [faqSchema] : []),
+      ],
+    }} />
+    <JsonLd data={getBreadcrumbSchema([
+      { name: "Home", url: "https://www.vectorialdata.com" },
+      { name: "Stocks", url: "https://www.vectorialdata.com/stocks" },
+      { name: stock.ticker, url: `https://www.vectorialdata.com/stocks/${stock.ticker}` },
+    ])} />
     <div className="max-w-4xl mx-auto">
       <div className="text-sm text-text-faint mb-6">
         <Link href="/stocks" className="hover:text-text-secondary">{t("breadcrumb")}</Link>
@@ -178,6 +198,14 @@ export default async function StockResearchPage({
         {tLegal("notFinancialAdvice")} {tLegal("consultAdvisor")}
       </p>
 
+      <p className="text-sm text-text-muted mb-6">
+        {t("bluf", { ticker: stock.ticker, date: tx?.date ?? stock.first_researched_at, price: stock.price.toFixed(2) })}
+      </p>
+
+      <time dateTime={stock.last_updated_at} className="text-xs text-text-faint">
+        {t("lastUpdated", { date: new Date(stock.last_updated_at + "T12:00:00").toLocaleDateString(localeMap[locale] ?? "es-MX", { day: "numeric", month: "short", year: "numeric" }) })}
+      </time>
+
       {researchHtml && (
         <div className="border border-border rounded-xl p-6 md:p-8">
           <h2 className="text-xl font-bold mb-6">{t("fullResearch")}</h2>
@@ -202,6 +230,7 @@ export default async function StockResearchPage({
         </p>
       )}
     </div>
+    </>
   );
 }
 

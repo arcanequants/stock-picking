@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { stocks, transactions } from "@/data/stocks";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +8,15 @@ import HomeNoticiasPreview from "@/components/HomeNoticiasPreview";
 import FreeSignupForm from "@/components/FreeSignupForm";
 import { getTranslations, getLocale } from "next-intl/server";
 import { getLocalizedField } from "@/data/stock-translations";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata");
+  return {
+    title: t("homeTitle"),
+    description: t("homeDescription"),
+    alternates: { canonical: "https://www.vectorialdata.com" },
+  };
+}
 
 export default async function Home() {
   const t = await getTranslations("Home");
@@ -95,6 +105,33 @@ export default async function Home() {
           </Link>
         </ScrollReveal>
       </section>
+
+      {/* BY THE NUMBERS — quotable facts for AI citations */}
+      <ScrollReveal>
+        <section className="max-w-3xl mx-auto">
+          <h2 className="text-lg font-semibold text-center text-text-muted mb-6">{t("quotableTitle")}</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="text-center">
+              <p className="text-2xl font-bold">{transactions.length}</p>
+              <p className="text-xs text-text-muted">{t("quotablePicks", { count: transactions.length })}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold">{new Set(stocks.map((s) => s.country)).size}</p>
+              <p className="text-xs text-text-muted">{t("quotableCountries", { count: new Set(stocks.map((s) => s.country)).size })}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold">{new Set(stocks.map((s) => s.sector)).size}</p>
+              <p className="text-xs text-text-muted">{t("quotableSectors", { count: new Set(stocks.map((s) => s.sector)).size })}</p>
+            </div>
+            <div className="text-center col-span-2 sm:col-span-1">
+              <p className="text-xs text-text-muted">{t("quotableBlockchain")}</p>
+            </div>
+            <div className="text-center col-span-2">
+              <p className="text-xs text-text-muted">{t("quotablePrice")}</p>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* PROBLEMA */}
       <ScrollReveal>

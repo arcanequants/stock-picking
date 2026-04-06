@@ -70,7 +70,13 @@
   },
   "Metadata": {
     "title": "Vectorial Data — Portfólio de Ações",
-    "description": "Picks de ações focados em dividendos e valorização de capital. Atualizado diariamente."
+    "description": "Picks de ações focados em dividendos e valorização de capital. Atualizado diariamente.",
+    "homeTitle": "Vectorial Data — Stock Picks Diários por $1/mês",
+    "homeDescription": "Stock picks pesquisados diariamente, certificados em blockchain. Portfólio real, retornos reais.",
+    "stocksTitle": "Pesquisa de Ações — Todos os Picks | Vectorial Data",
+    "stocksDescription": "Explore todas as ações pesquisadas com retornos, ratings e análise setorial. Atualizado diariamente.",
+    "joinTitle": "Junte-se ao Vectorial Data — Stock Picks por $1/mês",
+    "joinDescription": "Receba stock picks pesquisados diariamente via WhatsApp. Pesquisa completa, rastreamento de portfólio, verificação blockchain. A partir de $1/mês."
   },
   "Theme": {
     "light": "Mudar para modo claro",
@@ -154,7 +160,13 @@
     "verifyCardTitle": "Notário Digital",
     "verifyCardText": "Cada pick tem data selada. Se mudarmos algo, a cadeia quebra e você vê.",
     "verifyCardCta": "Ver registro verificável",
-    "pricingVerify": "Resultados verificados com notário digital"
+    "pricingVerify": "Resultados verificados com notário digital",
+    "quotableTitle": "Em números",
+    "quotablePicks": "{count} stock picks verificados",
+    "quotableCountries": "Empresas em {count} países",
+    "quotableSectors": "{count} setores cobertos",
+    "quotableBlockchain": "Cada pick certificado em blockchain Base (Ethereum L2)",
+    "quotablePrice": "$1/mês com picks diários via WhatsApp"
   },
   "Join": {
     "title": "Comece a gerar renda",
@@ -265,7 +277,9 @@
     "researched": "Pesquisado",
     "updated": "Atualizado",
     "nextReview": "Próxima revisão",
-    "legalDisclaimer": "Isso não é assessoria financeira. Consulte um assessor financeiro certificado."
+    "legalDisclaimer": "Isso não é assessoria financeira. Consulte um assessor financeiro certificado.",
+    "lastUpdated": "Atualizado: {date}",
+    "bluf": "Vectorial Data escolheu {ticker} em {date} a ${price}."
   },
   "Components": {
     "portfolio": "Portfólio",

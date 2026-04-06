@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getSupabase } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import { getTranslations, getLocale } from "next-intl/server";
@@ -7,6 +8,15 @@ import StocksView from "@/components/StocksView";
 import NotificationsBanner from "@/components/NotificationsBanner";
 import FreeSignupForm from "@/components/FreeSignupForm";
 import { getLocalizedField } from "@/data/stock-translations";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata");
+  return {
+    title: t("stocksTitle"),
+    description: t("stocksDescription"),
+    alternates: { canonical: "https://www.vectorialdata.com/stocks" },
+  };
+}
 
 export default async function StocksPage() {
   const t = await getTranslations("Stocks");

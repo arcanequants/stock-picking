@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import FreeSignupForm from "@/components/FreeSignupForm";
+import { JsonLd, getProductSchema } from "@/lib/seo";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata");
+  return {
+    title: t("joinTitle"),
+    description: t("joinDescription"),
+    alternates: { canonical: "https://www.vectorialdata.com/join" },
+  };
+}
 
 export default async function JoinPage() {
   const t = await getTranslations("Join");
@@ -8,6 +19,7 @@ export default async function JoinPage() {
 
   return (
     <div className="max-w-2xl mx-auto text-center space-y-8">
+      <JsonLd data={getProductSchema()} />
       <section>
         <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
         <p className="text-text-muted text-lg">{t("subtitle")}</p>

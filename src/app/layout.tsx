@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Noto_Sans_Devanagari } from "next/font/google";
 import Link from "next/link";
@@ -14,7 +15,16 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
+import { JsonLd, getOrganizationSchema } from "@/lib/seo";
 import "./globals.css";
+
+const SITE_URL = "https://www.vectorialdata.com";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,7 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
       process.env.NEXT_PUBLIC_SITE_URL ||
       (process.env.VERCEL_PROJECT_PRODUCTION_URL
         ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-        : "https://www.vectorialdata.com")
+        : SITE_URL)
     ),
     title: t("title"),
     description: t("description"),
@@ -48,6 +58,18 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Vectorial Data",
     },
     twitter: { card: "summary_large_image" },
+    alternates: {
+      canonical: SITE_URL,
+      languages: {
+        es: SITE_URL,
+        en: SITE_URL,
+        pt: SITE_URL,
+        hi: SITE_URL,
+      },
+    },
+    ...(process.env.GOOGLE_SITE_VERIFICATION && {
+      verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
+    }),
   };
 }
 
@@ -68,11 +90,22 @@ export default async function RootLayout({
     ? { user: null, isSubscribed: false }
     : await getAuthState();
 
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoDevanagari.variable} antialiased bg-background text-foreground min-h-screen ${locale === "hi" ? "font-[var(--font-noto-devanagari)]" : ""}`}
       >
+        <JsonLd data={getOrganizationSchema()} />
+        {gaId && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+            <Script id="ga4" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${gaId}');`}
+            </Script>
+          </>
+        )}
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {/* Navigation — hidden on marketing dashboard */}

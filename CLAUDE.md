@@ -14,9 +14,9 @@ When adding a new stock: fetch live Yahoo Finance price → research → add to 
 
 ## Worker System — Automatic Orchestration
 
-I have a team of 23 specialized workers in `.claude/workers/`. **I must automatically invoke the right worker(s) based on the task** — the user should never have to tell me which one to use.
+I have a team of 24 specialized workers in `.claude/workers/`. **I must automatically invoke the right worker(s) based on the task** — the user should never have to tell me which one to use.
 
-### Product & Design Workers (7)
+### Product, Design & Growth Workers (8)
 
 | Worker | File | Invoke When |
 |--------|------|-------------|
@@ -27,6 +27,7 @@ I have a team of 23 specialized workers in `.claude/workers/`. **I must automati
 | **Copywriter** (Apple/Stripe) | `copywriter.md` | Headlines, page copy, CTAs, microcopy, error messages, WhatsApp messages, marketing text |
 | **Product Manager** (Shreyas Doshi) | `product-manager.md` | Feature prioritization, what to build/not build, PRDs, MVP scope, roadmap |
 | **Growth Hacker** (Lenny Rachitsky) | `growth-hacker.md` | User acquisition, retention, pricing strategy, analytics, A/B tests, channel strategy |
+| **SEO & AI Discovery** (Rand Fishkin + Discovered Labs) | `seo-ai-discovery.md` | Google SEO, AI citations, Schema.org, robots.txt, llms.txt, GEO, structured data, sitemaps, B2AI |
 
 ### Email & Communications Workers (3)
 
@@ -73,6 +74,15 @@ I have a team of 23 specialized workers in `.claude/workers/`. **I must automati
 - **"write email copy / onboarding sequence"** → Newsletter + Retention + Copywriter
 - **"welcome email / re-engagement"** → Retention + Newsletter
 - **"email digest content strategy"** → Newsletter + Product Manager
+
+**SEO & AI Discovery:**
+- **"SEO / Google rankings"** → SEO & AI Discovery
+- **"AI discovery / ChatGPT / Perplexity / B2AI"** → SEO & AI Discovery + Growth Hacker
+- **"structured data / Schema.org / JSON-LD"** → SEO & AI Discovery
+- **"robots.txt / sitemap / crawlers"** → SEO & AI Discovery
+- **"llms.txt / AI agent discovery"** → SEO & AI Discovery + Product Manager
+- **"get found by AI / cited by ChatGPT"** → SEO & AI Discovery + Copywriter + Growth Hacker
+- **"meta tags / Open Graph / hrefLang"** → SEO & AI Discovery + Landing & Conversion
 
 **Product & Design:**
 - **"redesign the homepage"** → Landing & Conversion + UI/UX Designer + Copywriter

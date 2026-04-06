@@ -70,7 +70,13 @@
   },
   "Metadata": {
     "title": "Vectorial Data — Stock Portfolio",
-    "description": "Stock picks focused on dividends and capital appreciation. Updated daily."
+    "description": "Stock picks focused on dividends and capital appreciation. Updated daily.",
+    "homeTitle": "Vectorial Data — Daily Stock Picks for $1/month",
+    "homeDescription": "Daily researched stock picks, blockchain-certified. Real portfolio, real returns. Updated every weekday.",
+    "stocksTitle": "Stock Research — All Picks | Vectorial Data",
+    "stocksDescription": "Browse all researched stocks with returns, ratings, and sector analysis. Updated daily.",
+    "joinTitle": "Join Vectorial Data — $1/month Stock Picks",
+    "joinDescription": "Get daily researched stock picks via WhatsApp. Full research reports, portfolio tracking, blockchain verification. Starting at $1/month."
   },
   "Theme": {
     "light": "Switch to light mode",
@@ -154,7 +160,13 @@
     "verifyCardTitle": "Digital Notary",
     "verifyCardText": "Every pick is date-sealed. If we change anything, the chain breaks and you see it.",
     "verifyCardCta": "View verifiable record",
-    "pricingVerify": "Results verified with digital notary"
+    "pricingVerify": "Results verified with digital notary",
+    "quotableTitle": "By the numbers",
+    "quotablePicks": "{count} verified stock picks",
+    "quotableCountries": "Companies across {count} countries",
+    "quotableSectors": "{count} sectors covered",
+    "quotableBlockchain": "Every pick blockchain-certified on Base (Ethereum L2)",
+    "quotablePrice": "$1/month subscription with daily WhatsApp delivery"
   },
   "Join": {
     "title": "Start earning income",
@@ -265,7 +277,9 @@
     "researched": "Researched",
     "updated": "Updated",
     "nextReview": "Next review",
-    "legalDisclaimer": "This is not financial advice. Consult a certified financial advisor."
+    "legalDisclaimer": "This is not financial advice. Consult a certified financial advisor.",
+    "lastUpdated": "Last updated: {date}",
+    "bluf": "Vectorial Data picked {ticker} on {date} at ${price}."
   },
   "Components": {
     "portfolio": "Portfolio",

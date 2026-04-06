@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import TechnicalDetails from "@/components/TechnicalDetails";
 import { getEasExplorerUrl } from "@/lib/eas";
+import { JsonLd, getBreadcrumbSchema } from "@/lib/seo";
 
 const localeMap: Record<string, string> = {
   es: "es-MX",
@@ -47,6 +48,7 @@ export async function generateMetadata({
       images: [{ url: `/api/og/verify/${upper}`, width: 1200, height: 630 }],
     },
     twitter: { card: "summary_large_image" },
+    alternates: { canonical: `https://www.vectorialdata.com/verify/${upper}` },
   };
 }
 
@@ -104,6 +106,11 @@ export default async function VerifyCertificatePage({
 
   return (
     <div className="max-w-2xl mx-auto">
+      <JsonLd data={getBreadcrumbSchema([
+        { name: "Home", url: "https://www.vectorialdata.com" },
+        { name: "Verify", url: "https://www.vectorialdata.com/verify" },
+        { name: upper, url: `https://www.vectorialdata.com/verify/${upper}` },
+      ])} />
       {/* Multiple transactions header */}
       {totalTxs > 1 && (
         <div className="flex items-center justify-center gap-2 text-sm border border-brand/20 bg-brand/5 rounded-xl px-4 py-3 mb-6 text-center">

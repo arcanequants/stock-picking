@@ -69,6 +69,7 @@ export async function generateMetadata({
       type: "article",
     },
     twitter: { card: "summary_large_image" },
+    alternates: { canonical: `https://www.vectorialdata.com/stocks/${data.ticker}` },
   };
 }
 
