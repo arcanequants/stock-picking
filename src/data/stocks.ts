@@ -224,7 +224,7 @@ UBS Group AG es el **banco más grande de Suiza** y el **wealth manager #1 del m
       "Roper es una máquina de compounding de élite temporalmente en descuento. FCF margin del 31% ($2.47B), gross margin del 69.5%, y 85%+ revenue recurrente — métricas de empresa SaaS de primera clase. Cayó -44% por headwinds temporales: recortes DOGE afectan Deltek (gobierno) y recesión de freight afecta DAT.\n\nA $360, ROP cotiza a P/E forward de 15.4x — la mitad de su valuación histórica (~30x). Con $6B+ en capacidad de M&A, 33 años de dividend growth, y pipeline de 25+ productos de AI desplegados, el flywheel de compounding sigue intacto.\n\nConsenso Buy con target promedio de ~$478 (33% upside). La acción cotiza cerca del target bajo de Barclays ($380), ofreciendo margen de seguridad.",
     summary_risk:
       "El riesgo principal es la ejecución de capital allocation — el modelo de Roper depende de adquirir negocios a múltiplos atractivos. Con $9.5B en deuda total (2.9x net debt/EBITDA) y ROIC de ~5-6% por el goodwill de adquisiciones recientes, la empresa debe demostrar que CentralReach y Subsplash generan retornos incrementales.\n\nRiesgos adicionales: recortes DOGE presionan la base de clientes federales de Deltek más de lo esperado; recesión prolongada de freight afecta DAT; y si los múltiplos de M&A de software vertical suben, el flywheel de adquisiciones se desacelera.",
-    research_full: `# Roper Technologies (ROP) — Research Completo (RECOMPRA)
+    research_full: `# Roper Technologies (ROP) — Research Completo
 
 ## Precio: $360.46 | P/E Forward: 15.4 | Div Yield: 0.95% | Market Cap: $38.8B
 
@@ -4680,12 +4680,12 @@ export const transactions: Transaction[] = [
     id: 32,
     stock_id: 2,
     ticker: "ROP",
-    type: "rebuy" as const,
+    type: "new" as const,
     cycle_number: 7,
     price: 360.46,
     date: "2026-04-06",
     day_of_week: "monday",
-    wa_message: `🔄 *RECOMPRA* — Apr 6, 2026\n\n🏢 *Roper Technologies* (ROP) — $360.46\n🛍️ Vertafore (seguros), Deltek (gobierno), Aderant (bufetes legales), DAT (freight #1), CentralReach (terapia autismo), Foundry (efectos visuales Hollywood)\n\n💵 Seguimos acumulando ingreso del *0.95% anual*.\n💪 *¿Por qué recompramos?* Nuestra convicción es tan alta que estamos aumentando la posición. Comprar a diferentes precios reduce tu riesgo promedio.\n\n🔄 Recompra #32\n🔗 https://vectorialdata.com/stocks/ROP\n✅ Certificado por blockchain → vectorialdata.com/verify/ROP\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en ROP. Ve el research completo: vectorialdata.com/stocks/ROP\n\n💡 El CEO de Roper Technologies gana más en un día que la mayoría en un año. Pero hay un detalle: tú puedes ganar cada vez que él gana. Así funcionan las acciones.`,
+    wa_message: `📊 *STOCK PICK #32* — Apr 6, 2026\n\n🏢 *Roper Technologies* (ROP) — $360.46\n\n🛍️ *Sus productos*: Vertafore (seguros), Deltek (gobierno), Aderant (bufetes legales), DAT (freight #1 en Norteamérica), CentralReach (terapia autismo), Foundry (efectos visuales Hollywood)\n\n🌍 *Presencia*: Estados Unidos (Florida), operando globalmente con 18,000+ empleados. El "Berkshire Hathaway del software" — 85%+ revenue recurrente de software vertical dominante en nichos.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.95% anual* solo por ser dueño. Cada vez que un abogado usa su software, un contratista del gobierno gestiona un proyecto, o un broker de freight conecta una carga — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El modelo de Roper depende de adquirir negocios de software a múltiplos atractivos — con $9.5B en deuda, si los múltiplos suben o las adquisiciones fallan, el flywheel se desacelera.\n\n🆕 Posición #32\n🔗 https://vectorialdata.com/stocks/ROP\n✅ Certificado por blockchain → vectorialdata.com/verify/ROP\n\n💡 El CEO de Roper Technologies gana más en un día que la mayoría en un año. Pero hay un detalle: tú puedes ganar cada vez que él gana. Así funcionan las acciones.`,
     attestation_uid:
       "0x00e11de53b0a332029189046e1d1308b5562b91c9e3750e5be2a6bc52581f417",
   },
