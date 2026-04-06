@@ -4660,6 +4660,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-06",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #30* — Apr 6, 2026\n\n🏢 *Zoetis Inc* (ZTS) — $118.08\n\n🛍️ *Sus productos*: Simparica Trio (antiparasitario #1), Apoquel/Cytopoint (dermatología canina), Librela/Solensia (dolor artritis mascotas), vacunas y diagnósticos veterinarios\n\n🌍 *Presencia*: Estados Unidos (New Jersey), operando en 100+ países con 29 plantas de manufactura. La empresa #1 en salud animal del mundo — spin-off de Pfizer.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.7% anual* solo por ser dueño. Cada vez que alguien lleva su perro al veterinario, le pone su antiparasitario mensual, o un ganadero vacuna su ganado — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La FDA está investigando Librela (perros) y Solensia (gatos) por efectos adversos neurológicos — se han reportado más de 2,300 muertes de mascotas.\n\n🆕 Posición #30\n🔗 https://vectorialdata.com/stocks/ZTS\n✅ Certificado por blockchain → vectorialdata.com/verify/ZTS\n\n💡 Pregunta incómoda: ¿por qué Zoetis Inc vale $118 y no la mitad o el doble? La respuesta tiene menos que ver con la empresa y más con la psicología de millones de personas.`,
+    attestation_uid:
+      "0xf4859b5ce908b5073c1d78f4477c494b5e90cc08a83ea9da09d08dc09176db87",
   },
   {
     id: 31,
@@ -4671,6 +4673,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-06",
     day_of_week: "monday",
     wa_message: `📊 *STOCK PICK #31* — Apr 6, 2026\n\n🏢 *Mueller Industries* (MLI) — $112.67\n\n🛍️ *Sus productos*: Tubería de cobre Streamline® (#1 en plomería profesional), conexiones de cobre, válvulas, componentes HVAC y refrigeración, fundición de latón y aluminio\n\n🌍 *Presencia*: Estados Unidos (Tennessee), con operaciones en América del Norte. Fabricando productos de cobre esenciales desde 1917 — ~4,800 empleados.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.9% anual* solo por ser dueño. Cada vez que se construye una casa, se instala un aire acondicionado, o se renueva la plomería de un edificio — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Mueller depende del precio del cobre — si los precios caen significativamente, los márgenes se comprimen y el revenue puede caer.\n\n🆕 Posición #31\n🔗 https://vectorialdata.com/stocks/MLI\n✅ Certificado por blockchain → vectorialdata.com/verify/MLI\n\n💡 MLI cuesta $113 hoy. Hace 10 años costaba una fracción de eso. Pero lo interesante no es cuánto subió — es POR QUÉ subió.`,
+    attestation_uid:
+      "0xbd7e421ea0ee71571f65727e78fccb98dbdb30fc02167755ea1200e1aec343df",
   },
   {
     id: 32,
@@ -4682,6 +4686,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-06",
     day_of_week: "monday",
     wa_message: `🔄 *RECOMPRA* — Apr 6, 2026\n\n🏢 *Roper Technologies* (ROP) — $360.46\n🛍️ Vertafore (seguros), Deltek (gobierno), Aderant (bufetes legales), DAT (freight #1), CentralReach (terapia autismo), Foundry (efectos visuales Hollywood)\n\n💵 Seguimos acumulando ingreso del *0.95% anual*.\n💪 *¿Por qué recompramos?* Nuestra convicción es tan alta que estamos aumentando la posición. Comprar a diferentes precios reduce tu riesgo promedio.\n\n🔄 Recompra #32\n🔗 https://vectorialdata.com/stocks/ROP\n✅ Certificado por blockchain → vectorialdata.com/verify/ROP\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en ROP. Ve el research completo: vectorialdata.com/stocks/ROP\n\n💡 El CEO de Roper Technologies gana más en un día que la mayoría en un año. Pero hay un detalle: tú puedes ganar cada vez que él gana. Así funcionan las acciones.`,
+    attestation_uid:
+      "0x00e11de53b0a332029189046e1d1308b5562b91c9e3750e5be2a6bc52581f417",
   },
 ];
 
