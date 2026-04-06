@@ -210,28 +210,133 @@ UBS Group AG es el **banco más grande de Suiza** y el **wealth manager #1 del m
     country: "United States",
     region: "North America",
     currency: "USD",
-    price: 350.0,
-    pe_ratio: 24.5,
-    pe_forward: 16.0,
-    dividend_yield: 1.0,
-    market_cap_b: 36.0,
-    eps: 21.4,
+    price: 360.46,
+    pe_ratio: 25.4,
+    pe_forward: 15.4,
+    dividend_yield: 0.95,
+    market_cap_b: 38.8,
+    eps: 20.0,
     summary_short:
-      "El 'Berkshire Hathaway del software'. Compran empresas de software especializado y las dejan crecer. Cayó -44% por problemas temporales — oportunidad de década.",
+      "El 'Berkshire Hathaway del software'. Compran empresas de software especializado (#1 en nichos) y las dejan crecer. Revenue de $7.9B, FCF margin del 31%, 33 años de dividend growth. Cayó -44% por headwinds temporales.",
     summary_what:
-      "Roper compra empresas de software que son #1 en nichos específicos (software para abogados, contratistas del gobierno, freight, laboratorios). Las deja operar solas y reinvierte el cash flow en comprar más empresas.",
+      "Roper Technologies es una empresa diversificada de tecnología que adquiere y opera negocios de software vertical dominantes en nichos específicos — software para abogados (Aderant), contratistas del gobierno (Deltek), freight (DAT), laboratorios (Clinisys), y más. Genera 85%+ de revenue recurrente.\n\nOpera a través de tres segmentos: Application Software (~58% revenue), Network Software (~21%), y Technology Enabled Products (~21%). Cada empresa del portafolio — desde Vertafore en insurance tech hasta Foundry en efectos visuales de Hollywood — mantiene posición #1 o #2 en su nicho.\n\nEn 2025 desplegó $3.3B en adquisiciones de alta calidad: CentralReach ($1.85B, software de terapia ABA con 20%+ de crecimiento) y Subsplash ($800M, plataforma digital para iglesias).",
     summary_why:
-      "Máquina de compounding con FCF margin del 31%. Cayó -44% por problemas temporales (recortes gobierno, recesión freight). P/E forward de 16x para una compounder de élite es extraordinario. $6B+ en capacidad de M&A.",
+      "Roper es una máquina de compounding de élite temporalmente en descuento. FCF margin del 31% ($2.47B), gross margin del 69.5%, y 85%+ revenue recurrente — métricas de empresa SaaS de primera clase. Cayó -44% por headwinds temporales: recortes DOGE afectan Deltek (gobierno) y recesión de freight afecta DAT.\n\nA $360, ROP cotiza a P/E forward de 15.4x — la mitad de su valuación histórica (~30x). Con $6B+ en capacidad de M&A, 33 años de dividend growth, y pipeline de 25+ productos de AI desplegados, el flywheel de compounding sigue intacto.\n\nConsenso Buy con target promedio de ~$478 (33% upside). La acción cotiza cerca del target bajo de Barclays ($380), ofreciendo margen de seguridad.",
     summary_risk:
-      "Recortes DOGE afectan Deltek. Recesión de freight afecta DAT. Guidance 2026 conservador.",
-    research_full: "",
+      "El riesgo principal es la ejecución de capital allocation — el modelo de Roper depende de adquirir negocios a múltiplos atractivos. Con $9.5B en deuda total (2.9x net debt/EBITDA) y ROIC de ~5-6% por el goodwill de adquisiciones recientes, la empresa debe demostrar que CentralReach y Subsplash generan retornos incrementales.\n\nRiesgos adicionales: recortes DOGE presionan la base de clientes federales de Deltek más de lo esperado; recesión prolongada de freight afecta DAT; y si los múltiplos de M&A de software vertical suben, el flywheel de adquisiciones se desacelera.",
+    research_full: `# Roper Technologies (ROP) — Research Completo (RECOMPRA)
+
+## Precio: $360.46 | P/E Forward: 15.4 | Div Yield: 0.95% | Market Cap: $38.8B
+
+---
+
+## ¿Qué es Roper Technologies?
+
+Roper Technologies es el **"Berkshire Hathaway del software"** — una empresa que adquiere y opera negocios de software vertical dominantes en nichos específicos. Con $7.9B en revenue y 85%+ revenue recurrente, Roper ha completado una de las transformaciones corporativas más notables: de conglomerado industrial a compounder de software puro.
+
+## Empresas del Portafolio
+
+### Application Software (~58% revenue)
+| Empresa | Nicho | Posición |
+|---------|-------|----------|
+| **Vertafore** | Insurance tech | #1, 50+ años en el mercado |
+| **Deltek** | Software para contratistas gobierno | Líder, 23,000+ orgs en 80+ países |
+| **Aderant** | Software para bufetes legales | 77 de los top 100 Global Law Firms |
+| **CentralReach** | Terapia ABA (autismo) | Líder, 200,000+ profesionales |
+| **Strata** | Finanzas hospitalarias | Líder en healthcare analytics |
+| **Frontline** | Administración K-12 | Software escolar líder |
+
+### Network Software (~21% revenue)
+| Empresa | Nicho | Posición |
+|---------|-------|----------|
+| **DAT Solutions** | Marketplace de freight | #1 en América del Norte |
+| **ConstructConnect** | Licitaciones de construcción | Red líder de pre-construcción |
+| **iPipeline** | Distribución seguros de vida | Plataforma dominante |
+| **Foundry (Nuke)** | Efectos visuales cine/TV | Usado en Marvel, Star Wars |
+| **Subsplash** | Engagement digital iglesias | Líder en $2.5B TAM |
+
+### Technology Enabled Products (~21% revenue)
+| Empresa | Nicho | Posición |
+|---------|-------|----------|
+| **Neptune** | Medidores de agua inteligentes | Líder en smart water metering |
+| **Verathon** | Dispositivos médicos | GlideScope (videolaringoscopios) |
+| **NDI** | Medición 3D quirúrgica | Navegación quirúrgica de precisión |
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | $7.9B (+12.3% YoY) |
+| **Organic Growth** | +5% |
+| **Gross Margin** | 69.5% (+120bps YoY) |
+| **EBITDA** | $3.14B (39.8% margin) |
+| **Free Cash Flow** | $2.47B (31.2% FCF margin) |
+| **EPS** | $20.00 (+9% YoY) |
+| **Revenue Recurrente** | 85%+ |
+| **Empleados** | 18,000+ |
+
+## Dividendo — 33 Años de Crecimiento Consecutivo
+
+- **Dividendo anual:** $3.64/acción ($0.91 trimestral)
+- **Yield:** 0.95%
+- **Payout Ratio:** ~22% (enorme espacio de crecimiento)
+- **Crecimiento:** 33 años consecutivos
+- **CAGR 5 años:** ~10% anual
+
+## Por Qué Recompramos ROP
+
+ROP a $360 es una compounder de élite temporalmente en oferta. Los headwinds son cíclicos (DOGE/Deltek, freight/DAT), no estructurales. El motor de compounding sigue intacto:
+
+- **$3.3B desplegados en 2025** en CentralReach (20%+ growth) y Subsplash (high-teens growth)
+- **25+ productos de AI** desplegados en el portafolio (HerculesAI para legal, Spectrum AI para terapia)
+- **$6B+ en capacidad de M&A** futura
+- **Guidance 2026:** Revenue ~8% growth, EPS $21.30-$21.55
+- **Buyback:** programa de $500M señala convicción de management
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| Analistas | 14-18 |
+| Target Promedio | **$478** |
+| Target Rango | $365 - $625 |
+| **Upside** | **+32.6%** |
+
+## Riesgos Principales
+
+1. **Capital allocation** — Goodwill de $34.6B en activos; ROIC de 5-6% por adquisiciones recientes
+2. **DOGE** — Recortes de gasto gobierno presionan Deltek
+3. **Freight recession** — DAT afectado por ciclo bajo de transporte
+4. **Leverage** — $9.5B deuda total, 2.9x net debt/EBITDA
+5. **Múltiplos de M&A** — Si software vertical se encarece, el flywheel se frena
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $360.46 |
+| P/E Forward | 15.4x (vs histórico ~28-30x) |
+| Div Yield | 0.95% |
+| FCF Yield | ~6.4% |
+| 52-Week High | ~$640 |
+| Drawdown actual | ~-44% del máximo |
+
+## Conclusión
+
+ROP a $360 es una oportunidad de recomprar el compounder de software más disciplinado del mercado a la mitad de su valuación histórica. El 31% FCF margin, 85%+ revenue recurrente, y 33 años de dividend growth proveen downside protection, mientras el upside viene del re-rating cuando los headwinds cíclicos pasen. Con 33% de upside según analistas más el dividendo, estamos acumulando posición.
+
+---
+
+*Research fecha: 6 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
     analyst_consensus: "Buy",
     analyst_target: 478.0,
-    analyst_upside: 37.0,
-    status: "watchlist",
+    analyst_upside: 32.6,
+    status: "active",
     first_researched_at: "2026-03-04T00:00:00Z",
-    last_updated_at: "2026-03-04T00:00:00Z",
-    next_review_at: "2026-09-04T00:00:00Z",
+    last_updated_at: "2026-04-06T00:00:00Z",
+    next_review_at: "2026-10-06T00:00:00Z",
   },
   {
     id: 3,
@@ -3907,6 +4012,264 @@ MDLZ a $57 es una oportunidad de comprar el dueño de Oreo, Cadbury y Milka a P/
     last_updated_at: "2026-04-02T00:00:00Z",
     next_review_at: "2026-10-02T00:00:00Z",
   },
+  {
+    id: 34,
+    ticker: "ZTS",
+    name: "Zoetis Inc",
+    sector: "Healthcare",
+    industry: "Animal Health / Veterinary Pharmaceuticals",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 118.08,
+    pe_ratio: 19.6,
+    pe_forward: 15.7,
+    dividend_yield: 1.7,
+    market_cap_b: 52.0,
+    eps: 5.94,
+    summary_short:
+      "La empresa #1 en salud animal del mundo. Medicinas, vacunas y diagnósticos para mascotas y ganado. Spin-off de Pfizer en 2013, con ~$9.5B en revenue y presencia en 100+ países.",
+    summary_what:
+      "Zoetis es la compañía más grande del mundo dedicada exclusivamente a la salud animal. Desarrolla y manufactura medicinas, vacunas, diagnósticos y tecnologías para mascotas (perros, gatos) y ganado (bovino, porcino, avícola). Spin-off de Pfizer en 2013, heredó décadas de experiencia farmacéutica y una red global de distribución.\n\nSus productos estrella incluyen: Simparica Trio (antiparasitario #1, franquicia de ~$1.5B), Apoquel/Cytopoint (dermatología, franquicia de $1.74B), Librela/Solensia (dolor por artritis, $568M), y un amplio portafolio de vacunas y antibióticos para ganado.\n\nZoetis genera ~65% de su revenue en mascotas y ~35% en ganado, con presencia en 100+ países y 29 plantas de manufactura globales.",
+    summary_why:
+      "Zoetis es el líder indiscutible en una industria con vientos de cola seculares: la 'humanización de mascotas' donde dueños tratan a sus pets como familia y gastan en salud premium. Modelo de revenue recurrente — vacunas anuales, antiparasitarios mensuales, tratamientos crónicos.\n\nA $118, ZTS cotiza a P/E forward de 15.7x — un descuento masivo vs su promedio histórico de ~30x. La acción cayó ~28% desde máximos ($172) por la controversia de Librela (efectos secundarios en perros), pero los fundamentales son sólidos: margen operativo de 38%, FCF de $2.3B, y 12 años consecutivos de crecimiento de dividendo.\n\nConsenso Moderate Buy con target promedio de ~$156 (32% upside). Pipeline de 12 candidatos blockbuster en oncología, enfermedad renal y cardiología.",
+    summary_risk:
+      "La FDA está investigando Librela (perros) y Solensia (gatos) por efectos adversos neurológicos — se han reportado más de 2,300 muertes de mascotas. La franquicia de artritis ya cayó 3% en 2025 con caída del 11% en Q4. Si las restricciones regulatorias escalan o la confianza veterinaria se erosiona más, podría dañar un pilar clave de crecimiento y la reputación de toda la marca.\n\nRiesgos adicionales: desaceleración del gasto en mascotas si la economía empeora; competencia creciente en antiparasitarios y dermatología; exposición cambiaria (~50% revenue fuera de EE.UU.); y concentración en Librela/Simparica como drivers de crecimiento.",
+    research_full: `# Zoetis Inc (ZTS) — Research Completo
+
+## Precio: $118.08 | P/E Forward: 15.7 | Div Yield: 1.7% | Market Cap: $52B
+
+---
+
+## ¿Qué es Zoetis?
+
+Zoetis es la **compañía más grande del mundo dedicada exclusivamente a la salud animal**. Spin-off de Pfizer en 2013, desarrolla y manufactura medicinas, vacunas, diagnósticos y tecnologías para mascotas y ganado en 100+ países con ~$9.5B en revenue anual.
+
+## Productos Principales
+
+| Producto | Categoría | Revenue | Notas |
+|----------|-----------|---------|-------|
+| **Simparica Trio** | Antiparasitario (pulgas/garrapatas/gusano) | ~$1.5B (franquicia) | Cruzó $1B en ventas EE.UU.; +12% operacional |
+| **Apoquel** | Dermatología (comezón alérgica) | Parte de $1.74B | Tableta oral para perros; blockbuster |
+| **Cytopoint** | Dermatología (comezón alérgica) | Parte de $1.74B | Anticuerpo monoclonal inyectable |
+| **Librela** | Dolor artritis (perros) | Parte de $568M OA | Bajo escrutinio FDA por efectos adversos |
+| **Solensia** | Dolor artritis (gatos) | Parte de $568M OA | Primer mAb para dolor felino |
+| **Draxxin** | Anti-infeccioso ganado | Producto clave | Antibiótico líder para bovinos |
+| **Vacunas** | Ganado y mascotas | Portafolio amplio | Bovino, porcino, avícola, mascotas |
+| **Diagnósticos** | Point-of-care | Segmento en crecimiento | Vetscan, laboratorios de referencia |
+
+**Split de revenue:** ~65% mascotas, ~35% ganado.
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | $9.5B (+6% orgánico) |
+| **Margen Operativo** | ~38% |
+| **EBITDA Margin** | ~44.8% |
+| **Free Cash Flow** | $2.3B |
+| **EPS Ajustado** | $6.41 |
+| **Empleados** | ~14,100 |
+| **Países** | 100+ |
+| **Plantas manufactura** | 29 globales |
+
+## Dividendo — 12 Años de Crecimiento
+
+- **Dividendo anual:** $2.12/acción ($0.53 trimestral)
+- **Yield:** 1.7%
+- **Payout Ratio:** ~33% (muy bien cubierto)
+- **Crecimiento:** 12 años consecutivos de aumento
+- **CAGR 5 años:** ~20% anual
+
+## Por Qué ZTS a Estos Precios
+
+ZTS cotiza a $118, un 28% por debajo de su máximo de 52 semanas ($172.23). La causa principal: la controversia de Librela. La FDA reportó efectos adversos neurológicos y más de 2,300 muertes de mascotas. Pero el contexto importa:
+
+- Con 21M+ dosis distribuidas, la tasa de eventos adversos está por debajo de "raro" según la EMA
+- Las ventas mensuales se están estabilizando
+- Zoetis ya está desarrollando sucesores (Portela, Lenivia) para 2026
+- Los otros pilares (Simparica +12%, Apoquel/Cytopoint estables) siguen fuertes
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Moderate Buy** |
+| Buy / Hold / Sell | 6 / 5 / 0 |
+| Target Promedio | **$156** |
+| Target Rango | $130 - $200 |
+| **Upside** | **+32.1%** |
+
+## Catalizadores de Crecimiento
+
+1. **Humanización de mascotas** — Gasto en salud de mascotas crece 6-8% anual globalmente
+2. **Pipeline:** 12 candidatos blockbuster en oncología, enfermedad renal crónica y cardiología ($5B+ TAM)
+3. **Simparica** sigue ganando market share (+12% en 2025)
+4. **Diagnósticos** — Plataforma integrada "diagnostica-luego-trata"
+5. **Mercados emergentes** — China, Brasil, India con ownership de mascotas acelerando
+6. **Nuevos productos OA** — Portela y Lenivia lanzándose en 2026
+
+## Riesgos Principales
+
+1. **Librela/Solensia** — Escrutinio FDA, efectos adversos neurológicos, 2,300+ muertes reportadas
+2. **Desaceleración de gasto en mascotas** — Recesión podría reducir visitas al veterinario
+3. **Competencia** — Antiparasitarios y dermatología cada vez más competidos
+4. **Exposición cambiaria** — ~50% revenue fuera EE.UU.
+5. **Concentración** — Dependencia de Simparica y Librela como motores de crecimiento
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $118.08 |
+| P/E Forward | 15.7x (vs histórico ~30x) |
+| Div Yield | 1.7% |
+| 52-Week High | $172.23 |
+| Drawdown actual | -28% del máximo |
+| Guidance 2026 Revenue | $9.8B - $10.0B |
+| Guidance 2026 EPS Adj | $7.00 - $7.10 |
+
+## Conclusión
+
+ZTS a $118 es una oportunidad de comprar al líder mundial en salud animal a P/E forward de 15.7x — la mitad de su valuación histórica. La controversia de Librela creó el descuento, pero los fundamentales (38% margen operativo, $2.3B FCF, 12 años de dividend growth, pipeline robusto) no han cambiado. Con 32% de upside según analistas más el dividendo creciente, el retorno total esperado es ~34%.
+
+---
+
+*Research fecha: 6 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Moderate Buy",
+    analyst_target: 156.0,
+    analyst_upside: 32.1,
+    status: "active",
+    first_researched_at: "2026-04-06T00:00:00Z",
+    last_updated_at: "2026-04-06T00:00:00Z",
+    next_review_at: "2026-10-06T00:00:00Z",
+  },
+  {
+    id: 35,
+    ticker: "MLI",
+    name: "Mueller Industries",
+    sector: "Industrials",
+    industry: "Copper Products / HVAC Manufacturing",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 112.67,
+    pe_ratio: 16.4,
+    pe_forward: 13.5,
+    dividend_yield: 0.9,
+    market_cap_b: 12.5,
+    eps: 6.87,
+    summary_short:
+      "El rey del cobre industrial. Fabricante líder de tubería, conexiones y válvulas de cobre/latón para plomería, HVAC y refrigeración. Desde 1917 con la marca Streamline. Revenue de $4.2B y márgenes excepcionales.",
+    summary_what:
+      "Mueller Industries es uno de los fabricantes más grandes de productos de cobre, latón, aluminio y plástico en América. Fundada en 1917, la empresa opera a través de tres segmentos: Piping Systems (tubería y conexiones de cobre), Industrial Metals (latón y aluminio fundido), y Climate (componentes HVAC y refrigeración).\n\nSu marca insignia Streamline® ha sido la preferida de plomeros y técnicos HVAC por más de 90 años. Mueller suministra los componentes invisibles pero esenciales que hacen funcionar la plomería, el aire acondicionado y la refrigeración en hogares, edificios comerciales e industrias.\n\nOpera con ~4,800 empleados a través de subsidiarias como Mueller Streamline Co., Mueller Brass, ATCO Rubber Products y Mueller Impact.",
+    summary_why:
+      "Mueller Industries es una máquina de cash flow escondida a plena vista. Revenue de $4.2B con profit margin de ~18% — extraordinario para una empresa industrial. El precio del cobre está en máximos históricos y Mueller se beneficia directamente.\n\nA $113, MLI cotiza a P/E forward de 13.5x — descuento significativo para una empresa con crecimiento de revenue del 10%+, márgenes líderes en la industria, y balance impecable. Dividendo modesto (0.9%) pero creciente, con buybacks agresivos que reducen el share count.\n\nConsenso Buy de analistas con target promedio de ~$143 (27% upside). Mueller es el pick de infraestructura perfecta: cada casa nueva, cada sistema HVAC nuevo, cada renovación usa sus productos.",
+    summary_risk:
+      "Mueller depende del precio del cobre — si los precios caen significativamente, los márgenes se comprimen y el revenue puede caer, ya que el cobre es materia prima y componente de pricing.\n\nRiesgos adicionales: ciclicidad del sector construcción (nueva vivienda y comercial); competencia de alternativas plásticas (PEX) que reemplazan tubería de cobre en algunos usos; concentración geográfica en América del Norte; y riesgo de desaceleración económica que impacte la demanda de HVAC y plomería.",
+    research_full: `# Mueller Industries (MLI) — Research Completo
+
+## Precio: $112.67 | P/E Forward: 13.5 | Div Yield: 0.9% | Market Cap: $12.5B
+
+---
+
+## ¿Qué es Mueller Industries?
+
+Mueller Industries es uno de los **fabricantes más grandes de productos de cobre, latón y aluminio** en América. Fundada en 1917, la empresa manufactura tubería, conexiones, válvulas y componentes esenciales para plomería, HVAC, refrigeración e industria.
+
+## Segmentos de Negocio
+
+| Segmento | Productos | % Revenue aprox |
+|----------|-----------|-----------------|
+| **Piping Systems** | Tubería de cobre (Streamline®), conexiones, líneas de refrigerante | ~50% |
+| **Industrial Metals** | Fundición de latón y aluminio, barras, forjas | ~25% |
+| **Climate** | Componentes HVAC, válvulas, accesorios de refrigeración | ~25% |
+
+## Marcas y Subsidiarias
+
+- **Streamline®** — Marca insignia de tubería de cobre, preferida por profesionales por 90+ años
+- **Mueller Streamline Co.** — Sede en Collierville, TN; fabricación de tubería y conexiones
+- **Mueller Brass** — Productos de latón fundido
+- **ATCO Rubber Products** — Productos de caucho industrial
+- **Mueller Impact** — Forjas y componentes de precisión
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | $4.2B (+10.5% YoY) |
+| **Net Income** | $765M (+26.5% YoY) |
+| **Net Margin** | ~18% |
+| **Q4 2025 Sales** | $962M (+4.2% YoY) |
+| **Q4 2025 Net Income** | $154M (+11.6% YoY) |
+| **Empleados** | ~4,800 |
+
+## Dividendo
+
+- **Dividendo anual:** $1.00/acción ($0.25 trimestral)
+- **Yield:** 0.9%
+- **Payout Ratio:** ~15% (extremadamente bajo)
+- **Política:** Retorno de capital vía dividendos + buybacks agresivos
+
+## Por Qué MLI a Estos Precios
+
+Mueller Industries es la definición de "hidden gem" industrial. Con márgenes netos de 18% en manufactura — algo casi inaudito — la empresa demuestra poder de pricing excepcional. El boom de infraestructura en EE.UU. (chips, data centers, energía renovable) y la demanda de HVAC por cambio climático son vientos de cola de largo plazo.
+
+A P/E forward de 13.5x, Mueller cotiza con descuento significativo vs industriales comparables. El precio del cobre en máximos históricos beneficia directamente sus resultados. Y con un payout ratio de apenas 15%, hay enorme espacio para crecimiento de dividendo y buybacks.
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| Buy / Hold / Sell | 2 / 0 / 0 |
+| Target Promedio | **$143** |
+| Target Rango | $131 - $158 |
+| **Upside** | **+26.9%** |
+
+## Catalizadores de Crecimiento
+
+1. **Boom de infraestructura EE.UU.** — CHIPS Act, IRA, data centers requieren cobre y HVAC
+2. **Precio del cobre en máximos** — Beneficia directamente revenue y márgenes
+3. **Transición energética** — Vehículos eléctricos, energía solar, redes eléctricas usan más cobre
+4. **HVAC por cambio climático** — Más instalaciones de aire acondicionado globalmente
+5. **Reshoring manufacturero** — Más fábricas en EE.UU. = más demanda de productos Mueller
+
+## Riesgos Principales
+
+1. **Precio del cobre** — Caída significativa comprimiría márgenes y revenue
+2. **Ciclo de construcción** — Desaceleración en nueva vivienda y comercial
+3. **Competencia de PEX** — Tubería plástica reemplazando cobre en algunos usos
+4. **Concentración geográfica** — Mayormente América del Norte
+5. **Cobertura de analistas baja** — Solo 2 analistas cubren, menor visibilidad institucional
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $112.67 |
+| P/E Forward | 13.5x |
+| Net Margin | ~18% (excepcional para industrial) |
+| Div Yield | 0.9% |
+| Payout Ratio | ~15% |
+
+## Conclusión
+
+MLI a $113 es una oportunidad de comprar un fabricante industrial con márgenes de empresa tech (18% net margin) a valuación de empresa cíclica (13.5x forward P/E). El boom de infraestructura, cobre en máximos, y la transición energética son catalizadores de largo plazo. Con 27% de upside según analistas, buybacks activos, y dividendo con enorme espacio de crecimiento, Mueller es el pick de infraestructura que nadie está viendo.
+
+---
+
+*Research fecha: 6 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 143.0,
+    analyst_upside: 26.9,
+    status: "active",
+    first_researched_at: "2026-04-06T00:00:00Z",
+    last_updated_at: "2026-04-06T00:00:00Z",
+    next_review_at: "2026-10-06T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -4287,6 +4650,39 @@ export const transactions: Transaction[] = [
     attestation_uid:
       "0xb538f0e41529806eb85aa18e23d29eca91f94b8d6090cd1fbb89154e2b3c282f",
   },
+  {
+    id: 30,
+    stock_id: 34,
+    ticker: "ZTS",
+    type: "new" as const,
+    cycle_number: 6,
+    price: 118.08,
+    date: "2026-04-06",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #30* — Apr 6, 2026\n\n🏢 *Zoetis Inc* (ZTS) — $118.08\n\n🛍️ *Sus productos*: Simparica Trio (antiparasitario #1), Apoquel/Cytopoint (dermatología canina), Librela/Solensia (dolor artritis mascotas), vacunas y diagnósticos veterinarios\n\n🌍 *Presencia*: Estados Unidos (New Jersey), operando en 100+ países con 29 plantas de manufactura. La empresa #1 en salud animal del mundo — spin-off de Pfizer.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.7% anual* solo por ser dueño. Cada vez que alguien lleva su perro al veterinario, le pone su antiparasitario mensual, o un ganadero vacuna su ganado — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La FDA está investigando Librela (perros) y Solensia (gatos) por efectos adversos neurológicos — se han reportado más de 2,300 muertes de mascotas.\n\n🆕 Posición #30\n🔗 https://vectorialdata.com/stocks/ZTS\n✅ Certificado por blockchain → vectorialdata.com/verify/ZTS\n\n💡 Pregunta incómoda: ¿por qué Zoetis Inc vale $118 y no la mitad o el doble? La respuesta tiene menos que ver con la empresa y más con la psicología de millones de personas.`,
+  },
+  {
+    id: 31,
+    stock_id: 35,
+    ticker: "MLI",
+    type: "new" as const,
+    cycle_number: 7,
+    price: 112.67,
+    date: "2026-04-06",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #31* — Apr 6, 2026\n\n🏢 *Mueller Industries* (MLI) — $112.67\n\n🛍️ *Sus productos*: Tubería de cobre Streamline® (#1 en plomería profesional), conexiones de cobre, válvulas, componentes HVAC y refrigeración, fundición de latón y aluminio\n\n🌍 *Presencia*: Estados Unidos (Tennessee), con operaciones en América del Norte. Fabricando productos de cobre esenciales desde 1917 — ~4,800 empleados.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.9% anual* solo por ser dueño. Cada vez que se construye una casa, se instala un aire acondicionado, o se renueva la plomería de un edificio — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Mueller depende del precio del cobre — si los precios caen significativamente, los márgenes se comprimen y el revenue puede caer.\n\n🆕 Posición #31\n🔗 https://vectorialdata.com/stocks/MLI\n✅ Certificado por blockchain → vectorialdata.com/verify/MLI\n\n💡 MLI cuesta $113 hoy. Hace 10 años costaba una fracción de eso. Pero lo interesante no es cuánto subió — es POR QUÉ subió.`,
+  },
+  {
+    id: 32,
+    stock_id: 2,
+    ticker: "ROP",
+    type: "rebuy" as const,
+    cycle_number: 7,
+    price: 360.46,
+    date: "2026-04-06",
+    day_of_week: "monday",
+    wa_message: `🔄 *RECOMPRA* — Apr 6, 2026\n\n🏢 *Roper Technologies* (ROP) — $360.46\n🛍️ Vertafore (seguros), Deltek (gobierno), Aderant (bufetes legales), DAT (freight #1), CentralReach (terapia autismo), Foundry (efectos visuales Hollywood)\n\n💵 Seguimos acumulando ingreso del *0.95% anual*.\n💪 *¿Por qué recompramos?* Nuestra convicción es tan alta que estamos aumentando la posición. Comprar a diferentes precios reduce tu riesgo promedio.\n\n🔄 Recompra #32\n🔗 https://vectorialdata.com/stocks/ROP\n✅ Certificado por blockchain → vectorialdata.com/verify/ROP\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en ROP. Ve el research completo: vectorialdata.com/stocks/ROP\n\n💡 El CEO de Roper Technologies gana más en un día que la mayoría en un año. Pero hay un detalle: tú puedes ganar cada vez que él gana. Así funcionan las acciones.`,
+  },
 ];
 
 export const cycles = [
@@ -4335,7 +4731,15 @@ export const cycles = [
     cycle_number: 6,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 7,
+    cycle_number: 7,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 2,
     status: "active" as const,
   },
 ];
