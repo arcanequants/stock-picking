@@ -81,10 +81,10 @@ async function backfill() {
   for (
     let d = new Date(start);
     d <= end;
-    d.setDate(d.getDate() + 1)
+    d.setUTCDate(d.getUTCDate() + 1)
   ) {
     const dateStr = d.toISOString().split("T")[0];
-    const dayOfWeek = d.getDay();
+    const dayOfWeek = d.getUTCDay();
 
     // Skip weekends
     if (dayOfWeek === 0 || dayOfWeek === 6) continue;

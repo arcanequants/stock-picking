@@ -20,6 +20,12 @@ export async function GET(request: Request) {
   }
 
   try {
+    // Skip weekends (markets closed) — safety guard even though cron is Mon-Fri
+    const utcDay = new Date().getUTCDay();
+    if (utcDay === 0 || utcDay === 6) {
+      return NextResponse.json({ message: "Skipped: market closed on weekends" });
+    }
+
     // Get unique tickers from active transactions
     const activeTickers = [
       ...new Set(transactions.map((t) => t.ticker)),
