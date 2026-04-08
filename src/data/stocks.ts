@@ -4954,6 +4954,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-08",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #33* — Apr 8, 2026\n\n🏢 *Blackstone Inc.* (BX) — $117.67\n\n🛍️ *Sus marcas*: Hilton (inversión histórica), Bumble (app de citas), Ancestry.com (genealogía), centros de datos para AI ($55B+), Hipgnosis (derechos musicales)\n\n🌍 *Presencia*: Global — EE.UU., Europa, Asia, India, Japón, Australia. El gestor de activos alternativos más grande del mundo con $1.27 trillones bajo gestión.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.2% anual* solo por ser dueño. Cada vez que alguien se hospeda en un Hilton, hace match en Bumble, busca sus antepasados en Ancestry, o una empresa renta un centro de datos de Blackstone para AI — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la sensibilidad a tasas de interés y ciclos de mercado — si las tasas se mantienen altas, las valuaciones de real estate y private equity se comprimen.\n\n🆕 Posición #33\n🔗 https://vectorialdata.com/stocks/BX\n✅ Certificado por blockchain → vectorialdata.com/verify/BX\n\n💡 Blackstone Inc. paga 4.2% anual de dividendo. Eso es dinero que llega a tu cuenta sin que hagas nada. Automático.`,
+    attestation_uid:
+      "0x3cba824247397ef2a7e8d35ebf6a537b41f44f5b2bc515d3f332f9dceafb4660",
   },
   {
     id: 34,
@@ -4965,6 +4967,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-08",
     day_of_week: "wednesday",
     wa_message: `🔄 *RECOMPRA* — Apr 8, 2026\n\n🏢 *CaixaBank S.A.* (CAIXY) — $4.12\n🛍️ CaixaBank (banco #1 de España), imagin (banco digital), VidaCaixa (seguros), BPI (Portugal)\n\n💵 Seguimos acumulando ingreso del *4.82% anual*.\n💪 *¿Por qué recompramos?* Nuestra convicción es tan alta que estamos aumentando la posición. Comprar a diferentes precios reduce tu riesgo promedio.\n\n🔄 Recompra #34\n🔗 https://vectorialdata.com/stocks/CAIXY\n✅ Certificado por blockchain → vectorialdata.com/verify/CAIXY\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en CAIXY. Ve el research completo: vectorialdata.com/stocks/CAIXY\n\n💡 Con 4.82% de dividendo, CAIXY duplica tu inversión solo en dividendos en ~15 años. Sin que suba de precio.`,
+    attestation_uid:
+      "0xb59a7d029639108ecc279f6ac2df8331057fc5a613a0f07ed7c851211de7a59d",
   },
   {
     id: 35,
@@ -4976,6 +4980,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-08",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #35* — Apr 8, 2026\n\n🏢 *IDEX Corporation* (IEX) — $197.85\n\n🛍️ *Sus productos*: Bombas Viking, herramientas de rescate Jaws of Life, bombas contra incendios Hale, sistemas de sujeción BAND-IT, componentes para data centers y semiconductores\n\n🌍 *Presencia*: Estados Unidos y +20 países. Fabricante de bombas de precisión y tecnología de fluidos para mercados de misión crítica — desde bomberos hasta laboratorios y centros de datos.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.48% anual* solo por ser dueño. Cada vez que un camión de bomberos usa una bomba Hale, un laboratorio usa componentes IDEX, o un data center instala enfriamiento líquido — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la valuación premium — a P/E de 30.87x y forward ~24x, IDEX cotiza cara para una industrial con crecimiento orgánico modesto.\n\n🆕 Posición #35\n🔗 https://vectorialdata.com/stocks/IEX\n✅ Certificado por blockchain → vectorialdata.com/verify/IEX\n\n💡 El dividendo de IEX se reinvierte → compra más fracciones → genera más dividendo → compra más fracciones. Eso es interés compuesto.`,
+    attestation_uid:
+      "0x21f02a91b3893cc833a29444e9d3e005df5f7e5eafd02acc4394bfe7e995c3e6",
   },
 ];
 
