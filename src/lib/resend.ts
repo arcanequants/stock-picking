@@ -959,3 +959,148 @@ export async function sendPickEmail(
 
   if (error) throw new Error(`Failed to send pick email: ${error.message}`);
 }
+
+// ─── Analytics Digest (admin-only weekly report) ───
+
+export interface AnalyticsDigestData {
+  portfolioReturnPct: number | null;
+  weeklyChangePct: number | null;
+  bestStock: { ticker: string; returnPct: number } | null;
+  worstStock: { ticker: string; returnPct: number } | null;
+  totalBotVisits: number;
+  botBreakdown: { bot_name: string; count: number }[];
+  topCrawledPages: { url: string; count: number }[];
+  prevWeekBotVisits: number;
+  totalSubscribers: number;
+  newSubscribersThisWeek: number;
+  premiumCount: number;
+  freeCount: number;
+  totalApiKeys: number;
+  activeApiKeysThisWeek: number;
+  totalRequestsToday: number;
+  weekStart: string;
+  weekEnd: string;
+}
+
+function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
+  const {
+    portfolioReturnPct, weeklyChangePct, bestStock, worstStock,
+    totalBotVisits, botBreakdown, topCrawledPages, prevWeekBotVisits,
+    totalSubscribers, newSubscribersThisWeek, premiumCount, freeCount,
+    totalApiKeys, activeApiKeysThisWeek, totalRequestsToday,
+    weekStart, weekEnd,
+  } = data;
+
+  const pctSign = (portfolioReturnPct ?? 0) >= 0 ? "+" : "";
+  const pctColor = (portfolioReturnPct ?? 0) >= 0 ? "#16a34a" : "#dc2626";
+  const weekSign = (weeklyChangePct ?? 0) >= 0 ? "+" : "";
+  const weekColor = (weeklyChangePct ?? 0) >= 0 ? "#16a34a" : "#dc2626";
+  const heroBg = (portfolioReturnPct ?? 0) >= 0 ? "#f0fdf4" : "#fef2f2";
+  const heroBorder = (portfolioReturnPct ?? 0) >= 0 ? "#bbf7d0" : "#fecaca";
+
+  const heroSection = `
+    <div style="background:${heroBg};border:1px solid ${heroBorder};border-radius:8px;padding:14px 16px;margin-bottom:16px;">
+      <p style="margin:0;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">PORTFOLIO ALL-TIME</p>
+      <p style="margin:4px 0 0;font-size:32px;font-weight:700;color:${pctColor};">${pctSign}${(portfolioReturnPct ?? 0).toFixed(2)}%</p>
+      <p style="margin:4px 0 0;font-size:13px;color:#6b7280;">This week: <span style="color:${weekColor};font-weight:600;">${weekSign}${(weeklyChangePct ?? 0).toFixed(2)}%</span></p>
+      ${bestStock ? `<p style="margin:4px 0 0;font-size:12px;color:#6b7280;">Best: <strong>${bestStock.ticker}</strong> ${bestStock.returnPct >= 0 ? "+" : ""}${bestStock.returnPct.toFixed(1)}% &nbsp;|&nbsp; Worst: <strong>${worstStock?.ticker ?? "—"}</strong> ${worstStock ? (worstStock.returnPct >= 0 ? "+" : "") + worstStock.returnPct.toFixed(1) + "%" : "—"}</p>` : ""}
+    </div>`;
+
+  // Bot activity
+  const botTrend = prevWeekBotVisits > 0
+    ? ((totalBotVisits - prevWeekBotVisits) / prevWeekBotVisits * 100).toFixed(0)
+    : null;
+  const botTrendStr = botTrend !== null
+    ? ` (<span style="color:${Number(botTrend) >= 0 ? "#16a34a" : "#dc2626"}">${Number(botTrend) >= 0 ? "+" : ""}${botTrend}%</span> vs last week)`
+    : " (first week)";
+  const botRows = botBreakdown.slice(0, 8).map(b =>
+    `<tr><td style="padding:3px 0;font-size:13px;">${b.bot_name}</td><td style="padding:3px 0;font-size:13px;text-align:right;font-weight:600;">${b.count}</td></tr>`
+  ).join("");
+  const pageRows = topCrawledPages.slice(0, 5).map(p =>
+    `<tr><td style="padding:3px 0;font-size:12px;color:#6b7280;word-break:break-all;">${p.url}</td><td style="padding:3px 0;font-size:12px;text-align:right;white-space:nowrap;">${p.count}</td></tr>`
+  ).join("");
+
+  const crawlerSection = `
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.8px;">AI CRAWLER ACTIVITY</p>
+      <p style="margin:0 0 8px;font-size:14px;"><strong>${totalBotVisits}</strong> visits${botTrendStr}</p>
+      ${botRows ? `<table style="width:100%;border-collapse:collapse;">${botRows}</table>` : "<p style='font-size:13px;color:#9ca3af;'>No bot visits this week</p>"}
+      ${pageRows ? `<p style="margin:12px 0 4px;font-size:11px;color:#9ca3af;font-weight:600;">TOP PAGES CRAWLED</p><table style="width:100%;border-collapse:collapse;">${pageRows}</table>` : ""}
+    </div>`;
+
+  // Subscribers
+  const growthRate = totalSubscribers > 0 ? ((newSubscribersThisWeek / totalSubscribers) * 100).toFixed(1) : "0";
+  const subscriberSection = `
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.8px;">SUBSCRIBERS</p>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr><td style="padding:3px 0;font-size:13px;">Total</td><td style="text-align:right;font-weight:600;font-size:13px;">${totalSubscribers}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">New this week</td><td style="text-align:right;font-weight:600;font-size:13px;color:#16a34a;">+${newSubscribersThisWeek}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">Premium / Free</td><td style="text-align:right;font-size:13px;">${premiumCount} / ${freeCount}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">Growth rate</td><td style="text-align:right;font-size:13px;">${growthRate}%</td></tr>
+      </table>
+    </div>`;
+
+  // API
+  const apiSection = `
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.8px;">API USAGE</p>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr><td style="padding:3px 0;font-size:13px;">Total API keys</td><td style="text-align:right;font-weight:600;font-size:13px;">${totalApiKeys}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">Active this week</td><td style="text-align:right;font-size:13px;">${activeApiKeysThisWeek}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">Requests today</td><td style="text-align:right;font-weight:600;font-size:13px;">${totalRequestsToday}</td></tr>
+      </table>
+    </div>`;
+
+  // Quick links
+  const links = [
+    { label: "Google Analytics 4", url: "https://analytics.google.com" },
+    { label: "Vercel Analytics", url: "https://vercel.com/arcanequants/stock-picking/analytics" },
+    { label: "Google Search Console", url: "https://search.google.com/search-console?resource_id=sc-domain:vectorialdata.com" },
+    { label: "Marketing Dashboard", url: "https://www.vectorialdata.com/marketing" },
+  ];
+  const linkRows = links.map(l =>
+    `<tr><td style="padding:4px 0;font-size:13px;"><a href="${l.url}" style="color:#4f46e5;text-decoration:none;">${l.label} →</a></td></tr>`
+  ).join("");
+  const quickLinksSection = `
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.8px;">QUICK LINKS</p>
+      <table style="width:100%;border-collapse:collapse;">${linkRows}</table>
+    </div>`;
+
+  return `<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
+  ${previewText(`Portfolio ${pctSign}${(portfolioReturnPct ?? 0).toFixed(2)}%. ${totalBotVisits} bot visits. ${newSubscribersThisWeek} new subs.`)}
+  <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+    <div style="background:#111827;padding:20px 24px;">
+      <h1 style="margin:0;color:#fff;font-size:18px;font-weight:600;">Weekly Analytics Digest</h1>
+      <p style="margin:4px 0 0;color:rgba(255,255,255,0.7);font-size:13px;">${weekStart} — ${weekEnd}</p>
+    </div>
+    <div style="padding:20px 24px;">
+      ${heroSection}
+      ${crawlerSection}
+      ${subscriberSection}
+      ${apiSection}
+      ${quickLinksSection}
+    </div>
+    <div style="padding:16px 24px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0;font-size:12px;color:#9ca3af;">Vectorial Data — Weekly Analytics Report</p>
+    </div>
+  </div>
+</body></html>`;
+}
+
+export async function sendAnalyticsDigest(to: string, data: AnalyticsDigestData) {
+  const pctSign = (data.portfolioReturnPct ?? 0) >= 0 ? "+" : "";
+  const subject = `Analytics: Portfolio ${pctSign}${(data.portfolioReturnPct ?? 0).toFixed(2)}% | ${data.totalBotVisits} bot visits | ${data.newSubscribersThisWeek} new subs`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to,
+    subject,
+    html: buildAnalyticsDigestHtml(data),
+  });
+
+  if (error) throw new Error(`Failed to send analytics digest: ${error.message}`);
+}
