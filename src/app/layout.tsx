@@ -16,6 +16,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
 import { JsonLd, getOrganizationSchema } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const SITE_URL = "https://www.vectorialdata.com";
@@ -217,6 +219,8 @@ export default async function RootLayout({
             {!isMarketing && <CookieConsent />}
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
