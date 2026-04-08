@@ -351,4 +351,24 @@ export const ptTranslations: Record<string, StockTranslation> = {
     summary_risk:
       "Os custos de materias-primas (especialmente cacau e acucar) dispararam a pressao sobre as margens — o preco do cacau triplicou em 2024-2025, e embora esteja caindo, a volatilidade persiste e pode comprimir os lucros.\n\nRiscos adicionais: exposicao cambial significativa (75% da receita fora dos EUA) com dolar forte corroendo os resultados reportados; regulacao crescente de alimentos processados e rotulagem em mercados-chave (UE, Mexico, India); concorrencia intensa de marcas locais em mercados emergentes; e risco de mudanca nos habitos de consumo em direcao a snacks 'saudaveis' que deslocam categorias tradicionais.",
   },
+  BX: {
+    summary_short:
+      "O maior gestor de ativos alternativos do mundo com US$1,27 trilhao sob gestao. Donos de data centers, imoveis e empresas como Hilton e Bumble — pagam dividendo de 4,2% e estao apostando pesado em infraestrutura de IA.",
+    summary_what:
+      "A Blackstone e a maior firma de investimento alternativo do planeta, com US$1,27 trilhao em ativos sob gestao (AUM). Fundada por Steve Schwarzman, opera em quatro segmentos: Private Equity (US$416B AUM), Real Estate (US$319B AUM), Credit & Insurance (US$443B AUM) e Multi-Asset Investing (US$96B AUM). Compram empresas, predios, data centers e emprestam dinheiro em larga escala. Seu portfolio inclui nomes como Hilton (hoteis), Bumble (app de namoro), Ancestry.com (genealogia), e sao o maior investidor financeiro em infraestrutura de IA do mundo com US$55B em data centers e pipeline de US$70B+. Geraram US$14,45B em receita e US$7,1B em distributable earnings em 2025.",
+    summary_why:
+      "A Blackstone a US$117 e a lider indiscutivel de ativos alternativos em um momento em que o capital privado esta substituindo a banca tradicional. A receita cresceu 9% para US$14,45B, distributable earnings subiram 20%. O dividendo de 4,2% e atrativo e variavel. Credit & Insurance e o motor de crescimento mais rapido (+21% AUM ao ano), e a aposta massiva em data centers e infraestrutura de IA os posiciona como o landlord da revolucao da IA.",
+    summary_risk:
+      "O risco principal e a sensibilidade a taxas de juros e ciclos de mercado — se as taxas permanecerem altas, as avaliacoes de imoveis e private equity sao comprimidas, reduzindo as performance fees que representam ~40% da receita.",
+  },
+  IEX: {
+    summary_short:
+      "Fabricante de bombas especializadas, tecnologia de fluidos e equipamentos de resgate. Tres segmentos: agua, ciencias da vida e seguranca contra incendios. Fazem as 'Jaws of Life' e bombas Viking. Receita recorde de US$3,46B, 17 anos de dividendo crescente.",
+    summary_what:
+      "A IDEX Corporation projeta e fabrica bombas de engenharia de precisao, tecnologia de fluidos e solucoes de fluidics para mercados de missao critica. Opera em tres segmentos: Fluid & Metering Technologies (~35% da receita) — bombas industriais Viking, medidores de fluxo e equipamentos para agua/quimica/energia; Health & Science Technologies (~43% da receita) — componentes para ciencias da vida, optica, microfluidos e semicondutores; e Fire & Safety/Diversified Products (~22% da receita) — bombas contra incendio Hale, ferramentas de resgate Jaws of Life e sistemas de fixacao BAND-IT.",
+    summary_why:
+      "A US$197,85, IDEX oferece exposicao a megatendencias de infraestrutura de agua, data centers/IA e ciencias da vida. Free cash flow de US$617M (103% de conversao), 17 anos de dividendo crescente e guidance 2026 de EPS US$8,15-US$8,35.",
+    summary_risk:
+      "O risco principal e a avaliacao premium — a P/E de 30,87x e forward ~24x, IDEX e cara para uma empresa industrial com crescimento organico modesto (+1% em 2025).",
+  },
 };

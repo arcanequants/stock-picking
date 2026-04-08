@@ -351,4 +351,24 @@ export const enTranslations: Record<string, StockTranslation> = {
     summary_risk:
       "Raw material costs (especially cocoa and sugar) have surged, pressuring margins — cocoa prices tripled in 2024-2025, and while they are coming down, volatility persists and can compress earnings.\n\nAdditional risks: significant currency exposure (75% of revenue outside the U.S.) with a strong dollar eroding reported results; increasing regulation of processed foods and labeling in key markets (EU, Mexico, India); intense competition from local brands in emerging markets; and the risk of shifting consumer habits toward 'healthy' snacks that could displace traditional categories.",
   },
+  BX: {
+    summary_short:
+      "The world's largest alternative asset manager with $1.27 trillion in AUM. Owners of data centers, real estate, and companies like Hilton and Bumble — pays a 4.2% dividend and is betting heavily on AI infrastructure.",
+    summary_what:
+      "Blackstone is the largest alternative investment firm on the planet, with $1.27 trillion in assets under management (AUM). Founded by Steve Schwarzman, it operates across four segments: Private Equity ($416B AUM), Real Estate ($319B AUM), Credit & Insurance ($443B AUM), and Multi-Asset Investing ($96B AUM). They buy companies, buildings, data centers, and lend money at massive scale. Their portfolio includes names like Hilton (hotels), Bumble (dating app), Ancestry.com (genealogy), and they are the largest financial investor in AI infrastructure in the world with $55B in data centers and a $70B+ pipeline. They generated $14.45B in revenue and $7.1B in distributable earnings in 2025.",
+    summary_why:
+      "Blackstone at $117 is the undisputed leader in alternative assets at a time when private capital is replacing traditional banking. Revenue grew 9% to $14.45B, distributable earnings rose 20%. The 4.2% dividend is attractive and variable. Credit & Insurance is the fastest-growing engine (+21% AUM YoY), and the massive bet on data centers and AI infrastructure positions them as the landlord of the AI revolution.",
+    summary_risk:
+      "The main risk is sensitivity to interest rates and market cycles — if rates stay high, real estate and private equity valuations compress, reducing the performance fees that account for ~40% of revenue.",
+  },
+  IEX: {
+    summary_short:
+      "Manufacturer of specialty pumps, fluid technology, and rescue equipment. Three segments: water, life sciences, and fire safety. They make the 'Jaws of Life' and Viking pumps. Record revenue of $3.46B, 17 years of dividend growth.",
+    summary_what:
+      "IDEX Corporation designs and manufactures precision-engineered pumps, fluid technology, and fluidics solutions for mission-critical markets. It operates in three segments: Fluid & Metering Technologies (~35% revenue) — Viking industrial pumps, flow meters, and equipment for water/chemical/energy; Health & Science Technologies (~43% revenue) — components for life sciences, optics, microfluidics, and semiconductors; and Fire & Safety/Diversified Products (~22% revenue) — Hale fire pumps, Jaws of Life rescue tools, and BAND-IT clamping systems.",
+    summary_why:
+      "At $197.85, IDEX offers exposure to megatrends in water infrastructure, data centers/AI, and life sciences. Free cash flow of $617M (103% conversion), 17 years of consecutive dividend growth, and 2026 EPS guidance of $8.15-$8.35.",
+    summary_risk:
+      "The main risk is the premium valuation — at a P/E of 30.87x and forward ~24x, IDEX is expensive for an industrial company with modest organic growth (+1% in 2025).",
+  },
 };

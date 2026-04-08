@@ -1226,12 +1226,12 @@ El consenso es que AWK es una utility de altísima calidad que ya está **justam
     country: "Spain",
     region: "Europe",
     currency: "USD",
-    price: 3.69,
-    pe_ratio: 11.7,
-    pe_forward: 10.5,
-    dividend_yield: 5.1,
-    market_cap_b: 69.0,
-    eps: 0.84,
+    price: 4.12,
+    pe_ratio: 13.73,
+    pe_forward: 12.3,
+    dividend_yield: 4.82,
+    market_cap_b: 88.0,
+    eps: 0.30,
     summary_short:
       "El banco #1 de España con 18 millones de clientes. Premiado como 'Mejor Banco para Consumidores en Europa' por Euromoney 2025. Dividendo del 5.1% — creciendo 15% anual. Absorbieron Bankia y son dueños de BPI en Portugal.",
     summary_what:
@@ -4271,6 +4271,260 @@ MLI a $113 es una oportunidad de comprar un fabricante industrial con márgenes 
     last_updated_at: "2026-04-06T00:00:00Z",
     next_review_at: "2026-10-06T00:00:00Z",
   },
+  {
+    id: 36,
+    ticker: "BX",
+    name: "Blackstone Inc.",
+    sector: "Financials",
+    industry: "Alternative Asset Management",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 117.67,
+    pe_ratio: 30.41,
+    pe_forward: 17.89,
+    dividend_yield: 4.2,
+    market_cap_b: 143.8,
+    eps: 3.87,
+    summary_short:
+      "El gestor de activos alternativos más grande del mundo con $1.27 trillones bajo gestión. Dueños de centros de datos, bienes raíces, y empresas como Hilton y Bumble — pagan 4.2% de dividendo y están apostando fuerte por infraestructura de AI.",
+    summary_what:
+      "Blackstone es la firma de inversión alternativa más grande del planeta, con $1.27 trillones en activos bajo gestión (AUM). Fundada por Steve Schwarzman, opera en cuatro segmentos: Private Equity ($416B AUM), Real Estate ($319B AUM), Credit & Insurance ($443B AUM), y Multi-Asset Investing ($96B AUM). Compran empresas, edificios, centros de datos, y prestan dinero a gran escala. Su portafolio incluye nombres como Hilton (hotel), Bumble (app de citas), Ancestry.com (genealogía), y son el mayor inversionista financiero en infraestructura de AI del mundo con $55B en centros de datos y un pipeline de $70B+. Generaron $14.45B en revenue y $7.1B en distributable earnings en 2025.",
+    summary_why:
+      "Blackstone a $117 es el líder indiscutible de activos alternativos en un momento donde el capital privado está reemplazando a la banca tradicional. Revenue creció 9% a $14.45B, distributable earnings subieron 20% a $5.57/acción, y fee-related earnings alcanzaron $5.7B con el margen más alto de su historia. El dividendo de 4.2% ($4.74/acción) es atractivo y variable — sube cuando les va bien. Credit & Insurance es el motor de crecimiento más rápido (+21% AUM YoY), y la apuesta masiva en centros de datos e infraestructura de AI ($55B invertidos + $70B en pipeline) los posiciona como el \"landlord de la revolución AI\". Consenso de analistas: Buy con target promedio de ~$165 (40%+ upside).",
+    summary_risk:
+      "El riesgo principal es la sensibilidad a tasas de interés y ciclos de mercado — si las tasas se mantienen altas por más tiempo, las valuaciones de real estate y private equity se comprimen, reduciendo las performance fees que son ~40% de los ingresos. Los fondos retail como BREIT y BCRED permiten retiros limitados, y una \"corrida\" de redemptions podría dañar la reputación y liquidez. Riesgos adicionales: aranceles y política comercial de EE.UU. generan incertidumbre macroeconómica; el P/E GAAP de 30x deja poco margen de error; y la concentración en real estate comercial (25% del AUM) es vulnerable a una recesión prolongada.",
+    research_full: `# Blackstone Inc. (BX) — Research Completo
+
+## Precio: $117.67 | P/E: 30.41 | Div Yield: 4.2% | Market Cap: $143.8B
+
+---
+
+## ¿Qué es Blackstone?
+
+Blackstone Inc. es la **firma de inversión alternativa más grande del mundo**, con **$1.27 trillones en activos bajo gestión (AUM)**. Fundada en 1985 por **Steve Schwarzman** y Pete Peterson, Blackstone invierte en private equity, bienes raíces, crédito, infraestructura y hedge funds. Su modelo de negocio genera ingresos de dos fuentes: **management fees** (cobran por gestionar capital de otros) y **performance fees** (cobran cuando las inversiones generan retornos por encima de cierto umbral).
+
+## Segmentos de Negocio
+
+| Segmento | AUM | % del Total | Descripción |
+|----------|-----|-------------|-------------|
+| **Credit & Insurance** | $443B | ~35% | Crédito privado, préstamos directos, soluciones para aseguradoras |
+| **Private Equity** | $416B | ~33% | Compra de empresas, growth equity, infraestructura |
+| **Real Estate** | $319B | ~25% | Bienes raíces comerciales, logística, centros de datos, BREIT |
+| **Multi-Asset Investing** | $96B | ~8% | Hedge fund solutions, estrategias multi-activo |
+
+## Empresas del Portafolio
+
+- **Hilton Hotels** — inversión histórica legendaria (retorno de $14B+ en profit)
+- **Bumble** — app de citas
+- **Ancestry.com** — plataforma de genealogía y ADN ($4.7B)
+- **Hipgnosis Songs Fund** — derechos musicales de artistas como Shakira, Red Hot Chili Peppers
+- **$55B en centros de datos** — el mayor inversionista financiero en AI infrastructure del mundo
+- **$70B+ en pipeline** de desarrollo de data centers
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | $14.45B (+9.2% YoY) |
+| **Net Income** | $3.02B (+8.7% YoY) |
+| **EPS (GAAP)** | $3.87 (+6.9% YoY) |
+| **Distributable Earnings** | $7.1B ($5.57/acción, +20% YoY) |
+| **Fee-Related Earnings** | $5.7B (+9% YoY, margen récord) |
+| **Total AUM** | $1.27T (+13% YoY) |
+
+## Dividendo — Variable y Generoso
+
+- **Dividendo anual:** $4.74/acción
+- **Yield:** 4.2%
+- **Tipo:** Variable (basado en distributable earnings)
+- **Último pago:** $1.49/acción (feb 2026, +16% vs trimestre anterior)
+- **Frecuencia:** Trimestral
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| # Analistas Buy | 12 (57%) |
+| # Analistas Hold | 10 (43%) |
+| # Analistas Sell | 0 |
+| Price Target Promedio | **$165** |
+| Price Target Alto | $215 |
+| Price Target Bajo | $122 |
+| **Upside al Target** | **+40%** |
+
+## Catalizadores de Crecimiento
+
+1. **Infraestructura de AI** — $55B invertidos + $70B en pipeline de data centers
+2. **Credit & Insurance** — segmento de más rápido crecimiento (+21% AUM YoY)
+3. **Ciclo de bajada de tasas** — activos alternativos se revalorizan y performance fees explotan
+4. **Deal-making recovery** — $7T+ en dry powder global en PE, ciclo de exits por reactivarse
+5. **Life Sciences** — fondo BXLS VI de $6.3B con 86% de success rate en aprobaciones Phase III
+
+## Riesgos Principales
+
+1. **Sensibilidad a tasas de interés** — tasas altas comprimen valuaciones de PE y real estate
+2. **BREIT/BCRED redemptions** — una "corrida" en fondos retail dañaría reputación y liquidez
+3. **Concentración en real estate** — 25% del AUM en bienes raíces comerciales
+4. **P/E GAAP elevado** — 30x deja poco margen de error
+5. **Riesgo regulatorio** — mayor escrutinio a private equity y crédito privado
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $117.67 |
+| P/E GAAP | 30.41x |
+| P/E Forward (est. 2026) | ~17.9x |
+| Div Yield | 4.2% |
+
+## Conclusión
+
+Blackstone es el rey indiscutible de los activos alternativos — $1.27T en AUM, crecimiento de 13%, y posicionamiento único en AI, crédito privado, e infraestructura. A $117.67, la acción cotiza significativamente por debajo de los targets de analistas (~$165, 40% upside) por miedos macro temporales. El dividendo de 4.2% te paga por esperar.
+
+---
+
+*Research fecha: 8 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 165.0,
+    analyst_upside: 40.0,
+    status: "active",
+    first_researched_at: "2026-04-08T00:00:00Z",
+    last_updated_at: "2026-04-08T00:00:00Z",
+    next_review_at: "2026-10-08T00:00:00Z",
+  },
+  {
+    id: 37,
+    ticker: "IEX",
+    name: "IDEX Corporation",
+    sector: "Industrials",
+    industry: "Specialty Pumps & Flow Technology",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 197.85,
+    pe_ratio: 30.87,
+    pe_forward: 24.0,
+    dividend_yield: 1.48,
+    market_cap_b: 14.7,
+    eps: 6.41,
+    summary_short:
+      "Fabricante de bombas especializadas, tecnología de fluidos y equipos de rescate. Tres segmentos: agua, ciencias de la vida y seguridad contra incendios. Hacen las 'Jaws of Life' y bombas Viking. Revenue récord $3.46B, 17 años de dividendo creciente.",
+    summary_what:
+      "IDEX Corporation diseña y fabrica bombas de ingeniería de precisión, tecnología de fluidos y soluciones de fluidics para mercados de misión crítica. Opera en tres segmentos: Fluid & Metering Technologies (~35% revenue) — bombas industriales Viking, medidores de flujo y equipos para agua/químicos/energía; Health & Science Technologies (~43% revenue) — componentes para ciencias de la vida, óptica, microfluidics y semiconductores; y Fire & Safety/Diversified Products (~22% revenue) — bombas contra incendios Hale, herramientas de rescate Jaws of Life y sistemas de sujeción BAND-IT. Opera +50 negocios descentralizados en ~20 países. En 2025 logró revenue récord de $3.46B con $617M en free cash flow.",
+    summary_why:
+      "A $197.85, IDEX ofrece exposición a megatendencias de infraestructura de agua, data centers/AI y ciencias de la vida. El segmento HST tuvo crecimiento de órdenes orgánicas de +34% en Q4 impulsado por demanda de centros de datos y semiconductores. La adquisición de Mott Corporation expande sus capacidades en filtración avanzada con un contrato de $40M en aguas residuales. Free cash flow de $617M (103% de conversión), 17 años de dividendo creciente y guidance 2026 de EPS $8.15-$8.35.",
+    summary_risk:
+      "El riesgo principal es la valuación premium — a P/E de 30.87x y forward ~24x, IDEX cotiza cara para una industrial con crecimiento orgánico modesto (+1% en 2025). Si la demanda de data centers/AI se desacelera, el motor de crecimiento del segmento HST pierde impulso. Los segmentos FMT y FSDP mostraron debilidad: mercados de químicos, energía y agricultura están flojos, y Fire & Safety cayó -5% orgánicamente en Q4.",
+    research_full: `# IDEX Corporation (IEX) — Research Completo
+
+## Precio: $197.85 | P/E: 30.87 | P/E Forward: ~24.0x | Div Yield: 1.48% | Market Cap: $14.7B
+
+---
+
+## ¿Qué es IDEX?
+
+IDEX Corporation es un fabricante global de **bombas de ingeniería de precisión, tecnología de fluidos y soluciones de fluidics** para mercados de misión crítica. Con más de 50 negocios descentralizados operando en ~20 países, IDEX se especializa en productos de alta ingeniería donde la confiabilidad es esencial.
+
+## Segmentos de Negocio
+
+| Segmento | Revenue 2025 (est.) | % del Total | Descripción |
+|----------|---------------------|-------------|-------------|
+| **Health & Science Technologies (HST)** | ~$1,490M | ~43% | Componentes para ciencias de la vida, óptica, microfluidics, semiconductores, data centers |
+| **Fluid & Metering Technologies (FMT)** | ~$1,210M | ~35% | Bombas industriales, medidores de flujo, equipos para agua/químicos/energía |
+| **Fire & Safety / Diversified Products (FSDP)** | ~$760M | ~22% | Bombas contra incendios, herramientas de rescate, sistemas de sujeción |
+
+## Marcas Clave
+
+| Marca | Segmento | Producto |
+|-------|----------|----------|
+| **Viking Pump** | FMT | Bombas rotativas de desplazamiento positivo (#1 mundial) |
+| **Hale Products** | FSDP | Bombas para camiones de bomberos |
+| **Jaws of Life (Hurst)** | FSDP | Herramientas hidráulicas de rescate vehicular |
+| **BAND-IT** | FSDP | Sistemas de sujeción industrial |
+| **Microfluidics** | HST | Procesadores de alta presión para farmacéutica/biotech |
+| **Mott Corporation** | HST | Filtración avanzada de materiales porosos sinterizados |
+
+## Números Clave 2025
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | $3.46B (+6% reportado, +1% orgánico) |
+| **Net Income** | $483M |
+| **EPS** | $6.41 |
+| **EPS Ajustado** | $7.95 (+1% YoY) |
+| **Gross Margin** | 44.5% |
+| **Operating Margin** | 20.2% |
+| **Free Cash Flow** | $617M (FCF conversion 103%) |
+| **Órdenes Q4 (récord)** | $979M (+20% reportado, +16% orgánico) |
+
+## Dividendo — 17 Años de Crecimiento Consecutivo
+
+- **Dividendo anual:** $2.92/acción ($0.73 trimestral)
+- **Yield:** 1.48%
+- **Payout Ratio:** ~44%
+- **123 trimestres consecutivos** pagando dividendo (30+ años)
+- **17 años consecutivos** de aumento
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| # Analistas Buy | 7 |
+| # Analistas Hold | 6 |
+| # Analistas Sell | 0 |
+| Price Target Promedio | **$218** |
+| Price Target Alto | $250 |
+| Price Target Bajo | $170 |
+| **Upside al Target** | **+10.2%** |
+
+## Catalizadores de Crecimiento
+
+1. **Demanda AI/Data Centers** — Órdenes récord de HST por enfriamiento líquido y semiconductores
+2. **Mott Corporation** — Adquisición de filtración avanzada abre mercados de agua limpia
+3. **Guidance 2026** — EPS $8.15-$8.35
+4. **$60M en ahorros por optimización**
+5. **Balance sólido** — deuda/equity de 0.48x para más adquisiciones
+
+## Riesgos Principales
+
+1. **Valuación premium** — P/E de 30.87x es caro para +1% de crecimiento orgánico
+2. **Debilidad en FMT y FSDP** — Mercados de químicos, energía y agricultura flojos
+3. **Dependencia de AI/data centers** — Si el ciclo de CapEx de AI se desacelera, HST pierde motor
+4. **Integración de Mott** — Riesgo de ejecución
+5. **Exposición cíclica** — Vulnerable a recesiones globales
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $197.85 |
+| P/E Trailing | 30.87x |
+| P/E Forward | ~24.0x |
+| Div Yield | 1.48% |
+| FCF Yield | ~4.2% |
+| 52-Week High | $217.16 |
+| 52-Week Low | $153.36 |
+
+## Conclusión
+
+IDEX es una industrial de alta calidad con posiciones dominantes en nichos de misión crítica. El momentum en data centers/AI vía HST es real (órdenes récord +34% orgánico), y la adquisición de Mott agrega capacidades estratégicas. El dividendo creciente (17 años), FCF sólido, y exposición a megatendencias de agua e AI justifican una posición.
+
+---
+
+*Research fecha: 8 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 218.0,
+    analyst_upside: 10.2,
+    status: "active",
+    first_researched_at: "2026-04-08T00:00:00Z",
+    last_updated_at: "2026-04-08T00:00:00Z",
+    next_review_at: "2026-10-08T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -4690,6 +4944,39 @@ export const transactions: Transaction[] = [
     attestation_uid:
       "0x00e11de53b0a332029189046e1d1308b5562b91c9e3750e5be2a6bc52581f417",
   },
+  {
+    id: 33,
+    stock_id: 36,
+    ticker: "BX",
+    type: "new" as const,
+    cycle_number: 7,
+    price: 117.67,
+    date: "2026-04-08",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #33* — Apr 8, 2026\n\n🏢 *Blackstone Inc.* (BX) — $117.67\n\n🛍️ *Sus marcas*: Hilton (inversión histórica), Bumble (app de citas), Ancestry.com (genealogía), centros de datos para AI ($55B+), Hipgnosis (derechos musicales)\n\n🌍 *Presencia*: Global — EE.UU., Europa, Asia, India, Japón, Australia. El gestor de activos alternativos más grande del mundo con $1.27 trillones bajo gestión.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.2% anual* solo por ser dueño. Cada vez que alguien se hospeda en un Hilton, hace match en Bumble, busca sus antepasados en Ancestry, o una empresa renta un centro de datos de Blackstone para AI — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la sensibilidad a tasas de interés y ciclos de mercado — si las tasas se mantienen altas, las valuaciones de real estate y private equity se comprimen.\n\n🆕 Posición #33\n🔗 https://vectorialdata.com/stocks/BX\n✅ Certificado por blockchain → vectorialdata.com/verify/BX\n\n💡 Blackstone Inc. paga 4.2% anual de dividendo. Eso es dinero que llega a tu cuenta sin que hagas nada. Automático.`,
+  },
+  {
+    id: 34,
+    stock_id: 13,
+    ticker: "CAIXY",
+    type: "rebuy" as const,
+    cycle_number: 7,
+    price: 4.12,
+    date: "2026-04-08",
+    day_of_week: "wednesday",
+    wa_message: `🔄 *RECOMPRA* — Apr 8, 2026\n\n🏢 *CaixaBank S.A.* (CAIXY) — $4.12\n🛍️ CaixaBank (banco #1 de España), imagin (banco digital), VidaCaixa (seguros), BPI (Portugal)\n\n💵 Seguimos acumulando ingreso del *4.82% anual*.\n💪 *¿Por qué recompramos?* Nuestra convicción es tan alta que estamos aumentando la posición. Comprar a diferentes precios reduce tu riesgo promedio.\n\n🔄 Recompra #34\n🔗 https://vectorialdata.com/stocks/CAIXY\n✅ Certificado por blockchain → vectorialdata.com/verify/CAIXY\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en CAIXY. Ve el research completo: vectorialdata.com/stocks/CAIXY\n\n💡 Con 4.82% de dividendo, CAIXY duplica tu inversión solo en dividendos en ~15 años. Sin que suba de precio.`,
+  },
+  {
+    id: 35,
+    stock_id: 37,
+    ticker: "IEX",
+    type: "new" as const,
+    cycle_number: 7,
+    price: 197.85,
+    date: "2026-04-08",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #35* — Apr 8, 2026\n\n🏢 *IDEX Corporation* (IEX) — $197.85\n\n🛍️ *Sus productos*: Bombas Viking, herramientas de rescate Jaws of Life, bombas contra incendios Hale, sistemas de sujeción BAND-IT, componentes para data centers y semiconductores\n\n🌍 *Presencia*: Estados Unidos y +20 países. Fabricante de bombas de precisión y tecnología de fluidos para mercados de misión crítica — desde bomberos hasta laboratorios y centros de datos.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.48% anual* solo por ser dueño. Cada vez que un camión de bomberos usa una bomba Hale, un laboratorio usa componentes IDEX, o un data center instala enfriamiento líquido — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la valuación premium — a P/E de 30.87x y forward ~24x, IDEX cotiza cara para una industrial con crecimiento orgánico modesto.\n\n🆕 Posición #35\n🔗 https://vectorialdata.com/stocks/IEX\n✅ Certificado por blockchain → vectorialdata.com/verify/IEX\n\n💡 El dividendo de IEX se reinvierte → compra más fracciones → genera más dividendo → compra más fracciones. Eso es interés compuesto.`,
+  },
 ];
 
 export const cycles = [
@@ -4746,7 +5033,15 @@ export const cycles = [
     cycle_number: 7,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 8,
+    cycle_number: 8,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 0,
     status: "active" as const,
   },
 ];
