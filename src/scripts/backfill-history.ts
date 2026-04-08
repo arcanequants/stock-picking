@@ -17,6 +17,7 @@ const supabase = createClient(
 
 // Import data from stocks.ts
 import { transactions } from "../data/stocks.js";
+import { adjustPriceForSplit } from "../lib/split-detection.js";
 
 interface HistoricalRow {
   date: Date;
@@ -107,9 +108,10 @@ async function backfill() {
     const prices: Record<string, number> = {};
 
     for (const tx of activeTxs) {
-      const shares = INVESTMENT_PER_POSITION / tx.price;
-      totalInvested += INVESTMENT_PER_POSITION;
       const currentPrice = lastKnownPrice[tx.ticker] ?? tx.price;
+      const { adjustedPrice } = adjustPriceForSplit(tx.price, currentPrice);
+      const shares = INVESTMENT_PER_POSITION / adjustedPrice;
+      totalInvested += INVESTMENT_PER_POSITION;
       totalValue += shares * currentPrice;
       prices[tx.ticker] = currentPrice;
     }

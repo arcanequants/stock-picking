@@ -1,5 +1,6 @@
 import { stocks } from "@/data/stocks";
 import type { Transaction } from "@/lib/types";
+import { adjustPriceForSplit } from "@/lib/split-detection";
 
 const INVESTMENT_PER_POSITION = 50;
 
@@ -49,10 +50,11 @@ export function aggregatePositions(
     const txDetails: AggregatedPosition["transactions"] = [];
 
     for (const tx of txList) {
-      const shares = INVESTMENT_PER_POSITION / tx.price;
+      const { adjustedPrice } = adjustPriceForSplit(tx.price, currentPrice);
+      const shares = INVESTMENT_PER_POSITION / adjustedPrice;
       posInvested += INVESTMENT_PER_POSITION;
       posShares += shares;
-      txDetails.push({ price: tx.price, date: tx.date, type: tx.type });
+      txDetails.push({ price: adjustedPrice, date: tx.date, type: tx.type });
     }
 
     const avgPrice = posInvested / posShares;

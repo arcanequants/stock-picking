@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import { createEventWithExplanations } from "@/lib/notifications";
+import { adjustPriceForSplit } from "@/lib/split-detection";
 import YahooFinance from "yahoo-finance2";
 
 const yahooFinance = new YahooFinance();
@@ -55,11 +56,19 @@ export async function GET(request: Request) {
     const INVESTMENT_PER_POSITION = 50;
     let totalInvested = 0;
     let totalValue = 0;
+    const splitEvents: { ticker: string; ratio: number; original: number; adjusted: number }[] = [];
 
     for (const tx of transactions) {
-      const shares = INVESTMENT_PER_POSITION / tx.price;
+      const currentPrice = prices[tx.ticker] ?? tx.price;
+      const { detected, splitRatio, adjustedPrice } = adjustPriceForSplit(tx.price, currentPrice);
+
+      if (detected) {
+        splitEvents.push({ ticker: tx.ticker, ratio: splitRatio, original: tx.price, adjusted: adjustedPrice });
+      }
+
+      const shares = INVESTMENT_PER_POSITION / adjustedPrice;
       totalInvested += INVESTMENT_PER_POSITION;
-      totalValue += shares * (prices[tx.ticker] ?? tx.price);
+      totalValue += shares * currentPrice;
     }
 
     const returnPct =
@@ -132,6 +141,7 @@ export async function GET(request: Request) {
       return_pct: Math.round(returnPct * 100) / 100,
       prices,
       price_move_events: priceMoveEvents,
+      split_events: splitEvents,
     });
   } catch (error) {
     console.error("Cron snapshot error:", error);
