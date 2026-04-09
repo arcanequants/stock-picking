@@ -4525,6 +4525,143 @@ IDEX es una industrial de alta calidad con posiciones dominantes en nichos de mi
     last_updated_at: "2026-04-08T00:00:00Z",
     next_review_at: "2026-10-08T00:00:00Z",
   },
+  {
+    id: 38,
+    ticker: "CALM",
+    name: "Cal-Maine Foods Inc.",
+    sector: "Consumer Staples",
+    industry: "Shell Egg Production & Distribution",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 77.72,
+    pe_ratio: 5.41,
+    pe_forward: 20.14,
+    dividend_yield: 3.44,
+    market_cap_b: 3.69,
+    eps: 14.42,
+    summary_short:
+      "El mayor productor de huevos de EE.UU. (~20% del mercado), con ~13 mil millones de huevos al año. Marcas como Egg-Land's Best, Land O'Lakes y Crepini. Revenue $3.46B, dividendo variable (1/3 de utilidad neta trimestral). Expandiéndose en alimentos preparados.",
+    summary_what:
+      "Cal-Maine Foods es el mayor productor y distribuidor de huevos frescos en Estados Unidos, responsable de aproximadamente el 20% de la producción comercial del país con ~13 mil millones de huevos anuales. Opera granjas de producción, empaque, clasificación y distribución en más de 15 estados (Mississippi, Arkansas, Florida, Alabama, entre otros). Vende huevos convencionales, cage-free, orgánicos, free-range, pasture-raised y nutritionally-enhanced bajo marcas como Egg-Land's Best (licencia), Land O'Lakes (licencia), Farmhouse Eggs, Sunups y Sunny Meadow. Recientemente expandió a alimentos preparados con la adquisición de Crepini (egg wraps) y MeadowCreek Foods (pancakes), que ya representan 52.9% de ventas netas junto con huevos especiales.",
+    summary_why:
+      "A $77.72, CALM cotiza cerca de su mínimo de 52 semanas ($71.92) y a un P/E trailing de solo 5.4x — descuento masivo vs su P/E forward de 20x, reflejando la normalización del precio del huevo. Los catalizadores incluyen: (1) expansión agresiva en alimentos preparados — Crepini + nueva línea de pancakes de $14.8M en Wisconsin; (2) especialidad + preparados ya son 52.9% de ventas (mayor margen); (3) adquisición de Creighton Brothers para integración vertical; (4) dividendo variable que premia en buenos trimestres; (5) monopolio natural como el mayor productor con 20% del mercado estadounidense.",
+    summary_risk:
+      "Los ingresos y ganancias de Cal-Maine dependen casi exclusivamente del precio de los huevos, un commodity extremadamente volátil influenciado por brotes de gripe aviar (HPAI), costos de alimentación (~65% de costos de producción) y regulaciones estatales sobre jaulas. La compañía también enfrenta una investigación activa del DOJ por fijación de precios y escrutinio antimonopolio por su posición dominante del 20% del mercado.",
+    research_full: `# Cal-Maine Foods (CALM) — Research Completo
+
+## Precio: $77.72 | P/E: 5.41 | P/E Forward: ~20.1x | Div Yield: ~3.4% (variable) | Market Cap: $3.69B
+
+---
+
+## ¿Qué es Cal-Maine Foods?
+
+Cal-Maine Foods es el **mayor productor y distribuidor de huevos frescos en Estados Unidos**, representando aproximadamente el 20% de toda la producción comercial de huevos del país. Fundada en 1957 por Fred R. Adams Jr. en Mississippi, la empresa ha crecido principalmente a través de adquisiciones de más de 25 productores de huevos. Produce ~13 mil millones de huevos al año y abastece a cadenas de supermercados nacionales, club stores y distribuidores de foodservice.
+
+## Segmentos de Negocio
+
+| Categoría | % de Ventas | Descripción |
+|-----------|-------------|-------------|
+| **Huevos Especiales + Preparados** | ~52.9% | Cage-free, orgánicos, free-range, egg wraps Crepini, pancakes MeadowCreek |
+| **Huevos Convencionales** | ~47.1% | Huevos shell estándar, clasificados y empacados |
+
+## Marcas Clave
+
+| Marca | Tipo | Descripción |
+|-------|------|-------------|
+| **Egg-Land's Best** | Licencia | Marca premium de huevos nutritionally-enhanced (#1 en branded eggs) |
+| **Land O'Lakes** | Licencia | Huevos bajo marca reconocida de lácteos |
+| **Farmhouse Eggs** | Propia | Huevos de granja premium |
+| **Sunups** | Propia | Línea de huevos value |
+| **Sunny Meadow** | Propia | Huevos convencionales |
+| **4-Grain** | Propia | Huevos de gallinas alimentadas con 4 granos |
+| **Crepini** | Adquisición | Egg wraps y alimentos preparados de huevo |
+| **MeadowCreek Foods** | Subsidiaria | Pancakes y alimentos preparados |
+
+## Números Clave (FY2026 Q3, reportado Abr 1, 2026)
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue (Q3)** | $667.0M (-53.0% YoY) |
+| **Revenue (TTM)** | ~$3.46B |
+| **Net Income (Q3)** | $50.5M (-90.1% YoY) |
+| **EPS (Q3)** | $1.06 (beat $0.78 estimado, +35.9%) |
+| **EPS (TTM)** | $14.42 |
+| **Prepared Foods Revenue (Q3)** | $63.6M (+441.2% YoY) |
+| **Specialty + Prepared % of Sales** | 52.9% |
+| **Gross Margin** | ~15% (normalizing) |
+| **Shares Outstanding** | 47.38M |
+| **Employees** | ~3,828 |
+
+## Dividendo — Política Variable Única
+
+Cal-Maine tiene una **política de dividendo variable**: paga **1/3 de la utilidad neta trimestral** como dividendo cada trimestre. Esto significa:
+
+| Métrica | Valor |
+|---------|-------|
+| **Dividendo TTM** | $8.36/acción |
+| **Yield TTM** | ~10.76% (inflado por precios récord de huevo) |
+| **Forward Yield (est.)** | ~3.44% |
+| **Yield Mediana 10 años** | 2.68% |
+| **Último dividendo trimestral** | $0.36/acción |
+| **Payout Ratio** | 33% fijo (por política) |
+
+**Nota importante:** El yield TTM de 10.76% refleja las ganancias excepcionales de 2025 por precios récord del huevo. Con precios normalizándose, el yield forward es ~3.44%.
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** (Benchmark) / **Neutral** (Goldman Sachs) |
+| Price Target — Benchmark | $100 (Buy) |
+| Price Target — Goldman Sachs | $82 (Neutral) |
+| **Upside al target promedio** | **+17.5%** |
+
+## Catalizadores de Crecimiento
+
+1. **Diversificación a preparados** — Crepini + MeadowCreek: revenue de preparados +441% YoY, nueva línea de pancakes de $14.8M
+2. **Especialidad es mayoría** — 52.9% de ventas en huevos especiales + preparados (mayor margen que convencional)
+3. **Adquisición de Creighton Brothers** — Integración vertical post-Q3
+4. **Posición dominante** — ~20% del mercado de huevos de EE.UU., economías de escala imbatibles
+5. **Precio cerca de piso** — Cotiza cerca de 52-week low ($71.92), normalización ya priced-in
+
+## Riesgos Principales
+
+1. **Commodity puro** — Revenue y márgenes dependen del precio del huevo, que es extremadamente volátil
+2. **Gripe aviar (HPAI)** — Brotes pueden diezmar el inventario de gallinas y disparar costos
+3. **Costos de alimentación** — Feed ~65% de costos de producción, atado a precios de maíz/soja
+4. **Investigación DOJ** — Investigación activa por posible fijación de precios (antimonopolio)
+5. **Dividendo variable** — En trimestres malos, el dividendo puede ser $0 (literal)
+6. **Regulación estatal** — Leyes cage-free (California Prop 12) incrementan costos
+
+## Valuación Actual
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $77.72 |
+| P/E Trailing | 5.41x (inflado por ganancias excepcionales) |
+| P/E Forward | ~20.14x |
+| Forward Div Yield | ~3.44% |
+| 52-Week High | $126.40 |
+| 52-Week Low | $71.92 |
+| Market Cap | $3.69B |
+
+## Conclusión
+
+Cal-Maine es el líder absoluto en producción de huevos en EE.UU. con un moat de escala difícil de replicar. La estrategia de diversificación hacia preparados (Crepini, MeadowCreek) está funcionando — ya representan mayoría de ventas y tienen márgenes superiores. Cotizando cerca del 52-week low con la normalización del precio del huevo ya reflejada, CALM ofrece exposición al consumo básico con upside de crecimiento en prepared foods. El dividendo variable es una característica única: en buenos trimestres recibes mucho, en malos poco — alinea los intereses de la empresa con los tuyos.
+
+---
+
+*Research fecha: 9 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 91.0,
+    analyst_upside: 17.5,
+    status: "active",
+    first_researched_at: "2026-04-09T00:00:00Z",
+    last_updated_at: "2026-04-09T00:00:00Z",
+    next_review_at: "2026-10-09T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -4983,6 +5120,18 @@ export const transactions: Transaction[] = [
     attestation_uid:
       "0x21f02a91b3893cc833a29444e9d3e005df5f7e5eafd02acc4394bfe7e995c3e6",
   },
+  {
+    id: 36,
+    stock_id: 38,
+    ticker: "CALM",
+    type: "new" as const,
+    cycle_number: 8,
+    price: 77.72,
+    date: "2026-04-09",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #36* — Apr 9, 2026\n\n🏢 *Cal-Maine Foods* (CALM) — $77.72\n\n🛍️ *Sus marcas*: Egg-Land's Best, Land O'Lakes, Farmhouse Eggs, Sunups, Crepini (egg wraps y pancakes)\n\n🌍 *Presencia*: Estados Unidos — el mayor productor de huevos del país (~20% del mercado), con granjas en Mississippi, Arkansas, Florida, Alabama y +10 estados.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~3.4% anual* solo por ser dueño. Cada vez que alguien compra huevos en el supermercado, desayuna un omelette o usa un egg wrap Crepini — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Los ingresos de Cal-Maine dependen casi 100% del precio de los huevos — commodity extremadamente volátil por gripe aviar, costos de alimentación y regulación.\n\n🆕 Posición #36\n🔗 https://vectorialdata.com/stocks/CALM\n✅ Certificado por blockchain → vectorialdata.com/verify/CALM\n\n💡 Algo raro pasa con los dividendos de CALM. Lo explicamos en el reporte completo. → vectorialdata.com/stocks/calm`,
+    attestation_uid: "",
+  },
 ];
 
 export const cycles = [
@@ -5047,7 +5196,7 @@ export const cycles = [
     cycle_number: 8,
     type: "new" as const,
     target_count: 5,
-    current_count: 0,
+    current_count: 1,
     status: "active" as const,
   },
 ];

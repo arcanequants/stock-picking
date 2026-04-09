@@ -371,4 +371,14 @@ export const enTranslations: Record<string, StockTranslation> = {
     summary_risk:
       "The main risk is the premium valuation — at a P/E of 30.87x and forward ~24x, IDEX is expensive for an industrial company with modest organic growth (+1% in 2025).",
   },
+  CALM: {
+    summary_short:
+      "The largest egg producer in the U.S. (~20% of the market), with ~13 billion eggs per year. Brands like Egg-Land's Best, Land O'Lakes, and Crepini. Revenue $3.46B, variable dividend (1/3 of quarterly net income). Expanding into prepared foods.",
+    summary_what:
+      "Cal-Maine Foods is the largest producer and distributor of fresh eggs in the United States, responsible for approximately 20% of the country's commercial production with ~13 billion eggs annually. It operates production farms, packing, grading, and distribution facilities across more than 15 states (Mississippi, Arkansas, Florida, Alabama, among others). It sells conventional, cage-free, organic, free-range, pasture-raised, and nutritionally-enhanced eggs under brands like Egg-Land's Best (licensed), Land O'Lakes (licensed), Farmhouse Eggs, Sunups, and Sunny Meadow. It recently expanded into prepared foods with the acquisition of Crepini (egg wraps) and MeadowCreek Foods (pancakes), which together with specialty eggs already represent 52.9% of net sales.",
+    summary_why:
+      "At $77.72, CALM trades near its 52-week low ($71.92) at a trailing P/E of just 5.4x — a massive discount vs its forward P/E of 20x, reflecting the normalization of egg prices. Catalysts include: (1) aggressive expansion into prepared foods — Crepini + a new $14.8M pancake line in Wisconsin; (2) specialty + prepared foods already account for 52.9% of sales (higher margin); (3) acquisition of Creighton Brothers for vertical integration; (4) variable dividend that rewards shareholders in strong quarters; (5) natural monopoly as the largest producer with 20% of the U.S. market.",
+    summary_risk:
+      "Cal-Maine's revenue and earnings depend almost exclusively on egg prices, an extremely volatile commodity influenced by avian flu outbreaks (HPAI), feed costs (~65% of production costs), and state cage regulations. The company also faces an active DOJ investigation for price fixing and antitrust scrutiny due to its dominant 20% market position.",
+  },
 };

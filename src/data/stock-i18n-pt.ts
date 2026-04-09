@@ -371,4 +371,14 @@ export const ptTranslations: Record<string, StockTranslation> = {
     summary_risk:
       "O risco principal e a avaliacao premium — a P/E de 30,87x e forward ~24x, IDEX e cara para uma empresa industrial com crescimento organico modesto (+1% em 2025).",
   },
+  CALM: {
+    summary_short:
+      "O maior produtor de ovos dos EUA (~20% do mercado), com ~13 bilhoes de ovos por ano. Marcas como Egg-Land's Best, Land O'Lakes e Crepini. Receita de US$3,46B, dividendo variavel (1/3 do lucro liquido trimestral). Expandindo para alimentos preparados.",
+    summary_what:
+      "A Cal-Maine Foods e a maior produtora e distribuidora de ovos frescos dos Estados Unidos, responsavel por aproximadamente 20% da producao comercial do pais com ~13 bilhoes de ovos anuais. Opera fazendas de producao, empacotamento, classificacao e distribuicao em mais de 15 estados (Mississippi, Arkansas, Florida, Alabama, entre outros). Vende ovos convencionais, cage-free, organicos, free-range, pasture-raised e nutritionally-enhanced sob marcas como Egg-Land's Best (licenca), Land O'Lakes (licenca), Farmhouse Eggs, Sunups e Sunny Meadow. Recentemente expandiu para alimentos preparados com a aquisicao da Crepini (egg wraps) e MeadowCreek Foods (panquecas), que junto com ovos especiais ja representam 52,9% das vendas liquidas.",
+    summary_why:
+      "A US$77,72, CALM negocia perto de sua minima de 52 semanas (US$71,92) com P/E trailing de apenas 5,4x — desconto massivo vs seu P/E forward de 20x, refletindo a normalizacao do preco dos ovos. Os catalisadores incluem: (1) expansao agressiva em alimentos preparados — Crepini + nova linha de panquecas de US$14,8M em Wisconsin; (2) especialidade + preparados ja sao 52,9% das vendas (margem maior); (3) aquisicao da Creighton Brothers para integracao vertical; (4) dividendo variavel que premia em bons trimestres; (5) monopolio natural como maior produtor com 20% do mercado americano.",
+    summary_risk:
+      "A receita e os lucros da Cal-Maine dependem quase exclusivamente do preco dos ovos, uma commodity extremamente volatil influenciada por surtos de gripe aviaria (HPAI), custos de racao (~65% dos custos de producao) e regulacoes estaduais sobre gaiolas. A empresa tambem enfrenta uma investigacao ativa do DOJ por fixacao de precos e escrutinio antitruste por sua posicao dominante de 20% do mercado.",
+  },
 };
