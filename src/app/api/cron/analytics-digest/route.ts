@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { sendAnalyticsDigest, sendDailyBrief, type AnalyticsDigestData, type DailyBriefData, type DayMetric } from "@/lib/resend";
-import { fetchGA4Data, fetchGSCData } from "@/lib/google-analytics";
+import { fetchGA4Data, fetchGA4DailyTraffic, fetchGSCData } from "@/lib/google-analytics";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -130,6 +130,9 @@ export async function GET(request: Request) {
         if (i === 1) yesterdayBots = val;
       }
 
+      // GA4 yesterday's traffic (graceful)
+      const ga4Traffic = await fetchGA4DailyTraffic();
+
       const briefData: DailyBriefData = {
         date: today,
         portfolioReturnPct: Math.round(currentReturn * 100) / 100,
@@ -142,6 +145,7 @@ export async function GET(request: Request) {
         totalRequestsToday,
         portfolioSparkline,
         botSparkline,
+        traffic: ga4Traffic,
       };
 
       await sendDailyBrief(ADMIN_EMAIL, briefData);

@@ -1,42 +1,51 @@
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import { google } from "googleapis";
 
-// ─── GA4 Data ───
+function getGA4Client() {
+  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
+  const key = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY;
+  const propertyId = process.env.GA4_PROPERTY_ID;
+  if (!email || !key || !propertyId) return null;
+  const client = new BetaAnalyticsDataClient({
+    credentials: {
+      client_email: email,
+      private_key: key.replace(/\\n/g, "\n"),
+    },
+  });
+  return { client, property: `properties/${propertyId}` };
+}
+
+// ─── GA4 Data (weekly full report) ───
 
 export interface GA4Data {
   pageViews: number;
   sessions: number;
   users: number;
+  newUsers: number;
   topPages: { path: string; views: number }[];
   topCountries: { country: string; users: number }[];
+  trafficSources: { source: string; sessions: number }[];
+  devices: { device: string; sessions: number }[];
 }
 
 export async function fetchGA4Data(daysBack = 7): Promise<GA4Data | null> {
-  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-  const key = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY;
-  const propertyId = process.env.GA4_PROPERTY_ID;
-
-  if (!email || !key || !propertyId) return null;
+  const ga4 = getGA4Client();
+  if (!ga4) return null;
 
   try {
-    const client = new BetaAnalyticsDataClient({
-      credentials: {
-        client_email: email,
-        private_key: key.replace(/\\n/g, "\n"),
-      },
-    });
-
+    const { client, property } = ga4;
     const startDate = `${daysBack}daysAgo`;
     const endDate = "today";
 
-    // Totals: pageViews, sessions, users
+    // Totals: pageViews, sessions, users, newUsers
     const [totals] = await client.runReport({
-      property: `properties/${propertyId}`,
+      property,
       dateRanges: [{ startDate, endDate }],
       metrics: [
         { name: "screenPageViews" },
         { name: "sessions" },
         { name: "activeUsers" },
+        { name: "newUsers" },
       ],
     });
 
@@ -44,10 +53,11 @@ export async function fetchGA4Data(daysBack = 7): Promise<GA4Data | null> {
     const pageViews = parseInt(row?.metricValues?.[0]?.value ?? "0");
     const sessions = parseInt(row?.metricValues?.[1]?.value ?? "0");
     const users = parseInt(row?.metricValues?.[2]?.value ?? "0");
+    const newUsers = parseInt(row?.metricValues?.[3]?.value ?? "0");
 
     // Top pages
     const [pages] = await client.runReport({
-      property: `properties/${propertyId}`,
+      property,
       dateRanges: [{ startDate, endDate }],
       dimensions: [{ name: "pagePath" }],
       metrics: [{ name: "screenPageViews" }],
@@ -62,12 +72,12 @@ export async function fetchGA4Data(daysBack = 7): Promise<GA4Data | null> {
 
     // Top countries
     const [countries] = await client.runReport({
-      property: `properties/${propertyId}`,
+      property,
       dateRanges: [{ startDate, endDate }],
       dimensions: [{ name: "country" }],
       metrics: [{ name: "activeUsers" }],
       orderBys: [{ metric: { metricName: "activeUsers" }, desc: true }],
-      limit: 5,
+      limit: 10,
     });
 
     const topCountries = (countries.rows ?? []).map((r) => ({
@@ -75,9 +85,100 @@ export async function fetchGA4Data(daysBack = 7): Promise<GA4Data | null> {
       users: parseInt(r.metricValues?.[0]?.value ?? "0"),
     }));
 
-    return { pageViews, sessions, users, topPages, topCountries };
+    // Traffic sources
+    const [sources] = await client.runReport({
+      property,
+      dateRanges: [{ startDate, endDate }],
+      dimensions: [{ name: "sessionDefaultChannelGroup" }],
+      metrics: [{ name: "sessions" }],
+      orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
+      limit: 8,
+    });
+
+    const trafficSources = (sources.rows ?? []).map((r) => ({
+      source: r.dimensionValues?.[0]?.value ?? "",
+      sessions: parseInt(r.metricValues?.[0]?.value ?? "0"),
+    }));
+
+    // Devices
+    const [deviceData] = await client.runReport({
+      property,
+      dateRanges: [{ startDate, endDate }],
+      dimensions: [{ name: "deviceCategory" }],
+      metrics: [{ name: "sessions" }],
+      orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
+    });
+
+    const devices = (deviceData.rows ?? []).map((r) => ({
+      device: r.dimensionValues?.[0]?.value ?? "",
+      sessions: parseInt(r.metricValues?.[0]?.value ?? "0"),
+    }));
+
+    return { pageViews, sessions, users, newUsers, topPages, topCountries, trafficSources, devices };
   } catch (error) {
     console.error("GA4 fetch error:", error);
+    return null;
+  }
+}
+
+// ─── GA4 Daily Traffic (yesterday's data for daily brief) ───
+
+export interface GA4DailyTraffic {
+  pageViews: number;
+  sessions: number;
+  users: number;
+  newUsers: number;
+  topSource: string;
+  topSourceSessions: number;
+  sources: { source: string; sessions: number }[];
+}
+
+export async function fetchGA4DailyTraffic(): Promise<GA4DailyTraffic | null> {
+  const ga4 = getGA4Client();
+  if (!ga4) return null;
+
+  try {
+    const { client, property } = ga4;
+
+    // Yesterday's totals
+    const [totals] = await client.runReport({
+      property,
+      dateRanges: [{ startDate: "yesterday", endDate: "yesterday" }],
+      metrics: [
+        { name: "screenPageViews" },
+        { name: "sessions" },
+        { name: "activeUsers" },
+        { name: "newUsers" },
+      ],
+    });
+
+    const row = totals.rows?.[0];
+    const pageViews = parseInt(row?.metricValues?.[0]?.value ?? "0");
+    const sessions = parseInt(row?.metricValues?.[1]?.value ?? "0");
+    const users = parseInt(row?.metricValues?.[2]?.value ?? "0");
+    const newUsers = parseInt(row?.metricValues?.[3]?.value ?? "0");
+
+    // Yesterday's traffic sources
+    const [sourcesData] = await client.runReport({
+      property,
+      dateRanges: [{ startDate: "yesterday", endDate: "yesterday" }],
+      dimensions: [{ name: "sessionDefaultChannelGroup" }],
+      metrics: [{ name: "sessions" }],
+      orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
+      limit: 5,
+    });
+
+    const sources = (sourcesData.rows ?? []).map((r) => ({
+      source: r.dimensionValues?.[0]?.value ?? "",
+      sessions: parseInt(r.metricValues?.[0]?.value ?? "0"),
+    }));
+
+    const topSource = sources[0]?.source ?? "—";
+    const topSourceSessions = sources[0]?.sessions ?? 0;
+
+    return { pageViews, sessions, users, newUsers, topSource, topSourceSessions, sources };
+  } catch (error) {
+    console.error("GA4 daily traffic error:", error);
     return null;
   }
 }

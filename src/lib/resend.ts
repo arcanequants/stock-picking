@@ -984,8 +984,11 @@ export interface AnalyticsDigestData {
     pageViews: number;
     sessions: number;
     users: number;
+    newUsers: number;
     topPages: { path: string; views: number }[];
     topCountries: { country: string; users: number }[];
+    trafficSources: { source: string; sessions: number }[];
+    devices: { device: string; sessions: number }[];
   } | null;
   gsc?: {
     totalClicks: number;
@@ -1074,9 +1077,36 @@ function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
     const pageRows = g.topPages.slice(0, 5).map(p =>
       `<tr><td style="padding:3px 0;font-size:12px;color:#374151;word-break:break-all;">${p.path}</td><td style="padding:3px 0;font-size:12px;text-align:right;font-weight:600;">${p.views.toLocaleString()}</td></tr>`
     ).join("");
-    const countryRows = g.topCountries.slice(0, 5).map(c =>
-      `<tr><td style="padding:3px 0;font-size:12px;color:#374151;">${c.country}</td><td style="padding:3px 0;font-size:12px;text-align:right;">${c.users}</td></tr>`
-    ).join("");
+
+    // Country bars
+    const maxCountryUsers = Math.max(...g.topCountries.slice(0, 5).map(c => c.users), 1);
+    const countryBars = g.topCountries.slice(0, 5).map(c => {
+      const pct = Math.round((c.users / maxCountryUsers) * 100);
+      return `<div style="margin-bottom:4px;">
+        <div style="font-size:11px;color:#6b7280;margin-bottom:1px;"><span>${c.country}</span> <span style="float:right;font-weight:600;color:#374151;">${c.users}</span></div>
+        <div style="background:#f4f4f5;border-radius:3px;height:6px;overflow:hidden;">
+          <div style="background:#4f46e5;width:${pct}%;height:100%;border-radius:3px;"></div>
+        </div>
+      </div>`;
+    }).join("");
+
+    // Traffic source bars
+    const sourceBars = g.trafficSources?.length > 0 ? buildSourceBars(g.trafficSources) : "";
+
+    // Device split
+    const totalDeviceSessions = (g.devices ?? []).reduce((s, d) => s + d.sessions, 0);
+    const deviceBars = totalDeviceSessions > 0 ? (g.devices ?? []).map(d => {
+      const pct = Math.round((d.sessions / totalDeviceSessions) * 100);
+      const colors: Record<string, string> = { mobile: "#4f46e5", desktop: "#16a34a", tablet: "#f59e0b" };
+      const c = colors[d.device.toLowerCase()] ?? "#6b7280";
+      return `<div style="display:inline-block;margin-right:16px;font-size:12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${c};margin-right:4px;vertical-align:middle;"></span>
+        <span style="color:#374151;font-weight:600;">${d.device}</span>
+        <span style="color:#6b7280;"> ${pct}%</span>
+        <span style="color:#9ca3af;"> (${d.sessions})</span>
+      </div>`;
+    }).join("") : "";
+
     ga4Section = `
     <div style="margin-top:24px;padding-top:20px;border-top:1px solid #f4f4f5;">
       <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.8px;">WEBSITE TRAFFIC (GA4)</p>
@@ -1084,9 +1114,12 @@ function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
         <tr><td style="padding:3px 0;font-size:13px;">Page views</td><td style="text-align:right;font-weight:600;font-size:13px;">${g.pageViews.toLocaleString()}</td></tr>
         <tr><td style="padding:3px 0;font-size:13px;">Sessions</td><td style="text-align:right;font-size:13px;">${g.sessions.toLocaleString()}</td></tr>
         <tr><td style="padding:3px 0;font-size:13px;">Users</td><td style="text-align:right;font-size:13px;">${g.users.toLocaleString()}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">New users</td><td style="text-align:right;font-size:13px;color:#16a34a;">${g.newUsers.toLocaleString()}</td></tr>
       </table>
-      ${pageRows ? `<p style="margin:12px 0 4px;font-size:11px;color:#9ca3af;font-weight:600;">TOP PAGES</p><table style="width:100%;border-collapse:collapse;">${pageRows}</table>` : ""}
-      ${countryRows ? `<p style="margin:12px 0 4px;font-size:11px;color:#9ca3af;font-weight:600;">TOP COUNTRIES</p><table style="width:100%;border-collapse:collapse;">${countryRows}</table>` : ""}
+      ${sourceBars ? `<p style="margin:14px 0 6px;font-size:11px;color:#9ca3af;font-weight:600;">TRAFFIC SOURCES</p>${sourceBars}` : ""}
+      ${deviceBars ? `<p style="margin:14px 0 6px;font-size:11px;color:#9ca3af;font-weight:600;">DEVICES</p><div style="margin-top:4px;">${deviceBars}</div>` : ""}
+      ${countryBars ? `<p style="margin:14px 0 6px;font-size:11px;color:#9ca3af;font-weight:600;">TOP COUNTRIES</p>${countryBars}` : ""}
+      ${pageRows ? `<p style="margin:14px 0 4px;font-size:11px;color:#9ca3af;font-weight:600;">TOP PAGES</p><table style="width:100%;border-collapse:collapse;">${pageRows}</table>` : ""}
     </div>`;
   }
 
@@ -1170,21 +1203,65 @@ export interface DailyBriefData {
   totalRequestsToday: number;
   portfolioSparkline: DayMetric[];
   botSparkline: DayMetric[];
+  traffic?: {
+    pageViews: number;
+    sessions: number;
+    users: number;
+    newUsers: number;
+    topSource: string;
+    topSourceSessions: number;
+    sources: { source: string; sessions: number }[];
+  } | null;
 }
 
 function buildSparkBars(data: DayMetric[], color: string, height = 32): string {
   if (data.length === 0) return "";
-  const max = Math.max(...data.map(d => Math.abs(d.value)), 1);
+  // Skip if all values are 0 except maybe 1
+  const nonZero = data.filter(d => d.value !== 0);
+  if (nonZero.length <= 1) return "";
+
+  const values = data.map(d => d.value);
+  const minVal = Math.min(...values);
+  const maxVal = Math.max(...values);
+  const range = maxVal - minVal;
+
   const barWidth = Math.floor(100 / Math.max(data.length, 1));
   const bars = data.map(d => {
-    const h = Math.max(Math.round((Math.abs(d.value) / max) * height), 2);
+    // Use range-based scaling so similar values show visible differences
+    const normalized = range > 0 ? (d.value - minVal) / range : 0.5;
+    const h = Math.max(Math.round(normalized * height * 0.8 + height * 0.2), 3);
     const barColor = d.value >= 0 ? color : "#dc2626";
     return `<td style="vertical-align:bottom;padding:0 1px;width:${barWidth}%;">
-      <div title="${d.label}: ${d.value}" style="background:${barColor};height:${h}px;border-radius:2px 2px 0 0;opacity:0.7;"></div>
+      <div title="${d.label}: ${typeof d.value === 'number' && d.value % 1 !== 0 ? d.value.toFixed(2) : d.value}" style="background:${barColor};height:${h}px;border-radius:2px 2px 0 0;opacity:0.7;"></div>
       <div style="font-size:8px;color:#9ca3af;text-align:center;margin-top:2px;">${d.label.slice(3)}</div>
     </td>`;
   }).join("");
   return `<table style="width:100%;border-collapse:collapse;height:${height + 14}px;"><tr>${bars}</tr></table>`;
+}
+
+function buildSourceBars(sources: { source: string; sessions: number }[]): string {
+  if (sources.length === 0) return "";
+  const max = Math.max(...sources.map(s => s.sessions), 1);
+  const colors: Record<string, string> = {
+    "Organic Search": "#16a34a",
+    "Direct": "#4f46e5",
+    "Organic Social": "#ec4899",
+    "Referral": "#f59e0b",
+    "Paid Search": "#06b6d4",
+    "Email": "#8b5cf6",
+  };
+  return sources.slice(0, 4).map(s => {
+    const pct = Math.round((s.sessions / max) * 100);
+    const c = colors[s.source] ?? "#6b7280";
+    return `<div style="margin-bottom:4px;">
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:#6b7280;margin-bottom:1px;">
+        <span>${s.source}</span><span style="font-weight:600;color:#374151;">${s.sessions}</span>
+      </div>
+      <div style="background:#f4f4f5;border-radius:3px;height:6px;overflow:hidden;">
+        <div style="background:${c};width:${pct}%;height:100%;border-radius:3px;"></div>
+      </div>
+    </div>`;
+  }).join("");
 }
 
 function buildNarrative(data: DailyBriefData): string {
@@ -1290,7 +1367,7 @@ function buildDailyBriefHtml(data: DailyBriefData): string {
       <!-- Alerts -->
       ${alerts}
 
-      <!-- 2x2 Metric Cards -->
+      <!-- Metric Cards -->
       <table style="width:100%;border-collapse:collapse;">
         <tr>
           ${metricCard(
@@ -1317,7 +1394,13 @@ function buildDailyBriefHtml(data: DailyBriefData): string {
             totalBotVisits > yesterdayBotVisits && yesterdayBotVisits > 0 ? "#eff6ff" : "#f9fafb",
             totalBotVisits > yesterdayBotVisits && yesterdayBotVisits > 0 ? "#bfdbfe" : "#e4e4e7",
           )}
-          ${metricCard(
+          ${data.traffic ? metricCard(
+            "Traffic",
+            String(data.traffic.pageViews),
+            `${data.traffic.sessions} sessions · ${data.traffic.users} users`,
+            "#f9fafb",
+            "#e4e4e7",
+          ) : metricCard(
             "API",
             `${totalApiKeys} keys`,
             `${totalRequestsToday} requests today`,
@@ -1325,7 +1408,30 @@ function buildDailyBriefHtml(data: DailyBriefData): string {
             "#e4e4e7",
           )}
         </tr>
+        ${data.traffic ? `<tr>
+          ${metricCard(
+            "New Users",
+            String(data.traffic.newUsers),
+            "from GA4 yesterday",
+            data.traffic.newUsers > 0 ? "#f0fdf4" : "#f9fafb",
+            data.traffic.newUsers > 0 ? "#bbf7d0" : "#e4e4e7",
+          )}
+          ${metricCard(
+            "API",
+            `${totalApiKeys} keys`,
+            `${totalRequestsToday} requests today`,
+            "#f9fafb",
+            "#e4e4e7",
+          )}
+        </tr>` : ""}
       </table>
+
+      <!-- Traffic Sources -->
+      ${data.traffic && data.traffic.sources.length > 0 ? `
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid #f4f4f5;">
+        <p style="margin:0 0 8px;font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Traffic Sources — Yesterday</p>
+        ${buildSourceBars(data.traffic.sources)}
+      </div>` : ""}
 
       <!-- Portfolio Sparkline -->
       ${portfolioSparkline.length > 1 ? `
