@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
-import { sendAnalyticsDigest, sendDailyBrief, type AnalyticsDigestData, type DailyBriefData } from "@/lib/resend";
+import { sendAnalyticsDigest, sendDailyBrief, type AnalyticsDigestData, type DailyBriefData, type DayMetric } from "@/lib/resend";
 import { fetchGA4Data, fetchGSCData } from "@/lib/google-analytics";
 
 export const dynamic = "force-dynamic";
@@ -89,15 +89,59 @@ export async function GET(request: Request) {
 
     // ─── DAILY BRIEF ───
     if (!isWeekly) {
+      // Fetch 7-day history for sparklines
+      const sevenDaysAgo = new Date(now);
+      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+      // Portfolio history (last 7 snapshots)
+      const { data: portfolioHistory } = await supabase
+        .from("portfolio_snapshots")
+        .select("date, return_pct")
+        .gte("date", sevenDaysAgo.toISOString().split("T")[0])
+        .order("date", { ascending: true });
+
+      const portfolioSparkline: DayMetric[] = (portfolioHistory ?? []).map(
+        (s: { date: string; return_pct: number }) => ({
+          label: s.date.slice(5), // "04-03"
+          value: s.return_pct,
+        })
+      );
+
+      // Bot visits per day (last 7 days)
+      const botSparkline: DayMetric[] = [];
+      let yesterdayBots = 0;
+      for (let i = 6; i >= 0; i--) {
+        const d = new Date(now);
+        d.setDate(d.getDate() - i);
+        const dayStart = new Date(d);
+        dayStart.setHours(0, 0, 0, 0);
+        const dayEnd = new Date(d);
+        dayEnd.setHours(23, 59, 59, 999);
+        const { count } = await supabase
+          .from("ai_crawler_logs")
+          .select("id", { count: "exact", head: true })
+          .gte("created_at", dayStart.toISOString())
+          .lte("created_at", dayEnd.toISOString());
+        const val = count ?? 0;
+        botSparkline.push({
+          label: d.toISOString().split("T")[0].slice(5),
+          value: val,
+        });
+        if (i === 1) yesterdayBots = val;
+      }
+
       const briefData: DailyBriefData = {
         date: today,
         portfolioReturnPct: Math.round(currentReturn * 100) / 100,
         dailyChangePct: Math.round((currentReturn - yesterdayReturn) * 100) / 100,
         totalBotVisits: todayBotVisits ?? 0,
+        yesterdayBotVisits: yesterdayBots,
         totalSubscribers,
         newSubscribersToday,
         totalApiKeys,
         totalRequestsToday,
+        portfolioSparkline,
+        botSparkline,
       };
 
       await sendDailyBrief(ADMIN_EMAIL, briefData);

@@ -1151,72 +1151,199 @@ function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
 </body></html>`;
 }
 
-// ─── Daily Brief (lightweight daily snapshot) ───
+// ─── Daily Brief (founder dashboard email) ───
+
+export interface DayMetric {
+  label: string; // "04-03"
+  value: number;
+}
 
 export interface DailyBriefData {
   date: string;
   portfolioReturnPct: number;
   dailyChangePct: number;
   totalBotVisits: number;
+  yesterdayBotVisits: number;
   totalSubscribers: number;
   newSubscribersToday: number;
   totalApiKeys: number;
   totalRequestsToday: number;
+  portfolioSparkline: DayMetric[];
+  botSparkline: DayMetric[];
+}
+
+function buildSparkBars(data: DayMetric[], color: string, height = 32): string {
+  if (data.length === 0) return "";
+  const max = Math.max(...data.map(d => Math.abs(d.value)), 1);
+  const barWidth = Math.floor(100 / Math.max(data.length, 1));
+  const bars = data.map(d => {
+    const h = Math.max(Math.round((Math.abs(d.value) / max) * height), 2);
+    const barColor = d.value >= 0 ? color : "#dc2626";
+    return `<td style="vertical-align:bottom;padding:0 1px;width:${barWidth}%;">
+      <div title="${d.label}: ${d.value}" style="background:${barColor};height:${h}px;border-radius:2px 2px 0 0;opacity:0.7;"></div>
+      <div style="font-size:8px;color:#9ca3af;text-align:center;margin-top:2px;">${d.label.slice(3)}</div>
+    </td>`;
+  }).join("");
+  return `<table style="width:100%;border-collapse:collapse;height:${height + 14}px;"><tr>${bars}</tr></table>`;
+}
+
+function buildNarrative(data: DailyBriefData): string {
+  const parts: string[] = [];
+
+  // Portfolio
+  if (data.dailyChangePct > 0.1) parts.push(`Portfolio up ${data.dailyChangePct.toFixed(2)}% today`);
+  else if (data.dailyChangePct < -0.1) parts.push(`Portfolio down ${Math.abs(data.dailyChangePct).toFixed(2)}% today`);
+  else parts.push("Portfolio steady");
+
+  // Bots
+  if (data.totalBotVisits > 0) {
+    const botChange = data.yesterdayBotVisits > 0
+      ? Math.round(((data.totalBotVisits - data.yesterdayBotVisits) / data.yesterdayBotVisits) * 100)
+      : null;
+    if (botChange !== null && botChange > 50) parts.push(`${data.totalBotVisits} bot visits (spike!)`);
+    else parts.push(`${data.totalBotVisits} bot visits`);
+  }
+
+  // Subscribers
+  if (data.newSubscribersToday > 0) parts.push(`${data.newSubscribersToday} new signup${data.newSubscribersToday > 1 ? "s" : ""}!`);
+  else parts.push("0 new signups");
+
+  return parts.join(". ") + ".";
+}
+
+function buildAlerts(data: DailyBriefData): string {
+  const alerts: string[] = [];
+
+  // Bot spike
+  if (data.yesterdayBotVisits > 0) {
+    const change = ((data.totalBotVisits - data.yesterdayBotVisits) / data.yesterdayBotVisits) * 100;
+    if (change > 50) alerts.push(`<tr><td style="padding:4px 8px;font-size:13px;">&#128293; Bot visits up ${Math.round(change)}% vs yesterday</td></tr>`);
+  }
+  if (data.totalBotVisits > 0 && data.yesterdayBotVisits === 0) {
+    alerts.push(`<tr><td style="padding:4px 8px;font-size:13px;">&#128293; First bot visits today: ${data.totalBotVisits}</td></tr>`);
+  }
+
+  // New subscriber
+  if (data.newSubscribersToday > 0) {
+    alerts.push(`<tr><td style="padding:4px 8px;font-size:13px;">&#127881; ${data.newSubscribersToday} new subscriber${data.newSubscribersToday > 1 ? "s" : ""} today!</td></tr>`);
+  }
+
+  // Portfolio move
+  if (Math.abs(data.dailyChangePct) > 1) {
+    const emoji = data.dailyChangePct > 0 ? "&#128640;" : "&#9888;&#65039;";
+    alerts.push(`<tr><td style="padding:4px 8px;font-size:13px;">${emoji} Portfolio moved ${data.dailyChangePct > 0 ? "+" : ""}${data.dailyChangePct.toFixed(2)}% today</td></tr>`);
+  }
+
+  if (alerts.length === 0) return "";
+  return `<div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;margin-bottom:14px;overflow:hidden;">
+    <table style="width:100%;border-collapse:collapse;">${alerts.join("")}</table>
+  </div>`;
+}
+
+function metricCard(label: string, value: string, detail: string, bg: string, border: string, valueColor = "#111827"): string {
+  return `<td style="width:50%;padding:4px;">
+    <div style="background:${bg};border:1px solid ${border};border-radius:8px;padding:10px 12px;">
+      <p style="margin:0;font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">${label}</p>
+      <p style="margin:3px 0 0;font-size:22px;font-weight:700;color:${valueColor};">${value}</p>
+      <p style="margin:2px 0 0;font-size:11px;color:#9ca3af;">${detail}</p>
+    </div>
+  </td>`;
 }
 
 function buildDailyBriefHtml(data: DailyBriefData): string {
-  const { date, portfolioReturnPct, dailyChangePct, totalBotVisits, totalSubscribers, newSubscribersToday, totalApiKeys, totalRequestsToday } = data;
+  const { date, portfolioReturnPct, dailyChangePct, totalBotVisits, yesterdayBotVisits, totalSubscribers, newSubscribersToday, totalApiKeys, totalRequestsToday, portfolioSparkline, botSparkline } = data;
 
   const pctSign = portfolioReturnPct >= 0 ? "+" : "";
   const pctColor = portfolioReturnPct >= 0 ? "#16a34a" : "#dc2626";
   const daySign = dailyChangePct >= 0 ? "+" : "";
   const dayColor = dailyChangePct >= 0 ? "#16a34a" : "#dc2626";
-  const heroBg = portfolioReturnPct >= 0 ? "#f0fdf4" : "#fef2f2";
-  const heroBorder = portfolioReturnPct >= 0 ? "#bbf7d0" : "#fecaca";
 
-  const links = [
-    { label: "Google Analytics", url: "https://analytics.google.com" },
-    { label: "Vercel Analytics", url: "https://vercel.com/arcanequants/stock-picking/analytics" },
-    { label: "Search Console", url: "https://search.google.com/search-console?resource_id=sc-domain:vectorialdata.com" },
-    { label: "Marketing", url: "https://www.vectorialdata.com/marketing" },
-  ];
-  const linkRow = links.map(l =>
-    `<a href="${l.url}" style="color:#4f46e5;text-decoration:none;font-size:12px;">${l.label}</a>`
-  ).join(" &nbsp;·&nbsp; ");
+  const narrative = buildNarrative(data);
+  const alerts = buildAlerts(data);
+
+  // Bot trend vs yesterday
+  const botTrend = yesterdayBotVisits > 0
+    ? `${totalBotVisits >= yesterdayBotVisits ? "+" : ""}${totalBotVisits - yesterdayBotVisits} vs ayer`
+    : "first day";
+
+  // Subscriber detail
+  const subDetail = newSubscribersToday > 0
+    ? `+${newSubscribersToday} new today`
+    : "0 new today";
 
   return `<!DOCTYPE html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
-  ${previewText(`Portfolio ${pctSign}${portfolioReturnPct.toFixed(2)}% (${daySign}${dailyChangePct.toFixed(2)}% today). ${totalBotVisits} bots. ${newSubscribersToday} new subs.`)}
-  <div style="max-width:480px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
-    <div style="background:#1e293b;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
-      <span style="color:#fff;font-size:15px;font-weight:600;">Daily Brief</span>
-      <span style="color:rgba(255,255,255,0.6);font-size:13px;">${date}</span>
+  ${previewText(`${narrative}`)}
+  <div style="max-width:520px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+    <!-- Header -->
+    <div style="background:#111827;padding:14px 20px;">
+      <table style="width:100%;"><tr>
+        <td style="color:#fff;font-size:15px;font-weight:600;">Daily Brief</td>
+        <td style="color:rgba(255,255,255,0.5);font-size:13px;text-align:right;">${date}</td>
+      </tr></table>
     </div>
     <div style="padding:16px 20px;">
-      <div style="background:${heroBg};border:1px solid ${heroBorder};border-radius:8px;padding:12px 14px;margin-bottom:14px;">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;">
-          <span style="font-size:28px;font-weight:700;color:${pctColor};">${pctSign}${portfolioReturnPct.toFixed(2)}%</span>
-          <span style="font-size:14px;color:${dayColor};font-weight:600;">today ${daySign}${dailyChangePct.toFixed(2)}%</span>
-        </div>
-      </div>
+      <!-- Narrative -->
+      <p style="margin:0 0 14px;font-size:14px;color:#374151;line-height:1.5;">${narrative}</p>
+
+      <!-- Alerts -->
+      ${alerts}
+
+      <!-- 2x2 Metric Cards -->
       <table style="width:100%;border-collapse:collapse;">
         <tr>
-          <td style="padding:6px 0;font-size:13px;color:#6b7280;">Subscribers</td>
-          <td style="padding:6px 0;font-size:13px;text-align:right;font-weight:600;">${totalSubscribers}${newSubscribersToday > 0 ? ` <span style="color:#16a34a;">(+${newSubscribersToday})</span>` : ""}</td>
+          ${metricCard(
+            "Portfolio",
+            `${pctSign}${portfolioReturnPct.toFixed(2)}%`,
+            `<span style="color:${dayColor}">${daySign}${dailyChangePct.toFixed(2)}%</span> today`,
+            portfolioReturnPct >= 0 ? "#f0fdf4" : "#fef2f2",
+            portfolioReturnPct >= 0 ? "#bbf7d0" : "#fecaca",
+            pctColor
+          )}
+          ${metricCard(
+            "Subscribers",
+            String(totalSubscribers),
+            subDetail,
+            newSubscribersToday > 0 ? "#f0fdf4" : "#f9fafb",
+            newSubscribersToday > 0 ? "#bbf7d0" : "#e4e4e7",
+          )}
         </tr>
         <tr>
-          <td style="padding:6px 0;font-size:13px;color:#6b7280;">Bot visits today</td>
-          <td style="padding:6px 0;font-size:13px;text-align:right;font-weight:600;">${totalBotVisits}</td>
-        </tr>
-        <tr>
-          <td style="padding:6px 0;font-size:13px;color:#6b7280;">API keys / requests</td>
-          <td style="padding:6px 0;font-size:13px;text-align:right;font-weight:600;">${totalApiKeys} / ${totalRequestsToday}</td>
+          ${metricCard(
+            "Bot Visits",
+            String(totalBotVisits),
+            botTrend,
+            totalBotVisits > yesterdayBotVisits && yesterdayBotVisits > 0 ? "#eff6ff" : "#f9fafb",
+            totalBotVisits > yesterdayBotVisits && yesterdayBotVisits > 0 ? "#bfdbfe" : "#e4e4e7",
+          )}
+          ${metricCard(
+            "API",
+            `${totalApiKeys} keys`,
+            `${totalRequestsToday} requests today`,
+            "#f9fafb",
+            "#e4e4e7",
+          )}
         </tr>
       </table>
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f4f4f5;text-align:center;">
-        ${linkRow}
-      </div>
+
+      <!-- Portfolio Sparkline -->
+      ${portfolioSparkline.length > 1 ? `
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid #f4f4f5;">
+        <p style="margin:0 0 6px;font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Portfolio — Last 7 Days</p>
+        ${buildSparkBars(portfolioSparkline, "#16a34a", 36)}
+      </div>` : ""}
+
+      <!-- Bot Sparkline -->
+      ${botSparkline.some(b => b.value > 0) ? `
+      <div style="margin-top:12px;">
+        <p style="margin:0 0 6px;font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Bot Visits — Last 7 Days</p>
+        ${buildSparkBars(botSparkline, "#4f46e5", 28)}
+      </div>` : ""}
+    </div>
+    <!-- Footer -->
+    <div style="padding:10px 20px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0;font-size:11px;color:#a1a1aa;text-align:center;">Vectorial Data — Daily Analytics Brief</p>
     </div>
   </div>
 </body></html>`;
@@ -1224,7 +1351,16 @@ function buildDailyBriefHtml(data: DailyBriefData): string {
 
 export async function sendDailyBrief(to: string, data: DailyBriefData) {
   const daySign = data.dailyChangePct >= 0 ? "+" : "";
-  const subject = `Daily: ${data.portfolioReturnPct >= 0 ? "+" : ""}${data.portfolioReturnPct.toFixed(2)}% (${daySign}${data.dailyChangePct.toFixed(2)}% today) | ${data.totalBotVisits} bots | ${data.newSubscribersToday} new subs`;
+  const pctSign = data.portfolioReturnPct >= 0 ? "+" : "";
+
+  // Dynamic subject with alerts
+  const alertParts: string[] = [];
+  if (data.newSubscribersToday > 0) alertParts.push(`+${data.newSubscribersToday} sub`);
+  if (data.yesterdayBotVisits > 0 && ((data.totalBotVisits - data.yesterdayBotVisits) / data.yesterdayBotVisits) > 0.5) alertParts.push("bot spike");
+  if (Math.abs(data.dailyChangePct) > 1) alertParts.push(`portfolio ${daySign}${data.dailyChangePct.toFixed(1)}%`);
+  const alertStr = alertParts.length > 0 ? ` [${alertParts.join(", ")}]` : "";
+
+  const subject = `${pctSign}${data.portfolioReturnPct.toFixed(2)}% | ${data.totalBotVisits} bots | ${data.totalSubscribers} subs${alertStr}`;
 
   const { error } = await getResend().emails.send({
     from: FROM,
