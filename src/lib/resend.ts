@@ -1151,6 +1151,91 @@ function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
 </body></html>`;
 }
 
+// ─── Daily Brief (lightweight daily snapshot) ───
+
+export interface DailyBriefData {
+  date: string;
+  portfolioReturnPct: number;
+  dailyChangePct: number;
+  totalBotVisits: number;
+  totalSubscribers: number;
+  newSubscribersToday: number;
+  totalApiKeys: number;
+  totalRequestsToday: number;
+}
+
+function buildDailyBriefHtml(data: DailyBriefData): string {
+  const { date, portfolioReturnPct, dailyChangePct, totalBotVisits, totalSubscribers, newSubscribersToday, totalApiKeys, totalRequestsToday } = data;
+
+  const pctSign = portfolioReturnPct >= 0 ? "+" : "";
+  const pctColor = portfolioReturnPct >= 0 ? "#16a34a" : "#dc2626";
+  const daySign = dailyChangePct >= 0 ? "+" : "";
+  const dayColor = dailyChangePct >= 0 ? "#16a34a" : "#dc2626";
+  const heroBg = portfolioReturnPct >= 0 ? "#f0fdf4" : "#fef2f2";
+  const heroBorder = portfolioReturnPct >= 0 ? "#bbf7d0" : "#fecaca";
+
+  const links = [
+    { label: "Google Analytics", url: "https://analytics.google.com" },
+    { label: "Vercel Analytics", url: "https://vercel.com/arcanequants/stock-picking/analytics" },
+    { label: "Search Console", url: "https://search.google.com/search-console?resource_id=sc-domain:vectorialdata.com" },
+    { label: "Marketing", url: "https://www.vectorialdata.com/marketing" },
+  ];
+  const linkRow = links.map(l =>
+    `<a href="${l.url}" style="color:#4f46e5;text-decoration:none;font-size:12px;">${l.label}</a>`
+  ).join(" &nbsp;·&nbsp; ");
+
+  return `<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f9fafb;margin:0;padding:20px;">
+  ${previewText(`Portfolio ${pctSign}${portfolioReturnPct.toFixed(2)}% (${daySign}${dailyChangePct.toFixed(2)}% today). ${totalBotVisits} bots. ${newSubscribersToday} new subs.`)}
+  <div style="max-width:480px;margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+    <div style="background:#1e293b;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
+      <span style="color:#fff;font-size:15px;font-weight:600;">Daily Brief</span>
+      <span style="color:rgba(255,255,255,0.6);font-size:13px;">${date}</span>
+    </div>
+    <div style="padding:16px 20px;">
+      <div style="background:${heroBg};border:1px solid ${heroBorder};border-radius:8px;padding:12px 14px;margin-bottom:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;">
+          <span style="font-size:28px;font-weight:700;color:${pctColor};">${pctSign}${portfolioReturnPct.toFixed(2)}%</span>
+          <span style="font-size:14px;color:${dayColor};font-weight:600;">today ${daySign}${dailyChangePct.toFixed(2)}%</span>
+        </div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr>
+          <td style="padding:6px 0;font-size:13px;color:#6b7280;">Subscribers</td>
+          <td style="padding:6px 0;font-size:13px;text-align:right;font-weight:600;">${totalSubscribers}${newSubscribersToday > 0 ? ` <span style="color:#16a34a;">(+${newSubscribersToday})</span>` : ""}</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 0;font-size:13px;color:#6b7280;">Bot visits today</td>
+          <td style="padding:6px 0;font-size:13px;text-align:right;font-weight:600;">${totalBotVisits}</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 0;font-size:13px;color:#6b7280;">API keys / requests</td>
+          <td style="padding:6px 0;font-size:13px;text-align:right;font-weight:600;">${totalApiKeys} / ${totalRequestsToday}</td>
+        </tr>
+      </table>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f4f4f5;text-align:center;">
+        ${linkRow}
+      </div>
+    </div>
+  </div>
+</body></html>`;
+}
+
+export async function sendDailyBrief(to: string, data: DailyBriefData) {
+  const daySign = data.dailyChangePct >= 0 ? "+" : "";
+  const subject = `Daily: ${data.portfolioReturnPct >= 0 ? "+" : ""}${data.portfolioReturnPct.toFixed(2)}% (${daySign}${data.dailyChangePct.toFixed(2)}% today) | ${data.totalBotVisits} bots | ${data.newSubscribersToday} new subs`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to,
+    subject,
+    html: buildDailyBriefHtml(data),
+  });
+
+  if (error) throw new Error(`Failed to send daily brief: ${error.message}`);
+}
+
 export async function sendAnalyticsDigest(to: string, data: AnalyticsDigestData) {
   const pctSign = (data.portfolioReturnPct ?? 0) >= 0 ? "+" : "";
   const subject = `Analytics: Portfolio ${pctSign}${(data.portfolioReturnPct ?? 0).toFixed(2)}% | ${data.totalBotVisits} bot visits | ${data.newSubscribersThisWeek} new subs`;

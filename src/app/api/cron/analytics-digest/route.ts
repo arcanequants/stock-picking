@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
-import { sendAnalyticsDigest, type AnalyticsDigestData } from "@/lib/resend";
+import { sendAnalyticsDigest, sendDailyBrief, type AnalyticsDigestData, type DailyBriefData } from "@/lib/resend";
 import { fetchGA4Data, fetchGSCData } from "@/lib/google-analytics";
 
 export const dynamic = "force-dynamic";
@@ -17,15 +17,14 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  // ?mode=weekly forces full report; otherwise daily brief
+  const url = new URL(request.url);
+  const isWeekly = url.searchParams.get("mode") === "weekly";
+
   try {
     const supabase = getSupabaseAdmin();
     const now = new Date();
-    const weekEnd = now.toISOString().split("T")[0];
-    const weekAgo = new Date(now);
-    weekAgo.setDate(weekAgo.getDate() - 7);
-    const weekStart = weekAgo.toISOString().split("T")[0];
-    const twoWeeksAgo = new Date(now);
-    twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+    const today = now.toISOString().split("T")[0];
 
     // --- 1. Portfolio Performance ---
     const { data: latestSnapshot } = await supabase
@@ -34,6 +33,91 @@ export async function GET(request: Request) {
       .order("date", { ascending: false })
       .limit(1);
 
+    const currentReturn = (latestSnapshot?.[0]?.return_pct as number) ?? 0;
+
+    // Yesterday's snapshot for daily change
+    const yesterday = new Date(now);
+    yesterday.setDate(yesterday.getDate() - 1);
+    const { data: yesterdaySnapshot } = await supabase
+      .from("portfolio_snapshots")
+      .select("return_pct")
+      .lte("date", yesterday.toISOString().split("T")[0])
+      .order("date", { ascending: false })
+      .limit(1);
+    const yesterdayReturn = (yesterdaySnapshot?.[0]?.return_pct as number) ?? 0;
+
+    // --- 2. Today's bot visits ---
+    const todayStart = new Date(now);
+    todayStart.setHours(0, 0, 0, 0);
+    const { count: todayBotVisits } = await supabase
+      .from("ai_crawler_logs")
+      .select("id", { count: "exact", head: true })
+      .gte("created_at", todayStart.toISOString());
+
+    // --- 3. New subscribers today ---
+    let totalSubscribers = 0;
+    let newSubscribersToday = 0;
+    let page = 1;
+    const perPage = 1000;
+    while (true) {
+      const { data: { users }, error } = await supabase.auth.admin.listUsers({
+        page,
+        perPage,
+      });
+      if (error || !users?.length) break;
+      totalSubscribers += users.length;
+      for (const u of users) {
+        if (u.created_at && new Date(u.created_at) >= todayStart) {
+          newSubscribersToday++;
+        }
+      }
+      if (users.length < perPage) break;
+      page++;
+    }
+
+    // --- 4. API requests today ---
+    const { data: apiKeys } = await supabase
+      .from("api_keys")
+      .select("id, requests_today, is_active")
+      .eq("is_active", true);
+
+    const totalApiKeys = apiKeys?.length ?? 0;
+    const totalRequestsToday = (apiKeys ?? []).reduce(
+      (sum: number, k: { requests_today?: number }) => sum + (k.requests_today ?? 0),
+      0
+    );
+
+    // ─── DAILY BRIEF ───
+    if (!isWeekly) {
+      const briefData: DailyBriefData = {
+        date: today,
+        portfolioReturnPct: Math.round(currentReturn * 100) / 100,
+        dailyChangePct: Math.round((currentReturn - yesterdayReturn) * 100) / 100,
+        totalBotVisits: todayBotVisits ?? 0,
+        totalSubscribers,
+        newSubscribersToday,
+        totalApiKeys,
+        totalRequestsToday,
+      };
+
+      await sendDailyBrief(ADMIN_EMAIL, briefData);
+
+      return NextResponse.json({
+        success: true,
+        mode: "daily",
+        date: today,
+        sent_to: ADMIN_EMAIL,
+        summary: briefData,
+      });
+    }
+
+    // ─── WEEKLY CONSOLIDATED (Wednesdays) ───
+    const weekAgo = new Date(now);
+    weekAgo.setDate(weekAgo.getDate() - 7);
+    const weekStart = weekAgo.toISOString().split("T")[0];
+    const twoWeeksAgo = new Date(now);
+    twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+
     const { data: weekAgoSnapshot } = await supabase
       .from("portfolio_snapshots")
       .select("return_pct, prices")
@@ -41,7 +125,6 @@ export async function GET(request: Request) {
       .order("date", { ascending: false })
       .limit(1);
 
-    const currentReturn = (latestSnapshot?.[0]?.return_pct as number) ?? 0;
     const previousReturn = (weekAgoSnapshot?.[0]?.return_pct as number) ?? 0;
     const currentPrices = (latestSnapshot?.[0]?.prices as Record<string, number>) ?? {};
     const previousPrices = (weekAgoSnapshot?.[0]?.prices as Record<string, number>) ?? {};
@@ -61,7 +144,7 @@ export async function GET(request: Request) {
       }
     }
 
-    // --- 2. AI Crawler Logs ---
+    // Full week crawler logs
     const { data: crawlerLogs } = await supabase
       .from("ai_crawler_logs")
       .select("bot_name, url")
@@ -75,7 +158,6 @@ export async function GET(request: Request) {
       .lt("created_at", weekAgo.toISOString());
 
     const totalBotVisits = crawlerLogs?.length ?? 0;
-
     const botCounts = new Map<string, number>();
     const pageCounts = new Map<string, number>();
     for (const log of crawlerLogs ?? []) {
@@ -90,58 +172,42 @@ export async function GET(request: Request) {
       .sort((a, b) => b.count - a.count)
       .slice(0, 5);
 
-    // --- 3. Subscribers ---
+    // Subscribers for the week
     const { data: premiumSubs } = await supabase
       .from("subscribers")
       .select("email")
       .in("subscription_status", ["active", "trialing"]);
-
     const premiumCount = premiumSubs?.length ?? 0;
 
-    let totalSubscribers = 0;
     let newSubscribersThisWeek = 0;
-    let page = 1;
-    const perPage = 1000;
+    // Re-count for the full week
+    let page2 = 1;
     while (true) {
       const { data: { users }, error } = await supabase.auth.admin.listUsers({
-        page,
+        page: page2,
         perPage,
       });
       if (error || !users?.length) break;
-      totalSubscribers += users.length;
       for (const u of users) {
         if (u.created_at && new Date(u.created_at) >= weekAgo) {
           newSubscribersThisWeek++;
         }
       }
       if (users.length < perPage) break;
-      page++;
+      page2++;
     }
 
     const freeCount = totalSubscribers - premiumCount;
-
-    // --- 4. API Usage ---
-    const { data: apiKeys } = await supabase
-      .from("api_keys")
-      .select("id, requests_today, is_active")
-      .eq("is_active", true);
-
-    const totalApiKeys = apiKeys?.length ?? 0;
     const activeApiKeysThisWeek = (apiKeys ?? []).filter(
       (k: { requests_today?: number }) => (k.requests_today ?? 0) > 0
     ).length;
-    const totalRequestsToday = (apiKeys ?? []).reduce(
-      (sum: number, k: { requests_today?: number }) => sum + (k.requests_today ?? 0),
-      0
-    );
 
-    // --- 5. GA4 + GSC (graceful — null if not configured) ---
+    // GA4 + GSC (only for weekly)
     const [ga4Data, gscData] = await Promise.all([
       fetchGA4Data(7),
       fetchGSCData(7),
     ]);
 
-    // --- 6. Send email ---
     const digestData: AnalyticsDigestData = {
       portfolioReturnPct: Math.round(currentReturn * 100) / 100,
       weeklyChangePct: Math.round((currentReturn - previousReturn) * 100) / 100,
@@ -159,7 +225,7 @@ export async function GET(request: Request) {
       activeApiKeysThisWeek,
       totalRequestsToday,
       weekStart,
-      weekEnd,
+      weekEnd: today,
       ga4: ga4Data,
       gsc: gscData,
     };
@@ -168,13 +234,16 @@ export async function GET(request: Request) {
 
     return NextResponse.json({
       success: true,
-      week: `${weekStart} to ${weekEnd}`,
+      mode: "weekly",
+      week: `${weekStart} to ${today}`,
       sent_to: ADMIN_EMAIL,
       summary: {
         portfolio: { returnPct: currentReturn, weeklyChange: currentReturn - previousReturn },
         crawlers: { total: totalBotVisits, prevWeek: prevWeekBotVisits },
         subscribers: { total: totalSubscribers, new: newSubscribersThisWeek, premium: premiumCount },
         api: { keys: totalApiKeys, requestsToday: totalRequestsToday },
+        ga4: ga4Data ? "included" : "not configured",
+        gsc: gscData ? "included" : "not configured",
       },
     });
   } catch (error) {
