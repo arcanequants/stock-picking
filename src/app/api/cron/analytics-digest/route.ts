@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { sendAnalyticsDigest, type AnalyticsDigestData } from "@/lib/resend";
+import { fetchGA4Data, fetchGSCData } from "@/lib/google-analytics";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -134,7 +135,13 @@ export async function GET(request: Request) {
       0
     );
 
-    // --- 5. Send email ---
+    // --- 5. GA4 + GSC (graceful — null if not configured) ---
+    const [ga4Data, gscData] = await Promise.all([
+      fetchGA4Data(7),
+      fetchGSCData(7),
+    ]);
+
+    // --- 6. Send email ---
     const digestData: AnalyticsDigestData = {
       portfolioReturnPct: Math.round(currentReturn * 100) / 100,
       weeklyChangePct: Math.round((currentReturn - previousReturn) * 100) / 100,
@@ -153,6 +160,8 @@ export async function GET(request: Request) {
       totalRequestsToday,
       weekStart,
       weekEnd,
+      ga4: ga4Data,
+      gsc: gscData,
     };
 
     await sendAnalyticsDigest(ADMIN_EMAIL, digestData);

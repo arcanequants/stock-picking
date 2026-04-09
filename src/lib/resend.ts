@@ -980,6 +980,21 @@ export interface AnalyticsDigestData {
   totalRequestsToday: number;
   weekStart: string;
   weekEnd: string;
+  ga4?: {
+    pageViews: number;
+    sessions: number;
+    users: number;
+    topPages: { path: string; views: number }[];
+    topCountries: { country: string; users: number }[];
+  } | null;
+  gsc?: {
+    totalClicks: number;
+    totalImpressions: number;
+    averageCTR: number;
+    averagePosition: number;
+    topQueries: { query: string; clicks: number; impressions: number; position: number }[];
+    topPages: { page: string; clicks: number; impressions: number }[];
+  } | null;
 }
 
 function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
@@ -1052,6 +1067,49 @@ function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
       </table>
     </div>`;
 
+  // GA4 section
+  let ga4Section = "";
+  if (data.ga4) {
+    const g = data.ga4;
+    const pageRows = g.topPages.slice(0, 5).map(p =>
+      `<tr><td style="padding:3px 0;font-size:12px;color:#374151;word-break:break-all;">${p.path}</td><td style="padding:3px 0;font-size:12px;text-align:right;font-weight:600;">${p.views.toLocaleString()}</td></tr>`
+    ).join("");
+    const countryRows = g.topCountries.slice(0, 5).map(c =>
+      `<tr><td style="padding:3px 0;font-size:12px;color:#374151;">${c.country}</td><td style="padding:3px 0;font-size:12px;text-align:right;">${c.users}</td></tr>`
+    ).join("");
+    ga4Section = `
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.8px;">WEBSITE TRAFFIC (GA4)</p>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr><td style="padding:3px 0;font-size:13px;">Page views</td><td style="text-align:right;font-weight:600;font-size:13px;">${g.pageViews.toLocaleString()}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">Sessions</td><td style="text-align:right;font-size:13px;">${g.sessions.toLocaleString()}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">Users</td><td style="text-align:right;font-size:13px;">${g.users.toLocaleString()}</td></tr>
+      </table>
+      ${pageRows ? `<p style="margin:12px 0 4px;font-size:11px;color:#9ca3af;font-weight:600;">TOP PAGES</p><table style="width:100%;border-collapse:collapse;">${pageRows}</table>` : ""}
+      ${countryRows ? `<p style="margin:12px 0 4px;font-size:11px;color:#9ca3af;font-weight:600;">TOP COUNTRIES</p><table style="width:100%;border-collapse:collapse;">${countryRows}</table>` : ""}
+    </div>`;
+  }
+
+  // GSC section
+  let gscSection = "";
+  if (data.gsc) {
+    const s = data.gsc;
+    const queryRows = s.topQueries.slice(0, 8).map(q =>
+      `<tr><td style="padding:3px 0;font-size:12px;color:#374151;">${q.query}</td><td style="padding:3px 0;font-size:12px;text-align:right;">${q.clicks}</td><td style="padding:3px 0;font-size:12px;text-align:right;color:#6b7280;">${q.impressions.toLocaleString()}</td><td style="padding:3px 0;font-size:12px;text-align:right;color:#6b7280;">${q.position}</td></tr>`
+    ).join("");
+    gscSection = `
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid #f4f4f5;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.8px;">GOOGLE SEARCH (GSC)</p>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr><td style="padding:3px 0;font-size:13px;">Clicks</td><td style="text-align:right;font-weight:600;font-size:13px;">${s.totalClicks.toLocaleString()}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">Impressions</td><td style="text-align:right;font-size:13px;">${s.totalImpressions.toLocaleString()}</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">CTR</td><td style="text-align:right;font-size:13px;">${s.averageCTR.toFixed(1)}%</td></tr>
+        <tr><td style="padding:3px 0;font-size:13px;">Avg position</td><td style="text-align:right;font-size:13px;">${s.averagePosition.toFixed(1)}</td></tr>
+      </table>
+      ${queryRows ? `<p style="margin:12px 0 4px;font-size:11px;color:#9ca3af;font-weight:600;">TOP QUERIES</p><table style="width:100%;border-collapse:collapse;"><tr><td style="font-size:10px;color:#9ca3af;padding:0 0 4px;">Query</td><td style="font-size:10px;color:#9ca3af;text-align:right;padding:0 0 4px;">Clicks</td><td style="font-size:10px;color:#9ca3af;text-align:right;padding:0 0 4px;">Impr</td><td style="font-size:10px;color:#9ca3af;text-align:right;padding:0 0 4px;">Pos</td></tr>${queryRows}</table>` : ""}
+    </div>`;
+  }
+
   // Quick links
   const links = [
     { label: "Google Analytics 4", url: "https://analytics.google.com" },
@@ -1079,6 +1137,8 @@ function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
     </div>
     <div style="padding:20px 24px;">
       ${heroSection}
+      ${ga4Section}
+      ${gscSection}
       ${crawlerSection}
       ${subscriberSection}
       ${apiSection}

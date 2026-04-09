@@ -3,21 +3,47 @@
   "version": "1.0.0",
   "description": "MCP server for Vectorial Data stock picking API — use AI agents to access daily stock picks, research, and portfolio data",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "vectorialdata-mcp": "dist/index.js"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "zod": "^3.22.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
   },
-  "keywords": ["mcp", "stock-picking", "ai-agents", "vectorial-data", "finance"],
-  "license": "MIT"
+  "keywords": [
+    "mcp",
+    "stock-picking",
+    "ai-agents",
+    "vectorial-data",
+    "finance",
+    "dividends",
+    "portfolio"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcanequants/stock-picking",
+    "directory": "mcp"
+  },
+  "homepage": "https://vectorialdata.com/developers",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }
