@@ -5130,8 +5130,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-09",
     day_of_week: "wednesday",
     wa_message: `📊 *STOCK PICK #36* — Apr 9, 2026\n\n🏢 *Cal-Maine Foods* (CALM) — $77.72\n\n🛍️ *Sus marcas*: Egg-Land's Best, Land O'Lakes, Farmhouse Eggs, Sunups, Crepini (egg wraps y pancakes)\n\n🌍 *Presencia*: Estados Unidos — el mayor productor de huevos del país (~20% del mercado), con granjas en Mississippi, Arkansas, Florida, Alabama y +10 estados.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~3.4% anual* solo por ser dueño. Cada vez que alguien compra huevos en el supermercado, desayuna un omelette o usa un egg wrap Crepini — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Los ingresos de Cal-Maine dependen casi 100% del precio de los huevos — commodity extremadamente volátil por gripe aviar, costos de alimentación y regulación.\n\n🆕 Posición #36\n🔗 https://vectorialdata.com/stocks/CALM\n✅ Certificado por blockchain → vectorialdata.com/verify/CALM\n\n💡 Algo raro pasa con los dividendos de CALM. Lo explicamos en el reporte completo. → vectorialdata.com/stocks/calm`,
-    attestation_uid: "",
-  },
+    attestation_uid:
+      "0xb8848e79df28d19e195819dc5c0b4e9ca7aeeab8d8ca500655e3721b758bdd2e",
 ];
 
 export const cycles = [
