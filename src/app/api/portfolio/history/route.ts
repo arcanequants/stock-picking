@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const { data, error } = await getSupabase()
       .from("portfolio_snapshots")
-      .select("date, total_invested, total_value, return_pct, prices")
+      .select("date, total_invested, total_value, return_pct, spy_return_pct, prices")
       .order("date", { ascending: true });
 
     if (error) {

@@ -5133,7 +5133,6 @@ export const transactions: Transaction[] = [
     attestation_uid:
       "0xb8848e79df28d19e195819dc5c0b4e9ca7aeeab8d8ca500655e3721b758bdd2e",
   },
->>>>>>> 09122bb (fix: replace click-redirect tip with self-contained insight for CALM)
 ];
 
 export const cycles = [

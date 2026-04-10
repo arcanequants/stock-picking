@@ -65,6 +65,32 @@ async function backfill() {
     }
   }
 
+  // Fetch SPY (S&P 500 ETF) historical prices for benchmark comparison
+  console.log(`Fetching historical prices for SPY (benchmark)...`);
+  const spyPrices: Record<string, number> = {};
+  let spyBaselineClose: number | null = null;
+  try {
+    const spyResult = (await yahooFinance.historical("SPY", {
+      period1: firstDate,
+      period2: new Date().toISOString().split("T")[0],
+      interval: "1d",
+    })) as HistoricalRow[];
+
+    const spySorted = [...spyResult].sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
+    for (const row of spySorted) {
+      const dateStr = new Date(row.date).toISOString().split("T")[0];
+      spyPrices[dateStr] = row.close;
+    }
+    if (spySorted.length > 0) {
+      spyBaselineClose = spySorted[0].close;
+    }
+    console.log(`  Got ${Object.keys(spyPrices).length} SPY data points`);
+  } catch (err) {
+    console.error(`  Failed to fetch SPY:`, err);
+  }
+
   // Generate daily snapshots
   const start = new Date(firstDate);
   const end = new Date();
@@ -73,11 +99,13 @@ async function backfill() {
     total_invested: number;
     total_value: number;
     return_pct: number;
+    spy_return_pct: number;
     prices: Record<string, number>;
   }[] = [];
 
   // Track last known prices for filling gaps (weekends, holidays)
   const lastKnownPrice: Record<string, number> = {};
+  let lastKnownSpyPrice: number | null = null;
 
   for (
     let d = new Date(start);
@@ -101,6 +129,11 @@ async function backfill() {
       }
     }
 
+    // Update last known SPY price (use latest available for gaps)
+    if (spyPrices[dateStr] !== undefined) {
+      lastKnownSpyPrice = spyPrices[dateStr];
+    }
+
     // Calculate portfolio value ($50 per position)
     const INVESTMENT_PER_POSITION = 50;
     let totalInvested = 0;
@@ -121,11 +154,20 @@ async function backfill() {
         ? ((totalValue - totalInvested) / totalInvested) * 100
         : 0;
 
+    // Calculate SPY benchmark return % vs first portfolio date
+    let spyReturnPct = 0;
+    if (spyBaselineClose && lastKnownSpyPrice) {
+      spyReturnPct =
+        ((lastKnownSpyPrice - spyBaselineClose) / spyBaselineClose) * 100;
+      prices.SPY = lastKnownSpyPrice;
+    }
+
     snapshots.push({
       date: dateStr,
       total_invested: Math.round(totalInvested * 100) / 100,
       total_value: Math.round(totalValue * 100) / 100,
       return_pct: Math.round(returnPct * 100) / 100,
+      spy_return_pct: Math.round(spyReturnPct * 100) / 100,
       prices,
     });
   }

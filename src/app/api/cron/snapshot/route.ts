@@ -52,6 +52,16 @@ export async function GET(request: Request) {
       }
     }
 
+    // Fetch current SPY (S&P 500 ETF) price for benchmark
+    let spyCurrentPrice: number | null = null;
+    try {
+      const spyQuote = (await yahooFinance.quote("SPY")) as Record<string, unknown>;
+      spyCurrentPrice = (spyQuote.regularMarketPrice as number | undefined) ?? null;
+      if (spyCurrentPrice) prices.SPY = spyCurrentPrice;
+    } catch (e) {
+      console.error("Failed to fetch SPY quote:", e);
+    }
+
     // Calculate portfolio value ($50 per position)
     const INVESTMENT_PER_POSITION = 50;
     let totalInvested = 0;
@@ -78,6 +88,26 @@ export async function GET(request: Request) {
 
     const today = new Date().toISOString().split("T")[0];
 
+    // Calculate SPY benchmark return % vs first portfolio snapshot's SPY price
+    let spyReturnPct = 0;
+    try {
+      if (spyCurrentPrice) {
+        const { data: firstSnapshot } = await getSupabaseAdmin()
+          .from("portfolio_snapshots")
+          .select("prices")
+          .order("date", { ascending: true })
+          .limit(1)
+          .single();
+
+        const firstSpyPrice = (firstSnapshot?.prices as Record<string, number> | undefined)?.SPY;
+        if (firstSpyPrice && firstSpyPrice > 0) {
+          spyReturnPct = ((spyCurrentPrice - firstSpyPrice) / firstSpyPrice) * 100;
+        }
+      }
+    } catch (e) {
+      console.error("SPY baseline lookup error:", e);
+    }
+
     // Upsert snapshot (update if date exists, insert if not)
     const { error } = await getSupabaseAdmin()
       .from("portfolio_snapshots")
@@ -87,6 +117,7 @@ export async function GET(request: Request) {
           total_invested: totalInvested,
           total_value: totalValue,
           return_pct: Math.round(returnPct * 100) / 100,
+          spy_return_pct: Math.round(spyReturnPct * 100) / 100,
           prices,
         },
         { onConflict: "date" }
@@ -139,6 +170,7 @@ export async function GET(request: Request) {
       total_invested: totalInvested,
       total_value: Math.round(totalValue * 100) / 100,
       return_pct: Math.round(returnPct * 100) / 100,
+      spy_return_pct: Math.round(spyReturnPct * 100) / 100,
       prices,
       price_move_events: priceMoveEvents,
       split_events: splitEvents,

@@ -18,6 +18,7 @@ interface Snapshot {
   total_invested: number;
   total_value: number;
   return_pct: number;
+  spy_return_pct?: number | null;
 }
 
 const localeMap: Record<string, string> = {
@@ -69,26 +70,60 @@ export default function PerformanceChart() {
       day: "numeric",
     }),
     return_pct: Number(s.return_pct),
+    spy_return_pct: s.spy_return_pct != null ? Number(s.spy_return_pct) : null,
     value: Number(s.total_value),
   }));
 
   const latestReturn = chartData[chartData.length - 1]?.return_pct ?? 0;
+  const latestSpy = chartData[chartData.length - 1]?.spy_return_pct ?? null;
   const lineColor = latestReturn >= 0 ? "#34d399" : "#f87171";
+  const spyColor = "#9ca3af"; // neutral grey
+  const hasSpyData = chartData.some((d) => d.spy_return_pct != null);
+  const beatingSpy =
+    hasSpyData && latestSpy != null && latestReturn > latestSpy;
+  const diffVsSpy =
+    hasSpyData && latestSpy != null ? latestReturn - latestSpy : 0;
+
+  const fmt = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
 
   return (
     <div className="border border-border rounded-xl p-6">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
         <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider">
           {t("performanceTitle")}
         </h3>
-        <span
-          className={`text-sm font-mono font-bold ${
-            latestReturn >= 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"
-          }`}
-        >
-          {latestReturn >= 0 ? "+" : ""}
-          {latestReturn.toFixed(2)}%
-        </span>
+
+        {/* Comparative pill — always visible */}
+        <div className="flex items-center gap-3 text-xs font-mono">
+          <span className="flex items-center gap-1.5">
+            <span
+              className="inline-block w-3 h-0.5 rounded-full"
+              style={{ backgroundColor: lineColor }}
+            />
+            <span className="text-text-muted">{t("vectorialLabel")}</span>
+            <span
+              className={`font-bold ${
+                latestReturn >= 0
+                  ? "text-emerald-600 dark:text-emerald-400"
+                  : "text-red-600 dark:text-red-400"
+              }`}
+            >
+              {fmt(latestReturn)}
+            </span>
+          </span>
+          {hasSpyData && latestSpy != null && (
+            <span className="flex items-center gap-1.5">
+              <span
+                className="inline-block w-3 h-0 border-t-2 border-dashed"
+                style={{ borderColor: spyColor }}
+              />
+              <span className="text-text-muted">{t("spyLabel")}</span>
+              <span className="font-bold text-text-muted">
+                {fmt(latestSpy)}
+              </span>
+            </span>
+          )}
+        </div>
       </div>
 
       <ResponsiveContainer width="100%" height={300}>
@@ -114,12 +149,30 @@ export default function PerformanceChart() {
               color: "var(--foreground)",
               fontSize: "13px",
             }}
-            formatter={(value) => {
+            formatter={(value, name) => {
               const v = Number(value);
-              return [`${v >= 0 ? "+" : ""}${v.toFixed(2)}%`, t("returnLabel")];
+              const label =
+                name === "spy_return_pct"
+                  ? t("spyLabel")
+                  : t("vectorialLabel");
+              return [fmt(v), label];
             }}
           />
           <ReferenceLine y={0} stroke="var(--border-secondary)" strokeDasharray="3 3" />
+          {/* SPY benchmark line — grey, dashed, secondary */}
+          {hasSpyData && (
+            <Line
+              type="monotone"
+              dataKey="spy_return_pct"
+              stroke={spyColor}
+              strokeWidth={1.5}
+              strokeDasharray="6 4"
+              dot={false}
+              activeDot={{ r: 4, fill: spyColor }}
+              connectNulls
+            />
+          )}
+          {/* Vectorial portfolio line — primary */}
           <Line
             type="monotone"
             dataKey="return_pct"
@@ -130,6 +183,20 @@ export default function PerformanceChart() {
           />
         </LineChart>
       </ResponsiveContainer>
+
+      {/* Micro-copy: only when beating SPY — honest silence otherwise */}
+      {beatingSpy && (
+        <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-3 font-medium">
+          {t("beatingSpyText", { diff: diffVsSpy.toFixed(2) })}
+        </p>
+      )}
+
+      {/* Benchmark disclosure — builds trust */}
+      {hasSpyData && (
+        <p className="text-[11px] text-text-faint mt-2 leading-relaxed">
+          {t("benchmarkNote")}
+        </p>
+      )}
     </div>
   );
 }
