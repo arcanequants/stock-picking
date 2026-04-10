@@ -5298,8 +5298,8 @@ export const transactions: Transaction[] = [
     date: "2026-04-10",
     day_of_week: "friday",
     wa_message: `📊 *STOCK PICK #37* — Apr 10, 2026\n\n🏢 *Cameco Corporation* (CCJ) — $116.66\n\n⛏️ *Su producto*: Uranio — el combustible que mueve los reactores nucleares del mundo. Dueños de McArthur River (Saskatchewan), la mina de uranio más concentrada del planeta, y del 49% de Westinghouse (reactores nucleares AP1000 y AP300).\n\n🌍 *Presencia*: Canadá (Saskatoon HQ), con minas en Saskatchewan y joint venture en Kazajistán. Contratos de suministro con utilities nucleares en EE.UU., Europa, Asia y el Golfo — el productor de uranio más grande del mundo occidental.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.21% anual* solo por ser dueño — poco dividendo, pero la ganancia real está en el crecimiento. Cada vez que un reactor nuclear genera electricidad en Europa, Asia o EE.UU. — y cada vez que Microsoft, Google o Amazon firman un contrato para alimentar sus data centers de AI con energía nuclear — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Valuación muy alta (P/E forward 54x) y dependencia total del precio del uranio, que es cíclico.\n\n🆕 Posición #37\n🔗 https://vectorialdata.com/stocks/CCJ\n✅ Certificado por blockchain → vectorialdata.com/verify/CCJ\n\n💡 Dato que casi nadie sabe: cuando Microsoft firmó para reactivar Three Mile Island en 2024, cuando Amazon invirtió en X-energy, y cuando Google cerró con Kairos Power — todos llegaron a la misma conclusión. Los data centers de AI necesitan energía 24/7 sin carbono, y solo el nuclear da las 3 cosas a la vez. Cameco es dueña del combustible que hace posible esa electricidad — y de la mina McArthur River, que es ~100x más concentrada que el uranio normal. Por eso una apuesta al boom de AI es también una apuesta al uranio.`,
-    attestation_uid: "",
-  },
+    attestation_uid:
+      "0xd6537a82ef066d3ecacb03b64f49bb9c414bf42eedb653840977b9bf8c271dd2",
 ];
 
 export const cycles = [
