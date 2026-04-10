@@ -40,6 +40,11 @@ async function backfill() {
   console.log(`Backfilling from ${firstDate} to today`);
   console.log(`Tickers: ${tickers.join(", ")}`);
 
+  // period2 is EXCLUSIVE in yahoo-finance2 historical — use tomorrow to include today
+  const tomorrow = new Date();
+  tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+  const period2Str = tomorrow.toISOString().split("T")[0];
+
   // Fetch historical prices for each ticker
   const historicalPrices: Record<string, Record<string, number>> = {};
 
@@ -48,7 +53,7 @@ async function backfill() {
     try {
       const result = (await yahooFinance.historical(ticker, {
         period1: firstDate,
-        period2: new Date().toISOString().split("T")[0],
+        period2: period2Str,
         interval: "1d",
       })) as HistoricalRow[];
 
@@ -72,7 +77,7 @@ async function backfill() {
   try {
     const spyResult = (await yahooFinance.historical("SPY", {
       period1: firstDate,
-      period2: new Date().toISOString().split("T")[0],
+      period2: period2Str,
       interval: "1d",
     })) as HistoricalRow[];
 
@@ -103,9 +108,8 @@ async function backfill() {
     prices: Record<string, number>;
   }[] = [];
 
-  // Track last known prices for filling gaps (weekends, holidays)
+  // Track last known prices for intra-day stale tickers (not for market-closed days)
   const lastKnownPrice: Record<string, number> = {};
-  let lastKnownSpyPrice: number | null = null;
 
   for (
     let d = new Date(start);
@@ -122,16 +126,20 @@ async function backfill() {
     const activeTxs = sorted.filter((t) => t.date <= dateStr);
     if (activeTxs.length === 0) continue;
 
-    // Update last known prices
+    // Auto-detect market holidays: if SPY has no data for this date, the NYSE
+    // was closed (Good Friday, Christmas, etc.). Skip this date entirely —
+    // never fabricate snapshots with stale prices for closed-market days.
+    if (spyPrices[dateStr] === undefined) {
+      console.log(`  Skipping ${dateStr} — market closed (no SPY data)`);
+      continue;
+    }
+    const todaySpyPrice = spyPrices[dateStr];
+
+    // Update last known prices (only for tickers that traded today)
     for (const ticker of tickers) {
       if (historicalPrices[ticker]?.[dateStr]) {
         lastKnownPrice[ticker] = historicalPrices[ticker][dateStr];
       }
-    }
-
-    // Update last known SPY price (use latest available for gaps)
-    if (spyPrices[dateStr] !== undefined) {
-      lastKnownSpyPrice = spyPrices[dateStr];
     }
 
     // Calculate portfolio value ($50 per position)
@@ -155,11 +163,12 @@ async function backfill() {
         : 0;
 
     // Calculate SPY benchmark return % vs first portfolio date
+    // (todaySpyPrice is guaranteed defined because we skipped closed-market days above)
     let spyReturnPct = 0;
-    if (spyBaselineClose && lastKnownSpyPrice) {
+    if (spyBaselineClose) {
       spyReturnPct =
-        ((lastKnownSpyPrice - spyBaselineClose) / spyBaselineClose) * 100;
-      prices.SPY = lastKnownSpyPrice;
+        ((todaySpyPrice - spyBaselineClose) / spyBaselineClose) * 100;
+      prices.SPY = todaySpyPrice;
     }
 
     snapshots.push({

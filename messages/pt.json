@@ -295,7 +295,7 @@
     "vectorialLabel": "Vectorial",
     "spyLabel": "S&P 500",
     "beatingSpyText": "Nosso portfólio está +{diff}% acima do S&P 500",
-    "benchmarkNote": "Rentabilidade passada não garante resultados futuros. O S&P 500 é mostrado como referência, não como garantia.",
+    "benchmarkNote": "Rentabilidade passada não garante resultados futuros. O S&P 500 é mostrado como referência, não como garantia. Os snapshots são tomados apenas em dias de mercado aberto; não preenchemos dias fechados com dados sintéticos.",
     "currentCycle": "Ciclo Atual",
     "noCycle": "Sem ciclo ativo. Aguardando a próxima rodada de picks.",
     "newStocks": "Novas",

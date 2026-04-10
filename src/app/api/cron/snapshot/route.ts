@@ -52,14 +52,36 @@ export async function GET(request: Request) {
       }
     }
 
-    // Fetch current SPY (S&P 500 ETF) price for benchmark
+    // Fetch current SPY (S&P 500 ETF) price for benchmark.
+    // SPY is also our market-open signal: if Yahoo reports no recent trade
+    // (market holiday like Good Friday), we skip the snapshot entirely instead
+    // of fabricating one with stale data.
     let spyCurrentPrice: number | null = null;
+    let spyLastTradeTime: number | null = null;
     try {
       const spyQuote = (await yahooFinance.quote("SPY")) as Record<string, unknown>;
       spyCurrentPrice = (spyQuote.regularMarketPrice as number | undefined) ?? null;
+      const lastTrade = spyQuote.regularMarketTime;
+      if (lastTrade instanceof Date) {
+        spyLastTradeTime = lastTrade.getTime();
+      } else if (typeof lastTrade === "number") {
+        spyLastTradeTime = lastTrade * 1000;
+      }
       if (spyCurrentPrice) prices.SPY = spyCurrentPrice;
     } catch (e) {
       console.error("Failed to fetch SPY quote:", e);
+    }
+
+    // Market-holiday guard: if SPY's last trade is older than 20 hours, the
+    // market did not open today (holiday). Skip snapshot to avoid duplicating
+    // yesterday's values. 20h tolerance handles timezone edge cases.
+    if (spyLastTradeTime) {
+      const hoursSinceLastTrade = (Date.now() - spyLastTradeTime) / (1000 * 60 * 60);
+      if (hoursSinceLastTrade > 20) {
+        return NextResponse.json({
+          message: `Skipped: market closed today (SPY last traded ${hoursSinceLastTrade.toFixed(1)}h ago)`,
+        });
+      }
     }
 
     // Calculate portfolio value ($50 per position)
