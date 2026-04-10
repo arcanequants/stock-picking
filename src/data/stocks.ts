@@ -4662,6 +4662,161 @@ Cal-Maine es el líder absoluto en producción de huevos en EE.UU. con un moat d
     last_updated_at: "2026-04-09T00:00:00Z",
     next_review_at: "2026-10-09T00:00:00Z",
   },
+  {
+    id: 39,
+    ticker: "CCJ",
+    name: "Cameco Corporation",
+    sector: "Energy",
+    industry: "Uranium Mining & Nuclear Fuel Services",
+    country: "Canada",
+    region: "North America",
+    currency: "USD",
+    price: 116.66,
+    pe_ratio: 125.4,
+    pe_forward: 54.2,
+    dividend_yield: 0.21,
+    market_cap_b: 50.8,
+    eps: 0.93,
+    summary_short:
+      "El productor de uranio más grande del mundo occidental. Dueño de McArthur River (la mina de uranio más concentrada del planeta) y del 49% de Westinghouse (reactores nucleares). El combustible del renacimiento nuclear que alimenta los data centers de AI.",
+    summary_what:
+      "Cameco Corporation es una de las empresas más grandes del mundo dedicadas a la cadena completa del combustible nuclear: minería de uranio, refinación, conversión y servicios de combustible para reactores. Opera las minas más importantes del planeta en la cuenca de Athabasca (Saskatchewan, Canadá): McArthur River/Key Lake — la mina de uranio de alta ley más grande del mundo, con ley promedio ~6% (aproximadamente 100 veces más concentrada que el uranio típico) — y Cigar Lake, otra mina de ultra-alta ley. También posee facilidades de refinación en Blind River, conversión en Port Hope (Ontario), y fabricación de combustible para reactores CANDU.\n\nEn octubre de 2023, Cameco (49%) y Brookfield Asset Management (51%) adquirieron Westinghouse Electric Company por $7.9B. Westinghouse es uno de los mayores proveedores mundiales de tecnología, servicios y combustible para reactores nucleares, con tecnología AP1000 y el reactor modular pequeño AP300. Sus clientes son utilities nucleares alrededor del mundo bajo contratos de largo plazo (10-15 años).",
+    summary_why:
+      "Cameco es la apuesta más directa al renacimiento nuclear. Varios vientos de cola convergen simultáneamente: (1) Big Tech (Microsoft, Amazon, Google, Meta) firmó contratos multimillonarios de energía nuclear para alimentar sus data centers de AI — demanda 24/7 sin carbono que solo los reactores pueden dar; (2) más de 30 países firmaron en COP28 el compromiso de triplicar la capacidad nuclear global para 2050; (3) el Prohibiting Russian Uranium Imports Act (mayo 2024) sacó al mayor proveedor del mercado occidental, creando un déficit estructural; (4) el precio spot del uranio pasó de ~$20/lb en 2020 a $65-85/lb en 2025, y los contratos de largo plazo están en niveles récord; (5) la adquisición de Westinghouse ya está generando flujo de caja incremental para Cameco; (6) Cameco firmó contratos de suministro hasta 2030+ que garantizan revenue predecible a precios superiores.",
+    summary_risk:
+      "El precio del uranio es el mayor driver del negocio y es cíclico — si se materializan nuevos proyectos de minería (Kazatomprom, Namibia, Australia), la oferta puede aumentar y presionar precios. La valuación está muy alta: a P/E trailing de 125x y forward de 54x, la acción está priced-for-perfection — cualquier tropiezo operacional en McArthur River o Cigar Lake, o retrasos regulatorios en Westinghouse, pueden causar caídas fuertes. Riesgo adicional: el dividendo es bajo (~0.21%), así que el retorno depende casi 100% de la apreciación del precio, no de ingresos recurrentes.",
+    research_full: `# Cameco Corporation (CCJ) — Research Completo
+
+## Precio: $116.66 | P/E: 125.4 | P/E Forward: 54.2 | Div Yield: 0.21% | Market Cap: $50.8B
+
+---
+
+## ¿Qué es Cameco?
+
+Cameco Corporation es el **productor de uranio más grande del mundo occidental** y una de las pocas empresas con presencia en la cadena completa del combustible nuclear: minería, refinación, conversión, fabricación de combustible y — desde 2023 — reactores nucleares a través de su participación en Westinghouse. Fundada en 1988 en Saskatoon, Saskatchewan, Canadá, Cameco provee combustible a utilities nucleares alrededor del mundo bajo contratos de largo plazo.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | % Revenue aprox |
+|----------|-------------|-----------------|
+| **Uranium** | Minería y venta de U3O8 (yellowcake) | ~65% |
+| **Fuel Services** | Refinación, conversión y fabricación de combustible | ~15% |
+| **Westinghouse (49%)** | Reactores, combustible y servicios nucleares | ~20% |
+
+## Activos Mineros Clave
+
+| Mina | Ubicación | Participación | Ley Promedio | Notas |
+|------|-----------|---------------|--------------|-------|
+| **McArthur River/Key Lake** | Saskatchewan, Canadá | 70% | ~6% U3O8 | La mina de uranio de alta ley más grande del mundo — ~100x más concentrada que el promedio |
+| **Cigar Lake** | Saskatchewan, Canadá | 54.5% | ~17% U3O8 | Una de las minas con ley más alta del planeta |
+| **Inkai** | Kazajistán | 40% JV | ISR (lixiviación in situ) | Producción de bajo costo con Kazatomprom |
+| **Rabbit Lake** | Saskatchewan, Canadá | 100% | — | En cuidado y mantenimiento |
+
+## Westinghouse — El Game Changer de 2023
+
+En **octubre de 2023**, Cameco (49%) y Brookfield Asset Management (51%) cerraron la adquisición de **Westinghouse Electric Company por $7.9B**. Esto transformó a Cameco de pure-play de uranio a integrador vertical de la cadena nuclear completa.
+
+### Por qué importa:
+- **AP1000**: uno de los reactores Gen III+ más vendidos del mundo — nuevas construcciones en Polonia, Bulgaria, Ucrania
+- **AP300**: reactor modular pequeño (SMR) en desarrollo para data centers y grid industrial
+- **Servicios y combustible**: ingreso recurrente de alta margen de plantas existentes
+- **Backlog de $30B+** en contratos de largo plazo
+- **Cameco ya recibió ~$170M de dividendos** de su participación en el primer año completo
+
+## El Renacimiento Nuclear — Por Qué Ahora
+
+### 1. Big Tech apuesta al nuclear para AI
+- **Microsoft (Sep 2024)**: deal de 20 años con Constellation para reactivar Three Mile Island (Unit 1) — primera vez que una central reactivada es solo para una tech company
+- **Amazon (Oct 2024)**: $500M+ invertidos en SMRs con X-energy, además del deal con Talen Energy por Susquehanna
+- **Google (Oct 2024)**: acuerdo con Kairos Power por 500 MW de SMRs
+- **Meta (Dic 2024)**: RFP para 1-4 GW de capacidad nuclear en EE.UU.
+
+Todas estas compañías llegaron a la misma conclusión: los data centers de AI necesitan energía 24/7 sin carbono, y solo el nuclear puede cumplir los tres requisitos a la vez.
+
+### 2. Compromiso global — COP28
+En diciembre de 2023, **más de 30 países firmaron en COP28 el compromiso de triplicar la capacidad nuclear global para 2050**. Incluye EE.UU., Francia, Japón, Corea del Sur, Canadá, Emiratos Árabes y UK.
+
+### 3. Prohibición del uranio ruso
+En mayo de 2024, EE.UU. firmó el **Prohibiting Russian Uranium Imports Act**, que prohíbe la importación de uranio enriquecido ruso. Rusia era el ~20% del suministro occidental. Este vacío beneficia directamente a productores como Cameco.
+
+### 4. Déficit estructural
+El mundo consume ~180M lb de U3O8 al año, pero la minería produce solo ~140M lb. La diferencia venía de inventarios secundarios (armas nucleares desmanteladas, reprocesamiento) que se están agotando. **Déficit estructural → precios más altos sostenidos.**
+
+## Precio del Uranio — Rally Histórico
+
+| Año | Precio Spot (USD/lb) | Notas |
+|-----|----------------------|-------|
+| 2020 | ~$20-30 | Mínimos post-Fukushima |
+| 2022 | ~$50 | Inicio del rally post-Ucrania |
+| 2024 (peak) | ~$107 | Máximo de 16 años |
+| 2025 | ~$65-85 | Consolidación, contratos largo plazo aún más altos |
+
+Los contratos de largo plazo que Cameco está firmando están en niveles históricamente altos, garantizando revenue predecible.
+
+## Resultados Financieros 2024
+
+| Métrica | Valor |
+|---------|-------|
+| **Revenue** | ~$3.1B CAD |
+| **Net Earnings** | ~$400M+ CAD |
+| **Adjusted EBITDA** | ~$1.1B CAD |
+| **Contratos firmados (2024)** | 40M+ lb U3O8 |
+| **Inventario contratado** | Asegurado hasta 2030+ |
+
+## Capital Return
+
+| Métrica | Valor |
+|---------|-------|
+| **Dividendo anual** | ~$0.24 USD/acción |
+| **Yield actual** | ~0.21% |
+| **Historia del dividendo** | Conservador — prioriza balance sheet |
+| **Filosofía** | Crecer el dividendo con el ciclo, no forzarlo |
+
+**Nota importante**: CCJ es una apuesta de apreciación, no de dividendos. El retorno viene del crecimiento del negocio, no de pagos trimestrales.
+
+## Análisis de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy / Outperform** |
+| Price Target Promedio | **~$130** |
+| Upside al Target | **+11-12%** |
+| Buy ratings | Mayoría de analistas |
+
+## ¿Por Qué Nos Gusta?
+
+1. **Monopolio del Oeste** — Cameco es la única major nuclear completamente occidental, accesible y regulada (NYSE + TSX). Kazatomprom es más grande, pero está en Kazajistán y tiene exposición rusa.
+2. **McArthur River** — La mina más concentrada del mundo significa el costo más bajo y los márgenes más altos del sector.
+3. **Westinghouse** — Ya no es solo uranio: ahora tiene exposición a reactores, servicios y SMRs — el ciclo completo.
+4. **Contratos de largo plazo** — Revenue asegurada hasta 2030+ a precios récord.
+5. **Vientos de cola seculares** — AI, descarbonización, bloqueo ruso, compromiso COP28 — todos empujan en la misma dirección.
+6. **Opcionalidad de SMRs** — Si los reactores modulares pequeños escalan, la demanda de uranio se multiplica en la próxima década.
+
+## Riesgos Principales
+
+1. **Valuación muy alta** — P/E trailing de 125x, forward de 54x. Priced-for-perfection.
+2. **Sensibilidad al precio del uranio** — Ciclo de commodities; si se adelanta nueva oferta, los precios pueden corregir.
+3. **Riesgo operacional** — McArthur River ya tuvo un cierre prolongado (2018-2022). Cualquier interrupción impacta el profit.
+4. **Westinghouse aún no está completamente integrado** — Costos de integración y riesgos de ejecución en reactores nuevos.
+5. **Dividendo bajo** — Retorno casi 100% dependiente de apreciación de precio, no de ingresos recurrentes.
+6. **Riesgo geopolítico** — La mina Inkai está en Kazajistán, que depende de infraestructura rusa para exportar.
+
+## Conclusión
+
+Cameco es la apuesta más pura y accesible al renacimiento nuclear. Ya no es solo uranio: con el 49% de Westinghouse, Cameco es ahora un integrador vertical de la cadena nuclear completa — desde la mina de Saskatchewan hasta el reactor en funcionamiento. El convergir de Big Tech comprando energía nuclear para AI, el bloqueo al uranio ruso, el compromiso COP28 de triplicar la capacidad global, y los contratos de largo plazo a precios récord, crean un tailwind estructural difícil de replicar en otro sector. La valuación es cara — pero cuando todos los vientos soplan en la misma dirección, las apuestas caras pueden seguir subiendo por años.
+
+---
+
+*Research fecha: 10 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 130.0,
+    analyst_upside: 11.4,
+    status: "active",
+    first_researched_at: "2026-04-10T00:00:00Z",
+    last_updated_at: "2026-04-10T00:00:00Z",
+    next_review_at: "2026-10-10T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -5133,6 +5288,18 @@ export const transactions: Transaction[] = [
     attestation_uid:
       "0xb8848e79df28d19e195819dc5c0b4e9ca7aeeab8d8ca500655e3721b758bdd2e",
   },
+  {
+    id: 37,
+    stock_id: 39,
+    ticker: "CCJ",
+    type: "new" as const,
+    cycle_number: 8,
+    price: 116.66,
+    date: "2026-04-10",
+    day_of_week: "friday",
+    wa_message: `📊 *STOCK PICK #37* — Apr 10, 2026\n\n🏢 *Cameco Corporation* (CCJ) — $116.66\n\n⛏️ *Su producto*: Uranio — el combustible que mueve los reactores nucleares del mundo. Dueños de McArthur River (Saskatchewan), la mina de uranio más concentrada del planeta, y del 49% de Westinghouse (reactores nucleares AP1000 y AP300).\n\n🌍 *Presencia*: Canadá (Saskatoon HQ), con minas en Saskatchewan y joint venture en Kazajistán. Contratos de suministro con utilities nucleares en EE.UU., Europa, Asia y el Golfo — el productor de uranio más grande del mundo occidental.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.21% anual* solo por ser dueño — poco dividendo, pero la ganancia real está en el crecimiento. Cada vez que un reactor nuclear genera electricidad en Europa, Asia o EE.UU. — y cada vez que Microsoft, Google o Amazon firman un contrato para alimentar sus data centers de AI con energía nuclear — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Valuación muy alta (P/E forward 54x) y dependencia total del precio del uranio, que es cíclico.\n\n🆕 Posición #37\n🔗 https://vectorialdata.com/stocks/CCJ\n✅ Certificado por blockchain → vectorialdata.com/verify/CCJ\n\n💡 Dato que casi nadie sabe: cuando Microsoft firmó para reactivar Three Mile Island en 2024, cuando Amazon invirtió en X-energy, y cuando Google cerró con Kairos Power — todos llegaron a la misma conclusión. Los data centers de AI necesitan energía 24/7 sin carbono, y solo el nuclear da las 3 cosas a la vez. Cameco es dueña del combustible que hace posible esa electricidad — y de la mina McArthur River, que es ~100x más concentrada que el uranio normal. Por eso una apuesta al boom de AI es también una apuesta al uranio.`,
+    attestation_uid: "",
+  },
 ];
 
 export const cycles = [
@@ -5197,7 +5364,7 @@ export const cycles = [
     cycle_number: 8,
     type: "new" as const,
     target_count: 5,
-    current_count: 1,
+    current_count: 2,
     status: "active" as const,
   },
 ];
