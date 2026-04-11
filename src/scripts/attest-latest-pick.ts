@@ -17,75 +17,148 @@ import { createAttestation } from "../lib/eas";
 
 const STOCKS_FILE = resolve(__dirname, "../data/stocks.ts");
 
+/**
+ * Count transaction object delimiter braces (lines that are exactly `{` or `},`)
+ * inside the `export const transactions = [...]` block. Used as a sanity check
+ * to verify our rewrite did not delete or duplicate structural braces.
+ *
+ * This counts only lines that START with `{` / `},` — embedded braces inside
+ * template strings (wa_message) are ignored.
+ */
+function countTransactionBraces(fileContent: string): { open: number; close: number } {
+  const start = fileContent.indexOf("export const transactions");
+  if (start === -1) return { open: 0, close: 0 };
+  // Find the matching closing `];` of the transactions array
+  const end = fileContent.indexOf("\n];", start);
+  if (end === -1) return { open: 0, close: 0 };
+  const section = fileContent.slice(start, end);
+  let open = 0;
+  let close = 0;
+  for (const line of section.split("\n")) {
+    if (/^\s*\{\s*$/.test(line)) open++;
+    if (/^\s*\},?\s*$/.test(line)) close++;
+  }
+  return { open, close };
+}
+
 function writeUidToStocksFile(
   txId: number,
   uid: string,
   fileContent: string
 ): string {
-  // Find the transaction block by matching its id and the closing brace
-  // We look for the wa_message line (last field before closing) and insert attestation_uid after it
-  // Pattern: find `id: <txId>,` then find the next `},` or `}\n];` and insert before it
-
-  // Strategy: find the transaction by id, then find where to insert attestation_uid
-  // Match: `    id: <txId>,` ... then the closing `  },` or `  },\n]`
   const lines = fileContent.split("\n");
-  let inTargetTx = false;
-  let insertAfterLine = -1;
 
-  // Start searching only after "export const transactions" to avoid matching stock entries
+  // Locate the transactions section so we don't accidentally match stock entries
   const txSectionStart = lines.findIndex((l) =>
     l.includes("export const transactions")
   );
-  const startLine = txSectionStart >= 0 ? txSectionStart : 0;
+  if (txSectionStart === -1) {
+    throw new Error("Could not find 'export const transactions' in stocks.ts");
+  }
 
-  for (let i = startLine; i < lines.length; i++) {
-    const line = lines[i];
-
-    // Detect start of our target transaction
-    if (line.match(new RegExp(`^\\s*id:\\s*${txId},`))) {
-      inTargetTx = true;
-      continue;
-    }
-
-    // If we hit the next transaction's id, we passed our target
-    if (inTargetTx && line.match(/^\s*id:\s*\d+,/)) {
-      break;
-    }
-
-    // If in target tx and we find the closing `},` or end `};`
-    if (inTargetTx && line.match(/^\s*},?\s*$/)) {
-      // Insert before this closing brace
-      // Find the last non-empty content line before this
-      insertAfterLine = i;
+  // Find the target transaction's `id: <txId>,` line
+  let idLineIdx = -1;
+  for (let i = txSectionStart; i < lines.length; i++) {
+    if (lines[i].match(new RegExp(`^\\s*id:\\s*${txId},`))) {
+      idLineIdx = i;
       break;
     }
   }
-
-  if (insertAfterLine === -1) {
+  if (idLineIdx === -1) {
     throw new Error(
-      `Could not find transaction id: ${txId} in stocks.ts to insert attestation_uid`
+      `Could not find transaction id: ${txId} in stocks.ts`
     );
   }
 
-  // Check if attestation_uid already exists for this transaction
-  for (let i = insertAfterLine - 10; i < insertAfterLine; i++) {
-    if (i >= 0 && lines[i].includes("attestation_uid")) {
-      // Replace existing attestation_uid
-      lines[i] = `    attestation_uid:`;
-      lines[i + 1] = `      "${uid}",`;
-      return lines.join("\n");
+  // Find the closing `},` of this transaction object (stop if we hit the next tx's id)
+  let closingIdx = -1;
+  for (let i = idLineIdx + 1; i < lines.length; i++) {
+    if (lines[i].match(/^\s*id:\s*\d+,/)) {
+      throw new Error(
+        `Hit next transaction before finding closing brace for id: ${txId}`
+      );
+    }
+    if (lines[i].match(/^\s*},?\s*$/)) {
+      closingIdx = i;
+      break;
+    }
+  }
+  if (closingIdx === -1) {
+    throw new Error(
+      `Could not find closing '},' for transaction id: ${txId}`
+    );
+  }
+
+  // Detect if an attestation_uid field already exists between id and closing brace.
+  // Support both single-line and multi-line formats:
+  //   Single-line: `    attestation_uid: "0x...",`
+  //   Multi-line:
+  //     `    attestation_uid:`
+  //     `      "0x...",`
+  let attUidStart = -1; // inclusive
+  let attUidEnd = -1;   // inclusive
+  for (let i = idLineIdx + 1; i < closingIdx; i++) {
+    if (/^\s*attestation_uid\s*:/.test(lines[i])) {
+      attUidStart = i;
+      // Single-line if the value appears on the same line
+      if (/^\s*attestation_uid\s*:\s*"[^"]*"\s*,?\s*$/.test(lines[i])) {
+        attUidEnd = i;
+      } else {
+        // Multi-line: scan forward for the string value line
+        for (let j = i + 1; j < closingIdx; j++) {
+          if (/^\s*"[^"]*"\s*,?\s*$/.test(lines[j])) {
+            attUidEnd = j;
+            break;
+          }
+        }
+        if (attUidEnd === -1) {
+          throw new Error(
+            `Malformed attestation_uid near line ${i + 1} in transaction id: ${txId}`
+          );
+        }
+      }
+      break;
     }
   }
 
-  // Insert attestation_uid before the closing brace
-  const indent = "    ";
-  const newLines = [
-    `${indent}attestation_uid:`,
-    `${indent}  "${uid}",`,
-  ];
+  // Build the new (normalized) single-line field. Writing in a single canonical
+  // format eliminates the off-by-one bug that destroyed the closing `},` when
+  // the original code assumed a multi-line layout and overwrote `lines[i + 1]`.
+  const newLine = `    attestation_uid: "${uid}",`;
 
-  lines.splice(insertAfterLine, 0, ...newLines);
-  return lines.join("\n");
+  let newLines: string[];
+  if (attUidStart >= 0) {
+    // Replace existing field (1 or 2 lines) with normalized single line
+    newLines = [
+      ...lines.slice(0, attUidStart),
+      newLine,
+      ...lines.slice(attUidEnd + 1),
+    ];
+  } else {
+    // No existing field: insert just before the closing brace
+    newLines = [
+      ...lines.slice(0, closingIdx),
+      newLine,
+      ...lines.slice(closingIdx),
+    ];
+  }
+
+  const result = newLines.join("\n");
+
+  // Sanity check: the number of transaction object delimiter braces must not
+  // change. If it did, we corrupted structure and must abort.
+  const before = countTransactionBraces(fileContent);
+  const after = countTransactionBraces(result);
+  if (before.open !== after.open || before.close !== after.close) {
+    throw new Error(
+      `Brace sanity check failed for tx id ${txId}. ` +
+        `Before: open=${before.open} close=${before.close}, ` +
+        `After: open=${after.open} close=${after.close}. ` +
+        `Aborting to prevent stocks.ts corruption.`
+    );
+  }
+
+  return result;
 }
 
 async function attestLatest() {
