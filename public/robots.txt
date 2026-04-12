@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /welcome
+Disallow: /marketing/
 
 # AI Search/Citation crawlers — ALLOW (these bring referral traffic)
 User-agent: OAI-SearchBot

@@ -62,12 +62,6 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: { card: "summary_large_image" },
     alternates: {
       canonical: SITE_URL,
-      languages: {
-        es: SITE_URL,
-        en: SITE_URL,
-        pt: SITE_URL,
-        hi: SITE_URL,
-      },
     },
     ...(process.env.GOOGLE_SITE_VERIFICATION && {
       verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
