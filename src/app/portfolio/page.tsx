@@ -97,6 +97,23 @@ export default async function PortfolioPage() {
       {/* 3. Performance chart — always free (social proof, not product) */}
       <PerformanceChart />
 
+      {/* Trust signals — methodology + lessons */}
+      <p className="text-center text-sm text-text-faint py-2">
+        <Link
+          href="/metodologia"
+          className="text-brand hover:text-brand-hover transition-colors"
+        >
+          {t("trustMethodology")}
+        </Link>
+        {" · "}
+        <Link
+          href="/lecciones"
+          className="text-brand hover:text-brand-hover transition-colors"
+        >
+          {t("trustLessons")}
+        </Link>
+      </p>
+
       {/* 4. Transaction history (partial free + premium fade) */}
       {transactions.length > 0 && (
         <section className="border border-border rounded-xl p-5">

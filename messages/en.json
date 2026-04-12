@@ -201,6 +201,8 @@
   "Portfolio": {
     "title": "Portfolio Dashboard",
     "subtitle": "Overview of positions, allocation, and cycle progress.",
+    "trustMethodology": "How we calculate returns",
+    "trustLessons": "Our worst picks and what we learned",
     "transactionHistory": "Transaction History",
     "date": "Date",
     "ticker": "Ticker",
@@ -244,6 +246,9 @@
     "statusActive": "Active",
     "statusWatchlist": "Watchlist",
     "statusAvoid": "Avoid",
+    "trustLine": "Every return is calculated with the same formula, no exceptions.",
+    "trustMethodology": "See methodology",
+    "trustLessons": "Our worst decisions",
     "ctaText": "Don't miss the next pick",
     "ctaButton": "Join $1/mo",
     "apiText": "Access this data programmatically",

@@ -6,6 +6,7 @@ import { getAuthState } from "@/lib/auth";
 import { getRotationSeed, selectVisible, selectShowcase, selectFeatured } from "@/lib/rotation";
 import StocksView from "@/components/StocksView";
 import NotificationsBanner from "@/components/NotificationsBanner";
+import Link from "next/link";
 import FreeSignupForm from "@/components/FreeSignupForm";
 import { getLocalizedField } from "@/data/stock-translations";
 
@@ -212,6 +213,28 @@ export default async function StocksPage() {
         featuredPick={featuredPickData}
         hiddenCount={hiddenItems.length}
       />
+
+      {/* Trust block — transparent methodology */}
+      <section className="border border-border rounded-xl p-5 max-w-2xl mx-auto text-center">
+        <p className="text-sm text-text-muted">
+          {t("trustLine")}
+        </p>
+        <div className="flex items-center justify-center gap-3 mt-2 text-sm">
+          <Link
+            href="/metodologia"
+            className="text-brand hover:text-brand-hover transition-colors"
+          >
+            {t("trustMethodology")}
+          </Link>
+          <span className="text-text-faint">&middot;</span>
+          <Link
+            href="/lecciones"
+            className="text-brand hover:text-brand-hover transition-colors"
+          >
+            {t("trustLessons")}
+          </Link>
+        </div>
+      </section>
 
       {!isSubscribed && (
         <section className="max-w-md mx-auto text-center space-y-3 py-4">

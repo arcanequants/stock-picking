@@ -201,6 +201,8 @@
   "Portfolio": {
     "title": "Painel do Portfólio",
     "subtitle": "Resumo de posições, distribuição e progresso do ciclo.",
+    "trustMethodology": "Como calculamos os rendimentos",
+    "trustLessons": "Nossos piores picks e o que aprendemos",
     "transactionHistory": "Histórico de Transações",
     "date": "Data",
     "ticker": "Ticker",
@@ -244,6 +246,9 @@
     "statusActive": "Ativa",
     "statusWatchlist": "Em espera",
     "statusAvoid": "Evitar",
+    "trustLine": "Cada rendimento é calculado com a mesma fórmula, sem exceções.",
+    "trustMethodology": "Ver metodologia",
+    "trustLessons": "Nossas piores decisões",
     "ctaText": "Não perca a próxima escolha",
     "ctaButton": "Assine $1/mês",
     "apiText": "Acesse esses dados programaticamente",
