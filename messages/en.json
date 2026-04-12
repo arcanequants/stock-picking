@@ -543,7 +543,7 @@
     "faq5Q": "Is this financial advice?",
     "faq5A": "No. This is editorial and informational content. It is not a recommendation to buy, sell, or hold any security. Always consult a qualified financial adviser before making investment decisions.",
     "contextTitle": "Context of the full portfolio",
-    "contextBody": "These 5 picks are one slice of the portfolio. To see all positions (winners and losers) visit the {portfolioLink}. The full portfolio performance is also available in real time and is also verifiable.",
+    "contextBody": "These 5 picks are one slice of the portfolio. To see all positions (winners and losers) visit the <portfolioLink>full portfolio</portfolioLink>. The full portfolio performance is also available in real time and is also verifiable.",
     "contextPortfolioLink": "full portfolio",
     "ukBannerTitle": "🇬🇧 UK RESIDENTS",
     "ukBannerBody": "This page may constitute a financial promotion under FCA Section 21 of FSMA 2000. The content has not been approved by an FCA-authorized person. Investing carries risk. Consult an FCA-authorized adviser before making investment decisions.",

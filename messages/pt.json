@@ -543,7 +543,7 @@
     "faq5Q": "Isto é assessoria financeira?",
     "faq5A": "Não. Este é conteúdo editorial e informativo. Não é uma recomendação de comprar, vender ou manter qualquer valor mobiliário. Sempre consulte um assessor financeiro qualificado antes de tomar decisões de investimento.",
     "contextTitle": "Contexto do portfólio completo",
-    "contextBody": "Estes 5 picks são uma parte do portfólio. Para ver todas as posições (vencedoras e perdedoras) visite o {portfolioLink}. O desempenho global do portfólio também está disponível em tempo real e também é verificável.",
+    "contextBody": "Estes 5 picks são uma parte do portfólio. Para ver todas as posições (vencedoras e perdedoras) visite o <portfolioLink>portfólio completo</portfolioLink>. O desempenho global do portfólio também está disponível em tempo real e também é verificável.",
     "contextPortfolioLink": "portfólio completo",
     "ukBannerTitle": "🇬🇧 UK RESIDENTS",
     "ukBannerBody": "This page may constitute a financial promotion under FCA Section 21 of FSMA 2000. The content has not been approved by an FCA-authorized person. Investing carries risk. Consult an FCA-authorized adviser before making investment decisions.",
