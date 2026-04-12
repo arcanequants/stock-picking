@@ -9,6 +9,7 @@ import { stocks, transactions, cycles } from "@/data/stocks";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { getAuthState } from "@/lib/auth";
+import { isUkVisitor } from "@/lib/geo";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -28,6 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function PortfolioPage() {
   const { isSubscribed } = await getAuthState();
+  const showUkBanner = await isUkVisitor();
   const t = await getTranslations("Portfolio");
   const tPremium = await getTranslations("Premium");
   const tLegal = await getTranslations("Legal");
@@ -51,6 +53,15 @@ export default async function PortfolioPage() {
 
   return (
     <div className="space-y-10">
+      {showUkBanner && (
+        <div className="rounded-lg border border-amber-500/40 bg-amber-500/5 p-4">
+          <p className="font-semibold text-amber-700 dark:text-amber-400 text-sm">
+            {tLegal("ukBannerTitle")}
+          </p>
+          <p className="mt-2 text-xs text-text-muted">{tLegal("ukBannerBody")}</p>
+        </div>
+      )}
+
       {/* Hero: title + urgency indicator */}
       <section>
         <h1 className="text-3xl font-bold mb-2">{t("title")}</h1>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { getAuthState } from "@/lib/auth";
+import { isUkVisitor } from "@/lib/geo";
 import { getSupabase } from "@/lib/supabase";
 
 const FREE_PICK_COUNT = 5;
@@ -28,7 +29,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function VerifyPage() {
   const t = await getTranslations("Verify");
+  const tLegal = await getTranslations("Legal");
   const { isSubscribed } = await getAuthState();
+  const showUkBanner = await isUkVisitor();
 
   // Fetch latest portfolio snapshot (return + current prices)
   let returnPct: number | null = null;
@@ -93,6 +96,15 @@ export default async function VerifyPage() {
 
   return (
     <div className="max-w-3xl mx-auto">
+      {showUkBanner && (
+        <div className="rounded-lg border border-amber-500/40 bg-amber-500/5 p-4 mb-6">
+          <p className="font-semibold text-amber-700 dark:text-amber-400 text-sm">
+            {tLegal("ukBannerTitle")}
+          </p>
+          <p className="mt-2 text-xs text-text-muted">{tLegal("ukBannerBody")}</p>
+        </div>
+      )}
+
       {/* Banner — social proof */}
       <div className="flex items-center justify-center gap-2 text-sm border border-emerald-500/20 bg-emerald-500/5 rounded-xl px-4 py-3 mb-8 text-center">
         <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

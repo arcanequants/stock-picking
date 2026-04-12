@@ -3,6 +3,7 @@ import { stocks, transactions } from "@/data/stocks";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { isUkVisitor } from "@/lib/geo";
 
 export const dynamic = "force-dynamic";
 
@@ -68,6 +69,7 @@ export default async function SharePortfolioPage() {
   const { positions, totalReturnPct } = await getPortfolioData();
   const t = await getTranslations("Share");
   const tLegal = await getTranslations("Legal");
+  const showUkBanner = await isUkVisitor();
   const isPositive = totalReturnPct >= 0;
   const top5 = positions.slice(0, 5);
   const remaining = positions.length - 5;
@@ -77,6 +79,15 @@ export default async function SharePortfolioPage() {
 
   return (
     <div className="max-w-lg mx-auto py-16 px-4 text-center space-y-8">
+      {showUkBanner && (
+        <div className="rounded-lg border border-amber-500/40 bg-amber-500/5 p-4 text-left">
+          <p className="font-semibold text-amber-700 dark:text-amber-400 text-sm">
+            {tLegal("ukBannerTitle")}
+          </p>
+          <p className="mt-2 text-xs text-text-muted">{tLegal("ukBannerBody")}</p>
+        </div>
+      )}
+
       {/* Return hero — the hook */}
       <div>
         <p className="text-sm text-text-faint uppercase tracking-wider mb-2">

@@ -212,6 +212,7 @@ export default async function Home() {
       {/* FREE DIGEST SIGNUP — after how it works */}
       <ScrollReveal>
         <section className="max-w-md mx-auto text-center space-y-3">
+          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full">{t("freeLabel")}</span>
           <p className="text-lg font-semibold text-foreground">{f("homeTitle")}</p>
           <p className="text-sm text-text-faint">{f("homeSubtitle")}</p>
           <FreeSignupForm />
@@ -396,6 +397,7 @@ export default async function Home() {
               <div className="flex-1 h-px bg-border" />
             </div>
             <p className="text-sm text-text-faint">{f("homeFinalDesc")}</p>
+            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full">{t("freeLabel")}</span>
             <FreeSignupForm />
           </div>
           <p className="text-xs text-text-faint mt-8">{t("ctaDisclaimer")}</p>

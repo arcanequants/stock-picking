@@ -1,80 +1,54 @@
 # Vectorial Data
 
-> Vectorial Data is a stock picking service that publishes daily researched stock picks across global equities. Every pick is cryptographically verified via SHA-256 hash chain on Base (Ethereum L2). Subscription costs $1/month with daily WhatsApp delivery.
+> Stock picking service with daily researched picks across global equities. Every pick is cryptographically verified via SHA-256 hash chain on Base (Ethereum L2). $1/month, delivered via WhatsApp.
+>
+> Last updated: 2026-04-13
 
-## What We Do
+## Docs
 
-We research global stocks across all sectors and regions, publish daily picks with full fundamental analysis, and track portfolio performance transparently. Every pick is cryptographically verifiable via a SHA-256 hash chain committed to git.
+- [Full Documentation](https://vectorialdata.com/llms-full.txt): Complete API reference, authentication, payment flows, and examples
+- [OpenAPI Spec](https://vectorialdata.com/openapi.yaml): Machine-readable API specification
+- [Developer Portal](https://vectorialdata.com/developers): Interactive API documentation and key registration
 
 ## API
 
-Base URL: https://vectorialdata.com/api/v1
-Auth: Bearer token (API key)
-Register (free): POST /api/v1/auth/register
-OpenAPI spec: https://vectorialdata.com/openapi.yaml
-Full docs: https://vectorialdata.com/llms-full.txt
+- [Service Info](https://vectorialdata.com/api/v1/info): Service discovery, no auth needed
+- [Stock Picks](https://vectorialdata.com/api/v1/picks): All picks with returns
+- [Research](https://vectorialdata.com/api/v1/research/{ticker}): Full fundamental research per ticker
+- [Portfolio](https://vectorialdata.com/api/v1/portfolio): Portfolio performance summary
+- [Positions](https://vectorialdata.com/api/v1/portfolio/positions): All positions with live returns
+- [Stocks](https://vectorialdata.com/api/v1/stocks): All researched stocks
+- [Verify](https://vectorialdata.com/api/v1/verify/picks): Verifiable pick history (hash chain)
 
-## Key Endpoints
+## x402 Pay-Per-Request
 
-- GET /api/v1/info — Service discovery (no auth needed)
-- GET /api/v1/picks — Stock picks with returns
-- GET /api/v1/research/{ticker} — Full fundamental research
-- GET /api/v1/portfolio — Portfolio performance summary
-- GET /api/v1/portfolio/positions — All positions with live returns
-- GET /api/v1/stocks — All researched stocks
-- GET /api/v1/verify/picks — Verifiable pick history (hash chain)
+No API key needed. Pay USDC on Base per request. HTTP 402 flow.
 
-## Pricing
-
-- Free: 10 requests/day, latest 3 picks, portfolio summary, basic stock list
-- Pro: 1000 requests/day, all picks, full research, historical data — 5 USDC/month on Base L2
-- x402: Pay-per-request, no API key needed — USDC on Base
-
-## Payment
-
-### Subscription
-Send 5 USDC to our wallet on Base L2, then POST /api/v1/payments/verify with the tx_hash.
-
-### x402 Pay-Per-Request (for AI agents)
-No registration needed. Just call any /api/v1/x402/* endpoint. You'll get an HTTP 402 with payment instructions. Pay USDC on Base, retry with proof. Pro-tier data, per request.
-
-x402 info: GET /api/v1/x402/info
-x402 endpoints:
-- GET /api/v1/x402/picks ($0.005)
-- GET /api/v1/x402/picks/latest ($0.001)
-- GET /api/v1/x402/research/{ticker} ($0.01)
-- GET /api/v1/x402/portfolio ($0.002)
-- GET /api/v1/x402/portfolio/positions ($0.003)
-- GET /api/v1/x402/portfolio/history ($0.005)
-- GET /api/v1/x402/sectors ($0.001)
-- GET /api/v1/x402/regions ($0.001)
-- GET /api/v1/x402/stocks ($0.005)
-
-## MCP Server
-
-Install: npx @vectorialdata/mcp-server
-Env: VD_API_KEY=your_key
+- [x402 Info](https://vectorialdata.com/api/v1/x402/info): Payment instructions and pricing
+- [Picks](https://vectorialdata.com/api/v1/x402/picks): All picks ($0.005)
+- [Latest Pick](https://vectorialdata.com/api/v1/x402/picks/latest): Most recent pick ($0.001)
+- [Research](https://vectorialdata.com/api/v1/x402/research/{ticker}): Full research ($0.01)
+- [Portfolio](https://vectorialdata.com/api/v1/x402/portfolio): Portfolio summary ($0.002)
+- [Positions](https://vectorialdata.com/api/v1/x402/portfolio/positions): All positions ($0.003)
+- [History](https://vectorialdata.com/api/v1/x402/portfolio/history): Historical performance ($0.005)
+- [Sectors](https://vectorialdata.com/api/v1/x402/sectors): Sector breakdown ($0.001)
+- [Regions](https://vectorialdata.com/api/v1/x402/regions): Region breakdown ($0.001)
+- [Stocks](https://vectorialdata.com/api/v1/x402/stocks): All stocks ($0.005)
 
 ## Content
 
-- [Stock Research](https://vectorialdata.com/stocks): Browse all researched stocks with returns, ratings, and sector analysis
-- [Portfolio Performance](https://vectorialdata.com/portfolio): Live portfolio tracking with transparent returns
-- [Lessons (worst picks)](https://vectorialdata.com/lecciones): Top 5 worst-performing picks from the portfolio with honest retrospective analysis. Real-time, algorithmic selection, no cherry-picking. Weighted average cost basis across all transactions per ticker. Every transaction is attested on Base L2.
-- [Methodology](https://vectorialdata.com/metodologia): Exact method for calculating returns (weighted average), selecting losers, handling re-purchases and splits
-- [Verification](https://vectorialdata.com/verify): SHA-256 hash chain proof of pick history, blockchain-certified on Base L2
-- [Share Portfolio](https://vectorialdata.com/share/portfolio): Shareable portfolio performance snapshot
+- [Stock Research](https://vectorialdata.com/stocks): All researched stocks with returns, ratings, and sector analysis
+- [Portfolio](https://vectorialdata.com/portfolio): Live portfolio tracking with transparent returns
+- [Lessons](https://vectorialdata.com/lecciones): Top 5 worst-performing picks with honest retrospective analysis
+- [Methodology](https://vectorialdata.com/metodologia): Return calculation method, loser selection, re-purchase handling
+- [Verification](https://vectorialdata.com/verify): SHA-256 hash chain proof, blockchain-certified on Base L2
+- [Share Portfolio](https://vectorialdata.com/share/portfolio): Shareable portfolio snapshot
 
 ## Optional
 
-- [Terms of Service](https://vectorialdata.com/terms): Legal terms
-- [Privacy Policy](https://vectorialdata.com/privacy): Data handling practices
-- [Financial Disclaimer](https://vectorialdata.com/disclaimer): Risk disclosures
-- [Disclosures](https://vectorialdata.com/disclosures): Conflicts of interest, compensation, performance disclosure
+- [Terms of Service](https://vectorialdata.com/terms)
+- [Privacy Policy](https://vectorialdata.com/privacy)
+- [Financial Disclaimer](https://vectorialdata.com/disclaimer)
+- [Disclosures](https://vectorialdata.com/disclosures): Conflicts of interest, compensation, performance
 - [Risk Disclosure](https://vectorialdata.com/risk-disclosure): General and specific investment risks
-- [Legal Status](https://vectorialdata.com/legal-status): Operating under the Publisher's Exclusion of the U.S. Investment Advisers Act of 1940
-
-## Links
-
-- Website: https://vectorialdata.com
-- API Docs: https://vectorialdata.com/developers
-- GitHub: https://github.com/arcanequants/stock-picking
+- [Legal Status](https://vectorialdata.com/legal-status): Publisher's Exclusion, Investment Advisers Act of 1940

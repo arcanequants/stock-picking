@@ -1,8 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { headers } from "next/headers";
 import { getSupabase } from "@/lib/supabase";
+import { isUkVisitor } from "@/lib/geo";
 import {
   selectCurrentLessons,
   getLessonContent,
@@ -63,13 +63,8 @@ export default async function LeccionesPage() {
     timeZone: "America/Mexico_City",
   });
 
-  // UK geo-targeted banner (Opción B)
-  const headersList = await headers();
-  const country =
-    headersList.get("x-vercel-ip-country") ||
-    headersList.get("cf-ipcountry") ||
-    "";
-  const showUkBanner = country === "GB";
+  // UK geo-targeted banner
+  const showUkBanner = await isUkVisitor();
 
   // Schema.org
   const articleSchema = getGenericArticleSchema({
@@ -93,13 +88,13 @@ export default async function LeccionesPage() {
       <JsonLd data={articleSchema} />
       {faqSchema && <JsonLd data={faqSchema} />}
 
-      {/* UK Geo-Banner (Option B) */}
+      {/* UK Geo-Banner */}
       {showUkBanner && (
         <div className="rounded-lg border border-amber-500/40 bg-amber-500/5 p-4 mb-6">
           <p className="font-semibold text-amber-700 dark:text-amber-400 text-sm">
-            {t("ukBannerTitle")}
+            {tLegal("ukBannerTitle")}
           </p>
-          <p className="mt-2 text-xs text-text-muted">{t("ukBannerBody")}</p>
+          <p className="mt-2 text-xs text-text-muted">{tLegal("ukBannerBody")}</p>
         </div>
       )}
 
