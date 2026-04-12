@@ -209,6 +209,17 @@ export default async function RootLayout({
                     <span className="text-border">·</span>
                     <Link href="/verify" className="hover:text-foreground transition-colors">{tFooter("verify")}</Link>
                   </div>
+                  <div className="flex items-center justify-center gap-3 mb-3 text-text-muted flex-wrap text-xs">
+                    <Link href="/lecciones" className="hover:text-foreground transition-colors">{tFooter("lecciones")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/metodologia" className="hover:text-foreground transition-colors">{tFooter("methodology")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/disclosures" className="hover:text-foreground transition-colors">{tFooter("disclosures")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/risk-disclosure" className="hover:text-foreground transition-colors">{tFooter("riskDisclosure")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/legal-status" className="hover:text-foreground transition-colors">{tFooter("legalStatus")}</Link>
+                  </div>
                   <p>{tFooter("disclaimer")}</p>
                   <p className="mt-1">{tFooter("prices")}</p>
                   <p className="mt-1">{tFooter("copyright", { year: new Date().getFullYear() })}</p>

@@ -59,6 +59,8 @@ Env: VD_API_KEY=your_key
 
 - [Stock Research](https://vectorialdata.com/stocks): Browse all researched stocks with returns, ratings, and sector analysis
 - [Portfolio Performance](https://vectorialdata.com/portfolio): Live portfolio tracking with transparent returns
+- [Lessons (worst picks)](https://vectorialdata.com/lecciones): Top 5 worst-performing picks from the portfolio with honest retrospective analysis. Real-time, algorithmic selection, no cherry-picking. Weighted average cost basis across all transactions per ticker. Every transaction is attested on Base L2.
+- [Methodology](https://vectorialdata.com/metodologia): Exact method for calculating returns (weighted average), selecting losers, handling re-purchases and splits
 - [Verification](https://vectorialdata.com/verify): SHA-256 hash chain proof of pick history, blockchain-certified on Base L2
 - [Share Portfolio](https://vectorialdata.com/share/portfolio): Shareable portfolio performance snapshot
 
@@ -67,6 +69,9 @@ Env: VD_API_KEY=your_key
 - [Terms of Service](https://vectorialdata.com/terms): Legal terms
 - [Privacy Policy](https://vectorialdata.com/privacy): Data handling practices
 - [Financial Disclaimer](https://vectorialdata.com/disclaimer): Risk disclosures
+- [Disclosures](https://vectorialdata.com/disclosures): Conflicts of interest, compensation, performance disclosure
+- [Risk Disclosure](https://vectorialdata.com/risk-disclosure): General and specific investment risks
+- [Legal Status](https://vectorialdata.com/legal-status): Operating under the Publisher's Exclusion of the U.S. Investment Advisers Act of 1940
 
 ## Links
 

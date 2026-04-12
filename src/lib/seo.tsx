@@ -121,6 +121,53 @@ export function getProductSchema() {
   };
 }
 
+/* ── Generic Article schema (non-stock pages) ─────────── */
+
+export function getGenericArticleSchema(args: {
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: args.headline,
+    description: args.description,
+    datePublished: args.datePublished,
+    dateModified: args.dateModified,
+    author: {
+      "@type": "Organization",
+      name: "Vectorial Data",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Vectorial Data",
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+    },
+    mainEntityOfPage: args.url,
+  };
+}
+
+/* ── Generic FAQPage (non-stock pages) ────────────────── */
+
+export function getGenericFaqSchema(
+  questions: { question: string; answer: string }[],
+) {
+  if (questions.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
+  };
+}
+
 /* ── BreadcrumbList ───────────────────────────────────── */
 
 export function getBreadcrumbSchema(
