@@ -356,7 +356,10 @@
     "magicLinkPrompt": "Enter the email you used to subscribe",
     "emailPlaceholder": "your@email.com",
     "sendLink": "Send magic link",
-    "checkEmail": "Check your email for a login link!"
+    "checkEmail": "Check your email for a login link!",
+    "linkExpiredTitle": "Your link expired",
+    "linkExpiredDesc": "Enter your email to receive a new login link.",
+    "linkExpiredSent": "Link sent — check your email"
   },
   "Returns": {
     "positionReturns": "Position Returns",
@@ -406,11 +409,17 @@
     "channelBoth": "Both",
     "channelBothDesc": "Get picks via WhatsApp and email.",
     "deliverySaved": "Preference saved",
-    "deliverySaving": "Saving..."
+    "deliverySaving": "Saving...",
+    "autoLoginTitle": "Preparing your access...",
+    "autoLoginDesc": "We sent a login link to {email}. Check your email.",
+    "autoLoginResend": "Didn't arrive? Resend",
+    "autoLoginResent": "Link resent",
+    "autoLoginCooldown": "Wait {seconds}s",
+    "autoLoginError": "Something went wrong. Try again."
   },
   "Notifications": {
     "title": "Notifications",
-    "empty": "No notifications yet",
+    "empty": "When your stocks move, we'll explain it here.",
     "markAllRead": "Mark all read",
     "seeAll": "See all",
     "loadMore": "Load more",
@@ -437,7 +446,6 @@
     "blurCTA": "Unlock — $1/mo",
     "bannerCTA": "See explanation",
     "understandAll": "Understand all news",
-    "empty": "When your stocks move, we'll explain it here.",
     "dateToday": "Today",
     "dateYesterday": "Yesterday",
     "bottomCTATitle": "Don't stay in the dark",

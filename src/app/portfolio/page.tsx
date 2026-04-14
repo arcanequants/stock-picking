@@ -5,6 +5,8 @@ import PerformanceChart from "@/components/PerformanceChart";
 import PositionReturns from "@/components/PositionReturns";
 import PremiumGate from "@/components/PremiumGate";
 import FreeSignupForm from "@/components/FreeSignupForm";
+import LoginExpiredBanner from "@/components/LoginExpiredBanner";
+import { Suspense } from "react";
 import { stocks, transactions, cycles } from "@/data/stocks";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
@@ -61,6 +63,8 @@ export default async function PortfolioPage() {
           <p className="mt-2 text-xs text-text-muted">{tLegal("ukBannerBody")}</p>
         </div>
       )}
+
+      <Suspense fallback={null}><LoginExpiredBanner /></Suspense>
 
       {/* Hero: title + urgency indicator */}
       <section>

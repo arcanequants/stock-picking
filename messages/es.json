@@ -356,7 +356,10 @@
     "magicLinkPrompt": "Ingresa el email con el que te suscribiste",
     "emailPlaceholder": "tu@email.com",
     "sendLink": "Enviar link mágico",
-    "checkEmail": "Revisa tu email para iniciar sesión"
+    "checkEmail": "Revisa tu email para iniciar sesión",
+    "linkExpiredTitle": "Tu enlace expiró",
+    "linkExpiredDesc": "Ingresa tu email para recibir un nuevo enlace de acceso.",
+    "linkExpiredSent": "Enlace enviado — revisa tu email"
   },
   "Returns": {
     "positionReturns": "Returns por posición",
@@ -406,11 +409,17 @@
     "channelBoth": "Ambos",
     "channelBothDesc": "Recibes los picks por WhatsApp y también por email.",
     "deliverySaved": "Preferencia guardada",
-    "deliverySaving": "Guardando..."
+    "deliverySaving": "Guardando...",
+    "autoLoginTitle": "Estamos preparando tu acceso...",
+    "autoLoginDesc": "Enviamos un enlace de acceso a {email}. Revisa tu email.",
+    "autoLoginResend": "¿No llegó? Reenviar",
+    "autoLoginResent": "Enlace reenviado",
+    "autoLoginCooldown": "Espera {seconds}s",
+    "autoLoginError": "Hubo un problema. Intenta de nuevo."
   },
   "Notifications": {
     "title": "Notificaciones",
-    "empty": "Aún no hay notificaciones",
+    "empty": "Cuando tus acciones se muevan, aquí te lo explicamos.",
     "markAllRead": "Marcar todo leído",
     "seeAll": "Ver todas",
     "loadMore": "Cargar más",
@@ -437,7 +446,6 @@
     "blurCTA": "Desbloquear — $1/mes",
     "bannerCTA": "Ver explicación",
     "understandAll": "Entender todas las noticias",
-    "empty": "Cuando tus acciones se muevan, aquí te lo explicamos.",
     "dateToday": "Hoy",
     "dateYesterday": "Ayer",
     "bottomCTATitle": "No te quedes con la duda",

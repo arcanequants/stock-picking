@@ -1491,3 +1491,93 @@ export async function sendAnalyticsDigest(to: string, data: AnalyticsDigestData)
 
   if (error) throw new Error(`Failed to send analytics digest: ${error.message}`);
 }
+
+// ── Magic Link Email (branded) ──────────────────────────────
+
+const MAGIC_LINK_SUBJECTS: Record<string, string> = {
+  es: "Tu acceso a Vectorial Data",
+  en: "Your Vectorial Data access",
+  pt: "Seu acesso ao Vectorial Data",
+  hi: "आपका Vectorial Data एक्सेस",
+};
+
+export async function sendMagicLinkEmail(
+  email: string,
+  magicLinkUrl: string,
+  locale: string = "es"
+): Promise<void> {
+  const subject = MAGIC_LINK_SUBJECTS[locale] || MAGIC_LINK_SUBJECTS.es;
+
+  const ctaText: Record<string, string> = {
+    es: "Acceder a mi cuenta",
+    en: "Access my account",
+    pt: "Acessar minha conta",
+    hi: "मेरे खाते तक पहुँचें",
+  };
+
+  const expiryText: Record<string, string> = {
+    es: "Este enlace expira en 24 horas.",
+    en: "This link expires in 24 hours.",
+    pt: "Este link expira em 24 horas.",
+    hi: "यह लिंक 24 घंटे में समाप्त हो जाएगा।",
+  };
+
+  const ignoreText: Record<string, string> = {
+    es: "Si no solicitaste este acceso, ignora este correo.",
+    en: "If you didn't request this, ignore this email.",
+    pt: "Se você não solicitou isso, ignore este e-mail.",
+    hi: "अगर आपने यह अनुरोध नहीं किया, तो इस ईमेल को अनदेखा करें।",
+  };
+
+  const l = locale in ctaText ? locale : "es";
+
+  const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;">
+<tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <!-- Header -->
+  <tr><td style="padding:32px 32px 24px;text-align:center;">
+    <img src="${SITE}/logo.png" width="40" height="40" alt="Vectorial Data" style="display:inline-block;margin-bottom:12px;" />
+    <h1 style="margin:0;font-size:22px;font-weight:700;color:#111827;">Vectorial Data</h1>
+  </td></tr>
+  <!-- Body -->
+  <tr><td style="padding:0 32px 32px;">
+    <p style="margin:0 0 24px;font-size:15px;line-height:1.6;color:#374151;text-align:center;">
+      ${l === "es" ? "Haz clic en el botón para acceder a tu cuenta." : l === "en" ? "Click the button to access your account." : l === "pt" ? "Clique no botão para acessar sua conta." : "अपने खाते तक पहुँचने के लिए बटन पर क्लिक करें।"}
+    </p>
+    <table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
+      <a href="${magicLinkUrl}" style="display:inline-block;background:#4f46e5;color:#ffffff;padding:14px 32px;border-radius:10px;text-decoration:none;font-size:16px;font-weight:600;">
+        ${ctaText[l]}
+      </a>
+    </td></tr></table>
+    <p style="margin:24px 0 0;font-size:13px;color:#6b7280;text-align:center;">
+      ${expiryText[l]}
+    </p>
+  </td></tr>
+  <!-- Footer -->
+  <tr><td style="padding:20px 32px;border-top:1px solid #e4e4e7;text-align:center;">
+    <p style="margin:0;font-size:12px;color:#9ca3af;">
+      ${ignoreText[l]}
+    </p>
+    <p style="margin:8px 0 0;font-size:12px;color:#9ca3af;">
+      <a href="${SITE}" style="color:#4f46e5;text-decoration:none;">vectorialdata.com</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: email,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send magic link email: ${error.message}`);
+}

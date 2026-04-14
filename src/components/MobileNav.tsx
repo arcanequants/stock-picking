@@ -26,7 +26,7 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/portfolio`,
+        emailRedirectTo: `${window.location.origin}/auth/callback?next=/portfolio`,
       },
     });
     if (!error) setSent(true);

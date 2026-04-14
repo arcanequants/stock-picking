@@ -356,7 +356,10 @@
     "magicLinkPrompt": "सदस्यता के लिए उपयोग किया गया ईमेल दर्ज करें",
     "emailPlaceholder": "आपका@ईमेल.com",
     "sendLink": "मैजिक लिंक भेजें",
-    "checkEmail": "लॉगिन लिंक के लिए अपना ईमेल जांचें!"
+    "checkEmail": "लॉगिन लिंक के लिए अपना ईमेल जांचें!",
+    "linkExpiredTitle": "आपका लिंक समाप्त हो गया",
+    "linkExpiredDesc": "नया लॉगिन लिंक पाने के लिए अपना ईमेल दर्ज करें।",
+    "linkExpiredSent": "लिंक भेजा गया — अपना ईमेल चेक करें"
   },
   "Returns": {
     "positionReturns": "पोजीशन रिटर्न",
@@ -406,11 +409,17 @@
     "channelBoth": "दोनों",
     "channelBothDesc": "WhatsApp और ईमेल दोनों से पिक्स प्राप्त करें।",
     "deliverySaved": "प्राथमिकता सहेजी गई",
-    "deliverySaving": "सहेज रहे हैं..."
+    "deliverySaving": "सहेज रहे हैं...",
+    "autoLoginTitle": "आपका एक्सेस तैयार हो रहा है...",
+    "autoLoginDesc": "{email} पर एक लॉगिन लिंक भेजा गया। अपना ईमेल चेक करें।",
+    "autoLoginResend": "नहीं आया? दोबारा भेजें",
+    "autoLoginResent": "लिंक दोबारा भेजा गया",
+    "autoLoginCooldown": "{seconds}s इंतज़ार करें",
+    "autoLoginError": "कुछ गलत हो गया। फिर से कोशिश करें।"
   },
   "Notifications": {
     "title": "सूचनाएं",
-    "empty": "अभी तक कोई सूचना नहीं",
+    "empty": "जब आपके स्टॉक्स हिलेंगे, हम यहाँ समझाएंगे।",
     "markAllRead": "सभी पढ़ा हुआ चिह्नित करें",
     "seeAll": "सभी देखें",
     "loadMore": "और लोड करें",
@@ -437,7 +446,6 @@
     "blurCTA": "अनलॉक — $1/माह",
     "bannerCTA": "व्याख्या देखें",
     "understandAll": "सभी समाचार समझें",
-    "empty": "जब आपके स्टॉक्स हिलेंगे, हम यहाँ समझाएंगे।",
     "dateToday": "आज",
     "dateYesterday": "कल",
     "bottomCTATitle": "अंधेरे में न रहें",
