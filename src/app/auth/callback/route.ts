@@ -9,6 +9,8 @@ export async function GET(request: NextRequest) {
   const type = searchParams.get("type");
   const next = searchParams.get("next") ?? "/portfolio";
 
+  console.log("[auth/callback] params:", { code: !!code, token_hash: !!token_hash, type, next });
+
   const cookieStore = await cookies();
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -30,6 +32,7 @@ export async function GET(request: NextRequest) {
   // Flow 1: PKCE code exchange (from signInWithOtp)
   if (code) {
     const { error } = await supabase.auth.exchangeCodeForSession(code);
+    console.log("[auth/callback] PKCE result:", error ? error.message : "success");
     if (!error) {
       return NextResponse.redirect(`${origin}${next}`);
     }
@@ -41,11 +44,13 @@ export async function GET(request: NextRequest) {
       token_hash,
       type: type as "magiclink" | "email",
     });
+    console.log("[auth/callback] verifyOtp result:", error ? error.message : "success");
     if (!error) {
       return NextResponse.redirect(`${origin}${next}`);
     }
   }
 
+  console.log("[auth/callback] All flows failed, redirecting to expired");
   // Both flows failed or no params — redirect with error hint
   return NextResponse.redirect(`${origin}/portfolio?login=expired`);
 }

@@ -30,19 +30,11 @@ export async function POST(request: Request) {
 
     // 2. Generate a magic link via Supabase Admin
     const supabase = getSupabaseAdmin();
-    const siteUrl =
-      process.env.NEXT_PUBLIC_SITE_URL ||
-      (process.env.VERCEL_PROJECT_PRODUCTION_URL
-        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-        : "https://www.vectorialdata.com");
 
     const { data: linkData, error: linkError } =
       await supabase.auth.admin.generateLink({
         type: "magiclink",
         email: normalizedEmail,
-        options: {
-          redirectTo: `${siteUrl}/auth/callback?next=/portfolio`,
-        },
       });
 
     if (linkError || !linkData?.properties?.action_link) {
@@ -53,14 +45,28 @@ export async function POST(request: Request) {
       );
     }
 
-    // 3. Send branded email via Resend
+    // 3. Extract token_hash and build our own callback URL
+    // (bypasses Supabase's PKCE redirect which fails without code_verifier)
+    const actionUrl = new URL(linkData.properties.action_link);
+    const tokenHash = actionUrl.searchParams.get("token");
+    const type = actionUrl.searchParams.get("type") || "magiclink";
+
+    const siteUrl =
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : "https://www.vectorialdata.com");
+
+    const callbackUrl = `${siteUrl}/auth/callback?token_hash=${tokenHash}&type=${type}&next=/portfolio`;
+
+    // 4. Send branded email via Resend with our direct callback URL
     await sendMagicLinkEmail(
       normalizedEmail,
-      linkData.properties.action_link,
+      callbackUrl,
       locale || "es"
     );
 
-    // 4. Return masked email
+    // 5. Return masked email
     const [user, domain] = normalizedEmail.split("@");
     const masked =
       user.length <= 2

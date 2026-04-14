@@ -17,19 +17,11 @@ export async function POST(request: Request) {
 
     // Generate a magic link via Supabase Admin (does NOT send any email)
     const supabase = getSupabaseAdmin();
-    const siteUrl =
-      process.env.NEXT_PUBLIC_SITE_URL ||
-      (process.env.VERCEL_PROJECT_PRODUCTION_URL
-        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-        : "https://www.vectorialdata.com");
 
     const { data: linkData, error: linkError } =
       await supabase.auth.admin.generateLink({
         type: "magiclink",
         email: normalizedEmail,
-        options: {
-          redirectTo: `${siteUrl}/auth/callback?next=/portfolio`,
-        },
       });
 
     if (linkError || !linkData?.properties?.action_link) {
@@ -40,12 +32,25 @@ export async function POST(request: Request) {
       );
     }
 
-    // Send branded email via Resend (not Supabase)
-    await sendMagicLinkEmail(
-      normalizedEmail,
-      linkData.properties.action_link,
-      locale || "es"
-    );
+    // Extract token_hash from Supabase's action_link and build our own URL.
+    // Supabase's action_link goes to their /auth/v1/verify endpoint which
+    // redirects with PKCE code — but no code_verifier exists in the browser,
+    // so exchangeCodeForSession always fails. Instead, we link directly to
+    // our callback with the token_hash so we can call verifyOtp() ourselves.
+    const actionUrl = new URL(linkData.properties.action_link);
+    const tokenHash = actionUrl.searchParams.get("token");
+    const type = actionUrl.searchParams.get("type") || "magiclink";
+
+    const siteUrl =
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : "https://www.vectorialdata.com");
+
+    const callbackUrl = `${siteUrl}/auth/callback?token_hash=${tokenHash}&type=${type}&next=/portfolio`;
+
+    // Send branded email via Resend with our direct callback URL
+    await sendMagicLinkEmail(normalizedEmail, callbackUrl, locale || "es");
 
     return NextResponse.json({ ok: true });
   } catch (err) {
