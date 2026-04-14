@@ -1495,10 +1495,10 @@ export async function sendAnalyticsDigest(to: string, data: AnalyticsDigestData)
 // ── Magic Link Email (branded) ──────────────────────────────
 
 const MAGIC_LINK_SUBJECTS: Record<string, string> = {
-  es: "Tu acceso a Vectorial Data",
-  en: "Your Vectorial Data access",
-  pt: "Seu acesso ao Vectorial Data",
-  hi: "आपका Vectorial Data एक्सेस",
+  es: "Tu portafolio está listo",
+  en: "Your portfolio is ready",
+  pt: "Seu portfólio está pronto",
+  hi: "आपका पोर्टफोलियो तैयार है",
 };
 
 export async function sendMagicLinkEmail(
@@ -1535,6 +1535,9 @@ export async function sendMagicLinkEmail(
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<div style="display:none;font-size:1px;color:#f9fafb;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+  ${l === "es" ? "Tu enlace de acceso seguro a Vectorial Data" : l === "en" ? "Your secure access link to Vectorial Data" : l === "pt" ? "Seu link de acesso seguro ao Vectorial Data" : "Vectorial Data तक आपकी सुरक्षित पहुँच"}
+</div>
 <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;">
 <tr><td align="center">
 <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
@@ -1546,7 +1549,7 @@ export async function sendMagicLinkEmail(
   <!-- Body -->
   <tr><td style="padding:0 32px 32px;">
     <p style="margin:0 0 24px;font-size:15px;line-height:1.6;color:#374151;text-align:center;">
-      ${l === "es" ? "Haz clic en el botón para acceder a tu cuenta." : l === "en" ? "Click the button to access your account." : l === "pt" ? "Clique no botão para acessar sua conta." : "अपने खाते तक पहुँचने के लिए बटन पर क्लिक करें।"}
+      ${l === "es" ? "Tu portafolio te espera. Haz clic para entrar." : l === "en" ? "Your portfolio is waiting. Click to jump in." : l === "pt" ? "Seu portfólio está esperando. Clique para entrar." : "आपका पोर्टफोलियो आपका इंतज़ार कर रहा है। अंदर आने के लिए क्लिक करें।"}
     </p>
     <table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
       <a href="${magicLinkUrl}" style="display:inline-block;background:#4f46e5;color:#ffffff;padding:14px 32px;border-radius:10px;text-decoration:none;font-size:16px;font-weight:600;">
