@@ -23,7 +23,7 @@
     "riskDisclosure": "Riesgos",
     "legalStatus": "Estatus Legal",
     "copyright": "© {year} Vectorial Data. Todos los derechos reservados.",
-    "support": "Soporte: hola@vectorialdata.com"
+    "support": "Soporte: Hello@vectorialdata.com"
   },
   "Verify": {
     "pageTitle": "Registro Verificable",
@@ -483,7 +483,7 @@
     "termsGoverningTitle": "6. Ley Aplicable",
     "termsGoverningContent": "Estos términos se rigen por las leyes de México. Cualquier disputa se resolverá mediante arbitraje.",
     "termsContactTitle": "7. Contacto",
-    "termsContactContent": "Para preguntas sobre estos términos, contáctanos en hola@vectorialdata.com.",
+    "termsContactContent": "Para preguntas sobre estos términos, contáctanos en Hello@vectorialdata.com.",
     "privacyIntro": "Tu privacidad es importante para nosotros. Esta política explica qué datos recopilamos y cómo los usamos.",
     "privacyCollectTitle": "1. Datos que Recopilamos",
     "privacyCollectContent": "Correo electrónico (para autenticación y comunicación), información de pago (procesada por Stripe — nosotros no almacenamos datos de tarjeta), número de teléfono (para entrega de picks por WhatsApp), datos de uso (analíticas de páginas visitadas).",
@@ -494,13 +494,13 @@
     "privacyRetentionTitle": "4. Retención de Datos",
     "privacyRetentionContent": "Conservamos tus datos mientras tu suscripción esté activa. Si cancelas, eliminamos tus datos personales dentro de 30 días, excepto lo que se requiera por ley.",
     "privacyRightsTitle": "5. Tus Derechos",
-    "privacyRightsContent": "Dependiendo de tu ubicación, puedes tener derecho a: acceder, corregir o eliminar tus datos personales (GDPR — UE), solicitar portabilidad de datos (LGPD — Brasil), optar por no participar en la venta de datos (CCPA — California), solicitar eliminación de datos (DPDP — India). Contacta hola@vectorialdata.com para ejercer estos derechos.",
+    "privacyRightsContent": "Dependiendo de tu ubicación, puedes tener derecho a: acceder, corregir o eliminar tus datos personales (GDPR — UE), solicitar portabilidad de datos (LGPD — Brasil), optar por no participar en la venta de datos (CCPA — California), solicitar eliminación de datos (DPDP — India). Contacta Hello@vectorialdata.com para ejercer estos derechos.",
     "privacyCookiesTitle": "6. Cookies",
     "privacyCookiesContent": "Usamos cookies esenciales para funcionalidad (autenticación, preferencias de idioma). No usamos cookies de rastreo de terceros con fines publicitarios.",
     "privacyChildrenTitle": "7. Menores",
     "privacyChildrenContent": "Nuestro servicio no está dirigido a menores de 18 años. No recopilamos intencionalmente datos de menores.",
     "privacyContactTitle": "8. Contacto",
-    "privacyContactContent": "Para preguntas de privacidad: hola@vectorialdata.com.",
+    "privacyContactContent": "Para preguntas de privacidad: Hello@vectorialdata.com.",
     "disclaimerIntro": "Información importante sobre el contenido de Vectorial Data.",
     "disclaimerAdviceTitle": "1. No es Asesoría de Inversión",
     "disclaimerAdviceContent": "Vectorial Data proporciona contenido educativo e informativo únicamente. Nuestras selecciones de acciones y análisis NO constituyen asesoría de inversión personalizada, recomendaciones o solicitudes de compra o venta de valores. Siempre consulta con un asesor financiero calificado.",
@@ -606,7 +606,7 @@
     "limitsTitle": "9. Limitaciones conocidas",
     "limitsBody": "Nuestro modelo asume ejecución instantánea a precio de cierre, reinversión perfecta de dividendos (actualmente no modelados), y disponibilidad de fracciones de shares (lo cual no siempre es posible en todos los brókers). Estas simplificaciones son estándar en la mayoría de los backtests pero importan a la hora de comparar con rendimientos reales de una cuenta.",
     "auditTitle": "10. Cómo auditar todo esto",
-    "auditBody": "Todo el código es público. Los cálculos viven en `src/lib/position-utils.ts` (aggregatePositions) y `src/lib/lessons.ts` (selectLessons). Las transacciones viven en `src/data/stocks.ts` y cada una tiene un attestation UID on-chain. Si encuentras un error en el cálculo o la metodología, abre un issue en GitHub o escribe a hola@vectorialdata.com."
+    "auditBody": "Todo el código es público. Los cálculos viven en `src/lib/position-utils.ts` (aggregatePositions) y `src/lib/lessons.ts` (selectLessons). Las transacciones viven en `src/data/stocks.ts` y cada una tiene un attestation UID on-chain. Si encuentras un error en el cálculo o la metodología, abre un issue en GitHub o escribe a Hello@vectorialdata.com."
   },
   "Disclosures": {
     "pageTitle": "Disclosures",
@@ -630,7 +630,7 @@
     "thirdPartyTitle": "8. Datos de terceros",
     "thirdPartyBody": "Los precios, fundamentales y datos de referencia provienen de Yahoo Finance y otras fuentes públicas. No garantizamos la exactitud de estos datos. Cualquier error en datos de terceros puede propagarse a nuestros cálculos — si detectas uno, repórtalo.",
     "contactTitle": "9. Contacto",
-    "contactBody": "Para preguntas sobre disclosures, cumplimiento o reportar errores: hola@vectorialdata.com."
+    "contactBody": "Para preguntas sobre disclosures, cumplimiento o reportar errores: Hello@vectorialdata.com."
   },
   "RiskDisclosure": {
     "pageTitle": "Advertencia de riesgos",
@@ -687,7 +687,7 @@
     "changesTitle": "8. Cambios regulatorios",
     "changesBody": "El entorno regulatorio puede cambiar. Si una jurisdicción determina que nuestro contenido requiere una licencia específica que no tenemos, restringiremos el acceso en esa jurisdicción hasta resolver el tema. Monitoreamos activamente las reglas en los mercados donde tenemos lectores activos.",
     "contactTitle": "9. Contacto",
-    "contactBody": "Si eres abogado, regulador o suscriptor con una pregunta sobre nuestro estatus legal, escríbenos a hola@vectorialdata.com."
+    "contactBody": "Si eres abogado, regulador o suscriptor con una pregunta sobre nuestro estatus legal, escríbenos a Hello@vectorialdata.com."
   },
   "Developers": {
     "heroTitle": "Hecho para Agentes de IA",

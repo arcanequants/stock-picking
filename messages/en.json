@@ -23,7 +23,7 @@
     "riskDisclosure": "Risks",
     "legalStatus": "Legal Status",
     "copyright": "© {year} Vectorial Data. All rights reserved.",
-    "support": "Support: hola@vectorialdata.com"
+    "support": "Support: Hello@vectorialdata.com"
   },
   "Verify": {
     "pageTitle": "Verifiable Record",
@@ -483,7 +483,7 @@
     "termsGoverningTitle": "6. Governing Law",
     "termsGoverningContent": "These terms are governed by the laws of Mexico. Any disputes will be resolved through arbitration.",
     "termsContactTitle": "7. Contact",
-    "termsContactContent": "For questions about these terms, contact us at hola@vectorialdata.com.",
+    "termsContactContent": "For questions about these terms, contact us at Hello@vectorialdata.com.",
     "privacyIntro": "Your privacy matters to us. This policy explains what data we collect and how we use it.",
     "privacyCollectTitle": "1. Data We Collect",
     "privacyCollectContent": "Email address (for authentication and communication), payment information (processed by Stripe — we never store card data), phone number (for WhatsApp pick delivery), usage data (page visit analytics).",
@@ -494,13 +494,13 @@
     "privacyRetentionTitle": "4. Data Retention",
     "privacyRetentionContent": "We retain your data while your subscription is active. If you cancel, we delete your personal data within 30 days, except as required by law.",
     "privacyRightsTitle": "5. Your Rights",
-    "privacyRightsContent": "Depending on your location, you may have the right to: access, correct, or delete your personal data (GDPR — EU), request data portability (LGPD — Brazil), opt out of data sales (CCPA — California), request data deletion (DPDP — India). Contact hola@vectorialdata.com to exercise these rights.",
+    "privacyRightsContent": "Depending on your location, you may have the right to: access, correct, or delete your personal data (GDPR — EU), request data portability (LGPD — Brazil), opt out of data sales (CCPA — California), request data deletion (DPDP — India). Contact Hello@vectorialdata.com to exercise these rights.",
     "privacyCookiesTitle": "6. Cookies",
     "privacyCookiesContent": "We use essential cookies for functionality (authentication, language preferences). We do not use third-party tracking cookies for advertising purposes.",
     "privacyChildrenTitle": "7. Children",
     "privacyChildrenContent": "Our service is not intended for anyone under 18 years of age. We do not knowingly collect data from minors.",
     "privacyContactTitle": "8. Contact",
-    "privacyContactContent": "For privacy questions: hola@vectorialdata.com.",
+    "privacyContactContent": "For privacy questions: Hello@vectorialdata.com.",
     "disclaimerIntro": "Important information about Vectorial Data's content.",
     "disclaimerAdviceTitle": "1. Not Investment Advice",
     "disclaimerAdviceContent": "Vectorial Data provides educational and informational content only. Our stock selections and analysis do NOT constitute personalized investment advice, recommendations, or solicitations to buy or sell securities. Always consult a qualified financial advisor.",
@@ -606,7 +606,7 @@
     "limitsTitle": "9. Known limitations",
     "limitsBody": "Our model assumes instant execution at closing price, perfect reinvestment of dividends (not currently modelled), and availability of fractional shares (not always possible at all brokers). These simplifications are standard in most backtests but matter when comparing with real account performance.",
     "auditTitle": "10. How to audit all of this",
-    "auditBody": "All code is public. The calculations live in `src/lib/position-utils.ts` (aggregatePositions) and `src/lib/lessons.ts` (selectLessons). Transactions live in `src/data/stocks.ts` and each one has an on-chain attestation UID. If you find a bug in the calculation or methodology, open an issue on GitHub or email hola@vectorialdata.com."
+    "auditBody": "All code is public. The calculations live in `src/lib/position-utils.ts` (aggregatePositions) and `src/lib/lessons.ts` (selectLessons). Transactions live in `src/data/stocks.ts` and each one has an on-chain attestation UID. If you find a bug in the calculation or methodology, open an issue on GitHub or email Hello@vectorialdata.com."
   },
   "Disclosures": {
     "pageTitle": "Disclosures",
@@ -630,7 +630,7 @@
     "thirdPartyTitle": "8. Third-party data",
     "thirdPartyBody": "Prices, fundamentals and reference data come from Yahoo Finance and other public sources. We do not guarantee the accuracy of this data. Any error in third-party data may propagate to our calculations — if you detect one, please report it.",
     "contactTitle": "9. Contact",
-    "contactBody": "For questions about disclosures, compliance or to report errors: hola@vectorialdata.com."
+    "contactBody": "For questions about disclosures, compliance or to report errors: Hello@vectorialdata.com."
   },
   "RiskDisclosure": {
     "pageTitle": "Risk disclosure",
@@ -687,7 +687,7 @@
     "changesTitle": "8. Regulatory changes",
     "changesBody": "The regulatory environment may change. If a jurisdiction determines that our content requires a specific license we do not have, we will restrict access in that jurisdiction until the issue is resolved. We actively monitor the rules in markets where we have active readers.",
     "contactTitle": "9. Contact",
-    "contactBody": "If you are a lawyer, regulator or subscriber with a question about our legal status, email hola@vectorialdata.com."
+    "contactBody": "If you are a lawyer, regulator or subscriber with a question about our legal status, email Hello@vectorialdata.com."
   },
   "Developers": {
     "heroTitle": "Built for AI Agents",
