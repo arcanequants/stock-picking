@@ -391,4 +391,24 @@ export const ptTranslations: Record<string, StockTranslation> = {
     summary_risk:
       "O preco do uranio e o maior driver do negocio e e ciclico — se novos projetos de mineracao se materializarem (Kazatomprom, Namibia, Australia), a oferta pode aumentar e pressionar os precos. A avaliacao esta muito alta: com P/E trailing de 125x e forward de 54x, a acao esta priced-for-perfection — qualquer tropeco operacional em McArthur River ou Cigar Lake, ou atrasos regulatorios na Westinghouse, podem causar quedas fortes. Risco adicional: o dividendo e baixo (~0,21%), entao o retorno depende quase 100% da valorizacao do preco, nao de receita recorrente.",
   },
+  CRRFY: {
+    summary_short:
+      "O segundo maior varejista do mundo. Opera hipermercados, supermercados, lojas de conveniência e cash & carry em 30+ países. Marcas: Carrefour, Atacadão (Brasil), Supeco. Receita de ~€83B com posições de liderança na França, Espanha e Brasil.",
+    summary_what:
+      "Carrefour SA é um dos maiores varejistas do mundo, fundado em 1959 em Annecy, França. Opera mais de 14.000 lojas em 30+ países em múltiplos formatos: hipermercados Carrefour, supermercados Carrefour Market, lojas de conveniência (Carrefour Express, City, Contact), lojas de desconto Supeco, cash & carry Promocash e a cadeia brasileira Atacadão — o formato cash & carry líder do Brasil.\n\nA empresa gera ~€83B em receita anual, com três mercados principais representando a maioria das vendas: França (~47%), Brasil (~23%) e Espanha (~10%). Também opera na Itália, Bélgica, Polônia, Romênia, Argentina, Oriente Médio e África. Além do varejo, Carrefour tem operações em banco (Carrefour Banque), seguros, viagens e postos de combustível (Carfuel).\n\nEm fevereiro de 2026, Carrefour lançou seu plano estratégico 'Carrefour 2030', refocando em seus três mercados principais e simplificando sua estrutura operacional.",
+    summary_why:
+      "Carrefour a $3.94 é uma das ações mais baratas do portfólio: P/E forward de 9.5x — menos da metade da média do setor de varejo. O dividendo de 5.36% é um dos mais altos do portfólio, pago anualmente.\n\nTrês catalisadores: (1) O plano Carrefour 2030 simplifica operações e foca nos 3 mercados onde são #1 ou #2 — França, Espanha e Brasil; (2) Atacadão no Brasil está crescendo agressivamente com o formato cash & carry ganhando participação de mercado em toda a América Latina; (3) A ação está perto do 52-week high ($3.94) mas continua barata em métricas fundamentais — o mercado ainda não reconheceu a transformação operacional.\n\nCarrefour é o play defensivo europeu por excelência: as pessoas compram comida em qualquer ciclo econômico.",
+    summary_risk:
+      "O setor de varejo alimentar tem margens ultra-finas (~2-3% líquido), deixando pouco espaço para erro operacional. Qualquer aumento de custos (energia, logística, pessoal) pode comprimir lucros rapidamente.\n\nRiscos adicionais: competição intensa de Lidl, Aldi e discounters na Europa pressionando preços; exposição ao mercado francês (~47% da receita) onde o consumo está fraco e a regulação trabalhista é cara; o negócio na Argentina é volátil devido à inflação e controles cambiais; como ADR OTC, a liquidez é menor que na Euronext e os spreads podem ser amplos; risco cambial EUR/BRL/ARS contra USD.",
+  },
+  CDNS: {
+    summary_short:
+      "Metade do duopólio que projeta TODOS os chips do mundo. Sem Cadence (e sua rival Synopsys), não existiriam os processadores da Apple, NVIDIA, AMD nem qualquer chip moderno. Software de automação de design eletrônico (EDA) com ~80% de receita recorrente.",
+    summary_what:
+      "Cadence Design Systems é uma das duas empresas (junto com Synopsys) que fornece o software essencial para projetar circuitos integrados, chips e sistemas eletrônicos. Cada chip moderno foi projetado usando ferramentas da Cadence ou Synopsys. Não há alternativa.\n\nFundada em 1988 em San José, Califórnia, Cadence opera em três pilares: (1) Core EDA — ferramentas de design, simulação e implementação de chips; (2) System Design & Analysis — design de PCBs, simulação multifísica; (3) Life Sciences — modelagem de proteínas e biossimulação.",
+    summary_why:
+      "Cadence é um monopólio compartilhado com o fosso mais profundo da tecnologia. O custo de troca é astronômico: ~80% da receita é recorrente.\n\nTrês ventos favoráveis estruturais: explosão de AI requer chips mais complexos, expansão de TAM para análise de sistemas e ciências da vida, e parceria com NVIDIA para design de chips com IA agêntica. Target de analistas: ~$380 (+29% upside).",
+    summary_risk:
+      "A valuação é cara: P/E trailing de 72x não deixa margem de erro. A fusão Synopsys-Ansys cria um concorrente que ameaça a expansão da Cadence. China representa 11-18% da receita e está exposta a restrições de exportação.",
+  },
 };

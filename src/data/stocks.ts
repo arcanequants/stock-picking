@@ -4817,6 +4817,260 @@ Cameco es la apuesta más pura y accesible al renacimiento nuclear. Ya no es sol
     last_updated_at: "2026-04-10T00:00:00Z",
     next_review_at: "2026-10-10T00:00:00Z",
   },
+  {
+    id: 40,
+    ticker: "CRRFY",
+    name: "Carrefour SA",
+    sector: "Consumer",
+    industry: "Food Retail / Hypermarkets",
+    country: "France",
+    region: "Europe",
+    currency: "USD",
+    price: 3.94,
+    pe_ratio: 11.94,
+    pe_forward: 9.47,
+    dividend_yield: 5.36,
+    market_cap_b: 13.9,
+    eps: 0.33,
+    summary_short:
+      "El segundo retailer más grande del mundo. Opera hipermercados, supermercados, tiendas de conveniencia y cash & carry en 30+ países. Marcas propias: Carrefour, Atacadão (Brasil), Supeco. Revenue de ~€83B con posiciones de liderazgo en Francia, España y Brasil.",
+    summary_what:
+      "Carrefour SA es uno de los retailers más grandes del mundo, fundado en 1959 en Annecy, Francia. Opera más de 14,000 tiendas en 30+ países bajo múltiples formatos: hipermercados Carrefour (grandes superficies), supermercados Carrefour Market, tiendas de conveniencia (Carrefour Express, Carrefour City, Carrefour Contact), tiendas de descuento Supeco, cash & carry Promocash, y la cadena brasileña Atacadão — el formato cash & carry líder de Brasil.\n\nLa compañía genera ~€83B en revenue anual, con tres mercados core que representan la mayoría de ventas: Francia (~47%), Brasil (~23%) y España (~10%). También opera en Italia, Bélgica, Polonia, Rumania, Argentina, Medio Oriente y África. Más allá del retail, Carrefour tiene operaciones en banca (Carrefour Banque), seguros, viajes y estaciones de combustible (Carfuel).\n\nEn febrero 2026, Carrefour lanzó su plan estratégico 'Carrefour 2030', reenfocándose en sus tres mercados core (Francia, España, Brasil) y simplificando su estructura operativa.",
+    summary_why:
+      "Carrefour a $3.94 es una de las acciones más baratas del portafolio: P/E forward de 9.5x — menos de la mitad del promedio del sector retail. El dividendo de 5.36% es uno de los más altos del portafolio, pagado anualmente.\n\nTres catalizadores: (1) El plan Carrefour 2030 simplifica operaciones y se enfoca en los 3 mercados donde son #1 o #2 — Francia, España y Brasil; (2) Atacadão en Brasil está creciendo agresivamente con el formato cash & carry que gana cuota de mercado en toda Latinoamérica; (3) La acción cotiza cerca de su 52-week high ($3.94) pero sigue barata en métricas fundamentales — el mercado aún no reconoce la transformación operativa.\n\nCarrefour es el play defensivo europeo por excelencia: la gente compra comida en cualquier ciclo económico.",
+    summary_risk:
+      "El sector retail de alimentos tiene márgenes ultra-delgados (~2-3% neto), lo que deja poco margen de error operativo. Cualquier aumento en costos (energía, logística, personal) puede comprimir earnings rápidamente.\n\nRiesgos adicionales: competencia intensa de Lidl, Aldi y discounters en Europa que presionan precios; exposición al mercado francés (~47% de revenue) donde el consumo está débil y la regulación laboral es costosa; el negocio en Argentina es volátil por inflación y controles cambiarios; como ADR en OTC, la liquidez es más baja que en la bolsa de París (Euronext) y el spread puede ser amplio; riesgo cambiario EUR/BRL/ARS contra USD.",
+    research_full: `# Carrefour SA (CRRFY) — Research Completo
+
+## Precio: $3.94 | P/E: 11.94 | P/E Forward: 9.47 | Div Yield: 5.36% | Market Cap: $13.9B
+
+---
+
+## ¿Qué es Carrefour?
+
+Carrefour SA es el **segundo retailer más grande del mundo** (después de Walmart) y el **mayor de Europa**, fundado en 1959 en Annecy, Francia. Opera más de 14,000 tiendas en 30+ países bajo múltiples formatos. Es una de esas empresas que ves en todas partes si viajas por Europa, Latinoamérica o Medio Oriente.
+
+## Formatos y Marcas
+
+| Formato | Descripción | Tiendas aprox |
+|---------|-------------|---------------|
+| **Hipermercados Carrefour** | Grandes superficies (alimentos + electrónica + ropa) | ~1,100 |
+| **Carrefour Market** | Supermercados medianos | ~3,000 |
+| **Carrefour Express/City/Contact** | Tiendas de conveniencia | ~7,000+ |
+| **Atacadão** | Cash & carry (Brasil) — formato líder | ~400 |
+| **Supeco** | Discount (Europa) | ~1,000+ |
+| **Promocash** | Cash & carry (Francia) | ~130 |
+
+### Otras operaciones
+- **Carrefour Banque** — servicios financieros y crédito
+- **Carfuel** — estaciones de combustible en Francia y España
+- **E-commerce** — entrega a domicilio y click & collect
+- **Marca propia** — productos Carrefour representan ~35% de ventas
+
+## Mercados Clave
+
+| País | % Revenue | Posición | Notas |
+|------|-----------|----------|-------|
+| **Francia** | ~47% | #1 en hipermercados | Base histórica, altamente competitiva |
+| **Brasil** | ~23% | #2 (Atacadão) | Crecimiento explosivo en cash & carry |
+| **España** | ~10% | #2 | Posición fuerte, mercado estable |
+| **Italia** | ~4% | Top 5 | Presente pero no dominante |
+| **Otros** | ~16% | Varía | Bélgica, Polonia, Rumania, Argentina, Medio Oriente, África |
+
+## Plan Estratégico Carrefour 2030
+
+En **febrero 2026**, Carrefour lanzó su nuevo plan estratégico con foco en:
+
+1. **Refocus en 3 mercados core**: Francia, España, Brasil — donde tienen liderazgo
+2. **Simplificación operativa**: Nueva estructura de reporting por país
+3. **E-commerce y digitalización**: Aceleración de canales digitales
+4. **Marca propia**: Expandir participación de productos propios (margen superior)
+5. **Cash & carry en Brasil**: Seguir expandiendo Atacadão agresivamente
+
+## Números Clave
+
+| Métrica | Valor |
+|---------|-------|
+| Precio ADR | $3.94 |
+| P/E Trailing | 11.94x |
+| P/E Forward | 9.47x |
+| Dividend Yield | 5.36% |
+| Market Cap | $13.9B |
+| Revenue | ~€83B |
+| EPS | $0.33 |
+| 52-Week High | $3.94 |
+| 52-Week Low | $2.73 |
+| Margen Neto | ~2.5% |
+
+## Ventajas Competitivas (Moat)
+
+1. **Escala masiva**: #2 mundial en retail, poder de negociación con proveedores
+2. **Diversificación geográfica**: 30+ países reduce riesgo de un solo mercado
+3. **Atacadão en Brasil**: El formato cash & carry más exitoso de LATAM, con crecimiento orgánico fuerte
+4. **Marca reconocida**: Carrefour es una de las marcas retail más reconocidas globalmente
+5. **Inmobiliario**: Propietarios de muchos de sus locales — activo oculto en el balance
+6. **Resiliencia**: La gente come todos los días, en cualquier economía
+
+## Dividendo
+
+- **Yield actual**: 5.36% — uno de los más altos del portafolio
+- **Frecuencia**: Anual (pago en junio/julio)
+- **Payout ratio**: ~55%
+- **Historial**: Pagador consistente, ajustado durante COVID pero restaurado rápidamente
+
+## Riesgos Principales
+
+1. **Márgenes ultra-delgados**: ~2-3% neto típico en grocery retail — poco margen de error
+2. **Competencia feroz**: Lidl, Aldi y discounters ganan cuota en Europa presionando precios
+3. **Francia estancada**: ~47% del revenue depende de un mercado maduro con consumo débil
+4. **Argentina volátil**: Inflación y controles cambiarios hacen impredecible ese mercado
+5. **Liquidez ADR**: Como OTC, el spread puede ser amplio y la liquidez menor que en Euronext
+6. **Riesgo cambiario**: EUR, BRL y ARS contra USD afectan el valor del ADR
+
+## Consenso de Analistas
+
+- **Rating:** Neutral
+- **Price target promedio:** ~€14.92 (Paris) / ~$4.10 (ADR equivalente)
+- **Rango targets:** €10 - €18.50
+- **Analistas:** 13
+
+## Conclusión
+
+Carrefour a $3.94 es una de las posiciones más defensivas y baratas del portafolio. A P/E forward de 9.5x con 5.36% de dividendo, estás comprando el segundo retailer más grande del mundo por menos de 10 veces sus ganancias — y te pagan más de 5% anual solo por esperar. El riesgo real está en los márgenes delgados del sector y la dependencia de Francia, pero el crecimiento de Atacadão en Brasil y el plan Carrefour 2030 apuntan a una empresa que se está simplificando y enfocando. Como inversión defensiva con ingreso, pocas acciones ofrecen esta combinación de precio bajo + dividendo alto + escala global.
+
+---
+
+*Research fecha: 14 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Neutral",
+    analyst_target: 4.10,
+    analyst_upside: 4.1,
+    status: "active",
+    first_researched_at: "2026-04-14T00:00:00Z",
+    last_updated_at: "2026-04-14T00:00:00Z",
+    next_review_at: "2026-10-14T00:00:00Z",
+  },
+  {
+    id: 41,
+    ticker: "CDNS",
+    name: "Cadence Design Systems",
+    sector: "Technology",
+    industry: "Electronic Design Automation (EDA)",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 293.32,
+    pe_ratio: 72.25,
+    pe_forward: 31.16,
+    dividend_yield: 0,
+    market_cap_b: 81.0,
+    eps: 4.06,
+    summary_short:
+      "La mitad del duopolio que diseña TODOS los chips del mundo. Sin Cadence (y su rival Synopsys), no existirían los procesadores de Apple, NVIDIA, AMD, ni ningún chip moderno. Software de diseño electrónico (EDA) con ~80% de revenue recurrente y switching costs extremos.",
+    summary_what:
+      "Cadence Design Systems es una de las dos empresas (junto con Synopsys) que provee el software esencial para diseñar circuitos integrados, chips y sistemas electrónicos. Cada chip moderno — desde el A18 de tu iPhone hasta los GPUs de NVIDIA que entrenan modelos de AI — fue diseñado usando herramientas de Cadence o Synopsys. No hay alternativa.\n\nFundada en 1988 en San José, California, Cadence opera en tres pilares: (1) Core EDA — herramientas de diseño, simulación e implementación de chips (Virtuoso, Innovus, Genus, Tempus, Spectre); (2) System Design & Analysis — diseño de PCBs, simulación multifísica, integridad de señal (Allegro X, Sigrity, Celsius, Clarity 3D); (3) Life Sciences — modelado de proteínas y biosimulación para descubrimiento de fármacos (OpenEye Scientific).\n\nTambién fabrica hardware de verificación (Palladium para emulación, Protium para prototipos) y tiene una colaboración estratégica con NVIDIA para diseño de chips con AI agéntica (Cerebrus).",
+    summary_why:
+      "Cadence es un monopolio compartido con el moat más profundo de la tecnología. El switching cost es astronómico: cambiar de Cadence a otro proveedor EDA requeriría reentrenar miles de ingenieros y rediseñar flujos de trabajo que tomaron décadas construir. ~80% del revenue es recurrente (licencias y mantenimiento).\n\nTres tailwinds estructurales: (1) La explosión de AI requiere chips cada vez más complejos — más transistores = más licencias de EDA = más revenue para Cadence; (2) Expansión de TAM hacia system analysis (multifísica) y life sciences que duplica el mercado addressable más allá del diseño de chips tradicional; (3) El partnership con NVIDIA para diseño de chips con AI agéntica posiciona a Cadence en el centro del futuro del semiconductor design.\n\nCadence no paga dividendo — reinvierte todo en R&D y adquisiciones. El retorno viene de la apreciación del precio. Target de analistas: ~$380 (+29% upside). Consenso Buy de 22 de 31 analistas.",
+    summary_risk:
+      "La valuación es cara: P/E trailing de 72x no deja margen de error. Cualquier miss en revenue o guidance puede causar caídas de 15-20% en un día. Cadence cotiza como si la perfección fuera el baseline.\n\nRiesgos adicionales: la fusión Synopsys-Ansys crea un competidor 'silicon-to-systems' que amenaza la expansión de Cadence en simulación multifísica; China representa 11-18% del revenue y está expuesta a restricciones de exportación de semiconductores EE.UU.-China; no paga dividendo, así que el retorno depende 100% de la apreciación del precio; y el mercado de EDA, aunque con duopolio, tiene ciclos ligados al capex de semiconductores — una recesión en la industria de chips reduce la demanda de herramientas de diseño.",
+    research_full: `# Cadence Design Systems (CDNS) — Research Completo
+
+## Precio: $293.32 | P/E: 72.25 | P/E Forward: 31.16 | Div Yield: 0% | Market Cap: $81B
+
+---
+
+## ¿Qué es Cadence?
+
+Cadence Design Systems es la **mitad del duopolio más importante de la tecnología moderna**. Junto con Synopsys, Cadence provee el software sin el cual **ningún chip moderno puede ser diseñado o fabricado**. Cada procesador de Apple, GPU de NVIDIA, chip de Qualcomm y servidor de Intel fue diseñado usando herramientas de Cadence o Synopsys. No hay alternativa real — es un duopolio con switching costs de décadas.
+
+## Segmentos de Negocio
+
+| Segmento | Descripción | Productos Clave |
+|----------|-------------|-----------------|
+| **Core EDA** | Software para diseño, simulación e implementación de chips | Virtuoso, Innovus, Genus, Tempus, Voltus, Spectre |
+| **System Design & Analysis** | Diseño de PCBs, simulación multifísica | Allegro X, Sigrity X, Clarity 3D, Celsius, Fidelity |
+| **Verification Hardware** | Hardware para emulación y prototipos de chips | Palladium (emulación), Protium (prototyping) |
+| **Life Sciences** | Modelado de proteínas, biosimulación | OpenEye Scientific |
+| **AI/ML** | Diseño de chips asistido por inteligencia artificial | Cerebrus (con NVIDIA) |
+
+## Productos Clave Explicados
+
+| Producto | Qué hace | Por qué importa |
+|----------|----------|-----------------|
+| **Virtuoso** | Diseño de chips analógicos y mixed-signal | Estándar de la industria — usado por décadas |
+| **Innovus** | Place & route (colocar transistores en el chip) | Sin esto, no hay chip físico |
+| **Genus** | Síntesis lógica | Traduce diseño a circuito real |
+| **Tempus** | Timing signoff | Verifica que el chip funcione a la velocidad correcta |
+| **Spectre** | Simulación de circuitos | Predice comportamiento antes de fabricar |
+| **Allegro X** | Diseño de PCBs | La placa donde van los chips |
+| **Palladium** | Emulación de hardware | Prueba chips virtualmente antes de fabricarlos |
+| **Cerebrus** | AI para optimizar diseño de chips | Partnership con NVIDIA |
+
+## Números Clave
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $293.32 |
+| P/E Trailing | 72.25x |
+| P/E Forward | 31.16x |
+| Dividend Yield | 0% (reinvierte todo) |
+| Market Cap | $81B |
+| Revenue TTM | ~$4.6B |
+| EPS | $4.06 |
+| 52-Week High | $376.45 |
+| 52-Week Low | $247.70 |
+| Revenue recurrente | ~80% |
+| Empleados | 10,000+ en 30+ países |
+
+## Ventajas Competitivas (Moat)
+
+1. **Duopolio con switching costs de décadas**: Los ingenieros de chip se entrenan en Cadence o Synopsys. Cambiar requiere reentrenar equipos enteros y rediseñar flujos de trabajo — nadie lo hace
+2. **~80% revenue recurrente**: Licencias y mantenimiento crean un revenue predecible y sticky
+3. **Diseño de chips se vuelve más complejo cada año**: Más transistores = más simulaciones = más licencias = más revenue
+4. **Expansión de TAM**: De EDA puro (~$15B) a system analysis + life sciences (~$30B+ addressable)
+5. **Partnership con NVIDIA**: Cerebrus + NVIDIA para diseño de chips con AI agéntica — posición única
+6. **Barrera de entrada imposible**: Nadie puede construir un competidor de EDA desde cero — tomaría 20+ años y miles de millones
+
+## Por Qué el AI Boom Beneficia a Cadence
+
+La mayoría piensa que el AI boom beneficia a NVIDIA, AMD y las cloud companies. Pero hay un nivel más profundo: **alguien tiene que DISEÑAR esos chips**. Y ese alguien usa Cadence.
+
+- Los chips de AI son los más complejos jamás creados (GPUs, TPUs, custom ASICs)
+- Más complejidad = más tiempo de simulación = más licencias de EDA
+- Las empresas están diseñando chips custom para AI (Apple, Google, Amazon, Tesla, Meta) — cada uno necesita Cadence
+- Cadence cobra por uso/licencia — más chips diseñados = más revenue
+
+## Riesgos Principales
+
+1. **Valuación priced-for-perfection**: P/E trailing de 72x y forward de 31x — cualquier tropiezo causa desplome
+2. **Synopsys + Ansys merger**: Crea competidor silicon-to-systems que amenaza expansión en simulación multifísica
+3. **China 11-18% de revenue**: Expuesto a restricciones de exportación EE.UU.-China en tecnología de semiconductores
+4. **Sin dividendo**: Retorno 100% dependiente de apreciación del precio
+5. **Ciclo de semiconductores**: Una recesión en capex de chips reduce demanda de EDA
+
+## Consenso de Analistas
+
+- **Rating:** Buy (22 Buy, 4 Hold, 0 Sell de 31 analistas)
+- **Price target mediano:** ~$380
+- **Rango targets:** $275 - $410
+- **Upside implícito:** ~29.5%
+
+## Conclusión
+
+Cadence es el "pico y pala" del boom de semiconductores y AI. No importa quién gane la carrera de chips — Apple, NVIDIA, AMD, Google, Amazon — todos usan Cadence para diseñarlos. Es un duopolio con switching costs de décadas, ~80% revenue recurrente, y un TAM que se duplica con la expansión a simulación multifísica y life sciences. La valuación es cara (72x earnings), pero cuando una empresa tiene un monopolio compartido sobre la herramienta que diseña TODO el hardware del mundo, el premium está justificado. No paga dividendo — la tesis es pura apreciación de precio respaldada por un moat imposible de replicar.
+
+---
+
+*Research fecha: 14 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 380.0,
+    analyst_upside: 29.5,
+    status: "active",
+    first_researched_at: "2026-04-14T00:00:00Z",
+    last_updated_at: "2026-04-14T00:00:00Z",
+    next_review_at: "2026-10-14T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -5301,6 +5555,30 @@ export const transactions: Transaction[] = [
     attestation_uid:
       "0xd6537a82ef066d3ecacb03b64f49bb9c414bf42eedb653840977b9bf8c271dd2",
   },
+  {
+    id: 38,
+    stock_id: 40,
+    ticker: "CRRFY",
+    type: "new" as const,
+    cycle_number: 8,
+    price: 3.94,
+    date: "2026-04-14",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #38* — Apr 14, 2026\n\n🏢 *Carrefour SA* (CRRFY) — $3.94\n\n🛒 *Sus marcas y formatos*: Carrefour (hipermercados, supermercados, express), Atacadão (cash & carry líder de Brasil), Supeco (discount), Carrefour Bio, Promocash\n\n🌍 *Presencia*: Francia (#1 en hipermercados), Brasil (#2 con Atacadão), España (#2), Italia, Bélgica, Polonia, Rumania, Argentina, Medio Oriente y África — 14,000+ tiendas en 30+ países.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *5.36% anual* solo por ser dueño. Cada vez que alguien llena su carrito en un Carrefour en París, hace las compras del mes en un Atacadão en São Paulo, o carga gasolina en una estación Carfuel — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Los márgenes del sector retail de alimentos son ultra-delgados (~2-3% neto), lo que deja poco margen de error operativo ante aumentos de costos.\n\n🆕 Posición #38\n🔗 https://vectorialdata.com/stocks/CRRFY\n✅ Certificado por blockchain → vectorialdata.com/verify/CRRFY\n\n💡 Dato curioso: Carrefour inventó el concepto de hipermercado en 1963 — la idea de meter comida, ropa, electrónica y hogar bajo un mismo techo gigante. Hoy, 60+ años después, tienen 14,000 tiendas en 30+ países. Pero la joya escondida no está en Francia: es Atacadão en Brasil, un formato cash & carry donde la gente compra al mayoreo a precios de distribuidor. Atacadão crece más rápido que todo el grupo y ya representa ~23% del revenue total. Tú compraste el segundo retailer más grande del mundo por menos de $4 la acción y con 5.36% de dividendo — literalmente te pagan por esperar.`,
+    attestation_uid: "",
+  },
+  {
+    id: 39,
+    stock_id: 41,
+    ticker: "CDNS",
+    type: "new" as const,
+    cycle_number: 8,
+    price: 293.32,
+    date: "2026-04-14",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #39* — Apr 14, 2026\n\n🏢 *Cadence Design Systems* (CDNS) — $293.32\n\n🔧 *Sus productos*: Software de diseño electrónico (EDA) — las herramientas que diseñan TODOS los chips del mundo. Virtuoso, Innovus, Spectre, Allegro, Palladium, Cerebrus (AI).\n\n🌍 *Presencia*: Estados Unidos (San José HQ), con 10,000+ empleados en 30+ países. Clientes: Apple, NVIDIA, AMD, Qualcomm, Intel, Samsung, TSMC — literalmente toda la industria de semiconductores.\n\n💵 *Tu nuevo ingreso*: Esta empresa no paga dividendo — reinvierte cada centavo en crecer. Pero aquí está el truco: Cadence es la mitad del duopolio que diseña todos los chips del mundo. Sin su software, no existiría tu iPhone, ni las GPUs que entrenan ChatGPT, ni los servidores de Amazon. El retorno viene de ser dueño de algo irremplazable.\n\n⚠️ *El riesgo*: Valuación cara (P/E 72x) — no deja margen de error. Cualquier miss en resultados puede causar caídas fuertes.\n\n🆕 Posición #39\n🔗 https://vectorialdata.com/stocks/CDNS\n✅ Certificado por blockchain → vectorialdata.com/verify/CDNS\n\n💡 Dato que parece inventado pero no lo es: CADA chip moderno — el A18 de tu iPhone, los H100 de NVIDIA que entrenan modelos de AI, los procesadores de tu laptop — fue diseñado usando software de Cadence o Synopsys. No hay opción 3. Son las "herramientas de herrería" de la revolución tecnológica: invisibles pero absolutamente esenciales. Los ingenieros se entrenan por años en estas herramientas — cambiar de proveedor tomaría una década y miles de millones. Por eso ~80% del revenue es recurrente y por eso, aunque no paga dividendo, Cadence tiene uno de los moats más profundos de toda la tecnología.`,
+    attestation_uid: "",
+  },
 ];
 
 export const cycles = [
@@ -5365,7 +5643,7 @@ export const cycles = [
     cycle_number: 8,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 4,
     status: "active" as const,
   },
 ];
