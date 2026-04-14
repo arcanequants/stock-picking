@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { createSupabaseBrowserClient } from "@/lib/supabase-browser";
 
 interface MobileNavProps {
@@ -14,6 +14,7 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const t = useTranslations("Nav");
   const tAuth = useTranslations("Auth");
+  const locale = useLocale();
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
@@ -22,14 +23,12 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const supabase = createSupabaseBrowserClient();
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback?next=/portfolio`,
-      },
+    const res = await fetch("/api/auth/magic-link", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, locale }),
     });
-    if (!error) setSent(true);
+    if (res.ok) setSent(true);
     setLoading(false);
   };
 

@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { useTranslations } from "next-intl";
-import { createSupabaseBrowserClient } from "@/lib/supabase-browser";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function LoginExpiredBanner() {
   const searchParams = useSearchParams();
   const showBanner = searchParams.get("login") === "expired";
   const t = useTranslations("Auth");
+  const locale = useLocale();
 
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"form" | "sending" | "sent">("form");
@@ -20,15 +20,13 @@ export default function LoginExpiredBanner() {
     e.preventDefault();
     setState("sending");
 
-    const supabase = createSupabaseBrowserClient();
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback?next=/portfolio`,
-      },
+    const res = await fetch("/api/auth/magic-link", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, locale }),
     });
 
-    if (!error) setState("sent");
+    if (res.ok) setState("sent");
     else setState("form");
   };
 
