@@ -5071,6 +5071,154 @@ Cadence es el "pico y pala" del boom de semiconductores y AI. No importa quién 
     last_updated_at: "2026-04-14T00:00:00Z",
     next_review_at: "2026-10-14T00:00:00Z",
   },
+  {
+    id: 42,
+    ticker: "PNR",
+    name: "Pentair plc",
+    sector: "Industrials",
+    industry: "Water Treatment & Pool Equipment",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 90.81,
+    pe_ratio: 23.11,
+    pe_forward: 15.59,
+    dividend_yield: 1.14,
+    market_cap_b: 14.8,
+    eps: 3.93,
+    summary_short:
+      "La empresa líder mundial en soluciones de agua. Tres segmentos: tratamiento de agua residencial/comercial (filtros, suavizadores), equipos de piscinas (#1 en EE.UU.) y sistemas de flujo industrial. Marcas: Pentair, Everpure, RainSoft, Kreepy Krauly, Sta-Rite, Manitowoc Ice.",
+    summary_what:
+      "Pentair plc es una empresa global especializada en soluciones inteligentes de agua, fundada en 1966 y con sede operativa en Golden Valley, Minnesota (incorporada en Irlanda). Opera en tres segmentos:\n\n(1) **Water Solutions** — Sistemas de tratamiento de agua residencial y comercial: filtración punto-de-entrada y punto-de-uso, suavizadores, ósmosis inversa, tanques de presión, y máquinas de hielo comerciales. Marcas: Pentair Water Solutions, Everpure (filtración para restaurantes/hoteles), RainSoft (residencial premium), Pentek, Fleck, y Manitowoc Ice (máquinas de hielo comerciales).\n\n(2) **Pool** — Equipos y accesorios para piscinas residenciales y comerciales: bombas, filtros, calentadores, iluminación, controles automáticos, limpiadores robóticos, cloradores y accesorios. Es el líder del mercado de piscinas en EE.UU. Marcas: Pentair Pool, Kreepy Krauly (limpiadores), Pleatco (filtros), Sta-Rite.\n\n(3) **Flow** — Bombas industriales, válvulas, sistemas de separación por membrana y tratamiento de aguas residuales para industria, agricultura y municipios. Marcas: Aurora, Berkeley, Fairbanks-Nijhuis, Hypro, Shurflo, X-Flow.\n\nPentair sirve a más de 150 países con ~10,500 empleados y genera ~$3.9B en revenue anual.",
+    summary_why:
+      "Pentair es el play puro en agua — el recurso más esencial del planeta. Tres tesis convergen: (1) La escasez de agua es una megatendencia global: regulaciones más estrictas, infraestructura envejecida y cambio climático impulsan inversión en tratamiento de agua por décadas; (2) El mercado de piscinas en EE.UU. es un cash cow recurrente — 5.7 millones de piscinas necesitan mantenimiento constante (bombas, filtros, químicos) generando revenue predecible; (3) Post-transformación: Pentair se deshizo de sus negocios no-core (eléctrico, térmico) y ahora es pure-play agua con márgenes en expansión.\n\nA P/E forward de 15.6x con 1.14% de dividendo y target de analistas de ~$120 (+32% upside), PNR ofrece crecimiento defensivo en un sector con vientos de cola estructurales. Consenso Buy de analistas.",
+    summary_risk:
+      "El segmento Pool (~35% de revenue) es cíclico y sensible al clima, tasas de interés y construcción de viviendas — un invierno largo o tasas hipotecarias altas reducen nuevas construcciones de piscinas y el gasto en upgrades.\n\nRiesgos adicionales: exposición a aranceles y costos de materias primas (resinas, metales, componentes) que pueden comprimir márgenes; competencia creciente de fabricantes chinos de equipos de piscina a menor precio; la incorporación en Irlanda con residencia fiscal en UK crea complejidad regulatoria y posible escrutinio fiscal; y dependencia de EE.UU. (~65% del revenue) limita la diversificación geográfica. El dividendo es modesto (1.14%) — el retorno depende principalmente de apreciación del precio.",
+    research_full: `# Pentair plc (PNR) — Research Completo
+
+## Precio: $90.81 | P/E: 23.11 | P/E Forward: 15.59 | Div Yield: 1.14% | Market Cap: $14.8B
+
+---
+
+## ¿Qué es Pentair?
+
+Pentair plc es la **empresa líder mundial en soluciones inteligentes de agua**. Todo lo que toca el agua en tu vida — el filtro de tu cocina, la bomba de la piscina del vecino, el sistema que purifica el agua de un restaurante, las máquinas de hielo de un hotel — probablemente tiene tecnología de Pentair. Fundada en 1966 en Minnesota, Pentair se transformó de un conglomerado industrial diversificado a un pure-play de agua en los últimos años, vendiendo sus segmentos eléctrico y térmico para enfocarse 100% en agua.
+
+## Segmentos de Negocio
+
+| Segmento | % Revenue aprox | Descripción |
+|----------|-----------------|-------------|
+| **Water Solutions** | ~35% | Tratamiento de agua residencial/comercial, filtración, suavizadores, máquinas de hielo |
+| **Pool** | ~35% | Equipos de piscinas: bombas, filtros, calentadores, limpiadores, controles |
+| **Flow** | ~30% | Bombas industriales, válvulas, sistemas de membrana, tratamiento de aguas residuales |
+
+## Marcas Clave
+
+| Marca | Segmento | Qué hace |
+|-------|----------|----------|
+| **Everpure** | Water Solutions | Filtración premium para restaurantes, hoteles y food service |
+| **RainSoft** | Water Solutions | Tratamiento de agua residencial premium (dealer network) |
+| **Manitowoc Ice** | Water Solutions | Máquinas de hielo comerciales (top 3 global) |
+| **Pentek** | Water Solutions | Filtros y cartuchos de agua |
+| **Fleck** | Water Solutions | Válvulas de control para suavizadores |
+| **Kreepy Krauly** | Pool | Limpiadores automáticos de piscinas |
+| **Sta-Rite** | Pool/Flow | Bombas de piscina y agua residencial |
+| **Pleatco** | Pool | Filtros de reemplazo para piscinas |
+| **Aurora** | Flow | Bombas centrífugas industriales |
+| **Berkeley** | Flow | Bombas de agua sumergibles |
+| **X-Flow** | Flow | Membranas de ultrafiltración |
+
+## El Mercado de Piscinas — Cash Cow Escondido
+
+El mercado de piscinas de EE.UU. es un negocio brillante que pocos entienden:
+
+- **5.7 millones de piscinas** en EE.UU. que necesitan mantenimiento constante
+- **Revenue recurrente**: bombas se reemplazan cada 5-8 años, filtros cada 3-5, químicos cada temporada
+- **Aftermarket > new build**: ~80% del revenue de pool viene de reemplazo/upgrade, no de piscinas nuevas
+- **Regulación favorable**: la Ley DOE 2021 exige bombas variable-speed (más caras, más margen) — Pentair es líder
+- **Pricing power**: cuando tu piscina necesita una bomba, la necesitas YA — no es discrecional
+
+## La Megatendencia del Agua
+
+- **2.2 mil millones de personas** sin acceso a agua potable segura (ONU)
+- **Infraestructura envejecida**: las tuberías de EE.UU. tienen en promedio 50+ años — reemplazo masivo necesario
+- **Regulaciones más estrictas**: PFAS ("forever chemicals"), plomo, microplásticos están forzando upgrades
+- **Cambio climático**: sequías y floods aumentan demanda de tratamiento y reutilización
+- **Data centers y AI**: los centros de datos consumen billones de litros de agua para enfriamiento
+
+## Números Clave
+
+| Métrica | Valor |
+|---------|-------|
+| Precio | $90.81 |
+| P/E Trailing | 23.11x |
+| P/E Forward | 15.59x |
+| Dividend Yield | 1.14% |
+| Market Cap | $14.8B |
+| Revenue | ~$3.9B |
+| EPS | $3.93 |
+| 52-Week High | $113.95 |
+| 52-Week Low | $77.71 |
+| Empleados | ~10,500 |
+| Países | 150+ |
+
+## Transformación Pure-Play
+
+Pentair completó una transformación significativa:
+- **2018**: Spin-off de nVent Electric (segmento eléctrico)
+- **2019-2023**: Venta/simplificación de negocios no-core
+- **2023-2024**: Adquisición de Manitowoc Ice, expansión en water solutions
+- **Resultado**: Pure-play agua con márgenes en expansión y menor complejidad
+
+## Ventajas Competitivas (Moat)
+
+1. **Aftermarket recurrente**: ~60-70% del revenue viene de reemplazo/servicio — predecible
+2. **Regulación como tailwind**: Leyes de eficiencia (bombas variable-speed) y calidad de agua (PFAS) impulsan upgrades
+3. **Red de distribución**: Relaciones establecidas con dealers, pool builders y plomeros — difícil de replicar
+4. **Portafolio completo**: Cubre toda la cadena del agua: residencial, comercial, industrial, piscinas
+5. **Marca en nichos**: Everpure es el estándar en food service, Kreepy Krauly en limpieza de piscinas
+6. **Megatendencia secular**: El agua no es opcional — la demanda solo crece
+
+## Dividendo
+
+- **Yield actual**: 1.14%
+- **Frecuencia**: Trimestral
+- **Años consecutivos de aumento**: 47 — es un **Dividend Aristocrat**
+- **Crecimiento dividendo 5 años**: ~5% CAGR
+- **Payout ratio**: ~26% — muy sostenible con amplio margen de crecimiento
+
+## Riesgos Principales
+
+1. **Ciclicidad del pool**: Sensible a clima, construcción residencial y tasas de interés
+2. **Aranceles y costos**: Materias primas (resinas, metales) y aranceles pueden comprimir márgenes
+3. **Competencia china**: Fabricantes de bajo costo en equipos de piscina presionando precios
+4. **Concentración en EE.UU.**: ~65% del revenue — limitada diversificación geográfica
+5. **Complejidad corporativa**: Incorporada en Irlanda, residencia fiscal UK, operaciones en EE.UU.
+
+## Consenso de Analistas
+
+- **Rating:** Buy
+- **Price target promedio:** ~$120
+- **Rango targets:** $95 - $135
+- **Upside implícito:** ~32%
+- **Analistas:** 19-23
+
+## Conclusión
+
+Pentair es la apuesta más pura y accesible a la megatendencia del agua. Con 47 años consecutivos de aumento de dividendo (Dividend Aristocrat), un aftermarket recurrente que genera ~65% del revenue, y vientos de cola regulatorios (PFAS, eficiencia energética, infraestructura), PNR ofrece la combinación rara de crecimiento defensivo + ingreso creciente. A P/E forward de 15.6x cotiza con descuento vs su promedio histórico, y el target de analistas de $120 implica +32% de upside. El riesgo principal es la ciclicidad del segmento de piscinas, pero el aftermarket recurrente y la diversificación hacia water treatment y flow suavizan los ciclos.
+
+---
+
+*Research fecha: 14 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 120.0,
+    analyst_upside: 32.2,
+    status: "active",
+    first_researched_at: "2026-04-14T00:00:00Z",
+    last_updated_at: "2026-04-14T00:00:00Z",
+    next_review_at: "2026-10-14T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -5579,6 +5727,18 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #39* — Apr 14, 2026\n\n🏢 *Cadence Design Systems* (CDNS) — $293.32\n\n🔧 *Sus productos*: Software de diseño electrónico (EDA) — las herramientas que diseñan TODOS los chips del mundo. Virtuoso, Innovus, Spectre, Allegro, Palladium, Cerebrus (AI).\n\n🌍 *Presencia*: Estados Unidos (San José HQ), con 10,000+ empleados en 30+ países. Clientes: Apple, NVIDIA, AMD, Qualcomm, Intel, Samsung, TSMC — literalmente toda la industria de semiconductores.\n\n💵 *Tu nuevo ingreso*: Esta empresa no paga dividendo — reinvierte cada centavo en crecer. Pero aquí está el truco: Cadence es la mitad del duopolio que diseña todos los chips del mundo. Sin su software, no existiría tu iPhone, ni las GPUs que entrenan ChatGPT, ni los servidores de Amazon. El retorno viene de ser dueño de algo irremplazable.\n\n⚠️ *El riesgo*: Valuación cara (P/E 72x) — no deja margen de error. Cualquier miss en resultados puede causar caídas fuertes.\n\n🆕 Posición #39\n🔗 https://vectorialdata.com/stocks/CDNS\n✅ Certificado por blockchain → vectorialdata.com/verify/CDNS\n\n💡 Dato que parece inventado pero no lo es: CADA chip moderno — el A18 de tu iPhone, los H100 de NVIDIA que entrenan modelos de AI, los procesadores de tu laptop — fue diseñado usando software de Cadence o Synopsys. No hay opción 3. Son las "herramientas de herrería" de la revolución tecnológica: invisibles pero absolutamente esenciales. Los ingenieros se entrenan por años en estas herramientas — cambiar de proveedor tomaría una década y miles de millones. Por eso ~80% del revenue es recurrente y por eso, aunque no paga dividendo, Cadence tiene uno de los moats más profundos de toda la tecnología.`,
     attestation_uid: "0xce5b96efba3c1dd8409ca9e0f768efffc9ae05e8449d1115a980850cd0d8d25a",
   },
+  {
+    id: 40,
+    stock_id: 42,
+    ticker: "PNR",
+    type: "new" as const,
+    cycle_number: 8,
+    price: 90.81,
+    date: "2026-04-14",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #40* — Apr 14, 2026\n\n🏢 *Pentair plc* (PNR) — $90.81\n\n🔧 *Sus marcas y productos*: Pentair (tratamiento de agua), Everpure (filtración para restaurantes/hoteles), RainSoft (residencial premium), Kreepy Krauly (limpiadores de piscinas), Sta-Rite (bombas), Manitowoc Ice (máquinas de hielo comerciales), Pleatco (filtros)\n\n🌍 *Presencia*: Estados Unidos (Golden Valley, Minnesota HQ), con operaciones en 150+ países y ~10,500 empleados. Líder en equipos de piscinas en EE.UU. y tratamiento de agua a nivel global.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.14% anual* solo por ser dueño — y lleva *47 años consecutivos* aumentando ese dividendo (Dividend Aristocrat). Cada vez que un restaurante filtra agua con Everpure, alguien enciende la bomba de su piscina, o un hotel produce hielo con Manitowoc — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El segmento de piscinas (~35% del revenue) es cíclico y sensible al clima, tasas de interés y construcción de viviendas.\n\n🆕 Posición #40\n🔗 https://vectorialdata.com/stocks/PNR\n✅ Certificado por blockchain → vectorialdata.com/verify/PNR\n\n💡 Pentair lleva 47 años consecutivos aumentando su dividendo — eso lo convierte en un "Dividend Aristocrat" (se necesitan 25+ años para entrar al club). ¿Qué significa para ti? Que esta empresa ha aumentado tu pago cada año SIN FALTA durante recesiones, crisis financieras, pandemias y guerras. Solo 65 empresas en el S&P 500 tienen este récord. Y lo más interesante: el payout ratio es solo 26% — es decir, solo reparten una cuarta parte de lo que ganan. Tienen espacio de sobra para seguir aumentándolo por décadas.`,
+    attestation_uid: "",
+  },
 ];
 
 export const cycles = [
@@ -5643,7 +5803,15 @@ export const cycles = [
     cycle_number: 8,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 9,
+    cycle_number: 9,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 0,
     status: "active" as const,
   },
 ];

@@ -23,13 +23,13 @@ export const enTranslations: Record<string, StockTranslation> = {
   },
   PNR: {
     summary_short:
-      "A pure-play water company: treatment, filtration, and pool equipment. Dividend Aristocrat with 50 consecutive years of dividend growth. Riding the clean water megatrend.",
+      "The global leader in smart water solutions. Three segments: residential/commercial water treatment (filters, softeners), pool equipment (#1 in the US) and industrial flow systems. Brands: Pentair, Everpure, RainSoft, Kreepy Krauly, Sta-Rite, Manitowoc Ice.",
     summary_what:
-      "Pentair makes everything water-related: home filters, pool pumps, industrial treatment systems, and municipal equipment. If water passes through something, Pentair probably makes it.",
+      "Pentair plc is a global company specializing in smart water solutions, founded in 1966 with operational headquarters in Golden Valley, Minnesota (incorporated in Ireland). It operates in three segments:\n\n(1) Water Solutions — Residential and commercial water treatment systems: point-of-entry and point-of-use filtration, softeners, reverse osmosis, pressure tanks, and commercial ice machines. Brands: Everpure (restaurant/hotel filtration), RainSoft (premium residential), Manitowoc Ice (commercial ice machines).\n\n(2) Pool — Residential and commercial pool equipment and accessories: pumps, filters, heaters, lighting, automatic controls, robotic cleaners, chlorinators. #1 in the US pool market. Brands: Pentair Pool, Kreepy Krauly, Pleatco, Sta-Rite.\n\n(3) Flow — Industrial pumps, valves, membrane separation systems and wastewater treatment for industry, agriculture and municipalities. Brands: Aurora, Berkeley, X-Flow.\n\nPentair serves 150+ countries with ~10,500 employees and generates ~$3.9B in annual revenue.",
     summary_why:
-      "Secular clean water megatrend (PFAS regulation, aging infrastructure). 50 years of consecutive dividend growth. Record FCF of $748M. The 80/20 transformation has expanded margins for 15 consecutive quarters.",
+      "Pentair is the pure play on water — the planet's most essential resource. Three theses converge: (1) Water scarcity is a global megatrend: stricter regulations, aging infrastructure and climate change drive decades of investment in water treatment; (2) The US pool market is a recurring cash cow — 5.7 million pools need constant maintenance generating predictable revenue; (3) Post-transformation: Pentair divested non-core businesses and is now a pure-play water company with expanding margins.\n\nAt a forward P/E of 15.6x with 1.14% dividend and analyst target of ~$120 (+32% upside), PNR offers defensive growth in a sector with structural tailwinds. Buy consensus from analysts.",
     summary_risk:
-      "Weak organic growth (3-4%). Pool segment depends on the housing market. Volumes have been flat since 2021.",
+      "The Pool segment (~35% of revenue) is cyclical and sensitive to weather, interest rates and housing construction — a long winter or high mortgage rates reduce new pool builds and upgrade spending.\n\nAdditional risks: exposure to tariffs and raw material costs (resins, metals) that can compress margins; growing competition from lower-cost Chinese pool equipment manufacturers; incorporation in Ireland with UK tax residency creates regulatory complexity; and US dependence (~65% of revenue) limits geographic diversification. The dividend is modest (1.14%) — returns depend mainly on price appreciation.",
   },
   NTR: {
     summary_short:

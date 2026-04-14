@@ -23,13 +23,13 @@ export const ptTranslations: Record<string, StockTranslation> = {
   },
   PNR: {
     summary_short:
-      "Empresa especializada em agua: tratamento, filtracao e equipamentos para piscinas. Dividend Aristocrat com 50 anos consecutivos de dividendo crescente. Megatendencia da agua limpa.",
+      "Líder global em soluções inteligentes de água. Três segmentos: tratamento de água residencial/comercial, equipamentos de piscinas (#1 nos EUA) e sistemas de fluxo industrial. Marcas: Pentair, Everpure, RainSoft, Kreepy Krauly, Sta-Rite, Manitowoc Ice.",
     summary_what:
-      "A Pentair faz tudo relacionado a agua: filtros para sua casa, bombas para piscinas, sistemas de tratamento industrial e equipamentos para municipios. Se a agua passa por alguma coisa, provavelmente a Pentair fabrica.",
+      "Pentair plc é uma empresa global especializada em soluções inteligentes de água, fundada em 1966 com sede operacional em Golden Valley, Minnesota. Opera em três segmentos: Water Solutions (tratamento de água residencial e comercial), Pool (equipamentos de piscinas #1 nos EUA) e Flow (bombas industriais e tratamento de águas residuais). Serve 150+ países com ~10.500 funcionários e gera ~$3.9B em receita anual.",
     summary_why:
-      "Megatendencia secular da agua limpa (regulacao de PFAS, infraestrutura antiga). 50 anos de dividendo crescente. FCF recorde de US$748M. Transformacao 80/20 expandindo margens por 15 trimestres consecutivos.",
+      "Pentair é a aposta pura em água — o recurso mais essencial do planeta. A escassez de água é uma megatendência global com regulações mais rigorosas e infraestrutura envelhecida. O mercado de piscinas nos EUA é um cash cow recorrente. A P/E forward de 15.6x com target de analistas de ~$120 (+32% upside).",
     summary_risk:
-      "Crescimento organico fraco (3-4%). Segmento de piscinas depende do mercado imobiliario. Volumes estagnados desde 2021.",
+      "O segmento Pool (~35% da receita) é cíclico e sensível ao clima, taxas de juros e construção residencial. Riscos adicionais: tarifas e custos de matérias-primas, competição de fabricantes chineses de baixo custo, e dependência dos EUA (~65% da receita).",
   },
   NTR: {
     summary_short:
