@@ -22,7 +22,8 @@
     "disclosures": "Disclosures",
     "riskDisclosure": "Risks",
     "legalStatus": "Legal Status",
-    "copyright": "© {year} Vectorial Data. All rights reserved."
+    "copyright": "© {year} Vectorial Data. All rights reserved.",
+    "support": "Support: hola@vectorialdata.com"
   },
   "Verify": {
     "pageTitle": "Verifiable Record",

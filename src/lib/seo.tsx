@@ -44,6 +44,7 @@ export function getOrganizationSchema() {
 export function getArticleSchema(stock: Stock, locale: string) {
   const description = getLocalizedField(stock, "summary_short", locale);
   return {
+    "@context": "https://schema.org",
     "@type": "Article",
     headline: `${stock.ticker} — ${stock.name} | Stock Research`,
     description,
@@ -92,6 +93,7 @@ export function getFaqSchema(stock: Stock, locale: string) {
   if (questions.length === 0) return null;
 
   return {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: questions.map(({ q, a }) => ({
       "@type": "Question",

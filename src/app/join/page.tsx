@@ -29,7 +29,7 @@ export default async function JoinPage() {
         <p className="text-sm text-brand-text font-medium uppercase tracking-wider mb-2">{t("pricingLabel")}</p>
         <div className="flex items-baseline justify-center gap-1 mb-2">
           <span className="text-5xl font-bold">$1</span>
-          <span className="text-text-muted">/mes</span>
+          <span className="text-text-muted">{t("pricingPeriod")}</span>
         </div>
         <p className="text-text-faint text-sm mb-6">{t("pricingSubtitle")}</p>
 

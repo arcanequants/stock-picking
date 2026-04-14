@@ -22,7 +22,8 @@
     "disclosures": "प्रकटीकरण",
     "riskDisclosure": "जोखिम",
     "legalStatus": "कानूनी स्थिति",
-    "copyright": "© {year} Vectorial Data. सर्वाधिकार सुरक्षित।"
+    "copyright": "© {year} Vectorial Data. सर्वाधिकार सुरक्षित।",
+    "support": "सहायता: hola@vectorialdata.com"
   },
   "Verify": {
     "pageTitle": "सत्यापन योग्य रिकॉर्ड",

@@ -214,6 +214,11 @@ export default async function RootLayout({
                     <span className="text-border">·</span>
                     <Link href="/legal-status" className="hover:text-foreground transition-colors">{tFooter("legalStatus")}</Link>
                   </div>
+                  <p className="mb-3">
+                    <a href="mailto:hola@vectorialdata.com" className="hover:text-foreground transition-colors">
+                      {tFooter("support")}
+                    </a>
+                  </p>
                   <p>{tFooter("disclaimer")}</p>
                   <p className="mt-1">{tFooter("prices")}</p>
                   <p className="mt-1">{tFooter("copyright", { year: new Date().getFullYear() })}</p>
