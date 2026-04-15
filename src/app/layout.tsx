@@ -10,6 +10,7 @@ import NotificationBell from "@/components/NotificationBell";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import CookieConsent from "@/components/CookieConsent";
+import SupabaseAuthListener from "@/components/SupabaseAuthListener";
 import { getAuthState } from "@/lib/auth";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NextIntlClientProvider } from "next-intl";
@@ -103,6 +104,7 @@ export default async function RootLayout({
           </>
         )}
         <ThemeProvider>
+          <SupabaseAuthListener />
           <NextIntlClientProvider messages={messages}>
             {/* Navigation — hidden on marketing dashboard */}
             {!isMarketing && (
