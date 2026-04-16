@@ -5470,6 +5470,208 @@ Nota: 1 WFAFY ADR = 0.5 acciones WES.AX. Conversión AUD/USD ~0.714.
     last_updated_at: "2026-04-15T00:00:00Z",
     next_review_at: "2026-10-15T00:00:00Z",
   },
+  {
+    id: 45,
+    ticker: "ESLOY",
+    name: "EssilorLuxottica",
+    sector: "Consumer Discretionary",
+    industry: "Eyewear / Luxury Goods",
+    country: "France",
+    region: "Europe",
+    currency: "USD",
+    price: 122.75,
+    pe_ratio: 41.89,
+    pe_forward: 25.56,
+    dividend_yield: 1.87,
+    market_cap_b: 112.9,
+    eps: 2.93,
+    summary_short:
+      "El monopolio global de los lentes. Dueños de Ray-Ban, Oakley, Persol, LensCrafters y Sunglass Hut — controlan ~60% del mercado de eyewear en EE.UU. Además fabrican las Ray-Ban Meta, los smart glasses con AI más vendidos del mundo (7M unidades en 2025).",
+    summary_what:
+      "EssilorLuxottica es el gigante franco-italiano que domina TODA la cadena de valor del eyewear. Fabrican los lentes (Essilor: Varilux, Transitions, Crizal, Kodak Lens), diseñan y producen las monturas (Luxottica: Ray-Ban, Oakley, Persol, Oliver Peoples, Vogue Eyewear, Arnette, Costa Del Mar, Alain Mikli), tienen licencias exclusivas de marcas de lujo (Prada, Chanel, Tiffany, Versace, Burberry, Dolce & Gabbana, Michael Kors, Coach, Ralph Lauren, Giorgio Armani) y son dueños de las tiendas donde los compras (LensCrafters, Sunglass Hut, Pearle Vision, Target Optical, Apex). También son dueños de EyeMed, la aseguradora de vista #2 en EE.UU., cerrando el ciclo: te aseguran, te examinan, te venden la montura, te fabrican los lentes, te los entregan. Vertical integration total. El gran motor nuevo de crecimiento son las Ray-Ban Meta — los smart glasses con AI que desarrollan con Meta. Vendieron 7 millones de unidades en 2025 (vs 2M acumuladas 2023+2024). En 2026 lanzan versiones Oakley y Prada ampliando la apuesta.",
+    summary_why:
+      "FY2025 fue récord: revenue €28.5B (+11.2% YoY, primer double-digit growth en la historia de la empresa a tipo de cambio constante), Q4 acelerando a +18.4%, operating margin ajustado 16.0%, free cash flow récord de €2.8B a pesar de tarifas y divisa. Las Ray-Ban Meta son el 'dominant driver' del crecimiento wholesale — y el mercado de smart glasses se proyecta de 6M unidades en 2025 a 20M en 2026 (valor de $1.2B a $5.6B). La acción cayó del 52w high $186.81 a $122.75 (-34%) por miedo a competencia de Apple (smart glasses de Apple no llegan hasta 2027) y tarifas de Trump — headwinds temporales en un negocio con casi-monopolio estructural. Consenso de analistas: 19-22 Buy / 1-2 Hold / 0-1 Sell, con targets que implican upside significativo. Eyewear no es moda — es un gasto recurrente no-discrecional: 2.5B personas en el mundo usan lentes correctivos, y reemplazan lentes cada 2-3 años. Demanda estable, pricing power brutal, y ahora una patada de crecimiento vía AI wearables.",
+    summary_risk:
+      "La competencia de Apple en smart glasses (producción prevista diciembre 2026, lanzamiento 2027) amenaza la ventaja actual de Ray-Ban Meta — fue el detonante principal de la caída del 34% desde máximos. Si Apple captura share con un producto 'mejor hecho' (según filtraciones de Bloomberg), EssilorLuxottica pierde el premium que hoy tiene su mejor historia de crecimiento. Otros riesgos: tarifas de Trump de hasta 20% sobre imports europeos y 36% sobre Tailandia golpean márgenes en EE.UU. (40% del revenue); una class action fue presentada en febrero 2026 por subidas de precio post-tarifas; Warby Parker y DTC erosionan share en óptica entry-level. La valuación de P/E TTM 41.89x deja poco margen si earnings decepcionan.",
+    research_full: `# EssilorLuxottica (ESLOY) — Research Completo
+
+## Precio: $122.75 | P/E: 41.89 | P/E Forward: 25.56 | Div Yield: 1.87% | Market Cap: $112.9B
+
+*Nota: ESLOY es el ADR OTC. La acción primaria cotiza en Euronext Paris como EL.PA (1 ESLOY ≈ 0.25 EL.PA).*
+
+---
+
+## Qué Es
+
+EssilorLuxottica es el **monopolio global del eyewear** — el resultado de la fusión en 2018 entre Essilor (lentes franceses, #1 mundial en ophthalmic lenses) y Luxottica (monturas italianas, #1 mundial en frames). El grupo controla **~60% del mercado de eyewear en EE.UU.** y tiene una cuota comparable globalmente. En lentes correctivos específicamente, 42% de market share mundial.
+
+No es una empresa de lentes. Es un ecosistema vertical completo: diseñan, fabrican, licencian, distribuyen, venden al menudeo y aseguran. Si tienes lentes en tu cara, probablemente salieron de alguna parte de esta compañía.
+
+## Modelo de Negocio — Vertical Integration Total
+
+### Marcas Propias (Luxottica)
+| Marca | Segmento |
+|-------|----------|
+| **Ray-Ban** | Icónica, mass-premium, smart glasses |
+| **Oakley** | Deporte, performance, nueva línea Meta AI |
+| **Persol** | Premium italiano, hecho a mano |
+| **Oliver Peoples** | Luxury Californiano |
+| **Vogue Eyewear** | Fashion femenino accesible |
+| **Arnette** | Juvenil, action sports |
+| **Costa Del Mar** | Pesca, outdoor premium |
+| **Alain Mikli** | Haute couture |
+
+### Licencias de Lujo
+Licencias exclusivas con **Prada, Chanel, Tiffany, Versace, Burberry, Dolce & Gabbana, Michael Kors, Coach, Ralph Lauren, Giorgio Armani, Brunello Cucinelli, Miu Miu, Tory Burch** y más. La renovación con Prada en diciembre 2025 fue por 10 años.
+
+### Lentes (Essilor)
+| Marca | Especialidad |
+|-------|--------------|
+| **Varilux** | Progresivos #1 mundial |
+| **Transitions** | Fotocromáticos (adaptan al sol) |
+| **Crizal** | Anti-reflejo premium |
+| **Kodak Lens** | Marca masiva licenciada |
+
+### Retail Propio
+| Cadena | Alcance |
+|--------|---------|
+| **LensCrafters** | ~1,300 tiendas en EE.UU. |
+| **Sunglass Hut** | ~2,700 tiendas globales |
+| **Pearle Vision** | ~500 tiendas EE.UU. |
+| **Target Optical** | Within-Target |
+| **Apex by Sunglass Hut** | Premium sunglasses |
+| **Ray-Ban Stores** | Flagship stores globales |
+
+### Seguros
+**EyeMed** — segunda aseguradora de visión más grande en EE.UU. Cierra el loop: te asegura, te examina, te vende la montura, te fabrica los lentes, cobra seguro.
+
+## El Catalizador: Ray-Ban Meta (Smart Glasses)
+
+Partnership con **Meta Platforms** — renovado y ampliado en 2024 por $5B y 10 años adicionales.
+
+### Números Impresionantes
+- **7 millones de unidades vendidas en 2025** (Ray-Ban Meta + Oakley Meta)
+- vs 2 millones acumuladas en 2023+2024 → **+250% YoY**
+- Descrito por la empresa como "el driver dominante" del crecimiento wholesale
+
+### Mercado en Explosión
+- 2025: 6M unidades / $1.2B mercado
+- 2026 proyectado: **20M unidades / $5.6B mercado**
+- EssilorLuxottica + Meta tienen la delantera técnica y de distribución
+
+### Expansión 2026
+- **Oakley Meta HSTN** — versión deportiva, ~$360, resistente a clima (ya lanzada)
+- **Prada Meta** — primera marca fashion de lujo en smart glasses (filtrada 2026)
+- Próximas generaciones con display integrado (rumor Bloomberg 2026)
+
+## Resultados FY2025 — Récord Histórico
+
+| Métrica | Valor | vs 2024 |
+|---------|-------|---------|
+| **Revenue** | €28,491M | **+11.2%** (constant FX) |
+| **Q4 Revenue growth** | +18.4% | Aceleración |
+| **Adj. Operating Margin** | 16.0% | — |
+| **Adj. Operating Profit** | €4.5B | Récord |
+| **Free Cash Flow** | €2.796B | Récord histórico |
+| **Net Income** | ~€2.4B | — |
+
+> **Primer año en la historia de EssilorLuxottica con double-digit growth anual** a tipo de cambio constante.
+
+## Por Qué Ahora
+
+### 1. La Caída es un Regalo
+- 52w High: **$186.81**
+- Precio actual: **$122.75** → **-34% desde máximos**
+- Razón de la caída: miedo a Apple smart glasses + tarifas Trump + rotación fuera de luxury europeo
+- **Apple no lanza hasta 2027** — EssilorLuxottica tiene 18+ meses de ventaja
+
+### 2. Monopolio Real con Pricing Power
+- 60% share EE.UU., 42% global en lentes correctivos
+- Pueden pasar tarifas al consumidor sin perder clientes
+- 2.5B personas en el mundo usan lentes — demanda no-discrecional
+
+### 3. Ray-Ban Meta es un Negocio Nuevo
+- Margen alto, crecimiento triple-dígito
+- Meta paga R&D; EssilorLuxottica pone distribución y marca
+- Oakley y Prada extensions multiplican el TAM en 2026
+
+### 4. Guidance 2026 Sólido
+- Revenue: **€27-28B**
+- Operating margin: **19-20%** (mejora desde 16% en 2025)
+- Mid-single-digit growth confirmado a pesar de tarifas
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio ADR (ESLOY)** | $122.75 |
+| **Market Cap** | $112.9B |
+| **P/E TTM** | 41.89x |
+| **P/E Forward** | 25.56x |
+| **EPS TTM** | $2.93 |
+| **Dividend Yield** | 1.87% |
+| **Dividend Rate** | $2.25 |
+| **52w High** | $186.81 |
+| **52w Low** | $109.00 |
+| **Drawdown desde high** | -34% |
+
+## Consenso de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| Analistas Buy | 19-22 |
+| Analistas Hold | 1-2 |
+| Analistas Sell | 0-1 |
+| Target promedio (EL.PA) | €318-326 |
+| Target ADR estimado | **~$165** |
+| **Upside ADR desde $122.75** | **+34.4%** |
+
+## Riesgos
+
+### 1. Apple Smart Glasses (el big bear case)
+- Producción dic 2026, lanzamiento spring/summer 2027
+- Pricing rumoreado: $499-$799 (premium vs Ray-Ban Meta)
+- Filtración Bloomberg: "similar al producto Meta pero mejor construido"
+
+### 2. Tarifas Trump
+- Hasta 20% sobre imports europeos, 36% Tailandia, 145% China
+- Class action Feb 2026 por subidas de precio post-tarifas
+- Mitigación: considerando mover producción parcial a EE.UU.
+
+### 3. Warby Parker & DTC Erosión
+- Warby Parker ha ganado share en rangos entry-level
+- Amenaza más al segmento mass que al premium
+
+### 4. Valuación Premium
+- P/E TTM 41.89x deja poco margen de error
+
+### 5. Divisa EUR/USD
+- Empresa reporta en EUR; ADR en USD
+
+## Conclusión
+
+ESLOY a $122.75 es una oportunidad de comprar el monopolio global del eyewear con 34% de descuento desde máximos, justo cuando:
+1. Acaban de reportar su mejor año en la historia (+11.2% revenue)
+2. Tienen la categoría más caliente de hardware nuevo (Ray-Ban Meta, 7M unidades vendidas)
+3. El mercado los castiga por miedos de 2027 (Apple) — 18+ meses de ventaja estructural
+4. Dividendo 1.87% + pricing power para mitigar tarifas
+5. Consenso analyst Buy con upside ~34% al target
+
+El negocio aburrido (lentes correctivos para 2.5B personas) ancla la tesis defensiva. El negocio emocionante (smart glasses con AI) da el upside.
+
+---
+
+*Research fecha: 15 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 165.0,
+    analyst_upside: 34.4,
+    status: "active",
+    first_researched_at: "2026-04-15T00:00:00Z",
+    last_updated_at: "2026-04-15T00:00:00Z",
+    next_review_at: "2026-10-15T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -6014,6 +6216,18 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #42* — Apr 15, 2026\n\n🏢 *Wesfarmers Ltd* (WFAFY) — $26.73\n\n🛍️ *Sus marcas*: Bunnings (el "Home Depot" australiano), Kmart, Officeworks, Priceline (farmacias), Anko (marca propia), Blackwoods\n\n🌍 *Presencia*: Australia y Nueva Zelanda — el conglomerado más grande de Australia con 120,000+ empleados. También tiene una mina de litio (Mt Holland) en joint venture con SQM.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.5% anual* solo por ser dueño. Cada vez que un australiano compra herramientas en Bunnings, ropa en Kmart, útiles en Officeworks, o medicinas en Priceline — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la valuación elevada: P/E forward de 33x es caro para un conglomerado retail, lo que limita el upside y amplifica las caídas si los resultados decepcionan.\n\n🆕 Posición #42\n🔗 https://vectorialdata.com/stocks/WFAFY\n✅ Certificado por blockchain → vectorialdata.com/verify/WFAFY\n\n💡 Bunnings no es simplemente una ferretería — es una institución cultural en Australia. Los australianos van los fines de semana como ritual, a comer "sausage sizzle" (salchicha a la parrilla a la entrada) y a pasear. Con A$23.4 billones en ventas anuales, es más grande que Home Depot en proporción al tamaño de su mercado. Pero la joya escondida de Wesfarmers no está en las tiendas: es su mina de litio Mt Holland, que ya produce espodumeno y está arrancando una refinería de hidróxido de litio. Si el litio despega con los autos eléctricos, tienes exposición a eso también — sin haber comprado una empresa minera pura.`,
     attestation_uid: "0xde0de2a842e9e3d4ec4cb07b0438307437b118b4beacc6a58d36e0ef0d9b8eb5",
   },
+  {
+    id: 43,
+    stock_id: 45,
+    ticker: "ESLOY",
+    type: "new" as const,
+    cycle_number: 9,
+    price: 122.75,
+    date: "2026-04-15",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #43* — Apr 15, 2026\n\n🏢 *EssilorLuxottica* (ESLOY) — $122.75\n\n🛍️ *Sus marcas*: Ray-Ban, Oakley, Persol, Oliver Peoples, Vogue Eyewear, Costa Del Mar. Fabrican las Ray-Ban Meta (smart glasses con AI). Tiendas: LensCrafters, Sunglass Hut, Pearle Vision, Target Optical.\n\n🌍 *Presencia*: Global — HQ en Paris + Milán. Controlan ~60% del mercado de eyewear en EE.UU. y 42% del mercado mundial de lentes correctivos. Integración vertical total: fabrican los lentes, diseñan las monturas, venden al menudeo, y aseguran (EyeMed).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.87% anual* solo por ser dueño. Cada vez que alguien compra lentes en LensCrafters, se pone unos Ray-Ban, usa anteojos Oakley en el gym, o pide sus smart glasses Ray-Ban Meta — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La competencia de Apple en smart glasses (producción prevista diciembre 2026, lanzamiento 2027) amenaza la ventaja actual de Ray-Ban Meta — fue el detonante principal de la caída del 34% desde máximos.\n\n🆕 Posición #43\n🔗 https://vectorialdata.com/stocks/ESLOY\n✅ Certificado por blockchain → vectorialdata.com/verify/ESLOY\n\n💡 Dato que casi nadie conecta: cada Ray-Ban Meta que ves en la calle — los smart glasses con cámara, parlante y AI — está fabricado por EssilorLuxottica. Vendieron 7 millones de unidades en 2025 (vs 2 millones acumuladas en 2023+2024). El mercado de smart glasses pasará de $1.2B este año a $5.6B en 2026, y EssilorLuxottica + Meta lideran con distancia. En 2026 lanzan versiones Oakley (deporte) y Prada (luxury). Cuando Apple finalmente entre en 2027, se topará con una empresa que ya lleva 4+ años fabricando millones de smart glasses — y que además controla el 60% del retail óptico en EE.UU. La caída del 34% desde el pico es miedo a Apple. Pero el miedo crea oportunidades.`,
+    attestation_uid: "",
+  },
 ];
 
 export const cycles = [
@@ -6086,7 +6300,7 @@ export const cycles = [
     cycle_number: 9,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 3,
     status: "active" as const,
   },
 ];
