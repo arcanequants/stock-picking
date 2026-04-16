@@ -5219,6 +5219,257 @@ Pentair es la apuesta más pura y accesible a la megatendencia del agua. Con 47 
     last_updated_at: "2026-04-14T00:00:00Z",
     next_review_at: "2026-10-14T00:00:00Z",
   },
+  {
+    id: 43,
+    ticker: "MCD",
+    name: "McDonald's Corporation",
+    sector: "Consumer Discretionary",
+    industry: "Restaurants / Quick-Service",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 306.26,
+    pe_ratio: 25.48,
+    pe_forward: 23.19,
+    dividend_yield: 2.43,
+    market_cap_b: 215.45,
+    eps: 11.95,
+    summary_short:
+      "La cadena de restaurantes más grande del mundo con 45,000+ ubicaciones en 100+ países. Modelo de franquicias (95% franquiciado) que genera flujo de caja predecible a través de rentas y regalías. 50 años consecutivos de aumento de dividendo (Dividend Aristocrat).",
+    summary_what:
+      "McDonald's no es realmente un negocio de hamburguesas — es un negocio de bienes raíces y franquicias. La empresa posee o arrienda la mayoría de los terrenos e inmuebles donde operan sus 45,356 restaurantes, y los sub-arrienda a franquiciatarios. Solo ~5% de los restaurantes son operados directamente por McDonald's. Gana dinero de tres formas: (1) rentas fijas y variables sobre los inmuebles, (2) regalías del ~4% sobre ventas de cada franquiciatario, y (3) ventas directas de los pocos restaurantes propios. Este modelo de 'cobrar renta' es la razón de sus márgenes operativos de ~46% — extraordinarios para la industria de alimentos. Su ventaja competitiva es su escala global incomparable, su poder de negociación con proveedores, y el reconocimiento de marca #1 en fast food.",
+    summary_why:
+      "McDonald's está en un punto de inflexión digital. Su programa de lealtad MyMcDonald's Rewards ya tiene ~210 millones de usuarios activos (19% más que el año anterior), generando $40B en ventas digitales a nivel global. Los ingresos 2025 crecieron 4% a $26.9B con margen operativo expandido a 46.1%. La empresa abrió 2,276 restaurantes nuevos en 2025 y apunta a 50,000 totales para 2027. Además, está lanzando bebidas energéticas y refrescos artesanales para competir con Starbucks en el segmento de bebidas de alto margen. Free cash flow creció 8% a $7.2B, y la empresa devolvió $7.1B a accionistas entre dividendos y recompras.",
+    summary_risk:
+      "El riesgo principal es la presión sobre el consumidor de bajos ingresos: el CEO advirtió de una 'economía de dos niveles' donde el tráfico de clientes de menores ingresos ha caído ~10%, y los aranceles están elevando costos de insumos. Si la debilidad del consumidor se extiende a la clase media, los volúmenes podrían caer significativamente. Riesgos adicionales: guerra de precios intensificándose en fast food, inflación salarial presionando márgenes de franquiciatarios, exposición a ~100 países con riesgos geopolíticos variados, y equity negativo por las recompras masivas de acciones que limita flexibilidad financiera en caso de crisis.",
+    research_full: `# McDonald's Corporation (MCD) — Research Completo
+
+## Precio: $306.26 | P/E: 25.5 | P/E Forward: 23.2 | Div Yield: 2.43% | Market Cap: $215B
+
+---
+
+## Qué Es
+
+McDonald's es la **cadena de restaurantes más grande del mundo**, con **45,356 ubicaciones en más de 100 países**. Pero definirla como "restaurante de hamburguesas" sería incorrecto — es fundamentalmente un **negocio de bienes raíces y franquicias**. El 95% de sus restaurantes son operados por franquiciatarios que pagan rentas y regalías a McDonald's.
+
+La marca es reconocida por prácticamente cualquier persona en el planeta. Los Golden Arches son uno de los símbolos comerciales más poderosos de la historia.
+
+## Modelo de Negocio
+
+McDonald's gana dinero de **tres fuentes principales**:
+
+| Fuente | Descripción | % Revenue aprox |
+|--------|-------------|-----------------|
+| **Rentas de franquicias** | Rentas fijas y variables sobre inmuebles que McDonald's posee/arrienda | ~40% |
+| **Regalías (royalties)** | ~4% sobre ventas brutas de cada franquiciatario | ~25% |
+| **Restaurantes propios** | Ventas directas del ~5% de ubicaciones operadas por la empresa | ~35% |
+
+Lo brillante del modelo: las rentas y regalías son **ingreso de altísimo margen** (no pagan ingredientes, empleados ni operación). Por eso el margen operativo consolidado es de **46.1%** — extraordinario para cualquier industria, y absurdo para el sector de alimentos.
+
+McDonald's también posee o arrienda la mayoría de los terrenos donde operan los restaurantes. Esto le da **doble leverage**: cobra renta Y regalías. Si un franquiciatario falla, McDonald's mantiene el inmueble y pone otro operador.
+
+## Por Qué Ahora
+
+**1. Revolución Digital:**
+- MyMcDonald's Rewards: **210 millones de usuarios activos** (+19% YoY)
+- Ventas digitales: **$40B** a través de 70 mercados
+- Meta: 30% de pedidos de delivery originando en la app para 2027
+
+**2. Expansión Acelerada:**
+- 2,276 restaurantes nuevos abiertos en 2025
+- Meta: **50,000 restaurantes** para 2027 (faltan ~4,644)
+
+**3. Innovación de Bebidas:**
+- Lanzamiento de energy drinks, refrescos artesanales y refreshers
+- Probados en 500+ restaurantes en 2025
+- Compiten directamente con Starbucks en un segmento de **altísimo margen**
+
+**4. Resultados 2025 Sólidos:**
+- Revenue: $26.9B (+4%, +2% en moneda constante)
+- Operating income: $12.4B (+6%)
+- EPS: $11.95 (+5%)
+- FCF: $7.2B (+8%)
+- $7.1B devueltos a accionistas
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| Revenue (2025) | $26.9B |
+| Net Income (2025) | $8.56B |
+| Operating Margin | 46.1% |
+| Net Profit Margin | 31.85% |
+| Free Cash Flow | $7.2B |
+| FCF Yield | ~3.3% |
+| Revenue Growth (2025) | +4% |
+| EPS Growth (2025) | +5% |
+| Dividend/Share | $7.44 anual |
+| Dividend Yield | 2.43% |
+| Payout Ratio | ~60% |
+| Años consecutivos de aumento de dividendo | **50 años** (Dividend Aristocrat) |
+| P/E TTM | 25.5x |
+| P/E Forward | 23.2x |
+
+**Nota sobre equity negativo:** McDonald's ha recomprado tantas acciones que su shareholders' equity es negativo. Esto NO significa que la empresa esté en problemas — es consecuencia de devolver agresivamente capital a accionistas. El free cash flow de $7.2B demuestra la solidez del negocio.
+
+## Riesgos Principales
+
+1. **Economía de dos niveles:** El tráfico de consumidores de bajos ingresos ha caído ~10%. Si la debilidad se extiende a clase media, los volúmenes se ven afectados.
+
+2. **Guerra de precios en fast food:** Competidores como Burger King, Wendy's y Chick-fil-A están intensificando promociones de valor. Esto puede erosionar márgenes de franquiciatarios.
+
+3. **Inflación salarial:** Aumentos de salario mínimo en múltiples estados/países presionan costos de operación para franquiciatarios.
+
+4. **Exposición geopolítica:** Operar en 100+ países implica riesgo cambiario, regulatorio, y político.
+
+5. **Apalancamiento financiero:** El equity negativo y la deuda elevada limitan flexibilidad en caso de crisis prolongada.
+
+## Consenso de Analistas
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Buy** |
+| # Analistas Buy | 20 |
+| # Analistas Hold | 15 |
+| # Analistas Sell | 2 |
+| Price Target Promedio | **$342** |
+| Price Target Alto | $407 |
+| Price Target Bajo | $260 |
+| **Upside al Target** | **+11.7%** |
+
+---
+
+*Research fecha: 15 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 342.0,
+    analyst_upside: 11.7,
+    status: "active",
+    first_researched_at: "2026-04-15T00:00:00Z",
+    last_updated_at: "2026-04-15T00:00:00Z",
+    next_review_at: "2026-10-15T00:00:00Z",
+  },
+  {
+    id: 44,
+    ticker: "WFAFY",
+    name: "Wesfarmers Ltd",
+    sector: "Consumer Discretionary",
+    industry: "Diversified Retail / Conglomerate",
+    country: "Australia",
+    region: "Asia-Pacific",
+    currency: "USD",
+    price: 26.73,
+    pe_ratio: 31.9,
+    pe_forward: 33.1,
+    dividend_yield: 3.5,
+    market_cap_b: 60.8,
+    eps: 0.84,
+    summary_short:
+      "El conglomerado más grande de Australia. Dueño de Bunnings (el 'Home Depot' australiano), Kmart, Officeworks, Priceline farmacias, y una división de litio en crecimiento. Revenue de A$45.7B, profit subió 14.4% en 2025. 39 años pagando dividendos.",
+    summary_what:
+      "Wesfarmers es el conglomerado diversificado más grande de Australia, fundado en 1914. Opera un imperio retail que incluye Bunnings (ferretería y hogar, el 'Home Depot' australiano con A$23.4B en ventas), Kmart Group (ropa y hogar, A$10.5B), Officeworks (oficina y tecnología, A$3.6B), y Wesfarmers Health/Priceline (farmacia y belleza, A$3.3B). Fuera del retail, tiene WesCEF — una división de químicos, energía, fertilizantes y litio (A$3.0B) que opera el proyecto Mt Holland, una mina de litio en joint venture con SQM que ya produce espodumeno y está arrancando una refinería de hidróxido de litio. También tiene Industrial & Safety (Blackwoods, A$2.0B) y OneDigital, una plataforma de datos con 12.5 millones de perfiles de consumidores. El 85%+ de sus ingresos viene de retail.",
+    summary_why:
+      "Wesfarmers acaba de reportar resultados sólidos en H1 2026: revenue de A$24.2B (+3.1%) y NPAT de A$1.6B (+9.3%), liderado por Bunnings y Kmart. El catalizador de largo plazo es la división de litio — Mt Holland ya produce 98,000 toneladas de concentrado y la refinería de Kwinana arrancó en julio 2025, posicionando a Wesfarmers como productor integrado de litio justo cuando la demanda de baterías EV crece. FY2025 completo mostró revenue de A$45.7B (+3.4%), NPAT de A$2.9B (+14.4%) y EBIT de A$4.5B (+11.9%). La plataforma OneDigital con 12.5M de perfiles crea ventaja competitiva en retail analytics. Dividendo subió a A$3.56 (+80%) con yield del 3.5%. ROE del 33% demuestra uso eficiente del capital.",
+    summary_risk:
+      "El riesgo principal es la valuación elevada: P/E forward de 33x es caro para un conglomerado retail, lo que limita el upside y amplifica las caídas si los resultados decepcionan. Riesgos adicionales: la economía australiana bajo presión por inflación persistente y costos de vida elevados reduce el gasto del consumidor; competencia creciente de Amazon (~12% del e-commerce australiano) y Temu (~4%) presiona precios; la refinería de litio en Kwinana tiene retrasos por problemas técnicos; y la concentración geográfica en Australia/NZ limita la diversificación.",
+    research_full: `# Wesfarmers Ltd (WFAFY) — Research Completo
+
+## Precio ADR: $26.73 | P/E: 31.9 | P/E Forward: 33.1 | Div Yield: 3.5% | Market Cap: $60.8B
+
+---
+
+## Qué Es
+
+Wesfarmers Limited es el **conglomerado más grande de Australia**, fundado en 1914 como cooperativa de granjeros en Western Australia. Hoy opera un imperio diversificado que abarca retail, químicos, litio, salud, y servicios industriales, con **A$45.7 billones en revenue** y más de **120,000 empleados**.
+
+Cotiza como WES.AX en la bolsa de Sydney (ASX) y como WFAFY en OTC Markets de EE.UU. (1 ADR = 0.5 acciones ordinarias).
+
+## Modelo de Negocio
+
+| División | Revenue FY2025 | % del Total | Descripción |
+|----------|----------------|-------------|-------------|
+| **Bunnings** | A$23.4B | ~51% | Ferretería y hogar — el "Home Depot" de Australia y NZ. 390+ tiendas. |
+| **Kmart Group** | A$10.5B | ~23% | Kmart + Target — ropa, hogar, juguetes. Marca propia Anko. |
+| **Officeworks** | A$3.6B | ~8% | Artículos de oficina, tecnología, impresión. 170+ tiendas. |
+| **Wesfarmers Health** | A$3.3B | ~7% | Priceline Pharmacy (490+ farmacias), InstantScripts (telehealth). |
+| **WesCEF** | A$3.0B | ~7% | Químicos, fertilizantes, gas natural, y **litio** (Mt Holland). |
+| **Industrial & Safety** | A$2.0B | ~4% | Blackwoods, Workwear Group — suministros industriales. |
+
+## Por Qué Ahora
+
+**1. Litio en rampa:**
+- La mina Mt Holland (JV 50/50 con SQM) produjo 98,000 toneladas de espodumeno en H1 2026
+- La refinería de Kwinana ya produce hidróxido de litio desde julio 2025
+- Wesfarmers será un productor integrado de litio cuando complete el ramp-up
+
+**2. H1 2026 sólido:**
+- Revenue A$24.2B (+3.1%), NPAT A$1.6B (+9.3%)
+- Bunnings creció en todas las categorías
+- Kmart subió 3.3%, WesCEF mejoró por litio
+
+**3. FY2025 record:**
+- Revenue A$45.7B, NPAT A$2.9B (+14.4%), EBIT A$4.5B (+11.9%)
+
+**4. OneDigital:**
+- Plataforma de datos cross-divisional con 12.5M de perfiles únicos
+- Construyendo una red de retail media — otro flujo de ingresos de alto margen
+
+## Métricas Financieras
+
+| Métrica | Valor (FY2025) |
+|---------|-------|
+| Revenue | A$45.7B (~US$32.6B) |
+| Revenue Growth | +3.4% YoY |
+| EBIT | A$4,465M (+11.9% YoY) |
+| EBIT Margin | 9.8% |
+| NPAT | A$2,926M (+14.4% YoY) |
+| Net Margin | 6.4% |
+| ROE | 33% |
+| Free Cash Flow | A$3.4B (~US$2.4B) |
+| Dividend FY2025 | A$3.56/acción (+80%) |
+| Dividend Yield | 3.5% |
+| P/E TTM | 31.9x |
+| P/E Forward | 33.1x |
+| Market Cap | A$85B (~US$60.8B) |
+
+## Riesgos Principales
+
+1. **Valuación alta** — P/E forward de 33x es premium para un conglomerado retail.
+
+2. **Economía australiana** — CPI del 3.6%, costos de vida altos. El consumidor australiano está apretado.
+
+3. **Competencia digital** — Amazon (~12% del e-commerce australiano), Temu (~4%) presionan precios.
+
+4. **Riesgos del litio** — La refinería de Kwinana tiene retrasos técnicos. Precios del litio volátiles.
+
+5. **Concentración geográfica** — 95%+ del revenue viene de Australia/NZ.
+
+## Consenso de Analistas (WES.AX)
+
+| Métrica | Valor |
+|---------|-------|
+| Consenso | **Hold** |
+| # Analistas Buy | 2 |
+| # Analistas Hold | 5 |
+| # Analistas Sell | 6 |
+| Target Promedio (WES.AX) | **A$81.24** |
+| Target WFAFY (USD) | **~$29.00** |
+| **Upside al Target** | **+8.5%** |
+
+Nota: 1 WFAFY ADR = 0.5 acciones WES.AX. Conversión AUD/USD ~0.714.
+
+---
+
+*Research fecha: 15 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: 29.0,
+    analyst_upside: 8.5,
+    status: "active",
+    first_researched_at: "2026-04-15T00:00:00Z",
+    last_updated_at: "2026-04-15T00:00:00Z",
+    next_review_at: "2026-10-15T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -5739,6 +5990,30 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #40* — Apr 14, 2026\n\n🏢 *Pentair plc* (PNR) — $90.81\n\n🔧 *Sus marcas y productos*: Pentair (tratamiento de agua), Everpure (filtración para restaurantes/hoteles), RainSoft (residencial premium), Kreepy Krauly (limpiadores de piscinas), Sta-Rite (bombas), Manitowoc Ice (máquinas de hielo comerciales), Pleatco (filtros)\n\n🌍 *Presencia*: Estados Unidos (Golden Valley, Minnesota HQ), con operaciones en 150+ países y ~10,500 empleados. Líder en equipos de piscinas en EE.UU. y tratamiento de agua a nivel global.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.14% anual* solo por ser dueño — y lleva *47 años consecutivos* aumentando ese dividendo (Dividend Aristocrat). Cada vez que un restaurante filtra agua con Everpure, alguien enciende la bomba de su piscina, o un hotel produce hielo con Manitowoc — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El segmento de piscinas (~35% del revenue) es cíclico y sensible al clima, tasas de interés y construcción de viviendas.\n\n🆕 Posición #40\n🔗 https://vectorialdata.com/stocks/PNR\n✅ Certificado por blockchain → vectorialdata.com/verify/PNR\n\n💡 Pentair lleva 47 años consecutivos aumentando su dividendo — eso lo convierte en un "Dividend Aristocrat" (se necesitan 25+ años para entrar al club). ¿Qué significa para ti? Que esta empresa ha aumentado tu pago cada año SIN FALTA durante recesiones, crisis financieras, pandemias y guerras. Solo 65 empresas en el S&P 500 tienen este récord. Y lo más interesante: el payout ratio es solo 26% — es decir, solo reparten una cuarta parte de lo que ganan. Tienen espacio de sobra para seguir aumentándolo por décadas.`,
     attestation_uid: "0x4768b0ac8ddbe3d93569f06e67a523a5ee269ae241f540ee301b0d18169ab607",
   },
+  {
+    id: 41,
+    stock_id: 43,
+    ticker: "MCD",
+    type: "new" as const,
+    cycle_number: 9,
+    price: 306.26,
+    date: "2026-04-15",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #41* — Apr 15, 2026\n\n🏢 *McDonald's Corporation* (MCD) — $306.26\n\n🛍️ *Sus marcas*: Big Mac, McNuggets, McCafé, McFlurry, Happy Meal, McDelivery, Egg McMuffin, Quarter Pounder\n\n🌍 *Presencia*: Global — 45,000+ restaurantes en 100+ países. La cadena de comida rápida más grande del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.43% anual* solo por ser dueño. Cada vez que alguien pide un Big Mac, un Happy Meal para sus hijos, o un McCafé en la mañana — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la presión sobre el consumidor de bajos ingresos: el CEO advirtió de una 'economía de dos niveles' donde el tráfico de clientes de menores ingresos ha caído ~10%.\n\n🆕 Posición #41\n🔗 https://vectorialdata.com/stocks/MCD\n✅ Certificado por blockchain → vectorialdata.com/verify/MCD\n\n💡 Dato que cambia cómo ves los Golden Arches: McDonald's no es una empresa de hamburguesas — es una empresa de bienes raíces. Posee o arrienda los terrenos de la mayoría de sus 45,000 restaurantes y cobra renta + regalías a los franquiciatarios. Solo el ~5% de las tiendas son operadas directamente. Por eso el margen operativo es del 46% — absurdo para un negocio de comida. Y lleva 50 años consecutivos aumentando su dividendo (Dividend Aristocrat). Eso significa que ha subido tu pago cada año sin falta durante recesiones, crisis y pandemias.`,
+    attestation_uid: "",
+  },
+  {
+    id: 42,
+    stock_id: 44,
+    ticker: "WFAFY",
+    type: "new" as const,
+    cycle_number: 9,
+    price: 26.73,
+    date: "2026-04-15",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #42* — Apr 15, 2026\n\n🏢 *Wesfarmers Ltd* (WFAFY) — $26.73\n\n🛍️ *Sus marcas*: Bunnings (el "Home Depot" australiano), Kmart, Officeworks, Priceline (farmacias), Anko (marca propia), Blackwoods\n\n🌍 *Presencia*: Australia y Nueva Zelanda — el conglomerado más grande de Australia con 120,000+ empleados. También tiene una mina de litio (Mt Holland) en joint venture con SQM.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.5% anual* solo por ser dueño. Cada vez que un australiano compra herramientas en Bunnings, ropa en Kmart, útiles en Officeworks, o medicinas en Priceline — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la valuación elevada: P/E forward de 33x es caro para un conglomerado retail, lo que limita el upside y amplifica las caídas si los resultados decepcionan.\n\n🆕 Posición #42\n🔗 https://vectorialdata.com/stocks/WFAFY\n✅ Certificado por blockchain → vectorialdata.com/verify/WFAFY\n\n💡 Bunnings no es simplemente una ferretería — es una institución cultural en Australia. Los australianos van los fines de semana como ritual, a comer "sausage sizzle" (salchicha a la parrilla a la entrada) y a pasear. Con A$23.4 billones en ventas anuales, es más grande que Home Depot en proporción al tamaño de su mercado. Pero la joya escondida de Wesfarmers no está en las tiendas: es su mina de litio Mt Holland, que ya produce espodumeno y está arrancando una refinería de hidróxido de litio. Si el litio despega con los autos eléctricos, tienes exposición a eso también — sin haber comprado una empresa minera pura.`,
+    attestation_uid: "",
+  },
 ];
 
 export const cycles = [
@@ -5811,7 +6086,7 @@ export const cycles = [
     cycle_number: 9,
     type: "new" as const,
     target_count: 5,
-    current_count: 0,
+    current_count: 2,
     status: "active" as const,
   },
 ];
