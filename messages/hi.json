@@ -22,6 +22,7 @@
     "disclosures": "प्रकटीकरण",
     "riskDisclosure": "जोखिम",
     "legalStatus": "कानूनी स्थिति",
+    "apiPlayground": "API Playground",
     "copyright": "© {year} Vectorial Data. सर्वाधिकार सुरक्षित।",
     "support": "सहायता: Hello@vectorialdata.com"
   },
@@ -680,6 +681,9 @@
   "Developers": {
     "heroTitle": "AI एजेंट्स के लिए बनाया गया",
     "heroDesc": "REST API, MCP Server और सत्यापन योग्य ट्रैक रिकॉर्ड। आपका एजेंट दैनिक स्टॉक पिक्स, फंडामेंटल रिसर्च और पोर्टफोलियो डेटा प्राप्त करता है — सब कुछ मशीन उपभोग के लिए संरचित।",
+    "tryLiveCta": "लाइव आज़माएँ →",
+    "tryLiveSub": "अपने ब्राउज़र में हर endpoint एक्सप्लोर करें। कोई साइनअप नहीं।",
+    "endpointsTryInPlayground": "सभी endpoints को API playground में आज़माएँ →",
     "quickStartTitle": "त्वरित शुरुआत",
     "step1Label": "1. मुफ्त API key के लिए रजिस्टर करें",
     "step2Label": "2. नवीनतम पिक्स प्राप्त करें",
@@ -756,7 +760,7 @@
     "verifyTitle": "सत्यापन योग्य ट्रैक रिकॉर्ड",
     "verifyDesc": "प्रत्येक पिक git में कमिट की गई SHA-256 हैश चेन का हिस्सा है। एजेंट सत्यापित कर सकते हैं कि कोई पिक पूर्वव्यापी रूप से संपादित नहीं की गई।",
     "verifyAlgorithm": "एल्गोरिदम: SHA-256(ticker|price|date|previous_hash) — प्रत्येक पिक पिछली से जुड़ती है",
-    "contact": "प्रश्न? vectorialdata.com पर संपर्क करें"
+    "contact": "एकीकरण में मदद चाहिए? हमें Hello@vectorialdata.com पर लिखें"
   },
   "FreeSignup": {
     "separator": "अभी तय नहीं कर पा रहे?",

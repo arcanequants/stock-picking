@@ -30,9 +30,16 @@ export default async function DevelopersPage() {
       {/* Hero */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">{t("heroTitle")}</h1>
-        <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+        <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-6">
           {t("heroDesc")}
         </p>
+        <Link
+          href="/api-docs"
+          className="inline-flex items-center gap-2 bg-foreground text-background font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+        >
+          {t("tryLiveCta")}
+        </Link>
+        <p className="text-sm text-text-muted mt-3">{t("tryLiveSub")}</p>
       </div>
 
       {/* Quick Start */}
@@ -176,6 +183,12 @@ print(f"Chain valid: {ledger['valid']}, {ledger['chain_length']} picks")`}
         <p className="text-xs text-text-faint mt-3">
           {t("endpointsNote")} <code className="text-text-muted">/api/v1</code>
         </p>
+        <Link
+          href="/api-docs"
+          className="inline-block mt-4 text-brand text-sm font-semibold hover:underline"
+        >
+          {t("endpointsTryInPlayground")}
+        </Link>
       </div>
 
       {/* Pricing */}
@@ -360,7 +373,12 @@ curl https://vectorialdata.com/api/v1/verify/pick/UBS`}
       </div>
 
       <p className="text-xs text-text-faint text-center">
-        {t("contact")}
+        <a
+          href="mailto:Hello@vectorialdata.com"
+          className="hover:text-foreground transition-colors"
+        >
+          {t("contact")}
+        </a>
       </p>
     </div>
   );

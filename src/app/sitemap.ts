@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/verify`, lastModified: now, changeFrequency: "daily", priority: 0.8, alternates: { languages: langs("/verify") } },
     { url: `${BASE}/join`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: { languages: langs("/join") } },
     { url: `${BASE}/developers`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: { languages: langs("/developers") } },
+    { url: `${BASE}/api-docs`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: { languages: langs("/api-docs") } },
     { url: `${BASE}/share/portfolio`, lastModified: now, changeFrequency: "daily", priority: 0.6, alternates: { languages: langs("/share/portfolio") } },
     { url: `${BASE}/metodologia`, lastModified: "2026-04-10", changeFrequency: "monthly", priority: 0.5, alternates: { languages: langs("/metodologia") } },
     { url: `${BASE}/disclosures`, lastModified: "2026-04-10", changeFrequency: "monthly", priority: 0.4, alternates: { languages: langs("/disclosures") } },

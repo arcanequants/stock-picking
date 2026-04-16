@@ -9,6 +9,7 @@
 - [Full Documentation](https://vectorialdata.com/llms-full.txt): Complete API reference, authentication, payment flows, and examples
 - [OpenAPI Spec](https://vectorialdata.com/openapi.yaml): Machine-readable API specification
 - [Developer Portal](https://vectorialdata.com/developers): Interactive API documentation and key registration
+- [API Playground](https://vectorialdata.com/api-docs): Try every endpoint live in the browser (Scalar-powered, no signup required)
 
 ## API
 

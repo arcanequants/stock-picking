@@ -22,6 +22,7 @@
     "disclosures": "Disclosures",
     "riskDisclosure": "Riesgos",
     "legalStatus": "Estatus Legal",
+    "apiPlayground": "API Playground",
     "copyright": "© {year} Vectorial Data. Todos los derechos reservados.",
     "support": "Soporte: Hello@vectorialdata.com"
   },
@@ -692,6 +693,9 @@
   "Developers": {
     "heroTitle": "Hecho para Agentes de IA",
     "heroDesc": "REST API, MCP Server y registro verificable. Tu agente obtiene picks diarios de acciones, research fundamental y datos de portafolio — todo estructurado para consumo por máquinas.",
+    "tryLiveCta": "Pruébalo en vivo →",
+    "tryLiveSub": "Explora cada endpoint desde tu navegador. Sin registro.",
+    "endpointsTryInPlayground": "Prueba todos los endpoints en el playground →",
     "quickStartTitle": "Inicio Rápido",
     "step1Label": "1. Registra una API key gratuita",
     "step2Label": "2. Obtén los últimos picks",
@@ -768,7 +772,7 @@
     "verifyTitle": "Registro Verificable",
     "verifyDesc": "Cada pick es parte de una cadena de hashes SHA-256 registrada en git. Los agentes pueden verificar que ningún pick fue editado retroactivamente.",
     "verifyAlgorithm": "Algoritmo: SHA-256(ticker|price|date|previous_hash) — cada pick se encadena al anterior",
-    "contact": "¿Preguntas? Contáctanos en vectorialdata.com"
+    "contact": "¿Necesitas ayuda integrando? Escríbenos a Hello@vectorialdata.com"
   },
   "FreeSignup": {
     "separator": "¿Aún no estás seguro?",

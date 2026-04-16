@@ -215,6 +215,8 @@ export default async function RootLayout({
                     <Link href="/risk-disclosure" className="hover:text-foreground transition-colors">{tFooter("riskDisclosure")}</Link>
                     <span className="text-border">·</span>
                     <Link href="/legal-status" className="hover:text-foreground transition-colors">{tFooter("legalStatus")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/api-docs" className="hover:text-foreground transition-colors">{tFooter("apiPlayground")}</Link>
                   </div>
                   <p className="mb-3">
                     <a href="mailto:Hello@vectorialdata.com" className="hover:text-foreground transition-colors">
