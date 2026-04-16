@@ -6000,7 +6000,7 @@ export const transactions: Transaction[] = [
     date: "2026-04-15",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #41* — Apr 15, 2026\n\n🏢 *McDonald's Corporation* (MCD) — $306.26\n\n🛍️ *Sus marcas*: Big Mac, McNuggets, McCafé, McFlurry, Happy Meal, McDelivery, Egg McMuffin, Quarter Pounder\n\n🌍 *Presencia*: Global — 45,000+ restaurantes en 100+ países. La cadena de comida rápida más grande del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.43% anual* solo por ser dueño. Cada vez que alguien pide un Big Mac, un Happy Meal para sus hijos, o un McCafé en la mañana — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la presión sobre el consumidor de bajos ingresos: el CEO advirtió de una 'economía de dos niveles' donde el tráfico de clientes de menores ingresos ha caído ~10%.\n\n🆕 Posición #41\n🔗 https://vectorialdata.com/stocks/MCD\n✅ Certificado por blockchain → vectorialdata.com/verify/MCD\n\n💡 Dato que cambia cómo ves los Golden Arches: McDonald's no es una empresa de hamburguesas — es una empresa de bienes raíces. Posee o arrienda los terrenos de la mayoría de sus 45,000 restaurantes y cobra renta + regalías a los franquiciatarios. Solo el ~5% de las tiendas son operadas directamente. Por eso el margen operativo es del 46% — absurdo para un negocio de comida. Y lleva 50 años consecutivos aumentando su dividendo (Dividend Aristocrat). Eso significa que ha subido tu pago cada año sin falta durante recesiones, crisis y pandemias.`,
-    attestation_uid: "",
+    attestation_uid: "0x6d83f3eea183aa808d0b0f4fb55ca97b9a77762c46cf621549a2438312e41b04",
   },
   {
     id: 42,
@@ -6012,7 +6012,7 @@ export const transactions: Transaction[] = [
     date: "2026-04-15",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #42* — Apr 15, 2026\n\n🏢 *Wesfarmers Ltd* (WFAFY) — $26.73\n\n🛍️ *Sus marcas*: Bunnings (el "Home Depot" australiano), Kmart, Officeworks, Priceline (farmacias), Anko (marca propia), Blackwoods\n\n🌍 *Presencia*: Australia y Nueva Zelanda — el conglomerado más grande de Australia con 120,000+ empleados. También tiene una mina de litio (Mt Holland) en joint venture con SQM.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.5% anual* solo por ser dueño. Cada vez que un australiano compra herramientas en Bunnings, ropa en Kmart, útiles en Officeworks, o medicinas en Priceline — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la valuación elevada: P/E forward de 33x es caro para un conglomerado retail, lo que limita el upside y amplifica las caídas si los resultados decepcionan.\n\n🆕 Posición #42\n🔗 https://vectorialdata.com/stocks/WFAFY\n✅ Certificado por blockchain → vectorialdata.com/verify/WFAFY\n\n💡 Bunnings no es simplemente una ferretería — es una institución cultural en Australia. Los australianos van los fines de semana como ritual, a comer "sausage sizzle" (salchicha a la parrilla a la entrada) y a pasear. Con A$23.4 billones en ventas anuales, es más grande que Home Depot en proporción al tamaño de su mercado. Pero la joya escondida de Wesfarmers no está en las tiendas: es su mina de litio Mt Holland, que ya produce espodumeno y está arrancando una refinería de hidróxido de litio. Si el litio despega con los autos eléctricos, tienes exposición a eso también — sin haber comprado una empresa minera pura.`,
-    attestation_uid: "",
+    attestation_uid: "0xde0de2a842e9e3d4ec4cb07b0438307437b118b4beacc6a58d36e0ef0d9b8eb5",
   },
 ];
 
