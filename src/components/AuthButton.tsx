@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { createSupabaseBrowserClient } from "@/lib/supabase-browser";
 
@@ -82,12 +83,21 @@ export default function AuthButton({
                 {userEmail}
               </p>
               {isSubscribed && (
-                <button
-                  onClick={handleManageSubscription}
-                  className="block w-full text-left text-sm text-text-secondary hover:text-foreground hover:bg-card-hover px-2 py-1.5 rounded-lg transition-colors"
-                >
-                  {t("manageSubscription")}
-                </button>
+                <>
+                  <Link
+                    href="/account"
+                    onClick={() => setShowMenu(false)}
+                    className="block w-full text-left text-sm text-text-secondary hover:text-foreground hover:bg-card-hover px-2 py-1.5 rounded-lg transition-colors"
+                  >
+                    {t("account")}
+                  </Link>
+                  <button
+                    onClick={handleManageSubscription}
+                    className="block w-full text-left text-sm text-text-secondary hover:text-foreground hover:bg-card-hover px-2 py-1.5 rounded-lg transition-colors"
+                  >
+                    {t("manageSubscription")}
+                  </button>
+                </>
               )}
               <button
                 onClick={handleLogout}

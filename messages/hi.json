@@ -354,6 +354,7 @@
     "login": "लॉग इन",
     "logout": "लॉग आउट",
     "cancel": "रद्द करें",
+    "account": "खाता",
     "manageSubscription": "सदस्यता प्रबंधित करें",
     "magicLinkPrompt": "सदस्यता के लिए उपयोग किया गया ईमेल दर्ज करें",
     "emailPlaceholder": "आपका@ईमेल.com",
@@ -418,6 +419,16 @@
     "autoLoginResent": "लिंक दोबारा भेजा गया",
     "autoLoginCooldown": "{seconds}s इंतज़ार करें",
     "autoLoginError": "कुछ गलत हो गया। फिर से कोशिश करें।"
+  },
+  "Account": {
+    "title": "खाता",
+    "subtitle": "पिक्स प्राप्त करने का तरीका, सदस्यता और खाते की जानकारी प्रबंधित करें।",
+    "subscriptionTitle": "सदस्यता",
+    "subscriptionDesc": "भुगतान विधि अपडेट करें, इनवॉइस देखें या कभी भी रद्द करें।",
+    "manageSubscription": "सदस्यता प्रबंधित करें",
+    "logout": "लॉग आउट",
+    "accountInfoTitle": "खाता",
+    "email": "ईमेल"
   },
   "Notifications": {
     "title": "सूचनाएं",

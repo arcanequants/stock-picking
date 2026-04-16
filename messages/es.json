@@ -354,6 +354,7 @@
     "login": "Iniciar sesión",
     "logout": "Cerrar sesión",
     "cancel": "Cancelar",
+    "account": "Cuenta",
     "manageSubscription": "Gestionar suscripción",
     "magicLinkPrompt": "Ingresa el email con el que te suscribiste",
     "emailPlaceholder": "tu@email.com",
@@ -418,6 +419,16 @@
     "autoLoginResent": "Enlace reenviado",
     "autoLoginCooldown": "Espera {seconds}s",
     "autoLoginError": "Hubo un problema. Intenta de nuevo."
+  },
+  "Account": {
+    "title": "Cuenta",
+    "subtitle": "Administra cómo recibes los picks, tu suscripción y datos de cuenta.",
+    "subscriptionTitle": "Suscripción",
+    "subscriptionDesc": "Actualiza método de pago, consulta facturas o cancela cuando quieras.",
+    "manageSubscription": "Gestionar suscripción",
+    "logout": "Cerrar sesión",
+    "accountInfoTitle": "Cuenta",
+    "email": "Correo"
   },
   "Notifications": {
     "title": "Notificaciones",

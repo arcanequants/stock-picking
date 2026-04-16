@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 interface DeliveryPreferenceProps {
   labels: {
@@ -15,19 +16,20 @@ interface DeliveryPreferenceProps {
     saved: string;
     saving: string;
   };
-  waGroupLink: string;
 }
 
 type Channel = "whatsapp" | "email" | "both";
 
 export default function DeliveryPreference({
   labels,
-  waGroupLink,
 }: DeliveryPreferenceProps) {
+  const searchParams = useSearchParams();
+  const sessionId = searchParams.get("session_id");
   const [selected, setSelected] = useState<Channel>("whatsapp");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [waLink, setWaLink] = useState<string | null>(null);
 
   // Load saved preference on mount
   useEffect(() => {
@@ -53,6 +55,30 @@ export default function DeliveryPreference({
       cancelled = true;
     };
   }, []);
+
+  // Fetch WhatsApp group invite link (auth-gated server-side).
+  // Passes session_id for post-checkout arrivals who haven't clicked magic link yet.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const url = sessionId
+          ? `/api/subscriber/wa-invite?session_id=${encodeURIComponent(sessionId)}`
+          : "/api/subscriber/wa-invite";
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) return;
+        const json = (await res.json()) as { link?: string };
+        if (!cancelled && json.link) {
+          setWaLink(json.link);
+        }
+      } catch {
+        // silently fail — button just won't render
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [sessionId]);
 
   async function handleSelect(channel: Channel) {
     setSelected(channel);
@@ -143,10 +169,10 @@ export default function DeliveryPreference({
         ))}
       </div>
 
-      {/* Show WhatsApp group link when whatsapp or both is selected */}
-      {(selected === "whatsapp" || selected === "both") && (
+      {/* Show WhatsApp group link when whatsapp or both is selected AND link has been fetched */}
+      {(selected === "whatsapp" || selected === "both") && waLink && (
         <a
-          href={waGroupLink}
+          href={waLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors mt-2"

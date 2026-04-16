@@ -90,12 +90,21 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
               <div className="border-t border-border pt-3 mt-3">
                 <p className="text-xs text-text-faint truncate mb-2">{userEmail}</p>
                 {isSubscribed && (
-                  <button
-                    onClick={handleManageSubscription}
-                    className="block w-full text-left text-text-secondary hover:text-foreground py-2"
-                  >
-                    {tAuth("manageSubscription")}
-                  </button>
+                  <>
+                    <Link
+                      href="/account"
+                      onClick={() => setOpen(false)}
+                      className="block w-full text-left text-text-secondary hover:text-foreground py-2"
+                    >
+                      {tAuth("account")}
+                    </Link>
+                    <button
+                      onClick={handleManageSubscription}
+                      className="block w-full text-left text-text-secondary hover:text-foreground py-2"
+                    >
+                      {tAuth("manageSubscription")}
+                    </button>
+                  </>
                 )}
                 <button
                   onClick={handleLogout}

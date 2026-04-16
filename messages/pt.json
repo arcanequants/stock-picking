@@ -354,6 +354,7 @@
     "login": "Entrar",
     "logout": "Sair",
     "cancel": "Cancelar",
+    "account": "Conta",
     "manageSubscription": "Gerenciar assinatura",
     "magicLinkPrompt": "Digite o email que você usou para assinar",
     "emailPlaceholder": "seu@email.com",
@@ -418,6 +419,16 @@
     "autoLoginResent": "Link reenviado",
     "autoLoginCooldown": "Aguarde {seconds}s",
     "autoLoginError": "Algo deu errado. Tente novamente."
+  },
+  "Account": {
+    "title": "Conta",
+    "subtitle": "Gerencie como recebe os picks, sua assinatura e dados da conta.",
+    "subscriptionTitle": "Assinatura",
+    "subscriptionDesc": "Atualize método de pagamento, veja faturas ou cancele quando quiser.",
+    "manageSubscription": "Gerenciar assinatura",
+    "logout": "Sair",
+    "accountInfoTitle": "Conta",
+    "email": "E-mail"
   },
   "Notifications": {
     "title": "Notificações",

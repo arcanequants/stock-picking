@@ -1,13 +1,28 @@
 import { Suspense } from "react";
 import { getTranslations, getLocale } from "next-intl/server";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import DeliveryPreference from "@/components/DeliveryPreference";
 import WelcomeFlow from "@/components/WelcomeFlow";
+import { getAuthState } from "@/lib/auth";
 
-const WA_GROUP_LINK =
-  "https://chat.whatsapp.com/IxkYFffrCc5EL9smXvDVwX?mode=gi_t";
+export default async function WelcomePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ session_id?: string }>;
+}) {
+  const params = await searchParams;
+  const hasSessionId = Boolean(params.session_id);
 
-export default async function WelcomePage() {
+  // Gate: allow post-checkout arrivals (session_id validated by Stripe in WelcomeFlow)
+  // or already-subscribed users. Everyone else → pricing page.
+  if (!hasSessionId) {
+    const { isSubscribed } = await getAuthState();
+    if (!isSubscribed) {
+      redirect("/join");
+    }
+  }
+
   const t = await getTranslations("Welcome");
   const locale = await getLocale();
 
@@ -56,7 +71,7 @@ export default async function WelcomePage() {
               </div>
               <h2 className="font-semibold">{t("step1TitleNew")}</h2>
             </div>
-            <DeliveryPreference labels={deliveryLabels} waGroupLink={WA_GROUP_LINK} />
+            <DeliveryPreference labels={deliveryLabels} />
           </div>
 
           {/* Step 2: Login for premium content */}
