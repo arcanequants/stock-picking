@@ -9,6 +9,10 @@
       "schedule": "45 21 * * 1-5"
     },
     {
+      "path": "/api/cron/email-pick",
+      "schedule": "0 22 * * 1-5"
+    },
+    {
       "path": "/api/cron/reset-usage",
       "schedule": "0 0 * * *"
     },

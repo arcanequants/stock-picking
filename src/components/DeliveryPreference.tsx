@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface DeliveryPreferenceProps {
   labels: {
@@ -25,8 +25,34 @@ export default function DeliveryPreference({
   waGroupLink,
 }: DeliveryPreferenceProps) {
   const [selected, setSelected] = useState<Channel>("whatsapp");
+  const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+
+  // Load saved preference on mount
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/api/auth/delivery-preference", {
+          method: "GET",
+          cache: "no-store",
+        });
+        if (!res.ok) return;
+        const json = (await res.json()) as { channel?: Channel };
+        if (!cancelled && json.channel) {
+          setSelected(json.channel);
+        }
+      } catch {
+        // silently fall back to default
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   async function handleSelect(channel: Channel) {
     setSelected(channel);
@@ -89,11 +115,12 @@ export default function DeliveryPreference({
       <h3 className="font-semibold text-sm">{labels.title}</h3>
       <p className="text-xs text-text-muted">{labels.subtitle}</p>
 
-      <div className="grid gap-3">
+      <div className={`grid gap-3 ${loading ? "opacity-50 pointer-events-none" : ""}`}>
         {options.map((opt) => (
           <button
             key={opt.key}
             onClick={() => handleSelect(opt.key)}
+            disabled={loading}
             className={`flex items-start gap-3 p-4 rounded-xl border text-left transition-all ${
               selected === opt.key
                 ? "border-brand bg-brand-subtle ring-1 ring-brand"

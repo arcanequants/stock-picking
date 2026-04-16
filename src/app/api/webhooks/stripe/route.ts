@@ -71,23 +71,46 @@ export async function POST(request: Request) {
           }
         }
 
-        // Upsert subscriber
-        const { error: upsertError } = await supabase
+        // Check if subscriber exists to avoid clobbering delivery_channel preference
+        const { data: existing } = await supabase
           .from("subscribers")
-          .upsert(
-            {
+          .select("email")
+          .eq("email", normalizedEmail)
+          .maybeSingle();
+
+        if (existing) {
+          // Update: do NOT touch delivery_channel (preserve user preference)
+          const { error: updateError } = await supabase
+            .from("subscribers")
+            .update({
+              stripe_customer_id: customerId,
+              stripe_subscription_id: subscriptionId,
+              subscription_status: subscriptionStatus,
+              current_period_start: periodStart,
+              current_period_end: periodEnd,
+            })
+            .eq("email", normalizedEmail);
+
+          if (updateError) {
+            console.error("Subscriber update error:", updateError);
+          }
+        } else {
+          // Insert: default delivery_channel to 'whatsapp' for new users
+          const { error: insertError } = await supabase
+            .from("subscribers")
+            .insert({
               email: normalizedEmail,
               stripe_customer_id: customerId,
               stripe_subscription_id: subscriptionId,
               subscription_status: subscriptionStatus,
               current_period_start: periodStart,
               current_period_end: periodEnd,
-            },
-            { onConflict: "email" }
-          );
+              delivery_channel: "whatsapp",
+            });
 
-        if (upsertError) {
-          console.error("Subscriber upsert error:", upsertError);
+          if (insertError) {
+            console.error("Subscriber insert error:", insertError);
+          }
         }
 
         // Create Supabase Auth user if they don't exist (auto-confirmed)
