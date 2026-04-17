@@ -106,6 +106,13 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
                     </button>
                   </>
                 )}
+                <a
+                  href="mailto:Hello@vectorialdata.com?subject=Ayuda%20con%20mi%20suscripcion"
+                  onClick={() => setOpen(false)}
+                  className="block w-full text-left text-text-secondary hover:text-foreground py-2"
+                >
+                  {tAuth("help")}
+                </a>
                 <button
                   onClick={handleLogout}
                   className="block w-full text-left text-text-secondary hover:text-foreground py-2"

@@ -99,6 +99,13 @@ export default function AuthButton({
                   </button>
                 </>
               )}
+              <a
+                href="mailto:Hello@vectorialdata.com?subject=Ayuda%20con%20mi%20suscripcion"
+                onClick={() => setShowMenu(false)}
+                className="block w-full text-left text-sm text-text-secondary hover:text-foreground hover:bg-card-hover px-2 py-1.5 rounded-lg transition-colors"
+              >
+                {t("help")}
+              </a>
               <button
                 onClick={handleLogout}
                 className="block w-full text-left text-sm text-text-secondary hover:text-foreground hover:bg-card-hover px-2 py-1.5 rounded-lg transition-colors"

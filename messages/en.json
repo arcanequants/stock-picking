@@ -356,6 +356,7 @@
     "cancel": "Cancel",
     "account": "Account",
     "manageSubscription": "Manage subscription",
+    "help": "Help",
     "magicLinkPrompt": "Enter the email you used to subscribe",
     "emailPlaceholder": "your@email.com",
     "sendLink": "Send magic link",
