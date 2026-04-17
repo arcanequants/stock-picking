@@ -365,6 +365,27 @@
     "linkExpiredDesc": "Ingresa tu email para recibir un nuevo enlace de acceso.",
     "linkExpiredSent": "Enlace enviado — revisa tu email"
   },
+  "Help": {
+    "title": "Contáctanos",
+    "subtitle": "Leemos cada mensaje personalmente.",
+    "categoryLabel": "Tema",
+    "catBilling": "Facturación",
+    "catDelivery": "Entrega de correos / picks",
+    "catFeature": "Sugerencia",
+    "catOther": "Otro",
+    "messageLabel": "¿En qué te ayudamos?",
+    "messagePlaceholder": "Cuéntanos qué pasa…",
+    "send": "Enviar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "sla": "Respondemos en 1-2 días hábiles al correo de tu cuenta.",
+    "successTitle": "Mensaje recibido",
+    "successBody": "Te respondemos en 1-2 días hábiles a tu correo.",
+    "errorTooShort": "Agrega un poco más de detalle.",
+    "errorRateLimited": "Acabas de enviar un mensaje — danos un momento para leerlo.",
+    "errorUnauthorized": "Inicia sesión para enviar un mensaje.",
+    "errorGeneric": "Algo salió mal. Intenta de nuevo en un momento."
+  },
   "Returns": {
     "positionReturns": "Returns por posición",
     "name": "Empresa",

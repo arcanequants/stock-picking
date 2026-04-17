@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { createSupabaseBrowserClient } from "@/lib/supabase-browser";
+import HelpModal from "@/components/HelpModal";
 
 interface AuthButtonProps {
   userEmail: string | null;
@@ -21,6 +22,7 @@ export default function AuthButton({
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [showHelp, setShowHelp] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,6 +53,7 @@ export default function AuthButton({
   // Logged in
   if (userEmail) {
     return (
+      <>
       <div className="relative">
         <button
           onClick={() => setShowMenu(!showMenu)}
@@ -99,13 +102,15 @@ export default function AuthButton({
                   </button>
                 </>
               )}
-              <a
-                href="mailto:Hello@vectorialdata.com?subject=Ayuda%20con%20mi%20suscripcion"
-                onClick={() => setShowMenu(false)}
+              <button
+                onClick={() => {
+                  setShowMenu(false);
+                  setShowHelp(true);
+                }}
                 className="block w-full text-left text-sm text-text-secondary hover:text-foreground hover:bg-card-hover px-2 py-1.5 rounded-lg transition-colors"
               >
                 {t("help")}
-              </a>
+              </button>
               <button
                 onClick={handleLogout}
                 className="block w-full text-left text-sm text-text-secondary hover:text-foreground hover:bg-card-hover px-2 py-1.5 rounded-lg transition-colors"
@@ -116,6 +121,8 @@ export default function AuthButton({
           </>
         )}
       </div>
+      <HelpModal open={showHelp} onClose={() => setShowHelp(false)} />
+      </>
     );
   }
 

@@ -365,6 +365,27 @@
     "linkExpiredDesc": "Enter your email to receive a new login link.",
     "linkExpiredSent": "Link sent — check your email"
   },
+  "Help": {
+    "title": "Get in touch",
+    "subtitle": "We read every message personally.",
+    "categoryLabel": "Topic",
+    "catBilling": "Billing",
+    "catDelivery": "Email / pick delivery",
+    "catFeature": "Feature request",
+    "catOther": "Other",
+    "messageLabel": "How can we help?",
+    "messagePlaceholder": "Tell us what's going on…",
+    "send": "Send",
+    "cancel": "Cancel",
+    "close": "Close",
+    "sla": "We reply within 1-2 business days to the email on your account.",
+    "successTitle": "Message received",
+    "successBody": "We'll reply to your email within 1-2 business days.",
+    "errorTooShort": "Please add a bit more detail.",
+    "errorRateLimited": "You just sent a message — give us a minute to read it.",
+    "errorUnauthorized": "Please log in to send a message.",
+    "errorGeneric": "Something went wrong. Try again in a moment."
+  },
   "Returns": {
     "positionReturns": "Position Returns",
     "name": "Company",

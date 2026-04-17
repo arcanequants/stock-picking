@@ -1584,3 +1584,127 @@ export async function sendMagicLinkEmail(
 
   if (error) throw new Error(`Failed to send magic link email: ${error.message}`);
 }
+
+// ===== Support tickets =====
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+export async function sendSupportTicketToAdmin(
+  adminEmail: string,
+  userEmail: string,
+  category: string | null,
+  message: string,
+  ticketId: number
+): Promise<void> {
+  const safeMessage = escapeHtml(message).replace(/\n/g, "<br/>");
+  const cat = category ? escapeHtml(category) : "—";
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;"><tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 32px;background:#111827;color:#ffffff;">
+    <p style="margin:0;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#9ca3af;">Support ticket #${ticketId}</p>
+    <h1 style="margin:4px 0 0;font-size:18px;font-weight:600;">Category: ${cat}</h1>
+  </td></tr>
+  <tr><td style="padding:24px 32px;">
+    <p style="margin:0 0 8px;font-size:13px;color:#6b7280;">From</p>
+    <p style="margin:0 0 20px;font-size:15px;color:#111827;font-weight:500;">${escapeHtml(userEmail)}</p>
+    <p style="margin:0 0 8px;font-size:13px;color:#6b7280;">Message</p>
+    <div style="font-size:15px;line-height:1.6;color:#111827;background:#f9fafb;padding:16px;border-radius:8px;border:1px solid #e4e4e7;">${safeMessage}</div>
+    <p style="margin:20px 0 0;font-size:12px;color:#9ca3af;">Reply directly to this email — it goes back to the user.</p>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    replyTo: userEmail,
+    subject: `[Ticket #${ticketId}] ${category ?? "Support"} — ${userEmail}`,
+    html,
+    text: `Ticket #${ticketId}\nFrom: ${userEmail}\nCategory: ${category ?? "—"}\n\n${message}\n\nReply directly to this email.`,
+  });
+
+  if (error) throw new Error(`Failed to send support ticket to admin: ${error.message}`);
+}
+
+export async function sendSupportTicketAck(
+  userEmail: string,
+  ticketId: number,
+  locale: string = "es"
+): Promise<void> {
+  const L: Record<string, { subject: string; title: string; body: string; sla: string; footer: string }> = {
+    es: {
+      subject: `Recibimos tu mensaje — Ticket #${ticketId}`,
+      title: "Recibimos tu mensaje",
+      body: "Gracias por escribirnos. Leemos cada ticket personalmente.",
+      sla: "Te respondemos en 1-2 días hábiles al correo con el que te registraste.",
+      footer: "Este es un mensaje automático.",
+    },
+    en: {
+      subject: `We got your message — Ticket #${ticketId}`,
+      title: "We got your message",
+      body: "Thanks for reaching out. We read every ticket personally.",
+      sla: "You'll hear back from us within 1-2 business days at this email address.",
+      footer: "This is an automated confirmation.",
+    },
+    pt: {
+      subject: `Recebemos sua mensagem — Ticket #${ticketId}`,
+      title: "Recebemos sua mensagem",
+      body: "Obrigado por entrar em contato. Lemos cada ticket pessoalmente.",
+      sla: "Respondemos em 1-2 dias úteis no email com que você se cadastrou.",
+      footer: "Esta é uma confirmação automática.",
+    },
+    hi: {
+      subject: `हमें आपका संदेश मिला — Ticket #${ticketId}`,
+      title: "हमें आपका संदेश मिला",
+      body: "संपर्क करने के लिए धन्यवाद। हम हर टिकट को व्यक्तिगत रूप से पढ़ते हैं।",
+      sla: "हम 1-2 कार्य दिवसों में आपके पंजीकृत ईमेल पर उत्तर देंगे।",
+      footer: "यह एक स्वचालित पुष्टि है।",
+    },
+  };
+
+  const l = locale in L ? locale : "es";
+  const c = L[l];
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;"><tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:32px 32px 24px;text-align:center;">
+    <img src="${SITE}/logo.png" width="40" height="40" alt="Vectorial Data" style="display:inline-block;margin-bottom:12px;" />
+    <h1 style="margin:0;font-size:22px;font-weight:700;color:#111827;">${c.title}</h1>
+  </td></tr>
+  <tr><td style="padding:0 32px 32px;">
+    <p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#374151;">${c.body}</p>
+    <p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#374151;">${c.sla}</p>
+    <p style="margin:24px 0 0;font-size:13px;color:#6b7280;">Ticket #${ticketId}</p>
+  </td></tr>
+  <tr><td style="padding:20px 32px;border-top:1px solid #e4e4e7;text-align:center;">
+    <p style="margin:0;font-size:12px;color:#9ca3af;">${c.footer}</p>
+    <p style="margin:8px 0 0;font-size:12px;color:#9ca3af;">
+      <a href="${SITE}" style="color:#4f46e5;text-decoration:none;">vectorialdata.com</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: userEmail,
+    subject: c.subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send support ticket ack: ${error.message}`);
+}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { createSupabaseBrowserClient } from "@/lib/supabase-browser";
+import HelpModal from "@/components/HelpModal";
 
 interface MobileNavProps {
   userEmail: string | null;
@@ -12,6 +13,7 @@ interface MobileNavProps {
 
 export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
   const [open, setOpen] = useState(false);
+  const [showHelp, setShowHelp] = useState(false);
   const t = useTranslations("Nav");
   const tAuth = useTranslations("Auth");
   const locale = useLocale();
@@ -45,6 +47,7 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
   };
 
   return (
+    <>
     <div className="md:hidden">
       <button
         onClick={() => setOpen(!open)}
@@ -106,13 +109,15 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
                     </button>
                   </>
                 )}
-                <a
-                  href="mailto:Hello@vectorialdata.com?subject=Ayuda%20con%20mi%20suscripcion"
-                  onClick={() => setOpen(false)}
+                <button
+                  onClick={() => {
+                    setOpen(false);
+                    setShowHelp(true);
+                  }}
                   className="block w-full text-left text-text-secondary hover:text-foreground py-2"
                 >
                   {tAuth("help")}
-                </a>
+                </button>
                 <button
                   onClick={handleLogout}
                   className="block w-full text-left text-text-secondary hover:text-foreground py-2"
@@ -177,5 +182,7 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
         </div>
       )}
     </div>
+    <HelpModal open={showHelp} onClose={() => setShowHelp(false)} />
+    </>
   );
 }
