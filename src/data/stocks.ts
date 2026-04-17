@@ -5672,6 +5672,181 @@ El negocio aburrido (lentes correctivos para 2.5B personas) ancla la tesis defen
     last_updated_at: "2026-04-15T00:00:00Z",
     next_review_at: "2026-10-15T00:00:00Z",
   },
+  {
+    id: 46,
+    ticker: "CEG",
+    name: "Constellation Energy Corporation",
+    sector: "Utilities",
+    industry: "Electric Power Generation / Nuclear",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 295.49,
+    pe_ratio: 39.99,
+    pe_forward: 21.51,
+    dividend_yield: 0.57,
+    market_cap_b: 107.05,
+    eps: 7.39,
+    summary_short:
+      "La mayor productora de electricidad de EE.UU. tras comprar Calpine en enero 2026 — 55 GW, ~10% de toda la electricidad sin carbono del país. Firmó con Microsoft un contrato de 20 años para restart de Three Mile Island dedicado a entrenar AI. La acción cayó 28% desde máximos por retrasos en ese restart.",
+    summary_what:
+      "Constellation Energy es la utility #1 de EE.UU. medida por generación eléctrica. Opera la flota nuclear más grande del país (~22 GW — Byron, Braidwood, Clinton, Dresden, LaSalle, Limerick, Peach Bottom, Quad Cities, Salem, Nine Mile Point, FitzPatrick, Ginna y el reactor Unit 1 de Three Mile Island rebautizado como Crane Clean Energy Center). Tras la adquisición de Calpine (cerrada el 7 de enero de 2026) suma 33 GW adicionales de gas natural, eólica, solar e hidráulica — total combinado 55 GW, suficiente para ~27 millones de hogares. También venden electricidad al menudeo a hogares y empresas bajo la marca Constellation. El gran catalizador es el contrato con Microsoft firmado en septiembre 2024: una PPA de 20 años por TODA la producción del reactor Unit 1 de TMI (835 MW), dedicada a alimentar data centers de AI — el primer acuerdo de su tipo en la historia. El restart tiene $1B de garantía de préstamo del DOE.",
+    summary_why:
+      "FY2026 guidance: EPS ajustado $11–$12 (midpoint +55% vs 2025), apenas debajo del consenso de analistas de $11.60. El mercado castigó la acción un 28% desde el máximo de $412.70 por: (1) retraso del restart de TMI-Crane — técnicamente listo en 2027 pero con bottlenecks de transmisión de PJM que podrían empujar la conexión a la red hasta 2031; (2) la valuación al momento de firmar Calpine. Pero la tesis estructural no cambia: CEG es el único proveedor de EE.UU. con nuclear + gas peakers + renovables a esta escala — exactamente la combinación que necesitan los data centers de AI (baseload limpio 24/7, que solar y viento no pueden dar). Microsoft ya firmó 20 años, Amazon y Meta firmaron con otros operadores nucleares siguiendo el mismo patrón. El IRA tiene un Production Tax Credit para nuclear que pone piso al revenue. La acción a $295.49 te deja comprar la utility #1 de EE.UU. con 28% de descuento y exposición directa al gasto de AI capex.",
+    summary_risk:
+      "El retraso del restart de Three Mile Island (Crane Clean Energy Center) hasta 2031 por cuellos de botella en la transmisión de PJM decepcionó al mercado — fue el detonante de la caída del 28% desde máximos. Otros riesgos: guidance 2026 de $11–$12 EPS apenas debajo del consenso de $11.60; integración de Calpine (compra de $16.4B cerrada hace 3 meses) todavía en curso; valuación P/E forward 21.5x es rica para una utility tradicional aunque baja si la apuestas a AI se materializa; riesgo político del Production Tax Credit nuclear en el IRA bajo nuevo Congreso; precios del gas natural pueden comprimir márgenes del fleet de Calpine; sensibilidad a tasas de interés como toda utility intensiva en capital.",
+    research_full: `# Constellation Energy Corporation (CEG) — Research Completo
+
+## Precio: $295.49 | P/E TTM: 40.0 | P/E Forward: 21.5 | Div Yield: 0.57% | Market Cap: $107B
+
+---
+
+## Qué Es
+
+Constellation Energy es la **productora #1 de electricidad de Estados Unidos** desde que cerró la compra de Calpine el **7 de enero de 2026** por $16.4B. Opera 55 GW de capacidad combinada — **~10% de toda la electricidad sin carbono del país**, suficiente para alimentar aproximadamente 27 millones de hogares.
+
+Fue spin-off de Exelon en febrero de 2022 (CEG se llevó la generación; Exelon se quedó con la distribución regulada). HQ en Baltimore, Maryland.
+
+## Mix de Generación Post-Calpine
+
+| Fuente | Capacidad | % del fleet |
+|--------|-----------|-------------|
+| **Nuclear** | ~22 GW | 40% |
+| **Gas Natural** (ex-Calpine) | ~27 GW | 49% |
+| **Eólica / Solar / Hidro** | ~6 GW | 11% |
+
+## Flota Nuclear — la mayor de EE.UU.
+
+Opera 13 sitios nucleares con 21 reactores. Los principales:
+
+- **Crane Clean Energy Center** (ex-Three Mile Island Unit 1) — 835 MW, restart en proceso, PPA 20 años con **Microsoft**
+- Byron, Braidwood, Clinton (Illinois)
+- Dresden, LaSalle, Quad Cities (Illinois)
+- Peach Bottom, Limerick (Pennsylvania)
+- Nine Mile Point, FitzPatrick, Ginna (New York)
+- Salem, Hope Creek (New Jersey — joint ownership)
+
+## El Catalizador: Microsoft + AI
+
+En septiembre 2024, Constellation firmó con Microsoft una **PPA (Power Purchase Agreement) de 20 años** por toda la producción del reactor Unit 1 de Three Mile Island (ahora Crane Clean Energy Center). Primera vez en la historia que una hyperscaler firma un contrato de este tamaño para reactivar un reactor nuclear retirado.
+
+### Por Qué Importa
+Los data centers de AI necesitan **baseload limpio 24/7**. Solar + viento no sirven porque son intermitentes. Nuclear es la única fuente que:
+1. No emite CO2 (objetivos net-zero de Microsoft para 2030)
+2. Produce energía constante día y noche
+3. Tiene factor de capacidad >90% (vs 25% solar, 35% eólico)
+
+### El Patrón se Expande
+- **Amazon** compró un data center junto a la planta nuclear Susquehanna (Talen Energy) por $650M
+- **Meta** firmó con Constellation en junio 2025 una extensión de 20 años para el reactor Clinton de Illinois
+- **Google** está en negociaciones avanzadas con varios operadores
+
+CEG es el líder obvio de este tema por tamaño de fleet nuclear.
+
+## Resultados FY2025 y Guidance 2026
+
+| Métrica | FY2025 | FY2026 guidance |
+|---------|--------|-----------------|
+| **Adjusted EPS** | ~$7.39 | **$11.00 – $12.00** |
+| **Midpoint growth** | — | **+55%** YoY |
+| **Consenso analistas** | — | $11.60 |
+| **Free Cash Flow** | ~$2.5B | Creciente |
+
+Guidance midpoint (\$11.50) quedó marginalmente debajo del consenso (\$11.60) — una de las razones del sell-off reciente.
+
+## Calpine Acquisition — Closed Jan 7, 2026
+
+- **Precio**: $16.4B (cash + stock)
+- **Aporta**: 33 GW de gas natural + renovables
+- **Ubicación**: Texas, California, Mid-Atlantic
+- **Lógica estratégica**: gas peakers complementan nuclear baseload — necesario para equilibrar picos de demanda de data centers
+- **Integración**: en curso durante 2026
+
+## Por Qué Ahora
+
+### 1. La Caída es Técnica, no Estructural
+- 52w High: **$412.70**
+- Precio actual: **$295.49** → **-28% desde máximos**
+- Razón de la caída:
+  - Retraso de restart TMI-Crane a ~2031 por bottlenecks de transmisión PJM
+  - Guidance 2026 marginalmente debajo de consenso
+  - Digestión de la adquisición de Calpine
+- **La tesis de AI + nuclear sigue intacta** — Microsoft no canceló el contrato, solo se empuja la fecha de entrega
+
+### 2. Posición Estructural Irrepetible
+- 22 GW de nuclear ya operando (imposible construir nuevo en <10 años)
+- 55 GW totales post-Calpine = #1 del país
+- Mix único: nuclear + gas peakers + renovables = exactamente lo que los data centers necesitan
+
+### 3. Demanda de AI es Real y Creciente
+- Gasto global en data centers proyectado: $500B+ en 2026
+- Hyperscalers (MSFT, GOOGL, AMZN, META) están firmando contratos nucleares de 20 años
+- EE.UU. tiene déficit estructural de baseload limpio
+
+### 4. Piso del DOE y el IRA
+- $1B de garantía de préstamo del DOE para el restart de Crane
+- Production Tax Credit nuclear del Inflation Reduction Act pone piso al revenue
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio** | $295.49 |
+| **Market Cap** | $107.05B |
+| **P/E TTM** | 39.99x |
+| **P/E Forward** | 21.51x |
+| **EPS TTM** | $7.39 |
+| **EPS Forward** | $13.74 |
+| **Dividend Yield** | 0.57% |
+| **Dividend Rate** | $1.551 |
+| **52w High** | $412.70 |
+| **52w Low** | $188.00 |
+| **Drawdown desde high** | -28% |
+| **Shares Outstanding** | 362M |
+
+## Riesgos
+
+### 1. Retraso de TMI-Crane hasta 2031
+Bottlenecks de transmisión en PJM pueden empujar la fecha de conexión a la red del reactor. Microsoft sigue firmado, pero el flujo de ingresos se retrasa.
+
+### 2. Integración de Calpine
+Adquisición de $16.4B cerrada hace 3 meses. Sinergias prometidas todavía por materializarse.
+
+### 3. Valuación
+P/E forward 21.5x es alto para una utility tradicional. Solo se justifica si la historia de AI se materializa.
+
+### 4. Riesgo Político del PTC Nuclear
+El Production Tax Credit para nuclear del IRA es revisable. Un Congreso que lo elimine o reduzca golpea el floor de revenue.
+
+### 5. Precios del Gas Natural
+El fleet de Calpine es principalmente gas. Volatilidad en gas afecta márgenes.
+
+### 6. Tasas de Interés
+Utility intensiva en capital — sensible a subidas de tasas. Deuda neta significativa post-Calpine.
+
+## Conclusión
+
+CEG a $295.49 te permite comprar la utility #1 de EE.UU. con 28% de descuento desde máximos, cuando:
+1. Acaban de convertirse en la mayor productora de electricidad del país (55 GW post-Calpine)
+2. Tienen el contrato nuclear más comentado de la historia con Microsoft (PPA 20 años)
+3. La caída es por timing (TMI restart retrasado a 2031) no por tesis rota
+4. El mix nuclear + gas + renovables es exactamente lo que los data centers de AI necesitan
+5. $1B de garantía del DOE + PTC nuclear = piso estructural de revenue
+
+El negocio aburrido (electricidad para 27M de hogares) ancla. El negocio emocionante (combustible para la era de AI) da el upside.
+
+---
+
+*Research fecha: 17 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 380.0,
+    analyst_upside: 28.6,
+    status: "active",
+    first_researched_at: "2026-04-17T00:00:00Z",
+    last_updated_at: "2026-04-17T00:00:00Z",
+    next_review_at: "2026-10-17T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -6228,6 +6403,17 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #43* — Apr 15, 2026\n\n🏢 *EssilorLuxottica* (ESLOY) — $122.75\n\n🛍️ *Sus marcas*: Ray-Ban, Oakley, Persol, Oliver Peoples, Vogue Eyewear, Costa Del Mar. Fabrican las Ray-Ban Meta (smart glasses con AI). Tiendas: LensCrafters, Sunglass Hut, Pearle Vision, Target Optical.\n\n🌍 *Presencia*: Global — HQ en Paris + Milán. Controlan ~60% del mercado de eyewear en EE.UU. y 42% del mercado mundial de lentes correctivos. Integración vertical total: fabrican los lentes, diseñan las monturas, venden al menudeo, y aseguran (EyeMed).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.87% anual* solo por ser dueño. Cada vez que alguien compra lentes en LensCrafters, se pone unos Ray-Ban, usa anteojos Oakley en el gym, o pide sus smart glasses Ray-Ban Meta — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La competencia de Apple en smart glasses (producción prevista diciembre 2026, lanzamiento 2027) amenaza la ventaja actual de Ray-Ban Meta — fue el detonante principal de la caída del 34% desde máximos.\n\n🆕 Posición #43\n🔗 https://vectorialdata.com/stocks/ESLOY\n✅ Certificado por blockchain → vectorialdata.com/verify/ESLOY\n\n💡 Dato que casi nadie conecta: cada Ray-Ban Meta que ves en la calle — los smart glasses con cámara, parlante y AI — está fabricado por EssilorLuxottica. Vendieron 7 millones de unidades en 2025 (vs 2 millones acumuladas en 2023+2024). El mercado de smart glasses pasará de $1.2B este año a $5.6B en 2026, y EssilorLuxottica + Meta lideran con distancia. En 2026 lanzan versiones Oakley (deporte) y Prada (luxury). Cuando Apple finalmente entre en 2027, se topará con una empresa que ya lleva 4+ años fabricando millones de smart glasses — y que además controla el 60% del retail óptico en EE.UU. La caída del 34% desde el pico es miedo a Apple. Pero el miedo crea oportunidades.`,
     attestation_uid: "0x463bc6ed92ed891de6e44f718ad5dbc8e7434be075c9da0b578161e5d4ce5179",
   },
+  {
+    id: 44,
+    stock_id: 46,
+    ticker: "CEG",
+    type: "new" as const,
+    cycle_number: 9,
+    price: 295.49,
+    date: "2026-04-17",
+    day_of_week: "friday",
+    wa_message: `📊 *STOCK PICK #44* — Apr 17, 2026\n\n🏢 *Constellation Energy* (CEG) — $295.49\n\n🛍️ *Sus líneas/operaciones*: Energía nuclear (22 GW — la flota #1 de EE.UU.), gas natural (fleet de Calpine), eólica, solar e hidráulica. Opera el reactor Unit 1 de Three Mile Island (rebautizado Crane Clean Energy Center — contratado por Microsoft), Byron, Braidwood, Clinton, Dresden, Peach Bottom, Nine Mile Point. Retail: Constellation (electricidad a hogares y empresas).\n\n🌍 *Presencia*: EE.UU. — HQ en Baltimore, Maryland. Tras la compra de Calpine en enero 2026 son la mayor productora de electricidad del país: 55 GW de capacidad, suficientes para ~27M de hogares, ~10% de la electricidad sin carbono de EE.UU.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.57% anual* solo por ser dueño. Cada vez que enciendes la luz, cargas tu teléfono, o un data center de Microsoft entrena un modelo de AI — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El retraso del restart de Three Mile Island (Crane Clean Energy Center) hasta 2031 por cuellos de botella en la transmisión de PJM decepcionó al mercado — fue el detonante de la caída del 28% desde máximos.\n\n🆕 Posición #44\n🔗 https://vectorialdata.com/stocks/CEG\n✅ Certificado por blockchain → vectorialdata.com/verify/CEG\n\n💡 Dato que cambia cómo ves la acción: en septiembre de 2024, Microsoft firmó con Constellation un contrato de 20 años para absorber TODA la producción del reactor Unit 1 de Three Mile Island — 835 MW dedicados exclusivamente a entrenar AI. Primera vez en la historia que una hyperscaler paga para reactivar un reactor nuclear retirado. ¿Por qué? Los data centers de AI consumen electricidad 24/7, y solo nuclear puede dar baseload limpio sin parar (solar y viento son intermitentes). GPT-5, Copilot, Azure AI — todo eso corre con energía, y esa energía tiene que venir de algún lado. Amazon hizo algo similar con Talen. Meta firmó con Constellation para el reactor Clinton. Google está negociando. CEG no está vendiendo electricidad para casas — está vendiendo el combustible de la era de la AI. Por eso a $295 compras la utility #1 de EE.UU. con 28% de descuento; el mercado se asustó porque el restart de Crane se retrasa a 2031 en vez de 2028. Pero el contrato con Microsoft sigue firmado, y el gasto global en data centers proyecta +$500B en 2026. El miedo al timing abrió la puerta al precio.`,
+  },
 ];
 
 export const cycles = [
@@ -6300,7 +6486,7 @@ export const cycles = [
     cycle_number: 9,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 4,
     status: "active" as const,
   },
 ];
