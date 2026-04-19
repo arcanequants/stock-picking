@@ -1,0 +1,204 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Account" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Account" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Cuenta" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Conta" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "खाता" } }
+      }
+    },
+    "After hours" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "After hours" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Post-cierre" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Pós-mercado" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "समापन के बाद" } }
+      }
+    },
+    "Best" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Best" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Mejor" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Melhor" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "सर्वश्रेष्ठ" } }
+      }
+    },
+    "By continuing you agree to the Terms and Privacy Policy." : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "By continuing you agree to the Terms and Privacy Policy." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Al continuar aceptas los Términos y la Política de Privacidad." } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Ao continuar, você concorda com os Termos e a Política de Privacidade." } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "जारी रखकर, आप शर्तों और गोपनीयता नीति से सहमत होते हैं।" } }
+      }
+    },
+    "Check your email" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Check your email" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Revisa tu correo" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Verifique seu email" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "अपना ईमेल देखें" } }
+      }
+    },
+    "Coming soon" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Coming soon" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Próximamente" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Em breve" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "जल्द आ रहा है" } }
+      }
+    },
+    "Email" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Email" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Correo" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Email" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "ईमेल" } }
+      }
+    },
+    "Enter a valid email" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enter a valid email" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Introduce un correo válido" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Insira um email válido" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "मान्य ईमेल दर्ज करें" } }
+      }
+    },
+    "Home" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Home" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Inicio" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Início" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "होम" } }
+      }
+    },
+    "Market closed" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Market closed" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Mercado cerrado" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Mercado fechado" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "बाज़ार बंद" } }
+      }
+    },
+    "Market open" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Market open" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Mercado abierto" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Mercado aberto" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "बाज़ार खुला" } }
+      }
+    },
+    "One stock pick a day. Every day." : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "One stock pick a day. Every day." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Una acción al día. Todos los días." } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Uma ação por dia. Todos os dias." } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "हर दिन एक स्टॉक पिक।" } }
+      }
+    },
+    "Picks" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Picks" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Elecciones" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Escolhas" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "पिक्स" } }
+      }
+    },
+    "Portfolio" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Portfolio" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Portafolio" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Portfólio" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "पोर्टफोलियो" } }
+      }
+    },
+    "Portfolio return" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Portfolio return" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Rendimiento" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Retorno" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "पोर्टफोलियो रिटर्न" } }
+      }
+    },
+    "Positions" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Positions" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Posiciones" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Posições" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "पोज़िशन" } }
+      }
+    },
+    "Pre-market" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Pre-market" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Pre-mercado" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Pré-mercado" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "प्री-मार्केट" } }
+      }
+    },
+    "Send magic link" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Send magic link" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Enviar enlace mágico" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Enviar link mágico" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "मैजिक लिंक भेजें" } }
+      }
+    },
+    "Sending…" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sending…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Enviando…" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Enviando…" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "भेजा जा रहा है…" } }
+      }
+    },
+    "Sign out" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sign out" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Cerrar sesión" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Sair" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "साइन आउट" } }
+      }
+    },
+    "Status" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Status" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Estado" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Status" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "स्थिति" } }
+      }
+    },
+    "Vectorial Data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Vectorial Data" } }
+      }
+    },
+    "We sent a sign-in link to %@. Tap it on this device to continue." : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "We sent a sign-in link to %@. Tap it on this device to continue." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Enviamos un enlace de inicio de sesión a %@. Tócalo en este dispositivo para continuar." } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Enviamos um link de login para %@. Toque nele neste dispositivo para continuar." } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "हमने %@ पर साइन-इन लिंक भेजा। जारी रखने के लिए इस डिवाइस पर टैप करें।" } }
+      }
+    },
+    "Worst" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Worst" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Peor" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "Pior" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "सबसे खराब" } }
+      }
+    },
+    "you@example.com" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "you@example.com" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "tu@ejemplo.com" } },
+        "pt" : { "stringUnit" : { "state" : "translated", "value" : "voce@exemplo.com" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "aap@udaharan.com" } }
+      }
+    }
+  },
+  "version" : "1.0"
+}
