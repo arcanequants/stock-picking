@@ -57,6 +57,48 @@ export async function createSupabaseServerClient() {
   );
 }
 
+/**
+ * Resolves the authenticated user for an API route.
+ *
+ * Accepts two auth mechanisms (in order):
+ *   1. `Authorization: Bearer <jwt>` — used by the iOS app, JWTs from
+ *      Supabase's verifyOtp flow.
+ *   2. Supabase SSR session cookie — used by the web.
+ *
+ * Returns `null` if neither yields a valid user.
+ */
+export async function getAuthedUser(
+  request: Request
+): Promise<{ id: string; email: string } | null> {
+  const authHeader = request.headers.get("authorization");
+  if (authHeader?.startsWith("Bearer ")) {
+    const jwt = authHeader.slice(7).trim();
+    if (jwt) {
+      const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const anon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+      if (url && anon) {
+        const bearerClient = createClient(url, anon, {
+          global: { headers: { Authorization: `Bearer ${jwt}` } },
+          auth: { persistSession: false, autoRefreshToken: false },
+        });
+        const { data, error } = await bearerClient.auth.getUser(jwt);
+        if (!error && data.user?.email) {
+          return { id: data.user.id, email: data.user.email.toLowerCase() };
+        }
+      }
+    }
+  }
+
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (user?.email) {
+    return { id: user.id, email: user.email.toLowerCase() };
+  }
+  return null;
+}
+
 // Backwards compat
 export const supabase = typeof window !== "undefined" ? null : null;
 export const supabaseAdmin = null;

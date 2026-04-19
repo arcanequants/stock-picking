@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import { sendPickEmail } from "@/lib/resend";
+import { sendAPNsMany } from "@/lib/apns";
 import { generatePickApprovalToken } from "../route";
 
 export const dynamic = "force-dynamic";
@@ -138,9 +139,61 @@ export async function GET(request: Request) {
       }
     }
 
+    // iOS push fanout — best-effort, does not block email delivery summary.
+    let pushSent = 0;
+    let pushFailed = 0;
+    try {
+      const subscribedEmails = recipients.map((r) => r.email.toLowerCase());
+      if (subscribedEmails.length > 0 && process.env.APNS_TEAM_ID) {
+        const { data: tokens } = await supabase
+          .from("device_tokens")
+          .select("email, token")
+          .eq("platform", "ios")
+          .eq("is_active", true)
+          .in("email", subscribedEmails);
+
+        const tokenList = (tokens ?? []).map((t) => t.token);
+        if (tokenList.length > 0) {
+          const returnPct = tx.price > 0
+            ? Math.round(((stock.price - tx.price) / tx.price) * 10000) / 100
+            : 0;
+          const results = await sendAPNsMany(tokenList, {
+            aps: {
+              alert: {
+                title: `Pick #${pickNumber}: ${stock.ticker}`,
+                body: stock.name,
+              },
+              sound: "default",
+              "thread-id": "new-pick",
+            },
+            ticker: stock.ticker,
+            pick_number: pickNumber,
+            return_pct: returnPct,
+            kind: "new_pick",
+          });
+
+          // Deactivate tokens Apple rejects as dead (410).
+          const deadTokens = results
+            .filter((r) => r.status === 410 || r.reason === "Unregistered")
+            .map((r) => r.token);
+          if (deadTokens.length > 0) {
+            await supabase
+              .from("device_tokens")
+              .update({ is_active: false })
+              .in("token", deadTokens);
+          }
+
+          pushSent = results.filter((r) => r.ok).length;
+          pushFailed = results.length - pushSent;
+        }
+      }
+    } catch (e) {
+      console.error("APNs fanout failed (non-fatal):", e);
+    }
+
     return htmlResponse(
       "Pick enviado",
-      `Pick #${pickNumber} (${stock.name}): ${sent} emails enviados.${failed > 0 ? ` ${failed} fallaron.` : ""}`,
+      `Pick #${pickNumber} (${stock.name}): ${sent} emails, ${pushSent} pushes.${failed + pushFailed > 0 ? ` Fallaron ${failed} emails y ${pushFailed} pushes.` : ""}`,
       "#16a34a"
     );
   } catch (error) {

@@ -1,11 +1,16 @@
 import { NextResponse } from "next/server";
 import { getAuthedUser, getSupabaseAdmin } from "@/lib/supabase";
+import { getPicksData } from "@/lib/api-data";
 
 export const dynamic = "force-dynamic";
 
 /**
- * GET /api/me — authenticated user profile.
- * Accepts both web session cookie and `Authorization: Bearer <jwt>` (iOS).
+ * GET /api/picks — chronological list of every pick, newest first.
+ * Accepts web session cookie and `Authorization: Bearer <jwt>` (iOS).
+ *
+ * Gating:
+ *   - Subscribed users: all picks
+ *   - Unsubscribed:     most recent 3 (teaser)
  */
 export async function GET(request: Request) {
   const authed = await getAuthedUser(request);
@@ -15,22 +20,17 @@ export async function GET(request: Request) {
 
   const { data: subscriber } = await getSupabaseAdmin()
     .from("subscribers")
-    .select(
-      "email, subscription_status, delivery_channel, locale, created_at, current_period_end"
-    )
+    .select("subscription_status")
     .eq("email", authed.email)
     .single();
 
-  const status = subscriber?.subscription_status ?? null;
+  const status = subscriber?.subscription_status;
   const isSubscribed = status === "active" || status === "trialing";
 
+  const picks = await getPicksData(undefined, isSubscribed ? "pro" : "free");
+
   return NextResponse.json({
-    email: authed.email,
+    picks,
     is_subscribed: isSubscribed,
-    subscription_status: status,
-    delivery_channel: subscriber?.delivery_channel ?? null,
-    locale: subscriber?.locale ?? null,
-    created_at: subscriber?.created_at ?? null,
-    current_period_end: subscriber?.current_period_end ?? null,
   });
 }

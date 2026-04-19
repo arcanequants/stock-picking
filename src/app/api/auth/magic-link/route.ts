@@ -4,7 +4,7 @@ import { sendMagicLinkEmail } from "@/lib/resend";
 
 export async function POST(request: Request) {
   try {
-    const { email, locale } = await request.json();
+    const { email, locale, client } = await request.json();
 
     if (!email || typeof email !== "string") {
       return NextResponse.json(
@@ -12,6 +12,8 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    const isIOSClient = client === "ios";
 
     const normalizedEmail = email.toLowerCase().trim();
 
@@ -47,11 +49,19 @@ export async function POST(request: Request) {
         ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
         : "https://www.vectorialdata.com");
 
-    const callbackUrl = `${siteUrl}/auth/callback?token_hash=${tokenHash}&type=${type}&next=/portfolio`;
+    const callbackUrl = isIOSClient
+      ? `vectorialdata://auth?token_hash=${tokenHash}&type=${type}`
+      : `${siteUrl}/auth/callback?token_hash=${tokenHash}&type=${type}&next=/portfolio`;
 
-    // Send branded email via Resend with our direct callback URL
+    // Dev fallback: when RESEND_API_KEY isn't configured (local dev), skip
+    // the email send and return the link directly so the developer can open it.
+    // Production always has the key, so this branch is strictly a dev convenience.
+    if (!process.env.RESEND_API_KEY) {
+      console.log("[magic-link] dev mode — link:", callbackUrl);
+      return NextResponse.json({ ok: true, dev_link: callbackUrl });
+    }
+
     await sendMagicLinkEmail(normalizedEmail, callbackUrl, locale || "es");
-
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Magic link error:", err);

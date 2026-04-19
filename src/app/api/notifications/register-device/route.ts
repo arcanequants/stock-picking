@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createSupabaseServerClient, getSupabaseAdmin } from "@/lib/supabase";
+import { getAuthedUser, getSupabaseAdmin } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 10;
@@ -17,12 +17,8 @@ type Platform = (typeof ALLOWED_PLATFORMS)[number];
  * Auth: session cookie (Supabase SSR).
  */
 export async function POST(request: Request) {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user?.email) {
+  const authed = await getAuthedUser(request);
+  if (!authed) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
@@ -46,14 +42,13 @@ export async function POST(request: Request) {
   const appVersion =
     body.app_version && body.app_version.length < 32 ? body.app_version : null;
 
-  const email = user.email.toLowerCase();
   const admin = getSupabaseAdmin();
 
   const { error } = await admin
     .from("device_tokens")
     .upsert(
       {
-        email,
+        email: authed.email,
         token,
         platform,
         app_version: appVersion,
@@ -80,12 +75,8 @@ export async function POST(request: Request) {
  * Body: { token: string }
  */
 export async function DELETE(request: Request) {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user?.email) {
+  const authed = await getAuthedUser(request);
+  if (!authed) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
@@ -101,11 +92,10 @@ export async function DELETE(request: Request) {
     return NextResponse.json({ error: "missing_token" }, { status: 400 });
   }
 
-  const email = user.email.toLowerCase();
   const { error } = await getSupabaseAdmin()
     .from("device_tokens")
     .update({ is_active: false })
-    .eq("email", email)
+    .eq("email", authed.email)
     .eq("token", token);
 
   if (error) {
