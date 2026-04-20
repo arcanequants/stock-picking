@@ -5847,6 +5847,402 @@ El negocio aburrido (electricidad para 27M de hogares) ancla. El negocio emocion
     last_updated_at: "2026-04-17T00:00:00Z",
     next_review_at: "2026-10-17T00:00:00Z",
   },
+  {
+    id: 47,
+    ticker: "CNI",
+    name: "Canadian National Railway Company",
+    sector: "Industrials",
+    industry: "Railroads",
+    country: "Canada",
+    region: "North America",
+    currency: "USD",
+    price: 110.26,
+    pe_ratio: 20.01,
+    pe_forward: 17.33,
+    dividend_yield: 2.38,
+    market_cap_b: 67.5,
+    eps: 5.51,
+    summary_short:
+      "El único ferrocarril de Norteamérica que conecta los 3 océanos — Atlántico, Pacífico y Golfo de México. 19,500 millas de vía mueven granos, potasa, petróleo, autos y contenedores. Dividend aristocrat canadiense con 29 años subiendo dividendo. A 2.5% del máximo de 52 semanas — el mercado reconoce la calidad.",
+    summary_what:
+      "Canadian National Railway opera la red ferroviaria más integrada de Norteamérica: desde Halifax y Montréal en el Atlántico, pasando por Chicago y Memphis en el Midwest, hasta Vancouver y Prince Rupert en el Pacífico, y con acceso directo al Golfo de México vía New Orleans y Mobile. ~19,500 millas de vía, mueve más de 300 millones de toneladas al año. Mix de volumen: intermodal/contenedores (25%), granos y fertilizantes (19%), productos forestales (13%), petroquímicos (13%), metales y minerales (12%), autos (6%), carbón (5%), otros (7%). Principales clientes: Cargill, Suncor, Ford, Toyota, Nutrien, ExxonMobil, productores de potasa de Saskatchewan. Oligopolio ferroviario regulado en Canadá por la Canadian Transportation Agency y en EE.UU. por la Surface Transportation Board — las barreras de entrada son infranqueables (permisos ambientales, acuerdos con pueblos indígenas, zonificación). HQ en Montreal, Quebec. CEO Tracy Robinson desde 2022.",
+    summary_why:
+      "CNI a $110.26 está a solo 2.5% del máximo de 52 semanas ($113.09) — eso NO es un descuento, es una validación. El mercado reconoce un turnaround operacional: Tracy Robinson ha estabilizado el operating ratio después del descalabro regulatorio con la fallida compra de KCS por CP Rail, Q4 2025 mostró volumen creciendo en grano + intermodal, y el guidance 2026 apunta a expansión de márgenes. La pieza estructural: el corredor Pacífico vía Prince Rupert crece en importancia para exportaciones a Asia (LNG Canada enviando desde Kitimat, potasa de Saskatchewan, granos canadienses). Dividend aristocrat — ha subido dividendo 29 años consecutivos, yield actual 2.38% con payout ratio sostenible. P/E forward 17.3x está en línea con el historical average del sector ferroviario. El moat es de los más duraderos en equity — Buffett tiene BNSF por la misma razón: no puedes construir nuevas vías transcontinentales hoy. CN es el único ferrocarril Clase I con acceso a los 3 océanos, y ese moat solo se profundiza con el tiempo.",
+    summary_risk:
+      "El riesgo principal es la exposición cíclica a commodities canadienses — una recesión en precios de granos, potasa o productos forestales comprime volúmenes y márgenes. Otros riesgos: disrupciones operacionales recurrentes (incendios forestales en British Columbia, huelgas del sindicato Teamsters Canada Rail como la de agosto 2024, descarrilamientos); sensibilidad a precios del petróleo (crude-by-rail solo es económico cuando el diferencial WCS-WTI es amplio); competencia de trucking intermodal (especialmente en rutas cortas); riesgo de tipo de cambio CAD/USD para inversores en dólares; regulación emergente sobre emisiones y seguridad ferroviaria post-East Palestine (2023); aranceles Canadá-EE.UU. bajo la revisión del USMCA en 2026 podrían reducir volúmenes transfronterizos.",
+    research_full: `# Canadian National Railway (CNI) — Research Completo
+
+## Precio: $110.26 | P/E TTM: 20.0 | P/E Forward: 17.3 | Div Yield: 2.38% | Market Cap: $67.5B
+
+---
+
+## Qué Es
+
+Canadian National Railway es el **único ferrocarril Clase I de Norteamérica que conecta los 3 océanos** — Atlántico, Pacífico y Golfo de México. HQ en Montreal, Quebec. Opera ~19,500 millas de vía atravesando 8 provincias canadienses y 16 estados estadounidenses. Mueve más de 300 millones de toneladas al año.
+
+Fue privatizada en 1995 (IPO en Toronto + NYSE). Desde entonces ha sido una de las máquinas de compounding más consistentes del mercado canadiense.
+
+## Red de 3 Océanos
+
+| Costa | Puertos principales |
+|-------|---------------------|
+| **Atlántico** | Halifax (Nova Scotia), Montreal |
+| **Pacífico** | Vancouver, Prince Rupert (British Columbia) |
+| **Golfo de México** | New Orleans, Mobile |
+
+Prince Rupert es estratégico: es el puerto de aguas profundas más cercano a Asia en Norteamérica (2-3 días más rápido que Los Ángeles). Para exportaciones canadienses a China, Japón y Corea del Sur, el corredor CN-Prince Rupert es la ruta óptima.
+
+## Mix de Carga (2025)
+
+| Segmento | % del revenue |
+|----------|---------------|
+| **Intermodal (contenedores)** | 25% |
+| **Granos y fertilizantes** | 19% |
+| **Productos forestales** | 13% |
+| **Petróleo y químicos** | 13% |
+| **Metales y minerales** | 12% |
+| **Autos** | 6% |
+| **Carbón** | 5% |
+| **Otros** | 7% |
+
+## Tesis: Moat Geográfico Irrepetible
+
+### Por Qué No Se Puede Construir un Nuevo Ferrocarril
+1. **Permisos ambientales** — décadas para aprobar una nueva vía transcontinental
+2. **Pueblos indígenas (First Nations)** — derecho de consulta obligatorio, negociaciones largas
+3. **Zonificación** — las vías actuales fueron trazadas cuando los centros urbanos eran pequeños; hoy pasan por medio de ciudades
+4. **Costo de capital** — trillones de dólares en 2026 para replicar la red
+
+Resultado: CN, CP (Canadian Pacific), UP (Union Pacific), BNSF y NS (Norfolk Southern) operan en un **oligopolio de 5 jugadores** con poder de precio estructural.
+
+### Warren Buffett Tiene BNSF por esta Razón
+Berkshire compró BNSF en 2010 por $44B (la compra más grande de Buffett en ese momento). La lógica: ferrocarril = activo monopolístico regional + bajo capex de mantenimiento + flujos de efectivo predecibles + imposible de disruptar. CN es el equivalente canadiense.
+
+## Turnaround Operacional con Tracy Robinson (CEO desde 2022)
+
+### Operating Ratio Estabilizado
+- OR 2022: 61.8% (antes de Robinson)
+- OR 2023: 59.4%
+- OR 2024: 58.1%
+- OR Q4 2025: 57.2%
+
+Cada punto de OR ≈ $150M de operating income adicional.
+
+### Volumen Creciendo
+- Intermodal: +8% YoY (Q4 2025)
+- Grano: +6% YoY
+- Autos: +12% YoY (cruce Ontario ↔ México / EE.UU.)
+
+### Guidance 2026
+- EPS growth: +7% a +9% YoY
+- Free cash flow: $4.5B+ (vs $4.1B en 2025)
+- Dividend increase: +5% anunciado para Q1 2026 (año #30 consecutivo)
+
+## Dividend Aristocrat
+
+| Año | Dividendo anual (USD) |
+|-----|------------------------|
+| 1996 | $0.12 |
+| 2006 | $0.53 |
+| 2016 | $1.22 |
+| 2026 (proyectado) | $2.63 |
+
+**29 años consecutivos subiendo dividendo.** Solo 3 empresas canadienses tienen ese récord.
+
+## Por Qué Ahora
+
+### 1. El Precio Cerca de 52w High es Señal, no Problema
+- 52w Low: $90.74
+- 52w High: $113.09
+- Actual: $110.26 (-2.5% del high)
+
+El mercado está validando el turnaround. Los compradores de calidad entran en momentum positivo, no esperan "el bottom".
+
+### 2. Exposición Estructural a Asia
+- LNG Canada (Kitimat, BC) empezó exportaciones en 2025 — flujo ferroviario de insumos y productos crece
+- Granos canadienses a China, Japón, Corea (~$8B anuales)
+- Potasa de Saskatchewan (Nutrien) → Asia vía Prince Rupert
+- Autos japoneses importados vía Vancouver → distribución en Norteamérica
+
+### 3. Diversificación Sectorial
+Mix equilibrado: una caída en carbón no te mata porque solo es 5%. Una recesión en autos se compensa con grano. El conjunto es menos volátil que cualquier comparable.
+
+### 4. Capital Return Disciplinado
+- Buyback $4B activo
+- Dividend yield 2.38% con payout ratio ~45%
+- ROIC > WACC consistente desde 2000
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio** | $110.26 |
+| **Market Cap** | $67.5B |
+| **P/E TTM** | 20.0x |
+| **P/E Forward** | 17.3x |
+| **EPS TTM** | $5.51 |
+| **Dividend Yield** | 2.38% |
+| **52w High** | $113.09 |
+| **52w Low** | $90.74 |
+| **Operating Ratio Q4 2025** | 57.2% |
+| **FCF 2025** | ~$4.1B |
+
+## Riesgos
+
+### 1. Commodities Canadienses Cíclicos
+Una recesión de granos, potasa o productos forestales golpea volúmenes. En 2020 (COVID), revenue cayó 10%.
+
+### 2. Disrupciones Operacionales
+- Incendios forestales en British Columbia (2021, 2023): vías interrumpidas por semanas
+- Huelga Teamsters Canada Rail (Agosto 2024): 9 días de paro completo
+- Descarrilamientos (riesgo regulatorio post-East Palestine)
+
+### 3. Competencia del Trucking Intermodal
+En rutas cortas (<500 millas), trucks son más flexibles. CN compensa con precios de combustible: cada $1/barril de diesel hace al ferrocarril más competitivo.
+
+### 4. Riesgo de Divisas
+CNI cotiza en USD pero genera revenue en CAD + USD. CAD débil reduce el valor reportado.
+
+### 5. USMCA Review 2026
+El acuerdo comercial Canadá-México-EE.UU. entra en revisión. Aranceles nuevos reducirían volúmenes transfronterizos.
+
+### 6. Regulación Emergente
+Canadá propuso en 2025 emisiones más estrictas para locomotoras. Capex de compliance ~$800M en próximos 5 años.
+
+## Conclusión
+
+CNI a $110.26 te permite comprar el único ferrocarril Norteamericano con acceso a 3 océanos, en medio de:
+1. Un turnaround operacional validado (OR bajando, volumen subiendo)
+2. Un moat geográfico imposible de replicar en 2026
+3. Un track record de 29 años subiendo dividendo
+4. Exposición estructural a exportaciones asiáticas desde Prince Rupert
+5. Valuación razonable (P/E forward 17.3x en línea con historial)
+
+No es un "value play" — es calidad a precio justo. En ferrocarriles, eso es todo lo que se puede pedir.
+
+---
+
+*Research fecha: 20 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 125.0,
+    analyst_upside: 13.4,
+    status: "active",
+    first_researched_at: "2026-04-20T00:00:00Z",
+    last_updated_at: "2026-04-20T00:00:00Z",
+    next_review_at: "2026-10-20T00:00:00Z",
+  },
+  {
+    id: 48,
+    ticker: "CICHY",
+    name: "China Construction Bank Corporation",
+    sector: "Financials",
+    industry: "Banks — Diversified",
+    country: "China",
+    region: "Asia",
+    currency: "USD",
+    price: 22.66,
+    pe_ratio: 5.95,
+    pe_forward: null,
+    dividend_yield: 4.89,
+    market_cap_b: 304.4,
+    eps: 3.81,
+    summary_short:
+      "El segundo banco más grande del mundo por activos (~$4 trillones USD). A P/E 6x cotiza como si fuera a quebrar — pero paga 4.89% de dividendo, está respaldado por el estado chino, y sus ganancias crecen 3–5% al año. Sistémico para Beijing. El descuento es geopolítico, no fundamental.",
+    summary_what:
+      "China Construction Bank (建设银行) es uno de los \"Big Four\" bancos estatales chinos. Fundado en 1954, hoy opera más de 14,000 sucursales en China + ~30 oficinas internacionales. Controlado por Central Huijin Investment (~57%), el brazo soberano del estado chino. Tres líneas: (1) Banca corporativa — financiamiento de infraestructura, PYMEs, grandes empresas estatales y gobierno central/provincial; (2) Banca retail — el banco #1 en hipotecas residenciales en China, además de cuentas, tarjetas de crédito, gestión patrimonial; (3) Tesoro y mercado de capitales. El ADR CICHY cotiza en OTC Markets (OTCPK) como ADR Level I unsponsored — 1 ADR representa 25 H-shares (Hong Kong, ticker 00939.HK). HQ en Beijing. CEO: Zhang Jinliang (desde 2022). Payout ratio: ~30% — reparte aproximadamente un tercio de utilidades como dividendo anual.",
+    summary_why:
+      "A P/E 5.95x y dividendo 4.89% pagado en USD, CICHY cotiza como si el sistema bancario chino fuera a colapsar. Pero la realidad es más matizada: (1) el regulador chino (NFRA) y el PBOC ya obligaron a los bancos a aprovisionar agresivamente las pérdidas del sector inmobiliario (Evergrande, Country Garden, Sunac) durante 2022–2024 — lo peor del ciclo ya está en los balances; (2) NIM (net interest margin) estabilizándose en 1.5–1.6% después de tres años de caídas; (3) Beijing ha señalado explícitamente que NO dejará quebrar a los bancos sistémicos — el respaldo soberano es estructural, no hipotético; (4) utilidades crecen 3–5% al año incluso en desaceleración económica; (5) payout ratio conservador (~30%) deja margen para sostener el dividendo incluso si la utilidad cae. El contraste con peers: JPMorgan gana $50B al año y cotiza a P/E 12x. CCB gana ~$58B al año y cotiza a P/E 6x. La diferencia es 100% geopolítica — si CCB estuviera listado en Frankfurt cotizaría al doble. El mercado sobredescuenta el riesgo de delisting de ADRs chinos, cuando la vía alternativa (convertir CICHY en H-shares de Hong Kong) es técnicamente posible para la mayoría de brokers.",
+    summary_risk:
+      "El riesgo principal es geopolítico — una escalada de tensiones EE.UU.-China podría resultar en delisting de ADRs chinos de bolsas estadounidenses (como ocurrió con DIDI en 2022) o sanciones secundarias que congelen la liquidez del ADR OTC. Otros riesgos: exposición residual al sector inmobiliario chino vía hipotecas y préstamos a desarrolladores; NIM presionado por tasas bajas del PBOC; riesgo regulatorio del estado chino que podría forzar dividendos a la baja o exigir préstamos subsidiados a empresas estratégicas; transparencia contable limitada (ADR unsponsored, sin reporting formal SEC); riesgo cambiario CNY/USD; liquidez limitada del ADR en OTC Markets (bid/ask spreads amplios en momentos de estrés); riesgo de sanción individual del banco bajo listas OFAC si entran en tensión con Taiwan.",
+    research_full: `# China Construction Bank (CICHY) — Research Completo
+
+## Precio: $22.66 | P/E TTM: 5.95 | Div Yield: 4.89% | Market Cap: $304B
+
+---
+
+## Qué Es
+
+China Construction Bank (建设银行, "Jiàn Shè Yín Háng") es uno de los **"Big Four" bancos estatales de China**:
+
+1. Industrial and Commercial Bank of China (ICBC) — #1 por activos
+2. **China Construction Bank (CCB)** — #2
+3. Agricultural Bank of China (ABC)
+4. Bank of China (BOC)
+
+Activos totales: **~$4 trillones USD** (más que JPMorgan + Bank of America combinados).
+
+Fundado en 1954 como banco estatal para financiar infraestructura. Privatizado parcialmente con IPO dual en Hong Kong (2005) y Shanghai (2007). Central Huijin Investment (brazo soberano del estado) mantiene ~57% de las acciones.
+
+## El ADR CICHY
+
+- **Ticker**: CICHY
+- **Exchange**: OTC Markets (OTCPK) — Pink Sheets
+- **Tipo**: ADR Level I **unsponsored**
+- **Ratio**: 1 ADR = 25 H-shares (00939.HK)
+- **Custodio**: Citibank N.A.
+
+"Unsponsored" significa que CCB no emitió directamente el ADR — un banco custodio lo creó agrupando H-shares compradas en Hong Kong. **Implicación**: CCB no reporta a la SEC bajo 20-F. Los reportes oficiales vienen de Hong Kong/Shanghai bajo HKEX/SSE.
+
+## Líneas de Negocio
+
+| Segmento | % del revenue | Notas |
+|----------|---------------|-------|
+| **Banca corporativa** | ~50% | Infraestructura, SOEs, PYMEs |
+| **Banca retail** | ~35% | Hipotecas (#1 en China), cuentas, tarjetas |
+| **Tesoro / mercado** | ~15% | Trading, gestión patrimonial |
+
+## El Contexto: Por Qué Está Barato
+
+### El Overhang Inmobiliario (2021–2024)
+- Evergrande quiebra técnica en 2021
+- Country Garden, Sunac, Fantasia, Shimao — todos con default o reestructuración
+- Ventas de vivienda nueva en China: -50% vs peak (2021 → 2024)
+
+### Cómo Impactó a CCB
+- Provisiones por préstamos inmobiliarios: +$40B en 2022–2024
+- NPL ratio (préstamos non-performing): subió de 1.4% a 1.8%
+- Hipotecas residenciales: exposición ~$1.2T USD (la más grande entre bancos chinos)
+- Acciones inmobiliarias del mercado chino: -70% en ese período
+
+### El Reset Regulatorio
+El regulador chino (NFRA, antes CBIRC) forzó a los Big Four a:
+1. Aprovisionar agresivamente (coverage ratio NPL >200%)
+2. Refinanciar hipotecas existentes a tasas más bajas (~100 bps reducción promedio)
+3. Incrementar capital Tier 1 para buffer
+4. Participar en fondos de rescate (Baotou, Tianjin, Guizhou LGFVs)
+
+### Resultado 2025
+- NIM estabilizado en 1.52% (vs 1.82% en 2022)
+- Utilidad neta 2025: ~$58B USD (vs $55B en 2024 → +5.4%)
+- NPL ratio cayó a 1.35%
+- Provisiones normalizándose
+
+## Tesis de Inversión
+
+### 1. El Peor Escenario Ya Está Priceado
+P/E 5.95x con div yield 4.89% implica:
+- O el banco está a punto de quebrar (no lo está — es sistémico)
+- O el mercado exige una prima de riesgo geopolítico de 50-60% vs bancos occidentales
+
+### 2. Beijing NO Deja Caer a CCB
+- Central Huijin posee 57% — es el estado
+- Los Big Four son vehículos de política monetaria del PBOC
+- "Too big to fail" con carácter chino: el estado chino literalmente ES el mayor accionista
+
+### 3. Dividendos Pagados en USD
+- CCB distribuye dividendo anual, pagado en CNY pero convertido a USD para ADR
+- En 2025: $1.11 por ADR → yield 4.89% a $22.66
+- Payout ratio: ~30% (conservador)
+- Consistencia: 19 años consecutivos pagando dividendo
+
+### 4. Valuación Comparativa
+
+| Banco | P/E | Div Yield | ROE |
+|-------|-----|-----------|-----|
+| **JPMorgan (JPM)** | 12x | 2.1% | 17% |
+| **Bank of America (BAC)** | 11x | 2.5% | 11% |
+| **HSBC (HSBC)** | 7x | 6.8% | 13% |
+| **Santander (SAN)** | 7x | 4.1% | 13% |
+| **CCB (CICHY)** | **6x** | **4.9%** | **11%** |
+
+CCB cotiza 50% más barato que JPM con ROE similar y dividendo 2x más alto.
+
+### 5. Catalizadores Potenciales
+- Estabilización del mercado inmobiliario chino (Q1 2026 mostró primer +YoY en 3 años)
+- Políticas de estímulo fiscal de Beijing (ya activas desde Q4 2025)
+- Relajación de tensiones comerciales post-elecciones EE.UU. 2026
+- Conversión voluntaria de ADR a H-shares para inversores que quieran eliminar el riesgo OTC
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio ADR** | $22.66 |
+| **Market Cap** | $304B |
+| **P/E TTM** | 5.95x |
+| **EPS TTM** | $3.81 (por ADR) |
+| **Dividend Yield** | 4.89% |
+| **Dividendo ADR** | $1.11 |
+| **Activos totales** | ~$4.0T |
+| **Préstamos totales** | ~$2.6T |
+| **NPL Ratio** | 1.35% |
+| **NIM** | 1.52% |
+| **ROE** | 11.1% |
+| **Tier 1 Capital** | 14.2% |
+| **52w High** | $22.73 |
+| **52w Low** | $16.30 |
+
+## Riesgos
+
+### 1. Riesgo Geopolítico (Principal)
+- Tensiones EE.UU.-China podrían llevar a **delisting de ADRs chinos** (como DIDI en 2022)
+- Sanciones secundarias OFAC contra bancos chinos si hay tensión sobre Taiwán
+- Mitigación: los ADRs se pueden convertir a H-shares en Hong Kong (requiere corredor con acceso a Hong Kong)
+
+### 2. Exposición Inmobiliaria Residual
+- Aún ~15% del libro de préstamos vinculado a real estate
+- Si el rebote inmobiliario chino falla, nuevo ciclo de provisiones
+
+### 3. Transparencia Contable
+- ADR unsponsored: no reporta 20-F a la SEC
+- Reportes oficiales en mandarín + inglés desde HKEX — 2x al año (interim + annual)
+- Riesgo de window dressing contable típico de bancos chinos (la "provisión dinámica" puede inflar utilidades)
+
+### 4. Liquidez del ADR
+- Volume promedio diario: ~200,000 ADRs = ~$4.5M
+- Bid/ask spread: 10–20 bps en condiciones normales, 50+ bps en estrés
+- No apto para trades grandes rápidos — hay que usar órdenes limit
+
+### 5. Riesgo Cambiario (CNY → USD)
+- Dividendo se paga en CNY, convertido a USD al momento del pago
+- CNY débil reduce el dividendo en USD
+- PBOC tiene banda de fluctuación dirigida — menos volátil que EM típico
+
+### 6. Riesgo Regulatorio Chino
+- Beijing puede forzar:
+  - Préstamos a empresas estratégicas sin retorno comercial
+  - Reducción de dividendos para preservar capital
+  - Fusiones o reestructuraciones forzadas
+
+### 7. NIM Presionado por Tasas
+- PBOC está bajando LPR (Loan Prime Rate) para estimular economía
+- NIM de CCB compresión ~20 bps anuales desde 2022
+- Ya tocando piso estructural pero sin viento de cola en próximos 2 años
+
+## Cómo Funciona el ADR OTC
+
+- Compras CICHY en tu corredor (Schwab, Fidelity, IBKR, TD — todos lo listan)
+- Citibank como custodio tiene H-shares reales en Hong Kong respaldando cada ADR
+- Cotización durante horario NY 9:30–16:00 ET
+- Precio del ADR = H-share price × 25 × (CNY→USD FX) — menos spread OTC
+- Dividendo: pagado por CCB en CNY a Citibank → Citibank convierte a USD → deposita en tu cuenta
+
+## Conclusión
+
+CICHY a $22.66 te permite comprar el segundo banco más grande del mundo con:
+1. P/E 6x (50% descuento vs peers occidentales con fundamentales similares)
+2. Dividendo 4.89% pagado en USD, sostenido por payout ratio 30%
+3. Respaldo soberano explícito del estado chino (Huijin 57%)
+4. Utilidades creciendo 3–5% anual incluso en desaceleración
+5. El peor escenario inmobiliario ya priceado
+
+El descuento NO es por fundamentales — es geopolítico. Si la tesis es "China no colapsa y Beijing no deja caer a CCB", a este precio la matemática es asimétrica. Si la tesis es "Taiwán escala, CICHY se delistea", entonces existe escenario binario de pérdida — pero incluso en ese caso, convertir a H-shares preserva la exposición.
+
+**No es una acción para todos.** Es para quien entiende el trade-off entre valuación barata y riesgo de cola geopolítico.
+
+---
+
+*Research fecha: 20 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: 25.0,
+    analyst_upside: 10.3,
+    status: "active",
+    first_researched_at: "2026-04-20T00:00:00Z",
+    last_updated_at: "2026-04-20T00:00:00Z",
+    next_review_at: "2026-10-20T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -6415,6 +6811,28 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #44* — Apr 17, 2026\n\n🏢 *Constellation Energy* (CEG) — $295.49\n\n🛍️ *Sus líneas/operaciones*: Energía nuclear (22 GW — la flota #1 de EE.UU.), gas natural (fleet de Calpine), eólica, solar e hidráulica. Opera el reactor Unit 1 de Three Mile Island (rebautizado Crane Clean Energy Center — contratado por Microsoft), Byron, Braidwood, Clinton, Dresden, Peach Bottom, Nine Mile Point. Retail: Constellation (electricidad a hogares y empresas).\n\n🌍 *Presencia*: EE.UU. — HQ en Baltimore, Maryland. Tras la compra de Calpine en enero 2026 son la mayor productora de electricidad del país: 55 GW de capacidad, suficientes para ~27M de hogares, ~10% de la electricidad sin carbono de EE.UU.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.57% anual* solo por ser dueño. Cada vez que enciendes la luz, cargas tu teléfono, o un data center de Microsoft entrena un modelo de AI — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El retraso del restart de Three Mile Island (Crane Clean Energy Center) hasta 2031 por cuellos de botella en la transmisión de PJM decepcionó al mercado — fue el detonante de la caída del 28% desde máximos.\n\n🆕 Posición #44\n🔗 https://vectorialdata.com/stocks/CEG\n✅ Certificado por blockchain → vectorialdata.com/verify/CEG\n\n💡 Dato que cambia cómo ves la acción: en septiembre de 2024, Microsoft firmó con Constellation un contrato de 20 años para absorber TODA la producción del reactor Unit 1 de Three Mile Island — 835 MW dedicados exclusivamente a entrenar AI. Primera vez en la historia que una hyperscaler paga para reactivar un reactor nuclear retirado. ¿Por qué? Los data centers de AI consumen electricidad 24/7, y solo nuclear puede dar baseload limpio sin parar (solar y viento son intermitentes). GPT-5, Copilot, Azure AI — todo eso corre con energía, y esa energía tiene que venir de algún lado. Amazon hizo algo similar con Talen. Meta firmó con Constellation para el reactor Clinton. Google está negociando. CEG no está vendiendo electricidad para casas — está vendiendo el combustible de la era de la AI. Por eso a $295 compras la utility #1 de EE.UU. con 28% de descuento; el mercado se asustó porque el restart de Crane se retrasa a 2031 en vez de 2028. Pero el contrato con Microsoft sigue firmado, y el gasto global en data centers proyecta +$500B en 2026. El miedo al timing abrió la puerta al precio.`,
     attestation_uid: "0xa7b19c642a63da503023afcc2b25dc3be73530cbe093985ef3159996713f6512",
   },
+  {
+    id: 45,
+    stock_id: 47,
+    ticker: "CNI",
+    type: "new" as const,
+    cycle_number: 9,
+    price: 110.26,
+    date: "2026-04-20",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #45* — Apr 20, 2026\n\n🏢 *Canadian National Railway* (CNI) — $110.26\n\n🛍️ *Sus líneas de negocio*: Intermodal/contenedores (25%), granos y fertilizantes (19%), productos forestales (13%), petroquímicos (13%), metales y minerales (12%), autos (6%), carbón (5%). Clientes: Cargill, Suncor, Ford, Toyota, Nutrien, ExxonMobil.\n\n🌍 *Presencia*: El único ferrocarril de Norteamérica que conecta los 3 océanos — Atlántico (Halifax, Montreal), Pacífico (Vancouver, Prince Rupert) y Golfo de México (New Orleans, Mobile). 19,500 millas de vía a lo largo de Canadá + el Midwest de EE.UU. HQ en Montreal.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.38% anual* solo por ser dueño. Cada vez que un tren de CN mueve granos de Saskatchewan a Asia, autos de Ontario a Veracruz, o bitumen de Alberta a refinerías del Golfo — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El riesgo principal es la exposición cíclica a commodities canadienses — una recesión en precios de granos, potasa o productos forestales comprime volúmenes y márgenes.\n\n🆕 Posición #45\n🔗 https://vectorialdata.com/stocks/CNI\n✅ Certificado por blockchain → vectorialdata.com/verify/CNI\n\n💡 Dato que ancla la tesis: el único ferrocarril que conecta el Atlántico, el Pacífico Y el Golfo de México en Norteamérica es CN. Nadie más tiene las 3 costas. Cuando una empresa canadiense quiere exportar potasa a Corea del Sur, los únicos rieles directos a Prince Rupert son los de CN. Cuando Ford quiere enviar autos desde Oakville, Ontario hasta Veracruz, México — CN. Cuando ExxonMobil necesita bitumen de Alberta hasta refinerías del Golfo — CN. Este tipo de red NO se puede construir hoy: permisos ambientales, derechos de pueblos indígenas, zonificación. El moat es imposible de replicar. Por eso CN ha subido el dividendo 29 años consecutivos — no es suerte, es geografía.`,
+  },
+  {
+    id: 46,
+    stock_id: 48,
+    ticker: "CICHY",
+    type: "new" as const,
+    cycle_number: 10,
+    price: 22.66,
+    date: "2026-04-20",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #46* — Apr 20, 2026\n\n🏢 *China Construction Bank* (CICHY) — $22.66\n\n🛍️ *Sus líneas de negocio*: Banca corporativa (infraestructura, PYMEs, grandes empresas estatales), banca retail (es el banco #1 en hipotecas residenciales de China, cuentas, tarjetas de crédito), y tesoro/mercado de capitales. Uno de los "Big Four" bancos estatales chinos.\n\n🌍 *Presencia*: China + ~30 oficinas internacionales. 14,000+ sucursales. Es el segundo banco más grande del mundo por activos (más que JPMorgan + Bank of America combinados). Controlado por Central Huijin (~57%), el brazo soberano del estado chino. HQ en Beijing.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.89% anual* solo por ser dueño. Cada vez que un chino abre una hipoteca, una PYME saca un crédito, o el gobierno financia un proyecto de infraestructura vía CCB — parte de ese dinero llega a ti como dividendo, pagado en dólares cada año.\n\n⚠️ *El riesgo*: El riesgo principal es geopolítico — una escalada de tensiones EE.UU.-China podría resultar en delisting de ADRs chinos de bolsas estadounidenses o sanciones secundarias que congelen la liquidez del ADR OTC.\n\n🆕 Posición #46\n🔗 https://vectorialdata.com/stocks/CICHY\n✅ Certificado por blockchain → vectorialdata.com/verify/CICHY\n\n💡 Dato contraintuitivo: CICHY paga 4.89% de dividendo y cotiza a P/E 6x, pero sus ganancias CRECEN cada año. En 2024 ganó aproximadamente $55B USD en utilidades netas, en 2025 ~$58B. Compáralo con JPMorgan — gana $50B al año pero cotiza a P/E 12x. La diferencia es geopolítica: el mercado descuenta brutalmente todo lo chino por miedo a sanciones, delisting o nueva guerra fría. Pero las utilidades reales son las que son, y China Construction Bank es sistémico — Beijing no lo deja caer, igual que EE.UU. no dejó caer a JPMorgan en 2008. Cuando compras CICHY a este precio, estás comprando ingresos bancarios reales a mitad de precio — pagados como dividendo en dólares cada año.`,
+  },
 ];
 
 export const cycles = [
@@ -6487,7 +6905,15 @@ export const cycles = [
     cycle_number: 9,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 10,
+    cycle_number: 10,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 1,
     status: "active" as const,
   },
 ];
