@@ -6243,6 +6243,451 @@ El descuento NO es por fundamentales — es geopolítico. Si la tesis es "China 
     last_updated_at: "2026-04-20T00:00:00Z",
     next_review_at: "2026-10-20T00:00:00Z",
   },
+  {
+    id: 49,
+    ticker: "COIN",
+    name: "Coinbase Global, Inc.",
+    sector: "Financial Services",
+    industry: "Capital Markets / Crypto Exchange",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 208.58,
+    pe_ratio: 46.98,
+    pe_forward: 40.61,
+    dividend_yield: 0,
+    market_cap_b: 56.2,
+    eps: 4.44,
+    summary_short:
+      "El exchange de crypto más grande y regulado de EE.UU. — custodia el Bitcoin de 8 de los 11 ETFs spot aprobados por la SEC (BlackRock, Fidelity, Invesco, ARK, etc.). Diversificó sus ingresos: comisiones de trading, intereses de reservas USDC (~$900M anuales), staking, custodia institucional y Coinbase One. Cotiza -53% desde máximos ($444) — el mercado asume el peor escenario de precio de crypto, no el mejor escenario de infraestructura regulada.",
+    summary_what:
+      "Coinbase Global es la única exchange de crypto listada en Nasdaq bajo regulación completa de SEC, CFTC y FinCEN. Opera cuatro líneas: (1) Transaction revenue — comisiones de compra/venta de ~250 cryptoactivos para 110M+ usuarios verificados; (2) Subscription & services — intereses ganados sobre reservas de USDC (Circle comparte ~50% del interés con Coinbase, generando ~$900M al año a tasas actuales), staking (ETH, SOL, ADA), Coinbase One ($29.99/mes con trades ilimitados), Coinbase Prime (custodia institucional), Coinbase Custody (usado por los ETFs spot de BTC y ETH); (3) Blockchain rewards — ingresos de validación en redes proof-of-stake; (4) Corporate interest — rendimiento sobre su balance de efectivo y crypto. Su moat principal es regulación: conseguir licencias BitLicense en NY, Money Transmitter en 50 estados, MiCA en UE requirió 5+ años y ~$1B en gastos legales. Fundada en 2012 por Brian Armstrong (CEO) y Fred Ehrsam. HQ completamente remoto (sin oficina central desde 2021). IPO directa en Nasdaq en 2021 a $381.",
+    summary_why:
+      "COIN a $208 cotiza -53% del 52w high de $444 — el mercado está priceando un escenario donde el precio de crypto cae brutal y el volumen de trading desaparece. Pero la tesis no depende del precio de BTC, depende de la adopción: (1) Custodia el Bitcoin de 8 de 11 ETFs spot aprobados por la SEC — BlackRock IBIT solo tiene $60B+ en AUM y todo su BTC está en Coinbase. Cada dólar que entra a esos ETFs genera fees de custodia recurrentes para COIN; (2) USDC interest income: Circle comparte con Coinbase ~50% del interés ganado sobre las reservas de USDC (~$60B de supply) — a tasas de 4-5%, eso son $900M anuales de ingreso recurrente tipo SaaS, independiente del volumen de trading; (3) Coinbase One y staking construyen ingresos suscripción previsibles; (4) Moat regulatorio: son la ÚNICA exchange US con todas las licencias, lo que los hace el partner default para toda institución financiera que quiera exposición regulada a crypto (BlackRock, Fidelity, Grayscale, ARK, Invesco, Franklin Templeton); (5) El GENIUS Act firmado 2025 legitimó stablecoins y aceleró adopción institucional; (6) Base — su L2 de Ethereum — procesa más transacciones diarias que Ethereum mainnet. El bear case es 'crypto muere'; el bull case es 'Coinbase se convierte en el Nasdaq/DTCC del cripto'.",
+    summary_risk:
+      "No paga dividendo — es apuesta 100% por crecimiento y apreciación del precio. El ingreso depende críticamente de: (1) Volumen de trading de retail — que cae ~60% en bear markets de crypto (2022 fue brutal); (2) Precio del Bitcoin y Ethereum — aunque Coinbase ha diversificado, todavía ~45% del revenue es transaccional, por lo que un invierno crypto comprime utilidades; (3) Regulación cambiante — la SEC demandó a Coinbase en 2023 acusándolos de operar un exchange de valores no registrado; aunque Coinbase ganó el caso en 2024, nuevas administraciones pueden reabrir frentes; (4) Competencia de Binance, Kraken, Robinhood Crypto, e incluso TradFi entrando (Fidelity Crypto, Charles Schwab); (5) Dependencia de Circle para USDC — si Circle cambia los términos del acuerdo de reservas o USDC pierde market share vs Tether, ese ~$900M anual de SaaS-like revenue está en riesgo; (6) Valuación: P/E 47x y forward 40x son caros — cualquier miss de earnings en un quarter malo de crypto puede tumbar la acción 30%+ en un día; (7) Hacks o fallas operacionales — aunque nunca ha sido hackeada a nivel custodia, un evento de este tipo sería existencial.",
+    research_full: `# Coinbase Global, Inc. (COIN) — Research Completo
+
+## Precio: $208.58 | P/E TTM: 47.0 | P/E Forward: 40.6 | Div Yield: 0% | Market Cap: $56.2B
+
+---
+
+## Qué Es
+
+Coinbase Global es **la exchange de criptoactivos más grande y regulada de EE.UU.** — la única listada en Nasdaq (COIN) y con licencias completas de SEC, CFTC, FinCEN, NYDFS (BitLicense) y en los 50 estados de EE.UU. Fundada en 2012 por Brian Armstrong y Fred Ehrsam. IPO directa en abril 2021 a $381 por acción.
+
+Más de 110 millones de usuarios verificados. ~$200B+ de activos custodiados. Custodia el Bitcoin de **8 de los 11 ETFs spot de Bitcoin** aprobados por la SEC.
+
+## Líneas de Negocio
+
+| Segmento | % del revenue | Descripción |
+|----------|---------------|-------------|
+| **Transaction revenue** | ~45% | Comisiones por trades en spot market (retail + pro) |
+| **Subscription & services** | ~40% | USDC interest, staking, Coinbase One, Prime, Custody |
+| **Blockchain rewards** | ~8% | Validación proof-of-stake (ETH, SOL, ADA, ATOM) |
+| **Corporate interest** | ~5% | Rendimiento sobre cash y crypto en balance |
+| **Other** | ~2% | Base (L2), venture investments |
+
+### El Shift Crítico: De Exchange a Infraestructura
+
+Históricamente, Coinbase era ~85% transaccional — cuando el precio de crypto caía, el volumen caía, y COIN se desplomaba. Desde 2023 ese perfil cambió drásticamente:
+
+1. **USDC interest**: Coinbase tiene un acuerdo con Circle (emisor de USDC) que le da ~50% del interés ganado sobre las reservas del stablecoin. Con USDC supply ~$60B y tasas del 4-5%, eso son ~$900M/año de ingreso recurrente INDEPENDIENTE del precio de crypto.
+2. **Custody fees**: Los 8 ETFs de BTC (BlackRock IBIT, Fidelity FBTC, Ark ARKB, Invesco BTCO, etc.) y los 5 ETFs de ETH cotizan ~$90B+ AUM total. Coinbase cobra ~0.05-0.10% anual de custodia → ~$50-90M/año recurrentes.
+3. **Coinbase One**: Suscripción $29.99/mes con trades ilimitados, mayor rendimiento en staking, y prioridad de soporte. 1M+ suscriptores → ~$360M/año.
+
+## El Moat Regulatorio
+
+Conseguir las licencias que Coinbase tiene hoy cuesta **5+ años y $1B+ en legal y compliance**:
+
+- NY BitLicense (otorgada 2017)
+- Money Transmitter License en 50 estados
+- SEC registration como Alternative Trading System
+- CFTC registration como Derivatives Clearing Organization
+- MiCA authorization en UE (2025)
+- Licencias en Singapur, Canadá, Reino Unido, Irlanda, Brasil
+
+Esto hace a Coinbase el **default partner regulado** para toda institución que quiera exposición a crypto:
+
+- **BlackRock** eligió Coinbase para custodiar IBIT (el mayor ETF de BTC con ~$60B AUM)
+- **Fidelity** custodia FBTC con Coinbase
+- **Invesco, ARK, Franklin Templeton, Bitwise, Hashdex, WisdomTree** — todos usan Coinbase
+- **PayPal** usa Coinbase Crypto API para ofrecer BTC/ETH a sus usuarios
+- **Stripe** usa Coinbase para liquidar pagos en USDC
+
+## USDC y el Acuerdo con Circle
+
+En 2018, Coinbase y Circle co-fundaron el Centre Consortium para emitir USDC. En 2023 el consortium se disolvió y Circle asumió emisión directa, pero el acuerdo comercial sigue vigente:
+
+- Circle gestiona las reservas de USDC (bonos del Tesoro a corto plazo)
+- Circle gana intereses sobre esas reservas (~4-5% anual actualmente)
+- **Circle paga ~50% de ese interés a Coinbase** por distribuir y promover USDC
+
+USDC supply actual: ~$60B
+Interés anual agregado: ~$2.4-3B
+Share de Coinbase: **~$900M-1.2B/año**
+
+Esto es el equivalente a ingresos tipo SaaS — no depende del precio de crypto, solo del supply de USDC en circulación.
+
+## Base — La L2 de Coinbase
+
+En 2023 Coinbase lanzó **Base**, su L2 de Ethereum construida con Optimism OP Stack. Base hoy:
+
+- **1M+ transacciones diarias** (más que Ethereum mainnet la mayoría de los días)
+- **$5B+ TVL** (Total Value Locked)
+- Token COIN captura fees de secuenciador (~$100M anuales ya)
+- Es la L2 preferida de grandes proyectos como Farcaster, Aerodrome, y proyectos onchain de consumer
+
+Base convierte a Coinbase de "exchange" a "infraestructura de rails de crypto" — similar al pivot de AWS desde "hosting" a "cloud computing".
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio** | $208.58 |
+| **Market Cap** | $56.2B |
+| **P/E TTM** | 47.0x |
+| **P/E Forward** | 40.6x |
+| **EPS TTM** | $4.44 |
+| **Dividend Yield** | 0% |
+| **52w High** | $444.65 |
+| **52w Low** | $139.36 |
+| **Drawdown desde high** | -53% |
+| **Revenue 2025** | ~$7.1B |
+| **Adjusted EBITDA 2025** | ~$2.8B |
+| **Cash + crypto en balance** | ~$8B |
+| **Activos custodiados** | ~$200B |
+
+## Tesis: El Nasdaq/DTCC de Crypto
+
+La visión de 10 años de Coinbase no es ser la exchange de crypto más grande — es ser **la infraestructura regulada sobre la que se construye toda la economía onchain en Occidente**.
+
+### Analogía: DTCC + Nasdaq + Visa
+- **DTCC** custodia los $88T+ de valores en EE.UU. — cobra fees pequeños por cada transacción → negocio durable, no ciclico
+- **Nasdaq** opera el mercado de trading y cobra fees de listing + trading
+- **Visa** conecta bancos y comerciantes y cobra ~0.1% de cada swipe
+
+Coinbase quiere esa combinación aplicada a crypto. Y ya está en camino:
+- Custody (DTCC) ✓
+- Exchange (Nasdaq) ✓
+- Settlement + USDC rails (Visa) ✓
+- L2 (Base) — nueva pieza
+
+## Por Qué Ahora
+
+### 1. Precio con -53% Descuento
+El 52w high fue $444. Hoy cotiza $208. La caída no fue por fundamentals — fue por: (a) rotación de growth a value en Q1 2026; (b) miedos a recesión; (c) correction del BTC a $78K desde $108K. Los fundamentos del negocio no cambiaron.
+
+### 2. GENIUS Act Firmado (2025)
+La ley que creó el framework regulatorio federal para stablecoins pasó en noviembre 2025. Eso legitima a USDC (y por extensión, el revenue stream de Coinbase).
+
+### 3. ETFs de ETH Aprobados (Julio 2024)
+Coinbase custodia el ETH de todos los ETFs spot de Ethereum. AUM combinado: ~$12B y creciendo.
+
+### 4. Expansión Internacional
+Lanzamientos recientes en UE (MiCA), Australia, Brasil, Singapur agregando geografías con crecimiento crypto rápido.
+
+### 5. Earnings Crecientes
+Q4 2025: EPS $1.26 vs $1.05 consensus. Revenue $1.92B (+44% YoY).
+Q1 2026: proyectado $1.45B revenue, EPS $0.89.
+
+## Riesgos
+
+### 1. Volumen de Trading Cíclico
+En bear markets de crypto (2022 fue brutal), volumen cayó 60% y Coinbase reportó pérdidas trimestrales. Aunque el mix ahora es más defensivo, ~45% del revenue sigue siendo transaccional.
+
+### 2. Dependencia de USDC / Circle
+Si Circle renegocia el split de interés, cambia el custodio de reservas, o USDC pierde market share vs Tether/PYUSD/RLUSD → el ~$900M/año está en riesgo.
+
+### 3. Precio del Bitcoin
+A pesar de la diversificación, si BTC cae a $40K, las valuaciones de todos los ETFs bajan, las fees de custodia caen proporcionalmente, y el sentimiento se rompe.
+
+### 4. Competencia
+- **Binance** sigue siendo el #1 global por volumen
+- **Robinhood Crypto** y **Kraken** compiten en retail US
+- **Fidelity Crypto, Schwab** entrarán fuerte en 2026
+- **Revolut, Cash App** dominan mobile-first
+
+### 5. Regulación Imprevisible
+Aunque Coinbase ganó el caso SEC v. Coinbase en 2024, nuevas administraciones pueden reabrir frentes. Riesgo real si el próximo Congreso pasa legislación más restrictiva.
+
+### 6. Valuación Cara
+P/E 47x TTM, Forward 40x. Para una empresa con volatilidad trimestral de crypto, cualquier miss tumba la acción 20-30%.
+
+### 7. Hack o Falla Operacional
+Nunca ha sido hackeada a nivel custodia principal (solo incidentes menores en hot wallets). Un evento de este tipo sería existencial — todos los ETFs moverían AUM a otros custodios.
+
+## Conclusión
+
+COIN a $208 te permite comprar:
+1. La única exchange de crypto regulada completa en EE.UU. (moat regulatorio de $1B+ y 5 años)
+2. ~$900M anuales de ingreso recurrente tipo SaaS (USDC interest)
+3. Custodia monopolística del 80%+ del AUM de ETFs spot de BTC y ETH
+4. Una L2 (Base) que ya procesa más que Ethereum mainnet
+5. -53% descuento desde el high, con earnings en crecimiento trimestre a trimestre
+
+**El bear case es "crypto muere" (improbable dado adopción institucional). El bull case es "Coinbase se convierte en el DTCC/Nasdaq/Visa de crypto" (probable dado su posición regulatoria y de custody).**
+
+Esta no es una apuesta por el precio de BTC — es una apuesta por la adopción regulada de blockchain como infraestructura financiera. Y esa adopción ya está pasando, con o sin el precio de BTC en $150K.
+
+No paga dividendo. El rendimiento viene de la apreciación del precio si la tesis se materializa.
+
+---
+
+*Research fecha: 21 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 280.0,
+    analyst_upside: 34.2,
+    status: "active",
+    first_researched_at: "2026-04-21T00:00:00Z",
+    last_updated_at: "2026-04-21T00:00:00Z",
+    next_review_at: "2026-10-21T00:00:00Z",
+  },
+  {
+    id: 50,
+    ticker: "COST",
+    name: "Costco Wholesale Corporation",
+    sector: "Consumer Defensive",
+    industry: "Discount Stores / Membership Warehouse",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 994.87,
+    pe_ratio: 51.65,
+    pe_forward: 44.27,
+    dividend_yield: 0.59,
+    market_cap_b: 441.6,
+    eps: 19.26,
+    summary_short:
+      "El club de compras más grande del mundo — 73M+ miembros pagando $65-130/año solo para poder comprar. Renovación 92.9% en EE.UU./Canadá. Más del 70% del profit viene de las membresías, no de los productos. Kirkland Signature factura más que la mayoría del Fortune 500. Paga dividendo regular + especiales multimillonarios cada 3-4 años.",
+    summary_what:
+      "Costco Wholesale opera 890+ warehouses en 14 países — EE.UU., Canadá, México, UK, Japón, Corea del Sur, Taiwán, Australia, España, Francia, China (Shanghai, Suzhou), Islandia, Nueva Zelanda, Suecia. Modelo de negocio único: es el ÚNICO retailer donde necesitas PAGAR para poder comprar. Dos tipos de membresía: Gold Star ($65/año) y Executive ($130/año con 2% cashback). ~73M+ hogares con membresía pagada. Revenue 2025: ~$275B. Mix: 85% merchandise (comida fresca, abarrotes, electrónicos, ropa, combustible), 12% services (farmacia, óptica, llantas, travel, seguros), 3% membership fees. El insight contable clave: las membership fees son revenue puro con ~100% de margen — eso genera ~$5.4B/año de operating income sin costos asociados. Costco vende productos a margen ~11% (vs Walmart ~24%) porque NO busca ganar con los productos — busca que las membresías renueven. Fundada 1983, fusionada con Price Club 1993. HQ en Issaquah, Washington. CEO: Ron Vachris (desde enero 2024, reemplazando a Craig Jelinek).",
+    summary_why:
+      "COST a $994.87 es una de las tesis de inversión más sólidas en equities: (1) Negocio de ingresos recurrentes disfrazado de tienda — 92.9% de renovación en EE.UU./Canadá y 90.5% global es mejor que muchas SaaS empresariales. Cuando un cliente paga $65-130 al año automáticamente sin pensar, es un revenue stream SaaS-tier; (2) Margen de membresía: ~$5.4B anuales de fee income va directo al bottom line con ~100% gross margin. Eso solo paga casi todo el G&A corporativo; (3) Poder de negociación brutal — Costco es top-3 comprador de casi todo producto consumer en EE.UU. (leche, pollo, vino, electrónicos, ropa). Exige 3-5% menos que Walmart; (4) Kirkland Signature: la marca propia de Costco factura ~$85B/año — más que Kellogg's, Hershey's, Ford Motor Company, o Nike. Es la tercera marca de consumer goods más grande del mundo; (5) Pricing power anclado: el combo de hot dog + soda sigue costando $1.50 desde 1985; la pizza entera $9.99; el pollo rostizado $4.99. Jim Sinegal (co-fundador) amenazó con 'matar' a cualquier ejecutivo que los subiera. Son anclas psicológicas que los miembros renueven solo para 'sentir que ganan'; (6) 30 años consecutivos pagando dividendos + 18 subidas consecutivas + dividendos especiales ($7 en 2012, $10 en 2017, $10 en 2020, $15 en 2023); (7) Resistencia a Amazon probada — COST creció 14% en el peor año de Amazon (2023), porque la experiencia física de 'descubrimiento' en warehouse no se puede replicar online. Recurrente, defensivo, pricing power, moat cultural — 4 de las 5 cualidades que Buffett busca.",
+    summary_risk:
+      "El riesgo principal es la valuación: P/E TTM 51.65x y forward 44.3x están entre los más altos de su historia — el mercado ya reconoce la calidad del negocio, lo que limita el margen de seguridad. Otros riesgos: (1) Cualquier quarter con renovación debajo del 92% en EE.UU. causaría caída brutal (el mercado asume ~92%+ perpetuo); (2) Costo de commodities: inflación de carne, dairy, combustibles comprime el margen operativo — Costco absorbe porque no quiere subir precios visibles; (3) Dependencia regional: ~75% del revenue viene de EE.UU./Canadá — cualquier shock macro local pega fuerte; (4) Expansión internacional costosa: cada warehouse nuevo cuesta ~$75-100M y tarda 3-5 años en alcanzar break-even; (5) Competencia emergente de Sam's Club (Walmart) que ha acelerado digital + same-day; (6) Shrinkage (robo) creciendo en California y ciudades con relajación de enforcement; (7) Dividendo yield 0.59% es bajo — esto NO es una acción de ingresos pasivos, es growth + capital appreciation + dividendos especiales esporádicos; (8) Sucesión: Ron Vachris es nuevo CEO desde 2024 — transiciones pueden desestabilizar cultura operacional única de Costco.",
+    research_full: `# Costco Wholesale Corporation (COST) — Research Completo
+
+## Precio: $994.87 | P/E TTM: 51.7 | P/E Forward: 44.3 | Div Yield: 0.59% | Market Cap: $441.6B
+
+---
+
+## Qué Es
+
+Costco Wholesale es **el club de compras más grande del mundo** — 890+ warehouses en 14 países, 73M+ hogares con membresía pagada, y ~$275B de revenue anual. Fundada en 1983 en Seattle. Fusionada con Price Club en 1993. HQ en Issaquah, Washington.
+
+El modelo de negocio es contraintuitivo: **pagas para poder comprar**. Gold Star $65/año, Executive $130/año (con 2% cashback de hasta $1,250). Aprox 130M+ cardholders individuales (miembros + agregados).
+
+## El Ingrediente Secreto: Membership Fees
+
+Esta es la línea que la mayoría de análisis pasa por alto:
+
+| Año | Membership Fee Revenue | % del Operating Income |
+|-----|------------------------|------------------------|
+| 2020 | $3.54B | 72% |
+| 2021 | $3.88B | 68% |
+| 2022 | $4.22B | 71% |
+| 2023 | $4.58B | 68% |
+| 2024 | $4.83B | 69% |
+| 2025 | $5.40B | 71% |
+
+**Las membership fees tienen ~100% gross margin** (no hay costo asociado a una renovación anual). Esto significa que **~70% del operating income de Costco viene de un stream de ingresos recurrentes tipo SaaS**.
+
+Si separas los negocios:
+- Merchandise retail: revenue $266B, margen ~2.5% → OpInc ~$6.6B
+- Membership fees: revenue $5.4B, margen ~100% → OpInc ~$5.4B
+
+Vende productos casi AT COST (el nombre "Costco" viene de Cost + Co.). El negocio real son las membresías.
+
+## Renovación — El Métrico Clave
+
+Costco reporta renewal rate cada trimestre:
+
+| Región | Renovación |
+|--------|------------|
+| **EE.UU./Canadá** | 92.9% |
+| **Global** | 90.5% |
+
+Para contexto:
+- Netflix USA: ~60% renovación anual
+- Amazon Prime USA: ~93% renovación anual
+- Costco: 92.9% — **tier de Amazon Prime**
+
+Cada subida de fee (última vez fue septiembre 2024: Gold $60→$65, Exec $120→$130) genera $800M+ de revenue adicional con cero costo incremental y **sin caída en renovación**. Eso es pricing power puro.
+
+## Kirkland Signature — La Tercera Marca Consumer más Grande del Mundo
+
+Kirkland Signature (la marca propia de Costco) factura **~$85B/año**:
+
+| Marca | Revenue 2024 |
+|-------|--------------|
+| Coca-Cola (la marca, no la empresa) | ~$95B |
+| Pepsi (la marca) | ~$87B |
+| **Kirkland Signature** | **~$85B** |
+| Nike | ~$51B |
+| Kellogg's | ~$13B |
+| Hershey's | ~$11B |
+
+Kirkland representa ~30% del revenue de Costco. Miembros la prefieren por un motivo simple: Costco NO pone un producto Kirkland a menos que sea demostrablemente superior o igual a la mejor marca del mercado **a 20-30% menos precio**.
+
+Esa promesa construye tanta confianza que Costco es el ÚNICO retailer donde los consumidores asumen que el producto genérico es mejor que el branded.
+
+## Pricing Power Anclado — Los Precios Mágicos
+
+Costco mantiene deliberadamente varios precios **sin subir durante décadas** como anclas psicológicas:
+
+| Producto | Precio | Desde |
+|----------|--------|-------|
+| Hot dog + soda combo | $1.50 | 1985 |
+| Pizza entera | $9.99 | ~2000 |
+| Pollo rostizado | $4.99 | ~2009 |
+| Muffins paquete 12 | $8.99 | ~2015 |
+
+Jim Sinegal (co-fundador, CEO hasta 2011) famosamente le dijo a Craig Jelinek cuando sugirió subir el hot dog: *"If you raise the fucking hot dog, I will kill you."*
+
+Esto NO es sentimentalismo — es ciencia del pricing:
+
+1. Los miembros entran a Costco, ven el hot dog a $1.50 y se sienten "ganando"
+2. Ese sentimiento de valor se transfiere a TODO el resto de la compra
+3. Renuevan la membresía al año siguiente para repetir la sensación
+
+Es el "loss leader" más efectivo en retail history.
+
+## Resistencia a Amazon — El Test Real
+
+Durante 2020-2023, Amazon se comió el almuerzo de toda tienda física (Walmart, Kroger, Walgreens, CVS, etc.). Costco:
+
+| Año | COST revenue growth |
+|-----|---------------------|
+| 2020 | +9% |
+| 2021 | +17% |
+| 2022 | +16% |
+| 2023 | +7% (mal año general retail) |
+| 2024 | +9% |
+| 2025 | +8% |
+
+Costco creció EN el mejor momento de Amazon. Razones:
+
+1. **Experiencia**: La gente va el sábado como outing familiar — Amazon no puede replicar "deambular por warehouse y encontrar cosas"
+2. **Frescos**: Carne, produce, dairy — los miembros quieren inspeccionar antes de comprar
+3. **Tamaños**: Costco vende en cantidades industriales (24 rollos papel higiénico, 10 libras de arroz) que Amazon no transporta eficientemente
+4. **Precio absoluto**: En comodities, Costco vence a Amazon por ~10-15% porque no paga last-mile
+
+Incluso Amazon Business no ha logrado arrancarle Costco a nadie.
+
+## Dividendos — Regular + Especiales
+
+Costco paga dividendo regular desde 2004, subiéndolo cada año:
+
+| Año | Dividendo anual |
+|-----|-----------------|
+| 2004 | $0.40 |
+| 2014 | $1.42 |
+| 2024 | $4.64 |
+| 2026 proyectado | $5.80 |
+
+**Pero el home run son los dividendos especiales**:
+
+| Año | Dividendo especial | Monto total pagado |
+|-----|---------------------|---------------------|
+| 2012 | $7.00/share | $3.1B |
+| 2015 | $5.00/share | $2.2B |
+| 2017 | $7.00/share | $3.1B |
+| 2020 | $10.00/share | $4.4B |
+| 2023 | $15.00/share | $6.7B |
+| ~2026-27 | ~$20-25 estimado | ~$9-11B |
+
+La cadencia histórica es 3-4 años. El último fue enero 2023. **El próximo se espera entre fines 2026 e inicios 2027.**
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio** | $994.87 |
+| **Market Cap** | $441.6B |
+| **P/E TTM** | 51.65x |
+| **P/E Forward** | 44.27x |
+| **EPS TTM** | $19.26 |
+| **Dividend Yield** | 0.59% |
+| **Dividendo Anual Regular** | $5.80 |
+| **52w High** | $1,067.08 |
+| **52w Low** | $844.06 |
+| **Drawdown desde high** | -6.8% |
+| **Revenue 2025** | $275B |
+| **Membership Fees 2025** | $5.4B |
+| **Operating Margin** | 3.9% |
+| **ROE** | 31% |
+| **Free Cash Flow 2025** | $8.2B |
+
+## Por Qué Ahora
+
+### 1. Cerca de 52w High (Validación)
+A -6.8% del high, COST no está "barato" — pero eso es exactamente lo que esperas de un compounder Clase A. Las empresas de calidad rara vez están con 30% de descuento. Cuando lo están, generalmente hay algo roto.
+
+### 2. Subida de Fees Paga Dividendos
+Septiembre 2024 subió Gold Star $60→$65 (+8%) y Executive $120→$130 (+8%). Eso fue efectivo enero 2025 — aún se está materializando en resultados.
+
+### 3. Expansión Internacional Acelerando
+COST abrió 28 warehouses en 2025, 30+ planeados 2026. Mercados nuevos: Suecia (primer warehouse marzo 2026), New Zealand, más stores en China.
+
+### 4. Dividend Especial en Horizonte 2026-27
+La cadencia histórica (2012, 2015, 2017, 2020, 2023) sugiere próximo especial entre fines 2026 - inicios 2027. $20-25/share implica ~$9-11B de retorno extra.
+
+### 5. Tesis Amazon-Proof Comprobada
+10 años de crecimiento consecutivo mientras el resto del retail físico sufría. Buffett dijo en 2024: *"Costco is one of the few retailers I'd bet against Amazon."*
+
+## Riesgos
+
+### 1. Valuación Premium
+P/E 51.65x TTM es el rango alto de la historia de COST. No hay margen de error — cualquier miss en earnings o renovación impacta.
+
+### 2. Miss en Renovación
+Si renovación EE.UU./Canadá baja de 92%, la acción cae 15%+. Los miembros son fieles pero no indestructibles.
+
+### 3. Inflación Persistente
+Costco absorbe inflación en commodities (carne, dairy) para no romper la promesa de precio. Margin compression posible si inflación se acelera.
+
+### 4. Shrinkage (Robo)
+Creciendo en California, Washington state, NYC — afecta directamente margen. Costco está invirtiendo en tech de loss prevention.
+
+### 5. Competencia de Sam's Club
+Walmart ha invertido pesado en Sam's Club: same-day delivery, Scan & Go, apertura de 30+ nuevos warehouses. Primera vez que Sam's gana market share en 15 años.
+
+### 6. Expansión Costosa
+Warehouse nuevo ~$75-100M inversión inicial, 3-5 años para break-even. Mercados asiáticos más caros (China construcción, rentas).
+
+### 7. Riesgo de Sucesión
+Ron Vachris es nuevo CEO desde enero 2024 (reemplazó Craig Jelinek). Transiciones de CEO son riesgos culturales — Costco tiene cultura operacional únicamente disciplinada. Vachris es veterano Costco (30+ años), pero no es Sinegal ni Jelinek.
+
+### 8. Dividend Yield Insignificante
+0.59% — esto NO es una acción de ingreso. Si buscas flujo de dividendo mensual/trimestral, esto no es para ti. COST es appreciation + especiales + consistencia de 10% anual histórico.
+
+## Conclusión
+
+COST a $994.87 te permite comprar:
+1. Un negocio de ~$5.4B anuales de ingreso recurrente tipo SaaS (membership fees con 93% renovación)
+2. La tercera marca consumer más grande del mundo (Kirkland Signature - $85B)
+3. 10 años de crecimiento consecutivo probado resistente a Amazon
+4. Pricing power anclado (hot dog $1.50 desde 1985 — no es nostalgia, es ciencia del comportamiento)
+5. Dividend especial esperado en 2026-27 ($20-25/share = 2-2.5% de retorno extra de golpe)
+
+No es barato. Nunca ha sido barato. Y nunca lo será — porque el mercado sabe lo que está comprando. Esto es **pagar por calidad**, no por descuento.
+
+Si tu tesis de inversión es "quiero ser dueño de los mejores negocios durante 20 años y dormir tranquilo", Costco es la definición.
+
+---
+
+*Research fecha: 21 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 1100.0,
+    analyst_upside: 10.6,
+    status: "active",
+    first_researched_at: "2026-04-21T00:00:00Z",
+    last_updated_at: "2026-04-21T00:00:00Z",
+    next_review_at: "2026-10-21T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -6835,6 +7280,28 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #46* — Apr 20, 2026\n\n🏢 *China Construction Bank* (CICHY) — $22.66\n\n🛍️ *Sus líneas de negocio*: Banca corporativa (infraestructura, PYMEs, grandes empresas estatales), banca retail (es el banco #1 en hipotecas residenciales de China, cuentas, tarjetas de crédito), y tesoro/mercado de capitales. Uno de los "Big Four" bancos estatales chinos.\n\n🌍 *Presencia*: China + ~30 oficinas internacionales. 14,000+ sucursales. Es el segundo banco más grande del mundo por activos (más que JPMorgan + Bank of America combinados). Controlado por Central Huijin (~57%), el brazo soberano del estado chino. HQ en Beijing.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.89% anual* solo por ser dueño. Cada vez que un chino abre una hipoteca, una PYME saca un crédito, o el gobierno financia un proyecto de infraestructura vía CCB — parte de ese dinero llega a ti como dividendo, pagado en dólares cada año.\n\n⚠️ *El riesgo*: El riesgo principal es geopolítico — una escalada de tensiones EE.UU.-China podría resultar en delisting de ADRs chinos de bolsas estadounidenses o sanciones secundarias que congelen la liquidez del ADR OTC.\n\n🆕 Posición #46\n🔗 https://vectorialdata.com/stocks/CICHY\n✅ Certificado por blockchain → vectorialdata.com/verify/CICHY\n\n💡 Dato contraintuitivo: CICHY paga 4.89% de dividendo y cotiza a P/E 6x, pero sus ganancias CRECEN cada año. En 2024 ganó aproximadamente $55B USD en utilidades netas, en 2025 ~$58B. Compáralo con JPMorgan — gana $50B al año pero cotiza a P/E 12x. La diferencia es geopolítica: el mercado descuenta brutalmente todo lo chino por miedo a sanciones, delisting o nueva guerra fría. Pero las utilidades reales son las que son, y China Construction Bank es sistémico — Beijing no lo deja caer, igual que EE.UU. no dejó caer a JPMorgan en 2008. Cuando compras CICHY a este precio, estás comprando ingresos bancarios reales a mitad de precio — pagados como dividendo en dólares cada año.`,
     attestation_uid: "0xf4a0968aa3c9059d24c71da5c249942c43b106005ad59f18d3adcc73f654b546",
   },
+  {
+    id: 47,
+    stock_id: 49,
+    ticker: "COIN",
+    type: "new" as const,
+    cycle_number: 10,
+    price: 208.58,
+    date: "2026-04-21",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #47* — Apr 21, 2026\n\n🏢 *Coinbase Global* (COIN) — $208.58\n\n🛍️ *Sus líneas de negocio*: Exchange de crypto (250+ activos para 110M+ usuarios), intereses sobre reservas de USDC (comparte ~50% con Circle, ~$900M anuales), Coinbase Custody (custodia el Bitcoin de 8 de los 11 ETFs spot de BTC aprobados por la SEC — BlackRock IBIT, Fidelity, Invesco, ARK, etc.), staking (ETH, SOL, ADA), Coinbase One ($29.99/mes) y Base (su L2 de Ethereum que procesa más transacciones diarias que Ethereum mainnet).\n\n🌍 *Presencia*: EE.UU. — la única exchange de crypto regulada completa con licencias SEC, CFTC, FinCEN y en los 50 estados. Además UE (MiCA), UK, Canadá, Singapur, Brasil, Australia. HQ remoto desde 2021.\n\n💵 *Tu nuevo ingreso*: Esta empresa no paga dividendo — es 100% apuesta por crecimiento. Cada vez que alguien compra Bitcoin, Ethereum o USDC en Coinbase, o cada vez que BlackRock IBIT recibe dinero nuevo y guarda ese Bitcoin en Coinbase Custody — el valor de tu participación crece.\n\n⚠️ *El riesgo*: El ~45% de sus ingresos aún depende del volumen de trading de crypto — que cae 60% en bear markets como el de 2022, comprimiendo márgenes y utilidades.\n\n🆕 Posición #47\n🔗 https://vectorialdata.com/stocks/COIN\n✅ Certificado por blockchain → vectorialdata.com/verify/COIN\n\n💡 Dato que casi nadie conecta: Coinbase no gana solo cobrando comisiones. Tiene un acuerdo con Circle (emisor de USDC) que le paga ~50% de los intereses sobre las reservas del stablecoin. Con USDC a ~$60B de supply y tasas del 4-5%, eso son ~$900M anuales de ingreso recurrente tipo SaaS — SIN depender del precio de BTC. Y custodia el Bitcoin de 8 de los 11 ETFs spot aprobados por la SEC. Cuando BlackRock vende IBIT a un cliente, ese Bitcoin vive en Coinbase. Cuando Fidelity FBTC crece, Coinbase gana fees de custodia. Son $90B+ de AUM combinado entre todos los ETFs de BTC y ETH — y Coinbase cobra por custodiar cada dólar. No compras una exchange. Compras la infraestructura regulada que conecta a Wall Street con crypto.`,
+  },
+  {
+    id: 48,
+    stock_id: 50,
+    ticker: "COST",
+    type: "new" as const,
+    cycle_number: 10,
+    price: 994.87,
+    date: "2026-04-21",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #48* — Apr 21, 2026\n\n🏢 *Costco Wholesale* (COST) — $994.87\n\n🛍️ *Sus marcas/líneas*: Warehouses Costco (890+ en 14 países), Kirkland Signature (la marca propia más grande del mundo — factura ~$85B/año, más que Nike o Kellogg's), farmacia, óptica, combustible, travel, seguros. Hot dog + soda combo a $1.50 desde 1985. Pizza entera $9.99. Pollo rostizado $4.99.\n\n🌍 *Presencia*: EE.UU., Canadá, México, UK, Japón, Corea del Sur, Taiwán, Australia, España, Francia, China, Islandia, Nueva Zelanda, Suecia (primer warehouse marzo 2026). 73M+ hogares con membresía pagada ($65 Gold Star, $130 Executive). Renovación 92.9% EE.UU./Canadá.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.59% anual* solo por ser dueño. Cada vez que alguien renueva su membresía anual, carga combustible en la gasolinera, compra Kirkland, o se come el hot dog de $1.50 — parte de ese dinero llega a ti como dividendo. Además paga dividendos ESPECIALES multimillonarios cada 3-4 años ($15 en 2023, $10 en 2020, $7 en 2017) — el próximo se espera fines 2026 o inicios 2027.\n\n⚠️ *El riesgo*: P/E TTM de 51.65x está entre los más altos de su historia — el mercado ya reconoce la calidad del negocio, lo que limita el margen de seguridad ante cualquier miss trimestral.\n\n🆕 Posición #48\n🔗 https://vectorialdata.com/stocks/COST\n✅ Certificado por blockchain → vectorialdata.com/verify/COST\n\n💡 Dato que ancla la tesis: más del 70% del profit de Costco NO viene de vender productos — viene de las membresías. $5.4B anuales en fees de membresía con ~100% de margen. Los productos los vende casi al costo (de ahí el nombre "Costco" = Cost + Co.). ¿Por qué renuevan 92.9% cada año? Por el hot dog de $1.50. En serio. Jim Sinegal, co-fundador, amenazó con "matar" a cualquier ejecutivo que lo subiera. Porque cuando entras y ves ese hot dog a $1.50, te sientes "ganando", y ese sentimiento se transfiere a toda la compra. Es el loss leader más efectivo en retail history. Eso convierte un negocio de warehouse en un negocio de ingresos recurrentes tipo SaaS con renovación tier-Amazon-Prime. Kirkland Signature, la marca propia, factura $85B al año — más que Kellogg's + Hershey's + Nike combinados en margen. Esto no es una tienda — es una máquina de compounding disfrazada de tienda.`,
+  },
 ];
 
 export const cycles = [
@@ -6915,7 +7382,7 @@ export const cycles = [
     cycle_number: 10,
     type: "new" as const,
     target_count: 5,
-    current_count: 1,
+    current_count: 3,
     status: "active" as const,
   },
 ];

@@ -11,6 +11,7 @@ struct VectorialDataApp: App {
             RootView()
                 .environmentObject(authManager)
                 .environmentObject(notifications)
+                .preferredColorScheme(.dark)
                 .onOpenURL { url in
                     authManager.handleDeepLink(url)
                 }
