@@ -8,6 +8,9 @@ import {
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
+// Binance returns HTTP 451 for US-region IPs. Vercel's default iad1 is US,
+// so we route this single function through Frankfurt.
+export const preferredRegion = "fra1";
 
 const TIME_RANGES: BinanceTimeRange[] = ["30D", "90D", "180D"];
 
