@@ -45,11 +45,22 @@ interface BinanceEnvelope<T> {
 
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
 
-async function fetchEnvelope<T>(url: string): Promise<T> {
-  const res = await fetch(url, {
+// Binance returns HTTP 451 for US-region IPs (Vercel's iad1 default).
+// When we hit that, fall back through a non-US proxy.
+const PROXY_PREFIX = "https://api.codetabs.com/v1/proxy/?quest=";
+
+async function tryFetch(url: string): Promise<Response> {
+  return fetch(url, {
     headers: { "User-Agent": UA, Accept: "application/json" },
     cache: "no-store",
   });
+}
+
+async function fetchEnvelope<T>(url: string): Promise<T> {
+  let res = await tryFetch(url);
+  if (res.status === 451 || res.status === 403) {
+    res = await tryFetch(`${PROXY_PREFIX}${encodeURIComponent(url)}`);
+  }
   if (!res.ok) {
     throw new Error(`Binance ${res.status}: ${url}`);
   }
