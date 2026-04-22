@@ -8,7 +8,8 @@
     "notifications": "Notificaciones",
     "noticias": "Noticias",
     "verify": "Registro Verificable",
-    "verifyTooltip": "Registro verificable — notario digital"
+    "verifyTooltip": "Registro verificable — notario digital",
+    "quantLab": "Quant Lab"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Portafolio de Acciones. Esto no es asesoría financiera.",

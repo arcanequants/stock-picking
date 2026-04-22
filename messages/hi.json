@@ -8,7 +8,8 @@
     "notifications": "सूचनाएं",
     "noticias": "समाचार",
     "verify": "सत्यापन योग्य रिकॉर्ड",
-    "verifyTooltip": "सत्यापन योग्य रिकॉर्ड — डिजिटल नोटरी"
+    "verifyTooltip": "सत्यापन योग्य रिकॉर्ड — डिजिटल नोटरी",
+    "quantLab": "Quant Lab"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — स्टॉक पोर्टफोलियो। यह वित्तीय सलाह नहीं है।",
