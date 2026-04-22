@@ -6688,6 +6688,240 @@ Si tu tesis de inversión es "quiero ser dueño de los mejores negocios durante 
     last_updated_at: "2026-04-21T00:00:00Z",
     next_review_at: "2026-10-21T00:00:00Z",
   },
+  {
+    id: 51,
+    ticker: "WFC",
+    name: "Wells Fargo & Company",
+    sector: "Financial Services",
+    industry: "Banks — Diversified",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 81.08,
+    pe_ratio: 12.53,
+    pe_forward: 10.28,
+    dividend_yield: 2.15,
+    market_cap_b: 249.3,
+    eps: 6.47,
+    summary_short:
+      "El 4° banco más grande de EE.UU. — $1.9T en activos, 70M+ clientes, 4,200+ sucursales. La Reserva Federal le levantó el 'asset cap' en junio 2025 tras 7 años de castigo — primera vez en una década que puede crecer libremente. Dividendo 2.15% + buybacks agresivos. Cotiza 12.5x earnings mientras JPMorgan va a 13-14x — mismo deposit franchise, ~15% de descuento por el pecado pasado.",
+    summary_what:
+      "Wells Fargo & Company es uno de los 'Big Four' bancos estadounidenses (junto a JPMorgan, Bank of America y Citigroup). Fundada en 1852 por Henry Wells y William Fargo durante la fiebre del oro de California — empezó moviendo oro en diligencias entre San Francisco y el este del país, y sigue teniendo esa diligencia (stagecoach) como logo. Hoy: ~$1.9T en activos, ~$1.3T en depósitos, 70M+ clientes retail, 4,200+ sucursales y 12,000+ cajeros en 36 estados, ~220,000 empleados. HQ en San Francisco, California. Cuatro segmentos: (1) Consumer Banking (cuentas, hipotecas, tarjetas — incluyendo las Active Cash, Autograph, Reflect y la partnership con Bilt Mastercard para pagos de renta con rewards); (2) Commercial Banking (PYMEs y medianas empresas); (3) Corporate & Investment Banking (mercados de capitales, M&A — creciendo fuerte bajo Scharf); (4) Wealth & Investment Management (Wells Fargo Advisors, ~$2T en AUM). CEO: Charlie Scharf desde octubre 2019 — fichado de BNY Mellon (antes Visa, antes JPMorgan) específicamente para ejecutar el turnaround tras el escándalo de cuentas falsas de 2016.",
+    summary_why:
+      "WFC a $81.08 es la tesis de 'banco americano de calidad con descuento estructural' más clara del mercado: (1) El asset cap — la Fed levantó el 3 de junio de 2025 el tope de $1.95T en activos que le impuso a Wells en 2018 como castigo por el escándalo de 3.5M de cuentas falsas (2016). Fueron 7 años de cárcel económica: JPMorgan creció de $2.5T → $4T, Bank of America de $2.3T → $3.4T, y Wells quedó congelada en $1.9T → $1.9T. El levantamiento del cap es el catalizador estructural más grande en la banca estadounidense de 2025; (2) Deposit franchise: ~$1.3T en depósitos, 70M de clientes retail. Los depósitos son el moat más poderoso en banca — fondean la actividad crediticia a costo casi-cero. Wells está en el top-3 global junto a JPMorgan y BofA; (3) Descuento vs peers: P/E TTM 12.53x y forward 10.28x — mientras JPMorgan cotiza a 13.5x y Bank of America a 12.8x. ~15% de descuento por 'reputation overhang' del escándalo; ese descuento se cierra con cada trimestre sin nuevas noticias; (4) Turnaround comprobado: Charlie Scharf llegó en octubre 2019. Desde entonces: +$12B en costos recortados, salida de RIAs y de parts del negocio no-core, multas CFPB resueltas (las más grandes pagadas: $1.7B en 2020, $3.7B en 2022), equipos nuevos de compliance y risk, y 6 de 14 consent orders levantados. La casa está (casi) en orden; (5) Capital return agresivo: dividendo 2.15% ($1.75 anual), payout ~27% sobre EPS $6.47 — muy sostenible. Buybacks autorizados por $30B en 2025 — comprando ~12% del float al precio actual; (6) Crecimiento post-cap: Scharf ya empezó a crecer el balance desde Q3 2025. El runway para retomar el crecimiento perdido durante 7 años es enorme — especialmente en Corporate & Investment Banking donde han estado por debajo de JPM/BAC; (7) Consumer banking moat: en retail banking, donde la inercia es absoluta, Wells tiene la segunda red de sucursales más grande de EE.UU. (solo detrás de Chase) — y los mejores deposit costs del sector.",
+    summary_risk:
+      "El riesgo principal es la reincidencia regulatoria: el escándalo de cuentas falsas de 2016 le costó a Wells $2.9B en multas, el asset cap de 7 años, y la confianza del mercado (Warren Buffett vendió toda su posición — había comprado desde 1989). Otros riesgos: (1) Ciclo de crédito: si EE.UU. entra en recesión, las provisiones por préstamos malos (especialmente consumer) subirían significativamente — una recesión moderada podría recortar EPS 20-30%; (2) Net Interest Margin: si la Fed baja tasas agresivamente en 2026, el margen de intermediación se comprime — Wells es más sensible que JPM porque tiene mayor proporción de consumer vs trading; (3) Exposición a commercial real estate (CRE): ~$150B en préstamos CRE, incluyendo oficinas — el downturn de office es el talón de Aquiles del sector en 2026; (4) 8 consent orders todavía pendientes con el OCC y CFPB. Cada uno es un pie atrás en la rehabilitación; (5) Competencia fintech: Chime, Cash App, Apple Pay, SoFi están erosionando la relación bancaria de los millennials — Wells tiene que modernizar tech legacy con presupuesto ya estresado; (6) Ciclo de crecimiento post-cap: levantar el cap NO es gratis — crecer balance requiere capital y tiempo. El mercado podría decepcionarse si Scharf es conservador con el ritmo; (7) Dividendo 2.15% es bueno pero no extraordinario — es un 'calidad + turnaround' play, no un 'income' play. Si buscas 4-5% yield, no es este.",
+    research_full: `# Wells Fargo & Company (WFC) — Research Completo
+
+## Precio: $81.08 | P/E TTM: 12.53 | P/E Forward: 10.28 | Div Yield: 2.15% | Market Cap: $249.3B
+
+---
+
+## Qué Es
+
+Wells Fargo es el **4° banco más grande de EE.UU. por activos** — después de JPMorgan ($4T), Bank of America ($3.4T) y Citigroup ($2.4T). Hoy maneja ~$1.9T en activos, ~$1.3T en depósitos, atiende a 70M+ clientes retail, y opera 4,200+ sucursales en 36 estados con ~220,000 empleados.
+
+Fundada en **1852** por Henry Wells y William G. Fargo — los mismos que un año antes habían fundado American Express — para mover oro y paquetes durante la fiebre del oro de California. Sus diligencias (stagecoach) cruzaban el oeste americano entre San Francisco y el este. Ese logo sigue siendo el de Wells Fargo hoy.
+
+HQ en San Francisco, California. CEO: **Charlie Scharf** (desde octubre 2019 — antes CEO de BNY Mellon, antes Visa, antes Chase Retail).
+
+Cuatro segmentos operativos:
+
+| Segmento | % Revenue | Descripción |
+|----------|-----------|-------------|
+| **Consumer Banking & Lending** | ~44% | Cuentas, hipotecas, tarjetas (Active Cash, Autograph, Reflect, Bilt), préstamos auto |
+| **Commercial Banking** | ~18% | PYMEs, medianas empresas, treasury management |
+| **Corporate & Investment Banking** | ~22% | Mercados de capitales, M&A, FX, fixed income — el segmento que Scharf está haciendo crecer |
+| **Wealth & Investment Management** | ~14% | Wells Fargo Advisors, ~$2T AUM |
+
+Resto: corporate & other (~2%).
+
+## La Historia — Cómo Se Metieron en el Hoyo
+
+**Septiembre 2016**: El CFPB, OCC y la fiscalía de Los Ángeles revelan que empleados de Wells habían abierto **~3.5 millones de cuentas y tarjetas sin consentimiento** de los clientes — para cumplir las cuotas de "cross-selling" (8 productos por cliente) que John Stumpf había puesto como KPI. La presión bajaba de gerencia → sucursal → cajero: si no vendías 8 productos al día, estabas fuera.
+
+El resultado fue:
+- 5,300+ empleados despedidos (2011-2016) por abrir cuentas falsas
+- Multa inicial de $185M (CFPB + OCC + LA)
+- Renuncia de John Stumpf como CEO (octubre 2016) — devolvió $41M en compensación
+- Tim Sloan, sucesor, duró hasta marzo 2019 — renunció bajo presión del OCC y Fed
+- Warren Buffett (Berkshire Hathaway) vendió TODA su posición entre 2020-2022. Había comprado desde 1989.
+- **Total multas pagadas por Wells desde 2016: ~$7.5B** (incluye la multa de $3.7B del CFPB en diciembre 2022 por violaciones en auto loans, mortgage, cuentas bancarias)
+
+**Febrero 2018**: La Reserva Federal impone el **asset cap** — Wells no puede superar los $1.95 trillones en activos hasta que "arregle sus consent orders". Sin precedentes en la historia bancaria estadounidense.
+
+## La Cárcel Económica — 7 Años de Asset Cap
+
+Mientras Wells estaba congelada, sus rivales crecieron:
+
+| Banco | Activos 2018 | Activos 2025 | Crecimiento |
+|-------|-------------|--------------|-------------|
+| JPMorgan | $2.6T | $4.0T | +54% |
+| Bank of America | $2.3T | $3.4T | +48% |
+| Citigroup | $1.9T | $2.4T | +26% |
+| **Wells Fargo** | **$1.95T** | **$1.9T** | **0%** |
+
+El cap afectó todo:
+- **Corporate & Investment Banking**: no podían hacer crecer el balance, así que perdieron share en M&A, trading, debt capital markets
+- **Commercial lending**: referían negocio a competidores porque no podían mantener el asset
+- **Consumer lending**: tenían que reducir hipotecas deliberadamente
+- **Deposits**: no podían aceptar nuevos depósitos "de gran escala" porque eso subiría assets
+
+Wells pasó de ser el banco más grande por market cap en 2015 ($301B, el #1 mundial) a ser el 4° de EE.UU. y el 10° global.
+
+## Charlie Scharf — El Turnaround (2019-presente)
+
+El board de Wells hizo 3 intentos internos fallidos para arreglar la empresa (Stumpf → Tim Sloan → Allen Parker interino) antes de entender que tenían que traer a alguien de afuera. En octubre 2019 ficharon a **Charlie Scharf**, entonces CEO de BNY Mellon, con compensación récord ($23M al año + grandes stock awards).
+
+Lo que Scharf ha hecho:
+
+### 1. Reducción de costos: ~$12B eliminados
+- ~50,000 empleados menos (de 270,000 a 220,000)
+- Salida de **Wells Fargo Asset Management** (vendido a GTCR + Reverence Capital por $2.1B en 2021)
+- Salida de **Student Loan business** (vendido 2020)
+- Cerradas 800+ sucursales duplicadas
+- Reducción de la huella inmobiliaria corporativa (-30%)
+
+### 2. Rehabilitación regulatoria
+- **6 de 14 consent orders originales han sido LEVANTADOS** desde 2019
+- El OCC levantó el consent order de 2016 en febrero 2025
+- La Fed levantó el **asset cap el 3 de junio de 2025** — PRIMERA VEZ en 7 años que Wells puede crecer
+- Siguen 8 consent orders pendientes (gradually being resolved)
+
+### 3. Reconstrucción de Corporate & Investment Banking
+- Contrató a ~100+ banqueros senior de Goldman, Morgan Stanley, JPM
+- Nuevos líderes en M&A, equity capital markets, healthcare banking, TMT
+- Corporate & Investment Banking subió de ~16% a ~22% del revenue
+
+### 4. Modernización tecnológica
+- Migración a la nube (Azure, AWS) completada 2024
+- Nuevo app móvil (reescrito 2022-2023)
+- Integración con Bilt Mastercard (rent rewards) — programa viral con millennials/Gen Z
+- Gasto en tech: ~$10B anuales (similar a JPM por empleado)
+
+### 5. Capital return
+- Dividendo restaurado progresivamente: $0.50 (2020) → $1.75 (2025)
+- Buybacks: $30B autorizado para 2025 (~12% del float)
+
+## El Catalizador — Junio 2025: El Cap Se Levanta
+
+El **3 de junio de 2025**, la Fed anunció oficialmente que Wells Fargo había cumplido los requisitos y **levantó el asset cap de $1.95T**.
+
+Significado:
+1. **Crecimiento orgánico desbloqueado**: Wells puede volver a aceptar depósitos grandes, financiar mortgages, hacer crecer su balance sheet corporativa. El techo era artificial — ahora se puede expandir como JPM y BAC.
+2. **Señal de confianza regulatoria**: si la Fed lo soltó, significa que los problemas de compliance están mayoritariamente resueltos. Marca el fin simbólico de la era del escándalo.
+3. **Re-rating potencial**: el descuento de P/E vs JPM (12.5x vs 13.5x) existía porque el mercado tenía miedo al cap. Ahora que se fue, el descuento debería cerrarse gradualmente.
+4. **Aceleración en C&IB**: Corporate & Investment Banking estaba frenado por el cap — ahora puede competir contra JPM y Goldman en deals grandes.
+
+## Deposit Franchise — El Moat Invisible
+
+El moat más poderoso en banca no es la tecnología ni el brand — son los **depósitos baratos y pegajosos** (sticky cheap deposits). Wells tiene uno de los mejores del mundo:
+
+| Métrica | Wells Fargo | JPMorgan | Bank of America |
+|---------|-------------|----------|-----------------|
+| Depósitos totales | ~$1.3T | ~$2.4T | ~$2.0T |
+| Costo de depósitos | ~1.4% | ~1.5% | ~1.3% |
+| % non-interest bearing | ~28% | ~25% | ~30% |
+| Retail deposits share | 22% top-3 US | 1° | 2° |
+| # hogares con cuenta | ~25M | ~28M | ~29M |
+
+Los depósitos de retail (cheques, ahorros) cuestan poco, y los clientes rara vez cambian de banco — la inercia es absoluta. Wells cobra por fondearse con esos depósitos y presta a ~5-7% en hipotecas y tarjetas. Ese spread es la máquina de dinero.
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio** | $81.08 |
+| **Market Cap** | $249.3B |
+| **P/E TTM** | 12.53x |
+| **P/E Forward** | 10.28x |
+| **EPS TTM** | $6.47 |
+| **Dividend Yield** | 2.15% |
+| **Dividendo Anual** | $1.75 |
+| **Payout Ratio** | ~27% |
+| **Buyback Authorization 2025** | $30B (~12% float) |
+| **Activos Totales** | $1.9T |
+| **Depósitos Totales** | $1.3T |
+| **Loans Totales** | $930B |
+| **Net Interest Margin** | ~2.8% |
+| **ROE** | ~12% |
+| **Efficiency Ratio** | ~62% |
+| **CET1 Capital Ratio** | ~11.3% |
+| **Tangible Book Value / Share** | ~$43 |
+| **P/TBV** | 1.9x |
+
+## Por Qué Ahora
+
+### 1. El Asset Cap Se Levantó (Junio 2025)
+Por primera vez en 7 años, Wells puede crecer. El catalizador más grande de la banca estadounidense de 2025.
+
+### 2. Descuento de Valuación vs Peers
+P/E 12.5x vs JPM 13.5x vs BAC 12.8x. Mismo deposit franchise, ~15% descuento por el pasado. Cuando la historia se olvide (1-2 años más), el descuento se cierra.
+
+### 3. Turnaround Probado
+Scharf lleva 6+ años ejecutando. Multas grandes ya se pagaron. 6 de 14 consent orders levantados. La casa está (casi) en orden.
+
+### 4. Capital Return Enorme
+$30B en buybacks + 2.15% yield = ~14% yield total al accionista este año solo.
+
+### 5. C&IB en Expansión
+Scharf está metiendo billones en Corporate & Investment Banking — el segmento de mayor crecimiento y mayor margen en banca. Wells estuvo ausente por 7 años; ahora vuelve.
+
+### 6. Trump 2.0 = Desregulación Bancaria
+La administración Trump (enero 2025-) ha señalado reducir requisitos de capital (Basel III Endgame), bajar presión regulatoria general. Beneficia a Wells más que a otros porque Wells tiene más espacio para aprovechar el alivio.
+
+## Riesgos
+
+### 1. Reincidencia Regulatoria
+Si un NUEVO escándalo emerge (bien sea descubierto o creado por presión interna de crecimiento), el daño sería devastador. El mercado tiene memoria — otro incidente significa que Scharf no arregló la cultura, solo los procesos.
+
+### 2. Ciclo de Crédito
+En recesión: provisions suben, charge-offs suben, consumer defaults suben. Wells tiene más exposure a consumer (vs trading como Goldman) — más sensible al ciclo.
+
+### 3. Commercial Real Estate (CRE)
+~$150B en préstamos CRE incluyendo oficinas. El downturn de office commercial es el riesgo existencial de la banca mediana en 2026 — Wells absorbió parte de ese riesgo vía adquisiciones en los 2010s.
+
+### 4. Consent Orders Pendientes
+Todavía 8 consent orders abiertos con OCC y CFPB. Cada uno limita operaciones, consume capital de compliance, y es un recordatorio del pasado.
+
+### 5. Net Interest Margin (NIM) Compression
+Si la Fed baja tasas agresivamente (4-5 recortes en 2026), el margen de intermediación se estrecha. Wells es más sensible que los peers trading-heavy.
+
+### 6. Competencia Fintech
+Chime, Cash App, Apple Pay, SoFi están erosionando la relación bancaria de millennials y Gen Z. Wells debe modernizar con presupuesto ya comprometido en compliance.
+
+### 7. Ejecución Post-Cap
+Levantar el cap no es crecer automáticamente. Scharf podría ser conservador en ritmo (lo que decepciona mercado) o agresivo (lo que regenera riesgo de compliance). Es un equilibrio fino.
+
+### 8. Warren Buffett Exit
+Berkshire fue holder desde 1989 hasta 2022. Vender TODA la posición fue una señal fuerte. Buffett no ha regresado. Eso pesa en el sentiment.
+
+## Conclusión
+
+WFC a $81.08 te permite comprar:
+
+1. **El 4° banco más grande de EE.UU.** por activos ($1.9T) con el deposit franchise más pegajoso del top-5
+2. **Turnaround ejecutado**: 6 años de Scharf, $7.5B en multas pagadas, costos recortados $12B, 6 de 14 consent orders resueltos
+3. **El catalizador más claro en banca US 2025**: asset cap levantado tras 7 años — runway para crecer reinstalado
+4. **Descuento estructural vs peers**: 12.5x P/E vs JPM 13.5x por "reputation overhang" que se cerrará con el tiempo
+5. **Capital return agresivo**: 2.15% yield + $30B en buybacks = ~14% retorno total al accionista este año
+
+No es un banco sin pecado — es un banco con pecado PAGADO. El mercado descontó más de la cuenta, y Scharf ha hecho el trabajo que el board esperaba. Ahora la pregunta es cuánto tarda el mercado en notarlo.
+
+Si tu tesis es "comprar calidad con descuento creado por un pasado que ya se superó", Wells Fargo es la opción más limpia en banca estadounidense post-cap.
+
+---
+
+*Research fecha: 22 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 92.0,
+    analyst_upside: 13.5,
+    status: "active",
+    first_researched_at: "2026-04-22T00:00:00Z",
+    last_updated_at: "2026-04-22T00:00:00Z",
+    next_review_at: "2026-10-22T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -7304,6 +7538,17 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #48* — Apr 21, 2026\n\n🏢 *Costco Wholesale* (COST) — $994.87\n\n🛍️ *Sus marcas/líneas*: Warehouses Costco (890+ en 14 países), Kirkland Signature (la marca propia más grande del mundo — factura ~$85B/año, más que Nike o Kellogg's), farmacia, óptica, combustible, travel, seguros. Hot dog + soda combo a $1.50 desde 1985. Pizza entera $9.99. Pollo rostizado $4.99.\n\n🌍 *Presencia*: EE.UU., Canadá, México, UK, Japón, Corea del Sur, Taiwán, Australia, España, Francia, China, Islandia, Nueva Zelanda, Suecia (primer warehouse marzo 2026). 73M+ hogares con membresía pagada ($65 Gold Star, $130 Executive). Renovación 92.9% EE.UU./Canadá.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.59% anual* solo por ser dueño. Cada vez que alguien renueva su membresía anual, carga combustible en la gasolinera, compra Kirkland, o se come el hot dog de $1.50 — parte de ese dinero llega a ti como dividendo. Además paga dividendos ESPECIALES multimillonarios cada 3-4 años ($15 en 2023, $10 en 2020, $7 en 2017) — el próximo se espera fines 2026 o inicios 2027.\n\n⚠️ *El riesgo*: P/E TTM de 51.65x está entre los más altos de su historia — el mercado ya reconoce la calidad del negocio, lo que limita el margen de seguridad ante cualquier miss trimestral.\n\n🆕 Posición #48\n🔗 https://vectorialdata.com/stocks/COST\n✅ Certificado por blockchain → vectorialdata.com/verify/COST\n\n💡 Dato que ancla la tesis: más del 70% del profit de Costco NO viene de vender productos — viene de las membresías. $5.4B anuales en fees de membresía con ~100% de margen. Los productos los vende casi al costo (de ahí el nombre "Costco" = Cost + Co.). ¿Por qué renuevan 92.9% cada año? Por el hot dog de $1.50. En serio. Jim Sinegal, co-fundador, amenazó con "matar" a cualquier ejecutivo que lo subiera. Porque cuando entras y ves ese hot dog a $1.50, te sientes "ganando", y ese sentimiento se transfiere a toda la compra. Es el loss leader más efectivo en retail history. Eso convierte un negocio de warehouse en un negocio de ingresos recurrentes tipo SaaS con renovación tier-Amazon-Prime. Kirkland Signature, la marca propia, factura $85B al año — más que Kellogg's + Hershey's + Nike combinados en margen. Esto no es una tienda — es una máquina de compounding disfrazada de tienda.`,
     attestation_uid: "0x2fbc4af3da367c29d1a6f3915d477587f4b648d44b37b5606a46bd6911c7947c",
   },
+  {
+    id: 49,
+    stock_id: 51,
+    ticker: "WFC",
+    type: "new" as const,
+    cycle_number: 10,
+    price: 81.08,
+    date: "2026-04-22",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #49* — Apr 22, 2026\n\n🏢 *Wells Fargo & Company* (WFC) — $81.08\n\n🛍️ *Sus marcas/líneas*: Wells Fargo Bank (4,200+ sucursales retail), Wells Fargo Home Mortgage, Wells Fargo Advisors (wealth management con ~$2T en AUM), tarjetas de crédito Active Cash, Autograph y Reflect, la Bilt Mastercard (partnership para pagar renta y acumular puntos), Wells Fargo Corporate & Investment Banking. Logo: la diligencia (stagecoach) — llevan 174 años usándola, desde 1852.\n\n🌍 *Presencia*: Estados Unidos — HQ en San Francisco, California. 4,200+ sucursales y 12,000+ cajeros en 36 estados, 70M+ clientes retail, ~220,000 empleados. Es el 4° banco más grande de EE.UU. por activos ($1.9 trillones) — después de JPMorgan, Bank of America y Citigroup. Fundado en 1852 por Henry Wells y William Fargo durante la fiebre del oro de California.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.15% anual* solo por ser dueño. Cada vez que alguien guarda su sueldo en una cuenta de Wells Fargo, saca una hipoteca para comprar casa, paga la renta con su Bilt Mastercard, o usa los servicios de wealth management — parte de ese dinero llega a ti como dividendo. Y además acaban de autorizar $30 mil millones en recompra de acciones para 2025 — ~12% del total de acciones siendo absorbido por la propia empresa.\n\n⚠️ *El riesgo*: El riesgo principal es la reincidencia regulatoria — Wells ya pagó ~$7.5B en multas y vivió 7 años con un "asset cap" de la Fed por el escándalo de 3.5M de cuentas falsas (2016). Cualquier nuevo escándalo haría retroceder toda la confianza que Charlie Scharf ha reconstruido desde 2019.\n\n🆕 Posición #49\n🔗 https://vectorialdata.com/stocks/WFC\n✅ Certificado por blockchain → vectorialdata.com/verify/WFC\n\n💡 Dato que ancla la tesis: el 3 de junio de 2025, la Reserva Federal LEVANTÓ el "asset cap" que le había impuesto a Wells Fargo desde 2018 como castigo por el escándalo de cuentas falsas. Ese tope de $1.95 trillones en activos fue una cárcel económica sin precedentes — mientras JPMorgan crecía de $2.5T a $4T, Bank of America de $2.3T a $3.4T y Citigroup de $1.9T a $2.4T, Wells quedó congelado en $1.9T → $1.9T durante 7 años. No podía crecer su balance, no podía aceptar depósitos grandes, no podía competir en banca de inversión al mismo nivel. Ahora que se levantó, es la primera vez desde 2018 que Wells puede crecer libremente — y por eso Charlie Scharf (CEO desde octubre 2019, fichado de BNY Mellon específicamente para el turnaround) ya reactivó $30 mil millones en buybacks. A P/E 12.5x, Wells cotiza con ~15% de descuento vs JPMorgan (13.5x) por el "reputation overhang" del escándalo. Ese descuento existe porque el mercado todavía castiga un pecado ya pagado. Cuando la memoria se diluye, el descuento se cierra.`,
+  },
 ];
 
 export const cycles = [
@@ -7384,7 +7629,7 @@ export const cycles = [
     cycle_number: 10,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 4,
     status: "active" as const,
   },
 ];
