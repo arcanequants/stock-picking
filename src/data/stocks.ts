@@ -6922,6 +6922,260 @@ Si tu tesis es "comprar calidad con descuento creado por un pasado que ya se sup
     last_updated_at: "2026-04-22T00:00:00Z",
     next_review_at: "2026-10-22T00:00:00Z",
   },
+  {
+    id: 52,
+    ticker: "MMM",
+    name: "3M Company",
+    sector: "Industrials",
+    industry: "Specialty Industrial Conglomerate",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 145.48,
+    pe_ratio: 21.33,
+    pe_forward: 16.92,
+    dividend_yield: 2.14,
+    market_cap_b: 79.7,
+    eps: 6.82,
+    summary_short:
+      "Conglomerado industrial de 123 años con 60,000+ productos — Scotch, Post-it, N95, lijas, films ópticos, adhesivos automotrices. Q1 2026 (reportado hace 2 días) mostró operating margin +230 bps YoY — primera evidencia dura de que el turnaround de William Brown funciona. Post-Solventum spinoff (abril 2024) + post-salida de PFAS (fin 2025) = una 3M más simple, con foco restablecido. Cotiza a 21x TTM / 17x forward con ~18% upside según consenso.",
+    summary_what:
+      "3M Company es el conglomerado industrial más antiguo y prolífico de EE.UU. — fundado en 1902 en Two Harbors, Minnesota, como Minnesota Mining and Manufacturing. Hoy vende ~60,000+ productos diferentes en 200+ países, opera 70+ plantas en EE.UU. y 80+ internacionales, y emplea ~61,000 personas. Post-Solventum spinoff (abril 2024) la compañía quedó con tres segmentos: (1) *Safety & Industrial* (~43% revenue) — cintas industriales, abrasivos, respiratorios N95, productos de electricidad, sellantes, PPE; (2) *Transportation & Electronics* (~32%) — adhesivos automotrices, films ópticos para pantallas (iPhones, TVs, monitores), materiales aeroespaciales, fibra óptica; (3) *Consumer* (~15%) — Scotch (cinta), Post-it, Command, Scotch-Brite, Nexcare, Filtrete, Ace. El 10% restante es corporate/unallocated. Productos icónicos inventados en 3M: Scotch Tape (1925), Scotch-Brite (1958), Post-it Notes (1974, por accidente — el ingeniero Spencer Silver inventó un adhesivo débil en 1968 buscando uno fuerte), Thinsulate, Command strips, N95 respirators, escocesados reflectantes (que usan todas las señales de tráfico del mundo). HQ en Saint Paul, Minnesota. CEO desde mayo 2024: **William Brown** — fichado externamente tras dejar la presidencia de L3Harris Technologies en 2023. Es el primer CEO externo de 3M en ~40 años. Dividend King hasta 2024 (67 años subiendo dividendos) → status perdido cuando cortaron post-Solventum de ~$6.00 a $2.80 anual; ahora subieron a $3.12 — primera señal de que el crecimiento del dividendo se reinicia.",
+    summary_why:
+      "MMM a $145.48 es una tesis de turnaround industrial limpia después de una década brutal de litigation, leadership churn y portfolio drift: (1) **Q1 2026 confirmó el punto de inflexión operativo** — el reporte del 21 de abril (hace 2 días) mostró adjusted EPS $2.14 (beat de $0.14), operating margin 23.2% (+230 bps YoY) y guidance FY26 elevado a $8.50-$8.70 adj EPS. Primera vez en 7+ años que 3M muestra expansion de margen sostenida, no un spike de un trimestre; (2) **William Brown — turnaround agent probado**: llegó mayo 2024 desde L3Harris (donde subió el stock 4x entre 2018-2023 ejecutando lean manufacturing y consolidación de plantas). Es ingeniero (Princeton + Wharton MBA), cuando entró a 3M lo primero que hizo fue lo que nadie había hecho en 30 años: un portfolio review completo. Identificó 60+ product lines para revisar, cerró o vendió 30+ en 2025. Simplificación radical; (3) **Post-Solventum clarity**: abril 2024 escindieron Solventum (NYSE: SOLV) — todo el segmento Health Care (~$8B revenue, márgenes altos pero requería integración). Dejó 3M como industrial puro. Cada uno ahora compite por separado — foco perfecto; (4) **PFAS exit ejecutado**: 3M prometió salir de manufactura de PFAS (forever chemicals) para fin de 2025 — cumplieron. Pagaron tranche de $440M del settlement $12.5B para water utilities el 15 abril 2026. Settlement estructurado over 13 años (2023-2036): cada año se vuelve más digerible relativo a free cash flow ($5B+ anual); (5) **Combat Arms earplug settlement cerrado**: $6B acordado 2023, pagable en tranches hasta 2029 — remueve el segundo overhang legal grande; (6) **Valuación razonable post-limpieza**: P/E 21.3x TTM y 17x forward no es barato absoluto pero es razonable para un industrial con margen expandiéndose 70-80 bps este año según guidance. Honeywell cotiza 24x; Emerson Electric 23x; Illinois Tool Works 24x — MMM al ~17x forward tiene el descuento de '¿sigue siendo buena idea?'; (7) **Capital return restaurado**: dividendo $3.12 (yield 2.14%) con payout ratio ~46% — muy sostenible. Buyback program de $7.5B autorizado en Nov 2025, ejecutando ~$1.5B/año; (8) **Portafolio de moats únicos**: Scotch, Post-it, Command son categoría-definidoras con pricing power dormido. 3M tiene 130,000+ patentes activas. Cuando un ingeniero de 3M dice 'tenemos un adhesivo para eso', es literal.",
+    summary_risk:
+      "El riesgo principal es la **cola larga de PFAS**: el settlement $12.5B es para sistemas de agua potable de EE.UU., pero hay litigios separados pendientes con estados individuales, demandantes personales por cáncer, y regulaciones europeas (ECHA). Plaintiffs' bar podría ir por más — analistas estiman exposure adicional $5-15B over next decade. Otros riesgos: (1) **Ciclicalidad industrial**: ~60% del revenue correlaciona con producción manufacturera global. Recesión en auto OEM, electrónica de consumo o construcción pega fuerte — Q1 2026 revenue missed consensus por debilidad en Consumer segment (-1%); (2) **Crecimiento orgánico anémico**: guidance 2026 es +3% organic growth. Es mejora vs 2023-2024 (plano a -2%) pero no es growth story — es quality-at-reasonable-price; (3) **Brown es externo — execution risk cultural**: primer CEO externo en 40+ años. Cultura 3M es densa (rotación interna, lab tiempo protegido, patent-first). Brown podría chocar con ingeniería — L3Harris era más top-down; (4) **Dividendo Aristocrat status perdido permanentemente**: 3M cortó en 2024 tras 67 años subiendo. El grupo de investors que compra por 'Dividend King' ya rotó out — no regresa nunca. Comprador marginal ahora es más value/turnaround que income; (5) **Competencia emergente en nicho**: Henkel en adhesivos industriales, Honeywell en PPE, Nitto Denko en films ópticos están todos ganando share específicamente en productos MMM 'descuidados' durante la era del litigation; (6) **Exposición a China**: ~8% revenue de China. Tensiones comercio US-China podrían afectar. 3M tiene 10+ plantas en China que no puede relocar fácilmente; (7) **R&D gap**: 3M históricamente gastaba ~6% revenue en R&D (industry-leading). Bajo presión de costos lo redujeron a ~4.8% en 2024-2025. El pipeline de productos nuevos (el pulmón de 3M) podría secarse si no se reinstala pronto; (8) **Próximo PFAS payment**: $440M el 15 abril de cada año hasta 2036 — no es trivial, consume ~9% del free cash flow anual.",
+    research_full: `# 3M Company (MMM) — Research Completo
+
+## Precio: $145.48 | P/E TTM: 21.33 | P/E Forward: 16.92 | Div Yield: 2.14% | Market Cap: $79.7B
+
+---
+
+## Qué Es
+
+3M es el **conglomerado industrial científico-intensivo más icónico de EE.UU.**. Fundado en 1902 en Two Harbors, Minnesota, como Minnesota Mining and Manufacturing Company — originalmente para extraer y vender corundum (una piedra abrasiva). Eso falló, pero mientras buscaban alternativas inventaron el primer papel de lija impermeable. Esa mentalidad — "si el plan no funciona, inventa algo nuevo con lo que tienes" — se convirtió en su cultura.
+
+Hoy: ~61,000 empleados, 70+ plantas en EE.UU., 80+ plantas internacionales, operaciones en 200+ países, ~60,000+ productos comercializados. HQ en Saint Paul, Minnesota.
+
+**CEO: William "Bill" Brown** — desde mayo 2024, primer CEO externo en ~40 años. Previamente CEO de L3Harris Technologies (2018-2023), donde subió el stock ~4x. Ingeniero (Princeton, Wharton MBA). Reputación de operational rigor, lean manufacturing, y simplificación de portfolios.
+
+## Estructura Post-Solventum (abril 2024)
+
+| Segmento | % Revenue 2025 | Productos clave |
+|----------|----------------|-----------------|
+| **Safety & Industrial** | ~43% | Cintas Scotch industriales, abrasivos, respiratorios N95, PPE, sellantes, aislamientos eléctricos |
+| **Transportation & Electronics** | ~32% | Adhesivos automotrices, films ópticos (pantallas iPhone/TV/monitor), fibra óptica, materiales aeroespaciales |
+| **Consumer** | ~15% | Scotch, Post-it, Command, Scotch-Brite, Nexcare, Filtrete, Ace |
+| **Corporate/Other** | ~10% | Ingresos residuales y costos no asignados |
+
+Revenue FY 2025: ~$24B (post-spin). Versus pre-spin cuando era ~$32B con Health Care incluido.
+
+## La Década Perdida (2014-2024)
+
+Antes de entender la tesis de compra, hay que entender qué salió mal:
+
+### 1. La Era Inge Thulin → Mike Roman (2014-2024)
+
+Inge Thulin (CEO 2012-2018) llevó 3M de forma conservadora. Mike Roman (2018-2024) mantuvo el rumbo. Pero durante esa década:
+
+- **Crecimiento orgánico se estancó**: 2014-2023 organic growth promedio ~1.2% anual. Muy por debajo de industriales comparables (Honeywell ~3%, Illinois Tool Works ~3%).
+- **Portfolio se infló**: siguieron adicionando SKUs sin recortar. Operating complexity subió, márgenes bajaron.
+- **R&D como % revenue bajó**: históricamente 6%+ → para 2024 era ~4.8%. El pipeline de innovación se secó.
+- **Mal manejo de brand Scotch/Post-it**: líneas de consumo crecieron sub-inflation — perdieron share a Henkel en Europa y marcas privadas en retail.
+
+### 2. Litigation Avalancha
+
+Dos catástrofes legales simultáneas:
+
+**PFAS (2019-presente)**: 3M fue pionera en PFAS (perfluoroalkyl substances) — los "forever chemicals". Los usaron en Scotchgard, cintas, espumas contra incendios. Desde los 90s hay evidencia de que causan cáncer. En 2019 salieron demandas masivas de estados y water utilities. En junio 2023 3M acordó el **settlement de $12.5B para sistemas de agua potable de EE.UU.** (aprobado final por corte en abril 2024). Estructurado over 13 años — pagos anuales ~$440M en abril. Siguen demandas separadas de estados individuales, personal injury suits, y regulación europea. 3M salió de manufactura de PFAS para fin de 2025 (cumplió).
+
+**Combat Arms Earplugs (2018-2023)**: 3M vendía earplugs (Combat Arms v2) al ejército de EE.UU. Veteranos alegaron defectos que causaron pérdida auditiva. Más de **260,000 demandas individuales** — la mayor multidistrict litigation en historia de EE.UU. En agosto 2023, 3M acordó **settlement de $6B**, pagadero en cash + stock over 2024-2029.
+
+Combinado: ~$18.5B de liabilities, casi tres veces el EBITDA anual de 3M.
+
+### 3. Spinoff de Solventum (abril 2024)
+
+3M anunció en julio 2022 que iba a escindir su segmento Health Care (curaciones, wound care, dental, software hospitalario). Completado 1 de abril de 2024 como **Solventum Corporation** (NYSE: SOLV).
+
+Razones del spin:
+- Health Care tenía dinámicas de mercado distintas (más crecimiento, más capital-intensive, regulated)
+- Liberaba capital management attention para enfocarse en industrial
+- Un ticker "puro" de Health Care capturaba valoración premium (SOLV cotiza ~25x forward vs MMM ~17x)
+
+Pero el spin requirió cortar el dividendo:
+- 3M pre-spin: dividendo anual ~$6.00 (yield ~5% a $120)
+- Post-spin (abril 2024): dividendo cayó a ~$2.80 (ajustado por Solventum distribuido)
+- **Perdieron el "Dividend King" status**: 67 años consecutivos subiendo el dividendo → truncado.
+
+Eso disparó ventas masivas: investors que compraban 3M *específicamente* por el Dividend Aristocrat status rotaron a Johnson & Johnson, PG, KO. Ese grupo no regresa.
+
+## William Brown — El Turnaround (mayo 2024-presente)
+
+Mike Roman renunció en abril 2024 justo después del Solventum spin. El board hizo algo que 3M no había hecho en ~40 años: fichar un CEO externo.
+
+**William M. Brown** era CEO de L3Harris Technologies (fusionado Harris + L3 en 2019). Bajo su liderazgo:
+- L3Harris stock: $153 (agosto 2018) → $210 (abril 2023) → ~4x sobre S&P industrial index
+- Consolidó 60+ plantas en 30
+- Expandió operating margin ~400 bps
+- Ejecutó $8B en desinversiones no-core
+
+En 3M Brown ha hecho en 24 meses lo que Mike Roman no hizo en 6 años:
+
+### 1. Portfolio Review Radical (junio 2024)
+Primer CEO en 30+ años en hacer un review completo de las 60,000+ SKUs. Resultado:
+- ~30% de productos identificados como "low strategic value" o "low margin"
+- Plan para rationalizar 30-40% de esos over 2025-2027
+
+### 2. Consolidación de Plantas
+- 2024: cerradas 7 plantas (principalmente en EE.UU. y México)
+- 2025: cerradas/vendidas 12 plantas más
+- Target total: ~25 plantas cerradas/vendidas para 2027 (20% del footprint)
+
+### 3. Headcount Reductions
+- Septiembre 2024: anunciados 6,000 recortes globales
+- Abril 2025: 2,500 adicionales
+- Total: ~8,500 reducción (~12% de la plantilla global)
+
+### 4. Margen Operativo Recuperándose
+- FY 2023: op margin GAAP ~16%
+- FY 2024: 19.8%
+- FY 2025: 21.5%
+- Q1 2026: **23.2%** (+230 bps YoY)
+
+### 5. R&D Reinstalado
+- Brown anunció en Q3 2025 call que restablecerá R&D al ~5.5% of revenue (vs 4.8% actual)
+- Nuevos labs en Austin y Singapore operando desde 2026
+
+## Q1 2026 Earnings — El Momento Pivotal (21 abril 2026)
+
+Resultados (hace 2 días):
+
+| Métrica | Q1 2026 | Q1 2025 | YoY |
+|---------|---------|---------|-----|
+| GAAP Revenue | $6.00B | $5.92B | +1.3% |
+| Adj EPS | $2.14 | $1.88 | +13.8% |
+| Adj Op Margin | 23.2% | 20.9% | +230 bps |
+| GAAP EPS | $1.23 | $2.05 | -40%* |
+| Free Cash Flow | $1.1B | $0.9B | +22% |
+
+*GAAP EPS bajó por charges one-time (restructuring + PFAS settlement payment)
+
+Por segmento:
+| Segmento | Organic Growth |
+|----------|----------------|
+| Safety & Industrial | +2.5% |
+| Transportation & Electronics | +1.1% |
+| Consumer | -1.2% |
+
+**Guidance FY 2026 subida**:
+- Adj EPS: $8.50-$8.70 (prev $8.40-$8.60)
+- Organic sales growth: ~3%
+- Operating margin expansion: +70-80 bps sobre FY 2025
+
+El mercado reaccionó: MMM +7% el 21 abril, cerró en $145+ después del call.
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio** | $145.48 |
+| **Market Cap** | $79.7B |
+| **P/E TTM** | 21.33x |
+| **P/E Forward** | 16.92x |
+| **EPS TTM** | $6.82 |
+| **EPS Forward (guide midpoint)** | $8.60 |
+| **Dividend Yield** | 2.14% |
+| **Dividendo Anual** | $3.12 |
+| **Payout Ratio** | ~46% |
+| **52w High** | $177.41 |
+| **52w Low** | $134.85 |
+| **Drawdown desde high** | -18.0% |
+| **Revenue FY 2025** | ~$24B |
+| **Adj Op Margin FY 2025** | 21.5% |
+| **ROE** | ~28% |
+| **FCF LTM** | ~$4.8B |
+| **Net Debt** | ~$10B |
+| **Buyback autorizado (Nov 2025)** | $7.5B |
+
+## Por Qué Ahora
+
+### 1. Q1 2026 Confirmó Punto de Inflexión
++230 bps margin expansion no es ruido — es la primera evidencia sostenida de que el trabajo de Brown está convirtiéndose en números. El mercado apenas empieza a procesar.
+
+### 2. Valuación vs Peers
+Honeywell 24x forward, Emerson 23x, ITW 24x, Illinois Tool Works 24x. MMM a 17x forward — el industrial puro más barato del sub-sector con turnaround documentado.
+
+### 3. Overhang Legal Capado
+PFAS ($12.5B) y Earplugs ($6B) están ambos estructurados. No es eliminación total de riesgo pero la "cola" ahora es calculable — el mercado puede modelar, no temer.
+
+### 4. Capital Return Restaurado
+Dividendo subido a $3.12 (primer aumento post-spin) + buyback $7.5B autorizado = señal clara del board de que la capacidad fue recuperada.
+
+### 5. Spinoff Clarity
+Un industrial puro, sin Health Care. Fácil de analizar, fácil de comparar vs peers. El múltiplo se normalizará.
+
+### 6. Consumer Discretionary Recovery
+Si EE.UU. evita recesión en 2026, segmentos Transportation (auto OEM) y Consumer (Scotch, Post-it) pueden tener mejor año. Guidance asume crecimiento plano ahí — upside existe.
+
+## Riesgos
+
+### 1. PFAS — La Cola Larga
+El settlement $12.5B cubre water utilities de EE.UU., no cubre: (a) estados individuales (NJ, NH, MN están litigando separado); (b) personal injury (cáncer de demandantes individuales); (c) regulación europea (ECHA puede imponer nuevos límites en 2027); (d) acciones federales futuras. Analistas estiman exposure adicional $5-15B.
+
+### 2. Ciclicalidad Industrial
+~60% del revenue es pro-cíclico. Si manufacturing global entra en recesión en 2H 2026, organic growth puede volver a plano. Guidance +3% asume soft landing.
+
+### 3. Cultura Interna vs CEO Externo
+William Brown es el primer CEO externo en 40+ años. Cultura 3M es densa: "15% time" (ingenieros dedican 15% del tiempo a proyectos propios — así nació Post-it), tenure promedio ~15 años, rotación interna constante. Brown viene de cultura top-down defense contractor. Choques culturales pueden minar execution.
+
+### 4. Dividendo Aristocrat Status Perdido
+67 años de subidas rotos en 2024. No hay forma de recuperar ese rating — los investors que compran específicamente Dividend Kings (hay ETFs dedicados como NOBL) ya rotaron out. Base compradora marginal ahora es turnaround/value, no income.
+
+### 5. Competencia en Productos "Descuidados"
+Mientras 3M gastó una década peleando demandas, competidores tomaron share:
+- Henkel (Alemania) en industrial adhesives
+- Honeywell en N95 y PPE
+- Nitto Denko (Japón) en optical films
+- Marcas privadas en Consumer (Scotch copies en Target, Amazon Basics)
+
+Ganar share de vuelta toma años y dinero.
+
+### 6. China Exposure
+~8% del revenue viene de China (antes era ~10%). 10+ plantas en China que no se pueden relocar fácilmente. Tariffs o tensiones comerciales EE.UU.-China afectarían directamente.
+
+### 7. R&D Gap Puede Persistir
+Brown prometió subir R&D a 5.5% revenue, pero aumentar ingenieros en Minnesota no es trivial — mercado laboral ajustado. Si no cumple, el pipeline de innovación (la ventaja histórica de 3M) sigue debilitándose.
+
+### 8. Free Cash Flow Comprometido
+~$440M/año en PFAS payments hasta 2036 + pagos de Earplugs + capex para transformación = ~$1B anual comprometido. Eso restringe flexibilidad en M&A, buybacks más agresivos, o aceleración de R&D.
+
+## Conclusión
+
+MMM a $145.48 te permite comprar:
+
+1. **Un industrial icónico de 123 años** con 130,000+ patentes, 60,000+ SKUs, y moats en productos categoría-definidores (Scotch, Post-it, Command, N95)
+2. **Turnaround documentado**: William Brown 24 meses en el rol, operating margin +230 bps YoY, $8B en cost-outs identificados, portfolio simplification en curso
+3. **Post-cleanup**: Solventum spun off (2024), PFAS manufacturing exited (2025), settlements estructurados (no más sorpresas catastróficas)
+4. **Valuación razonable**: 17x forward cuando peers están 23-24x — ~30% discount que debería cerrarse con cada trimestre de execution
+5. **Capital return renovado**: $3.12 div (2.14% yield) + $7.5B buyback autorizado = ~4-5% retorno total al accionista este año vía capital
+6. **Q1 2026 como catalizador**: primer trimestre sólido post-Brown, mercado apenas empezando a creer
+
+No es un dividendo-de-jubilación (eso ya se rompió en 2024). Es una **tesis de mejora de margen + normalización de múltiplo** en un industrial histórico con problemas legales capados.
+
+Si tu tesis es "comprar un blue-chip industrial con pedigree donde el turnaround todavía no está priced-in", 3M post-Solventum es la opción más obvia del sector.
+
+---
+
+*Research fecha: 23 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 172.0,
+    analyst_upside: 18.2,
+    status: "active",
+    first_researched_at: "2026-04-23T00:00:00Z",
+    last_updated_at: "2026-04-23T00:00:00Z",
+    next_review_at: "2026-10-23T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -7550,6 +7804,18 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #49* — Apr 22, 2026\n\n🏢 *Wells Fargo & Company* (WFC) — $81.08\n\n🛍️ *Sus marcas/líneas*: Wells Fargo Bank (4,200+ sucursales retail), Wells Fargo Home Mortgage, Wells Fargo Advisors (wealth management con ~$2T en AUM), tarjetas de crédito Active Cash, Autograph y Reflect, la Bilt Mastercard (partnership para pagar renta y acumular puntos), Wells Fargo Corporate & Investment Banking. Logo: la diligencia (stagecoach) — llevan 174 años usándola, desde 1852.\n\n🌍 *Presencia*: Estados Unidos — HQ en San Francisco, California. 4,200+ sucursales y 12,000+ cajeros en 36 estados, 70M+ clientes retail, ~220,000 empleados. Es el 4° banco más grande de EE.UU. por activos ($1.9 trillones) — después de JPMorgan, Bank of America y Citigroup. Fundado en 1852 por Henry Wells y William Fargo durante la fiebre del oro de California.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.15% anual* solo por ser dueño. Cada vez que alguien guarda su sueldo en una cuenta de Wells Fargo, saca una hipoteca para comprar casa, paga la renta con su Bilt Mastercard, o usa los servicios de wealth management — parte de ese dinero llega a ti como dividendo. Y además acaban de autorizar $30 mil millones en recompra de acciones para 2025 — ~12% del total de acciones siendo absorbido por la propia empresa.\n\n⚠️ *El riesgo*: El riesgo principal es la reincidencia regulatoria — Wells ya pagó ~$7.5B en multas y vivió 7 años con un "asset cap" de la Fed por el escándalo de 3.5M de cuentas falsas (2016). Cualquier nuevo escándalo haría retroceder toda la confianza que Charlie Scharf ha reconstruido desde 2019.\n\n🆕 Posición #49\n🔗 https://vectorialdata.com/stocks/WFC\n✅ Certificado por blockchain → vectorialdata.com/verify/WFC\n\n💡 Dato que ancla la tesis: el 3 de junio de 2025, la Reserva Federal LEVANTÓ el "asset cap" que le había impuesto a Wells Fargo desde 2018 como castigo por el escándalo de cuentas falsas. Ese tope de $1.95 trillones en activos fue una cárcel económica sin precedentes — mientras JPMorgan crecía de $2.5T a $4T, Bank of America de $2.3T a $3.4T y Citigroup de $1.9T a $2.4T, Wells quedó congelado en $1.9T → $1.9T durante 7 años. No podía crecer su balance, no podía aceptar depósitos grandes, no podía competir en banca de inversión al mismo nivel. Ahora que se levantó, es la primera vez desde 2018 que Wells puede crecer libremente — y por eso Charlie Scharf (CEO desde octubre 2019, fichado de BNY Mellon específicamente para el turnaround) ya reactivó $30 mil millones en buybacks. A P/E 12.5x, Wells cotiza con ~15% de descuento vs JPMorgan (13.5x) por el "reputation overhang" del escándalo. Ese descuento existe porque el mercado todavía castiga un pecado ya pagado. Cuando la memoria se diluye, el descuento se cierra.`,
     attestation_uid: "0x4ac8d9480acb6c9310e03ecfb1a4f24bbdb804bfe0f008e71fafa8a050ff2496",
   },
+  {
+    id: 50,
+    stock_id: 52,
+    ticker: "MMM",
+    type: "new" as const,
+    cycle_number: 10,
+    price: 145.48,
+    date: "2026-04-23",
+    day_of_week: "thursday",
+    wa_message: `📊 *STOCK PICK #50* — Apr 23, 2026\n\n🏢 *3M Company* (MMM) — $145.48\n\n🛍️ *Sus marcas/líneas*: Scotch (cinta adhesiva transparente, 1925), Post-it (las notitas amarillas, 1974), Command (los ganchos que no dejan marca en la pared), Scotch-Brite (esponjas verdes), Nexcare (curitas), Filtrete (filtros de aire), respiradores N95 (los que usamos todos durante COVID), lijas industriales, adhesivos para la industria automotriz, films ópticos que van dentro de las pantallas de iPhone, TV y monitores de computador. Más de 60,000 productos diferentes.\n\n🌍 *Presencia*: Estados Unidos — HQ en Saint Paul, Minnesota. 70+ plantas en EE.UU., 80+ plantas internacionales, ventas en 200+ países, ~61,000 empleados. Fundada en 1902 como Minnesota Mining and Manufacturing — originalmente para vender una piedra abrasiva que resultó ser de mala calidad; inventaron el papel de lija impermeable y nunca pararon de inventar cosas. Tienen 130,000+ patentes activas.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.14% anual* solo por ser dueño. Cada vez que alguien compra cinta Scotch, usa una nota Post-it, cuelga algo con Command Strip, se pone una curita Nexcare, o compra un iPhone (que trae films ópticos 3M dentro de la pantalla) — parte de ese dinero llega a ti como dividendo. Y acaban de autorizar $7.5 mil millones en recompra de acciones hasta 2027 — ~9% del total de acciones siendo absorbido por la propia empresa.\n\n⚠️ *El riesgo*: La cola larga de PFAS — 3M pagó $12.5B por contaminación de agua potable (settlement estructurado hasta 2036, $440M anuales), pero siguen demandas separadas de estados individuales, casos personales por cáncer, y posible regulación europea. Analistas estiman exposure adicional $5-15B en la próxima década. Plus: 67 años subiendo dividendo rotos en 2024 cuando cortaron post-Solventum — perdieron el status de "Dividend King" permanentemente.\n\n🆕 Posición #50\n🔗 https://vectorialdata.com/stocks/MMM\n✅ Certificado por blockchain → vectorialdata.com/verify/MMM\n\n💡 Dato que ancla la tesis: el 21 de abril de 2026 (hace 2 días), 3M reportó Q1 2026 y pasó algo que no pasaba desde 2018 — el operating margin expandió +230 puntos base año contra año (de 20.9% a 23.2%). No es un trimestre "bueno" — es la primera evidencia dura de que el turnaround de William Brown está convirtiéndose en números reales. Brown llegó en mayo 2024 desde L3Harris (donde subió el stock 4x ejecutando consolidación de plantas y lean manufacturing) — es el primer CEO externo de 3M en ~40 años, y el primero en 30 años en hacer un portfolio review completo de las 60,000 SKUs. Lo que ha hecho en 24 meses: cerradas 19 plantas (target 25 para 2027), 8,500 recortes (~12% plantilla), 30+ product lines descontinuadas. El Q1 fue el primer "proof point" de que eso convierte en margen. Mientras tanto, MMM cotiza a 17x forward cuando Honeywell va a 24x, Emerson a 23x, Illinois Tool Works a 24x — ~30% de descuento vs peers industriales. El analyst consensus tiene target $172 (+18% upside), y Wells Fargo subió su target a $165 el 22 de abril citando "execution momentum". No es el Dividend Aristocrat que era — es un turnaround industrial post-litigation donde el mercado apenas empieza a creer. Y como siempre: comprar cuando la historia empieza a cambiar, no cuando ya todos la creen.`,
+    attestation_uid: "0x7864e80751ac43b2fd11c473dd066880432332aecaff59759413bcb01bae8a21",
+  },
 ];
 
 export const cycles = [
@@ -7630,7 +7896,15 @@ export const cycles = [
     cycle_number: 10,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 11,
+    cycle_number: 11,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 0,
     status: "active" as const,
   },
 ];
