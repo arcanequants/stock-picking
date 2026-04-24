@@ -1735,9 +1735,13 @@ const WELCOME_COPY: Record<
     expectTiming: string;
     expectFrequency: string;
     expectFormat: string;
+    expectAha: string;
+    ruleTipTitle: string;
+    ruleTipBody: string;
+    ruleTipLink: string;
     webTitle: string;
     webDesc: string;
-    webButton: string;
+    webLink: string;
     webExpiry: string;
     sign: string;
     signRole: string;
@@ -1757,12 +1761,16 @@ const WELCOME_COPY: Record<
     waCtaDesc: "Este es el paso más importante. Sin esto, no recibirás los picks.",
     waButton: "Unirme al grupo",
     expectTitle: "Qué esperar",
-    expectTiming: "Primer pick: próximo día hábil, ~11am hora del centro.",
-    expectFrequency: "Frecuencia: lunes a viernes, siempre a la misma hora.",
+    expectTiming: "Tu primer pick llega cuando haya uno nuevo — no hay pick todos los días.",
+    expectFrequency: "Frecuencia: lunes a viernes, solo cuando hay una oportunidad real.",
     expectFormat: "Cada pick incluye: ticker, tesis, riesgo, y research completo en la web.",
+    expectAha: "En un año harás cientos de compras pequeñas. La constancia es el truco — no el stock que escojas.",
+    ruleTipTitle: "Antes del primer pick: define tu regla",
+    ruleTipBody: "Decide un presupuesto mensual que no te duela mantener. Divídelo entre 30. Esa es la cantidad que inviertes en cada pick — siempre la misma.",
+    ruleTipLink: "Definir mi regla en 30 segundos →",
     webTitle: "Accede a tu portafolio en la web",
     webDesc: "Gráficas, posiciones, transacciones y research completo.",
-    webButton: "Acceder a mi cuenta",
+    webLink: "Acceder a mi cuenta →",
     webExpiry: "Este enlace expira en 24 horas.",
     sign: "— Alberto",
     signRole: "Fundador, Vectorial Data",
@@ -1781,12 +1789,16 @@ const WELCOME_COPY: Record<
     waCtaDesc: "This is the most important step. Without this, you won't receive picks.",
     waButton: "Join the group",
     expectTitle: "What to expect",
-    expectTiming: "First pick: next business day, ~11am Central Time.",
-    expectFrequency: "Frequency: Monday through Friday, always at the same time.",
+    expectTiming: "Your first pick arrives when there's a new one — not every day has a pick.",
+    expectFrequency: "Frequency: Monday through Friday, only when there's a real opportunity.",
     expectFormat: "Each pick includes: ticker, thesis, risk, and full research on the web.",
+    expectAha: "In a year you'll make hundreds of small buys. The trick is consistency — not the stock you pick.",
+    ruleTipTitle: "Before the first pick: set your rule",
+    ruleTipBody: "Pick a monthly budget that won't hurt to keep up. Divide by 30. That's the amount you invest in every pick — always the same.",
+    ruleTipLink: "Set my rule in 30 seconds →",
     webTitle: "Access your portfolio on the web",
     webDesc: "Charts, positions, transactions and full research.",
-    webButton: "Access my account",
+    webLink: "Access my account →",
     webExpiry: "This link expires in 24 hours.",
     sign: "— Alberto",
     signRole: "Founder, Vectorial Data",
@@ -1805,12 +1817,16 @@ const WELCOME_COPY: Record<
     waCtaDesc: "Este é o passo mais importante. Sem isso, você não receberá picks.",
     waButton: "Entrar no grupo",
     expectTitle: "O que esperar",
-    expectTiming: "Primeiro pick: próximo dia útil, ~11h (horário central).",
-    expectFrequency: "Frequência: segunda a sexta, sempre no mesmo horário.",
+    expectTiming: "Seu primeiro pick chega quando houver um novo — nem todo dia tem pick.",
+    expectFrequency: "Frequência: segunda a sexta, só quando há uma oportunidade real.",
     expectFormat: "Cada pick inclui: ticker, tese, risco, e research completo na web.",
+    expectAha: "Em um ano você fará centenas de compras pequenas. O truque é a constância — não o stock que você escolhe.",
+    ruleTipTitle: "Antes do primeiro pick: defina sua regra",
+    ruleTipBody: "Escolha um orçamento mensal que não doa manter. Divida por 30. Essa é a quantia que você investe em cada pick — sempre a mesma.",
+    ruleTipLink: "Definir minha regra em 30 segundos →",
     webTitle: "Acesse seu portfólio na web",
     webDesc: "Gráficos, posições, transações e research completo.",
-    webButton: "Acessar minha conta",
+    webLink: "Acessar minha conta →",
     webExpiry: "Este link expira em 24 horas.",
     sign: "— Alberto",
     signRole: "Fundador, Vectorial Data",
@@ -1829,12 +1845,16 @@ const WELCOME_COPY: Record<
     waCtaDesc: "यह सबसे महत्वपूर्ण कदम है। इसके बिना आपको picks नहीं मिलेंगे।",
     waButton: "ग्रुप में शामिल हों",
     expectTitle: "क्या अपेक्षा करें",
-    expectTiming: "पहला pick: अगले कार्य दिवस, ~11am सेंट्रल टाइम।",
-    expectFrequency: "आवृत्ति: सोमवार से शुक्रवार, हमेशा एक ही समय पर।",
+    expectTiming: "आपका पहला pick तब आएगा जब कोई नया होगा — हर दिन pick नहीं होता।",
+    expectFrequency: "आवृत्ति: सोमवार से शुक्रवार, केवल जब कोई वास्तविक अवसर हो।",
     expectFormat: "हर pick में: ticker, थीसिस, जोखिम, और वेब पर पूरा research।",
+    expectAha: "एक साल में आप सैकड़ों छोटी खरीदारी करेंगे। चाल निरंतरता है — आप जो stock चुनते हैं वो नहीं।",
+    ruleTipTitle: "पहले pick से पहले: अपना नियम सेट करें",
+    ruleTipBody: "एक मासिक बजट चुनें जिसे बनाए रखना मुश्किल न हो। 30 से विभाजित करें। यही वो राशि है जो आप हर pick में निवेश करते हैं — हमेशा वही।",
+    ruleTipLink: "30 सेकंड में मेरा नियम सेट करें →",
     webTitle: "वेब पर अपना पोर्टफोलियो देखें",
     webDesc: "चार्ट, पोजीशन, लेनदेन और पूरा research।",
-    webButton: "मेरे खाते तक पहुँचें",
+    webLink: "मेरे खाते तक पहुँचें →",
     webExpiry: "यह लिंक 24 घंटे में समाप्त हो जाएगा।",
     sign: "— Alberto",
     signRole: "संस्थापक, Vectorial Data",
@@ -1915,25 +1935,35 @@ export async function sendWelcomeEmail(
       <tr><td style="padding:0 0 8px;font-size:14px;line-height:1.6;color:#374151;">
         <span style="color:#4f46e5;font-weight:600;">→</span> ${c.expectFrequency}
       </td></tr>
-      <tr><td style="padding:0 0 8px;font-size:14px;line-height:1.6;color:#374151;">
+      <tr><td style="padding:0 0 12px;font-size:14px;line-height:1.6;color:#374151;">
         <span style="color:#4f46e5;font-weight:600;">→</span> ${c.expectFormat}
+      </td></tr>
+      <tr><td style="padding:12px 0 0;border-top:1px solid #f3f4f6;font-size:14px;line-height:1.6;color:#111827;font-style:italic;">
+        ${c.expectAha}
       </td></tr>
     </table>
   </td></tr>
-  <!-- Magic link -->
-  <tr><td style="padding:16px 32px 8px;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;border:1px solid #e4e4e7;border-radius:12px;">
-      <tr><td style="padding:20px;">
-        <p style="margin:0 0 4px;font-size:15px;font-weight:600;color:#111827;">${c.webTitle}</p>
-        <p style="margin:0 0 14px;font-size:13px;line-height:1.5;color:#6b7280;">${c.webDesc}</p>
-        <table cellpadding="0" cellspacing="0"><tr><td>
-          <a href="${magicLinkUrl}" style="display:inline-block;background:#4f46e5;color:#ffffff;padding:12px 24px;border-radius:10px;text-decoration:none;font-size:15px;font-weight:600;">
-            ${c.webButton}
-          </a>
-        </td></tr></table>
-        <p style="margin:12px 0 0;font-size:12px;color:#9ca3af;">${c.webExpiry}</p>
+  <!-- DCA rule tip (text-only; preserves WA block as only button) -->
+  <tr><td style="padding:20px 32px 0;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f3ff;border-left:3px solid #4f46e5;border-radius:6px;">
+      <tr><td style="padding:16px 18px;">
+        <p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#4338ca;text-transform:uppercase;letter-spacing:0.4px;">${c.ruleTipTitle}</p>
+        <p style="margin:0 0 8px;font-size:14px;line-height:1.6;color:#374151;">${c.ruleTipBody}</p>
+        <p style="margin:0;font-size:14px;">
+          <a href="${SITE}/metodo" style="color:#4f46e5;text-decoration:none;font-weight:600;">${c.ruleTipLink}</a>
+        </p>
       </td></tr>
     </table>
+  </td></tr>
+  <!-- Magic link (demoted to text link so WA block is the only button) -->
+  <tr><td style="padding:20px 32px 8px;">
+    <p style="margin:0 0 4px;font-size:14px;color:#374151;">
+      <strong style="color:#111827;">${c.webTitle}.</strong> ${c.webDesc}
+    </p>
+    <p style="margin:6px 0 0;font-size:14px;">
+      <a href="${magicLinkUrl}" style="color:#4f46e5;text-decoration:none;font-weight:600;">${c.webLink}</a>
+      <span style="color:#9ca3af;font-size:12px;margin-left:8px;">${c.webExpiry}</span>
+    </p>
   </td></tr>
   <!-- Personal sign-off -->
   <tr><td style="padding:24px 32px 8px;">
@@ -2281,4 +2311,143 @@ export async function sendWaJoinFollowupEmail(
   });
 
   if (error) throw new Error(`Failed to send wa-followup email: ${error.message}`);
+}
+
+// ── Budget Reminder (3-day follow-up if monthly_budget is NULL) ──────
+// Sent once per subscriber, 3 days after signup, if they haven't set
+// their DCA rule yet. Stamps budget_reminder_sent_at to prevent doubles.
+
+const BUDGET_REMINDER_COPY: Record<
+  string,
+  {
+    subject: string;
+    heading: string;
+    body: string;
+    ruleTitle: string;
+    rule1: string;
+    rule2: string;
+    rule3: string;
+    button: string;
+    why: string;
+    sign: string;
+    signRole: string;
+  }
+> = {
+  es: {
+    subject: "Tu regla de compra todavía no está lista",
+    heading: "Un último paso para que el método funcione.",
+    body: "Has recibido picks, pero aún no definiste cuánto invertir en cada uno. Sin esa regla, el método no hace su magia — y el método es por lo que estás aquí.",
+    ruleTitle: "La regla, en 3 líneas",
+    rule1: "Decide un presupuesto mensual que no te duela mantener un año.",
+    rule2: "Divídelo entre 30. Esa es tu cantidad por cada pick.",
+    rule3: "Siempre la misma cantidad. No pienses, no adivines.",
+    button: "Definir mi regla en 30 segundos",
+    why: "Los que se quedan 12 meses son los que tienen una regla. Los que adivinan se frustran y se van. Tú decides de qué lado estar.",
+    sign: "— Alberto",
+    signRole: "Fundador, Vectorial Data",
+  },
+  en: {
+    subject: "Your buying rule isn't set yet",
+    heading: "One last step for the method to work.",
+    body: "You've been getting picks, but you haven't decided how much to invest in each one. Without that rule, the method doesn't do its magic — and the method is why you're here.",
+    ruleTitle: "The rule, in 3 lines",
+    rule1: "Pick a monthly budget you can sustain for a year without pain.",
+    rule2: "Divide it by 30. That's your per-pick amount.",
+    rule3: "Always the same amount. Don't think, don't guess.",
+    button: "Set my rule in 30 seconds",
+    why: "The people who stay for 12 months have a rule. The people who guess get frustrated and leave. You decide which side to be on.",
+    sign: "— Alberto",
+    signRole: "Founder, Vectorial Data",
+  },
+  pt: {
+    subject: "Sua regra de compra ainda não está pronta",
+    heading: "Um último passo para o método funcionar.",
+    body: "Você recebeu picks, mas ainda não definiu quanto investir em cada um. Sem essa regra, o método não faz sua mágica — e o método é por isso que você está aqui.",
+    ruleTitle: "A regra, em 3 linhas",
+    rule1: "Escolha um orçamento mensal que você consiga manter um ano sem dor.",
+    rule2: "Divida por 30. Essa é sua quantia por pick.",
+    rule3: "Sempre a mesma quantia. Não pense, não adivinhe.",
+    button: "Definir minha regra em 30 segundos",
+    why: "Quem fica 12 meses tem uma regra. Quem adivinha se frustra e sai. Você decide de que lado estar.",
+    sign: "— Alberto",
+    signRole: "Fundador, Vectorial Data",
+  },
+  hi: {
+    subject: "आपका खरीद नियम अभी तय नहीं है",
+    heading: "method को काम करने के लिए आखिरी कदम।",
+    body: "आपको picks मिल रहे हैं, लेकिन आपने अभी तय नहीं किया कि हर एक में कितना निवेश करना है। उस नियम के बिना, method अपना जादू नहीं करता — और method ही वो कारण है जिसलिए आप यहाँ हैं।",
+    ruleTitle: "नियम, 3 पंक्तियों में",
+    rule1: "एक मासिक बजट चुनें जिसे आप एक साल बिना तकलीफ के बनाए रख सकें।",
+    rule2: "30 से विभाजित करें। यही आपकी प्रति-pick राशि है।",
+    rule3: "हमेशा वही राशि। मत सोचें, मत अनुमान लगाएं।",
+    button: "30 सेकंड में मेरा नियम सेट करें",
+    why: "जो 12 महीने रुकते हैं उनके पास एक नियम होता है। जो अनुमान लगाते हैं वे निराश होकर चले जाते हैं। आप तय करें किस तरफ होना है।",
+    sign: "— Alberto",
+    signRole: "संस्थापक, Vectorial Data",
+  },
+};
+
+export async function sendBudgetReminderEmail(
+  email: string,
+  ctaUrl: string,
+  locale: string = "es"
+): Promise<void> {
+  const l = locale in BUDGET_REMINDER_COPY ? locale : "es";
+  const c = BUDGET_REMINDER_COPY[l];
+
+  const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<div style="display:none;font-size:1px;color:#f9fafb;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${c.body}</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;">
+<tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:32px 32px 8px;text-align:center;">
+    <img src="${SITE}/logo.png" width="40" height="40" alt="Vectorial Data" style="display:inline-block;margin-bottom:12px;" />
+  </td></tr>
+  <tr><td style="padding:8px 32px 8px;">
+    <h1 style="margin:0 0 8px;font-size:22px;font-weight:700;color:#111827;line-height:1.3;">${c.heading}</h1>
+    <p style="margin:0;font-size:15px;line-height:1.6;color:#6b7280;">${c.body}</p>
+  </td></tr>
+  <tr><td style="padding:20px 32px 8px;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;">
+      <tr><td style="padding:20px;">
+        <p style="margin:0 0 12px;font-size:15px;font-weight:600;color:#4338ca;">${c.ruleTitle}</p>
+        <p style="margin:0 0 6px;font-size:14px;line-height:1.5;color:#374151;"><strong>1.</strong> ${c.rule1}</p>
+        <p style="margin:0 0 6px;font-size:14px;line-height:1.5;color:#374151;"><strong>2.</strong> ${c.rule2}</p>
+        <p style="margin:0 0 16px;font-size:14px;line-height:1.5;color:#374151;"><strong>3.</strong> ${c.rule3}</p>
+        <table cellpadding="0" cellspacing="0"><tr><td>
+          <a href="${ctaUrl}" style="display:inline-block;background:#4f46e5;color:#ffffff;padding:12px 24px;border-radius:10px;text-decoration:none;font-size:15px;font-weight:600;">
+            ${c.button}
+          </a>
+        </td></tr></table>
+      </td></tr>
+    </table>
+  </td></tr>
+  <tr><td style="padding:24px 32px 8px;">
+    <p style="margin:0 0 12px;font-size:14px;line-height:1.6;color:#374151;font-style:italic;">${c.why}</p>
+    <p style="margin:0;font-size:14px;font-weight:600;color:#111827;">${c.sign}</p>
+    <p style="margin:2px 0 0;font-size:13px;color:#6b7280;">${c.signRole}</p>
+  </td></tr>
+  <tr><td style="padding:20px 32px;border-top:1px solid #e4e4e7;text-align:center;">
+    <p style="margin:0;font-size:12px;color:#9ca3af;">
+      <a href="${SITE}" style="color:#4f46e5;text-decoration:none;">vectorialdata.com</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    replyTo: "Hello@vectorialdata.com",
+    to: email,
+    subject: c.subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send budget-reminder email: ${error.message}`);
 }

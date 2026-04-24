@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import DeliveryPreference from "@/components/DeliveryPreference";
+import DcaCalculator from "@/components/DcaCalculator";
 import AccountActions from "@/components/AccountActions";
 import { getAuthState } from "@/lib/auth";
 
@@ -38,6 +41,18 @@ export default async function AccountPage() {
     waFallbackDesc: t("waFallbackDesc"),
   };
 
+  const budgetLabels = {
+    title: t("budgetCalcTitle"),
+    subtitle: t("budgetCalcSubtitle"),
+    budgetLabel: t("budgetInputLabel"),
+    perPickLabel: t("budgetPerPickLabel"),
+    perPickSuffix: t("budgetPerPickSuffix"),
+    saveButton: t("budgetSave"),
+    saving: t("budgetSaving"),
+    saved: t("budgetSaved"),
+    minHint: t("budgetMinHint"),
+  };
+
   return (
     <div className="max-w-2xl mx-auto space-y-6 py-8">
       <div>
@@ -48,6 +63,22 @@ export default async function AccountPage() {
       {/* Delivery preference */}
       <section className="border border-border rounded-2xl p-6">
         <DeliveryPreference labels={deliveryLabels} />
+      </section>
+
+      {/* DCA rule */}
+      <section className="border border-border rounded-2xl p-6 space-y-4">
+        <div className="flex items-baseline justify-between gap-4">
+          <h2 className="font-semibold">{t("budgetStepTitle")}</h2>
+          <Link
+            href="/metodo"
+            className="text-sm text-brand hover:underline shrink-0"
+          >
+            {t("methodLearnMore")}
+          </Link>
+        </div>
+        <Suspense fallback={null}>
+          <DcaCalculator labels={budgetLabels} persist />
+        </Suspense>
       </section>
 
       {/* Subscription */}

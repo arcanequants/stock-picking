@@ -3,6 +3,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import DeliveryPreference from "@/components/DeliveryPreference";
+import DcaCalculator from "@/components/DcaCalculator";
 import WelcomeFlow from "@/components/WelcomeFlow";
 import { getAuthState } from "@/lib/auth";
 
@@ -42,6 +43,18 @@ export default async function WelcomePage({
     waFallbackDesc: t("waFallbackDesc"),
   };
 
+  const budgetLabels = {
+    title: t("budgetCalcTitle"),
+    subtitle: t("budgetCalcSubtitle"),
+    budgetLabel: t("budgetInputLabel"),
+    perPickLabel: t("budgetPerPickLabel"),
+    perPickSuffix: t("budgetPerPickSuffix"),
+    saveButton: t("budgetSave"),
+    saving: t("budgetSaving"),
+    saved: t("budgetSaved"),
+    minHint: t("budgetMinHint"),
+  };
+
   return (
     <Suspense fallback={null}>
       <WelcomeFlow locale={locale}>
@@ -77,11 +90,31 @@ export default async function WelcomePage({
             <DeliveryPreference labels={deliveryLabels} />
           </div>
 
-          {/* Step 2: Login for premium content */}
+          {/* Step 2: Set your DCA rule (monthly budget ÷ 30) */}
+          <div className="border border-border rounded-2xl p-6 text-left">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm">
+                2
+              </div>
+              <h2 className="font-semibold">{t("budgetStepTitle")}</h2>
+            </div>
+            <p className="text-sm text-text-muted mb-4">
+              {t("budgetStepSubtitle")}{" "}
+              <Link
+                href="/metodo"
+                className="text-brand hover:underline font-medium"
+              >
+                {t("methodLearnMore")}
+              </Link>
+            </p>
+            <DcaCalculator labels={budgetLabels} persist />
+          </div>
+
+          {/* Step 3: Login for premium content */}
           <div className="border border-border rounded-2xl p-6 text-left">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm">
-                2
+                3
               </div>
               <h2 className="font-semibold">{t("step2Title")}</h2>
             </div>
