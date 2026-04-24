@@ -27,13 +27,17 @@ export default function WelcomeFlow({ children, locale }: WelcomeFlowProps) {
         const res = await fetch("/api/auth/post-checkout", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ session_id: sessionId, locale }),
+          body: JSON.stringify({
+            session_id: sessionId,
+            locale,
+            resend: isResend,
+          }),
         });
         const data = await res.json();
         if (res.ok && data.email_masked) {
           setMaskedEmail(data.email_masked);
           setState(isResend ? "resent" : "sent");
-          setCooldown(60);
+          if (isResend) setCooldown(60);
         } else {
           setState("error");
         }

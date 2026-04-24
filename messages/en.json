@@ -441,7 +441,14 @@
     "autoLoginResend": "Didn't arrive? Resend",
     "autoLoginResent": "Link resent",
     "autoLoginCooldown": "Wait {seconds}s",
-    "autoLoginError": "Something went wrong. Try again."
+    "autoLoginError": "Something went wrong. Try again.",
+    "expectTitle": "What to expect",
+    "expect1": "Picks Monday through Friday, straight to your channel.",
+    "expect2": "Each pick includes thesis, signal, and risk management.",
+    "expect3": "Same email to access the portfolio and change your preference anytime.",
+    "joinWhatsApp": "Join the WhatsApp group",
+    "waFallbackTitle": "We'll email you the link",
+    "waFallbackDesc": "To protect the group, the invite goes in your welcome email. Check your inbox (and spam) in a few minutes."
   },
   "Account": {
     "title": "Account",

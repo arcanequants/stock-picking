@@ -1,9 +1,26 @@
 import { NextResponse } from "next/server";
 import { getStripe } from "@/lib/stripe";
 import { getSupabaseAdmin } from "@/lib/supabase";
+import {
+  sendWelcomeEmail,
+  sendNewSubscriberAlertToAdmin,
+  sendChurnAlertToAdmin,
+  sendPaymentFailedAlertToAdmin,
+} from "@/lib/resend";
 import type Stripe from "stripe";
 
 export const dynamic = "force-dynamic";
+
+const ADMIN_EMAIL = "0138078@up.edu.mx";
+
+function getSiteUrl(): string {
+  return (
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "https://www.vectorialdata.com")
+  );
+}
 
 export async function POST(request: Request) {
   const body = await request.text();
@@ -131,6 +148,75 @@ export async function POST(request: Request) {
           }
         }
 
+        const deliveryChannel = existing
+          ? ((
+              await supabase
+                .from("subscribers")
+                .select("delivery_channel")
+                .eq("email", normalizedEmail)
+                .maybeSingle()
+            ).data?.delivery_channel as
+              | "whatsapp"
+              | "email"
+              | "both"
+              | null) ?? "whatsapp"
+          : "whatsapp";
+
+        let magicLinkUrl: string | null = null;
+        try {
+          const { data: linkData, error: linkError } =
+            await supabase.auth.admin.generateLink({
+              type: "magiclink",
+              email: normalizedEmail,
+            });
+          if (!linkError && linkData?.properties?.action_link) {
+            const actionUrl = new URL(linkData.properties.action_link);
+            const tokenHash = actionUrl.searchParams.get("token");
+            const type =
+              actionUrl.searchParams.get("type") || "magiclink";
+            magicLinkUrl = `${getSiteUrl()}/auth/callback?token_hash=${tokenHash}&type=${type}&next=/portfolio`;
+          } else {
+            console.error("Magic link generation failed:", linkError);
+          }
+        } catch (err) {
+          console.error("Magic link generation error:", err);
+        }
+
+        const waGroupLink = process.env.WHATSAPP_GROUP_LINK ?? null;
+
+        if (magicLinkUrl) {
+          try {
+            await sendWelcomeEmail(
+              normalizedEmail,
+              magicLinkUrl,
+              waGroupLink,
+              deliveryChannel,
+              "es"
+            );
+          } catch (err) {
+            console.error("Welcome email send error:", err);
+          }
+        }
+
+        try {
+          const amountCents =
+            typeof session.amount_total === "number"
+              ? session.amount_total
+              : null;
+          await sendNewSubscriberAlertToAdmin(ADMIN_EMAIL, {
+            email: normalizedEmail,
+            deliveryChannel,
+            stripeCustomerId: customerId,
+            stripeSubscriptionId: subscriptionId,
+            amountCents,
+            currency: session.currency ?? null,
+            country:
+              session.customer_details?.address?.country ?? null,
+          });
+        } catch (err) {
+          console.error("Admin new-subscriber alert error:", err);
+        }
+
         console.log("Checkout completed for:", normalizedEmail);
         break;
       }
@@ -165,12 +251,25 @@ export async function POST(request: Request) {
         const subscription = event.data.object as Stripe.Subscription;
         const customerId = subscription.customer as string;
 
-        const { error } = await supabase
+        const { data: subRow, error } = await supabase
           .from("subscribers")
           .update({ subscription_status: "canceled" })
-          .eq("stripe_customer_id", customerId);
+          .eq("stripe_customer_id", customerId)
+          .select("email")
+          .maybeSingle();
 
         if (error) console.error("Subscription delete error:", error);
+
+        try {
+          await sendChurnAlertToAdmin(ADMIN_EMAIL, {
+            stripeCustomerId: customerId,
+            email: subRow?.email ?? null,
+            reason: subscription.cancellation_details?.reason ?? null,
+          });
+        } catch (err) {
+          console.error("Admin churn alert error:", err);
+        }
+
         console.log("Subscription canceled for customer:", customerId);
         break;
       }
@@ -179,12 +278,26 @@ export async function POST(request: Request) {
         const invoice = event.data.object as Stripe.Invoice;
         const customerId = invoice.customer as string;
 
-        const { error } = await supabase
+        const { data: subRow, error } = await supabase
           .from("subscribers")
           .update({ subscription_status: "past_due" })
-          .eq("stripe_customer_id", customerId);
+          .eq("stripe_customer_id", customerId)
+          .select("email")
+          .maybeSingle();
 
         if (error) console.error("Payment failed update error:", error);
+
+        try {
+          await sendPaymentFailedAlertToAdmin(ADMIN_EMAIL, {
+            stripeCustomerId: customerId,
+            email: subRow?.email ?? null,
+            amountCents: invoice.amount_due ?? null,
+            currency: invoice.currency ?? null,
+          });
+        } catch (err) {
+          console.error("Admin payment-failed alert error:", err);
+        }
+
         console.log("Payment failed for customer:", customerId);
         break;
       }

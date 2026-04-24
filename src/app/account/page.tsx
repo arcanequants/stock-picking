@@ -33,6 +33,9 @@ export default async function AccountPage() {
     bothDesc: t("channelBothDesc"),
     saved: t("deliverySaved"),
     saving: t("deliverySaving"),
+    joinWhatsApp: t("joinWhatsApp"),
+    waFallbackTitle: t("waFallbackTitle"),
+    waFallbackDesc: t("waFallbackDesc"),
   };
 
   return (

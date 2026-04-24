@@ -1708,3 +1708,437 @@ export async function sendSupportTicketAck(
 
   if (error) throw new Error(`Failed to send support ticket ack: ${error.message}`);
 }
+
+// ── Welcome Email (post-checkout) ───────────────────────────
+// Copywriter + Retention + Email Designer collab.
+// Hits the user at the peak anxiety moment (right after paying) with:
+//   (1) confirmation ("listo"), (2) WA group button if chosen, (3) clear
+//   expectations (when/how often/what format), (4) magic link for web,
+//   (5) personal sign-off to invite replies.
+
+type DeliveryChannel = "whatsapp" | "email" | "both";
+
+const WELCOME_COPY: Record<
+  string,
+  {
+    subject: string;
+    heading: string;
+    intro: string;
+    channelLabel: string;
+    channelWhatsApp: string;
+    channelEmail: string;
+    channelBoth: string;
+    waCtaTitle: string;
+    waCtaDesc: string;
+    waButton: string;
+    expectTitle: string;
+    expectTiming: string;
+    expectFrequency: string;
+    expectFormat: string;
+    webTitle: string;
+    webDesc: string;
+    webButton: string;
+    webExpiry: string;
+    sign: string;
+    signRole: string;
+    reply: string;
+    footerLegal: string;
+  }
+> = {
+  es: {
+    subject: "Bienvenido a Vectorial Data. Tu primer pick llega pronto.",
+    heading: "Listo — tu suscripción está activa.",
+    intro: "Gracias por unirte. Aquí está todo lo que necesitas para empezar.",
+    channelLabel: "Elegiste recibir por",
+    channelWhatsApp: "WhatsApp",
+    channelEmail: "Email",
+    channelBoth: "WhatsApp y Email",
+    waCtaTitle: "Únete al grupo de WhatsApp",
+    waCtaDesc: "Este es el paso más importante. Sin esto, no recibirás los picks.",
+    waButton: "Unirme al grupo",
+    expectTitle: "Qué esperar",
+    expectTiming: "Primer pick: próximo día hábil, ~11am hora del centro.",
+    expectFrequency: "Frecuencia: lunes a viernes, siempre a la misma hora.",
+    expectFormat: "Cada pick incluye: ticker, tesis, riesgo, y research completo en la web.",
+    webTitle: "Accede a tu portafolio en la web",
+    webDesc: "Gráficas, posiciones, transacciones y research completo.",
+    webButton: "Acceder a mi cuenta",
+    webExpiry: "Este enlace expira en 24 horas.",
+    sign: "— Alberto",
+    signRole: "Fundador, Vectorial Data",
+    reply: "¿Preguntas? Responde este email directo. Lo leo yo.",
+    footerLegal: "Esto no es asesoría financiera. Todos los precios en USD.",
+  },
+  en: {
+    subject: "Welcome to Vectorial Data. Your first pick is coming soon.",
+    heading: "You're in — your subscription is active.",
+    intro: "Thanks for joining. Here's everything you need to get started.",
+    channelLabel: "You chose to receive by",
+    channelWhatsApp: "WhatsApp",
+    channelEmail: "Email",
+    channelBoth: "WhatsApp and Email",
+    waCtaTitle: "Join the WhatsApp group",
+    waCtaDesc: "This is the most important step. Without this, you won't receive picks.",
+    waButton: "Join the group",
+    expectTitle: "What to expect",
+    expectTiming: "First pick: next business day, ~11am Central Time.",
+    expectFrequency: "Frequency: Monday through Friday, always at the same time.",
+    expectFormat: "Each pick includes: ticker, thesis, risk, and full research on the web.",
+    webTitle: "Access your portfolio on the web",
+    webDesc: "Charts, positions, transactions and full research.",
+    webButton: "Access my account",
+    webExpiry: "This link expires in 24 hours.",
+    sign: "— Alberto",
+    signRole: "Founder, Vectorial Data",
+    reply: "Questions? Reply to this email directly. I read every one.",
+    footerLegal: "This is not investment advice. All prices in USD.",
+  },
+  pt: {
+    subject: "Bem-vindo ao Vectorial Data. Seu primeiro pick chega em breve.",
+    heading: "Pronto — sua assinatura está ativa.",
+    intro: "Obrigado por entrar. Aqui está tudo que você precisa para começar.",
+    channelLabel: "Você escolheu receber por",
+    channelWhatsApp: "WhatsApp",
+    channelEmail: "Email",
+    channelBoth: "WhatsApp e Email",
+    waCtaTitle: "Entre no grupo do WhatsApp",
+    waCtaDesc: "Este é o passo mais importante. Sem isso, você não receberá picks.",
+    waButton: "Entrar no grupo",
+    expectTitle: "O que esperar",
+    expectTiming: "Primeiro pick: próximo dia útil, ~11h (horário central).",
+    expectFrequency: "Frequência: segunda a sexta, sempre no mesmo horário.",
+    expectFormat: "Cada pick inclui: ticker, tese, risco, e research completo na web.",
+    webTitle: "Acesse seu portfólio na web",
+    webDesc: "Gráficos, posições, transações e research completo.",
+    webButton: "Acessar minha conta",
+    webExpiry: "Este link expira em 24 horas.",
+    sign: "— Alberto",
+    signRole: "Fundador, Vectorial Data",
+    reply: "Dúvidas? Responda este email diretamente. Eu leio cada um.",
+    footerLegal: "Isto não é conselho de investimento. Todos os preços em USD.",
+  },
+  hi: {
+    subject: "Vectorial Data में आपका स्वागत है। आपका पहला pick जल्द आएगा।",
+    heading: "हो गया — आपकी सदस्यता सक्रिय है।",
+    intro: "शामिल होने के लिए धन्यवाद। शुरू करने के लिए यहाँ सब कुछ है।",
+    channelLabel: "आपने चुना",
+    channelWhatsApp: "WhatsApp",
+    channelEmail: "ईमेल",
+    channelBoth: "WhatsApp और ईमेल",
+    waCtaTitle: "WhatsApp ग्रुप में शामिल हों",
+    waCtaDesc: "यह सबसे महत्वपूर्ण कदम है। इसके बिना आपको picks नहीं मिलेंगे।",
+    waButton: "ग्रुप में शामिल हों",
+    expectTitle: "क्या अपेक्षा करें",
+    expectTiming: "पहला pick: अगले कार्य दिवस, ~11am सेंट्रल टाइम।",
+    expectFrequency: "आवृत्ति: सोमवार से शुक्रवार, हमेशा एक ही समय पर।",
+    expectFormat: "हर pick में: ticker, थीसिस, जोखिम, और वेब पर पूरा research।",
+    webTitle: "वेब पर अपना पोर्टफोलियो देखें",
+    webDesc: "चार्ट, पोजीशन, लेनदेन और पूरा research।",
+    webButton: "मेरे खाते तक पहुँचें",
+    webExpiry: "यह लिंक 24 घंटे में समाप्त हो जाएगा।",
+    sign: "— Alberto",
+    signRole: "संस्थापक, Vectorial Data",
+    reply: "प्रश्न? इस ईमेल का सीधे जवाब दें। मैं हर एक पढ़ता हूँ।",
+    footerLegal: "यह निवेश सलाह नहीं है। सभी कीमतें USD में हैं।",
+  },
+};
+
+export async function sendWelcomeEmail(
+  email: string,
+  magicLinkUrl: string,
+  waGroupLink: string | null,
+  deliveryChannel: DeliveryChannel,
+  locale: string = "es"
+): Promise<void> {
+  const l = locale in WELCOME_COPY ? locale : "es";
+  const c = WELCOME_COPY[l];
+
+  const channelText =
+    deliveryChannel === "whatsapp"
+      ? c.channelWhatsApp
+      : deliveryChannel === "email"
+        ? c.channelEmail
+        : c.channelBoth;
+
+  const showWaBlock =
+    (deliveryChannel === "whatsapp" || deliveryChannel === "both") &&
+    Boolean(waGroupLink);
+
+  const waBlockHtml = showWaBlock
+    ? `
+  <tr><td style="padding:0 32px 24px;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:12px;">
+      <tr><td style="padding:20px 20px 16px;">
+        <p style="margin:0 0 4px;font-size:15px;font-weight:600;color:#065f46;">${c.waCtaTitle}</p>
+        <p style="margin:0 0 16px;font-size:13px;line-height:1.5;color:#047857;">${c.waCtaDesc}</p>
+        <table cellpadding="0" cellspacing="0"><tr><td>
+          <a href="${waGroupLink}" style="display:inline-block;background:#25D366;color:#ffffff;padding:12px 24px;border-radius:10px;text-decoration:none;font-size:15px;font-weight:600;">
+            💬 ${c.waButton}
+          </a>
+        </td></tr></table>
+      </td></tr>
+    </table>
+  </td></tr>`
+    : "";
+
+  const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<div style="display:none;font-size:1px;color:#f9fafb;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${c.intro}</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;">
+<tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <!-- Header -->
+  <tr><td style="padding:32px 32px 8px;text-align:center;">
+    <img src="${SITE}/logo.png" width="40" height="40" alt="Vectorial Data" style="display:inline-block;margin-bottom:12px;" />
+  </td></tr>
+  <!-- Heading -->
+  <tr><td style="padding:8px 32px 8px;">
+    <h1 style="margin:0 0 8px;font-size:22px;font-weight:700;color:#111827;line-height:1.3;">${c.heading}</h1>
+    <p style="margin:0;font-size:15px;line-height:1.6;color:#6b7280;">${c.intro}</p>
+  </td></tr>
+  <!-- Channel badge -->
+  <tr><td style="padding:16px 32px 8px;">
+    <p style="margin:0;font-size:13px;color:#6b7280;">
+      ${c.channelLabel}: <strong style="color:#111827;">${channelText}</strong>
+    </p>
+  </td></tr>
+  ${waBlockHtml}
+  <!-- What to expect -->
+  <tr><td style="padding:${showWaBlock ? "0" : "16px"} 32px 8px;">
+    <p style="margin:0 0 12px;font-size:15px;font-weight:600;color:#111827;">${c.expectTitle}</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr><td style="padding:0 0 8px;font-size:14px;line-height:1.6;color:#374151;">
+        <span style="color:#4f46e5;font-weight:600;">→</span> ${c.expectTiming}
+      </td></tr>
+      <tr><td style="padding:0 0 8px;font-size:14px;line-height:1.6;color:#374151;">
+        <span style="color:#4f46e5;font-weight:600;">→</span> ${c.expectFrequency}
+      </td></tr>
+      <tr><td style="padding:0 0 8px;font-size:14px;line-height:1.6;color:#374151;">
+        <span style="color:#4f46e5;font-weight:600;">→</span> ${c.expectFormat}
+      </td></tr>
+    </table>
+  </td></tr>
+  <!-- Magic link -->
+  <tr><td style="padding:16px 32px 8px;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;border:1px solid #e4e4e7;border-radius:12px;">
+      <tr><td style="padding:20px;">
+        <p style="margin:0 0 4px;font-size:15px;font-weight:600;color:#111827;">${c.webTitle}</p>
+        <p style="margin:0 0 14px;font-size:13px;line-height:1.5;color:#6b7280;">${c.webDesc}</p>
+        <table cellpadding="0" cellspacing="0"><tr><td>
+          <a href="${magicLinkUrl}" style="display:inline-block;background:#4f46e5;color:#ffffff;padding:12px 24px;border-radius:10px;text-decoration:none;font-size:15px;font-weight:600;">
+            ${c.webButton}
+          </a>
+        </td></tr></table>
+        <p style="margin:12px 0 0;font-size:12px;color:#9ca3af;">${c.webExpiry}</p>
+      </td></tr>
+    </table>
+  </td></tr>
+  <!-- Personal sign-off -->
+  <tr><td style="padding:24px 32px 8px;">
+    <p style="margin:0 0 12px;font-size:14px;line-height:1.6;color:#374151;font-style:italic;">${c.reply}</p>
+    <p style="margin:0;font-size:14px;font-weight:600;color:#111827;">${c.sign}</p>
+    <p style="margin:2px 0 0;font-size:13px;color:#6b7280;">${c.signRole}</p>
+  </td></tr>
+  <!-- Footer -->
+  <tr><td style="padding:20px 32px;border-top:1px solid #e4e4e7;text-align:center;margin-top:16px;">
+    <p style="margin:0;font-size:12px;color:#9ca3af;">${c.footerLegal}</p>
+    <p style="margin:8px 0 0;font-size:12px;color:#9ca3af;">
+      <a href="${SITE}" style="color:#4f46e5;text-decoration:none;">vectorialdata.com</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    replyTo: "Hello@vectorialdata.com",
+    to: email,
+    subject: c.subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send welcome email: ${error.message}`);
+}
+
+// ── Admin Alerts (real-time subscription events) ─────────────
+// Alberto wants to know the moment someone subscribes, cancels, or
+// fails to pay — and which delivery channel they picked.
+
+interface NewSubscriberData {
+  email: string;
+  deliveryChannel: DeliveryChannel;
+  stripeCustomerId: string;
+  stripeSubscriptionId: string;
+  amountCents?: number | null;
+  currency?: string | null;
+  country?: string | null;
+  locale?: string;
+}
+
+function formatAmount(cents: number | null | undefined, currency: string | null | undefined): string {
+  if (cents == null || currency == null) return "—";
+  const amount = (cents / 100).toFixed(2);
+  return `${amount} ${currency.toUpperCase()}`;
+}
+
+export async function sendNewSubscriberAlertToAdmin(
+  adminEmail: string,
+  data: NewSubscriberData
+): Promise<void> {
+  const channelEmoji =
+    data.deliveryChannel === "whatsapp"
+      ? "💬 WhatsApp"
+      : data.deliveryChannel === "email"
+        ? "✉️ Email"
+        : "💬✉️ WhatsApp + Email";
+
+  const timestamp = new Date().toISOString();
+  const stripeUrl = `https://dashboard.stripe.com/customers/${data.stripeCustomerId}`;
+
+  const subject = `🎉 Nueva suscripción: ${data.email} [${data.deliveryChannel}]`;
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
+<table width="520" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 28px;background:#ecfdf5;border-bottom:1px solid #a7f3d0;">
+    <p style="margin:0;font-size:13px;color:#047857;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">Nueva suscripción</p>
+    <h1 style="margin:4px 0 0;font-size:20px;font-weight:700;color:#064e3b;">${escapeHtml(data.email)}</h1>
+  </td></tr>
+  <tr><td style="padding:24px 28px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">Canal</td>
+          <td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">${channelEmoji}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Monto</td>
+          <td style="padding:8px 0;font-size:14px;color:#111827;">${formatAmount(data.amountCents, data.currency)}</td></tr>
+      ${data.country ? `<tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">País</td><td style="padding:8px 0;font-size:14px;color:#111827;">${escapeHtml(data.country)}</td></tr>` : ""}
+      ${data.locale ? `<tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Locale</td><td style="padding:8px 0;font-size:14px;color:#111827;">${escapeHtml(data.locale)}</td></tr>` : ""}
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Customer</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${escapeHtml(data.stripeCustomerId)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Subscription</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${escapeHtml(data.stripeSubscriptionId)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Timestamp</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${timestamp}</td></tr>
+    </table>
+    <div style="margin-top:20px;">
+      <a href="${stripeUrl}" style="display:inline-block;background:#635bff;color:#ffffff;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">Ver en Stripe →</a>
+    </div>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send new-subscriber admin alert: ${error.message}`);
+}
+
+interface ChurnAlertData {
+  stripeCustomerId: string;
+  email?: string | null;
+  reason?: string | null;
+}
+
+export async function sendChurnAlertToAdmin(
+  adminEmail: string,
+  data: ChurnAlertData
+): Promise<void> {
+  const subject = `😔 Cancelación: ${data.email ?? data.stripeCustomerId}`;
+  const stripeUrl = `https://dashboard.stripe.com/customers/${data.stripeCustomerId}`;
+  const timestamp = new Date().toISOString();
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
+<table width="520" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 28px;background:#fef2f2;border-bottom:1px solid #fecaca;">
+    <p style="margin:0;font-size:13px;color:#991b1b;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">Cancelación</p>
+    <h1 style="margin:4px 0 0;font-size:20px;font-weight:700;color:#7f1d1d;">${escapeHtml(data.email ?? data.stripeCustomerId)}</h1>
+  </td></tr>
+  <tr><td style="padding:24px 28px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${data.email ? `<tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">Email</td><td style="padding:8px 0;font-size:14px;color:#111827;">${escapeHtml(data.email)}</td></tr>` : ""}
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">Customer</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${escapeHtml(data.stripeCustomerId)}</td></tr>
+      ${data.reason ? `<tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Razón</td><td style="padding:8px 0;font-size:14px;color:#111827;">${escapeHtml(data.reason)}</td></tr>` : ""}
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Timestamp</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${timestamp}</td></tr>
+    </table>
+    <div style="margin-top:20px;">
+      <a href="${stripeUrl}" style="display:inline-block;background:#635bff;color:#ffffff;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">Ver en Stripe →</a>
+    </div>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send churn admin alert: ${error.message}`);
+}
+
+interface PaymentFailedAlertData {
+  stripeCustomerId: string;
+  email?: string | null;
+  amountCents?: number | null;
+  currency?: string | null;
+}
+
+export async function sendPaymentFailedAlertToAdmin(
+  adminEmail: string,
+  data: PaymentFailedAlertData
+): Promise<void> {
+  const subject = `⚠️ Pago fallido: ${data.email ?? data.stripeCustomerId}`;
+  const stripeUrl = `https://dashboard.stripe.com/customers/${data.stripeCustomerId}`;
+  const timestamp = new Date().toISOString();
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
+<table width="520" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 28px;background:#fffbeb;border-bottom:1px solid #fcd34d;">
+    <p style="margin:0;font-size:13px;color:#92400e;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">Pago fallido</p>
+    <h1 style="margin:4px 0 0;font-size:20px;font-weight:700;color:#78350f;">${escapeHtml(data.email ?? data.stripeCustomerId)}</h1>
+  </td></tr>
+  <tr><td style="padding:24px 28px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${data.email ? `<tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">Email</td><td style="padding:8px 0;font-size:14px;color:#111827;">${escapeHtml(data.email)}</td></tr>` : ""}
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">Monto</td>
+          <td style="padding:8px 0;font-size:14px;color:#111827;">${formatAmount(data.amountCents, data.currency)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Customer</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${escapeHtml(data.stripeCustomerId)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Timestamp</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${timestamp}</td></tr>
+    </table>
+    <div style="margin-top:20px;">
+      <a href="${stripeUrl}" style="display:inline-block;background:#635bff;color:#ffffff;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">Ver en Stripe →</a>
+    </div>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send payment-failed admin alert: ${error.message}`);
+}

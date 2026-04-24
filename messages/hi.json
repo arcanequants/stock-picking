@@ -441,7 +441,14 @@
     "autoLoginResend": "नहीं आया? दोबारा भेजें",
     "autoLoginResent": "लिंक दोबारा भेजा गया",
     "autoLoginCooldown": "{seconds}s इंतज़ार करें",
-    "autoLoginError": "कुछ गलत हो गया। फिर से कोशिश करें।"
+    "autoLoginError": "कुछ गलत हो गया। फिर से कोशिश करें।",
+    "expectTitle": "क्या उम्मीद करें",
+    "expect1": "सोमवार से शुक्रवार तक picks, सीधे आपके चैनल पर।",
+    "expect2": "हर pick में थीसिस, सिग्नल और रिस्क मैनेजमेंट शामिल है।",
+    "expect3": "पोर्टफोलियो एक्सेस और प्राथमिकता बदलने के लिए वही email।",
+    "joinWhatsApp": "WhatsApp ग्रुप में शामिल हों",
+    "waFallbackTitle": "हम आपको link email से भेजेंगे",
+    "waFallbackDesc": "ग्रुप की सुरक्षा के लिए, invite आपके welcome email में जाएगा। कुछ मिनट में inbox (और spam) देखें।"
   },
   "Account": {
     "title": "खाता",

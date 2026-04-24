@@ -37,6 +37,9 @@ export default async function WelcomePage({
     bothDesc: t("channelBothDesc"),
     saved: t("deliverySaved"),
     saving: t("deliverySaving"),
+    joinWhatsApp: t("joinWhatsApp"),
+    waFallbackTitle: t("waFallbackTitle"),
+    waFallbackDesc: t("waFallbackDesc"),
   };
 
   return (
@@ -89,6 +92,31 @@ export default async function WelcomePage({
             >
               {t("goToPortfolio")}
             </Link>
+          </div>
+
+          {/* What to expect */}
+          <div className="border border-border rounded-2xl p-6 text-left">
+            <h2 className="font-semibold mb-4">{t("expectTitle")}</h2>
+            <ul className="space-y-3 text-sm">
+              {[t("expect1"), t("expect2"), t("expect3")].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span className="text-text-muted">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Tip */}

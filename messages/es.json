@@ -441,7 +441,14 @@
     "autoLoginResend": "¿No llegó? Reenviar",
     "autoLoginResent": "Enlace reenviado",
     "autoLoginCooldown": "Espera {seconds}s",
-    "autoLoginError": "Hubo un problema. Intenta de nuevo."
+    "autoLoginError": "Hubo un problema. Intenta de nuevo.",
+    "expectTitle": "Qué esperar",
+    "expect1": "Picks de lunes a viernes, directo a tu canal.",
+    "expect2": "Cada pick incluye tesis, señal y gestión de riesgo.",
+    "expect3": "Mismo email para acceder al portafolio y cambiar tu preferencia cuando quieras.",
+    "joinWhatsApp": "Unirme al grupo de WhatsApp",
+    "waFallbackTitle": "Te mandamos el link por email",
+    "waFallbackDesc": "Para proteger al grupo, el enlace va en tu correo de bienvenida. Revisa tu inbox (y spam) en unos minutos."
   },
   "Account": {
     "title": "Cuenta",
