@@ -3573,7 +3573,7 @@ BIDU a $106.60 es una **apuesta deep value al líder de IA en China** — con m�
     id: 30,
     ticker: "BKNG",
     name: "Booking Holdings Inc.",
-    price: 168.17, // Split-adjusted (1:25 split, pre-split: $4204.22)
+    price: 4204.22,
     currency: "USD",
     sector: "Consumer Discretionary",
     industry: "Online Travel",
@@ -3583,7 +3583,7 @@ BIDU a $106.60 es una **apuesta deep value al líder de IA en China** — con m�
     pe_ratio: 25.5,
     pe_forward: 15.5,
     dividend_yield: 1.02,
-    eps: 6.42, // Split-adjusted (pre-split: $160.5)
+    eps: 160.5,
 
     summary_short:
       "La plataforma de viajes en línea más grande del mundo. Dueños de Booking.com, Priceline, Kayak, Agoda y OpenTable. Procesan $186B al año en reservas de hoteles, vuelos, autos y restaurantes en 220+ países.",
@@ -7740,7 +7740,7 @@ export const transactions: Transaction[] = [
     ticker: "BKNG",
     type: "new" as const,
     cycle_number: 6,
-    price: 168.17, // Split-adjusted (1:25 split, pre-split: $4204.22)
+    price: 4204.22,
     date: "2026-03-31",
     day_of_week: "tuesday",
     wa_message: `📊 *STOCK PICK #26* — Mar 31, 2026\n\n🏢 *Booking Holdings* (BKNG) — $168.17\n\n🛍️ *Sus marcas*: Booking.com, Priceline, Kayak, Agoda, OpenTable\n\n🌍 *Presencia*: EE.UU. (Norwalk, CT), Ámsterdam, y operaciones en 220+ países. La plataforma de viajes en línea más grande del mundo con $186B en reservas brutas al año.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.02% anual* solo por ser dueño. Cada vez que alguien reserva un hotel, busca un vuelo, o reserva un restaurante en Booking.com, Priceline o OpenTable — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Regulación EU (Digital Markets Act) puede forzar a Booking.com a eliminar cláusulas de paridad de precios.\n\n🆕 Posición #26\n🔗 https://vectorialdata.com/stocks/BKNG\n\n💡 Mejor $3 por pick durante 3 años que $50 por pick y parar a los 2 meses. Consistencia > cantidad.`,
