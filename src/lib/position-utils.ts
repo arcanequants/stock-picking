@@ -1,6 +1,6 @@
 import { stocks } from "@/data/stocks";
 import type { Transaction } from "@/lib/types";
-import { adjustPriceForSplit } from "@/lib/split-detection";
+import { applySplitAdjustment, type SplitMap } from "@/lib/split-detection";
 
 const INVESTMENT_PER_POSITION = 50;
 
@@ -27,6 +27,7 @@ export interface AggregatedPosition {
 export function aggregatePositions(
   txs: Transaction[],
   prices: Record<string, number>,
+  splitMap: SplitMap = {},
 ): { positions: AggregatedPosition[]; totalInvested: number; totalValue: number } {
   const grouped = new Map<string, Transaction[]>();
 
@@ -50,7 +51,7 @@ export function aggregatePositions(
     const txDetails: AggregatedPosition["transactions"] = [];
 
     for (const tx of txList) {
-      const { adjustedPrice } = adjustPriceForSplit(tx.price, currentPrice);
+      const { adjustedPrice } = applySplitAdjustment(tx.price, tx.date, splitMap[tx.ticker]);
       const shares = INVESTMENT_PER_POSITION / adjustedPrice;
       posInvested += INVESTMENT_PER_POSITION;
       posShares += shares;

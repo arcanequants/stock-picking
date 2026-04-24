@@ -683,7 +683,7 @@
     "selectionStep5": "5. Ordenar ASC por return_pct (peor primero). Desempate: fecha de primera compra más antigua",
     "selectionStep6": "6. Tomar los primeros 5. Si hay menos de 5 negativas, mostrar solo las que haya",
     "splitsTitle": "6. Splits de acciones",
-    "splitsBody": "Detectamos splits automáticamente comparando el precio histórico con el precio actual. Si el ratio indica un split (ej. 2:1, 3:1), ajustamos el precio de compra retroactivamente para que las shares y el return reflejen la realidad post-split. El detector está en `src/lib/split-detection.ts`.",
+    "splitsBody": "Obtenemos los eventos reales de splits corporativos directamente de Yahoo Finance para cada ticker. Cuando ocurre un split después de una compra, ajustamos el costo base por la ratio exacta (numerator/denominator) para que las shares y el return reflejen la realidad post-split. El handler está en `src/lib/split-detection.ts`.",
     "cacheTitle": "7. Frecuencia de actualización",
     "cacheBody": "Los precios se actualizan en cada día de mercado abierto (lunes a viernes, salvo días feriados) a las 4:30 PM ET mediante un cron job que obtiene cotizaciones de Yahoo Finance y guarda un snapshot en Supabase. Las páginas públicas que dependen de estos datos se cachean por ~5 minutos con stale-while-revalidate.",
     "assumptionsTitle": "8. Qué NO está incluido",

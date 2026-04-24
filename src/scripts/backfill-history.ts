@@ -17,7 +17,7 @@ const supabase = createClient(
 
 // Import data from stocks.ts
 import { transactions } from "../data/stocks.js";
-import { adjustPriceForSplit } from "../lib/split-detection.js";
+import { applySplitAdjustment, fetchSplitMap } from "../lib/split-detection.js";
 
 interface HistoricalRow {
   date: Date;
@@ -96,6 +96,15 @@ async function backfill() {
     console.error(`  Failed to fetch SPY:`, err);
   }
 
+  // Fetch real split events once for all tickers from firstDate forward.
+  console.log(`Fetching split events...`);
+  const splitMap = await fetchSplitMap(tickers, yahooFinance, new Date(firstDate));
+  for (const [t, evs] of Object.entries(splitMap)) {
+    if (evs.length > 0) {
+      console.log(`  ${t}: ${evs.length} split(s)`, evs.map((e) => `${e.ratio}@${e.date.toISOString().slice(0,10)}`).join(", "));
+    }
+  }
+
   // Generate daily snapshots
   const start = new Date(firstDate);
   const end = new Date();
@@ -150,7 +159,11 @@ async function backfill() {
 
     for (const tx of activeTxs) {
       const currentPrice = lastKnownPrice[tx.ticker] ?? tx.price;
-      const { adjustedPrice } = adjustPriceForSplit(tx.price, currentPrice);
+      // Only count splits that have already happened by `dateStr` for this snapshot.
+      const eventsUpToDate = (splitMap[tx.ticker] ?? []).filter(
+        (s) => s.date.toISOString().slice(0, 10) <= dateStr,
+      );
+      const { adjustedPrice } = applySplitAdjustment(tx.price, tx.date, eventsUpToDate);
       const shares = INVESTMENT_PER_POSITION / adjustedPrice;
       totalInvested += INVESTMENT_PER_POSITION;
       totalValue += shares * currentPrice;

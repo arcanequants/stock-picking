@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import { createEventWithExplanations } from "@/lib/notifications";
-import { adjustPriceForSplit } from "@/lib/split-detection";
+import { applySplitAdjustment, fetchSplitMap } from "@/lib/split-detection";
 import YahooFinance from "yahoo-finance2";
 
 const yahooFinance = new YahooFinance();
@@ -84,6 +84,14 @@ export async function GET(request: Request) {
       }
     }
 
+    // Fetch real split events from Yahoo for the earliest tx date forward.
+    // Single API call per ticker; events are rare so the response is tiny.
+    const earliestTxDate = transactions.reduce(
+      (min, t) => (t.date < min ? t.date : min),
+      transactions[0]?.date ?? new Date().toISOString(),
+    );
+    const splitMap = await fetchSplitMap(activeTickers, yahooFinance, new Date(earliestTxDate));
+
     // Calculate portfolio value ($50 per position)
     const INVESTMENT_PER_POSITION = 50;
     let totalInvested = 0;
@@ -92,10 +100,14 @@ export async function GET(request: Request) {
 
     for (const tx of transactions) {
       const currentPrice = prices[tx.ticker] ?? tx.price;
-      const { detected, splitRatio, adjustedPrice } = adjustPriceForSplit(tx.price, currentPrice);
+      const { detected, factor, adjustedPrice } = applySplitAdjustment(
+        tx.price,
+        tx.date,
+        splitMap[tx.ticker],
+      );
 
       if (detected) {
-        splitEvents.push({ ticker: tx.ticker, ratio: splitRatio, original: tx.price, adjusted: adjustedPrice });
+        splitEvents.push({ ticker: tx.ticker, ratio: factor, original: tx.price, adjusted: adjustedPrice });
       }
 
       const shares = INVESTMENT_PER_POSITION / adjustedPrice;
