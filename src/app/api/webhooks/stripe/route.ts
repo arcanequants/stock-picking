@@ -7,6 +7,7 @@ import {
   sendChurnAlertToAdmin,
   sendPaymentFailedAlertToAdmin,
 } from "@/lib/resend";
+import { buildTrackedWaUrl } from "@/lib/wa-track";
 import type Stripe from "stripe";
 
 export const dynamic = "force-dynamic";
@@ -182,7 +183,9 @@ export async function POST(request: Request) {
           console.error("Magic link generation error:", err);
         }
 
-        const waGroupLink = process.env.WHATSAPP_GROUP_LINK ?? null;
+        const waGroupLink = process.env.WHATSAPP_GROUP_LINK
+          ? buildTrackedWaUrl(normalizedEmail, getSiteUrl())
+          : null;
 
         if (magicLinkUrl) {
           try {

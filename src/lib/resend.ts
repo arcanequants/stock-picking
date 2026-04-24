@@ -2142,3 +2142,143 @@ export async function sendPaymentFailedAlertToAdmin(
 
   if (error) throw new Error(`Failed to send payment-failed admin alert: ${error.message}`);
 }
+
+// ── WA Join Follow-up (Day 2-3 nudge) ────────────────────────
+// Sent to subscribers who paid 48h+ ago, chose WhatsApp delivery,
+// and never clicked the tracked WA join button. Empathetic tone —
+// assume they had trouble, not that they forgot.
+
+const WA_FOLLOWUP_COPY: Record<
+  string,
+  {
+    subject: string;
+    heading: string;
+    body: string;
+    stepsTitle: string;
+    step1: string;
+    step2: string;
+    step3: string;
+    button: string;
+    help: string;
+    sign: string;
+    signRole: string;
+  }
+> = {
+  es: {
+    subject: "¿Tuviste problema uniéndote al grupo?",
+    heading: "Notamos que no has entrado al grupo todavía.",
+    body: "Sin acceso al grupo no estás recibiendo los picks — y eso es literalmente lo que pagaste. Si algo falló, aquí está el botón de nuevo con los pasos claros.",
+    stepsTitle: "Cómo entrar en 30 segundos",
+    step1: "Haz clic en el botón verde de abajo.",
+    step2: "WhatsApp abrirá y pedirá confirmar que quieres unirte.",
+    step3: "Apruebo tu solicitud en minutos — recibirás los picks directo.",
+    button: "Unirme al grupo ahora",
+    help: "¿Algo no funciona? Responde este email y lo resuelvo yo mismo.",
+    sign: "— Alberto",
+    signRole: "Fundador, Vectorial Data",
+  },
+  en: {
+    subject: "Did you have trouble joining the group?",
+    heading: "We noticed you haven't joined the group yet.",
+    body: "Without access to the group you're not getting the picks — which is literally what you paid for. If something broke, here's the button again with clear steps.",
+    stepsTitle: "How to join in 30 seconds",
+    step1: "Click the green button below.",
+    step2: "WhatsApp will open and ask you to confirm you want to join.",
+    step3: "I approve your request in minutes — you'll start getting picks.",
+    button: "Join the group now",
+    help: "Something not working? Reply to this email and I'll fix it personally.",
+    sign: "— Alberto",
+    signRole: "Founder, Vectorial Data",
+  },
+  pt: {
+    subject: "Teve problema para entrar no grupo?",
+    heading: "Notamos que você ainda não entrou no grupo.",
+    body: "Sem acesso ao grupo você não está recebendo os picks — e é literalmente pelo que pagou. Se algo falhou, aqui está o botão de novo com os passos claros.",
+    stepsTitle: "Como entrar em 30 segundos",
+    step1: "Clique no botão verde abaixo.",
+    step2: "O WhatsApp abrirá e pedirá para confirmar que quer entrar.",
+    step3: "Aprovo sua solicitação em minutos — receberá os picks direto.",
+    button: "Entrar no grupo agora",
+    help: "Algo não funciona? Responda este email e eu resolvo pessoalmente.",
+    sign: "— Alberto",
+    signRole: "Fundador, Vectorial Data",
+  },
+  hi: {
+    subject: "क्या ग्रुप में शामिल होने में समस्या हुई?",
+    heading: "हमने देखा कि आप अभी तक ग्रुप में शामिल नहीं हुए हैं।",
+    body: "ग्रुप में पहुँच के बिना आपको picks नहीं मिल रहे — और वही आपने खरीदा है। अगर कुछ गलत हुआ, यहाँ फिर से बटन है साफ steps के साथ।",
+    stepsTitle: "30 सेकंड में कैसे शामिल हों",
+    step1: "नीचे हरे बटन पर क्लिक करें।",
+    step2: "WhatsApp खुलेगा और शामिल होने की पुष्टि पूछेगा।",
+    step3: "मैं आपकी request मिनटों में approve करता हूँ — picks मिलना शुरू।",
+    button: "अभी ग्रुप में शामिल हों",
+    help: "कुछ काम नहीं कर रहा? इस email का जवाब दें, मैं खुद solve करूँगा।",
+    sign: "— Alberto",
+    signRole: "संस्थापक, Vectorial Data",
+  },
+};
+
+export async function sendWaJoinFollowupEmail(
+  email: string,
+  trackedWaUrl: string,
+  locale: string = "es"
+): Promise<void> {
+  const l = locale in WA_FOLLOWUP_COPY ? locale : "es";
+  const c = WA_FOLLOWUP_COPY[l];
+
+  const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<div style="display:none;font-size:1px;color:#f9fafb;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${c.body}</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;">
+<tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:32px 32px 8px;text-align:center;">
+    <img src="${SITE}/logo.png" width="40" height="40" alt="Vectorial Data" style="display:inline-block;margin-bottom:12px;" />
+  </td></tr>
+  <tr><td style="padding:8px 32px 8px;">
+    <h1 style="margin:0 0 8px;font-size:22px;font-weight:700;color:#111827;line-height:1.3;">${c.heading}</h1>
+    <p style="margin:0;font-size:15px;line-height:1.6;color:#6b7280;">${c.body}</p>
+  </td></tr>
+  <tr><td style="padding:20px 32px 8px;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:12px;">
+      <tr><td style="padding:20px;">
+        <p style="margin:0 0 12px;font-size:15px;font-weight:600;color:#065f46;">${c.stepsTitle}</p>
+        <p style="margin:0 0 6px;font-size:14px;line-height:1.5;color:#047857;"><strong>1.</strong> ${c.step1}</p>
+        <p style="margin:0 0 6px;font-size:14px;line-height:1.5;color:#047857;"><strong>2.</strong> ${c.step2}</p>
+        <p style="margin:0 0 16px;font-size:14px;line-height:1.5;color:#047857;"><strong>3.</strong> ${c.step3}</p>
+        <table cellpadding="0" cellspacing="0"><tr><td>
+          <a href="${trackedWaUrl}" style="display:inline-block;background:#25D366;color:#ffffff;padding:12px 24px;border-radius:10px;text-decoration:none;font-size:15px;font-weight:600;">
+            💬 ${c.button}
+          </a>
+        </td></tr></table>
+      </td></tr>
+    </table>
+  </td></tr>
+  <tr><td style="padding:24px 32px 8px;">
+    <p style="margin:0 0 12px;font-size:14px;line-height:1.6;color:#374151;font-style:italic;">${c.help}</p>
+    <p style="margin:0;font-size:14px;font-weight:600;color:#111827;">${c.sign}</p>
+    <p style="margin:2px 0 0;font-size:13px;color:#6b7280;">${c.signRole}</p>
+  </td></tr>
+  <tr><td style="padding:20px 32px;border-top:1px solid #e4e4e7;text-align:center;">
+    <p style="margin:0;font-size:12px;color:#9ca3af;">
+      <a href="${SITE}" style="color:#4f46e5;text-decoration:none;">vectorialdata.com</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    replyTo: "Hello@vectorialdata.com",
+    to: email,
+    subject: c.subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send wa-followup email: ${error.message}`);
+}
