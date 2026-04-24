@@ -7176,6 +7176,236 @@ Si tu tesis es "comprar un blue-chip industrial con pedigree donde el turnaround
     last_updated_at: "2026-04-23T00:00:00Z",
     next_review_at: "2026-10-23T00:00:00Z",
   },
+  {
+    id: 53,
+    ticker: "MCO",
+    name: "Moody's Corporation",
+    sector: "Financial Services",
+    industry: "Financial Data & Stock Exchanges",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 457.97,
+    pe_ratio: 33.6,
+    pe_forward: 27.4,
+    dividend_yield: 0.91,
+    market_cap_b: 81.8,
+    eps: 13.66,
+    summary_short:
+      "La mitad del duopolio global de calificaciones crediticias — con S&P Global califican >80% de la deuda pública y privada del planeta. Q1 2026 (reportado hace 2 días) mostró adj EPS $4.33 (beat $0.32), operating margin ajustado 53.2%, y guidance 2026 subido a $16.40-$17.00. Moody's Analytics (63% del revenue) es 96% suscripciones recurrentes — el negocio más SaaS-like de Wall Street disfrazado de agencia de ratings. Dividend Contender con 17 años consecutivos subiendo dividendo (+14.8% en 2026) y payout ratio apenas 28%.",
+    summary_what:
+      "Moody's Corporation es una de las dos agencias de calificación crediticia dominantes del mundo (con S&P Global y, distante, Fitch). Fundada en 1909 por John Moody en Nueva York — el mismo que en 1900 publicó el primer manual de bonos de EE.UU. Hoy opera en dos segmentos claramente definidos: (1) *Moody's Investors Service (MIS)* — ~37% del revenue, el negocio clásico de ratings. Califica bonos corporativos, soberanos, estructurados (MBS, ABS, CLOs) y de gobiernos locales. Es quien pone esas letras (Aaa, Aa1, Baa2, etc.) que decide si un bono es \"investment grade\" o \"junk\". Cobra al emisor cuando califica una emisión nueva (issuance-based) y una tarifa anual por mantener la calificación (surveillance); (2) *Moody's Analytics (MA)* — ~63% del revenue, el negocio de datos y software. Vende research, datos económicos, software de riesgo crediticio (BondX, CreditView), modelos de catástrofe (RMS — compraron por $2B en 2021 — usado por aseguradoras para modelar huracanes, terremotos, climate risk), KYC/AML (Bureau van Dijk — base de datos de 500M+ empresas globales). 96% del revenue de MA es suscripción recurrente. CEO desde 2021: **Robert Fauber** — 12 años en Moody's, antes dirigió estrategia corporativa y M&A. HQ en 7 World Trade Center, NYC. ~16,000 empleados en 40+ países. Warren Buffett's Berkshire Hathaway es el accionista #1 desde 2000 — tienen 24.7M acciones (~13% de la compañía) — una posición que Buffett llama \"eternal hold\".",
+    summary_why:
+      "MCO a $457.97 es una de las tesis más limpias en todo el portafolio — es literalmente comprar un peaje sobre toda la deuda del mundo: (1) **Duopolio regulatorio con barreras imposibles**: Moody's + S&P controlan >80% del mercado global de ratings. Para ser \"NRSRO\" (Nationally Recognized Statistical Rating Organization) requiere autorización de la SEC — y la SEC no ha aprobado un entrante nuevo serio en décadas. Fitch es el distante tercero (~15% share), y después nadie más cuenta. Compound esta ventaja con 115+ años de historial auditado y tienes un moat que es literalmente un monopolio de datos que el regulador crea y protege; (2) **Ola de refinanciamiento 2026-2027**: $2 trillones en bonos corporativos investment-grade + high-yield de EE.UU. vencen en los próximos 24 meses. Cada uno debe ser refinanciado (nueva emisión) — y cada emisión nueva = fee para Moody's. El pico de volumen está llegando justo ahora; (3) **Private credit boom estructural**: el mercado de crédito privado (direct lending, BDCs, CLOs) pasó de $500B (2019) a $2T (2026) y llega a $4T para 2030. Cada deal requiere ratings, y Moody's domina el rating de CLOs con ~45% share. Nueva línea de crecimiento que no existía hace 5 años; (4) **Moody's Analytics = SaaS disfrazado**: 63% del revenue es MA, 96% recurrente, con retention rate 95%+. Eso es Snowflake-economics en el cuerpo de una empresa de 115 años. Creció +11% YoY en Q1 2026. La valoración del segment MA solo justificaría $350+ por acción; (5) **Q1 2026 beat sustentado**: hace 2 días (22 abril) reportaron adj EPS $4.33 vs $4.01 esperado (+8% beat), revenue $2.08B (+8% YoY), adj operating margin 53.2%. Guidance FY26 subido a adj EPS $16.40-$17.00 (vs $16.00-$16.50 anterior) + $2.5B en buybacks anunciados; (6) **Dividend growth machine**: 17 años consecutivos subiendo dividendo (Contender — dos años menos que un Aristocrat). 5-year DGR 10.9%. Dividendo anual subido +14.8% en marzo 2026 a $4.12 con payout ratio apenas ~28% — hay espacio para duplicarlo sin afectar el capex/buybacks; (7) **Berkshire's eternal hold**: Warren Buffett compra MCO desde 2000, posee 24.7M acciones (~13% compañía), nunca ha vendido una sola — le llama \"una de las mejores franquicias del mundo\". Es el endorsement más fuerte imaginable para un Dividend Growth portfolio de largo plazo.",
+    summary_risk:
+      "El riesgo principal es la **concentración en volumen de emisión de deuda**. MIS (37% del revenue) es issuance-based — si un shock de mercado (otra crisis 2008, crunch de liquidez, Fed inesperadamente hawkish) corta la emisión de bonos corporativos, el revenue de MIS puede caer 15-25% en un trimestre. Q4 2022 fue un recordatorio: emisión high-yield cayó 80% YoY, MCO acciones -40%. Otros riesgos: (1) **Presión regulatoria constante**: agencias de rating son políticamente impopulares desde 2008 (se culpó a Moody's + S&P por calificar AAA bonos subprime que quebraron). SEC, UE (ESMA) y Reino Unido (FCA) mantienen supervisión estricta. Cualquier nueva regulación (ej. rating mandatorio por un panel público en vez de emisor-paga) es existential risk; (2) **Litigation historical**: 2017 pagaron $864M a DOJ + 21 estados por ratings pre-2008. Nuevos casos surgen — 2024 tuvieron que pagar $11M adicional por errores de data en MA. Plaintiffs' bar sigue activa; (3) **Valoración exigente**: P/E TTM 33.6x y forward 27.4x — no es barato. Compara con S&P Global (SPGI) a 32x forward — parecido, pero ambos son premium vs mercado en 18x. Cualquier miss genera downside significativo — el stock es priced-for-growth sostenido; (4) **Dependencia en tipo de interés y spreads**: ambiente de tasas altas ralentiza emisión nueva (empresas esperan a refinanciar cuando tasas bajen). Inverso también cierto — spreads muy estrechos reducen la prima que Moody's cobra en deals complejos; (5) **AI-disrupción en ratings?**: largo plazo, modelos de credit scoring basados en ML (ej. Bridgewater, AQR, algunos fondos) podrían bypass rating agencies. Moody's invierte heavily en AI (partnership con Microsoft en 2024 para Moody's Assistant), pero la tecnología podría comoditizar la \"opinión\" que venden; (6) **Berkshire venta** (improbable pero posible): si Buffett alguna vez vende sus 24.7M acciones, sería -10%+ overnight. 26 años sin vender, pero fondos de Berkshire post-Buffett pueden decidir diferente; (7) **China/Asia exposure limitada**: a diferencia de competidores como Fitch o DBRS, Moody's tiene baja presencia en mercados emergentes en Asia — posible oportunidad perdida si ese mercado se desarrolla; (8) **Dependencia de cultura corporativa**: Robert Fauber es CEO desde 2021 — si alguna vez sale, sucesión es crítica porque el CEO aquí debe balancear regulador-emisor-inversionista con habilidad política rara.",
+    research_full: `# Moody's Corporation (MCO) — Research Completo
+
+## Precio: $457.97 | P/E TTM: 33.6x | P/E Forward: 27.4x | Div Yield: 0.91% | Market Cap: $81.8B
+
+---
+
+## Qué Es
+
+Moody's Corporation es una de las **dos agencias de calificación crediticia dominantes del planeta** (con S&P Global; y, distante, Fitch). Fundada en 1909 por John Moody en Nueva York — el mismo que en 1900 publicó el primer manual estandarizado de bonos ferrocarrileros de EE.UU., creando de la nada la industria del análisis de crédito.
+
+Hoy: ~16,000 empleados en 40+ países, HQ en 7 World Trade Center (NYC).
+
+**CEO: Robert Fauber** — desde enero 2021. 12 años en Moody's antes del CEO job — dirigió estrategia corporativa, M&A, y el segmento MIS. Harvard College + Wharton MBA. Reputación de operational focus + capital discipline.
+
+## Estructura de Segmentos (FY 2025)
+
+| Segmento | % Revenue | Qué vende | Modelo |
+|----------|-----------|-----------|--------|
+| **Moody's Investors Service (MIS)** | ~37% | Ratings de bonos corporativos, soberanos, estructurados (CLOs, MBS, ABS), municipales | Issuance fees (al emitir) + surveillance fees (anuales) |
+| **Moody's Analytics (MA)** | ~63% | Data, research, software de riesgo crediticio, RMS (modelos de catástrofe), Bureau van Dijk (KYC/AML) | Suscripción recurrente (96% del revenue de MA) |
+
+Revenue FY 2025: ~$7.3B. Revenue TTM: ~$7.87B. Guidance FY 2026 revenue growth: 8-10%.
+
+## El Negocio — Explicado en Detalle
+
+### MIS: El Peaje Sobre la Deuda del Mundo
+
+Cuando una empresa (Apple, Exxon, un gobierno local) quiere emitir bonos, **tiene que pagarle a Moody's o S&P para que los califiquen**. Sin rating, los inversionistas institucionales no pueden comprar (muchos mandatos requieren bonos investment-grade con rating específico).
+
+**Tarifas típicas**:
+- Emisión corporativa investment-grade: 0.04-0.07% del valor nominal
+- High-yield bond: 0.06-0.10%
+- CLO complejo: $500K-$2M flat fee
+- Surveillance anual: $50K-$500K por emisor
+
+Con $15T+ en bonos corporativos + $32T en deuda soberana global en circulación, cada rating = revenue. Y cuando la deuda se refinancia (los bonos vencen cada 5-10 años), se paga de nuevo. Es un toll road estructural.
+
+**Share del mercado**: Moody's + S&P combinados ~80% de todas las emisiones con rating en EE.UU. y UE. Fitch ~15%. Otras (DBRS, Kroll, Egan-Jones) dividiéndose el 5%.
+
+### MA: El SaaS Disfrazado
+
+Este es el segmento que el mercado subestima sistemáticamente. Moody's Analytics vende:
+
+1. **Research & Ratings Data** — acceso a su base de datos histórica de 100+ años. Obligatorio para cualquier banco serio.
+2. **Risk Management Software** — CreditView, BondX, modelos ERM. Usado por 85%+ de los bancos Tier 1 globales.
+3. **RMS (Risk Management Solutions)** — adquirido 2021 por $2B. Modelos de huracán, terremoto, wildfire, climate risk. Toda aseguradora global los usa para pricing de reaseguro.
+4. **Bureau van Dijk** — adquirido 2017 por $3.3B. Base de datos de 500M+ empresas globalmente. Usada para KYC, AML, due diligence.
+
+**Dinámica económica**: 96% revenue recurrente. Retention rate 95%+. Net Revenue Retention (NRR) ~110%. Margen operativo ~32%. Eso es perfil de SaaS — con durabilidad de 115 años.
+
+El mercado valora SaaS-pure-plays a 10-15x revenue. MA generaría $5B en revenue 2026 — implicaría $50-75B de EV solo para MA. MCO entero (ambos segmentos) tiene EV de ~$85B. Los ratings (MIS) están prácticamente "free optionality".
+
+## Warren Buffett y Berkshire Hathaway
+
+- **Primera compra**: 2000, cuando Moody's spin-off'd de Dun & Bradstreet
+- **Posición actual**: 24.7M acciones (~13% outstanding), valor ~$11.3B
+- **Nunca ha vendido una sola acción** en 26 años
+- Buffett a los shareholders: "La tesis de Moody's es la misma que hace 20 años — es uno de los mejores modelos de negocio del mundo."
+- Ha dicho que no la compraría hoy al precio actual (lo admitió 2018), pero mantiene porque es "la franquicia".
+
+Esto es el único stock pick significativo de Buffett que nunca ha tocado. Mayor endorsement imposible.
+
+## Q1 2026 — El Trimestre Pivotal (22 abril 2026)
+
+Hace 2 días reportaron:
+
+| Métrica | Q1 2026 | Q1 2025 | YoY | vs Est |
+|---------|---------|---------|-----|--------|
+| Revenue | $2.08B | $1.91B | +8.95% | miss $2.082B est |
+| Adj EPS | $4.33 | $3.92 | +10.5% | **beat $4.01 (+$0.32)** |
+| GAAP EPS | $3.73 | $3.45 | +8.1% | - |
+| Adj Op Margin | 53.2% | 52.1% | +110 bps | - |
+| Op Cash Flow | $893M | $720M | +24% | - |
+| Free Cash Flow | $844M | $670M | +26% | - |
+
+Por segmento:
+
+| Segmento | Revenue Q1 2026 | YoY |
+|----------|-----------------|-----|
+| MIS (ratings) | $770M | +4% |
+| MA (analytics) | $1.31B | +11% |
+
+**Capital return Q1 2026**:
+- $1.5B en buybacks (primer trimestre)
+- $185M en dividendos
+- Total: $1.7B (~2% del market cap en un trimestre)
+
+**Guidance FY 2026 subido**:
+- Adj diluted EPS: **$16.40-$17.00** (vs $16.00-$16.50 anterior)
+- Revenue growth: 8-10%
+- Adj operating margin: 51-52%
+- Buybacks: ~$2.5B (vs $2.0B anterior)
+
+El mercado reaccionó moderadamente: MCO +3% post-earnings. El stock había subido ya ~12% YTD en anticipación.
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio** | $457.97 |
+| **Market Cap** | $81.8B |
+| **P/E TTM** | 33.6x |
+| **P/E Forward** | 27.4x |
+| **EPS TTM** | $13.66 |
+| **EPS Forward (guide midpoint)** | $16.70 |
+| **Dividend Yield** | 0.91% |
+| **Dividendo Anual** | $4.12 |
+| **Payout Ratio** | ~28% |
+| **52w High** | $518.32 |
+| **52w Low** | $378.45 |
+| **Revenue TTM** | $7.87B |
+| **Revenue Growth YoY** | +8.95% |
+| **Profit Margin** | 31.9% |
+| **Operating Margin** | 44.5% |
+| **ROE** | ~55% |
+| **FCF TTM** | ~$2.9B |
+| **Buyback 2026 anunciado** | $2.5B |
+
+## Dividend History
+
+- **17 años consecutivos subiendo dividendo** (Dividend Contender — 2 años menos que status de Aristocrat)
+- **5-year DGR**: 10.91% anual
+- **10-year DGR**: 11.8% anual
+- **Annual dividend**: $4.12/share (quarterly $1.03)
+- **Último aumento**: marzo 2026, +14.8% (de $3.59 a $4.12)
+- **Payout ratio**: ~28% (extremadamente conservador — hay espacio amplio)
+- **Next ex-dividend**: esperado junio 2026
+
+## Por Qué Ahora
+
+### 1. Ola de Refinanciamiento 2026-2027
+$2T en bonos corporativos IG + HY de EE.UU. vencen en los próximos 24 meses. Cada uno = fee nueva para Moody's. El pico está llegando ahora.
+
+### 2. Private Credit Boom
+Mercado de crédito privado pasó de $500B (2019) a $2T (2026), proyectado $4T para 2030. Moody's tiene ~45% share en rating CLOs. Nueva línea de crecimiento estructural.
+
+### 3. Moody's Analytics Acelerando
+MA creció +11% YoY en Q1 2026 — accelerating. Es el segmento de mayor crecimiento + mayor márgen recurrente. Al mercado aún no le cayó que 63% del revenue es SaaS.
+
+### 4. Guidance Subido Post-Q1
+Management demostró confianza al subir guidance midpoint +2.5% post-Q1 — señal de visibilidad alta en el pipeline de issuance.
+
+### 5. Buybacks Aggresivos
+$2.5B anunciado para 2026 = ~3% del market cap. Durante los próximos 4 años eso es ~12% de acciones retiradas — compound growth para EPS.
+
+### 6. Valuación Razonable en Contexto
+P/E forward 27.4x vs SPGI 32x (su peer directo). MCO tiene descuento de ~15% vs el único comparable exacto. Ambos son premium vs S&P 500 a ~18x — pero justificado por el moat y el recurring revenue profile.
+
+### 7. Berkshire Hathaway como Ancla
+Posición de 13% de Buffett que nunca se vende = floor psicológico para el stock. Mientras Berkshire no venda (y no ha vendido en 26 años), hay una base de demand estructural.
+
+## Riesgos
+
+### 1. Dependencia de Volumen de Emisión
+MIS (37% del revenue) es issuance-based. Un shock que frene emisión de bonos (crisis de liquidez tipo 2008, Fed inesperadamente muy hawkish) = revenue MIS cae 15-25% en un trimestre. Q4 2022: emisión HY cayó 80% YoY, MCO stock -40%.
+
+### 2. Presión Regulatoria Perpetua
+Agencias de rating son políticamente impopulares desde 2008. SEC, ESMA (UE), FCA (UK) mantienen supervisión estricta. Propuestas periódicas (la más reciente, 2024 en Parlamento Europeo) de crear un "Euro Rating Agency" público que compita — no ha pasado, pero el riesgo existe.
+
+### 3. Litigation Historical y Futuro
+- 2017: pagaron $864M a DOJ + 21 estados por ratings pre-2008 subprime
+- 2024: $11M adicional por data errors en MA
+- Plaintiffs' bar sigue activa — cualquier rating que resulte dramáticamente errado puede generar class-action
+
+### 4. Valuación No-Barata
+27.4x forward no es cheap absoluto. Si el ambiente macro se vuelve hostil (rates más altos, spreads ampliándose), el múltiplo puede contraerse a 20-22x — que es -15 a -25% downside del múltiplo solo.
+
+### 5. AI Disruption Largo Plazo
+ML-based credit scoring desde hedge funds y tech companies (Palantir, AQR, Bridgewater) podría eventualmente bypass rating agencies para inversionistas sofisticados. Moody's invierte heavy en AI (Moody's Assistant con Microsoft, 2024) para adelantarse — pero la tecnología podría comoditizar la "opinión experta" que venden.
+
+### 6. Berkshire Venta Hipotética
+Si Buffett o post-Buffett Berkshire alguna vez decide vender los 24.7M acciones, sería -10% overnight. No ha pasado en 26 años, pero fondos post-Buffett pueden tener criterios distintos.
+
+### 7. Dependencia en Tipos de Interés
+Tasas muy altas → empresas posponen emisión esperando tasas menores. Spreads muy estrechos → reducida prima por rating complejo. Ambiente actual de tasas ~4% US 10-year es el sweet spot — si se mueve dramático en cualquier dirección, afecta.
+
+### 8. Sucesión de Fauber
+CEO desde 2021. Si sale, la sucesión es crítica porque el job requiere balancear reguladores + emisores + inversionistas + empleados con habilidad política específica. Mala sucesión = execution risk multi-año.
+
+## Conclusión
+
+MCO a $457.97 te permite comprar:
+
+1. **Mitad de un duopolio regulatorio** con moat imposible de penetrar (NRSRO status + 115 años de data)
+2. **Peaje sobre $47T+ de deuda global** con ola de refinanciamiento 2026-2027 garantizando volumen
+3. **SaaS de 96% recurring (MA)** disfrazado de agencia de ratings — 63% del revenue es sustancialmente mejor que negocio de lo que el mercado reconoce
+4. **Dividend Contender**: 17 años subiendo dividendo, payout ratio 28%, DGR 10-11%
+5. **Capital return agresivo**: $2.5B buybacks + $800M dividendos = $3.3B devueltos a accionistas en 2026 (~4% del market cap)
+6. **Berkshire ancla**: Buffett posee 13%, nunca ha vendido — el endorsement más fuerte en quality compounding
+7. **Q1 2026 momentum**: beat de $0.32 en EPS, guidance subido, adj op margin 53.2%
+
+No es barato absoluto — es pagar precio justo por un negocio excepcional. La tesis no es multiple-expansion; es **compounder mantenido por 10+ años con 9-11% EPS growth anual + 0.9% dividend + 3% buyback yield = ~13-15% total return annualizado**.
+
+Si tu tesis es "comprar negocios con moat matemáticamente imposible de replicar y mantenerlos por décadas", Moody's es uno de los 5 mejores stocks del S&P 500 por esa definición.
+
+---
+
+*Research fecha: 24 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 510.0,
+    analyst_upside: 11.4,
+    status: "active",
+    first_researched_at: "2026-04-24T00:00:00Z",
+    last_updated_at: "2026-04-24T00:00:00Z",
+    next_review_at: "2026-10-24T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -7816,6 +8046,17 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #50* — Apr 23, 2026\n\n🏢 *3M Company* (MMM) — $145.48\n\n🛍️ *Sus marcas/líneas*: Scotch (cinta adhesiva transparente, 1925), Post-it (las notitas amarillas, 1974), Command (los ganchos que no dejan marca en la pared), Scotch-Brite (esponjas verdes), Nexcare (curitas), Filtrete (filtros de aire), respiradores N95 (los que usamos todos durante COVID), lijas industriales, adhesivos para la industria automotriz, films ópticos que van dentro de las pantallas de iPhone, TV y monitores de computador. Más de 60,000 productos diferentes.\n\n🌍 *Presencia*: Estados Unidos — HQ en Saint Paul, Minnesota. 70+ plantas en EE.UU., 80+ plantas internacionales, ventas en 200+ países, ~61,000 empleados. Fundada en 1902 como Minnesota Mining and Manufacturing — originalmente para vender una piedra abrasiva que resultó ser de mala calidad; inventaron el papel de lija impermeable y nunca pararon de inventar cosas. Tienen 130,000+ patentes activas.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.14% anual* solo por ser dueño. Cada vez que alguien compra cinta Scotch, usa una nota Post-it, cuelga algo con Command Strip, se pone una curita Nexcare, o compra un iPhone (que trae films ópticos 3M dentro de la pantalla) — parte de ese dinero llega a ti como dividendo. Y acaban de autorizar $7.5 mil millones en recompra de acciones hasta 2027 — ~9% del total de acciones siendo absorbido por la propia empresa.\n\n⚠️ *El riesgo*: La cola larga de PFAS — 3M pagó $12.5B por contaminación de agua potable (settlement estructurado hasta 2036, $440M anuales), pero siguen demandas separadas de estados individuales, casos personales por cáncer, y posible regulación europea. Analistas estiman exposure adicional $5-15B en la próxima década. Plus: 67 años subiendo dividendo rotos en 2024 cuando cortaron post-Solventum — perdieron el status de "Dividend King" permanentemente.\n\n🆕 Posición #50\n🔗 https://vectorialdata.com/stocks/MMM\n✅ Certificado por blockchain → vectorialdata.com/verify/MMM\n\n💡 Dato que ancla la tesis: el 21 de abril de 2026 (hace 2 días), 3M reportó Q1 2026 y pasó algo que no pasaba desde 2018 — el operating margin expandió +230 puntos base año contra año (de 20.9% a 23.2%). No es un trimestre "bueno" — es la primera evidencia dura de que el turnaround de William Brown está convirtiéndose en números reales. Brown llegó en mayo 2024 desde L3Harris (donde subió el stock 4x ejecutando consolidación de plantas y lean manufacturing) — es el primer CEO externo de 3M en ~40 años, y el primero en 30 años en hacer un portfolio review completo de las 60,000 SKUs. Lo que ha hecho en 24 meses: cerradas 19 plantas (target 25 para 2027), 8,500 recortes (~12% plantilla), 30+ product lines descontinuadas. El Q1 fue el primer "proof point" de que eso convierte en margen. Mientras tanto, MMM cotiza a 17x forward cuando Honeywell va a 24x, Emerson a 23x, Illinois Tool Works a 24x — ~30% de descuento vs peers industriales. El analyst consensus tiene target $172 (+18% upside), y Wells Fargo subió su target a $165 el 22 de abril citando "execution momentum". No es el Dividend Aristocrat que era — es un turnaround industrial post-litigation donde el mercado apenas empieza a creer. Y como siempre: comprar cuando la historia empieza a cambiar, no cuando ya todos la creen.`,
     attestation_uid: "0x7864e80751ac43b2fd11c473dd066880432332aecaff59759413bcb01bae8a21",
   },
+  {
+    id: 51,
+    stock_id: 53,
+    ticker: "MCO",
+    type: "new" as const,
+    cycle_number: 11,
+    price: 457.97,
+    date: "2026-04-24",
+    day_of_week: "friday",
+    wa_message: `📊 *STOCK PICK #51* — Apr 24, 2026\n\n🏢 *Moody's Corporation* (MCO) — $457.97\n\n🛍️ *Sus marcas/líneas*: Moody's Investors Service (la agencia de calificación crediticia — quien pone Aaa, Aa1, Baa2 a los bonos del mundo), Moody's Analytics (software de riesgo crediticio CreditView y BondX), RMS (modelos de huracán, terremoto y climate risk — los usa cada aseguradora global), Bureau van Dijk (base de datos de 500M+ empresas usada para KYC y due diligence), Moody's Assistant (asistente de AI lanzado con Microsoft en 2024).\n\n🌍 *Presencia*: Estados Unidos — HQ en 7 World Trade Center, Nueva York. ~16,000 empleados en 40+ países. Fundada en 1909 por John Moody — el mismo que en 1900 publicó el primer manual estandarizado de bonos ferrocarrileros de EE.UU., creando de la nada la industria del análisis de crédito. Junto con S&P Global forma un duopolio que califica más del 80% de toda la deuda pública y privada del planeta.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.91% anual* solo por ser dueño. Cada vez que Apple, Exxon o un gobierno emite bonos nuevos — le tienen que pagar a Moody's para calificarlos. Cada vez que un banco consulta CreditView, una aseguradora usa RMS para modelar un huracán, o un compliance officer hace KYC con Bureau van Dijk — parte de ese dinero llega a ti como dividendo. Llevan *17 años consecutivos subiendo dividendo* (+14.8% el aumento más reciente en marzo 2026), y acaban de autorizar $2.5 mil millones en recompra de acciones para 2026.\n\n⚠️ *El riesgo*: El 37% del revenue viene de emisiones de bonos nuevos — si un shock de mercado (crisis 2008, crunch de liquidez, Fed sorpresivamente hawkish) frena la emisión, ese revenue puede caer 15-25% en un trimestre. Q4 2022 fue recordatorio: emisión high-yield cayó 80% YoY y el stock -40%. Además: P/E forward 27x no es barato — cualquier miss genera downside grande.\n\n🆕 Posición #51\n🔗 https://vectorialdata.com/stocks/MCO\n✅ Certificado por blockchain → vectorialdata.com/verify/MCO\n\n💡 Dato que ancla la tesis: Warren Buffett empezó a comprar Moody's en 2000 cuando hizo spin-off de Dun & Bradstreet, y en 26 años **nunca ha vendido una sola acción**. Berkshire Hathaway posee hoy 24.7M acciones (~13% de la compañía entera, $11.3B). Buffett ha admitido públicamente que no la compraría al precio actual — pero la mantiene porque, cito, "es una de las mejores franquicias del mundo". ¿Por qué? Porque Moody's tiene el moat más matemáticamente imposible de replicar de Wall Street: para competir necesitas (1) status NRSRO de la SEC, que no aprueban hace décadas; (2) 100+ años de historial auditado de ratings — cada bono del mundo se compara contra la escala de Moody's; (3) integración con los sistemas de risk management de todos los bancos Tier 1. Y encima, el 63% del revenue ya no viene de ratings — viene de Moody's Analytics, que es 96% suscripciones recurrentes tipo SaaS. Es decir: MCO es un SaaS disfrazado de agencia de calificación, con un duopolio regulatorio protegido por la SEC, con Buffett como accionista eterno. Hace 2 días (22 abril) reportaron Q1 2026 con adj EPS $4.33 beat de $0.32, subieron guidance FY26 a $16.40-$17.00, y anunciaron $2.5B en buybacks. No es una tesis de turnaround ni de multi-bagger. Es una tesis de *compounder aburrido mantenido por décadas*: ~10% EPS growth anual + 1% dividend + 3% buyback yield = ~14% retorno total annualizado, con moat que sobrevive recesiones, AI, y la muerte térmica del universo.`,
+  },
 ];
 
 export const cycles = [
@@ -7904,7 +8145,7 @@ export const cycles = [
     cycle_number: 11,
     type: "new" as const,
     target_count: 5,
-    current_count: 0,
+    current_count: 1,
     status: "active" as const,
   },
 ];
