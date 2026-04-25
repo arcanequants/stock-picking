@@ -4,7 +4,7 @@ import { sendMagicLinkEmail } from "@/lib/resend";
 
 export async function POST(request: Request) {
   try {
-    const { email, locale, client } = await request.json();
+    const { email, locale, client, next } = await request.json();
 
     if (!email || typeof email !== "string") {
       return NextResponse.json(
@@ -14,6 +14,16 @@ export async function POST(request: Request) {
     }
 
     const isIOSClient = client === "ios";
+
+    // Whitelist next paths that the email link is allowed to land on.
+    // Prevents open-redirect via crafted next values.
+    const SAFE_NEXT_PREFIXES = ["/account", "/portfolio", "/metodo", "/welcome"];
+    const safeNext: string =
+      typeof next === "string" &&
+      next.startsWith("/") &&
+      SAFE_NEXT_PREFIXES.some((p) => next === p || next.startsWith(p + "/"))
+        ? next
+        : "/portfolio";
 
     const normalizedEmail = email.toLowerCase().trim();
 
@@ -51,7 +61,7 @@ export async function POST(request: Request) {
 
     const callbackUrl = isIOSClient
       ? `vectorialdata://auth?token_hash=${tokenHash}&type=${type}`
-      : `${siteUrl}/auth/callback?token_hash=${tokenHash}&type=${type}&next=/portfolio`;
+      : `${siteUrl}/auth/callback?token_hash=${tokenHash}&type=${type}&next=${encodeURIComponent(safeNext)}`;
 
     // Dev fallback: when RESEND_API_KEY isn't configured (local dev), skip
     // the email send and return the link directly so the developer can open it.

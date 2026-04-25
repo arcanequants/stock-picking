@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 export default async function AccountPage() {
   const { user, isSubscribed } = await getAuthState();
 
-  // Gate: only authenticated subscribers can access
-  if (!user || !isSubscribed) {
-    redirect("/join");
-  }
+  // Gate: subscribers only. Logged-out → login (so the email "set my rule"
+  // CTA brings them back here after auth). Logged-in but not subscribed → join.
+  if (!user) redirect("/login?next=/account");
+  if (!isSubscribed) redirect("/join");
 
   const t = await getTranslations("Welcome");
   const tAccount = await getTranslations("Account");

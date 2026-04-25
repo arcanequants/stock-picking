@@ -181,6 +181,7 @@
     "title": "Empieza a generar ingresos",
     "subtitle": "Recibe picks diarios en tu WhatsApp. Empresas que te pagan dividendos por ser dueño. Research completo incluido.",
     "pricingLabel": "Membresía mensual",
+    "pricingPeriod": "/mes",
     "pricingSubtitle": "Un dólar al mes. Sin truco.",
     "feature1": "Pick diario con research completo (7 por semana)",
     "feature2": "Empresas que pagan dividendos cada trimestre",
@@ -364,7 +365,9 @@
     "checkEmail": "Revisa tu email para iniciar sesión",
     "linkExpiredTitle": "Tu enlace expiró",
     "linkExpiredDesc": "Ingresa tu email para recibir un nuevo enlace de acceso.",
-    "linkExpiredSent": "Enlace enviado — revisa tu email"
+    "linkExpiredSent": "Enlace enviado — revisa tu email",
+    "loginPageTitle": "Inicia sesión",
+    "genericError": "Algo salió mal. Intenta de nuevo."
   },
   "Help": {
     "title": "Contáctanos",

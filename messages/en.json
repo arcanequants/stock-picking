@@ -181,6 +181,7 @@
     "title": "Start earning income",
     "subtitle": "Receive daily picks on your WhatsApp. Companies that pay you dividends for being an owner. Full research included.",
     "pricingLabel": "Monthly membership",
+    "pricingPeriod": "/mo",
     "pricingSubtitle": "One dollar a month. No catch.",
     "feature1": "Daily pick with full research (7 per week)",
     "feature2": "Companies that pay dividends every quarter",
@@ -364,7 +365,9 @@
     "checkEmail": "Check your email for a login link!",
     "linkExpiredTitle": "Your link expired",
     "linkExpiredDesc": "Enter your email to receive a new login link.",
-    "linkExpiredSent": "Link sent — check your email"
+    "linkExpiredSent": "Link sent — check your email",
+    "loginPageTitle": "Log in",
+    "genericError": "Something went wrong. Try again."
   },
   "Help": {
     "title": "Get in touch",
