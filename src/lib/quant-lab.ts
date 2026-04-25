@@ -60,6 +60,48 @@ export async function getAllBots(): Promise<QuantLabBot[]> {
   return (data as QuantLabBot[] | null) ?? [];
 }
 
+export interface QuantLabBotCard {
+  bot: QuantLabBot;
+  latest: QuantLabSnapshot | null;
+  sparkline: Array<{ t: string; roi: number }>; // 30D ROI series
+  daysLive: number;
+}
+
+export async function getAllBotCards(): Promise<QuantLabBotCard[]> {
+  const admin = getSupabaseAdmin();
+  const bots = await getAllBots();
+  if (bots.length === 0) return [];
+
+  const ids = bots.map((b) => b.id);
+  const { data: snaps } = await admin
+    .from("quant_lab_snapshots")
+    .select("bot_id, captured_at, roi, mdd, current_copy_count, win_rate, total_orders, aum_amount, time_range")
+    .in("bot_id", ids)
+    .eq("time_range", "30D")
+    .order("captured_at", { ascending: true });
+
+  const byBot = new Map<number, QuantLabSnapshot[]>();
+  for (const row of (snaps as Array<QuantLabSnapshot & { bot_id: number }> | null) ?? []) {
+    const arr = byBot.get(row.bot_id) ?? [];
+    arr.push(row);
+    byBot.set(row.bot_id, arr);
+  }
+
+  return bots.map((bot) => {
+    const list = byBot.get(bot.id) ?? [];
+    const latest = list[list.length - 1] ?? null;
+    const sparkline = list
+      .filter((s) => s.roi !== null)
+      .map((s) => ({ t: s.captured_at, roi: Number(s.roi) }));
+    const startedAt = new Date(bot.started_at).getTime();
+    const daysLive = Math.max(
+      0,
+      Math.floor((Date.now() - startedAt) / (1000 * 60 * 60 * 24))
+    );
+    return { bot, latest, sparkline, daysLive };
+  });
+}
+
 export async function getBotView(slug: string): Promise<QuantLabBotView | null> {
   const bot = await getBot(slug);
   if (!bot) return null;
