@@ -7406,6 +7406,653 @@ Si tu tesis es "comprar negocios con moat matemáticamente imposible de replicar
     last_updated_at: "2026-04-24T00:00:00Z",
     next_review_at: "2026-10-24T00:00:00Z",
   },
+  {
+    id: 54,
+    ticker: "GILD",
+    name: "Gilead Sciences",
+    sector: "Healthcare",
+    industry: "Pharmaceuticals / Biotechnology",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 129.83,
+    pe_ratio: 19.15,
+    pe_forward: 13.5,
+    dividend_yield: 2.52,
+    market_cap_b: 161.1,
+    eps: 6.78,
+    summary_short:
+      "El líder global en HIV — Biktarvy ($14.3B en 2025, +7%) ancla el portafolio mientras Yeztugo (lenacapavir) abre la primera ventana de PrEP de 6 meses con inyección semestral. FDA aprobó Yeztugo en junio 2025 (PURPOSE-1: 100% de protección, 0 infecciones en 2,134 mujeres); Mizuho proyecta peak de $8B/año. Q4 2025 EPS $6.78, guidance 2026 EPS $8.45-$8.85 (+25% midpoint). $16B desplegados en M&A en 60 días Q1 2026 (Arcellx + Tubulis + Ouro). Daniel O'Day (CEO) afirma que el bar para nuevas adquisiciones ahora es \"el más alto que jamás ha existido\". P/E forward 13.5x con consenso Strong Buy y mediana target $160 (+23% upside).",
+    summary_what:
+      "Gilead Sciences es la biotecnológica de HIV más dominante del mundo, fundada en 1987 en Foster City, California, por Michael Riordan (médico de 29 años). Hoy ~17,000 empleados, HQ en Foster City. CEO desde 2019: **Daniel O'Day** — anteriormente lideró Roche Pharmaceuticals 13 años. Cuatro plataformas terapéuticas: (1) **HIV — 71% del revenue ($20.8B en 2025, +6% YoY)**: Biktarvy (régimen #1 mundial, $14.3B en 2025), Descovy (PrEP diaria, $2.8B +31% en 2025 mientras Yeztugo ramps), legacy STR (Genvoya/Odefsey/Symtuza). Yeztugo (lenacapavir, aprobado FDA junio 2025) es el primer y único PrEP **inyectable de 6 meses** — 2 dosis al año reemplazan 365 píldoras de Truvada. Q3 2025 ventas $39M, FY 2025 $150M, guidance 2026 ~$800M, Mizuho peak $8B; (2) **Oncología/Cell Therapy ($3.2B en 2025)**: Trodelvy (ADC TROP-2 para cáncer de mama triple-negativo, $1.4B +6%), Yescarta y Tecartus (CAR-T CD19 — Yescarta $1.5B, Tecartus $344M, ambos declinando por competencia); pipeline includes anito-cel (CAR-T BCMA de Arcellx, PDUFA dic 23, 2026 para mieloma múltiple); (3) **Hepatitis & enfermedad hepática**: Vemlidy, Epclusa (HCV), Hepcludex (HDV); (4) **Inflammation/COVID/Otros**: Veklury (remdesivir, $600M guide 2026 declinando). Tres adquisiciones cerraron Q1 2026 — $7.8B Arcellx (anito-cel BCMA CAR-T), $3.1B Tubulis (plataforma ADC next-gen), $1.7B Ouro Medicines (T-cell engager BCMAxCD3). Buffett no la posee, pero la familia Hartford (Walgreens herederos) sí. Berkshire compró posición pequeña en 2024 y la aumentó.",
+    summary_why:
+      "GILD a $129.83 es comprar el líder estructural del HIV protegido hasta 2036, con el mayor catalizador biotech de la década (PrEP semestral) recién lanzado y todavía sin reflejarse en el múltiplo: (1) **Biktarvy patente extendida hasta 2036**: settlements firmados con Lupin, Cipla y Laurus Labs (los 3 grandes genéricos indios) en 2025 retrasan la entrada de copias 3 años más allá del consenso anterior (de 2033 a abril 2036). Eso son ~$45B+ adicionales en revenue protegido vs lo que el mercado modelaba; (2) **Yeztugo es el primer PrEP de 6 meses del mundo**: PURPOSE-1 (junio 2024) mostró **0 infecciones de HIV en 2,134 mujeres** (100% reducción vs Truvada diaria) — el resultado clínico más limpio del año en farma. PURPOSE-2 (hombres + diversidad de género): 2 infecciones en 2,179 = 99.9% protección. Aprobado FDA junio 2025, EU late-2025. Cobertura comercial USA ~85% de vidas con $0 copay. Mizuho llama el guidance 2026 de $800M \"probablemente conservador\"; peak case $8B/año. PEPFAR + Global Fund anunciaron inversión adicional para acceso global en 2026; (3) **Q4 2025 batió consenso y guidance 2026 sólido**: $1.90 non-GAAP EPS vs $1.83 esperado. Guidance 2026: revenue $29.6-$30B (+2-4%), EPS $8.45-$8.85 (vs $6.78 TTM = +25% midpoint). HIV +6%, base business +4-5%; (4) **El \"buy today\" anchor: tender offer de Arcellx vence HOY 5pm ET**. Gilead anunció el deal el 23 feb 2026 ($115/acción cash + $5 CVR contingente a $6B ventas acumuladas anito-cel). Aprobaciones regulatorias completadas 17 abril. Cierre esta semana convierte a Gilead de \"socio CAR-T\" a **dueño 100% de un BCMA CAR-T best-in-class** con PDUFA 23 dic 2026. iMMagine-1 datos: ORR 96%, CR/sCR 74%, perfil de seguridad CRS Grado 0/1 = 83% (vs 35-50% en Carvykti/Abecma); (5) **M&A spree disciplinado, ahora pausado**: $16B desplegados Q1 2026 (Arcellx + Tubulis + Ouro Medicines). O'Day dijo a inversionistas que \"el bar para nuevas adquisiciones es el más alto que jamás ha existido\" — señal clara: ahora a integrar y ejecutar; (6) **Capital return + 10 años subiendo dividendo**: dividendo trimestral $0.82 (+3.8% en feb 2026), payout ratio ~47% sobre TTM. $6B autorizados en buybacks (algo pausado por M&A spree, retomará en 2026 H2). Yield 2.52%, total return ~5% anual solo en distribución; (7) **Múltiplo deprimido vs growth subyacente**: P/E forward 13.5x cuando el EPS crece +25% en 2026 = PEG ~0.5x — uno de los más baratos en farma large-cap. Bristol-Myers (BMY) cotiza 9.5x pero revenue declina; Pfizer 9-10x con payout ratio 107% insostenible; Merck 13x con cliff de Keytruda 2028; AbbVie 16x. GILD es el único del set con pipeline robusto + P/E forward sub-15 + dividendo creciendo; (8) **Consenso de analistas Strong Buy**: 33 Buy / 3 Hold / 0 Sell. Mediana target $160 = +23% upside. Morgan Stanley subió a $175 (10 abr), Citi a $165 (10 abr) — ambos post-Yeztugo data. La narrativa institucional está rotando.",
+    summary_risk:
+      "El riesgo más concreto es la **negociación de precio de Medicare bajo IRA**: Biktarvy fue seleccionada en el ciclo 3 de CMS — el precio negociado entrará en vigor el **1 de enero de 2028**. Y Biktarvy Medicare = ~8% del revenue total proyectado de Gilead 2027, una exposición desproporcionada vs peers en el mismo ciclo (que rondan 0-3%). Otros riesgos: (1) **Trodelvy impairments recurrentes**: write-downs trimestrales desde 2024 (retiro de indicación de cáncer de vejiga). Estrategia ASCENT-03/04 (TNBC 1L) está pendiente de approval; cualquier decepción = otro impairment; (2) **Yescarta + Tecartus declinando**: -5% y -15% respectivamente en 2025. Competencia de Carvykti (J&J) y Abecma (BMS) en CAR-T BCMA, y Breyanzi (BMS) en CD19. Anito-cel necesita aprobarse y ganar share rápido para evitar que el franchise CAR-T se siga erosionando; (3) **GSK ViiV avanzando en HIV long-acting**: Apretude (cabotegravir cada 2 meses) + Cabenuva tracking £7B en 2026 según analistas — ~1/3 del HIV revenue de ViiV. GSK está triplicando supply de Apretude para LMICs para defender share. Yeztugo tiene ventaja estructural por dosing semestral, pero la guerra es en ejecución comercial; (4) **Concentración de Biktarvy**: aún con extensión a 2036, Biktarvy = ~50% del revenue HIV. Cualquier issue de seguridad o cambio de guidelines de OMS/IAS-USA podría comprimir uso. Patente core expira 2036 pero las relacionadas (formulación, salts) van rolling off antes — pequeño espacio para genéricos creativos; (5) **M&A integration risk**: $16B desplegados en 60 días = mucha digestión. Arcellx, Tubulis y Ouro son tres modos operativos distintos (CAR-T fabrica, ADC engineering, T-cell engager). O'Day llegó de Roche con experiencia de M&A grande, pero ejecutar 3 integraciones simultáneas sin churn de talento clave es inusual; (6) **China geopolitical**: Genhouse Bio + Ouro/Keymed son deals de origen chino. CFIUS y la administración Trump han incrementado scrutiny en pharma con supply chain o IP de China. Riesgo regulatorio asimétrico; (7) **Veklury decay**: $600M en 2026 guide vs ~$1B-$1.5B en años anteriores. COVID tailwind se acabó. No es material per se, pero contamina la línea de revenue total; (8) **Catalizadores binarios**: Q1 2026 reporta el **7 de mayo de 2026** (10 días después de hoy) — guidance 2026 puede ajustarse. PDUFA de anito-cel 23 dic 2026: rechazo o demora por meses sería -10-15% en GILD día 1.",
+    research_full: `# Gilead Sciences (GILD) — Research Completo
+
+## Precio: $129.83 | P/E TTM: 19.15x | P/E Forward: 13.5x | Div Yield: 2.52% | Market Cap: $161.1B
+
+---
+
+## Qué Es
+
+Gilead Sciences es **la biotech de HIV más dominante del planeta**. Fundada en 1987 en Foster City, California, por Michael Riordan (médico de 29 años entonces). Hoy: ~17,000 empleados, HQ en Foster City, CA. Cotiza en NasdaqGS desde 1992.
+
+**CEO desde marzo 2019: Daniel O'Day** — antes lideró Roche Pharmaceuticals durante 13 años. O'Day es belga-americano, ingeniero industrial de Georgetown, MBA de Columbia. Conocido por disciplina M&A y foco en science-driven pipelines.
+
+## Las 4 Plataformas
+
+| Plataforma | % Revenue 2025 | Productos clave |
+|------------|----------------|-----------------|
+| **HIV** | ~71% ($20.8B) | Biktarvy, Descovy, Yeztugo, Genvoya, Odefsey, Symtuza |
+| **Oncología / Cell Therapy** | ~11% ($3.2B) | Trodelvy, Yescarta, Tecartus; pipeline anito-cel |
+| **Liver / Hepatitis** | ~10% (~$3B) | Vemlidy, Epclusa, Hepcludex |
+| **COVID / Otros** | ~8% (~$2.4B) | Veklury (remdesivir), pipeline inflamación |
+
+Revenue FY 2025: **$29.4B** (+2% YoY). GAAP EPS $6.78 (vs $0.38 en 2024 — el año previo fue distorsionado por charge IPR&D de Immunomedics).
+
+## El Negocio HIV — Por Qué Domina
+
+### 1. Biktarvy — El Régimen #1 del Mundo
+
+Biktarvy (bictegravir + emtricitabine + tenofovir alafenamide) es el régimen oral de HIV más recetado globalmente. Una píldora al día. Aprobado FDA 2018.
+
+**Datos clave:**
+- 2024 ventas: **$13.4B (+13%)**
+- 2025 ventas: **$14.3B (+7%)**
+- Q4 2025: ~$4.0B (+5%)
+- Cuota de mercado en HIV régimens (USA): ~46%
+- Cuota global: ~36%
+
+**Patent extension MASSIVA:** En 2025, Gilead firmó settlements con los 3 fabricantes indios de genéricos más relevantes (Lupin, Cipla, Laurus Labs) que **retrasan la entrada de genéricos en USA hasta 1 abril 2036** — ~3 años más allá del consenso anterior (era 2033). Eso son ~$45B adicionales de revenue protegido.
+
+Como contraprestación, Gilead pagó $1.25B + 3% royalty a GSK en 2025 por settlement de patent claim relacionado a Cabenuva/dolutegravir IP.
+
+### 2. Yeztugo (lenacapavir) — El Primer PrEP Semestral del Mundo
+
+Aprobado FDA **18 junio 2025**. Indicación: profilaxis pre-exposición (PrEP) para HIV-1 en adultos y adolescentes.
+
+**Régimen revolucionario:** 2 inyecciones subcutáneas al año. Reemplaza 365 píldoras anuales de Truvada o ~6 inyecciones bimestrales de Apretude (GSK).
+
+**Datos clínicos rompiendo récords:**
+- **PURPOSE-1** (mujeres cisgénero, África sub-sahariana): **0 infecciones en 2,134 pacientes** — 100% reducción vs Truvada diaria. Resultado más limpio del año biotech 2024.
+- **PURPOSE-2** (hombres + género diverso): 2 infecciones en 2,179 pacientes — 99.9% protección, superior a Truvada.
+
+**Trayectoria comercial:**
+- 2025 (año launch): **$150M** (Q3 2025: $39M solo)
+- 2026 guidance: ~**$800M** (Mizuho lo llama "probablemente conservador")
+- Mizuho peak case: **$8B/año**
+- Citi: GILD podría capturar **>60% del mercado USA de PrEP** para mid-2030s
+
+**Cobertura:**
+- ~85% de vidas comerciales USA con $0 copay
+- Brand: "Yeztugo" en USA, "Yeytuo" en EU
+- PEPFAR + Global Fund anunciaron inversión adicional para acceso global en 2026
+- Versiones genéricas para LMICs: Gates Foundation negoció acuerdos con generic makers indios para vender a **$40/año** en países low-income — gestión de "exclusion zone" que protege premium en mercados desarrollados
+
+### 3. Competencia: GSK ViiV (Apretude + Cabenuva)
+
+GSK ViiV (joint venture con Pfizer + Shionogi) es el #2 en HIV con franchise long-acting:
+- **Apretude** (cabotegravir): inyección **cada 2 meses** para PrEP
+- **Cabenuva** (cabotegravir + rilpivirine): inyección mensual para tratamiento HIV+
+
+GSK acelerando: tracking £7B en HIV en 2026 (~1/3 del revenue total de ViiV). GSK está **triplicando supply de Apretude para LMICs** específicamente para defender share contra Yeztugo.
+
+**Yeztugo's structural advantage:** dosing semestral vs bimestral = ~3x menos visitas a la clínica. Para HIV PrEP donde adherencia es la métrica clave, eso es enorme.
+
+## El Negocio Oncológico
+
+### Trodelvy (sacituzumab govitecan) — ADC TROP-2
+
+Antibody-drug conjugate dirigido a TROP-2 (proteína sobre-expresada en tumores). Indicaciones aprobadas: cáncer de mama triple-negativo (TNBC) y cáncer de mama HR+/HER2-.
+
+**Ventas 2025: $1.4B (+6%)**
+
+**Estrategia 2026:** Filed sBLAs basados en:
+- **ASCENT-03**: Trodelvy mono en 1L mTNBC inelegible para PD-(L)1
+- **ASCENT-04**: Trodelvy + Keytruda (Merck) en PD-L1-high mTNBC
+
+Si ambos se aprueban: Trodelvy se vuelve **backbone de 1L mTNBC** = $3-4B revenue path.
+
+**Riesgo:** retiro de indicación de cáncer de vejiga en 2024, impairments recurrentes desde entonces (Q3 2025 también).
+
+### Yescarta (axi-cel) — CAR-T CD19
+
+CAR-T para linfoma de células B difuso (DLBCL) en 2L+. Adquirido vía Kite Pharma 2017.
+
+- 2025 ventas: **$1.5B (-5%)** (declinando por competencia: Breyanzi de BMS, Carvykti)
+- Filed para CNS lymphoma primario, decisión FDA esperada feb 2026
+
+### Tecartus (brexu-cel) — CAR-T CD19
+
+Para mantle cell lymphoma + acute lymphoblastic leukemia.
+
+- 2025 ventas: **$344M (-15%)** (in-class competition)
+
+### Anito-cel (Arcellx, $7.8B Adquisición) — El Próximo Trodelvy
+
+CAR-T BCMA para mieloma múltiple recidivante/refractario. Adquirido vía deal con Arcellx (Feb 2026).
+
+**Por qué importa:**
+- **PDUFA: 23 diciembre 2026**
+- Datos pivotales iMMagine-1 (ASH 2025): **ORR 96%, CR/sCR 74%, ≥VGPR 88%**
+- Perfil seguridad CRS: 86% incidencia pero **83% Grado 0/1** — **best-in-class** vs Carvykti (J&J, ~50% Grado 0/1) y Abecma (BMS).
+- Usa novel "D-domain" binder (no scFv tradicional) = potencial mejor manufacturing yield
+
+**Estructura del deal:**
+- $115/acción en cash + **$5 CVR** contingente a $6B ventas acumuladas para 12/31/2029
+- Total enterprise value: ~$7.8B
+- Aprobaciones regulatorias **completadas 17 abril 2026**
+- **Tender offer expira HOY 27 abril 2026, 5pm ET**
+
+### Tubulis (3.1B Adquisición) — ADC Next-Gen
+
+Plataforma de ADC con tecnología propietaria de payload. Adquirido Q1 2026 por **$3.1B**. Pipeline en early-stage tumors sólidos. Sinergia con Trodelvy y Kite.
+
+## El Q4 2025 (10 feb 2026)
+
+| Métrica | Q4 2025 | YoY | vs Est |
+|---------|---------|-----|--------|
+| Revenue | $7.9B | +5% | meet |
+| Non-GAAP EPS | $1.90 | +14% | **beat $1.83 (+$0.07)** |
+| GAAP EPS | $1.86 | - | - |
+
+**Por producto:**
+- Biktarvy: ~$4.0B (+5%)
+- Trodelvy: $384M (+8%)
+- Yescarta: $368M (-6%)
+- Tecartus: declinando (FY -15% a $344M)
+- Veklury: $600M guide para FY 2026
+
+**Guidance 2026 (issued Q4 2025 release):**
+- Revenue: **$29.6-$30.0B** (+2-4%)
+- Base business (ex-Veklury): $29.0-$29.4B (+4-5%)
+- HIV: +6%
+- **Non-GAAP EPS: $8.45-$8.85** (vs $7.40 FY 2025 = +14% midpoint)
+
+**Q1 2026 reporta el 7 mayo 2026** (10 días después de hoy).
+
+## El M&A Spree de O'Day — $16B en 60 Días
+
+Q1 2026, en ~6 semanas:
+
+1. **Arcellx — $7.8B** (anito-cel BCMA CAR-T)
+2. **Tubulis — $3.1B** (plataforma ADC next-gen)
+3. **Ouro Medicines — $1.7B upfront** (BCMAxCD3 T-cell engager, ex-China rights de Keymed Biosciences)
+4. **Genhouse Bio — $80M upfront + $1.45B milestones** (MAT2A synthetic-lethality, China-origin)
+
+**Total: ~$16B desplegados.**
+
+O'Day comentó (post-deals):
+
+> "Esperamos tomar tiempo ahora para enfocarnos en actividades de integración y M&A más rutinario. El bar para nuevas adquisiciones nunca ha estado más alto."
+
+Future M&A focus declarado: liver disease, oncología, inflamación.
+
+CMO Dietmar Berger: "El portafolio es **el más robusto y diferenciado en la historia de la compañía**."
+
+Long-term goal: **10 terapias transformacionales para 2030**.
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **Precio** | $129.83 |
+| **Market Cap** | $161.1B |
+| **P/E TTM** | 19.15x |
+| **P/E Forward** | 13.5x |
+| **EPS TTM** | $6.78 |
+| **EPS Forward (guide midpoint)** | $8.65 |
+| **PEG (forward EPS growth)** | ~0.5x |
+| **Dividend Yield** | 2.52% |
+| **Dividendo Anual** | $3.28 |
+| **Payout Ratio** | ~47% |
+| **52w High** | ~$135 |
+| **52w Low** | ~$95 |
+| **Revenue TTM** | $29.4B |
+| **Revenue Growth YoY** | +2% (FY); +5% (Q4) |
+| **Profit Margin** | ~28.9% |
+| **ROE** | ~41% |
+| **Buyback Authorization** | $6.0B |
+
+## Dividendo
+
+- **Streak: 10 años consecutivos subiendo** (Dividend Contender)
+- **Quarterly Q1 2026: $0.82** (+3.8% raise feb 2026)
+- **Anualizado: $3.28**
+- **Yield**: 2.52% (vs Bristol-Myers 4.2%, Merck 2.7%, Pfizer 6.3%, AbbVie 3.2%)
+- **Payout ratio**: ~47% — sostenible con espacio para crecer
+- **Buyback**: $6B authorization; $500M ASR ya ejecutado; pace 2026 lentificado por M&A spree
+
+## Por Qué Ahora
+
+### 1. Yeztugo Recién Empezando
+Lanzado junio 2025. Solo $150M en 2025. Pipeline de penetración USA + EU + LMICs apenas comenzando. Cada quarter de 2026 es un step-up grande.
+
+### 2. Arcellx Tender Cierra Hoy
+27 abril 2026 5pm ET. Anito-cel se vuelve 100% Gilead. PDUFA en 8 meses (23 dic 2026). El mercado aún cotiza GILD pre-Arcellx-close.
+
+### 3. Biktarvy Patente +3 Años
+Settlements con Lupin/Cipla/Laurus extendieron exclusividad a 2036. ~$45B revenue protegido adicional. Mercado todavía no ha re-modelado completo.
+
+### 4. Múltiplo Barato Absoluto y Relativo
+P/E forward 13.5x con EPS creciendo +25% en 2026 = PEG 0.5x. El más barato del set pharma con dividendo creciendo.
+
+### 5. Capital Return + Disciplina M&A
+$3.28 dividendo + $6B buyback = ~6% total return solo en distribución. M&A spree pausado, ahora a integrar.
+
+### 6. Consenso Strong Buy
+Mediana target $160 = +23% upside. Morgan Stanley $175, Citi $165 — ambos subidos en abril 2026 post-Yeztugo data. Sin sells.
+
+### 7. PEPFAR + Global Fund
+Inversión adicional en lenacapavir announce 2026. Global access expansion = volumen futuro asegurado.
+
+## Riesgos
+
+### 1. Medicare Negociación de Precio (IRA Cycle 3)
+Biktarvy seleccionada para negociación. Precio efectivo **1 enero 2028**. Biktarvy Medicare = ~8% del revenue total proyectado de Gilead 2027 — exposición desproporcionada vs peers.
+
+### 2. Trodelvy Impairments Recurrentes
+Write-downs trimestrales desde 2024. Estrategia ASCENT pendiente de approval. Cualquier decepción = otro impairment.
+
+### 3. Yescarta + Tecartus Declinando
+-5% y -15% en 2025. Competencia BMS (Breyanzi, Abecma) y J&J (Carvykti). Anito-cel necesita aprobarse y ramp rápido para reemplazar.
+
+### 4. GSK ViiV Long-Acting Avanzando
+Apretude bimestral + Cabenuva mensual = £7B en 2026. GSK triplicando supply para defender share. Yeztugo tiene ventaja estructural pero la guerra comercial está activa.
+
+### 5. Concentración en Biktarvy
+~50% del HIV revenue. Patente core hasta 2036, pero patentes secundarias rolling off antes. Issue de seguridad o cambio de guidelines = riesgo material.
+
+### 6. Integration Risk de M&A Spree
+$16B en 60 días = digestión grande. Arcellx (CAR-T mfg), Tubulis (ADC engineering), Ouro (T-cell engager) son tres modos operativos distintos.
+
+### 7. China Geopolitical
+Genhouse + Ouro/Keymed son origen China. CFIUS scrutiny aumentando. Riesgo regulatorio asimétrico.
+
+### 8. Catalizadores Binarios
+- **Q1 2026 earnings: 7 mayo 2026** (10 días) — guidance puede ajustarse
+- **Anito-cel PDUFA: 23 dic 2026** — rechazo = -10-15% día 1
+- **ASCENT filings (Trodelvy)**: decisión durante 2026 — go/no-go grande
+
+## Conclusión
+
+GILD a $129.83 te permite comprar:
+
+1. **Líder estructural HIV** con Biktarvy ($14.3B/yr) protegido hasta 2036
+2. **Yeztugo**: primer PrEP semestral del mundo, peak case $8B, apenas comenzando
+3. **Arcellx integration cerrando hoy** + anito-cel PDUFA 8 meses
+4. **Múltiplo deprimido**: P/E forward 13.5x con EPS +25% = PEG 0.5x
+5. **10 años subiendo dividendo** + $6B buyback authorization
+6. **Strong Buy consenso**, +23% upside a mediana target
+
+No es una tesis de turnaround — es **growth pharma con valuation de value**. Si la tesis de Yeztugo se cumple a la mitad ($4B peak vs $8B Mizuho) y Biktarvy sostiene su 2036 protection, GILD 2030 EPS = $13-15 y el stock dobla.
+
+---
+
+*Research fecha: 27 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 160.0,
+    analyst_upside: 23.2,
+    status: "active",
+    first_researched_at: "2026-04-27T00:00:00Z",
+    last_updated_at: "2026-04-27T00:00:00Z",
+    next_review_at: "2026-10-27T00:00:00Z",
+  },
+  {
+    id: 55,
+    ticker: "AMKBY",
+    name: "A.P. Møller-Mærsk (ADR)",
+    sector: "Industrials",
+    industry: "Marine Shipping & Integrated Logistics",
+    country: "Denmark",
+    region: "Europe",
+    currency: "USD",
+    price: 11.51,
+    pe_ratio: 12.93,
+    pe_forward: null,
+    dividend_yield: 3.23,
+    market_cap_b: 33.4,
+    eps: 0.89,
+    summary_short:
+      "ADR OTC del gigante danés de shipping (1 ADR = 1/200 de la acción B en Copenhague). FY2025 cerró con EBIT $3.5B (top de guidance) y guidance 2026 EBIT -$1.5B a +$1.0B — el rango refleja la apuesta binaria sobre el regreso al Suez. Houthis volvieron a atacar feb-mar 2026 → la \"normalización\" se está estancando, lo que protege las tarifas mejor de lo que la guidance asume. SCFI +39% YoY al 27 abril. Cotiza a P/B 0.61 — única gran naviera bajo book value. Hapag-Lloyd compró ZIM a 1.06x P/B = mercado privado valora estos activos arriba de book aún en bottom de ciclo. Dividendo DKK 480 ($0.37/ADR, 3.23%) + $1B buyback = $2.1B retorno 2026.",
+    summary_what:
+      "A.P. Møller-Mærsk A/S es el #2 mundial de shipping de contenedores (detrás de MSC) y el integrador logístico más grande del planeta. Fundado 1904 por A.P. Møller y Peter Mærsk-Møller en Svendborg, Dinamarca. HQ Copenhague. ~95,000 empleados, 130 países. AMKBY es el ADR OTC en USA (tier OTCPK). **Estructura: 1 AMKBY ADR = 1/200 de una acción B (MAERSK-B.CO) en Copenhague.** Cotiza en USD ($11.51 el 27 abril 2026), pero el negocio reporta en USD nativo (no DKK). Tres segmentos operativos: (1) **Ocean (~65% revenue, $35B en 2025)**: 726 buques con capacidad 4.5M TEU (14% market share global). El segmento más cíclico — la mitad del cycle bottom 2026 vive aquí. EBIT FY2025 cayó -71% a $1.4B; (2) **Logistics & Services (~28%, $15.1B en 2025)**: forwarding (aéreo + LCL + project cargo), landside (warehousing + e-commerce delivery + customs), solutions (digital platforms). EBIT +36% a $729M en 2025 — segmento que hace 5 años no existía como peso material; (3) **Terminals (~10%, $5.3B en 2025)**: APM Terminals — 65 terminales globales. La joya del portafolio: utilización 88%, ROIC 16.1%, EBIT margin >30%, +20% revenue YoY. Towage & misc (Svitzer) representa el residual. **CEO desde enero 2023: Vincent Clerc** — danés, con Mærsk desde 1998. Lideró Ocean & Logistics 2019-2022 (es el arquitecto de la estrategia integrator). En febrero 2026 anunció ~1,000 layoffs adicionales (HQ Copenhague + regional) por $160M cost-out. **Gemini Cooperation** (alianza con Hapag-Lloyd, lanzada 1 feb 2025): operacionalmente excepcional — schedule reliability ~92.3% vs 62.4% promedio industria. Pero pierde share porque su capacidad es fija (Hub & Spoke) mientras MSC standalone y Premier Alliance expanden. **Familia Møller** (vía A.P. Møller Holding) controla ~42% de los votos.",
+    summary_why:
+      "AMKBY a $11.51 es una apuesta contraria altamente asimétrica: comprar al cycle bottom de shipping cuando el mercado descuenta una normalización rápida del Suez que parece no llegar, mientras los segmentos no-Ocean inflexionan al alza y la valuación cotiza por debajo de book value. Tesis específica: (1) **El \"Suez return\" se está estancando — esto protege las tarifas más de lo que la guidance asume**: cease-fire de Houthis tomó efecto octubre 2025 y los primeros buques de Mærsk pasaron por Suez en diciembre. PERO: 28 feb y 28 mar 2026, los Houthis re-amenazaron y reanudaron ataques tied a la escalada US-Israel-Irán. Volumen de tránsitos por Suez todavía -60% vs 2023. Xeneta (la voz autoritativa de freight rates): \"esto destroza la esperanza de un retorno de gran escala al Mar Rojo en 2026\". SCFI 27 abril: 1,875 puntos = **+39% YoY**. Tarifas están MÁS ALTAS que hace un año, no colapsando; (2) **Guidance EBIT -$1.5B a +$1.0B asume normalización rápida**: si la ruta Cape se prolonga = 6-8% capacidad menos en el mercado = floor de tarifas mucho más alto que el modelado. La guidance es esencialmente una opción binaria sobre la geopolítica del Mar Rojo. La realidad de abril 2026 está apoyando el upside; (3) **P/B 0.61 = la naviera grande más barata del mundo en book**: Hapag-Lloyd compró ZIM en feb 2026 a $35/acción = **1.06x P/B** ($4.2B deal, 58% premium al close pre-anuncio). Eso establece un piso conceptual para el mercado: estrategos pagan 1.06x book por shipping cíclico. Mærsk a 0.61x = ~40% de descuento implícito a deal print. Si Hapag-Lloyd pagó eso por ZIM (más pequeño, menos integrado), Mærsk a 1.0x book = $19/ADR (+65%); (4) **Terminals + L&S inflexionando arriba mientras Ocean inflexiona abajo**: Terminals EBIT FY2025 +31% a $1.7B con ROIC 16.1%; L&S EBIT +36% a $729M. Los dos no-Ocean = $2.4B EBIT combinado, **suficiente para cubrir el dividendo 2026 entero ($1.05B implícito por DKK 480) y el buyback de $1B**. Si Ocean entra en pérdida operativa en 2026, los segmentos buenos siguen pagando el cash flow a accionistas; (5) **Capital return defendido**: $2.1B total 2026 (DKK 480 dividendo + $1B buyback). Yield 3.23% sobre AMKBY hoy. Buyback en abr 2026 a 0.61x P/B = compresión de book per share aritmética sobre tiempo. Cada dólar que recompran a sub-book es accretive instantáneo; (6) **Cambio de vida útil contable +$700M a EBIT 2026**: efectivo 1 enero 2026, Mærsk extendió useful life de buques de 20 a 25 años (consistente con realidad operativa post-COVID — los buques se mantienen mejor de lo modelado). Es ~$700M menos de depreciación = $700M más de EBIT GAAP. Puramente accounting, pero real para earnings reportados; (7) **Gemini schedule reliability 92.3% es moat estructural**: industria global avg 62.4% al inicio de 2026. Hapag + Mærsk lideran rankings. Cargadores premium (BMW, Apple, Walmart) pagan premium por reliability — cuando Suez normalice y oferta excede, Gemini retiene contracts mientras carriers no-aliados pelean por spot; (8) **Vincent Clerc enfocado y disciplinado**: 1,000 layoffs feb-mar 2026 + $160M cost-out anuales. Doble apuesta a integrator strategy (no spinoff de Ocean). 27 buques metanol en flota end-2025 (de 1 en 2023) = lead structural en decarbonización — EU ETS y FuelEU Maritime favorecen low-emission fleet, costo regulatorio asimétrico contra competencia tradicional.",
+    summary_risk:
+      "El riesgo dominante y específicamente cuantificable es la **doble fuente de oferta cuando Suez normalice**: el regreso completo Cape→Suez libera 6-8% de capacidad efectiva global instantáneamente. HSBC modeló decline de tarifas 9-16% en ese escenario; transición acelerada agrega -10% adicional. Mærsk podría entrar en pérdida operativa neta — y la propia guidance lo refleja: floor EBIT -$1.5B en 2026. Otros riesgos: (1) **Sobrecapacidad estructural extrema**: orderbook industria = **33.5% del fleet existente** (~11.3M TEU on order). Históricamente niveles >25% han precedido cycles bear de 3-5 años. Supply growth 2026 +3.6% vs demanda +3.0% = oversupply de ~60 bps. Industry forecast: ~$10B PÉRDIDA agregada de carriers en 2026 vs $20B profit en 2025; (2) **US-China weakness estructural**: imports US-de-China -28% YoY en 2025; Q1 2026 sigue -30% YoY. Top-5 carriers reportan -33%+ booking decline TPEB. Truce trade es 12 meses, no estructural. Sourcing displacement permanente a Indonesia/Tailandia/Vietnam favorece a otras rutas, no necesariamente a Mærsk; (3) **Free Cash Flow negativo 2026**: guidance FCF -$3B mientras paga dividendo $1.05B + buyback $1B = $2.05B salidos vs cash entrante negativo. Balance sheet absorbe gap (~$30B liquidez total). Sostenible 1-2 años; problemático si cycle bottom dura más; (4) **Houthi/Iran reanudación**: ataques de 28 feb y 28 mar 2026 ya restauraron diversion parcial. Si escalada de Iran amplía conflicto regional, riesgo de daño a buques o pricing de seguros disparándose; (5) **Dividendo FY2025 cortado vs FY2024**: pago DKK 480 (40% payout sobre net income $2.9B) vs DKK 1,300+ pre-cycle bottom. Si 2026 EBIT entra en pérdida, dividendo 2027 podría cortarse de nuevo (no recortar implicaría payout >100%); (6) **Gemini perdiendo share relativa**: Asia-NA West Coast 15%→13%, Asia-NA East Coast 20%→17%, Asia-N Europe 27%→23% entre abr 2025 y may 2026. Por design Hub & Spoke = capacidad fija. Cargadores spot van a alianzas que añaden capacidad. Reliability premium puede no compensar share loss; (7) **Single-analyst Yahoo proyectando -$0.28 EPS 2027**: refleja escenario trough — Suez full + capacidad peak + tariffs ceiling + tarifas mean-reverting pre-COVID. Consenso amplio (37 analystas, panel \"Moderate Sell\" con 9 sell / 0 buy) tiene mediana target DKK 13,245 = **-10% downside** en moneda local sobre Copenhague; (8) **Bunker fuel volátil**: VLSFO Singapore puede absorber 8-12% del revenue Ocean. Tensiones Iran disparan fuel prices doblemente — ataques + sanciones a Iran crude. Hedging cubre solo 20-30% típicamente; (9) **Q1 2026 reporta el 7 de mayo 2026** (10 días) — primer test post-guidance. Cualquier guide cut adicional = -10-15% día 1.",
+    research_full: `# A.P. Møller-Mærsk (AMKBY ADR / MAERSK-B Copenhagen) — Research Completo
+
+## Precio: $11.51 (AMKBY) | DKK 14,720 (MAERSK-B) | P/E TTM: 12.93x | P/E Forward: N/A* | Div Yield: 3.23% | Market Cap: $33.4B | P/B: 0.61
+
+*P/E forward técnicamente -42.5x — refleja proyección de un solo analista que modela pérdida pequeña en 2027. Lo dejamos N/A por baja informatividad.
+
+---
+
+## Estructura del ADR
+
+**1 AMKBY ADR = 1/200 de una acción B (MAERSK-B) en Copenhague.**
+
+Math check (27 abr 2026):
+- MAERSK-B: 14,720 DKK
+- Tipo de cambio: ~6.40 DKK/USD
+- 14,720 / 200 = 73.6 DKK por unidad ADR-equivalent
+- 73.6 / 6.40 = **$11.50** ✅
+
+Cotiza en OTC Markets OTCPK (no en NYSE/Nasdaq). Reporta finanzas en **USD nativo** (a diferencia de la mayoría de ADRs europeos que reportan en moneda doméstica).
+
+---
+
+## Qué Es
+
+A.P. Møller-Mærsk A/S es el **#2 mundial de shipping de contenedores** (detrás de MSC, que es privada con ~22% market share). Es el **integrador logístico más grande del planeta**, operando en 130 países.
+
+Fundada 1904 por A.P. Møller y su padre Peter Mærsk-Møller en Svendborg, Dinamarca. HQ Copenhague. ~95,000 empleados.
+
+**CEO desde enero 2023: Vincent Clerc** — danés, con Mærsk desde 1998. Lideró Ocean & Logistics 2019-2022, arquitecto de la estrategia integrator. Reemplazó a Søren Skou.
+
+**Familia Møller** (a través de A.P. Møller Holding): ~42% de los votos. Es la familia controladora desde 1904. Ane Mærsk Mc-Kinney Uggla (presidenta de A.P. Møller Holding) es la cabeza actual.
+
+## Estructura de Segmentos (FY 2025)
+
+| Segmento | Revenue 2025 | % Revenue | EBIT FY 2025 | YoY EBIT |
+|----------|--------------|-----------|--------------|----------|
+| **Ocean** | $35.0B | ~65% | $1.4B | -71% |
+| **Logistics & Services** | $15.1B | ~28% | $729M | +36% |
+| **Terminals** | $5.3B | ~10% | $1.7B | +31% |
+| **Towage & Misc** | residual | <1% | residual | - |
+
+Revenue total FY 2025: $54.0B. EBITDA $9.5B. EBIT $3.5B (top end de guidance original).
+
+### 1. Ocean — El Segmento Cíclico
+
+- 726 buques de contenedores
+- Capacidad: 4.5M TEU
+- Market share global: 14% (#2 detrás de MSC ~22%)
+- 3.38M FFE cargados en FY 2025 (+8% YoY)
+- Tarifa promedio FY 2025: -23% YoY
+
+EBIT cayó de $4.9B (2024) a $1.4B (2025) — el efecto de freight rates normalizándose post-pico Houthi de mediados-2024. Q4 2025: **EBIT -$153M (primera pérdida trimestral del cycle)**.
+
+### 2. Logistics & Services — El Segmento Estratégico
+
+Reorganizado 2024 en 3 sub-segments:
+- **Landside** (gestionado por país): warehousing, e-commerce delivery, contract logistics, customs
+- **Forwarding** (global): aéreo + LCL + project cargo + insurance
+- **Solutions** (global): digital platforms, supply chain visibility
+
+- 2025 revenue $15.1B (+1.2%)
+- 2025 EBIT $729M (+36%)
+- 2025 EBITDA $1.7B (+17%)
+
+E-commerce: Mærsk delivers to 93% of US in <3 days. Multi-carrier parcel network. Customs: AI-driven HS code harmonization (WCO Data Model). Estos no eran propuestas hace 5 años.
+
+### 3. Terminals (APM Terminals) — La Joya
+
+- 65 terminales globales
+- 2025 revenue $5.3B (+20%)
+- EBITDA $1.8B (+15%)
+- EBIT $1.7B (+31%)
+- **ROIC 16.1%** (vs Ocean ROIC <5% en bottom)
+- Utilización 88%
+- Volume +8.4% YoY
+
+EBIT margin Terminals >30%. Es el segmento que el mercado siempre subestima.
+
+## Q4 2025 (5 feb 2026)
+
+| Métrica | Q4 2025 | YoY |
+|---------|---------|-----|
+| Revenue | $13.3B | -8.7% |
+| EBITDA | $1.8B | margin 13.8% |
+| EBIT | $118M | margin 0.9% |
+| **Ocean EBIT** | **-$153M** | vs +$1.6B Q4 2024 |
+| Terminals EBIT | $321M | volume +8.4% |
+| L&S EBIT | $194M | margin 4.9% |
+
+**Q1 2026 reporta el 7 de mayo 2026** (10 días después de hoy).
+
+## Guidance FY 2026 (issued 5 feb 2026)
+
+- **EBITDA: $4.5-$7.0B** (consensus había $6.5B)
+- **EBIT: -$1.5B a +$1.0B** (rango binario amplio = Suez incertidumbre)
+- **FCF: al menos -$3.0B** (Morgan Stanley había modelado -$0.8B → guide negativa surprise)
+- **CapEx 2026-27: $10-11B** combinado
+- Asume demanda global containerized +2-4%; Mærsk crece in-line con mercado
+- Incluye ~**$700M de tailwind de depreciación** por extender useful life de buques de 20 a 25 años (efectivo 1 enero 2026)
+
+## El Tape de Tarifas (al 27 abril 2026)
+
+### SCFI (Shanghai Containerized Freight Index)
+
+- **27 abril 2026: 1,875.26 puntos**
+- Flat WoW; +2.65% MoM; **+39.13% YoY**
+
+### Drewry World Container Index (40ft container)
+
+| Fecha | $/40ft | Δ |
+|-------|--------|---|
+| Apr 2 | $2,287 | stable |
+| Apr 9 | $2,309 | +1% |
+| Apr 16 | $2,246 | -3% |
+| Apr 23 | $2,232 | -1% |
+
+- Asia-Europe declining: Shanghai→Genoa $3,071 (-8%), Shanghai→Rotterdam $2,147 (-4%)
+- Transpacific holding: Shanghai→LA $2,934 (+4%), Shanghai→NY $3,562 (flat)
+- Transatlantic: $2,326 (+15% por PSS $1,100/40ft efectivo abr 15 + capacity cuts)
+
+**Conclusión del tape**: tarifas están en niveles que sostienen el upside de guidance, no el downside.
+
+## El Status del Mar Rojo / Suez
+
+| Evento | Fecha |
+|--------|-------|
+| Houthi cease-fire (Gaza peace plan) | 10 oct 2025 |
+| Primer buque Mærsk transitando Suez (Sebarok) | 19 dic 2025 |
+| CMA CGM MEDEX/INDAMEX retornan vía Suez | ene 2026 |
+| **Houthis amenazan/reanudan ataques (US/Israel-Iran)** | **28 feb 2026** |
+| Segunda ronda Houthi attacks | **28 mar 2026** |
+| Tránsitos Suez = -60% vs 2023 | abril 2026 |
+
+Xeneta (Peter Sand): "esto destroza la esperanza de un retorno de gran escala al Mar Rojo en 2026".
+
+Mærsk MECL service: "permanent transition back to Suez".
+
+**Capacidad unlock estimada de full Cape→Suez return: 6-8% del global container capacity instantáneamente.**
+
+## Gemini Cooperation (Alianza con Hapag-Lloyd)
+
+- **Lanzada operativamente: 1 feb 2025**
+- **Schedule reliability promedio: ~92.3%** (vs industry avg 62.4%)
+- Asia-N Europe + Transatlantic: >95%
+- Diseño "Hub & Spoke": pocas paradas en hubs principales + shuttles a ports más pequeños
+
+**Capacity dynamics (abr 2025 → may 2026):**
+- Asia-NA West Coast: 15% → 13%
+- Asia-NA East Coast: 20% → 17%
+- Asia-N Europe: 27% → 23%
+
+Gemini pierde share relativa porque su capacidad es **fija por design** (Hub & Spoke) mientras competidores (MSC standalone, Premier Alliance ONE/HMM/Yang Ming, Ocean Alliance CMA CGM/Cosco/Evergreen) expanden volumen. Trade-off: reliability vs capacidad.
+
+Mærsk solo: 726 buques / 4.5M TEU / 14% share. Hapag-Lloyd solo: 270 buques / 1.9M TEU.
+
+## Capital Return
+
+### Dividendo
+
+- **FY 2025 (paid 2026): DKK 480/B-share** = **$0.37/ADR**
+- 40% payout ratio sobre net income $2.9B
+- AGM 26 marzo 2026 aprobó
+- **Yield 3.23%** sobre AMKBY $11.51
+
+Cortado vs FY 2024: net income cayó de $6B a $2.9B; payout policy 30-50%.
+
+### Buybacks
+
+- **2026 autorizado: $1.0B**
+- 2025 completados (Feb + Aug tranches)
+- Reducción de capital: DKK 1.133B vía cancelación de A y B shares (aprobado AGM 2026)
+
+### Total cash return 2026: $2.1B
+
+(~6.3% del market cap)
+
+## Decarbonización & Fleet
+
+- **Net-zero target: 2040** (10 años antes de IMO 2050)
+- **Methanol dual-fuel fleet**: 19 buques al end-2025 (vs 1 en 2023), +6 en 2026, 25 dual-fuel para 2027
+- 800,000 TEU fleet renewal program activo
+- 6 buques 17,480-TEU methanol entregados (último: Barcelona Mærsk, ene 2026)
+- 20 dual-fuel vessels (300,000 TEU) on order across 3 shipyards
+- Laura Mærsk recibió primer e-methanol comercial de Kassø (Dinamarca, mayo 2025), 42,000 t/yr capacity
+
+**Industry orderbook = 33.5% del fleet existente** (~11.3M TEU on order). Históricamente extremo.
+
+## Macro / Cycle Context
+
+- **2025 demanda global containerized: +3.5-4.2%**
+- **2026 consensus: +3.0%**
+- **2026 supply growth: +3.6%** = oversupply ~60 bps
+- Industry overcapacity: ~27% promedio 2026-2028
+- Industry P&L: ~$60B profit 2024 → ~$20B 2025 → forecast **~$10B PÉRDIDA AGREGADA 2026**
+
+### US-China
+
+- Imports US-de-China: **-28% YoY 2025**, Q1 2026 sigue -30%
+- Top-5 carriers reportan -33%+ booking decline en TPEB eastbound
+- Sourcing displacement: Indonesia US imports +34% en 2025; Tailandia +28%
+- US-China truce = **12-month, no estructural**
+
+## ZIM-Hapag Print = Floor de Valuación
+
+- **Feb 2026**: Hapag-Lloyd anunció acquisition de ZIM
+- **Precio: $35/acción cash = $4.2B deal**
+- Premium: **58% sobre Feb 13, 2026 close**
+- **Implied multiple: ~1.06x P/B**
+
+Mærsk hoy: 0.61x P/B. ZIM print 1.06x P/B sobre un competidor más pequeño y menos integrado.
+
+**Si Mærsk cotizara a 1.0x P/B = $19/ADR (+65% upside).**
+
+ZIM (post-deal) está siendo escindido en "New ZIM" como Israeli spinoff — los activos no-Israelíes van a Hapag-Lloyd.
+
+## Peer Set
+
+| Compañía | P/E TTM | P/B | Notas |
+|----------|---------|-----|-------|
+| Mærsk B (MAERSK-B / AMKBY) | 12.93 | **0.61** | trades below book |
+| Hapag-Lloyd (HLAG.DE) | n/a precise | 1.12-1.18 | EUR 115-118; mkt cap €21B |
+| ZIM | 2.64 (pre-deal) | 1.06x (deal print) | siendo adquirido |
+| COSCO Shipping (1919.HK) | 3.8-11.9 | 0.53-1.24 | range amplio entre fuentes |
+| Mitsui O.S.K. (9104.T) | 2.5-10 | n/a | Elliott built stake mar 2026 (+11%) |
+
+**Mærsk = la grande más barata en book.** Solo COSCO comparable, pero menos líquida y con riesgo China geopolitical.
+
+## Métricas Financieras
+
+| Métrica | Valor |
+|---------|-------|
+| **AMKBY price** | $11.51 |
+| **MAERSK-B price** | DKK 14,720 |
+| **Market Cap** | $33.4B |
+| **P/E TTM** | 12.93x |
+| **P/B** | 0.61x |
+| **EPS TTM (ADR)** | $0.89 |
+| **Book Value (ADR)** | $18.95 |
+| **Dividend** | $0.37/ADR |
+| **Yield** | 3.23% |
+| **Buyback 2026** | $1.0B |
+| **Total Return 2026** | $2.1B |
+| **FY 2025 Revenue** | $54.0B |
+| **FY 2025 EBIT** | $3.5B |
+| **FY 2025 EBITDA** | $9.5B |
+| **FY 2026 EBIT Guidance** | -$1.5B a +$1.0B |
+| **FY 2026 FCF Guidance** | ≥ -$3.0B |
+| **Net Income FY 2025** | $2.9B |
+
+## Por Qué Ahora
+
+### 1. Suez Return Estancándose
+SCFI +39% YoY. Houthi attacks 28 feb + 28 mar 2026. Tránsitos Suez -60% vs 2023. Tarifas más altas que hace un año, no colapsando como guidance asume.
+
+### 2. Discount a Print Privado de M&A
+ZIM vendido a 1.06x P/B. Mærsk a 0.61x = ~40% descuento implícito al deal print más reciente del sector.
+
+### 3. Terminals + L&S Cubren Dividendo Solos
+$2.4B EBIT combinado de los segments no-Ocean. Dividendo $1.05B + buyback $1B = $2.05B salidas. Cubierto sin necesidad de Ocean profit.
+
+### 4. Vincent Clerc Disciplinado
+1,000 layoffs feb-mar 2026 + $160M cost-out. Doble apuesta a integrator, no spinoff. Lead estructural en methanol fleet.
+
+### 5. Accounting Tailwind de $700M
+Useful life 20→25 años efectivo 1 enero 2026 = $700M más EBIT GAAP en 2026 puramente por accounting (real para earnings reportados).
+
+### 6. Capital Return Sustainable
+$2.1B total 2026 = 6.3% del market cap. Buyback a 0.61x P/B = accretion instantáneo a book per share.
+
+### 7. Optionality Asimétrica
+Floor: P/B 0.61 hard. Ceiling: si Suez no normaliza + L&S/Terminals siguen creciendo + ZIM print holds = re-rate fácil a 1.0x P/B = +65%.
+
+## Riesgos
+
+### 1. Doble Oferta cuando Suez Normalice
+6-8% capacidad efectiva liberada instantáneamente. HSBC: -9 a -16% en tarifas. Acelerada: -10% adicional.
+
+### 2. Sobrecapacidad Estructural
+33.5% orderbook/fleet. Supply +3.6% vs demanda +3.0% en 2026. Industry forecast: ~$10B PÉRDIDA AGREGADA carriers 2026.
+
+### 3. US-China Estructural
+Imports -28% YoY 2025. Truce 12-meses. Sourcing displacement permanente. TPEB no se recupera fast.
+
+### 4. FCF Negativo 2026
+-$3B FCF mientras paga $2.05B a accionistas = balance sheet absorbe. Sostenible 1-2 años; problemático si cycle bottom dura más.
+
+### 5. Houthi/Iran Reanudación
+Ataques feb-mar 2026 ya restauraron diversion parcial. Escalada Iran amplía riesgo.
+
+### 6. Dividend Cut Riesgo
+DKK 480 (40% payout) sostenible con $2.9B net income 2025. Si EBIT entra en pérdida 2026, dividendo 2027 podría re-cortarse.
+
+### 7. Gemini Share Loss
+Capacidad fija by design = pierde share relativa mientras competidores expanden. Reliability premium puede no compensar.
+
+### 8. Single-Analyst -$0.28 EPS 2027
+Refleja escenario trough completo. Consenso amplio Moderate Sell con mediana DKK 13,245 = -10% downside.
+
+### 9. Q1 2026 = 7 mayo 2026
+Primer test post-guidance. Cualquier guide cut adicional = -10-15% día 1.
+
+### 10. Bunker Fuel Volatilidad
+VLSFO Singapore puede absorber 8-12% del Ocean revenue. Iran tensiones disparan double-whammy. Hedging cubre 20-30% típicamente.
+
+## Conclusión
+
+AMKBY a $11.51 te permite comprar:
+
+1. **El #2 global de shipping** + el integrador logístico más grande del mundo
+2. **0.61x P/B** vs ZIM-Hapag deal print de 1.06x P/B = ~40% descuento implícito al benchmark privado
+3. **Terminals + L&S** ($2.4B EBIT combinado) que cubren el cash return entero solas
+4. **3.23% dividend yield** + $1B buyback = 6.3% total return on market cap
+5. **Optionality binaria** sobre Suez geopolítica — guidance asume normalización rápida que no está pasando
+6. **Lead structural en methanol** fleet (19 buques end-2025 vs 1 en 2023) con EU ETS asimétrico contra competencia tradicional
+
+La tesis no es "shipping vuelve a 2024 super-cycle". Es: **el bottom es shallower than priced, los segments no-Ocean inflexionan arriba, y los compradores estratégicos privados pagan 1.06x P/B por activos cíclicos similares**. Si Suez no normaliza fast → upside de guidance. Si normaliza → P/B 0.61 floor + buyback accretive + dividendo 3.23%. Asimetría que rara vez existe en large-cap.
+
+---
+
+*Research fecha: 27 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: 10.4,
+    analyst_upside: -9.6,
+    status: "active",
+    first_researched_at: "2026-04-27T00:00:00Z",
+    last_updated_at: "2026-04-27T00:00:00Z",
+    next_review_at: "2026-10-27T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -8058,6 +8705,28 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #51* — Apr 24, 2026\n\n🏢 *Moody's Corporation* (MCO) — $457.97\n\n🛍️ *Sus marcas/líneas*: Moody's Investors Service (la agencia de calificación crediticia — quien pone Aaa, Aa1, Baa2 a los bonos del mundo), Moody's Analytics (software de riesgo crediticio CreditView y BondX), RMS (modelos de huracán, terremoto y climate risk — los usa cada aseguradora global), Bureau van Dijk (base de datos de 500M+ empresas usada para KYC y due diligence), Moody's Assistant (asistente de AI lanzado con Microsoft en 2024).\n\n🌍 *Presencia*: Estados Unidos — HQ en 7 World Trade Center, Nueva York. ~16,000 empleados en 40+ países. Fundada en 1909 por John Moody — el mismo que en 1900 publicó el primer manual estandarizado de bonos ferrocarrileros de EE.UU., creando de la nada la industria del análisis de crédito. Junto con S&P Global forma un duopolio que califica más del 80% de toda la deuda pública y privada del planeta.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.91% anual* solo por ser dueño. Cada vez que Apple, Exxon o un gobierno emite bonos nuevos — le tienen que pagar a Moody's para calificarlos. Cada vez que un banco consulta CreditView, una aseguradora usa RMS para modelar un huracán, o un compliance officer hace KYC con Bureau van Dijk — parte de ese dinero llega a ti como dividendo. Llevan *17 años consecutivos subiendo dividendo* (+14.8% el aumento más reciente en marzo 2026), y acaban de autorizar $2.5 mil millones en recompra de acciones para 2026.\n\n⚠️ *El riesgo*: El 37% del revenue viene de emisiones de bonos nuevos — si un shock de mercado (crisis 2008, crunch de liquidez, Fed sorpresivamente hawkish) frena la emisión, ese revenue puede caer 15-25% en un trimestre. Q4 2022 fue recordatorio: emisión high-yield cayó 80% YoY y el stock -40%. Además: P/E forward 27x no es barato — cualquier miss genera downside grande.\n\n🆕 Posición #51\n🔗 https://vectorialdata.com/stocks/MCO\n✅ Certificado por blockchain → vectorialdata.com/verify/MCO\n\n💡 Dato que ancla la tesis: Warren Buffett empezó a comprar Moody's en 2000 cuando hizo spin-off de Dun & Bradstreet, y en 26 años **nunca ha vendido una sola acción**. Berkshire Hathaway posee hoy 24.7M acciones (~13% de la compañía entera, $11.3B). Buffett ha admitido públicamente que no la compraría al precio actual — pero la mantiene porque, cito, "es una de las mejores franquicias del mundo". ¿Por qué? Porque Moody's tiene el moat más matemáticamente imposible de replicar de Wall Street: para competir necesitas (1) status NRSRO de la SEC, que no aprueban hace décadas; (2) 100+ años de historial auditado de ratings — cada bono del mundo se compara contra la escala de Moody's; (3) integración con los sistemas de risk management de todos los bancos Tier 1. Y encima, el 63% del revenue ya no viene de ratings — viene de Moody's Analytics, que es 96% suscripciones recurrentes tipo SaaS. Es decir: MCO es un SaaS disfrazado de agencia de calificación, con un duopolio regulatorio protegido por la SEC, con Buffett como accionista eterno. Hace 2 días (22 abril) reportaron Q1 2026 con adj EPS $4.33 beat de $0.32, subieron guidance FY26 a $16.40-$17.00, y anunciaron $2.5B en buybacks. No es una tesis de turnaround ni de multi-bagger. Es una tesis de *compounder aburrido mantenido por décadas*: ~10% EPS growth anual + 1% dividend + 3% buyback yield = ~14% retorno total annualizado, con moat que sobrevive recesiones, AI, y la muerte térmica del universo.`,
     attestation_uid: "0xf5d0d3deba5e26819aeb64712c25ce64eef4ee61566bf7d460017e267727e091",
   },
+  {
+    id: 52,
+    stock_id: 54,
+    ticker: "GILD",
+    type: "new" as const,
+    cycle_number: 11,
+    price: 129.83,
+    date: "2026-04-27",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #52* — Apr 27, 2026\n\n🏢 *Gilead Sciences* (GILD) — $129.83\n\n🛍️ *Sus marcas/líneas*: Biktarvy (el régimen de HIV #1 mundial — $14.3B en 2025, lo toman millones de personas a diario), Descovy (PrEP diaria para prevenir HIV), *Yeztugo* (lenacapavir — el primer y único PrEP **inyectable de 6 meses**, aprobado por la FDA en junio 2025), Trodelvy (quimio dirigida para cáncer de mama triple-negativo), Yescarta y Tecartus (terapias CAR-T contra linfomas), Veklury (remdesivir, el antiviral COVID), Vemlidy y Epclusa (Hepatitis B y C).\n\n🌍 *Presencia*: Estados Unidos — HQ en Foster City, California. ~17,000 empleados en 40+ países. Fundada en 1987 por Michael Riordan, un médico de 29 años. Hoy sus medicamentos de HIV se distribuyen a más de 200 países a través de PEPFAR y el Global Fund — la familia farma que más vidas ha extendido en la era moderna del HIV.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.52% anual* solo por ser dueño. Cada vez que un paciente toma su Biktarvy diaria, recibe una inyección semestral de Yeztugo, o un hospital infunde Yescarta a un paciente con linfoma — parte de ese dinero llega a ti como dividendo. Llevan *10 años consecutivos subiendo dividendo* (+3.8% en febrero 2026), y tienen $6 mil millones autorizados en recompra de acciones.\n\n⚠️ *El riesgo*: La negociación de Medicare bajo IRA seleccionó Biktarvy en el ciclo 3 — el precio negociado entrará en vigor el 1 de enero de 2028. Biktarvy Medicare = ~8% del revenue total proyectado de Gilead 2027, una exposición desproporcionada vs peers. Plus: $16B desplegados en M&A en 60 días (Arcellx + Tubulis + Ouro) = mucha integración simultánea — ejecutar 3 deals a la vez sin churn de talento clave es inusual.\n\n🆕 Posición #52\n🔗 https://vectorialdata.com/stocks/GILD\n✅ Certificado por blockchain → vectorialdata.com/verify/GILD\n\n💡 Dato que ancla la tesis: en junio de 2024, Gilead reportó los resultados del estudio PURPOSE-1 de Yeztugo (lenacapavir) — y produjo el resultado clínico más limpio del año en farma global: **0 infecciones de HIV en 2,134 mujeres** que recibieron la inyección semestral, vs 16 infecciones en el grupo de control con Truvada diaria. **100% de protección.** PURPOSE-2 (hombres + diversidad de género): 2 infecciones en 2,179 = 99.9%. La FDA aprobó Yeztugo en junio 2025; Q3 2025 ventas $39M, FY 2025 $150M, guidance 2026 ~$800M. Mizuho proyecta peak de **$8 mil millones anuales** y llama el guidance "probablemente conservador". Por qué importa: el PrEP diaria de Truvada cuesta a USA ~$23B/año en Medicaid + comercial; Yeztugo es 2 visitas al año vs 365 píldoras → adherencia que pasa de 60% a >95%. Y mientras Yeztugo ramps, Biktarvy acaba de extender patente a abril 2036 (settlements firmados con Lupin, Cipla, Laurus Labs en 2025) = ~$45B+ adicionales en revenue protegido vs el modelo previo. Hoy 27 abril vence la oferta tender de Arcellx — Gilead anunció el deal $7.8B en febrero, aprobaciones regulatorias completadas el 17 abril, cierre de la operación esta semana convierte a Gilead de "socio CAR-T" a **dueño 100% de un BCMA CAR-T best-in-class** con PDUFA el 23 de diciembre 2026 (iMMagine-1: ORR 96%, CR/sCR 74%). El stock cotiza a P/E forward 13.5x mientras EPS crece +25% en 2026 (guidance $8.45-$8.85 vs $6.78 TTM) = PEG ~0.5x, uno de los más baratos en farma large-cap. Bristol-Myers a 9.5x con revenue declinando, Pfizer a 9-10x con payout 107%, Merck a 13x con cliff de Keytruda 2028, AbbVie a 16x. GILD es el único del set con pipeline robusto + P/E forward sub-15 + dividendo creciendo + Strong Buy consenso (33 Buy / 3 Hold / 0 Sell) y mediana target $160 = +23% upside.`,
+  },
+  {
+    id: 53,
+    stock_id: 55,
+    ticker: "AMKBY",
+    type: "new" as const,
+    cycle_number: 11,
+    price: 11.51,
+    date: "2026-04-27",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #53* — Apr 27, 2026\n\n🏢 *A.P. Møller-Mærsk* (AMKBY) — $11.51\n\n🛍️ *Sus marcas/líneas*: Maersk Line (el #2 mundial de shipping de contenedores, 726 buques, 4.5M TEU de capacidad, 14% market share global — los famosos contenedores azul cielo cruzando océanos), APM Terminals (65 terminales portuarios globales — la joya del portafolio, ROIC 16% y EBIT margin >30%), Maersk Logistics (warehousing, e-commerce delivery, customs, last-mile), Svitzer (remolcadores y servicios portuarios), la *Gemini Cooperation* (alianza con Hapag-Lloyd lanzada feb 2025 — schedule reliability 92.3% vs 62.4% del promedio industria).\n\n🌍 *Presencia*: Dinamarca — HQ en Copenhague. ~95,000 empleados en 130 países. Fundada en 1904 por A.P. Møller y Peter Mærsk-Møller en Svendborg. La familia Møller aún controla ~42% de los votos vía A.P. Møller Holding. Es el integrador logístico más grande del planeta — si compras algo importado, hay alta probabilidad de que cruzó un buque, terminal o warehouse de Mærsk.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.23% anual* solo por ser dueño. Cada vez que un contenedor sale de Shanghai a Rotterdam en un buque azul, atraca en un terminal APM, o un retailer paga el warehousing de su mercancía navideña — parte de ese dinero llega a ti como dividendo. El programa de capital return 2026 = *$2.1 mil millones combinados* (DKK 480 dividendo + $1B buyback) — y cada acción que recompran a P/B 0.61x es accretive instantáneo.\n\n⚠️ *El riesgo*: Si el regreso completo Cape→Suez se materializa rápido, libera 6-8% de capacidad efectiva global instantáneamente. HSBC modeló decline de tarifas 9-16% en ese escenario; Mærsk podría entrar en pérdida operativa neta — la propia guidance lo refleja con floor EBIT -$1.5B en 2026. Plus: orderbook industria = 33.5% del fleet existente (~11.3M TEU on order) — históricamente niveles >25% han precedido cycles bear de 3-5 años.\n\n🆕 Posición #53\n🔗 https://vectorialdata.com/stocks/AMKBY\n✅ Certificado por blockchain → vectorialdata.com/verify/AMKBY\n\n💡 Dato que ancla la tesis: el 28 de febrero y el 28 de marzo de 2026, los Houthis volvieron a amenazar y atacar buques en el Mar Rojo, atado a la escalada US-Israel-Irán. **El "Suez return" se está estancando.** Volumen de tránsitos por Suez todavía -60% vs 2023. Xeneta (la voz autoritativa de freight rates) lo dijo así: "esto destroza la esperanza de un retorno de gran escala al Mar Rojo en 2026". El SCFI (índice de tarifas Shanghai-global) cerró el 27 abril en 1,875 puntos = **+39% YoY**. Tarifas están MÁS ALTAS que hace un año, no colapsando. Y mientras tanto, el 23 de febrero 2026, Hapag-Lloyd compró ZIM a $35/acción = **1.06x P/B** ($4.2B deal, 58% premium al close pre-anuncio). Eso establece un piso conceptual: estrategos pagan 1.06x book por shipping cíclico. Mærsk hoy cotiza a 0.61x book = ~40% de descuento implícito al deal print. Si Mærsk re-ratea a 1.0x book = $19/ADR (+65%). Mientras tanto, los segmentos no-Ocean inflexionan al alza: Terminals EBIT FY2025 +31% a $1.7B con ROIC 16.1%; Logistics & Services EBIT +36% a $729M. Los dos juntos = $2.4B EBIT combinado, suficiente para cubrir el dividendo 2026 entero ($1.05B) y el buyback de $1B. Si Ocean entra en pérdida operativa, los segmentos buenos siguen pagando el cash flow a accionistas. Es una apuesta contraria asimétrica: si Suez no normaliza fast → upside masivo de guidance. Si normaliza → P/B 0.61 floor + buyback accretive + dividendo 3.23%. La asimetría que rara vez existe en large-cap.`,
+  },
 ];
 
 export const cycles = [
@@ -8146,7 +8815,7 @@ export const cycles = [
     cycle_number: 11,
     type: "new" as const,
     target_count: 5,
-    current_count: 1,
+    current_count: 3,
     status: "active" as const,
   },
 ];
