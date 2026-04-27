@@ -12,7 +12,7 @@ export const maxDuration = 60;
 // so we route this single function through Frankfurt.
 export const preferredRegion = "fra1";
 
-const TIME_RANGES: BinanceTimeRange[] = ["30D", "90D", "180D"];
+const TIME_RANGES: BinanceTimeRange[] = ["30D", "90D", "180D", "365D"];
 
 export async function GET(request: Request) {
   const authHeader = request.headers.get("authorization");

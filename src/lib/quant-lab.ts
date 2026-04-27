@@ -32,13 +32,22 @@ export interface QuantLabSnapshot {
   total_copy_count: number | null;
 }
 
+export type CurveTab = "inception" | "30D" | "90D" | "365D";
+
+export interface QuantLabCurve {
+  tab: CurveTab;
+  label: string;
+  caption: string;
+  bot: Array<{ t: string; roi: number }>;
+  benchmark: { symbol: string; label: string; series: Array<{ t: string; roi: number }> } | null;
+}
+
 export interface QuantLabBotView {
   bot: QuantLabBot;
   latest: QuantLabSnapshot | null;
-  equityCurve: Array<{ t: string; roi: number }>;
-  benchmark: { symbol: string; label: string; series: Array<{ t: string; roi: number }> } | null;
+  curves: QuantLabCurve[];
+  defaultTab: CurveTab;
   daysLive: number;
-  simulatedCopier: { invested: number; wouldBe: number } | null;
 }
 
 export async function getBot(slug: string): Promise<QuantLabBot | null> {
@@ -64,7 +73,7 @@ export async function getAllBots(): Promise<QuantLabBot[]> {
 export interface QuantLabBotCard {
   bot: QuantLabBot;
   latest: QuantLabSnapshot | null;
-  sparkline: Array<{ t: string; roi: number }>; // 30D ROI series
+  sparkline: Array<{ t: string; roi: number }>;
   daysLive: number;
 }
 
@@ -103,49 +112,35 @@ export async function getAllBotCards(): Promise<QuantLabBotCard[]> {
   });
 }
 
-export async function getBotView(slug: string): Promise<QuantLabBotView | null> {
-  const bot = await getBot(slug);
-  if (!bot) return null;
-
-  const admin = getSupabaseAdmin();
-  const { data: snaps } = await admin
-    .from("quant_lab_snapshots")
-    .select("*")
-    .eq("bot_id", bot.id)
-    .eq("time_range", "30D")
-    .order("captured_at", { ascending: true });
-
-  const list = (snaps as QuantLabSnapshot[] | null) ?? [];
-  const latest = list[list.length - 1] ?? null;
-  const equityCurve = list
-    .filter((s) => s.roi !== null)
-    .map((s) => ({ t: s.captured_at, roi: Number(s.roi) }));
-
-  const startedAt = new Date(bot.started_at).getTime();
-  const daysLive = Math.max(
-    0,
-    Math.floor((Date.now() - startedAt) / (1000 * 60 * 60 * 24))
-  );
-
-  const simulatedCopier = latest?.roi != null
-    ? { invested: 100, wouldBe: 100 * (1 + Number(latest.roi) / 100) }
-    : null;
-
-  const benchmark = await getBenchmarkForAssetClass(bot.asset_class, equityCurve);
-
-  return { bot, latest, equityCurve, benchmark, daysLive, simulatedCopier };
-}
-
 const BENCHMARKS: Record<string, { symbol: string; label: string }> = {
   crypto: { symbol: "BTC-USD", label: "BTC" },
+  "crypto-futures": { symbol: "BTC-USD", label: "BTC" },
   stocks: { symbol: "SPY", label: "S&P 500" },
   metals: { symbol: "GC=F", label: "Oro" },
 };
 
-async function getBenchmarkForAssetClass(
+function pickInceptionRange(daysLive: number): string {
+  if (daysLive <= 30) return "30D";
+  if (daysLive <= 90) return "90D";
+  if (daysLive <= 180) return "180D";
+  return "365D";
+}
+
+const fmtDateES = (iso: string) => {
+  const d = new Date(iso);
+  return d.toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" });
+};
+
+function snapsToSeries(snaps: QuantLabSnapshot[]): Array<{ t: string; roi: number }> {
+  return snaps
+    .filter((s) => s.roi !== null)
+    .map((s) => ({ t: s.captured_at, roi: Number(s.roi) }));
+}
+
+async function fetchBenchmark(
   assetClass: string,
   botSeries: Array<{ t: string; roi: number }>,
-): Promise<QuantLabBotView["benchmark"]> {
+): Promise<QuantLabCurve["benchmark"]> {
   const cfg = BENCHMARKS[assetClass];
   if (!cfg || botSeries.length < 2) return null;
   try {
@@ -176,4 +171,86 @@ async function getBenchmarkForAssetClass(
     console.error("benchmark fetch failed", cfg.symbol, e);
     return null;
   }
+}
+
+export async function getBotView(slug: string): Promise<QuantLabBotView | null> {
+  const bot = await getBot(slug);
+  if (!bot) return null;
+
+  const admin = getSupabaseAdmin();
+  const { data: snaps } = await admin
+    .from("quant_lab_snapshots")
+    .select("*")
+    .eq("bot_id", bot.id)
+    .order("captured_at", { ascending: true });
+
+  const all = (snaps as QuantLabSnapshot[] | null) ?? [];
+  const byRange = new Map<string, QuantLabSnapshot[]>();
+  for (const s of all) {
+    const arr = byRange.get(s.time_range) ?? [];
+    arr.push(s);
+    byRange.set(s.time_range, arr);
+  }
+
+  const list30D = byRange.get("30D") ?? [];
+  const latest = list30D[list30D.length - 1] ?? null;
+
+  const startedAt = new Date(bot.started_at).getTime();
+  const daysLive = Math.max(
+    0,
+    Math.floor((Date.now() - startedAt) / (1000 * 60 * 60 * 24))
+  );
+
+  const inceptionRange = pickInceptionRange(daysLive);
+  const startedDateLabel = fmtDateES(bot.started_at);
+
+  const curves: QuantLabCurve[] = [];
+
+  const inceptionSeries = snapsToSeries(byRange.get(inceptionRange) ?? []);
+  const inceptionBench = await fetchBenchmark(bot.asset_class, inceptionSeries);
+  curves.push({
+    tab: "inception",
+    label: `Desde inicio (${daysLive}d)`,
+    caption: `ROI acumulado desde ${startedDateLabel}.`,
+    bot: inceptionSeries,
+    benchmark: inceptionBench,
+  });
+
+  if (daysLive > 30) {
+    curves.push({
+      tab: "30D",
+      label: "30d",
+      caption: "ROI de los últimos 30 días (ventana móvil).",
+      bot: snapsToSeries(byRange.get("30D") ?? []),
+      benchmark: null,
+    });
+  }
+
+  if (daysLive > 90) {
+    curves.push({
+      tab: "90D",
+      label: "90d",
+      caption: "ROI de los últimos 90 días (ventana móvil).",
+      bot: snapsToSeries(byRange.get("90D") ?? []),
+      benchmark: null,
+    });
+  }
+
+  if (daysLive > 365) {
+    curves.push({
+      tab: "365D",
+      label: "365d",
+      caption: "ROI de los últimos 365 días (ventana móvil).",
+      bot: snapsToSeries(byRange.get("365D") ?? []),
+      benchmark: null,
+    });
+  }
+
+  return {
+    bot,
+    latest,
+    curves,
+    defaultTab: "inception",
+    daysLive,
+  };
 }

@@ -54,7 +54,7 @@ export default async function BotDetailPage({
 
       <BotHero bot={view.bot} latest={view.latest} daysLive={view.daysLive} />
       <DisclosureBanner />
-      <EquityCurve series={view.equityCurve} benchmark={view.benchmark} />
+      <EquityCurve curves={view.curves} defaultTab={view.defaultTab} />
       <SimulatedCopierCard roi={roi} />
       <HowToCopy
         leadDetailsUrl={view.bot.lead_details_url}
