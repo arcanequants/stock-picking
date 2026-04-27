@@ -81,14 +81,18 @@ export default async function QuantLabPage() {
         <h1 className="text-3xl md:text-4xl font-semibold mb-3">Quant Lab</h1>
         <p className="text-text-muted max-w-2xl leading-relaxed">
           El laboratorio cuantitativo de Vectorial Data. Mientras el portafolio
-          principal hace stock-picking discrecional, aquí experimentamos con
-          estrategias sistemáticas en cripto, acciones y metales. Cada bot
-          muestra su performance pública en tiempo real — sin curvas ajustadas,
-          sin promesas.
+          principal hace stock-picking discrecional, aquí ponemos a prueba
+          estrategias sistemáticas en público. Cada bot muestra su performance
+          en tiempo real — sin curvas ajustadas, sin promesas.
         </p>
       </header>
 
       <div className="grid gap-4 md:grid-cols-2">
+        {cards.length === 0 && (
+          <p className="text-sm text-text-muted md:col-span-2">
+            Aún no hay bots públicos. Vuelve pronto.
+          </p>
+        )}
         {cards.map(({ bot, latest, sparkline, daysLive }) => {
           const chip = chipFor(bot.asset_class);
           const roi = latest?.roi != null ? Number(latest.roi) : null;
@@ -153,18 +157,6 @@ export default async function QuantLabPage() {
             </Link>
           );
         })}
-
-        {/* Próximamente placeholders — set the narrative that this is a multi-asset lab */}
-        <PlaceholderCard
-          title="Stocks Bot"
-          subtitle="Estrategia sistemática multi-factor en acciones US"
-          chip={chipFor("stocks")}
-        />
-        <PlaceholderCard
-          title="Metals Bot"
-          subtitle="Asignación dinámica oro / plata vs. tasas reales"
-          chip={chipFor("metals")}
-        />
       </div>
 
       <div className="mt-10 p-4 border border-border rounded-xl text-xs text-text-faint">
@@ -176,33 +168,6 @@ export default async function QuantLabPage() {
           intermediación la realiza el exchange correspondiente.
         </p>
       </div>
-    </div>
-  );
-}
-
-function PlaceholderCard({
-  title,
-  subtitle,
-  chip,
-}: {
-  title: string;
-  subtitle: string;
-  chip: { label: string; bg: string; text: string; border: string };
-}) {
-  return (
-    <div className="block border border-dashed border-border rounded-2xl p-5 bg-surface/50">
-      <div className="flex items-start justify-between mb-3 gap-3">
-        <div>
-          <h2 className="text-xl font-semibold text-text-muted">{title}</h2>
-          <p className="text-xs text-text-faint mt-0.5">Próximamente</p>
-        </div>
-        <span
-          className={`text-[10px] font-semibold uppercase tracking-wider px-2 py-1 rounded-full border ${chip.bg} ${chip.text} ${chip.border} opacity-70`}
-        >
-          {chip.label}
-        </span>
-      </div>
-      <p className="text-sm text-text-faint leading-relaxed">{subtitle}</p>
     </div>
   );
 }

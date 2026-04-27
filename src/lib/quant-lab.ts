@@ -36,6 +36,7 @@ export interface QuantLabBotView {
   bot: QuantLabBot;
   latest: QuantLabSnapshot | null;
   equityCurve: Array<{ t: string; roi: number }>;
+  benchmark: { symbol: string; label: string; series: Array<{ t: string; roi: number }> } | null;
   daysLive: number;
   simulatedCopier: { invested: number; wouldBe: number } | null;
 }
@@ -130,5 +131,49 @@ export async function getBotView(slug: string): Promise<QuantLabBotView | null> 
     ? { invested: 100, wouldBe: 100 * (1 + Number(latest.roi) / 100) }
     : null;
 
-  return { bot, latest, equityCurve, daysLive, simulatedCopier };
+  const benchmark = await getBenchmarkForAssetClass(bot.asset_class, equityCurve);
+
+  return { bot, latest, equityCurve, benchmark, daysLive, simulatedCopier };
+}
+
+const BENCHMARKS: Record<string, { symbol: string; label: string }> = {
+  crypto: { symbol: "BTC-USD", label: "BTC" },
+  stocks: { symbol: "SPY", label: "S&P 500" },
+  metals: { symbol: "GC=F", label: "Oro" },
+};
+
+async function getBenchmarkForAssetClass(
+  assetClass: string,
+  botSeries: Array<{ t: string; roi: number }>,
+): Promise<QuantLabBotView["benchmark"]> {
+  const cfg = BENCHMARKS[assetClass];
+  if (!cfg || botSeries.length < 2) return null;
+  try {
+    const startMs = new Date(botSeries[0].t).getTime();
+    const endMs = new Date(botSeries[botSeries.length - 1].t).getTime();
+    const period1 = Math.floor((startMs - 86400_000) / 1000);
+    const period2 = Math.floor(endMs / 1000);
+    const url = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(cfg.symbol)}?period1=${period1}&period2=${period2}&interval=1d`;
+    const res = await fetch(url, {
+      headers: { "User-Agent": "Mozilla/5.0" },
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return null;
+    const json = (await res.json()) as {
+      chart?: { result?: Array<{ timestamp?: number[]; indicators?: { quote?: Array<{ close?: Array<number | null> }> } }> };
+    };
+    const result = json.chart?.result?.[0];
+    const ts = result?.timestamp ?? [];
+    const closes = result?.indicators?.quote?.[0]?.close ?? [];
+    const pairs = ts
+      .map((t, i) => ({ t: new Date(t * 1000).toISOString(), c: closes[i] }))
+      .filter((p): p is { t: string; c: number } => typeof p.c === "number");
+    if (pairs.length < 2) return null;
+    const base = pairs[0].c;
+    const series = pairs.map((p) => ({ t: p.t, roi: ((p.c - base) / base) * 100 }));
+    return { symbol: cfg.symbol, label: cfg.label, series };
+  } catch (e) {
+    console.error("benchmark fetch failed", cfg.symbol, e);
+    return null;
+  }
 }

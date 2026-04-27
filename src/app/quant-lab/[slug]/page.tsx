@@ -6,7 +6,6 @@ import DisclosureBanner from "./_components/DisclosureBanner";
 import BotHero from "./_components/BotHero";
 import EquityCurve from "./_components/EquityCurve";
 import SimulatedCopierCard from "./_components/SimulatedCopierCard";
-import CopierPnLExplainer from "./_components/CopierPnLExplainer";
 import HowToCopy from "./_components/HowToCopy";
 import RisksSection from "./_components/RisksSection";
 import AlertSubscribeForm from "./_components/AlertSubscribeForm";
@@ -53,13 +52,10 @@ export default async function BotDetailPage({
         </Link>
       </nav>
 
-      <DisclosureBanner />
       <BotHero bot={view.bot} latest={view.latest} daysLive={view.daysLive} />
-      <EquityCurve series={view.equityCurve} />
-      <div className="grid gap-5 md:grid-cols-2">
-        <SimulatedCopierCard roi={roi} />
-        <CopierPnLExplainer latest={view.latest} />
-      </div>
+      <DisclosureBanner />
+      <EquityCurve series={view.equityCurve} benchmark={view.benchmark} />
+      <SimulatedCopierCard roi={roi} />
       <HowToCopy
         leadDetailsUrl={view.bot.lead_details_url}
         referralUrl={view.bot.referral_url}
