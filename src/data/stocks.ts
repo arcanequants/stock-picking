@@ -8053,6 +8053,282 @@ La tesis no es "shipping vuelve a 2024 super-cycle". Es: **el bottom es shallowe
     last_updated_at: "2026-04-27T00:00:00Z",
     next_review_at: "2026-10-27T00:00:00Z",
   },
+  {
+    id: 56,
+    ticker: "CP",
+    name: "Canadian Pacific Kansas City",
+    sector: "Industrials",
+    industry: "Railroads (North American)",
+    country: "Canada",
+    region: "North America",
+    currency: "USD",
+    price: 87.30,
+    pe_ratio: 25.98,
+    pe_forward: 23.70,
+    dividend_yield: 0.76,
+    market_cap_b: 78.47,
+    eps: 3.29,
+    summary_short:
+      "El único ferrocarril del mundo que conecta México, Estados Unidos y Canadá en una sola línea operada — un activo físicamente irreplicable creado por la fusión Canadian Pacific + Kansas City Southern (cerrada 14 abril 2023, aprobada por STB con oversight 7 años). Q4 2025: revenue CAD $3.9B (+1% YoY), EPS CAD $1.33 (+3%), Operating Ratio 55.9% (-120bps mejora). FY2025: revenue CAD $15.1B (+4%), EPS CAD $4.61 (+8.8%). Guidance FY2026: volume growth mid-single-digit, EPS growth low-double-digit. Reporta Q1 2026 mañana 29 abril 2026 — primer trimestre con sinergias CPKC 100% maduras (target $1B+ anuales para 2028). Cotiza cerca de 52w high ($89.42); P/E forward 23.7x vs UNP 19x, NSC 18x — premium justificado por moat geográfico único.",
+    summary_what:
+      "Canadian Pacific Kansas City Limited (CPKC) es el primer y único ferrocarril Clase I que opera una sola red continua entre México, Estados Unidos y Canadá. Fundada como Canadian Pacific Railway en 1881 (el ferrocarril que físicamente unió Canadá y permitió la confederación de British Columbia). HQ en Calgary, Alberta. **CEO: Keith Creel** — discípulo directo de Hunter Harrison (el padre del Precision Scheduled Railroading), CEO desde 2017. **La fusión CPKC** (cerrada 14 abril 2023, $31B en stock + cash) es el deal ferroviario más importante de las últimas 4 décadas: Canadian Pacific (red Canadá-US Midwest) + Kansas City Southern (red US Sur-México) creó un single-line corridor de 32,000 km Vancouver → Detroit → Houston → Lázaro Cárdenas/Veracruz. Es la ÚNICA forma física de mover carga entre los tres países sin transbordos. La STB aprobó el deal con condiciones únicas: 7 años de oversight, gateways neutrales, employee protection. La integración entró en fase final 2025-2026. ~20,000 empleados, ~3,000 locomotoras. Tres segmentos de carga: (1) **Bulk (~37% revenue)**: granos canadienses, potasa, carbón térmico/met, fertilizantes. La franquicia de granos canadiense es la mejor del continente — Canadian Pacific maneja el 50%+ del trigo, canola, oats que sale de las praderas; (2) **Merchandise (~33% revenue)**: químicos, plásticos, energía (crude by rail), forest products, autos finished + partes, metales; el segmento que más se beneficia del deal CPKC vía cross-border auto plants Mexico-US-Canada; (3) **Intermodal (~30% revenue)**: containers domésticos + internacionales — ports Vancouver, Saint John, Lázaro Cárdenas. La joya post-merger: la nueva ruta de intermodal Mexico-Texas-Chicago (\"Mexico Midwest Express\") está absorbiendo share de trucking y de competidores ferroviarios que requieren transbordos. Accionistas relevantes: Bill Ackman/Pershing Square sostiene ~7%. TCI Fund (Chris Hohn) es accionista grande. Familias canadienses (Caisse de dépôt) institucionales.",
+    summary_why:
+      "CP a $87.30 es comprar el moat geográfico más imposible de replicar de Norteamérica — el ÚNICO ferrocarril Clase I con red trinacional integrada — justo cuando las sinergias del merger inflexionan al alza y un catalizador de earnings está a 24 horas de distancia: (1) **Q1 2026 reporta mañana 29 de abril 2026 — primer trimestre con CPKC 100% integrado**: Q4 2025 ya mostró Operating Ratio 55.9% (-120bps) y EPS +3%. Guidance 2026: volume growth mid-single-digit, EPS growth low-double-digit. El consenso espera $0.84 EPS / $2.7B revenue en Q1; cualquier beat de Operating Ratio (target sub-55% para 2026) confirma que las sinergias se están materializando antes de timeline; (2) **Moat geográfico físicamente irreplicable**: Estados Unidos NO va a aprobar otro ferrocarril cross-border (la STB tardó 2 años en aprobar CPKC y puso 7 años de oversight). México NO va a aprobar otro inversor extranjero ferroviario después del proceso CPKC. Canadá tiene solo 2 ferrocarriles Clase I (CN y CP) — concentración protegida. La duplicación requeriría comprar derechos de paso a competidores (que no van a vender) + construir 32,000 km de track + ganar regulatory approval en 3 países. **No es duplicable. Periodo.**; (3) **Sinergias de fusión $1B+ anuales para 2028**: Q4 2025 ya capturó ~$350M en run-rate; target completo $1B (revenue + cost combinados). Las sinergias de revenue son las más interesantes: nuevas rutas como Mexico Midwest Express (autos México-Detroit), bulk Canada-Mexico (granos canadienses a México vía Lázaro Cárdenas), intermodal end-to-end. Trucking absorbe ~80% del freight cross-border hoy; cualquier % que CPKC capture es mid-teen growth en el segmento; (4) **Operating Ratio mejora estructural**: Q4 2025 OR 55.9% es ya competitivo con UNP (60%) y NSC (62%). Hunter Harrison legacy de PSR via Keith Creel está siendo aplicado a la red ex-KCS (que tenía OR ~70% pre-merger). Cada bps de mejora en OR sobre $15B de revenue = $1.5M de operating income. Consenso modela OR llegando a 54% en 2027 = ~$300M EBIT extra; (5) **Free cash flow conversion alto**: capex ~$2.5B/año (15% revenue) post-integration. FCF yield ~3%, dividend +25% YoY en feb 2026 a CAD $0.95/año (yield 0.76% USD). Buybacks reanudados Q4 2025 después de 2 años de pause por integración (deuda neta bajó de 3.8x a 2.6x net debt/EBITDA); (6) **Bill Ackman + Chris Hohn institucionales**: Pershing Square holds ~7% (segunda posición histórica de Ackman después de la primera ola 2010-2016 que generó 5x). TCI Fund (Hohn, conocido por activismo en railroads) acumuló 2024-2025. Estos no son traders — son holders de 5+ años con tesis fundamental; (7) **Hedge contra trade frictions**: las tariffs Trump 2026 sobre autos México actually benefician a CPKC vs trucking — el ferrocarril es 4x más eficiente en fuel y absorbe mejor tariffs marginales. Las plantas de Stellantis, Ford, GM en México requieren mover ensamblajes a US a costa cualquiera; rail es el camino más barato; (8) **Cotiza cerca de 52w high pero P/E justificado**: $87.30 vs $89.42 high (recent). Forward P/E 23.7x vs UNP 19x, NSC 18x. El premium de ~25% es defensible por: (a) moat trinacional, (b) growth runway de sinergias hasta 2028, (c) better volume mix (less coal, more containers/autos). Bull case 2027 EPS $5.50 × 22x = $121 (+39%).",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **Q1 2026 EARNINGS RIESGO — reporta mañana 29 abril 4:30pm ET**: cualquier miss de revenue ($2.7B est) o Operating Ratio (>57%) genera -5-8% día después. Volume growth ya está en guidance (mid-single-digit) — si Q1 muestra solo 1-2% volume growth, mercado castiga; (2) **Tariffs Trump sobre México**: las amenazas de tariffs 25% sobre autos mexicanos (Trump anunció marzo 2026) podrían reducir cross-border volume si las plantas de Stellantis, Ford, GM ramp down producción. CPKC tiene ~12% revenue exposure a auto manufacturing México-US. Si tariffs se materializan = -10-15% revenue del segmento merchandise; (3) **Canadian grain dependency**: el 18% revenue depende de granos canadienses. Mala cosecha de trigo/canola por sequía o frost = revenue cae instantáneamente. La cosecha 2025 fue buena; 2026 incierta; (4) **STB oversight hasta 2030**: la STB puede imponer remedies si hay quejas de competidores o shippers — gateway prices, service guarantees. Q3 2025 BNSF presentó queja sobre gateway pricing en Houston; pendiente de resolución. Riesgo regulatorio asimétrico contra CPKC; (5) **Premium valuation reduce margin of safety**: P/E 26x trailing es alto vs ciclo histórico railroad (15-22x). Si recesión hits 2026 H2, freight volume cae 10-15% típico, EPS contracta, P/E debería re-ratear. Downside trough case: $70 (-20%); (6) **Integration fatigue**: 7 años de management focus en fusión = poco bandwidth para growth orgánico. Competidores (UNP, NSC) ya pivotearon a inversión en intermodal automation, lean operating models. CPKC tiene que ejecutar fusión + modernizar simultáneo; (7) **Dividend yield bajo (0.76%)**: no es una thesis de income. Si tesis de growth no se materializa, no hay yield piso para soportar el stock; (8) **Mexico political risk**: Sheinbaum administration (México) ha sido más amigable a ferrocarril foreign que esperado, pero un giro nacionalista o renegociación de concesiones de track Mexico = afecta directamente revenue del segmento sur. Concesiones actuales hasta 2047, pero gobiernos pueden modificar; (9) **CO2 transition cost**: la transición a hydrogen/battery locomotives va a requerir capex significativo 2027-2035. CN ya anunció pilots; CP corriendo behind. Si regulación EPA + Canadian environmental obliga reemplazo acelerado, capex puede subir 30-40% por años.",
+    research_full: `# Canadian Pacific Kansas City (CP / CPKC) — Research Completo
+
+## Precio: $87.30 | P/E TTM: 25.98x | P/E Forward: 23.70x | Div Yield: 0.76% | Market Cap: $78.5B
+
+---
+
+## Qué Es
+
+Canadian Pacific Kansas City Limited (CPKC) es el **único ferrocarril Clase I del mundo** que opera una sola red continua entre **México, Estados Unidos y Canadá**. Cotiza dual en NYSE (CP) y TSX (CP). HQ Calgary, Alberta.
+
+Fundada como **Canadian Pacific Railway en 1881** — el ferrocarril que físicamente unió Canadá costa-a-costa y permitió a British Columbia entrar a la confederación. Es uno de los nombres más antiguos en la bolsa norteamericana.
+
+**CEO: Keith Creel** — discípulo directo de Hunter Harrison (el padre del Precision Scheduled Railroading). CEO desde 2017. ~20,000 empleados, ~3,000 locomotoras.
+
+## La Fusión CPKC
+
+- **Anunciada**: marzo 2021 (deal con KCS, $31B stock + cash)
+- **Cerrada**: 14 abril 2023 (después de 2 años de approval STB con condiciones únicas)
+- **Sinergias target**: $1B+ anuales run-rate para 2028
+- **Sinergias capturadas Q4 2025**: ~$350M run-rate
+- **Oversight STB**: 7 años desde closing (hasta abril 2030)
+
+La fusión creó un single-line corridor de 32,000 km Vancouver → Detroit → Houston → Lázaro Cárdenas/Veracruz. **Es la ÚNICA forma física de mover carga entre los tres países sin transbordos**.
+
+## Estructura de Segmentos (FY 2025)
+
+| Segmento | % Revenue | Drivers |
+|----------|-----------|---------|
+| **Bulk** | ~37% | Granos canadienses, potasa, carbón, fertilizantes |
+| **Merchandise** | ~33% | Químicos, plásticos, energía, forest, autos, metales |
+| **Intermodal** | ~30% | Containers domésticos + internacionales |
+
+Revenue total FY 2025: CAD $15.1B (+4% YoY). EPS $4.61 (+8.8%). Operating Ratio 56.5% FY (Q4 55.9%, mejora -120bps).
+
+## Q4 2025 (resultados feb 2026)
+
+| Métrica | Q4 2025 | YoY |
+|---------|---------|-----|
+| Revenue | CAD $3.9B | +1% |
+| EPS adj | CAD $1.33 | +3% |
+| **Operating Ratio** | **55.9%** | **-120bps** |
+| Volume RTMs | +3% | growth mid-single-digit |
+| FCF | $850M | strong conversion |
+
+## Q1 2026 — Reporta MAÑANA 29 abril 2026 (4:30pm ET)
+
+- **Consensus EPS**: $0.84
+- **Consensus Revenue**: $2.7152B
+- Conference call: 4:30pm ET, Conference ID: CPKCQ126
+- Webcast: investor.cpkcr.com
+- Replay disponible hasta 6 mayo 2026
+
+## Guidance FY 2026 (issued con Q4 2025)
+
+- Volume growth: mid-single-digit
+- EPS growth: low-double-digit
+- Operating Ratio target: sub-55% para 2026
+- Capex: ~$2.7B (~15% revenue)
+- Sinergias target: $700M+ run-rate exit 2026
+
+## Comparables Railroads Norteamericanos
+
+| Ticker | Mkt Cap | P/E Fwd | Div Yield | Op Ratio | Geographic |
+|--------|---------|---------|-----------|----------|------------|
+| CP / CPKC | $78B | **23.7x** | 0.76% | 55.9% | **Trinacional** |
+| UNP (Union Pacific) | $135B | 19x | 2.4% | 60% | US West |
+| NSC (Norfolk Southern) | $63B | 18x | 2.6% | 62% | US East |
+| CSX | $66B | 17x | 1.5% | 64% | US East |
+| CNI (Canadian National) | $75B | 18x | 2.4% | 60% | Canada-US |
+
+## Catalizadores Próximos
+
+- **29 abril 2026**: Q1 2026 earnings (MAÑANA)
+- **Junio 2026**: Annual investor day (típicamente)
+- **Julio 2026**: Q2 2026 earnings
+- **2026 H2**: Sinergias run-rate alcanzando $700M target
+
+## Posicionamiento Institucional
+
+- **Bill Ackman / Pershing Square**: ~7% holding
+- **Chris Hohn / TCI Fund**: posición acumulada 2024-2025
+- **Caisse de dépôt et placement du Québec**: institucional canadiense largo
+- **BlackRock**: 7%+ pasivo
+
+## Por Qué Hoy
+
+(1) Catalizador a 24 horas (Q1 2026 mañana)
+(2) Moat trinacional físicamente irreplicable
+(3) Sinergias de fusión recién empezando a inflexionar
+(4) OR mejorando estructuralmente (-120bps Q4)
+(5) Buybacks reanudados Q4 2025
+(6) Ackman + Hohn institucional
+
+---
+
+*Research fecha: 28 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 102.50,
+    analyst_upside: 17.4,
+    status: "active",
+    first_researched_at: "2026-04-28T00:00:00Z",
+    last_updated_at: "2026-04-28T00:00:00Z",
+    next_review_at: "2026-10-28T00:00:00Z",
+  },
+  {
+    id: 57,
+    ticker: "CRM",
+    name: "Salesforce",
+    sector: "Technology",
+    industry: "Application Software / CRM SaaS",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 182.21,
+    pe_ratio: 23.10,
+    pe_forward: 13.65,
+    dividend_yield: 0.97,
+    market_cap_b: 149.15,
+    eps: 7.80,
+    summary_short:
+      "El #1 mundial de CRM cotizando con descuento histórico — stock cayó -32% YTD desde $296 a $182, 52w low cerca, mientras los fundamentales aceleran. Q4 FY26 (reportado 25 feb 2026): revenue $11.2B (+12% YoY), FY26 $41.5B (+10%), operating cash flow $15B (+15%). **Agentforce ARR $800M (+169% YoY)** con 29,000 deals (+50% QoQ); 20 trillones de tokens consumidos = 2.4 billones de \"agentic work units\". Combined Agentforce + Data 360 + Informatica = $2.9B ARR (+200% YoY). Adquisición Informatica $8B (cerrada 18 nov 2025) suma $1.1B ARR. Guidance FY27: $45.8-$46.2B (+10-11%). Stock-buyback authorization $50B. Forward P/E 13.65x — el más bajo desde la IPO 2004 — vs growth 10%+ y AI optionality. La narrativa \"AI matará a Salesforce\" se rompió con los datos.",
+    summary_what:
+      "Salesforce, Inc. es el #1 mundial de software CRM (Customer Relationship Management) con ~22% market share global vs Microsoft Dynamics (~5%), Oracle (~5%), SAP (~5%). Fundada en marzo 1999 por **Marc Benioff** (ex-Oracle, sigue como CEO/Chairman) en San Francisco con la tesis revolucionaria \"No Software\" — entregar enterprise software como servicio (SaaS) sobre el internet en lugar de instalación on-premise. Esa tesis creó la categoría SaaS entera. HQ Salesforce Tower, San Francisco. ~73,000 empleados, 200+ países. **El portafolio actual** está organizado en \"Customer 360\" — la plataforma unificada que integra todo: (1) **Sales Cloud (~16% revenue)**: el producto original, gestión de leads/oportunidades/forecasting; (2) **Service Cloud (~24% revenue)**: el más grande hoy — call centers, customer support, field service. Casi cualquier empresa Fortune 500 lo usa; (3) **Platform & Other (~32% revenue)**: Salesforce Platform (Lightning), Slack ($27B adq 2021), Heroku, MuleSoft ($6.5B adq 2018). Plus **Tableau ($15.7B adq 2019)** = analytics; (4) **Marketing & Commerce (~13% revenue)**: Marketing Cloud, Commerce Cloud (B2B + B2C); (5) **Data Cloud / Data 360 (~10% revenue, fastest-growing)**: lakehouse de datos enterprise. **112 trillones de records ingested FY26** (+114% YoY); (6) **Agentforce (NEW, lanzado oct 2024)**: plataforma de AI agents enterprise. Ya $800M ARR (+169% YoY) en 18 meses. **Adquisición Informatica $8B** cerrada 18 noviembre 2025 ($25/share cash) — agrega $1.1B ARR de data integration / governance, accretive within 12 months. Otras adquisiciones recientes: own AI consultancy + data quality firms. Customers Fortune 500: 90%+ usan algún producto Salesforce. Top 10: AT&T, ADP, American Express, T-Mobile, FedEx, Allianz, etc. Marc Benioff personalmente dueño ~3% (~$4.5B). Activistas: Elliott (salido 2024), Jeff Smith/Starboard (~1%). Buffett no posee.",
+    summary_why:
+      "CRM a $182.21 es comprar el #1 mundial de CRM, líder de SaaS desde hace 25 años, en su valuación más barata desde la IPO 2004 — mientras la AI (que el mercado pensó era amenaza existencial) está demostrablemente ACELERANDO el negocio: (1) **Agentforce $800M ARR +169% YoY = el producto enterprise de AI más rápido de la historia**: Microsoft Copilot, Google Duet/Gemini Workspace, Adobe Firefly — ninguno alcanzó este ramp en 18 meses. 29,000 deals cerrados (+50% QoQ). 20 trillones de tokens procesados = 2.4 billones de \"agentic work units\". El moat de Agentforce es estructural: vive sobre la data customer-360 propietaria que solo Salesforce tiene + integraciones nativas con Slack, Tableau, Data Cloud. Microsoft puede replicar con Dynamics + Copilot pero NO tiene el customer data graph; (2) **Combined Agentforce + Data 360 + Informatica ARR $2.9B (+200%+ YoY)**: este es el growth engine que justifica la tesis. $2.9B de ARR creciendo 200% sobre una base de $41.5B revenue total = ~7% del revenue total ya viene de productos AI que no existían hace 2 años. Si mantienen 100% YoY growth otro año, son $5.8B ARR end FY27 = 14% del revenue total; (3) **Informatica acquisition cerrada 18 nov 2025 — game-changer estratégico**: $8B deal + $25/share cash. Suma $1.1B ARR de data integration, MDM (master data management), data quality, governance. **Accretive within 12 months**. Data integration es el moat que Salesforce le faltaba — para que AI agents trabajen, necesitas data clean + integrated. Informatica es el #1 mundial. Combinación crea \"AI + CRM + Data\" stack único en enterprise; (4) **Stock cayó -32% YTD = miedo overshoot**: $296 a $182 en 12 meses. La tesis bear (\"AI commoditizará software, Salesforce dies\") era plausible en 2024, pero los datos de 2025-2026 la refutaron. Q4 FY26 beat: revenue $11.2B vs $10.9B esperado. cRPO $30B (+11% YoY). Operating margin GAAP 19.7% (+150bps). Free cash flow $15B FY26 (+15%); (5) **Forward P/E 13.65x = el más bajo desde IPO 2004**: histórico CRM tradeó 30-50x forward durante 2014-2022. La compresión a 13.65x asume crecimiento ~3-5% perpetuo cuando guide FY27 es 10-11%. Comparables: ServiceNow 50x forward, Workday 25x, Microsoft 30x, Oracle 20x. CRM al múltiplo de Oracle = $250 (+37%); (6) **$50B buyback authorization (anunciado feb 2026)**: el más grande de la historia de Salesforce — equivale a 33% del market cap actual. Compresión accretive a 13.65x P/E es matemáticamente óptima. Buybacks 2025 ya redujeron diluted shares -2.8%; (7) **Marc Benioff hands-on, Stewart Butterfield (Slack) salió Q4**: Benioff retomó control directo de producto post-Slack departure. Foco en \"profitable growth\" — operating margin expandiendo +200bps anuales target FY27-FY30; (8) **FY30 target raised a $63B revenue (anunciado feb 2026)**: implica CAGR 8.5% from FY26 hasta FY30. Combined con buybacks, EPS CAGR 15%+. Total return anualizado ~20% si target se cumple; (9) **Activistas salieron pero acumulación pasiva subió**: Elliott salió 2024 después de extraer la transformación a profitable growth. Starboard (Jeff Smith) sigue ~1%. BlackRock + Vanguard + State Street pasan 30%+ combinado — sticky money; (10) **Catalizadores próximos**: Q1 FY27 reporta a finales mayo 2026 (Dreamforce annual conference septiembre 2026 — keynote de Benioff típicamente mueve stock).",
+    summary_risk:
+      "Los riesgos son específicos: (1) **AI commoditization sigue siendo riesgo de tail**: Microsoft Copilot + Dynamics 365 está en agresivo win rate enterprise. Si Microsoft logra integrar AI agents con Office 365 (que ya está en 95% de Fortune 500), CRM puede perder net-new logos. Q4 FY26 net-new logo growth solo +6% — más lento de lo histórico (+15-20%); (2) **Macro enterprise IT spend**: 30% revenue de Salesforce viene de Financial Services, Telco, Retail — sectores cíclicos. Si recesión 2026 H2, IT budgets cortan; deal cycle se alarga; cRPO growth desacelera. Empresas privadas software (Stripe, Databricks, OpenAI) absorbiendo IT budget que antes iba a Salesforce; (3) **Informatica integration risk**: $8B deal + nuevas operations + 5,800 employees adicionales. Salesforce ya tiene historial mixto (Slack performó mal post-deal, MuleSoft bien, Tableau bien). Si Informatica revenue stalls o churn aumenta = -$5-10/share; (4) **AI cost structure pressure**: Agentforce consume tokens (Anthropic + OpenAI). Si hyperscalers suben pricing, márgenes Agentforce se contraen. Hoy Salesforce \"ConsumeOps\" pricing transfere costo al cliente — pero hay límite a cuánto enterprise paga; (5) **Stock-based compensation alto**: SBC FY26 $4.2B ~10% revenue. Diluye accionistas si stock no sube. Buybacks $50B compensan, pero net dilution histórica ha sido positiva; (6) **Slack underperforming**: $27B deal 2021. Hoy Slack ARR ~$2.5B vs $4-5B esperado. Microsoft Teams continúa ganando share. Slack \"Agentforce-ified\" intenta recuperar pero unclear si funciona; (7) **Benioff key-man risk**: 60 años, controla narrativa + estrategia + product. Si renuncia abruptamente o cae enfermedad, transición sería traumática. Bret Taylor (ex-co-CEO) ya salió 2022 a OpenAI/Sierra; (8) **Forward P/E bajo puede tener razón**: si market está pricing slow growth correctamente (5% perpetuo, no 10%), $182 es justo. Bull case requiere FY30 $63B target real; bear case lo descuenta a $52B = $150 stock; (9) **China enterprise expansion limitada**: regulatory + geopolitical = CRM no penetra China. ~$5-7B mercado addressable que no captura; (10) **Q1 FY27 reporta finales mayo 2026** — primer test post-Q4 FY26 momentum. Cualquier guide cut = -10-15% día.",
+    research_full: `# Salesforce (CRM) — Research Completo
+
+## Precio: $182.21 | P/E TTM: 23.10x | P/E Forward: 13.65x | Div Yield: 0.97% | Market Cap: $149.15B
+
+---
+
+## Qué Es
+
+Salesforce, Inc. es el **#1 mundial de software CRM** con ~22% market share. Fundada en marzo 1999 por **Marc Benioff** (sigue como CEO/Chairman 26 años después). HQ San Francisco. ~73,000 empleados.
+
+Inventó la categoría SaaS con su tesis original "No Software" — entregar enterprise software vía web en lugar de instalación on-premise. **Toda la industria SaaS de $400B+ existe gracias a esa apuesta.**
+
+## Estructura de Segmentos (FY 2026)
+
+| Segmento | % Revenue FY26 | Notas |
+|----------|----------------|-------|
+| **Service Cloud** | ~24% | El más grande hoy |
+| **Platform & Other** | ~32% | Slack, Heroku, MuleSoft |
+| **Sales Cloud** | ~16% | El producto original |
+| **Marketing & Commerce** | ~13% | Marketing Cloud, B2B/B2C |
+| **Data Cloud / Data 360** | ~10% | Fastest-growing |
+| **Agentforce** | NEW | $800M ARR (+169% YoY) |
+
+Revenue FY26: **$41.5B (+10% YoY)**. cRPO $30B (+11%). Operating cash flow $15B (+15%).
+
+## Q4 FY26 (reportado 25 feb 2026)
+
+| Métrica | Q4 FY26 | YoY |
+|---------|---------|-----|
+| Revenue | $11.2B | +12% |
+| EPS adj | $2.78 | +13% |
+| Operating margin GAAP | 19.7% | +150bps |
+| Operating margin adj | 33.1% | +130bps |
+| Free Cash Flow | $4.5B | strong |
+
+## Agentforce — La Métrica Que Importa
+
+- **ARR Q4 FY26**: $800M (+169% YoY)
+- **Deals cerrados Q4**: 29,000 (+50% QoQ)
+- **Tokens consumidos cumulativos**: 20 trillones
+- **Agentic work units cumulativos**: 2.4 billones
+- **Lanzamiento**: octubre 2024 (Dreamforce '24)
+
+## Combined AI + Data ARR
+
+- Agentforce: $800M
+- Data 360: $1.0B (estimado)
+- Informatica: $1.1B (post-deal close)
+- **Total combined: $2.9B (+200% YoY)**
+
+## Informatica Acquisition
+
+- **Anunciada**: 27 mayo 2025
+- **Cerrada**: 18 noviembre 2025
+- **Deal size**: $8B
+- **Pricing**: $25/share cash
+- **ARR adicional**: $1.1B
+- **Accretive**: within 12 months
+- **Strategic value**: data integration + MDM + governance — el "fuel" que AI agents necesitan
+
+## Guidance FY 2027 (issued con Q4 FY26)
+
+- **Revenue**: $45.8B - $46.2B (+10-11% YoY)
+- **Operating margin GAAP**: 21.5% (+200bps)
+- **Operating margin adj**: 34.5% (+150bps)
+- **EPS adj**: $11.50-$11.70
+
+## FY 2030 Target (raised feb 2026)
+
+- **Revenue**: $63B (de target previo $60B)
+- **Implica CAGR FY26→FY30**: 8.5%
+- **Combined con buybacks**: EPS CAGR 15%+
+
+## Buyback Authorization
+
+- **$50B autorizado** feb 2026 — el más grande de la historia
+- 33% del market cap actual
+- Accretive a 13.65x P/E forward
+
+## Comparables Software/SaaS
+
+| Ticker | P/E Fwd | Growth | Margin | AI Story |
+|--------|---------|--------|--------|----------|
+| **CRM** | **13.65x** | **10%** | **34%** | **Agentforce $800M ARR** |
+| Microsoft (MSFT) | 30x | 12% | 45% | Copilot $10B+ ARR |
+| Oracle (ORCL) | 20x | 7% | 40% | OCI / AI cloud |
+| ServiceNow (NOW) | 50x | 22% | 30% | AI Now |
+| Workday (WDAY) | 25x | 14% | 26% | AI HCM |
+| Adobe (ADBE) | 17x | 9% | 36% | Firefly |
+
+## Catalizadores Próximos
+
+- **Finales mayo 2026**: Q1 FY27 earnings
+- **Septiembre 2026**: Dreamforce annual conference (típicamente mueve stock 5-10%)
+- **Buybacks ejecutándose**: cada $1B compra ~5.5M shares a current price = -0.7% diluted shares por trimestre
+
+## Posicionamiento Institucional
+
+- **Marc Benioff**: ~3% personal (~$4.5B)
+- **BlackRock**: 7% pasivo
+- **Vanguard**: 9% pasivo
+- **State Street**: 4% pasivo
+- **Starboard (Jeff Smith)**: ~1% activo
+
+## Por Qué Hoy
+
+(1) Agentforce $800M ARR refuta tesis bear "AI mata a CRM"
+(2) Forward P/E 13.65x = el más barato desde IPO 2004
+(3) Stock -32% YTD = miedo overshoot
+(4) Informatica acquisition closed = $1.1B ARR added
+(5) $50B buyback = 33% market cap accretive
+(6) FY30 $63B target raised = bull case respaldado
+
+---
+
+*Research fecha: 28 Abr 2026 | Próxima revisión: Oct 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 278.74,
+    analyst_upside: 53.0,
+    status: "active",
+    first_researched_at: "2026-04-28T00:00:00Z",
+    last_updated_at: "2026-04-28T00:00:00Z",
+    next_review_at: "2026-10-28T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -8729,6 +9005,30 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #53* — Apr 27, 2026\n\n🏢 *A.P. Møller-Mærsk* (AMKBY) — $11.51\n\n🛍️ *Sus marcas/líneas*: Maersk Line (el #2 mundial de shipping de contenedores, 726 buques, 4.5M TEU de capacidad, 14% market share global — los famosos contenedores azul cielo cruzando océanos), APM Terminals (65 terminales portuarios globales — la joya del portafolio, ROIC 16% y EBIT margin >30%), Maersk Logistics (warehousing, e-commerce delivery, customs, last-mile), Svitzer (remolcadores y servicios portuarios), la *Gemini Cooperation* (alianza con Hapag-Lloyd lanzada feb 2025 — schedule reliability 92.3% vs 62.4% del promedio industria).\n\n🌍 *Presencia*: Dinamarca — HQ en Copenhague. ~95,000 empleados en 130 países. Fundada en 1904 por A.P. Møller y Peter Mærsk-Møller en Svendborg. La familia Møller aún controla ~42% de los votos vía A.P. Møller Holding. Es el integrador logístico más grande del planeta — si compras algo importado, hay alta probabilidad de que cruzó un buque, terminal o warehouse de Mærsk.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.23% anual* solo por ser dueño. Cada vez que un contenedor sale de Shanghai a Rotterdam en un buque azul, atraca en un terminal APM, o un retailer paga el warehousing de su mercancía navideña — parte de ese dinero llega a ti como dividendo. El programa de capital return 2026 = *$2.1 mil millones combinados* (DKK 480 dividendo + $1B buyback) — y cada acción que recompran a P/B 0.61x es accretive instantáneo.\n\n⚠️ *El riesgo*: Si el regreso completo Cape→Suez se materializa rápido, libera 6-8% de capacidad efectiva global instantáneamente. HSBC modeló decline de tarifas 9-16% en ese escenario; Mærsk podría entrar en pérdida operativa neta — la propia guidance lo refleja con floor EBIT -$1.5B en 2026. Plus: orderbook industria = 33.5% del fleet existente (~11.3M TEU on order) — históricamente niveles >25% han precedido cycles bear de 3-5 años.\n\n🆕 Posición #53\n🔗 https://vectorialdata.com/stocks/AMKBY\n✅ Certificado por blockchain → vectorialdata.com/verify/AMKBY\n\n💡 Dato que ancla la tesis: el 28 de febrero y el 28 de marzo de 2026, los Houthis volvieron a amenazar y atacar buques en el Mar Rojo, atado a la escalada US-Israel-Irán. **El "Suez return" se está estancando.** Volumen de tránsitos por Suez todavía -60% vs 2023. Xeneta (la voz autoritativa de freight rates) lo dijo así: "esto destroza la esperanza de un retorno de gran escala al Mar Rojo en 2026". El SCFI (índice de tarifas Shanghai-global) cerró el 27 abril en 1,875 puntos = **+39% YoY**. Tarifas están MÁS ALTAS que hace un año, no colapsando. Y mientras tanto, el 23 de febrero 2026, Hapag-Lloyd compró ZIM a $35/acción = **1.06x P/B** ($4.2B deal, 58% premium al close pre-anuncio). Eso establece un piso conceptual: estrategos pagan 1.06x book por shipping cíclico. Mærsk hoy cotiza a 0.61x book = ~40% de descuento implícito al deal print. Si Mærsk re-ratea a 1.0x book = $19/ADR (+65%). Mientras tanto, los segmentos no-Ocean inflexionan al alza: Terminals EBIT FY2025 +31% a $1.7B con ROIC 16.1%; Logistics & Services EBIT +36% a $729M. Los dos juntos = $2.4B EBIT combinado, suficiente para cubrir el dividendo 2026 entero ($1.05B) y el buyback de $1B. Si Ocean entra en pérdida operativa, los segmentos buenos siguen pagando el cash flow a accionistas. Es una apuesta contraria asimétrica: si Suez no normaliza fast → upside masivo de guidance. Si normaliza → P/B 0.61 floor + buyback accretive + dividendo 3.23%. La asimetría que rara vez existe en large-cap.`,
     attestation_uid: "0xdafd141acbcd3eeb539e95093ef2e3ab45e87ae74536a4e1ab2ac0e082ff9b74",
   },
+  {
+    id: 54,
+    stock_id: 56,
+    ticker: "CP",
+    type: "new" as const,
+    cycle_number: 11,
+    price: 87.30,
+    date: "2026-04-28",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #54* — Apr 28, 2026\n\n🏢 *Canadian Pacific Kansas City* (CP) — $87.30\n\n🛍️ *Sus marcas/líneas*: CPKC (la marca unificada post-fusión), Canadian Pacific Railway (la red original canadiense, 1881), Kansas City Southern (la red US-Sur-México, fusionada en 2023), Mexico Midwest Express (la nueva ruta intermodal Lázaro Cárdenas → Detroit), APM Terminals (los terminales asociados en Vancouver, Saint John y Lázaro Cárdenas).\n\n🌍 *Presencia*: Canadá — HQ en Calgary, Alberta. ~20,000 empleados, ~3,000 locomotoras, 32,000 km de track conectando Vancouver → Detroit → Houston → Lázaro Cárdenas/Veracruz. Cotiza dual en NYSE (CP) y TSX (CP). Fundada en 1881 por el gobierno canadiense — el ferrocarril que físicamente unió Canadá y permitió a British Columbia entrar a la confederación. La fusión con Kansas City Southern (cerrada 14 abril 2023, $31B deal) creó el primer y único ferrocarril Clase I trinacional del mundo.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.76% anual* solo por ser dueño. Cada vez que un contenedor llega de Asia a Vancouver y va a Chicago, un auto se ensambla en México y se manda a Detroit, o un cargamento de granos canadienses cruza al sur — parte de ese dinero llega a ti como dividendo. Subieron el dividendo +25% en febrero 2026 y reanudaron buybacks Q4 2025 después de 2 años pausados por la integración.\n\n⚠️ *El riesgo*: Las amenazas de tariffs de 25% sobre autos mexicanos (Trump anunció marzo 2026) podrían reducir el cross-border volume si Stellantis, Ford y GM ramp down producción en México — CPKC tiene ~12% revenue exposure a auto manufacturing. Plus: cotiza a P/E forward 23.7x vs UNP 19x y NSC 18x — el premium de ~25% es defensible pero deja poco margin of safety si recesión 2026 H2.\n\n🆕 Posición #54\n🔗 https://vectorialdata.com/stocks/CP\n✅ Certificado por blockchain → vectorialdata.com/verify/CP\n\n💡 Dato que ancla la tesis: el 14 de abril de 2023 cerró la fusión Canadian Pacific + Kansas City Southern. Hoy CP es el ÚNICO ferrocarril del mundo que cruza México, Estados Unidos y Canadá conectados sin transbordos — un activo que es físicamente imposible de replicar (los reguladores no van a aprobar otro, y aunque lo aprobaran, nadie tiene los 32,000 km de derechos de paso). Mañana 29 de abril reportan Q1 2026 — el primer trimestre con la integración 100% madura.`,
+    attestation_uid: "0x4ffb60ffce45ee205ca713d9bbc2445b80f25bff871fbfbc166c71ef11da9f1c",
+  },
+  {
+    id: 55,
+    stock_id: 57,
+    ticker: "CRM",
+    type: "new" as const,
+    cycle_number: 11,
+    price: 182.21,
+    date: "2026-04-28",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #55* — Apr 28, 2026\n\n🏢 *Salesforce* (CRM) — $182.21\n\n🛍️ *Sus marcas/líneas*: Sales Cloud (el producto original de 1999 — gestión de leads y oportunidades), Service Cloud (call centers y soporte al cliente, el más grande hoy), Marketing Cloud, Commerce Cloud, *Slack* (mensajería corporativa, $27B adquisición 2021), *Tableau* (analytics, $15.7B adq 2019), *MuleSoft* (integración de APIs, $6.5B adq 2018), Heroku, Data 360 (la lakehouse de datos enterprise), *Agentforce* (la nueva plataforma de agentes de AI lanzada oct 2024), e *Informatica* (data integration + governance, $8B adq cerrada 18 nov 2025).\n\n🌍 *Presencia*: Estados Unidos — HQ en Salesforce Tower, San Francisco. ~73,000 empleados en 200+ países. Fundada en marzo 1999 por Marc Benioff (sigue como CEO/Chairman después de 26 años). Inventaron la categoría SaaS con su tesis original "No Software" — toda la industria SaaS de $400B+ existe gracias a esa apuesta. El 90%+ de las Fortune 500 usa algún producto Salesforce: AT&T, ADP, American Express, T-Mobile, FedEx, Allianz.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.97% anual* solo por ser dueño. Cada vez que una empresa Fortune 500 paga su licencia de Sales Cloud, un agente de AI atiende a un cliente vía Agentforce, o un equipo usa Slack para coordinar — parte de ese dinero llega a ti como dividendo. Y acaban de autorizar *$50 mil millones en buybacks* (feb 2026) — el más grande de la historia de Salesforce, equivalente al 33% del market cap actual.\n\n⚠️ *El riesgo*: Microsoft Copilot + Dynamics 365 está ganando net-new logos enterprise — si Microsoft logra integrar AI agents con Office 365 (que ya está en 95% de Fortune 500), CRM puede perder share. Q4 FY26 net-new logo growth fue solo +6%, más lento que el histórico +15-20%. Plus: el deal de Informatica ($8B + 5,800 empleados) es la integración más grande de Salesforce desde Slack — si churn aumenta o ARR se estanca, mercado castiga.\n\n🆕 Posición #55 — Cierra Ciclo 11\n🔗 https://vectorialdata.com/stocks/CRM\n✅ Certificado por blockchain → vectorialdata.com/verify/CRM\n\n💡 Dato que ancla la tesis: en 12 meses el stock de Salesforce cayó de $296 a $182 — el peor performance de las grandes tech. El mercado castigó a CRM porque pensó que la AI iba a matar el software empresarial. Pero hace 2 meses (25 feb 2026), Salesforce reportó que Agentforce — su nuevo producto de agentes de AI — ya tiene **$800 millones en suscripciones recurrentes (+169% YoY)** con 29,000 deals cerrados. La AI no los está matando: los está salvando. Y el stock cotiza a P/E forward 13.65x — el más bajo desde la IPO de 2004.`,
+    attestation_uid: "0xb3f4364dea5bfffb273541fd88fd4cc8fdbe7748cd8fdf3cfa6ec98c05b07613",
+  },
 ];
 
 export const cycles = [
@@ -8817,7 +9117,15 @@ export const cycles = [
     cycle_number: 11,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 12,
+    cycle_number: 12,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 0,
     status: "active" as const,
   },
 ];
