@@ -29,12 +29,17 @@ export async function GET(request: NextRequest) {
     }
   );
 
+  // /auth/synced is a tiny client page that broadcasts the auth-success event
+  // to any other tab on this origin (the one that requested the login) and then
+  // either auto-closes itself or shows a "puedes cerrar esta pestaña" message.
+  const syncedUrl = `${origin}/auth/synced?next=${encodeURIComponent(next)}`;
+
   // Flow 1: PKCE code exchange (from signInWithOtp)
   if (code) {
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     console.log("[auth/callback] PKCE result:", error ? error.message : "success");
     if (!error) {
-      return NextResponse.redirect(`${origin}${next}`);
+      return NextResponse.redirect(syncedUrl);
     }
   }
 
@@ -46,7 +51,7 @@ export async function GET(request: NextRequest) {
     });
     console.log("[auth/callback] verifyOtp result:", error ? error.message : "success");
     if (!error) {
-      return NextResponse.redirect(`${origin}${next}`);
+      return NextResponse.redirect(syncedUrl);
     }
   }
 

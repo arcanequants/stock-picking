@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
 export default function LoginForm({ next }: { next: string }) {
@@ -10,6 +10,25 @@ export default function LoginForm({ next }: { next: string }) {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // After the magic-link email is sent, listen for the auth-success broadcast
+  // from /auth/synced (fired by the tab the email link opens). When it lands,
+  // navigate THIS tab to `next` so the user keeps their original browsing
+  // context — no more "logged in over there, logged out here" split.
+  useEffect(() => {
+    if (!sent || typeof BroadcastChannel === "undefined") return;
+    const channel = new BroadcastChannel("vd-auth");
+    channel.onmessage = (ev) => {
+      if (ev.data?.type === "vd-auth-success") {
+        const target =
+          typeof ev.data.next === "string" && ev.data.next.startsWith("/")
+            ? ev.data.next
+            : next;
+        window.location.assign(target);
+      }
+    };
+    return () => channel.close();
+  }, [sent, next]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
