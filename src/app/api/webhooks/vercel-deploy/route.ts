@@ -56,39 +56,28 @@ export async function POST(request: Request) {
     return NextResponse.json({ skipped: "not production" });
   }
 
-  const pickNumber = transactions[transactions.length - 1]?.id;
-  if (!pickNumber) {
-    return NextResponse.json({ skipped: "no transactions" });
-  }
-
-  const tx = transactions.find((t) => t.id === pickNumber);
-  const stock = tx ? stocks.find((s) => s.ticker === tx.ticker) : null;
-  if (!tx || !stock) {
-    return NextResponse.json({ skipped: "pick or stock not found" });
-  }
-
   const supabase = getSupabaseAdmin();
 
-  const { data: alreadySent } = await supabase
-    .from("email_pick_log")
-    .select("pick_number")
-    .eq("pick_number", pickNumber)
-    .limit(1);
-  if (alreadySent && alreadySent.length > 0) {
-    return NextResponse.json({
-      skipped: `pick #${pickNumber} already approved & sent`,
-    });
-  }
+  const [{ data: previewLog }, { data: sentLog }] = await Promise.all([
+    supabase.from("email_pick_preview_log").select("pick_number"),
+    supabase.from("email_pick_log").select("pick_number"),
+  ]);
+  const processed = new Set<number>([
+    ...(previewLog ?? []).map((r) => r.pick_number as number),
+    ...(sentLog ?? []).map((r) => r.pick_number as number),
+  ]);
 
-  const { data: previewSent } = await supabase
-    .from("email_pick_preview_log")
-    .select("pick_number")
-    .eq("pick_number", pickNumber)
-    .limit(1);
-  if (previewSent && previewSent.length > 0) {
-    return NextResponse.json({
-      skipped: `preview for pick #${pickNumber} already sent`,
-    });
+  // Process every transaction in the last 7 days that hasn't received a
+  // preview yet. Prevents historical deploys from re-firing old picks while
+  // covering same-day multi-pick deploys (e.g. CP + CRM in one push).
+  const cutoffMs = Date.now() - 7 * 86400 * 1000;
+  const pending = transactions.filter(
+    (tx) =>
+      !processed.has(tx.id) && new Date(tx.date).getTime() >= cutoffMs
+  );
+
+  if (pending.length === 0) {
+    return NextResponse.json({ skipped: "no pending picks" });
   }
 
   const { data: emailSubs } = await supabase
@@ -98,32 +87,46 @@ export async function POST(request: Request) {
     .in("delivery_channel", ["email", "both"]);
   const recipientCount = (emailSubs ?? []).length;
 
-  const token = generatePickApprovalToken(pickNumber);
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.vectorialdata.com";
-  const approveUrl = `${baseUrl}/api/cron/email-pick/approve?pick=${pickNumber}&token=${token}`;
 
-  await sendPickApprovalEmail(
-    ADMIN_EMAIL,
-    stock,
-    pickNumber,
-    tx,
-    approveUrl,
-    recipientCount
-  );
+  const sent: Array<{ pick_number: number; ticker: string }> = [];
+  const errors: Array<{ pick_number: number; error: string }> = [];
 
-  const { error: insertError } = await supabase
-    .from("email_pick_preview_log")
-    .insert({ pick_number: pickNumber });
-  if (insertError && insertError.code !== "23505") {
-    console.error("Failed to log preview:", insertError);
+  for (const tx of pending) {
+    const stock = stocks.find((s) => s.ticker === tx.ticker);
+    if (!stock) {
+      errors.push({ pick_number: tx.id, error: `stock ${tx.ticker} not found` });
+      continue;
+    }
+    try {
+      const token = generatePickApprovalToken(tx.id);
+      const approveUrl = `${baseUrl}/api/cron/email-pick/approve?pick=${tx.id}&token=${token}`;
+      await sendPickApprovalEmail(
+        ADMIN_EMAIL,
+        stock,
+        tx.id,
+        tx,
+        approveUrl,
+        recipientCount
+      );
+      const { error: insertError } = await supabase
+        .from("email_pick_preview_log")
+        .insert({ pick_number: tx.id });
+      if (insertError && insertError.code !== "23505") {
+        console.error("Failed to log preview:", insertError);
+      }
+      sent.push({ pick_number: tx.id, ticker: tx.ticker });
+    } catch (e) {
+      errors.push({ pick_number: tx.id, error: (e as Error).message });
+    }
   }
 
   return NextResponse.json({
     success: true,
     preview_sent_to: ADMIN_EMAIL,
-    pick_number: pickNumber,
-    ticker: tx.ticker,
+    sent,
+    errors,
     recipient_count: recipientCount,
   });
 }
