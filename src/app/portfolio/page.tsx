@@ -30,7 +30,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function PortfolioPage() {
-  const { isSubscribed } = await getAuthState();
+  const { user, isSubscribed } = await getAuthState();
+  const isAuthed = user !== null;
   const showUkBanner = await isUkVisitor();
   const t = await getTranslations("Portfolio");
   const tPremium = await getTranslations("Premium");
@@ -64,7 +65,7 @@ export default async function PortfolioPage() {
         </div>
       )}
 
-      <Suspense fallback={null}><LoginExpiredBanner /></Suspense>
+      <Suspense fallback={null}><LoginExpiredBanner isAuthed={isAuthed} /></Suspense>
 
       {/* Hero: title + urgency indicator */}
       <section>

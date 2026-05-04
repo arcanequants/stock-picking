@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 
-export default function LoginExpiredBanner() {
+export default function LoginExpiredBanner({ isAuthed = false }: { isAuthed?: boolean }) {
   const searchParams = useSearchParams();
-  const showBanner = searchParams.get("login") === "expired";
+  const router = useRouter();
+  const pathname = usePathname();
+  const hasExpiredParam = searchParams.get("login") === "expired";
   const t = useTranslations("Auth");
   const locale = useLocale();
 
@@ -14,7 +16,31 @@ export default function LoginExpiredBanner() {
   const [state, setState] = useState<"form" | "sending" | "sent">("form");
   const [dismissed, setDismissed] = useState(false);
 
-  if (!showBanner || dismissed) return null;
+  // If the user is already authed (session cookie set by another tab via the
+  // magic link), strip the stale ?login=expired so the banner can't reappear
+  // on refresh and so other consumers of the URL stay clean.
+  useEffect(() => {
+    if (isAuthed && hasExpiredParam) {
+      router.replace(pathname);
+    }
+  }, [isAuthed, hasExpiredParam, pathname, router]);
+
+  // Listen for the cross-tab auth success broadcast from /auth/synced. When
+  // the magic-link tab completes login it posts on this channel — we use it
+  // to self-dismiss instead of leaving a stale "expired" banner up.
+  useEffect(() => {
+    if (typeof BroadcastChannel === "undefined") return;
+    const channel = new BroadcastChannel("vd-auth");
+    channel.onmessage = (ev) => {
+      if (ev.data?.type === "vd-auth-success") {
+        setDismissed(true);
+        if (hasExpiredParam) router.replace(pathname);
+      }
+    };
+    return () => channel.close();
+  }, [hasExpiredParam, pathname, router]);
+
+  if (!hasExpiredParam || dismissed || isAuthed) return null;
 
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
