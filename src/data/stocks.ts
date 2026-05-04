@@ -8688,6 +8688,301 @@ UAW abiertamente hostil. Trump campaña 2024 amenazó 200% tariff sobre producto
     last_updated_at: "2026-05-04T00:00:00Z",
     next_review_at: "2026-11-04T00:00:00Z",
   },
+  {
+    id: 60,
+    ticker: "HCA",
+    name: "HCA Healthcare, Inc.",
+    sector: "Health Care",
+    industry: "Hospitals & Health Systems",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 429.01,
+    pe_ratio: 14.78,
+    pe_forward: 12.94,
+    dividend_yield: 0.72,
+    market_cap_b: 95.17,
+    eps: 29.02,
+    summary_short:
+      "El operador de hospitales **#1 de Estados Unidos** — **188 hospitales + 2,400+ sitios ambulatorios** en 19-20 estados + Reino Unido, ~280,000 empleados, CEO **Sam Hazen** desde 1-ene-2019 (veterano 41+ años en HCA). Q1 2026 (reportado **24 abril 2026**): revenue $19.109B (+4.3% YoY) en línea con consenso, **EPS GAAP $7.15 (+10.9%)**, same-facility admissions +0.9%, same-facility revenue per equivalent admission +3.1%. Margen operativo **comprimido a 12.0%** (vs 12.7% Q1 2025) por ACA subsidy expiration: **el lapso de los enhanced subsidies del ACA el 1-ene-2026 ya costó $150M en Q1**, con guidance de impacto FY2026 entre **$600M-$900M**. Admisiones de pacientes ACA -15% YoY (extremo bajo del rango -15/-20% guiado), uninsured +16% YoY (sustitución parcial). HCA reafirmó **guidance 2026: revenue $76.5-$80.0B, Adj EBITDA $15.55-$16.45B, diluted EPS $29.10-$31.50**. Capital return masivo: dividendo subió **+8.3% a $0.78/q** anunciado 27-ene-2026 ($3.12/año forward, yield real ~0.73%); nueva autorización de **$10B en buybacks** (recompraron $1.571B en Q1, $9.179B disponibles). Concentración geográfica fuerte: **TX (73 hospitales) + FL (49)** = >50% del total — exposición a huracanes y políticas estatales de Medicaid. Riesgo regulatorio mayor: **One Big Beautiful Bill Act (firmada 4-jul-2025)** limita state-directed Medicaid payments a 100% Medicare en estados expansion / 110% non-expansion, con phase-down 10pp/año desde 1-ene-2028. Consenso analistas: **Buy** (37% Strong Buy + 37% Buy); mean target **~$505** (+17.7% upside).",
+    summary_what:
+      "HCA Healthcare es **el sistema hospitalario privado más grande de Estados Unidos**, fundado en **1968 en Nashville, Tennessee** por el Dr. Thomas Frist Sr. (padre del ex-Senador Bill Frist) y Jack Massey. Hoy opera **188 hospitales + más de 2,400 sitios ambulatorios** (surgery centers, freestanding ERs, urgent care, clínicas físicas, imaging) en **19-20 estados de EE.UU. + Reino Unido**. ~280,000 empleados. **CEO: Sam Hazen** (Chairman + CEO desde 1-ene-2019, 41+ años en HCA). **CFO: Mike Marks** desde mayo 2024 (~30 años en HCA).\n\n**Footprint geográfico** (concentración alta en sunbelt): **Texas (73 hospitales)** + **Florida (49)** = >50% del total. Otros mercados core: Tennessee (HQ), Virginia (HCA Virginia), Colorado (HCA HealthONE Denver), Utah/Idaho (MountainStar Healthcare), Kansas/Missouri, Las Vegas, Nashville (TriStar). UK opera 6 hospitales en Londres bajo HCA UK.\n\n**Marcas/sistemas insignia**: **HCA Florida** (red más grande del estado), **HCA Houston**, **HCA Virginia**, **HCA HealthONE** (Colorado), **MountainStar** (Utah/Idaho), **TriStar Health** (Tennessee), y **Sarah Cannon Research Institute** — el brazo de investigación oncológica con >4,500 enrollments en clinical trials/año y >750 first-in-human studies/año, contribuyendo a la mayoría de nuevas terapias oncológicas aprobadas por la FDA en la última década (UK + US presence).\n\n**Estructura de revenue 2025 ($75.6B total, +6.4% YoY)**: hospitales agudos representan ~75-80% del revenue, ambulatorio ~15-20%, otros ~5%. ~50% del revenue viene de Medicare/Medicaid combinado, ~40% de comercial/managed care, ~10% otros (uninsured, self-pay). El segmento ambulatorio (surgery centers, ERs freestanding, urgent care) es donde HCA está creciendo más rápido — más alto margen, menos regulado.\n\n**Capital return histórico agresivo**: HCA es uno de los más prolíficos buyback-ers del S&P 500 — desde 2017 ha retirado >$50B en acciones (más del 50% del market cap actual). Combina dividendo creciente (subió 8.3% en ene-2026) con buyback program de $10B autorizado.",
+    summary_why:
+      "HCA a $429.01 es comprar el operador de hospitales **#1 de EE.UU.** a P/E forward de **12.94x** — descuento histórico vs su propio promedio de 5 años (~14.5x), justo cuando el mercado está sobre-pricing el headwind del ACA subsidy expiration y el One Big Beautiful Bill Act. Razones específicas: (1) **Q1 2026 fue cleaner de lo que pricing sugiere — reportado 24 abril 2026**: revenue $19.109B (+4.3% YoY) en línea, EPS GAAP $7.15 (+10.9% YoY) en línea con consenso, same-facility revenue per equivalent admission +3.1%. Volumen débil (admisiones respiratorias -42% YoY por temporada de gripe muy débil) es one-off, no estructural. (2) **Guidance 2026 reafirmado**: revenue $76.5-$80.0B, Adj EBITDA $15.55-$16.45B, **diluted EPS $29.10-$31.50** = midpoint $30.30, P/E fwd implícito ~14.2x sobre midpoint. Si HCA hits high-end, P/E fwd cae a 13.6x. (3) **Capital return masivo cuantificado**: nueva autorización de **$10B en buybacks** anunciada 27-ene-2026 (=10.5% del market cap actual). Q1 2026: $1.571B en recompras (3.157M acciones), $9.179B disponibles. Dividendo subió +8.3% a $0.78/q ($3.12/año forward). Run-rate retiro de acciones: ~5-7% anual = mecanismo de compounding fuera del crecimiento operativo. (4) **ACA subsidy headwind ya pricedin**: $150M Q1 + guided $600M-$900M FY2026 = midpoint $750M ÷ revenue $78B = ~1% impacto. Dolor real pero contenido. Admisiones uninsured +16% YoY = HCA captura volumen que antes pagaba ACA. Si Congreso renueva subsidies en debate Q3-Q4 2026, hay reversal upside no priced. (5) **OBBBA Medicaid phase-down recién en 1-ene-2028**: state-directed payments limitados, pero phase-down 10pp/año = 5 años de runway. HCA tiene tiempo para readjuste pricing y mix. Tennessee (sede HCA) había aumentado state-directed payments por +$3.2B antes de la ley = base alta antes de phase-down. (6) **Sarah Cannon Research como crown jewel hidden**: >4,500 oncology trial enrollments/año, >750 first-in-human studies/año, contribuyente a la mayoría de aprobaciones FDA oncológicas última década. Vale potencialmente $5-10B standalone en spin-out, no priced en HCA. (7) **Concentración sunbelt = demografía estructural**: TX+FL son los estados de mayor crecimiento poblacional de EE.UU. (TX +1.5%/año, FL +1.2%/año), con migración hacia jubilados (consumo médico per cápita 2-3x). HCA tiene el #1 share de hospitales en Houston, Dallas-Fort Worth, Austin, Miami, Tampa, Orlando. Demand structurally creciente. (8) **212,000 bebés/año = ~5.9% de TODOS los nacimientos de EE.UU.** entregados en hospitales HCA. Volumen de OB irreemplazable. (9) **Analyst consensus 19-27 analistas**: ~37% Strong Buy + ~37% Buy + ~21% Hold; mean target ~$505 = **+17.7% upside**. Post Q1 algunos cortaron targets pero mantuvieron Buy.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **ACA enhanced subsidy expiration confirmado 1-ene-2026** — primas más que se duplicaron en promedio. **Q1 2026 ya costó $150M; HCA guió $600M-$900M FY2026** ($750M midpoint). Admisiones ACA -15% YoY. Si admisiones uninsured no compensan (Q1: +16% YoY) y bad-debt expense se dispara, el hit puede deslizarse hacia el extremo alto. Sin renovación legislativa en 2026, el run-rate FY2027 podría ser similar o peor. (2) **One Big Beautiful Bill Act (firmada 4-jul-2025)**: CBO estima >$1T de recortes federales a salud + 10M más sin seguro a nivel nacional. Limita state-directed Medicaid payments a **100% Medicare en estados expansion / 110% en non-expansion**; arrangements existentes phasedown **10 percentage points/año desde 1-ene-2028**. Tennessee había aumentado state-directed payments por +$3.2B antes de la ley = base alta antes del phase-down. Texas y Florida también afectados. Sin guidance de $ específico de HCA pero el run-rate impacto es material. (3) **Margen operativo en compresión visible**: 12.0% Q1 2026 vs 12.7% Q1 2025 = -70bps. Si labor inflation (nursing wages, agency staff) se acelera + payer mix shift hacia Medicaid expandido (lower reimbursement), márgenes pueden seguir comprimiéndose 50-100bps adicionales en 2026-2027. (4) **Volumen respiratorio -42% YoY en Q1 2026**: golpea comparables — temporada de gripe muy débil (no estructural pero pesa en el quarter). Si la temporada 2026-27 tampoco es fuerte, comparables Q4 2026 sufren. (5) **Concentración geográfica TX+FL >50%**: huracanes (Helene + Milton 2024 costaron ~$250M total: $50M Q3 + ~$200M Q4 2024). Temporada 2025 sin nuevo hit material. Temporada 2026 sigue siendo riesgo recurrente (junio-noviembre). Un huracán mayor en Houston o Tampa puede borrar $200-400M de revenue + capex de reparación. (6) **Premium vs peers**: P/E fwd 12.94 vs Tenet (THC) y Universal Health (UHS) cotizando más bajos — HCA cotiza con prima modesta justificada por escala/márgenes pero compresión narrativa puede emparejar múltiples. (7) **Riesgo legislativo recurrente**: cada cambio de administración puede traer nuevos cuts a Medicare reimbursement, surprise billing legislation (No Surprises Act), 340B drug pricing reform, y site-neutral payment reforms (HCA opera muchos hospital outpatient departments que reciben pagos más altos que clínicas independientes — site-neutral acabaría con esa prima). (8) **Labor cost trend**: nurse-to-patient staffing ratios (California ya, Massachusetts y NY proponiendo) aumentan headcount mandatorio. Agency nursing rates aún 30-40% sobre prepandemia. Salary inflation en healthcare professionals corre 4-5% anual vs CPI ~2.5%. (9) **Tort/litigation**: no se identificaron casos materiales nuevos en últimos 6 meses, pero healthcare es industria estructuralmente litigiosa — siempre hay class actions, billing fraud allegations (False Claims Act), antitrust scrutiny en mercados donde HCA tiene >50% share local.",
+    research_full: `# HCA Healthcare (HCA) — Research Completo
+
+## Precio: $429.01 | P/E TTM: 14.78 | P/E Forward: 12.94 | Div Yield: 0.72% | Market Cap: $95.17B
+
+---
+
+## ¿Qué es HCA Healthcare?
+
+HCA Healthcare es **el sistema hospitalario privado más grande de Estados Unidos**, fundado en **1968 en Nashville, Tennessee** por el Dr. Thomas Frist Sr. (padre del ex-Senador Bill Frist) y Jack Massey. Originalmente Hospital Corporation of America. Hoy opera **188 hospitales + más de 2,400 sitios ambulatorios** (surgery centers, freestanding ERs, urgent care, clínicas físicas, imaging) en 19-20 estados de EE.UU. + Reino Unido.
+
+CEO: **Sam Hazen** (1-ene-2019, 41+ años en HCA). CFO: **Mike Marks** (mayo 2024).
+
+## Footprint Geográfico
+
+| Estado | Hospitales |
+|--------|-----------|
+| Texas | 73 |
+| Florida | 49 |
+| Tennessee (HQ) | ~16 |
+| Virginia | ~13 |
+| Colorado | ~8 |
+| Otros 14 estados + UK | ~29 |
+
+**TX + FL = >50% del total** = exposición concentrada a huracanes y políticas estatales de Medicaid (state-directed payments).
+
+## Q1 2026 — Reportado 24 abril 2026
+
+- **Revenue**: $19.109B (+4.3% YoY), en línea con consenso $19.08B
+- **Diluted EPS GAAP**: $7.15 (+10.9% YoY desde $6.45). Consenso non-GAAP: $7.13
+- **Same-facility admissions**: +0.9% YoY
+- **Same-facility equivalent admissions**: +1.3% YoY
+- **Same-facility revenue per equivalent admission**: +3.1% YoY
+- **Operating income**: $2.29B / **margen 12.0%** (vs $2.33B / 12.7% en Q1 2025) — margen contraído
+- **Cash from ops**: $2.014B (+22.0% YoY)
+- **Headwind clave**: admisiones respiratorias **-42% YoY** (temporada de gripe muy débil)
+- **Buybacks Q1**: 3.157M acciones por $1.571B; **$9.179B disponibles** post Q1
+
+## Guidance FY2026 (reafirmado en Q1)
+
+| Métrica | Rango |
+|---------|-------|
+| Revenue | $76.5-$80.0B |
+| Adj EBITDA | $15.55-$16.45B |
+| Net income | $6.5-$7.0B |
+| **Diluted EPS** | **$29.10-$31.50** |
+
+## Capital Return — Aumento Reciente
+
+- **Dividendo subió de $0.72 → $0.78 trimestral** anunciado 27-ene-2026 (con resultados Q4 2025). Anualizado forward: **$3.12/año** (yield real ~0.73% al precio actual). Yahoo muestra $2.94 trailing porque promedia 3 pagos $0.72 + 1 pago $0.78.
+- **Nuevo programa de buybacks de $10B** autorizado 27-ene-2026.
+- Buybacks históricos: HCA ha retirado >$50B en acciones desde 2017 (>50% del market cap actual).
+
+## Catalysts y Riesgos Macro
+
+### ACA Enhanced Subsidies — Expiraron 1-ene-2026
+
+Congreso no las renovó a finales de 2025. Primas individuales de salud más que se duplicaron en promedio. **Impacto Q1 2026 en HCA: $150M**. **Guidance FY2026: $600M-$900M de hit total** (midpoint $750M ≈ ~1% del revenue). Admisiones ACA -15% YoY (extremo bajo del rango -15/-20% guiado). Admisiones uninsured +16% YoY como compensación parcial.
+
+### One Big Beautiful Bill Act (firmada 4-jul-2025)
+
+CBO estima >$1T en recortes federales a salud + 10M más sin seguro nacional. Limita state-directed Medicaid payments a **100% Medicare en estados expansion / 110% en non-expansion**; arrangements existentes phasedown **10 pp/año desde 1-ene-2028**. Tennessee había aumentado state-directed payments por +$3.2B pre-ley.
+
+### Huracanes (riesgo recurrente)
+
+Helene + Milton 2024: ~$250M de impacto total ($50M Q3 + ~$200M Q4 2024). Temporada 2025 sin hit material reportado. Temporada 2026 (junio-noviembre) sigue como riesgo.
+
+## Brands & Crown Jewels
+
+- **HCA Florida** — red más grande del estado
+- **HCA Houston / HCA Virginia / HCA HealthONE (Colorado)**
+- **MountainStar Healthcare** (Utah/Idaho)
+- **TriStar Health** (Tennessee)
+- **Sarah Cannon Research Institute** — >4,500 oncology trial enrollments/año, >750 first-in-human studies/año. Contribuyó a la mayoría de aprobaciones oncológicas FDA en la última década. UK + US presence.
+
+## Wow Data Points
+
+- **HCA entrega ~212,000 bebés al año** = **~5.9% de todos los nacimientos de EE.UU.** (CDC: ~3.6M nacimientos/año). Más que cualquier otro health system del país.
+- HCA opera el #1 hospital share en mercados como Houston, Dallas-Fort Worth, Austin, Miami, Tampa, Orlando.
+
+## Analyst Consensus (mayo 2026)
+
+- **Rating compuesto**: Buy. MarketBeat (19 analistas): 37% Strong Buy + 37% Buy + 21% Hold + 5% Sell + 0% Strong Sell.
+- **Mean target**: ~$505 (TipRanks 19 analistas $510.21; consenso amplio 27 $505.04; mediana 45 $490, rango $368-$525).
+- **Upside vs $429.01**: +17.7% al mean target.
+- Post-Q1 2026: varios analistas recortaron targets (volúmenes débiles), mantuvieron Buy rating.
+
+## Riesgos Clave Cuantificados
+
+1. **ACA subsidy lapse**: $600M-$900M FY2026 ($750M midpoint = ~1% revenue). Sin renovación legislativa, run-rate FY2027 similar.
+2. **OBBBA Medicaid phase-down**: comienza 1-ene-2028, 10pp/año, durante 5 años.
+3. **Margen operativo comprimido**: -70bps Q1 2026 vs Q1 2025.
+4. **Concentración TX+FL >50%**: huracanes + políticas estatales.
+5. **Labor cost inflation**: nurse-to-patient ratios, agency rates 30-40% sobre prepandemia.
+
+## Tesis en una línea
+
+> Comprar el operador de hospitales #1 de EE.UU. a P/E forward 12.94x — descuento vs históricos — con $10B nuevo buyback (10.5% market cap), dividendo +8.3%, y >$50B retirados de acciones desde 2017. ACA + OBBBA headwinds están priced; demografía sunbelt + Sarah Cannon están subpriced.
+
+---
+
+*Research fecha: 4 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 505.00,
+    analyst_upside: 17.7,
+    status: "active",
+    first_researched_at: "2026-05-04T00:00:00Z",
+    last_updated_at: "2026-05-04T00:00:00Z",
+    next_review_at: "2026-11-04T00:00:00Z",
+  },
+  {
+    id: 61,
+    ticker: "HEI",
+    name: "HEICO Corporation",
+    sector: "Industrials",
+    industry: "Aerospace Aftermarket / PMA Parts",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 270.34,
+    pe_ratio: 53.64,
+    pe_forward: 42.56,
+    dividend_yield: 0.09,
+    market_cap_b: 37.72,
+    eps: 5.04,
+    summary_short:
+      "El **mayor proveedor independiente del mundo** de partes FAA-PMA (Parts Manufacturer Approval) — partes genéricas aprobadas por FAA que reemplazan partes OEM de motores y airframes a **25-50% del precio**. Fundada 1957, controlada por la familia Mendelson desde 1990 cuando Larry Mendelson tomó control y la transformó de $26M en revenues → ~$4.5B (170x), market cap **>$37B (>1,500x), CAGR 22-23% por 35 años**. **Larry Mendelson falleció el 27-sept-2025 a los 87 años**; sucesión ya ejecutada según plan: **Eric Mendelson** y **Victor Mendelson** son ahora **Co-Chairmen + Co-CEOs** (Eric heads Flight Support Group, Victor heads Electronic Technologies Group). Q1 FY2026 (reportado **25 feb 2026**, fiscal Oct-end): revenue $1.18B (+14.4% YoY) batió consensus $1.15B; **EPS $1.35 (+12.5%)** vs estimate $1.27 (+6.3% beat); net income récord **$190.2M (+13%)**; crecimiento orgánico **12% en FSG, 6% en ETG**. **FSG margen expandió a 24.5%** (de 23.4%); **ETG comprimido a 19.8%** (de 23.1%) por mix desfavorable defense/space. Guidance FY2026: revenue $5.01B. Modelo bolt-on M&A: 4 adquisiciones cerradas/anunciadas en 2025-2026 (Millennium Intl, Rosen Aviation, EthosEnergy A&C cerrada 5-feb-2026, Sherwood Avionics 6-abril-2026). PMA library: **>19,500 partes aprobadas + >90M partes entregadas con CERO Service Bulletins, ADs ni in-flight shutdowns trazables**. Yield 0.09% es engañoso — la acción ha compundido tanto que el dividendo absoluto no se nota, pero pago semi-anual sostenido por décadas. Riesgo dominante: P/E TTM **53.64x es premium real** vs A&D peer ~37x. Consenso analistas Buy, mean target ~$373-376 = **+38% upside**.",
+    summary_what:
+      "HEICO Corporation es **el mayor proveedor independiente del mundo de partes aftermarket aprobadas FAA-PMA** para motores y aeronaves comerciales y de defensa, fundada en **1957 en Hollywood, Florida**. La empresa tiene dos clases de acciones — **HEI (Common Stock, 1 voto)** que cotiza con prima vs **HEI.A (Class A, 1/10 voto)** que cotiza con descuento; económicamente idénticas. Esta posición es en HEI Common.\n\n**Liderazgo familia Mendelson**: **Larry Mendelson** tomó control en 1990 cuando la empresa facturaba $26M y la transformó en ~$4.5B en revenue + ~$37B market cap (CAGR 22-23% durante 35 años). **Falleció el 27 de septiembre de 2025 a los 87 años**. Sucesión ejecutada según plan preexistente: **Eric A. Mendelson** y **Victor H. Mendelson** son ahora **Co-Chairmen del Board + Co-CEOs**. Eric continúa al frente del **Flight Support Group (FSG)**; Victor al frente del **Electronic Technologies Group (ETG)**.\n\n**Estructura de revenue (2 segmentos)**:\n\n**(1) Flight Support Group (FSG)** — el segmento aftermarket parts ancla, ~70% del revenue. Incluye **HEICO Parts Group** (>19,500 partes FAA-PMA aprobadas, >500 nuevas/año, >90M partes entregadas con CERO Service Bulletins/Airworthiness Directives/in-flight shutdowns trazables a HEICO), engine accessory & component repair (Wencor, EthosEnergy A&C), avionics repair (Millennium International), in-flight entertainment for business aviation (Rosen Aviation). Clientes: aerolíneas comerciales globales (Delta, United, American, Lufthansa, Emirates) + military operators. Q1 FY2026: $820M revenue (+15% YoY), op income $200.7M (+21%), **margen 24.5%** (expandiendo).\n\n**(2) Electronic Technologies Group (ETG)** — ~30% del revenue, sesgado fuertemente a defense/space/aerospace (**81.3% del segmento**). Sub-electrónica para misiles, satélites, electronic warfare, RF y microwave; medical/telecom non-aero (~18.7%). Clientes: Lockheed Martin, Boeing Defense, Raytheon, NASA/ESA, Northrop Grumman. Q1 FY2026: $370.7M revenue (+12% YoY), **margen comprimido a 19.8%** (de 23.1%) por mix desfavorable defense/space.\n\n**Modelo de M&A bolt-on**: HEICO cierra ~10+ adquisiciones/año, paga típicamente 7-9x EBITDA, retiene management, descentraliza operaciones. **Wencor (cerrada 4-ago-2023, $2.05B = $1.9B cash + $150M HEI.A)** es la mayor adquisición histórica y sigue siendo ancla post-2023. Adquisiciones recientes: **Millennium International** (FSG, 2025), **Rosen Aviation** (vía Mid Continent Controls, mayo 2025), **EthosEnergy Accessories and Components** (anunciada dic 2025, cerrada 5-feb-2026 — engine accessory + component repair, 175 empleados, >175,000 sq ft EE.UU. + Escocia), **Sherwood Avionics and Accessories** (6-abril-2026, 80% adquirido).",
+    summary_why:
+      "HEICO a $270.34 es comprar el compounder más probado del aerospace aftermarket — 35 años de **CAGR 22-23%** ($100k invertidos en 1990 valdrían >$100M hoy) — al **PE forward 42.56x** que sí es premium pero ha sido el rango histórico durante toda la era moderna del compounding. Razones específicas: (1) **Q1 FY2026 fue beat amplio — reportado 25 feb 2026**: revenue $1.18B (+14.4% YoY) batió consensus $1.15B; EPS $1.35 vs estimate $1.27 (**+6.3% beat**); net income récord $190.2M (+13%); operating profit $260M (+14.6%). Crecimiento orgánico **12% en FSG, 6% en ETG**. Guidance Q2 FY2026: EPS ~$1.60. **Q2 FY2026 reporta el 26 mayo 2026** (22 días) — primer test post-OBBBA legislation. (2) **FSG margen expandiendo a 24.5%** (de 23.4% Q1 2025): el segmento ancla está acelerando margins via Wencor synergies + scale en PMA portfolio. ETG margen 19.8% comprimido por mix one-off — management guió rebote. (3) **Aging fleet thesis vigente**: Boeing 737 MAX targeting 47/mes en 2026 → 52 → 57; 787 ya en 7/mes, target 10/mes en 2026. Pero gap entre delivery rates OEM y demanda aerolíneas → flotas operadas más tiempo → mayor consumo aftermarket parts y shop visits de motores. HEICO tiene PMA para 737NG, 737 MAX, 757, 767, 777, 787 + Airbus. (4) **PMA moat estructural**: >19,500 partes FAA-PMA aprobadas, >500 nuevas/año, >90M entregadas con **CERO Service Bulletins, Airworthiness Directives, ni in-flight shutdowns trazables a HEICO**. PMA permite **25-50% ahorro vs OEM** en ese ítem específico — savings que cualquier aerolínea con un solo financial officer aprueba. Cada nueva regulación FAA que requiere replacement parts genera demanda. (5) **Sucesión Mendelson ya ejecutada (no es riesgo emergente)**: Larry transitionó a Executive Chairman a inicios de 2025; Eric+Victor ya operaban como Co-CEOs por años. Tras muerte 27-sept-2025, escalation a Co-Chairmen fue fluida; HEICO declaró 'no anticipa cambios en operaciones'. Ambos hermanos llevan décadas en sus segmentos respectivos. La 'familia compounder' continúa. (6) **M&A pipeline activo**: 4 adquisiciones cerradas/anunciadas en últimos 12 meses (Millennium, Rosen, EthosEnergy A&C, Sherwood Avionics). Modelo bolt-on probado durante 35 años. Cada deal añade 2-5% EPS accretion + diversifica portfolio. (7) **Defense sustainment tailwind**: ETG sesgado 81.3% a defense/space/aerospace — defense budgets globales en alza (Trump prioritized defense, NATO 5% target, Asia-Pacific tensions), MRO sustainment es categoría protected. (8) **Capital structure conservadora**: HEICO ha completado 15 stock splits/dividends desde 1995, sigue pagando dividendos semi-anuales (~$0.24/año, yield 0.09% — mínimo porque la acción ha compundido tanto). Sin deuda excesiva, balance sheet permite seguir M&A pace. (9) **Analyst consensus Buy**: ~12 analistas, 60% bullish; mean target ~$373-376 (rango $278-$415); high target Citi $415 (13-ene-2026); RBC $375. Implied upside +38% vs $270.34.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **Valuación premium real — P/E TTM 53.64x / forward 42.56x**: aerospace & defense peer average ~37x; fair-value ratio basado en growth + ROIC ~30x. **No hay margen for error si sentiment cambia**. Si HEICO pierde un quarter o el mercado rota fuera de premium compounders, la corrección puede ser -20-30% sin que nada cambie operativamente. Premium ha sido el rango histórico desde 2010 pero no es ley de física. (2) **ETG margin compression Q1 FY2026**: caída de 23.1% → 19.8% por mix desfavorable defense/space. Management guió rebote pero hay que verlo — si es estructural (ej. low-margin contracts won) en vez de one-off, el target FY2026 EPS sufre. (3) **Boeing/Airbus production ramp riesgo**: si OEM deliveries aceleran agresivamente (737 MAX 47→52→57/mes, 787 7→10/mes), aerolíneas reciben aircraft nuevos y la demanda aftermarket sobre flotas viejas modera. La aging fleet thesis funciona mientras OEM sigue undershipping — si sale del slot, se neutraliza. (4) **Recession exposure**: menos travel = menos cycles de motor = menos shop visits = menos PMA parts consumidas. HEICO sufrió en GFC 2008-09 (revenue -10%) y COVID 2020 (revenue -20%). Si recession 2026-27, el aftermarket es ciclico aunque más resiliente que OEM. (5) **M&A integration risk con pace de 10+ deals/año**: cada año HEICO digiere ~$200-500M en bolt-ons. Si un deal grande va mal (Wencor a $2.05B fue el primer test grande, hasta ahora bien), el roll-up thesis se cuestiona. (6) **Sucesión familiar — Larry murió sept-2025**: Eric+Victor ya operaban pero la pérdida del dealmaker arquitecto del compounder es riesgo cualitativo. Tercera generación Mendelson aún no probada en posiciones decisión-making. Si Eric o Victor (62 y 58 años respectivamente, edades aproximadas) salen en 5-10 años, hay vacío de liderazgo familiar. (7) **Premium vs HEI.A spread**: HEI Common cotiza con prima ~10-15% sobre HEI.A. Inversores que quieran exposure cheaper pueden rotar a HEI.A, presionando spread. Históricamente prima ha sido estable pero no garantizada. (8) **Defense budget reversal**: si nueva administración (US, Europa) cuts defense budgets agresivamente, ETG sesgado 81% a defense sufre. Trump-era priorización es bullish pero Congress cycles cambian. (9) **PMA approvals slowdown**: si FAA endurece criterios para aprobar nuevas PMA parts (presión OEMs), la pipeline de >500 nuevas/año se ralentiza. Históricamente FAA ha sido neutral pero pressure points existen.",
+    research_full: `# HEICO Corporation (HEI) — Research Completo
+
+## Precio: $270.34 | P/E TTM: 53.64 | P/E Forward: 42.56 | Div Yield: 0.09% | Market Cap: $37.72B
+
+---
+
+## ¿Qué es HEICO?
+
+HEICO Corporation es **el mayor proveedor independiente del mundo de partes aftermarket aprobadas FAA-PMA (Parts Manufacturer Approval)** para motores de jet, airframes y componentes electrónicos. Fundada en **1957** en Hollywood, Florida. La familia Mendelson tomó control en **1990** cuando Larry Mendelson — un acquirer entrenado en private equity — vio el potencial.
+
+**Lo que sigue es uno de los track records de compounding más completos del mercado público de EE.UU.**:
+
+| Métrica | 1990 | 2026 |
+|---------|------|------|
+| Revenue | $26M | ~$4.5B |
+| Market cap | bajo nine-figure | ~$37.72B |
+| Multiplier | 1x | **>1,500x** |
+| CAGR | — | **22-23% por 35 años** |
+
+Una inversión de $100,000 en 1990 valdría **>$100 millones hoy**. ~59,337% retorno total incluyendo dividendos.
+
+## Clases de Acciones
+
+| Symbol | Voto | Cotización |
+|--------|------|------------|
+| **HEI (Common)** | 1 voto/acción | **$270.34** (esta posición) |
+| HEI.A (Class A) | 1/10 voto/acción | ~$215 (descuento) |
+
+Económicamente idénticas — la prima reflecta el voto. Esta posición es HEI Common.
+
+## Sucesión Mendelson — Cambio Crítico (sept-2025)
+
+**Larry Mendelson (Laurans A. Mendelson) falleció el 27 de septiembre de 2025 a los 87 años**. Era Executive Chairman; sucesión ya ejecutada según plan:
+
+- **Eric A. Mendelson** y **Victor H. Mendelson** ahora son **Co-Chairmen + Co-CEOs**
+- **Eric** sigue al frente de Flight Support Group (FSG)
+- **Victor** sigue al frente de Electronic Technologies Group (ETG)
+- HEICO declaró "no anticipa cambios en operaciones"
+
+Larry había transicionado a Executive Chairman a inicios de 2025; Eric+Victor ya operaban como Co-CEOs por años. Transición fluida.
+
+## Q1 FY2026 — Reportado 25 febrero 2026
+
+(Fiscal year ends 31 octubre)
+
+- **Revenue**: $1.18B (+14.4% YoY), batió consensus $1.15B
+- **EPS**: $1.35 vs estimate $1.27 (**+6.3% beat**); +12.5% YoY desde $1.20
+- **Net income récord**: $190.2M (+13% YoY)
+- **Operating profit**: $260M (+14.6% YoY)
+- **Operating cash flow**: $178.6M
+- **Crecimiento orgánico**: 12% FSG, 6% ETG; resto vía M&A
+
+### Por Segmento
+
+| Segmento | Revenue Q1 | YoY | Op Income | Margen | Vs Q1 2025 |
+|----------|-----------|-----|-----------|--------|------------|
+| FSG | $820.0M | +15% | $200.7M | **24.5%** | +110bps (expandiendo) |
+| ETG | $370.7M | +12% | — | **19.8%** | -330bps (comprimido por mix) |
+
+**ETG defense/space/aerospace mix**: $301.2M (81.3%) | Otros (medical, telecom): $69.5M (18.7%).
+
+### Guidance
+
+- **Q2 FY2026** (reporta 26 mayo 2026): EPS ~$1.60
+- **FY2026 revenue**: $5.01B
+
+## PMA Moat — El Centro del Modelo
+
+HEICO Parts Group es **el mayor proveedor independiente del mundo** de partes FAA-PMA:
+
+- **>19,500 partes FAA-PMA aprobadas**
+- **>500 nuevas partes/año** (pipeline regular)
+- **>90 millones de partes entregadas históricamente** con **CERO Service Bulletins, Airworthiness Directives, ni in-flight shutdowns trazables a HEICO**
+- **25-50% ahorro vs OEM** en ese ítem específico
+- Aprobaciones para **737NG, 737 MAX, 757, 767, 777, 787** + varios Airbus
+
+PMA permite a aerolíneas comprar partes genéricas FAA-aprobadas en lugar de OEM — savings inmediatos sin penalty regulatorio. Es uno de los moats más limpios en industrials.
+
+## Adquisiciones Recientes
+
+| Deal | Fecha | Segmento | Notas |
+|------|-------|----------|-------|
+| **Wencor** (ancla) | 4-ago-2023 | FSG | $2.05B = $1.9B cash + $150M HEI.A — la mayor histórica |
+| Millennium International | 2025 | FSG | 90% del stock; avionics commercial repair |
+| Rosen Aviation | mayo 2025 | FSG | vía Mid Continent Controls; in-flight entertainment business aviation |
+| EthosEnergy Accessories & Components | cerrada 5-feb-2026 | FSG (vía Wencor) | engine accessory + component repair; 175 empleados; >175k sq ft EE.UU. + Escocia |
+| Sherwood Avionics & Accessories | 6-abril-2026 | FSG | 80% adquirido; management retiene 20% |
+
+Modelo: ~10+ deals/año, ~7-9x EBITDA pagados, retain management, descentralizado.
+
+## Capital Return
+
+- **Dividendos semi-anuales** (NO trimestral) — pago más reciente: 17-ene-2025 ($0.110/share). Yield ~0.09%, $0.24/yr.
+- **8 años consecutivos** subiendo dividendo (verificable). Cifra "92 dividendos consecutivos" no verificable en estas búsquedas — citada como tradición HEICO.
+- **15 stock splits/dividends desde 1995**. Más reciente: 5-for-4 split sobre ambas clases.
+- Dividend absoluto pequeño porque la acción ha compundido — el cash retorna primero a M&A y reinversion en compounding.
+
+## Catalysts 2025-2026
+
+- **Boeing ramp**: 737 MAX 47/mes en 2026 → 52 → 57; 787 7/mes → 10/mes en 2026. HEICO tiene PMA para ambos.
+- **Aging fleet thesis vigente**: gap delivery vs demand → flotas más viejas → más aftermarket consumption.
+- **Defense sustainment tailwind**: ETG sesgado 81% defense/space; budget global en alza.
+- **MRO Americas 2026**: presentación HEICO captó atención sell-side.
+- **EthosEnergy A&C integration** post-feb 2026: expande engine accessory repair capabilities.
+- **Citi target $415** (13-ene-2026); RBC $375.
+
+## Analyst Consensus (mayo 2026)
+
+- **Rating**: Buy. ~12 analistas, 60% bullish.
+- **Mean target**: ~$373-376
+- **High**: $415 (Citi)
+- **Low**: $278-330
+- **Upside vs $270.34**: **+38%** al mean target.
+
+## Riesgos Cuantificados
+
+1. **Valuación premium real** — P/E TTM 53.64x / forward 42.56x vs A&D peer ~37x.
+2. **ETG margin compression** — 23.1% → 19.8% Q1 FY2026; verificar rebote en Q2.
+3. **OEM ramp risk** — si Boeing/Airbus aceleran muy rápido, aging fleet thesis modera.
+4. **Recession exposure** — aftermarket es cíclico (revenue -10% GFC, -20% COVID).
+5. **M&A integration risk** — pace 10+ deals/año.
+6. **Sucesión familiar** — Larry murió sept-2025; Eric+Victor sólidos pero pérdida del arquitecto.
+
+## Tesis en una línea
+
+> Comprar el compounder de aerospace aftermarket más probado del mercado público (CAGR 22-23% por 35 años, >1,500x desde 1990) en el rango premium histórico, con FSG margen expandiendo, M&A pipeline activo, y aging fleet thesis vigente. La sucesión Mendelson ya ocurrió y fue fluida.
+
+---
+
+*Research fecha: 4 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 375.00,
+    analyst_upside: 38.7,
+    status: "active",
+    first_researched_at: "2026-05-04T00:00:00Z",
+    last_updated_at: "2026-05-04T00:00:00Z",
+    next_review_at: "2026-11-04T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -9424,6 +9719,28 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #58* — May 4, 2026\n\n🏢 *Deere & Company* (DE) — $578.79\n\n🚜 *Sus líneas/marcas*: Tractores John Deere (8R/9RX series, los más grandes del mundo), combines (S/X series), *Wirtgen Group* (construcción de carreteras, $5.2B adq 2017), *Blue River Technology* (AI/ML para See & Spray), *Bear Flag Robotics* (autonomía), *Hagie Manufacturing* (sprayers), *JDLink* (telematics) y el *John Deere Operations Center* (la plataforma cloud donde converge el dato de cada tractor conectado del mundo).\n\n🌍 *Presencia*: Estados Unidos — HQ en Moline, Illinois (donde John Deere fundó la empresa en 1837 inventando el primer arado de acero auto-limpiable). ~75,000 empleados globales. Fábricas en Iowa (Waterloo, Davenport, Dubuque, Ankeny), Brasil (3 fábricas + tech center, BRL 3B invertidos), México, Alemania, India. CEO **John C. May** desde 2019.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.12% anual* solo por ser dueño — y el dividendo lleva 6 años consecutivos subiendo, con un payout ratio de solo 34% (mucho margen para seguir creciendo). Cada vez que un farmer en Iowa cosecha maíz con un combine S780, una constructora pavimenta una autopista con maquinaria Wirtgen, o un agricultor en Brasil siembra soja con un tractor 8R — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Tariffs van a costar **$1.2B en FY2026** (confirmado por el management) y el ciclo agrícola sigue en zona baja — USDA proyecta pérdidas de $0.88 por bushel de maíz en 2026. Si los farmers postponen capex 12 meses más y los tariffs se mantienen, el rebote del earnings que el mercado espera para FY2027 puede llegar más débil de lo esperado.\n\n🆕 Posición #58\n🔗 https://vectorialdata.com/stocks/DE\n✅ Certificado por blockchain → vectorialdata.com/verify/DE\n\n💡 Dato que ancla la tesis: en su última call (19 feb 2026), el CEO John May dijo textualmente: *"2026 marca el fondo del ciclo actual"*. El dato que respalda esa frase es brutal — el inventario de tractores grandes (220+ HP) en los lotes de los dealers a fin de FY2025 está en **el nivel más bajo en 17+ años**. Cuando los dealers tienen los lotes vacíos, cualquier farmer que necesita reemplazar equipo tiene que pedir nuevo. Y mientras tanto, See & Spray — el sistema de visión artificial que rocía herbicida solo donde hay malezas — cubrió +5M de acres en 2025 ahorrando 31M galones de químicos. Deere ya cobra $5/acre en cultivo activo: cuando esos 5M se conviertan en los 185M+ acres meta, eso son cientos de millones en revenue recurrente tipo SaaS, con márgenes de software, no de fierro.`,
     attestation_uid: "0x8bc31d06fdabdbbfe135b4daaacbff3ff4bb1072c28852b5588a362a25d509cd",
   },
+  {
+    id: 59,
+    stock_id: 60,
+    ticker: "HCA",
+    type: "new" as const,
+    cycle_number: 12,
+    price: 429.01,
+    date: "2026-05-04",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #59* — May 4, 2026\n\n🏢 *HCA Healthcare* (HCA) — $429.01\n\n🏥 *Sus líneas/marcas*: 188 hospitales y +2,400 sitios ambulatorios. Marcas insignia: HCA Florida (la red más grande del estado), HCA Houston, HCA Virginia, HCA HealthONE (Colorado), MountainStar Healthcare (Utah/Idaho), TriStar Health (Tennessee), HCA UK (6 hospitales en Londres), y *Sarah Cannon Research Institute* — el brazo de investigación oncológica con +4,500 enrollments en clinical trials por año.\n\n🌍 *Presencia*: Estados Unidos — HQ en Nashville, Tennessee. Operaciones en 19-20 estados + Reino Unido, ~280,000 empleados. Concentración en el Sunbelt: Texas (73 hospitales) + Florida (49) representan más de la mitad del total. Fundada en 1968 por el Dr. Thomas Frist y Jack Massey. CEO Sam Hazen desde enero 2019 (41+ años en HCA).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.72% anual* solo por ser dueño — y el dividendo acaba de subir 8.3% en enero 2026 (de $0.72 a $0.78 trimestral). Cada vez que alguien da a luz en un hospital HCA, recibe quimioterapia en Sarah Cannon, o llega a una sala de emergencias HCA en Houston o Miami — parte de ese dinero llega a ti como dividendo. Y el management acaba de autorizar *$10 mil millones* en recompras de acciones (10.5% del valor total de la empresa).\n\n⚠️ *El riesgo*: El 1 de enero 2026 expiraron los subsidios mejorados del ACA (Obamacare) — las primas de salud individuales más que se duplicaron. HCA ya reportó *$150 millones* de impacto en Q1 2026 y proyecta entre $600M y $900M de hit en todo 2026. Plus: la "One Big Beautiful Bill Act" firmada en julio 2025 limita los pagos estatales de Medicaid (con phase-down empezando 2028) — el sistema TX/FL de HCA es exactamente donde más se nota.\n\n🆕 Posición #59\n🔗 https://vectorialdata.com/stocks/HCA\n✅ Certificado por blockchain → vectorialdata.com/verify/HCA\n\n💡 Dato que ancla la tesis: HCA entrega ~212,000 bebés al año. Contra los 3.6 millones de nacimientos anuales en EE.UU., eso significa que **~5.9% de TODOS los bebés del país nacen en un hospital HCA** — más que cualquier otro sistema hospitalario privado. Es el tipo de volumen de servicio esencial que ningún competidor puede replicar en 5 ni 10 años. Y por eso, mientras el mercado castiga la acción a P/E forward 12.94x (descuento vs su histórico) por temas regulatorios temporales del ACA, HCA está retirando $10B en buybacks — equivalente a ~10% del market cap. Acciones que se reducen + servicio esencial irreemplazable = compounding silencioso.`,
+  },
+  {
+    id: 60,
+    stock_id: 61,
+    ticker: "HEI",
+    type: "new" as const,
+    cycle_number: 12,
+    price: 270.34,
+    date: "2026-05-04",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #60* — May 4, 2026\n\n🏢 *HEICO Corporation* (HEI) — $270.34\n\n✈️ *Sus líneas/marcas*: HEICO Parts Group (+19,500 partes aprobadas por la FAA para reemplazar partes de motores y aviones a 25-50% del precio que cobran Boeing y Airbus), *Wencor* (la mayor adquisición histórica, $2.05B en 2023), *Mid Continent Controls* y *Rosen Aviation* (entretenimiento a bordo en aviación de negocios), *Millennium International* (avionics repair), y *EthosEnergy Accessories & Components* (cerrada feb 2026 — reparación de accesorios de motores). Plus el segmento de electrónica para defensa: misiles, satélites, electronic warfare para Lockheed, Boeing Defense, NASA, Northrop Grumman.\n\n🌍 *Presencia*: Estados Unidos — HQ en Hollywood, Florida. ~11,000 empleados globales con operaciones en EE.UU., Reino Unido, Escocia, Alemania, Israel, Singapur. Fundada en 1957. La familia Mendelson tomó control en 1990; Eric y Victor Mendelson son hoy *Co-CEOs y Co-Chairmen* (su padre Larry, el arquitecto del compounder, falleció en septiembre 2025 — la sucesión ya estaba ejecutada).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.09% anual* solo por ser dueño — un yield diminuto porque la acción ha subido tanto que el dividendo absoluto se ve pequeño en porcentaje. HEICO paga dividendos semi-anuales ininterrumpidos por décadas; cada vez que una aerolínea como Delta o Lufthansa instala una pieza HEICO PMA en un motor de 737, una compañía de defensa monta un sub-componente de electrónica HEICO en un misil, o un Boeing 787 entra a un overhaul — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La valuación es premium real — P/E TTM 53.64x vs el promedio de aerospace & defense de ~37x. Si la sentiment cambia, una corrección de -20-30% es posible sin que nada operativo cambie. Plus: el segmento de electrónica (ETG) acaba de comprimir margen de 23.1% a 19.8% en Q1 — management dice que es one-off, pero hay que verificarlo en el reporte del 26 de mayo.\n\n🆕 Posición #60\n🔗 https://vectorialdata.com/stocks/HEI\n✅ Certificado por blockchain → vectorialdata.com/verify/HEI\n\n💡 Dato que ancla la tesis: HEICO ha entregado más de 90 millones de partes PMA a aerolíneas y operadores militares de todo el mundo desde 1957. Ninguna de esas partes ha generado un solo Service Bulletin de la FAA, ninguna Airworthiness Directive, y ningún in-flight shutdown trazable a HEICO — *cero, en 67 años*. Por eso una aerolínea puede comprar una parte HEICO al 50% del precio OEM sin sacrificar ninguna garantía de seguridad, y por eso esta empresa convirtió $26 millones de revenue en 1990 en ~$4.5 mil millones hoy bajo la familia Mendelson. CAGR del 22-23% durante 35 años: $100,000 invertidos en 1990 valdrían más de $100 millones hoy.`,
+  },
 ];
 
 export const cycles = [
@@ -9520,7 +9837,15 @@ export const cycles = [
     cycle_number: 12,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 13,
+    cycle_number: 13,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 0,
     status: "active" as const,
   },
 ];
