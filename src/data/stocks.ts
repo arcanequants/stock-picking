@@ -8329,6 +8329,365 @@ Revenue FY26: **$41.5B (+10% YoY)**. cRPO $30B (+11%). Operating cash flow $15B 
     last_updated_at: "2026-04-28T00:00:00Z",
     next_review_at: "2026-10-28T00:00:00Z",
   },
+  {
+    id: 58,
+    ticker: "CSX",
+    name: "CSX Corporation",
+    sector: "Industrials",
+    industry: "Railroads (US East Coast)",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 45.14,
+    pe_ratio: 27.69,
+    pe_forward: 20.97,
+    dividend_yield: 1.24,
+    market_cap_b: 83.88,
+    eps: 1.63,
+    summary_short:
+      "El ferrocarril Clase I del Este de EE.UU. — 20,000 millas de vías en 26 estados + DC + Ontario y Quebec, sirviendo dos tercios de la población al este del Mississippi y 70+ puertos del Atlántico y Golfo. Q1 2026 reportado 22 abril: EPS $0.43 (+26% YoY) batió consensus por $0.04, revenue $3.48B (+2%), **Operating Ratio mejoró 560 bps a 64.0% — el #2 mejor del grupo Class I solo detrás de UNP (59.9%)**, volumen total +3% con intermodal +6%. CSX SUBIÓ guidance FY2026: revenue de low- a mid-single-digit growth, expansión de margen 200-300 bps trending hacia el extremo alto, FCF >60% YoY. **El CEO Steve Angel** (entró sept 2025 reemplazando a Joe Hinrichs bajo presión del activista Ancora Holdings) trae pedigree explícito en M&A — ex-CEO de Linde y Praxair — sentado mientras la industria entra en su mayor ola consolidatoria en 30 años: el 19 dic 2025 UP+NSC anunciaron fusión $85B, la STB la rechazó como incompleta el 16 enero 2026, y la **refilearon el 30 abril 2026 (hace 4 días)** prometiendo $3.5B/año en savings al shipper. CSX es la dance partner natural si el deal cierra — likely BNSF o CPKC. Plus: tunnel Howard Street reabierto sept 2025 habilita **doble-stack intermodal Florida → Northeast** (ventaja estructural en el corredor I-95), dividendo subió +8% feb 2026 a $0.56/año, $222M de buybacks en Q1 sobre un programa que ya retiró $7B+ desde 2023. P/E forward 19.4x — la M&A optionality no está descontada.",
+    summary_what:
+      "CSX Corporation es uno de los cuatro ferrocarriles 'super-regionales' Clase I de Norteamérica (junto a Union Pacific, BNSF, Norfolk Southern, Canadian National y CPKC). HQ en Jacksonville, Florida. Formada en 1980 por la fusión de Chessie System + Seaboard Coast Line Industries — la era moderna del rail consolidation post-Staggers Act. ~23,000 empleados, ~3,500 locomotoras. Su subsidiaria operativa **CSX Transportation** opera la marca y la red. **CEO: Steve Angel** desde septiembre 2025 — el board terminó a Joe Hinrichs bajo presión pública del fondo activista **Ancora Holdings** (el mismo que activó NSC y catalizó la fusión UP-NSC). Angel viene de Linde + Praxair, un track record de 11 años cerrando deals industriales globales — leído como hire específico para el momento de consolidación.\n\n**Estructura de revenue FY2025 ($14.1B total, -3% YoY):** (1) **Merchandise (~62%, $8.8B)** — el segmento más grande: químicos, plásticos, automóviles ensamblados + partes, metales, fertilizantes, productos forestales (housing-sensitive). (2) **Intermodal (~15%, $2.1B)** — containers domésticos + internacionales conectando puertos del Atlántico (Baltimore, Norfolk, Charleston, Savannah, Jacksonville, Miami) y Golfo (Mobile, New Orleans, Tampa) con el interior; Q1 2026 volumen +6%. (3) **Coal (~13%, $1.9B)** — domestic utility (térmico) + export metallurgical; el segmento que estructuralmente decae con la transición energética. (4) **Trucking — Quality Carriers (~6%, $0.8B)** — adquirida julio 2021, el #1 transportista de químicos a granel en Norteamérica con 2,400 camiones, integrado al franchise de químicos por rail. (5) **Otros (~4%, $0.5B)** — fuel surcharge, otros revenue.\n\n**Activos estructurales:** **ShipCSX** (portal proprietario de booking/tracking), **Pan Am Railways** (adquirida junio 2022, 1,200 millas en New England integradas a la red), y el **proyecto Howard Street Tunnel** ($450M+) en Baltimore, completado en septiembre 2025 y con clearance final Q1 2026, que habilita por primera vez **trenes intermodales doble-stack desde Florida hasta el Northeast** sin reposicionamiento — un cambio estructural en el corredor I-95 con margen estructural permanente.",
+    summary_why:
+      "CSX a $45.09 es comprar el #2 operador por eficiencia en la #3 industria más consolidada del mundo (después de aerolíneas y Class I rail mismo), justo en el medio de su mayor ola de fusión en 30 años, con un nuevo CEO con pedigree de M&A y un activista satisfecho pero todavía mirando — y el mercado todavía no embebe la optionality. Razones específicas: (1) **Q1 2026 fue una inflexión clara — reportado 22 abril**: EPS $0.43 +26% YoY batió por $0.04, OR mejoró 560 bps a 64.0%, volumen total +3%, intermodal +6%. **CSX SUBIÓ el guidance**: revenue de low-single a mid-single, margen +200-300 bps trending hacia el extremo alto, FCF +60% YoY. Esto es lo opuesto a Union Pacific (que reportó cauteloso) y a Canadian National (cuyo guide cayó 5%+ post-results). (2) **M&A optionality no priced**: el 30 abril 2026 — hace 4 días — UP y NSC refilearon su solicitud de fusión $85B con la STB, prometiendo $3.5B/año en savings al shipper. La STB tiene 30 días para juzgar la nueva completitud. Si aprueba, CSX se convierte en la dance partner natural — likely BNSF (Berkshire-owned, podría hacer spin) o CPKC (post-integración KCS). El P/E forward 19.4x está alineado con UNP (~21x) sin embeber el premium de takeover (históricamente 25-40% sobre precio en fusiones de rail). (3) **Steve Angel = M&A pedigree explícito**: 11 años como CEO de Linde + Praxair, cerró el merger Linde-Praxair de $90B en 2018. El board lo trajo específicamente para este momento — Hinrichs fue terminado por NO entablar conversaciones con UP. Angel YA tuvo conversación informal con Jim Vena (CEO de UP) según reportes. (4) **Howard Street Tunnel = ventaja estructural permanente**: el proyecto de $450M+ en Baltimore completado sept 2025 (con clearance final Q1 2026) habilita por primera vez **doble-stack intermodal Florida → Northeast** sin transbordos. Esto es revenue/acre de ventaja en el corredor I-95 que UNP, NSC y CN físicamente NO tienen. Los 37 nuevos plants industriales en la red de CSX YTD se conectan a este corredor. (5) **Capital return acelerado**: dividendo subió +8% feb 2026 a $0.56/año (yield 1.24%), buybacks Q1 2026 = $222M / 6M acciones, programa cumulativo retiró ~$7B+ desde 2023 (CSX prefiere buybacks sobre dividendos vs los peers). En Q1 2026 retornaron $482M total a accionistas. (6) **OR gap a UNP comprimiendo**: CSX 64.0% vs UNP 59.9% es 4.1 puntos — pero hace 12 meses era 7+ puntos. Cada punto de OR sobre $14B de revenue = $140M de operating income; cerrar 2 puntos más en 2026 = +$280M EBIT (~6% upside a EPS). (7) **Tariffs benefician onshoring sobre la red**: Hinrichs (antes de salir) flagged 37 nuevos plants abriéndose en la red CSX YTD por onshoring respondiendo a tariffs Trump 25% sobre Canadá/México y 25% sobre acero/aluminio. Cada planta nueva = revenue 5-15 años en bulk merchandise. (8) **Analyst targets recientes raised post-Q1**: Baird $47 (de $40, Outperform), BofA $49 (Buy), TD Cowen $45 (Buy), Wolfe Research raised. Consensus mean ~$47, range $30-$50. Upside +4% al consensus + optionality M&A no priced.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **Riesgo estratégico de fusión asimétrica**: si UP+NSC cierra (después de refile 30 abril 2026), CSX queda en posición de FORZADO a fusionarse para mantener competitividad — pero las dos opciones (BNSF, CPKC) son complejas. BNSF es Berkshire-owned (Buffett raramente vende, y un spin tomaría 1-2 años). CPKC acaba de digerir KCS (oversight STB hasta 2030, capacidad de M&A limitada). Si CSX termina como buyer-de-último-recurso, paga premium + acepta condiciones STB que pueden lastimar márgenes 5-10 años. (2) **Coal exposure (~13% revenue, $1.9B)**: declinó otra vez Q1 2026 (-1%) con weakness en metallurgical export driven por demanda débil de steelmakers asiáticos. Q3 2025 vio coal export collapsar -11%. La transición global de steel + thermal decarbonization significa que este segmento estructuralmente se reduce — la pregunta es velocidad. (3) **Tariff exposure cross-border (10-15% revenue)**: las tariffs Trump 25% sobre bienes mexicanos/canadienses amenaza directamente intermodal cross-border + automotive volumes. Onshoring (37 plantas nuevas) compensa parcialmente pero el offset es multi-año mientras los tariffs impactan inmediatamente. (4) **OR gap a UNP persistente**: 4.1 puntos detrás (64.0% vs 59.9%) = ~$560M de operating income perdido anualmente. Si Steve Angel no cierra terreno significativo en 12-18 meses, la carta de Ancora se reescribe automáticamente. (5) **Activist + transition risk**: Ancora satisfecha con cambio de CEO pero NO ha declarado victoria. Si Angel pushea M&A agresivo y el deal explota a nivel STB (como pasó con UP-NSC primer filing), CSX enfrenta años de distracción + costo legal. (6) **Labor/regulatory**: Class I rails operan bajo Collective Bargaining Agreements federales + procesos PEB. La huelga de 2022 solo se evitó por intervención del Congreso. Cualquier work action = network shutdown. (7) **Customer concentration en chemicals + autos**: Merchandise 62% es heavy en químicos + automóviles, ambos cíclicos y tariff-sensitive. Forest products -9% Q1 2026 muestra el drag de housing weakness. (8) **Valuation premium relativo**: P/E forward 19.4x es middle-of-pack pero CN cotiza 18x con menor riesgo cíclico, AGCO 11x con mayor leverage operativo. Si recesión 2026 H2 hits, freight volume típicamente cae 10-15%, EPS contracta, P/E debería re-ratear. Trough case sin merger: $35 (-22%).",
+    research_full: `# CSX Corporation (CSX) — Research Completo
+
+## Precio: $45.09 | P/E TTM: 22.97x | P/E Forward: 19.43x | Div Yield: 1.24% | Market Cap: $84.4B
+
+---
+
+## Qué Es
+
+CSX Corporation es uno de los cuatro ferrocarriles **"super-regionales" Clase I** de Norteamérica (Union Pacific, BNSF, Norfolk Southern, Canadian National, CPKC son los otros). HQ Jacksonville, Florida. Formada en 1980 por la fusión Chessie System + Seaboard Coast Line Industries — la primera ola moderna de consolidación post-Staggers Act.
+
+~23,000 empleados. Red de **20,000 millas** en 26 estados + Washington D.C. + Ontario/Quebec. Sirve dos tercios de la población US al este del Mississippi y 70+ puertos Atlántico/Golfo. Conecta a 230+ short-line y regional railroads.
+
+**CEO: Steve Angel** (sept 2025 — reemplazó a Joe Hinrichs después de presión del activista Ancora Holdings). Ex-CEO de **Linde** y **Praxair**, lideró la fusión Linde-Praxair de $90B en 2018. Track record explícito de M&A industrial global.
+
+## Estructura de Segmentos (FY 2025: $14.1B total, -3% YoY)
+
+| Segmento | Revenue | % | Drivers |
+|----------|---------|---|---------|
+| **Merchandise** | $8.8B | ~62% | Químicos, plásticos, autos, metales, fertilizantes, forest |
+| **Intermodal** | $2.1B | ~15% | Containers domésticos + internacionales |
+| **Coal** | $1.9B | ~13% | Domestic utility + export metallurgical |
+| **Trucking (Quality Carriers)** | $0.82B | ~6% | #1 chemical bulk trucker NA |
+| **Otros** | ~$0.5B | ~4% | Fuel surcharge + other |
+
+FY2025 EPS: $1.54 (-14% YoY). Operating margin: 32.1% (vs 36.1% FY2024). El año del downcycle merchandise + coal.
+
+## Q1 2026 (reportado 22 abril 2026 — el inflexión)
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Revenue | $3.48B | **+2%** (missed $3.52B est) |
+| EPS Diluted | **$0.43** | **+26%** (BEAT $0.39 est por $0.04) |
+| Net Income | $807M | +25% |
+| Operating Income | $1.25B | **+20%** |
+| Operating Margin | **36.0%** | +560 bps |
+| **Operating Ratio** | **64.0%** | **mejora 560 bps** |
+| Volume Total | 1.56M units | **+3%** |
+| Intermodal volume | — | **+6%** |
+| Merchandise volume | — | flat (minerals +4%, forest -9%) |
+| Coal | — | -1% (export weak) |
+| FCF before dividends | $793M | +42% |
+
+## Guidance FY 2026 (RAISED en Q1 call)
+
+- **Revenue growth: mid-single-digit** (raised de low-single)
+- **Operating margin expansion: 200-300 bps**, trending hacia extremo alto
+- **Capex: <$2.4B**
+- **FCF: >+60% YoY**
+
+## Capital Return
+
+- **Q1 2026 buybacks: $222M / 6M acciones**
+- **Q1 2026 dividends: $260M pagados**
+- **Cumulative buybacks 2023-2025: ~$7B+** (2025: $1.39B, 2024: $2.23B, 2023: $3.48B)
+- **Dividendo: +8% feb 2026 a $0.14/q ($0.56/año)**
+
+## El Catalizador Macro: UP-NSC Merger
+
+| Fecha | Evento |
+|-------|--------|
+| 19 dic 2025 | UP + NSC anuncian fusión $85B |
+| 16 enero 2026 | STB rechaza filing como incompleto |
+| 30 abril 2026 | UP+NSC **refilean** prometiendo $3.5B/año savings |
+| 30 mayo 2026 | STB debe responder sobre completitud |
+| 2026-2027 | Si aceptado, formal review process >1 año |
+
+**Coalición opuesta**: BNSF + CPKC + grupo de shippers. **Coalición a favor**: UP, NSC, algunos shippers de larga distancia.
+
+**CSX como dance partner**: la lógica es geográfica — UP+NSC unificada cubre US transcontinental west-east; deja CSX como el único network con franquicia East/Mid-Atlantic. Las opciones lógicas son:
+- **BNSF** (transcontinental west, Berkshire-owned, conectaría con CSX east) — requiere voluntad de Buffett de divestir
+- **CPKC** (US sur-México-Canadá, complementaria a CSX) — capacidad limitada por integración KCS hasta 2027
+
+## Howard Street Tunnel — Ventaja Estructural Permanente
+
+- **Inversión total: $450M+** (público + privado)
+- Reabierto **septiembre 2025**, clearance final completado **Q1 2026**
+- Habilita por primera vez **trenes intermodales doble-stack Florida → Northeast** en el corredor I-95
+- UNP, NSC, CN físicamente NO pueden competir en este corredor
+- 37 plantas industriales nuevas YTD en la red CSX (Hinrichs cit pre-exit)
+- Margen estructural permanente en intermodal del Sureste
+
+## Comparables Class I
+
+| Ticker | Mkt Cap | P/E Fwd | Div Yield | OR Q1 26 | Geographic |
+|--------|---------|---------|-----------|----------|------------|
+| **CSX** | $84B | **19.4x** | **1.24%** | **64.0%** | US East |
+| UNP | $135B | 21x | 2.21% | 59.9% | US West |
+| NSC | $63B | 24x* | 1.68% | 68.7% | US East |
+| CN | $75B | 18x | 2.32% | 64.2% | Canada-US |
+| CP | $78B | 23.7x | 0.76% | 55.9% | Trinacional |
+
+*NSC P/E elevado por merger arb premium
+
+## Analyst Consensus (post-Q1 raises)
+
+- Coverage: ~46 analysts
+- Mix: **28 Buy / 17 Hold / 1 Sell**
+- Mean target: ~$47 (range $30-$50)
+- **Recientes raises**: Baird $47 (de $40, Outperform), BofA $49 (Buy), TD Cowen $45 (Buy), Wolfe Research raised post-Q1
+
+## Posicionamiento Institucional Notable
+
+- **Ancora Holdings** — activista, sigue presente post-Hinrichs ouster
+- BlackRock, Vanguard, State Street — pasivos
+- Berkshire Hathaway no tiene posición pública en CSX (controla BNSF)
+
+## Catalizadores Próximos
+
+- **30 mayo 2026**: STB decisión sobre completitud refile UP-NSC
+- **Mid-julio 2026**: Q2 2026 earnings (proyectado)
+- **2026 H2**: posibles M&A talks formales si UP-NSC avanza
+- **Septiembre 2026**: Annual investor day típico
+- **2027**: STB decisión final sobre UP-NSC merger
+
+## Por Qué Hoy
+
+(1) Q1 2026 fue claro inflection — guide raised, OR -560bps, volumen +3%
+(2) M&A optionality no priced — UP-NSC refile hace 4 días
+(3) Steve Angel tiene pedigree explícito de M&A
+(4) Howard Street Tunnel = ventaja estructural permanente
+(5) Capital return acelerado (+8% div, $222M Q1 buybacks)
+(6) Onshoring tailwind (37 plants nuevos en red)
+
+---
+
+*Research fecha: 4 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 47.00,
+    analyst_upside: 4.2,
+    status: "active",
+    first_researched_at: "2026-05-04T00:00:00Z",
+    last_updated_at: "2026-05-04T00:00:00Z",
+    next_review_at: "2026-11-04T00:00:00Z",
+  },
+  {
+    id: 59,
+    ticker: "DE",
+    name: "Deere & Company",
+    sector: "Industrials",
+    industry: "Agricultural Machinery",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 578.79,
+    pe_ratio: 32.66,
+    pe_forward: 25.15,
+    dividend_yield: 1.12,
+    market_cap_b: 156.34,
+    eps: 17.72,
+    summary_short:
+      "El #1 fabricante mundial de maquinaria agrícola — fundado en 1837 por John Deere (el inventor del arado de acero), HQ en Moline, Illinois, ~75,000 empleados globales, CEO **John C. May** desde 2019. Q1 FY2026 (reportado 19 feb): EPS **$2.42 batió consensus por ~20%** ($2.00-$2.10 esperado), revenue equipment-ops $8.0B (+17.5%), Construction & Forestry +34%, Small Ag & Turf +24%. **Deere SUBIÓ el guidance FY2026** a net income $4.5-5.0B (de $4.0-4.75B prior). May dijo en la call: **'2026 marca el fondo del ciclo actual'** — y el dato lo respalda: inventario de field de tractores 220+ HP a fin de FY2025 = el nivel más bajo en 17+ años. Destocking esencialmente completo. La tesis secular de **precision ag**: See & Spray cubrió **+5M acres en 2025** ahorrando 31M galones de herbicida y +2 bu/acre de yield (third-party trials), nuevo modelo de pricing per-acre ($1 fallow / $5 in-crop) tipo SaaS, target +185M engaged acres adicionales a fin de 2026. **El tractor autónomo 8R/9RX** (Perception Autonomy Kit revelado CES 2025, retrofitable a 8R/8RX MY2020+) entra a rollout comercial broader 2026. Capital return: dividendo $1.62/q ($6.48/año, 6 años consecutivos subiendo), $750M devueltos en Q1 sólo. Riesgo: tariff hit confirmado **$1.2B en FY2026** + commodity prices presionando capex de farmers.",
+    summary_what:
+      "Deere & Company es el **#1 fabricante mundial de maquinaria agrícola** y un top-3 global en construcción/forestry. Fundada en **1837 por John Deere** en Grand Detour, Illinois — el blacksmith que inventó el primer arado de acero auto-limpiable que permitió cultivar las praderas del Midwest. HQ Moline, Illinois (donde la fundación ocurrió en 1848 cuando se mudó). ~75,000 empleados globalmente. **CEO: John C. May** (Chairman + CEO desde 2019/2020).\n\n**Estructura de revenue FY2025 (fiscal year ends late October — $45.7B total, -12% YoY de $51.7B FY2024):** (1) **Production & Precision Ag (~38%, $17.3B)** — el segmento core: tractores grandes (8R/9RX series), combines (S/X series), tecnología de precision farming, sprayers. EPS de operating profit -41% YoY a $2.67B en el downcycle. (2) **Small Ag & Turf (~22%, $10.2B)** — tractores compactos, turf equipment, residential. (3) **Construction & Forestry (~25%, $11.4B)** — incluye **Wirtgen Group** (la adquisición de $5.2B en 2017, road construction global), construcción y forestal John Deere brand. (4) **Financial Services (~13%, $5.8B)** — John Deere Financial financia ~50%+ de las ventas de equipment a farmers; +1% YoY en FY2025 (el único segmento creciendo). (5) Otros (~2%).\n\n**Stack tecnológico precision ag** (la tesis secular): **Blue River Technology** (adquirida 2017, AI/ML brain de See & Spray), **Bear Flag Robotics** (adquirida 2021, autonomía base), **Hagie Manufacturing** (sprayers high-clearance), **JDLink** (telematics), y el **John Deere Operations Center** (cloud platform — el data flywheel central donde converge el dato de cada tractor conectado). El **autonomous 8R/9RX Perception Autonomy Kit** revelado en CES 2025: 16 cámaras en pods para 360° del campo, retrofitable a tractores MY2020+ y 9R/9RX MY2022+, con variante orchard que añade LiDAR. Limited availability 2025, broader rollout 2026.\n\n**Geografía**: US core (Iowa: Waterloo/Davenport/Dubuque/Ankeny; Illinois: Moline/East Moline). Brasil = mercado estratégico de alto crecimiento — 3 fábricas + tech center, BRL 3B invertidos. India = oportunidad pero tough — Mahindra+Swaraj domina ~43% combinado vs Deere ~7.87%. Europa = Small Ag & Turf-skew. Anunciaron en 2024 que la producción de skid steers + compact track loaders se MUEVE de Dubuque (Iowa) a México para fin de 2026 — más de 4,500 jobs cortados desde 2015.",
+    summary_why:
+      "Deere a $579.38 es comprar el operador #1 global de **ag equipment + precision farming** justo en el fondo del downcycle más profundo desde 2014, con guidance recién raised, inventarios de field a 17-year lows, y el rollout comercial broader del autonomous 8R/9RX a partir de 2026. Razones específicas: (1) **Q1 FY2026 fue el inflection — reportado 19 feb 2026**: EPS $2.42 batió consensus por ~20% ($2.00-$2.10 esperado). Equipment-ops revenue $8.0B (+17.5% YoY). Construction & Forestry +34%, Small Ag & Turf +24% (downcycle bottom evidence). Deere **SUBIÓ guidance FY2026 a net income $4.5-5.0B** (de $4.0-4.75B prior). (2) **'2026 marca el fondo del ciclo actual' — John May, Q1 call**: el dato concreto lo respalda — inventario de field de tractores 220+ HP a fin de FY2025 = **el nivel más bajo en 17+ años**. Destocking esencialmente completo. Cuando los tractores grandes vuelvan a salir del lote, Deere captura el upside completo (no hay competidor cerca). (3) **Tesis secular precision ag inflexionando**: **See & Spray cubrió +5M acres en 2025** ahorrando 31M galones de herbicida + delivering +2 bu/acre de yield en trials de 3rd-party universidades en 7 estados. Pricing model evolutionado a **per-acre ($1 fallow / $5 in-crop)** = SaaS-like recurring revenue. **Target: +185M engaged acres adicionales fin de 2026** (acres conectados al Operations Center). Si Deere captura $5-10/acre en software/service en 265M+ engaged acres = $1.3-2.7B incremental high-margin recurring. (4) **Autonomous 8R/9RX rollout broader 2026**: Perception Autonomy Kit revelado CES 2025 con 16 cámaras + LiDAR en variante orchard, retrofitable a tractores MY2020+. Limited 2025, broader 2026. **See & Scout** lanzado 23 abril 2026 — extiende plataforma de spraying a scouting de campos. Esto NO es vaporware — es producto que ya facturó. (5) **Capital return acelerado**: dividendo $1.62/q ($6.48/año, +16.3% CAGR 5 años, payout ratio solo 34%, **6 años consecutivos subiendo**), $750M devueltos a accionistas en Q1 FY2026 sólo. Buyback authorization cumulative ~$39-43B (UAW figure). (6) **Brasil estructural tailwind**: mercado de ag machinery proyectado de $7.93B (2025) a $11.38B (2031, CAGR ~6.2%). Deere expandiendo capacidad — BRL 3B en fábricas + BRL 180M en tropical-ag tech center. (7) **Tariffs son net positivos en 5 años**: el $1.2B FY2026 hit es real pero el onshoring response a tariffs Trump favorece a Deere vs CNH/Kubota (más expuestos a importación). May explicit en Q1 call: tariffs aceleran shift de capex de farmers a equipment doméstico. (8) **Analyst consensus**: 16 Buy / 9 Hold / 0 Sell. Mean target ~$655, range $618-$669, high $775-$793. Implied upside +13% al mean. RBC tiene $736 aplicando 32x a FY2027 EPS consensus de $23.01-$23.64.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **Tariff hit confirmado $1.2B en FY2026 — y creciente**: Q1 FY2026 ya embebió tariffs; el **6 abril 2026** Section 232 expandido a 50% sobre **valor completo del artículo** (no solo metal content) añade headwind incremental. Q2 FY2026 (reporta mid-mayo 2026) será primer trimestre completo con la nueva framework. Si tariffs se mantienen 12+ meses, el run-rate puede subir a $1.5-2B. (2) **Commodity price headwind sobre farmer capex**: USDA outlook 2026 — corn $4.62/bu (-$0.08), losses forecast de **$0.88/bu**, cost-to-plant +$27 a $917/acre. Net farm income forecast $153.4B (-0.7% YoY). Los farmers postponen CAPEX en este ambiente — el 'farm spending freeze' es el frame que los inversores están miran. Government payments hasta $44.3B (+$13.8B) compensan parcial. (3) **Valuation premium asume rebound limpio FY2027**: P/E TTM 33.9x / forward FY2026 31.5x / forward FY2027 25x asume **EPS rebote a $23+ en FY2027**. Morningstar fair value $328 = -43% downside como contrarian bookend. Si commodity prices NO suben + tariffs persisten + adoption precision ag plateaues, FY2027 EPS puede caer en low end $19, y multiple comprime simultáneo. Downside trough case: $400 (-31%). (4) **UAW + labor friction**: 4,500+ jobs cortados desde 2015, 2,700+ desde oct 2023. Relación con UAW abiertamente hostil (huelga 2021 fue significativa). Mexico shift de skid steers/compact track loaders genera fricción política — Trump amenazó con 200% tariff sobre productos Deere-Mexico durante campaña. Renegociación CBA puede traer disrupción. (5) **Adopción precision ag puede plateau**: See & Spray creció a 5M acres pero target +185M acres en 1 año es agresivo. Si farmer ROI math se aprieta por commodity prices bajos, adoption rate podría stallar. Competidores (Solinftec, Greeneye Technology) están commoditizando spot-spray. La 'data flywheel' solo funciona si efectivamente gira. (6) **Mahindra threat en India + CNH en LatAm**: Mahindra+Swaraj ~43% combined India share vs Deere ~7.87%. CNH (acquired Raven Industries 2021) compitiendo aggressively en precision ag. AGCO con Trimble JV. La premium-price positioning de Deere funciona en US but harder in price-sensitive markets. (7) **CFO transition reciente**: Joshua Jepsen renunció **19 feb 2026** (mismo día que Q1 results) para ser CFO de Honeywell Aerospace. Ryan Campbell acting CFO interim. Cualquier transición de CFO en mid-cycle reorg = riesgo de revisión de guidance. (8) **Construction & Forestry ciclo separado**: ~25% revenue depende de housing + infrastructure spending. Si Trump infrastructure bill se delays + housing recession deepens, Construction segment puede caer otro -20% sobre la base ya deprimida FY2025.",
+    research_full: `# Deere & Company (DE) — Research Completo
+
+## Precio: $579.38 | P/E TTM: 33.9x | P/E Forward FY26: 31.5x | Div Yield: 1.12% | Market Cap: $156.5B
+
+---
+
+## Qué Es
+
+Deere & Company es el **#1 fabricante mundial de maquinaria agrícola** y un top-3 global en construcción/forestry. Fundada en **1837 por John Deere** — el blacksmith que inventó el primer arado de acero auto-limpiable que permitió cultivar las praderas del Midwest. HQ Moline, Illinois. ~75,000 empleados.
+
+**CEO: John C. May** (Chairman + CEO desde 2019/2020). **CFO transition reciente: Joshua Jepsen renunció 19 feb 2026** para CFO de Honeywell Aerospace. **Ryan D. Campbell** acting CFO interim. **Cory Reed** movido de President P&PA a President Lifecycle Solutions (señal de reorg en aftermarket + monetización digital).
+
+## Estructura de Segmentos (FY 2025: $45.7B, -12% YoY)
+
+| Segmento | Revenue | % | Op Profit | OP YoY |
+|----------|---------|---|-----------|--------|
+| **Production & Precision Ag** | $17.3B | ~38% | $2.67B | -41% |
+| **Small Ag & Turf** | $10.2B | ~22% | $1.21B | -26% |
+| **Construction & Forestry** | $11.4B | ~25% | $1.03B | -49% |
+| **Financial Services** | $5.8B | ~13% | $1.11B | **+25%** |
+| **Other** | $0.95B | ~2% | — | — |
+
+FY2025 EPS Diluted: **$18.50** (vs $25.62 FY2024 = -28%) — el downcycle más profundo desde 2014.
+
+## Q1 FY2026 (reportado 19 feb 2026 — INFLECTION)
+
+| Métrica | Q1 FY26 | YoY |
+|---------|---------|-----|
+| Equipment Ops Revenue | $8.0B | **+17.5%** |
+| Worldwide Net Sales | $9.6B | +13% |
+| Net Income | $656M | -25% (tariff drag) |
+| **EPS Diluted** | **$2.42** | -24% but **BEAT $2.00-$2.10 est por ~20%** |
+| Equipment Ops Op Margin | 5.9% | tariff-compressed, mejorando seq |
+
+### Segmentos Q1 FY26:
+
+| Segmento | Net Sales | YoY | Op Margin |
+|----------|-----------|-----|-----------|
+| Production & Precision Ag | $3.16B | +3% | 4.4% |
+| Small Ag & Turf | $2.17B | **+24%** | 9.0% |
+| Construction & Forestry | $2.67B | **+34%** | 5.1% |
+
+Construction orders highest level since 2024.
+
+## Guidance FY2026 (RAISED en Q1 call)
+
+- **Net Income: $4.5B - $5.0B** (raised de $4.0B-$4.75B)
+- Production & Precision Ag op margin: 11-13%
+- Small Ag & Turf op margin: 13.5-15% (raised)
+- Construction & Forestry op margin: 9-11% (raised)
+- **Tariff cost FY2026: ~$1.2B pre-tax** (less than half from IEEPA)
+
+## La Cita Que Importa
+
+> **"2026 marca el fondo del ciclo actual."** — John May, Q1 FY26 earnings call (19 feb 2026)
+
+**Evidencia que respalda**:
+- Inventario de field de tractores 220+ HP a fin FY2025 = **17-year low**
+- Destocking de dealers esencialmente completo
+- Construction orders Q1 FY26 = highest desde 2024
+- Brazil + India + Russia growth offsetting NA softness
+
+## Tesis Secular: Precision Ag Data Flywheel
+
+**Stack:**
+- **Blue River Technology** (adq 2017) — AI/ML brain de See & Spray
+- **Bear Flag Robotics** (adq 2021) — autonomía base
+- **Hagie Manufacturing** (adq 2016) — sprayer hardware
+- **JDLink** — telematics
+- **Operations Center** — cloud central, data flywheel
+
+**Tracking comercial:**
+- **See & Spray cobertura**: **+5M acres en 2025**
+  - Ahorró ~31M galones de herbicida mix
+  - +2 bu/acre yield (avg, hasta +4.8) — third-party trials universidades en 7 estados
+- **Engaged Acres**: +80M en 1 año, **target +185M más fin 2026**
+- **Pricing**: $1/fallow acre, $5/in-crop acre, **Application Savings Guarantee** (pay only when measurable savings deliver), **Unlimited Annual License** nuevo MY2026
+
+**Math grueso**: 265M+ engaged acres × $5-10/acre = **$1.3-2.7B incremental recurring** a margenes software-like (50%+).
+
+## Autonomous Tractor Rollout
+
+| Modelo | CES Reveal | Status |
+|--------|-----------|--------|
+| Autonomous 8R | CES 2022 | Limited availability |
+| Perception Autonomy Kit gen-2 | CES 2025 | 16 cameras pods + 360° |
+| Retrofittable | MY2020+ 8R/8RX, MY2022+ 9R/9RX | 2026 broader |
+| Orchard variant | CES 2025 | LiDAR added |
+| **See & Scout** | **23 abril 2026** | Field scouting tool |
+
+## Catalizadores Próximos
+
+| Fecha | Evento |
+|-------|--------|
+| **Mid-mayo 2026** | Q2 FY26 earnings (TBD — verify Deere IR) |
+| **Mayo 8, 2026** | Pago dividendo $1.62/q (record date 31 marzo) |
+| **Jun-Jul 2026** | Annual investor day típicamente |
+| **2026 H2** | Mexico production shift execution |
+| **CES Jan 2027** | Próximo gen autonomous reveal |
+
+## Capital Return
+
+- **Dividendo: $1.62/q ($6.48/año)** — 6 años consecutivos subiendo, +16.3% CAGR 5 años
+- Payout ratio: 34%
+- **Q1 FY26: ~$750M devueltos** (dividendos + buybacks)
+- **Buyback cumulative authorization: ~$39-43B** (UAW figure)
+- Yield: 1.12% al precio actual
+
+## Comparables
+
+| Company | P/E TTM | Op Margin | Notes |
+|---------|---------|-----------|-------|
+| **DE** | 33.9x | 12-13% est FY26 | Premium ag pure-play |
+| CAT | 43x (Apr 26) | mid-upper guide | Energy/data-center tailwind |
+| CNH | 32.75x | 4.5-5.5% guide | Margin compression |
+| AGCO | 12-20x | 6.8% (adj 7.5%) | Cheapest |
+| Kubota | 14.6x | 8.8% | Highest peer margin |
+
+## Geografía + Manufacturing
+
+- **US Iowa**: Waterloo, Davenport, Dubuque, Ankeny, Johnston, Urbandale, Ottumwa
+- **US Illinois**: Moline, East Moline
+- **Brazil**: 3 plants + tech center; BRL 3B+ invested; mercado proyectado a $11.4B (2031)
+- **India**: ~7.87% share (Mahindra dominante 43% combined)
+- **Mexico shift**: skid steers + compact track loaders moving from Dubuque IA → Mexico fin 2026
+
+## Layoff/Labor History
+
+| Año | Eventos |
+|-----|---------|
+| 2015-2023 | 2,000+ jobs cortados |
+| Oct 2023-2024 | +2,700 jobs cortados Iowa/Illinois |
+| 2024 | 2,167 layoffs |
+| 2026 (proj) | Mexico shift execution |
+
+UAW abiertamente hostil. Trump campaña 2024 amenazó 200% tariff sobre productos Deere-Mexico.
+
+## Analyst Consensus
+
+- **Mix**: 16 Buy / 9 Hold / 0 Sell (MarketBeat) o 10/6/0 (TipRanks)
+- **Mean target**: ~$655 (range $618-$669)
+- **High target**: $775 (TipRanks) / $793 (WallStreetZen) / $736 (RBC)
+- **Low target**: $531-$550
+- **Upside vs $579**: +13% al mean
+- **FY2026 EPS consensus**: **$18.42** (range $16.72-$20.75)
+- **FY2027 EPS consensus**: ~$23.01-$23.64
+- **Morningstar fair value: $328** (contrarian, -43% downside)
+
+## Por Qué Hoy
+
+(1) Q1 FY26 batió por 20% + guide raised
+(2) John May: '2026 marca el fondo del ciclo'
+(3) Inventarios de field tractores 220+ HP en 17-year low
+(4) Tesis secular precision ag inflexionando (5M acres + per-acre pricing)
+(5) Autonomous 8R/9RX rollout broader 2026
+(6) Capital return acelerado (6 años consecutivos div+, $750M Q1)
+
+## Riesgos Específicos
+
+(1) Tariffs $1.2B FY26 confirmados + Section 232 expandido 6 abril 2026
+(2) Commodity prices presionando farmer capex
+(3) Valuation 33x asume FY27 rebound limpio
+(4) UAW + Mexico shift = labor friction
+(5) Mahindra + CNH share thieves en LATAM/India
+(6) Morningstar $328 fair value como bookend contrario
+
+---
+
+*Research fecha: 4 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 655.00,
+    analyst_upside: 13.0,
+    status: "active",
+    first_researched_at: "2026-05-04T00:00:00Z",
+    last_updated_at: "2026-05-04T00:00:00Z",
+    next_review_at: "2026-11-04T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -9029,6 +9388,39 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #55* — Apr 28, 2026\n\n🏢 *Salesforce* (CRM) — $182.21\n\n🛍️ *Sus marcas/líneas*: Sales Cloud (el producto original de 1999 — gestión de leads y oportunidades), Service Cloud (call centers y soporte al cliente, el más grande hoy), Marketing Cloud, Commerce Cloud, *Slack* (mensajería corporativa, $27B adquisición 2021), *Tableau* (analytics, $15.7B adq 2019), *MuleSoft* (integración de APIs, $6.5B adq 2018), Heroku, Data 360 (la lakehouse de datos enterprise), *Agentforce* (la nueva plataforma de agentes de AI lanzada oct 2024), e *Informatica* (data integration + governance, $8B adq cerrada 18 nov 2025).\n\n🌍 *Presencia*: Estados Unidos — HQ en Salesforce Tower, San Francisco. ~73,000 empleados en 200+ países. Fundada en marzo 1999 por Marc Benioff (sigue como CEO/Chairman después de 26 años). Inventaron la categoría SaaS con su tesis original "No Software" — toda la industria SaaS de $400B+ existe gracias a esa apuesta. El 90%+ de las Fortune 500 usa algún producto Salesforce: AT&T, ADP, American Express, T-Mobile, FedEx, Allianz.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.97% anual* solo por ser dueño. Cada vez que una empresa Fortune 500 paga su licencia de Sales Cloud, un agente de AI atiende a un cliente vía Agentforce, o un equipo usa Slack para coordinar — parte de ese dinero llega a ti como dividendo. Y acaban de autorizar *$50 mil millones en buybacks* (feb 2026) — el más grande de la historia de Salesforce, equivalente al 33% del market cap actual.\n\n⚠️ *El riesgo*: Microsoft Copilot + Dynamics 365 está ganando net-new logos enterprise — si Microsoft logra integrar AI agents con Office 365 (que ya está en 95% de Fortune 500), CRM puede perder share. Q4 FY26 net-new logo growth fue solo +6%, más lento que el histórico +15-20%. Plus: el deal de Informatica ($8B + 5,800 empleados) es la integración más grande de Salesforce desde Slack — si churn aumenta o ARR se estanca, mercado castiga.\n\n🆕 Posición #55 — Cierra Ciclo 11\n🔗 https://vectorialdata.com/stocks/CRM\n✅ Certificado por blockchain → vectorialdata.com/verify/CRM\n\n💡 Dato que ancla la tesis: en 12 meses el stock de Salesforce cayó de $296 a $182 — el peor performance de las grandes tech. El mercado castigó a CRM porque pensó que la AI iba a matar el software empresarial. Pero hace 2 meses (25 feb 2026), Salesforce reportó que Agentforce — su nuevo producto de agentes de AI — ya tiene **$800 millones en suscripciones recurrentes (+169% YoY)** con 29,000 deals cerrados. La AI no los está matando: los está salvando. Y el stock cotiza a P/E forward 13.65x — el más bajo desde la IPO de 2004.`,
     attestation_uid: "0xb3f4364dea5bfffb273541fd88fd4cc8fdbe7748cd8fdf3cfa6ec98c05b07613",
   },
+  {
+    id: 56,
+    stock_id: 40,
+    ticker: "CRRFY",
+    type: "rebuy" as const,
+    cycle_number: 12,
+    price: 4.00,
+    date: "2026-05-04",
+    day_of_week: "monday",
+    wa_message: `🔄 *RECOMPRA* — May 4, 2026\n\n🏢 *Carrefour SA* (CRRFY) — $4.00\n🛒 Carrefour (hipermercados líder en Francia y España), Atacadão (cash & carry #1 de Brasil), Supeco (descuento), Carrefour Bio, Promocash\n\n💵 Seguimos acumulando ingreso del *5.68% anual* — el yield subió desde nuestra primera compra en abril.\n💪 *¿Por qué recompramos?* La acción sigue prácticamente al mismo precio que hace 3 semanas y los fundamentales no cambiaron: P/E forward 9.5x, plan Carrefour 2030 ejecutándose, Atacadão creciendo en Brasil. Comprar a diferentes precios reduce tu riesgo promedio.\n\n🔄 Recompra #56\n🔗 https://vectorialdata.com/stocks/CRRFY\n✅ Certificado por blockchain → vectorialdata.com/verify/CRRFY\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en CRRFY. Ve el research completo: vectorialdata.com/stocks/CRRFY\n\n💡 Carrefour paga su dividendo una vez al año (típicamente en mayo-junio), no trimestral como las empresas americanas. La asamblea anual aprueba el monto y se paga en un solo cheque. Con 5.68% de yield, eso significa que en ~12.5 años recuperas tu inversión completa solo en dividendos — sin que el precio suba un centavo.`,
+  },
+  {
+    id: 57,
+    stock_id: 58,
+    ticker: "CSX",
+    type: "new" as const,
+    cycle_number: 12,
+    price: 45.14,
+    date: "2026-05-04",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #57* — May 4, 2026\n\n🏢 *CSX Corporation* (CSX) — $45.14\n\n🚂 *Sus líneas/activos*: 20,000 millas de vía férrea en el Este de EE.UU. — uno de los dos ferrocarriles Clase I que dominan el corredor East Coast (el otro es Norfolk Southern). Mueven carbón, intermodal (contenedores), químicos, automóviles, granos y agregados desde el Atlántico hasta el Mississippi. El **tunnel Howard Street** en Baltimore (reabierto sept 2025) habilita doble-stack intermodal Florida → Northeast por primera vez en la historia.\n\n🌍 *Presencia*: Estados Unidos — HQ en Jacksonville, Florida. Vía férrea en 26 estados + DC + Ontario y Quebec. Sirven a dos tercios de la población al este del Mississippi y conectan 70+ puertos del Atlántico y el Golfo. CEO **Steve Angel** (entró sept 2025, ex-CEO de Linde y Praxair — pedigree explícito en M&A).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.24% anual* solo por ser dueño. Cada vez que un contenedor llega al puerto de Savannah y viaja en tren hasta Chicago, cada vez que GM mueve autos desde Detroit hacia el Sur, o cada vez que una utility quema carbón de West Virginia para generar electricidad — parte de ese dinero llega a ti como dividendo. El dividendo subió +8% en feb 2026 a $0.56/año, y CSX devolvió $222M en buybacks solo en Q1.\n\n⚠️ *El riesgo*: La industria ferroviaria está entrando en su mayor ola de fusiones en 30 años. El 30 abril 2026 (hace 4 días), Union Pacific y Norfolk Southern refilearon su fusión de $85B con la STB. Si la fusión se aprueba, crea el primer ferrocarril transcontinental — y CSX queda como la "dance partner" obvia para BNSF o CPKC. Pero si la STB la rechaza otra vez, la tesis de M&A se enfría y el stock puede corregir.\n\n🆕 Posición #57\n🔗 https://vectorialdata.com/stocks/CSX\n✅ Certificado por blockchain → vectorialdata.com/verify/CSX\n\n💡 Dato que ancla la tesis: el Howard Street Tunnel en Baltimore se construyó en 1895. Por 130 años fue demasiado bajo para que pasaran trenes con contenedores apilados de a dos (lo que en la industria llaman "doble-stack"). Eso obligaba a CSX a desviar carga o usar un solo nivel — costoso e ineficiente. En septiembre 2025 terminaron de bajar el piso del túnel y ahora, por primera vez en la historia, los trenes doble-stack pueden ir directo desde Florida hasta Nueva York por la costa Este. Ese cambio estructural — invisible para Wall Street — vale cientos de millones en eficiencia anual y hace que CSX gane participación contra el camión en el corredor I-95, el más congestionado de EE.UU.`,
+  },
+  {
+    id: 58,
+    stock_id: 59,
+    ticker: "DE",
+    type: "new" as const,
+    cycle_number: 12,
+    price: 578.79,
+    date: "2026-05-04",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #58* — May 4, 2026\n\n🏢 *Deere & Company* (DE) — $578.79\n\n🚜 *Sus líneas/marcas*: Tractores John Deere (8R/9RX series, los más grandes del mundo), combines (S/X series), *Wirtgen Group* (construcción de carreteras, $5.2B adq 2017), *Blue River Technology* (AI/ML para See & Spray), *Bear Flag Robotics* (autonomía), *Hagie Manufacturing* (sprayers), *JDLink* (telematics) y el *John Deere Operations Center* (la plataforma cloud donde converge el dato de cada tractor conectado del mundo).\n\n🌍 *Presencia*: Estados Unidos — HQ en Moline, Illinois (donde John Deere fundó la empresa en 1837 inventando el primer arado de acero auto-limpiable). ~75,000 empleados globales. Fábricas en Iowa (Waterloo, Davenport, Dubuque, Ankeny), Brasil (3 fábricas + tech center, BRL 3B invertidos), México, Alemania, India. CEO **John C. May** desde 2019.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.12% anual* solo por ser dueño — y el dividendo lleva 6 años consecutivos subiendo, con un payout ratio de solo 34% (mucho margen para seguir creciendo). Cada vez que un farmer en Iowa cosecha maíz con un combine S780, una constructora pavimenta una autopista con maquinaria Wirtgen, o un agricultor en Brasil siembra soja con un tractor 8R — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: Tariffs van a costar **$1.2B en FY2026** (confirmado por el management) y el ciclo agrícola sigue en zona baja — USDA proyecta pérdidas de $0.88 por bushel de maíz en 2026. Si los farmers postponen capex 12 meses más y los tariffs se mantienen, el rebote del earnings que el mercado espera para FY2027 puede llegar más débil de lo esperado.\n\n🆕 Posición #58\n🔗 https://vectorialdata.com/stocks/DE\n✅ Certificado por blockchain → vectorialdata.com/verify/DE\n\n💡 Dato que ancla la tesis: en su última call (19 feb 2026), el CEO John May dijo textualmente: *"2026 marca el fondo del ciclo actual"*. El dato que respalda esa frase es brutal — el inventario de tractores grandes (220+ HP) en los lotes de los dealers a fin de FY2025 está en **el nivel más bajo en 17+ años**. Cuando los dealers tienen los lotes vacíos, cualquier farmer que necesita reemplazar equipo tiene que pedir nuevo. Y mientras tanto, See & Spray — el sistema de visión artificial que rocía herbicida solo donde hay malezas — cubrió +5M de acres en 2025 ahorrando 31M galones de químicos. Deere ya cobra $5/acre en cultivo activo: cuando esos 5M se conviertan en los 185M+ acres meta, eso son cientos de millones en revenue recurrente tipo SaaS, con márgenes de software, no de fierro.`,
+  },
 ];
 
 export const cycles = [
@@ -9125,7 +9517,7 @@ export const cycles = [
     cycle_number: 12,
     type: "new" as const,
     target_count: 5,
-    current_count: 0,
+    current_count: 3,
     status: "active" as const,
   },
 ];
