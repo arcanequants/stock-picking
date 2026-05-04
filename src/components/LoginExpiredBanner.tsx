@@ -25,21 +25,6 @@ export default function LoginExpiredBanner({ isAuthed = false }: { isAuthed?: bo
     }
   }, [isAuthed, hasExpiredParam, pathname, router]);
 
-  // Listen for the cross-tab auth success broadcast from /auth/synced. When
-  // the magic-link tab completes login it posts on this channel — we use it
-  // to self-dismiss instead of leaving a stale "expired" banner up.
-  useEffect(() => {
-    if (typeof BroadcastChannel === "undefined") return;
-    const channel = new BroadcastChannel("vd-auth");
-    channel.onmessage = (ev) => {
-      if (ev.data?.type === "vd-auth-success") {
-        setDismissed(true);
-        if (hasExpiredParam) router.replace(pathname);
-      }
-    };
-    return () => channel.close();
-  }, [hasExpiredParam, pathname, router]);
-
   if (!hasExpiredParam || dismissed || isAuthed) return null;
 
   const handleSend = async (e: React.FormEvent) => {
