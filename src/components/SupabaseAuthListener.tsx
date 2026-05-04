@@ -43,8 +43,43 @@ export default function SupabaseAuthListener() {
       }
     });
 
+    // Cross-tab BroadcastChannel listener. The /auth/synced tab (opened by the
+    // email magic-link click) posts vd-auth-success and immediately closes.
+    // Supabase's own cross-tab sync may miss it because the synced tab does
+    // no client-side auth work — cookies are set by the server redirect.
+    // We listen here so ANY origin tab picks up the new session and refreshes.
+    let channel: BroadcastChannel | null = null;
+    if (typeof BroadcastChannel !== "undefined") {
+      try {
+        channel = new BroadcastChannel("vd-auth");
+        channel.onmessage = (ev) => {
+          if (ev.data?.type !== "vd-auth-success") return;
+          const path = window.location.pathname;
+          const isPublic = PUBLIC_REDIRECT_PATHS.some(
+            (p) => path === p || path.startsWith(p + "/"),
+          );
+          const next =
+            typeof ev.data.next === "string" && ev.data.next.startsWith("/")
+              ? ev.data.next
+              : "/portfolio";
+          if (isPublic) {
+            window.location.href = next;
+          } else {
+            // Strip stale ?login=expired etc. so the banner can't reappear,
+            // and refresh server components so the page re-renders authed.
+            const cleanUrl = window.location.pathname;
+            window.history.replaceState(null, "", cleanUrl);
+            router.refresh();
+          }
+        };
+      } catch {
+        // BroadcastChannel can throw in some embedded contexts — best-effort.
+      }
+    }
+
     return () => {
       subscription.unsubscribe();
+      channel?.close();
     };
   }, [router]);
 
