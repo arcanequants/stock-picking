@@ -1,11 +1,7 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
-
-// 60 days — outlives a browser close so users stay logged in.
-// Refresh-token validity is controlled in the Supabase Dashboard
-// (Auth → Sessions → Inactivity timeout) and must also be ≥ 60d.
-export const AUTH_SESSION_MAX_AGE = 60 * 24 * 60 * 60;
+import { AUTH_SESSION_MAX_AGE } from "@/lib/auth-session";
 
 // ===== Existing clients (data queries, cron jobs) =====
 

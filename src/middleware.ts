@@ -1,6 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
-import { AUTH_SESSION_MAX_AGE } from "@/lib/supabase";
+import { AUTH_SESSION_MAX_AGE } from "@/lib/auth-session";
 
 // ─── AI Bot Detection ───
 const AI_BOTS: Record<string, "search" | "training"> = {

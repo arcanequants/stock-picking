@@ -1,5 +1,5 @@
 import { createBrowserClient } from "@supabase/ssr";
-import { AUTH_SESSION_MAX_AGE } from "@/lib/supabase";
+import { AUTH_SESSION_MAX_AGE } from "@/lib/auth-session";
 
 let _browserClient: ReturnType<typeof createBrowserClient> | null = null;
 
