@@ -6,7 +6,7 @@ import { getSplitMap } from "@/lib/split-cache";
 
 export const dynamic = "force-dynamic";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const [{ data: snapshots }, splitMap] = await Promise.all([
       getSupabase()
@@ -21,19 +21,6 @@ export async function GET(request: Request) {
       (snapshots?.[0]?.prices as Record<string, number>) ?? {};
     const sharesMap: Record<string, number> =
       (snapshots?.[0]?.position_shares as Record<string, number>) ?? {};
-
-    // Temp debug — remove after BKNG fix verified
-    if (new URL(request.url).searchParams.get("debug") === "1") {
-      return NextResponse.json({
-        snapshot_date: snapshots?.[0]?.date ?? null,
-        sharesMap_keys: Object.keys(sharesMap).length,
-        sharesMap_BKNG: Object.entries(sharesMap)
-          .filter(([k]) => k.startsWith("BKNG"))
-          .map(([k, v]) => `${k}=${v}`),
-        splitMap_BKNG: splitMap.BKNG ?? null,
-        splitMap_keys: Object.keys(splitMap).length,
-      });
-    }
 
     const { positions, totalInvested, totalValue } = aggregatePositions(
       transactions,
