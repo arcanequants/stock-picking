@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { AUTH_SESSION_MAX_AGE } from "@/lib/supabase";
 
 // ─── AI Bot Detection ───
 const AI_BOTS: Record<string, "search" | "training"> = {
@@ -101,7 +102,10 @@ export async function middleware(request: NextRequest) {
           });
           supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) => {
-            supabaseResponse.cookies.set(name, value, options);
+            supabaseResponse.cookies.set(name, value, {
+              ...options,
+              maxAge: AUTH_SESSION_MAX_AGE,
+            });
           });
         },
       },
