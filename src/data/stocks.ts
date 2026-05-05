@@ -8983,6 +8983,318 @@ Modelo: ~10+ deals/año, ~7-9x EBITDA pagados, retain management, descentralizad
     last_updated_at: "2026-05-04T00:00:00Z",
     next_review_at: "2026-11-04T00:00:00Z",
   },
+  {
+    id: 62,
+    ticker: "RHHBY",
+    name: "Roche Holding AG",
+    sector: "Healthcare",
+    industry: "Pharmaceuticals / Diagnostics",
+    country: "Switzerland",
+    region: "Europe",
+    currency: "USD",
+    price: 50.84,
+    pe_ratio: 19.86,
+    pe_forward: 15.76,
+    dividend_yield: 3.08,
+    market_cap_b: 327.45,
+    eps: 2.56,
+    summary_short:
+      "**La empresa farmacéutica más antigua del top global** — fundada en 1896 en Basilea, Suiza, hoy es **#1 mundial en oncología y diagnósticos in-vitro**. Controlada desde hace 130 años por la familia fundadora **Hoffmann-Oeri** (64.97% de los votos vía pool familiar creado en 1948 — la familia jamás ha vendido el control). Q1 FY2026 reportado **23 abril 2026**: ventas grupo CHF 14.722B (**+6% a tipo de cambio constante, +9% USD**), **Pharma CHF 11.469B (+7% CER)**, Diagnostics CHF 3.253B (+3% CER) — beat consensus en ambos segmentos. Top 5 productos en crecimiento Q1: **Ocrevus** (esclerosis múltiple, CHF 1.69B, +6%), **Hemlibra** (hemofilia A, CHF 1.19B, +13%), **Vabysmo** (degeneración macular, CHF 1.02B, +13%), **Xolair** (asma/alergias, CHF 708M, +26%), **Phesgo** (cáncer mama HER2+, CHF 686M, +27%). Pipeline catalítico 2026: **CT-388** (obesidad — primer competidor real a Mounjaro/Ozempic, Phase 3 acaba de iniciar tras 22.5% pérdida de peso en Phase 2), **trontinemab** (Alzheimer — 91% reducción de placas amiloides en Phase 2), **giredestrant** (cáncer mama ER+ — Phase 3 persevERA falló endpoint primario en marzo 2026, pero pipeline tiene otros 2 estudios en marcha). **89bio acquisition cerrada sept 2025** ($2.4B + CVR hasta $6/sh = ~$3.5B total) sumó pegozafermin para enfermedad hepática NASH/MASH. **Trump-Suiza tariff cap 15%** (bajó de 39% original) reduce el riesgo. Roche comprometió **$50B de inversión en EE.UU. a 5 años** para desactivar presión política. **Estructura ADR**: 8 ADRs RHHBY = 1 Genussschein (Non-Voting Equity Security) — los inversionistas RHHBY no tienen voto. Próximo earnings: ~24 julio 2026. Yield trailing 3.08% (USD), payout ratio 61%, dividendo 36 años consecutivos pagado/subido.",
+    summary_what:
+      "Roche Holding AG es **la empresa farmacéutica más antigua del top global**, fundada en **1896** por Fritz Hoffmann-La Roche en Basilea, Suiza. Hoy es **#1 mundial en oncología** (cáncer de mama, linfomas, pulmón) y **#1 mundial en diagnósticos in-vitro** (los tests de PCR que tu hospital usa, los tests de glucosa, oncology companion diagnostics). Tiene dos divisiones:\n\n**(1) Pharma (~78% del revenue)** — desarrollo y comercialización de medicamentos. Top productos en 2026: **Ocrevus** (esclerosis múltiple), **Hemlibra** (hemofilia A — primer anticuerpo bispecífico aprobado), **Vabysmo** (degeneración macular y edema diabético), **Xolair** (asma y alergias graves), **Phesgo** (cáncer de mama HER2+), **Tecentriq** (inmunoterapia oncológica), **Evrysdi** (atrofia muscular espinal — el primer tratamiento oral de la enfermedad).\n\n**(2) Diagnostics (~22% del revenue)** — tests de laboratorio y dispositivos médicos. Roche fabrica los analizadores que están en hospitales de **>180 países**. Cada año procesan **>30 mil millones de tests diagnósticos** globalmente.\n\n**Estructura accionaria — el dato que marca todo**: Roche tiene tres clases de títulos:\n- **Bearer Shares (ROG.SW)** — con voto, 12.96% del capital, controladas por la familia Hoffmann-Oeri (64.97% de los votos vía pool familiar creado 1948).\n- **Genussscheine** (Non-Voting Equity Security, NES) — sin voto, 87.04% del capital, lo que se compra públicamente.\n- **RHHBY ADR** — **8 ADRs RHHBY = 1 Genussschein**. Los holders de RHHBY no tienen voto. Económicamente idénticos a los Genussscheine.\n\n**La familia Hoffmann-Oeri** firmó un pool agreement en **1948** (76 años atrás) que les da control absoluto sin necesitar mayoría del capital. El pool jamás ha vendido. Severin Schwan (CEO 2008-2023) y ahora **Thomas Schinecker** (CEO desde marzo 2023, ex-CEO de Roche Diagnostics) reportan a un Board encabezado por Christoph Franz (Chairman desde 2014). 90 productos Roche están en la **WHO Essential Medicines List**. >100,000 empleados globales.",
+    summary_why:
+      "RHHBY a $50.84 es comprar el #1 farmacéutico global en oncología y diagnósticos a P/E forward 15.76x — descuento vs farmacéutica peer ~18-20x — con un pipeline 2026-27 que tiene 3 catalysts asimétricos. Razones específicas: (1) **Q1 FY2026 batió consensus en ambos segmentos (reportado 23 abril 2026)**: revenue grupo CHF 14.722B (+6% CER, +9% USD), Pharma CHF 11.469B (+7% CER), Diagnostics CHF 3.253B (+3% CER). 5 productos crecieron doble dígito: Ocrevus +6%, Hemlibra +13%, Vabysmo +13%, **Xolair +26%, Phesgo +27%**. Confirmaron guidance FY2026 (mid single-digit growth en sales, high single-digit growth en core EPS a CER). (2) **CT-388 obesidad — la apuesta más asimétrica del año**: Phase 2 results (sept 2024) mostraron **22.5% pérdida de peso a 24 semanas** vs ~21% de Mounjaro y ~15% de Wegovy — números competitivos al **gold standard**. **Phase 3 acaba de iniciarse Q1 2026** (5 trials simultáneos). Si CT-388 logra aprobación 2028-29, Roche entra al mercado de obesidad de **$150B+ proyectado para 2030** que hoy controlan Lilly y Novo. Cualquier captura material es upside masivo no priced en la acción. (3) **Trontinemab Alzheimer — 91% reducción de placas amiloides en Phase 2**: cifra inédita vs Lecanemab (Eisai/Biogen) y Donanemab (Lilly) que rondan 60-70%. Phase 3 inicia 2026, lectura ~2028-29. Mercado Alzheimer es ~$50B+/año proyectado. (4) **89bio integración (cerrada sept 2025, $2.4B + CVR)**: pegozafermin sumó programa NASH/MASH (enfermedad de hígado graso no-alcohólica) — categoría sin tratamiento aprobado, prevalencia ~25% adultos EE.UU. Phase 3 en curso. (5) **Hoffmann-Oeri family control = capital allocator a 50 años**: el pool firmado en **1948** (76 años atrás) garantiza que Roche jamás será objeto de takeover hostil, jamás cortará R&D para hacer earnings de un quarter, jamás hará financial engineering. Sus decisiones se toman pensando en la generación siguiente. Es el horizonte de inversión más largo del top farmacéutico mundial. (6) **Diagnostics moat estructural**: Roche fabrica los analizadores que están en >180 países procesando >30B tests/año. Una vez instalado un analizador, los reactivos son razor-and-blade por décadas. (7) **Trump-Suiza tariff cap 15% (vs 39% original)**: el deal Suiza-EE.UU. de septiembre 2025 limita farmaceutical tariffs a 15%. Roche comprometió **$50B inversión en EE.UU. a 5 años** para desactivar presión política y mantener acceso al mercado #1 mundial. (8) **Dividendo 3.08% trailing, 36 años consecutivos pagado**: payout ratio 61%, sostenible. Roche distribuye en CHF (Swiss franc) — Suiza no tiene **Withholding Tax sobre US holders del ADR** (treaty 0%). (9) **Valuación**: P/E forward 15.76x es 15-20% descuento vs Pharma peer (Lilly 30x, Novo 22x, Pfizer 12x, Merck 14x). Si el pipeline obesidad/Alzheimer/NASH delivers, re-rating natural. Mean analyst target alrededor de $59-62 = **+15-20% upside**.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **persevERA giredestrant Phase 3 falló endpoint primario (marzo 2026)** — el oral SERD para cáncer mama ER+ post-tratamiento aromatase inhibitor + CDK4/6 inhibitor no superó al fulvestrant en first-line metastatic. Roche aún tiene 2 estudios giredestrant en marcha (lidERA adjuvant, evERA combinación) pero el dato más esperado falló. Cualquier fallo similar en CT-388 obesidad o trontinemab Alzheimer sería material. (2) **CT-388 Phase 3 incertidumbre real**: Phase 2 fue 22.5% pérdida pero N=78 pacientes en 24 semanas. Phase 3 con thousands de pacientes y 68-78 semanas puede tener side effects que limiten la dosis o eficacia menor que peers. Si CT-388 falla, la tesis obesidad-asimétrica desaparece. (3) **Trontinemab Alzheimer — Phase 2 fue impresionante pero N pequeño**: 91% reducción de placas amiloides es inédito pero hay que esperar Phase 3 para ver impacto en cognición/función. **El precedente de Lecanemab + Donanemab muestra que reducir placas no siempre traduce a beneficio clínico significativo**. (4) **Tariffs farmacéuticos en EE.UU.**: el cap de 15% post-deal es reducción del 39% original pero todavía es un costo. Roche tiene 36% del revenue en EE.UU. ($21B de $58B en 2024). Cada 1% de tariff adicional = ~$200M anuales. Si la administración Trump cambia términos, riesgo. (5) **89bio integración**: $3.5B total deal con CVR — si pegozafermin NASH falla en Phase 3, Roche escribirá goodwill. (6) **Patent cliffs 2026-29**: Ocrevus pierde exclusividad principal en EE.UU. 2029 (CHF 7B+ producto en 2025); biosimilars entrarán. Hemlibra protected hasta 2028+. Tecentriq biosimilars empezando ~2027. (7) **Estructura ADR sin voto**: holders RHHBY no participan en gobierno corporativo. Si la familia Hoffmann-Oeri tomara una decisión que perjudicara al public float, no hay defensa. Históricamente alineados pero estructuralmente posible. (8) **CHF/USD currency risk**: Roche reporta en CHF. Si CHF se aprecia vs USD, revenue USD-denominated reportado en CHF cae aún si volumen sube. (9) **Diagnostics competition desde China**: Mindray, Sysmex, Siemens Healthineers ganando share en mercados emergentes. Diagnostics sólo creció +3% Q1 2026 (vs Pharma +7%). (10) **Government drug pricing pressure**: Inflation Reduction Act (IRA) Medicare price negotiation está expandiendo lista de drugs negociadas — Ocrevus podría entrar 2027-28.",
+    research_full: `# Roche Holding AG (RHHBY) — Research Completo
+
+## Precio: $50.84 | P/E TTM: 19.86 | P/E Forward: 15.76 | Div Yield: 3.08% | Market Cap: $327.45B
+
+---
+
+## ¿Qué es Roche?
+
+Roche Holding AG es **la empresa farmacéutica más antigua del top global**, fundada en **1896** por Fritz Hoffmann-La Roche en Basilea, Suiza. Hoy es:
+
+- **#1 mundial en oncología** (cáncer de mama, linfomas, pulmón)
+- **#1 mundial en diagnósticos in-vitro** (>180 países, >30B tests/año)
+- **130 años de historia continua** controlada por la misma familia fundadora
+
+## Estructura Accionaria — Lo Que Marca Todo
+
+Roche tiene tres clases de títulos:
+
+| Título | Voto | % Capital | Quién lo tiene |
+|--------|------|-----------|----------------|
+| **Bearer Shares (ROG.SW)** | Sí | 12.96% | Familia Hoffmann-Oeri (64.97% votos via pool 1948) |
+| **Genussscheine (NES)** | No | 87.04% | Public float global |
+| **RHHBY ADR** | No | (representa Genussschein) | **8 ADRs = 1 Genussschein** |
+
+**El pool familiar Hoffmann-Oeri firmado en 1948** (76 años atrás) garantiza control absoluto. La familia jamás ha vendido. Inversionistas RHHBY no tienen voto, pero económicamente equivalentes a Genussscheine.
+
+## Q1 FY2026 — Reportado 23 abril 2026
+
+| Métrica | Q1 2026 | YoY (CER) |
+|---------|---------|-----------|
+| Revenue grupo | CHF 14.722B | **+6% CER, +9% USD** |
+| Pharma | CHF 11.469B | **+7% CER** |
+| Diagnostics | CHF 3.253B | +3% CER |
+
+**Top 5 productos en crecimiento Q1**:
+- **Ocrevus** (esclerosis múltiple): CHF 1.69B (+6%)
+- **Hemlibra** (hemofilia A): CHF 1.19B (+13%)
+- **Vabysmo** (degeneración macular): CHF 1.02B (+13%)
+- **Xolair** (asma/alergias): CHF 708M (**+26%**)
+- **Phesgo** (cáncer mama HER2+): CHF 686M (**+27%**)
+
+**Guidance FY2026 confirmado**: mid single-digit growth en sales, high single-digit growth en core EPS a CER.
+
+## Pipeline 2026-29 — Las 3 Apuestas Asimétricas
+
+### (1) CT-388 — Obesidad (Phase 3 inicia Q1 2026)
+
+- **Phase 2 result (sept 2024)**: 22.5% pérdida de peso a 24 semanas
+- **Comparación**: Mounjaro ~21%, Wegovy ~15%
+- **Phase 3**: 5 trials simultáneos en curso
+- **Mercado obesidad**: $150B+ proyectado para 2030 (hoy ~$30B)
+- **Aprobación esperada**: 2028-29 si Phase 3 confirma datos
+
+### (2) Trontinemab — Alzheimer (Phase 3 inicia 2026)
+
+- **Phase 2 result (oct 2024)**: **91% reducción de placas amiloides**
+- **Comparación**: Lecanemab (Eisai) ~60%, Donanemab (Lilly) ~70%
+- **Lectura Phase 3**: ~2028-29
+- **Mercado Alzheimer**: $50B+/año proyectado
+
+### (3) Pegozafermin (89bio) — NASH/MASH
+
+- **Adquisición 89bio cerrada sept 2025**: $2.4B + CVR hasta $6/sh = ~$3.5B total
+- **NASH/MASH**: enfermedad de hígado graso no-alcohólica, sin tratamiento aprobado, ~25% prevalencia adultos EE.UU.
+- **Phase 3** en curso
+
+## Tariffs y Política — Trump-Suiza Deal
+
+- **Tariff cap 15%** (bajó de 39% original) tras deal Suiza-EE.UU. **septiembre 2025**
+- Roche comprometió **$50B inversión EE.UU. a 5 años**
+- 36% del revenue Roche viene de EE.UU. ($21B de $58B en 2024)
+- Cada 1% de tariff adicional = ~$200M/año
+
+## Capital Return
+
+- **Dividendo CHF 9.80/Genussschein FY2025** (USD ADR yield ~3.08%)
+- **36 años consecutivos** subiendo o manteniendo dividendo
+- **Payout ratio**: 61%
+- **Buybacks**: limitados — Roche prefiere reinvertir en R&D + M&A
+- Suiza-EE.UU. **0% withholding tax** sobre RHHBY ADR (treaty)
+
+## Patent Landscape
+
+| Producto | Pierde exclusividad |
+|----------|---------------------|
+| Ocrevus | EE.UU. 2029 (~CHF 7B en 2025) |
+| Hemlibra | 2028+ |
+| Tecentriq | ~2027 (biosimilars) |
+| Vabysmo | 2032+ |
+| Phesgo | 2030+ |
+
+## Próximos Catalysts
+
+- **Earnings Q2 FY2026**: ~24 julio 2026
+- **CT-388 Phase 3 readouts iniciales**: 2027
+- **Trontinemab Phase 3 enrollment**: completa 2026
+
+## Tesis en una línea
+
+> Comprar el #1 farmacéutico global en oncología y diagnósticos a P/E forward 15.76x, con familia Hoffmann-Oeri controlling 76 años (capital allocator multi-generacional), pipeline 2026-29 que tiene 3 apuestas asimétricas (CT-388 obesidad, trontinemab Alzheimer, pegozafermin NASH), Trump-Suiza tariff cap 15%, dividendo 3.08% / 36 años consecutivos.
+
+---
+
+*Research fecha: 5 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 60.00,
+    analyst_upside: 18.0,
+    status: "active",
+    first_researched_at: "2026-05-05T00:00:00Z",
+    last_updated_at: "2026-05-05T00:00:00Z",
+    next_review_at: "2026-11-05T00:00:00Z",
+  },
+  {
+    id: 63,
+    ticker: "RTX",
+    name: "RTX Corporation",
+    sector: "Industrials",
+    industry: "Aerospace & Defense",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 172.87,
+    pe_ratio: 32.43,
+    pe_forward: 22.90,
+    dividend_yield: 1.60,
+    market_cap_b: 232.80,
+    eps: 5.33,
+    summary_short:
+      "**Tercera empresa de defensa más grande de EE.UU.** y **#2 fabricante mundial de motores comerciales** (después de GE Aerospace). Formada en abril 2020 por la fusión Raytheon + United Technologies (UTC), reorganizada como RTX en julio 2023 con tres segmentos: **Collins Aerospace** (aviónica + sistemas de cabina, ~37% revenue), **Pratt & Whitney** (motores de jet GTF + F135 para F-35, ~33% revenue), **Raytheon** (misiles, defensa aérea, radar — Patriot, NASAMS, Tomahawk, ~30% revenue). Q1 FY2026 reportado **21 abril 2026**: revenue **$22.1B (+9% YoY beat $21.4B)**, **Adj EPS $1.78 vs $1.51 (+18% beat consensus $1.69)**, **backlog récord $271B** ($162B comercial / $109B defensa = ~3 años de ventas adelantadas). **Guidance FY2026 SUBIÓ**: adj EPS $6.70-$6.90 (era $6.50-$6.80), FCF $8.25-$8.75B. Pero stock cayó >4% post-earnings por warning de **$850M tariff hit en 2026**: Canada/Mexico ~$250M, China ~$250M, reciprocal ~$300M, steel/aluminum ~$50M. **Patriot Ukraine: contrato $3.7B firmado 14 abril 2026** (financiado por Alemania, 5 sistemas Patriot adicionales). **Patriot Taiwan: $698.9M contract noviembre 2025** para upgrade NASAMS. **Pratt & Whitney F-35 ECU**: P&W ganó el Engine Core Upgrade vs GE Aerospace XA100 (decisión Pentagon 2024). **GTF recall**: $2.8B accumulated provision, AOG (Aircraft on Ground) -15% Q1 2026 vs Q1 2025, recovery a niveles normales **2030**. **Dividendo subió 30 abril 2026**: $0.73/sh trimestral (+7.4%), payable 11 jun 2026. **CEO Chris Calio** desde 2 mayo 2024 (sucedió a Greg Hayes). Próximo earnings: 28 julio 2026.",
+    summary_what:
+      "RTX Corporation es la **tercera empresa de defensa más grande de EE.UU.** (después de Lockheed Martin y Northrop Grumman) y el **#2 fabricante mundial de motores comerciales** (después de GE Aerospace). Formada en abril 2020 por la fusión Raytheon + United Technologies (UTC), reorganizada como RTX en julio 2023 con tres segmentos:\n\n**(1) Collins Aerospace (~37% del revenue)** — aviónica integrada (cockpit displays, autopilot, comunicaciones), sistemas mecánicos de cabina (asientos, cabinas, oxígeno), evacuación, lighting, controles de vuelo, propellers. Cliente principal: Boeing, Airbus, Bombardier, Embraer, defense agencies. **Q1 FY2026: $7.4B revenue (+5%)**.\n\n**(2) Pratt & Whitney (~33% del revenue)** — motores de jet. **GTF (Geared Turbofan)** PW1100G para A320neo + A321neo + A220 + Embraer E2 (>1,200 aviones operando), **PW1500G** para A220, **F135** motor para F-35 Lightning II (P&W ganó el F-35 Engine Core Upgrade vs GE Aerospace XA100 en 2024 — contrato a $1B+ a largo plazo), **PW800** business jets. **Q1 FY2026: $7.4B revenue (+14%)**, beat por F135 production ramp.\n\n**(3) Raytheon (~30% del revenue)** — sistemas de defensa: **Patriot** (sistema de defensa aérea más exitoso del mundo — 19 países operando, **>140 misiles balísticos interceptados desde Ucrania mayo 2023 + ~250 air targets**), **NASAMS** (defensa aérea de corto alcance, en uso por Ukraine, Taiwan, EE.UU. White House), **Tomahawk** (cruise missile), **AMRAAM** (air-to-air), **AIM-9X** (Sidewinder), **SM-3** (anti-balístico naval), **SPY-6 radar** (próxima generación radar naval). **Q1 FY2026: $6.7B revenue (+5%)**, beat por backlog récord defense $109B.\n\n**Backlog récord $271B** ($162B comercial / $109B defensa) = ~3 años de ventas adelantadas. **CEO Chris Calio desde 2 mayo 2024** (sucedió a Greg Hayes que retiró tras 16 años). **HQ Arlington, Virginia**. ~185,000 empleados. Cotización en S&P 500.",
+    summary_why:
+      "RTX a $172.87 es comprar el #3 contractor de defensa de EE.UU. + #2 fabricante mundial de motores comerciales con backlog récord $271B (~3 años de ventas) a P/E forward 22.9x — premium real pero justificado por backlog visibility, crecimiento defense estructural y GTF recovery proyectada 2030. Razones específicas: (1) **Q1 FY2026 fue beat amplio (reportado 21 abril 2026)**: revenue $22.1B (+9% YoY) batió consensus $21.4B; **adj EPS $1.78 vs $1.51 (+18% YoY)** batió consensus $1.69 (+5% beat). Los 3 segmentos crecieron — Collins +5%, Pratt +14%, Raytheon +5%. **Guidance FY2026 SUBIÓ** mid-call: adj EPS $6.70-$6.90 (era $6.50-$6.80), FCF $8.25-$8.75B (era $7.5-$8B). (2) **Backlog récord $271B = ~3 años de ventas adelantadas**: $162B comercial (Boeing/Airbus aftermarket + GTF MRO + Collins systems) + $109B defense (Patriot + NASAMS + F135 + Tomahawk + AMRAAM). En Q1 RTX cerró $30B+ en nuevos contratos. La visibility multi-año es brutal vs ciclico industrial peer. (3) **Patriot Ukraine — $3.7B contrato firmado 14 abril 2026 (financiado por Alemania)**: 5 sistemas Patriot adicionales para Ukraine. Patriot ya intercepted **>140 misiles balísticos + ~250 air targets en Ucrania desde mayo 2023**, incluyendo el primer derribo confirmado de un Kinzhal hipersónico (Patriot vs Russia top weapon = mayor demostración de capacidad militar de la década). Cada Patriot system = $1B+. Pipeline Patriot global: Polonia, Rumania, Suecia, Alemania, Países Bajos, Japón. (4) **NASAMS Taiwan $698.9M (noviembre 2025)**: defensa aérea para Taipei amid tensiones con China. **NASAMS protege la White House desde 2005**. (5) **F-35 Engine Core Upgrade (ECU) — P&W ganó vs GE Aerospace en 2024**: el upgrade del F135 va a P&W exclusivo, contrato sustained ~$1B+ por 20+ años. Pentagon eligió ECU sobre AETP (Adaptive Engine Transition Program) para reducir riesgo. F-35 program tiene 2,400+ aviones backlog global (EE.UU. + 18 aliados). (6) **GTF recovery curve clara**: el GTF powder metallurgy issue requirió $2.8B accumulated provision desde 2023. **AOG (Aircraft on Ground) cayó -15% Q1 2026 vs Q1 2025** — primera mejora material. Recovery a niveles normales **2030**. **GTF Advantage (entry late-2026)** ofrece +1% mejor fuel burn y +5,000 ciclos durabilidad — relanza el motor con airlines major. (7) **Dividendo subió +7.4% el 30 abril 2026** a $0.73/sh trimestral, payable 11 jun 2026. Yield 1.60% trailing. RTX paga dividendos desde 1936 (89 años) entre componentes legacy + uninterrupted desde merger 2020. (8) **Trump $1T defense budget proposed**: nueva administración prioritized defense, NATO 5% GDP target. RTX como 3er contractor + Patriot/NASAMS demand global = beneficiario directo. (9) **Backlog defense $109B + Trump executive order 7-ene-2026**: orden ejecutiva limita defense buybacks/dividendos pero **autoriza M&A defense industrial base** — RTX puede crecer inorgánico. (10) **Valuación**: P/E forward 22.9x es premium vs A&D peer ~20x pero justificado por backlog visibility 3 años + Patriot demand structural. Mean analyst target $158-180 (depending on fuente) con high target $190+. Pero stock cayó >4% post-earnings por tariff $850M warning — ese gap es la oportunidad.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **Tariff hit $850M en FY2026 — el detonante del sell-off post-earnings**: Canada/Mexico ~$250M, China ~$250M, reciprocal ~$300M, steel/aluminum ~$50M. RTX absorbe directamente; si tariffs escalan más, el guidance subido se erosiona. RTX puede pasar parte vía price increases pero no toda — el management estimó ~$500M neto post-mitigations. (2) **GTF accumulated provision $2.8B + AOG recovery a 2030**: el powder metallurgy issue requirió 700+ aviones aterrizados peak. AOG -15% Q1 2026 es first improvement pero recovery completa toma **4 años más**. Si ocurre otro defect detection (improbable pero posible), nueva provision. Customer concessions con airlines (Lufthansa, JetBlue, IndiGo, Spirit) suman $1B+ contingencies pendientes. (3) **F-35 program risk político**: Trump y Musk pública críticas al F-35 program ('manned fighters obsoletos'). Si Pentagon recorta order rate F-35 (de 80-90/año a 40-50/año), revenue F135 + Collins F-35 systems baja $500M+/año. ECU contract sigue pero volumen producción cae. (4) **Boeing 737 MAX dependency**: Collins + LTA + Pratt motors (PW1500G en B-MAX competitor A220) tienen exposure indirecta al 737 MAX ramp Boeing. Si Boeing tiene otro grounding o quality issue, GTF demand cae. (5) **Trump executive order 7-ene-2026 limitando buybacks/dividendos defense**: orden ejecutiva propuso restringir buybacks de defense contractors (devolver capital al gobierno vía price reductions). Si Congress codifica, RTX dividend growth se ralentiza. RTX subió div 7.4% el 30 abril a pesar de la orden — challenge legal en curso pero incertidumbre. (6) **Raytheon Iran/Middle East exposure**: Patriot exports a Saudi/UAE, NASAMS Israel — escalation regional aumenta backlog pero también riesgo regulatorio (CAATSA, ITAR scrutiny). (7) **Defense budget reversal Europa**: si Ucrania logra ceasefire, demand Patriot/NASAMS replenishment se modera. Pero NATO 5% target sostiene baseline alta. (8) **Pratt Engine Alliance dissolution**: P&W dejó Engine Alliance (joint con GE para A380) — A380 production ya terminó, pero quedan service contracts. (9) **Cybersecurity attacks**: RTX es target prioritario de Russian/Chinese state actors. Cualquier major breach = customer trust + remediation costs. (10) **CEO transition Chris Calio early-tenure**: solo 2 años desde sucesión. El primer test grande con tariffs tuvo response mediocre (stock cayó 4%). Si surge otra crisis (otra GTF defect, F-35 cut), su credibilidad se prueba.",
+    research_full: `# RTX Corporation (RTX) — Research Completo
+
+## Precio: $172.87 | P/E TTM: 32.43 | P/E Forward: 22.90 | Div Yield: 1.60% | Market Cap: $232.80B
+
+---
+
+## ¿Qué es RTX?
+
+RTX Corporation es la **tercera empresa de defensa más grande de EE.UU.** (después de Lockheed Martin y Northrop Grumman) y el **#2 fabricante mundial de motores comerciales** (después de GE Aerospace).
+
+**Historia**:
+- **Abril 2020**: fusión Raytheon Company + United Technologies Corporation (UTC) = Raytheon Technologies
+- **Julio 2023**: rebrand a RTX Corporation, reorganización en 3 segmentos
+- **2 mayo 2024**: Chris Calio asume CEO (sucedió a Greg Hayes tras 16 años)
+
+**HQ**: Arlington, Virginia | **Empleados**: ~185,000 | **Cotización**: S&P 500
+
+## Tres Segmentos
+
+### Collins Aerospace (~37% revenue)
+- Aviónica (cockpit displays, autopilot, comunicaciones)
+- Sistemas de cabina (asientos, oxígeno, evacuación, lighting)
+- Controles de vuelo, propellers, landing gear
+- Cliente: Boeing, Airbus, Bombardier, Embraer, defense agencies
+- **Q1 FY2026**: $7.4B revenue (+5%)
+
+### Pratt & Whitney (~33% revenue)
+- **GTF (Geared Turbofan) PW1100G**: A320neo + A321neo (>1,200 aviones operando)
+- **PW1500G**: A220, Embraer E2
+- **F135**: motor exclusivo F-35 Lightning II
+- **PW800**: business jets (Gulfstream, Dassault)
+- **Q1 FY2026**: $7.4B revenue (+14%)
+
+### Raytheon (~30% revenue)
+- **Patriot**: sistema #1 de defensa aérea — 19 países
+- **NASAMS**: defensa aérea corto alcance — Ukraine, Taiwan, White House
+- **Tomahawk**: cruise missile
+- **AMRAAM**: air-to-air
+- **AIM-9X (Sidewinder)**: air-to-air corto alcance
+- **SM-3**: anti-balístico naval
+- **SPY-6**: radar naval próxima generación
+- **Q1 FY2026**: $6.7B revenue (+5%)
+
+## Q1 FY2026 — Reportado 21 abril 2026
+
+| Métrica | Q1 2026 | Consensus | Beat |
+|---------|---------|-----------|------|
+| Revenue | $22.1B | $21.4B | **+3%** |
+| Adj EPS | $1.78 | $1.69 | **+5%** |
+| YoY EPS | +18% | — | — |
+
+**Backlog récord**: **$271B** ($162B comercial / $109B defensa = ~3 años de ventas).
+
+**Guidance FY2026 SUBIÓ post-call**:
+- Adj EPS $6.70-$6.90 (era $6.50-$6.80)
+- FCF $8.25-$8.75B (era $7.5-$8B)
+
+## Tariff Impact — La Razón del Sell-off Post-earnings
+
+| Categoría | Impacto FY2026 |
+|-----------|-----------------|
+| Canada/Mexico | ~$250M |
+| China | ~$250M |
+| Reciprocal | ~$300M |
+| Steel/Aluminum | ~$50M |
+| **Total** | **~$850M** |
+
+Stock cayó **>4% post-earnings** a pesar del beat. Mitigations en marcha pero $500M+ residual.
+
+## Patriot — La Joya del Portfolio Defense
+
+**Performance Ucrania (mayo 2023 – mayo 2026)**:
+- **>140 misiles balísticos interceptados**
+- **~250 air targets neutralizados**
+- **Primer derribo confirmado de Kinzhal hipersónico** (mayo 2023)
+
+**Contratos recientes**:
+- **Ukraine $3.7B (14 abril 2026)** — 5 sistemas Patriot adicionales, financiado por Alemania
+- **Taiwan NASAMS $698.9M (noviembre 2025)**
+- Pipeline: Polonia, Rumania, Suecia, Alemania, Países Bajos, Japón
+
+Cada Patriot system = ~$1B+. Pipeline global = $20B+ next 5 years.
+
+## F-35 Engine Core Upgrade (ECU) — P&W Win
+
+- **Pentagon decision 2024**: P&W ECU vs GE Aerospace XA100
+- P&W ECU eligida para **reducir riesgo** (drop-in upgrade vs nuevo motor)
+- Contrato sustained ~$1B+/año por 20+ años
+- F-35 program: 2,400+ aviones backlog (EE.UU. + 18 aliados)
+
+## GTF Recovery Curve
+
+- **$2.8B accumulated provision** desde 2023 (powder metallurgy issue)
+- **AOG (Aircraft on Ground)**: peak 700+, **-15% Q1 2026** vs Q1 2025
+- **Recovery a niveles normales**: **2030**
+- **GTF Advantage (entry late-2026)**: +1% fuel burn, +5,000 ciclos durabilidad
+
+## Capital Return
+
+- **Dividendo subió +7.4% el 30 abril 2026**: $0.73/sh trimestral, payable 11 jun 2026
+- **Yield trailing**: 1.60% (USD)
+- **Dividendo legacy desde 1936** (89 años entre componentes)
+- **Buybacks limitados** post Trump executive order 7-ene-2026
+
+## Trump Defense Priorities
+
+- **$1T defense budget proposed**
+- **NATO 5% GDP target**
+- **Executive order 7-ene-2026**: limita buybacks/dividendos defense pero autoriza M&A defense industrial base
+- RTX como #3 contractor = beneficiario directo
+
+## Catalysts 2026-27
+
+- **Q2 FY2026 earnings**: 28 julio 2026 (siguiente test post-tariff)
+- **GTF Advantage entry**: late-2026
+- **Patriot pipeline awards**: Polonia, Rumania, Suecia, Japón
+- **F-35 ECU production ramp**: 2027+
+- **NATO 5% GDP target enforcement**: 2026-30
+
+## Analyst Consensus (mayo 2026)
+
+- **Rating**: Buy / Outperform
+- **Mean target**: ~$180-190
+- **High**: $200+
+- **Upside vs $172.87**: ~+10-15%
+
+## Riesgos Cuantificados
+
+1. **Tariff hit $850M FY2026** — $500M neto post-mitigations
+2. **GTF recovery 2030** — AOG -15% es first improvement, todavía 4 años hasta normal
+3. **F-35 program risk político** — Trump/Musk críticas, si cut order rate revenue F135 cae
+4. **Boeing 737 MAX dependency** — Collins systems exposure
+5. **Buyback restrictions** — Trump exec order 7-ene-2026
+6. **Defense budget reversal Europa** — si Ucrania ceasefire
+7. **Cybersecurity attacks** — state actors target
+8. **CEO Chris Calio early-tenure** — primer crisis tariff respondida con stock -4%
+
+## Tesis en una línea
+
+> Comprar el #3 contractor defense EE.UU. + #2 fabricante mundial motores comerciales a P/E forward 22.9x con backlog récord $271B (~3 años visibility), Patriot demand global structural (Ukraine $3.7B, Taiwan, NATO 5%), F-35 ECU win sustained $1B+/año, dividendo +7.4% subido 30-abril, GTF recovery a 2030 ya iniciada (-15% AOG Q1).
+
+---
+
+*Research fecha: 5 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 185.00,
+    analyst_upside: 7.0,
+    status: "active",
+    first_researched_at: "2026-05-05T00:00:00Z",
+    last_updated_at: "2026-05-05T00:00:00Z",
+    next_review_at: "2026-11-05T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -9743,6 +10055,28 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #60* — May 4, 2026\n\n🏢 *HEICO Corporation* (HEI) — $270.34\n\n✈️ *Sus líneas/marcas*: HEICO Parts Group (+19,500 partes aprobadas por la FAA para reemplazar partes de motores y aviones a 25-50% del precio que cobran Boeing y Airbus), *Wencor* (la mayor adquisición histórica, $2.05B en 2023), *Mid Continent Controls* y *Rosen Aviation* (entretenimiento a bordo en aviación de negocios), *Millennium International* (avionics repair), y *EthosEnergy Accessories & Components* (cerrada feb 2026 — reparación de accesorios de motores). Plus el segmento de electrónica para defensa: misiles, satélites, electronic warfare para Lockheed, Boeing Defense, NASA, Northrop Grumman.\n\n🌍 *Presencia*: Estados Unidos — HQ en Hollywood, Florida. ~11,000 empleados globales con operaciones en EE.UU., Reino Unido, Escocia, Alemania, Israel, Singapur. Fundada en 1957. La familia Mendelson tomó control en 1990; Eric y Victor Mendelson son hoy *Co-CEOs y Co-Chairmen* (su padre Larry, el arquitecto del compounder, falleció en septiembre 2025 — la sucesión ya estaba ejecutada).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.09% anual* solo por ser dueño — un yield diminuto porque la acción ha subido tanto que el dividendo absoluto se ve pequeño en porcentaje. HEICO paga dividendos semi-anuales ininterrumpidos por décadas; cada vez que una aerolínea como Delta o Lufthansa instala una pieza HEICO PMA en un motor de 737, una compañía de defensa monta un sub-componente de electrónica HEICO en un misil, o un Boeing 787 entra a un overhaul — parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: La valuación es premium real — P/E TTM 53.64x vs el promedio de aerospace & defense de ~37x. Si la sentiment cambia, una corrección de -20-30% es posible sin que nada operativo cambie. Plus: el segmento de electrónica (ETG) acaba de comprimir margen de 23.1% a 19.8% en Q1 — management dice que es one-off, pero hay que verificarlo en el reporte del 26 de mayo.\n\n🆕 Posición #60\n🔗 https://vectorialdata.com/stocks/HEI\n✅ Certificado por blockchain → vectorialdata.com/verify/HEI\n\n💡 Dato que ancla la tesis: HEICO ha entregado más de 90 millones de partes PMA a aerolíneas y operadores militares de todo el mundo desde 1957. Ninguna de esas partes ha generado un solo Service Bulletin de la FAA, ninguna Airworthiness Directive, y ningún in-flight shutdown trazable a HEICO — *cero, en 67 años*. Por eso una aerolínea puede comprar una parte HEICO al 50% del precio OEM sin sacrificar ninguna garantía de seguridad, y por eso esta empresa convirtió $26 millones de revenue en 1990 en ~$4.5 mil millones hoy bajo la familia Mendelson. CAGR del 22-23% durante 35 años: $100,000 invertidos en 1990 valdrían más de $100 millones hoy.`,
     attestation_uid: "0x43a5b3eebda6626a571719b1707c60954c24844b3e1ebedf786c11636971cbb5",
   },
+  {
+    id: 61,
+    stock_id: 62,
+    ticker: "RHHBY",
+    type: "new" as const,
+    cycle_number: 13,
+    price: 50.84,
+    date: "2026-05-05",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #61* — May 5, 2026\n\n🏢 *Roche Holding* (RHHBY) — $50.84\n\n💊 *Sus líneas/marcas*: la empresa farmacéutica más antigua del top global, fundada en 1896 en Basilea, Suiza. Top productos hoy: *Ocrevus* (esclerosis múltiple), *Hemlibra* (hemofilia), *Vabysmo* (degeneración macular — cuando se daña la vista en personas mayores), *Xolair* (asma y alergias graves), *Phesgo* (cáncer de mama). Plus el negocio de diagnósticos: las máquinas que están en hospitales de >180 países procesando los tests de PCR, glucosa y cáncer que se hacen cada día.\n\n🌍 *Presencia*: Suiza (HQ en Basilea), con ventas en >180 países y >100,000 empleados globales. **Controlada desde hace 130 años por la familia fundadora Hoffmann-Oeri** (la familia firmó un pacto en 1948 que les da control absoluto y JAMÁS han vendido). CEO Thomas Schinecker desde marzo 2023.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.08% anual* solo por ser dueño. Cada vez que un paciente con esclerosis múltiple recibe Ocrevus, alguien con hemofilia se inyecta Hemlibra, o un hospital en cualquier parte del mundo procesa un test de cáncer en una máquina Roche — parte de ese dinero llega a ti como dividendo. Y Roche lleva 36 años seguidos pagando o subiendo el dividendo.\n\n⚠️ *El riesgo*: Tienen 3 medicamentos importantes en pruebas finales: uno para obesidad (CT-388), uno para Alzheimer (trontinemab) y uno para hígado graso. **Si fallan los 3, la tesis a 5 años se rompe.** Y en marzo 2026 ya falló uno (giredestrant para cáncer de mama) — el mercado está nervioso. Plus: tarifas a productos suizos en EE.UU. del 15%.\n\n🆕 Posición #61 — Abre Ciclo 13\n🔗 https://vectorialdata.com/stocks/RHHBY\n✅ Certificado por blockchain → vectorialdata.com/verify/RHHBY\n\n💡 Dato que ancla la tesis: Roche desarrolla un medicamento llamado **CT-388** para obesidad que en pruebas mostró **22.5% de pérdida de peso en 6 meses** — números similares a Mounjaro y Wegovy (los Ozempic-style que están de moda). Phase 3 (la última prueba antes de aprobación) acaba de empezar este año. Si funciona, Roche entra a un mercado de **$150 mil millones al año** que hoy controlan solo dos empresas. Aún si capturan apenas el 10%, son $15 mil millones de revenue extra anual sin que el mercado lo tenga incorporado en el precio actual.`,
+  },
+  {
+    id: 62,
+    stock_id: 63,
+    ticker: "RTX",
+    type: "new" as const,
+    cycle_number: 13,
+    price: 172.87,
+    date: "2026-05-05",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #62* — May 5, 2026\n\n🏢 *RTX Corporation* (RTX) — $172.87\n\n🚀 *Sus líneas/marcas*: la 3ra empresa de defensa más grande de EE.UU. y la 2da fabricante de motores de avión del mundo. Tres negocios: *Collins Aerospace* (los asientos, las pantallas y los sistemas de cabina de tu próximo vuelo en Boeing o Airbus), *Pratt & Whitney* (los motores GTF de los Airbus A320neo y el motor F135 que usa el caza F-35), y *Raytheon* (sistema **Patriot** que protege ciudades de misiles, **NASAMS** que protege la Casa Blanca, *Tomahawk*, *AMRAAM*).\n\n🌍 *Presencia*: HQ en Arlington, Virginia. ~185,000 empleados globales. Patriot está desplegado en 19 países. Formada en abril 2020 por la fusión de Raytheon + United Technologies. CEO Chris Calio desde mayo 2024.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.60% anual* solo por ser dueño — y acaban de subir el dividendo +7.4% el 30 de abril (de $0.68 a $0.73 por trimestre). Cada vez que Boeing o Airbus entrega un avión nuevo (lleva sistemas Collins + motores Pratt), cada vez que Alemania compra un sistema Patriot para enviar a Ucrania, o un F-35 sale de fábrica con motor Pratt — parte de ese dinero llega a ti como dividendo. RTX paga dividendos sin parar desde 1936.\n\n⚠️ *El riesgo*: Las tarifas de Trump le van a costar **$850 millones en 2026** (Canadá, México, China, acero, aluminio). Por eso la acción cayó >4% el día que reportaron, aunque batieron expectativas. Plus: hay un orden ejecutivo de enero 2026 que limita los buybacks de empresas de defensa.\n\n🆕 Posición #62\n🔗 https://vectorialdata.com/stocks/RTX\n✅ Certificado por blockchain → vectorialdata.com/verify/RTX\n\n💡 Dato que ancla la tesis: RTX tiene **$271 mil millones** en órdenes ya firmadas pero no entregadas — eso son **3 años completos de ventas adelantadas**, contractuadas, esperando ejecución. El sistema *Patriot* de RTX ha derribado **más de 140 misiles balísticos rusos en Ucrania desde mayo 2023**, incluyendo el primer derribo confirmado de un misil hipersónico ruso (el Kinzhal, que Putin presentaba como "imparable"). Ese rendimiento real en combate hizo que Polonia, Rumania, Suecia, Alemania, Países Bajos y Japón se pusieran en cola para comprar Patriot — y cada sistema cuesta más de $1,000 millones.`,
+  },
 ];
 
 export const cycles = [
@@ -9847,7 +10181,7 @@ export const cycles = [
     cycle_number: 13,
     type: "new" as const,
     target_count: 5,
-    current_count: 0,
+    current_count: 2,
     status: "active" as const,
   },
 ];
