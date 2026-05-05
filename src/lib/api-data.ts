@@ -1,6 +1,7 @@
 import { getSupabase } from "@/lib/supabase";
 import { stocks, transactions, cycles } from "@/data/stocks";
 import { aggregatePositions } from "@/lib/position-utils";
+import { getSplitMap } from "@/lib/split-cache";
 
 const INVESTMENT_PER_POSITION = 50;
 
@@ -12,6 +13,23 @@ async function getLatestPrices(): Promise<Record<string, number>> {
     .limit(1);
 
   return (snapshots?.[0]?.prices as Record<string, number>) ?? {};
+}
+
+async function getLatestSnapshot(): Promise<{
+  prices: Record<string, number>;
+  sharesMap: Record<string, number>;
+}> {
+  const { data: snapshots } = await getSupabase()
+    .from("portfolio_snapshots")
+    .select("prices, position_shares")
+    .order("date", { ascending: false })
+    .limit(1);
+
+  return {
+    prices: (snapshots?.[0]?.prices as Record<string, number>) ?? {},
+    sharesMap:
+      (snapshots?.[0]?.position_shares as Record<string, number>) ?? {},
+  };
 }
 
 export async function getPicksData(limit?: number, tier = "free") {
@@ -93,8 +111,11 @@ export function getResearchData(ticker: string, tier = "free") {
 }
 
 export async function getPortfolioSummary() {
-  const prices = await getLatestPrices();
-  const { totalInvested, totalValue, positions } = aggregatePositions(transactions, prices);
+  const [{ prices, sharesMap }, splitMap] = await Promise.all([
+    getLatestSnapshot(),
+    getSplitMap(),
+  ]);
+  const { totalInvested, totalValue, positions } = aggregatePositions(transactions, prices, splitMap, sharesMap);
 
   const totalReturnPct = totalInvested > 0
     ? Math.round((((totalValue - totalInvested) / totalInvested) * 100) * 100) / 100
@@ -110,8 +131,11 @@ export async function getPortfolioSummary() {
 }
 
 export async function getPositions(tier = "free") {
-  const prices = await getLatestPrices();
-  const { positions, totalInvested, totalValue } = aggregatePositions(transactions, prices);
+  const [{ prices, sharesMap }, splitMap] = await Promise.all([
+    getLatestSnapshot(),
+    getSplitMap(),
+  ]);
+  const { positions, totalInvested, totalValue } = aggregatePositions(transactions, prices, splitMap, sharesMap);
 
   positions.sort((a, b) => b.return_pct - a.return_pct);
 

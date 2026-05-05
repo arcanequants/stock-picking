@@ -23,11 +23,16 @@ export interface AggregatedPosition {
  * Groups transactions by ticker and calculates weighted average cost basis.
  * Portfolio-level totals (totalInvested, totalValue) use per-transaction math
  * so global return_pct stays identical to the cron snapshot formula.
+ *
+ * `sharesMap` (keyed `${ticker}|${date}|${type}`) is the DRIP-adjusted share
+ * count per tx persisted by the cron. When present, value/return reflect
+ * dividends reinvested. When absent, falls back to split-only math.
  */
 export function aggregatePositions(
   txs: Transaction[],
   prices: Record<string, number>,
   splitMap: SplitMap = {},
+  sharesMap: Record<string, number> = {},
 ): { positions: AggregatedPosition[]; totalInvested: number; totalValue: number } {
   const grouped = new Map<string, Transaction[]>();
 
@@ -52,7 +57,9 @@ export function aggregatePositions(
 
     for (const tx of txList) {
       const { adjustedPrice } = applySplitAdjustment(tx.price, tx.date, splitMap[tx.ticker]);
-      const shares = INVESTMENT_PER_POSITION / adjustedPrice;
+      const fallbackShares = INVESTMENT_PER_POSITION / adjustedPrice;
+      const shares =
+        sharesMap[`${tx.ticker}|${tx.date}|${tx.type}`] ?? fallbackShares;
       posInvested += INVESTMENT_PER_POSITION;
       posShares += shares;
       txDetails.push({ price: adjustedPrice, date: tx.date, type: tx.type });
@@ -60,7 +67,7 @@ export function aggregatePositions(
 
     const avgPrice = posInvested / posShares;
     const posValue = posShares * currentPrice;
-    const returnPct = ((currentPrice - avgPrice) / avgPrice) * 100;
+    const returnPct = ((posValue - posInvested) / posInvested) * 100;
 
     const dates = txList.map((t) => t.date).sort();
     const firstBought = dates[0];

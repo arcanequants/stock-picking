@@ -17,7 +17,9 @@ const supabase = createClient(
 
 // Import data from stocks.ts
 import { transactions } from "../data/stocks.js";
-import { applySplitAdjustment, fetchSplitMap } from "../lib/split-detection.js";
+import { fetchSplitMap } from "../lib/split-detection.js";
+import { fetchDividendMap } from "../lib/dividend-detection.js";
+import { walkShares } from "../lib/shares-walk.js";
 
 interface HistoricalRow {
   date: Date;
@@ -70,10 +72,13 @@ async function backfill() {
     }
   }
 
-  // Fetch SPY (S&P 500 ETF) historical prices for benchmark comparison
+  // Fetch SPY (S&P 500 ETF) historical prices for DCA-equivalent benchmark.
+  // For each tx we allocate the same $50 to SPY at that tx's date, so the
+  // benchmark has the same money-weighted exposure as the portfolio (no
+  // lump-sum bias).
   console.log(`Fetching historical prices for SPY (benchmark)...`);
   const spyPrices: Record<string, number> = {};
-  let spyBaselineClose: number | null = null;
+  const spyDateOrder: string[] = [];
   try {
     const spyResult = (await yahooFinance.historical("SPY", {
       period1: firstDate,
@@ -87,14 +92,23 @@ async function backfill() {
     for (const row of spySorted) {
       const dateStr = new Date(row.date).toISOString().split("T")[0];
       spyPrices[dateStr] = row.close;
-    }
-    if (spySorted.length > 0) {
-      spyBaselineClose = spySorted[0].close;
+      spyDateOrder.push(dateStr);
     }
     console.log(`  Got ${Object.keys(spyPrices).length} SPY data points`);
   } catch (err) {
     console.error(`  Failed to fetch SPY:`, err);
   }
+
+  // Resolve the SPY close on a tx's purchase date — fall back to the next
+  // available trading day if the tx fell on a weekend/holiday (since the tx
+  // date is "when we picked it" not "when SPY traded").
+  const spyOnOrAfter = (date: string): number | null => {
+    if (spyPrices[date] !== undefined) return spyPrices[date];
+    for (const d of spyDateOrder) {
+      if (d >= date) return spyPrices[d];
+    }
+    return null;
+  };
 
   // Fetch real split events once for all tickers from firstDate forward.
   console.log(`Fetching split events...`);
@@ -102,6 +116,24 @@ async function backfill() {
   for (const [t, evs] of Object.entries(splitMap)) {
     if (evs.length > 0) {
       console.log(`  ${t}: ${evs.length} split(s)`, evs.map((e) => `${e.ratio}@${e.date.toISOString().slice(0,10)}`).join(", "));
+    }
+  }
+
+  // Fetch dividend events for portfolio tickers + SPY (DRIP reinvestment).
+  console.log(`Fetching dividend events...`);
+  const dividendMap = await fetchDividendMap(
+    [...tickers, "SPY"],
+    yahooFinance,
+    new Date(firstDate),
+  );
+  for (const [t, evs] of Object.entries(dividendMap)) {
+    if (evs.length > 0) {
+      console.log(
+        `  ${t}: ${evs.length} dividend(s)`,
+        evs
+          .map((e) => `$${e.amount}@${e.date.toISOString().slice(0, 10)}`)
+          .join(", "),
+      );
     }
   }
 
@@ -115,6 +147,7 @@ async function backfill() {
     return_pct: number;
     spy_return_pct: number;
     prices: Record<string, number>;
+    position_shares: Record<string, number>;
   }[] = [];
 
   // Track last known prices for intra-day stale tickers (not for market-closed days)
@@ -151,23 +184,30 @@ async function backfill() {
       }
     }
 
-    // Calculate portfolio value ($50 per position)
+    // Calculate portfolio value ($50 per position) with DRIP reinvestment.
+    // Per-tx walkShares handles splits + dividends chronologically and returns
+    // the share count after every event up to `dateStr`.
     const INVESTMENT_PER_POSITION = 50;
     let totalInvested = 0;
     let totalValue = 0;
     const prices: Record<string, number> = {};
+    const positionShares: Record<string, number> = {};
 
     for (const tx of activeTxs) {
       const currentPrice = lastKnownPrice[tx.ticker] ?? tx.price;
-      // Only count splits that have already happened by `dateStr` for this snapshot.
-      const eventsUpToDate = (splitMap[tx.ticker] ?? []).filter(
-        (s) => s.date.toISOString().slice(0, 10) <= dateStr,
-      );
-      const { adjustedPrice } = applySplitAdjustment(tx.price, tx.date, eventsUpToDate);
-      const shares = INVESTMENT_PER_POSITION / adjustedPrice;
+      const { shares } = walkShares({
+        investment: INVESTMENT_PER_POSITION,
+        buyPrice: tx.price,
+        buyDate: tx.date,
+        asOfDate: dateStr,
+        splits: splitMap[tx.ticker] ?? [],
+        dividends: dividendMap[tx.ticker] ?? [],
+        priceHistory: historicalPrices[tx.ticker] ?? {},
+      });
       totalInvested += INVESTMENT_PER_POSITION;
       totalValue += shares * currentPrice;
       prices[tx.ticker] = currentPrice;
+      positionShares[`${tx.ticker}|${tx.date}|${tx.type}`] = shares;
     }
 
     const returnPct =
@@ -175,14 +215,30 @@ async function backfill() {
         ? ((totalValue - totalInvested) / totalInvested) * 100
         : 0;
 
-    // Calculate SPY benchmark return % vs first portfolio date
-    // (todaySpyPrice is guaranteed defined because we skipped closed-market days above)
-    let spyReturnPct = 0;
-    if (spyBaselineClose) {
-      spyReturnPct =
-        ((todaySpyPrice - spyBaselineClose) / spyBaselineClose) * 100;
-      prices.SPY = todaySpyPrice;
+    // DCA-equivalent SPY benchmark with DRIP: for each tx, allocate $50 of
+    // SPY at that tx's date and reinvest SPY dividends through `dateStr`.
+    // Same money-weighted exposure + same total-return treatment as the
+    // portfolio — apples-to-apples.
+    let spyInvested = 0;
+    let spyValue = 0;
+    for (const tx of activeTxs) {
+      const spyAtBuy = spyOnOrAfter(tx.date);
+      if (spyAtBuy == null) continue;
+      const { shares: spyShares } = walkShares({
+        investment: INVESTMENT_PER_POSITION,
+        buyPrice: spyAtBuy,
+        buyDate: tx.date,
+        asOfDate: dateStr,
+        splits: [],
+        dividends: dividendMap.SPY ?? [],
+        priceHistory: spyPrices,
+      });
+      spyInvested += INVESTMENT_PER_POSITION;
+      spyValue += spyShares * todaySpyPrice;
     }
+    const spyReturnPct =
+      spyInvested > 0 ? ((spyValue - spyInvested) / spyInvested) * 100 : 0;
+    prices.SPY = todaySpyPrice;
 
     snapshots.push({
       date: dateStr,
@@ -191,6 +247,7 @@ async function backfill() {
       return_pct: Math.round(returnPct * 100) / 100,
       spy_return_pct: Math.round(spyReturnPct * 100) / 100,
       prices,
+      position_shares: positionShares,
     });
   }
 

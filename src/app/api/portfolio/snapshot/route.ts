@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { transactions, stocks } from "@/data/stocks";
 import { getSupabase } from "@/lib/supabase";
 import { aggregatePositions } from "@/lib/position-utils";
+import { getSplitMap } from "@/lib/split-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -22,18 +23,25 @@ export const dynamic = "force-dynamic";
  */
 export async function GET() {
   try {
-    const { data: snapshots } = await getSupabase()
-      .from("portfolio_snapshots")
-      .select("prices, date")
-      .order("date", { ascending: false })
-      .limit(1);
+    const [{ data: snapshots }, splitMap] = await Promise.all([
+      getSupabase()
+        .from("portfolio_snapshots")
+        .select("prices, date, position_shares")
+        .order("date", { ascending: false })
+        .limit(1),
+      getSplitMap(),
+    ]);
 
     const latestPrices: Record<string, number> =
       (snapshots?.[0]?.prices as Record<string, number>) ?? {};
+    const sharesMap: Record<string, number> =
+      (snapshots?.[0]?.position_shares as Record<string, number>) ?? {};
 
     const { positions, totalInvested, totalValue } = aggregatePositions(
       transactions,
-      latestPrices
+      latestPrices,
+      splitMap,
+      sharesMap,
     );
 
     positions.sort((a, b) => b.return_pct - a.return_pct);
