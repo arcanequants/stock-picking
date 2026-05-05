@@ -56,7 +56,8 @@ export function aggregatePositions(
     const txDetails: AggregatedPosition["transactions"] = [];
 
     for (const tx of txList) {
-      const { adjustedPrice } = applySplitAdjustment(tx.price, tx.date, splitMap[tx.ticker]);
+      const basisPrice = tx.open_price ?? tx.price;
+      const { adjustedPrice } = applySplitAdjustment(basisPrice, tx.date, splitMap[tx.ticker]);
       const fallbackShares = INVESTMENT_PER_POSITION / adjustedPrice;
       const shares =
         sharesMap[`${tx.ticker}|${tx.date}|${tx.type}`] ?? fallbackShares;

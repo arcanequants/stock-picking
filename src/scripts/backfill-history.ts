@@ -197,7 +197,11 @@ async function backfill() {
       const currentPrice = lastKnownPrice[tx.ticker] ?? tx.price;
       const { shares } = walkShares({
         investment: INVESTMENT_PER_POSITION,
-        buyPrice: tx.price,
+        // Use open_price (day's regularMarketOpen) as the cost basis for chart
+        // math — fair, consistent benchmark vs. whatever intraday price we
+        // happened to fetch when announcing. Falls back to tx.price for any
+        // legacy tx missing open_price.
+        buyPrice: tx.open_price ?? tx.price,
         buyDate: tx.date,
         asOfDate: dateStr,
         splits: splitMap[tx.ticker] ?? [],

@@ -7,10 +7,19 @@
 - **Repo:** arcanequants/stock-picking
 
 ## Stock Pick Workflow
-When adding a new stock: fetch live Yahoo Finance price → research → add to stocks.ts → add transaction → generate WhatsApp message → update cycle → build → backfill → commit → push.
+When adding a new stock: fetch Yahoo `regularMarketOpen` (NOT `regularMarketPrice`) → research → add to stocks.ts → add transaction → generate WhatsApp message → update cycle → build → backfill → commit → push.
 - Each position = $50 invested (fractional shares)
 - NEVER show dollar values in UI — only percentages
 - Tip rotation: (pickNumber - 1) % tips.length — dynamic tips using stock context (see `tips` array in stocks.ts)
+
+### Price rule (open price for everything)
+For ALL new picks, the day's `regularMarketOpen` is the canonical price — used for:
+1. `tx.price` — feeds the EAS blockchain attestation (immutable hash chain).
+2. `tx.open_price` — feeds chart math via `walkShares()` in `backfill-history.ts` and `position-utils.ts`.
+3. WhatsApp message — quote the open price.
+4. Stock entry's `price` field on first add.
+
+By rule, for new picks: `tx.price === tx.open_price`. They diverge only for the 62 legacy picks (id ≤ 62) where `tx.price` was the intraday price at announcement. For those, `tx.open_price` is set but `tx.price` is preserved (already attested on-chain).
 
 ## Worker System — Automatic Orchestration
 

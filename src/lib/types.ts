@@ -33,7 +33,15 @@ export interface Transaction {
   ticker: string;
   type: "new" | "rebuy";
   cycle_number: number;
+  // `price` is the announced price — what we said publicly + what's hashed
+  // on-chain via EAS attestation. Immutable after attestation.
   price: number;
+  // `open_price` is the day's regularMarketOpen for the pick's date. Used by
+  // the portfolio chart calculation so performance is measured from a fair,
+  // consistent benchmark (open) rather than whatever intraday level we
+  // happened to fetch when announcing. For new picks (going forward),
+  // tx.price === tx.open_price by rule.
+  open_price?: number;
   date: string;
   day_of_week: string;
   wa_message: string;
