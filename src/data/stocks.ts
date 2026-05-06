@@ -9295,6 +9295,146 @@ Cada Patriot system = ~$1B+. Pipeline global = $20B+ next 5 years.
     last_updated_at: "2026-05-05T00:00:00Z",
     next_review_at: "2026-11-05T00:00:00Z",
   },
+  {
+    id: 64,
+    ticker: "NU",
+    name: "Nu Holdings Ltd",
+    sector: "Financial Services",
+    industry: "Banks - Diversified",
+    country: "Brazil",
+    region: "South America",
+    currency: "USD",
+    price: 14.50,
+    pe_ratio: 25.00,
+    pe_forward: 12.60,
+    dividend_yield: 0,
+    market_cap_b: 70.50,
+    eps: 0.58,
+    summary_short:
+      "**El banco digital sin sucursales más grande de Latinoamérica** y la mayor plataforma fintech del mundo fuera de China por número de clientes. Fundado en 2013 en São Paulo por **David Vélez** (colombiano, ex-Stanford/Sequoia), Cristina Junqueira y Edward Wible. **Cerró 2025 con 131 millones de clientes** (+17M netos en el año), revenue **$16.3B (+45% YoY)**, net income **$2.9B (+45% YoY)**, **ROE récord 33%** — el más alto de cualquier banco grande del mundo (vs 15-18% de JPM/BAC/Citi). En México sirven **~15% de toda la población adulta** y son la #1 emisora de tarjetas de crédito nuevas; en Colombia superaron 4M de clientes. Backers: **Berkshire Hathaway de Warren Buffett (~$1B desde 2021** — única apuesta fintech de Buffett en su carrera), Tencent. **29 enero 2026: OCC aprobó condicionalmente el charter de banco nacional EE.UU.** — abriendo hubs en Miami, Bay Area, Virginia y NC research triangle. **Plan 2026: invertir R$45B (~$8.2B) en Brasil, casi 2x el nivel de hace 2 años.** Próximo earnings: **14 mayo 2026 after-close**, consensus revenue $5.06-5.10B, EPS $0.21. Listed NYSE desde dic 2021. CEO David Vélez. Acción a $14.50 está **24% por debajo del máximo 52-sem $18.98**, castigada por debilidad del real brasileño.",
+    summary_what:
+      "Nu Holdings Ltd (NU) es **el mayor banco 100% digital de Latinoamérica** y, por número de clientes, la mayor plataforma fintech del mundo fuera de China.\n\n**Producto core**: la **tarjeta de crédito morada Nubank** (#1 emisora de tarjetas nuevas en Brasil y México), la cuenta digital **NuConta** (sin comisiones, sin sucursales — recibir sueldo, transferir, pagar), **Nu Crypto** (compra/venta de bitcoin desde la app), **NuInvest** (inversiones para principiantes — fondos, CDB en Brasil, acciones), seguros y crédito personal.\n\n**Mercados**:\n- **Brasil** (~75% del negocio, 100M+ clientes — más que el banco más grande tradicional Itaú)\n- **México** (~15% de la población adulta, líder en emisión de tarjetas nuevas)\n- **Colombia** (4M+ clientes, expansión acelerada de tarjeta de crédito)\n\n**Founders y control**: David Vélez (colombiano, ex-Sequoia, Stanford MBA), Cristina Junqueira (brasileña, ex-Itaú), Edward Wible (estadounidense, ex-Boston Consulting). David Vélez sigue como **CEO y founder-led**.\n\n**Backers**: **Berkshire Hathaway (Warren Buffett) ~$1B invertidos desde la IPO de 2021** — Buffett rara vez invierte en fintech, NU es una excepción notable. **Tencent** también es accionista mayor.\n\n**Listing**: NYSE bajo ticker NU desde diciembre 2021. **Class A ordinary shares** (Cayman Islands holding, operación en Brasil/México/Colombia).\n\n**Q4 2025/FY2025 (reportado 25 feb 2026)**:\n- Revenue FY2025: **$16.3B (+45% YoY)**\n- Net income FY2025: **$2.9B (+45% YoY)**\n- Revenue Q4'25: **$4.9B (beat consensus $4.55B)**\n- **ROE 33% récord** — el más alto de cualquier banco grande globalmente\n- **131M clientes globales** (+17M netos en 2025)\n\n**HQ**: São Paulo, Brasil. **~13,000 empleados**. **Próximo earnings**: 14 de mayo 2026 after-close.",
+    summary_why:
+      "NU a $14.50 es comprar el banco más rentable del mundo (ROE 33%) creciendo 45% al año, a forward P/E 12.6x — la mitad de la valuación que paga el mercado por JPMorgan/BAC (P/E 14-16x con crecimiento de 6-8%). Razones específicas: (1) **ROE 33% es récord global de cualquier banco grande**: JPMorgan 17%, BAC 11%, Citi 7%, HSBC 13%. NU genera $33 de utilidad neta por cada $100 de capital propio — más eficiente que cualquier banco gigante de Wall Street, y con tasa de crecimiento 5-7x más alta. La combinación growth + ROE no existe en otro banco listado. (2) **131M clientes (+17M netos en 2025)** = más que la población de México y casi tanto como Japón. En México NU sirve al 15% de la población adulta y es #1 en emisión de tarjetas nuevas; en Colombia 4M+ clientes con expansión de portafolio crediticio. La parte mexicana sola podría valer $20B+ en valuación standalone. (3) **OCC charter EE.UU. aprobado condicionalmente 29 enero 2026** (después de 121 días de revisión) — NU puede operar como banco nacional EE.UU. con depósitos asegurados, lending, custodia de activos digitales. Plan: hubs en Miami, SF Bay, Virginia y Carolina del Norte. Capitalización completa en 12 meses, apertura en 18 meses. **EE.UU. abre TAM de >$3 trillion** vs LatAm $400B — NU se vuelve banco global, no solo banco LATAM. (4) **R$45B (~$8.2B) inversión en Brasil 2026** = casi 2x el nivel de hace 2 años. Management está pisando el acelerador en cohort de clientes high-value (NuConta payroll, NuInvest, crédito de mayor ticket). (5) **Q1 2026 earnings 14 mayo (after-close, próxima semana)**: consensus revenue $5.06-5.10B, EPS GAAP $0.19, EPS normalized $0.21. NU lleva 8 trimestres consecutivos batiendo consensus de revenue. Si bate y guidea bien, gap up >5% likely; si decepciona, oportunidad de añadir a precios mejores. (6) **Berkshire Hathaway $1B+ desde 2021** = validación de Buffett (que rara vez invierte fintech) + Tencent como accionista. Insider holding muy estable. (7) **Eficiencia récord**: cost-to-serve por cliente activo $0.95/mes vs $30+ en banca tradicional brasileña. Cada nuevo cliente es contribución marginal positiva desde mes 1. (8) **Forward P/E 12.6x con crecimiento 45%** = PEG <0.3 — extremadamente barato. Bancos con esa tasa de crecimiento históricamente cotizan a 2-4x esa valuación. (9) **Analyst consensus Moderate Buy, target promedio $18.26** = upside +25.9% vs $14.50. (10) **24% off 52-week high $18.98**: el mercado castigó NU por debilidad del real brasileño Q1 2026, pero el negocio en USD constante creció 45% — la corrección es FX, no fundamentos.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **Real brasileño / FX = ~75% del negocio**: cuando el BRL se devalúa vs USD, las ganancias reportadas en USD encogen aún si el negocio crece en moneda local. En 2025 el BRL cayó ~20% vs USD; en Q1 2026 NU absorbió el hit. Si el BRL cae otro 10-15% (escenario plausible si Brasil sube tasas de interés agresivamente o si Trump impone tariffs a Brasil), revenue reportado en USD podría aplanarse o caer aunque el negocio crezca 40% en moneda local. (2) **Tasas de interés Brasil (Selic)**: la Selic está en ~14.25% (mayo 2026), una de las más altas del mundo. Si NU sube tasas a clientes para mantener spread, el net interest margin se beneficia, pero defaults también suben. NPL (préstamos morosos) +90 días subió a 6.1% en Q4 2025 — manejable pero la trayectoria importa. (3) **México = mercado más competitivo**: BBVA, Santander, Banamex, MercadoPago, Stori — todos pelean por el mismo cliente sin bancarizar. NU es líder en tarjetas nuevas pero unit economics en México todavía no rentables (-$15-20M operating loss Mexico FY2025). Path a profitability MX = 2027-28. (4) **OCC US charter es condicional**: requiere capitalización completa en 12 meses + cumplir condiciones específicas no públicas. Si Federal Reserve o FDIC ponen barreras adicionales (KYC mejorado, capital requirements más estrictos), launch EE.UU. se retrasa de 18 meses a 24-30. (5) **Q1 2026 earnings 14 mayo = catalyst binary**: si bate ($5.10B+ revenue, ROE >32%), gap up. Si miss, corrección -10-15% likely (la acción ya está -24% del high). (6) **Concentración founder David Vélez**: founder-led es positivo pero también riesgo single-point. Vélez tiene control via dual-class shares — si sale o se diluye su rol, governance changes. (7) **Crypto exposure post-OCC**: el OCC charter incluye custodia de digital assets. Si crypto colapsa (post-Bitcoin halving cycle 2025-26), NU Crypto podría perder rentabilidad/clientes. (8) **Competencia MercadoPago**: en LATAM general, MELI's MercadoPago es competidor directo (también 50M+ usuarios financieros, ROE alto). Si MercadoPago acelera, NU pierde share. (9) **Gobierno Brasil (Lula)**: regulación bancaria brasileña podría endurecerse — Banco Central impuso topes a tarjetas de crédito revolving en 2024; otra ronda regulatoria afectaría márgenes. (10) **Valuación si crecimiento desacelera**: si el run-rate de adds cae de 17M/año a 10M/año, forward P/E se 'normaliza' al promedio sector (~10x) → downside ~20%.",
+    research_full: `# Nu Holdings Ltd (NU) — Research Completo
+
+## Precio: $14.50 | P/E TTM: 25.00 | P/E Forward: 12.60 | Div Yield: 0% | Market Cap: $70.50B
+
+---
+
+## ¿Qué es Nu Holdings?
+
+Nu Holdings Ltd es **el mayor banco 100% digital de Latinoamérica** y, por número de clientes (131M), la mayor plataforma fintech del mundo fuera de China.
+
+**Historia**:
+- **2013**: David Vélez (colombiano, ex-Sequoia) funda Nubank en São Paulo con Cristina Junqueira y Edward Wible
+- **2021 (dic)**: IPO en NYSE, valuación $41B, una de las IPOs fintech más grandes de la historia
+- **2024**: 100M+ clientes alcanzados
+- **29 enero 2026**: OCC aprueba condicionalmente charter de banco nacional EE.UU.
+
+**HQ**: São Paulo, Brasil | **Empleados**: ~13,000 | **Cotización**: NYSE (Class A ordinary)
+
+## Producto
+
+### Brasil (~75% revenue, 100M+ clientes)
+- **Tarjeta de crédito Nubank morada**: #1 emisora del país, sin comisión anual
+- **NuConta**: cuenta digital sin comisiones — payroll, PIX, pagos, transferencias
+- **NuInvest**: inversiones (CDB, fondos, acciones B3)
+- **Nu Crypto**: compra/venta BTC + tokens
+- **Crédito personal + seguros**
+
+### México (~15% adultos)
+- Líder en emisión de tarjetas de crédito nuevas
+- Cuenta NuConta MXN
+- Operating loss FY2025 ~$15-20M (path to profitability 2027-28)
+
+### Colombia (4M+ clientes)
+- Tarjeta de crédito + cuenta digital
+- Aprobación 3x más alta de tarjetas tras expansión 2025
+
+## Q4 2025 / FY 2025 — Reportado 25 feb 2026
+
+| Métrica | FY 2025 | YoY |
+|---------|---------|-----|
+| Revenue | $16.3B | **+45%** |
+| Net Income | $2.9B | **+45%** |
+| Q4 Revenue | $4.9B | beat $4.55B |
+| Q4 EPS | $0.18 | beat $0.18 |
+| **ROE** | **33%** | **récord global** |
+| Customers | 131M | +17M netos |
+| Customers México | ~12-13M | 15% adultos |
+| Customers Colombia | 4M+ | — |
+
+## ROE 33% — El Diferenciador
+
+| Banco | ROE |
+|-------|-----|
+| **Nu Holdings** | **33%** |
+| JPMorgan Chase | 17% |
+| HSBC | 13% |
+| Bank of America | 11% |
+| Citigroup | 7% |
+
+NU genera $33 de utilidad neta por cada $100 de capital propio — el más alto de cualquier banco grande del mundo, con tasa de crecimiento 5-7x mayor.
+
+## OCC US National Bank Charter — 29 enero 2026
+
+- **Aplicación**: 30 sept 2025
+- **Aprobación condicional**: 29 enero 2026 (121 días)
+- **Pendiente**: FDIC + Federal Reserve approvals
+- **Plan**: Capitalización completa en 12 meses, apertura banco en 18 meses
+- **Hubs EE.UU.**: Miami, SF Bay Area, Northern Virginia, NC Research Triangle
+- **Servicios**: depósitos asegurados, tarjetas, lending, **custodia de activos digitales**
+
+**TAM EE.UU. = >$3T** vs LATAM $400B → NU evoluciona de banco LATAM a banco global digital.
+
+## Inversión Brasil 2026
+
+- **R$45B (~$8.2B USD)** en Brasil 2026
+- ~**2x** el nivel de inversión de hace 2 años
+- Foco: cohort high-value (payroll, NuInvest, crédito de mayor ticket)
+
+## Backers Estratégicos
+
+- **Berkshire Hathaway (Warren Buffett)**: ~$1B desde IPO 2021 — **única apuesta fintech notable** en la carrera de Buffett
+- **Tencent**: stake mayor desde 2018
+- **Sequoia Capital**: pre-IPO
+- **Insider holding** estable, founder David Vélez retiene control via dual-class
+
+## Próximo Catalyst — Q1 2026 Earnings
+
+- **Fecha**: 14 mayo 2026 (after-close, NYSE)
+- **Consensus revenue**: $5.06-5.10B
+- **Consensus EPS GAAP**: $0.19
+- **Consensus EPS normalized**: $0.21
+- **Track record**: 8 trimestres consecutivos batiendo revenue consensus
+
+## Valuación
+
+- **Forward P/E**: 12.6x — vs sector banca digital LATAM ~15x, vs JPM/BAC/Citi 14-16x
+- **PEG (forward P/E ÷ growth)**: ~0.28 — extremadamente barato
+- **52-week range**: $11.71 – $18.98 → **24% off high**
+- **Mean analyst target**: $18.26 → **+25.9% upside**
+- **Analyst rating**: Moderate Buy
+
+## Tesis en una línea
+
+> Comprar el banco más rentable del mundo (ROE 33%, vs 11-17% de JPM/BAC/Citi) creciendo 45% YoY a forward P/E 12.6x — la mitad de la valuación de los gigantes de Wall Street que crecen 6-8%, justo cuando OCC les aprobó banco nacional EE.UU. (29 ene 2026), abriendo TAM >$3T vs LATAM $400B. Backed by Buffett. 24% off 52-week high por castigo de FX (BRL débil), no por fundamentos.
+
+---
+
+*Research fecha: 6 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Moderate Buy",
+    analyst_target: 18.26,
+    analyst_upside: 25.9,
+    status: "active",
+    first_researched_at: "2026-05-06T00:00:00Z",
+    last_updated_at: "2026-05-06T00:00:00Z",
+    next_review_at: "2026-11-06T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -10141,6 +10281,18 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #62* — May 5, 2026\n\n🏢 *RTX Corporation* (RTX) — $172.87\n\n🚀 *Sus líneas/marcas*: la 3ra empresa de defensa más grande de EE.UU. y la 2da fabricante de motores de avión del mundo. Tres negocios: *Collins Aerospace* (los asientos, las pantallas y los sistemas de cabina de tu próximo vuelo en Boeing o Airbus), *Pratt & Whitney* (los motores GTF de los Airbus A320neo y el motor F135 que usa el caza F-35), y *Raytheon* (sistema **Patriot** que protege ciudades de misiles, **NASAMS** que protege la Casa Blanca, *Tomahawk*, *AMRAAM*).\n\n🌍 *Presencia*: HQ en Arlington, Virginia. ~185,000 empleados globales. Patriot está desplegado en 19 países. Formada en abril 2020 por la fusión de Raytheon + United Technologies. CEO Chris Calio desde mayo 2024.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.60% anual* solo por ser dueño — y acaban de subir el dividendo +7.4% el 30 de abril (de $0.68 a $0.73 por trimestre). Cada vez que Boeing o Airbus entrega un avión nuevo (lleva sistemas Collins + motores Pratt), cada vez que Alemania compra un sistema Patriot para enviar a Ucrania, o un F-35 sale de fábrica con motor Pratt — parte de ese dinero llega a ti como dividendo. RTX paga dividendos sin parar desde 1936.\n\n⚠️ *El riesgo*: Las tarifas de Trump le van a costar **$850 millones en 2026** (Canadá, México, China, acero, aluminio). Por eso la acción cayó >4% el día que reportaron, aunque batieron expectativas. Plus: hay un orden ejecutivo de enero 2026 que limita los buybacks de empresas de defensa.\n\n🆕 Posición #62\n🔗 https://vectorialdata.com/stocks/RTX\n✅ Certificado por blockchain → vectorialdata.com/verify/RTX\n\n💡 Dato que ancla la tesis: RTX tiene **$271 mil millones** en órdenes ya firmadas pero no entregadas — eso son **3 años completos de ventas adelantadas**, contractuadas, esperando ejecución. El sistema *Patriot* de RTX ha derribado **más de 140 misiles balísticos rusos en Ucrania desde mayo 2023**, incluyendo el primer derribo confirmado de un misil hipersónico ruso (el Kinzhal, que Putin presentaba como "imparable"). Ese rendimiento real en combate hizo que Polonia, Rumania, Suecia, Alemania, Países Bajos y Japón se pusieran en cola para comprar Patriot — y cada sistema cuesta más de $1,000 millones.`,
     attestation_uid: "0x7abbefdeaaec550f152c57cedac791a00fb9a0445121cc072157b9b8936b656e",
   },
+  {
+    id: 63,
+    stock_id: 64,
+    ticker: "NU",
+    type: "new" as const,
+    cycle_number: 13,
+    price: 14.50,
+    open_price: 14.50,
+    date: "2026-05-06",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #63* — May 6, 2026\n\n🏢 *Nu Holdings* (NU) — $14.50\n\n💳 *Sus líneas/marcas*: el banco digital sin sucursales más grande de Latinoamérica. Sus productos: la tarjeta de crédito morada *Nubank* (la #1 emisora de tarjetas nuevas en Brasil y México), la cuenta digital *NuConta* (recibir sueldo, pagar, transferir — sin comisiones, sin filas), *Nu Crypto* (comprar y vender bitcoin desde la misma app), *NuInvest* (inversiones para principiantes), seguros y crédito personal.\n\n🌍 *Presencia*: Brasil, México y Colombia — *131 millones de clientes* (más que la población de México entera). HQ en São Paulo. Fundada en 2013 por *David Vélez* (colombiano, ex-Stanford), Cristina Junqueira y Edward Wible. CEO David Vélez. **Warren Buffett invirtió ~$1,000 millones en 2021 vía Berkshire Hathaway** — prácticamente la única apuesta fintech que Buffett ha hecho en su carrera.\n\n🚀 *Por qué la compramos*: Nu *no paga dividendo — es 100% apuesta por crecimiento*. Cada dólar de utilidad lo reinvierten en ganar más clientes. Y los números son brutales: en 2025 sumaron 17 millones de clientes nuevos, los ingresos subieron *45%* a $16.3 mil millones, y por cada $100 de capital propio invertido la empresa generó $33 de ganancia neta — más rentable que JPMorgan, Bank of America o Citi. Plus: el *29 de enero 2026 consiguieron permiso del gobierno de EE.UU. para abrir banco nacional* — están montando oficinas en Miami, San Francisco, Virginia y Carolina del Norte.\n\n⚠️ *El riesgo*: Brasil sube tasas de interés y el real brasileño se devalúa — eso encoge las ganancias cuando se traducen a dólares (Brasil = ~75% del negocio). Plus: la acción cotiza barata (por cada dólar de ganancia futura, el mercado paga $12.60 — la mitad que JPMorgan paga $25) precisamente porque inversionistas temen que el crecimiento de 45% se desacelere. Plus: el próximo reporte de resultados es *14 de mayo 2026* — si decepciona vs expectativas ($5.1B ingresos), corrección de -10-15% es realista.\n\n🆕 Posición #63\n🔗 https://vectorialdata.com/stocks/NU\n✅ Certificado por blockchain → vectorialdata.com/verify/NU\n\n💡 Dato que ancla la tesis: Nu acaba de cerrar 2025 con *131 millones de clientes* — más que la población de México y casi tanto como Japón. En México sirven al *15% de todos los adultos del país* y son la #1 emisora de tarjetas de crédito nuevas. A $14.50, la acción está *24% por debajo* de su máximo de $18.98 — el mercado la castigó por el real brasileño débil, pero el negocio sigue creciendo 45% al año con el rendimiento sobre capital más alto de cualquier banco grande del mundo (33% vs 15-18% de los gigantes de Wall Street). Comprar el banco más rentable del mundo al precio de un banco mediocre, justo cuando le acaban de aprobar el banco gringo, es la asimetría.`,
+  },
 ];
 
 export const cycles = [
@@ -10245,7 +10397,7 @@ export const cycles = [
     cycle_number: 13,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 3,
     status: "active" as const,
   },
 ];
