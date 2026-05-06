@@ -46,12 +46,14 @@ export async function createSupabaseServerClient() {
         },
         setAll(cookiesToSet) {
           try {
-            cookiesToSet.forEach(({ name, value, options }) =>
-              cookieStore.set(name, value, {
-                ...options,
-                maxAge: AUTH_SESSION_MAX_AGE,
-              })
-            );
+            cookiesToSet.forEach(({ name, value, options }) => {
+              const isDelete = options?.maxAge === 0;
+              cookieStore.set(
+                name,
+                value,
+                isDelete ? options : { ...options, maxAge: AUTH_SESSION_MAX_AGE }
+              );
+            });
           } catch {
             // Called from Server Component where cookies are read-only
           }

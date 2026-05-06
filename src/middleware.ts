@@ -102,10 +102,16 @@ export async function middleware(request: NextRequest) {
           });
           supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) => {
-            supabaseResponse.cookies.set(name, value, {
-              ...options,
-              maxAge: AUTH_SESSION_MAX_AGE,
-            });
+            // When Supabase wants to DELETE a cookie (refresh failure, signOut),
+            // it sends options.maxAge=0. Don't override that — pass through.
+            // Otherwise, force a long maxAge so cookies survive tab close in
+            // every browser (Safari ITP, Chrome session cookies, etc).
+            const isDelete = options?.maxAge === 0;
+            supabaseResponse.cookies.set(
+              name,
+              value,
+              isDelete ? options : { ...options, maxAge: AUTH_SESSION_MAX_AGE }
+            );
           });
         },
       },

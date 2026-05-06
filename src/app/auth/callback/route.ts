@@ -22,12 +22,14 @@ export async function GET(request: NextRequest) {
           return cookieStore.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) =>
-            cookieStore.set(name, value, {
-              ...options,
-              maxAge: AUTH_SESSION_MAX_AGE,
-            })
-          );
+          cookiesToSet.forEach(({ name, value, options }) => {
+            const isDelete = options?.maxAge === 0;
+            cookieStore.set(
+              name,
+              value,
+              isDelete ? options : { ...options, maxAge: AUTH_SESSION_MAX_AGE }
+            );
+          });
         },
       },
     }
