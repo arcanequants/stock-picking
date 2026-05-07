@@ -1,7 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import { NextResponse, type NextRequest } from "next/server";
-import { AUTH_SESSION_MAX_AGE } from "@/lib/auth-session";
+import { authCookieOverrides } from "@/lib/auth-session";
 
 export async function GET(request: NextRequest) {
   const { searchParams, origin } = new URL(request.url);
@@ -13,6 +13,13 @@ export async function GET(request: NextRequest) {
   console.log("[auth/callback] params:", { code: !!code, token_hash: !!token_hash, type, next });
 
   const cookieStore = await cookies();
+  const successUrl = `${origin}${next}`;
+  // Build the redirect response up-front so Supabase's setAll callback can
+  // attach Set-Cookie headers directly to the response we return. Setting
+  // them via cookieStore.set() and then returning a fresh NextResponse can
+  // drop the cookies in some Next.js Route Handler paths.
+  const response = NextResponse.redirect(successUrl);
+
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -24,30 +31,21 @@ export async function GET(request: NextRequest) {
         setAll(cookiesToSet) {
           cookiesToSet.forEach(({ name, value, options }) => {
             const isDelete = options?.maxAge === 0;
-            cookieStore.set(
-              name,
-              value,
-              isDelete ? options : { ...options, maxAge: AUTH_SESSION_MAX_AGE }
-            );
+            response.cookies.set(name, value, {
+              ...options,
+              ...authCookieOverrides(isDelete),
+            });
           });
         },
       },
     }
   );
 
-  // The magic-link click lands the user in a NEW tab. We just send them
-  // straight to `next` (logged in) — no sync interstitial, no auto-close,
-  // no cross-tab broadcast. The original tab stays as it was; it's the
-  // simplest, most predictable UX.
-  const successUrl = `${origin}${next}`;
-
   // Flow 1: PKCE code exchange (from signInWithOtp)
   if (code) {
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     console.log("[auth/callback] PKCE result:", error ? error.message : "success");
-    if (!error) {
-      return NextResponse.redirect(successUrl);
-    }
+    if (!error) return response;
   }
 
   // Flow 2: Token hash verification (from admin.generateLink)
@@ -57,12 +55,9 @@ export async function GET(request: NextRequest) {
       type: type as "magiclink" | "email",
     });
     console.log("[auth/callback] verifyOtp result:", error ? error.message : "success");
-    if (!error) {
-      return NextResponse.redirect(successUrl);
-    }
+    if (!error) return response;
   }
 
   console.log("[auth/callback] All flows failed, redirecting to expired");
-  // Both flows failed or no params — redirect with error hint
   return NextResponse.redirect(`${origin}/portfolio?login=expired`);
 }

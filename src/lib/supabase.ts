@@ -1,7 +1,7 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
-import { AUTH_SESSION_MAX_AGE } from "@/lib/auth-session";
+import { authCookieOverrides } from "@/lib/auth-session";
 
 // ===== Existing clients (data queries, cron jobs) =====
 
@@ -48,11 +48,10 @@ export async function createSupabaseServerClient() {
           try {
             cookiesToSet.forEach(({ name, value, options }) => {
               const isDelete = options?.maxAge === 0;
-              cookieStore.set(
-                name,
-                value,
-                isDelete ? options : { ...options, maxAge: AUTH_SESSION_MAX_AGE }
-              );
+              cookieStore.set(name, value, {
+                ...options,
+                ...authCookieOverrides(isDelete),
+              });
             });
           } catch {
             // Called from Server Component where cookies are read-only

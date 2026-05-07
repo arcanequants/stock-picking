@@ -1,6 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
-import { AUTH_SESSION_MAX_AGE } from "@/lib/auth-session";
+import { authCookieOverrides } from "@/lib/auth-session";
 
 // ─── AI Bot Detection ───
 const AI_BOTS: Record<string, "search" | "training"> = {
@@ -102,16 +102,11 @@ export async function middleware(request: NextRequest) {
           });
           supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) => {
-            // When Supabase wants to DELETE a cookie (refresh failure, signOut),
-            // it sends options.maxAge=0. Don't override that — pass through.
-            // Otherwise, force a long maxAge so cookies survive tab close in
-            // every browser (Safari ITP, Chrome session cookies, etc).
             const isDelete = options?.maxAge === 0;
-            supabaseResponse.cookies.set(
-              name,
-              value,
-              isDelete ? options : { ...options, maxAge: AUTH_SESSION_MAX_AGE }
-            );
+            supabaseResponse.cookies.set(name, value, {
+              ...options,
+              ...authCookieOverrides(isDelete),
+            });
           });
         },
       },

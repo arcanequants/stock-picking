@@ -14,6 +14,9 @@ export function createSupabaseBrowserClient() {
         maxAge: AUTH_SESSION_MAX_AGE,
         sameSite: "lax",
         path: "/",
+        // Safari ITP demotes non-Secure cookies to session-only on HTTPS,
+        // which is the "logs out on tab close" bug. Force Secure in prod.
+        secure: process.env.NODE_ENV === "production",
       },
     }
   );
