@@ -10,14 +10,11 @@ export async function GET(request: NextRequest) {
   const type = searchParams.get("type");
   const next = searchParams.get("next") ?? "/portfolio";
 
-  console.log("[auth/callback] params:", { code: !!code, token_hash: !!token_hash, type, next });
-
   const cookieStore = await cookies();
   const successUrl = `${origin}${next}`;
-  // Build the redirect response up-front so Supabase's setAll callback can
-  // attach Set-Cookie headers directly to the response we return. Setting
-  // them via cookieStore.set() and then returning a fresh NextResponse can
-  // drop the cookies in some Next.js Route Handler paths.
+  // Attach Set-Cookie headers directly to the redirect response — using
+  // cookieStore.set() and returning a fresh NextResponse drops cookies in
+  // some Next.js Route Handler paths.
   const response = NextResponse.redirect(successUrl);
 
   const supabase = createServerClient(
@@ -44,7 +41,6 @@ export async function GET(request: NextRequest) {
   // Flow 1: PKCE code exchange (from signInWithOtp)
   if (code) {
     const { error } = await supabase.auth.exchangeCodeForSession(code);
-    console.log("[auth/callback] PKCE result:", error ? error.message : "success");
     if (!error) return response;
   }
 
@@ -54,10 +50,8 @@ export async function GET(request: NextRequest) {
       token_hash,
       type: type as "magiclink" | "email",
     });
-    console.log("[auth/callback] verifyOtp result:", error ? error.message : "success");
     if (!error) return response;
   }
 
-  console.log("[auth/callback] All flows failed, redirecting to expired");
   return NextResponse.redirect(`${origin}/portfolio?login=expired`);
 }
