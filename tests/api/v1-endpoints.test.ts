@@ -1,6 +1,8 @@
 import { describe, it, expect, beforeAll } from "vitest";
 
-const BASE = "https://www.vectorialdata.com/api/v1";
+// Apex (no www) — www redirects to apex, and Node fetch strips the
+// Authorization header across that origin hop, so authed tests 401'd.
+const BASE = "https://vectorialdata.com/api/v1";
 
 let apiKey: string;
 
