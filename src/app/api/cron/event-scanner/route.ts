@@ -177,44 +177,10 @@ export async function GET(request: Request) {
       errors.push(`${ticker} analyst: ${e}`);
     }
 
-    // --- 4. Near 52-week high/low ---
-    try {
-      const sd = summaryDetail as Record<string, unknown> | undefined;
-      const fiftyTwoWeekHigh = sd?.fiftyTwoWeekHigh as number | undefined;
-      const fiftyTwoWeekLow = sd?.fiftyTwoWeekLow as number | undefined;
-      const currentPrice = sd?.previousClose as number | undefined;
-
-      if (fiftyTwoWeekHigh && fiftyTwoWeekLow && currentPrice && currentPrice > 0) {
-        const pctFromHigh = ((fiftyTwoWeekHigh - currentPrice) / fiftyTwoWeekHigh) * 100;
-        const pctFromLow = ((currentPrice - fiftyTwoWeekLow) / fiftyTwoWeekLow) * 100;
-
-        if (pctFromHigh <= 5) {
-          const exists = await eventExists(ticker, "notifications.near52High", 30);
-          if (!exists) {
-            pendingEvents.push({
-              ticker,
-              event_type: "price_move",
-              title_key: "notifications.near52High",
-              params: { ticker, pct: pctFromHigh.toFixed(1), high: fiftyTwoWeekHigh.toFixed(2) },
-            });
-          }
-        }
-
-        if (pctFromLow <= 5) {
-          const exists = await eventExists(ticker, "notifications.near52Low", 30);
-          if (!exists) {
-            pendingEvents.push({
-              ticker,
-              event_type: "price_move",
-              title_key: "notifications.near52Low",
-              params: { ticker, pct: pctFromLow.toFixed(1), low: fiftyTwoWeekLow.toFixed(2) },
-            });
-          }
-        }
-      }
-    } catch (e) {
-      errors.push(`${ticker} 52week: ${e}`);
-    }
+    // 52-week proximity used to fire here. Removed — it's the lowest-signal
+    // event type (every stock brushes its 52-week extremes constantly), so
+    // it filled the human feed with noise that the AI had to score and the
+    // user had to scroll past. Yahoo's own quote pages surface this anyway.
   }
 
   // Phase 3: Create events with AI explanations (sequential — AI is the bottleneck)

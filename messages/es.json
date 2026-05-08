@@ -509,6 +509,9 @@
   "Notifications": {
     "title": "Notificaciones",
     "empty": "Cuando tus acciones se muevan, aquí te lo explicamos.",
+    "emptyTitle": "Hoy nada movió la tesis.",
+    "emptyBody": "Solo te avisamos cuando algo importante pasa. El silencio significa que el plan sigue intacto.",
+    "thesisFlag": "Cambia la tesis",
     "markAllRead": "Marcar todo leído",
     "seeAll": "Ver todas",
     "loadMore": "Cargar más",

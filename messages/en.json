@@ -509,6 +509,9 @@
   "Notifications": {
     "title": "Notifications",
     "empty": "When your stocks move, we'll explain it here.",
+    "emptyTitle": "Nothing changed the thesis today.",
+    "emptyBody": "We only ping you when something matters. Silence means the plan is intact.",
+    "thesisFlag": "Thesis change",
     "markAllRead": "Mark all read",
     "seeAll": "See all",
     "loadMore": "Load more",

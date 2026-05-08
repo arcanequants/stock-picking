@@ -1,7 +1,17 @@
 import { getSupabaseAdmin } from "@/lib/supabase";
-import { generateExplanations } from "@/lib/ai-explainer";
+import { generateEventInsight } from "@/lib/ai-explainer";
 import { stocks } from "@/data/stocks";
-import type { EventType, EventExplanations, PortfolioEvent } from "@/lib/types";
+import type {
+  EventType,
+  EventExplanations,
+  EventSeverity,
+  HumanSummaries,
+  PortfolioEvent,
+} from "@/lib/types";
+
+// Severity at or above this threshold is what humans see by default.
+// Everything else lives in the firehose for AI/API consumers.
+export const HUMAN_SEVERITY_THRESHOLD: EventSeverity = 4;
 
 // --- Create event (admin/cron use) ---
 
@@ -11,6 +21,9 @@ export async function createEvent(event: {
   title_key: string;
   params: Record<string, string>;
   explanations?: EventExplanations;
+  severity?: EventSeverity;
+  affects_thesis?: boolean;
+  summaries?: HumanSummaries;
 }) {
   const { error } = await getSupabaseAdmin()
     .from("portfolio_events")
@@ -20,12 +33,18 @@ export async function createEvent(event: {
       title_key: event.title_key,
       params: event.params,
       explanations: event.explanations ?? {},
+      severity: event.severity ?? 3,
+      affects_thesis: event.affects_thesis ?? false,
+      human_summary_en: event.summaries?.en ?? null,
+      human_summary_es: event.summaries?.es ?? null,
+      human_summary_pt: event.summaries?.pt ?? null,
+      human_summary_hi: event.summaries?.hi ?? null,
     });
 
   if (error) throw new Error(`Failed to create event: ${error.message}`);
 }
 
-// --- Create event with AI-generated explanations ---
+// --- Create event with AI-generated insight (severity + summary + details) ---
 
 export async function createEventWithExplanations(event: {
   ticker: string;
@@ -36,33 +55,64 @@ export async function createEventWithExplanations(event: {
   const stock = stocks.find((s) => s.ticker === event.ticker);
   const researchFull = stock?.research_full ?? "";
 
-  let explanations: EventExplanations = {};
-  if (researchFull) {
-    try {
-      explanations = await generateExplanations(
-        event.ticker,
-        event.event_type,
-        event.params,
-        researchFull
-      );
-    } catch (e) {
-      console.error(`AI explanation failed for ${event.ticker}:`, e);
-    }
+  if (!researchFull) {
+    await createEvent(event);
+    return;
   }
 
-  await createEvent({ ...event, explanations });
+  try {
+    const insight = await generateEventInsight(
+      event.ticker,
+      event.event_type,
+      event.params,
+      researchFull
+    );
+    await createEvent({
+      ...event,
+      severity: insight.severity,
+      affects_thesis: insight.affects_thesis,
+      summaries: insight.summaries,
+      explanations: insight.explanations,
+    });
+  } catch (e) {
+    console.error(`AI insight failed for ${event.ticker}:`, e);
+    await createEvent(event);
+  }
 }
 
-// --- Public events (no auth needed) ---
+// --- Public events: humans get the curated cut by default ---
 
 export async function getPublicEvents(limit = 20): Promise<PortfolioEvent[]> {
+  return getCuratedEvents(limit);
+}
+
+// Curated feed: severity ≥ HUMAN_SEVERITY_THRESHOLD only. Used by /notifications
+// and the dropdown — the human-facing surface.
+export async function getCuratedEvents(limit = 20): Promise<PortfolioEvent[]> {
+  const { data, error } = await getSupabaseAdmin()
+    .from("portfolio_events")
+    .select("*")
+    .gte("severity", HUMAN_SEVERITY_THRESHOLD)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (error) throw new Error(`Failed to fetch curated events: ${error.message}`);
+  return (data ?? []) as PortfolioEvent[];
+}
+
+// Firehose: every event regardless of severity. Used by the API for AI/bots
+// and by the optional /notifications/all power-user surface.
+export async function getAllEvents(
+  limit = 100,
+  offset = 0
+): Promise<PortfolioEvent[]> {
   const { data, error } = await getSupabaseAdmin()
     .from("portfolio_events")
     .select("*")
     .order("created_at", { ascending: false })
-    .limit(limit);
+    .range(offset, offset + limit - 1);
 
-  if (error) throw new Error(`Failed to fetch public events: ${error.message}`);
+  if (error) throw new Error(`Failed to fetch all events: ${error.message}`);
   return (data ?? []) as PortfolioEvent[];
 }
 
@@ -90,52 +140,38 @@ export async function getEventsForDigest(since: Date): Promise<PortfolioEvent[]>
   return (data ?? []) as PortfolioEvent[];
 }
 
-// --- Unread count for a user ---
+// --- Unread count for a user (curated only — humans never see noise) ---
 
 export async function getUnreadCount(userId: string): Promise<number> {
-  // Count events that don't have a read entry for this user
-  const { count, error } = await getSupabaseAdmin()
+  const { data: events } = await getSupabaseAdmin()
     .from("portfolio_events")
-    .select("id", { count: "exact", head: true })
-    .not(
-      "id",
-      "in",
-      `(SELECT event_id FROM notification_reads WHERE user_id = '${userId}')`
-    );
+    .select("id")
+    .gte("severity", HUMAN_SEVERITY_THRESHOLD);
+  const { data: reads } = await getSupabaseAdmin()
+    .from("notification_reads")
+    .select("event_id")
+    .eq("user_id", userId);
 
-  if (error) {
-    // Fallback: use separate queries
-    const { data: events } = await getSupabaseAdmin()
-      .from("portfolio_events")
-      .select("id");
-    const { data: reads } = await getSupabaseAdmin()
-      .from("notification_reads")
-      .select("event_id")
-      .eq("user_id", userId);
-
-    const readIds = new Set((reads ?? []).map((r) => r.event_id));
-    return (events ?? []).filter((e) => !readIds.has(e.id)).length;
-  }
-
-  return count ?? 0;
+  const readIds = new Set((reads ?? []).map((r) => r.event_id));
+  return (events ?? []).filter((e) => !readIds.has(e.id)).length;
 }
 
-// --- Get events with read status for a user ---
+// --- Get events with read status for a user (curated only) ---
 
 export async function getEventsWithReadStatus(
   userId: string,
   limit = 20,
   offset = 0
 ): Promise<{ events: (PortfolioEvent & { is_read: boolean })[]; total: number }> {
-  // Get total count
   const { count } = await getSupabaseAdmin()
     .from("portfolio_events")
-    .select("id", { count: "exact", head: true });
+    .select("id", { count: "exact", head: true })
+    .gte("severity", HUMAN_SEVERITY_THRESHOLD);
 
-  // Get events
   const { data: events, error } = await getSupabaseAdmin()
     .from("portfolio_events")
     .select("*")
+    .gte("severity", HUMAN_SEVERITY_THRESHOLD)
     .order("created_at", { ascending: false })
     .range(offset, offset + limit - 1);
 

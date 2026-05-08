@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import type { PortfolioEvent, EventExplanation } from "@/lib/types";
+import type { PortfolioEvent } from "@/lib/types";
 
 const EVENT_ICONS: Record<string, string> = {
   price_move: "\u{1F4C8}",
@@ -21,6 +21,23 @@ interface Props {
   totalWithExplanations: number;
 }
 
+type SummaryLocale = "en" | "es" | "pt" | "hi";
+
+function pickSummary(event: PortfolioEvent, locale: string): string | null {
+  const lang = (["es", "en", "pt", "hi"] as SummaryLocale[]).includes(
+    locale as SummaryLocale
+  )
+    ? (locale as SummaryLocale)
+    : "es";
+  const map: Record<SummaryLocale, string | null> = {
+    es: event.human_summary_es,
+    en: event.human_summary_en,
+    pt: event.human_summary_pt,
+    hi: event.human_summary_hi,
+  };
+  return map[lang] ?? map.es ?? map.en ?? null;
+}
+
 export default function NotificationsList({
   initialEvents,
   isSubscribed,
@@ -31,7 +48,6 @@ export default function NotificationsList({
   const t = useTranslations("Notifications");
   const [events, setEvents] = useState(initialEvents);
 
-  // Poll for premium users only (they have read tracking)
   useEffect(() => {
     if (!isSubscribed) return;
     const interval = setInterval(async () => {
@@ -47,10 +63,13 @@ export default function NotificationsList({
     return () => clearInterval(interval);
   }, [isSubscribed]);
 
-  // Auto-mark-as-read for premium users
   useEffect(() => {
     if (!isSubscribed || !isLoggedIn) return;
-    const unreadIds = events.filter((e) => !(e as PortfolioEvent & { is_read?: boolean }).is_read).map((e) => e.id);
+    const unreadIds = events
+      .filter(
+        (e) => !(e as PortfolioEvent & { is_read?: boolean }).is_read
+      )
+      .map((e) => e.id);
     if (unreadIds.length === 0) return;
 
     const timer = setTimeout(async () => {
@@ -67,7 +86,7 @@ export default function NotificationsList({
     return () => clearTimeout(timer);
   }, [events, isSubscribed, isLoggedIn]);
 
-  const renderEventText = (event: PortfolioEvent) => {
+  const renderHeadline = (event: PortfolioEvent) => {
     const key = event.title_key.replace("notifications.", "");
     try {
       return t(key, event.params);
@@ -89,14 +108,17 @@ export default function NotificationsList({
     });
   };
 
-  // Date label for separators: "Hoy", "Ayer", or formatted date
   const getDateLabel = (dateStr: string) => {
     const date = new Date(dateStr);
     const now = new Date();
     const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     const yesterday = new Date(today);
     yesterday.setDate(yesterday.getDate() - 1);
-    const eventDay = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const eventDay = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate()
+    );
 
     if (eventDay.getTime() === today.getTime()) return t("dateToday");
     if (eventDay.getTime() === yesterday.getTime()) return t("dateYesterday");
@@ -107,18 +129,6 @@ export default function NotificationsList({
     });
   };
 
-  const getExplanation = (event: PortfolioEvent): EventExplanation | null => {
-    if (!event.explanations || Object.keys(event.explanations).length === 0) {
-      return null;
-    }
-    return (
-      event.explanations[locale as "en" | "es" | "pt" | "hi"] ??
-      event.explanations["en"] ??
-      null
-    );
-  };
-
-  // FOMO counter: use server-provided count (before stripping)
   const understoodCount = isSubscribed
     ? totalWithExplanations
     : Math.min(1, totalWithExplanations);
@@ -126,18 +136,20 @@ export default function NotificationsList({
   if (events.length === 0) {
     return (
       <div className="text-center py-16">
-        <div className="text-4xl mb-4">{"\u{1F4E1}"}</div>
-        <p className="text-text-muted">{t("empty")}</p>
+        <div className="text-4xl mb-4">{"\u2728"}</div>
+        <p className="text-foreground font-medium">{t("emptyTitle")}</p>
+        <p className="text-text-muted text-sm mt-2 max-w-sm mx-auto">
+          {t("emptyBody")}
+        </p>
       </div>
     );
   }
 
-  // Group events by date for separators
   let lastDateLabel = "";
 
   return (
     <div>
-      {/* FOMO counter for free users */}
+      {/* FOMO counter for free users — only shown if there's anything curated */}
       {!isSubscribed && totalWithExplanations > 1 && (
         <div className="bg-brand-subtle border border-brand-border rounded-xl p-4 mb-6 text-center">
           <p className="text-sm text-foreground">
@@ -155,21 +167,18 @@ export default function NotificationsList({
         </div>
       )}
 
-      <div className="space-y-3">
+      <div className="space-y-2">
         {events.map((event, index) => {
-          const explanation = getExplanation(event);
+          const summary = pickSummary(event, locale);
           const isLatest = index === 0;
-          const showExplanation = isSubscribed || isLatest;
-          const hasExplanation = explanation !== null;
+          const showSummary = isSubscribed || isLatest;
 
-          // Date separator
           const dateLabel = getDateLabel(event.created_at);
           const showDateSeparator = dateLabel !== lastDateLabel;
           lastDateLabel = dateLabel;
 
           return (
             <div key={event.id}>
-              {/* Date separator */}
               {showDateSeparator && (
                 <div className="flex items-center gap-3 pt-4 pb-1 first:pt-0">
                   <div className="h-px flex-1 bg-border" />
@@ -180,76 +189,61 @@ export default function NotificationsList({
                 </div>
               )}
 
-              <div className="bg-card border border-border rounded-xl overflow-hidden notification-item">
-                {/* Layer 1: Headline (always visible) */}
-                <div className="p-4">
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl mt-0.5">
-                      {EVENT_ICONS[event.event_type] ?? "\u{1F4CC}"}
-                    </span>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-foreground leading-relaxed">
-                        {renderEventText(event)}
-                      </p>
-                      <p className="text-xs text-text-faint mt-1.5">
-                        {formatDate(event.created_at)}
-                      </p>
+              <Link
+                href={`/stocks/${event.ticker}`}
+                className="block bg-card border border-border rounded-xl p-4 hover:border-brand-border transition-colors"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="text-xl mt-0.5">
+                    {EVENT_ICONS[event.event_type] ?? "\u{1F4CC}"}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    {/* Single one-liner summary if we have it; fall back to the
+                        i18n headline. We dropped the WHAT IT MEANS / FOR YOUR
+                        PORTFOLIO double-section — it read as personalized
+                        advice and was AI filler. */}
+                    <p className="text-sm font-medium text-foreground leading-relaxed">
+                      {showSummary && summary ? summary : renderHeadline(event)}
+                    </p>
+                    <div className="flex items-center gap-2 mt-1.5 text-xs text-text-faint">
+                      <span>{formatDate(event.created_at)}</span>
+                      <span>·</span>
+                      <span className="font-medium tracking-wide">
+                        {event.ticker}
+                      </span>
+                      {event.affects_thesis && (
+                        <>
+                          <span>·</span>
+                          <span className="text-brand-text font-medium">
+                            {t("thesisFlag")}
+                          </span>
+                        </>
+                      )}
                     </div>
-                    <span className="text-xs font-medium text-text-faint uppercase tracking-wide mt-1">
-                      {event.ticker}
-                    </span>
                   </div>
                 </div>
 
-                {/* Layer 2+3: Full explanation (premium or latest event) */}
-                {hasExplanation && showExplanation && (
-                  <div className="border-t border-border bg-background px-4 py-3 space-y-3">
-                    <div>
-                      <p className="text-xs font-semibold text-brand-text uppercase tracking-wide mb-1">
-                        {t("whatItMeans")}
-                      </p>
-                      <p className="text-sm text-text-muted leading-relaxed">
-                        {explanation.meaning}
-                      </p>
+                {/* Free user blur teaser — only on non-latest if a summary
+                    exists. The latest is shown as a free preview. */}
+                {!isSubscribed && !isLatest && summary && (
+                  <div className="mt-3 pt-3 border-t border-border relative">
+                    <div className="space-y-2 explanation-blur">
+                      <div className="h-3 bg-brand/10 rounded w-full" />
+                      <div className="h-3 bg-brand/10 rounded w-4/5" />
                     </div>
-                    <div>
-                      <p className="text-xs font-semibold text-brand-text uppercase tracking-wide mb-1">
-                        {t("whatToDo")}
-                      </p>
-                      <p className="text-sm text-text-muted leading-relaxed">
-                        {explanation.action}
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                {/* Blurred explanation with CTA (free users, non-latest) */}
-                {!isSubscribed && !isLatest && (
-                  <div className="border-t border-border relative">
-                    <div className="px-4 py-3 explanation-blur bg-brand-subtle/30">
-                      <div className="space-y-2">
-                        <div className="h-3 bg-brand/10 rounded w-full" />
-                        <div className="h-3 bg-brand/10 rounded w-4/5" />
-                        <div className="h-3 bg-brand/8 rounded w-3/5" />
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 flex items-center justify-center bg-brand-subtle/40 backdrop-blur-[2px]">
-                      <Link
-                        href="/join"
-                        className="text-sm font-medium text-brand hover:text-brand-hover transition-colors bg-background/80 px-4 py-1.5 rounded-full border border-brand-border"
-                      >
+                    <div className="absolute inset-0 flex items-center justify-center bg-brand-subtle/40 backdrop-blur-[2px] rounded">
+                      <span className="text-sm font-medium text-brand bg-background/80 px-4 py-1.5 rounded-full border border-brand-border">
                         {t("blurCTA")} {"\u2192"}
-                      </Link>
+                      </span>
                     </div>
                   </div>
                 )}
-              </div>
+              </Link>
             </div>
           );
         })}
       </div>
 
-      {/* Bottom CTA for free users */}
       {!isSubscribed && (
         <div className="mt-8 text-center">
           <div className="bg-brand-subtle border border-brand-border rounded-xl p-6">

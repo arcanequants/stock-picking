@@ -107,6 +107,10 @@ export interface EventExplanation {
 
 export type EventExplanations = Partial<Record<"en" | "es" | "pt" | "hi", EventExplanation>>;
 
+export type HumanSummaries = Partial<Record<"en" | "es" | "pt" | "hi", string>>;
+
+export type EventSeverity = 1 | 2 | 3 | 4 | 5;
+
 export interface PortfolioEvent {
   id: string;
   ticker: string;
@@ -115,6 +119,12 @@ export interface PortfolioEvent {
   params: Record<string, string>;
   explanations: EventExplanations;
   created_at: string;
+  severity: EventSeverity;
+  affects_thesis: boolean;
+  human_summary_es: string | null;
+  human_summary_en: string | null;
+  human_summary_pt: string | null;
+  human_summary_hi: string | null;
 }
 
 export interface NotificationWithRead extends PortfolioEvent {
