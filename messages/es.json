@@ -810,6 +810,8 @@
     "descRegions": "Distribución por región",
     "descStocks": "Todas las acciones investigadas",
     "descVerify": "Cadena de hashes verificable",
+    "descEvents": "Eventos del portafolio (firehose con severidad 1-5)",
+    "descDigest": "Resumen semanal (eventos + delta del portafolio)",
     "descPayment": "Verificar pago USDC",
     "endpointsNote": "Todos los endpoints con prefijo",
     "freeTitle": "Gratis",

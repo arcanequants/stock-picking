@@ -205,6 +205,63 @@ paths:
               schema:
                 $ref: "#/components/schemas/ApiResponse"
 
+  /events:
+    get:
+      operationId: getEvents
+      summary: Portfolio events firehose
+      description: |
+        Returns portfolio events (price moves, dividends, earnings, analyst calls, news).
+        Each event carries a `severity` (1-5), `affects_thesis` boolean, and one-line
+        human summaries in es/en/pt/hi. The site shows humans only severity ≥ 4 by
+        default — this API exposes the full firehose so AI agents can decide their
+        own threshold.
+
+        Severity rubric:
+        - 5 = Changes the thesis (rare; sell signal, fraud, regulatory shock)
+        - 4 = Important, plan unchanged (raised guidance, dividend cut, CEO change)
+        - 3 = Notable (regular earnings, regular dividend, upcoming earnings)
+        - 2 = Noise (sub-5% price moves, 52-week proximity, single-firm nudges)
+        - 1 = Skip
+      parameters:
+        - name: limit
+          in: query
+          schema: { type: integer, default: 20 }
+          description: Free tier capped at 3.
+        - name: severity_min
+          in: query
+          schema: { type: integer, minimum: 1, maximum: 5 }
+          description: Only return events with severity >= this value.
+        - name: since
+          in: query
+          schema: { type: string, format: date-time }
+          description: ISO timestamp; only events newer than this are returned. Use for incremental sync.
+      responses:
+        "200":
+          description: Event list
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/ApiResponse"
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items: { $ref: "#/components/schemas/PortfolioEvent" }
+
+  /digest/latest:
+    get:
+      operationId: getDigestLatest
+      summary: Latest weekly digest
+      description: 7-day rollup of events plus portfolio delta.
+      responses:
+        "200":
+          description: Digest payload
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+
   /verify/picks:
     get:
       operationId: verifyPicks
@@ -360,6 +417,39 @@ paths:
         "402":
           description: Payment required
 
+  /x402/events:
+    get:
+      operationId: getX402Events
+      summary: Portfolio events via x402 ($0.002 USDC)
+      description: Same firehose as /events with severity, affects_thesis, and multi-language summaries. Supports `severity_min` and `since` query params.
+      security: []
+      parameters:
+        - name: limit
+          in: query
+          schema: { type: integer }
+        - name: severity_min
+          in: query
+          schema: { type: integer, minimum: 1, maximum: 5 }
+        - name: since
+          in: query
+          schema: { type: string, format: date-time }
+      responses:
+        "200":
+          description: Event list (pro tier)
+        "402":
+          description: Payment required
+
+  /x402/digest/latest:
+    get:
+      operationId: getX402DigestLatest
+      summary: Latest weekly digest via x402 ($0.003 USDC)
+      security: []
+      responses:
+        "200":
+          description: Digest payload
+        "402":
+          description: Payment required
+
   /payments/verify:
     post:
       operationId: verifyPayment
@@ -432,6 +522,51 @@ components:
             type: string
         endpoints:
           type: object
+
+    PortfolioEvent:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        ticker:
+          type: string
+        event_type:
+          type: string
+          enum: [price_move, dividend, earnings, analyst, news]
+        title_key:
+          type: string
+          description: i18n key for the headline. Use `params` to fill placeholders.
+        params:
+          type: object
+          additionalProperties: { type: string }
+        severity:
+          type: integer
+          minimum: 1
+          maximum: 5
+          description: 1=skip, 2=noise, 3=notable, 4=important, 5=changes-the-thesis. Humans on site see ≥4 by default.
+        affects_thesis:
+          type: boolean
+          description: True if a long-term holder should reconsider the position. Almost always false.
+        human_summary_es:
+          type: string
+          nullable: true
+          description: One-sentence plain-language summary in Spanish. Null for legacy events not yet scored.
+        human_summary_en:
+          type: string
+          nullable: true
+        human_summary_pt:
+          type: string
+          nullable: true
+        human_summary_hi:
+          type: string
+          nullable: true
+        explanations:
+          type: object
+          description: Optional deeper explanations (meaning + action) per language. Only populated for severity ≥ 4. Stripped on free tier.
+        created_at:
+          type: string
+          format: date-time
 
     Pick:
       type: object

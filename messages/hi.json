@@ -798,6 +798,8 @@
     "descRegions": "क्षेत्र वितरण",
     "descStocks": "सभी शोधित स्टॉक्स",
     "descVerify": "सत्यापन योग्य हैश चेन",
+    "descEvents": "पोर्टफोलियो इवेंट्स (severity 1-5 के साथ firehose)",
+    "descDigest": "साप्ताहिक डाइजेस्ट (इवेंट्स + पोर्टफोलियो डेल्टा)",
     "descPayment": "USDC भुगतान सत्यापित करें",
     "endpointsNote": "सभी endpoints का उपसर्ग",
     "freeTitle": "मुफ्त",

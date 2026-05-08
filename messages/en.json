@@ -810,6 +810,8 @@
     "descRegions": "Region allocation",
     "descStocks": "All researched stocks",
     "descVerify": "Verifiable hash chain",
+    "descEvents": "Portfolio events (firehose with severity 1-5)",
+    "descDigest": "Weekly digest (events + portfolio delta)",
     "descPayment": "Verify USDC payment",
     "endpointsNote": "All endpoints prefixed with",
     "freeTitle": "Free",
