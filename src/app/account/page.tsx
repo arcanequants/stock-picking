@@ -11,7 +11,7 @@ import { getAuthState } from "@/lib/auth";
 export const metadata: Metadata = {
   title: "Account — Vectorial Data",
   robots: { index: false, follow: false },
-  alternates: { canonical: "https://www.vectorialdata.com/account" },
+  alternates: { canonical: "https://vectorialdata.com/account" },
 };
 
 export default async function AccountPage() {

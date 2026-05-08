@@ -21,7 +21,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-const SITE_URL = "https://www.vectorialdata.com";
+const SITE_URL = "https://vectorialdata.com";
 
 export const viewport: Viewport = {
   width: "device-width",

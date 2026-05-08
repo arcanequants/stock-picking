@@ -1,7 +1,7 @@
 import type { Stock } from "@/lib/types";
 import { getLocalizedField } from "@/data/stock-translations";
 
-const SITE_URL = "https://www.vectorialdata.com";
+const SITE_URL = "https://vectorialdata.com";
 
 /* ── JSON-LD renderer ─────────────────────────────────── */
 

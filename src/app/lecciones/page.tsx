@@ -17,7 +17,7 @@ import {
 export const dynamic = "force-dynamic";
 export const revalidate = 300; // 5 min stale-while-revalidate
 
-const SITE_URL = "https://www.vectorialdata.com";
+const SITE_URL = "https://vectorialdata.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Lecciones");

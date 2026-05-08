@@ -48,7 +48,7 @@ export async function generateMetadata({
       images: [{ url: `/api/og/verify/${upper}`, width: 1200, height: 630 }],
     },
     twitter: { card: "summary_large_image" },
-    alternates: { canonical: `https://www.vectorialdata.com/verify/${upper}` },
+    alternates: { canonical: `https://vectorialdata.com/verify/${upper}` },
   };
 }
 
@@ -107,9 +107,9 @@ export default async function VerifyCertificatePage({
   return (
     <div className="max-w-2xl mx-auto">
       <JsonLd data={getBreadcrumbSchema([
-        { name: "Home", url: "https://www.vectorialdata.com" },
-        { name: "Verify", url: "https://www.vectorialdata.com/verify" },
-        { name: upper, url: `https://www.vectorialdata.com/verify/${upper}` },
+        { name: "Home", url: "https://vectorialdata.com" },
+        { name: "Verify", url: "https://vectorialdata.com/verify" },
+        { name: upper, url: `https://vectorialdata.com/verify/${upper}` },
       ])} />
       {/* Multiple transactions header */}
       {totalTxs > 1 && (

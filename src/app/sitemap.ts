@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { stocks, transactions } from "@/data/stocks";
 
-const BASE = "https://www.vectorialdata.com";
+const BASE = "https://vectorialdata.com";
 
 /** hreflang alternates — all locales serve the same URL (no /es/ prefix) */
 function langs(path: string) {

@@ -57,7 +57,7 @@ export async function POST(request: Request) {
       process.env.NEXT_PUBLIC_SITE_URL ||
       (process.env.VERCEL_PROJECT_PRODUCTION_URL
         ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-        : "https://www.vectorialdata.com");
+        : "https://vectorialdata.com");
 
     const callbackUrl = isIOSClient
       ? `vectorialdata://auth?token_hash=${tokenHash}&type=${type}`

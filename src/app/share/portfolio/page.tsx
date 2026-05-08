@@ -61,7 +61,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
     },
     twitter: { card: "summary_large_image" },
-    alternates: { canonical: "https://www.vectorialdata.com/portfolio" },
+    alternates: { canonical: "https://vectorialdata.com/portfolio" },
   };
 }
 

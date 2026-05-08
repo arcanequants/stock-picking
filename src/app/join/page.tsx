@@ -9,7 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("joinTitle"),
     description: t("joinDescription"),
-    alternates: { canonical: "https://www.vectorialdata.com/join" },
+    alternates: { canonical: "https://vectorialdata.com/join" },
   };
 }
 

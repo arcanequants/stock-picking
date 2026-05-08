@@ -120,7 +120,7 @@ export async function GET(request: Request) {
 
     // Generate HMAC approval token
     const token = generateApprovalToken(weekKey);
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.vectorialdata.com";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vectorialdata.com";
     const approveUrl = `${baseUrl}/api/cron/email-digest/approve?week=${encodeURIComponent(weekKey)}&token=${token}`;
 
     // Send preview to admin only

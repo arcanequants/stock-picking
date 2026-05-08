@@ -35,7 +35,7 @@ function buildApologyHtml(firstName: string, ticker1: string, ticker2: string, t
       </p>
     </td></tr>
     <tr><td style="padding:16px 32px;border-top:1px solid #e4e4e7;font-size:12px;color:#9ca3af;text-align:center;">
-      <a href="https://www.vectorialdata.com" style="color:#4f46e5;text-decoration:none;">Vectorial Data</a>
+      <a href="https://vectorialdata.com" style="color:#4f46e5;text-decoration:none;">Vectorial Data</a>
     </td></tr>
   </table>
 </body>

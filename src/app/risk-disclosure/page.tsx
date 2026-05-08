@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("metaTitle"),
     description: t("metaDescription"),
     alternates: {
-      canonical: "https://www.vectorialdata.com/risk-disclosure",
+      canonical: "https://vectorialdata.com/risk-disclosure",
     },
   };
 }

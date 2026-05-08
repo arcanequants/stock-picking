@@ -88,7 +88,7 @@ export async function POST(request: Request) {
   const recipientCount = (emailSubs ?? []).length;
 
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.vectorialdata.com";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://vectorialdata.com";
 
   const sent: Array<{ pick_number: number; ticker: string }> = [];
   const errors: Array<{ pick_number: number; error: string }> = [];

@@ -22,7 +22,7 @@ function htmlResponse(title: string, message: string, color: string) {
     </div>
     <h1 style="margin:0 0 8px;font-size:20px;color:#111827;">${title}</h1>
     <p style="margin:0;font-size:14px;color:#6b7280;line-height:1.6;">${message}</p>
-    <a href="https://www.vectorialdata.com" style="display:inline-block;margin-top:20px;font-size:13px;color:#4f46e5;text-decoration:none;">Vectorial Data</a>
+    <a href="https://vectorialdata.com" style="display:inline-block;margin-top:20px;font-size:13px;color:#4f46e5;text-decoration:none;">Vectorial Data</a>
   </div>
 </body>
 </html>`,

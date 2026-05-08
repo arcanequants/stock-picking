@@ -22,7 +22,7 @@ function getResend() {
   return _resend;
 }
 
-const SITE = "https://www.vectorialdata.com";
+const SITE = "https://vectorialdata.com";
 const FROM = "Vectorial Data <notifications@mail.vectorialdata.com>";
 
 // Icons: keep for dividend, earnings, analyst, news — price moves use colored text instead
@@ -1148,7 +1148,7 @@ function buildAnalyticsDigestHtml(data: AnalyticsDigestData): string {
     { label: "Google Analytics 4", url: "https://analytics.google.com" },
     { label: "Vercel Analytics", url: "https://vercel.com/arcanequants/stock-picking/analytics" },
     { label: "Google Search Console", url: "https://search.google.com/search-console?resource_id=sc-domain:vectorialdata.com" },
-    { label: "Marketing Dashboard", url: "https://www.vectorialdata.com/marketing" },
+    { label: "Marketing Dashboard", url: "https://vectorialdata.com/marketing" },
   ];
   const linkRows = links.map(l =>
     `<tr><td style="padding:4px 0;font-size:13px;"><a href="${l.url}" style="color:#4f46e5;text-decoration:none;">${l.label} →</a></td></tr>`

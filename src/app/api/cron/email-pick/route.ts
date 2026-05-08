@@ -87,7 +87,7 @@ export async function GET(request: Request) {
     // Generate HMAC approval token
     const token = generatePickApprovalToken(pickNumber);
     const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL || "https://www.vectorialdata.com";
+      process.env.NEXT_PUBLIC_SITE_URL || "https://vectorialdata.com";
     const approveUrl = `${baseUrl}/api/cron/email-pick/approve?pick=${pickNumber}&token=${token}`;
 
     // Send preview to admin

@@ -36,7 +36,7 @@ export async function generateMetadata({
     title: `${stock.ticker} — ${stock.name} | Vectorial Data Research`,
     description: localizedShort,
     alternates: {
-      canonical: `https://www.vectorialdata.com/stocks/${stock.ticker}`,
+      canonical: `https://vectorialdata.com/stocks/${stock.ticker}`,
     },
     openGraph: {
       title: `${stock.ticker} — ${stock.name}`,
@@ -135,9 +135,9 @@ export default async function StockResearchPage({
       ],
     }} />
     <JsonLd data={getBreadcrumbSchema([
-      { name: "Home", url: "https://www.vectorialdata.com" },
-      { name: "Stocks", url: "https://www.vectorialdata.com/stocks" },
-      { name: stock.ticker, url: `https://www.vectorialdata.com/stocks/${stock.ticker}` },
+      { name: "Home", url: "https://vectorialdata.com" },
+      { name: "Stocks", url: "https://vectorialdata.com/stocks" },
+      { name: stock.ticker, url: `https://vectorialdata.com/stocks/${stock.ticker}` },
     ])} />
     <div className="max-w-4xl mx-auto">
       <div className="text-sm text-text-faint mb-6">
