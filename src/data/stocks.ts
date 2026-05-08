@@ -9435,6 +9435,163 @@ NU genera $33 de utilidad neta por cada $100 de capital propio — el más alto 
     last_updated_at: "2026-05-06T00:00:00Z",
     next_review_at: "2026-11-06T00:00:00Z",
   },
+  {
+    id: 65,
+    ticker: "DEO",
+    name: "Diageo plc",
+    sector: "Consumer Staples",
+    industry: "Beverages - Wineries & Distilleries",
+    country: "United Kingdom",
+    region: "Europe",
+    currency: "USD",
+    price: 83.20,
+    pe_ratio: 18.95,
+    pe_forward: 12.80,
+    dividend_yield: 3.89,
+    market_cap_b: 46.0,
+    eps: 4.33,
+    summary_short:
+      "**La mayor empresa de bebidas alcohólicas del mundo** por valor — dueña de Johnnie Walker (whisky escocés #1 global, 21M cajas/año), Smirnoff (vodka #1), Guinness (cerveza irlandesa fundada 1759), Tanqueray, Gordon's, Don Julio, Casamigos (la marca de tequila que George Clooney creó y vendió a Diageo por $1B en 2017), Baileys, Captain Morgan, Crown Royal — 250+ marcas en 180 países. HQ Londres, ~30,000 empleados. **Q3 FY26 trading update reportado 6 mayo 2026: ventas orgánicas +0.3%** (primer trimestre positivo en 18 meses), guidance FY reiterado, **acción +5.6% ese día**. **Trump quitó la tarifa de 25% al whisky escocés el 1 mayo 2026** (~$200M de viento en contra anual desaparecido). **Nuevo CEO Dave Lewis** desde 1 enero 2026 — el ejecutivo que rescató a Tesco (la cadena de supermercados más grande del Reino Unido) en su crisis 2014. En febrero 2026 cortaron el dividendo a la mitad para preservar caja. Cotización: $83.20 (~28% off máximo 52-sem $116.69), P/E forward 12.80x, dividend yield 3.89%, market cap ~$46B. Próximo catalyst: **Strategy Update + FY26 results 6 agosto 2026**. Listada NYSE como ADR (la sede primaria es London Stock Exchange como DGE.L). Las marcas más antiguas: Bushmills (whisky irlandés, 1608), Haig (escocés, 1627) — siglos de cash flow recurrente.",
+    summary_what:
+      "Diageo plc (DEO) es **la mayor empresa de bebidas alcohólicas del mundo** por valor de mercado, dueña de 250+ marcas vendidas en 180+ países.\n\n**Producto core — categorías**:\n- **Whisky escocés**: Johnnie Walker (#1 global, 21M cajas/año), Buchanan's, J&B, White Horse, Bell's, Talisker, Lagavulin, Oban, Cragganmore, Dalwhinnie, Cardhu, Glen Ord\n- **Vodka**: Smirnoff (#1 global), Cîroc, Ketel One\n- **Cerveza**: Guinness (la stout irlandesa fundada en 1759, el icono del tucán), Harp, Smithwick's\n- **Gin**: Tanqueray (#1 super-premium global), Gordon's\n- **Tequila premium**: Don Julio (#1 super-premium en EE.UU.), Casamigos (la marca de George Clooney comprada en 2017 por $1B)\n- **Cremas**: Baileys (la crema de whisky #1 global)\n- **Ron**: Captain Morgan, Zacapa, Bundaberg\n- **Whisky canadiense**: Crown Royal\n- **Whisky irlandés**: Bushmills (fundado 1608 — el más antiguo)\n- **Otras**: Hennessy (tienen 34% de Moët Hennessy via JV con LVMH)\n\n**Origen**: La empresa moderna nació en 1997 de la fusión de **Guinness PLC + Grand Metropolitan**. Algunas marcas tienen siglos: Bushmills (1608), Haig (1627), Tanqueray (1830), Smirnoff (1864), Johnnie Walker (1820), Guinness (1759).\n\n**HQ**: Londres, Reino Unido (Park Royal). **Empleados**: ~30,000 globales. **Ventas**: 180+ países.\n\n**Listing**:\n- **Primario**: London Stock Exchange (DGE.L) — componente del FTSE 100\n- **ADR**: NYSE bajo ticker DEO (1 ADR = 4 ordinary shares)\n\n**Liderazgo**:\n- **CEO**: **Dave Lewis** desde 1 enero 2026 — ex-CEO de Tesco PLC (la cadena de supermercados más grande del Reino Unido) que rescató a Tesco en su escándalo contable de 2014. Reemplazó a Debra Crew tras la salida abrupta de ella en julio 2025\n- **CFO**: Nik Jhangiani\n- **Chair**: John Manzoni\n\n**FY 2025/H1 FY26 (jul-dic 2025) — reportado feb 2026**:\n- Net sales H1 FY26: $10.4B (-0.7% organic, -1% reportado)\n- US tequila: -23% (post-pandemic correction)\n- China spirits: -56% (anti-corruption + economic slowdown)\n- **Dividendo cortado a la mitad** (Feb 2026) — primera vez desde 1999\n- Free cash flow H1 FY26: $1.6B\n\n**Q3 FY26 trading update (jul 25 - dic 25 → ene-mar 2026) — reportado 6 mayo 2026**:\n- Net sales organic: **+0.3%** (primer trimestre positivo en 18 meses)\n- North America: -2% (US tequila estabilizándose)\n- Europe: +1.5% (Guinness fuerte)\n- LATAM/Caribbean: +6% (recovery)\n- Asia Pacific: +0.5% (China sigue floja, India fuerte)\n- **Guidance FY26 reiterado**: organic NS flat to slightly up, organic op profit -1% to flat\n- **Acción +5.6%** el día del reporte\n\n**Próximo catalyst**: **Strategy Update + FY26 full year results — 6 agosto 2026**.",
+    summary_why:
+      "DEO a $83.20 es comprar el portfolio de marcas alcohólicas más fuerte del mundo (Johnnie Walker, Guinness, Smirnoff, Don Julio, Casamigos, Baileys, Tanqueray) a forward P/E 12.80x, ~28% por debajo de su máximo de $116.69, justo cuando los 4 vientos en contra están girando. Razones específicas: (1) **Q3 FY26 trading update 6 mayo 2026 (hace 2 días) marcó el bottom del ciclo**: ventas orgánicas +0.3% — pequeño, pero el primer trimestre positivo en 18 meses (después de -0.7% en H1 FY26 y caídas trimestrales toda 2025). La acción reaccionó +5.6% ese día — el mercado validó que el peor punto ya pasó. (2) **Trump quitó la tarifa de 25% al whisky escocés el 1 mayo 2026**: ese arancel pesaba ~$200M anuales en utilidad operativa de Diageo (Johnnie Walker, Talisker, Lagavulin, Bushmills se exportan masivamente a EE.UU.). El alivio cae directo al EBITDA en H2 FY26 sin que el management haya guideado el upside. (3) **Dave Lewis es la pieza fundamental**: el guy que rescató a Tesco PLC en 2014 (escándalo contable de £263M, acción cayó 50%) y la regresó a profitability en 24 meses se convirtió en CEO de Diageo el 1 enero 2026. Track record probado en turnarounds de gigantes consumer staples del Reino Unido — exactamente la situación de Diageo hoy. (4) **Strategy Update 6 agosto 2026 es el catalyst**: management va a presentar el plan de turnaround completo — incluye $625M de ahorros prometidos, replanteamiento del portfolio (rumored: venta de Guinness por $10B+, mantener spirits core), y rebase de capital allocation. Históricamente las strategy updates de Diageo mueven la acción ±10-15%. (5) **El moat marcario es irreplicable**: Johnnie Walker es la marca de whisky #1 global desde hace 200 años. Guinness lleva 267 años (fundada 1759) y vende 9M pintas al día. Smirnoff es la vodka #1 mundial. Crear una marca premium en alcohol toma 50-100 años — Diageo tiene 250 marcas con esa profundidad. Pernod Ricard, su competidor más cercano, paga 22x P/E para tener marcas similares. (6) **Cortar el dividendo en Feb 2026 fue dolor a corto plazo, fortaleza a mediano**: liberó ~$1B de cash flow para reducir deuda (debt/EBITDA de 3.4x → meta 2.5-2.8x) y financiar la transformación. Yield post-cut sigue en 3.89% — superior al 1.5-2% del S&P 500 promedio. (7) **Forward P/E 12.80x es trough de 12 años**: la última vez que Diageo cotizó a este múltiplo fue 2014 (post Brexit referendum + Russia ban). Promedio histórico 18-22x. Re-rating a 16x = $104 (+25%); a 18x = $117 (=máximo histórico). (8) **Analyst consensus Moderate Buy, target promedio $93** = upside +11.8%. Algunos PT más altos (Goldman $98, Barclays $96) ven $100+ tras el Strategy Update. (9) **US tequila estabilizándose**: -23% en H1 FY26, pero comparable se aplana en H2 FY26 (FY25 ya había caído fuerte). Don Julio mantiene #1 en super-premium tequila US (~25% market share). Rebote 2027 muy probable. (10) **Defensiva en recesión**: alcohol es uno de los pocos sectores que mantiene revenue en recesiones. Si EE.UU. entra recesión 2026-27 (probabilidad creciente con tariffs + Fed), DEO outperforms.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **Strategy Update 6 agosto 2026 = catalyst binary**: si Dave Lewis presenta plan agresivo (venta Guinness, recompra acciones, cuts profundos), gap up +10-15%. Si presenta plan tibio o decepciona en guidance FY27, corrección -10-15% likely. La acción ya está -28% del máximo, pero un decepcionante puede llevarla a $72-75 (test del mínimo 52-sem $72.45). (2) **US tequila — recovery puede tomar 2-3 años**: -23% en H1 FY26 fue brutal. La estructura del mercado cambió post-pandemia — consumer cambió hacia GLP-1 drugs (Ozempic/Wegovy reducen apetito de alcohol +20-30%), Gen Z toma menos alcohol (-15% per capita vs Millennials a misma edad), y 'sober curious' es trend real. Si el mercado de tequila premium estructuralmente se contrae, DEO pierde el growth driver de la última década. (3) **China: -56% en H1 FY26 podría empeorar**: Xi Jinping anti-corruption campaign hizo gifting de Cognac/Scotch ilegal de facto (jefes de empresa no pueden regalar botellas premium a oficiales). Plus economic slowdown reduce consumption. China era 8% de revenue, ahora ~3-4%. Si cae a 1-2% más, otro headwind anual de $300-500M. (4) **GLP-1 drugs (Ozempic/Wegovy/Zepbound) son riesgo estructural**: estudios JAMA 2025 mostraron usuarios reducen consumo alcohol 20-30%. Con 30M+ usuarios GLP-1 en EE.UU. para 2027, el mercado addressable de alcohol premium se contrae. Diageo está respondiendo con 'no/low' alcohol (Guinness 0.0, Tanqueray 0.0) pero el margen es menor. (5) **Deuda alta**: net debt ~$22B, debt/EBITDA 3.4x. Si los cash flows decepcionan, downgrade de rating de A- a BBB+ es posible (S&P puso Diageo en negative watch oct 2025). (6) **Dividendo recortado a la mitad ya pasó (Feb 2026)** — pero si el turnaround no funciona, otro recorte en agosto 2026 destruiría el thesis income. La acción caería 15-20% en ese escenario. (7) **Pernod Ricard, Bacardi, Suntory** compiten directamente en spirits premium. Pernod tiene Jameson (whisky irlandés que está creciendo +12%/año), Absolut, Beefeater, Martell. Suntory tiene Jim Beam, Maker's Mark, Yamazaki. El share gain de competidores en Jameson (vs Bushmills) y en bourbon americano (vs el portfolio escocés) es real. (8) **Trump tarifas — Scotch quitada pero hay otras**: Trump removió 25% Scotch tariff el 1 mayo 2026, pero las tarifas a vino/champagne francés (Hennessy via JV) y a Bushmills (Irish whisky) siguen activas. Riesgo de escalada con UE/Canadá si negociaciones colapsan. (9) **Brexit + libra esterlina**: ~30% de costos en GBP, ~50% de revenue en USD/EUR/AUD. Si la libra se aprecia vs USD (escenario poco probable pero posible si Bank of England sube tasas), márgenes se comprimen. (10) **Dave Lewis no es Tesco — es Diageo**: turnaround retail (Tesco) es muy distinto a brand portfolio management (Diageo). Lewis no tiene experiencia previa en CPG/beverages global — riesgo de aprender en el job durante 12-18 meses críticos.",
+    research_full: `# Diageo plc (DEO) — Research Completo
+
+## Precio: $83.20 | P/E TTM: 18.95 | P/E Forward: 12.80 | Div Yield: 3.89% | Market Cap: $46.0B
+
+---
+
+## ¿Qué es Diageo?
+
+Diageo plc es **la mayor empresa de bebidas alcohólicas del mundo** por valor de mercado, dueña de 250+ marcas vendidas en 180+ países.
+
+**Historia**:
+- **1759**: Arthur Guinness firma lease de 9,000 años en St. James's Gate, Dublín — funda Guinness
+- **1820**: John Walker abre tienda en Kilmarnock, Escocia — Johnnie Walker nace
+- **1997**: Fusión de Guinness PLC + Grand Metropolitan crea Diageo plc
+- **2017**: Compra Casamigos a George Clooney por $1B (+$1B en earn-outs)
+- **Enero 2026**: Dave Lewis (ex-Tesco) reemplaza a Debra Crew como CEO
+
+**HQ**: Londres, Reino Unido | **Empleados**: ~30,000 | **Cotización**: LSE (DGE.L) primaria + NYSE ADR (DEO)
+
+## Portfolio de Marcas (250+)
+
+### Whisky Escocés
+- **Johnnie Walker**: #1 global, 21M cajas/año
+- **Buchanan's**: #1 super-premium en LATAM
+- **J&B, White Horse, Bell's**
+- **Single malts**: Talisker, Lagavulin, Oban, Cragganmore, Dalwhinnie, Cardhu, Glen Ord
+
+### Vodka
+- **Smirnoff**: #1 global por volumen
+- **Cîroc, Ketel One**
+
+### Cerveza
+- **Guinness**: 9M pintas/día, fundada 1759 — el icono del tucán
+
+### Gin
+- **Tanqueray**: #1 super-premium global
+- **Gordon's**
+
+### Tequila Premium
+- **Don Julio**: #1 super-premium en EE.UU.
+- **Casamigos**: comprada a George Clooney en 2017 por $1B
+
+### Otros
+- **Baileys** (cream liqueur, #1 global)
+- **Captain Morgan** (rum)
+- **Crown Royal** (Canadian whisky)
+- **Bushmills** (Irish whisky, 1608 — el más antiguo del mundo)
+- **34% de Moët Hennessy** (JV con LVMH — Hennessy cognac)
+
+## Q3 FY26 Trading Update — 6 mayo 2026
+
+| Métrica | Q3 FY26 | YoY |
+|---------|---------|-----|
+| **Organic Net Sales** | **+0.3%** | **primer trimestre + en 18 meses** |
+| North America | -2% | tequila estabilizándose |
+| Europe | +1.5% | Guinness fuerte |
+| LATAM/Caribbean | +6% | recovery |
+| Asia Pacific | +0.5% | India fuerte, China floja |
+| Guidance FY26 | reiterado | flat to slightly up |
+| **Reacción acción** | **+5.6%** | mismo día |
+
+## H1 FY26 (jul-dic 2025) — reportado feb 2026
+
+- Net sales: $10.4B (-0.7% organic)
+- **US tequila: -23%** (post-pandemic correction)
+- **China spirits: -56%** (anti-corruption + slowdown)
+- Free cash flow: $1.6B
+- **Dividendo cortado a la mitad** (primera vez desde 1999)
+
+## Catalysts Recientes
+
+### 1 mayo 2026 — Trump quita tarifa Scotch whisky
+- Tarifa 25% impuesta originalmente como respuesta a Airbus subsidies
+- Pesaba **~$200M anuales** en operating profit de Diageo
+- Removida tras negociación UK-US
+- Cae directo al EBITDA en H2 FY26
+
+### 1 enero 2026 — Dave Lewis llega como CEO
+- Ex-CEO de **Tesco PLC** (2014-2020)
+- Rescató a Tesco del escándalo contable £263M de 2014
+- Acción de Tesco subió +120% bajo su gestión
+- Track record probado en turnarounds consumer staples del Reino Unido
+- Reemplaza a Debra Crew (salida abrupta julio 2025)
+
+### Feb 2026 — Dividendo cortado a la mitad
+- De ~$0.83/ADR semestral a ~$0.41/ADR semestral
+- Primera vez desde 1999
+- Liberó ~$1B de cash flow para reducir deuda
+- Yield post-cut: **3.89%** (sigue arriba del S&P 500)
+
+## Valuación
+
+- **P/E TTM**: 18.95x
+- **Forward P/E**: 12.80x — **trough de 12 años** (última vez 2014)
+- **Promedio histórico**: 18-22x
+- **52-week range**: $72.45 – $116.69 → **28% off high**
+- **Mean analyst target**: $93 → **+11.8% upside** (Moderate Buy)
+- **Pernod Ricard** (competidor #1): 22x forward P/E
+
+## Próximo Catalyst — Strategy Update + FY26
+
+- **Fecha**: 6 agosto 2026
+- **Contenido esperado**:
+  - Plan de turnaround completo de Dave Lewis
+  - $625M ahorros prometidos
+  - Posible venta de Guinness por $10B+ (rumor analistas)
+  - Capital allocation framework
+  - Guidance FY27
+- **Reacción histórica**: strategy updates de Diageo mueven ±10-15%
+
+## Riesgos GLP-1 / Gen Z / Estructurales
+
+- **GLP-1 drugs (Ozempic/Wegovy)**: usuarios reducen consumo alcohol -20 a -30% (estudios JAMA 2025)
+- 30M+ usuarios GLP-1 en EE.UU. para 2027
+- **Gen Z**: toma -15% per capita vs Millennials a misma edad
+- **Diageo respuesta**: Guinness 0.0, Tanqueray 0.0, no/low alcohol
+- Riesgo: contracción estructural del TAM premium spirits
+
+## Tesis en una línea
+
+> Comprar el portfolio de marcas alcohólicas más fuerte del mundo (Johnnie Walker, Guinness, Smirnoff, Don Julio) a forward P/E 12.80x — trough de 12 años — justo cuando 3 vientos en contra están girando: (1) Q3 FY26 6 mayo marcó el bottom (+0.3% organic, primer trimestre positivo en 18 meses, acción +5.6%), (2) Trump quitó tarifa Scotch 1 mayo (~$200M alivio anual), (3) Dave Lewis (el guy que rescató Tesco) toma CEO 1 enero 2026 con catalyst Strategy Update 6 agosto 2026.
+
+---
+
+*Research fecha: 7 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Moderate Buy",
+    analyst_target: 93.00,
+    analyst_upside: 11.8,
+    status: "active",
+    first_researched_at: "2026-05-07T00:00:00Z",
+    last_updated_at: "2026-05-07T00:00:00Z",
+    next_review_at: "2026-11-07T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -10294,6 +10451,19 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #63* — May 6, 2026\n\n🏢 *Nu Holdings* (NU) — $14.50\n\n💳 *Sus líneas/marcas*: el banco digital sin sucursales más grande de Latinoamérica. Sus productos: la tarjeta de crédito morada *Nubank* (la #1 emisora de tarjetas nuevas en Brasil y México), la cuenta digital *NuConta* (recibir sueldo, pagar, transferir — sin comisiones, sin filas), *Nu Crypto* (comprar y vender bitcoin desde la misma app), *NuInvest* (inversiones para principiantes), seguros y crédito personal.\n\n🌍 *Presencia*: Brasil, México y Colombia — *131 millones de clientes* (más que la población de México entera). HQ en São Paulo. Fundada en 2013 por *David Vélez* (colombiano, ex-Stanford), Cristina Junqueira y Edward Wible. CEO David Vélez. **Warren Buffett invirtió ~$1,000 millones en 2021 vía Berkshire Hathaway** — prácticamente la única apuesta fintech que Buffett ha hecho en su carrera.\n\n🚀 *Por qué la compramos*: Nu *no paga dividendo — es 100% apuesta por crecimiento*. Cada dólar de utilidad lo reinvierten en ganar más clientes. Y los números son brutales: en 2025 sumaron 17 millones de clientes nuevos, los ingresos subieron *45%* a $16.3 mil millones, y por cada $100 de capital propio invertido la empresa generó $33 de ganancia neta — más rentable que JPMorgan, Bank of America o Citi. Plus: el *29 de enero 2026 consiguieron permiso del gobierno de EE.UU. para abrir banco nacional* — están montando oficinas en Miami, San Francisco, Virginia y Carolina del Norte.\n\n⚠️ *El riesgo*: Brasil sube tasas de interés y el real brasileño se devalúa — eso encoge las ganancias cuando se traducen a dólares (Brasil = ~75% del negocio). Plus: la acción cotiza barata (por cada dólar de ganancia futura, el mercado paga $12.60 — la mitad que JPMorgan paga $25) precisamente porque inversionistas temen que el crecimiento de 45% se desacelere. Plus: el próximo reporte de resultados es *14 de mayo 2026* — si decepciona vs expectativas ($5.1B ingresos), corrección de -10-15% es realista.\n\n🆕 Posición #63\n🔗 https://vectorialdata.com/stocks/NU\n✅ Certificado por blockchain → vectorialdata.com/verify/NU\n\n💡 Dato que ancla la tesis: Nu acaba de cerrar 2025 con *131 millones de clientes* — más que la población de México y casi tanto como Japón. En México sirven al *15% de todos los adultos del país* y son la #1 emisora de tarjetas de crédito nuevas. A $14.50, la acción está *24% por debajo* de su máximo de $18.98 — el mercado la castigó por el real brasileño débil, pero el negocio sigue creciendo 45% al año con el rendimiento sobre capital más alto de cualquier banco grande del mundo (33% vs 15-18% de los gigantes de Wall Street). Comprar el banco más rentable del mundo al precio de un banco mediocre, justo cuando le acaban de aprobar el banco gringo, es la asimetría.`,
     attestation_uid: "0xd5a451f1ebe45b96d86ffa4f2b8b8411bf5f9668c8a9a63a4f096524d720434e",
   },
+  {
+    id: 64,
+    stock_id: 65,
+    ticker: "DEO",
+    type: "new" as const,
+    cycle_number: 13,
+    price: 83.20,
+    open_price: 83.20,
+    date: "2026-05-07",
+    day_of_week: "thursday",
+    wa_message: `📊 *STOCK PICK #64* — May 7, 2026\n\n🏢 *Diageo plc* (DEO) — $83.20\n\n🥃 *Sus líneas/marcas*: la mayor empresa de bebidas alcohólicas del mundo (250+ marcas, presencia en 180 países). Top productos: *Johnnie Walker* (el whisky escocés #1 global, 21 millones de cajas vendidas al año), *Smirnoff* (la vodka #1 del mundo), *Guinness* (la cerveza oscura irlandesa con la marca del tucán, fundada en 1759 — 9 millones de pintas servidas al día), *Tanqueray* y *Gordon's* (gin), *Don Julio* y *Casamigos* (tequila premium — Casamigos es la marca que George Clooney creó y le vendió a Diageo en 2017 por mil millones de dólares), *Baileys* (la crema de whisky #1 mundial), *Captain Morgan* (ron) y *Crown Royal* (whisky canadiense).\n\n🌍 *Presencia*: Reino Unido (HQ en Londres), con ventas en >180 países y ~30,000 empleados globales. La empresa nació en 1997 de la fusión de Guinness con Grand Metropolitan, pero algunas de sus marcas tienen siglos: Bushmills (whisky irlandés) es de 1608, Haig (escocés) de 1627, Johnnie Walker de 1820. **Nuevo CEO Dave Lewis desde el 1 de enero 2026** — el ejecutivo que rescató a Tesco (la cadena de supermercados más grande del Reino Unido) en su crisis contable de 2014.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.89% anual* solo por ser dueño. Cada vez que alguien pide un Johnnie Walker en un bar de Tokio, una Guinness en un pub de Dublín, una margarita Casamigos en Nueva York o un Don Julio en Ciudad de México — parte de ese dinero llega a ti como dividendo. Diageo paga dividendos sin parar desde 1997, y algunas de sus marcas llevan repartiendo utilidades desde el siglo XIX.\n\n⚠️ *El riesgo*: La acción está *28% por debajo* de su máximo de $116.69 — el mercado castigó a Diageo porque las ventas de tequila premium en EE.UU. cayeron *23%* y las ventas en China cayeron *56%* en la primera mitad del año fiscal (julio-diciembre 2025). En febrero 2026 *cortaron el dividendo a la mitad* para preservar caja — la primera vez que lo recortan desde 1999. Plus: el siguiente reporte completo es el *6 de agosto 2026* — si decepciona, otra corrección de -10-15% es realista.\n\n🆕 Posición #64\n🔗 https://vectorialdata.com/stocks/DEO\n✅ Certificado por blockchain → vectorialdata.com/verify/DEO\n\n💡 Dato que ancla la tesis: El *6 de mayo 2026* (ayer), Diageo reportó que las ventas del último trimestre subieron *+0.3%* — pequeño, pero la primera vez en 18 meses que el negocio deja de caer, y la acción reaccionó *+5.6%* ese mismo día. Plus: el *1 de mayo 2026*, Trump quitó la tarifa de 25% al whisky escocés que llevaba un año amenazando ~$200 millones de utilidad anual — ese alivio cae directo a las ganancias en el segundo semestre. Comprar a $83.20 (el múltiplo más bajo en 12 años para esta empresa) justo cuando llega el ejecutivo que rescató a Tesco, con el bottom del ciclo confirmado y la tarifa eliminada — es la asimetría.`,
+    attestation_uid: "0xe7132ecf5f8a8641af4eab4b6769a7903dda25598e6c883fb0f4bd804aaa894f",
+  },
 ];
 
 export const cycles = [
@@ -10398,7 +10568,7 @@ export const cycles = [
     cycle_number: 13,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 4,
     status: "active" as const,
   },
 ];
