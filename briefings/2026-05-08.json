@@ -1,0 +1,99 @@
+{
+  "date": "2026-05-08",
+  "summary": "US-Iran talks pause Hormuz crisis as oil holds above $100, sending inflation ripples from Sydney to Mexico City",
+  "causalChain": "Iran's de facto closure of the Strait of Hormuz since February cut 20% of global oil supply, forcing central banks from Australia to Japan to fight oil-driven inflation even as their economies slow. A fragile US-Iran 14-point deal could unlock prices — but if it collapses, energy costs keep climbing everywhere.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "US pauses Iran operation; 14-point Hormuz deal on the table", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Gold at $4,756 — Swiss bar tariffs + Middle East fear drive surge", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "UAE exits OPEC May 1 — free to pump, but Hormuz blockade outweighs it", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico holds at 6.5%, ending easing cycle as inflation stays at 4.6%", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Remittances +4.9% in March — first real rebound after worst year in 16 yrs", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "USMCA July review: biggest single economic risk on Mexico's calendar", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ holds 0.75% in 6-3 split; yen at 162, Japan asks US for currency help", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "Yuan at 6.85, China exports +6.6%, Hang Seng +1.2%; iron ore price fight looms", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "Germany halves 2026 growth forecast to 0.5% — Iran oil shock hits factories", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "European stocks +17% YTD; ECB on hold after 4 cuts — oil inflation rising", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBA hikes 3rd time to 4.35% — oil-driven inflation forces Australian hand", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "BHP + Rio Tinto explore joint 200M-tonne Pilbara deal as China pushes on price", "worker": "—"},
+    {"n": 13, "region": "WOW", "angle": "66-million-year-old T. rex blood vessels found intact inside healed rib bone", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "Flexible perovskite solar cell hits 33.6% efficiency — well past silicon's ceiling", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Scientists discover 16,000 new species per year — fastest rate in history", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The US paused its military operation near Iran this week and says it's close to a 14-point deal that would reopen the Strait of Hormuz — the narrow water channel where 1 in 5 barrels of oil shipped worldwide passes. Iran effectively locked it in February. Since then, only 40 ships cross per week vs the usual 120 a day. Oil sits at $100+. If the deal holds, prices could fall fast. If it breaks down, expect higher gas, heating, and food costs worldwide. The next 72 hours matter."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,756 per ounce this week — nearly triple its price of a few years ago. Two things are piling on: investors are nervous about the Middle East conflict and buying it as protection, and the US put a 39% tax on gold bars imported from Switzerland — the main supplier — making them suddenly more expensive for banks and funds to acquire. Both forces push prices up together. Gold pays no interest, so when it surges this fast, it's usually a sign that a lot of people are scared."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The UAE — one of the biggest oil producers in the world — quietly left OPEC on May 1, freeing itself from the group's production agreements. OPEC is the club of oil-producing countries that coordinates how much oil they pump. When a member leaves, it can produce freely, which in theory pushes prices down. But the Hormuz blockade is so severe that any extra UAE output can't offset the disruption. Markets barely reacted — the crisis outweighs the departure."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank just paused its easing cycle, holding its overnight lending rate — the rate banks use to set what they charge you for loans — at 6.5%. They cut it several times since 2024, but core inflation stayed stuck at 4.6%, above the 3% target. Oil prices are a big reason: when energy costs rise, businesses charge more, and prices drift up. The bank faces two uncomfortable choices: cut and risk prices running hotter, or hold and keep growth sluggish at around 1.6% this year."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexicans in the US sent 4.9% more money home to family in March — a real rebound after 2025, when those transfers dropped 4.6%, the worst fall in 16 years. These payments, called remittances, equal 3.6% of Mexico's entire economy — more than oil exports. The rebound suggests workers feel stable enough to send more. The risk: if the US job market softens or immigration enforcement intensifies, these flows can reverse quickly and hit household incomes across Mexico."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "In July, the US, Canada, and Mexico must formally review their trade deal — the pact that shapes nearly all of Mexico's manufacturing exports. This is the first review where both sides arrive with very different priorities than in 2020. Mexico's pitch to investors: wages at $4.90/hr, 25% cheaper than China. If the review goes badly, companies building factories in Mexico pause their plans. It's the single biggest economic risk on Mexico's calendar this year."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank held its rate at 0.75% this week in a close 6-3 vote. The yen sits at 162 per dollar — meaning imports, especially oil, cost more for Japanese households. Japan reportedly asked the US to help defend its currency, something rare between allies. Higher oil plus a weaker yen equals rising prices. If the bank raises rates to fix this, it risks slowing an economy already expected to grow just 0.5% this year."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's central bank held its lending rate steady for the 10th month in a row, yet the yuan got stronger — now 6.85 per dollar — because the US dollar has been weakening globally. Exports jumped 6.6%. Hong Kong stocks rose 1.2%. The subplot to watch: China is formally pushing to control iron ore pricing, the raw material for steel, challenging the Australian miners who currently set benchmark prices. If China succeeds, it reshapes global commodity markets and squeezes mining profits."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Germany — Europe's biggest economy — just cut its own growth forecast in half, now expecting just 0.5% this year instead of 1%. The reason is the oil shock from the Iran conflict. Germany runs on manufacturing: cars, chemicals, machinery — all of which need affordable energy. When oil doubles, factory margins shrink, investment slows, and the engine stalls. A weak Germany typically drags France, Italy, and Eastern Europe down with it."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "European stocks have been surprisingly resilient this year — up 17% overall — as the European Central Bank cut lending rates four times in 2025 and is now on hold. London's main stock index hit 10,438 on Thursday. Cheap money boosted company valuations even as underlying economies grow slowly. The catch: the oil shock is now feeding into inflation, which could force rates to stay higher longer, squeezing the momentum that drove stocks up. Q2 earnings season is the first real test."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its lending rate for the third time in a row to 4.35%, in an 8-1 vote. The driver: Middle East oil costs are inflating prices across the economy. For Australian homeowners — most of whom have variable-rate mortgages that move directly with this rate — that means another monthly payment increase. The bank says it will do what is necessary to bring inflation down, leaving the door open to more hikes if oil prices don't fall."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Two of the world's largest mining companies, BHP and Rio Tinto, are exploring a joint operation to extract up to 200 million tonnes of iron ore in Western Australia's Pilbara region. Iron ore makes steel. China buys 70% of the world's iron ore, and this week China pressured these miners to give it more say in setting the price. The joint plan cuts costs for both miners — but deepens dependence on a single buyer that is actively trying to push the price down."
+    },
+    {
+      "n": 13,
+      "region": "WOW",
+      "text": "A PhD student at the University of Regina in Canada found preserved blood vessels inside a T. rex fossil rib from 66 million years ago. The rib had fractured and healed — and that healing created dense bone that locked the vessels in. Researchers used synchrotron X-rays, an extremely powerful scanner from a particle accelerator, to see inside without damaging the fossil. The find opens the door to extracting original proteins from a dinosaur for the first time in history.\n📄 Published in Scientific Reports · More: https://www.sciencedaily.com/releases/2026/04/260426012259.htm"
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "Researchers layered a new material called perovskite on top of standard silicon to build a flexible solar cell that converts 33.6% of sunlight into electricity. Standard panels top out at around 24%. The jump means fewer panels needed for the same power output. The key breakthrough was a new interface layer keeping the cell stable under heat — historically the main reason perovskite cells degraded too quickly to commercialize. This was led by Wang, Li, and Yu at Helmholtz-Zentrum Berlin and KAUST.\n📄 Published in Nature, vol. 649 (2026) · More: https://www.nature.com/articles/s41586-025-09849-4"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Scientists are discovering more than 16,000 new species every year — the fastest rate in recorded history — including hundreds of new vertebrates like fish and frogs. Some researchers assumed we were running out of species to find, but the data shows the opposite. Prof. John Wiens at the University of Arizona estimates there may be 115,000 fish species total, more than double the ~42,000 currently known. Most undiscovered species live in tropical regions and deep oceans.\n📄 Published in Science Advances · More: https://www.science.org/doi/10.1126/sciadv.adz3071"
+    }
+  ]
+}
