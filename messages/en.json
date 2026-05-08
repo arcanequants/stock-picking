@@ -225,7 +225,8 @@
     "lastPickToday": "New pick today",
     "lastPick": "Last pick: {days} day(s) ago",
     "verifyBanner": "This portfolio has a verifiable record",
-    "verifyBannerCta": "View record"
+    "verifyBannerCta": "View record",
+    "eventsHeroTitle": "What moved today"
   },
   "Stocks": {
     "title": "Our Portfolio",

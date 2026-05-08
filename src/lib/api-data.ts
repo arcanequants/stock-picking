@@ -256,10 +256,33 @@ export function getStocksList(tier = "free") {
 
 // --- Events data for API ---
 
-export async function getEventsData(tier = "free", limit?: number) {
-  const { getRecentEvents } = await import("@/lib/notifications");
-  const maxEvents = tier === "free" ? 3 : (limit || 20);
-  const events = await getRecentEvents(maxEvents);
+export async function getEventsData(
+  tier = "free",
+  limit?: number,
+  filters?: { severityMin?: number; since?: string }
+) {
+  const { getSupabaseAdmin } = await import("@/lib/supabase");
+  const maxEvents = tier === "free" ? 3 : limit || 20;
+
+  let query = getSupabaseAdmin()
+    .from("portfolio_events")
+    .select("*")
+    .order("created_at", { ascending: false })
+    .limit(maxEvents);
+
+  if (filters?.severityMin && filters.severityMin >= 1 && filters.severityMin <= 5) {
+    query = query.gte("severity", filters.severityMin);
+  }
+  if (filters?.since) {
+    const sinceDate = new Date(filters.since);
+    if (!isNaN(sinceDate.getTime())) {
+      query = query.gte("created_at", sinceDate.toISOString());
+    }
+  }
+
+  const { data, error } = await query;
+  if (error) throw new Error(`Failed to fetch events: ${error.message}`);
+  const events = data ?? [];
 
   if (tier === "free") {
     // Strip AI explanations for free tier

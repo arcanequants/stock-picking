@@ -225,7 +225,8 @@
     "lastPickToday": "Nuevo pick hoy",
     "lastPick": "Último pick: hace {days} día(s)",
     "verifyBanner": "Este portafolio tiene registro verificable",
-    "verifyBannerCta": "Ver registro"
+    "verifyBannerCta": "Ver registro",
+    "eventsHeroTitle": "Hoy en tu portafolio"
   },
   "Stocks": {
     "title": "Nuestro Portafolio",

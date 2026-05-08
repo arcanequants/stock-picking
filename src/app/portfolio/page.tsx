@@ -3,6 +3,7 @@ import CycleTracker from "@/components/CycleTracker";
 import PerformanceMetrics from "@/components/PerformanceMetrics";
 import PerformanceChart from "@/components/PerformanceChart";
 import PositionReturns from "@/components/PositionReturns";
+import PortfolioEventsHero from "@/components/PortfolioEventsHero";
 import PremiumGate from "@/components/PremiumGate";
 import FreeSignupForm from "@/components/FreeSignupForm";
 import LoginExpiredBanner from "@/components/LoginExpiredBanner";
@@ -100,6 +101,9 @@ export default async function PortfolioPage() {
           <span className="hover:underline">{t("verifyBannerCta")} {"\u2192"}</span>
         </Link>
       </section>
+
+      {/* Curated events — top 1-2 severity≥4 movements. Hides if none. */}
+      <Suspense fallback={null}><PortfolioEventsHero /></Suspense>
 
       {/* 1. Return total hero — the emotional hook */}
       <PerformanceMetrics positionCount={transactions.length} />

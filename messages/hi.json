@@ -225,7 +225,8 @@
     "lastPickToday": "आज नया पिक",
     "lastPick": "आखिरी पिक: {days} दिन पहले",
     "verifyBanner": "इस पोर्टफोलियो का सत्यापन योग्य रिकॉर्ड है",
-    "verifyBannerCta": "रिकॉर्ड देखें"
+    "verifyBannerCta": "रिकॉर्ड देखें",
+    "eventsHeroTitle": "आज आपके पोर्टफोलियो में"
   },
   "Stocks": {
     "title": "हमारा पोर्टफोलियो",

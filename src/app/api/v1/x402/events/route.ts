@@ -4,5 +4,10 @@ import { getEventsData } from "@/lib/api-data";
 
 export const GET = createX402Route("0.002", "Portfolio events with AI explanations", async (request: NextRequest) => {
   const limit = request.nextUrl.searchParams.get("limit");
-  return getEventsData("pro", limit ? parseInt(limit) : undefined);
+  const severityMin = request.nextUrl.searchParams.get("severity_min");
+  const since = request.nextUrl.searchParams.get("since");
+  return getEventsData("pro", limit ? parseInt(limit) : undefined, {
+    severityMin: severityMin ? parseInt(severityMin) : undefined,
+    since: since ?? undefined,
+  });
 });

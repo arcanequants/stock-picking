@@ -2,7 +2,7 @@
 
 > Stock picking service with daily researched picks across global equities. Every pick is cryptographically verified via SHA-256 hash chain on Base (Ethereum L2). $1/month, delivered via WhatsApp.
 >
-> Last updated: 2026-04-13
+> Last updated: 2026-05-08
 
 ## Docs
 
@@ -19,6 +19,8 @@
 - [Portfolio](https://vectorialdata.com/api/v1/portfolio): Portfolio performance summary
 - [Positions](https://vectorialdata.com/api/v1/portfolio/positions): All positions with live returns
 - [Stocks](https://vectorialdata.com/api/v1/stocks): All researched stocks
+- [Events](https://vectorialdata.com/api/v1/events): Portfolio events firehose (price moves, dividends, earnings, analyst calls, news). Each event carries `severity` (1-5), `affects_thesis` (bool), and one-line human summaries in es/en/pt/hi. Filter with `?severity_min=4` for thesis-changing only, or `?since=2026-05-01` for incremental sync. Humans on the site see only severity ≥ 4 by default; the API exposes the full firehose to AI agents.
+- [Digest](https://vectorialdata.com/api/v1/digest/latest): Latest weekly digest (events + portfolio delta)
 - [Verify](https://vectorialdata.com/api/v1/verify/picks): Verifiable pick history (hash chain)
 
 ## x402 Pay-Per-Request
@@ -35,6 +37,8 @@ No API key needed. Pay USDC on Base per request. HTTP 402 flow.
 - [Sectors](https://vectorialdata.com/api/v1/x402/sectors): Sector breakdown ($0.001)
 - [Regions](https://vectorialdata.com/api/v1/x402/regions): Region breakdown ($0.001)
 - [Stocks](https://vectorialdata.com/api/v1/x402/stocks): All stocks ($0.005)
+- [Events](https://vectorialdata.com/api/v1/x402/events): Portfolio events firehose with AI explanations ($0.002)
+- [Digest](https://vectorialdata.com/api/v1/x402/digest/latest): Latest weekly digest ($0.003)
 
 ## Content
 
