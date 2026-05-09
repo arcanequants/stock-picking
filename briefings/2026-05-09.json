@@ -1,0 +1,105 @@
+{
+  "date": "2026-05-09",
+  "summary": "El Estrecho de Ormuz bloqueado mantiene el petróleo en $114 y fuerza a bancos centrales de México a Australia a pausar recortes o subir tasas.",
+  "causalChain": "El conflicto en torno a Irán retiró el 20% del petróleo global del mercado; los precios altos de energía alimentan inflación persistente que impide recortes de tasas en EE.UU., México y Australia, mientras Europa enfrenta el doble riesgo de estancamiento y posibles alzas.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Strait of Hormuz blocks 20% of world oil supply; Brent at $114", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 30-year borrowing cost tops 5% as tariff inflation stalls rate cuts", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,600 squeezed by strong dollar, high yields, and energy costs", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "Fed holds at 3.5–3.75%; tariffs explain half of excess inflation at 3.3%", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico cuts to 6.50% and signals end of easing cycle", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "March remittances hit historic high: $5.4B in single month", "worker": "—"},
+    {"n": 7, "region": "MEXICO", "angle": "GDP shrinks 0.8% in Q1; T-MEC review in July clouds investment", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "Japan spends $64B+ defending yen as rate gap vs US stays wide", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "PBOC carefully allows yuan to gain 2% vs dollar since April", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "Germany halves 2026 growth forecast to 0.5%; ECB may raise rates", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "FTSE drops 1.26% on Trump tariff ultimatum to EU", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "RBA hikes to 4.35% (third time this year); recession warnings grow", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "BHP & Rio Tinto: copper/lithium demand up, iron ore soft on China property", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "First quantum teleportation between separate devices over 270m open air", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Aluminum molecule replaces rare earth metals in industrial chemistry", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Malaria shaped where humans lived in Africa for 74,000 years", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The world's most important oil shipping lane has been blocked since late February, after war broke out around Iran. About 20% of the world's oil normally flows through this narrow passage. When 1 in 5 barrels can't get through, prices spike — Brent crude hit $114 per barrel this week. Asian nations that depend on this route are absorbing most of the hit."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government is now paying over 5% per year to borrow money for 30 years — a level that ripples through everything from mortgages to business loans. Why? Import tariffs are keeping prices persistently above the central bank's target, so the bank can't cut rates. Higher government borrowing costs make it more expensive for everyone else to borrow too."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold just crossed $4,600 per ounce — but it's fighting headwinds. Three forces are squeezing it: the US dollar is strong (so foreigners need more of their own currency to buy gold), the rate the US government pays to lenders is high (making gold, which pays nothing, less attractive), and oil-driven costs are rising everywhere. Even 'safe haven' assets are under pressure."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "America's central bank is keeping its lending rate at 3.5–3.75% and running out of reasons to lower it. The problem: import tariffs account for roughly half of the extra price increases Americans face above the normal target. With prices stuck at 3.3% annual growth and 115,000 jobs added last month, there's no urgent case to cut borrowing costs."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank just cut its lending rate to 6.50% — and said that's likely the last cut for now, after lowering it steadily since early 2024. Rising oil prices from Middle East conflict risk pushing prices back up. The peso holds near 17.27 per dollar, steadied by factory investment from companies moving operations to Mexico and spending around the upcoming FIFA World Cup."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexicans living abroad sent $5.4 billion home in March — the highest March total ever recorded. These family transfers now represent about 4% of Mexico's entire economy — larger than oil export revenue. One nuance: fewer transactions happened overall, but each one was bigger. Senders are remitting more per transfer even as the number of people sending declines slightly."
+    },
+    {
+      "n": 7,
+      "region": "MEXICO",
+      "text": "Mexico's economy contracted 0.8% in the first quarter of 2026 — the first quarterly dip after four straight quarters of growth, though it's still 0.2% ahead of last year overall. The key concern: a formal review of North America's trade deal is coming in July 2026. Companies weighing whether to build factories in Mexico are holding back until they see what new rules emerge."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's currency keeps losing ground because its interest rates (0.75%) are far below US rates (3.5–3.75%). Money flows to where it earns more, draining out of Japan and weakening the yen. Japan's government has now spent over $64 billion from its reserves trying to defend the currency. This week the yen snapped back to a 10-week high — markets suspect officials quietly stepped in again."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "China's currency has gained about 2% against the US dollar since April — but this isn't a free market move. China's central bank is carefully controlling the pace to avoid two traps: a currency too strong makes exports expensive, while one too weak triggers capital outflows and trade tensions. The controlled appreciation reflects Beijing's balancing act between competing pressures."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Germany just cut its economic growth forecast in half, now expecting just 0.5% expansion this year. Weak factory orders and soft industrial output are the culprits. Meanwhile, Europe's central bank may raise borrowing costs — not cut them — because oil prices are driving inflation higher. Slow growth plus possibly rising rates is what economists call stagflation, the hardest scenario to navigate."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "London's main stock index fell 1.26% this week after President Trump threatened much higher taxes on European goods unless the EU eliminates all its tariffs on US products first. European markets had just recovered on hopes of easing Middle East tensions, but the trade ultimatum wiped out the gains. The 2026 pattern: geopolitical relief is repeatedly offset by trade-war escalation."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its interest rate to 4.35% — the third increase this year. It's fighting persistent price increases amplified by global oil costs. The tension: higher rates slow borrowing and spending, and with growth forecasts already cut to just 2% for 2026, some economists warn the bank risks tipping the country into a recession by tightening too far."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "Australia's two biggest mining companies face a split story. Demand for copper and lithium — used in electric vehicles — is growing strongly. But demand for iron ore from China's construction sector remains soft, since fewer apartments are being built. The bet: electrification demand will eventually outweigh the drag from China's slower property market as the decade progresses."
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "Scientists teleported the state of a light particle 270 meters between two separate devices for the first time. Teleportation here means instantly copying a particle's exact quantum fingerprint onto another particle far away — not moving matter. It's a key step toward a quantum internet where interception is physically detectable. Led by Prof. Klaus Jöns (Paderborn Univ.) & Prof. Rinaldo Trotta (Sapienza, Rome). 📄 Published in Nature Communications · More: https://www.nature.com/articles/s41467-025-65911-9"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Rare earth metals — used in electric motors and industrial chemistry — are scarce and mostly controlled by a few countries. A team at King's College London created an aluminum molecule that performs the same chemical work, using a metal that's abundant and cheap. The trick: three aluminum atoms in a triangular shape unlock unusual reactivity. Led by Dr. Clare Bakewell, Dept. of Chemistry, KCL. 📄 Published in Nature Communications · More: https://www.sciencedaily.com/releases/2026/04/260429102032.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Malaria-carrying mosquitoes quietly dictated where humans could live in Africa for 74,000 years. New research shows early populations consistently avoided high-risk zones — fragmenting groups, limiting interbreeding, and shaping the genetic diversity we see today. When populations later expanded into riskier areas, the sickle-cell trait emerged as a survival response. Led by Dr. Margherita Colucci, Max Planck Institute & Univ. of Cambridge. 📄 Published in Science Advances · More: https://www.science.org/doi/10.1126/sciadv.aea2316"
+    }
+  ]
+}
