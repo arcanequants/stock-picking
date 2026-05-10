@@ -121,7 +121,7 @@ export default async function QuantLabPage() {
               <div className="grid grid-cols-3 gap-3 mb-3">
                 <div>
                   <p className="text-[10px] uppercase tracking-wider text-text-faint mb-0.5">
-                    ROI 30d
+                    ROI desde inicio
                   </p>
                   <p
                     className={`text-base font-semibold ${

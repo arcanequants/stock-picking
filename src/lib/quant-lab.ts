@@ -87,27 +87,28 @@ export async function getAllBotCards(): Promise<QuantLabBotCard[]> {
     .from("quant_lab_snapshots")
     .select("bot_id, captured_at, roi, mdd, current_copy_count, win_rate, total_orders, aum_amount, time_range")
     .in("bot_id", ids)
-    .eq("time_range", "30D")
     .order("captured_at", { ascending: true });
 
-  const byBot = new Map<number, QuantLabSnapshot[]>();
+  const byBotRange = new Map<string, QuantLabSnapshot[]>();
   for (const row of (snaps as Array<QuantLabSnapshot & { bot_id: number }> | null) ?? []) {
-    const arr = byBot.get(row.bot_id) ?? [];
+    const key = `${row.bot_id}::${row.time_range}`;
+    const arr = byBotRange.get(key) ?? [];
     arr.push(row);
-    byBot.set(row.bot_id, arr);
+    byBotRange.set(key, arr);
   }
 
   return bots.map((bot) => {
-    const list = byBot.get(bot.id) ?? [];
-    const latest = list[list.length - 1] ?? null;
-    const sparkline = list
-      .filter((s) => s.roi !== null)
-      .map((s) => ({ t: s.captured_at, roi: Number(s.roi) }));
     const startedAt = new Date(bot.started_at).getTime();
     const daysLive = Math.max(
       0,
       Math.floor((Date.now() - startedAt) / (1000 * 60 * 60 * 24))
     );
+    const inceptionRange = pickInceptionRange(daysLive);
+    const list = byBotRange.get(`${bot.id}::${inceptionRange}`) ?? [];
+    const latest = list[list.length - 1] ?? null;
+    const sparkline = list
+      .filter((s) => s.roi !== null)
+      .map((s) => ({ t: s.captured_at, roi: Number(s.roi) }));
     return { bot, latest, sparkline, daysLive };
   });
 }
