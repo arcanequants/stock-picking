@@ -40,6 +40,20 @@ No API key needed. Pay USDC on Base per request. HTTP 402 flow.
 - [Events](https://vectorialdata.com/api/v1/x402/events): Portfolio events firehose with AI explanations ($0.002)
 - [Digest](https://vectorialdata.com/api/v1/x402/digest/latest): Latest weekly digest ($0.003)
 
+## Vectorial Signals (alt-data submarca)
+
+Hedge-fund-tier alternative-data signals translated to plain language. Free preview per signal; full history + alerts on the $1/mo subscription. Every signal ships in 4 tiers — Casual (HTML), Pro (logged-in toggle), AI brief (markdown), Machine (JSON + JSON-LD).
+
+- [Signals catalog](https://vectorialdata.com/signals): Index of all live signals
+- [Signals JSON catalog](https://vectorialdata.com/api/signals): Machine-readable list with brief.md + machine-tier endpoints per signal
+- [Signals OpenAPI 3.1](https://vectorialdata.com/api/signals/openapi.json): API spec
+- [EIA Weekly Petroleum brief](https://vectorialdata.com/signals/eia-weekly-petroleum/brief.md): US crude inventories vs 5y average
+- [Crack spread 3-2-1 brief](https://vectorialdata.com/signals/crack-spread-321/brief.md): Refining margin
+- [LNG arbitrage brief](https://vectorialdata.com/signals/lng-arbitrage/brief.md): Henry Hub / TTF / JKM spreads
+- [Hormuz Strait transits brief](https://vectorialdata.com/signals/hormuz-transit/brief.md): Daily AIS vessel transit count
+- [TROPOMI NO₂ brief](https://vectorialdata.com/signals/tropomi-no2-economic/brief.md): Industrial activity from space
+- [Iowa corn yield brief](https://vectorialdata.com/signals/iowa-corn-yield/brief.md): Satellite yield model vs USDA WASDE
+
 ## Content
 
 - [Stock Research](https://vectorialdata.com/stocks): All researched stocks with returns, ratings, and sector analysis

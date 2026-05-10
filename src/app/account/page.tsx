@@ -95,6 +95,24 @@ export default async function AccountPage() {
         />
       </section>
 
+      {/* Vectorial Signals */}
+      <section className="border border-border rounded-2xl p-6">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <h2 className="font-semibold mb-1">Vectorial Signals</h2>
+            <p className="text-sm text-text-muted">
+              Alt-data signals (satélites, AIS, EIA, TROPOMI). Usa el toggle Pro para vista densa.
+            </p>
+          </div>
+          <Link
+            href="/signals"
+            className="shrink-0 px-3 py-2 rounded-lg border border-border text-sm text-text-secondary hover:text-foreground hover:bg-card-hover transition-colors"
+          >
+            Ver signals
+          </Link>
+        </div>
+      </section>
+
       {/* Support */}
       <section className="border border-border rounded-2xl p-6">
         <div className="flex items-center justify-between gap-4">

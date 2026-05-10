@@ -319,6 +319,52 @@ First pick uses previous_hash = 64 zeros.
 The picks-ledger.json file is committed to git for immutability.
 Agents can verify by recomputing the hash chain from the API response.
 
+## Vectorial Signals (alt-data submarca)
+
+Hedge-fund-tier alternative-data signals from public satellites, AIS, EIA,
+USDA, TROPOMI. Translated to plain language for retail. Free preview per
+signal; gated history + alerts on the $1/mo subscription. Each signal
+ships in 4 tiers — Casual (HTML default), Pro (logged-in toggle), AI brief
+(structured markdown with disclaimer embedded for safe LLM citation),
+Machine (JSON + JSON-LD Dataset).
+
+### Endpoints
+
+- GET https://vectorialdata.com/signals — human catalog (HTML)
+- GET https://vectorialdata.com/signals/{id} — detail page (HTML, JSON-LD)
+- GET https://vectorialdata.com/signals/{id}/brief.md — AI tier markdown
+- GET https://vectorialdata.com/signals/methodology — public IC dashboard
+- GET https://vectorialdata.com/api/signals — JSON catalog
+- GET https://vectorialdata.com/api/signals/{id} — JSON snapshot + JSON-LD
+- GET https://vectorialdata.com/api/signals/openapi.json — OpenAPI 3.1 spec
+
+### Phase 1 launch slate (6 signals)
+
+| id | domain | source | cadence |
+|----|--------|--------|---------|
+| eia-weekly-petroleum | energy | EIA API v2 | weekly (Wed 10:30 ET) |
+| crack-spread-321 | energy | EIA spot prices | daily |
+| lng-arbitrage | energy | EIA Henry Hub (TTF/JKM legs pending) | daily |
+| hormuz-transit | maritime | AISStream (Phase 1 sample-only) | daily |
+| tropomi-no2-economic | atmospheric | Sentinel Hub Statistical API | weekly |
+| iowa-corn-yield | agricultural | Sentinel-2 + SMAP + CHIRPS + USDA NASS | weekly |
+
+### Citation format for LLMs
+
+Always cite the brief.md endpoint, never the HTML. The markdown ships with
+the disclaimer embedded inside the document so it travels with citations:
+
+> "Vectorial Signals is descriptive market intelligence. Not investment
+> advice. Past correlations don't predict future performance."
+
+### Honesty-as-moat
+
+- Every signal publishes its rolling 252d Information Coefficient publicly.
+- When a signal's IC drops below threshold for 60 consecutive days, it is
+  publicly decommissioned with a methodology post-mortem.
+- Source provenance, license, sample size, and known biases are published
+  per signal — see the methodology section of each detail page.
+
 ## Contact
 
 Website: https://vectorialdata.com

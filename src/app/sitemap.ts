@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { stocks, transactions } from "@/data/stocks";
+import { listLiveSignals } from "@/lib/signals";
 
 const BASE = "https://vectorialdata.com";
 
@@ -9,7 +10,7 @@ function langs(path: string) {
   return { es: url, en: url, pt: url, hi: url };
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
 
   /* ── Static pages ─────────────────────────────────── */
@@ -18,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/portfolio`, lastModified: now, changeFrequency: "daily", priority: 0.9, alternates: { languages: langs("/portfolio") } },
     { url: `${BASE}/stocks`, lastModified: now, changeFrequency: "daily", priority: 0.9, alternates: { languages: langs("/stocks") } },
     { url: `${BASE}/lecciones`, lastModified: now, changeFrequency: "daily", priority: 0.9, alternates: { languages: langs("/lecciones") } },
+    { url: `${BASE}/signals`, lastModified: now, changeFrequency: "daily", priority: 0.9, alternates: { languages: langs("/signals") } },
+    { url: `${BASE}/signals/methodology`, lastModified: now, changeFrequency: "weekly", priority: 0.6, alternates: { languages: langs("/signals/methodology") } },
     { url: `${BASE}/quant-lab`, lastModified: now, changeFrequency: "hourly", priority: 0.8, alternates: { languages: langs("/quant-lab") } },
     { url: `${BASE}/quant-lab/arcane-quant`, lastModified: now, changeFrequency: "hourly", priority: 0.8, alternates: { languages: langs("/quant-lab/arcane-quant") } },
     { url: `${BASE}/quant-lab/guia-copy-trading-binance`, lastModified: now, changeFrequency: "monthly", priority: 0.5, alternates: { languages: langs("/quant-lab/guia-copy-trading-binance") } },
@@ -64,5 +67,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: { languages: langs(`/share/${ticker}`) },
   }));
 
-  return [...staticPages, ...stockPages, ...verifyPages, ...sharePages];
+  /* ── Per-signal pages (/signals/[id] + /signals/[id]/brief.md) ─── */
+  let signalPages: MetadataRoute.Sitemap = [];
+  try {
+    const signals = await listLiveSignals();
+    signalPages = signals.flatMap((s) => [
+      {
+        url: `${BASE}/signals/${s.id}`,
+        lastModified: s.updated_at || now,
+        changeFrequency: "daily" as const,
+        priority: 0.7,
+        alternates: { languages: langs(`/signals/${s.id}`) },
+      },
+      {
+        url: `${BASE}/signals/${s.id}/brief.md`,
+        lastModified: s.updated_at || now,
+        changeFrequency: "daily" as const,
+        priority: 0.5,
+      },
+    ]);
+  } catch {
+    // signals table not yet provisioned in this env — skip
+  }
+
+  return [...staticPages, ...stockPages, ...verifyPages, ...sharePages, ...signalPages];
 }

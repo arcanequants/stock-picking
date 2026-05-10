@@ -212,6 +212,8 @@ export default async function RootLayout({
                     <Link href="/verify" className="hover:text-foreground transition-colors">{tFooter("verify")}</Link>
                   </div>
                   <div className="flex items-center justify-center gap-3 mb-3 text-text-muted flex-wrap text-xs">
+                    <Link href="/signals" className="hover:text-foreground transition-colors">Signals</Link>
+                    <span className="text-border">·</span>
                     <Link href="/lecciones" className="hover:text-foreground transition-colors">{tFooter("lecciones")}</Link>
                     <span className="text-border">·</span>
                     <Link href="/metodologia" className="hover:text-foreground transition-colors">{tFooter("methodology")}</Link>
