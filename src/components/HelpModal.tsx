@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useLocale, useTranslations } from "next-intl";
 
 interface HelpModalProps {
@@ -18,6 +19,11 @@ export default function HelpModal({ open, onClose }: HelpModalProps) {
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) {
@@ -38,7 +44,7 @@ export default function HelpModal({ open, onClose }: HelpModalProps) {
     return () => document.removeEventListener("keydown", onKey);
   }, [open, onClose]);
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,7 +76,7 @@ export default function HelpModal({ open, onClose }: HelpModalProps) {
     }
   };
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] overflow-y-auto bg-black/60"
       onClick={onClose}
@@ -169,6 +175,7 @@ export default function HelpModal({ open, onClose }: HelpModalProps) {
         )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
