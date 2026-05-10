@@ -6,7 +6,7 @@ import { sendSupportTicketToAdmin, sendSupportTicketAck } from "@/lib/resend";
 export const dynamic = "force-dynamic";
 export const maxDuration = 15;
 
-const ADMIN_EMAIL = "0138078@up.edu.mx";
+const SUPPORT_EMAIL = "hello@vectorialdata.com";
 const ALLOWED_CATEGORIES = ["billing", "delivery", "feature", "other"] as const;
 const MAX_MESSAGE_LENGTH = 4000;
 const MIN_MESSAGE_LENGTH = 5;
@@ -68,7 +68,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    await sendSupportTicketToAdmin(ADMIN_EMAIL, user.email, category, message, inserted.id);
+    await sendSupportTicketToAdmin(SUPPORT_EMAIL, user.email, category, message, inserted.id);
   } catch (err) {
     console.error("Failed to email admin ticket:", err);
   }
