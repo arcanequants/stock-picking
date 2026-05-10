@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { getAuthState } from "@/lib/auth";
 import { getAdminAuth } from "@/lib/admin";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
@@ -28,8 +29,10 @@ export default async function AdminTicketsPage({
 }: {
   searchParams: SearchParams;
 }) {
+  const { user } = await getAuthState();
+  if (!user) redirect("/login?next=/admin/tickets");
   const admin = await getAdminAuth();
-  if (!admin) redirect("/login?next=/admin/tickets");
+  if (!admin) notFound();
 
   const sp = await searchParams;
   const filterStatus = sp.status === "closed" ? "closed" : sp.status === "all" ? null : "open";

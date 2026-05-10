@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import { getAuthState } from "@/lib/auth";
 import { getAdminAuth } from "@/lib/admin";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import AdminReplyForm from "./AdminReplyForm";
@@ -33,9 +34,11 @@ export default async function AdminTicketDetailPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const admin = await getAdminAuth();
   const { id } = await params;
-  if (!admin) redirect(`/login?next=/admin/tickets/${id}`);
+  const { user } = await getAuthState();
+  if (!user) redirect(`/login?next=/admin/tickets/${id}`);
+  const admin = await getAdminAuth();
+  if (!admin) notFound();
 
   const ticketId = Number(id);
   if (!Number.isInteger(ticketId) || ticketId <= 0) notFound();
