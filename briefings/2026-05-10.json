@@ -1,0 +1,99 @@
+{
+  "date": "2026-05-10",
+  "summary": "La clausura del Estrecho de Hormuz — 70 días y contando — mantiene el petróleo caro mientras Banxico cierra su ciclo de recortes y la ciencia revela universos ocultos en arrecifes, átomos y datos de la NASA.",
+  "causalChain": "El bloqueo iraní del Estrecho de Hormuz (desde principios de marzo) corta el 20% del suministro mundial de petróleo, disparando precios de energía y obligando a los bancos centrales — desde Sydney hasta Frankfurt y Ciudad de México — a elegir entre frenar la inflación por petróleo y proteger un crecimiento que ya se frena.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz shuts 20% of world oil — 70 days and counting", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "OPEC adds barrels it can't ship out of the locked Strait", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "US 10-year borrowing cost steady at 4.39%; Fed watches oil", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "Gold climbs as war + import taxes erode trust in paper money", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico cuts to 6.5%; Q1 GDP shrank 0.8% — worst since pandemic", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "USMCA formal review begins May 25 — extension or exit?", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ holds at 0.75%; yen at 155 after intervention; Nikkei hits record 62,833", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "China April exports hit record $359B; yuan at 3-year high vs dollar", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB holds at 2%; Germany halves 2026 growth to 0.5%; US car tariffs bite", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "FTSE -1.4%; Shell/BP cushion UK from oil spike but war still drags growth", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBA hikes to 4.35% — third in a row — as oil pushes inflation to 4.8%", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "BHP + Rio plan 200Mt iron ore deal, but China demand is cooling", "worker": "—"},
+    {"n": 13, "region": "WOW", "angle": "Coral reefs hide 4,224 unseen microbial species — a living pharmacy", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "Oxford: first-ever quadsqueezing quantum state, 100× faster than theory", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "AI finds 118 hidden planets in NASA data — including worlds orbiting in under a day", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The world's busiest oil lane has been shut for 10 weeks. Iran blocked the Strait of Hormuz — a 33-mile-wide channel carrying 1 in 5 barrels of oil shipped globally — after US and Israeli airstrikes killed its leader in February. Oil prices are up 55% since January. Iran now charges ships a fee just to pass. 22,500 sailors remain trapped on 1,550 vessels with no clear exit date."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "OPEC+ oil producers voted to pump 188,000 more barrels per day starting this month. The problem: most of that oil flows through the Strait of Hormuz, which Iran has shut since March. Adding supply doesn't help when the exit route is blocked — the bottleneck is the shipping lane, not the wells. Until Hormuz reopens, extra barrels stay landlocked and prices stay high."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The US government paid 4.39% per year to borrow money for 10 years last week. The central bank's main rate sits at 3.5–3.75%, set during a slow cutting cycle that began in late 2024. High borrowing costs worldwide ripple into mortgages, car loans, and business spending. Markets are betting on another cut this summer — if oil-driven inflation doesn't flare up again."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "Gold is climbing as investors look for somewhere safe to park money. The Hormuz oil shock is raising prices globally, and the US added a 10% tax on all imports in February. When inflation rises and trade turns uncertain, buyers flock to gold — it doesn't depend on any government's promise. China's central bank has been buying gold steadily, slowly trimming its reliance on US dollars in its reserves."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main lending rate to 6.5% on May 7 — its 14th cut in two years — after the economy shrank 0.8% in the first three months of 2026, the worst quarter since the pandemic. Inflation sits at 4.5%, still above the 3% target. The peso trades at 17.25 per dollar, pressured by global oil shock and slowing growth. The bank signaled this may be its last cut for a while."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "On May 25, the US, Mexico, and Canada formally begin reviewing the trade deal that replaced NAFTA. Every six years the three partners check whether the rules still work — they can extend, revise, or end the deal. Mexico attracted a record $40 billion in manufacturing investment last year betting on this deal's stability. The review will shape where US companies build factories for the next decade."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank held its lending rate at 0.75% last week, cautious about the oil shock hitting its import-heavy economy. That wide gap versus US rates (3.5–3.75%) keeps the yen weak — investors borrow cheap yen and convert to dollars for bigger returns, putting selling pressure on Japan's currency. Japan spent billions to push the yen from 160 back to 155. The Nikkei stock index hit a record 62,833 on tech earnings and Middle East peace hopes."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's April exports hit a record $359 billion — up 14% from a year ago, even with US tariffs in place. Its currency touched a 3-year high against the dollar. China's central bank faces a dilemma: a stronger currency helps with inflation and global credibility, but makes Chinese goods pricier abroad and could slow exports. Analysts expect China's economy to grow 4.8% this year, driven mainly by factory output."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank kept its main rate at 2% last month, worried the oil shock could push inflation back up just as it was cooling. Germany — Europe's largest economy — is most exposed: heavy factories and big fossil fuel imports. Germany halved its 2026 growth forecast to 0.5%. Then the US added a 25% tax on European cars, hitting automakers directly. Europe is squeezed between oil inflation from the east and trade pressure from the west."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "London's main stock index fell 1.4% last week as Middle East tensions rattled investors. Unlike most European indexes, the FTSE 100 includes large oil companies like Shell and BP — so rising oil prices partially cushion the blow. Still, Europe faces a squeeze: expensive fuel, slowing growth, and US tariffs on its goods. The conflict in the Middle East is expected to cut 0.4% off global economic growth over the next two years."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its key rate to 4.35% last week — its third hike in a row — as the Hormuz closure pushed global fuel prices higher and domestic inflation toward 4.8%. Australia imports most of its fuel, so global oil spikes hit consumers at the pump and raise shipping costs for businesses. Higher rates mean costlier home loans for millions of Australians already stretched by high prices."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Mining giants BHP and Rio Tinto are exploring a deal to jointly dig up to 200 million tonnes of iron ore per year in Western Australia's Pilbara region. The ore goes mainly to China's steel mills. But China's construction sector is cooling, which could soften demand — meaning Australia's mining ambitions depend on whether China keeps building. A final decision hasn't been made; first ore is expected early next decade."
+    },
+    {
+      "n": 13,
+      "region": "WOW",
+      "text": "Beneath each coral colony lives a private universe of microbes — and scientists just mapped it for the first time. Researchers from ETH Zurich and the University of Galway sampled 820 coral colonies across 99 Pacific reefs, finding 4,224 microbial species. Nearly all had never been seen before. Many carry genes for making chemicals that could become new medicines. 📄 Published in Nature · More: https://www.sciencedaily.com/releases/2026/05/260506225229.htm"
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "Oxford physicists trapped a single charged atom and coaxed it into a quantum state never created anywhere before — called quadsqueezing. It's a fourth-order quantum effect that arrived 100× faster than theory predicted. The team, building on a theory by Dr. Raghavendra Srinivas and Dr. Robert Sutherland, says this opens new paths for quantum computers and ultra-precise sensors. 📄 Published in Nature Physics · More: https://www.physics.ox.ac.uk/news/oxford-team-achieves-first-ever-quadsqueezing-quantum-interaction"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Scientists at the University of Warwick built an AI called RAVEN that scoured data from NASA's planet-hunting telescope — and found 118 new worlds hiding in plain sight, including planets that orbit their star in under a day. The AI analyzed light from 2.2 million stars, spotting tiny dips caused by a passing planet. Humans had missed them. 📄 Published in Monthly Notices of the Royal Astronomical Society · More: https://www.sciencedaily.com/releases/2026/05/260502233926.htm"
+    }
+  ]
+}
