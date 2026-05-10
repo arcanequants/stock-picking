@@ -23,7 +23,7 @@ By rule, for new picks: `tx.price === tx.open_price`. They diverge only for the 
 
 ## Worker System — Automatic Orchestration
 
-I have a team of 24 specialized workers in `.claude/workers/`. **I must automatically invoke the right worker(s) based on the task** — the user should never have to tell me which one to use.
+I have a team of 25 specialized workers in `.claude/workers/`. **I must automatically invoke the right worker(s) based on the task** — the user should never have to tell me which one to use.
 
 ### Product, Design & Growth Workers (8)
 
@@ -37,6 +37,12 @@ I have a team of 24 specialized workers in `.claude/workers/`. **I must automati
 | **Product Manager** (Shreyas Doshi) | `product-manager.md` | Feature prioritization, what to build/not build, PRDs, MVP scope, roadmap |
 | **Growth Hacker** (Lenny Rachitsky) | `growth-hacker.md` | User acquisition, retention, pricing strategy, analytics, A/B tests, channel strategy |
 | **SEO & AI Discovery** (Rand Fishkin + Discovered Labs) | `seo-ai-discovery.md` | Google SEO, AI citations, Schema.org, robots.txt, llms.txt, GEO, structured data, sitemaps, B2AI |
+
+### Engineering Workers (1)
+
+| Worker | File | Invoke When |
+|--------|------|-------------|
+| **Application Security Engineer** (Latacora / tptacek) | `security-engineer.md` | Supabase RLS, secrets/keys, webhook signatures, auth/session security, API key rotation, OWASP, dependency audits, threat modeling |
 
 ### Email & Communications Workers (3)
 
@@ -93,6 +99,16 @@ I have a team of 24 specialized workers in `.claude/workers/`. **I must automati
 - **"get found by AI / cited by ChatGPT"** → SEO & AI Discovery + Copywriter + Growth Hacker
 - **"meta tags / Open Graph / hrefLang"** → SEO & AI Discovery + Landing & Conversion
 
+**Security:**
+- **"Supabase RLS / database linter errors"** → Security Engineer + Privacy & Data Protection
+- **"is this endpoint safe? / threat model this"** → Security Engineer
+- **"webhook signature / Stripe webhook security"** → Security Engineer
+- **"secrets / API keys / rotation"** → Security Engineer
+- **"npm audit / dependency vuln"** → Security Engineer
+- **"auth bug / session leak / cookie scoping"** → Security Engineer
+- **"could someone exploit X?"** → Security Engineer
+- **"we got breached / incident response"** → Security Engineer + Privacy & Data Protection
+
 **Product & Design:**
 - **"redesign the homepage"** → Landing & Conversion + UI/UX Designer + Copywriter
 - **"write the hero section"** → Copywriter + Landing & Conversion
@@ -122,3 +138,15 @@ I have a team of 24 specialized workers in `.claude/workers/`. **I must automati
 - Workers provide DIRECTION and THINKING — the actual code implementation is still done by me as the developer
 - When multiple workers are invoked, present each one's perspective clearly labeled
 - Workers can disagree with each other — present the tension and recommend the best path
+
+## Cross-Repo Worker Sharing — Vectorial Data Broker
+
+Sibling product `Vectorial Data Broker` lives at `/Users/albertosorno/vectorialdata-broker/` (separate repo). It has its own 12 workers in `.claude/workers/` and reuses 12 workers from THIS repo.
+
+**Workers in THIS repo that are also used by the broker** (do not duplicate them there):
+- `product-manager.md`, `growth-hacker.md`, `copywriter.md`, `brand-strategist.md`, `visual-identity.md`
+- `legal-securities.md`, `legal-corporate.md`, `legal-sanctions-aml.md`, `legal-privacy.md`, `legal-tax.md`, `legal-terms.md`, `legal-payments-currency.md`
+
+When editing any of these workers in stock-picking, remember they're also load-bearing for the broker — keep them product-agnostic where possible (no stock-picking-only assumptions in the worker spec, just in the example sections).
+
+**Workers exclusive to stock-picking** (broker does NOT use): email-designer, newsletter, retention, seo-ai-discovery, ui-designer, landing-conversion, legal-asia-pacific, legal-mena-africa, legal-latam, legal-consumer, legal-content-promotions, legal-ip-brand.
