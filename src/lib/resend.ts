@@ -1619,7 +1619,6 @@ export async function sendSupportTicketToAdmin(
     <p style="margin:0 0 20px;font-size:15px;color:#111827;font-weight:500;">${escapeHtml(userEmail)}</p>
     <p style="margin:0 0 8px;font-size:13px;color:#6b7280;">Message</p>
     <div style="font-size:15px;line-height:1.6;color:#111827;background:#f9fafb;padding:16px;border-radius:8px;border:1px solid #e4e4e7;">${safeMessage}</div>
-    <p style="margin:20px 0 0;font-size:12px;color:#9ca3af;">Reply directly to this email — it goes back to the user.</p>
   </td></tr>
 </table>
 </td></tr></table>
@@ -1629,9 +1628,10 @@ export async function sendSupportTicketToAdmin(
     from: FROM,
     to: adminEmail,
     replyTo: userEmail,
-    subject: `[Ticket #${ticketId}] ${category ?? "Support"} — ${userEmail}`,
+    subject: `[Ticket #${ticketId}] ${category ?? "Support"}`,
+    headers: { "X-Vectorial-Reply-Hint": "Replying to this email goes to the user." },
     html,
-    text: `Ticket #${ticketId}\nFrom: ${userEmail}\nCategory: ${category ?? "—"}\n\n${message}\n\nReply directly to this email.`,
+    text: `Ticket #${ticketId}\nFrom: ${userEmail}\nCategory: ${category ?? "—"}\n\n${message}`,
   });
 
   if (error) throw new Error(`Failed to send support ticket to admin: ${error.message}`);
