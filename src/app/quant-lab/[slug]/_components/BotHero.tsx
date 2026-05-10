@@ -53,7 +53,7 @@ export default function BotHero({
         </div>
         <div className="flex items-baseline gap-5">
           <div className="text-right">
-            <p className="text-xs text-text-muted">ROI 30 días</p>
+            <p className="text-xs text-text-muted">ROI desde inicio</p>
             <p
               className={`text-4xl font-semibold leading-tight ${
                 positive ? "text-emerald-500" : "text-red-500"

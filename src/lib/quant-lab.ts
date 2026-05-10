@@ -192,9 +192,6 @@ export async function getBotView(slug: string): Promise<QuantLabBotView | null> 
     byRange.set(s.time_range, arr);
   }
 
-  const list30D = byRange.get("30D") ?? [];
-  const latest = list30D[list30D.length - 1] ?? null;
-
   const startedAt = new Date(bot.started_at).getTime();
   const daysLive = Math.max(
     0,
@@ -202,6 +199,13 @@ export async function getBotView(slug: string): Promise<QuantLabBotView | null> 
   );
 
   const inceptionRange = pickInceptionRange(daysLive);
+
+  // Header metrics (ROI, MDD, Sharpe, win rate) reflect inception-to-date.
+  // For a bot younger than the smallest Binance window (30D), 30D ≈ inception.
+  // For a 48-day-old bot, 90D includes 42 days of pre-launch zeros, so 90D ROI
+  // effectively equals ROI since first trade.
+  const inceptionList = byRange.get(inceptionRange) ?? [];
+  const latest = inceptionList[inceptionList.length - 1] ?? null;
   const startedDateLabel = fmtDateES(bot.started_at);
 
   const curves: QuantLabCurve[] = [];
