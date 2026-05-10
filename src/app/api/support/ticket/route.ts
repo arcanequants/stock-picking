@@ -67,6 +67,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "insert_failed" }, { status: 500 });
   }
 
+  await supabase.from("support_ticket_messages").insert({
+    ticket_id: inserted.id,
+    sender_type: "user",
+    sender_email: user.email.toLowerCase(),
+    body: message,
+  });
+
   try {
     await sendSupportTicketToAdmin(SUPPORT_EMAIL, user.email, category, message, inserted.id);
   } catch (err) {

@@ -1605,6 +1605,7 @@ export async function sendSupportTicketToAdmin(
 ): Promise<void> {
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br/>");
   const cat = category ? escapeHtml(category) : "—";
+  const ticketUrl = `${SITE}/admin/tickets/${ticketId}`;
 
   const html = `<!DOCTYPE html>
 <html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
@@ -1619,6 +1620,10 @@ export async function sendSupportTicketToAdmin(
     <p style="margin:0 0 20px;font-size:15px;color:#111827;font-weight:500;">${escapeHtml(userEmail)}</p>
     <p style="margin:0 0 8px;font-size:13px;color:#6b7280;">Message</p>
     <div style="font-size:15px;line-height:1.6;color:#111827;background:#f9fafb;padding:16px;border-radius:8px;border:1px solid #e4e4e7;">${safeMessage}</div>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0 0;"><tr><td align="center">
+      <a href="${ticketUrl}" style="display:inline-block;background:#111827;color:#ffffff;text-decoration:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;">Open ticket in dashboard</a>
+    </td></tr></table>
+    <p style="margin:16px 0 0;font-size:12px;color:#9ca3af;text-align:center;">Reply from the dashboard so the user gets a branded email.</p>
   </td></tr>
 </table>
 </td></tr></table>
@@ -1629,12 +1634,129 @@ export async function sendSupportTicketToAdmin(
     to: adminEmail,
     replyTo: userEmail,
     subject: `[Ticket #${ticketId}] ${category ?? "Support"}`,
-    headers: { "X-Vectorial-Reply-Hint": "Replying to this email goes to the user." },
+    headers: { "X-Vectorial-Reply-Hint": "Open ticket in dashboard to reply with branding." },
     html,
-    text: `Ticket #${ticketId}\nFrom: ${userEmail}\nCategory: ${category ?? "—"}\n\n${message}`,
+    text: `Ticket #${ticketId}\nFrom: ${userEmail}\nCategory: ${category ?? "—"}\n\n${message}\n\nOpen ticket: ${ticketUrl}`,
   });
 
   if (error) throw new Error(`Failed to send support ticket to admin: ${error.message}`);
+}
+
+export async function sendTicketReplyToUser(
+  userEmail: string,
+  ticketId: number,
+  body: string,
+  locale: string = "es"
+): Promise<void> {
+  const L: Record<string, { subject: string; preheader: string; title: string; cta: string; footer: string }> = {
+    es: {
+      subject: `Tienes una respuesta — Ticket #${ticketId}`,
+      preheader: "El equipo de Vectorial Data te respondió.",
+      title: "Tienes una respuesta",
+      cta: "Ver y responder en el sitio",
+      footer: "Responde directo en el sitio para mantener el hilo en tu cuenta.",
+    },
+    en: {
+      subject: `You have a reply — Ticket #${ticketId}`,
+      preheader: "The Vectorial Data team replied.",
+      title: "You have a reply",
+      cta: "Open and reply on the site",
+      footer: "Reply on the site to keep the thread in your account.",
+    },
+    pt: {
+      subject: `Você tem uma resposta — Ticket #${ticketId}`,
+      preheader: "A equipe da Vectorial Data respondeu.",
+      title: "Você tem uma resposta",
+      cta: "Abrir e responder no site",
+      footer: "Responda no site para manter o histórico em sua conta.",
+    },
+    hi: {
+      subject: `आपको उत्तर मिला — Ticket #${ticketId}`,
+      preheader: "Vectorial Data टीम ने उत्तर दिया।",
+      title: "आपको उत्तर मिला",
+      cta: "साइट पर खोलें और उत्तर दें",
+      footer: "धागे को अपने खाते में रखने के लिए साइट पर उत्तर दें।",
+    },
+  };
+  const l = locale in L ? locale : "es";
+  const c = L[l];
+  const safeBody = escapeHtml(body).replace(/\n/g, "<br/>");
+  const ticketUrl = `${SITE}/account/tickets/${ticketId}`;
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<span style="display:none;visibility:hidden;opacity:0;height:0;width:0;font-size:0;">${c.preheader}</span>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;"><tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:32px 32px 16px;text-align:center;">
+    <img src="${SITE}/logo.png" width="40" height="40" alt="Vectorial Data" style="display:inline-block;margin-bottom:12px;" />
+    <p style="margin:0;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#9ca3af;">Ticket #${ticketId}</p>
+    <h1 style="margin:6px 0 0;font-size:22px;font-weight:700;color:#111827;">${c.title}</h1>
+  </td></tr>
+  <tr><td style="padding:8px 32px 24px;">
+    <div style="font-size:15px;line-height:1.65;color:#111827;background:#f9fafb;padding:18px;border-radius:8px;border:1px solid #e4e4e7;">${safeBody}</div>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0 0;"><tr><td align="center">
+      <a href="${ticketUrl}" style="display:inline-block;background:#4f46e5;color:#ffffff;text-decoration:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;">${c.cta}</a>
+    </td></tr></table>
+  </td></tr>
+  <tr><td style="padding:18px 32px;border-top:1px solid #e4e4e7;text-align:center;">
+    <p style="margin:0;font-size:12px;color:#9ca3af;">${c.footer}</p>
+    <p style="margin:8px 0 0;font-size:12px;color:#9ca3af;">
+      <a href="${SITE}" style="color:#4f46e5;text-decoration:none;">vectorialdata.com</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: userEmail,
+    subject: c.subject,
+    html,
+    text: `${c.title}\n\n${body}\n\n${c.cta}: ${ticketUrl}`,
+  });
+
+  if (error) throw new Error(`Failed to send ticket reply to user: ${error.message}`);
+}
+
+export async function sendTicketReplyToAdmin(
+  adminEmail: string,
+  userEmail: string,
+  ticketId: number,
+  body: string
+): Promise<void> {
+  const safeBody = escapeHtml(body).replace(/\n/g, "<br/>");
+  const ticketUrl = `${SITE}/admin/tickets/${ticketId}`;
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:40px 0;"><tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 32px;background:#111827;color:#ffffff;">
+    <p style="margin:0;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#9ca3af;">User reply · Ticket #${ticketId}</p>
+    <h1 style="margin:4px 0 0;font-size:16px;font-weight:600;">${escapeHtml(userEmail)}</h1>
+  </td></tr>
+  <tr><td style="padding:24px 32px;">
+    <div style="font-size:15px;line-height:1.6;color:#111827;background:#f9fafb;padding:16px;border-radius:8px;border:1px solid #e4e4e7;">${safeBody}</div>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0 0;"><tr><td align="center">
+      <a href="${ticketUrl}" style="display:inline-block;background:#111827;color:#ffffff;text-decoration:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;">Open ticket in dashboard</a>
+    </td></tr></table>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    replyTo: userEmail,
+    subject: `[Ticket #${ticketId}] User replied`,
+    html,
+    text: `User reply on ticket #${ticketId} from ${userEmail}\n\n${body}\n\nOpen ticket: ${ticketUrl}`,
+  });
+
+  if (error) throw new Error(`Failed to send ticket reply to admin: ${error.message}`);
 }
 
 export async function sendSupportTicketAck(

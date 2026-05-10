@@ -95,6 +95,22 @@ export default async function AccountPage() {
         />
       </section>
 
+      {/* Support */}
+      <section className="border border-border rounded-2xl p-6">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <h2 className="font-semibold mb-1">Soporte</h2>
+            <p className="text-sm text-text-muted">Ve tus tickets y respuestas del equipo.</p>
+          </div>
+          <Link
+            href="/account/tickets"
+            className="shrink-0 px-3 py-2 rounded-lg border border-border text-sm text-text-secondary hover:text-foreground hover:bg-card-hover transition-colors"
+          >
+            Mis tickets
+          </Link>
+        </div>
+      </section>
+
       {/* Account info */}
       <section className="border border-border rounded-2xl p-6">
         <h2 className="font-semibold mb-3">{tAccount("accountInfoTitle")}</h2>
