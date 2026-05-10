@@ -72,13 +72,14 @@ export default function HelpModal({ open, onClose }: HelpModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4 py-8"
+      className="fixed inset-0 z-[100] overflow-y-auto bg-black/60"
       onClick={onClose}
     >
-      <div
-        className="w-full max-w-md bg-card border border-border rounded-xl shadow-2xl overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className="min-h-full flex items-center justify-center px-4 py-8">
+        <div
+          className="w-full max-w-md bg-card border border-border rounded-xl shadow-2xl overflow-hidden"
+          onClick={(e) => e.stopPropagation()}
+        >
         <div className="flex items-start justify-between px-5 py-4 border-b border-border">
           <div>
             <h2 className="text-base font-semibold text-foreground">{t("title")}</h2>
@@ -166,6 +167,7 @@ export default function HelpModal({ open, onClose }: HelpModalProps) {
             <p className="text-[11px] text-text-faint pt-1">{t("sla")}</p>
           </form>
         )}
+        </div>
       </div>
     </div>
   );
