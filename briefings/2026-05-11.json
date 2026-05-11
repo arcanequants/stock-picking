@@ -1,0 +1,105 @@
+{
+  "date": "2026-05-11",
+  "summary": "El Estrecho de Hormuz sigue cerrado de facto, mantiene el petróleo sobre $101 y ata de manos a todos los bancos centrales.",
+  "causalChain": "Irán cierra efectivamente el Estrecho de Hormuz desde marzo, retirando 14 millones de barriles diarios del mercado global y llevando el petróleo a $101; esa inflación energética impide recortes de tasas en la Fed, el BCE, el BoJ y el RBA, mientras México cierra su ciclo con Banxico en 6.50% y se prepara para renegociar el T-MEC el 25 de mayo.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Oil above $101: Hormuz stays shut, 14M bpd offline", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed holds at 4.25-4.50%: tariff-driven inflation blocks any cut", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold near $4,720: war and rate uncertainty drive safe-haven surge", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico ends easing cycle at 6.50%, peso holds at 17.23/dollar", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Nearshoring FDI record $40.9B — USMCA renegotiation starts May 25", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Remittances down 5.1%: US crackdown hits Mexico family transfers", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ at 0.75%, yen past 160: Japan intervenes twice in Golden Week", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "Yuan below 7/dollar for first time in 3 years — PBOC tolerates strength", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Hormuz detour: Japan, S. Korea, China reroute tankers around Africa", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "ECB holds at 2.15%: stagflation trap with 0.1% GDP and 2.6% inflation", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "DAX falls: Germany's factories bear the brunt of the energy spike", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "RBA holds at 4.35%, warns rates may rise to 4.70% before year-end", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "Iron ore revenue falls: China builds less steel, Australia earns less", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "NASA Curiosity finds 7 new molecules in 3.5-billion-year-old Mars rock", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Universe expands at 73.5 km/s/Mpc — Hubble tension is now near-certain", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "MIT finds 30% of adult brain connections are silent — waiting to be used", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil costs $101 a barrel for the first time in four years. The main reason: ships stopped sailing through the Strait of Hormuz, a narrow waterway between Iran and Oman that carries roughly 20% of the world's oil. Iran closed it in March after the US and Israel bombed its military sites. About 14 million barrels per day went missing from global supply, and prices shot up 57% in a year. A ceasefire exists on paper, but almost no tankers are actually sailing through."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US Federal Reserve kept what it charges banks to borrow money at 4.25-4.50%. It wants to lower it, but it can't: new taxes on imported goods were the biggest US tax increase since 1993, and they pushed consumer prices 3.5% above last year's. Every time the Fed hints at a cut, fresh inflation data blocks it. Americans are stuck paying high rates on mortgages, car loans, and credit cards while the economy slows."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,720 an ounce this week, near its all-time high. When wars drag on and nobody knows what comes next, people park money in gold — it holds value and does not depend on any government. The Middle East conflict, high US lending costs, and a strong dollar all pushed investors that way. Central banks in China, India, and Turkey have been steady buyers all year, adding demand that keeps the price elevated."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main lending rate to 6.50% on May 7 — the lowest since early 2022 — and signaled it will stop cutting. After more than two years of gradual reductions, the bank believes the rate is now at the right level. Mexico's prices are rising 4.45% a year, still above the 3% target, partly because of energy. The peso barely reacted: it traded at 17.23 pesos per dollar after the decision."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "A record $40.9 billion in foreign investment landed in Mexico in 2025 as companies built factories closer to the US market. Now that advantage faces a test: the US-Mexico-Canada trade agreement is up for formal renegotiation starting May 25. Stricter rules could change which factories qualify for lower import taxes — rules that may slow or redirect the factory investment wave reshaping Mexico's industrial north."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Money sent home by Mexicans living in the US fell 5.1% to $51.3 billion last year — reversing years of record growth. Stricter US immigration enforcement meant fewer workers crossing the border, less income earned, and fewer bank transfers sent home. These remittances are Mexico's third-largest source of foreign income, bigger than tourism. The decline is expected to continue through 2026, squeezing millions of households in rural and southern states."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank held its lending rate at 0.75% — the highest since 1995 — but the yen kept weakening. The core problem: the US Federal Reserve's rate is still about 4 points higher. Investors borrow cheap yen, convert it to dollars, and earn more in the US — a cycle that pushes the yen down. The Japanese government stepped in twice during the Golden Week holiday to buy yen and slow the slide, but the pressure has not gone away."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's currency just strengthened past 7 yuan per dollar for the first time in three years. China's government is allowing this quietly. The reason: strong exports, up 6.6% this year, mean China earns more US dollars than it spends, which naturally pushes the yuan up. A stronger yuan makes imports cheaper, softening the blow of high global oil prices on Chinese factories and ordinary consumers."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "Japan, South Korea, and China collectively import over 60% of the Gulf oil that normally flows through the Strait of Hormuz. With that route effectively shut since March, their tankers now sail around Africa's southern tip — adding roughly 15 extra days and far higher shipping costs per load. All three are drawing down strategic oil reserves. Higher fuel costs are slowing factory output across East Asia."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Europe's central bank held its main rate at 2.15% and is caught in a trap: the Hormuz crisis pushed energy costs up, lifting inflation to 2.6% — the highest since mid-2024 — but the European economy barely grew 0.1% in the first quarter of 2026. Cutting rates risks more inflation; raising them risks a recession. Markets now expect the bank will be forced to raise rates as early as June to prevent prices climbing further."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Germany's main stock index fell this week as oil held above $100 a barrel. Germany runs Europe's biggest manufacturing sector — cars, chemicals, machines — and all of it depends heavily on energy. Higher fuel bills cut directly into factory profits. With German growth near zero and US import barriers weakening demand for European goods, investors are pulling money out of European stocks and moving it into US government bonds."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's central bank held its main lending rate at 4.35% and issued a warning: it might actually raise rates to 4.70% before the year ends, rather than cutting them. The Middle East war pushed oil prices up, raising fuel costs inside Australia and reigniting inflation just as it was cooling. Earlier hopes for rate cuts in 2026 have largely evaporated. Homeowners with variable-rate mortgages — a large share of Australians — face the prospect of higher monthly payments."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "Australia ships more iron ore than any country on earth, almost entirely to China for making steel. But China's construction boom is fading — an aging population, slower urban growth, and a weaker real estate market mean less demand for steel. Export earnings are projected to fall from $116 billion to $107 billion by 2027. Analysts forecast a surplus of 200 million tonnes by 2028. BHP and Rio Tinto are already seeing the slowdown in their earnings."
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "NASA's Curiosity rover dissolved Martian rock in a chemical solution and found over 20 carbon-based molecules — 7 never seen on Mars before. One closely resembles a building block of DNA. The rock is 3.5 billion years old. This does not prove life once existed, but shows ancient Mars had the chemical ingredients that preceded life on Earth. Lead author: Dr. Amy Williams, University of Florida. 📄 Published in Nature Communications · More: https://www.nature.com/articles/s41467-026-70656-0"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "The universe expands faster than our best theories predict — and the gap just got clearer. A global team measured 73.5 km per second per megaparsec using four independent methods; the early-universe calculation gives 67-68. At this precision a measurement error is nearly ruled out. Something in our model of the cosmos is missing. Researchers: Dominic Pesce, Caroline Huang, Adam Riess — Harvard Center for Astrophysics and H0DN Collaboration. 📄 Published in Astronomy & Astrophysics · More: https://noirlab.edu/public/news/noirlab2611/"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "MIT neuroscientists found that about 30% of brain connections in adults are silent — dormant junctions that sit ready until you learn something new. Until now, scientists thought new learning required building fresh connections from scratch. Instead, the brain keeps millions of pre-made sockets waiting. This may reshape how we think about memory and help patients recover from strokes or brain injuries. MIT Department of Brain and Cognitive Sciences. 📄 Published in Nature Neuroscience · More: https://www.sciencedaily.com/releases/2026/05/260504211848.htm"
+    }
+  ]
+}
