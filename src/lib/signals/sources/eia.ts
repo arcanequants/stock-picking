@@ -93,7 +93,10 @@ export async function ingestEiaWeeklyPetroleum(): Promise<IngestResult> {
 }
 
 // ─────────────────────────────────────────────────────────
-// Crack spread 3-2-1 = 3·WTI − (2·Gasoline + 1·HO), USD/bbl.
+// Crack spread 3-2-1 = (2·Gasoline + 1·HO − 3·WTI) / 3, USD/bbl.
+// Industry-standard: 3 barrels crude in → 2 barrels gasoline + 1 barrel heating oil
+// out. Spread reports per-barrel refining margin.
+//
 // EIA spot price series (NY Harbor for the product legs):
 //  - WTI Cushing: RWTC ($/bbl)
 //  - Conventional Gasoline NY Harbor: EER_EPMRU_PF4_Y35NY_DPG ($/gal) → ×42 for $/bbl
@@ -174,7 +177,9 @@ export async function ingestCrackSpread321(): Promise<IngestResult> {
       a < b ? -1 : 1
     )) {
       if (v.wti != null && v.gasoline != null && v.ulsd != null) {
-        const spread = 3 * v.wti - (2 * v.gasoline * 42 + v.ulsd * 42);
+        const gasoline_bbl = v.gasoline * 42;
+        const ulsd_bbl = v.ulsd * 42;
+        const spread = (2 * gasoline_bbl + ulsd_bbl - 3 * v.wti) / 3;
         cracks.push({ period, spread });
       }
     }
@@ -192,7 +197,7 @@ export async function ingestCrackSpread321(): Promise<IngestResult> {
       value: latest.spread,
       baseline_value: baseline,
       metadata: {
-        formula: "3·WTI − (2·Gasoline + 1·HO) × 42",
+        formula: "(2·Gasoline·42 + 1·HO·42 − 3·WTI) / 3 [USD/bbl refining margin]",
         gasoline_series: "EER_EPMRU_PF4_Y35NY_DPG (Conv NY Harbor — RBOB spot discontinued in EIA v2)",
         baseline_window_days: window.length,
         period_raw: latest.period,
