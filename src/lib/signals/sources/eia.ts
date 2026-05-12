@@ -93,11 +93,12 @@ export async function ingestEiaWeeklyPetroleum(): Promise<IngestResult> {
 }
 
 // ─────────────────────────────────────────────────────────
-// Crack spread 3-2-1 = 3·WTI − (2·RBOB + 1·HO), USD/bbl.
-// EIA spot price series:
-//  - WTI Cushing: PET.RWTC.D ($/bbl)
-//  - RBOB NY Harbor: PET.EER_EPMRR_PF4_Y35NY_DPG.D ($/gal) → ×42 for $/bbl
-//  - ULSD NY Harbor: PET.EER_EPD2DXL0_PF4_Y35NY_DPG.D ($/gal) → ×42 for $/bbl
+// Crack spread 3-2-1 = 3·WTI − (2·Gasoline + 1·HO), USD/bbl.
+// EIA spot price series (NY Harbor for the product legs):
+//  - WTI Cushing: RWTC ($/bbl)
+//  - Conventional Gasoline NY Harbor: EER_EPMRU_PF4_Y35NY_DPG ($/gal) → ×42 for $/bbl
+//    (RBOB spot was discontinued in EIA v2; Conv NY is the standard EIA replacement.)
+//  - ULSD NY Harbor: EER_EPD2DXL0_PF4_Y35NY_DPG ($/gal) → ×42 for $/bbl
 // Baseline: trailing 90-day mean.
 // ─────────────────────────────────────────────────────────
 export async function ingestCrackSpread321(): Promise<IngestResult> {
@@ -107,7 +108,7 @@ export async function ingestCrackSpread321(): Promise<IngestResult> {
   if (miss) return miss;
 
   try {
-    const [wti, rbob, ulsd] = await Promise.all([
+    const [wti, gasoline, ulsd] = await Promise.all([
       fetchEiaSeries(
         "petroleum/pri/spt",
         {
@@ -126,7 +127,7 @@ export async function ingestCrackSpread321(): Promise<IngestResult> {
         {
           frequency: "daily",
           "data[0]": "value",
-          "facets[series][]": "EER_EPMRR_PF4_Y35NY_DPG",
+          "facets[series][]": "EER_EPMRU_PF4_Y35NY_DPG",
           "sort[0][column]": "period",
           "sort[0][direction]": "desc",
           offset: "0",
@@ -149,17 +150,20 @@ export async function ingestCrackSpread321(): Promise<IngestResult> {
       ),
     ]);
 
-    if (wti.length === 0 || rbob.length === 0 || ulsd.length === 0) {
+    if (wti.length === 0 || gasoline.length === 0 || ulsd.length === 0) {
       return { signal_id, status: "error", error: "Missing series data" };
     }
 
     // Build a map per-period to align dates (EIA daily series have small gaps).
-    const map = new Map<string, { wti?: number; rbob?: number; ulsd?: number }>();
+    const map = new Map<
+      string,
+      { wti?: number; gasoline?: number; ulsd?: number }
+    >();
     for (const p of wti) {
       map.set(p.period, { ...(map.get(p.period) ?? {}), wti: p.value });
     }
-    for (const p of rbob) {
-      map.set(p.period, { ...(map.get(p.period) ?? {}), rbob: p.value });
+    for (const p of gasoline) {
+      map.set(p.period, { ...(map.get(p.period) ?? {}), gasoline: p.value });
     }
     for (const p of ulsd) {
       map.set(p.period, { ...(map.get(p.period) ?? {}), ulsd: p.value });
@@ -169,8 +173,8 @@ export async function ingestCrackSpread321(): Promise<IngestResult> {
     for (const [period, v] of [...map.entries()].sort(([a], [b]) =>
       a < b ? -1 : 1
     )) {
-      if (v.wti != null && v.rbob != null && v.ulsd != null) {
-        const spread = 3 * v.wti - (2 * v.rbob * 42 + v.ulsd * 42);
+      if (v.wti != null && v.gasoline != null && v.ulsd != null) {
+        const spread = 3 * v.wti - (2 * v.gasoline * 42 + v.ulsd * 42);
         cracks.push({ period, spread });
       }
     }
@@ -188,7 +192,8 @@ export async function ingestCrackSpread321(): Promise<IngestResult> {
       value: latest.spread,
       baseline_value: baseline,
       metadata: {
-        formula: "3·WTI − (2·RBOB + 1·HO) × 42",
+        formula: "3·WTI − (2·Gasoline + 1·HO) × 42",
+        gasoline_series: "EER_EPMRU_PF4_Y35NY_DPG (Conv NY Harbor — RBOB spot discontinued in EIA v2)",
         baseline_window_days: window.length,
         period_raw: latest.period,
       },
