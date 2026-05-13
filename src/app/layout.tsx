@@ -149,6 +149,12 @@ export default async function RootLayout({
                       {t("quantLab")}
                     </Link>
                     <Link
+                      href="/signals"
+                      className="text-text-muted hover:text-foreground transition-colors"
+                    >
+                      Signals
+                    </Link>
+                    <Link
                       href="/developers"
                       className="text-text-muted hover:text-foreground transition-colors"
                     >
