@@ -43,6 +43,31 @@ async function loadIcLatest(): Promise<Map<string, IcRow>> {
   }
 }
 
+async function loadObservationCounts(): Promise<
+  Map<string, { count: number; first: string | null; last: string | null }>
+> {
+  try {
+    const sb = getSupabaseAdmin();
+    const { data } = await sb
+      .from("signal_observations")
+      .select("signal_id, observed_at");
+    const stats = new Map<
+      string,
+      { count: number; first: string | null; last: string | null }
+    >();
+    for (const row of (data ?? []) as { signal_id: string; observed_at: string }[]) {
+      const cur = stats.get(row.signal_id) ?? { count: 0, first: null, last: null };
+      cur.count += 1;
+      if (!cur.first || row.observed_at < cur.first) cur.first = row.observed_at;
+      if (!cur.last || row.observed_at > cur.last) cur.last = row.observed_at;
+      stats.set(row.signal_id, cur);
+    }
+    return stats;
+  } catch {
+    return new Map();
+  }
+}
+
 const STATUS_LABEL: Record<string, string> = {
   live: "live",
   decayed: "decayed",
@@ -55,9 +80,10 @@ function fmtIc(ic: number) {
 }
 
 export default async function SignalsMethodologyPage() {
-  const [signals, icLatest] = await Promise.all([
+  const [signals, icLatest, obsStats] = await Promise.all([
     listLiveSignals(),
     loadIcLatest(),
+    loadObservationCounts(),
   ]);
 
   return (
@@ -91,16 +117,17 @@ export default async function SignalsMethodologyPage() {
               <tr>
                 <th className="text-left px-4 py-2 font-medium">Signal</th>
                 <th className="text-left px-4 py-2 font-medium">Domain</th>
+                <th className="text-right px-4 py-2 font-medium">Observations</th>
                 <th className="text-right px-4 py-2 font-medium">
                   Rolling 252d IC
                 </th>
-                <th className="text-right px-4 py-2 font-medium">Sample N</th>
                 <th className="text-right px-4 py-2 font-medium">Status</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
               {signals.map((s) => {
                 const ic = icLatest.get(s.id);
+                const obs = obsStats.get(s.id);
                 return (
                   <tr key={s.id}>
                     <td className="px-4 py-2">
@@ -113,12 +140,18 @@ export default async function SignalsMethodologyPage() {
                     </td>
                     <td className="px-4 py-2 text-text-muted">{s.domain}</td>
                     <td className="px-4 py-2 text-right tabular-nums">
-                      {ic ? fmtIc(ic.rolling_ic_252d) : (
-                        <span className="text-text-faint">no data yet</span>
+                      {obs ? (
+                        <span title={`${obs.first?.slice(0, 10)} → ${obs.last?.slice(0, 10)}`}>
+                          {obs.count.toLocaleString()}
+                        </span>
+                      ) : (
+                        <span className="text-text-faint">—</span>
                       )}
                     </td>
-                    <td className="px-4 py-2 text-right tabular-nums text-text-muted">
-                      {ic ? ic.sample_size.toLocaleString() : "—"}
+                    <td className="px-4 py-2 text-right tabular-nums">
+                      {ic ? fmtIc(ic.rolling_ic_252d) : (
+                        <span className="text-text-faint">pending 252d</span>
+                      )}
                     </td>
                     <td className="px-4 py-2 text-right">
                       <span
