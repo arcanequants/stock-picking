@@ -46,21 +46,34 @@ async function loadIcLatest(): Promise<Map<string, IcRow>> {
 async function loadObservationCounts(): Promise<
   Map<string, { count: number; first: string | null; last: string | null }>
 > {
+  // Supabase REST defaults to max 1000 rows per query. Page through in 1k chunks
+  // so a single signal with decades of weekly data (e.g. EIA: 2.2k+ rows) doesn't
+  // silently truncate and show "—" on the methodology page.
   try {
     const sb = getSupabaseAdmin();
-    const { data } = await sb
-      .from("signal_observations")
-      .select("signal_id, observed_at");
     const stats = new Map<
       string,
       { count: number; first: string | null; last: string | null }
     >();
-    for (const row of (data ?? []) as { signal_id: string; observed_at: string }[]) {
-      const cur = stats.get(row.signal_id) ?? { count: 0, first: null, last: null };
-      cur.count += 1;
-      if (!cur.first || row.observed_at < cur.first) cur.first = row.observed_at;
-      if (!cur.last || row.observed_at > cur.last) cur.last = row.observed_at;
-      stats.set(row.signal_id, cur);
+    const PAGE = 1000;
+    let from = 0;
+    for (;;) {
+      const { data, error } = await sb
+        .from("signal_observations")
+        .select("signal_id, observed_at")
+        .order("observed_at", { ascending: true })
+        .range(from, from + PAGE - 1);
+      if (error) throw new Error(error.message);
+      const rows = (data ?? []) as { signal_id: string; observed_at: string }[];
+      for (const row of rows) {
+        const cur = stats.get(row.signal_id) ?? { count: 0, first: null, last: null };
+        cur.count += 1;
+        if (!cur.first || row.observed_at < cur.first) cur.first = row.observed_at;
+        if (!cur.last || row.observed_at > cur.last) cur.last = row.observed_at;
+        stats.set(row.signal_id, cur);
+      }
+      if (rows.length < PAGE) break;
+      from += PAGE;
     }
     return stats;
   } catch {
