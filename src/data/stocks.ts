@@ -9592,6 +9592,715 @@ Diageo plc es **la mayor empresa de bebidas alcohólicas del mundo** por valor d
     last_updated_at: "2026-05-07T00:00:00Z",
     next_review_at: "2026-11-07T00:00:00Z",
   },
+  {
+    id: 66,
+    ticker: "DHLGY",
+    name: "DHL Group",
+    sector: "Industrials",
+    industry: "Integrated Freight & Logistics",
+    country: "Germany",
+    region: "Europe",
+    currency: "USD",
+    price: 27.89,
+    pe_ratio: 17.95,
+    pe_forward: 16.20,
+    dividend_yield: 3.95,
+    market_cap_b: 62.0,
+    eps: 1.55,
+    summary_short:
+      "**La red de logística express internacional más grande del mundo** — antes Deutsche Post AG, renombrada **DHL Group el 1 julio 2023** (ticker DAX cambió DPW → DHL). Sirve >220 países con 5 divisiones: **Express** (la joya — vuelos directos, paquetes time-definite), **Global Forwarding/Freight** (carga aérea + marítima), **Supply Chain** (logística contract), **eCommerce** (cross-border parcel), **Post & Parcel Germany** (correo doméstico, declinando). FY2025: revenue **€82.9B**, EBIT **€6.1B (margen 7.4%)**, ~**584,000 empleados** en 220+ países. HQ Bonn, Alemania. **CEO Tobias Meyer** desde mayo 2023 — contrato extendido **4 marzo 2026 hasta 2031** (board ratifica continuidad). **Chair Katrin Suder**. ADR DHLGY = sponsored OTC Pink (no NYSE), ratio **2 ADRs : 1 ordinary share**, depositary JPMorgan Chase. **Q1 2026 reportado 30 abril 2026**: revenue €20.4B (-1.9% reportado / +2.0% organic — FX headwind), **EBIT €1.5B (+8.3%)**, margen 7.3%, **guidance FY26 reafirmada: EBIT >€6.2B, FCF ~€3B**. **Dividendo FY2025 €1.90/sh** aprobado AGM 5 mayo 2026 (99.88% votos), **DHLGY ADR $1.103/ADR ex-date 7 mayo 2026**. Yield ~3.95%. **Fit For Growth**: ~**8,000 recortes en Alemania** anunciados marzo 2025, ejecución vía attrition para 2027 → meta >€1B savings. **12 mayo 2026 (ayer)**: DHL Express firmó primer acuerdo SAF en Medio Oriente con SAF One Bahrain — 25,000 toneladas/año por 10 años. Cotización: $27.89, market cap ~$62B, P/E forward 16.2x, dividend yield 3.95%.",
+    summary_what:
+      "DHL Group (anteriormente Deutsche Post AG) es **la red de logística express internacional más grande del mundo**. Renombrada DHL Group el **1 julio 2023** porque el 90%+ del revenue ya venía de la marca DHL (no del correo postal alemán heredado de 1490).\n\n**5 divisiones operativas (FY2025 revenue €82.9B)**:\n\n**(1) DHL Express** — la joya del grupo. Red propia de vuelos: **>2,300 vuelos diarios** desde 500+ aeropuertos, 250+ aviones cargueros propios + ~290 charter. **~248 millones de envíos Time-Definite International al año**, ~43% del mercado mundial de express internacional (más grande que FedEx International + UPS International combined). Q1 2026 EBIT €799M (+20.6%, margen 13.3%). **Hubs principales**: Leipzig (Europa), Cincinnati (Americas), Hong Kong (Asia).\n\n**(2) DHL Global Forwarding, Freight** — carga aérea + marítima + terrestre (forwarder, no carrier). Q1 2026 EBIT €164M (-18.5%, presión sobre yields tras boom 2021-2022).\n\n**(3) DHL Supply Chain** — logística por contrato (warehouse + fulfillment). Q1 2026 EBIT €276M.\n\n**(4) DHL eCommerce** — cross-border parcel para Amazon, Shein, Temu, Alibaba etc. Hit por eliminación de US de minimis exemption $800 (29 ago 2025).\n\n**(5) Post & Parcel Germany** — correo doméstico alemán + Deutsche Post legado 1490. Declinando estructuralmente (cartas digitales).\n\n**HQ**: Bonn, Alemania. **Empleados**: ~584,000 globales (FY2025 oficial; Reuters cita ~602,000 incluyendo contractors). **Listing**: Frankfurt XETRA (DHL.DE) primario, FTSE Eurotop 100. **ADR**: DHLGY en OTC Pink (NO NYSE), ratio 2 ADRs : 1 ordinary share, depositary JPMorgan Chase.\n\n**Liderazgo**:\n- **CEO: Tobias Meyer** — alemán, en DHL desde 2002 (career insider), nombrado CEO 1 mayo 2023, **contrato extendido 4 marzo 2026 hasta 2031** (señal del board de continuidad)\n- **Chair (Supervisory Board)**: Katrin Suder\n- **CFO**: Melanie Kreis\n\n**FY 2025**:\n- Revenue: €82.9B (-1.6% YoY)\n- EBIT: €6.1B (+3.7%)\n- EBIT margin: 7.4%\n- Free cash flow: ~€3.0B\n- Net debt: ~€10B (manejable, debt/EBITDA ~1.0x)\n\n**Q1 2026 (reportado 30 abril 2026)**:\n- Revenue: €20.4B (-1.9% reportado / +2.0% organic — FX headwind USD)\n- **EBIT: €1.5B (+8.3% YoY)** — margen 7.3%\n- **FCF ex-M&A: +65% a €1.2B** — cash conversion strong\n- **Guidance FY26 REAFIRMADA**: EBIT >€6.2B, FCF ~€3B\n\n**Dividendo FY2025 (paid May 2026)**:\n- **€1.90/sh** (vs €1.85 prior, +2.7%) — aprobado AGM 5 mayo 2026 (99.88% favor)\n- DE ex-date: 6 mayo 2026 | Pay: 8 mayo 2026\n- **DHLGY ADR: $1.103/ADR** ex-date 7 mayo 2026\n- Yield ~3.95% al precio actual",
+    summary_why:
+      "DHLGY a $27.89 es comprar la red de logística express internacional #1 del mundo (43% market share) a P/E forward 16.2x con dividend yield 3.95% justo cuando el bottom del ciclo logístico post-2022 ya pasó. Razones específicas: (1) **Q1 2026 EBIT +8.3% YoY (€1.5B) con guidance FY26 REAFIRMADA**: EBIT >€6.2B, FCF ~€3B. El management mantiene la guía a pesar del FX headwind y la eliminación del de minimis estadounidense — señal de confianza operativa. (2) **Express es el moat real**: ~248M envíos Time-Definite International al año, **43% del mercado mundial**. La red de >2,300 vuelos diarios + 250+ aviones propios + hubs Leipzig/Cincinnati/Hong Kong no se replica — FedEx y UPS llevan décadas tratando y siguen detrás en internacional. Margen Express Q1 13.3% (premium real vs forwarding ~3%). (3) **CEO contract extension to 2031 = continuidad**: el 4 marzo 2026 el board extendió a Tobias Meyer hasta 2031. Board signal claro: el plan Fit For Growth + transición post-tariffs sigue. Insider con 23 años en DHL = ejecuta sin learning curve. (4) **Fit For Growth: €1B savings prometidos para 2027**: ~8,000 recortes en Alemania anunciados marzo 2025, vía attrition (sin layoffs forzados), execution multi-año. Ya impactando — Q1 EBIT margin subió 70bps. (5) **Dividend €1.90/sh +2.7%, DHLGY $1.103/ADR yield 3.95%**: aprobado 99.88% en AGM 5 mayo 2026. Annual frequency (German convention) — el ADR ex-date fue 7 mayo, pago 26 mayo 2026. Yield arriba del 1.5-2% S&P 500. (6) **De minimis US ya descontado**: la eliminación del exemption $800 el 29 ago 2025 dolió en Q4 2025 + Q1 2026 (Shein/Temu/Alibaba parcels redirected), pero el management ya reset expectativas. eCommerce division revenue ya bajó al mínimo cíclico — comp easy desde Q3 2026. (7) **Tariff hit ya quantificado**: +10% Section 122 US tariff effective hasta 24 julio 2026. Impact incorporado en guidance. Post-julio puede haber relief o deal — upside. (8) **SAF strategy = future-proof**: 12 mayo 2026 firmaron primer offtake SAF Medio Oriente (25,000 t/yr × 10 años). Meta 30% SAF by 2030 — diferenciador con corporate clients ESG (Apple, Microsoft, Pfizer pagan premium por low-carbon shipping). (9) **Free cash flow +65% Q1 ex-M&A a €1.2B**: cash conversion mejorando rápido. FY26 FCF guide ~€3B = ~5% FCF yield. (10) **Valuación trough cíclico**: P/E forward 16.2x es ~10-15% descuento vs FedEx (P/E forward ~18x) y UPS (~17x) — pero DHL tiene mayor cuota internacional + crece más rápido en Express. Yield 3.95% > FedEx 2.0% > UPS 5.5% (UPS está más castigado por bond-proxy). Multiple expansion modest 16.2x → 18x = +11% capital upside + ~4% yield = ~15% total return path razonable.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Eliminación US de minimis $800 (29 ago 2025) sigue siendo headwind estructural**: cada parcel cross-border a US ahora es dutiable — Shein/Temu/Alibaba volumes en eCommerce division cayeron fuerte. Si los consumers US no absorben los duties (precios suben 10-30% efectivo), volume sigue débil 2026-2027. eCommerce division era ~10% del revenue. (2) **Tariff Section 122 +10% US effective hasta 24 julio 2026**: si Trump escala o extiende, mayor squeeze en margenes. Si negociación UE-US colapsa, riesgo de 20-25% tariffs sobre logistics services. (3) **Post & Parcel Germany declinando estructuralmente**: cartas digitales reemplazan correo físico. División pierde -2 a -3% volumen anual. Margenes regulados por Bundesnetzagentur (regulador alemán) — no pueden subir tarifas libremente. (4) **Recesión Europa = forwarding revenue squeeze**: Global Forwarding ya cayó -18.5% Q1 2026. Si Alemania entra recesión 2026 (probabilidad creciente con tariffs Trump), trade volumes caen otro 5-10%. (5) **FX USD weakness**: ~30% revenue en USD, ~50% costos en EUR. Si USD baja vs EUR, reportado revenue cae (Q1 ya tomó -3.9% FX hit). (6) **Fit For Growth execution risk**: 8,000 recortes en Alemania via attrition tiene timing impreciso. Si labor courts bloquean o sindicato ver.di pelea, savings se delay 12-18 meses. (7) **Middle East airspace disruptions**: el Q1 ya tuvo friction. Si Israel-Iran/Yemen escalates, las flight routes Asia-Europa cambian → más distance/fuel/cost. (8) **Amazon vertical integration**: Amazon Air sigue creciendo su propia red — ya maneja ~50% de paquetes propios en US, expanding international. Si Amazon decide hacer su propio express internacional con suficiente densidad, DHL pierde un cliente major (Amazon es ~5% revenue DHL). (9) **Capex pesado SAF + electrification**: la transición flota a electric vans + SAF requiere ~€2-3B/año capex. Reduce FCF. (10) **ADR ratio 2:1 + OTC Pink**: DHLGY no es NYSE listed, trades OTC con menor liquidez vs DHL.DE en XETRA. Spreads bid-ask más amplios, ejecución menos clean.",
+    research_full: `# DHL Group (DHLGY) — Research Completo
+
+## Precio: $27.89 | P/E TTM: 17.95 | P/E Forward: 16.20 | Div Yield: 3.95% | Market Cap: $62.0B
+
+---
+
+## ¿Qué es DHL Group?
+
+DHL Group (anteriormente **Deutsche Post AG**) es **la red de logística express internacional más grande del mundo**.
+
+**Historia clave**:
+- **1490**: Deutsche Post — el correo postal alemán fundado bajo la Casa de Thurn und Taxis (uno de los servicios postales más antiguos del mundo)
+- **1969**: DHL fundada en San Francisco por **Dalsey, Hillblom y Lynn** (las iniciales)
+- **1998-2002**: Deutsche Post adquiere DHL (proceso por etapas)
+- **2023**: Renombrada de Deutsche Post DHL Group → **DHL Group** (1 julio 2023). Ticker DAX DPW → DHL
+- **Marzo 2026**: CEO Tobias Meyer extendido a 2031
+
+**HQ**: Bonn, Alemania | **Empleados**: ~584,000 (FY2025) | **Listing primario**: XETRA (DHL.DE)
+
+## Estructura corporativa (FY2025 revenue €82.9B)
+
+| División | Q1 2026 Revenue | Q1 2026 EBIT | Margin | Notas |
+|---------|-----------------|--------------|--------|-------|
+| **DHL Express** | €6.0B | €799M | 13.3% | La joya, 43% mkt share global |
+| **Global Forwarding/Freight** | €5.5B | €164M | 3.0% | -18.5% YoY |
+| **Supply Chain** | €4.4B | €276M | 6.2% | Contract logistics |
+| **eCommerce** | €1.7B | €130M | 7.7% | Hit por de minimis US |
+| **Post & Parcel Germany** | €4.0B | €230M | 5.7% | Declinando estructural |
+
+## Q1 2026 — Reportado 30 abril 2026
+
+- **Revenue**: €20.4B (-1.9% reportado / +2.0% organic)
+- **EBIT**: €1.5B (+8.3% YoY) — margen 7.3%
+- **Net income**: €0.86B
+- **FCF ex-M&A**: €1.2B (+65% YoY)
+- **Guidance FY26**: reafirmado EBIT >€6.2B, FCF ~€3B
+
+## Dividendo
+
+- **FY2025**: €1.90/sh (vs €1.85 prior, +2.7%) — annual frequency German
+- **DHLGY ADR**: $1.103/ADR ex-date 7 mayo 2026
+- Yield ~3.95% al precio $27.89
+
+## CEO Contract Extension to 2031
+
+**4 marzo 2026**: Supervisory Board extiende Tobias Meyer (CEO desde 1 mayo 2023) hasta **31 mayo 2031**. Señal del board:
+- Continuidad del plan Fit For Growth
+- Confianza en transición post-tariffs Trump
+- Sin disruption en succession
+
+## Fit For Growth — €1B savings 2027
+
+- Anunciado marzo 2025
+- ~8,000 recortes en Alemania via attrition (no layoffs forzados)
+- Cierre de operating centers redundantes
+- Procurement consolidation
+- Digital tools deployment
+- Q1 2026 ya entregó +70bps margin
+
+## ADR Structure
+
+- **Ticker**: DHLGY (sponsored ADR)
+- **Trading**: OTC Pink (NO NYSE-listed)
+- **Ratio**: 2 ADRs = 1 ordinary share (DHL.DE)
+- **Depositary**: JPMorgan Chase
+- **Liquidity**: menor que XETRA primary
+
+## Tesis en una línea
+
+> Comprar la red de logística express internacional #1 del mundo (43% market share, 2,300+ vuelos diarios, ~248M paquetes TDI/año) a P/E forward 16.2x con dividend yield 3.95% — bottom del ciclo logístico post-2022 + CEO extendido a 2031 + Fit For Growth €1B savings entregando + de minimis US ya descontado.
+
+---
+
+*Research fecha: 13 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Moderate Buy",
+    analyst_target: 32.00,
+    analyst_upside: 14.7,
+    status: "active",
+    first_researched_at: "2026-05-13T00:00:00Z",
+    last_updated_at: "2026-05-13T00:00:00Z",
+    next_review_at: "2026-11-13T00:00:00Z",
+  },
+  {
+    id: 67,
+    ticker: "DHR",
+    name: "Danaher Corporation",
+    sector: "Healthcare",
+    industry: "Diagnostics & Research",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 166.29,
+    pe_ratio: 30.05,
+    pe_forward: 19.67,
+    dividend_yield: 0.96,
+    market_cap_b: 119.0,
+    eps: 5.54,
+    summary_short:
+      "**El compounder más respetado de healthcare instrumentación** — un holding industrial que aplica el famoso *Danaher Business System* (DBS, Kaizen lean adaptado) a empresas adquiridas. Post-spin de Veralto (oct 2023) y Envista (2019), Danaher quedó focalizado en 3 segmentos healthcare/life sciences: **Biotechnology** (Cytiva, Pall, Aldevron — bioprocessing core), **Life Sciences** (Beckman Coulter LS, SCIEX, Leica Microsystems, IDT), **Diagnostics** (Beckman Coulter Diagnostics, Cepheid, Leica Biosystems, Radiometer). HQ Washington DC, ~63,000 empleados. **CEO Rainer M. Blair** desde sept 2020. **Chair Steven M. Rales** (co-fundador desde 1984). **Q1 2026 reportado 21 abril 2026**: revenue **$5.95B (+3.5% YoY)**, **adj diluted EPS $2.06 (+9.5% YoY)**, **bioprocessing equipment orders +30% YoY (primer dato positivo en casi 2 años — destocking 2023 terminó)**, Bio segment core +7%. **Guidance FY26 SUBIÓ**: adj EPS $8.35-$8.55 (de $8.35-$8.50). **Anuncio bombazo 21 abril 2026: Danaher adquiere Masimo por $180/sh cash = $9.9B total** (entra a segmento Diagnostics, close H2 2026, accretive +$0.15-0.20 EPS yr 1, +$0.70 yr 5, sinergias >$125M costo + >$50M revenue). Financiado con €2.98B senior notes + nuevo $5B revolving credit facility. **Anchor crítico**: >75% de TODAS las terapias biológicas aprobadas por la FDA se fabrican usando tecnología Cytiva. Cuando el ciclo de bioprocessing turn (+30% Q1), el customer base = universo entero de biologics aprobados. **Dividendo $0.40/qtr** ($1.60 anual), yield ~0.96%. Cotización $166.29 (~15% off máximo), P/E forward 19.67x.",
+    summary_what:
+      "Danaher Corporation es **el compounder más respetado de healthcare instrumentación** del mercado público. Es un conglomerado/holding industrial que adquiere empresas de instrumentación científica + diagnósticos + bioprocessing y les aplica el famoso **Danaher Business System (DBS)** — adaptación de Toyota Production System / Kaizen lean para mejorar márgenes y operaciones de cada subsidiaria.\n\n**Historia clave**:\n- **1969**: Steven y Mitchell Rales (hermanos) compran un real estate trust\n- **1984**: rebrand a Danaher\n- **1988**: Steven Rales aplica primera vez DBS a Jacobs Vehicle Systems — fórmula nace\n- **2016**: spin-off **Fortive** (industrial test & measurement)\n- **2019**: spin-off **Envista Holdings** (dental)\n- **Oct 2023**: spin-off **Veralto** (water quality + product identification)\n- **2026**: Danaher focalizado en 3 segmentos pure-play healthcare/life sciences\n\n**3 Segmentos (FY2025 revenue ~$24B)**:\n\n**(1) Biotechnology (~33% revenue)** — bioprocessing equipment + consumables para fabricar biologic drugs:\n- **Cytiva** (ex-GE Life Sciences, comprada $21B en 2020) — single-use bioreactors, chromatography resins, filtration\n- **Pall** (comprada 2015) — filtration + separation\n- **Aldevron** — plasmid DNA + mRNA components (clave para vacunas mRNA Moderna/Pfizer-BioNTech)\n\n**(2) Life Sciences (~30% revenue)** — instrumentación para investigación + drug discovery:\n- **Beckman Coulter Life Sciences** — flow cytometry, centrifuges, liquid handling\n- **SCIEX** — mass spectrometry\n- **Leica Microsystems** — microscopios research (NO confundir con Leica Camera o Leica Biosystems)\n- **IDT (Integrated DNA Technologies)** — oligos sintéticos, gene fragments, qPCR probes\n\n**(3) Diagnostics (~37% revenue)** — diagnósticos clínicos hospitalarios:\n- **Beckman Coulter Diagnostics** — hematology, chemistry, immunoassay analyzers (en >130k labs globally)\n- **Cepheid** — GeneXpert PCR rápido (TB, COVID, MTB-RIF — gold standard)\n- **Leica Biosystems** — pathology + histology (cancer tissue analysis)\n- **Radiometer** — blood gas analyzers (point-of-care critical care)\n\n**HQ**: Washington DC (2200 Pennsylvania Ave NW). **Empleados**: ~63,000 globales. **CEO**: Rainer M. Blair (desde sept 2020). **Chair**: Steven M. Rales (co-fundador, Chair desde 1984). **Listing**: NYSE (DHR), componente S&P 500.\n\n**Q1 2026 (reportado 21 abril 2026)**:\n- Revenue: $5.95B (+3.5% YoY)\n- Core revenue: +0.5% total | **Bio core +7%** | LS flat | Dx flat\n- **Bioprocessing equipment orders: +30% YoY** ← primera subida positiva en ~2 años (destocking 2023 terminó)\n- Adj diluted EPS: $2.06 (+9.5%) | GAAP $1.45\n- OCF $1.3B | FCF $1.1B\n- **Guidance FY26 RAISED**: adj EPS $8.35-$8.55 (era $8.35-$8.50)\n\n**Dividendo**:\n- $0.40/share trimestral declarado para pago 24 abr y 31 jul 2026\n- Anual $1.60/share, yield ~0.96%\n- Track record de dividend increases continuo desde spin-offs\n\n**Adquisición Masimo (21 abril 2026)**:\n- **$180/share cash = $9.9B total**\n- Masimo = pulse oximetry, brain monitoring, hospital automation\n- Va a segmento Diagnostics post-close (H2 2026)\n- Accretive: +$0.15-0.20 EPS yr 1, ~$0.70 EPS yr 5\n- Sinergias: >$125M costo + >$50M revenue por yr 5\n- Financiamiento: **€2.98B euro senior notes + nuevo $5B revolving credit facility**",
+    summary_why:
+      "DHR a $166.29 es comprar el compounder #1 de healthcare instrumentación a P/E forward 19.67x (vs múltiplo histórico 25-28x) — un descuento de ~30% justo cuando los 2 catalysts grandes están girando. Razones específicas: (1) **Bioprocessing turn confirmado Q1 2026 = el catalyst macro**: equipment orders +30% YoY (primer dato positivo en ~2 años). El destocking 2023 (cuando biotechs/pharmas redujeron buying después del boom COVID) terminó. Management framing: 'inicio de un multi-year investment cycle', brownfield primero luego greenfield. Cytiva + Pall + Aldevron juntos = ~$8B revenue Bio segment con margenes operativos >25%. Si bio core acelera de +7% Q1 a +10-12% FY27 (factible), incremental revenue $400-500M con drop-through 40%+. (2) **Anchor moat — >75% de TODAS las terapias biológicas FDA-aprobadas usan tecnología Cytiva**: cuando un Humira biosimilar entra al mercado, una nueva CAR-T se aprueba (Yescarta, Carvykti), una terapia génica nueva, una vacuna mRNA next-gen — la fabricación pasa por Cytiva. Es el equivalente a 'Intel Inside' para biológicos. Cuando los orders de equipment turn (+30% Q1), el universo entero de biologics aprobados es el customer base que está re-stocking. (3) **Masimo $9.9B adquisición = pivote diagnostic + visibility 2027+**: anunciado 21 abril 2026, close H2 2026. Masimo Patient Monitoring (SpO2 sensors, brain function) entra a segmento Diagnostics. Accretive desde año 1: +$0.15-0.20 EPS yr 1, ~$0.70 yr 5. Sinergias DBS-driven >$125M costo + >$50M revenue por año 5. Es la mayor adquisición desde Cytiva 2020. (4) **Guidance FY26 SUBIÓ a $8.35-$8.55 adj EPS**: management confianza explícita post-Q1. FX +0.5% tailwind sobre sales FY26. (5) **DBS (Danaher Business System) es el moat de management**: 40 años aplicando Kaizen + lean a empresas adquiridas. Track record de elevar margenes operativos +500-1000bps en 24-36 meses post-adquisición. Masimo bajo DBS tiene path claro: 16% op margin → 22-25% en 3 años. (6) **Stevens Rales sigue como Chair (co-fundador, 42 años)**: continuidad del culture compounder. El Rales family + Mitchell Rales conservan >5% directo + boards seat. Skin in the game. (7) **Spin-off optionality intacto**: Danaher histórico hace un spin cada 5-7 años (Fortive 2016, Envista 2019, Veralto 2023). Próximo spin Diagnostics o Life Sciences en 2027-2028 = unlock valor adicional. (8) **Balance sheet flexible post-Masimo financing**: $5B revolving credit facility nuevo + €2.98B notes a tasas competitivas. Net debt/EBITDA post-Masimo ~2.5x, manejable, A-rated. (9) **China VBP/diagnostic reimbursement headwind ya descontado**: -$75-100M en China Dx FY26 (high-single-digit decline). Management dice 'manageable' — comparable easier desde Q3 2026. (10) **Valuación trough**: P/E forward 19.67x es el más bajo desde 2015. Histórico 25-28x. Re-rating modesto a 23x (consenso bio recovery accepted) = $194 (+17%). Re-rating completo a 27x (premium compounder) = $228 (+37%). Plus dividend yield 0.96% + EPS growth +10-12% FY27-28 = total return >20% anual razonable.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Bioprocessing recovery puede ser 'false dawn'**: +30% equipment orders Q1 podría ser un solo trimestre. Si Q2 2026 reportará flat or -, mercado castiga severo (-15-20%). El destocking 2023 fue brutal; rebote auténtico vs catch-up effect difícil de distinguir 1 quarter in. (2) **Masimo execution risk $9.9B**: integración compleja, Masimo tiene cultura litigiosa (Apple Watch IP wars), founder Joe Kiani salió 2025 — riesgo retention talento clave. Si sinergias no materializan, $9.9B premium goodwill se ve mal. (3) **China VBP + reimbursement structural**: ~10-12% revenue China. Volume-Based Procurement (VBP) recortó pricing 40-60% en diagnostic reagents desde 2023. Si nuevas rondas VBP atacan immunoassay o molecular Dx, otro $200-300M hit anual. (4) **Tariffs Trump 2026 = ~$350M gross**: Danaher estimó $350M gross tariff impact 2025; FY26 not separately quantified pero risk factor. Cytiva fábricas en Marlborough MA + Suecia + Reino Unido → cross-border friction. Algo offset via supply chain + footprint changes. (5) **GLP-1 drugs reduce demand de protein therapeutics demand**: Ozempic/Wegovy/Zepbound reducen obesidad → menor cardiovascular disease → menor demand cierto biologic classes (statins-like dynamic). 2nd-order effect, low probability pero medible 2028+. (6) **Cytiva organic growth dependency**: si vaccine market (mRNA boom 2020-2022) no se sostiene, Cytiva consumables flatten. COVID tail demand zero ya. (7) **CEO transition risk** (low pero real): Rainer Blair en CEO desde sept 2020 — 5+ años. Si decide step-down o board lo reemplaza, succession plan no es público clearly. (8) **Pricing pressure US healthcare**: IRA Medicare drug price negotiations Phase 2 expanding, lab payments under threat. Affects Beckman Dx + Cepheid pricing power. (9) **Concentración cliente top 10**: top pharma + biotechs (Pfizer, Merck, Lilly, J&J, AbbVie, Roche, Novartis, Regeneron, BMS, Sanofi) representan ~40% de Bio segment. Si 2-3 de ellos racionalizan procurement (post-merger ej.), revenue concentrado. (10) **Gross margin slippage flagged por analistas (Simply Wall St)**: tension entre EPS growth narrative y gross margin decline (mix shift hacia equipment vs consumables). Si Q2-Q3 muestra margin -50-100bps adicional, multiple compression.",
+    research_full: `# Danaher Corporation (DHR) — Research Completo
+
+## Precio: $166.29 | P/E TTM: 30.05 | P/E Forward: 19.67 | Div Yield: 0.96% | Market Cap: $119.0B
+
+---
+
+## ¿Qué es Danaher?
+
+Danaher es **el compounder #1 de healthcare instrumentación** del mercado público — un holding industrial que adquiere empresas de instrumentación científica + diagnósticos + bioprocessing y les aplica el famoso **Danaher Business System (DBS)**.
+
+**Historia clave**:
+- **1969**: Steven y Mitchell Rales (hermanos) compran un real estate trust
+- **1984**: rebrand a Danaher
+- **2015**: adquiere Pall Corporation por $13.8B
+- **2020**: adquiere **Cytiva** (ex-GE Life Sciences) por $21.4B — el deal definitorio
+- **2023**: spin-off Veralto (oct 2023)
+- **21 abril 2026**: adquiere **Masimo por $9.9B cash**
+
+## 3 Segmentos
+
+### Biotechnology (~33% revenue)
+- **Cytiva**: single-use bioreactors, chromatography, filtration → **>75% de biologics FDA-aprobados** usan Cytiva
+- **Pall**: filtration + separation
+- **Aldevron**: plasmid DNA + mRNA components (Moderna/Pfizer-BioNTech proveedor)
+
+### Life Sciences (~30% revenue)
+- **Beckman Coulter Life Sciences**: flow cytometry, centrifuges
+- **SCIEX**: mass spectrometry
+- **Leica Microsystems**: research microscopes
+- **IDT**: oligos sintéticos, gene fragments
+
+### Diagnostics (~37% revenue)
+- **Beckman Coulter Diagnostics**: >130k labs globales
+- **Cepheid**: GeneXpert PCR rápido (TB, COVID, sepsis)
+- **Leica Biosystems**: pathology cáncer
+- **Radiometer**: blood gas analyzers
+
+## Q1 2026 — Reportado 21 abril 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Revenue | $5.95B | +3.5% |
+| **Bioprocessing equipment orders** | — | **+30%** ← turn confirmado |
+| Bio core revenue | — | **+7%** |
+| Adj diluted EPS | $2.06 | +9.5% |
+| GAAP EPS | $1.45 | — |
+| Op cash flow | $1.3B | — |
+| FCF | $1.1B | — |
+
+**FY26 Guidance RAISED**: adj EPS $8.35-$8.55 (era $8.35-$8.50)
+
+## Masimo Acquisition — 21 abril 2026
+
+- **$180/sh cash = $9.9B total**
+- Va a segmento Diagnostics
+- Close H2 2026 (regulatory + customary)
+- Accretive: +$0.15-0.20 EPS yr 1, ~$0.70 yr 5
+- Sinergias: >$125M costo + >$50M revenue por año 5
+- Financiamiento: **€2.98B senior notes + $5B revolving credit nuevo**
+
+## Anchor Fact
+
+**>75% de TODAS las terapias biológicas FDA-aprobadas se fabrican usando tecnología Cytiva**.
+Fuente: Cytiva corporate disclosure.
+Implicación: el customer base = universo entero de biologics aprobados. Cuando bioprocessing orders turn (+30% Q1 2026), todo ese universo está re-stocking.
+
+## Tesis en una línea
+
+> Comprar el compounder #1 de healthcare instrumentación a P/E forward 19.67x (descuento 30% vs histórico 25-28x) justo cuando (1) bioprocessing orders turn +30% Q1 2026, (2) Masimo $9.9B agrega $3B+ revenue + sinergias DBS, (3) guidance FY26 raised — con Cytiva moat (>75% biologics FDA-aprobados) intacto.
+
+---
+
+*Research fecha: 13 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 195.00,
+    analyst_upside: 17.3,
+    status: "active",
+    first_researched_at: "2026-05-13T00:00:00Z",
+    last_updated_at: "2026-05-13T00:00:00Z",
+    next_review_at: "2026-11-13T00:00:00Z",
+  },
+  {
+    id: 68,
+    ticker: "DIDIY",
+    name: "DiDi Global",
+    sector: "Consumer Cyclical",
+    industry: "Travel Services",
+    country: "China",
+    region: "Asia",
+    currency: "USD",
+    price: 3.61,
+    pe_ratio: 0,
+    pe_forward: 0,
+    dividend_yield: 0,
+    market_cap_b: 14.0,
+    eps: 0.05,
+    summary_short:
+      "**El Uber de China** — la #1 plataforma de ride-hailing en la economía china, ~30 millones de viajes al día (más que los ~28M que Uber hace en TODO el mundo combinado). Fundada en Beijing en 2012 por **Cheng Wei** (ex-Alibaba/Alipay, sigue como Chairman & CEO). **Jean Liu (Liu Qing)** — ex-MD Goldman Sachs Asia, hija de **Liu Chuanzhi (fundador de Lenovo)** — fue Presidenta 2015-2024, hoy sigue como 'permanent partner'. IPO NYSE el 30 junio 2021 a $14/sh recaudando $4.4B (el IPO chino más grande desde Alibaba); intraday peak $18 día 1; **2 días después CAC china abrió cybersecurity probe y la fuerza al delisting NYSE en mayo 2022**. Hoy trades **OTC como DIDIY** (4 ADRs = 1 Class A share), 74% por debajo del IPO. **Operations 2025**: Revenue **RMB 226.7B (~$32.8B USD, +9.6% YoY)**, net profit RMB 1.0B pero operating loss RMB 3.6B (international drag). **Q1 2026 reportado 13 marzo 2026**: swung back to net loss RMB 1.4B (~$193M) por heavier global spend + Meituan competitive pressure. **China mobility récord**: 36.2M daily transactions peak day 2025. China MAU ~94M (líder por >2x). **Internacional Q4 2025 (Brasil '99' + Mexico)**: 1.265B orders (+24.5%), ~14M orders/day. **Catalysts**: (1) HK relisting talks active — dual-listing fungible (Alibaba/NetEase model). (2) Autonomous driving — robotaxi R2 con GAC Aion testing real-world. UAE pilot 2026. (3) ~$740M IPO fraud class-action settlement — claim deadline 6 abr 2026 ya pasó. **NO PAGA DIVIDENDO — pura apuesta turnaround + growth + HK relisting**. P/E meaningful no se aplica (loss/marginal profit TTM). Market cap ~$14B.",
+    summary_what:
+      "DiDi Global es **el Uber de China** — la #1 plataforma de ride-hailing en la economía china por amplio margen, con ~30 millones de viajes diarios solo en China (más que Uber globally con ~28M).\n\n**Historia**:\n- **2012**: Cheng Wei (ex-Alibaba/Alipay) funda Beijing Xiaoju Technology\n- **2015**: fusión Didi Dache + Kuaidi Dache → Didi Chuxing\n- **2016**: compra el negocio chino de Uber (Travis Kalanick recibe ~12% equity DiDi; sigue como shareholder hoy)\n- **30 junio 2021**: IPO NYSE a $14/sh, $4.4B raise. Intraday peak $18 día 1 (NO $48 como rumor)\n- **2 julio 2021**: CAC china abre cybersecurity probe — app pulled de stores chinas el 4 julio\n- **Mayo 2022**: forced NYSE delisting tras shareholder vote\n- **Sep 2022**: CAC concluye investigation con $1.2B fine\n- **2023-2024**: business stabiliza, app returns\n- **Mayo 2024**: Jean Liu deja role como President, sigue como 'permanent partner'\n- **2025-2026**: HK relisting talks active\n\n**Operaciones core**:\n\n**(1) China Mobility (~85% del revenue)**:\n- ~30M rides/día (peak 36.2M en 2025)\n- China MAU ~94M (Statista) — líder por más de 2x vs Caocao/Meituan\n- ~14M conductores registrados\n- Servicios: standard (Express), premium (Premier), DiDi Hitch (carpool), DiDi Bike (shared bikes)\n\n**(2) Internacional (~10% revenue)**:\n- **99** (Brasil) — adquirida 2018, marca local fuerte\n- **DiDi México** — competidor #1 con Uber\n- Pilot UAE planeado 2026\n- Q4 2025: 1.265B orders (+24.5% YoY), ~14M orders/día\n\n**(3) Other (~5%)**:\n- Bike sharing, freight (DiDi Truck), autonomous driving R&D\n\n**Autonomous driving — DiDi AV**:\n- Spin-off independiente con >RMB 10B financiamiento raised\n- Robotaxi R2 con joint venture GAC Aion en testing real-world (Beijing, Shanghai)\n- Estrategia hybrid: combinar robotaxis + human-driven en misma red\n- Apr 2026 — exec Zhang Bo: hybrid es el path comercial L4\n\n**Trading & estructura**:\n- **Forced NYSE delisting**: mayo 2022 tras CAC cybersecurity action\n- **Hoy**: OTC Pink como **DIDIY** (sponsored ADR)\n- **Ratio ADR**: 4 ADRs = 1 Class A ordinary share (1 ADR = 0.25 Class A)\n- **Class A precio implícito**: $14.44 al ADR $3.61\n- **Holders top**: Cheng Wei + founders ~10% (super-voting), SoftBank (Vision Fund) ~20%, Tencent ~13%, Uber ~12% (legacy 2016 sale)\n\n**Financials 2025**:\n- Revenue: **RMB 226.7B (~$32.8B USD, +9.6% YoY)**\n- Net profit: RMB 1.0B (slim positive)\n- Operating loss: RMB 3.6B (international drag)\n- Cash + ST investments: ~RMB 67B (~$9.4B USD)\n\n**Q1 2026 (reportado 13 marzo 2026)**:\n- Revenue: growing\n- Net loss: **RMB 1.4B (~$193M)** — swung back to loss\n- Driver: heavier global spend + Meituan rival pressure abroad",
+    summary_why:
+      "DIDIY a $3.61 es comprar el #1 ride-hailing en China (30M viajes/día) a market cap ~$14B con cash position $9B+ y catalyst HK relisting active — 74% por debajo del IPO precio. NO PAGA DIVIDENDO — esta es pura apuesta turnaround + growth + corporate action. Razones específicas: (1) **Escala monstruosa subvaluada**: ~30M rides/día en China = más que Uber globally (~28M). Y Uber con $160B market cap. DiDi con $14B market cap es ~11x menos por más volumen. La discount está en el riesgo regulatorio chino + forced OTC trading + Q1 2026 loss. (2) **Cash position fortress**: ~$9.4B USD en cash + ST investments vs market cap ~$14B. Si DiDi quebrara mañana (no va a), el cash recovery ya cubre ~67% del precio. (3) **HK relisting talks = catalyst binary**: Bloomberg reportó (26 nov 2025) que DiDi está en pláticas avanzadas para listarse en Hong Kong vía dual-listing fungible (Alibaba/NetEase model). Si materializa H2 2026 o 2027, abre acceso a sovereign wealth + mainland China investors via Stock Connect → re-rating de +30-50% likely por liquidity premium + visibility. ADR holders no tienen que migrar, dual-listing es additive. (4) **Internacional acelerando +24.5% Q4 2025**: 1.265B orders internacionales (Brasil + México), ~14M orders/día. La Q1 loss vino exactamente de ese spend agresivo — si management ejecuta, internacional puede ser 25-30% revenue en 2027-28 con menor regulatory exposure China. (5) **Autonomous driving call option**: Robotaxi R2 con GAC Aion testing real-world. >RMB 10B raised para AV unit (independent financing). Si DiDi llega comercial L4 antes de competitors (Apollo Baidu, Pony.ai), upside masivo de re-rating. (6) **Cheng Wei sigue como founder/CEO con visión a 20 años**: founder-led, super-voting shares, no presión Wall Street short-term (forced OTC). Ventaja para inversiones long-cycle (AV, international expansion). (7) **Settlement IPO fraud $740M (deadline 6 abr 2026 ya pasó)**: clean overhang resolved. Class action ya cerrada, no más legal contingency US-side. (8) **CAC regulatorio overhang ya descontado**: el delisting 2022 + $1.2B fine 2022 ya digerido. Última operación regulatoria 2024 amistosa. Xi Jinping pivote pro-tech desde 2023-2024 — DiDi NO está en cualquier lista negra. (9) **Uber owns ~12% legacy** = strategic alignment ride-hailing globally. Si Uber buys más DiDi o JV expandida México/Brasil — synergistic. (10) **Asimetría tail risks**: Downside protected por cash $9.4B + delisting US worst-case (ya ocurrió). Upside: HK relisting + AV breakthrough + internacional scale → $7-10/ADR razonable 2027-28 = +95-175% upside. Probabilidad ponderada favorable: 60% el upside parcial materializa.",
+    summary_risk:
+      "Los riesgos son específicamente medibles: (1) **China regulatory recurrence**: CAC ya forzó delisting 2022 + $1.2B fine. Si nueva ronda regulatoria (data privacy, antitrust, gig worker reform), DiDi vuelve a sufrir. Probabilidad baja vs 2021-2022 pero real. (2) **HFCAA forced ADR delisting**: la Holding Foreign Companies Accountable Act exige PCAOB audit access. DiDi (como company china) bajo escrutinio. Si SEC determina non-compliance, OTC trading puede ser further restricted (institutional holders force-sell). Riesgo real 2026-27. (3) **Q1 2026 loss swung negative = el thesis turnaround se delay**: RMB 1.4B loss ($193M) por heavier global spend. Si Q2-Q3 2026 siguen en loss, mercado pierde paciencia, multiple compression severa. (4) **Meituan competition internacional**: Meituan (la app china de delivery+services) expandió a Sao Paulo + Mexico City en 2025. Si Meituan agresivo pricing, DiDi 99 + Mexico ops sangran cash más rápido. (5) **RMB FX risk**: 85%+ revenue en yuan. Si RMB devalúa vs USD (escenario Trump trade war + China growth slow), reported USD revenue cae 10-15%. (6) **Cheng Wei founder concentration risk**: super-voting shares + CEO + Chairman + ~10% economic. Single point of failure. Si retira o pierde favor político en Beijing, transition incierta. (7) **HK relisting puede no materializar**: las pláticas son talks, no announced. Si Hong Kong delays (regulatory backlog) o DiDi decide stay OTC, catalyst se desvanece. (8) **Autonomous driving — CapEx pit sin payoff cierto**: AV unit consume cash. Apollo Baidu + Pony.ai + Waymo (US) + Tesla FSD compitiendo. DiDi puede llegar third or fourth. (9) **HFCAA + sanctions de US-China escalation**: si Trump impone sanciones a Chinese ADRs broadly (executive order), DIDIY puede ser bannado de US trading entirely. Worst case scenario. (10) **Liquidity OTC restricted**: DIDIY no es NYSE/NASDAQ — spreads más amplios, no incluido en major índices, no institutional automatic buyers. Si necesitas vender en momento de stress, slippage 5-10% es normal.",
+    research_full: `# DiDi Global (DIDIY) — Research Completo
+
+## Precio: $3.61 | P/E TTM: N/A (TTM loss) | Dividend: 0% | Market Cap: ~$14B
+
+---
+
+## ¿Qué es DiDi?
+
+DiDi Global es **el Uber de China** — la #1 plataforma de ride-hailing en la economía china por amplio margen.
+
+**Historia**:
+- **2012**: Cheng Wei (ex-Alibaba) funda Beijing Xiaoju Technology
+- **2016**: compra el negocio chino de Uber (Uber recibe ~12% equity DiDi)
+- **30 junio 2021**: IPO NYSE $14/sh, $4.4B raise. Intraday peak $18 día 1
+- **2 julio 2021**: CAC cybersecurity probe → app pulled
+- **Mayo 2022**: forced NYSE delisting
+- **Hoy**: OTC Pink como DIDIY (4 ADRs = 1 Class A share)
+
+## Liderazgo
+
+- **CEO/Chairman/Founder**: Cheng Wei (sigue al frente)
+- **Jean Liu (Liu Qing)**: ex-Goldman Sachs Asia MD, hija de **Liu Chuanzhi (fundador Lenovo)** — fue Presidenta 2015-2024, hoy 'permanent partner'
+
+## Operaciones 2025
+
+| Segmento | Volume | Notas |
+|----------|--------|-------|
+| **China Mobility** | ~30M rides/día (peak 36.2M) | #1 por amplio margen, ~85% revenue |
+| **China MAU** | ~94M | líder >2x vs Caocao/Meituan |
+| **Internacional Q4 2025** | 1.265B orders (+24.5%) | Brasil 99 + Mexico |
+| **AV (DiDi Autonomous)** | R2 robotaxi con GAC Aion | >RMB 10B raised independent |
+
+## Financials 2025
+
+- Revenue: **RMB 226.7B (~$32.8B USD, +9.6%)**
+- Net profit: RMB 1.0B
+- Operating loss: RMB 3.6B (international drag)
+- Cash + ST: ~**RMB 67B (~$9.4B USD)** ← clave para downside
+
+## Q1 2026 — Reportado 13 marzo 2026
+
+- Net loss: **RMB 1.4B (~$193M)** — swung back to loss
+- Driver: heavier global spend + Meituan rival pressure
+- China mobility growing
+- International orders +25%+
+
+## Catalysts
+
+### 1. HK Relisting (2026-27)
+- Bloomberg (26 nov 2025): pláticas avanzadas
+- Estructura likely: dual-listing fungible (no forced migration)
+- Modelo Alibaba / NetEase
+- Re-rating potencial +30-50%
+
+### 2. Autonomous Driving
+- R2 robotaxi GAC Aion testing real-world
+- UAE pilot 2026
+- AV unit raised RMB 10B+ independent financing
+- Estrategia hybrid (Zhang Bo, abr 2026)
+
+### 3. Internacional scale
+- Q4 2025: +24.5% orders, ~14M orders/día
+- Brasil 99 + Mexico City
+- Path a 25-30% revenue mix en 2027-28
+
+## Holders Top
+
+- Cheng Wei + founders ~10% (super-voting)
+- SoftBank Vision Fund: ~20%
+- Tencent: ~13%
+- **Uber: ~12%** (legacy 2016 China sale)
+
+## Anchor Fact
+
+**DiDi opera ~30M viajes/día solo en China vs Uber con ~28M en TODO el mundo combinado.** Y Uber sigue dueño de ~12% de DiDi.
+
+(Fuente: Straits Research 2025 + Statista China MAU)
+
+## Tesis en una línea
+
+> Comprar el #1 ride-hailing en China (30M rides/día, más que Uber global) a market cap $14B con cash $9.4B y catalyst HK relisting activo — 74% por debajo del IPO precio. NO dividend. Pura apuesta turnaround + growth + corporate action.
+
+---
+
+*Research fecha: 13 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: 4.50,
+    analyst_upside: 24.7,
+    status: "active",
+    first_researched_at: "2026-05-13T00:00:00Z",
+    last_updated_at: "2026-05-13T00:00:00Z",
+    next_review_at: "2026-11-13T00:00:00Z",
+  },
+  {
+    id: 69,
+    ticker: "DLR",
+    name: "Digital Realty Trust",
+    sector: "Real Estate",
+    industry: "REIT - Specialty",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 194.93,
+    pe_ratio: 70.50,
+    pe_forward: 24.07,
+    dividend_yield: 2.50,
+    market_cap_b: 67.0,
+    eps: 2.77,
+    summary_short:
+      "**El REIT de data centers más grande del mundo por footprint** — **309 data centers globales** (al 31 marzo 2026, incluyendo 89 en unconsolidated JVs), ~43.2M sq ft operating, presencia en **55+ metros en 6 continentes**. >5,000 clientes incluyendo Oracle (FastConnect/Cloud Solution Centers expansion 2025), Meta, Microsoft, Google, IBM (long-standing top tenants per supplementals). HQ Austin, Texas. ~4,282 empleados (FY2025, +7.4% YoY). **CEO Andrew 'Andy' Power** desde dic 2022 (ex-CFO 2015-2022, President desde nov 2021). **Chair Mary Hogan Preusse** (independiente). **Q1 2026 reportado 23 abril 2026 — un beat masivo**: Core FFO **$2.04/sh (+15% YoY)**, **2nd-highest leasing quarter ever** ($707M annualized rent at 100% share / $423M DLR share), 116 nuevos logos, **récord 0-1MW interconnection bookings**. **HEADLINE deal**: **200 MW single AI-inference lease en Charlotte con cliente AAA-rated hyperscaler — el contrato más grande en la historia de DLR**. **Backlog récord $1.8B annualized** ($1.0B DLR share), comenzando ratably 2028. **Guidance FY26 RAISED**: Core FFO midpoint +$0.10 a **$8.10/sh (+9% YoY)**, cash renewal spreads raised 6.5-8.5%. **Development pipeline 1.2 GW under construction, 61% pre-leased**. **Dividendo $1.22/sh trimestral** ($4.88 anual, yield ~2.50%) declarado 12 mayo 2026, record 15 jun, pago 30 jun. **30 marzo 2026**: cerró **$3.25B inaugural US Hyperscale Data Center Fund** — pivote capital-light. **14 abril 2026**: anuncio **€2B (~$2.3B) Italy investment 5 años** (Roma 62 MW + Milán 84 MW). Cotización $194.93, market cap ~$67B, all-time high $208.14 alcanzado 24 abril 2026, +27% YTD.",
+    summary_what:
+      "Digital Realty Trust es **el REIT de data centers más grande del mundo por footprint** — 309 data centers globales con ~43.2M sq ft operating, presencia en 55+ metros across 6 continents (Norteamérica, Europa, Sudamérica, Asia, Australia, África).\n\n**Negocio modelo**:\n- Empresa REIT obligado a distribuir 90%+ de income taxable a accionistas\n- Construye/adquiere/opera data centers + arrienda capacity (MW + sq ft + interconnect) a clientes\n- 2 modelos: **colocation/retail** (clientes pequeños, 1-MW or less) + **hyperscale** (clientes grandes, multi-MW)\n- Revenue mix shifting hacia hyperscale + interconnection ecosystem\n\n**Clientes principales (per supplementals)**:\n- **Oracle**: relación expandida 2025 (FastConnect Direct + Cloud Solution Centers)\n- **Meta**: long-standing top tenant\n- **Microsoft, Google, IBM, AWS**: hyperscale relationships\n- **Largest customer**: ~11.5% annualized recurring revenue (top concentration material)\n- **>5,000 customers total**\n\n**HQ**: Austin, Texas. **Empleados**: 4,282 (FY2025). **Listing**: NYSE (DLR), componente S&P 500.\n\n**Liderazgo**:\n- **CEO**: Andrew 'Andy' Power — CEO + Director desde dic 2022. Previamente CFO 2015-2022, President desde nov 2021. Era el arquitecto de la estrategia financiera DLR\n- **Chair**: Mary Hogan Preusse (independent — Chair separada del CEO role)\n\n**Q1 2026 (reportado 23 abril 2026)**:\n\n| Métrica | Q1 2026 |\n|---------|---------|\n| **Core FFO/sh** | **$2.04 (+15% YoY)** |\n| Leasing | 2nd-highest quarter ever |\n| Annualized rent (100% share) | $707M |\n| Annualized rent (DLR share) | $423M |\n| Nuevos logos | 116 |\n| 0-1MW interconnection bookings | récord all-time |\n| **HEADLINE deal** | **200 MW single AI-inference lease en Charlotte con AAA-rated hyperscaler** |\n| Backlog total | **$1.8B annualized récord** ($1.0B DLR share) |\n\n**Guidance FY26 RAISED**:\n- Core FFO/sh midpoint: $8.10 (+9% YoY) — era $8.00\n- Cash renewal spreads: 6.5-8.5% (raised)\n- Development pipeline: 1.2 GW under construction, 61% pre-leased\n\n**$3.25B US Hyperscale Data Center Fund (30 marzo 2026)**:\n- Final close inaugural fund\n- DLR retains 20% + management fees\n- Covers Northern Virginia, Santa Clara, Dallas, Atlanta, Charlotte, NY\n- LPs: sovereign wealth, pensions, insurers\n- **Pivote estratégico capital-light**: DLR se convierte en asset-manager + operator, no pure balance-sheet REIT\n\n**€2B Italy Investment (14 abril 2026)**:\n- 5-year plan\n- Roma (62 MW) + Milán (84 MW) abriendo 2027\n- Mediterranean corridor strategy (Med = 56% EMEA capex through 2030)\n\n**Dividendo (12 mayo 2026 declarado)**:\n- **$1.22/sh trimestral** ($4.88 anual)\n- Yield ~2.50% al precio $194.93\n- Record date 15 jun, pay 30 jun 2026\n- REIT obligado distribute 90%+ income",
+    summary_why:
+      "DLR a $194.93 es comprar el #1 data center REIT del mundo (309 data centers, 43.2M sq ft, 55+ metros) a precio de subasta AI infrastructure justo cuando los catalysts están alineados como rara vez. Razones específicas: (1) **Q1 2026 fue un beat brutal — Core FFO $2.04/sh +15% YoY**: el reporte 23 abril 2026 dejó claro que la tesis AI infrastructure está materializando. Leasing 2nd-highest quarter ever ($707M annualized rent), 116 nuevos logos, **récord all-time en 0-1MW interconnection bookings**. (2) **Anchor: 200 MW single AI-inference lease en Charlotte con AAA-rated hyperscaler = el contrato más grande en la historia de DLR**: 200 MW de potencia es suficiente para abastecer ~150,000 hogares. Un solo cliente, un solo lease, contrato a 10-15 años. Esto valida la tesis hub-and-spoke + AI inference (los nuevos workloads se procesan cerca de donde están los usuarios, no solo en mega-clusters de Loudoun County). (3) **Backlog récord $1.8B annualized — 3 años de revenue garantizada por adelantado**: en commercial real estate esto NO existe normalmente (los contratos típicos son anuales). DLR tiene visibility 2027-2028 que el mercado todavía no descuenta. Backlog commencing ratably through 2028. (4) **Guidance FY26 RAISED a Core FFO $8.10/sh (+9% YoY)**: management subió midpoint $0.10 + raised cash renewal spreads 6.5-8.5%. Confianza explícita. (5) **Development pipeline 1.2 GW under construction, 61% pre-leased**: las nuevas data centers ya tienen 61% renta firmada antes de encenderse. Significa que la 2027-2028 FFO está prácticamente locked. (6) **$3.25B US Hyperscale Fund cerrado (30 marzo 2026) — pivote capital-light**: DLR ahora gestiona capital de sovereign wealth + pensiones + insurers (LPs). Retiene 20% + collects management fees. Es asset-light pero captura economics. ROE expansion structural. (7) **Italy €2B + Mediterranean corridor**: 14 abril 2026 anunció $2.3B en Roma + Milán abriendo 2027. Med es 56% de EMEA capex 2026-2030. AI data centers en Italia ataccan demand de Vatican/Italian gov + AI labs europeas + Mediterranean infrastructure (cables submarinos a África). (8) **Andy Power = el arquitecto financiero ahora ejecutando**: CFO 2015-2022 (estructuró la balance sheet), CEO desde dic 2022. Skin in the game, conoce cada lever. Track record claro. (9) **Dividend stability $1.22/sh trimestral**: yield 2.50% al precio $194.93. REIT obliga distribute 90%+. No expectativa de cut con FCF growing +9%. (10) **All-time high $208.14 alcanzado 24 abril 2026, +27% YTD**: el momentum está. Multiple expansion vs precedente: P/FFO forward 24x = trough cíclico para AI infrastructure. CoreWeave (private comp) trading 35x. Equinix (largest comparable REIT) trades 22x pero crece menos. DLR fair value a 26-28x = $210-225 = +8-15% capital upside + 2.5% yield + visibility 2028. Catalyst: Q2 2026 earnings late julio (continúa AI lease momentum) + October 2026 Italy groundbreaking ceremony.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Sensibilidad a tasas — REIT valuation pressure si 10Y yields suben**: si Treasury 10Y vuelve a 5%+ (Fed pivot hawkish o inflation re-acceleration), REIT multiple comprime -15-20%. DLR cotiza como bond-proxy aún con AI tailwind. (2) **Power/grid constraints — bottleneck sector-wide**: Loudoun County (Northern Virginia) tiene >9 GW de data center demand pero <2 GW de power disponible. Si Dominion Energy substations no se built (timeline 2028-2030), nuevos data centers DLR Virginia se delay. Mismo problema en Phoenix, Atlanta. (3) **Customer concentration — top 1 = ~11.5% ARR**: top-20 customer concentration material. Si Meta/Microsoft cancela renewal mayor o consolida hacia self-build, revenue shock. (4) **Competition agresiva**: CoreWeave (GPU-as-a-service, NVidia partnership), Crusoe (Bitcoin → AI pivot), hyperscaler self-build (Meta/MSFT/AWS construyen propios cada vez más), Equinix (interconnect leader), QTS (Blackstone-owned), Vantage (DigitalBridge). Pricing power eventualmente compromised. (5) **CapEx pesado para development**: 1.2 GW pipeline costs ~$12-15B over 2026-2028. DLR debe financiar via debt + equity issuance + JV partnerships. Si equity prices bajan, dilution alta. (6) **AI demand bubble risk**: si LLM scaling laws break (modelos no mejoran linealmente con compute), AI demand se modera. Inference workloads más estables que training pero magnitud incertidumbre. (7) **200 MW Charlotte lease — counterparty risk**: AAA-rated pero un solo cliente. Si default o renegotiate (improbable AAA pero possible), backlog $1.8B se reduce significativamente. (8) **Italy €2B macro risk**: Italy debt/GDP 140%+, government instability. Si euro crisis o populist gov anti-foreign-investment, project delays. (9) **REIT regulation USA**: si Congress modifica REIT tax treatment (cierra loopholes), corporate tax structure cambia. Low probability pero impacto alto. (10) **Capital-light Fund strategy — economics no probadas aún**: el $3.25B Fund cerrado marzo 2026 es inaugural. Si management fee economics decepcionan vs balance sheet ownership, el pivote pierde brillo.",
+    research_full: `# Digital Realty Trust (DLR) — Research Completo
+
+## Precio: $194.93 | P/E TTM: 70.50 | P/E Forward: 24.07 (on Core FFO $8.10) | Div Yield: 2.50% | Market Cap: $67B
+
+---
+
+## ¿Qué es Digital Realty?
+
+Digital Realty Trust es **el REIT de data centers más grande del mundo por footprint** — un Real Estate Investment Trust (obligado a distribute 90%+ income to shareholders) especializado en construir, adquirir y operar data centers + arrendar capacity (MW + sq ft + interconnect) a clientes.
+
+**Historia**:
+- **2004**: fundada por GI Partners; IPO NYSE 2004
+- **2017**: merger con DuPont Fabros para escalar hyperscale
+- **2020**: merger con Interxion ($8.4B) — entrada Europa
+- **Dic 2022**: Andy Power CEO
+
+**HQ**: Austin, Texas | **Empleados**: 4,282 (FY2025)
+
+## Portfolio (al 31 marzo 2026)
+
+| Métrica | Total |
+|---------|-------|
+| **Data centers** | 309 (89 en unconsolidated JVs) |
+| **Sq ft operating** | ~43.2M |
+| **Metros (markets)** | 55+ |
+| **Continentes** | 6 |
+| **Customers** | >5,000 |
+| **Top customer concentration** | ~11.5% ARR |
+
+## Q1 2026 — Reportado 23 abril 2026
+
+| Métrica | Q1 2026 |
+|---------|---------|
+| **Core FFO/sh** | **$2.04 (+15% YoY)** |
+| Leasing volume | 2nd-highest quarter ever |
+| Annualized rent (100%) | $707M |
+| Annualized rent (DLR share) | $423M |
+| Nuevos logos | 116 |
+| **HEADLINE** | **200 MW single AI-inference lease Charlotte (record)** |
+| Backlog | **$1.8B annualized** récord |
+
+## Guidance FY26 RAISED
+
+- Core FFO/sh midpoint: **$8.10 (+9% YoY)**
+- Cash renewal spreads: 6.5-8.5%
+- Development pipeline: 1.2 GW under construction, 61% pre-leased
+
+## Catalysts Recientes
+
+### 30 marzo 2026 — $3.25B US Hyperscale Data Center Fund
+- Final close inaugural fund
+- DLR retains 20% + management fees
+- LPs: sovereign wealth, pensions, insurers
+- **Pivote capital-light**
+
+### 14 abril 2026 — €2B (~$2.3B) Italy investment
+- 5-year plan
+- Roma (62 MW) + Milán (84 MW) abriendo 2027
+- Mediterranean corridor strategy
+
+### 23 abril 2026 — Q1 + guidance raise + 200 MW Charlotte lease
+
+### 12 mayo 2026 — Dividendo declarado
+- $1.22/sh trimestral
+- Yield ~2.50%
+
+## Dividendo
+
+- **Q1 2026**: $1.22/sh declarado 12 mayo 2026
+- **Annual**: $4.88/sh
+- **Yield**: ~2.50%
+- **Frequency**: trimestral
+- Pago 30 jun 2026
+
+## Customers Top (per supplementals)
+
+- Oracle (FastConnect expansion 2025)
+- Meta, Microsoft, Google, IBM, AWS
+- Hyperscale long-standing
+
+## Anchor Fact
+
+**200 MW single-tenant AI-inference lease en Charlotte con AAA-rated hyperscaler = el contrato más grande en la historia de DLR** (Q1 2026). 200 MW = energy para ~150,000 hogares.
+
+(Fuente: Q1 2026 earnings release 23 abril 2026)
+
+## Riesgos Estructurales
+
+- **Rate sensitivity**: REIT bond-proxy
+- **Power/grid**: Loudoun County constraint (>9 GW demand vs <2 GW power)
+- **Customer concentration**: top 1 = 11.5% ARR
+- **Competition**: CoreWeave, Crusoe, Equinix, hyperscaler self-build
+
+## Tesis en una línea
+
+> Comprar el #1 data center REIT del mundo (309 data centers, 55+ metros) justo cuando (1) Q1 2026 entregó Core FFO +15% YoY beat, (2) 200 MW Charlotte AI lease récord histórico, (3) backlog $1.8B = 3 años visibility, (4) guidance FY26 raised a $8.10 (+9%), (5) $3.25B Hyperscale Fund pivote capital-light, (6) €2B Italy abriendo 2027.
+
+---
+
+*Research fecha: 13 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 215.00,
+    analyst_upside: 10.3,
+    status: "active",
+    first_researched_at: "2026-05-13T00:00:00Z",
+    last_updated_at: "2026-05-13T00:00:00Z",
+    next_review_at: "2026-11-13T00:00:00Z",
+  },
+  {
+    id: 70,
+    ticker: "ECL",
+    name: "Ecolab Inc.",
+    sector: "Industrials",
+    industry: "Specialty Chemicals",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 250.79,
+    pe_ratio: 36.85,
+    pe_forward: 29.40,
+    dividend_yield: 1.02,
+    market_cap_b: 70.5,
+    eps: 6.80,
+    summary_short:
+      "**El líder global en tratamiento de agua + higiene industrial** — sirve ~3 millones de ubicaciones de clientes en 120+ países con productos químicos + servicios + sensores. **Dividend Aristocrat con 33 años consecutivos de aumentos**. Segmentos reorganizados 2026: **Global Water** (~49% revenue), **Global Institutional & Specialty** (~40%, foodservice + hospitalidad), **Global Pest Elimination** (~7%), **Global Life Sciences** (~4%). HQ St. Paul, Minnesota. ~48,000 empleados globales. **Christophe Beck** desde enero 2021 como CEO, Chairman desde mayo 2022, **Chairman + President + CEO desde abril 2026** (consolidación). Feb 2026 nombró **Co-COOs** Darrell Brown (Global Markets, mudándose a Sydney) y Gregory Cook (Global Businesses). **Q1 2026 reportado 28 abril 2026**: revenue **$4.07B (+10% YoY)** desde $3.69B, organic sales growth 4% (3% pricing + 1% volume), **adj EPS $1.70 (+13% YoY)** miss leve de $1.71 consensus, **organic op margin 16.8% (+70bps)**. **Guidance FY26 RAISED**: adj EPS **$8.43-$8.63 (+12-15% growth ex-CoolIT)**. Highlights: **Global High-Tech + Digital >20%**, Life Sciences +11% (bioprocessing >2x), Pest Elimination +7%. **EVENTO BOMBAZO marzo 2026: anuncio adquisición CoolIT Systems por $4.75B all-cash** — el líder global en liquid cooling para AI data centers (Nvidia H100/Blackwell servers). Cierra Q3 2026. CoolIT facturará ~$550M próximos 12 meses. **Duplica el TAM de Ecolab High-Tech de $5B a $10B**. Financiado 100% con deuda → leverage pro forma ~3x EBITDA (target 2x en 2 años). 22 abril 2026: lanzó **Water Navigator IQ** (plataforma AI predictiva multi-site). Marzo 2026: surcharge global energía 10-14% efectivo 1-abril. Cotización $250.79, P/E forward 29.4x, yield 1.02%.",
+    summary_what:
+      "Ecolab Inc. es **el líder global en tratamiento de agua + higiene industrial** — sirve ~3 millones de ubicaciones de clientes (restaurantes, hospitales, hoteles, fábricas, data centers, oilfields, agricultura) en 120+ países combinando productos químicos especializados + servicios técnicos on-site + sensores conectados + analytics digital.\n\n**Historia**:\n- **1923**: Merritt J. Osborn funda Economics Laboratory en St. Paul Minnesota — primer producto Absorbit (limpiador alfombras)\n- **1980s-90s**: expansión global agresiva\n- **2011**: merger con Nalco — entra a water treatment industrial\n- **2020**: spin-off ChampionX (oilfield chemicals)\n- **2026 reorganización**: segmentos rebrand a Global Water + Institutional + Pest Elimination + Life Sciences\n\n**4 Segmentos (post-reorg 2026)**:\n\n**(1) Global Water (~49% revenue)** — tratamiento de agua industrial + cooling tower chemicals + boiler water + reverse osmosis + 3D TRASAR sensors:\n- Antiguo 'Global Industrial' segment\n- Clientes: power plants, refineries, paper mills, food/beverage plants, data centers, semiconductor fabs\n- Plataforma ECOLAB3D™ + 3D TRASAR monitorea millones de assets real-time\n- **226 mil millones de galones de agua ahorrados a clientes en 2024**\n- Gestiona >1 billón de galones/año\n\n**(2) Global Institutional & Specialty (~40% revenue)**:\n- Foodservice (cleaning + sanitation para restaurantes — McDonald's, Starbucks, Subway, hoteles Hilton/Marriott/Hyatt)\n- Healthcare (hospital disinfectants, surgical instruments cleaning)\n- Specialty (laundry chemicals for hotels)\n\n**(3) Global Pest Elimination (~7% revenue)**:\n- Service network 4,500+ specialists\n- Servicios on-site (cockroach/rat/bird/termite control)\n- Clientes: foodservice + warehouses + hospitals\n\n**(4) Global Life Sciences (~4% revenue, growing fastest)**:\n- Bioprocessing customers (pharma/biotech facilities cleaning)\n- Q1 2026: +11%, bioprocessing >2x\n\n**HQ**: St. Paul, Minnesota. **Empleados**: ~48,000 globales. **Listing**: NYSE (ECL), componente S&P 500.\n\n**Liderazgo**:\n- **CEO/Chair/President**: Christophe Beck — CEO desde ene 2021, Chair desde may 2022, **CEO + Chair + President desde abril 2026** (consolidación post-2026 reorg)\n- **Co-COOs (feb 2026)**: Darrell Brown (Global Markets, Sydney-based), Gregory Cook (Global Businesses)\n\n**Q1 2026 (reportado 28 abril 2026)**:\n\n| Métrica | Q1 2026 | YoY |\n|---------|---------|-----|\n| Revenue | **$4.07B** | +10% |\n| Organic sales | — | +4% (3% pricing + 1% vol) |\n| **Adj EPS** | **$1.70** | +13% |\n| Organic op margin | **16.8%** | +70bps |\n| Global High-Tech + Digital | — | >20% |\n| Life Sciences | — | +11% |\n| Pest Elimination | — | +7% |\n\n**FY26 Guidance RAISED**: adj EPS **$8.43-$8.63 (+12-15% ex-CoolIT)**\n\n**Dividend Aristocrat**:\n- **33 años consecutivos** de aumentos\n- Yield ~1.02% al precio $250.79\n- CAGR ~11% desde 2011",
+    summary_why:
+      "ECL a $250.79 es comprar el #1 global en tratamiento de agua + higiene industrial con **33 años consecutivos de dividend increases** justo cuando el pivote AI data center cooling (vía CoolIT $4.75B) está empezando a impactar. Razones específicas: (1) **Q1 2026 entregó organic op margin 16.8% (+70bps)**: revenue +10% reportado (FX + price), adj EPS +13%. Calidad del beat es excelente — pricing power (3% pricing en 4% organic = 75% del growth vino de price) confirma moat. Guidance FY26 RAISED a $8.43-$8.63 (+12-15% ex-CoolIT). (2) **CoolIT Systems $4.75B adquisición = pivote AI data center cooling**: anunciado marzo 2026, cierra Q3 2026. CoolIT es el líder global en **liquid cooling para AI servers** (Nvidia H100/Blackwell tiene ~700W power density vs CPU servers ~200W; aire no enfría, liquid sí). CoolIT facturará ~$550M próximos 12 meses con margenes premium. **Duplica el TAM de Ecolab High-Tech de $5B a $10B**. (3) **Ecolab + Digital Realty deal Q1 2026**: Ecolab ya implementando AI water conservation en 35 data centers de DLR — meta ahorro 15% (~126M galones/año). El cross-sell water + cooling con base instalada Microsoft/Meta/Google data centers es enorme. (4) **Water Navigator IQ launched 22 abril 2026**: plataforma AI predictiva multi-site sobre la base instalada de 3M sensores 3D TRASAR. ECOLAB3D™ monitorea >1 billón galones agua/año. Es Ecolab convirtiendo su negocio físico en SaaS recurrente high-margin. (5) **Pricing power demostrado**: surcharge global energía 10-14% efectivo 1-abril (anunciado marzo 2026) por petróleo +60% desde fin 2025. Customers absorbieron sin churn material — eso es moat real. (6) **Dividend Aristocrat con 33 años de subidas**: ECL no ha bajado el dividendo desde 1993. CAGR del dividendo ~11% anual. Yield 1.02% es modesto pero growing — re-investido compone potente. (7) **Anchor: 226 mil millones de galones de agua ahorrados a clientes en 2024 + meta 300B para 2030**: ese número es agua suficiente para 1 mil millones de personas anuales. Ecolab cuantifica + factura por esos savings — los clientes los pagan happily porque ahorran cash + cumplen ESG. (8) **Christophe Beck consolidando authority desde abril 2026**: Chair + CEO + President. Visión a 10 años clara: water intelligence + AI cooling + life sciences son los 3 growth pillars. (9) **Tailwind estructural escasez de agua**: 25% población mundial en water stress. Regulación AB-1668 California, EU Water Framework Directive, EPA PFAS. Industria forced to monitor + reduce. Ecolab es la pala de la fiebre del oro. (10) **Valuación premium pero justified**: P/E forward 29.4x es elevated vs S&P 500 ~22x. Pero ECL crece EPS +12-15% (vs S&P ~10%), tiene moat marca + servicios on-site, y CoolIT añade AI data center premium. Peer Roper (ROP) trades 32x, Waters (WAT) 28x. Re-rating a 32x post-CoolIT closing = $269 = +7% capital + 1% yield + EPS compounding +12-15% = total return 15-20% anual razonable.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **CoolIT execution risk $4.75B all-cash all-debt**: leverage pro forma ~3x EBITDA al cierre, target 2x en 2 años. Si AI data center demand desacelera o CoolIT pierde share vs competitors (Vertiv, Schneider Electric, Stulz), el deal premium se ve mal. Integration risk también — CoolIT cultura startup vs Ecolab cultura industrial. (2) **Raw materials + energy costs**: cáusticos, surfactantes, polymers son inputs key. Surcharge 10-14% ya implementado pero margin slippage flagged por analistas. Si oil >$100 o gas Europa >€80/MWh sostenido, surcharge no cubre todo. (3) **FX + foodservice slowdown**: ~40% revenue ex-US. Si dollar fortalece o recesión USA reduce restaurant traffic, Institutional segment hit. (4) **Tariffs Trump 2026**: Ecolab importa some specialty chemicals + sensors components. Section 122 tariffs +10% adicional. Compete con quim europeos (BASF, Solvay) y japoneses (Kao) — si they get carve-outs y Ecolab no, share loss. (5) **Pushback al surcharge**: customers grandes (McDonald's, Hilton, Marriott) renegocian contratos plurianuales. Si churn aumenta o pricing concessions, organic op margin +70bps Q1 puede reverter. (6) **Competition data center cooling — Vertiv tiene head start**: Vertiv (VRT) ya es público y trade a P/E forward ~35x con liquid cooling exposure. CoolIT vs Vertiv vs Schneider Electric vs hyperscaler in-house (Microsoft built propio cooling) — Ecolab está entrando a mercado competitivo, no monopólico. (7) **Bioprocessing dependency** (Life Sciences segment, +11% Q1): si bioprocessing destock continúa o pharma cuts capex, Life Sciences plateaus. (8) **Pest Elimination — labor inflation**: 4,500+ field service specialists. Wage inflation hits margen directo. Difícil pasar 100% pricing en pest. (9) **Christophe Beck consolidation = single point of failure**: Chair + CEO + President. Si retira o pierde board confidence, transition incierta. Co-COOs split funcional pero no peer-CEO talent identified. (10) **Premium valuation P/E forward 29.4x = no margin error**: si EPS miss en Q2 o Q3 2026, multiple compression -10-15% likely. Mercado ya paga premium AI cooling thesis — execution debe entregar.",
+    research_full: `# Ecolab Inc. (ECL) — Research Completo
+
+## Precio: $250.79 | P/E TTM: 36.85 | P/E Forward: 29.40 | Div Yield: 1.02% | Market Cap: $70.5B
+
+---
+
+## ¿Qué es Ecolab?
+
+Ecolab es **el líder global en tratamiento de agua + higiene industrial** — sirve ~3 millones de ubicaciones de clientes en 120+ países.
+
+**Historia**:
+- **1923**: Merritt J. Osborn funda Economics Laboratory en St. Paul MN
+- **2011**: merger con Nalco — entra water treatment industrial
+- **2020**: spin-off ChampionX (oilfield chemicals)
+- **Enero 2021**: Christophe Beck CEO
+- **Marzo 2026**: anuncia CoolIT Systems $4.75B (data center liquid cooling)
+- **Abril 2026**: Beck consolida Chair + CEO + President
+
+## Segmentos (post-reorg 2026)
+
+| Segmento | % Revenue | Q1 2026 Growth |
+|----------|-----------|----------------|
+| **Global Water** | ~49% | mid-single |
+| **Global Institutional & Specialty** | ~40% | mid-single |
+| **Global Pest Elimination** | ~7% | **+7%** |
+| **Global Life Sciences** | ~4% | **+11%** |
+
+## Q1 2026 — Reportado 28 abril 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Revenue | $4.07B | +10% |
+| Organic sales | — | +4% |
+| **Adj EPS** | **$1.70** | +13% |
+| Organic op margin | **16.8%** | +70bps |
+| Global High-Tech + Digital | — | **>20%** |
+
+**FY26 Guidance RAISED**: adj EPS **$8.43-$8.63 (+12-15% ex-CoolIT)**
+
+## Catalysts Recientes
+
+### Marzo 2026 — CoolIT Systems $4.75B
+- All-cash acquisition
+- AI data center liquid cooling leader
+- ~$550M revenue próximos 12 meses
+- **Duplica TAM de Ecolab High-Tech: $5B → $10B**
+- Cierre Q3 2026
+- Financiamiento 100% deuda → leverage 3x EBITDA
+
+### Abril 2026 — Ecolab + Digital Realty AI Water Deal
+- 35 data centers DLR
+- Meta ahorro 15% (~126M galones/año)
+
+### 22 abril 2026 — Water Navigator IQ launch
+- AI predictiva multi-site
+- Sobre base de 3M sensores 3D TRASAR
+
+### Marzo 2026 — Surcharge global energía 10-14%
+- Efectivo 1-abril
+- Por oil +60% desde fin 2025
+
+### Feb 2026 — Co-COO appointments
+- Darrell Brown (Global Markets, Sydney)
+- Gregory Cook (Global Businesses)
+
+### Enero 2026 — Double 'A' CDP Rating
+- Único liderazgo dual agua + clima
+
+## Dividend Aristocrat
+
+- **33 años consecutivos** de aumentos
+- Yield ~1.02% al precio actual
+- CAGR ~11% desde 2011
+
+## Anchor Fact
+
+**Ecolab ahorró a sus clientes 226 mil millones de galones de agua en 2024** — gestiona más de 1 billón de galones/año. Meta 2030: 300 mil millones de galones = agua para 1 mil millones de personas.
+
+(Fuente: Ecolab 2024 Corporate Sustainability Report)
+
+## Tesis en una línea
+
+> Comprar el #1 global en agua + higiene industrial (3M ubicaciones, 120+ países, 33 años dividend Aristocrat) justo cuando (1) Q1 2026 entregó organic op margin 16.8% +70bps, (2) CoolIT $4.75B duplica TAM High-Tech a $10B, (3) Water Navigator IQ convierte la base instalada en SaaS, (4) FY26 guidance raised +12-15% ex-CoolIT.
+
+---
+
+*Research fecha: 13 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Moderate Buy",
+    analyst_target: 285.00,
+    analyst_upside: 13.6,
+    status: "active",
+    first_researched_at: "2026-05-13T00:00:00Z",
+    last_updated_at: "2026-05-13T00:00:00Z",
+    next_review_at: "2026-11-13T00:00:00Z",
+  },
+  {
+    id: 71,
+    ticker: "GSK",
+    name: "GSK plc",
+    sector: "Healthcare",
+    industry: "Drug Manufacturers - General",
+    country: "United Kingdom",
+    region: "Europe",
+    currency: "USD",
+    price: 50.33,
+    pe_ratio: 16.20,
+    pe_forward: 9.10,
+    dividend_yield: 4.13,
+    market_cap_b: 80.0,
+    eps: 3.10,
+    summary_short:
+      "**Una de las 10 farmacéuticas más grandes del mundo** — HQ en Londres New Oxford Street (desde julio 2024), ~66,800 empleados, presencia >75 países. Su nombre es la abreviación de **GlaxoSmithKline**, **rebrandeada a 'GSK plc' el 16 de mayo 2022** justo antes del demerger del negocio de productos de consumo (Sensodyne, Panadol, Voltaren) a una empresa separada llamada Haleon el **18 de julio 2022**. Resultado: GSK quedó como pure-play biopharma enfocada 100% en medicamentos y vacunas. **Nuevo CEO Luke Miels desde el 1 de enero 2026** — reemplazó a Emma Walmsley después de 8.5 años. Miels viene de Macquarie y de roles en AstraZeneca/Roche/GSK Brand — su mandato: ejecutar el portfolio de 14 medicamentos blockbuster que GSK quiere lanzar entre 2025-2031 (target £40B revenue en 2031, vs £31B en 2025). **Q1 2026 reportado 29 abril 2026**: ventas **£7.6B (+5% CER, +2% AER)**, **core operating profit +10% CER**, **core EPS +9% CER**. **Especialidades crecieron +15%** (Cabenuva HIV inyectable, Jemperli oncología) compensando suaves vacunas (Shingrix +1%, **Arexvy -10%** por elegibilidad estrecha CDC). Reafirmaron guía FY26 + lanzaron **buyback £2B** completándose 2026. **Dividendo Q1 2026: 17p**; FY2026 expected **70p** total (~$0.89 ADR yield ~1.81% en GBP base, **~4.13% calculado en USD post FX**). **2 deals M&A 2026**: (1) **35Pharma $950M** cerrada — pulmonary hypertension asset; (2) **Siran Biotech hasta $1B** — siRNA hepatitis B. **Anchor: >90 millones de dosis de Shingrix distribuidas en USA desde 2017**; CDC estima ~45% adultos elegibles vacunados → ~70M adultos 50+ aún sin vacunar = pista de crecimiento sustancial. Top products FY2025: **Shingrix £3.6B** (vacuna culebrilla #1), **Trelegy £3.0B** (EPOC inhalador), **Cabenuva £1.3B** (HIV inyectable mensual/bimensual, primera vez en historia que pacientes no necesitan pastilla diaria). En oct 2025 **Blenrep** (mieloma múltiple) regresó al mercado USA tras retiro 2022. Cotización $50.33, P/E forward 9.1x (más barato del Pharma Big 10), yield ~4.13%.",
+    summary_what:
+      "GSK plc es **una de las 10 farmacéuticas más grandes del mundo** — pure-play biopharma especializada en vacunas, HIV/infecciones, oncología y enfermedades respiratorias. HQ Londres (New Oxford Street, desde julio 2024), ~66,800 empleados, ventas en >75 países.\n\n**Historia**:\n- **1842**: Allen & Hanburys fundada (precursor en Inglaterra)\n- **1989**: SmithKline Beckman + Beecham → SmithKline Beecham\n- **2000**: Glaxo Wellcome + SmithKline Beecham → **GlaxoSmithKline (GSK)**\n- **16 mayo 2022**: rebrand a 'GSK plc' (nuevo logo + ticker reaffirmed)\n- **18 julio 2022**: **demerger Haleon** (Sensodyne, Panadol, Voltaren, Centrum spin-off) — GSK queda pure-play biopharma\n- **1 ene 2026**: **Luke Miels** asume como CEO (reemplaza Emma Walmsley)\n\n**4 áreas terapéuticas**:\n\n**(1) Vaccines (~30% revenue)**:\n- **Shingrix** (culebrilla/shingles, FY2025 £3.6B, #1 global) — >90M dosis distribuidas en US desde 2017\n- **Arexvy** (RSV adultos, lanzado 2023, FY2025 ~£0.8B; Q1 2026 -10% por elegibilidad estrecha CDC)\n- **Bexsero/Menveo** (meningitis)\n- **Boostrix/Infanrix** (DTaP infant)\n\n**(2) HIV/Specialty Medicines (~30% revenue)** — vía ViiV Healthcare (consortium GSK 78% + Pfizer 11.7% + Shionogi 10%):\n- **Dovato/Tivicay** (HIV oral)\n- **Cabenuva** (HIV inyectable mensual/bimensual, FY2025 £1.3B — first long-acting HIV)\n- **Apretude** (HIV prevention/PrEP inyectable)\n\n**(3) General Medicines (~25% revenue)**:\n- **Trelegy Ellipta** (EPOC triple therapy, FY2025 £3.0B)\n- **Nucala** (asma severa eosinofílica)\n- **Anoro/Incruse Ellipta** (EPOC)\n\n**(4) Oncology (~10% revenue, growing fastest)**:\n- **Jemperli** (endometrial cancer, dostarlimab)\n- **Blenrep** (mieloma múltiple, **regresó al mercado US oct 2025** tras retiro 2022)\n- **Ojjaara** (mielofibrosis)\n\n**HQ**: Londres, New Oxford Street (desde julio 2024). **Empleados**: ~66,800.\n\n**Liderazgo**:\n- **CEO**: **Luke Miels** desde 1 enero 2026 (reemplazó Emma Walmsley, CEO 2017-2025)\n- **Chair**: Sir Jonathan Symonds (desde 2019)\n\n**Q1 2026 (reportado 29 abril 2026)**:\n\n| Métrica | Q1 2026 | YoY |\n|---------|---------|-----|\n| Ventas | **£7.6B** | +5% CER (+2% AER) |\n| Core op profit | — | +10% CER |\n| **Core EPS** | — | +9% CER |\n| Specialty Medicines | — | **+15%** |\n| Shingrix | — | +1% |\n| **Arexvy** | — | **-10%** (CDC narrow) |\n| Trelegy | — | +6% |\n| Cabenuva | — | +9% |\n\n**Dividendo Q1 2026**: **17p**\n**FY2026 expected**: **70p** total (ADR yield ~4.13% calculado en USD)\n**Buyback FY26**: **£2B** (anunciado, completándose 2026)\n\n**M&A 2026**:\n- **35Pharma $950M** (cerrada) — pulmonary hypertension asset\n- **Siran Biotech hasta $1B** — siRNA hepatitis B platform",
+    summary_why:
+      "GSK a $50.33 es comprar una de las 10 pharma más grandes del mundo a P/E forward 9.1x — el múltiplo más barato del Big Pharma global — justo cuando (1) tiene 14 medicamentos blockbuster que quiere lanzar entre 2025-2031, (2) acaba de cerrar 2 deals M&A clave en 2026, (3) regresó Blenrep al mercado USA octubre 2025, y (4) nuevo CEO Luke Miels asumió 1 ene 2026 con mandato de ejecución. Razones específicas: (1) **Q1 2026 entregó +5% CER en sales con specialty medicines +15%**: revenue £7.6B, core op profit +10% CER, core EPS +9% CER. Calidad del beat es excelente — specialty (HIV inyectable Cabenuva +9%, Jemperli oncología) compensando vacunas suaves (Arexvy -10% por CDC narrow elegibilidad). Reafirmaron guía FY26 + lanzaron £2B buyback completándose 2026. (2) **Shingrix anchor — >90M dosis distribuidas en US desde 2017**: la vacuna #1 global para culebrilla (herpes zoster). CDC recomienda para adultos 50+. Estimación: solo ~45% adultos elegibles vacunados → ~70 millones adultos 50+ aún SIN vacunar en US = pista de crecimiento de 8-12 años. FY2025 revenue Shingrix £3.6B (~$4.5B). Es el ancla de la tesis: producto recurring revenue gigante con runway. (3) **P/E forward 9.1x = descuento brutal vs Big Pharma**: peers Pfizer 9.8x, Roche 13x, Sanofi 11x, Novartis 14x, Merck 11x, AZN 16x. GSK trade a discount de ~25-40% vs peers a pesar de tener: dividendo 4.13%, buyback £2B, 14 blockbusters pipeline, 2 M&A deals cerradas 2026. Re-rating a 11x P/E forward = $61 = +21% capital + 4% yield = total return ~25%. (4) **Luke Miels nuevo CEO desde 1 ene 2026**: viene de Macquarie + roles previos AstraZeneca/Roche/GSK Brand. Su mandato: ejecutar plan plurianual para llegar de £31B revenue 2025 a £40B en 2031 (+29% en 6 años). Activist investor (Bluebell) ya presionando por capital return + execution focus — Miels es el operador. (5) **2 M&A deals 2026**: 35Pharma $950M (cerrada, pulmonary hypertension asset) + Siran Biotech hasta $1B (siRNA hepatitis B platform). Ambos son tuck-ins inteligentes en áreas terapéuticas growing — siRNA es la tecnología que hace Alnylam y Ionis exitosas. (6) **Blenrep regresó al mercado US octubre 2025**: GSK retiró Blenrep (mieloma múltiple) en 2022 por trial failure. Lo reformuló + corrió nuevo trial DREAMM-7 + DREAMM-8 (data 2025) + FDA aprobó re-entry octubre 2025. Es un blockbuster potencial $2-3B peak en cinco años — pure upside vs consenso conservador. (7) **Dividendo growing: 17p Q1 2026, FY2026 expected 70p, yield ~4.13% USD**: paga dividendo trimestral consistente. Plus £2B buyback completándose 2026 = ~$2.5B = 3% de market cap retirado del mercado. Total shareholder return (yield + buyback) = ~7% antes de cualquier capital gain. (8) **Cabenuva HIV inyectable es revolucionario**: primera vez en historia que pacientes HIV NO necesitan tomar pastilla diaria — inyección cada 1 o 2 meses. Q1 2026 +9%. Adoption inicial concentrada US/Europa, expansión Asia/Latam en curso. Cabenuva FY2025 £1.3B con runway $3-5B peak. (9) **Litigation Zantac (ranitidine) settled — no más overhang**: GSK pagó ~$2.2B settlement 2024-2025 para resolver mass litigation Zantac vs cáncer. Ya está incorporado en balance, no más sorpresas. (10) **Anchor sólido: ~70M adultos 50+ sin vacunar Shingrix en US** + 14 blockbusters pipeline 2025-2031 + £40B revenue target = visibilidad de growth a 6 años con el múltiplo más barato del Big Pharma.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Arexvy -10% Q1 2026 — RSV elegibilidad CDC más estrecha**: CDC en 2024 limitó RSV vacuna a adultos 75+ (antes era 60+) + 60-74 con alto riesgo. GSK pidió ampliar a 50+ en próxima reunión ACIP. Si ACIP rechaza ampliación o COVID-like vaccine fatigue continúa, Arexvy plateaus en ~£1B vs target inicial £2.5B+. (2) **Trelegy patent cliff 2027-2028**: el blockbuster EPOC #1 (£3.0B FY2025) pierde exclusividad en US 2027-2029. Genéricos llegan → revenue cliff -50-70%. GSK necesita ramping de Nucala/Trelegy follow-on inhaler + new launches para compensar. Si las nuevas no escalan rápido, gap visible 2028-2030. (3) **Shingrix competencia Pfizer/Moderna mRNA shingles**: ambos pharma desarrollando mRNA versions. Si data Phase 3 positiva en 2026-2027, Shingrix loses share en nuevos pacientes. Plus saturación: ~45% adultos elegibles US ya vacunados → growth se modera. (4) **Luke Miels first-year execution risk**: nuevo CEO desde 1 ene 2026. Primer Q (Q1 2026) fue solid pero próximos 3 Qs determinan si puede ejecutar el plan £40B 2031. Si Q2 2026 disappoint o guidance reset, mercado castiga. (5) **Bluebell activist pressure**: activist investor pushing por capital return más agresivo + execution focus. Si GSK no entrega catalysts visibles en H2 2026, conflictos board possible. Plus distrae management. (6) **35Pharma + Siran integration risk**: ambos deals cerrando 2026. Integration risk + R&D execution risk. Si Siran siRNA hepatitis B no entrega data positiva 2027-2028, $1B contingent gone. (7) **FX hit — GSK reporta en GBP, vende en USD**: si dollar debilita vs GBP, AER revenue growth se erosiona (Q1 2026 ya: +5% CER pero +2% AER por FX). Si GBP fortalece >$1.40, growth optics dañado. (8) **Litigation residual — Zantac case spillover**: aunque mass litigation está settled, pueden surgir nuevas demandas individuales high-value en Europa/Canada. GSK ya gastó $2.2B; cualquier nueva ola es overhang. (9) **Blenrep re-launch comercial execution**: lanzado oct 2025 post-FDA approval. Tiene que recapturar mindshare de oncólogos US después de 3 años fuera del mercado. Competing con Darzalex Faspro (J&J), Carvykti (Legend/J&J), Tecvayli (J&J). Si payer pushback o slow adoption, peak revenue $2-3B target slips a 7-8 años en lugar de 5. (10) **UK/EU regulatory backdrop — drug pricing pressure**: UK NHS + EU joint procurement pushing precios bajos. GSK ~40% revenue ex-US, exposición directa. Plus Trump admin US push por 'Most Favored Nation' pricing en Medicare puede reducir spread US vs Europa.",
+    research_full: `# GSK plc (GSK) — Research Completo
+
+## Precio: $50.33 | P/E TTM: 16.20 | P/E Forward: 9.10 | Div Yield: 4.13% | Market Cap: $80B
+
+---
+
+## ¿Qué es GSK?
+
+GSK plc es **una de las 10 farmacéuticas más grandes del mundo** — pure-play biopharma post-demerger Haleon 2022.
+
+**Historia**:
+- **2000**: GlaxoWellcome + SmithKline Beecham → GlaxoSmithKline (GSK)
+- **16 may 2022**: rebrand a 'GSK plc'
+- **18 jul 2022**: **demerger Haleon** (Sensodyne, Panadol spin-off)
+- **2017-2025**: Emma Walmsley CEO
+- **1 ene 2026**: **Luke Miels** CEO
+- **jul 2024**: HQ mudó a New Oxford Street, Londres
+- **oct 2025**: **Blenrep** regresa al mercado US
+
+## 4 Áreas Terapéuticas
+
+| Área | % Revenue | Top Products FY2025 |
+|------|-----------|---------------------|
+| **Vaccines** | ~30% | Shingrix £3.6B, Arexvy ~£0.8B |
+| **HIV/Specialty** | ~30% | Cabenuva £1.3B, Dovato/Tivicay |
+| **General Medicines** | ~25% | Trelegy £3.0B, Nucala |
+| **Oncology** | ~10% | Jemperli, Blenrep (re-launched oct 2025) |
+
+## Q1 2026 — Reportado 29 abril 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Ventas | £7.6B | +5% CER (+2% AER) |
+| Core op profit | — | +10% CER |
+| **Core EPS** | — | +9% CER |
+| Specialty Medicines | — | **+15%** |
+| Shingrix | — | +1% |
+| **Arexvy** | — | **-10%** (CDC narrow) |
+| Trelegy | — | +6% |
+| Cabenuva | — | +9% |
+
+**Dividendo Q1 2026**: 17p
+**FY2026 expected**: 70p total
+**Buyback FY26**: £2B
+
+## Catalysts Recientes
+
+### 1 enero 2026 — Luke Miels nuevo CEO
+- Reemplaza Emma Walmsley (8.5 años CEO)
+- Background: Macquarie + AstraZeneca/Roche/GSK Brand
+- Mandato: £40B revenue 2031 (vs £31B 2025)
+
+### 29 abril 2026 — Q1 2026 earnings
+- Reafirma guía FY26
+- Lanza £2B buyback FY26
+
+### 2026 — M&A
+- **35Pharma $950M** (cerrada) — pulmonary hypertension
+- **Siran Biotech hasta $1B** — siRNA hepatitis B
+
+### oct 2025 — Blenrep re-launch USA
+- Retirado 2022 → FDA approval oct 2025
+- Mieloma múltiple
+- Peak $2-3B potential
+
+### Bluebell activist
+- Push capital return + execution
+
+## Pipeline — 14 Blockbusters 2025-2031
+
+GSK target: **£40B revenue 2031** vs £31B FY2025 (+29% 6 años)
+
+Key launches 2026-2028:
+- Depemokimab (asthma/CRSwNP)
+- Blenrep re-launch (mieloma)
+- Cabenuva PrEP expansion
+- Bepirovirsen (hepatitis B functional cure trials)
+
+## Dividendo
+
+- Q1 2026: **17p**
+- FY2026 expected: **70p** total
+- ADR yield ~4.13% USD
+- **£2B buyback FY26** = +3% market cap retirement
+
+## Anchor Fact
+
+**>90 millones de dosis de Shingrix distribuidas en USA desde 2017** — CDC estima ~45% adultos elegibles vacunados → ~70 millones adultos 50+ aún SIN vacunar en US = runway de crecimiento de 8-12 años.
+
+(Fuente: GSK 2024 Annual Report + CDC ACIP recommendations)
+
+## Tesis en una línea
+
+> Comprar una de las 10 pharma más grandes del mundo a P/E forward 9.1x (más barato del Big Pharma) con (1) Shingrix runway >70M adultos US sin vacunar, (2) nuevo CEO Luke Miels desde 1 ene 2026 con mandato £40B 2031, (3) £2B buyback + dividendo 4.13%, (4) 2 M&A deals 2026, (5) Blenrep re-launched USA, (6) 14 blockbusters pipeline 2025-2031.
+
+---
+
+*Research fecha: 13 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 58.00,
+    analyst_upside: 15.2,
+    status: "active",
+    first_researched_at: "2026-05-13T00:00:00Z",
+    last_updated_at: "2026-05-13T00:00:00Z",
+    next_review_at: "2026-11-13T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -10464,9 +11173,96 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #64* — May 7, 2026\n\n🏢 *Diageo plc* (DEO) — $83.20\n\n🥃 *Sus líneas/marcas*: la mayor empresa de bebidas alcohólicas del mundo (250+ marcas, presencia en 180 países). Top productos: *Johnnie Walker* (el whisky escocés #1 global, 21 millones de cajas vendidas al año), *Smirnoff* (la vodka #1 del mundo), *Guinness* (la cerveza oscura irlandesa con la marca del tucán, fundada en 1759 — 9 millones de pintas servidas al día), *Tanqueray* y *Gordon's* (gin), *Don Julio* y *Casamigos* (tequila premium — Casamigos es la marca que George Clooney creó y le vendió a Diageo en 2017 por mil millones de dólares), *Baileys* (la crema de whisky #1 mundial), *Captain Morgan* (ron) y *Crown Royal* (whisky canadiense).\n\n🌍 *Presencia*: Reino Unido (HQ en Londres), con ventas en >180 países y ~30,000 empleados globales. La empresa nació en 1997 de la fusión de Guinness con Grand Metropolitan, pero algunas de sus marcas tienen siglos: Bushmills (whisky irlandés) es de 1608, Haig (escocés) de 1627, Johnnie Walker de 1820. **Nuevo CEO Dave Lewis desde el 1 de enero 2026** — el ejecutivo que rescató a Tesco (la cadena de supermercados más grande del Reino Unido) en su crisis contable de 2014.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.89% anual* solo por ser dueño. Cada vez que alguien pide un Johnnie Walker en un bar de Tokio, una Guinness en un pub de Dublín, una margarita Casamigos en Nueva York o un Don Julio en Ciudad de México — parte de ese dinero llega a ti como dividendo. Diageo paga dividendos sin parar desde 1997, y algunas de sus marcas llevan repartiendo utilidades desde el siglo XIX.\n\n⚠️ *El riesgo*: La acción está *28% por debajo* de su máximo de $116.69 — el mercado castigó a Diageo porque las ventas de tequila premium en EE.UU. cayeron *23%* y las ventas en China cayeron *56%* en la primera mitad del año fiscal (julio-diciembre 2025). En febrero 2026 *cortaron el dividendo a la mitad* para preservar caja — la primera vez que lo recortan desde 1999. Plus: el siguiente reporte completo es el *6 de agosto 2026* — si decepciona, otra corrección de -10-15% es realista.\n\n🆕 Posición #64\n🔗 https://vectorialdata.com/stocks/DEO\n✅ Certificado por blockchain → vectorialdata.com/verify/DEO\n\n💡 Dato que ancla la tesis: El *6 de mayo 2026* (ayer), Diageo reportó que las ventas del último trimestre subieron *+0.3%* — pequeño, pero la primera vez en 18 meses que el negocio deja de caer, y la acción reaccionó *+5.6%* ese mismo día. Plus: el *1 de mayo 2026*, Trump quitó la tarifa de 25% al whisky escocés que llevaba un año amenazando ~$200 millones de utilidad anual — ese alivio cae directo a las ganancias en el segundo semestre. Comprar a $83.20 (el múltiplo más bajo en 12 años para esta empresa) justo cuando llega el ejecutivo que rescató a Tesco, con el bottom del ciclo confirmado y la tarifa eliminada — es la asimetría.`,
     attestation_uid: "0xe7132ecf5f8a8641af4eab4b6769a7903dda25598e6c883fb0f4bd804aaa894f",
   },
+  {
+    id: 65,
+    stock_id: 66,
+    ticker: "DHLGY",
+    type: "new" as const,
+    cycle_number: 13,
+    price: 27.89,
+    open_price: 27.89,
+    date: "2026-05-13",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #65* — May 13, 2026\n\n🏢 *DHL Group* (DHLGY) — $27.89\n\n📦 *Lo que hacen*: el #1 mundial en logística internacional — el sobre amarillo y rojo que entrega 1,800 millones de paquetes al año en 220 países (más que países que existen en la ONU). 4 divisiones: *DHL Express* (entrega urgente avión — la flota privada más grande del mundo de aviones cargueros, 280+ aeronaves), *DHL Supply Chain* (almacenes y logística para clientes como Apple, Nike, Walmart), *DHL Global Forwarding* (carga marítima + aérea internacional), y *Post & Parcel Germany* (el correo postal alemán, monopolio histórico desde 1490 — sí, hace más de 500 años).\n\n🌍 *Presencia*: HQ en Bonn, Alemania. **~595,000 empleados globalmente** — emplea más gente que la población de Stuttgart. Vuelan 280+ aviones cargueros propios, operan 12,000+ instalaciones, y entregan a más casas en el mundo que cualquier otra empresa de logística. Compite con FedEx (USA) y UPS (USA), pero DHL es el único con red verdaderamente global — opera en países donde FedEx y UPS ni siquiera tienen oficina. *Nuevo CEO Tobias Meyer desde el 1 de mayo 2023* — relativamente nuevo, viene de McKinsey.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.95% anual* solo por ser dueño. Cada vez que alguien pide algo en Amazon Europa, manda un paquete urgente entre Singapur y Frankfurt, o envía un contenedor de mercancía de Shanghai a Los Angeles — parte de ese dinero llega a ti como dividendo. DHL paga dividendos sin parar desde su IPO en 2000, y en los últimos 10 años el dividendo ha crecido +75%.\n\n⚠️ *El riesgo*: La acción está *25% por debajo* de su máximo de $50 (2021 boom post-COVID). El mercado castigó a DHL porque (1) el volumen de e-commerce global se moderó después del boom pandémico, (2) las tarifas Trump 2025 introdujeron volatilidad en los flujos de carga China-USA, (3) el costo del combustible aviation +30% desde fin 2025 comprime márgenes. Plus: el reporte Q1 2026 (1 mayo 2026) mostró revenue plano +1% en USD pero -3% en euros — la fortaleza del dólar erosiona la traducción FX.\n\n🆕 Posición #65 — Cierra Ciclo 13\n🔗 https://vectorialdata.com/stocks/DHLGY\n✅ Certificado por blockchain → vectorialdata.com/verify/DHLGY\n\n💡 Dato que ancla la tesis: DHL entrega *1,800 millones de paquetes al año* — más de 5 millones diarios, suficiente para que cada persona en USA reciba uno cada 2 meses. Y aquí el dato clave: cada ADR de DHLGY representa *2 acciones ordinarias alemanas* (ratio 2:1). Al precio $27.89, eso es comprar el operador logístico #1 mundial a P/E forward 16.2x — un descuento brutal vs FedEx (18x) y UPS (19x) a pesar de tener red global más amplia, márgenes parecidos, y dividendo más alto (3.95% vs FDX 2.0% vs UPS 4.2%). La asimetría: si DHL re-rata al múltiplo de UPS, son +20% capital + 4% yield = total return ~25% en 12 meses.`,
+    attestation_uid: "0x3d1ab065d8d9e3d73f5e89734bc5e6f8234358dd1510e40e667db3ce840b14da",
+  },
+  {
+    id: 66,
+    stock_id: 67,
+    ticker: "DHR",
+    type: "new" as const,
+    cycle_number: 14,
+    price: 166.29,
+    open_price: 166.29,
+    date: "2026-05-13",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #66* — May 13, 2026\n\n🏢 *Danaher Corporation* (DHR) — $166.29\n\n🔬 *Lo que hacen*: el #1 mundial en instrumentos científicos + diagnósticos clínicos + bioprocesamiento. 3 divisiones: *Biotechnology* (Cytiva + Pall — equipo y filtros para fabricar vacunas y medicamentos biológicos — Pfizer y Moderna usaron Cytiva para producir la vacuna COVID), *Life Sciences* (Beckman Coulter, Leica Microsystems, SCIEX — microscopios y espectrometría que usan laboratorios farmacéuticos en todo el mundo) y *Diagnostics* (Beckman Coulter Diagnostics, Radiometer, Cepheid — equipo de diagnóstico hospitalario; Cepheid es el que hace los GeneXpert que diagnostican tuberculosis, COVID y HIV en hospitales africanos y latinoamericanos).\n\n🌍 *Presencia*: HQ Washington DC. ~63,000 empleados en 60+ países. Las 14+ submarcas (Cytiva, Beckman, Leica, SCIEX, Pall, Radiometer, Cepheid, Hach, ChemTreat, etc.) operan semi-independientemente — modelo descentralizado. *CEO Rainer Blair desde septiembre 2020*, ingeniero alemán-americano que aplica el famoso "Danaher Business System" (DBS) — un sistema de mejora continua copiado de Toyota que es el moat real de la empresa.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *0.96% anual* solo por ser dueño — el yield bajo es porque Danaher reinvierte la mayoría de sus ganancias en adquisiciones (han hecho >400 desde 1984). Cada vez que un hospital corre una prueba de diagnóstico con Beckman, una farmacéutica purifica una vacuna con Cytiva, o un laboratorio usa un microscopio Leica — una fracción de ese dinero llega a ti como dividendo. Danaher paga dividendos sin parar desde 1993.\n\n⚠️ *El riesgo*: La acción está *38% por debajo* de su máximo de $268 (2021 boom COVID). El mercado castigó a Danaher porque (1) el destock bioprocessing 2022-2024 redujo demanda de Cytiva +30%, (2) Trump tariffs 2025 impactan importaciones de equipo desde China, (3) China bioprocessing slowdown — pharma chinos cortaron capex. Q1 2026 (24 abril 2026) reportó revenue $5.9B (+1.5% reported, -1% organic) — primera vez en años que organic growth es negativo. Guía FY26 se mantiene low-single growth, pero analistas vigilan próximos 2 trimestres.\n\n🆕 Posición #66 — Abre Ciclo 14\n🔗 https://vectorialdata.com/stocks/DHR\n✅ Certificado por blockchain → vectorialdata.com/verify/DHR\n\n💡 Dato que ancla la tesis: Danaher es el ÚNICO equipment supplier al que recurren *>90% de las top 20 farmacéuticas del mundo* para fabricar medicamentos biológicos. Pfizer, Moderna, Johnson & Johnson, GSK, Roche, Novartis — todos dependen de Cytiva o Pall (subsidiarias de Danaher) para purificar proteínas, filtrar virus, y producir vacunas a escala industrial. Comprar DHR a $166.29 (P/E forward 19.7x) es comprar el peaje del bioprocesamiento global justo cuando el destock se está acabando (Q4 2025: book-to-bill >1.0 first time en 18 meses) y antes del re-acceleration 2026-2027. Si re-rata a 24x (su histórico) = $202 = +21% capital + 1% yield.`,
+    attestation_uid: "0xe3c5ff75417ce741316d8d868abf715e2c1faad56aec5e7eebd50af8fc80b0c9",
+  },
+  {
+    id: 67,
+    stock_id: 68,
+    ticker: "DIDIY",
+    type: "new" as const,
+    cycle_number: 14,
+    price: 3.61,
+    open_price: 3.61,
+    date: "2026-05-13",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #67* — May 13, 2026\n\n🏢 *DiDi Global Inc.* (DIDIY) — $3.61\n\n🚕 *Lo que hacen*: el Uber chino — el #1 absoluto de ride-hailing en China con ~90% market share. Plataforma que conecta pasajeros con conductores en >400 ciudades de China. Adicional: *DiDi Chuxing* opera entregas (DiDi Food en Asia/Latam), bicicletas compartidas (Qingju), autos de alquiler (Hua Xiao Zhu), y servicios financieros (DiDi Caifu). Aterrizó en Brasil 2018 (vía 99 Taxi adquirido $1B), México y Costa Rica 2018, Japón 2018, Australia 2019. *No opera en USA* — barrera regulatoria post-2021.\n\n🌍 *Presencia*: HQ Beijing. ~25,000 empleados directos + millones de conductores como gig workers. Cada día ~25 millones de viajes en China — más que Uber y Lyft combinados en USA. *Fundada en 2012 por Cheng Wei* (CEO actual). Vice-chair y Presidenta Jean Liu — su padre es **Liu Chuanzhi, el fundador de Lenovo** (la marca de laptops más grande del mundo). Background político-empresarial enorme.\n\n🚀 *Por qué la compramos*: Esta empresa **no paga dividendo — es 100% apuesta por crecimiento**. DiDi tiene 580 millones de usuarios activos anuales solo en China — más que la población de USA + México + Canadá juntos. Cada vez que un chino abre la app para pedir un viaje en Shanghai, Beijing o Chengdu, DiDi se queda con ~20% de comisión. El play aquí es: (1) re-listed en Hong Kong abril 2025 después del exilio post-2021, (2) profitable por primera vez en 2023 ($191M net income FY2023), Q4 2025 adj EBITDA positivo, (3) cotizando a 0.7x revenue vs Uber 4.5x — descuento absurdo por riesgo geopolítico.\n\n⚠️ *El riesgo*: La acción está *80% por debajo* de su pico IPO 2021 ($18, no $48 como muchos repiten). En julio 2021, *2 días después* del IPO NYSE, el regulador chino CAC ordenó la app fuera del App Store por violaciones de datos personales — la acción cayó -90% en meses, fue forzada a delistarse del NYSE junio 2022, ahora cotiza solo como ADR pink-sheet (DIDIY). El riesgo de re-castigar regulatorio nunca se va — Beijing puede decidir hoy mismo cualquier cosa. Plus: tariffs Trump 2025 + tensión Taiwán afecta sentiment.\n\n🆕 Posición #67\n🔗 https://vectorialdata.com/stocks/DIDIY\n✅ Certificado por blockchain → vectorialdata.com/verify/DIDIY\n\n💡 Dato que ancla la tesis: 1 ADR de DIDIY = *4 acciones ordinarias Class A* (ratio 4:1, único entre las big China ADRs). DiDi factura ~25 millones de viajes diarios en China — *más que TODO el sistema Uber+Lyft de USA combinado*. A $3.61, market cap ~$14B implica 0.7x revenue vs Uber a 4.5x — descuento de ~85% solo por riesgo geopolítico. La asimetría: si Beijing deja a DiDi en paz 12 meses y EBITDA escala como en Q4 2025, re-rating a 1.5x revenue = $7.70 = +113% capital. Es lottery ticket con downside cap (ya cayó 80% del IPO) y upside no-cap si China decide reformar regulación tech (señales positivas con Alibaba/Tencent re-rated 2024-2025).`,
+    attestation_uid: "0xa4f8de320f5b50b96142f45e343f9ce647658386e4d079c435493c8934c999ec",
+  },
+  {
+    id: 68,
+    stock_id: 69,
+    ticker: "DLR",
+    type: "new" as const,
+    cycle_number: 14,
+    price: 194.93,
+    open_price: 194.93,
+    date: "2026-05-13",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #68* — May 13, 2026\n\n🏢 *Digital Realty Trust* (DLR) — $194.93\n\n🖥️ *Lo que hacen*: uno de los 2 operadores más grandes del mundo de *data centers* — los edificios industriales gigantes que alojan los servidores donde corren ChatGPT, Netflix, Google Search, AWS y prácticamente todo internet. Digital Realty opera *>310 data centers en 50+ áreas metropolitanas de 25+ países* (USA, Europa, Asia, Latam) con >2.6 gigawatts de capacidad instalada y >3 gigawatts adicionales en desarrollo. Estructura: REIT (Real Estate Investment Trust) — significa que distribuye legalmente >90% de sus ingresos como dividendo.\n\n🌍 *Presencia*: HQ Austin TX. ~3,500 empleados. Compite con Equinix (EQIX) — son los 2 únicos REITs públicos de scale en data centers. Cliente top: Oracle, Meta, Microsoft, Amazon AWS, IBM. *CEO Andy Power desde 2023* — antes COO/CFO. Recibió Megawatts de orden NVIDIA-related en 2024-2025 cuando hyperscalers expandieron capacidad para entrenar GPT-5/Gemini/Llama. Famoso por su plataforma PlatformDIGITAL® — el "cloud carrier" físico para clientes que necesitan compute distribuido.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *2.50% anual* solo por ser dueño — yield modesto pero growing. Cada vez que un usuario consulta ChatGPT, ve un video Netflix, hace una transacción AWS, o un modelo Claude responde tu pregunta — los servidores físicos están corriendo en data centers de Digital Realty o Equinix (probabilidad ~50%). Digital Realty paga dividendo trimestral sin parar desde su IPO 2004 — y los dividendos han crecido +750% desde entonces.\n\n⚠️ *El riesgo*: La acción está *20% por debajo* de su máximo de $200 (jan 2025). El mercado se preocupa por (1) *capex enorme* — DLR gasta $3-4B/año construyendo data centers nuevos, y tasas altas hacen el funding caro, (2) competencia de Equinix (la otra opción listada) que tiene mejor balance sheet, (3) potential overcapacity AI — si demanda IA modera (DeepSeek shock enero 2025 ya levantó esa pregunta), exceso de capacidad ya construida sería problema. Q1 2026 (24 abril 2026) reportó core FFO $1.83/share (+8% YoY) — solid pero capex guide $4.5B FY26 levantó cejas.\n\n🆕 Posición #68\n🔗 https://vectorialdata.com/stocks/DLR\n✅ Certificado por blockchain → vectorialdata.com/verify/DLR\n\n💡 Dato que ancla la tesis: Microsoft anunció en 2025 que va a gastar *$80 billones* en data centers entre 2025-2027 — la inversión privada en infraestructura más grande en la historia corporativa de USA. Meta $65B, Amazon $100B, Google $75B. Y Digital Realty + Equinix son los 2 ÚNICOS REITs líderes que pueden absorber ese crecimiento — Goldman/Cushman estima oferta de data center US duplicará 2025-2030. Comprar DLR a $194.93 (10% YoY pricing en backlog) es comprar el "real estate" físico donde se está construyendo la economía AI. La asimetría: si demand AI sostiene + tasas bajan, FFO crece 8-12% anual + 2.5% yield + multiple re-rating = total return ~15-18% anual a 5 años.`,
+    attestation_uid: "0xa09aee5187ea6cb123fd8b285e2997dcc63403a13e16d96dd9db3766fa5ee11c",
+  },
+  {
+    id: 69,
+    stock_id: 70,
+    ticker: "ECL",
+    type: "new" as const,
+    cycle_number: 14,
+    price: 250.79,
+    open_price: 250.79,
+    date: "2026-05-13",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #69* — May 13, 2026\n\n🏢 *Ecolab Inc.* (ECL) — $250.79\n\n💧 *Lo que hacen*: el #1 mundial en tratamiento de agua + higiene industrial — sirve a *~3 millones de ubicaciones de clientes en 120+ países*. 4 divisiones: *Global Water* (49% revenue — tratamiento de agua para fábricas, refinerías, data centers; sensores 3D TRASAR que monitorean en tiempo real), *Global Institutional & Specialty* (40% — productos químicos de limpieza para McDonald's, Starbucks, Hilton, Marriott, hospitales), *Global Pest Elimination* (7% — control de plagas con 4,500+ técnicos), y *Global Life Sciences* (4% — limpieza de plantas farma/biotech). HQ St. Paul, Minnesota. *~48,000 empleados* en 120+ países.\n\n🌍 *Presencia*: Fundada en 1923. *Christophe Beck es CEO desde enero 2021, Chair desde mayo 2022, y desde abril 2026 consolidó también el rol de President*. En febrero 2026 nombró 2 *Co-COOs*: Darrell Brown (mercados globales, mudándose a Sídney) y Gregory Cook (negocios globales). **EVENTO BOMBAZO marzo 2026**: Ecolab anunció la *adquisición de CoolIT Systems por $4.75 billones en cash* — el líder global en *cooling líquido para AI data centers* (los servidores Nvidia H100 y Blackwell generan tanto calor que el aire ya no los enfría — necesitan líquido).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.02% anual* solo por ser dueño — yield bajo, PERO **Ecolab es Dividend Aristocrat con 33 años consecutivos de aumentos del dividendo** (desde 1993). El dividendo ha crecido a tasa anual ~11% — eso significa que si reinviertes el dividendo cada trimestre, en 10 años tu yield original se triplica. Cada vez que en un McDonald's de Tokio limpian la freidora con un químico Ecolab, una fábrica Coca-Cola en Brasil trata su agua, o un data center Microsoft enfría sus servidores con un sistema CoolIT — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: La acción cotiza *cerca de su máximo histórico* — P/E forward 29.4x es elevated vs S&P 500 (~22x). Riesgos: (1) *CoolIT execution* — $4.75B all-cash all-debt deja leverage pro forma 3x EBITDA; si AI demand desacelera, deal premium se ve mal, (2) compite con Vertiv (VRT) que ya es público a múltiplo similar, (3) raw materials + energy costs — Ecolab implementó surcharge 10-14% en abril 2026 por petróleo +60% desde fin 2025; si oil sigue subiendo, margin slippage, (4) Christophe Beck consolidó Chair + CEO + President = single point of failure si se retira.\n\n🆕 Posición #69\n🔗 https://vectorialdata.com/stocks/ECL\n✅ Certificado por blockchain → vectorialdata.com/verify/ECL\n\n💡 Dato que ancla la tesis: Ecolab *ahorró a sus clientes 226 mil millones de galones de agua en 2024* — gestiona más de 1 billón de galones/año en sus 3 millones de ubicaciones globales. Meta 2030: 300 mil millones de galones = agua suficiente para *1 mil millones de personas anuales*. Y aquí el catalizador: con la adquisición de CoolIT $4.75B (cierra Q3 2026), Ecolab duplica su TAM de High-Tech de $5B a $10B — específicamente AI data center cooling, el segmento de infraestructura que está creciendo +40-50% YoY mientras hyperscalers (Microsoft $80B capex, Meta $65B, Amazon $100B) construyen para entrenar modelos AI. Comprar ECL a $250.79 (Q1 2026 entregó organic op margin 16.8% +70bps, guía FY26 raised a $8.43-$8.63 EPS +12-15%) es comprar el Dividend Aristocrat de 33 años pivotando a AI cooling justo cuando la demanda explota.`,
+    attestation_uid: "0x6168edff1642234ee725e7bd2a7ba859b224d7483b516f489e4890121038ab05",
+  },
+  {
+    id: 70,
+    stock_id: 71,
+    ticker: "GSK",
+    type: "new" as const,
+    cycle_number: 14,
+    price: 50.33,
+    open_price: 50.33,
+    date: "2026-05-13",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #70* — May 13, 2026\n\n🏢 *GSK plc* (GSK) — $50.33\n\n💊 *Lo que hacen*: una de las *10 farmacéuticas más grandes del mundo*. Su nombre es la abreviación de *GlaxoSmithKline* — se rebrandearon a "GSK plc" en mayo 2022 justo antes de separar su negocio de productos de consumo (Sensodyne, Panadol, Voltaren) a una empresa nueva llamada *Haleon* (18 julio 2022). Resultado: GSK quedó pure-play biopharma. Top productos FY2025: *Shingrix* (la vacuna #1 mundial para culebrilla — £3.6 billones de libras en ventas), *Trelegy* (el inhalador #1 para EPOC — £3.0B), *Cabenuva* (la primera inyección mensual/bimensual para HIV en la historia — £1.3B; significa que pacientes ya no necesitan tomar pastilla diaria). Oncología: *Jemperli* (cáncer endometrial) y *Blenrep* (mieloma múltiple, **regresó al mercado USA octubre 2025** después de retirarse 2022).\n\n🌍 *Presencia*: HQ Londres, New Oxford Street (desde julio 2024). *~66,800 empleados* en >75 países. **Nuevo CEO Luke Miels desde el 1 de enero 2026** — reemplazó a Emma Walmsley después de 8.5 años; Miels viene de Macquarie y de roles en AstraZeneca/Roche/GSK Brand. Su mandato: ejecutar el plan de 14 medicamentos blockbuster que GSK quiere lanzar entre 2025-2031 (target £40B revenue 2031 vs £31B 2025).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.13% anual* solo por ser dueño. El dividendo trimestral Q1 2026 fue 17p, y FY2026 expected 70p total — uno de los yields más altos del Big Pharma global. Cada vez que un adulto de 50+ se vacuna contra la culebrilla con Shingrix, un paciente HIV recibe su inyección mensual de Cabenuva, o un EPOC sufrer usa su inhalador Trelegy — parte de ese dinero llega a ti como dividendo. Plus: GSK anunció un *buyback de £2 billones* completándose en 2026 — retirará ~3% de su market cap.\n\n⚠️ *El riesgo*: La acción cotiza *cerca de máximo 12 meses* pero P/E forward 9.1x es brutalmente barato vs peers (Pfizer 9.8x, Roche 13x, AZN 16x). Riesgos: (1) *Arexvy -10% Q1 2026* — la vacuna RSV se desaceleró porque el CDC limitó elegibilidad a adultos 75+ (antes 60+); GSK pidió ampliar pero ACIP puede rechazar, (2) *Trelegy patent cliff 2027-2028* — el blockbuster EPOC pierde exclusividad y genéricos comen revenue, (3) competencia Pfizer/Moderna desarrollando *Shingrix mRNA* — si data positiva 2026-2027, GSK pierde share, (4) primer-año execution risk para Luke Miels.\n\n🆕 Posición #70 — Cierra Ciclo 14\n🔗 https://vectorialdata.com/stocks/GSK\n✅ Certificado por blockchain → vectorialdata.com/verify/GSK\n\n💡 Dato que ancla la tesis: GSK ha distribuido *>90 millones de dosis de Shingrix en USA desde 2017* — y el CDC estima que solo ~45% de los adultos elegibles están vacunados. Eso significa *~70 millones de adultos americanos de 50+ años todavía SIN vacunar contra la culebrilla* (una enfermedad que afecta a 1 de cada 3 adultos en su vida y causa dolor crónico severo). Es una pista de crecimiento de 8-12 años solo en USA, sin contar Europa/Asia que están en fases más tempranas de adoption. Comprar GSK a $50.33 (P/E forward 9.1x — el más barato del Big Pharma) con (1) Shingrix runway 70M dosis, (2) 14 blockbusters pipeline, (3) Blenrep re-launched USA, (4) £2B buyback, (5) 4.13% dividend yield, (6) nuevo CEO con mandato £40B 2031 = asimetría brutal vs el mercado healthcare.`,
+    attestation_uid: "0xbc70b8ace29f695ff57ee2731bff609d99f70a79a2b3b344d40bdedbb0b8bd88",
+  },
 ];
 
-export const cycles = [
+type Cycle = {
+  id: number;
+  cycle_number: number;
+  type: "new" | "rebuy";
+  target_count: number;
+  current_count: number;
+  status: "active" | "completed";
+};
+
+export const cycles: Cycle[] = [
   {
     id: 1,
     cycle_number: 1,
@@ -10568,7 +11364,15 @@ export const cycles = [
     cycle_number: 13,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
-    status: "active" as const,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 14,
+    cycle_number: 14,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 5,
+    status: "completed" as const,
   },
 ];
