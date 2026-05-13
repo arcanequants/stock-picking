@@ -13,6 +13,7 @@ import {
 } from "@/lib/signals";
 import { getSignalView } from "@/lib/signals-view";
 import { SignalViewToggle } from "@/components/SignalViewToggle";
+import { SignalSparkline } from "@/components/SignalSparkline";
 import { JsonLd } from "@/lib/seo";
 
 const SITE_URL = "https://vectorialdata.com";
@@ -74,7 +75,7 @@ export default async function SignalDetailPage({
   const snapshot = await getSignalSnapshot(id);
   if (!snapshot) notFound();
 
-  const { definition, latest, delta_vs_baseline_pct } = snapshot;
+  const { definition, latest, delta_vs_baseline_pct, history90d } = snapshot;
   const locale = normalizeLocale(await getLocale());
   const { user } = await getAuthState();
   const view = await getSignalView();
@@ -150,6 +151,18 @@ export default async function SignalDetailPage({
           </div>
         </div>
         <p className="text-xs text-text-faint">Observed: {observedAt}</p>
+        {history90d.length >= 2 && (
+          <div className="pt-3 border-t border-border">
+            <p className="text-[10px] uppercase tracking-wide text-text-faint mb-2">
+              Last 90 days · dashed = {definition.methodology.baseline_method}
+            </p>
+            <SignalSparkline
+              history={history90d}
+              unit={definition.unit}
+              decimals={definition.display_decimals}
+            />
+          </div>
+        )}
       </section>
 
       {view === "pro" ? (
