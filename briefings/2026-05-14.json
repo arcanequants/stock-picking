@@ -1,0 +1,117 @@
+{
+  "date": "2026-05-14",
+  "summary": "El bloqueo de Hormuz sostiene el petróleo sobre $100 y paraliza la política monetaria global",
+  "causalChain": "Irán bloquea el estrecho por donde fluye el 20% del petróleo mundial, disparando inflación y encerrando a la Fed, el BCE y Banxico entre la imposibilidad de bajar tasas y una economía que se desacelera. Simultáneamente China bate récords de exportación y el yen japonés requiere decenas de miles de millones en intervención para evitar el colapso.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz: 600 tankers stuck, oil above $100", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 30-year borrowing cost tops 5% for first time since 2008", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Fed frozen in closest vote since 1992 — hike now possible", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "Gold at $4,700/oz all-time high as war uncertainty peaks", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico ends 14-cut cycle at 6.50% — no more relief ahead", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Mexico GDP shrank 0.8% in Q1 — worst quarter since pandemic", "worker": "—"},
+    {"n": 7, "region": "MEXICO", "angle": "USMCA July review could stall Mexico's nearshoring boom", "worker": "—"},
+    {"n": 8, "region": "MEXICO", "angle": "Remittances from US down 7.5% as immigration enforcement bites", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Japan spent $65B to defend yen — rate gap with US is the root cause", "worker": "—"},
+    {"n": 10, "region": "ASIA", "angle": "China April exports hit record $359B — AI hardware drives surge", "worker": "—"},
+    {"n": 11, "region": "ASIA", "angle": "Yuan near 2-year high as Trump-Xi summit bets build", "worker": "—"},
+    {"n": 12, "region": "EUROPE", "angle": "ECB holds at 2.15% — energy inflation blocks any rate cut", "worker": "—"},
+    {"n": 13, "region": "EUROPE", "angle": "DAX -1.3%, FTSE -0.4% — manufacturers squeezed by costly energy", "worker": "—"},
+    {"n": 14, "region": "OCEANIA", "angle": "BHP + Rio Tinto to jointly mine 200M tonnes of Pilbara iron ore", "worker": "—"},
+    {"n": 15, "region": "OCEANIA", "angle": "RBA minutes May 19 — oil-driven inflation may block any rate cut", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "McGill finds molecular switch that turns on body's heat-burning fat", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "4-week diet makes older adults biologically 4 years younger", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Aalto connects 'time crystal' to real device — quantum clock step", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Just 2–5 ships pass daily through the Strait of Hormuz — the narrow sea channel connecting Gulf oil to world markets — down from 70 before the US-Iran war. Iran blocked it in retaliation for strikes on its territory. Over 600 oil tankers are stuck inside the Gulf. That forces buyers to pay premiums for longer alternative routes, pushing oil past $100 a barrel and inflating energy costs for every country on Earth."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government now pays more than 5% per year to borrow money for 30 years — the first time since the 2008 financial crisis. Why? Investors fear that oil-driven inflation from the Iran conflict is here to stay, so they demand a higher return before lending long-term. When that rate rises, mortgages, car loans, and business credit all get pricier, cooling the broader economy."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The US central bank left its key rate unchanged last week in an 8-to-4 vote — the most divided since 1992. It cannot cut because oil-driven inflation is still running hot; it cannot easily raise without risking a slowdown. Bank of America now says cheaper borrowing won't arrive until mid-2027 at the earliest. Markets are starting to price in a possible hike before a cut."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,700 per ounce this week — an all-time high. When wars disrupt oil, governments borrow heavily, and paper currencies weaken, investors flock to gold because it holds value when nothing else seems certain. The US-Iran conflict and sticky inflation created the perfect storm. Even a brief ceasefire rumor knocked it $200 lower in hours — showing just how nervous markets remain."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key interest rate to 6.50% and declared the cutting cycle officially over — 14 cuts since early 2024, reducing borrowing costs by 4.5 percentage points total. The problem: inflation is still above 4.5%, well above the 3% target. With the Iran war pushing oil and food prices higher globally, the bank can no longer justify further cuts. Cheaper credit for Mexican businesses will have to wait until 2027."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico's economy shrank 0.8% in the first three months of 2026 — the worst quarter since the pandemic lockdowns of 2020. Weak household spending, still-expensive borrowing, and global uncertainty all weighed on output. Analysts now project just 1.2% growth for the full year, barely enough to keep pace with population growth, meaning average living standards are effectively stagnant."
+    },
+    {
+      "n": 7,
+      "region": "MEXICO",
+      "text": "Mexico pulled in a record $40.9B of foreign factory investment last year as companies shifted production away from Asia. But the trade pact making that viable — USMCA — faces its mandatory six-year review in July 2026. Tougher rules on Chinese-made components could disqualify some manufacturers. The review's outcome will decide whether Mexico's factory boom continues or stalls before it fully pays off."
+    },
+    {
+      "n": 8,
+      "region": "MEXICO",
+      "text": "Money Mexican workers send home from the US fell 7.5% this year as stricter border enforcement reduced the number of people crossing. These transfers equal 3.5% of Mexico's entire economy and are the main income source for millions of families in rural states. A sustained drop hits local shops, housing construction, and household spending across dozens of Mexican communities simultaneously."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "The Japanese yen jumped to its strongest level in ten weeks after Japan spent an estimated $65 billion in two waves defending the currency. The underlying problem: Japan's central bank keeps rates near zero while the US charges 3.5–3.75%, making the yen far less attractive to hold. Without intervention, imports of oil, food, and goods would become dangerously expensive for ordinary Japanese households."
+    },
+    {
+      "n": 10,
+      "region": "ASIA",
+      "text": "China exported a record $359 billion in goods in April alone — up 14% from a year ago. The main driver: surging global demand for AI hardware, electronics, and manufactured goods. Shipments rerouted through new lanes that bypass the blocked Strait of Hormuz helped maintain delivery timelines. The yuan strengthened to a near two-year high, a sign that investors see China as a relative shelter during the Middle East chaos."
+    },
+    {
+      "n": 11,
+      "region": "ASIA",
+      "text": "China's currency strengthened to its best level since February 2023 as currency traders bet on a deal at the upcoming Trump-Xi summit. Both sides have reason to negotiate: the US wants cheaper imports to fight inflation; China wants tariff relief to keep its export machine running. Currency moves often telegraph what investors expect before diplomats announce anything — and right now they expect a deal."
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "text": "Europe's central bank froze interest rates on April 30 even as oil-driven inflation threatens to undo two years of progress. The main rate holds at 2.15%. Why not cut? War-related energy costs are pushing prices back up, and premature cuts could reignite inflation. Markets are now pricing in three possible rate hikes in 2026 — a complete reversal from the cuts analysts expected three months ago."
+    },
+    {
+      "n": 13,
+      "region": "EUROPE",
+      "text": "Germany's main stock index fell 1.3% to 24,338 as expensive energy squeezes industrial production. Germany runs on manufacturing — cars, chemicals, machinery — and when energy gets costly, factory profit margins shrink fast. The UK's main index fell a milder 0.4%. European markets are stuck between inflation that prevents rate cuts and a slowing economy that desperately needs them."
+    },
+    {
+      "n": 14,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — two of the world's biggest mining companies — signed a deal to jointly extract up to 200 million tonnes of iron ore from neighboring sites in Western Australia's Pilbara region. Combining operations cuts costs and boosts output. Iron ore is the key ingredient in steel, and China buys the vast majority of Australia's supply. Rivals cooperating signals both companies expect Chinese demand to hold up despite global turbulence."
+    },
+    {
+      "n": 15,
+      "region": "OCEANIA",
+      "text": "Australia's central bank releases its rate-meeting minutes on May 19, and investors are watching closely. Surging global oil prices from the Iran conflict are raising costs across Australia — from groceries to gasoline — making it harder for the bank to reduce borrowing costs. If the minutes signal a possible rate increase, Australian homeowners with variable-rate mortgages could face significantly higher monthly payments within months."
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Your body has two kinds of fat: one stores energy, the other burns it as heat. Scientists at McGill University in Canada found the molecular key that flips the heat-burning type on — a molecule called glycerol binds to an enzyme (TNAP) when you get cold, triggering a calorie-burning system nobody knew existed. The discovery may lead to new treatments for obesity and bone disease. Researchers have already identified dozens of drug candidates. 📄 Published in Nature · More: https://www.mcgill.ca/newsroom/channels/news/discovery-fat-burning-switch-could-lead-advances-bone-disease-treatments-372896"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Researchers at the University of Sydney gave 104 adults aged 65–75 four different diets for just four weeks. Those who switched to lower-fat or more plant-based meals appeared biologically up to 4 years younger based on 20 blood markers — including cholesterol, inflammation signals, and insulin. Your calendar age stays fixed, but your body's internal clocks can reset faster than previously thought. 📄 Published in Aging Cell · More: https://www.sydney.edu.au/news-opinion/news/2026/05/12/dietary-changes-in-older-people-can-improve--biological-age-.html"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "A time crystal is a bizarre state of matter that pulses rhythmically — like a clock ticking — without any energy input, defying our usual assumption that things need power to move. Scientists at Aalto University in Finland connected one to an external device for the very first time. That bridge between the time crystal and the real world is a critical step toward using them as ultra-precise clocks or stable components in future quantum computers. 📄 Published in Nature Communications · More: https://www.sciencedaily.com/releases/2026/05/260504154024.htm"
+    }
+  ]
+}
