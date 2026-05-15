@@ -1,0 +1,117 @@
+{
+  "date": "2026-05-15",
+  "summary": "Trump-Xi summit signals trade truce while Hormuz blockade keeps oil near $106 and gold above $4,650",
+  "causalChain": "La clausura parcial del Estrecho de Ormuz mantiene el petróleo caro y la inflación elevada, forzando a los bancos centrales (Fed, ECB, BoJ) a actuar con cautela; el acuerdo arancelario en Pekín mejora el sentimiento de riesgo, impulsando al Nikkei a récord histórico y Bitcoin sobre $80K, mientras el oro cerca de $4,652 refleja compra estructural de bancos centrales como seguro ante conflicto y deuda.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz blockade: Brent near $106 as 20% of seaborne oil stays stranded since Feb 28", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Gold at $4,652/oz: central banks bought 244 tonnes in Q1 alone — structural safe-haven bid", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Trump-Xi Beijing summit: US tariffs on China at 30%, tone shifts from confrontation to truce", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "Fed rate at 3.50–3.75% as Powell's term expires — successor pick adds policy uncertainty", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico cuts to 6.50% — likely final move — as Q1 GDP contracts 0.8%", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "March remittances set record at $5.39B; Q1 2026 bounces +1.4% after 2025 slump", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Nikkei hits all-time high 62,833 on earnings + peace hopes; BoJ holds rate at 0.75%", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "PBOC yuan swap lines hit 2-year high as global central banks diversify away from dollars", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB holds at 2.15% but markets price 3 hikes as Middle East energy inflation resurges", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "Germany's defense + infrastructure surge to add 0.5pp to eurozone growth in 2026", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP + Rio Tinto explore 200M-tonne/yr Pilbara iron ore joint venture — biggest in mining history", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "Iron ore deals now priced partly in yuan — quiet erosion of dollar dominance in commodities", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin near $80K: spot ETFs absorb $933M in a week, 4th straight week of institutional inflows", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Digital dollars hit $320B: USDT $190B, USDC $78B; GENIUS Act advancing through Senate", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "SEC + CFTC classify Bitcoin, Ethereum, Solana among 16 tokens as commodities — not securities", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Evolution reused the same 2 genes for 120 million years across unrelated butterfly species", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Universe expanding faster than physics can explain — gap confirmed to record precision", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Universal alien-life fingerprint found in amino acid statistics — no special instrument needed", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Iran's military blocked the Strait of Hormuz on February 28 — the narrow waterway that carries roughly 1 in every 5 barrels of oil shipped worldwide. Brent crude hit $126/barrel at the peak and trades near $106 today. Countries that relied on Gulf oil must scramble for alternatives, pushing energy bills higher globally and keeping inflation stubborn everywhere from Europe to Southeast Asia."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,652 per ounce this week — a level unimaginable just two years ago. When wars break out and governments run large debts, investors park money in gold as financial insurance. Central banks worldwide bought 244 tonnes of gold in just the first three months of 2026 alone, a 3% jump over the prior year. Supply is fixed; institutional demand keeps climbing."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "US and Chinese leaders met in Beijing this week for the most consequential trade summit in years. After briefly imposing triple-digit tariff taxes on each other's goods, both sides have dialed back: the US now charges 30% on Chinese imports; China charges 10% on US goods. That is still 10x the 2018 baseline, but the tone has shifted from confrontation to cautious deal-making."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The US government pays 3.50–3.75% per year to borrow money overnight — a rate set by the Federal Reserve that shapes mortgage costs, car loans, and business credit worldwide. Fed Chair Jerome Powell's term expires this month. Whoever replaces him will decide whether borrowing gets cheaper or stays expensive for millions of households and businesses that depend on that one number."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its benchmark lending rate to 6.50% this week, the lowest since April 2022. The reason: Mexico's economy shrank 0.8% in the first three months of 2026 — the weakest quarterly reading since the pandemic. A contracting economy reduces upward price pressure, giving policymakers room to lower rates. Two of the five board members voted against the cut, signaling this is likely the final reduction."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexicans living abroad sent home $5.39 billion in March — a single-month record. The average individual transfer reached $417, also a record for March. After 2025 brought the first annual decline in remittances in 11 consecutive years, Q1 2026 came in 1.4% ahead of last year. These family-to-family transfers are Mexico's second-largest source of foreign income, after manufacturing exports."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's stock market closed at an all-time high this week, topping 62,800 points. Strong corporate earnings and rising hopes for a Middle East ceasefire drove the rally. Japan's central bank kept its lending rate at just 0.75%, while the US rate sits at 3.50–3.75%. That gap pulls investor money toward dollars and weakens the yen — Japan has already stepped in twice this spring to prop up its currency in open markets."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Central banks around the world borrowed a record 111.6 billion yuan — roughly $16 billion — from China's central bank in March, the highest level in two years. Countries are quietly adding Chinese yuan to their financial reserves to reduce dependence on US dollars. China is carefully managing how fast its currency rises so its export factories stay price-competitive on world markets."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank left its main lending rate unchanged at 2.15% in April, but financial markets now expect three increases by year-end. The reason: Middle East oil disruptions are keeping energy expensive, and that pushes up prices on everything from heating to shipping. Europe's economy is forecast to grow just 0.9% this year — roughly half of what it managed in pre-pandemic years."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Germany is spending big — really big. New defense and public infrastructure budgets are injecting enough money into Europe's largest economy to add an estimated 0.5 percentage points to the region's annual growth rate. This is the most aggressive government spending push Germany has made in decades, and it is arriving at exactly the right moment as an energy shock from the Middle East weighs on industry."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — the world's two biggest mining companies, both with vast Australian operations — are exploring a partnership to dig up to 200 million tonnes of iron ore per year from Western Australia's Pilbara region. That would be the largest collaboration in the history of the mining industry. Iron ore is the key ingredient in steel, and steel is what bridges, buildings, and factories are built from."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Iron ore — the raw material for steel — has historically been priced and paid for in US dollars. That is quietly changing: BHP now uses a Chinese yuan-based pricing index for part of its sales to China's state mining company. With more than 80% of Australian iron ore going to China, the buyer is slowly gaining the power to set the terms — a small shift with large implications for dollar dominance in global trade."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading near $80,000 after hitting a lifetime peak above $126,000 earlier in 2026. This week, funds that hold Bitcoin on behalf of everyday investors absorbed $933 million in new cash — the fourth straight week of gains. The turnaround is notable: between November 2025 and February 2026, investors pulled $6.38 billion from those same funds as Bitcoin fell toward $60,000. Institutional money is returning."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Digital dollars — coins worth exactly $1 that run on computer networks — hit a combined $320 billion in circulation this month. The two biggest: USDT at $190 billion and USDC at $78 billion. A new US law called the GENIUS Act is moving through Congress to set rules for who can issue these coins. Clear rules could unlock mainstream bank adoption — or squeeze out players who do not meet the new standards."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "US financial regulators at the SEC and the CFTC officially classified 16 cryptocurrencies — including Bitcoin, Ethereum, and Solana — as commodities, like gold or oil, rather than securities, like company stocks. This is one of the most significant regulatory decisions in crypto history. Commodities face lighter oversight rules and a historically friendlier regulator. The industry has lobbied for exactly this outcome for years."
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Scientists at the University of York and the Wellcome Sanger Institute studied butterflies and moths in South American rainforests and discovered something unexpected: the same two genes — called ivory and optix — have been used to create warning color patterns for over 120 million years, across species that share no recent common ancestor. Evolution keeps reaching for the same toolbox rather than inventing new solutions from scratch. 📄 Published in PLOS Biology · More: https://www.sciencedaily.com/releases/2026/05/260502233856.htm"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "The H0 Distance Network — a global team of astronomers including researchers at Harvard's Center for Astrophysics — made the most precise measurement ever of how fast the universe is expanding: 73.5 kilometers per second for every 3.26 million light-years of distance. The puzzle: calculations from the early universe consistently predict 67–68. The stubborn gap suggests something fundamental is missing from our best model of the cosmos. 📄 Published in Astronomy & Astrophysics · More: https://www.cfa.harvard.edu/news/scientists-report-most-precise-measurement-yet-universes-expansion"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "Detecting life on another planet has always required specialized instruments tuned to specific molecules. Researchers including Gideon Yoffe and Fabian Klenner found a simpler fingerprint: amino acids from living organisms are more varied and more evenly distributed than those formed by chemistry alone — and this statistical pattern can be detected without knowing what you are looking for. It could work on samples returned from Mars or ocean-world moons. 📄 Published in Nature Astronomy · More: https://www.sciencedaily.com/releases/2026/05/260511213146.htm"
+    }
+  ]
+}
