@@ -1,0 +1,105 @@
+{
+  "date": "2026-05-16",
+  "summary": "Hormuz closure pushes oil past $100, forcing central banks worldwide to pause easing and revive inflation fears.",
+  "causalChain": "Iran's blockade of the Strait of Hormuz after U.S.-Israel strikes drove oil above $100, reigniting global inflation; the Fed, ECB, RBA, and Banxico responded by halting or reversing rate cuts, strengthening the dollar, pressuring gold and emerging-market currencies, and clouding the 2026 recovery.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Oil above $100: Hormuz closure chokes one-fifth of global supply", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed holds rates in a no-win corner as oil inflation meets recession risk", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold falls 4% as dollar strengthens on stubborn inflation and tariffs", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico ends rate-cut cycle at 6.5% with a tight 3-2 vote", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Record nearshoring investment meets a growth trap — infrastructure lags factories", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "BoJ holds at 0.75% but yen hits 159 on persistent U.S.-Japan rate gap", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "China exports +6.6%; foreign central banks borrow yuan at 2-year high rate", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB holds at 2.15% as oil reverses disinflation, markets price in hikes", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "FTSE falls to 10,226 and pound slips below $1.34 on UK political uncertainty", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA hikes to 4.35%; BHP and Rio Tinto cushioned by China's steady commodity demand", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "New Zealand faces 1.4% growth and rising inflation — possible stagflation trap", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin above $82K on $2.7B 9-day ETF inflow streak; exchange supply at 7-year low", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Digital dollars hit $320B as EU July licensing deadline and U.S. GENIUS Act approach", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "First lab-grown food pipe transplanted in pigs grows real nerves and muscle — it works", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Oxford physicists achieve quadsqueezing: a new frontier in quantum control", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "LONGi hits 35% solar efficiency world record, certified by U.S. national lab", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "U.S. crude oil topped $100 a barrel this week for the first time since the pandemic. The Strait of Hormuz — a narrow sea lane carrying one-fifth of the world's oil — has been effectively blocked since March, when Iran imposed restrictions after U.S. and Israeli strikes. Ships that try to pass risk attack. Less oil reaching markets means buyers bid prices up, making fuel, shipping, and manufactured goods more expensive everywhere."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "America's central bank kept its lending rate at 3.5–3.75% for a third straight meeting. It's caught between two problems: oil-driven inflation calls for higher rates to slow spending, but raising rates further risks a recession. Adding to uncertainty, longtime chairman Jerome Powell is expected to be replaced by Kevin Warsh on May 15. Markets hate leadership changes at the institution that sets the price of every dollar — uncertainty at the top adds to volatility."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell nearly 4% this week to around $4,480 — its biggest drop since March. That sounds odd: gold usually rises when the world is nervous. But U.S. inflation just hit its worst pace in years, driven by $100-plus oil. Higher inflation makes investors expect borrowing costs to stay elevated, which strengthens the dollar. A stronger dollar makes gold more expensive for foreign buyers, so demand drops. Trade tariffs adding roughly $1,500 per U.S. household compound the pressure."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its benchmark lending rate to 6.5% and signaled this may be the last cut for a while — the vote was 3-2, unusually tight. Inflation slowed to 4.45% in April but remains above the 3% target. The tension: cutting rates makes borrowing cheaper and can lift growth, but if oil-driven global inflation spills further into Mexico, the bank may need to pause or reverse. The peso barely moved, reflecting markets had expected exactly this."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico pulled in a record $40.9 billion in foreign investment through 2025, mostly factories relocating closer to the U.S. But the economy barely grew — less than 1% last year. The bottleneck is infrastructure: roads, ports, water, and electricity aren't expanding fast enough to support the factory boom. Meanwhile, the USMCA trade deal faces its 2026 review, and manufacturers won't commit to new plants until they know the rules stay in place."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's central bank kept its rate at 0.75% — a 30-year high — but the yen keeps falling, hitting 159 per dollar. The reason: U.S. borrowing costs are still about 3 percentage points above Japan's. That gap makes it profitable to borrow cheaply in Japan, convert to dollars, and earn more elsewhere — a trade so popular it drags the yen down continuously. Japan intervened twice this year to slow the drop. Long-term Japanese government bonds just hit 2.6%, adding a new stress signal."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Foreign central banks borrowed $16.4 billion in yuan from China's central bank — the most in two years. It signals growing appetite to hold yuan instead of only dollars. Meanwhile, China's exports jumped 6.6%, driven by AI hardware and tech goods. China's central bank is quietly letting the yuan strengthen, making exports slightly pricier but building global trust in the currency. The Hang Seng index is near its 2026 highs, riding trade momentum and domestic policy support."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's central bank held its rate at 2.15% but faces an uncomfortable shift: inflation jumped to 2.6%, driven by rising oil costs from the Middle East conflict. Six months ago, markets expected rate cuts. Now they price in possible hikes. Germany is offsetting some pain with the biggest spending plan on defense and infrastructure in decades, estimated to add 0.5 percentage points to European growth this year. But energy prices remain the wildcard."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Britain's main stock index fell to 10,226 Friday, hit by oil costs and a political subplot: reports that Andy Burnham — seen as less business-friendly — may challenge Prime Minister Keir Starmer. When politics cloud a government's direction, bond investors demand more to lend to the country, and that ripples into stocks and currency. The pound fell below $1.34, its lowest since April. The Bank of England is holding borrowing rates at 3.75% with inflation at 3.3%."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia raised its lending rate to 4.35%, pushed there by inflation from Middle East oil disruptions. Higher rates slow borrowing and spending — the standard tool to cool prices. But mining giants BHP and Rio Tinto are holding firm: China's steady appetite for iron ore and metals keeps orders flowing. The ASX 200 barely moved Friday as miners offset pressure from banks and tech. Australia's odd position: the global stress that forces rate hikes also boosts its biggest export sector."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "New Zealand's economy is expected to grow just 1.4% in 2026 — fragile, per the OECD. Inflation is forecast at 3.4%, above the central bank's 2% ceiling, which may force rate hikes even as growth barely moves. New Zealand is small, open, and trade-dependent: when oil spikes globally or China slows purchases of dairy and meat, the whole country feels it fast. The central bank may face slowing growth and rising prices at the same time — one of the hardest situations any policymaker can face."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin climbed past $82,000 as the funds that let regular investors buy it through a stock broker pulled in $2.7 billion over nine straight days — nine times more than was newly mined in that period. Large holders net-bought 270,000 coins in a month. The amount available on exchanges hit a 7-year low: fewer coins to sell means buyers must bid higher. BlackRock alone now holds $62 billion in Bitcoin — among the largest holdings anywhere in the world."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Digital dollars — coins worth exactly $1 that run on public blockchains — hit $320 billion in total supply worldwide, with Tether at $190B and USD Coin at $78B. Two regulatory deadlines loom: the EU requires any company serving European customers to hold a crypto license by July 1, or stop operating. In the U.S., the GENIUS Act would create the first formal rules for these tokens. Clearer rules open the door for banks and companies to use digital dollars in payroll and global payments."
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "Scientists at Great Ormond Street Hospital and UCL grew a food pipe in a lab and transplanted it into pigs. Six months later the tube had grown real muscle, nerves, and blood vessels, letting animals swallow normally with no immune drugs needed. They stripped a donor tube down to bare scaffolding, then rebuilt it with the recipient's own cells — no rejection. Could one day help babies born without a complete food pipe. 📄 Published in Nature Biotechnology · More: https://www.gosh.org/news/gosh-charity-funded-team-engineers-first-lab-grown-oesophagus/"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Physicists at the University of Oxford trapped a single charged atom and detected a fourth-order quantum effect — called quadsqueezing — never achieved before. In quantum systems, squeezing means compressing uncertainty in one direction to cut measurement errors. Getting to the fourth order is far harder and opens new paths to build quantum computers and sensors with precision no ordinary tool can match. 📄 Published in Nature Physics · More: https://www.sciencedaily.com/releases/2026/05/260501052828.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Solar maker LONGi, certified by America's national renewable energy lab (NREL), hit 35% sunlight-to-electricity conversion — a new world record. Standard commercial panels reach about 24%. The trick: layer silicon with a newer crystal called perovskite. Each material captures a different slice of sunlight, like two nets of different mesh size. More efficient panels mean cheaper clean electricity — one of the fastest levers for cutting emissions. 📄 Published in Nature · More: https://www.nature.com/articles/s41586-025-09849-4"
+    }
+  ]
+}
