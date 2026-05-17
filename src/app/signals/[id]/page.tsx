@@ -104,7 +104,7 @@ export default async function SignalDetailPage({
       <JsonLd data={renderJsonLdDataset(snapshot, locale)} />
 
       <nav className="text-xs text-text-faint">
-        <Link href="/signals" className="hover:text-foreground">
+        <Link href="/signals" className="hover:text-signals-accent-hover">
           ← All signals
         </Link>
       </nav>
@@ -232,7 +232,7 @@ export default async function SignalDetailPage({
               href={definition.source_url}
               target="_blank"
               rel="noreferrer"
-              className="underline hover:text-foreground break-all"
+              className="underline hover:text-signals-accent-hover break-all"
             >
               {definition.source_url}
             </a>
@@ -259,7 +259,7 @@ export default async function SignalDetailPage({
           <li>
             <Link
               href={`/signals/${definition.id}/brief.md`}
-              className="underline hover:text-foreground"
+              className="underline hover:text-signals-accent-hover"
             >
               /signals/{definition.id}/brief.md
             </Link>{" "}
@@ -268,7 +268,7 @@ export default async function SignalDetailPage({
           <li>
             <Link
               href={`/api/signals/${definition.id}`}
-              className="underline hover:text-foreground"
+              className="underline hover:text-signals-accent-hover"
             >
               /api/signals/{definition.id}
             </Link>{" "}
@@ -277,10 +277,20 @@ export default async function SignalDetailPage({
         </ul>
       </section>
 
-      <footer className="border-t border-border pt-6 text-xs text-text-faint leading-relaxed">
-        Vectorial Signals is descriptive market intelligence. Not investment
-        advice. We don&apos;t manage money. Past correlations don&apos;t predict
-        future performance. Decisions are yours.
+      <footer className="border-t border-border pt-6 text-xs text-text-faint leading-relaxed space-y-2">
+        <p>
+          Vectorial Signals is descriptive market intelligence. Not investment
+          advice. We don&apos;t manage money. Past correlations don&apos;t
+          predict future performance. Decisions are yours.
+        </p>
+        <p>
+          <Link
+            href="/legal/signals-terms"
+            className="underline hover:text-signals-accent-hover"
+          >
+            Vectorial Signals Terms of Use
+          </Link>
+        </p>
       </footer>
     </div>
   );

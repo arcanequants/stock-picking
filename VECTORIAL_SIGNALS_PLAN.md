@@ -42,54 +42,48 @@
 | 13 | **Pro tier free today** (toggle for logged-in users) — lays the rail for a future **$19/mo Vectorial Pro** tier. Today no pricing change; tomorrow optionality. | Alberto + Growth | 2026-05-10 |
 | 14 | AI brief endpoint at `/signals/[id]/brief.md` (file-style URL, cleaner for LLM ingestion) — disclaimers embedded inside the markdown so they travel with citations | Alberto + SEO/AI Discovery + Securities | 2026-05-10 |
 | 15 | Mom Test rule **does not mean dumbed-down language** — it means *clarity*. Sophisticated + clear is the floor. Jerga-as-status without inline definition is what fails. | Copywriter clarification | 2026-05-10 |
+| 16 | **AISStream killed from plan** — no published ToS (page 404), legal risk for B2AI redistribution. Replaced by **Path A**: Sentinel-1 SAR (Copernicus EU Reg 1159/2013, commercial+redistribution explicitly permitted) for Hormuz tanker counts + China port congestion. **Kystverket NLOD** (Norway open-gov TCP feed `153.44.253.27:5631`) as bonus for NW Europe shipping. **NOAA MarineCadastre CC0** for US backfill. All three are legal-clean for B2AI with attribution only. | Alberto + verified ToS research | 2026-05-14 |
 
 ---
 
-## 3. The 18-signal launch slate
+## 3. The 12-signal launch slate (god-tier — team consensus 2026-05-14)
 
-Curated across all 6 alt-data domains, plus 3 cross-domain "infrastructure" signals.
+Tiered investment system: **Tier A flagship** (deep) → **Tier B workhorse** (solid) → **Tier C experimental** (BETA, kill-or-promote @60d).
 
-### Maritime (3)
+### 🥇 Tier A — Flagship (3) — hero of /signals, hedge-fund-grade backtest, weekly hand-curated explainer
 | # | Signal | Source | Cadence |
 |---|--------|--------|---------|
-| 1 | Crude tanker floating storage by region (China, Singapore, Saldanha Bay) | AISStream + Sentinel-1 SAR cross-check | Weekly |
-| 2 | Hormuz Strait daily transit count (broken by direction + cargo type) | AISStream WebSocket | Daily |
-| 3 | Top-10 port congestion index (LA/LB, Shanghai, Rotterdam, Singapore, Qingdao) | AIS anchorage queue + dwell time | Daily |
+| A1 | **EIA Weekly Petroleum Status Dashboard** (crude/gasoline/distillate vs 5y avg) | EIA API | Weekly (Wed 10:30 ET) |
+| A2 | **US Corn Belt Yield Model** (county-level vs USDA WASDE) | Sentinel-2 NDVI + SMAP + CHIRPS | Weekly |
+| A3 | **TROPOMI NO₂ Economic-Activity Index** (top 50 industrial regions) | Sentinel-5P TROPOMI | Weekly |
 
-### Energy & Commodities (3)
+### 🥈 Tier B — Workhorse (6) — solid backtest, indexed for SEO/AI cite-targets
 | # | Signal | Source | Cadence |
 |---|--------|--------|---------|
-| 4 | EIA Weekly Petroleum Status dashboard (crude/gasoline/distillate vs 5y avg) | EIA API | Weekly (Wed 10:30 ET) |
-| 5 | Crack spread monitor (3-2-1, gasoil-Brent, Singapore Mogas) | EIA + CME settlements | Daily |
-| 6 | LNG arbitrage screen (Henry Hub / TTF / JKM spreads) | EIA + GIE AGSI + ICE proxies | Daily |
+| B1 | Hormuz Strait transit count | Sentinel-1 SAR (revisit 6-12d) | Weekly |
+| B2 | Crack spread monitor (3-2-1, gasoil-Brent, Singapore Mogas) | EIA + CME settlements | Daily |
+| B3 | LNG arbitrage screen (Henry Hub / TTF / JKM) | EIA + GIE AGSI + ICE proxies | Daily |
+| B4 | Top-20 US retailer parking-lot tracker (WMT/TGT/COST/HD/LOW/...) | Sentinel-2 via Sentinel Hub | Weekly |
+| B5 | Cushing oil storage tank-lid tracker | Sentinel-1 SAR (cloud-penetrating) | Weekly |
+| B6 | Brazil safrinha + soy condition (Mato Grosso/Paraná/RGS) | Sentinel-2 + CHIRPS + ERA5 | Weekly |
 
-### Geospatial (3)
+### 🥉 Tier C — Experimental (3) — explicit "BETA" label, IC decides promote/kill @60d
 | # | Signal | Source | Cadence |
 |---|--------|--------|---------|
-| 7 | Top-20 US retailer parking-lot tracker (WMT/TGT/COST/HD/LOW/...) | Sentinel Hub Statistical API + Sentinel-2 | Weekly |
-| 8 | Cushing oil storage tank-lid tracker | Sentinel-1 SAR (cloud-penetrating) | Weekly |
-| 9 | Permian rig activity index (active drilling sites) | Sentinel-2 + Sentinel-1 SAR | Weekly |
+| C1 | Permian methane super-emitter alerts | TROPOMI + Carbon Mapper public + EMIT | Weekly |
+| C2 | Permian rig activity index | Sentinel-2 + Sentinel-1 SAR | Weekly |
+| C3 | China power-sector emissions (Shanxi + Inner Mongolia) | Sentinel-5P NO₂ + SO₂ | Weekly |
 
-### Atmospheric (3)
-| # | Signal | Source | Cadence |
-|---|--------|--------|---------|
-| 10 | Permian methane super-emitter alert | TROPOMI + Carbon Mapper public + EMIT | Weekly |
-| 11 | TROPOMI NO₂ economic-activity index (top 50 industrial regions) | Sentinel-5P TROPOMI | Weekly |
-| 12 | China power-sector emissions tracker (Shanxi + Inner Mongolia) | Sentinel-5P NO₂ + SO₂ | Weekly |
+### ⚙️ Cross-domain Infrastructure (always-on, NOT counted as signals)
+- **Signal IC Dashboard** — public rolling out-of-sample IC per signal (shipped Phase 1)
+- **AI Explainer** — Claude on top of every signal, on-demand, lightweight
 
-### Agricultural (3)
-| # | Signal | Source | Cadence |
-|---|--------|--------|---------|
-| 13 | US Corn Belt yield model (county-level vs USDA WASDE) | Sentinel-2 NDVI + SMAP + CHIRPS | Weekly |
-| 14 | Brazil safrinha + soy condition (Mato Grosso/Paraná/RGS) | Sentinel-2 + CHIRPS + ERA5 | Weekly |
-| 15 | Cocoa West Africa screen (Ivory Coast + Ghana) | Sentinel-2 NDVI + rainfall + disease proxies | Weekly |
-
-### Cross-domain / Infrastructure (3)
-| # | Signal | Function | Cadence |
-|---|--------|----------|---------|
-| 16 | Signal IC Dashboard | Public rolling out-of-sample IC for every signal — honesty-as-moat | Real-time |
-| 17 | Cross-signal triangulation engine | When ≥2 domains confirm same thesis, surface "high-conviction" tag | On signal flip |
-| 18 | AI Explainer service | Claude on top of every signal context → plain-Spanish + plain-English translation | On signal flip |
+### Killed from original 18-slate (2026-05-14 team consensus)
+- ~~Crude tanker floating storage~~ → SAR weekly revisit doesn't capture daily turnover (replaced by Hormuz B1)
+- ~~Top-10 port congestion~~ → Same problem: AIS dwell-time is daily, SAR weekly insufficient
+- ~~Cocoa West Africa~~ → Capacity too small (cocoa market too thin for retail moat)
+- ~~Cross-signal triangulation engine~~ → Needs 6+ months data accumulated → Phase 3 backlog
+- ~~AI Explainer as standalone signal~~ → Moved to Cross-domain Infrastructure (not a signal)
 
 ### Cross-cutting: every signal ships in **4 language tiers**
 
@@ -761,22 +755,22 @@ All scoped to "Production" + "Preview" in Vercel env. Rotation calendar: quarter
 ## 7. Risks & open questions for Alberto
 
 ### Technical
-- **Q1: Fly.io worker for AISStream WebSocket OK, or stay sample-only on Vercel cron?** Cost: ~$5/mo Fly. Sample-only loses fidelity but stays single-platform.
-- **Q2: Sentinel Hub free tier (10k req/mo) sufficient through Phase 2?** If we cross 30k, jump to ~$1k/mo paid tier.
-- **Q3: AISStream commercial license needed for B2AI redistribution?** Legal flag — check before B2AI launch.
+- ~~**Q1: Fly.io worker for AISStream WebSocket**~~ → **RESOLVED 2026-05-14**: Vercel Pro Cron + Fluid Compute (Option A). Worker only needed if we add Kystverket NLOD as bonus; cron opens TCP socket ~50s per minute. Hormuz/China use Sentinel-1 SAR poll-only — no worker needed.
+- **Q2: Sentinel Hub free tier (10k req/mo) sufficient through Phase 2?** → **RESOLVED 2026-05-14**: Free tier OK (~1,825 req/mo projected, 5x headroom). Internal counter + 80% alert. Jump to paid only if we cross 8k consistent.
+- ~~**Q3: AISStream commercial license**~~ → **RESOLVED 2026-05-14**: AISStream killed. Path A (Sentinel-1 SAR + Kystverket NLOD + NOAA CC0). Sentinel-1 SAR detects ships from radar directly — sidesteps AIS ToS entirely. Kystverket NLOD permits commercial redistribution with attribution. NOAA MarineCadastre is CC0.
 
 ### Product
-- **Q4: Confirm 18-signal slate, or trim to 12?** Recommendation from PM: ship 18 phased; kill any with weak IC publicly.
-- **Q5: Free preview = current value + 90d. Confirm?** Alternative: free = current only, gate the chart.
-- **Q6: Signal alerts via WhatsApp count toward the 24h window rules?** They're triggered by user opt-in, but we send templates safely.
+- ~~**Q4: Confirm 18-signal slate, or trim to 12?**~~ → **RESOLVED 2026-05-14**: 12 señales en 3 tiers (Tier A flagship 3 / Tier B workhorse 6 / Tier C experimental 3) + Cross-domain Infra. Team consensus PM+Quant+Growth+SEO. Killed: floating storage, port congestion, cocoa, triangulation engine, AI Explainer-as-signal. See §3.
+- ~~**Q5: Free preview = current value + 90d.**~~ → **RESOLVED 2026-05-14**: Free = current value + 90d trailing chart. Full history (252d+ IC) gated behind sub.
+- ~~**Q6: Signal alerts channel — WhatsApp?**~~ → **RESOLVED 2026-05-15**: **WhatsApp killed for Signals** (unprofessional for B2AI/institutional audience). 3-channel stack: (1) Page `/signals` + RSS feed (`/signals/feed.xml`, `/signals/feed.json`) pull-based default, AI-crawlable; (2) Email digest section folded into existing Sunday portfolio digest (no new ritual, no new infra); (3) Webhook API + x402 endpoint deferred to **Phase 3** (gated by Tier A IC track record). Team consensus: UI+SEO+Newsletter+Retention+PM unanimous.
 
 ### Brand
-- **Q7: Submarca naming — "Vectorial Signals" approved?** If yes, kick off trademark filing.
-- **Q8: Visual accent color for Signals — pick now or design pass later?**
+- ~~**Q7: Submarca naming — "Vectorial Signals" approved?**~~ → **RESOLVED 2026-05-15**: ✅ "Vectorial Signals" approved as operating name. **Branded house architecture confirmed**: Vectorial Data is umbrella; Signals / Stocks / Terminal / News / Quant Lab are services living at `vectorialdata.com/{service}` (Stripe / Bloomberg / Google pattern). **NO separate domains, NO trademark filings yet** — defer until MRR justifies. Brand monitoring (Google Alerts + USPTO TESS watch) DEFERRED to backlog. Action items spawned: (1) Global nav bar across vectorialdata.com listing all services, (2) JSON-LD `@type: Service` per service so AI models index them as separate entities under one domain.
+- ~~**Q8: Visual accent color for Signals — pick now or design pass later?**~~ → **RESOLVED 2026-05-15**: **Cyan radar `#00BCD4`** (Tailwind `cyan-500` / `cyan-400` dark). CSS var `--signals-accent: 188 86% 42%`. Picked because (a) doesn't collide with semantic status colors (emerald=live, amber=decayed, faint=deprecated/pending) used in `methodology/page.tsx`, (b) evokes radar/satellite/alt-data instruments matching the Signals voice (descriptive, scientific, no-hype), (c) distinct from any future Stocks/Terminal accent. OG image template uses cyan gradient corner.
 
 ### Legal
-- **Q9: Confirm publisher's exclusion comfort — Sullivan & Cromwell wants signals impersonal + regular + incidental.** Alberto sign-off before Phase 1 ship.
-- **Q10: B2AI tier license terms — accept derivative use without redistribution?** Drives B2AI ToS.
+- ~~**Q9: Confirm publisher's exclusion comfort**~~ → **RESOLVED 2026-05-16**: Alberto signed off on (A) the 4 bright lines — no buy/sell/recommend language, no forward return projections, no personalized DM/email responses, no portfolio-tailored signals; (B) Stripe Legal worker drafts a `/legal/signals-terms` ToS addendum before Phase 2 ship (separate from stock-picking ToS, linked from `/signals/*` footer). (C) Support ticket SOP for "should I buy X" type asks is handled **manually by Alberto for now** — no automated macro / template needed yet. Revisit C if ticket volume grows.
+- ~~**Q10: B2AI tier license terms**~~ → **RESOLVED 2026-05-16**: **Permissive everything if paid.** No restrictions on consumer downstream use — training, redistribution, derivative products all OK. Our legal posture: "not investment advice" + attribution boilerplate + no warranty + liability cap (Polygon.io / Tiingo pattern). **Pricing model — 2 tiers:** (1) 🧍 **Vectorial Pro** flat monthly for humans/institutions ($19/mo personal · $199/mo institutional 5-seat); (2) 🤖 **API pay-as-you-use** for everything machine-consumed ($0.005 read · $0.01 webhook · $2 bulk historical · $50-500 AI training samples). **Billing model — prepaid credits with auto-refill** (OpenAI/Anthropic/Vercel pattern): minimum top-up $5 · auto-refill threshold $1 → refill $10 · $1 free credit at email-verified signup · Stripe Customer Balance API for card rail · x402 USDC on Base for crypto/atomic rail. Prepaid > postpaid for fraud protection (Security Engineer rationale).
 
 ### Resolved 2026-05-10
 - **Language strategy:** ship 4 tiers from day one (Casual / Pro / AI brief / Machine). Override of PM 2+2-staged proposal. ✓

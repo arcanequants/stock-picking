@@ -9,7 +9,8 @@
     "noticias": "News",
     "verify": "Verifiable Record",
     "verifyTooltip": "Verifiable record — digital notary",
-    "quantLab": "Quant Lab"
+    "quantLab": "Quant Lab",
+    "terminal": "Terminal"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Stock Portfolio. This is not financial advice.",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllBotCards } from "@/lib/quant-lab";
+import { JsonLd, getServiceSchema } from "@/lib/seo";
 import Sparkline from "./_components/Sparkline";
 
 export const metadata: Metadata = {
@@ -71,6 +72,7 @@ export default async function QuantLabPage() {
 
   return (
     <div className="max-w-5xl mx-auto">
+      <JsonLd data={getServiceSchema("quant-lab")} />
       <header className="mb-10">
         <p className="text-sm text-text-muted mb-2">
           <Link href="/" className="hover:text-foreground transition-colors">

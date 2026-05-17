@@ -4,6 +4,7 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 import { getEventsForDigest } from "@/lib/notifications";
 import { sendDigestEmail } from "@/lib/resend";
 import { generateApprovalToken, getWeeklyPerformance } from "../route";
+import { getWeeklySignalsSummary } from "@/lib/signals";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -82,8 +83,11 @@ export async function GET(request: Request) {
       return htmlResponse("Sin eventos", "No hay eventos esta semana para enviar.", "#f59e0b");
     }
 
-    // Get portfolio performance
-    const summary = await getWeeklyPerformance();
+    // Get portfolio performance + signals weekly snapshot
+    const [summary, signalsWeekly] = await Promise.all([
+      getWeeklyPerformance(),
+      getWeeklySignalsSummary().catch(() => []),
+    ]);
 
     // Get premium subscribers
     const { data: subscribers } = await supabaseAdmin
@@ -128,7 +132,14 @@ export async function GET(request: Request) {
     for (const user of uniqueRecipients) {
       try {
         const isPremium = premiumEmails.has(user.email);
-        await sendDigestEmail(user.email, events, "es", isPremium, summary);
+        await sendDigestEmail(
+          user.email,
+          events,
+          "es",
+          isPremium,
+          summary,
+          signalsWeekly
+        );
 
         await supabaseAdmin
           .from("email_digest_log")

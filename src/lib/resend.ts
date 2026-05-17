@@ -1,6 +1,11 @@
 import { Resend } from "resend";
 import type { PortfolioEvent, Stock, Transaction } from "@/lib/types";
 import { stocks } from "@/data/stocks";
+import {
+  pickCopyCasual,
+  type SignalLocale,
+  type WeeklySignalSnapshot,
+} from "@/lib/signals";
 
 // Ticker → company name map (e.g., "ARM" → "Arm Holdings")
 const NAMES: Record<string, string> = Object.fromEntries(
@@ -65,6 +70,10 @@ const L: Record<string, Record<string, string>> = {
     analystDown: "recomiendan comprar",
     near52High: "cerca de máximo 52 semanas",
     near52Low: "cerca de mínimo 52 semanas",
+    signalsWeekly: "Esta semana en Signals",
+    signalsCta: "Ver todos los signals",
+    signalsBaseline: "vs baseline",
+    signalsWeekDelta: "7d",
   },
   en: {
     title: "Weekly Summary",
@@ -95,6 +104,10 @@ const L: Record<string, Record<string, string>> = {
     analystDown: "rate Buy",
     near52High: "near 52-week high",
     near52Low: "near 52-week low",
+    signalsWeekly: "This week in Signals",
+    signalsCta: "View all signals",
+    signalsBaseline: "vs baseline",
+    signalsWeekDelta: "7d",
   },
   pt: {
     title: "Resumo Semanal",
@@ -125,6 +138,10 @@ const L: Record<string, Record<string, string>> = {
     analystDown: "recomendam compra",
     near52High: "perto da máxima de 52 semanas",
     near52Low: "perto da mínima de 52 semanas",
+    signalsWeekly: "Esta semana em Signals",
+    signalsCta: "Ver todos os signals",
+    signalsBaseline: "vs baseline",
+    signalsWeekDelta: "7d",
   },
   hi: {
     title: "साप्ताहिक सारांश",
@@ -155,6 +172,10 @@ const L: Record<string, Record<string, string>> = {
     analystDown: "खरीदने की सलाह",
     near52High: "52-सप्ताह के उच्चतम के पास",
     near52Low: "52-सप्ताह के न्यूनतम के पास",
+    signalsWeekly: "इस सप्ताह Signals में",
+    signalsCta: "सभी signals देखें",
+    signalsBaseline: "vs baseline",
+    signalsWeekDelta: "7d",
   },
 };
 
@@ -423,6 +444,85 @@ function buildBottomLine(
     </div>`;
 }
 
+// --- Signals weekly section (Vectorial Signals submarca) ---
+
+const SIGNALS_DOMAIN_GLYPH: Record<string, string> = {
+  maritime: "&#9956;",     // ⛴
+  energy: "&#9981;",       // ⛽
+  geospatial: "&#128752;", // 🛰
+  atmospheric: "&#127787;",// 🌫
+  agricultural: "&#127806;",// 🌾
+  cross: "&#9651;",        // △
+};
+
+function fmtSignalValue(value: number, decimals: number): string {
+  return value.toLocaleString("en-US", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+}
+
+function fmtSignalPct(pct: number): string {
+  const sign = pct >= 0 ? "+" : "";
+  return `${sign}${(pct * 100).toFixed(1)}%`;
+}
+
+function signalsLocale(locale: string): SignalLocale {
+  if (locale === "en" || locale === "pt" || locale === "hi") return locale;
+  return "es";
+}
+
+function buildSignalsSection(
+  snapshots: WeeklySignalSnapshot[],
+  locale: string,
+  limit = 5
+): string {
+  if (snapshots.length === 0) return "";
+  const lang = L[locale] ? locale : "en";
+  const slang = signalsLocale(lang);
+  const shown = snapshots.slice(0, limit);
+
+  const rows = shown
+    .map((row) => {
+      const def = row.definition;
+      const casual = pickCopyCasual(def.copy, slang);
+      const glyph = SIGNALS_DOMAIN_GLYPH[def.domain] ?? "&bull;";
+      const valueDisplay = `${fmtSignalValue(Number(row.latest.value), def.display_decimals)} ${def.unit}`;
+      const title = casual.title || def.name;
+      const tagline = casual.tagline || "";
+
+      let deltaHtml = "";
+      if (row.delta7d_pct !== null) {
+        const positive = row.delta7d_pct >= 0;
+        const color = positive ? "#0097a7" : "#dc2626";
+        deltaHtml = `<span style="color:${color};font-weight:600;">${fmtSignalPct(row.delta7d_pct)}</span> <span style="color:#9ca3af;">${t(lang, "signalsWeekDelta")}</span>`;
+      }
+
+      return `<tr><td style="padding:8px 0;font-size:14px;line-height:1.5;border-bottom:1px solid #f4f4f5;">
+        <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;">
+          <span style="color:#0097a7;" aria-hidden="true">${glyph}</span>
+          <a href="${SITE}/signals/${def.id}" style="color:#111827;text-decoration:none;font-weight:600;">${title}</a>
+          <span style="color:#374151;font-variant-numeric:tabular-nums;">${valueDisplay}</span>
+          ${deltaHtml}
+        </div>
+        ${tagline ? `<p style="margin:4px 0 0;font-size:12px;color:#6b7280;line-height:1.5;">${tagline}</p>` : ""}
+      </td></tr>`;
+    })
+    .join("");
+
+  return `
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid #f4f4f5;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#00bcd4;"></span>
+        <p style="margin:0;font-size:11px;font-weight:700;color:#0097a7;text-transform:uppercase;letter-spacing:0.8px;">${t(lang, "signalsWeekly")}</p>
+      </div>
+      <table style="width:100%;border-collapse:collapse;">${rows}</table>
+      <p style="margin:12px 0 0;font-size:12px;">
+        <a href="${SITE}/signals" style="color:#0097a7;text-decoration:none;font-weight:500;">${t(lang, "signalsCta")} &rarr;</a>
+      </p>
+    </div>`;
+}
+
 // Hidden preview text for email clients (shows after subject line)
 function previewText(text: string): string {
   // Hidden text + whitespace padding to push default preview text away
@@ -468,7 +568,8 @@ function generateDynamicSubject(
 function buildDigestHtml(
   events: PortfolioEvent[],
   locale: string,
-  summary: DigestSummary | null
+  summary: DigestSummary | null,
+  signalsWeekly: WeeklySignalSnapshot[] = []
 ): string {
   const lang = L[locale] ? locale : "en";
   const grouped = groupEvents(events);
@@ -514,6 +615,7 @@ function buildDigestHtml(
   );
 
   const newsSection = buildSectionHtml("News", grouped.news, locale, 3);
+  const signalsSection = buildSignalsSection(signalsWeekly, locale, 5);
   const bottomLine = buildBottomLine(events, summary, locale);
 
   return `<!DOCTYPE html>
@@ -534,6 +636,7 @@ function buildDigestHtml(
       ${earnSection}
       ${analystSection}
       ${newsSection}
+      ${signalsSection}
       ${bottomLine}
     </div>
     <div style="padding:16px 24px;border-top:1px solid #e4e4e7;text-align:center;">
@@ -556,7 +659,8 @@ function buildDigestHtml(
 function buildFreeDigestHtml(
   events: PortfolioEvent[],
   locale: string,
-  summary: DigestSummary | null
+  summary: DigestSummary | null,
+  signalsWeekly: WeeklySignalSnapshot[] = []
 ): string {
   const lang = L[locale] ? locale : "en";
   const grouped = groupEvents(events);
@@ -627,6 +731,7 @@ function buildFreeDigestHtml(
       <div style="margin-top:16px;padding-top:12px;border-top:1px solid #e4e4e7;">
         <table style="width:100%;border-collapse:collapse;">${previewRows}${moreRow}</table>
       </div>` : ""}
+      ${buildSignalsSection(signalsWeekly, locale, 3)}
     </div>
     <div style="padding:16px 24px;border-top:1px solid #e4e4e7;text-align:center;">
       <a href="${SITE}/join" style="display:inline-block;background:#4f46e5;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:15px;font-weight:600;">${t(lang, "freeCta")}</a>
@@ -652,10 +757,11 @@ export async function sendDigestApprovalEmail(
   weekKey: string,
   recipientCount: number,
   premiumCount: number,
-  summary: DigestSummary | null
+  summary: DigestSummary | null,
+  signalsWeekly: WeeklySignalSnapshot[] = []
 ) {
   const freeCount = recipientCount - premiumCount;
-  const digestPreview = buildDigestHtml(events, "es", summary);
+  const digestPreview = buildDigestHtml(events, "es", summary, signalsWeekly);
 
   const html = `<!DOCTYPE html>
 <html>
@@ -703,7 +809,8 @@ export async function sendDigestEmail(
   events: PortfolioEvent[],
   locale = "en",
   isSubscribed = true,
-  summary: DigestSummary | null = null
+  summary: DigestSummary | null = null,
+  signalsWeekly: WeeklySignalSnapshot[] = []
 ) {
   const subject = generateDynamicSubject(events, summary, locale);
 
@@ -712,8 +819,8 @@ export async function sendDigestEmail(
     to,
     subject,
     html: isSubscribed
-      ? buildDigestHtml(events, locale, summary)
-      : buildFreeDigestHtml(events, locale, summary),
+      ? buildDigestHtml(events, locale, summary, signalsWeekly)
+      : buildFreeDigestHtml(events, locale, summary, signalsWeekly),
   });
 
   if (error) throw new Error(`Failed to send digest: ${error.message}`);

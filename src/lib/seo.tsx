@@ -24,18 +24,108 @@ export function getOrganizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-      "Vectorial Data is a stock picking service that publishes daily researched stock picks across global equities. Every pick is cryptographically verified via SHA-256 hash chain on Base (Ethereum L2). Subscription costs $1/month with daily WhatsApp delivery.",
+      "Vectorial Data is a multi-product market intelligence company. Branded house architecture: Vectorial Stocks (daily picks, $1/mo), Vectorial Signals (alternative-data signals), Vectorial Terminal (prediction markets + perps aggregator), Vectorial Quant Lab (systematic trading bots), and Vectorial News (real-time market events).",
     foundingDate: "2026",
     areaServed: "Worldwide",
-    serviceType: "Stock Research and Analysis",
     knowsAbout: [
       "Stock Analysis",
-      "Fundamental Research",
-      "Portfolio Management",
+      "Alternative Data",
+      "Satellite Intelligence",
+      "AIS / Maritime Intelligence",
+      "Prediction Markets",
+      "Perpetual Futures",
+      "Systematic Trading",
+      "Quantitative Research",
       "Global Equities",
-      "Dividend Investing",
     ],
     sameAs: ["https://github.com/arcanequants/stock-picking"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Vectorial Data services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: getServiceSchema("stocks") },
+        { "@type": "Offer", itemOffered: getServiceSchema("signals") },
+        { "@type": "Offer", itemOffered: getServiceSchema("terminal") },
+        { "@type": "Offer", itemOffered: getServiceSchema("quant-lab") },
+        { "@type": "Offer", itemOffered: getServiceSchema("news") },
+      ],
+    },
+  };
+}
+
+/* ── Service (per branded-house product) ──────────────── */
+
+type ServiceId = "stocks" | "signals" | "terminal" | "quant-lab" | "news";
+
+const SERVICES: Record<
+  ServiceId,
+  {
+    name: string;
+    url: string;
+    serviceType: string;
+    description: string;
+    sameAs?: string[];
+  }
+> = {
+  stocks: {
+    name: "Vectorial Stocks",
+    url: `${SITE_URL}/stocks`,
+    serviceType: "Stock Research and Analysis",
+    description:
+      "Daily researched stock picks across global equities, delivered via WhatsApp. Every pick is cryptographically attested on Base (Ethereum L2) via SHA-256 hash chain. Subscription: $1/month.",
+  },
+  signals: {
+    name: "Vectorial Signals",
+    url: `${SITE_URL}/signals`,
+    serviceType: "Alternative Data Signals",
+    description:
+      "Alternative-data signals from public satellites, AIS, EIA, USDA, and TROPOMI — cleaned, baselined, and translated to plain language. Descriptive market intelligence with publicly-published Information Coefficient per signal.",
+  },
+  terminal: {
+    name: "Vectorial Terminal",
+    url: "https://terminal.vectorialdata.com",
+    serviceType: "Prediction Markets and Perpetual Futures Aggregator",
+    description:
+      "Trading terminal aggregating Hyperliquid (perps), Polymarket (prediction markets), and Azuro across one interface. Includes AI agents and Brier / calibration metrics.",
+  },
+  "quant-lab": {
+    name: "Vectorial Quant Lab",
+    url: `${SITE_URL}/quant-lab`,
+    serviceType: "Systematic Trading Bots",
+    description:
+      "Laboratory of systematic trading bots with public real-time performance — Arcane Quant (Binance Futures Copy Trading) and beyond. No promises, just transparent equity curves.",
+  },
+  news: {
+    name: "Vectorial News",
+    url: `${SITE_URL}/notifications`,
+    serviceType: "Financial News and Market Events",
+    description:
+      "Real-time market events relevant to Vectorial Data picks, with AI-generated explanations of why each event matters. Free preview; full explanations on Pro.",
+  },
+};
+
+export function getServiceSchema(id: ServiceId) {
+  const s = SERVICES[id];
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: s.name,
+    url: s.url,
+    serviceType: s.serviceType,
+    description: s.description,
+    areaServed: "Worldwide",
+    provider: {
+      "@type": "Organization",
+      name: "Vectorial Data",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+    },
+    brand: { "@type": "Brand", name: s.name },
+    isPartOf: {
+      "@type": "Organization",
+      name: "Vectorial Data",
+      url: SITE_URL,
+    },
   };
 }
 

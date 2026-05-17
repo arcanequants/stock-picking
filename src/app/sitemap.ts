@@ -21,6 +21,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/lecciones`, lastModified: now, changeFrequency: "daily", priority: 0.9, alternates: { languages: langs("/lecciones") } },
     { url: `${BASE}/signals`, lastModified: now, changeFrequency: "daily", priority: 0.9, alternates: { languages: langs("/signals") } },
     { url: `${BASE}/signals/methodology`, lastModified: now, changeFrequency: "weekly", priority: 0.6, alternates: { languages: langs("/signals/methodology") } },
+    { url: `${BASE}/signals/feed.xml`, lastModified: now, changeFrequency: "hourly", priority: 0.5 },
+    { url: `${BASE}/signals/feed.json`, lastModified: now, changeFrequency: "hourly", priority: 0.5 },
     { url: `${BASE}/quant-lab`, lastModified: now, changeFrequency: "hourly", priority: 0.8, alternates: { languages: langs("/quant-lab") } },
     { url: `${BASE}/quant-lab/arcane-quant`, lastModified: now, changeFrequency: "hourly", priority: 0.8, alternates: { languages: langs("/quant-lab/arcane-quant") } },
     { url: `${BASE}/quant-lab/guia-copy-trading-binance`, lastModified: now, changeFrequency: "monthly", priority: 0.5, alternates: { languages: langs("/quant-lab/guia-copy-trading-binance") } },
@@ -37,6 +39,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/terms`, lastModified: "2026-03-04", changeFrequency: "monthly", priority: 0.3, alternates: { languages: langs("/terms") } },
     { url: `${BASE}/privacy`, lastModified: "2026-03-04", changeFrequency: "monthly", priority: 0.3, alternates: { languages: langs("/privacy") } },
     { url: `${BASE}/disclaimer`, lastModified: "2026-03-04", changeFrequency: "monthly", priority: 0.3, alternates: { languages: langs("/disclaimer") } },
+    { url: `${BASE}/legal/signals-terms`, lastModified: "2026-05-17", changeFrequency: "monthly", priority: 0.4, alternates: { languages: langs("/legal/signals-terms") } },
   ];
 
   /* ── Per-stock pages (/stocks/[ticker]) ───────────── */

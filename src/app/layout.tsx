@@ -154,6 +154,17 @@ export default async function RootLayout({
                     >
                       Signals
                     </Link>
+                    <a
+                      href="https://terminal.vectorialdata.com"
+                      target="_blank"
+                      rel="noopener"
+                      className="text-text-muted hover:text-foreground transition-colors inline-flex items-center gap-1"
+                    >
+                      {t("terminal")}
+                      <svg className="w-3 h-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                        <path d="M7 17L17 7M9 7h8v8" />
+                      </svg>
+                    </a>
                     <Link
                       href="/developers"
                       className="text-text-muted hover:text-foreground transition-colors"
@@ -219,6 +230,8 @@ export default async function RootLayout({
                   </div>
                   <div className="flex items-center justify-center gap-3 mb-3 text-text-muted flex-wrap text-xs">
                     <Link href="/signals" className="hover:text-foreground transition-colors">Signals</Link>
+                    <span className="text-border">·</span>
+                    <a href="https://terminal.vectorialdata.com" target="_blank" rel="noopener" className="hover:text-foreground transition-colors">Terminal</a>
                     <span className="text-border">·</span>
                     <Link href="/lecciones" className="hover:text-foreground transition-colors">{tFooter("lecciones")}</Link>
                     <span className="text-border">·</span>

@@ -140,6 +140,68 @@ export async function getRecentObservations(
   return (data ?? []) as SignalObservation[];
 }
 
+export async function listRecentObservationsAcrossSignals(
+  limit = 50
+): Promise<SignalObservation[]> {
+  const sb = getSupabaseAdmin();
+  const { data } = await sb
+    .from("signal_observations")
+    .select("*")
+    .order("observed_at", { ascending: false })
+    .limit(limit);
+  return (data ?? []) as SignalObservation[];
+}
+
+export type WeeklySignalSnapshot = {
+  definition: SignalDefinition;
+  latest: SignalObservation;
+  earliest: SignalObservation;
+  delta7d_pct: number | null;
+};
+
+/**
+ * Per-signal week-over-week snapshot — used by the Sunday digest "Esta semana
+ * en Signals" section. Returns one row per live signal sorted by |Δ7d| desc so
+ * the most interesting movers surface first.
+ */
+export async function getWeeklySignalsSummary(): Promise<WeeklySignalSnapshot[]> {
+  const defs = await listLiveSignals();
+  const sb = getSupabaseAdmin();
+  const since = new Date(Date.now() - 8 * 86400_000).toISOString();
+
+  const rows = await Promise.all(
+    defs.map(async (def) => {
+      const { data } = await sb
+        .from("signal_observations")
+        .select("*")
+        .eq("signal_id", def.id)
+        .gte("observed_at", since)
+        .order("observed_at", { ascending: false });
+      const obs = (data ?? []) as SignalObservation[];
+      if (obs.length === 0) return null;
+      const latest = obs[0];
+      const earliest = obs[obs.length - 1];
+      const earliestVal = Number(earliest.value);
+      const delta =
+        obs.length >= 2 && earliestVal !== 0
+          ? (Number(latest.value) - earliestVal) / Math.abs(earliestVal)
+          : null;
+      return {
+        definition: def,
+        latest,
+        earliest,
+        delta7d_pct: delta,
+      } satisfies WeeklySignalSnapshot;
+    })
+  );
+
+  return rows
+    .filter((r): r is WeeklySignalSnapshot => r !== null)
+    .sort(
+      (a, b) => Math.abs(b.delta7d_pct ?? 0) - Math.abs(a.delta7d_pct ?? 0)
+    );
+}
+
 export async function getLatestObservation(
   signalId: string
 ): Promise<SignalObservation | null> {

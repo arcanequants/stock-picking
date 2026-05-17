@@ -27,6 +27,12 @@
   --brand-subtle: #eef2ff;
   --brand-border: rgba(79, 70, 229, 0.3);
   --brand-text: #4f46e5;
+  /* Signals accent (cyan radar — Q8 RESOLVED 2026-05-15) */
+  --signals-accent: #00bcd4;
+  --signals-accent-hover: #0097a7;
+  --signals-accent-subtle: rgba(0, 188, 212, 0.08);
+  --signals-accent-border: rgba(0, 188, 212, 0.3);
+  --signals-accent-text: #0097a7;
 }
 
 .dark {
@@ -53,6 +59,12 @@
   --brand-subtle: rgba(79, 70, 229, 0.1);
   --brand-border: rgba(129, 140, 248, 0.3);
   --brand-text: #818cf8;
+  /* Signals accent — dark mode (cyan radar) */
+  --signals-accent: #22d3ee;
+  --signals-accent-hover: #67e8f9;
+  --signals-accent-subtle: rgba(34, 211, 238, 0.1);
+  --signals-accent-border: rgba(34, 211, 238, 0.3);
+  --signals-accent-text: #22d3ee;
 }
 
 @theme inline {
@@ -72,6 +84,11 @@
   --color-brand-subtle: var(--brand-subtle);
   --color-brand-border: var(--brand-border);
   --color-brand-text: var(--brand-text);
+  --color-signals-accent: var(--signals-accent);
+  --color-signals-accent-hover: var(--signals-accent-hover);
+  --color-signals-accent-subtle: var(--signals-accent-subtle);
+  --color-signals-accent-border: var(--signals-accent-border);
+  --color-signals-accent-text: var(--signals-accent-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

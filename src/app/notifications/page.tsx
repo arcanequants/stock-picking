@@ -1,6 +1,7 @@
 import { getAuthState } from "@/lib/auth";
 import { getTranslations, getLocale } from "next-intl/server";
 import { getPublicEvents } from "@/lib/notifications";
+import { JsonLd, getServiceSchema } from "@/lib/seo";
 import NotificationsList from "./NotificationsList";
 
 export default async function NotificationsPage() {
@@ -24,6 +25,7 @@ export default async function NotificationsPage() {
 
   return (
     <div className="max-w-2xl mx-auto">
+      <JsonLd data={getServiceSchema("news")} />
       <div className="mb-8">
         <h1 className="text-2xl font-bold mb-2">{t("pageTitle")}</h1>
         <p className="text-text-muted text-sm">{t("pageSubtitle")}</p>

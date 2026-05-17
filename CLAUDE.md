@@ -23,7 +23,7 @@ By rule, for new picks: `tx.price === tx.open_price`. They diverge only for the 
 
 ## Worker System — Automatic Orchestration
 
-I have a team of 25 specialized workers in `.claude/workers/`. **I must automatically invoke the right worker(s) based on the task** — the user should never have to tell me which one to use.
+I have a team of 31 specialized workers in `.claude/workers/`. **I must automatically invoke the right worker(s) based on the task** — the user should never have to tell me which one to use.
 
 ### Product, Design & Growth Workers (8)
 
@@ -43,6 +43,17 @@ I have a team of 25 specialized workers in `.claude/workers/`. **I must automati
 | Worker | File | Invoke When |
 |--------|------|-------------|
 | **Application Security Engineer** (Latacora / tptacek) | `security-engineer.md` | Supabase RLS, secrets/keys, webhook signatures, auth/session security, API key rotation, OWASP, dependency audits, threat modeling |
+
+### Alt Data & Signals Workers (6) — Vectorial Signals submarca
+
+| Worker | File | Invoke When |
+|--------|------|-------------|
+| **Maritime Intelligence Analyst** (Ami Daniel/Windward + Lloyd's List) | `maritime-intelligence.md` | AIS / shipping / tanker tracking, dark fleet, sanctions vessels, port congestion, Hormuz/Suez chokepoints, oil-by-sea flows |
+| **Energy & Commodities Strategist** (Ed Morse + Anas Alhajji) | `energy-commodities.md` | Oil markets, OPEC+, EIA reports, crack spreads, LNG arbitrage, refining margins, US shale FCF, OPEC strategy, commodity policy calendar |
+| **Geospatial Intelligence Analyst** (Cardillo/NGA + Crawford/Orbital Insight) | `geospatial-intelligence.md` | Satellite imagery interpretation, parking-lot car counts, oil tank lid heights, rig activity, construction progress, Sentinel Hub, Planet, SAR |
+| **Quantitative Alt Data Analyst** (Tammer Kamel/Quandl + Eagle Alpha) | `quant-alt-data.md` | Backtesting alt signals, IC/Sharpe/capacity, point-in-time discipline, signal cleaning + decay, methodology cards, FISD-style provenance, B2AI JSON-LD signal schema |
+| **Atmospheric Scientist** (Daniel Jacob/Harvard + Climate TRACE) | `atmospheric-science.md` | TROPOMI methane / NO₂ / SO₂ inversions, super-emitter detection, EPA self-report vs satellite reality, China industrial NO₂, EMIT plumes, IMI methodology |
+| **Agricultural Remote Sensing Analyst** (Sara Menker/Gro + Mark Johnson/Descartes Labs) | `agricultural-remote-sensing.md` | NDVI/EVI yield models, USDA WASDE comparison, SMAP soil moisture, CHIRPS rainfall, phenology-weighted forecasts, corn/soy/wheat/cocoa/coffee crop calls |
 
 ### Email & Communications Workers (3)
 
@@ -99,6 +110,19 @@ I have a team of 25 specialized workers in `.claude/workers/`. **I must automati
 - **"get found by AI / cited by ChatGPT"** → SEO & AI Discovery + Copywriter + Growth Hacker
 - **"meta tags / Open Graph / hrefLang"** → SEO & AI Discovery + Landing & Conversion
 
+**Vectorial Signals (Alt Data submarca):**
+- **"AIS / tanker / shipping / dark fleet / Hormuz"** → Maritime Intelligence
+- **"oil markets / OPEC / EIA / crack spreads / refiners / LNG"** → Energy & Commodities
+- **"satellite imagery / parking lots / oil tanks / rigs / construction"** → Geospatial Intelligence
+- **"backtest a signal / signal methodology / IC / capacity / decay"** → Quant Alt Data
+- **"methane / TROPOMI / super-emitters / NO₂ / EMIT"** → Atmospheric Science
+- **"crop yield / NDVI / WASDE / corn/soy/wheat / agricultural"** → Agricultural Remote Sensing
+- **"build a /signals page / new alt-data signal end-to-end"** → Quant Alt Data + relevant domain worker(s) + UI/UX Designer + Copywriter
+- **"oil tanker storage thesis"** → Maritime Intelligence + Energy & Commodities + Geospatial Intelligence (triangulate)
+- **"is Walmart's quarter looking good?" (alt-data driven)** → Geospatial Intelligence + Quant Alt Data
+- **"China economic activity proxy"** → Atmospheric Science (NO₂) + Maritime Intelligence (port congestion) + Geospatial Intelligence (factory activity)
+- **"crop call for ag commodity futures"** → Agricultural Remote Sensing + Quant Alt Data + Energy & Commodities (positioning context)
+
 **Security:**
 - **"Supabase RLS / database linter errors"** → Security Engineer + Privacy & Data Protection
 - **"is this endpoint safe? / threat model this"** → Security Engineer
@@ -149,4 +173,4 @@ Sibling product `Vectorial Data Broker` lives at `/Users/albertosorno/vectoriald
 
 When editing any of these workers in stock-picking, remember they're also load-bearing for the broker — keep them product-agnostic where possible (no stock-picking-only assumptions in the worker spec, just in the example sections).
 
-**Workers exclusive to stock-picking** (broker does NOT use): email-designer, newsletter, retention, seo-ai-discovery, ui-designer, landing-conversion, legal-asia-pacific, legal-mena-africa, legal-latam, legal-consumer, legal-content-promotions, legal-ip-brand.
+**Workers exclusive to stock-picking** (broker does NOT use): email-designer, newsletter, retention, seo-ai-discovery, ui-designer, landing-conversion, legal-asia-pacific, legal-mena-africa, legal-latam, legal-consumer, legal-content-promotions, legal-ip-brand, **maritime-intelligence, energy-commodities, geospatial-intelligence, quant-alt-data, atmospheric-science, agricultural-remote-sensing** (6 alt-data workers — Vectorial Signals submarca lives only in stock-picking).

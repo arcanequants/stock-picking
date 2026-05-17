@@ -11,7 +11,7 @@ import {
 import { getSignalView } from "@/lib/signals-view";
 import { SignalCard } from "@/components/SignalCard";
 import { SignalViewToggle } from "@/components/SignalViewToggle";
-import { JsonLd } from "@/lib/seo";
+import { JsonLd, getServiceSchema } from "@/lib/seo";
 
 const SITE_URL = "https://vectorialdata.com";
 
@@ -29,6 +29,14 @@ export const metadata: Metadata = {
       en: `${SITE_URL}/signals`,
       pt: `${SITE_URL}/signals`,
       hi: `${SITE_URL}/signals`,
+    },
+    types: {
+      "application/rss+xml": [
+        { url: `${SITE_URL}/signals/feed.xml`, title: "Vectorial Signals (RSS)" },
+      ],
+      "application/feed+json": [
+        { url: `${SITE_URL}/signals/feed.json`, title: "Vectorial Signals (JSON Feed)" },
+      ],
     },
   },
   robots: { index: true, follow: true },
@@ -107,12 +115,13 @@ export default async function SignalsIndexPage() {
 
   return (
     <div className="space-y-10">
+      <JsonLd data={getServiceSchema("signals")} />
       <JsonLd data={itemListSchema} />
 
       <header className="space-y-3">
         <div className="flex items-start justify-between gap-4 flex-wrap">
           <div>
-            <p className="text-xs uppercase tracking-widest text-text-faint">
+            <p className="text-xs uppercase tracking-widest text-signals-accent-text">
               Vectorial Signals
             </p>
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
@@ -130,19 +139,27 @@ export default async function SignalsIndexPage() {
         </div>
 
         <div className="flex flex-wrap gap-3 text-xs text-text-faint">
-          <Link href="/api/signals" className="underline hover:text-foreground">
+          <Link href="/api/signals" className="underline hover:text-signals-accent-hover">
             JSON catalog
           </Link>
           <span>·</span>
           <Link
             href="/api/signals/openapi.json"
-            className="underline hover:text-foreground"
+            className="underline hover:text-signals-accent-hover"
           >
             OpenAPI 3.1
           </Link>
           <span>·</span>
-          <Link href="/llms.txt" className="underline hover:text-foreground">
+          <Link href="/llms.txt" className="underline hover:text-signals-accent-hover">
             llms.txt
+          </Link>
+          <span>·</span>
+          <Link href="/signals/feed.xml" className="underline hover:text-signals-accent-hover">
+            RSS
+          </Link>
+          <span>·</span>
+          <Link href="/signals/feed.json" className="underline hover:text-signals-accent-hover">
+            JSON Feed
           </Link>
         </div>
       </header>
@@ -171,10 +188,20 @@ export default async function SignalsIndexPage() {
         ))
       )}
 
-      <footer className="border-t border-border pt-6 text-xs text-text-faint leading-relaxed max-w-3xl">
-        Vectorial Signals is descriptive market intelligence. Not investment
-        advice. We don&apos;t manage money. Past correlations don&apos;t predict
-        future performance. Decisions are yours.
+      <footer className="border-t border-border pt-6 text-xs text-text-faint leading-relaxed max-w-3xl space-y-2">
+        <p>
+          Vectorial Signals is descriptive market intelligence. Not investment
+          advice. We don&apos;t manage money. Past correlations don&apos;t
+          predict future performance. Decisions are yours.
+        </p>
+        <p>
+          <Link
+            href="/legal/signals-terms"
+            className="underline hover:text-signals-accent-hover"
+          >
+            Vectorial Signals Terms of Use
+          </Link>
+        </p>
       </footer>
     </div>
   );

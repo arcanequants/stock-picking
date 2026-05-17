@@ -4,6 +4,7 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 import { getEventsForDigest } from "@/lib/notifications";
 import { sendDigestApprovalEmail } from "@/lib/resend";
 import type { DigestSummary } from "@/lib/resend";
+import { getWeeklySignalsSummary } from "@/lib/signals";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -89,8 +90,11 @@ export async function GET(request: Request) {
       return NextResponse.json({ message: "Digest already sent this week", week_key: weekKey });
     }
 
-    // Get portfolio performance
-    const summary = await getWeeklyPerformance();
+    // Get portfolio performance + signals weekly snapshot
+    const [summary, signalsWeekly] = await Promise.all([
+      getWeeklyPerformance(),
+      getWeeklySignalsSummary().catch(() => []),
+    ]);
 
     // Count recipients for the preview
     const { data: subscribers } = await getSupabaseAdmin()
@@ -131,7 +135,8 @@ export async function GET(request: Request) {
       weekKey,
       recipientCount,
       premiumCount,
-      summary
+      summary,
+      signalsWeekly
     );
 
     return NextResponse.json({
@@ -143,6 +148,7 @@ export async function GET(request: Request) {
       premium: premiumCount,
       free: recipientCount - premiumCount,
       portfolio: summary,
+      signals_count: signalsWeekly.length,
     });
   } catch (error) {
     console.error("Email digest cron error:", error);

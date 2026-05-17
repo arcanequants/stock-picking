@@ -102,11 +102,11 @@ export default async function SignalsMethodologyPage() {
   return (
     <div className="space-y-10 max-w-3xl">
       <header className="space-y-3">
-        <p className="text-xs uppercase tracking-widest text-text-faint">
-          <Link href="/signals" className="hover:text-foreground">
+        <p className="text-xs uppercase tracking-widest text-signals-accent-text">
+          <Link href="/signals" className="hover:text-signals-accent-hover">
             Vectorial Signals
           </Link>{" "}
-          / methodology
+          <span className="text-text-faint">/ methodology</span>
         </p>
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
           Signal IC dashboard
@@ -146,7 +146,7 @@ export default async function SignalsMethodologyPage() {
                     <td className="px-4 py-2">
                       <Link
                         href={`/signals/${s.id}`}
-                        className="hover:text-foreground underline"
+                        className="hover:text-signals-accent-hover underline"
                       >
                         {s.name}
                       </Link>
@@ -207,9 +207,19 @@ export default async function SignalsMethodologyPage() {
         </ul>
       </section>
 
-      <footer className="border-t border-border pt-6 text-xs text-text-faint leading-relaxed">
-        Vectorial Signals is descriptive market intelligence. Not investment
-        advice. Past correlations don&apos;t predict future performance.
+      <footer className="border-t border-border pt-6 text-xs text-text-faint leading-relaxed space-y-2">
+        <p>
+          Vectorial Signals is descriptive market intelligence. Not investment
+          advice. Past correlations don&apos;t predict future performance.
+        </p>
+        <p>
+          <Link
+            href="/legal/signals-terms"
+            className="underline hover:text-signals-accent-hover"
+          >
+            Vectorial Signals Terms of Use
+          </Link>
+        </p>
       </footer>
     </div>
   );

@@ -9,6 +9,7 @@ import NotificationsBanner from "@/components/NotificationsBanner";
 import Link from "next/link";
 import FreeSignupForm from "@/components/FreeSignupForm";
 import { getLocalizedField } from "@/data/stock-translations";
+import { JsonLd, getServiceSchema } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata");
@@ -190,6 +191,7 @@ export default async function StocksPage() {
 
   return (
     <div className="space-y-10">
+      <JsonLd data={getServiceSchema("stocks")} />
       {!isSubscribed && <NotificationsBanner />}
 
       <section>

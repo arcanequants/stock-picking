@@ -56,7 +56,7 @@ export function SignalCard({
   return (
     <Link
       href={`/signals/${definition.id}`}
-      className="block rounded-2xl border border-border bg-card p-5 hover:border-foreground/30 transition-colors"
+      className="block rounded-2xl border border-border bg-card p-5 hover:border-signals-accent-border transition-colors"
     >
       <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-text-faint mb-2">
         <span aria-hidden>{glyph}</span>
