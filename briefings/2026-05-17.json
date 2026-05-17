@@ -1,0 +1,135 @@
+{
+  "date": "2026-05-17",
+  "summary": "Hormuz standoff pause, gold retreats, and Bitcoin ETFs log their biggest institutional buying streak of 2026",
+  "causalChain": "The Iran-US standoff keeps ~10M bpd offline, forcing energy-driven inflation that locks central banks (RBA, ECB) into tightening while Banxico signals its easing cycle is over; separately, record ETF inflows lift Bitcoin above $80K just as the US Senate votes on a law to formally regulate digital dollars.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Trump pauses Hormuz reopening op; Iran deal talks ongoing", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Brent ~$106; UAE exits OPEC; symbolic 188k bpd hike", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold slides to $4,547; strong dollar + no Trump-Xi deal", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "Court blocks 10% global tariff; appeals court freezes ruling same day", "worker": "—"},
+    {"n": 5, "region": "GLOBAL", "angle": "Trump-Xi Beijing truce: soybeans + rare-earth delay; tariffs unchanged", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Banxico cuts to 6.50%; split 3-2 vote likely ends easing cycle", "worker": "—"},
+    {"n": 7, "region": "MEXICO", "angle": "Nearshoring $41B FDI but 127k manufacturing jobs lost; USMCA review July", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "BoJ holds 0.75%; inflation forecast raised to 2.8% on Iran-war energy costs", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Yuan at 3-year high 6.78/USD; $1.2T surplus; PBOC slows appreciation", "worker": "—"},
+    {"n": 10, "region": "ASIA", "angle": "Japan intervenes twice to prop yen vs carry-trade pressure", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "ECB holds at 2%; energy pushes CPI to 3%; markets price 3 hikes", "worker": "—"},
+    {"n": 12, "region": "EUROPE", "angle": "Germany 1.2% growth after 2 years contraction; gov spending leads, exports lag", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "RBA 3rd hike to 4.35%; Iran-war energy costs driving Australian inflation", "worker": "—"},
+    {"n": 14, "region": "OCEANIA", "angle": "China housing slump weighs on iron ore; copper + green minerals support BHP/Rio", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "Bitcoin ETFs: $2.7B 9-day inflow streak; BTC ~$81K; BlackRock IBIT leads", "worker": "—"},
+    {"n": 16, "region": "CRYPTO", "angle": "Senate CLARITY Act vote: USDT $190B, USDC $77B; no passive yield allowed", "worker": "—"},
+    {"n": 17, "region": "CRYPTO", "angle": "DeFi TVL -10.7% to $82.7B; whales +56K BTC while retail sells", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Queen Mary U: universe constants sit in narrow 'bio-friendly window' — Science Advances", "worker": "—"},
+    {"n": 19, "region": "WOW", "angle": "Pond organism rewrites stop-codon rules; genetic code less universal than thought", "worker": "—"},
+    {"n": 20, "region": "WOW", "angle": "McGill U: glycerol-TNAP switch activates calorie-burning fat + bone formation — Nature", "worker": "—"},
+    {"n": 21, "region": "WOW", "angle": "U Sydney: 4-week low-fat diet makes older adults biologically younger — Aging Cell", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Trump just paused the US military operation trying to reopen the world's key oil shipping lane — the Strait of Hormuz. Nearly 10 million barrels of oil per day remain stuck because Iran and the US-Israel coalition are still in a standoff. That's roughly 10% of the world's daily oil supply on hold. Prices stay high until ships can move again."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "OPEC+ announced a small production increase — 188,000 extra barrels per day starting June. Sounds big, but it barely moves the needle when 10 million barrels daily are stuck behind Iran's closed shipping lane. Also: the UAE quietly left OPEC this month after decades of membership. Oil sits around $106 a barrel, still well below April's $138 spike."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell to $4,547 an ounce Friday — down 16% from its January peak near $5,600. A stronger dollar is the main driver: when the US dollar rises, gold usually falls since investors treat both as safe stores of value. The Trump-Xi summit in Beijing ended without a major trade deal, removing one reason investors had hoped the dollar might weaken."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "A US trade court ruled against Trump's 10% blanket tax on all imports, saying the law does not give the president that power. But within 24 hours an appeals court froze that ruling, so the taxes remain in place for now. The average US household pays roughly $1,500 more per year because of these tariffs. Courts will decide the final outcome."
+    },
+    {
+      "n": 5,
+      "region": "GLOBAL",
+      "text": "Trump and Xi met in Beijing this week. No grand deal, but a fragile truce: China agreed to buy US soybeans again after halting imports, and agreed to delay planned controls on rare minerals for one year. The US keeps all its tariffs in place. Both sides stepped back from escalation without resolving the deeper trade tensions — a pause, not a peace."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key interest rate to 6.50% on May 7 — the 14th cut in a row since early 2024. The vote was split 3-2, with two members wanting to hold. This likely ends the cutting cycle: the bank hinted it is done lowering rates. Mexico's economy shrank in the first quarter of 2026 and inflation sits at 4.45%, above the 3% target."
+    },
+    {
+      "n": 7,
+      "region": "MEXICO",
+      "text": "Mexico attracted nearly $41 billion in foreign investment through late 2025 as companies moved supply chains closer to the US. But there's a catch: manufacturing jobs fell by 127,000 last year — the worst drop since 2008. New factories are more automated than expected. The biggest test arrives in July 2026 when the USMCA North American trade agreement gets reviewed."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's central bank kept its main rate at 0.75% — unchanged since April. But it raised its inflation forecast from 1.9% to 2.8%, mainly because the Iran war drove up energy costs. The yen weakened and Japan has stepped in to defend its currency twice already this year. Markets are betting on when — not if — Tokyo will need to intervene again."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "China's currency hit its strongest level against the dollar since early 2023 — around 6.78 yuan per dollar. Exports are booming, with a record $1.2 trillion trade surplus last year. But China's central bank is quietly slowing the rise. A stronger currency makes imports cheaper but hurts exporters — and China's entire growth model still depends on selling goods abroad."
+    },
+    {
+      "n": 10,
+      "region": "ASIA",
+      "text": "Japan has spent huge sums buying yen twice in recent weeks to stop it from weakening. The reason: Japan's rates (0.75%) are far below US rates (4.39%). Traders borrow money cheaply in Japan and invest it in the US for higher returns — when they do, they sell yen, pushing it down. This borrow-low-invest-high cycle keeps forcing Tokyo's hand."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Europe's central bank held borrowing costs at 2% in late April, but the environment shifted. The Iran war pushed European inflation to 3%. Core prices — everything except energy and food — held at 2.2%. Markets now expect three rate increases later this year as policymakers wait to see whether high energy prices cool down or stay baked into broader costs."
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "text": "Germany's economy is expected to grow 1.2% in 2026 after two straight years of contraction. But this recovery is driven by government spending, not trade — US tariffs and weak global demand keep German exports depressed. The country's central bank says no recession is coming, but growth remains among the slowest in the developed world."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised interest rates to 4.35% — the third hike this year. The main culprit: the Iran war drove up global energy costs, which pushed Australian inflation higher. For millions of Australians with home loans, each hike means larger monthly payments. The dilemma: keep fighting inflation or risk tipping the housing market into crisis."
+    },
+    {
+      "n": 14,
+      "region": "OCEANIA",
+      "text": "China's housing slump is weighing on demand for Australian iron ore — the raw material for steel. Fewer apartments being built in China means less steel needed. BHP and Rio Tinto, the two biggest Australian miners, stay profitable thanks to copper and minerals used in electric vehicles and solar panels. But iron ore, once the biggest profit driver, remains under pressure."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "Wall Street Bitcoin funds run by BlackRock and Fidelity pulled in $2.7 billion over the past nine trading days — the biggest sustained buying wave of 2026. Bitcoin hovers around $81,000. Every dollar flowing into these funds effectively removes Bitcoin from the open market, reducing supply. When supply shrinks and demand holds steady, prices tend to rise."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "The US Senate is voting this week on a law that would formally regulate digital dollars — tokens like USDT ($190 billion in circulation) and USDC ($77 billion). One key rule: simply holding these digital dollars won't earn interest-like rewards. But using them to trade can still earn fees. This gives digital dollar issuers a clear legal path into mainstream banking."
+    },
+    {
+      "n": 17,
+      "region": "CRYPTO",
+      "text": "Money locked in finance apps built on blockchain fell 10.7% last month to $82.7 billion. At the same time, Bitcoin's largest holders added 56,000 coins while smaller everyday traders were net sellers. This split — big players buying while small players exit — is a classic pre-move pattern in crypto markets, though it signals direction, not timing."
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "Physicists at Queen Mary University of London found that the universe's deepest rules — numbers like the Planck constant and electron charge — sit in a tiny window that allows liquids to flow inside living cells. Slightly different values would make blood too thick or water too sticky for life to function. The universe, it seems, is finely tuned for biology. 📄 Published in Science Advances · More: https://www.sciencedaily.com/releases/2026/05/260508022653.htm"
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "text": "Researchers found a microscopic pond organism that breaks one of biology's most fundamental rules. Its genetic instructions use certain stop signals not to halt protein production but to insert different building blocks instead. What we thought was a universal code shared by every living thing turns out to be more flexible than anyone realized. 📄 Published via ScienceDaily (May 2026) · More: https://www.sciencedaily.com/releases/2026/05/260507024045.htm"
+    },
+    {
+      "n": 20,
+      "region": "WOW",
+      "text": "Scientists at McGill University found the molecular switch that activates the body's heat-generating fat — the kind that burns calories for warmth rather than stores them. A molecule called glycerol binds to an enzyme called TNAP, flipping the calorie-burning system on. That same enzyme also builds bones, opening unexpected doors in bone disease research. 📄 Published in Nature · More: https://www.mcgill.ca/newsroom/channels/news/discovery-fat-burning-switch-could-lead-advances-bone-disease-treatments-372896"
+    },
+    {
+      "n": 21,
+      "region": "WOW",
+      "text": "A University of Sydney study found that adults aged 65-75 who switched to a lower-fat diet for just four weeks tested as biologically younger — measured by 20 blood markers including cholesterol and inflammation. The fastest improvement came from those eating more carbs and less fat. Researchers say the speed of the change surprised even them. 📄 Published in Aging Cell · More: https://www.sydney.edu.au/news-opinion/news/2026/05/12/dietary-changes-in-older-people-can-improve--biological-age-.html"
+    }
+  ]
+}
