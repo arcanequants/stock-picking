@@ -1,0 +1,129 @@
+{
+  "date": "2026-05-18",
+  "summary": "Oil shock from Hormuz crisis cascades into global inflation, frozen central banks, and equity selloffs",
+  "causalChain": "Near-closure of the Strait of Hormuz has pushed oil to $107/barrel (+73% YoY), feeding inflation everywhere and trapping central banks between fighting prices and supporting growth; from Tokyo to Frankfurt equity markets are selling off while the US dollar strengthens and gold — unusually — falls as bond rates rise.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Oil hits $107/barrel as Hormuz near-shutdown tightens global supply", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed frozen at 3.5–3.75% — inflation and recession risks pull in opposite directions", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold slides 4 days straight as rising dollar and bond rates undercut safe-haven demand", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "UAE exits OPEC, removing global oil market's spare capacity buffer", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico cuts to 6.50% — signals end of easing cycle as Q1 GDP contracts 0.8%", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Remittances hit record $5.4B in March; Q1 total $14.5B (+1.4% YoY)", "worker": "—"},
+    {"n": 7, "region": "MEXICO", "angle": "T-MEC July review: Mexico's rules-of-origin compliance jumped from 45% to 89%", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "BOJ holds at 0.75% while 3-point rate gap with US keeps yen carry trade alive", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "PBOC eases cautiously as yuan slides 4% despite China's record $1T trade surplus", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "DAX -1%, FTSE -1.7%, STOXX -1.3% as German bond rates hit 13-year high at 3.17%", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "ECB holds: energy shock creates simultaneous inflation and growth dilemma", "worker": "—"},
+    {"n": 12, "region": "EUROPE", "angle": "UK FTSE worst in Europe as Starmer political crisis spooks foreign investors", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "RBA hikes to 4.35% — third straight increase as oil pushes inflation toward 4.8% peak", "worker": "—"},
+    {"n": 14, "region": "OCEANIA", "angle": "BHP and Rio Tinto face China iron ore slowdown as inventory rebuild winds down", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "Bitcoin at $76,771 (-2%): risk-off mood hits crypto as ETF AUM holds at $96.5B", "worker": "—"},
+    {"n": 16, "region": "CRYPTO", "angle": "Digital dollar supply hits all-time high $269.7B: Tether gains, USDC retreats", "worker": "—"},
+    {"n": 17, "region": "CRYPTO", "angle": "US and EU close crypto grey zone — July 1 MiCA compliance deadline looms for all operators", "worker": "—"},
+    {"n": 18, "region": "CIENCIA", "angle": "Failing cell energy engines directly cause memory loss — French researchers find new Alzheimer's target", "worker": "—"},
+    {"n": 19, "region": "CIENCIA", "angle": "First clear photograph of a cosmic filament — the universe's hidden plumbing — captured by Italian-German team", "worker": "—"},
+    {"n": 20, "region": "CIENCIA", "angle": "Asteroid Ryugu holds 100-ring carbon molecules older than the solar system, Tokyo researchers find", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil hit $107.72 a barrel today — up 73% from a year ago. The cause: military tensions have nearly shut down the Strait of Hormuz, the narrow Persian Gulf waterway where roughly 20% of the world's oil normally flows each day. Less oil reaching markets means prices rise, and everything made with or transported by oil gets more expensive — gas, groceries, flights. A ceasefire deal would send prices tumbling; a prolonged conflict could push them much higher."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US central bank kept its borrowing rate at 3.5–3.75%. It is caught in a bind: oil prices are up 73% due to the Hormuz crisis, and White House tariffs are pushing import prices up — both driving inflation higher. Normally the central bank would raise rates to cool prices. But raising too far risks recession. One Fed official publicly warned rates may actually need to go up if the Strait of Hormuz stays blocked for much longer."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell below $4,550 an ounce for the fourth day in a row — unusual during a war. The reason: the US dollar and US government bond rates are both rising sharply. Gold pays no interest. When you can earn good returns just by holding dollars or government bonds, gold loses its edge. The energy crisis is pushing both inflation and interest rates up, which is the rare combination that weighs on gold even as geopolitical fears mount."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The United Arab Emirates left OPEC — the oil producers' club — on May 1. The UAE held enormous backup production capacity: spare oil it could pump quickly to cool markets during price spikes. Without it, OPEC has less ability to act as a global shock absorber. With oil already at $107/barrel from the Hormuz crisis, losing the UAE's swing capacity removes one of the few natural brakes on runaway prices."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.50% — the lowest since 2022 — and signaled it is likely done cutting. Why? Mexico's economy shrank 0.8% in the first three months of 2026, the worst since the pandemic. A shrinking economy means less pressure on prices, giving the bank room to cut rates to try to stimulate activity. But with oil-driven global inflation returning, further cuts would risk pushing prices back up."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexicans living abroad — mostly in the US — sent home a record $5.4 billion in March alone, the highest ever for any March. For the full first quarter, families received $14.5 billion, up 1.4% from last year. This money flow has become one of Mexico's largest sources of foreign income, bigger than oil revenues in many recent years. It goes directly to households, flows straight into local spending, and helps keep Mexico's currency stable."
+    },
+    {
+      "n": 7,
+      "region": "MEXICO",
+      "text": "Mexico's trade deal with the US and Canada comes up for a full review this July — and the outcome will define the country's economic decade. Since the deal took effect, the share of Mexican goods that genuinely qualify as made in North America jumped from 45% to 89%. That track record is Mexico's strongest negotiating card. Billions in factory relocations from Asia — the nearshoring boom — depend entirely on the deal's renewal."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's central bank kept its rate at 0.75%, while the US rate sits at 3.5–3.75%. That 3-point gap is the engine behind the weak Japanese yen. Investors borrow cheaply in Japan, convert to dollars, and earn higher returns in the US — then send money back later. This constant cycle puts downward pressure on the yen. Japan's government stepped in to buy yen in early May, but the gap will not close unless the US cuts rates or Japan raises them significantly."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "China's exports are booming — the country added over $1 trillion to its trade surplus so far this year. Despite that, the yuan has quietly weakened 4% against other major currencies. China's central bank is easing credit to help its domestic economy grow, while also trying to prevent the yuan from falling too fast. The tension: supporting growth means looser money, which weakens the currency, which risks friction with trading partners who see it as an unfair advantage."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "European stocks fell hard today: Germany's main index dropped 1%, the UK's fell 1.7%, and Europe's broad benchmark lost 1.3%. The trigger: German government bond rates hit 3.17%, the highest since 2011. When government bonds pay more, investors move money from stocks into bonds. Middle East tensions add to the caution. European companies import a lot of energy, so $107 oil hits their profit margins directly and makes products more expensive to produce."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Europe's central bank left interest rates unchanged. The problem: the Iran war has sent energy prices surging, pushing European inflation higher — but the same war is cooling economic growth. Cutting rates would help the economy but worsen inflation; raising rates would fight inflation but hurt growth further. The European Central Bank is explicitly in wait-and-see mode, warning that the longer the war drags on, the harder both problems become to solve."
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "text": "The UK stock market is the worst-performing major European index right now. One reason is political: Prime Minister Keir Starmer, who won a landslide two years ago, is now under serious pressure inside his own party. Political instability makes foreign investors nervous — they worry about unpredictable policy changes ahead. That nervousness shows up in markets as investors reduce their exposure to UK assets until the political picture clears."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "Australia raised its main interest rate to 4.35% — the third consecutive hike this year. The same Hormuz-driven oil spike hitting the rest of the world is pushing Australian inflation toward a peak of 4.8% this quarter. The Reserve Bank is hiking to cool prices. The risk: higher rates slow borrowing and spending, and Australia's biggest export customer — China — is itself slowing, reducing demand for the iron ore and coal that fuel Australian growth."
+    },
+    {
+      "n": 14,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto, the world's two largest mining companies, face a tricky moment. China had been rebuilding its iron ore stockpiles after running them low — a process that boosted demand for Australian ore. That inventory rebuild is now largely done. Future orders depend on new Chinese construction and infrastructure projects. Both companies are watching Beijing's stimulus plans carefully; without new building programs, demand for their ore softens significantly."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading at $76,771 today, down nearly 2%. The drop mirrors stock markets: when geopolitical tension rises, investors move money out of risky assets — crypto and growth stocks — into safer ones like bonds and cash. US-approved Bitcoin investment funds now hold $96.5 billion in assets, showing how mainstream crypto has become. But that mainstream status means it now moves in sync with the same fears driving traditional markets."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "The total supply of digital dollars — coins that track the US dollar 1-to-1 on blockchain networks — just hit an all-time high of $269.7 billion. But there is a split: Tether, dominant in Asia and emerging markets, gained $1 billion this week, while USD Coin, preferred by US institutions, lost $640 million. Offshore retail users are moving more savings into digital dollars; US-regulated institutions are pulling back — a clear sign of geopolitical risk-off in different parts of the world."
+    },
+    {
+      "n": 17,
+      "region": "CRYPTO",
+      "text": "The US and EU are finalizing crypto rules in parallel. In the US, regulators jointly declared that Bitcoin and Ethereum are commodities — not unregistered securities — giving exchanges clearer rules and ending years of legal uncertainty. In Europe, companies offering crypto services to EU users without a license must stop by July 1 or face enforcement. Both regions are closing the regulatory grey zone that early crypto operated in, reshaping which firms can survive globally."
+    },
+    {
+      "n": 18,
+      "region": "CIENCIA",
+      "text": "Researchers at France's INSERM and the University of Bordeaux found that failing cellular energy engines — called mitochondria — directly cause memory loss in dementia. When these engines inside neurons break down, brain cells struggle to fire properly before they even die. By temporarily rebooting mitochondrial activity in mice with dementia symptoms, scientists restored memory function. This hints that Alzheimer's could be partly an energy problem — potentially treatable before brain cells are lost. Published in Nature Neuroscience · More: https://www.sciencedaily.com/releases/2026/05/260515234803.htm"
+    },
+    {
+      "n": 19,
+      "region": "CIENCIA",
+      "text": "Astronomers led by Davide Tornotti at the University of Milano-Bicocca took the clearest photograph ever of a cosmic filament — the invisible gas thread connecting galaxies across the universe. Using a spectrograph on a giant telescope in Chile, the team imaged a strand 3 million light-years long, formed 12 billion years ago. These threads are the universe's hidden plumbing, funneling raw gas into galaxies. We knew they existed from simulations — now we can see one clearly. Published in Nature Astronomy · More: https://www.sciencedaily.com/releases/2026/05/260516034136.htm"
+    },
+    {
+      "n": 20,
+      "region": "CIENCIA",
+      "text": "Researchers at the University of Tokyo found enormous organic molecules inside dust from asteroid Ryugu, retrieved by Japan's Hayabusa2 spacecraft. Using an atomic-level microscope, they discovered molecules built from about 100 fused carbon rings — far larger than anything ever detected in space rocks before. These molecules formed in interstellar space before our solar system existed. It means complex organic chemistry was already happening in the cosmos billions of years before Earth formed. Published in Nature Communications · More: https://www.nature.com/articles/s41467-026-71484-y"
+    }
+  ]
+}
