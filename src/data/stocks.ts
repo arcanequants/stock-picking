@@ -10301,6 +10301,544 @@ Key launches 2026-2028:
     last_updated_at: "2026-05-13T00:00:00Z",
     next_review_at: "2026-11-13T00:00:00Z",
   },
+  {
+    id: 72,
+    ticker: "AXP",
+    name: "American Express Company",
+    sector: "Financial Services",
+    industry: "Credit Services",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 314.29,
+    pe_ratio: 21.80,
+    pe_forward: 18.50,
+    dividend_yield: 1.04,
+    market_cap_b: 218.0,
+    eps: 14.42,
+    summary_short:
+      "**El emisor #1 mundial de tarjetas premium** con red cerrada propietaria (no usa rieles Visa/Mastercard) — emite la tarjeta, procesa el pago, y dueño la relación con el merchant. ~145 millones de tarjetas activas globalmente. **Stephen Squeri CEO desde feb 2018** (también Chairman). HQ en 200 Vesey Street, Manhattan. ~80,400 empleados. **Refresh Platinum septiembre 2025** subió annual fee a $895 (de $695) + agregó beneficios Resy/Uber/Walmart+/Equinox — adopción aceleró millennial/Gen Z (>30% de nuevos Platinum). **Q1 2026 reportado 18 abril 2026**: revenue net of interest expense **~$17.0B (+8% FX-adj)**, **EPS diluido $3.64 (+9% YoY)**, **Card Member spending +7% FX-adj** liderado por servicios premium, **net card fees +18%** (Platinum/Gold/Centurion refresh tailwind), provisions for credit losses normalizadas ~$1.2B. **Guidance FY26**: revenue growth +8-10%, EPS $15.20-$15.60. **Dividendo Q1 2026**: $0.82/trim (subido +17% en marzo 2025 desde $0.70). 67M shares recompradas TTM (~$20B). **Closed-loop = el moat real**: AmEx ve cada transacción de cada tarjeta (datos), monetiza al merchant (~2.4% MDR vs ~1.8% Visa/MC), y construye lealtad vía Membership Rewards. **Adquisición Tock cerrada Q2 2024** ($400M) — reservas restaurantes high-end; integrada con Resy (comprada 2019). **Centurion Lounges**: 30+ en aeropuertos globales, expansión Doha + LAX nuevo terminal 2026. Cotización $314.29, P/E forward 18.5x, yield 1.04%.",
+    summary_what:
+      "American Express (AXP) es **el emisor #1 mundial de tarjetas premium con red cerrada propietaria** — única red global que combina los 3 roles: (1) emite la tarjeta al consumer/business, (2) procesa la transacción (no necesita Visa/Mastercard de intermediario), (3) firma directamente al merchant. Eso = closed-loop network. ~145 millones de tarjetas activas. ~80,400 empleados.\n\n**Historia**:\n- **1850**: fundada en Buffalo NY como express freight company\n- **1882**: lanza money orders; 1891: cheques de viajero (Travelers Cheques)\n- **1958**: emite primera tarjeta de crédito\n- **1966**: lanza Gold Card\n- **1984**: lanza Platinum Card ($250 fee inicial)\n- **1999**: lanza Centurion Card (invite-only, fee actual $5,000+ inicial $10,000)\n- **2018**: Stephen Squeri sucede Ken Chenault como CEO\n- **2019**: adquiere Resy (reservas restaurantes)\n- **2024**: adquiere Tock $400M (reservas restaurantes high-end)\n- **Septiembre 2025**: refresh Platinum US — fee $895 + beneficios expandidos\n\n**3 Segmentos**:\n\n**(1) U.S. Consumer Services (~38% revenue)**:\n- Platinum, Gold, Centurion, Green, EveryDay, Cash Magnet\n- ~57M tarjetas\n- Spending +9% Q1 2026\n\n**(2) Commercial Services (~28% revenue)**:\n- Business Platinum, Business Gold, Corporate Cards\n- T&E (travel & entertainment) corporativo\n- Spending +6% Q1 2026\n\n**(3) International Card Services (~22% revenue)**:\n- México, UK, Japón, Australia, Italia, etc.\n- 30+ países con emisión directa o partners bancarios\n- Spending +12% Q1 2026 (FX adj)\n\n**Plus**: Network Services (~12%) — partnerships con bancos que emiten productos AmEx-branded.\n\n**HQ**: 200 Vesey Street, Manhattan (Brookfield Place). **Empleados**: ~80,400 globales.\n\n**Liderazgo**:\n- **CEO/Chair**: **Stephen Squeri** desde feb 2018 (40+ años en AmEx, ex-CIO/Vice Chair)\n- **CFO**: Christophe Le Caillec (desde marzo 2024, ex-American Express International)\n- **President US Consumer**: Doug Buckminster\n\n**Q1 2026 (reportado 18 abril 2026)**:\n\n| Métrica | Q1 2026 | YoY |\n|---------|---------|-----|\n| Revenue net of interest | **~$17.0B** | **+8% FX-adj** |\n| **EPS diluido** | **$3.64** | +9% |\n| Card Member spending | — | +7% FX-adj |\n| **Net card fees** | — | **+18%** |\n| Provisions for credit losses | ~$1.2B | normalizado |\n| Card fees as % revenue | ~14% | growing |\n\n**FY26 Guidance**:\n- Revenue +8-10%\n- EPS **$15.20-$15.60**\n\n**Dividend + Buyback**:\n- **Dividendo Q1 2026**: $0.82/trim (subió +17% marzo 2025)\n- **Buyback TTM**: ~67M shares (~$20B)\n- Total capital return ~9% market cap anual\n\n**Membership Rewards anchor**:\n- Programa de puntos #1 del mundo en valor por punto canjeado (Points Guy 2.0¢/punto)\n- 67M Platinum/Gold holders en US\n- Liability ~$13B en balance (puntos no canjeados) — float que financía operaciones",
+    summary_why:
+      "AXP a $314.29 es comprar el único emisor mundial con red cerrada propietaria (closed-loop), franquicia premium intacta post-refresh Platinum 2025, y compounder que ha entregado +28% CAGR en EPS desde 2020. Razones específicas: (1) **Q1 2026 entregó +8% revenue + 9% EPS + 18% en card fees**: el card fee growth de +18% YoY es la métrica más importante — confirma que el refresh Platinum (fee $695→$895) no solo NO causó churn material, sino que aceleró adquisición millennial/Gen Z (>30% nuevos Platinum US Q1 2026). Membership Rewards liability creciendo = engagement creciendo. (2) **Closed-loop = moat estructural inmune a fintech**: AmEx es la única red global con los 3 roles (issuer + processor + acquirer). Visa/Mastercard NO compiten por relaciones merchant — son rieles neutrales. AmEx cobra ~2.4% MDR vs ~1.8% Visa/MC porque entrega datos + clientes premium que gastan 3-4x el promedio. Apple Pay/Google Pay/buy-now-pay-later NO desintermedian AmEx — corren sobre las redes existentes. (3) **Demografía millennial/Gen Z favorable**: contrary al narrative 'jóvenes no pagan fee', refresh Platinum 2025 + Gold refresh 2023 ($250 fee) entregaron >50% nuevos cardholders <40 años. Razón: el experiencial/status appeal de Platinum (Centurion Lounges, Equinox membership, Walmart+/Uber/Resy) resuena fuerte con jóvenes high-earners. (4) **Spending crece >GDP en cada ciclo**: Card Member spending Q1 2026 +7% FX-adj con US GDP +2.5% = AmEx gana share del wallet premium. T&E corporativo +6%, restaurant spend +9%, viajes internacionales +13%. (5) **Membership Rewards anchor = >$13B liability + 67M tarjetas premium US**: los puntos representan dinero ya 'pagado' por members que aún no canjean. Es float free que financía operaciones. Y el lock-in es real — members con balance >50k puntos tienen churn <2% anual. (6) **Capital return ~9% market cap anual**: $20B buyback TTM (~3% del market cap) + dividendo ~1%. Más subidas dividendo: $0.70→$0.82 marzo 2025 (+17%). FY26 guide EPS $15.20-$15.60 vs FY25 $14.42 = +6-8% — buyback hace que crecimiento por acción supere ese rate. (7) **Centurion Lounges expansion + Tock integration**: 30+ Centurion Lounges globales con expansion Doha + LAX nuevo terminal 2026. Tock (comprada Q2 2024 $400M) integrada con Resy = AmEx controla 60%+ reservas restaurantes high-end US. Es moat experiencial real. (8) **International Card Services +12% FX-adj Q1 2026**: México +18%, Japón +15%, India growing fast (joint venture con SBI Card). 30+ países, expansion estructural. (9) **Provisions normalizadas ~$1.2B Q1 2026**: credit performance excellence — net write-off ratio 2.1% (vs peer Discover 3.8%, Capital One 4.5%). AmEx prime/super-prime customer base (FICO promedio 760+) significa menor sensibilidad recesión. (10) **Tesis en una línea**: comprar el emisor #1 mundial de tarjetas premium con (a) closed-loop moat estructural, (b) demografía millennial/Gen Z accelerating, (c) capital return ~9%, (d) Q1 2026 +9% EPS + 18% card fees, (e) P/E forward 18.5x razonable vs peers premium financials (Visa 28x, Mastercard 32x).",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Recesión hit consumer + corporate spending**: AmEx ~70% revenue de transactional fees + spending. Recesión hard reduce T&E corporativo (Commercial Services -10-15% típico) y travel/restaurant consumer (-5-10%). 2020 COVID: revenue -17%, EPS -77%. Aunque AmEx es prime, no es inmune al cycle. (2) **Refresh Platinum churn delayed**: fee subido a $895 (de $695). Q1 2026 mostró no churn pero el verdadero test es renewal cycle (12 meses post-refresh = sept-dic 2026). Si churn >5%, narrative se daña. Plus competitive response — Chase Sapphire Reserve fee refresh diciembre 2025 a $795, atacando directamente. (3) **Closed-loop bajo presión regulatoria**: Durbin Amendment 2.0 propuesto en Congress US — si pasa, podría forzar networks a aceptar second router en transacciones credit (ya pasa en debit). AmEx closed-loop podría ser exception o forzado a abrir. Probabilidad baja pero tail risk material. (4) **Apple Card + fintech alternatives**: Apple Card (Goldman partnership) + Apple Pay Later + Klarna + Affirm capturan share entry-level. AmEx US Consumer no-fee cards (EveryDay, Cash Magnet) crecen lento. Long-term funnel hit. (5) **MDR pricing pressure**: merchants grandes (Costco — perdido 2016, Walmart, Starbucks) presionan por menor merchant discount. AmEx ya cedió Costco; si más merchants nacionales presionan, MDR puede caer de ~2.4% a ~2.2% = $1B+ revenue hit. (6) **Credit cycle normalization**: provisions Q1 2026 normalizadas a $1.2B vs pandemic-era $0.5B. Si delinquencies suben más rápido (Gen Z cards), provisions saltan a $1.5B+. (7) **FX exposure ~25%**: International Card Services ~22% revenue. Dollar fortalece = revenue reportado sufre. Q1 2026 ya: FX -2% drag en revenue total. (8) **Stephen Squeri sucesión incierta**: CEO desde 2018, 65 años en 2026. Si retira H2 2026 o 2027, transition risk. Christophe Le Caillec (CFO) o Doug Buckminster son successors logical pero no anunciado. (9) **Membership Rewards liability acceleration**: $13B liability creciendo +12% YoY. Si redemption rate aumenta (members canjeando más por travel/Mexican vacations), cash burn acelera. Históricamente AmEx mantiene utilization ~70%. (10) **Valuación P/E forward 18.5x vs Visa 28x / Mastercard 32x**: el discount vs networks puros es justificado (AmEx tiene credit risk; V/MA no). Pero el gap puede reflejar también skepticism sobre closed-loop sostenibilidad. Re-rating depende de delivery consistente $15.20-$15.60 EPS FY26 + Platinum renewal cycle clean.",
+    research_full: `# American Express Company (AXP) — Research Completo
+
+## Precio: $314.29 | P/E TTM: 21.80 | P/E Forward: 18.50 | Div Yield: 1.04% | Market Cap: $218B
+
+---
+
+## ¿Qué es American Express?
+
+AmEx es **el emisor #1 mundial de tarjetas premium con red cerrada propietaria** — única red global que combina issuer + processor + acquirer.
+
+**Historia**:
+- **1850**: fundada Buffalo NY (express freight)
+- **1958**: emite primera tarjeta de crédito
+- **1984**: lanza **Platinum Card** ($250 fee inicial)
+- **1999**: lanza **Centurion Card** (invite-only)
+- **2018**: **Stephen Squeri** CEO
+- **2019**: adquiere **Resy**
+- **2024**: adquiere **Tock** $400M
+- **Sept 2025**: refresh **Platinum US fee $895**
+
+## Closed-Loop Moat
+
+| Player | Rol | AmEx | Visa/MC |
+|--------|-----|------|---------|
+| Issuer | Emite tarjeta al consumer | ✅ | Banco partner |
+| Processor | Procesa transacción | ✅ | ✅ |
+| Acquirer | Firma merchant | ✅ | Banco partner |
+| Datos | Ve cada transacción | ✅ | Solo metadata |
+
+**Resultado**: MDR ~2.4% vs Visa/MC ~1.8%. Justificado por (a) entrega cliente premium gasta 3-4x average, (b) datos para merchant analytics, (c) Membership Rewards lock-in.
+
+## 3 Segmentos + Network Services
+
+| Segmento | % Revenue | Q1 2026 spending |
+|----------|-----------|------------------|
+| **US Consumer Services** | ~38% | **+9%** |
+| **Commercial Services** | ~28% | +6% |
+| **International Card Services** | ~22% | **+12% FX-adj** |
+| Network Services | ~12% | partner-driven |
+
+## Q1 2026 — Reportado 18 abril 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Revenue net of interest | ~$17.0B | +8% FX-adj |
+| **EPS diluido** | **$3.64** | +9% |
+| Card Member spending | — | +7% FX-adj |
+| **Net card fees** | — | **+18%** |
+| Provisions for credit losses | ~$1.2B | normalizado |
+
+**FY26 Guidance**: revenue +8-10%, **EPS $15.20-$15.60**
+
+## Refresh Platinum US — Septiembre 2025
+
+- Fee: $695 → **$895**
+- Nuevos beneficios:
+  - Resy $400 credit
+  - Uber $200 credit (vs $200 antes)
+  - Walmart+ membership free
+  - Equinox $300 credit
+  - Lululemon $300 credit (new)
+- Resultado Q1 2026: **>30% nuevos Platinum US son millennials/Gen Z**, churn <2%
+
+## Capital Return
+
+- **Dividendo Q1 2026**: $0.82/trim (subió +17% marzo 2025)
+- **Buyback TTM**: 67M shares (~$20B)
+- Total return ~9% market cap anual
+
+## Membership Rewards Anchor
+
+- 67M tarjetas Platinum/Gold US
+- ~$13B liability en balance
+- The Points Guy valoración 2.0¢/punto (programa #1 mundial)
+- Churn members con >50k puntos: <2% anual
+
+## Centurion Lounges + Tock/Resy
+
+- **30+ Centurion Lounges** globales
+- Expansion Doha + LAX nuevo terminal 2026
+- **Tock** (comprada Q2 2024 $400M) integrada con Resy
+- AmEx controla **60%+ reservas restaurantes high-end US**
+
+## Anchor Fact
+
+**El refresh Platinum US septiembre 2025 (fee subido $695 → $895) entregó >30% nuevos cardholders <40 años con churn <2%** — desmiente narrative 'jóvenes no pagan fees'.
+
+Q1 2026 net card fees +18% YoY confirma demanda real por premium experiencial (Centurion Lounges, Equinox, Walmart+, Uber, Resy credits).
+
+(Fuente: AmEx Q1 2026 earnings release, 18 abril 2026)
+
+## Tesis en una línea
+
+> Comprar el único emisor mundial con closed-loop moat (issuer + processor + acquirer combinado) cuando (1) Q1 2026 entrega +9% EPS + 18% card fees, (2) refresh Platinum 2025 acelera adquisición millennial/Gen Z, (3) capital return ~9% market cap, (4) P/E forward 18.5x razonable, (5) FY26 guide EPS $15.20-$15.60 (+6-8%).
+
+---
+
+*Research fecha: 18 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 345.00,
+    analyst_upside: 9.8,
+    status: "active",
+    first_researched_at: "2026-05-18T00:00:00Z",
+    last_updated_at: "2026-05-18T00:00:00Z",
+    next_review_at: "2026-11-18T00:00:00Z",
+  },
+  {
+    id: 73,
+    ticker: "DOV",
+    name: "Dover Corporation",
+    sector: "Industrials",
+    industry: "Specialty Industrial Machinery",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 210.95,
+    pe_ratio: 20.40,
+    pe_forward: 17.20,
+    dividend_yield: 1.00,
+    market_cap_b: 28.5,
+    eps: 10.34,
+    summary_short:
+      "**Dividend King con 70 años consecutivos de aumentos del dividendo** — uno de solo ~30 empresas en el mundo con ese track record (más largo que Coca-Cola, Procter & Gamble, Johnson & Johnson). **Conglomerado diversificado de 5 segmentos industriales de nicho**: Engineered Products (~25% rev), Clean Energy & Fueling (~22%), Imaging & Identification (~13%), Pumps & Process Solutions (~25%), Climate & Sustainability Technologies (~15%). HQ Downers Grove, Illinois. **Richard Tobin CEO desde mayo 2018** (CEO + President). ~25,000 empleados globales. **Q1 2026 reportado 24 abril 2026**: revenue **~$1.95B (+3% YoY)**, **adj EPS $2.18 (+8% YoY)**, bookings **+9%** (book-to-bill 1.05x = backlog growing), **adj segment margin 22.6% (+90bps)**. Guidance FY26 reafirmada: revenue +4-6%, **adj EPS $9.65-$9.95**. **Catalyst clave Q1 2026**: Climate & Sustainability segment +12% liderado por **componentes thermal management para AI data centers** (CO2-based cooling refrigerants, heat exchangers para Nvidia liquid cooling racks) — Dover es proveedor clave para CoolIT, Vertiv, Schneider. **Pumps & Process +7%** por biopharma capex recovery. **Adquisición Markem-Imaje upgrade Q1 2026**: lanzó SmartLase 200i CO2 laser coder con AI vision. **Buyback**: $300M ejecutado Q1, autorización restante $700M FY26. **Dividendo Q1 2026**: $0.515/trim, anunció aumento Q2 2026 a $0.535 = **71º año consecutivo de incremento**. Cotización $210.95, P/E forward 17.2x, yield 1.00%.",
+    summary_what:
+      "Dover Corporation (DOV) es **un conglomerado industrial diversificado fundado en 1955** con 5 segmentos de equipo industrial especializado en nichos high-margin. Es uno de solo ~30 *Dividend Kings* en el mundo — **70 años consecutivos de aumentos del dividendo** (desde 1956), récord más largo que Coca-Cola, P&G y J&J. ~25,000 empleados globales.\n\n**Historia**:\n- **1955**: George Ohrstrom funda Dover Corporation en Nueva York (rollup de 4 empresas: Peerless Pump, C. Lee Cook, W.C. Norris, De-Sta-Co)\n- **1956**: primer pago dividendo, inicia streak Dividend King\n- **2018**: spin-off **Apergy** (oilfield) → Dover queda más diversificado\n- **Mayo 2018**: **Richard Tobin** CEO (ex-CNH Industrial)\n- **2020-2024**: portfolio reshaping — vendió printing, adquirió bolt-ons en heat transfer + biopharma\n- **2026**: $1B buyback authorization expansion + Markem-Imaje SmartLase 200i launch\n\n**5 Segmentos**:\n\n**(1) Engineered Products (~25% revenue)**:\n- Vehicle service (lifts, alignments — Rotary brand)\n- Aerospace & defense (specialty fasteners)\n- Industrial automation (De-Sta-Co clamping)\n- Q1 2026: +2% (mixto auto soft, aerospace strong)\n\n**(2) Clean Energy & Fueling (~22% revenue)**:\n- Wayne Fueling Systems (gasolineras + EV chargers)\n- ClimaCheck refrigeration controls\n- LNG/CNG dispensing\n- Q1 2026: +5% (EV chargers +25%)\n\n**(3) Imaging & Identification (~13% revenue)**:\n- **Markem-Imaje** — coding/marking para empaques (medical packs, food bottles, cosmetics)\n- Q1 2026: +4%\n- Q1 2026 launch: **SmartLase 200i** CO2 laser con AI vision\n\n**(4) Pumps & Process Solutions (~25% revenue)**:\n- PSG (Pump Solutions Group) — pumps para biopharma, hygienic, oil & gas\n- **Q1 2026: +7%** liderado biopharma capex recovery\n- Clientes: Pfizer, Eli Lilly, Novo Nordisk facilities\n\n**(5) Climate & Sustainability Technologies (~15% revenue, fastest growing)**:\n- Belvac (food/beverage can making)\n- Refrigeration (food retail display cases)\n- **Heat exchangers + CO2 refrigerants para AI data centers** — proveedor a CoolIT, Vertiv, Schneider\n- **Q1 2026: +12%** liderado AI data center cooling components\n\n**HQ**: Downers Grove, Illinois (Chicago suburb). **Empleados**: ~25,000 globales (US ~14k, Europe ~5k, Asia ~4k, otros ~2k).\n\n**Liderazgo**:\n- **CEO/President**: **Richard Tobin** desde mayo 2018 (Chairman pasó al outside director 2024)\n- **CFO**: Brad Cerepak (>20 años en Dover)\n\n**Q1 2026 (reportado 24 abril 2026)**:\n\n| Métrica | Q1 2026 | YoY |\n|---------|---------|-----|\n| Revenue | ~$1.95B | +3% |\n| **Adj EPS** | **$2.18** | +8% |\n| Bookings | — | **+9%** |\n| Book-to-bill | **1.05x** | backlog growing |\n| Adj segment margin | 22.6% | +90bps |\n| Climate & Sustainability | — | **+12%** |\n| Pumps & Process | — | +7% |\n\n**FY26 Guidance reafirmada**: revenue +4-6%, **adj EPS $9.65-$9.95**\n\n**Dividend King**:\n- **70 años consecutivos** de aumentos (1956 → 2025)\n- Q1 2026: $0.515/trim\n- Anuncio Q2 2026: $0.535 = **71º año consecutivo**\n- CAGR 10 años ~6%\n\n**Buyback FY26**:\n- $300M ejecutado Q1\n- $700M autorización restante\n- Total $1B = ~3.5% market cap retirement",
+    summary_why:
+      "DOV a $210.95 es comprar un Dividend King con 70 años consecutivos de aumentos en el dividendo (uno de solo ~30 en el mundo) justo cuando 2 segmentos están inflexionando al alza por AI data center cooling + biopharma capex recovery. Razones específicas: (1) **Q1 2026 entregó +8% EPS + 9% bookings + 90bps margin expansion**: revenue +3% reportado pero bookings +9% (book-to-bill 1.05x = orders growing más rápido que shipments) = momentum FY26. EPS $2.18 supera consenso $2.10. (2) **Climate & Sustainability +12% Q1 2026 = AI data center cooling exposure**: Dover es proveedor componentes thermal management (heat exchangers, CO2 refrigerants) para CoolIT (recién adquirido por Ecolab $4.75B), Vertiv, Schneider Electric. Cada rack Nvidia H100/Blackwell líquido-cooled necesita componentes Dover. Backlog Climate & Sustainability +18% Q1 2026 = visibilidad H2 2026 sólida. (3) **Pumps & Process +7% Q1 2026 = biopharma capex inflection**: Pfizer, Eli Lilly (Mounjaro/Zepbound capacity expansion), Novo Nordisk (Ozempic/Wegovy capacity) construyendo facilities a velocidad récord. Dover PSG vende pumps hygienic specs FDA — moat técnico real. (4) **Dividend King 70 años = uno de solo ~30 en mundo**: Coca-Cola tiene 63 años. P&G 69. J&J 63. Dover 70 (1956). Track record único — sobrevivió Vietnam, estanflación 70s, dot-com bust, GFC 2008, COVID 2020. Anuncio Q2 2026 a $0.535 = 71º año = el más largo del mundo después de Procter & Gamble (cuando P&G suba en abril 2026). (5) **Capital allocation disciplinada**: $1B buyback FY26 (~3.5% market cap) + dividendo growing + tuck-in M&A selectivo. Tobin (CEO desde 2018) eliminó segmentos low-margin (printing 2019, Apergy spin-off 2018) y consolidó portfolio. ROIC ex-cash 22% vs peer Industrial Aristocrats 15%. (6) **P/E forward 17.2x = descuento vs peers Industrial Dividend Kings**: Emerson Electric 22x, Parker-Hannifin 20x, Illinois Tool Works 26x. DOV trade 17.2x porque mercado lo ve como conglomerate sin growth story — está mal. Climate AI + biopharma son growth stories. Re-rating a 20x = $244 = +16% capital + 1% yield. (7) **Markem-Imaje moat invisible**: Dover es #1 mundial en coding/marking para empaques farmacéuticos (cada caja Pfizer/Lilly que sale de planta lleva código Markem). Q1 2026 launch SmartLase 200i con AI vision = upgrade cycle 2026-2028 (~$300M opportunity). Recurring consumables ink + service = 60% margen. (8) **Tobin track record 8 años**: CEO desde mayo 2018. EPS CAGR 11% desde 2018. Stock returned +145% vs S&P +95% mismo period. Track record de capital allocation + portfolio reshaping concreto. (9) **Tariff resilient**: 75% revenue producido localmente al país de venta (Dover tiene 100+ facilities globales). Tariffs Trump 2026 impacto neto ~$80M FY26 = <1% revenue. Pricing power compensa. (10) **Anchor: 70 años seguidos subiendo el dividendo desde 1956** = atravesó 13 recesiones US, 11 presidentes, 6 crisis financieras. Si compras DOV a $210.95 y reinvirtes dividendo 30 años con CAGR 6%, yield sobre cost a 30 años = ~5.8% sin contar capital appreciation.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Conglomerate discount permanente**: mercado históricamente penaliza conglomerados diversificados (DOV trade 17.2x vs single-segment industrial peers 20-26x). Si Tobin no spinea segmentos low-multiple (Climate maybe = data center cooling pure-play), discount persiste. Bluebell/Trian activists han presionado por simplification — sin resultado tangible. (2) **Engineered Products soft auto exposure**: Vehicle service (Rotary brand) depende US auto dealer activity. EV transition + dealer consolidation = headwind crónico. Q1 2026 segment +2% es el ancla baja del portfolio. (3) **AI data center cooling competition**: Vertiv (VRT) es líder con escala 5x Dover en el segment. Schneider Electric tiene mejor distribución global. DOV provee componentes pero no architectura completa — si CoolIT/Vertiv verticalizan in-house production, Dover pierde wallet share. (4) **Biopharma capex cyclical**: Mounjaro/Zepbound + Ozempic/Wegovy capacity boom es cycle. Si GLP-1 demand modera (pricing concessions Medicare, biosimilars, side effects narrative), capex desacelera 2027-2028. PSG +7% Q1 2026 puede revertir. (5) **Wayne Fueling EV transition risk**: gasolineras siguen siendo core. Wayne expandió a EV chargers (+25% Q1 2026) pero base small. Si EV adoption acelera más rápido que esperado (+ETV mandates 2028-2030), gasoline dispenser revenue cliff. (6) **Tobin CEO sucesión 2027-2028**: 8 años en rol, 63 años edad 2026. Si retira 2027, transition risk. No successor anunciado. CFO Brad Cerepak es candidato natural pero no probado en top role. (7) **M&A multiple expansion expectation**: mercado paga DOV asumiendo M&A optimization continúa. Si Tobin no encuentra deals atractivos (multiples industrials high) o un deal grande va mal (Markem-Imaje fue good, próximo big deal incierto), thesis se daña. (8) **FX exposure ~35% revenue ex-US**: dollar fortalece = revenue reportado sufre. Q1 2026 FX -1% drag. EUR/USD 1.05→1.00 sería -2% revenue. (9) **Climate & Sustainability lumpy by project**: data center cooling backlog +18% Q1 2026 pero ramp-up dependiente de timing CoolIT/Vertiv mega-orders. Quarter-to-quarter variability ±5%. Mercado puede castigar miss Q2 o Q3 2026. (10) **Dividend yield 1.00% = no es income stock**: yield modesto vs peer Emerson 2.2%, Parker-Hannifin 1.3%. Inversores income-focused van a Emerson; inversores growth van a non-Aristocrats. DOV tiene que entregar capital appreciation + dividend growth combo — si EPS growth disappoint 2 quarters, dual narrative se rompe.",
+    research_full: `# Dover Corporation (DOV) — Research Completo
+
+## Precio: $210.95 | P/E TTM: 20.40 | P/E Forward: 17.20 | Div Yield: 1.00% | Market Cap: $28.5B
+
+---
+
+## ¿Qué es Dover?
+
+Dover Corporation es **un conglomerado industrial diversificado fundado en 1955** — uno de solo ~30 *Dividend Kings* en el mundo con **70 años consecutivos de aumentos del dividendo** (desde 1956).
+
+**Historia**:
+- **1955**: George Ohrstrom funda Dover (rollup 4 empresas)
+- **1956**: primer dividendo — inicia streak
+- **2018**: spin-off **Apergy** (oilfield)
+- **Mayo 2018**: **Richard Tobin** CEO
+- **2020-2025**: portfolio reshaping continuado
+- **2026**: $1B buyback FY26, Markem-Imaje SmartLase launch, 71º año dividend increase
+
+## 5 Segmentos
+
+| Segmento | % Revenue | Q1 2026 | Highlight |
+|----------|-----------|---------|-----------|
+| **Engineered Products** | ~25% | +2% | Vehicle service, aerospace |
+| **Clean Energy & Fueling** | ~22% | +5% | Wayne fuel + **EV chargers +25%** |
+| **Imaging & Identification** | ~13% | +4% | **Markem-Imaje** coding |
+| **Pumps & Process** | ~25% | **+7%** | **Biopharma capex recovery** |
+| **Climate & Sustainability** | ~15% | **+12%** | **AI data center cooling** |
+
+## Q1 2026 — Reportado 24 abril 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Revenue | ~$1.95B | +3% |
+| **Adj EPS** | **$2.18** | +8% |
+| Bookings | — | **+9%** |
+| Book-to-bill | **1.05x** | backlog growing |
+| Adj segment margin | 22.6% | +90bps |
+
+**FY26 Guidance reafirmada**: revenue +4-6%, **adj EPS $9.65-$9.95**
+
+## Catalysts 2025-2026
+
+### Climate & Sustainability +12% — AI Data Center Cooling
+- Heat exchangers + CO2 refrigerants para liquid cooling
+- Clientes: CoolIT (Ecolab), Vertiv, Schneider Electric
+- Backlog +18% Q1 2026
+
+### Pumps & Process +7% — Biopharma Capex
+- Pfizer, Eli Lilly (Mounjaro/Zepbound), Novo Nordisk (Ozempic/Wegovy)
+- Hygienic specs FDA = moat técnico
+
+### Markem-Imaje SmartLase 200i (Q1 2026)
+- CO2 laser coder con AI vision
+- Upgrade cycle 2026-2028 (~$300M opportunity)
+
+### Buyback FY26
+- $300M Q1 ejecutado
+- $700M autorización restante
+- Total $1B = ~3.5% market cap
+
+## Dividend King — 70 Años
+
+| Empresa | Streak Dividend Increases |
+|---------|---------------------------|
+| **Procter & Gamble** | 69 años |
+| **Dover Corporation** | **70 años** |
+| Genuine Parts | 69 años |
+| Coca-Cola | 63 años |
+| Johnson & Johnson | 63 años |
+
+**Anuncio Q2 2026**: $0.515 → $0.535 = **71º año consecutivo**
+
+Streak más largo histórico del world. Sobrevivió:
+- Recesiones: 1958, 1960, 1969, 1973-75, 1980, 1981-82, 1990, 2001, 2008-09, 2020
+- Crisis: dot-com, GFC, COVID
+- Stagflation 70s
+
+## Tobin Track Record (CEO desde may 2018)
+
+- EPS CAGR 11% desde 2018
+- Stock total return +145% vs S&P +95%
+- Portfolio reshaping: vendió printing, spin Apergy
+- Tuck-in M&A disciplinado (Markem-Imaje extensiones)
+
+## Anchor Fact
+
+**70 años consecutivos de aumentos del dividendo (1956 → 2025)** — uno de solo ~30 *Dividend Kings* en el mundo y el segundo streak más largo después de Procter & Gamble.
+
+Si compras DOV a $210.95 y reinvirtes dividendo 30 años a CAGR 6%, yield sobre cost (YoC) a 30 años = ~5.8% sin contar capital appreciation.
+
+(Fuente: Dover Investor Relations + Mergent Dividend Achievers Index)
+
+## Tesis en una línea
+
+> Comprar un Dividend King de 70 años (uno de solo ~30 en mundo) cuando (1) Q1 2026 entrega +8% EPS + 9% bookings, (2) Climate +12% por AI data center cooling, (3) Pumps +7% por biopharma capex, (4) $1B buyback FY26, (5) P/E forward 17.2x descuento vs peers Industrial Aristocrats 20-26x.
+
+---
+
+*Research fecha: 18 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 238.00,
+    analyst_upside: 12.8,
+    status: "active",
+    first_researched_at: "2026-05-18T00:00:00Z",
+    last_updated_at: "2026-05-18T00:00:00Z",
+    next_review_at: "2026-11-18T00:00:00Z",
+  },
+  {
+    id: 74,
+    ticker: "NTR",
+    name: "Nutrien Ltd.",
+    sector: "Basic Materials",
+    industry: "Agricultural Inputs",
+    country: "Canada",
+    region: "North America",
+    currency: "USD",
+    price: 71.27,
+    pe_ratio: 16.20,
+    pe_forward: 12.50,
+    dividend_yield: 3.03,
+    market_cap_b: 35.0,
+    eps: 4.40,
+    summary_short:
+      "**El productor #1 mundial de potash + el retail agrícola más grande del planeta** — formado 1 enero 2018 por merger de PotashCorp + Agrium ($36B deal). 3 negocios: **Potash** (mayor productor mundial, ~20-25% capacidad global con 6 minas en Saskatchewan Canadá), **Nitrogen** (3º global, capacidad 13.8M tonnes/año), **Retail** (Nutrien Ag Solutions — 2,000+ tiendas físicas en US/Canadá/Australia/Brasil/Argentina vendiendo semillas + fertilizantes + crop protection + servicios agronómicos a 500,000+ growers). HQ Saskatoon, Saskatchewan, Canadá. **Ken Seitz CEO desde junio 2023** (ex-CEO Canpotex y veterano potash 25+ años). ~25,000 empleados. **Q1 2026 reportado 6 mayo 2026**: revenue **$6.3B (+4% YoY)**, **adj EBITDA $1.4B (+12% YoY)**, **adj EPS $0.95 (+18% YoY)** beat consenso $0.85. Potash volumes **3.6Mt (+12% YoY)** — récord trimestral, precio MOP promedio Vancouver **$340/t (+15% YoY)**. Nitrogen prices **+22% YoY** por sanctions Rusia/Bielorrusia + reducción exports China. Retail proprietary products gross margin **+250bps**. **Guidance FY26 RAISED**: adj EBITDA **$5.6-$6.2B** (vs $5.4-$6.0B prior), adj EPS **$3.80-$4.30**. **Dividendo Q1 2026**: $0.545/trim (anualizado $2.18 = yield 3.03%). **Buyback FY26**: $1B autorización (~3% market cap). **Catalyst clave**: India tender potash mayo 2026 a $375/t (+12% vs 2025) + China contract negociaciones junio 2026. Cotización $71.27, P/E forward 12.5x, yield 3.03%.",
+    summary_what:
+      "Nutrien Ltd. (NTR) es **el productor #1 mundial de potash + el retail agrícola más grande del planeta**. Creada el 1 enero 2018 por la fusión de PotashCorp + Agrium ($36B all-stock deal) — el mayor merger en historia de Canadá. ~25,000 empleados en 14 países.\n\n**Historia**:\n- **1975**: Saskatchewan Government nacionaliza minas potash → forma PotashCorp\n- **1989**: PotashCorp privatizada\n- **1931-2018**: Agrium creada de Cominco/Cyanamid\n- **1 enero 2018**: **Nutrien Ltd.** = merger PotashCorp + Agrium ($36B)\n- **2018-2023**: Chuck Magro CEO inicial → CFO Pedro Farah\n- **Junio 2023**: **Ken Seitz** CEO (ex-CEO Canpotex)\n- **2024-2026**: capital discipline + buyback + potash production restraint\n\n**3 Negocios**:\n\n**(1) Potash (~35% revenue, ~50% EBITDA)** — núcleo del moat:\n- **Mayor productor mundial** con ~20-25% capacidad global\n- **6 minas en Saskatchewan, Canadá** (Allan, Cory, Lanigan, Patience Lake, Rocanville, Vanscoy)\n- Capacidad nameplate ~20Mt/año, **production guidance FY26 13-13.6Mt**\n- Costa logística vía **Canpotex** (consortium NTR + Mosaic) — terminales Portland OR + Vancouver BC + Saint John NB\n- Clientes top: India (15%), Brasil (12%), China (10%), USA (8%)\n- Q1 2026: volumes 3.6Mt (+12% YoY), precio MOP $340/t (+15%)\n\n**(2) Nitrogen (~25% revenue, ~25% EBITDA)**:\n- **3º productor mundial** (después de CF Industries + Yara)\n- Capacidad ~13.8M tonnes/año en US (Borger TX, Augusta GA, Geismar LA) + Trinidad + Argentina\n- Productos: ammonia, urea, UAN\n- Q1 2026: precio +22% YoY por sanctions Rusia/Bielorrusia + China export reductions\n\n**(3) Retail — Nutrien Ag Solutions (~40% revenue, ~25% EBITDA)**:\n- **Mayor retail agrícola del mundo** con **2,000+ tiendas físicas**\n- Presencia: US (1,400+), Canadá (200+), Australia (300+), Brasil (50+), Argentina (50+)\n- Vende a 500,000+ growers: semillas + fertilizantes + crop protection (Bayer, Syngenta, Corteva) + servicios agronómicos\n- **Proprietary products** (Loveland Products marca propia): 25% mix retail, gross margin 2x branded\n- Plataforma digital **agrible** + **Echelon** (precision agronomy)\n- Q1 2026: proprietary gross margin +250bps\n\n**HQ**: Saskatoon, Saskatchewan, Canadá. **Empleados**: ~25,000.\n\n**Liderazgo**:\n- **CEO**: **Ken Seitz** desde junio 2023 (ex-CEO Canpotex, 25+ años potash)\n- **CFO**: Mark Thompson (desde marzo 2024)\n- **Chair**: Russ Girling (ex-CEO TC Energy)\n\n**Q1 2026 (reportado 6 mayo 2026)**:\n\n| Métrica | Q1 2026 | YoY |\n|---------|---------|-----|\n| Revenue | **$6.3B** | +4% |\n| **Adj EBITDA** | **$1.4B** | **+12%** |\n| **Adj EPS** | **$0.95** | **+18%** |\n| Potash volumes | **3.6Mt** | **+12%** (récord trim) |\n| Potash MOP Vancouver | **$340/t** | +15% |\n| Nitrogen prices | — | **+22%** |\n| Retail proprietary GM | — | **+250bps** |\n\n**FY26 Guidance RAISED**:\n- Adj EBITDA **$5.6-$6.2B** (vs $5.4-$6.0B prior)\n- Adj EPS **$3.80-$4.30**\n- Potash sales volumes **13.0-13.6Mt**\n\n**Capital Return**:\n- **Dividendo Q1 2026**: $0.545/trim (anualizado $2.18, yield 3.03%)\n- **Buyback FY26**: $1B autorización (~3% market cap)\n- ROIC FY26 guide: ~14%",
+    summary_why:
+      "NTR a $71.27 es comprar el productor #1 mundial de potash + el retail agrícola más grande del planeta a P/E forward 12.5x — el múltiplo más barato de Ag Inputs desde post-COVID — justo cuando India tender mayo 2026 + China contract junio 2026 + Q1 2026 EBITDA +12% confirman price floor. Razones específicas: (1) **Q1 2026 entregó EBITDA +12% + EPS +18% + volumes potash récord trimestral**: Adj EBITDA $1.4B (vs consenso $1.25B), adj EPS $0.95 (vs $0.85). Potash volumes 3.6Mt = récord Q1. Precio MOP Vancouver $340/t (+15% YoY). Beat amplio + guidance RAISED a $5.6-$6.2B EBITDA FY26 (vs $5.4-$6.0B prior). (2) **India tender mayo 2026 a $375/t = price floor confirmado**: India Potash Limited firmó contrato mayo 2026 a $375/t CFR (+12% vs $335/t 2025). Establece price benchmark global. China contract negotiations junio 2026 esperado >$340/t CFR (vs $310/t 2025 = +10%). Estos 2 anchors = visibilidad pricing FY26 entera. (3) **Sanctions Rusia/Bielorrusia + China nitrogen export restrictions = tailwind estructural**: Belaruskali (Bielorrusia, antes ~18% market share potash) sigue sancionado UE + Lithuania port closure. Uralkali (Rusia) acceso limitado. Resultado: NTR + Mosaic (Canpotex) + ICL (Israel) capturan share permanentemente. China en mayo 2025 cortó nitrogen exports 30% → urea/UAN +22% YoY Q1 2026. (4) **Retail Nutrien Ag Solutions = moat irrepetible**: 2,000+ tiendas físicas + 500,000+ growers + proprietary products (Loveland) con GM 2x branded. Es el Walmart + Costco del campo americano. Q1 2026 proprietary GM +250bps. Competidores (Sinochem, Yara) NO pueden replicar — barrera tiempo + relaciones farmer. (5) **P/E forward 12.5x = descuento brutal vs peers Ag Inputs**: Mosaic 13x, CF Industries 11x, Yara 16x, Corteva 17x, Bunge 11x. NTR trade descuento por combo conglomerado + Canadian listing. Re-rating a 15x P/E = $86 = +20% capital + 3% yield = total return ~25%. (6) **Capital return ~6% market cap FY26**: dividendo 3.03% + $1B buyback (~3% market cap) = ~6% total yield. NTR ha retirado ~$15B en buybacks desde merger 2018 — share count -25%. (7) **Ken Seitz CEO desde junio 2023 = production discipline real**: vino de Canpotex (consortium NTR+Mosaic) sabiendo el playbook potash. Recortó production capex agresivamente (FY26 capex $2.0-$2.2B vs $2.6B 2022). Production guidance 13-13.6Mt = 65-70% utilization (no flood el mercado). Resultado: precio MOP sostenido $340/t en lugar de colapsar a $250/t. (8) **Anchor: 8 mil millones de personas que comer en 2030**: USDA proyecta global crop demand +25% al 2030. Potash es input #2 (después N) que no puede ser sustituido — es K (potasio), elemento esencial fotosíntesis. No hay reemplazo químico. Nutrien tiene 6 minas Saskatchewan que producen 75 años a current rate (reservas masivas) — moat geológico irreplicable. (9) **Crop prices estables Q1 2026**: corn $4.50/bu, wheat $6.80/bu, soybeans $11.50/bu, palm oil MYR 4,250. Farmer income healthy = demand fertilizante sostenido. NOAA pronostica La Niña neutral 2026 = condiciones planting normales. (10) **Tesis en una línea**: comprar productor #1 mundial potash + retail ag #1 mundial a P/E forward 12.5x (más barato Ag Inputs) cuando (a) Q1 2026 EBITDA +12% + EPS +18%, (b) India $375/t + China contract junio = price floor confirmed, (c) sanctions Belarusia/Rusia tailwind estructural, (d) dividendo 3.03% + buyback $1B, (e) 8B personas alimentando 2030 = demand demográfica permanente.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Potash precio cíclico — base case $340/t puede colapsar a $250/t**: precios potash van entre $200-$1,200/t históricamente. 2022 peak $1,200 → 2024 trough $280. Si sanctions Belarusia se relajan + Uralkali Russia regresa al mercado o Laos/BHP Jansen project en BC ramp acelera, oversupply puede llevar precios bajo $300/t = NTR EPS -30%. BHP Jansen (escala 4.4Mt initial 2027, hasta 8.5Mt 2030) es la espada de Damocles sobre el sector. (2) **Nitrogen +22% YoY puede revertir rápido**: dependiente de China export policy + gas natural prices. Si China relaja export quotas 2026 H2 + gas natural US se desploma post-LNG export buildout, urea/UAN -15-25%. (3) **Retail margin sensitive a farmer cash flow**: Q1 2026 proprietary GM +250bps es great pero requiere farmers con cash. Si crop prices colapsan (corn <$3.50, soy <$9.00), farmer cuts spending. Retail Nutrien Ag Solutions revenue -8-12% en cycles bear (2019-2020 ejemplo). (4) **BHP Jansen ramp 2027-2030**: BHP construyendo Jansen mine en Saskatchewan — phase 1 capacity 4.4Mt 2027, phase 2 4.1Mt 2030. Total 8.5Mt = ~10% global market entrando. Canpotex incluye BHP también pero capacity puro adicional = pricing pressure 2028+. (5) **India / China negotiating power**: India Potash Limited + Chinese state buyers son monopsonists. Si forman compradores group + delay tenders, NTR pierde leverage. India tender 2025 negociado a $335 vs initial offer $400 — bajaron 16% del ask. (6) **Sanctions Belarusia/Rusia eventually lift**: si geopolitical thaw (Ucrania ceasefire, sanctions partial relief), Belaruskali + Uralkali regresan parcialmente al mercado. ~3-5Mt potash flooding sería -15-25% price hit. (7) **Ken Seitz CEO sucesión long-tail**: 25+ años potash veterano pero 60+ años edad. Si retira 2027-2028 sin successor preparado, transition risk. Pedro Farah (CFO previo) salió 2024. (8) **FX exposure CAD/USD**: NTR reporta USD pero significant Canadian operations. CAD fortalece (BoC tightening, oil tailwind) = costos operating suben. Q1 2026 EBITDA +12% incluye CAD -3% drag. (9) **ESG/regulatory risk**: nitrogen + ammonia plants tienen high CO2 footprint. EU CBAM (Carbon Border Adjustment) puede penalizar nitrogen exports a Europa 2026-2030. Plus farmer pushback en fertilizer use (regenerative ag movement). (10) **Conglomerate discount NTR trade P/E forward 12.5x vs Mosaic 13x, Yara 16x**: si Seitz no spinea retail (como Cargill rumors hace años), discount persiste. Retail business merece P/E 18x standalone (recurring + capital-light) pero combinada con commodity potash trade at lower multiple.",
+    research_full: `# Nutrien Ltd. (NTR) — Research Completo
+
+## Precio: $71.27 | P/E TTM: 16.20 | P/E Forward: 12.50 | Div Yield: 3.03% | Market Cap: $35B
+
+---
+
+## ¿Qué es Nutrien?
+
+Nutrien es **el productor #1 mundial de potash + el retail agrícola más grande del planeta**. Creada 1 enero 2018 por merger PotashCorp + Agrium ($36B all-stock).
+
+**Historia**:
+- **1975**: Saskatchewan nacionaliza potash → PotashCorp
+- **1989**: PotashCorp privatizada
+- **1 enero 2018**: **Nutrien** = merger PotashCorp + Agrium
+- **Junio 2023**: **Ken Seitz** CEO (ex-Canpotex)
+- **2024-2026**: capital discipline + production restraint
+
+## 3 Negocios
+
+| Segmento | % Revenue | % EBITDA | Q1 2026 |
+|----------|-----------|----------|---------|
+| **Potash** | ~35% | ~50% | Vol +12%, price +15% |
+| **Nitrogen** | ~25% | ~25% | Price +22% |
+| **Retail Ag** | ~40% | ~25% | Proprietary GM +250bps |
+
+## Potash — El Moat Principal
+
+- **6 minas en Saskatchewan, Canadá** (Allan, Cory, Lanigan, Patience Lake, Rocanville, Vanscoy)
+- Capacidad nameplate ~20Mt/año
+- **FY26 production guide 13-13.6Mt** (65-70% utilization = no flood mercado)
+- Costas vía **Canpotex** (NTR + Mosaic): Portland OR + Vancouver BC + Saint John NB
+- **Reservas 75+ años** a current rate
+
+### Top Mercados Potash
+
+| País | % Sales | Vehículo |
+|------|---------|----------|
+| India | 15% | India Potash Limited (annual tender) |
+| Brasil | 12% | Bunge, ADM distributors |
+| China | 10% | State buyer Sinofert contract |
+| USA | 8% | Direct via Nutrien Ag |
+
+## Q1 2026 — Reportado 6 mayo 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Revenue | $6.3B | +4% |
+| **Adj EBITDA** | **$1.4B** | **+12%** |
+| **Adj EPS** | **$0.95** | **+18%** |
+| Potash volumes | **3.6Mt** | **+12% récord** |
+| Potash MOP Vancouver | **$340/t** | +15% |
+| Nitrogen prices | — | **+22%** |
+
+**FY26 Guidance RAISED**:
+- Adj EBITDA **$5.6-$6.2B**
+- Adj EPS **$3.80-$4.30**
+- Potash volumes 13-13.6Mt
+
+## Catalysts 2026
+
+### Mayo 2026 — India Potash Tender
+- Firmado $375/t CFR (+12% vs 2025)
+- Volumen ~1.5Mt anual
+- **Establece price benchmark global**
+
+### Junio 2026 — China Contract
+- Negociaciones activas con Sinofert
+- Expectativa >$340/t CFR (+10% vs 2025)
+
+### Sanctions Belarusia continuidad
+- Belaruskali (antes 18% market share) sigue sancionado UE
+- Lithuania port closure persiste
+- NTR + Mosaic + ICL capturan share
+
+### China Nitrogen Export Restrictions
+- Mayo 2025: China cortó nitrogen exports 30%
+- Urea + UAN +22% YoY Q1 2026
+
+## Retail — Nutrien Ag Solutions
+
+- **2,000+ tiendas físicas** (US 1,400+, Canadá 200+, Australia 300+, Brasil 50+, Argentina 50+)
+- **500,000+ growers** atendidos
+- **Proprietary products** (Loveland): 25% mix, GM 2x branded
+- Plataforma digital **agrible** + **Echelon** (precision agronomy)
+- Q1 2026: proprietary GM +250bps
+
+## Capital Return
+
+- **Dividendo Q1 2026**: $0.545/trim (anualizado $2.18)
+- **Buyback FY26**: $1B autorización
+- Total return ~6% market cap anual
+- **Share count -25% desde merger 2018**
+
+## Anchor Fact
+
+**8 mil millones de personas para alimentar en 2030 + 6 minas Saskatchewan con reservas 75+ años** — USDA proyecta crop demand +25% al 2030. Potash es elemento K esencial fotosíntesis sin sustituto químico. NTR controla ~20-25% capacidad global con moat geológico irreplicable.
+
+Plus BHP Jansen mine 2027 (4.4Mt phase 1) entra a Canpotex también — NTR mantiene pricing power.
+
+(Fuente: Nutrien Annual Report 2025 + USDA World Agricultural Supply and Demand Estimates)
+
+## Tesis en una línea
+
+> Comprar productor #1 mundial potash + retail ag #1 mundial a P/E forward 12.5x cuando (1) Q1 2026 EBITDA +12% + EPS +18%, (2) India tender $375/t + China contract junio = price floor, (3) sanctions Belarusia/Rusia + China nitrogen tailwind estructural, (4) dividendo 3.03% + $1B buyback, (5) 8B personas alimentando 2030 = demand permanente.
+
+---
+
+*Research fecha: 18 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 82.00,
+    analyst_upside: 15.1,
+    status: "active",
+    first_researched_at: "2026-05-18T00:00:00Z",
+    last_updated_at: "2026-05-18T00:00:00Z",
+    next_review_at: "2026-11-18T00:00:00Z",
+  },
+  {
+    id: 75,
+    ticker: "TNL",
+    name: "Travel + Leisure Co.",
+    sector: "Consumer Cyclical",
+    industry: "Travel Services",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 62.75,
+    pe_ratio: 10.10,
+    pe_forward: 8.20,
+    dividend_yield: 3.19,
+    market_cap_b: 4.3,
+    eps: 6.22,
+    summary_short:
+      "**El operador #1 mundial de vacation ownership (timeshares)** con 245+ resorts y ~830,000 owner families. Spin-off de Wyndham Worldwide en mayo 2018 como Wyndham Destinations → **rebrandeado a 'Travel + Leisure Co.' el 17 enero 2022** después de comprar la marca *Travel + Leisure* a Meredith Corp en 2021 ($100M cash + royalty). HQ Orlando, Florida. **Michael Brown CEO desde mayo 2021** (también President). ~17,000 empleados. Marcas: **Club Wyndham**, **WorldMark by Wyndham**, **Margaritaville Vacation Club**, **Accor Vacation Club** (Asia), **Sports Illustrated Resorts** (lanzado 2023, lifestyle resorts SI-branded), y la membership lifestyle **Travel + Leisure GO** (subscription $99/año launched octubre 2023). **Q1 2026 reportado 23 abril 2026**: revenue **$939M (+5% YoY)**, **adj EBITDA $193M (+8% YoY)**, **adj EPS $0.95 (+12% YoY)** beat consenso $0.88, VPG (Volume Per Guest) **$3,180 (+4% YoY)**, tours **161k (+3% YoY)**, gross VOI sales **$486M (+7% YoY)**. **Guidance FY26 reafirmada**: adj EBITDA **$1.04-$1.06B**, adj EPS **$5.95-$6.25**. **Dividendo Q1 2026**: $0.56/trim (anualizado $2.24 = yield 3.19%). **Buyback FY26**: $200M autorización (~5% market cap). **Catalyst**: nuevas adiciones inventario Margaritaville Lake Tahoe Q3 2026 + Sports Illustrated resorts Tulum Q4 2026. Cotización $62.75, P/E forward 8.2x, yield 3.19%.",
+    summary_what:
+      "Travel + Leisure Co. (TNL) es **el operador #1 mundial de vacation ownership (timeshares)** con 245+ resorts en USA, México, Caribe, Europa, Asia-Pacífico, y ~830,000 owner families. ~17,000 empleados. HQ Orlando, FL.\n\n**Historia**:\n- **1990**: Wyndham International formado (hoteles)\n- **2006**: spin-off Cendant → Wyndham Worldwide (hoteles + timeshare)\n- **Mayo 2018**: spin-off **Wyndham Destinations** (timeshare puro) — Wyndham Hotels & Resorts (WH) queda separado\n- **2021**: compra marca **Travel + Leisure** a Meredith Corp ($100M cash + royalty)\n- **17 enero 2022**: **rebrand a 'Travel + Leisure Co.' (TNL)** — ticker NYSE WYND→TNL\n- **Mayo 2021**: **Michael Brown** CEO (ex-President Wyndham Destinations)\n- **2023**: lanza **Sports Illustrated Resorts** + **Travel + Leisure GO** subscription\n- **2024-2026**: Margaritaville expansion + B2B Travel + Leisure brand monetization\n\n**2 Segmentos**:\n\n**(1) Vacation Ownership (~85% revenue, 90% EBITDA)** — el core:\n- **245+ resorts** vacation ownership\n- **~830,000 owner families**\n- Marcas: Club Wyndham (US), WorldMark by Wyndham (US West Coast), Margaritaville Vacation Club (Jimmy Buffett license), Accor Vacation Club (Asia), Shell Vacations Club, Worldmark South Pacific\n- Modelo: vende intervalos (1-2 semanas/año) → propiedad real estate registrada → owner paga anual maintenance fees\n- VPG (Volume Per Guest) Q1 2026 $3,180 (+4% YoY)\n- Tours 161k Q1 2026 (+3%)\n\n**(2) Travel & Membership (~15% revenue, 10% EBITDA)**:\n- **RCI** — exchange network #1 mundial (intercambio entre owners 4,200+ resorts)\n- **Travel + Leisure GO** subscription ($99/año launched oct 2023)\n- Travel agencies + cruise + theme park resellers (Disney, Universal partnerships)\n- **Sports Illustrated Resorts** (lanzado 2023, lifestyle SI-branded resorts — Tulum Q4 2026 next opening)\n\n**HQ**: Orlando, Florida. **Empleados**: ~17,000 (US ~13k, México/Caribe ~2k, Asia-Pacífico ~2k).\n\n**Liderazgo**:\n- **CEO/President**: **Michael Brown** desde mayo 2021 (ex-President Wyndham Destinations 2017-2021)\n- **CFO**: Erik Hoag (desde marzo 2023)\n- **Chair**: Stephen Holmes (ex-CEO Wyndham Worldwide, fundador del spin-off 2018)\n\n**Q1 2026 (reportado 23 abril 2026)**:\n\n| Métrica | Q1 2026 | YoY |\n|---------|---------|-----|\n| Revenue | **$939M** | +5% |\n| **Adj EBITDA** | **$193M** | **+8%** |\n| **Adj EPS** | **$0.95** | **+12%** |\n| **VPG** | **$3,180** | +4% |\n| Tours | 161k | +3% |\n| Gross VOI sales | $486M | +7% |\n\n**FY26 Guidance reafirmada**:\n- Adj EBITDA **$1.04-$1.06B**\n- Adj EPS **$5.95-$6.25**\n- Gross VOI sales $2.30-$2.40B\n- Tours 700-720k\n\n**Capital Return**:\n- **Dividendo Q1 2026**: $0.56/trim (anualizado $2.24 = yield 3.19%)\n- **Buyback FY26**: $200M autorización (~5% market cap)\n- Total return ~8% market cap anual\n- Net debt $3.6B (~3.5x EBITDA leverage)\n\n**Nuevas Adiciones Inventory 2026**:\n- **Margaritaville Lake Tahoe** Q3 2026 (resort #1 brand expansion)\n- **Sports Illustrated Resorts Tulum** Q4 2026\n- **Accor Vacation Club Australia Sydney** Q4 2026",
+    summary_why:
+      "TNL a $62.75 es comprar el operador #1 mundial de vacation ownership a P/E forward 8.2x — uno de los múltiplos más bajos del S&P en Consumer Cyclical — con yield 3.19% + buyback 5% = ~8% capital return anual + EPS growth +5-7%. Razones específicas: (1) **Q1 2026 entregó EBITDA +8% + EPS +12% + VPG +4% + tours +3%**: el quinteto perfect — sales volume creciendo (tours) + ticket size creciendo (VPG) + margin holding. Adj EPS $0.95 supera consenso $0.88 ampliamente. Gross VOI sales $486M (+7%) = pipeline FY26 sólida. (2) **Vacation Ownership es business modelo único + countercyclical-ish**: TNL vende intervalos REAL estate → owner family compra una vez, paga maintenance fees anual (~$1,200/año por unit) por 30+ años. Recurring revenue stream + low churn (<3% anual). Es como ARR pero physical. ~830,000 owner families = revenue base recurring ~$1B/año en maintenance fees solo. (3) **Margaritaville expansion = wedge brand premium**: Jimmy Buffett licensed brand (estate retains royalty post-2023 muerte). Margaritaville Vacation Club crece 2x ritmo Club Wyndham. **Lake Tahoe Q3 2026** = primer resort montaña, expande season. Sports Illustrated Resorts (lanzado 2023, Tulum opens Q4 2026) = otro brand premium pulling new owner demographic <50 años. (4) **Dividend 3.19% + buyback 5% = ~8% capital return**: TNL pagó dividendo continuo desde spin-off 2018 (subió +12% marzo 2026 a $0.56). Buyback FY26 $200M = ~5% market cap retirement. Total ~8% capital return + EPS growth ~6% = ~14% total return floor. (5) **P/E forward 8.2x = uno de los más baratos S&P Consumer Cyclical**: peers Hilton 28x, Marriott 24x, Hyatt 22x, MGM 12x, Wyndham Hotels (WH) 22x. Discount explicado por: (a) vacation ownership stigma timeshare = perception negativa, (b) levered balance sheet ~3.5x. Pero TNL EPS growth +5-7% sostenido = mispriced. Re-rating a P/E 12x = $76 = +21% capital + 3% yield = total return ~25%. (6) **Anchor: la marca 'Travel + Leisure' = 50+ años de equity editorial**: revista fundada 1971 por American Express, comprada Time Inc, vendida Meredith, comprada TNL 2021 ($100M cash + royalty). Tiene 'World's Best Awards' (los #1 ranking de hoteles/destinos/airlines mundial — equivalente a Michelin Stars en hospitality). TNL monetiza el brand: GO subscription ($99/año), B2B licensing, vacation packages branded T+L. Es asset oculto que mercado no valora — Disney/Marriott pagarían >$1B por el brand standalone. (7) **VPG (Volume Per Guest) $3,180 = pricing power**: VPG es la métrica clave del business — quanto cada guest tour gasta promedio en compra timeshare. +4% YoY Q1 2026 = ticket size growing faster que inflation. Track record: VPG +3-5% anual sostenido desde 2021. (8) **Michael Brown CEO 5 años track record**: desde mayo 2021. EPS CAGR 14% bajo su tenure. Re-launchó marca (T+L brand), expandió Margaritaville, lanzó SI Resorts + GO subscription. Capital allocator disciplinado. (9) **Recession resilience demostrada 2020**: COVID 2020 fue test máximo — revenue -45% pero compañía sobrevivió, mantuvo dividendo (cortado pero no suspended), regresó a profit 2021. Owner families pagaron maintenance fees aun en lockdown — el lock-in es real. (10) **Tesis en una línea**: comprar operador #1 mundial vacation ownership (830k owner families, 245+ resorts, ~$1B/año recurring maintenance fees) a P/E forward 8.2x cuando (a) Q1 2026 EBITDA +8% + EPS +12%, (b) capital return ~8% market cap, (c) Margaritaville + SI Resorts brand premium expansion, (d) marca T+L como hidden asset, (e) demand viajes premium estructural growing.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Leverage 3.5x net debt/EBITDA = no es low-debt company**: $3.6B net debt sobre $1.04-$1.06B EBITDA = leverage elevada. Si EBITDA cae 20% en recesión, leverage salta a 4.5x → covenants risk + dividend cut probability. 2020 COVID se vio: cortaron dividendo de $0.50 a $0.30 marzo 2020. Replay possible si recesión hard. (2) **Vacation ownership es discretionary spend = primer cut en recesión**: cuando consumer cuts spending, vacations + timeshare son first to go. Tour cancellation rate aumenta, VPG cae, deferred revenue se acumula. 2008-09: revenue -25%, 2020: -45%. Si recesión 2026-27, EBITDA puede caer 15-25%. (3) **Timeshare reputational risk + class actions**: industria timeshare tiene mala reputación histórica (high-pressure sales, exit difficulties). Class action lawsuits comunes — TNL settled $35M caso Florida 2023. Plus regulatory scrutiny FL/CA AG offices. Si nueva regulation (CA SB-1170 propuesta restringir VOI sales), business model hit. (4) **Aging owner base + millennial adoption pendiente**: owner average age 55+ años. Cuando boomers fallen o sell back (TNL Cessation Program), inventory regresa. Millennial/Gen Z prefieren Airbnb experiences, not 30-year commitments. Margaritaville + SI Resorts tratan de atraer <50 años pero conversion rate timeshare lento para esta demo. (5) **Margaritaville Jimmy Buffett post-mortem**: Buffett murió septiembre 2023. Estate retains royalty + brand control vía family. Si estate disputes royalty o terms se renegocian, Margaritaville growth puede pause. Brand value depende de continued music/cultural relevance. (6) **Hospitality competition Airbnb + cheap hotels**: Airbnb captures vacation spending share, especialmente <40 años. Hotels post-COVID rebajando rates. TNL VPG +4% es OK pero si lodging supply explote, VPG pressure aparece. (7) **Maintenance fees inflation pushback**: TNL cobra ~$1,200/año/unit maintenance fees + sube ~5-8% anual. Owner pushback creciente — class actions en California cuestionan rate hikes >CPI. Si court force cap, recurring revenue declina. (8) **Brand T+L brand monetization slow**: GO subscription ($99/año) launched oct 2023. TNL no comunica subscriber count — sospechoso que sea <100k. Si brand monetization no ramp 2026-2027, hidden asset thesis se erosiona. (9) **Michael Brown CEO sucesión long-tail**: 5 años en rol, 55+ años edad. Sin successor visible. Erik Hoag (CFO desde 2023) candidato. Transition risk si retira 2027-2028. (10) **Inventory development capex requirement**: TNL necesita gastar $300-400M/año desarrollando nuevos resorts (Margaritaville Lake Tahoe, SI Tulum, Sydney). Si construction cost inflation persists or new resorts underperform tour generation, capital efficiency deteriora.",
+    research_full: `# Travel + Leisure Co. (TNL) — Research Completo
+
+## Precio: $62.75 | P/E TTM: 10.10 | P/E Forward: 8.20 | Div Yield: 3.19% | Market Cap: $4.3B
+
+---
+
+## ¿Qué es Travel + Leisure Co.?
+
+TNL es **el operador #1 mundial de vacation ownership (timeshares)** con 245+ resorts y ~830,000 owner families.
+
+**Historia**:
+- **2006**: spin-off Cendant → Wyndham Worldwide
+- **Mayo 2018**: spin-off **Wyndham Destinations** (timeshare puro)
+- **2021**: compra marca **Travel + Leisure** ($100M + royalty)
+- **17 enero 2022**: rebrand a **Travel + Leisure Co. (TNL)**
+- **Mayo 2021**: **Michael Brown** CEO
+- **2023**: lanza **Sports Illustrated Resorts** + **T+L GO**
+- **2024-2026**: Margaritaville expansion + SI Resorts
+
+## 2 Segmentos
+
+| Segmento | % Revenue | % EBITDA | Q1 2026 |
+|----------|-----------|----------|---------|
+| **Vacation Ownership** | ~85% | ~90% | VPG +4%, tours +3% |
+| **Travel & Membership** | ~15% | ~10% | RCI + GO + SI Resorts |
+
+## Vacation Ownership — Core
+
+- **245+ resorts** globales
+- **~830,000 owner families**
+- Marcas: Club Wyndham, WorldMark by Wyndham, **Margaritaville Vacation Club**, Accor Vacation Club, Shell, Worldmark South Pacific
+- Modelo: vende intervalos → maintenance fees recurrentes ~$1,200/año/unit
+
+### KPIs Q1 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| **VPG** (Volume Per Guest) | **$3,180** | +4% |
+| Tours | 161k | +3% |
+| Gross VOI sales | $486M | +7% |
+| New owner mix | ~30% | stable |
+
+## Q1 2026 — Reportado 23 abril 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Revenue | $939M | +5% |
+| **Adj EBITDA** | **$193M** | **+8%** |
+| **Adj EPS** | **$0.95** | **+12%** |
+
+**FY26 Guidance reafirmada**:
+- Adj EBITDA **$1.04-$1.06B**
+- Adj EPS **$5.95-$6.25**
+
+## Catalysts 2026
+
+### Q3 2026 — Margaritaville Lake Tahoe
+- Primer resort montaña (vs beach previo)
+- Expande season (winter + summer)
+- ~600 units inventory
+
+### Q4 2026 — Sports Illustrated Resorts Tulum
+- 350+ units
+- Lifestyle brand <50 años demo
+
+### Q4 2026 — Accor Vacation Club Sydney
+- Expansion Asia-Pacífico
+
+### Travel + Leisure GO subscription
+- Launched oct 2023, $99/año
+- B2B licensing ramping
+
+## Capital Return
+
+- **Dividendo Q1 2026**: $0.56/trim (subió +12% marzo 2026)
+- **Buyback FY26**: $200M (~5% market cap)
+- Total return ~8% market cap anual
+- Net debt $3.6B (~3.5x EBITDA)
+
+## Brand 'Travel + Leisure' Hidden Asset
+
+- Revista fundada 1971 por American Express
+- 'World's Best Awards' = Michelin Stars de hospitality
+- TNL compró brand 2021 a Meredith ($100M cash + royalty)
+- Monetización:
+  - GO subscription ($99/año)
+  - B2B licensing
+  - Vacation packages T+L branded
+- Standalone valuation: $1B+ (Disney/Marriott pagarían premium)
+
+## Anchor Fact
+
+**~830,000 owner families pagando ~$1,200/año en maintenance fees = ~$1B/año recurring revenue base** sin necesidad de vender otro tour. Lock-in real — churn <3% anual. Es como ARR pero physical real estate.
+
+Plus VPG $3,180 +4% YoY = pricing power demostrado año tras año.
+
+(Fuente: TNL Q1 2026 earnings release + 10-K 2025)
+
+## Tesis en una línea
+
+> Comprar operador #1 mundial vacation ownership (830k owner families, 245+ resorts, ~$1B recurring maintenance fees) a P/E forward 8.2x cuando (1) Q1 2026 EBITDA +8% + EPS +12%, (2) capital return ~8% market cap (3.19% yield + 5% buyback), (3) Margaritaville + SI Resorts brand premium expansion, (4) brand T+L como hidden asset valuado $1B+, (5) re-rating a P/E 12x = +21% capital upside.
+
+---
+
+*Research fecha: 18 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 75.00,
+    analyst_upside: 19.5,
+    status: "active",
+    first_researched_at: "2026-05-18T00:00:00Z",
+    last_updated_at: "2026-05-18T00:00:00Z",
+    next_review_at: "2026-11-18T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -11251,6 +11789,58 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #70* — May 13, 2026\n\n🏢 *GSK plc* (GSK) — $50.33\n\n💊 *Lo que hacen*: una de las *10 farmacéuticas más grandes del mundo*. Su nombre es la abreviación de *GlaxoSmithKline* — se rebrandearon a "GSK plc" en mayo 2022 justo antes de separar su negocio de productos de consumo (Sensodyne, Panadol, Voltaren) a una empresa nueva llamada *Haleon* (18 julio 2022). Resultado: GSK quedó pure-play biopharma. Top productos FY2025: *Shingrix* (la vacuna #1 mundial para culebrilla — £3.6 billones de libras en ventas), *Trelegy* (el inhalador #1 para EPOC — £3.0B), *Cabenuva* (la primera inyección mensual/bimensual para HIV en la historia — £1.3B; significa que pacientes ya no necesitan tomar pastilla diaria). Oncología: *Jemperli* (cáncer endometrial) y *Blenrep* (mieloma múltiple, **regresó al mercado USA octubre 2025** después de retirarse 2022).\n\n🌍 *Presencia*: HQ Londres, New Oxford Street (desde julio 2024). *~66,800 empleados* en >75 países. **Nuevo CEO Luke Miels desde el 1 de enero 2026** — reemplazó a Emma Walmsley después de 8.5 años; Miels viene de Macquarie y de roles en AstraZeneca/Roche/GSK Brand. Su mandato: ejecutar el plan de 14 medicamentos blockbuster que GSK quiere lanzar entre 2025-2031 (target £40B revenue 2031 vs £31B 2025).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.13% anual* solo por ser dueño. El dividendo trimestral Q1 2026 fue 17p, y FY2026 expected 70p total — uno de los yields más altos del Big Pharma global. Cada vez que un adulto de 50+ se vacuna contra la culebrilla con Shingrix, un paciente HIV recibe su inyección mensual de Cabenuva, o un EPOC sufrer usa su inhalador Trelegy — parte de ese dinero llega a ti como dividendo. Plus: GSK anunció un *buyback de £2 billones* completándose en 2026 — retirará ~3% de su market cap.\n\n⚠️ *El riesgo*: La acción cotiza *cerca de máximo 12 meses* pero P/E forward 9.1x es brutalmente barato vs peers (Pfizer 9.8x, Roche 13x, AZN 16x). Riesgos: (1) *Arexvy -10% Q1 2026* — la vacuna RSV se desaceleró porque el CDC limitó elegibilidad a adultos 75+ (antes 60+); GSK pidió ampliar pero ACIP puede rechazar, (2) *Trelegy patent cliff 2027-2028* — el blockbuster EPOC pierde exclusividad y genéricos comen revenue, (3) competencia Pfizer/Moderna desarrollando *Shingrix mRNA* — si data positiva 2026-2027, GSK pierde share, (4) primer-año execution risk para Luke Miels.\n\n🆕 Posición #70 — Cierra Ciclo 14\n🔗 https://vectorialdata.com/stocks/GSK\n✅ Certificado por blockchain → vectorialdata.com/verify/GSK\n\n💡 Dato que ancla la tesis: GSK ha distribuido *>90 millones de dosis de Shingrix en USA desde 2017* — y el CDC estima que solo ~45% de los adultos elegibles están vacunados. Eso significa *~70 millones de adultos americanos de 50+ años todavía SIN vacunar contra la culebrilla* (una enfermedad que afecta a 1 de cada 3 adultos en su vida y causa dolor crónico severo). Es una pista de crecimiento de 8-12 años solo en USA, sin contar Europa/Asia que están en fases más tempranas de adoption. Comprar GSK a $50.33 (P/E forward 9.1x — el más barato del Big Pharma) con (1) Shingrix runway 70M dosis, (2) 14 blockbusters pipeline, (3) Blenrep re-launched USA, (4) £2B buyback, (5) 4.13% dividend yield, (6) nuevo CEO con mandato £40B 2031 = asimetría brutal vs el mercado healthcare.`,
     attestation_uid: "0xbc70b8ace29f695ff57ee2731bff609d99f70a79a2b3b344d40bdedbb0b8bd88",
   },
+  {
+    id: 71,
+    stock_id: 72,
+    ticker: "AXP",
+    type: "new" as const,
+    cycle_number: 15,
+    price: 314.29,
+    open_price: 314.29,
+    date: "2026-05-18",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #71* — May 18, 2026\n\n🏢 *American Express* (AXP) — $314.29\n\n💳 *Lo que hacen*: el emisor *#1 mundial de tarjetas premium*. Lo único en el mundo donde *la misma empresa* (1) te emite la tarjeta, (2) procesa cada compra que haces, y (3) cobra al comercio directamente — sin intermediarios Visa ni Mastercard. Eso se llama "red cerrada" y es el moat real de AmEx. ~145 millones de tarjetas activas. Marcas estrella: *Platinum* (fee $895 desde sept 2025), *Gold* ($325), *Centurion* (la negra, solo por invitación, fee $5,000+), Business Platinum, Corporate. Plus dueños de *Resy* (reservas restaurantes premium, comprada 2019) y *Tock* (comprada 2024 por $400M). Operan *30+ Centurion Lounges* en aeropuertos globales (LAX nuevo terminal abre 2026).\n\n🌍 *Presencia*: HQ Manhattan, 200 Vesey Street. *~80,400 empleados*. Presencia directa en >30 países (México, UK, Japón, Australia, Italia, India joint venture con SBI Card, etc.). *Stephen Squeri es CEO desde febrero 2018* (también Chairman) — 40+ años en AmEx, sucedió a Ken Chenault que lideró durante 17 años.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.04% anual* solo por ser dueño. Dividendo trimestral $0.82 (subió +17% en marzo 2025 desde $0.70). PERO el capital return real está en el buyback: AmEx recompró *~$20 mil millones en acciones los últimos 12 meses* — eso es ~9% de su market cap saliendo del mercado vía recompras. Cada vez que alguien usa su Platinum en un restaurante Resy, un viajero pasa por un Centurion Lounge, o una empresa paga viajes corporativos con su Corporate Card — parte de ese dinero llega a ti como dividendo + buyback accretive.\n\n⚠️ *El riesgo*: AmEx es *cíclico* — si llega recesión hard, el gasto premium (viajes corporativos, restaurantes high-end) cae primero. En COVID 2020: revenue -17%, EPS -77%. Riesgos: (1) el refresh Platinum subió fee de $695 a $895 — Q1 2026 no mostró churn pero el verdadero test es el ciclo de renovación sept-dic 2026, (2) Chase Sapphire Reserve subió su fee también ($795 desde dic 2025) atacando directamente, (3) regulación *Durbin Amendment 2.0* podría forzar a abrir el closed-loop, (4) Apple Card + buy-now-pay-later capturan share entry-level.\n\n🆕 Posición #71 — Abre Ciclo 15\n🔗 https://vectorialdata.com/stocks/AXP\n✅ Certificado por blockchain → vectorialdata.com/verify/AXP\n\n💡 Dato que ancla la tesis: en septiembre 2025 AmEx subió el fee de la Platinum de $695 a $895 — 200 dólares más al año. La gran pregunta era "¿se van a ir los clientes?". El Q1 2026 (reportado 18 abril 2026) contestó: *los fees por tarjeta crecieron +18% YoY* (el mayor salto en 15 años), churn <2%, y >30% de los nuevos Platinum eran millennials/Gen Z <40 años. Significa que la gente joven SÍ paga $895/año por la experiencia (Centurion Lounges, Equinox membership, Walmart+, Uber credit, Resy $400 credit). El moat experiencial es real. Comprar AXP a $314.29 (P/E forward 18.5x, barato vs Visa 28x o Mastercard 32x) es comprar el único emisor mundial closed-loop justo cuando el premium business está acelerando y devolviendo ~9% del market cap al año vía dividendo + buyback.`,
+    attestation_uid: "",
+  },
+  {
+    id: 72,
+    stock_id: 73,
+    ticker: "DOV",
+    type: "new" as const,
+    cycle_number: 15,
+    price: 210.95,
+    open_price: 210.95,
+    date: "2026-05-18",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #72* — May 18, 2026\n\n🏢 *Dover Corporation* (DOV) — $210.95\n\n⚙️ *Lo que hacen*: Dover es un *conglomerado industrial* fundado en 1955 — significa que es como un holding de muchos negocios de equipo industrial especializado para nichos específicos. *5 segmentos*: (1) *Engineered Products* (lifts para mecánicos automotrices, partes aeroespaciales), (2) *Clean Energy & Fueling* (despachadores de gasolineras + cargadores eléctricos Wayne), (3) *Imaging & Identification* (Markem-Imaje — el #1 mundial en marcado de empaques: cada caja Pfizer, cada botella Coca-Cola, cada paquete de comida lleva un código láser hecho con su tecnología), (4) *Pumps & Process Solutions* (bombas para fábricas de biofarmacia tipo Pfizer/Eli Lilly), (5) *Climate & Sustainability* (intercambiadores de calor y refrigerantes para data centers de AI — proveedor clave para CoolIT, Vertiv, Schneider).\n\n🌍 *Presencia*: HQ Downers Grove, Illinois (suburbio de Chicago). *~25,000 empleados* en 14 países. *Richard Tobin es CEO desde mayo 2018* (también President) — antes lideró CNH Industrial. Track record: bajo su gestión EPS creció +145% acumulado vs S&P +95%. Eliminó negocios low-margin (vendió printing 2019, spinó Apergy oilfield 2018) y enfocó portfolio en nichos high-margin.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.00% anual* — yield modesto. PERO Dover es algo extremadamente raro: un *Dividend King con 70 años consecutivos de aumentos en el dividendo* (desde 1956). Solo hay ~30 empresas en el mundo con ese track record — Coca-Cola tiene 63 años, P&G 69, J&J 63, Dover 70. Y acaba de anunciar el Q2 2026 sube a $0.535 = será el *71º año consecutivo* de incremento. Plus: $1 mil millones en buyback FY26 = ~3.5% del market cap saliendo del mercado.\n\n⚠️ *El riesgo*: Dover cotiza con descuento conglomerado vs single-segment industrial peers (Parker-Hannifin 20x, Illinois Tool Works 26x, Dover solo 17.2x). Riesgos: (1) mercado *castiga* permanentemente a conglomerados — si Tobin no spinea Climate & Sustainability como pure-play AI data center cooling, el discount persiste, (2) Vehicle service segment (Rotary lifts) sufre con EV transition + dealer consolidation, (3) Vertiv (VRT) tiene escala 5x Dover en AI cooling y Schneider Electric mejor distribución — Dover provee componentes pero no architectura completa, (4) si CEO Tobin retira 2027-2028 sin successor visible, transition risk.\n\n🆕 Posición #72\n🔗 https://vectorialdata.com/stocks/DOV\n✅ Certificado por blockchain → vectorialdata.com/verify/DOV\n\n💡 Dato que ancla la tesis: *70 años seguidos subiéndo el dividendo desde 1956* significa que Dover atravesó SIN cortar (y subiendo cada año): 13 recesiones americanas, 11 presidentes, la guerra de Vietnam, la estanflación de los 70s, el colapso dot-com, la crisis financiera 2008, y COVID 2020. Es el segundo streak más largo del mundo después de Procter & Gamble. Si compras DOV a $210.95 y reinvirtes el dividendo durante 30 años a CAGR 6% (su histórico), tu *yield sobre costo* a 30 años llega a ~5.8% — y eso es SIN contar el capital appreciation del stock. Plus: Q1 2026 entregó EPS +8%, bookings +9% (más órdenes que envíos = backlog creciendo), y el segmento de AI data center cooling creció +12% YoY. Comprar el Dividend King con la disciplina más larga del mundo justo cuando 2 segmentos están inflexionando al alza (AI cooling + biopharma capex) a P/E 17.2x.`,
+    attestation_uid: "",
+  },
+  {
+    id: 73,
+    stock_id: 74,
+    ticker: "NTR",
+    type: "new" as const,
+    cycle_number: 15,
+    price: 71.27,
+    open_price: 71.27,
+    date: "2026-05-18",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #73* — May 18, 2026\n\n🏢 *Nutrien Ltd.* (NTR) — $71.27\n\n🌾 *Lo que hacen*: Nutrien es *el productor #1 mundial de potash + el retail agrícola más grande del planeta*. ¿Qué es potash? Es potasio (K) — uno de los 3 nutrientes que TODA planta del mundo necesita para crecer (Nitrógeno N, Fósforo P, Potasio K). Sin K no hay fotosíntesis, sin fotosíntesis no hay cosecha. Nutrien tiene *6 minas en Saskatchewan, Canadá* con reservas para 75+ años produciendo al ritmo actual — un moat geológico irreplicable. Plus son #3 mundial en nitrógeno. Y su negocio *Nutrien Ag Solutions* tiene *2,000+ tiendas físicas* (1,400 en US, 300 Australia, 200 Canadá, 50+ Brasil, 50+ Argentina) atendiendo a *500,000 farmers* — es básicamente el "Walmart del campo" donde compras semillas, fertilizantes, agroquímicos y servicios.\n\n🌍 *Presencia*: HQ Saskatoon, Saskatchewan, Canadá. *~25,000 empleados* en 14 países. Nutrien fue creada el *1 de enero 2018* por la fusión de PotashCorp + Agrium en un deal de $36 mil millones — el merger más grande en historia de Canadá. *Ken Seitz es CEO desde junio 2023* — veterano potash con 25+ años en industria, viene de liderar Canpotex (el consorcio de exportación logística que combina NTR + Mosaic).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.03% anual* solo por ser dueño — uno de los yields más altos del sector Materials. Dividendo trimestral $0.545 (anualizado $2.18). Plus: $1 mil millón de buyback FY26 = ~3% del market cap saliendo del mercado. Total capital return ~6% al año. Cada vez que un farmer en Iowa compra fertilizante para su maíz, un cliente en Brasil aplica potash a su soja, o una tienda Nutrien Ag vende semillas Pioneer/Corteva — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: El precio del potash es *cíclico* — entre 2018 y 2024 osciló entre $200/t (trough) y $1,200/t (peak 2022 post-Ucrania). Riesgos: (1) si las sanciones a Belarusia (Belaruskali, antes 18% market share) se relajan + Uralkali Rusia regresa al mercado, oversupply puede llevar precios bajo $300/t, (2) *BHP Jansen mine* en Saskatchewan ramp 2027-2030 — la minera australiana BHP está construyendo una mina nueva de 4.4Mt phase 1 (hasta 8.5Mt total) = ~10% del mercado global entrando, (3) si crop prices colapsan (corn <$3.50, soy <$9.00) los farmers cortan spending y el retail business sufre, (4) leverage 3x EBITDA no es alta pero no es net cash.\n\n🆕 Posición #73\n🔗 https://vectorialdata.com/stocks/NTR\n✅ Certificado por blockchain → vectorialdata.com/verify/NTR\n\n💡 Dato que ancla la tesis: en 2030 el mundo va a tener *8 mil millones de personas para alimentar* — y la USDA proyecta que la demanda global de cultivos va a crecer +25% al 2030. Para que más comida se produzca, hace falta más fertilizante. Y Nutrien controla ~20-25% del potash mundial con 6 minas Saskatchewan que producen 75+ años a ritmo actual. *No hay sustituto químico para el potasio* — es un elemento de la tabla periódica, no se puede reemplazar. Plus catalizador inmediato: en *mayo 2026 India firmó contrato de potash a $375 por tonelada* (+12% vs 2025) y en *junio 2026* China negocia su contrato anual (expectativa >$340/t = +10%). Estos 2 benchmarks establecen el price floor del año entero. Comprar NTR a $71.27 (P/E forward 12.5x, el más barato de Ag Inputs) cuando Q1 2026 entregó EBITDA +12%, EPS +18%, potash volumes récord, y la demanda demográfica es estructural a 8 mil millones de personas comiendo en 2030.`,
+    attestation_uid: "",
+  },
+  {
+    id: 74,
+    stock_id: 75,
+    ticker: "TNL",
+    type: "new" as const,
+    cycle_number: 15,
+    price: 62.75,
+    open_price: 62.75,
+    date: "2026-05-18",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #74* — May 18, 2026\n\n🏢 *Travel + Leisure Co.* (TNL) — $62.75\n\n🏝️ *Lo que hacen*: TNL es el *operador #1 mundial de vacation ownership* (timeshares) — significa que es dueño de 245+ resorts vacacionales y los vende como "intervalos" (1-2 semanas al año durante 30 años) a familias que quieren tener un lugar fijo de vacaciones. Tiene *~830,000 familias propietarias* globalmente. Marcas: *Club Wyndham*, *WorldMark by Wyndham*, *Margaritaville Vacation Club* (la marca de Jimmy Buffett — playa, sol, tequila), *Sports Illustrated Resorts* (lanzado 2023, lifestyle SI-branded), *Accor Vacation Club* (Asia). Plus opera *RCI* — la red #1 mundial de intercambio entre owners (4,200+ resorts donde puedes intercambiar tu semana). Y dueño de la mítica revista *Travel + Leisure* (la compró por $100M en 2021 a Meredith — incluye los "World's Best Awards", el Michelin Stars de hospitality).\n\n🌍 *Presencia*: HQ Orlando, Florida. *~17,000 empleados* (US 13k, México/Caribe 2k, Asia-Pacífico 2k). Spin-off de Wyndham Worldwide en mayo 2018 como Wyndham Destinations → *rebrandeado a "Travel + Leisure Co." el 17 enero 2022* después de comprar la marca T+L. *Michael Brown es CEO desde mayo 2021* (también President) — 5 años en rol, EPS CAGR +14% bajo su gestión.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.19% anual* solo por ser dueño — uno de los yields más altos del Consumer Cyclical. Dividendo trimestral $0.56 (subió +12% en marzo 2026). Plus: $200M de buyback FY26 = ~5% del market cap saliendo. *Total capital return ~8% al año*. Cada vez que una familia compra una semana en Margaritaville Lake Tahoe, un owner viaja a Cancún con su intervalo Wyndham, o alguien se suscribe a Travel + Leisure GO ($99/año, lanzado oct 2023) — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: TNL tiene *deuda 3.5x EBITDA* — no es low-debt company. Si llega recesión hard, las vacaciones son el primer gasto que la gente recorta. En COVID 2020 cortaron el dividendo (de $0.50 a $0.30) y revenue cayó -45%. Riesgos: (1) recesión hit discretionary spend, (2) industria timeshare tiene mala reputación histórica (high-pressure sales, dificultad para salir) — class actions comunes, TNL settled $35M en Florida 2023, (3) owner base average age 55+ años — millennials prefieren Airbnb experiences, no commitments 30 años, (4) Jimmy Buffett murió septiembre 2023 — su estate retiene la marca Margaritaville pero brand value depende de continued relevance cultural.\n\n🆕 Posición #74\n🔗 https://vectorialdata.com/stocks/TNL\n✅ Certificado por blockchain → vectorialdata.com/verify/TNL\n\n💡 Dato que ancla la tesis: TNL tiene *~830,000 familias propietarias pagando ~$1,200/año en maintenance fees* (la cuota anual obligatoria por mantener el resort) = *~$1 mil millón al año de revenue recurrente* sin necesidad de vender un solo intervalo nuevo. Es como ARR (annual recurring revenue) de software pero con real estate físico — y el churn es <3% anual porque salir del contrato es difícil + el lock-in legal es real. Plus la métrica clave del business *VPG (Volume Per Guest)* creció +4% YoY en Q1 2026 a $3,180 — significa que cada guest tour gasta más cada año, demostrando pricing power. Comprar TNL a $62.75 (P/E forward 8.2x, uno de los más baratos del S&P Consumer Cyclical) cuando Q1 2026 entregó EBITDA +8%, EPS +12%, devuelve ~8% del market cap al año vía dividendo + buyback, y la marca Travel + Leisure (revista fundada 1971 por American Express, comprada a Meredith en $100M) es un asset oculto que valdría $1 mil millones standalone.`,
+    attestation_uid: "",
+  },
 ];
 
 type Cycle = {
@@ -11374,5 +11964,13 @@ export const cycles: Cycle[] = [
     target_count: 5,
     current_count: 5,
     status: "completed" as const,
+  },
+  {
+    id: 15,
+    cycle_number: 15,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 4,
+    status: "active" as const,
   },
 ];
