@@ -6,7 +6,10 @@ import {
   sendNewSubscriberAlertToAdmin,
   sendChurnAlertToAdmin,
   sendPaymentFailedAlertToAdmin,
+  sendApiTopupAlertToAdmin,
 } from "@/lib/resend";
+import { grantCredits } from "@/lib/api-keys";
+import { getPack } from "@/lib/api-credit-packs";
 import { buildTrackedWaUrl } from "@/lib/wa-track";
 import type Stripe from "stripe";
 
@@ -56,6 +59,54 @@ export async function POST(request: Request) {
     switch (event.type) {
       case "checkout.session.completed": {
         const session = event.data.object as Stripe.Checkout.Session;
+
+        // API credit top-up branch — one-time payment, no subscription.
+        // Identified by metadata.purpose set when we created the Checkout
+        // session in /api/billing/topup.
+        if (session.metadata?.purpose === "api_topup") {
+          const accountId = session.metadata.account_id;
+          const apiKeyId = session.metadata.api_key_id;
+          const packId = session.metadata.pack_id;
+          const pack = getPack(packId);
+          const paymentIntentId =
+            typeof session.payment_intent === "string"
+              ? session.payment_intent
+              : session.payment_intent?.id ?? null;
+
+          if (!accountId || !apiKeyId || !pack || !paymentIntentId) {
+            console.error("Topup session missing required metadata:", session.id);
+            break;
+          }
+
+          try {
+            const newBalance = await grantCredits({
+              account_id: accountId,
+              api_key_id: apiKeyId,
+              credits: pack.credits,
+              source: "topup_stripe",
+              stripe_payment_intent_id: paymentIntentId,
+              notes: `Stripe top-up · pack=${pack.id}`,
+            });
+
+            await sendApiTopupAlertToAdmin(ADMIN_EMAIL, {
+              email: session.customer_details?.email ?? session.customer_email ?? null,
+              accountId,
+              apiKeyId,
+              packId: pack.id,
+              credits: pack.credits,
+              amountCents: session.amount_total ?? pack.priceUsdCents,
+              currency: session.currency ?? "usd",
+              newBalance,
+              stripePaymentIntentId: paymentIntentId,
+            }).catch((e) => console.error("Topup admin alert failed:", e));
+
+            console.log(`API top-up credited: ${apiKeyId} +${pack.credits} (balance=${newBalance})`);
+          } catch (err) {
+            console.error("Topup grantCredits failed:", err);
+          }
+          break;
+        }
+
         const email =
           session.customer_details?.email ?? session.customer_email;
         const customerId = session.customer as string;

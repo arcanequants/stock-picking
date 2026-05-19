@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
+import { sendFreeSignupAlertToAdmin } from "@/lib/resend";
+import { ADMIN_EMAIL } from "@/lib/admin";
 
 export const dynamic = "force-dynamic";
 
@@ -7,7 +9,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request) {
   try {
-    const { email } = (await request.json()) as { email?: string };
+    const { email, source } = (await request.json()) as { email?: string; source?: string };
 
     if (!email || !EMAIL_RE.test(email)) {
       return NextResponse.json(
@@ -48,6 +50,15 @@ export async function POST(request: Request) {
     }
 
     console.log("Free user registered:", normalizedEmail);
+
+    // Fire-and-forget admin alert — never block signup on email failure
+    const totalFreeUsers = (allUsers?.users?.length ?? 0) + 1;
+    sendFreeSignupAlertToAdmin(ADMIN_EMAIL, {
+      email: normalizedEmail,
+      source: source ?? null,
+      totalFreeUsers,
+    }).catch((e) => console.error("Free signup admin alert failed:", e));
+
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Free register error:", err);

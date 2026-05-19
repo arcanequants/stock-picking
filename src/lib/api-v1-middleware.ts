@@ -1,11 +1,18 @@
 import { NextResponse } from "next/server";
-import { validateApiKey, incrementUsage, type ApiKeyInfo } from "@/lib/api-keys";
+import {
+  debitApiKey,
+  DEFAULT_REQUEST_COST_CREDITS,
+  type ApiKeyInfo,
+} from "@/lib/api-keys";
 
 export type AuthResult =
   | { ok: true; auth: ApiKeyInfo }
   | { ok: false; response: NextResponse };
 
-export async function withApiKey(request: Request): Promise<AuthResult> {
+export async function withApiKey(
+  request: Request,
+  costCredits: number = DEFAULT_REQUEST_COST_CREDITS
+): Promise<AuthResult> {
   const authHeader = request.headers.get("authorization");
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return {
@@ -18,20 +25,23 @@ export async function withApiKey(request: Request): Promise<AuthResult> {
   }
 
   const key = authHeader.slice(7);
-  const info = await validateApiKey(key);
+  const endpoint = new URL(request.url).pathname;
 
+  const info = await debitApiKey(key, endpoint, costCredits);
   if (!info) {
+    // 402 is the right code for "valid key, no credits". Invalid keys also
+    // land here — we don't distinguish to avoid leaking key validity.
     return {
       ok: false,
       response: NextResponse.json(
-        { error: "Invalid API key, inactive, expired, or rate limit exceeded" },
-        { status: info === null ? 401 : 429 }
+        {
+          error:
+            "Invalid API key or insufficient credits. Top up at https://vectorialdata.com/api-keys",
+        },
+        { status: 402 }
       ),
     };
   }
-
-  // Increment usage (fire and forget for speed)
-  incrementUsage(info.keyId).catch(() => {});
 
   return { ok: true, auth: info };
 }
@@ -45,14 +55,14 @@ export function apiResponse<T>(
     data,
     meta: {
       tier: auth.tier,
-      requests_remaining: auth.remaining - 1,
+      credits_remaining: auth.credits_remaining,
       timestamp: new Date().toISOString(),
     },
   };
 
   const res = NextResponse.json(body, { status });
   res.headers.set("X-VD-Tier", auth.tier);
-  res.headers.set("X-VD-Remaining", String(auth.remaining - 1));
+  res.headers.set("X-VD-Credits-Remaining", String(auth.credits_remaining));
   res.headers.set("X-VD-Version", "1");
   res.headers.set(
     "Cache-Control",

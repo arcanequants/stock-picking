@@ -51,6 +51,14 @@
     {
       "path": "/api/cron/signals-ingest",
       "schedule": "0 */6 * * *"
+    },
+    {
+      "path": "/api/cron/subscriber-briefing",
+      "schedule": "0 9 * * 1"
+    },
+    {
+      "path": "/api/cron/stripe-sync-audit",
+      "schedule": "0 8 * * *"
     }
   ]
 }

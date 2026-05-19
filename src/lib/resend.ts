@@ -2402,6 +2402,401 @@ export async function sendPaymentFailedAlertToAdmin(
   if (error) throw new Error(`Failed to send payment-failed admin alert: ${error.message}`);
 }
 
+interface FreeSignupAlertData {
+  email: string;
+  source?: string | null;
+  totalFreeUsers?: number | null;
+}
+
+export async function sendFreeSignupAlertToAdmin(
+  adminEmail: string,
+  data: FreeSignupAlertData
+): Promise<void> {
+  const timestamp = new Date().toISOString();
+  const subject = `📩 Nuevo free signup: ${data.email}`;
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
+<table width="520" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 28px;background:#eff6ff;border-bottom:1px solid #bfdbfe;">
+    <p style="margin:0;font-size:13px;color:#1e40af;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">Free signup</p>
+    <h1 style="margin:4px 0 0;font-size:20px;font-weight:700;color:#1e3a8a;">${escapeHtml(data.email)}</h1>
+  </td></tr>
+  <tr><td style="padding:24px 28px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${data.source ? `<tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">Source</td><td style="padding:8px 0;font-size:14px;color:#111827;">${escapeHtml(data.source)}</td></tr>` : ""}
+      ${data.totalFreeUsers != null ? `<tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">Total free users</td><td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">${data.totalFreeUsers}</td></tr>` : ""}
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Timestamp</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${timestamp}</td></tr>
+    </table>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send free-signup admin alert: ${error.message}`);
+}
+
+interface ApiTopupAlertData {
+  email: string | null;
+  accountId: string;
+  apiKeyId: string;
+  packId: string;
+  credits: number;
+  amountCents: number;
+  currency: string;
+  newBalance: number;
+  stripePaymentIntentId: string;
+}
+
+export async function sendApiTopupAlertToAdmin(
+  adminEmail: string,
+  data: ApiTopupAlertData
+): Promise<void> {
+  const timestamp = new Date().toISOString();
+  const amountUsd = (data.amountCents / 100).toFixed(2);
+  const subject = `💳 API top-up: ${data.email ?? data.accountId.slice(0, 8)} · +${data.credits.toLocaleString()} credits ($${amountUsd})`;
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
+<table width="520" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 28px;background:#eef2ff;border-bottom:1px solid #c7d2fe;">
+    <p style="margin:0;font-size:13px;color:#4338ca;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">API credit top-up</p>
+    <h1 style="margin:4px 0 0;font-size:20px;font-weight:700;color:#1e1b4b;">+${data.credits.toLocaleString()} credits · $${amountUsd} ${data.currency.toUpperCase()}</h1>
+  </td></tr>
+  <tr><td style="padding:24px 28px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">User</td>
+          <td style="padding:8px 0;font-size:14px;color:#111827;">${escapeHtml(data.email ?? "(no email)")}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Pack</td>
+          <td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">${escapeHtml(data.packId)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">New balance</td>
+          <td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">${data.newBalance.toLocaleString()} credits</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">API key</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${escapeHtml(data.apiKeyId)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Payment intent</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${escapeHtml(data.stripePaymentIntentId)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Timestamp</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${timestamp}</td></tr>
+    </table>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send API top-up admin alert: ${error.message}`);
+}
+
+interface StripeSyncDriftRow {
+  email: string | null;
+  subId: string;
+  issue: string;
+  stripeStatus: string;
+  dbStatus: string | null | undefined;
+  stripePeriodEnd: string;
+  dbPeriodEnd: string | null | undefined;
+}
+
+export async function sendStripeSyncDriftAlertToAdmin(
+  adminEmail: string,
+  rows: StripeSyncDriftRow[]
+): Promise<void> {
+  const timestamp = new Date().toISOString();
+  const subject = `🚨 Stripe↔DB drift: ${rows.length} subscription${rows.length === 1 ? "" : "s"} out of sync`;
+
+  const rowsHtml = rows
+    .map(
+      (r) => `
+      <tr><td style="padding:12px;border-top:1px solid #fee2e2;font-size:13px;color:#111827;">
+        <div style="font-weight:600;">${escapeHtml(r.email ?? "(no email)")}</div>
+        <div style="font-size:11px;color:#6b7280;font-family:monospace;">${escapeHtml(r.subId)}</div>
+        <div style="margin-top:6px;font-size:12px;color:#b91c1c;font-weight:600;">${escapeHtml(r.issue)}</div>
+        <div style="margin-top:4px;font-size:11px;color:#6b7280;">
+          stripe: <code>${escapeHtml(r.stripeStatus)}</code> · ${escapeHtml(r.stripePeriodEnd)}<br/>
+          db: <code>${escapeHtml(r.dbStatus ?? "(none)")}</code> · ${escapeHtml(r.dbPeriodEnd ?? "(none)")}
+        </div>
+      </td></tr>`
+    )
+    .join("");
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #fecaca;overflow:hidden;">
+  <tr><td style="padding:24px 28px;background:#fef2f2;border-bottom:1px solid #fecaca;">
+    <p style="margin:0;font-size:13px;color:#b91c1c;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">Stripe ↔ Supabase drift detected</p>
+    <h1 style="margin:4px 0 0;font-size:20px;font-weight:700;color:#7f1d1d;">${rows.length} subscription${rows.length === 1 ? "" : "s"} out of sync</h1>
+  </td></tr>
+  <tr><td style="padding:16px 28px;font-size:13px;color:#374151;">
+    The daily audit walked every active Stripe subscription and compared status + current_period_end against Supabase.
+    The rows below diverge — likely a missed webhook event.
+  </td></tr>
+  <tr><td style="padding:0 28px 24px;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #fecaca;border-radius:8px;overflow:hidden;">
+      ${rowsHtml}
+    </table>
+    <p style="margin:16px 0 0;font-size:11px;color:#6b7280;">Audit ran at ${timestamp}</p>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send Stripe sync drift alert: ${error.message}`);
+}
+
+interface CryptoPaymentAlertData {
+  walletAddress: string;
+  endpoint: string;
+  priceUsd: string;
+  network: string;
+  isFirstPayment: boolean;
+  totalPayersToDate?: number | null;
+}
+
+export async function sendCryptoPaymentAlertToAdmin(
+  adminEmail: string,
+  data: CryptoPaymentAlertData
+): Promise<void> {
+  const timestamp = new Date().toISOString();
+  const shortWallet =
+    data.walletAddress.length > 16
+      ? `${data.walletAddress.slice(0, 8)}…${data.walletAddress.slice(-6)}`
+      : data.walletAddress;
+  const subject = data.isFirstPayment
+    ? `🪙 Nuevo crypto payer: ${shortWallet}`
+    : `🪙 Crypto payment: ${shortWallet}`;
+
+  const explorerUrl =
+    data.network.includes("base")
+      ? `https://basescan.org/address/${data.walletAddress}`
+      : data.network.includes("ethereum") || data.network.includes("mainnet")
+        ? `https://etherscan.io/address/${data.walletAddress}`
+        : `https://blockscan.com/address/${data.walletAddress}`;
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
+<table width="520" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 28px;background:#f0fdfa;border-bottom:1px solid #99f6e4;">
+    <p style="margin:0;font-size:13px;color:#0f766e;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">${data.isFirstPayment ? "Primer pago crypto" : "Pago crypto"}</p>
+    <h1 style="margin:4px 0 0;font-size:18px;font-weight:700;color:#134e4a;font-family:monospace;">${escapeHtml(shortWallet)}</h1>
+  </td></tr>
+  <tr><td style="padding:24px 28px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;width:140px;">Wallet</td>
+          <td style="padding:8px 0;font-size:12px;color:#111827;font-family:monospace;word-break:break-all;">${escapeHtml(data.walletAddress)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Endpoint</td>
+          <td style="padding:8px 0;font-size:13px;color:#111827;font-family:monospace;">${escapeHtml(data.endpoint)}</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Price</td>
+          <td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">$${escapeHtml(data.priceUsd)} USD</td></tr>
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Network</td>
+          <td style="padding:8px 0;font-size:14px;color:#111827;">${escapeHtml(data.network)}</td></tr>
+      ${data.totalPayersToDate != null ? `<tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Total payers</td><td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">${data.totalPayersToDate}</td></tr>` : ""}
+      <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Timestamp</td>
+          <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${timestamp}</td></tr>
+    </table>
+    <div style="margin-top:20px;">
+      <a href="${explorerUrl}" style="display:inline-block;background:#0f766e;color:#ffffff;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">Ver en explorer →</a>
+    </div>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send crypto payment admin alert: ${error.message}`);
+}
+
+interface WeeklySubscriberBriefingData {
+  weekKey: string;
+  newPaidSubs: Array<{ email: string; createdAt: string; amountCents: number | null; currency: string | null; deliveryChannel: string }>;
+  churned: Array<{ email: string; canceledAt: string }>;
+  newFreeSubs: Array<{ email: string; createdAt: string }>;
+  cryptoPayers: Array<{ wallet: string; firstPaymentAt: string; totalPaidUsd: number; requestCount: number }>;
+  totals: {
+    paidActive: number;
+    freeUsers: number;
+    mrrUsd: number;
+    cryptoRevenueWeekUsd: number;
+  };
+}
+
+export async function sendWeeklySubscriberBriefingToAdmin(
+  adminEmail: string,
+  data: WeeklySubscriberBriefingData
+): Promise<void> {
+  const subject = `📊 Briefing semanal ${data.weekKey} · +${data.newPaidSubs.length} paid · +${data.newFreeSubs.length} free`;
+
+  const fmtMoney = (cents: number | null, currency: string | null) =>
+    cents == null || currency == null ? "—" : `${(cents / 100).toFixed(2)} ${currency.toUpperCase()}`;
+
+  const paidRows = data.newPaidSubs.length
+    ? data.newPaidSubs
+        .map(
+          (s) =>
+            `<tr><td style="padding:6px 8px;font-size:13px;color:#111827;border-bottom:1px solid #f3f4f6;">${escapeHtml(s.email)}</td><td style="padding:6px 8px;font-size:12px;color:#6b7280;border-bottom:1px solid #f3f4f6;">${fmtMoney(s.amountCents, s.currency)}</td><td style="padding:6px 8px;font-size:12px;color:#6b7280;border-bottom:1px solid #f3f4f6;">${escapeHtml(s.deliveryChannel)}</td><td style="padding:6px 8px;font-size:12px;color:#6b7280;border-bottom:1px solid #f3f4f6;font-family:monospace;">${s.createdAt.split("T")[0]}</td></tr>`
+        )
+        .join("")
+    : `<tr><td colspan="4" style="padding:12px 8px;font-size:13px;color:#9ca3af;text-align:center;">Sin nuevos paid subs esta semana.</td></tr>`;
+
+  const freeRows = data.newFreeSubs.length
+    ? data.newFreeSubs
+        .slice(0, 50)
+        .map(
+          (s) =>
+            `<tr><td style="padding:6px 8px;font-size:13px;color:#111827;border-bottom:1px solid #f3f4f6;">${escapeHtml(s.email)}</td><td style="padding:6px 8px;font-size:12px;color:#6b7280;border-bottom:1px solid #f3f4f6;font-family:monospace;">${s.createdAt.split("T")[0]}</td></tr>`
+        )
+        .join("")
+    : `<tr><td colspan="2" style="padding:12px 8px;font-size:13px;color:#9ca3af;text-align:center;">Sin nuevos free signups esta semana.</td></tr>`;
+
+  const churnRows = data.churned.length
+    ? data.churned
+        .map(
+          (s) =>
+            `<tr><td style="padding:6px 8px;font-size:13px;color:#111827;border-bottom:1px solid #f3f4f6;">${escapeHtml(s.email)}</td><td style="padding:6px 8px;font-size:12px;color:#6b7280;border-bottom:1px solid #f3f4f6;font-family:monospace;">${s.canceledAt.split("T")[0]}</td></tr>`
+        )
+        .join("")
+    : "";
+
+  const cryptoRows = data.cryptoPayers.length
+    ? data.cryptoPayers
+        .map((p) => {
+          const shortWallet = `${p.wallet.slice(0, 8)}…${p.wallet.slice(-6)}`;
+          return `<tr><td style="padding:6px 8px;font-size:12px;color:#111827;border-bottom:1px solid #f3f4f6;font-family:monospace;">${shortWallet}</td><td style="padding:6px 8px;font-size:13px;color:#111827;border-bottom:1px solid #f3f4f6;">$${p.totalPaidUsd.toFixed(4)}</td><td style="padding:6px 8px;font-size:12px;color:#6b7280;border-bottom:1px solid #f3f4f6;">${p.requestCount} req</td><td style="padding:6px 8px;font-size:12px;color:#6b7280;border-bottom:1px solid #f3f4f6;font-family:monospace;">${p.firstPaymentAt.split("T")[0]}</td></tr>`;
+        })
+        .join("")
+    : "";
+
+  const html = `<!DOCTYPE html>
+<html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
+<table width="640" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
+  <tr><td style="padding:24px 28px;background:#111827;">
+    <p style="margin:0;font-size:13px;color:#9ca3af;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">Briefing semanal</p>
+    <h1 style="margin:4px 0 0;font-size:22px;font-weight:700;color:#ffffff;">Semana ${escapeHtml(data.weekKey)}</h1>
+  </td></tr>
+
+  <tr><td style="padding:24px 28px;border-bottom:1px solid #f3f4f6;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="padding:8px 12px;background:#f9fafb;border-radius:8px;text-align:center;">
+          <div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Paid activos</div>
+          <div style="font-size:24px;font-weight:700;color:#111827;margin-top:4px;">${data.totals.paidActive}</div>
+        </td>
+        <td style="padding:8px 12px;background:#f9fafb;border-radius:8px;text-align:center;">
+          <div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Free users</div>
+          <div style="font-size:24px;font-weight:700;color:#111827;margin-top:4px;">${data.totals.freeUsers}</div>
+        </td>
+        <td style="padding:8px 12px;background:#f9fafb;border-radius:8px;text-align:center;">
+          <div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">MRR USD</div>
+          <div style="font-size:24px;font-weight:700;color:#16a34a;margin-top:4px;">$${data.totals.mrrUsd.toFixed(2)}</div>
+        </td>
+        <td style="padding:8px 12px;background:#f9fafb;border-radius:8px;text-align:center;">
+          <div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Crypto 7d</div>
+          <div style="font-size:24px;font-weight:700;color:#0f766e;margin-top:4px;">$${data.totals.cryptoRevenueWeekUsd.toFixed(4)}</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <tr><td style="padding:24px 28px;">
+    <h2 style="margin:0 0 12px;font-size:15px;font-weight:600;color:#111827;">💰 Nuevos paid subs (${data.newPaidSubs.length})</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+      <thead><tr style="background:#f9fafb;">
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Email</th>
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Monto</th>
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Canal</th>
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Fecha</th>
+      </tr></thead>
+      <tbody>${paidRows}</tbody>
+    </table>
+  </td></tr>
+
+  ${
+    data.churned.length > 0
+      ? `<tr><td style="padding:0 28px 24px;">
+    <h2 style="margin:0 0 12px;font-size:15px;font-weight:600;color:#991b1b;">😔 Churn (${data.churned.length})</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+      <thead><tr style="background:#fef2f2;">
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#991b1b;text-transform:uppercase;letter-spacing:0.5px;">Email</th>
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#991b1b;text-transform:uppercase;letter-spacing:0.5px;">Cancelado</th>
+      </tr></thead>
+      <tbody>${churnRows}</tbody>
+    </table>
+  </td></tr>`
+      : ""
+  }
+
+  <tr><td style="padding:0 28px 24px;">
+    <h2 style="margin:0 0 12px;font-size:15px;font-weight:600;color:#111827;">📩 Nuevos free signups (${data.newFreeSubs.length}${data.newFreeSubs.length > 50 ? ", mostrando 50" : ""})</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+      <thead><tr style="background:#f9fafb;">
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Email</th>
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;">Fecha</th>
+      </tr></thead>
+      <tbody>${freeRows}</tbody>
+    </table>
+  </td></tr>
+
+  ${
+    data.cryptoPayers.length > 0
+      ? `<tr><td style="padding:0 28px 24px;">
+    <h2 style="margin:0 0 12px;font-size:15px;font-weight:600;color:#0f766e;">🪙 Crypto payers nuevos (${data.cryptoPayers.length})</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+      <thead><tr style="background:#f0fdfa;">
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#0f766e;text-transform:uppercase;letter-spacing:0.5px;">Wallet</th>
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#0f766e;text-transform:uppercase;letter-spacing:0.5px;">Pagado</th>
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#0f766e;text-transform:uppercase;letter-spacing:0.5px;">Requests</th>
+        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#0f766e;text-transform:uppercase;letter-spacing:0.5px;">Primer pago</th>
+      </tr></thead>
+      <tbody>${cryptoRows}</tbody>
+    </table>
+  </td></tr>`
+      : ""
+  }
+</table>
+</td></tr></table>
+</body></html>`;
+
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to: adminEmail,
+    subject,
+    html,
+  });
+
+  if (error) throw new Error(`Failed to send weekly subscriber briefing: ${error.message}`);
+}
+
 // ── WA Join Follow-up (Day 2-3 nudge) ────────────────────────
 // Sent to subscribers who paid 48h+ ago, chose WhatsApp delivery,
 // and never clicked the tracked WA join button. Empathetic tone —

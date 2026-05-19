@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createApiKey } from "@/lib/api-keys";
+import { createApiKey, SIGNUP_GRANT_CREDITS } from "@/lib/api-keys";
 
 export async function POST(request: Request) {
   try {
@@ -15,15 +15,15 @@ export async function POST(request: Request) {
     return NextResponse.json({
       data: {
         api_key: result.key,
-        tier: result.tier,
-        daily_limit: result.daily_limit,
+        credits_remaining: result.credits_remaining,
       },
       meta: {
-        message: "API key created. Include it as: Authorization: Bearer <key>",
+        message: `API key created with ${SIGNUP_GRANT_CREDITS} free credits. Include it as: Authorization: Bearer <key>`,
         docs: "https://vectorialdata.com/developers",
+        topup: "https://vectorialdata.com/api-keys",
       },
     });
-  } catch (err) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to create API key" },
       { status: 500 }
