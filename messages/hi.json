@@ -227,7 +227,11 @@
     "lastPick": "आखिरी पिक: {days} दिन पहले",
     "verifyBanner": "इस पोर्टफोलियो का सत्यापन योग्य रिकॉर्ड है",
     "verifyBannerCta": "रिकॉर्ड देखें",
-    "eventsHeroTitle": "आज आपके पोर्टफोलियो में"
+    "eventsHeroTitle": "आज आपके पोर्टफोलियो में",
+    "dividendsSummaryTitle": "पोर्टफोलियो को प्राप्त लाभांश",
+    "dividendsSummary": "Vectorial पोर्टफोलियो को {year} में {count} लाभांश मिले — कुल ${total}।",
+    "dividendsSummaryEmpty": "इस वर्ष अभी तक पोर्टफोलियो को कोई लाभांश दर्ज नहीं हुआ है।",
+    "dividendsSummaryDisclaimer": "यह मॉडल को मिली राशि दर्शाता है। आपका वास्तविक रिटर्न इस पर निर्भर करता है कि आपने कब रेप्लिकेट किया और आपके ब्रोकर पर।"
   },
   "Stocks": {
     "title": "हमारा पोर्टफोलियो",
@@ -296,7 +300,15 @@
     "nextReview": "अगली समीक्षा",
     "legalDisclaimer": "यह वित्तीय सलाह नहीं है। निवेश करने से पहले किसी प्रमाणित वित्तीय सलाहकार से परामर्श लें।",
     "lastUpdated": "अंतिम अपडेट: {date}",
-    "bluf": "Vectorial Data ने {ticker} को {date} को ${price} पर चुना।"
+    "bluf": "Vectorial Data ने {ticker} को {date} को ${price} पर चुना।",
+    "dividendsReceivedTitle": "Vectorial पोर्टफोलियो को प्राप्त लाभांश",
+    "dividendsReceivedSubtitle": "इस स्टॉक ने खरीद के बाद से मॉडल को कितना दिया है। आपकी वास्तविक राशि इस पर निर्भर करती है कि आपने कब रेप्लिकेट किया।",
+    "dividendsNone": "{ticker} ने अभी तक पोर्टफोलियो को लाभांश नहीं दिया है।",
+    "dividendsTableExDate": "एक्स-डिव तारीख",
+    "dividendsTablePerShare": "प्रति शेयर",
+    "dividendsTableShares": "शेयर",
+    "dividendsTableTotal": "कुल (पोर्टफोलियो को)",
+    "dividendsTotal": "कुल प्राप्त: ${total}"
   },
   "Components": {
     "portfolio": "पोर्टफोलियो",
@@ -520,7 +532,7 @@
     "bellLabel": "सूचनाएं",
     "priceUp": "{ticker} आज {pct}% बढ़ा",
     "priceDown": "{ticker} आज {pct}% गिरा",
-    "dividendPaid": "{ticker} ने {amount} का लाभांश दिया",
+    "dividendPaid": "{ticker} ने लाभांश दिया — Vectorial पोर्टफोलियो को ${total} मिले (${amount}/शेयर)",
     "earningsReport": "{ticker} ने कमाई रिपोर्ट की: {summary}",
     "analystUpgrade": "{analyst} ने {ticker} को {rating} में अपग्रेड किया",
     "analystDowngrade": "{analyst} ने {ticker} को {rating} में डाउनग्रेड किया",

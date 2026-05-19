@@ -227,7 +227,11 @@
     "lastPick": "Último pick: hace {days} día(s)",
     "verifyBanner": "Este portafolio tiene registro verificable",
     "verifyBannerCta": "Ver registro",
-    "eventsHeroTitle": "Hoy en tu portafolio"
+    "eventsHeroTitle": "Hoy en tu portafolio",
+    "dividendsSummaryTitle": "Dividendos recibidos por el portafolio",
+    "dividendsSummary": "El portafolio Vectorial recibió {count} dividendo(s) en {year} — ${total} en total.",
+    "dividendsSummaryEmpty": "Aún no se han registrado dividendos pagados al portafolio este año.",
+    "dividendsSummaryDisclaimer": "Refleja lo que recibió el modelo. Tu rendimiento real depende de cuándo replicaste y de tu broker."
   },
   "Stocks": {
     "title": "Nuestro Portafolio",
@@ -296,7 +300,15 @@
     "nextReview": "Próxima revisión",
     "legalDisclaimer": "Esto no es asesoría financiera. Consulta con un asesor financiero certificado.",
     "lastUpdated": "Actualizado: {date}",
-    "bluf": "Vectorial Data eligió {ticker} el {date} a ${price}."
+    "bluf": "Vectorial Data eligió {ticker} el {date} a ${price}.",
+    "dividendsReceivedTitle": "Dividendos recibidos por el portafolio Vectorial",
+    "dividendsReceivedSubtitle": "Lo que esta acción le ha pagado al modelo desde que la compramos. Tu monto real depende de cuándo replicaste.",
+    "dividendsNone": "{ticker} aún no ha pagado dividendos al portafolio.",
+    "dividendsTableExDate": "Fecha ex-div",
+    "dividendsTablePerShare": "Por acción",
+    "dividendsTableShares": "Acciones",
+    "dividendsTableTotal": "Total al portafolio",
+    "dividendsTotal": "Total recibido: ${total}"
   },
   "Components": {
     "portfolio": "Portafolio",
@@ -520,7 +532,7 @@
     "bellLabel": "Notificaciones",
     "priceUp": "{ticker} subió {pct}% hoy",
     "priceDown": "{ticker} bajó {pct}% hoy",
-    "dividendPaid": "{ticker} pagó un dividendo de {amount}",
+    "dividendPaid": "{ticker} pagó un dividendo — el portafolio Vectorial recibió ${total} (${amount}/acción)",
     "earningsReport": "{ticker} reportó ganancias: {summary}",
     "analystUpgrade": "{ticker} fue mejorado a {rating} por {analyst}",
     "analystDowngrade": "{ticker} fue degradado a {rating} por {analyst}",

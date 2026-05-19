@@ -227,7 +227,11 @@
     "lastPick": "Last pick: {days} day(s) ago",
     "verifyBanner": "This portfolio has a verifiable record",
     "verifyBannerCta": "View record",
-    "eventsHeroTitle": "What moved today"
+    "eventsHeroTitle": "What moved today",
+    "dividendsSummaryTitle": "Dividends received by the portfolio",
+    "dividendsSummary": "The Vectorial portfolio received {count} dividend(s) in {year} — ${total} total.",
+    "dividendsSummaryEmpty": "No dividends recorded to the portfolio this year yet.",
+    "dividendsSummaryDisclaimer": "Reflects what the model received. Your actual return depends on when you replicated and your broker."
   },
   "Stocks": {
     "title": "Our Portfolio",
@@ -296,7 +300,15 @@
     "nextReview": "Next review",
     "legalDisclaimer": "This is not financial advice. Consult a certified financial advisor.",
     "lastUpdated": "Last updated: {date}",
-    "bluf": "Vectorial Data picked {ticker} on {date} at ${price}."
+    "bluf": "Vectorial Data picked {ticker} on {date} at ${price}.",
+    "dividendsReceivedTitle": "Dividends received by the Vectorial portfolio",
+    "dividendsReceivedSubtitle": "What this stock has paid the model since we bought it. Your actual amount depends on when you replicated.",
+    "dividendsNone": "{ticker} has not paid a dividend to the portfolio yet.",
+    "dividendsTableExDate": "Ex-div date",
+    "dividendsTablePerShare": "Per share",
+    "dividendsTableShares": "Shares",
+    "dividendsTableTotal": "Total to portfolio",
+    "dividendsTotal": "Total received: ${total}"
   },
   "Components": {
     "portfolio": "Portfolio",
@@ -520,7 +532,7 @@
     "bellLabel": "Notifications",
     "priceUp": "{ticker} rose {pct}% today",
     "priceDown": "{ticker} fell {pct}% today",
-    "dividendPaid": "{ticker} paid a dividend of {amount}",
+    "dividendPaid": "{ticker} paid a dividend — the Vectorial portfolio received ${total} (${amount}/share)",
     "earningsReport": "{ticker} reported earnings: {summary}",
     "analystUpgrade": "{ticker} upgraded to {rating} by {analyst}",
     "analystDowngrade": "{ticker} downgraded to {rating} by {analyst}",

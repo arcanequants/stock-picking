@@ -59,6 +59,10 @@
     {
       "path": "/api/cron/stripe-sync-audit",
       "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/cron/dividend-scanner",
+      "schedule": "0 1 * * *"
     }
   ]
 }

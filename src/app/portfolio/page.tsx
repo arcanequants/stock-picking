@@ -4,6 +4,7 @@ import PerformanceMetrics from "@/components/PerformanceMetrics";
 import PerformanceChart from "@/components/PerformanceChart";
 import PositionReturns from "@/components/PositionReturns";
 import PortfolioEventsHero from "@/components/PortfolioEventsHero";
+import PortfolioDividendsSummary from "@/components/PortfolioDividendsSummary";
 import PremiumGate from "@/components/PremiumGate";
 import FreeSignupForm from "@/components/FreeSignupForm";
 import LoginExpiredBanner from "@/components/LoginExpiredBanner";
@@ -110,6 +111,8 @@ export default async function PortfolioPage() {
 
       {/* Past performance disclaimer */}
       <p className="text-xs text-text-faint italic -mt-6">{tLegal("pastPerformance")} {tLegal("notFinancialAdvice")}</p>
+
+      <Suspense fallback={null}><PortfolioDividendsSummary /></Suspense>
 
       {/* 2. Position returns with sharing — the conversion driver */}
       <PositionReturns isSubscribed={isSubscribed} />

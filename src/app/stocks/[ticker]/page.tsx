@@ -4,6 +4,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
 import BlockchainBadge from "@/components/BlockchainBadge";
+import StockDividendsReceived from "@/components/StockDividendsReceived";
+import { Suspense } from "react";
 import { getLocalizedField } from "@/data/stock-translations";
 import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema } from "@/lib/seo";
 
@@ -205,6 +207,10 @@ export default async function StockResearchPage({
       <time dateTime={stock.last_updated_at} className="text-xs text-text-faint">
         {t("lastUpdated", { date: new Date(stock.last_updated_at + "T12:00:00").toLocaleDateString(localeMap[locale] ?? "es-MX", { day: "numeric", month: "short", year: "numeric" }) })}
       </time>
+
+      <Suspense fallback={null}>
+        <StockDividendsReceived ticker={stock.ticker} />
+      </Suspense>
 
       {researchHtml && (
         <div className="border border-border rounded-xl p-6 md:p-8">
