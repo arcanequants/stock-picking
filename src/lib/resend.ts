@@ -74,6 +74,8 @@ const L: Record<string, Record<string, string>> = {
     signalsCta: "Ver todos los signals",
     signalsBaseline: "vs baseline",
     signalsWeekDelta: "7d",
+    dividendsHeroTitle: "Dividendos esta semana",
+    dividendsHeroSubtitle: "Lo que recibió el portafolio Vectorial",
   },
   en: {
     title: "Weekly Summary",
@@ -108,6 +110,8 @@ const L: Record<string, Record<string, string>> = {
     signalsCta: "View all signals",
     signalsBaseline: "vs baseline",
     signalsWeekDelta: "7d",
+    dividendsHeroTitle: "Dividends this week",
+    dividendsHeroSubtitle: "What the Vectorial portfolio received",
   },
   pt: {
     title: "Resumo Semanal",
@@ -142,6 +146,8 @@ const L: Record<string, Record<string, string>> = {
     signalsCta: "Ver todos os signals",
     signalsBaseline: "vs baseline",
     signalsWeekDelta: "7d",
+    dividendsHeroTitle: "Dividendos esta semana",
+    dividendsHeroSubtitle: "O que o portfólio Vectorial recebeu",
   },
   hi: {
     title: "साप्ताहिक सारांश",
@@ -176,6 +182,8 @@ const L: Record<string, Record<string, string>> = {
     signalsCta: "सभी signals देखें",
     signalsBaseline: "vs baseline",
     signalsWeekDelta: "7d",
+    dividendsHeroTitle: "इस सप्ताह लाभांश",
+    dividendsHeroSubtitle: "Vectorial पोर्टफोलियो को क्या मिला",
   },
 };
 
@@ -188,6 +196,14 @@ function t(locale: string, key: string): string {
 export interface DigestSummary {
   weeklyChangePct: number | null;
   totalReturnPct: number | null;
+}
+
+export interface WeeklyDividend {
+  ticker: string;
+  ex_date: string;
+  amount_per_share: number;
+  shares_held: number;
+  total_amount: number;
 }
 
 interface GroupedEvents {
@@ -563,13 +579,38 @@ function generateDynamicSubject(
   return fallback[lang];
 }
 
+// --- Dividends hero (transparency: cash the model portfolio actually received) ---
+
+function buildDividendsHeroHtml(
+  rows: WeeklyDividend[],
+  locale: string
+): string {
+  if (rows.length === 0) return "";
+  const lang = L[locale] ? locale : "en";
+  const total = rows.reduce((s, r) => s + Number(r.total_amount), 0);
+  const tickerLines = rows
+    .map(
+      (r) =>
+        `<tr><td style="padding:3px 0;font-size:13px;color:#065f46;font-weight:500;">${r.ticker}</td><td style="padding:3px 0;font-size:13px;color:#065f46;text-align:right;font-variant-numeric:tabular-nums;">$${Number(r.total_amount).toFixed(2)}</td></tr>`
+    )
+    .join("");
+  return `
+      <div style="background:#ecfdf5;border:1px solid #6ee7b7;border-radius:10px;padding:14px 16px;margin:0 0 16px;">
+        <p style="margin:0;font-size:11px;font-weight:700;color:#047857;text-transform:uppercase;letter-spacing:0.8px;">${t(lang, "dividendsHeroTitle")}</p>
+        <p style="margin:6px 0 2px;font-size:24px;font-weight:700;color:#065f46;font-variant-numeric:tabular-nums;">$${total.toFixed(2)}</p>
+        <p style="margin:0 0 8px;font-size:12px;color:#047857;">${t(lang, "dividendsHeroSubtitle")}</p>
+        <table style="width:100%;border-collapse:collapse;border-top:1px solid #a7f3d0;margin-top:8px;padding-top:4px;">${tickerLines}</table>
+      </div>`;
+}
+
 // --- Premium digest ---
 
 function buildDigestHtml(
   events: PortfolioEvent[],
   locale: string,
   summary: DigestSummary | null,
-  signalsWeekly: WeeklySignalSnapshot[] = []
+  signalsWeekly: WeeklySignalSnapshot[] = [],
+  weeklyDivs: WeeklyDividend[] = []
 ): string {
   const lang = L[locale] ? locale : "en";
   const grouped = groupEvents(events);
@@ -580,6 +621,7 @@ function buildDigestHtml(
     : `${events.length} eventos esta semana en nuestro portafolio.`;
 
   const summaryHtml = buildSummaryHtml(locale, summary, best, worst);
+  const dividendsHero = buildDividendsHeroHtml(weeklyDivs, locale);
   const priceSection = buildSectionHtml(
     t(lang, "priceMoves"),
     grouped.priceMoves,
@@ -631,6 +673,7 @@ function buildDigestHtml(
     <div style="padding:20px 24px;">
       <p style="margin:0 0 16px;font-size:14px;color:#374151;line-height:1.5;">${t(lang, "greeting")}</p>
       ${summaryHtml}
+      ${dividendsHero}
       ${priceSection}
       ${divSection}
       ${earnSection}
@@ -660,7 +703,8 @@ function buildFreeDigestHtml(
   events: PortfolioEvent[],
   locale: string,
   summary: DigestSummary | null,
-  signalsWeekly: WeeklySignalSnapshot[] = []
+  signalsWeekly: WeeklySignalSnapshot[] = [],
+  weeklyDivs: WeeklyDividend[] = []
 ): string {
   const lang = L[locale] ? locale : "en";
   const grouped = groupEvents(events);
@@ -671,6 +715,7 @@ function buildFreeDigestHtml(
     : `${events.length} eventos esta semana. Abre para ver qué pasó.`;
 
   const summaryHtml = buildSummaryHtml(locale, summary, best, worst);
+  const dividendsHero = buildDividendsHeroHtml(weeklyDivs, locale);
 
   // Show 1 featured event with AI explanation
   const featured = events[0];
@@ -725,6 +770,7 @@ function buildFreeDigestHtml(
     <div style="padding:20px 24px;">
       <p style="margin:0 0 16px;font-size:14px;color:#374151;line-height:1.5;">${t(lang, "greeting")}</p>
       ${summaryHtml}
+      ${dividendsHero}
       <p style="margin:16px 0 4px;font-size:15px;font-weight:600;color:#111827;">${featIcon}${featLine}</p>
       ${explanationHtml}
       ${previewEvts.length > 0 ? `
@@ -758,10 +804,11 @@ export async function sendDigestApprovalEmail(
   recipientCount: number,
   premiumCount: number,
   summary: DigestSummary | null,
-  signalsWeekly: WeeklySignalSnapshot[] = []
+  signalsWeekly: WeeklySignalSnapshot[] = [],
+  weeklyDivs: WeeklyDividend[] = []
 ) {
   const freeCount = recipientCount - premiumCount;
-  const digestPreview = buildDigestHtml(events, "es", summary, signalsWeekly);
+  const digestPreview = buildDigestHtml(events, "es", summary, signalsWeekly, weeklyDivs);
 
   const html = `<!DOCTYPE html>
 <html>
@@ -810,7 +857,8 @@ export async function sendDigestEmail(
   locale = "en",
   isSubscribed = true,
   summary: DigestSummary | null = null,
-  signalsWeekly: WeeklySignalSnapshot[] = []
+  signalsWeekly: WeeklySignalSnapshot[] = [],
+  weeklyDivs: WeeklyDividend[] = []
 ) {
   const subject = generateDynamicSubject(events, summary, locale);
 
@@ -819,8 +867,8 @@ export async function sendDigestEmail(
     to,
     subject,
     html: isSubscribed
-      ? buildDigestHtml(events, locale, summary, signalsWeekly)
-      : buildFreeDigestHtml(events, locale, summary, signalsWeekly),
+      ? buildDigestHtml(events, locale, summary, signalsWeekly, weeklyDivs)
+      : buildFreeDigestHtml(events, locale, summary, signalsWeekly, weeklyDivs),
   });
 
   if (error) throw new Error(`Failed to send digest: ${error.message}`);

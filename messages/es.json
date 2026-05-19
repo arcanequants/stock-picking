@@ -230,6 +230,7 @@
     "eventsHeroTitle": "Hoy en tu portafolio",
     "dividendsSummaryTitle": "Dividendos recibidos por el portafolio",
     "dividendsSummary": "El portafolio Vectorial recibió {count} dividendo(s) en {year} — ${total} en total.",
+    "dividendsYieldOnCost": "Rendimiento por dividendos del modelo en {year}: {pct}% sobre el costo invertido.",
     "dividendsSummaryEmpty": "Aún no se han registrado dividendos pagados al portafolio este año.",
     "dividendsSummaryDisclaimer": "Refleja lo que recibió el modelo. Tu rendimiento real depende de cuándo replicaste y de tu broker."
   },

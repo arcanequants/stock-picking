@@ -230,6 +230,7 @@
     "eventsHeroTitle": "What moved today",
     "dividendsSummaryTitle": "Dividends received by the portfolio",
     "dividendsSummary": "The Vectorial portfolio received {count} dividend(s) in {year} — ${total} total.",
+    "dividendsYieldOnCost": "Model dividend yield on cost in {year}: {pct}%.",
     "dividendsSummaryEmpty": "No dividends recorded to the portfolio this year yet.",
     "dividendsSummaryDisclaimer": "Reflects what the model received. Your actual return depends on when you replicated and your broker."
   },

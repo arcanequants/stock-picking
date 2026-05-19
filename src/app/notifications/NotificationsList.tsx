@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import type { PortfolioEvent } from "@/lib/types";
+import ShareButton from "@/components/ShareButton";
 
 const EVENT_ICONS: Record<string, string> = {
   price_move: "\u{1F4C8}",
@@ -221,6 +222,21 @@ export default function NotificationsList({
                       )}
                     </div>
                   </div>
+                  {event.event_type === "dividend" && (
+                    <div
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                      }}
+                      className="shrink-0"
+                    >
+                      <ShareButton
+                        url={`/stocks/${event.ticker}`}
+                        title={renderHeadline(event)}
+                        variant="icon"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Free user blur teaser — only on non-latest if a summary

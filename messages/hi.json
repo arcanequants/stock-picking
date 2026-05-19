@@ -230,6 +230,7 @@
     "eventsHeroTitle": "आज आपके पोर्टफोलियो में",
     "dividendsSummaryTitle": "पोर्टफोलियो को प्राप्त लाभांश",
     "dividendsSummary": "Vectorial पोर्टफोलियो को {year} में {count} लाभांश मिले — कुल ${total}।",
+    "dividendsYieldOnCost": "{year} में मॉडल का लाभांश यील्ड (निवेश पर): {pct}%।",
     "dividendsSummaryEmpty": "इस वर्ष अभी तक पोर्टफोलियो को कोई लाभांश दर्ज नहीं हुआ है।",
     "dividendsSummaryDisclaimer": "यह मॉडल को मिली राशि दर्शाता है। आपका वास्तविक रिटर्न इस पर निर्भर करता है कि आपने कब रेप्लिकेट किया और आपके ब्रोकर पर।"
   },

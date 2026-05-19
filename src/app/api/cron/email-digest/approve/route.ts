@@ -3,7 +3,11 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { getEventsForDigest } from "@/lib/notifications";
 import { sendDigestEmail } from "@/lib/resend";
-import { generateApprovalToken, getWeeklyPerformance } from "../route";
+import {
+  generateApprovalToken,
+  getWeeklyPerformance,
+  getWeeklyDividends,
+} from "../route";
 import { getWeeklySignalsSummary } from "@/lib/signals";
 
 export const dynamic = "force-dynamic";
@@ -83,10 +87,11 @@ export async function GET(request: Request) {
       return htmlResponse("Sin eventos", "No hay eventos esta semana para enviar.", "#f59e0b");
     }
 
-    // Get portfolio performance + signals weekly snapshot
-    const [summary, signalsWeekly] = await Promise.all([
+    // Get portfolio performance + signals weekly snapshot + dividends this week
+    const [summary, signalsWeekly, weeklyDivs] = await Promise.all([
       getWeeklyPerformance(),
       getWeeklySignalsSummary().catch(() => []),
+      getWeeklyDividends().catch(() => []),
     ]);
 
     // Get premium subscribers
@@ -138,7 +143,8 @@ export async function GET(request: Request) {
           "es",
           isPremium,
           summary,
-          signalsWeekly
+          signalsWeekly,
+          weeklyDivs
         );
 
         await supabaseAdmin

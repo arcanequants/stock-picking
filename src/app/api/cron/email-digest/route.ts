@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { getEventsForDigest } from "@/lib/notifications";
 import { sendDigestApprovalEmail } from "@/lib/resend";
-import type { DigestSummary } from "@/lib/resend";
+import type { DigestSummary, WeeklyDividend } from "@/lib/resend";
 import { getWeeklySignalsSummary } from "@/lib/signals";
 
 export const dynamic = "force-dynamic";
@@ -15,6 +15,20 @@ export function generateApprovalToken(weekKey: string): string {
   const secret = process.env.RESEND_API_KEY;
   if (!secret) throw new Error("RESEND_API_KEY not configured");
   return crypto.createHmac("sha256", secret).update(weekKey).digest("hex");
+}
+
+export async function getWeeklyDividends(): Promise<WeeklyDividend[]> {
+  const since = new Date();
+  since.setDate(since.getDate() - 7);
+  const sinceStr = since.toISOString().split("T")[0];
+
+  const { data } = await getSupabaseAdmin()
+    .from("dividend_events")
+    .select("ticker, ex_date, amount_per_share, shares_held, total_amount")
+    .gte("ex_date", sinceStr)
+    .order("ex_date", { ascending: false });
+
+  return (data ?? []) as WeeklyDividend[];
 }
 
 export async function getWeeklyPerformance(): Promise<DigestSummary | null> {
@@ -90,10 +104,11 @@ export async function GET(request: Request) {
       return NextResponse.json({ message: "Digest already sent this week", week_key: weekKey });
     }
 
-    // Get portfolio performance + signals weekly snapshot
-    const [summary, signalsWeekly] = await Promise.all([
+    // Get portfolio performance + signals weekly snapshot + dividends this week
+    const [summary, signalsWeekly, weeklyDivs] = await Promise.all([
       getWeeklyPerformance(),
       getWeeklySignalsSummary().catch(() => []),
+      getWeeklyDividends().catch(() => []),
     ]);
 
     // Count recipients for the preview
@@ -136,7 +151,8 @@ export async function GET(request: Request) {
       recipientCount,
       premiumCount,
       summary,
-      signalsWeekly
+      signalsWeekly,
+      weeklyDivs
     );
 
     return NextResponse.json({
@@ -149,6 +165,7 @@ export async function GET(request: Request) {
       free: recipientCount - premiumCount,
       portfolio: summary,
       signals_count: signalsWeekly.length,
+      dividends_count: weeklyDivs.length,
     });
   } catch (error) {
     console.error("Email digest cron error:", error);
