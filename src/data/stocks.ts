@@ -10839,6 +10839,300 @@ Plus VPG $3,180 +4% YoY = pricing power demostrado año tras año.
     last_updated_at: "2026-05-18T00:00:00Z",
     next_review_at: "2026-11-18T00:00:00Z",
   },
+  {
+    id: 76,
+    ticker: "EADSY",
+    name: "Airbus SE",
+    sector: "Industrials",
+    industry: "Aerospace & Defense",
+    country: "France",
+    region: "Europe",
+    currency: "USD",
+    price: 50.12,
+    pe_ratio: 26.6,
+    pe_forward: 20.8,
+    dividend_yield: 1.89,
+    market_cap_b: 154.0,
+    eps: 1.84,
+    summary_short:
+      "**El fabricante #1 mundial de aviones comerciales** — Airbus superó a Boeing en 2019 y desde entonces no ha cedido el liderazgo. Su producto estrella es la **familia A320** (A319/A320/A321), el avión más vendido en la historia de la aviación civil con **más de 12,487 entregados desde 1988**. También fabrica el A220 (regional), A330 + A350 (widebodies long-haul), helicópteros (H125, H145, H160 — #1 mundial civil + militar) y tiene división Defence & Space (Eurofighter Typhoon, transporte militar A400M, satélites Galileo, lanzadores Ariane). 3 segmentos: **Commercial Aircraft ~72% revenue**, **Helicopters ~12%**, **Defence & Space ~16%**. HQ legal en Leiden, Holanda; HQ operativa en **Toulouse, Francia** (donde se ensambla cada A320 del mundo). Líneas de ensamblaje también en Hamburgo (DE), Sevilla (ES), Tianjin (CN) y Mobile, Alabama (US). ~145,000 empleados en 35 países. **Guillaume Faury es CEO desde 2019**, contrato renovado 2025. Cotiza en París como AIR.PA + ADR **EADSY** en USA (ratio 1 ADR = 1/4 ordinaria). **FY2025 (reportado 19 feb 2026)**: revenue **€73.4B (+6.1% YoY)**, EBIT ajustado **€7.1B (margin 9.7% vs 7.7% en 2024)**, FCF €4.6B, **793 entregas** (607 A320 family, 93 A220, 36 A330, 57 A350), **backlog récord €619 mil millones / 9,037 aviones**. **Q1 2026 (reportado 28 abril 2026)**: revenue €12.7B (-7%), EBIT Adj €300M (-52%), entregas 114 vs 136 — débil por escasez de motores GTF de Pratt & Whitney (RTX) que frena el ramp del A320neo. **Guidance FY2026 reafirmada**: ~870 entregas, EBIT Adj ~€7.5B, FCF ~€4.5B. **Dividendo 2025 €3.20/acción** (ex 21 abril, pay 23 abril 2026, +6.7% vs €3.00 en 2024) — ADR recibió ~$0.90, yield 1.89% sobre $50.12. **Buyback** solo para compensación a empleados (~4.14M shares), NO es retorno de capital agresivo. Catalizadores 2026-2027: A320neo target 75/mes para 2027 (récord histórico aviación civil), A350 12/mes para 2028, certificación 737 MAX 7/10 (Boeing) ahora esperada finales 2026, 777X Boeing slipped a 2027 (delay #6 — Airbus mantiene ventana abierta en widebodies). Adquisición de operaciones Spirit AeroSystems (~4,000 empleados) backward-integra aerostructures. Cotización $50.12 cerca de mínimo 52 semanas ($44-$64.35), P/E forward 20.8x, yield 1.89%.",
+    summary_what:
+      "Airbus SE es **el fabricante #1 mundial de aviones comerciales** + uno de los grupos aeroespaciales y de defensa más grandes del planeta. HQ legal Leiden, Holanda; HQ operativa Toulouse, Francia. ~145,000 empleados en 35 países.\n\n**Historia**:\n- **1970**: fundado como Airbus Industrie GIE (consorcio Francia/Alemania/UK/España)\n- **2000**: reorganización como EADS (European Aeronautic Defence and Space Company)\n- **2014**: rebrand a **Airbus Group** + simplificación corporativa\n- **2017**: rebrand final a **Airbus SE** (Societas Europaea, sede Leiden)\n- **2019**: **Guillaume Faury** asume como CEO (sucesor de Tom Enders)\n- **2019**: Airbus supera a Boeing en entregas anuales por primera vez (no ha cedido el liderazgo desde entonces)\n- **2020**: COVID — entregas caen a 566 (de 863 en 2019)\n- **2025**: Faury re-contratado +5 años; Airbus anuncia adquisición de operaciones A220/A320/A350 de Spirit AeroSystems\n- **enero 2026**: Matthieu Louvot nuevo CEO de Airbus Helicopters (sucede Bruno Even)\n- **mayo 2026**: Eric Kirstetter nuevo EVP Strategy\n\n**3 Segmentos**:\n\n**(1) Commercial Aircraft (~72% revenue, ~75% EBIT Adj)** — el core:\n- **Familia A220** (regional 100-150 asientos) — target producción 12/mes para 2027 (bajado de 14)\n- **Familia A320** (A319/A320/A321 narrowbody) — el avión más vendido de la historia: 12,487+ entregados desde 1988. Target producción **75/mes para finales de 2027** = récord histórico aviación civil\n- **A330** (widebody) — versión actualizada A330neo en producción\n- **A350** (widebody long-haul) — target 12/mes para 2028\n- **Backlog Commercial Q1 2026**: **9,037 aviones** vs 8,754 al cierre 2025\n- **Cuota de mercado narrowbodies**: A320 family ~60% vs Boeing 737 MAX ~40%\n- **Cuota de mercado widebodies**: Boeing sigue líder (787, 777)\n\n**(2) Helicopters (~12% revenue, ~10% EBIT Adj)** — #1 mundial civil + militar:\n- **H125** (light single) — el más vendido\n- **H145** (light twin) — médicos, rescate, militar\n- **H160** (medium twin) — flagship reciente\n- **H225M Caracal** (heavy militar)\n- **Tiger** (combate)\n- **NH90** (medium militar multi-rol)\n- Q1 2026 entregas: 56 (vs 51 anterior); revenue estable €1.6B\n\n**(3) Defence & Space (~16% revenue)** — el catalizador 2025-2027:\n- **Eurofighter Typhoon** — fighter europeo, partnership BAE + Leonardo + Airbus. Ramping producción de 14 a 20 aviones/año, ordenes nuevas Italia + Alemania + Turquía\n- **A400M Atlas** — transporte militar pesado (backlog débil, <50 aircraft)\n- **Satélites**: Galileo (sistema GPS europeo), OneSat (satélites flexibles), constelaciones LEO\n- **Lanzadores Ariane** (ArianeGroup JV con Safran)\n- **FCAS** (Future Combat Air System con Francia/Alemania/España) — estancado en Phase 1B; Faury dijo apoyaría 'two-fighter solution'\n- Q1 2026: revenue €2.8B **(+7% YoY)**, EBIT Adj €130M (vs €77M = casi 2x)\n\n**Liderazgo**:\n- **CEO Airbus SE**: **Guillaume Faury** desde 2019 (re-contratado 2025)\n- **CFO**: Thomas Toepfer\n- **CEO Commercial Aircraft**: Christian Scherer\n- **CEO Helicopters**: Matthieu Louvot (desde 1 abril 2026)\n- **CEO Defence & Space**: Mike Schoellhorn\n- **EVP Strategy**: Eric Kirstetter (desde 18 mayo 2026)\n\n**Q1 2026 (reportado 28 abril 2026)**:\n\n| Métrica | Q1 2026 | YoY |\n|---------|---------|-----|\n| Revenue | **€12.7B** | -7% |\n| **EBIT Adjusted** | **€300M** | **-52%** |\n| EBIT reported | €224M | — |\n| **EPS Adjusted** | **€0.33** | vs €0.67 |\n| Entregas | 114 | vs 136 |\n| Backlog (Q1) | **9,037 aviones** | vs 8,754 YE25 |\n\n**FY2025 (reportado 19 feb 2026)**:\n\n| Métrica | FY2025 | YoY |\n|---------|--------|-----|\n| Revenue | **€73.4B** | +6.1% |\n| **EBIT Adj** | **€7.1B** | margin 9.7% |\n| **FCF** | **€4.6B** | — |\n| Entregas | **793** | vs 766 |\n| Backlog valor | **€619B** | récord |\n\n**FY2026 Guidance reafirmada**:\n- ~870 entregas\n- EBIT Adj ~**€7.5B**\n- FCF ~**€4.5B**\n\n**Capital Return**:\n- **Dividendo 2025 €3.20/acción** (ex 21 abril 2026) — +6.7% vs 2024 (€2.00 ord + €1.00 special)\n- ADR EADSY ratio 1:4 → recibió ~$0.90, yield ~1.89% sobre $50.12\n- **Buyback**: SOLO para compensación a empleados (~4.14M shares), NO es retorno de capital agresivo",
+    summary_why:
+      "EADSY a $50.12 (cerca mínimo 52 semanas $44-$64.35) es comprar el fabricante #1 mundial de aviones comerciales con backlog de 10 años (9,037 aviones, €619B) en un momento de máxima ansiedad de corto plazo (Q1 -52% EBIT) que es 100% atribuible a un cuello de botella temporal de motores Pratt & Whitney. Razones específicas: (1) **Backlog €619B / 9,037 aviones = ~10 años de producción vendida al ritmo actual de 870 entregas/año**: el backlog tiene un valor 4x mayor que toda la capitalización de mercado de Airbus (~€143B). Eso significa visibilidad de revenue hasta ~2036 sin que entre un solo pedido nuevo. Ninguna empresa industrial en el mundo tiene este nivel de visibilidad. (2) **Duopolio comercial estructural Airbus vs Boeing — y Airbus está ganando**: superó a Boeing en entregas desde 2019 y no ha cedido. En narrowbodies (el 70% del mercado mundial), A320 family tiene ~60% share vs 40% Boeing 737 MAX. Boeing sigue lidiando con cert del 737 MAX 7/10 (slipped a finales 2026), 777X (slipped a 2027, delay #6), y problemas de calidad post-Alaska Airlines incidente enero 2024. No hay tercer competidor viable (COMAC C919 todavía sin certificación occidental). (3) **Q1 2026 -52% es 100% efecto motor — no demanda**: el problema no son los pedidos (entran a ~95% más rápido que 2025) sino el suministro de motores GTF de Pratt & Whitney (RTX). Es un bottleneck temporal que se resuelve 2026-2027 cuando P&W termine el reemplazo de hojas defectuosas. Demanda intacta, supply temporalmente comprimido = compresión temporal de earnings. (4) **A320neo ramp a 75/mes para 2027 = récord histórico aviación civil**: ninguna familia de aviones en la historia ha alcanzado 75/mes. Con eso Airbus genera ~900 entregas/año solo del A320neo + ~870-900 total = revenue Commercial Aircraft saltando de €52.6B (FY2025) a ~€65-70B en 2028. Operating leverage masivo. (5) **Defence & Space inflexionando al alza — Europa rearmando**: Q1 2026 D&S EBIT casi se duplica YoY (€130M vs €77M). Eurofighter ramping a 20 aviones/año con nuevos pedidos Italia, Alemania, Turquía. Re-armamento europeo post-Ucrania genera tailwind multi-año para la división. Si FCAS se desbloquea 2026-2027 → otro catalyst. (6) **Helicópteros — #1 mundial civil + militar — anchored business**: Q1 entregas +10% YoY a 56 helicópteros. Mercado militar global expansión + flotas civiles renovándose. Negocio menos cíclico que Commercial Aircraft, alta recurring revenue services. (7) **Capital allocation disciplinado**: Airbus paga dividendo creciente desde 2017 (sin interrupción excepto COVID 2020). €3.20/acción FY2025 (+6.7%). No tiene buyback agresivo (solo employee comp ~4.14M shares) pero también no diluye con M&A masivas — Spirit AeroSystems es backward integration estratégica, no growth-by-acquisition wasteful. (8) **Boeing sigue paralizado — ventana abierta para Airbus**: 737 MAX cert delays + 777X slipping continuo + calidad post-Alaska Air + huelgas IAM 2024 + drenaje de cash. Mientras Boeing está reparando su house, Airbus captura share permanente. Aerolíneas que cambian de Boeing a Airbus rara vez regresan (training de pilotos, inventario partes, contratos mantenimiento — todo se queda con Airbus). (9) **P/E forward 20.8x = razonable para un duopolio con backlog 10 años**: peers Lockheed Martin 17x, Northrop 19x, RTX 21x, Honeywell 22x. Airbus a 20.8x con (a) visibilidad de 10 años de revenue, (b) margin expansion en curso (FY25 9.7% vs 7.7% FY24), (c) defence inflexión, (d) duopolio estructural = mispriced por miedo de corto plazo. (10) **Analyst consensus Buy + target €218 promedio (AIR.PA) = ~+27% upside ordinaria, ~+20% EADSY ADR**: 15 Buy / 8 Hold / 0 Sell. Re-rating a P/E 22-23x cuando los motores P&W normalicen + Q4 2026 entregas aceleren = thesis pago.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Pratt & Whitney GTF engine shortfall — el #1 driver del Q1 -52%**: P&W (subsidiaria de RTX) no entrega motores al ritmo prometido por defectos en hojas de turbina que requieren reemplazo. Esto bloquea entregas A320neo y forzó a Airbus a bajar guidance de ramp (de 75/mes firme para 2027 a 70-75/mes). Si la situación se prolonga >2027, EBIT FY26-27 sufre material. CFM (alternativa motor del A320) tiene capacidad limitada para compensar. (2) **Spirit AeroSystems integration drag 2026**: la adquisición de operaciones A220/A320/A350 de Spirit (~4,000 empleados) agrega presión en cash flow + ejecución. Spirit tenía problemas crónicos de calidad — Airbus los hereda. Si fixes toman más tiempo o requieren más capex, FCF target €4.5B se erosiona. (3) **A320 panel quality issue 2026**: identificado problema de manufactura en panels que afecta entregas adicionales. No es catastrófico pero agrega ruido en métricas Q2-Q3 2026. (4) **Boeing recovery narrative — gap se cierra 2027-2028**: si 737 MAX 7/10 certifica finales 2026 (FAA Bedford dice 'no major obstacles' en abril 2026) + 777X certifica 2027 + Boeing normaliza producción 737 a 52/mes para finales 2026, el mercado rota de 'Airbus duopoly winner' hacia 'duopolio normalizado' y el premium de Airbus comprime. (5) **Tarifas Trump 2026 = wild card**: el guidance FY2026 asume 'tarifas actualmente aplicables'. Cualquier escalación (USA tarifa aviones europeos en respuesta a EU tarifa aviones Boeing) genera headwind directo en margin — Airbus exporta ~40% de aviones a Asia/Pacífico/Middle East vía rotación de USD. (6) **USD/EUR FX**: revenue commercial aircraft denominada en USD pero costos en EUR. USD debilita = revenue traducido a EUR baja. Q1 2026 ya vio efecto. Si USD sigue débil <1.20 EUR/USD por todo 2026, EBIT Adj guidance €7.5B difícil. (7) **FCAS stalled — Eurofighter como Plan B no es ideal**: Future Combat Air System (sucesor del Eurofighter) lleva años de estancamiento Francia vs Alemania vs España. Faury reconoció esto. Si FCAS se descarta y se queda con Eurofighter ramping a 20/año, growth Defence & Space limita. Tempest UK (BAE/Leonardo/Mitsubishi) es competidor que podría capturar exports si FCAS muere. (8) **Helicópteros — pricing pressure + competencia**: H125 enfrenta Bell 505 (USA) low-cost. H160 ramp más lento que esperado vs Sikorsky. Helicópteros es ~12% revenue pero ~10% EBIT — no es el motor central, pero deterioro aquí erosiona narrativa 'diversified'. (9) **A400M backlog declining**: <50 aircraft en backlog, sin exports importantes recientes. Si los pedidos restantes terminan y no entran nuevos, A400M se acerca al fin de su programa — write-down risk. (10) **Sucesión CEO de Faury post-2027**: Faury fue re-contratado 2025 pero su tenure terminará 2027-2030. Sin sucesor visible (Scherer Commercial CEO + Schoellhorn D&S CEO son candidatos pero ninguno designado). Sucesión mal-ejecutada = ejecución risk. (11) **Boeing podría romper duopoly bajando precios desesperadamente**: si Boeing's balance sheet sigue deteriorando (cash burn 2024-2025 fue masivo), podría aceptar precios irracionales para preservar share — guerra de precios narrowbody mata margins de ambos.",
+    research_full: `# Airbus SE (EADSY) — Research Completo
+
+## Precio: $50.12 | P/E TTM: 26.6 | P/E Forward: 20.8 | Div Yield: 1.89% | Market Cap: $154B
+
+---
+
+## ¿Qué es Airbus?
+
+Airbus SE es **el fabricante #1 mundial de aviones comerciales** + uno de los grupos aeroespaciales y de defensa más grandes del planeta. Superó a Boeing en entregas desde 2019.
+
+**Historia**:
+- **1970**: fundado como Airbus Industrie GIE (consorcio FR/DE/UK/ES)
+- **2000**: reorganización como EADS
+- **2014**: rebrand a Airbus Group
+- **2017**: rebrand final a **Airbus SE** (sede Leiden)
+- **2019**: **Guillaume Faury** CEO; Airbus supera Boeing por primera vez
+- **2025**: Faury re-contratado +5 años; adquisición Spirit AeroSystems ops
+
+## 3 Segmentos
+
+| Segmento | % Revenue | % EBIT | Q1 2026 |
+|----------|-----------|--------|---------|
+| **Commercial Aircraft** | ~72% | ~75% | -11%, 114 entregas |
+| **Helicopters** | ~12% | ~10% | estable, 56 entregas |
+| **Defence & Space** | ~16% | ~15% | **+7%, EBIT casi 2x** |
+
+## Familia A320 — el avión más vendido de la historia
+
+- **12,487+ entregados** desde 1988
+- A319, A320, A321 narrowbodies
+- **Target producción 75/mes para finales 2027** = récord histórico aviación civil
+- Cuota de mercado narrowbodies: ~60% vs Boeing 737 MAX 40%
+
+## Q1 2026 — Reportado 28 abril 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Revenue | €12.7B | -7% |
+| **EBIT Adjusted** | **€300M** | **-52%** |
+| EPS Adj | €0.33 | vs €0.67 |
+| Entregas | 114 | vs 136 |
+| Backlog | **9,037 aviones** | vs 8,754 YE25 |
+
+## FY2025 — Reportado 19 feb 2026
+
+| Métrica | FY2025 | YoY |
+|---------|--------|-----|
+| Revenue | **€73.4B** | +6.1% |
+| **EBIT Adj** | **€7.1B** | margin 9.7% |
+| FCF | **€4.6B** | — |
+| Entregas | 793 | vs 766 |
+| **Backlog valor** | **€619B** | récord |
+
+## FY2026 Guidance (reafirmada Q1)
+
+- ~870 entregas commercial aircraft
+- EBIT Adj **~€7.5B**
+- FCF **~€4.5B**
+
+## Dividendo + Capital Return
+
+- **2025 dividendo €3.20/acción** (+6.7% vs €3.00 en 2024)
+- Ex-date 21 abril 2026 · Pay date 23 abril 2026
+- ADR EADSY (ratio 1:4) recibió **~$0.90**, yield 1.89%
+- **Buyback** solo para employee comp (~4.14M shares) — NO retorno de capital agresivo
+
+## ¿Por qué cotiza cerca de mínimo 52 semanas?
+
+1. **Pratt & Whitney GTF engine shortfall** = #1 driver — bloquea ramp A320neo
+2. **Q1 2026 print**: -52% EBIT Adj, -16% entregas — el peor Q1 desde pandemia
+3. **Spirit AeroSystems integration** — cash drag 2026
+4. **A320 panel quality issue**
+5. **USD weakness** vs EUR
+6. **Boeing recovery narrative** — gap empieza a cerrarse
+7. **Tarifas Trump** — wild card
+
+## Boeing Competitive Context
+
+- **737 MAX 7/10**: FAA dice cert finales 2026 (delays previos)
+- **777X**: cert slipped a 2027 (delay #6, $15B over budget)
+- **Narrowbodies**: Airbus 60% vs Boeing 40% share
+- **Widebodies**: Boeing sigue líder (787, 777)
+
+## Defence — Europa rearmando
+
+- **Eurofighter**: ramping 14→20 aviones/año; pedidos Italia, Alemania, Turquía
+- **FCAS** (Francia/DE/ES): estancado; Faury apoyaría 'two-fighter solution'
+- **A400M**: backlog débil <50 aircraft
+
+## Producción Targets
+
+| Modelo | Target | Para |
+|--------|--------|------|
+| A320neo family | **75/mes** | finales 2027 |
+| A350 | 12/mes | 2028 |
+| A220 | 12/mes | 2027 (bajado de 14) |
+
+## Analyst Consensus
+
+- Rating: **Buy** (15 Buy / 8 Hold / 0 Sell, 23 analistas)
+- Target promedio AIR.PA: €209-219 (rango €170-€255)
+- Implied upside ordinaria: ~+27%
+- Implied upside EADSY ADR: ~+20%
+
+## Anchor Fact
+
+**Airbus ya vendió 9,037 aviones que todavía no entrega — eso es producción para los próximos ~10 años a ritmo de 870 entregas/año.** El backlog vale €619 mil millones = más de 4x toda la capitalización de mercado de Airbus.
+
+(Fuente: Airbus Q1 2026 release + FY2025 results)
+
+## Tesis en una línea
+
+> Comprar el fabricante #1 mundial de aviones comerciales (60% share narrowbodies vs Boeing 40%) con backlog de 10 años (9,037 aviones / €619B) cuando (1) el Q1 -52% es 100% atribuible a un cuello de botella temporal de motores Pratt & Whitney, (2) A320neo ramp a 75/mes para 2027 es operating leverage masivo, (3) Defence & Space EBIT casi se duplica YoY con Europa rearmando, (4) Boeing sigue paralizado en cert 737 MAX 7/10 + 777X, y (5) cotiza cerca de mínimo 52 semanas a P/E forward 20.8x con upside analyst ~+20% en el ADR.
+
+---
+
+*Research fecha: 19 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 60.00,
+    analyst_upside: 19.7,
+    status: "active",
+    first_researched_at: "2026-05-19T00:00:00Z",
+    last_updated_at: "2026-05-19T00:00:00Z",
+    next_review_at: "2026-11-19T00:00:00Z",
+  },
+  {
+    id: 77,
+    ticker: "DTEGY",
+    name: "Deutsche Telekom AG",
+    sector: "Communication Services",
+    industry: "Telecom Services",
+    country: "Germany",
+    region: "Europe",
+    currency: "USD",
+    price: 33.82,
+    pe_ratio: 16.1,
+    pe_forward: 12.0,
+    dividend_yield: 3.5,
+    market_cap_b: 165.0,
+    eps: 2.11,
+    summary_short:
+      "**La telecom más grande de Europa por revenue** (€119B FY2025) y dueña del **57% de T-Mobile US** (TMUS, mcap ~$209B en mayo 2026). Esto es clave para entender la tesis: Deutsche Telekom no es solo una telco alemana — es básicamente la **holding controladora de T-Mobile USA** + toda la operación europea. 4 segmentos: **T-Mobile US ~64% revenue** (€19.7B Q1 2026), **Alemania ~21%** (operador #1 mobile + fiber doméstico, €6.3B Q1), **Europa ~10%** (10 países bajo marcas T-Mobile/Magenta — Austria, Croacia, República Checa, Grecia, Hungría, Polonia, Eslovaquia + 2 más; saliendo de Rumania), y **T-Systems ~3%** (servicios IT corporate B2B, €1.0B Q1). En Alemania son el operador histórico (sucesor de Deutsche Bundespost privatizada 1995), con la red de fibra más grande del país: **12.6 millones de hogares cubiertos con FTTH** a fin de 2025, target **25 millones para 2030**. HQ Bonn, Alemania. **~200,000 empleados** globales. **Tim Höttges es CEO desde 2014** (contrato extendido +5 años en 2025) — arquitecto de la fusión T-Mobile US + Sprint cerrada 2020. CFO Christian Illek desde 2019. **FY2025 (reportado feb 2026)**: revenue **€119.1B (+4.2% orgánico)**, Adj EBITDA AL **€44.2B (+4.7% orgánico)**, **FCF AL €19.5B**, Adj EPS €2.00 (+5.2%). **Q1 2026 (reportado 13 mayo 2026)**: service revenue €25.0B (+4.6% orgánico), Adj EBITDA AL **€11.5B (+7.5% orgánico)**, **FCF AL €5.7B récord Q1**, Adj EPS €0.54 (+7.9%). **FY2026 guidance subida**: Adj EBITDA AL **~€47.5B**, FCF AL **>€19.8B**, Adj EPS **~€2.20**. **Dividendo FY2025 €1.00/acción** (+11% vs €0.90 — récord histórico), pagado 8 abril 2026, yield 3.5% en ADR. **Buyback FY2026 hasta €2B** autorizado en enero — Tranche 1 (€471M / 15.6M acciones) completada Q1, Tranche 2 (hasta €550M) corriendo abril-junio. Cotización $33.82 cerca de mínimo 52 semanas ($30.31-$40.58), P/E forward 12.0x, yield 3.5%.",
+    summary_what:
+      "Deutsche Telekom AG es **la telecom más grande de Europa por revenue** (€119B FY2025) — sucesora del operador estatal alemán Deutsche Bundespost (privatizada 1995). HQ Bonn, Alemania. ~200,000 empleados globales. ADR DTEGY (1 ADR = 1 acción ordinaria).\n\n**Historia**:\n- **1995**: privatización de Deutsche Bundespost Telekom\n- **1996**: IPO en Frankfurt\n- **2001**: adquisición de VoiceStream Wireless en USA (semilla de T-Mobile US)\n- **2014**: **Tim Höttges** asume como CEO\n- **2018**: anuncia merger T-Mobile US + Sprint\n- **abril 2020**: T-Mobile US + Sprint cierran fusión — DT queda con ~43% TMUS inicial\n- **2024**: DT ejerce call options a SoftBank, sube a control mayoritario TMUS\n- **2025**: contrato Höttges extendido +5 años\n- **junio 2025**: SoftBank vende 21.5M shares TMUS (Project 9) — DT sube a **57.1%** ownership\n- **enero 2026**: DT anuncia buyback FY26 hasta €2B (extension del programa)\n- **mayo 2026**: ver.di sindicato extiende huelgas (60,000 trabajadores piden +6.6% + €660 bono)\n\n**4 Segmentos**:\n\n**(1) T-Mobile US (~64% revenue, ~52% EBITDA AL)** — el ancla:\n- DT owns **57.1%** post-2024-2025 deals con SoftBank\n- TMUS mcap ~$209B mayo 2026 — DT's stake worth ~$119B\n- #2 wireless carrier USA (~110M postpaid customers)\n- Líder en 5G coverage USA (3.5GHz mid-band)\n- Q1 2026: revenue €19.7B / $23.1B (+10.9%), Adj EBITDA AL €7.7B / $9.1B (+12.9%)\n\n**(2) Germany (~21% revenue, ~25% EBITDA AL)**:\n- Operador histórico ex-Bundespost\n- **#1 mobile** (~38% market share)\n- **#1 fixed broadband** + **fiber** (FTTH 12.6M hogares pasados, target 25M 2030)\n- Marca: Magenta (consumer) + Deutsche Telekom (B2B)\n- Q1 2026: revenue €6.3B (+2.1% org), EBITDA AL €2.7B (+2.5% org)\n\n**(3) Europe (~10% revenue, ~10% EBITDA AL)** — 10 países:\n- Austria, Croacia, República Checa, Grecia, Hungría, Polonia, Eslovaquia, Montenegro, Macedonia del Norte, Holanda\n- **Saliendo de Rumania** (joint con OTE)\n- 8.6M clientes convergentes (FMC) Q3 2025\n- 5G population coverage 89.3%\n- Q1 2026: revenue €3.1B (+2.1% org), EBITDA AL €1.2B (+3.5% org)\n\n**(4) Systems Solutions / T-Systems (~3% revenue)**:\n- IT services B2B corporate\n- Cloud, ciberseguridad, integración\n- Q1 2026: revenue €1.0B (+2.1% org), EBITDA AL €84M (+4.0% org)\n\n**Liderazgo**:\n- **CEO**: **Tim Höttges** desde 2014 (re-contratado +5 años en 2025)\n- **CFO**: Christian Illek desde 2019\n- **CEO T-Mobile US**: Mike Sievert (desde abril 2020)\n\n**Q1 2026 (reportado 13 mayo 2026)**:\n\n| Métrica | Q1 2026 | YoY |\n|---------|---------|-----|\n| Service Revenue | **€25.0B** | +4.6% org |\n| Net Revenue | €29.9B | +4.7% org |\n| **Adj EBITDA AL** | **€11.5B** | **+7.5% org** (+2.0% reportado por FX) |\n| **FCF AL** | **€5.7B** | récord Q1 |\n| Adj Net Profit | €2.6B | +6.5% |\n| **Adj EPS** | **€0.54** | **+7.9%** |\n\n**FY2025 (reportado feb 2026)**:\n\n| Métrica | FY2025 | YoY |\n|---------|--------|-----|\n| Revenue | **€119.1B** | +4.2% org |\n| **Adj EBITDA AL** | **€44.2B** | +4.7% org |\n| **FCF AL** | **€19.5B** | +2.0% |\n| Adj EPS | €2.00 | +5.2% |\n\n**FY2026 Guidance (subida en Q1)**:\n- Adj EBITDA AL **~€47.5B**\n- FCF AL **>€19.8B**\n- Adj EPS **~€2.20**\n\n**Capital Return**:\n- **Dividendo FY2025 €1.00/acción** (+11% vs €0.90 — récord)\n- Pagado 8 abril 2026 (ex 2 abril, AGM 1 abril)\n- ADR DTEGY ratio 1:1, recibió ~$1.18, yield ~3.5%\n- Política: 40-60% del Adj EPS sostenible\n- **Buyback FY26 hasta €2B** (anunciado enero 5, 2026)\n  - Tranche 1 (Q1): ~15.6M shares por ~€471M (completada)\n  - Tranche 2 (Q2-Q3): hasta €550M (abril-junio)\n- Total capital return ~5% market cap al año\n\n**Germany Fiber Build-out**:\n- **12.6M hogares con FTTH** al cierre 2025 (Alemania)\n- 24M hogares con FTTH total footprint europeo\n- Target +1M nuevos hogares en 2026 (Alemania)\n- Long-term goal: **25M hogares FTTH Alemania para 2030**\n- Run-rate ~3M hogares/año build capacity\n- Berlín alcanzó 1M FTTH milestone en 2026",
+    summary_why:
+      "DTEGY a $33.82 (cerca mínimo 52 semanas $30.31-$40.58) es comprar la telecom más grande de Europa con yield 3.5% + buyback €2B (~5% market cap retorno total) cuando el mercado está descontando casi por completo el resto del negocio europeo después de valorar el pedazo de T-Mobile US. Razones específicas: (1) **'Germany + Europe por casi nada' — el setup más cuantificable de la tesis**: DT mcap $165B. Su pedazo del 57% de T-Mobile US (TMUS mcap ~$209B) vale ~$119B. Eso significa que el mercado le pone solo ~$46B al resto del negocio — toda Alemania (operador #1, 12.6M hogares con fibra, ramping 25M para 2030), 10 países europeos con 8.6M clientes convergentes, y T-Systems IT services. Ese resto generó €20.5B de Adj EBITDA AL en 2025. Esto implica valuación stub de ~2.2x EV/EBITDA cuando el sector telecom europeo cotiza a 5-7x — descuento brutal. (2) **Q1 2026 entregó +7.5% Adj EBITDA AL orgánico + récord FCF Q1 €5.7B + EPS +7.9%**: la diferencia +7.5% organic vs +2.0% reportado es 100% FX (USD débil deprime traducción TMUS). Operating performance subyacente está saludable en todos los segmentos. Guidance FY26 SUBIDA en el mismo print. (3) **Dividendo creciente + récord €1.00/acción FY2025 (+11%)**: yield 3.5% en ADR. Plus buyback FY26 hasta €2B (~3% market cap retirement) — €471M / 15.6M shares ya completados Q1. Total shareholder return ~5% al año antes de cualquier capital gain. Política payout 40-60% del Adj EPS = ratio sustainable, no es overlevered. (4) **T-Mobile US es la mejor wireless USA Q1 2026**: TMUS contribución a DT: revenue +10.9% USD, EBITDA AL +12.9% USD. Líder en 5G mid-band coverage. Mike Sievert (TMUS CEO) sigue ejecutando — net postpaid adds liderando industria pre-cable MVNO disruption. DT's stake ~$119B en TMUS = ya cubre 72% del market cap de DT antes incluso de considerar Alemania/Europa/T-Systems. (5) **Tim Höttges CEO 12+ años extendido +5 más**: arquitecto de la fusión T-Mobile US + Sprint (2020) — el deal que transformó TMUS de #3 a #2 wireless USA + creó duopoly funcional Verizon/T-Mobile. Contrato extendido 2025 = continuidad estratégica + execution. Uno de los CEOs telco más respetados de Europa. (6) **Germany fiber rollout — moat structural largo plazo**: 12.6M hogares con FTTH a fin 2025, ramping a 25M para 2030. DT pasa ~3M hogares/año = capacity sostenible. Fiber es 30-50 años asset — una vez instalado el cable, churn cero. Vodafone Alemania y O2 quedaron rezagados — DT consolida posición #1 mobile + #1 fixed broadband + #1 fiber con bundling convergent. (7) **Huelga ver.di + cable MVNO = ruido temporal, no problema estructural**: ver.di pide +6.6% pay + €660 bono (60,000 trabajadores). Se resolverá con compromiso ~4-5% pay rise — costo absorbible (~€500M run-rate en €119B revenue base). Comcast/Charter MVNO en TMUS captando 39% net adds = realidad pero margins MVNO son malos para cable cos y TMUS sigue creciendo. Ambos drivers narrative se resuelven 2026-2027. (8) **Defensive cash flow + sector resilience**: telecom es ~recession-resistant — la gente paga el teléfono y el internet antes que casi cualquier otra cosa discretionary. FCF AL FY2025 €19.5B = ~12% FCF yield sobre market cap. En recession scenario, DT outperforms vs cíclicos por wide margin. (9) **Analyst consensus Strong Buy + target €37.11 promedio = ~+24% upside ADR**: 18 Buy / 0 Hold / 0 Sell en MarketScreener. Wall Street target ~$42/ADR vs $33.82 spot. Re-rating a P/E forward 14x = $39+ = +15% capital + 3.5% yield + 3% buyback = ~22% total return. (10) **Backup tesis: incluso si TMUS cae 20%, DT sigue siendo barata**: si TMUS cae a $167B, DT's stake = $95B. DT mcap a $165B implica stub Europa = $70B para €20.5B EBITDA AL = 3.4x EV/EBITDA — todavía descuento. Margin of safety estructural via TMUS hedge.",
+    summary_risk:
+      "Los riesgos son medibles: (1) **Huelga ver.di Alemania — costos + reputación corto plazo**: 60,000 trabajadores piden +6.6% + €660 bono. 2da ronda de negociación colapsó 27 abril. Huelgas mayo 11-12 expandieron a Renania, Sajonia, Sajonia-Anhalt, Turingia (>20,000 empleados strikeando, incluido T-Systems por primera vez). Sindicato apunta al buyback €2B como argumento. Resolución probable +4-5% pay rise = ~€500M run-rate costo. Si negociación se prolonga >Q3 2026, ruido reputacional + interrupciones servicio Alemania. (2) **Cable MVNO disruption en TMUS — Comcast/Charter capturando ~39% net postpaid adds 2025**: Xfinity Mobile (Comcast >20M wireless subs) + Spectrum Mobile (Charter) ofrecen 'free for a year' bundles con cable. Capturan share sin overhead red. TMUS pricing power se presiona, ARPU plateaus, net adds growth desacelera. Si esto se acelera 2026-2027, TMUS contribution to DT crece más lento. (3) **USD weakness comprime reporte traducido**: Q1 2026 diferencia +7.5% organic vs +2.0% reportado es 100% FX. Si USD sigue débil <1.20 EUR/USD por todo 2026, Adj EBITDA AL guidance €47.5B se aleja. Sensitivity: cada 5% depreciación USD = ~€1.5B EBITDA AL menos reportado. (4) **TMUS valuation downside — mcap ya bajó de $260B a $209B en 2026**: si TMUS sigue bajando (cable MVNO + slowing growth + Verizon competitive response + capex peak), DT's stake worth diluye. Cada 10% caída TMUS = ~$12B perdidos en DT's stake. Si TMUS pierde otros 20%, DT's stake worth $95B y el discount Europe stub se evapora narrativamente. (5) **Germany fiber capex peak + ROI lento**: DT está gastando €3-5B/año en build de fibra. Payback es 8-12 años post-instalación. Si penetración no llega a target o competition (Vodafone, Telefónica Deutschland, alt-nets) presiona precios, ROI se erosiona. Plus regulación BNetzA puede forzar wholesale access a competidores en términos malos. (6) **Política payout 40-60% del Adj EPS no es 'safe' dividend aristocrat**: si Adj EPS cae 20% en algún año (recesión, USD shock, FX), dividendo no es contractualmente protegido — puede stagnant o reducirse. Track record reciente bueno (+11% FY2025) pero no garantía. (7) **Tim Höttges sucesión 2030+ — no hay sucesor visible**: 12 años CEO + 5 más = total 17 años cuando termine. Sin sucesor designado. Christian Illek (CFO) candidato pero no confirmado. Mike Sievert (TMUS CEO) podría ser candidato externo. Sucesión mal-ejecutada = strategic drift risk. (8) **Regulación europea telecom**: EU push por single market + price caps + roaming free es headwind multi-año. España y Portugal específicamente tienen ARPU bajo + competition feroz. Si Bruselas pasa nueva regulación 2026-2027 (price caps wholesale, mandate spectrum sharing), Europe segment EBITDA AL crece menos. (9) **T-Systems es 3% revenue pero distrae management**: T-Systems históricamente underperformer — competing con Accenture, IBM, Capgemini en services. EBITDA margin <10% vs core telco >35%. Si DT no spinea o vende T-Systems, distrae capital + management bandwidth sin generar valor. Algunos activists han pushed por spinout. (10) **Saliendo de Rumania = ejecución incierta**: DT + OTE están exiting joint venture rumana. Si la venta no se materializa o se vende a bajo precio, write-down posible. Europe segment revenue baja por divestiture. (11) **5G capex cycle peak Alemania + USA**: hyperscalers no son los únicos invirtiendo en infraestructura — telcos están en ciclo capex 5G stand-alone + fiber + edge. Si demand 5G enterprise no materializa los próximos 2 años, ROI capex se erosiona. (12) **Recession risk B2B (T-Systems + corporate accounts)**: si Alemania entra recesión profunda 2026-2027 (manufactura ya en contracción), T-Systems revenue + corporate accounts Germany/Europe sufren primero. ~15% del revenue tiene exposición direct corporate spending.",
+    research_full: `# Deutsche Telekom AG (DTEGY) — Research Completo
+
+## Precio: $33.82 | P/E TTM: 16.1 | P/E Forward: 12.0 | Div Yield: 3.5% | Market Cap: $165B
+
+---
+
+## ¿Qué es Deutsche Telekom?
+
+DT es **la telecom más grande de Europa por revenue** (€119B FY2025) y dueña del **57% de T-Mobile US**. Sucesora del operador estatal alemán Deutsche Bundespost (privatizada 1995).
+
+**Historia**:
+- **1995**: privatización Deutsche Bundespost Telekom
+- **2001**: adquisición VoiceStream Wireless USA (semilla T-Mobile US)
+- **2014**: **Tim Höttges** CEO
+- **abril 2020**: cierra fusión T-Mobile US + Sprint
+- **2024-2025**: ejerce calls + SoftBank vende → DT a **57.1% TMUS**
+- **2025**: Höttges re-contratado +5 años
+- **enero 2026**: anuncia buyback €2B FY26
+
+## 4 Segmentos
+
+| Segmento | % Revenue | Q1 2026 Revenue | Q1 2026 EBITDA AL |
+|----------|-----------|-----------------|-------------------|
+| **T-Mobile US** | ~64% | €19.7B / $23.1B | €7.7B / $9.1B |
+| **Germany** | ~21% | €6.3B | €2.7B |
+| **Europe** (10 países) | ~10% | €3.1B | €1.2B |
+| **T-Systems** | ~3% | €1.0B | €0.08B |
+
+## T-Mobile US — el ancla
+
+- DT owns **57.1%** post-2024-2025 (call options + SoftBank sale)
+- TMUS mcap ~$209B (mayo 2026)
+- **DT's stake worth ~$119B = 72% de DT mcap ($165B)**
+- TMUS = #2 wireless USA, ~110M postpaid customers
+- Líder 5G mid-band coverage
+
+## Q1 2026 — Reportado 13 mayo 2026
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| Service Revenue | **€25.0B** | +4.6% org |
+| **Adj EBITDA AL** | **€11.5B** | **+7.5% org** (+2.0% rep) |
+| **FCF AL** | **€5.7B** | récord Q1 |
+| **Adj EPS** | **€0.54** | **+7.9%** |
+
+## FY2025 — Reportado feb 2026
+
+| Métrica | FY2025 | YoY |
+|---------|--------|-----|
+| Revenue | €119.1B | +4.2% org |
+| **Adj EBITDA AL** | **€44.2B** | +4.7% org |
+| **FCF AL** | **€19.5B** | +2.0% |
+| Adj EPS | €2.00 | +5.2% |
+
+## FY2026 Guidance (subida)
+
+- Adj EBITDA AL **~€47.5B**
+- FCF AL **>€19.8B**
+- Adj EPS **~€2.20**
+
+## Dividendo + Buyback
+
+- **Dividendo FY2025 €1.00/acción** (+11% — récord)
+- Pagado 8 abril 2026 · Ex 2 abril
+- ADR DTEGY (1:1) recibió ~$1.18, yield ~3.5%
+- Política: 40-60% Adj EPS sostenible
+- **Buyback FY26 hasta €2B** (anunciado 5 enero 2026)
+  - Tranche 1: ~15.6M shares / ~€471M (completada Q1)
+  - Tranche 2: hasta €550M (abril-junio)
+- **Total capital return ~5% market cap/año**
+
+## Germany Fiber
+
+- **12.6M hogares FTTH** al cierre 2025
+- Target +1M en 2026 (Alemania)
+- **25M hogares FTTH Alemania para 2030**
+- Berlín alcanzó 1M FTTH milestone 2026
+
+## Europa — 10 Países
+
+Austria, Croacia, República Checa, Grecia, Hungría, Polonia, Eslovaquia, Montenegro, Macedonia del Norte, Holanda. **Saliendo de Rumania**.
+
+- 8.6M clientes convergentes (FMC)
+- 5G coverage 89.3%
+
+## ¿Por qué cotiza cerca de mínimo 52 semanas?
+
+1. **Huelga ver.di Alemania** — 60,000 trabajadores, +6.6% pay + €660 bono
+2. **USD débil** comprime traducción TMUS (Q1 +7.5% org vs +2.0% rep = FX)
+3. **Cable MVNO TMUS** — Comcast + Charter capturando ~39% net postpaid adds 2025
+4. Headline GAAP Q1 -28% (base effects)
+
+## Analyst Consensus
+
+- Rating: **Strong Buy** (18 Buy / 0 Hold / 0 Sell en MarketScreener)
+- Target XETRA promedio: €37.11 (rango €33-€44)
+- ADR target: **~$42** vs $33.82 spot = **+24% upside**
+
+## Anchor Fact — el setup que define la tesis
+
+**Deutsche Telekom vale $165B en bolsa. Su pedazo del 57% de T-Mobile US sola vale ~$119B. Significa que el mercado le pone solo ~$46B al resto del negocio — toda Alemania (12.6M hogares con fibra), 10 países europeos con 8.6M clientes, y T-Systems — que juntos generaron €20.5B de Adj EBITDA AL en 2025.**
+
+Implied stub = 2.2x EV/EBITDA vs sector telecom europeo 5-7x. Descuento brutal.
+
+(Fuente: TMUS market cap CompaniesMarketCap mayo 2026 + DT Q1 2026 release)
+
+## Tesis en una línea
+
+> Comprar la telecom más grande de Europa con yield 3.5% + buyback €2B (~5% capital return) cuando el mercado valora el pedazo de T-Mobile US ($119B) en 72% del market cap total ($165B) — implicando que toda Alemania (12.6M FTTH), 10 países europeos (8.6M clientes convergentes), y T-Systems (B2B IT) cotizan a ~2.2x EV/EBITDA vs sector 5-7x. Q1 2026 entregó +7.5% Adj EBITDA AL organic + récord FCF + guidance subida. Tim Höttges CEO 12 años extendido +5 más, política dividend creciente, fiber moat estructural.
+
+---
+
+*Research fecha: 19 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 42.00,
+    analyst_upside: 24.2,
+    status: "active",
+    first_researched_at: "2026-05-19T00:00:00Z",
+    last_updated_at: "2026-05-19T00:00:00Z",
+    next_review_at: "2026-11-19T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -11841,6 +12135,30 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #74* — May 18, 2026\n\n🏢 *Travel + Leisure Co.* (TNL) — $62.75\n\n🏝️ *Lo que hacen*: TNL es el *operador #1 mundial de vacation ownership* (timeshares) — significa que es dueño de 245+ resorts vacacionales y los vende como "intervalos" (1-2 semanas al año durante 30 años) a familias que quieren tener un lugar fijo de vacaciones. Tiene *~830,000 familias propietarias* globalmente. Marcas: *Club Wyndham*, *WorldMark by Wyndham*, *Margaritaville Vacation Club* (la marca de Jimmy Buffett — playa, sol, tequila), *Sports Illustrated Resorts* (lanzado 2023, lifestyle SI-branded), *Accor Vacation Club* (Asia). Plus opera *RCI* — la red #1 mundial de intercambio entre owners (4,200+ resorts donde puedes intercambiar tu semana). Y dueño de la mítica revista *Travel + Leisure* (la compró por $100M en 2021 a Meredith — incluye los "World's Best Awards", el Michelin Stars de hospitality).\n\n🌍 *Presencia*: HQ Orlando, Florida. *~17,000 empleados* (US 13k, México/Caribe 2k, Asia-Pacífico 2k). Spin-off de Wyndham Worldwide en mayo 2018 como Wyndham Destinations → *rebrandeado a "Travel + Leisure Co." el 17 enero 2022* después de comprar la marca T+L. *Michael Brown es CEO desde mayo 2021* (también President) — 5 años en rol, EPS CAGR +14% bajo su gestión.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.19% anual* solo por ser dueño — uno de los yields más altos del Consumer Cyclical. Dividendo trimestral $0.56 (subió +12% en marzo 2026). Plus: $200M de buyback FY26 = ~5% del market cap saliendo. *Total capital return ~8% al año*. Cada vez que una familia compra una semana en Margaritaville Lake Tahoe, un owner viaja a Cancún con su intervalo Wyndham, o alguien se suscribe a Travel + Leisure GO ($99/año, lanzado oct 2023) — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: TNL tiene *deuda 3.5x EBITDA* — no es low-debt company. Si llega recesión hard, las vacaciones son el primer gasto que la gente recorta. En COVID 2020 cortaron el dividendo (de $0.50 a $0.30) y revenue cayó -45%. Riesgos: (1) recesión hit discretionary spend, (2) industria timeshare tiene mala reputación histórica (high-pressure sales, dificultad para salir) — class actions comunes, TNL settled $35M en Florida 2023, (3) owner base average age 55+ años — millennials prefieren Airbnb experiences, no commitments 30 años, (4) Jimmy Buffett murió septiembre 2023 — su estate retiene la marca Margaritaville pero brand value depende de continued relevance cultural.\n\n🆕 Posición #74\n🔗 https://vectorialdata.com/stocks/TNL\n✅ Certificado por blockchain → vectorialdata.com/verify/TNL\n\n💡 Dato que ancla la tesis: TNL tiene *~830,000 familias propietarias pagando ~$1,200/año en maintenance fees* (la cuota anual obligatoria por mantener el resort) = *~$1 mil millón al año de revenue recurrente* sin necesidad de vender un solo intervalo nuevo. Es como ARR (annual recurring revenue) de software pero con real estate físico — y el churn es <3% anual porque salir del contrato es difícil + el lock-in legal es real. Plus la métrica clave del business *VPG (Volume Per Guest)* creció +4% YoY en Q1 2026 a $3,180 — significa que cada guest tour gasta más cada año, demostrando pricing power. Comprar TNL a $62.75 (P/E forward 8.2x, uno de los más baratos del S&P Consumer Cyclical) cuando Q1 2026 entregó EBITDA +8%, EPS +12%, devuelve ~8% del market cap al año vía dividendo + buyback, y la marca Travel + Leisure (revista fundada 1971 por American Express, comprada a Meredith en $100M) es un asset oculto que valdría $1 mil millones standalone.`,
     attestation_uid: "0x951f9267e60d4970206cf7788c5bbdb5274a7b0198654c21d81a584f04579a99",
   },
+  {
+    id: 75,
+    stock_id: 76,
+    ticker: "EADSY",
+    type: "new" as const,
+    cycle_number: 15,
+    price: 50.12,
+    open_price: 50.12,
+    date: "2026-05-19",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #75* — May 19, 2026\n\n🏢 *Airbus SE* (EADSY) — $50.12\n\n✈️ *Lo que hacen*: Airbus es *el fabricante #1 mundial de aviones comerciales* — superó a Boeing en 2019 y desde entonces no ha cedido el liderazgo. Su producto estrella es la *familia A320* (A319/A320/A321), el avión más vendido en la historia de la aviación civil con más de *12,487 entregados desde 1988* — si subiste a un avión narrowbody en los últimos años, probablemente fue un A320. También fabrica el A220 (regional), el A330 + A350 (widebodies para vuelos transatlánticos), helicópteros H125/H145/H160 (es #1 mundial en helicópteros civiles + militares), y tiene división Defence & Space que produce el Eurofighter Typhoon, el transporte militar A400M, satélites Galileo (el GPS europeo) y los lanzadores Ariane.\n\n🌍 *Presencia*: HQ legal en Leiden, Holanda; HQ operativa en *Toulouse, Francia* (donde se ensambla cada A320 del mundo). Líneas de ensamblaje adicionales en Hamburgo (Alemania), Sevilla (España), Tianjin (China) y Mobile, Alabama (USA). *~145,000 empleados* en 35 países. *Guillaume Faury es CEO desde 2019*, contrato re-extendido +5 años en 2025 — fue quien lideró la recuperación post-COVID y posicionó a Airbus en el liderazgo permanente vs Boeing.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.89% anual* solo por ser dueño. Dividendo 2025 €3.20/acción ordinaria (+6.7% vs €3.00 en 2024) — el ADR EADSY (cada ADR = 1/4 de acción ordinaria) recibió ~$0.90 en abril 2026. Plus buyback (solo para compensación a empleados ~4.14M shares, NO es retorno agresivo). Cada vez que Lufthansa recibe un A350 nuevo, IndiGo en India suma A320neos a su flota, o el ejército alemán compra un Eurofighter — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: Q1 2026 fue débil — *EBIT cayó -52% YoY* a €300M y las entregas bajaron a 114 vs 136 — porque hay *escasez de motores GTF de Pratt & Whitney* (RTX) que frena el ramp del A320neo. Es un cuello de botella temporal pero hasta que se resuelva (2026-2027), Airbus no puede entregar todos los aviones que tiene vendidos. Otros riesgos: (1) si Boeing recupera momentum con el 737 MAX 7/10 certificado finales 2026, podría retomar share, (2) recesión global hit a demanda aerolíneas, (3) FCAS (programa fighter europeo con Francia/Alemania/España) estancado en Phase 1B, (4) exposición al ciclo aviación civil que es volátil.\n\n🆕 Posición #75 — Cierra Ciclo 15\n🔗 https://vectorialdata.com/stocks/EADSY\n✅ Certificado por blockchain → vectorialdata.com/verify/EADSY\n\n💡 Dato que ancla la tesis: Airbus tiene *9,037 aviones vendidos en backlog* — es decir, contratos firmes ya pagados o comprometidos para entregar en los próximos años. A su ritmo actual de ~870 entregas al año, eso es *~10 años de producción vendida por adelantado*. Y el valor de ese backlog es *€619 mil millones* — *4 veces el valor total de la empresa en bolsa* (mcap ~€143B). Ninguna empresa industrial del mundo tiene este nivel de visibilidad de revenue. Comprar EADSY a $50.12 (cerca del mínimo 52 semanas $44-$64.35, P/E forward 20.8x) cuando el mercado castiga la acción por un problema temporal de motores Pratt & Whitney que se resuelve en 12-24 meses, mientras el backlog 10 años de producción y el duopolio estructural con Boeing (que sigue paralizado con cert delays del 737 MAX 7/10 + 777X slipped a 2027) permanecen intactos. Plus Defence & Space inflexionando al alza con Europa rearmando — D&S EBIT casi se duplicó en Q1 2026 (€130M vs €77M) por Eurofighter ramping. Analyst consensus Buy con target €218 (AIR.PA) = ~+27% upside ordinaria, ~+20% upside ADR.`,
+  },
+  {
+    id: 76,
+    stock_id: 77,
+    ticker: "DTEGY",
+    type: "new" as const,
+    cycle_number: 16,
+    price: 33.82,
+    open_price: 33.82,
+    date: "2026-05-19",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #76* — May 19, 2026\n\n🏢 *Deutsche Telekom AG* (DTEGY) — $33.82\n\n📡 *Lo que hacen*: Deutsche Telekom es *la telecom más grande de Europa por revenue* (€119 mil millones FY2025) — es la sucesora del operador estatal alemán Deutsche Bundespost, privatizada en 1995. Tiene 4 negocios: (1) *T-Mobile US* — DT es dueña del *57.1% de T-Mobile US* (TMUS, #2 wireless USA con ~110M clientes postpaid, líder en cobertura 5G mid-band), (2) *Alemania* — operador #1 mobile (~38% market share), #1 fixed broadband + #1 en fibra (12.6M hogares ya conectados con FTTH, target 25M para 2030), (3) *Europa* — opera en 10 países (Austria, Croacia, República Checa, Grecia, Hungría, Polonia, Eslovaquia, Montenegro, Macedonia del Norte, Holanda), (4) *T-Systems* — IT services B2B para corporativos (cloud, ciberseguridad, integración).\n\n🌍 *Presencia*: HQ Bonn, Alemania. *~200,000 empleados* globales. La marca consumer es *Magenta* (el color magenta es trademark icónico de DT). *Tim Höttges es CEO desde 2014* — uno de los CEOs telco más respetados de Europa, arquitecto de la fusión T-Mobile US + Sprint (2020) que transformó TMUS de #3 a #2 wireless USA. Contrato extendido +5 años en 2025. En junio 2025 DT subió su participación en T-Mobile US a 57.1% comprando shares a SoftBank.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.5% anual* solo por ser dueño. Dividendo FY2025 €1.00/acción (+11% vs €0.90 — récord histórico), pagado 8 abril 2026 — el ADR DTEGY (ratio 1:1) recibió ~$1.18. Plus buyback FY26 hasta *€2 mil millones* (~3% del market cap retirement) — €471M / 15.6M shares ya completados en Q1. *Total capital return ~5% al año*. Cada vez que un alemán paga su factura de Magenta, un cliente en USA usa T-Mobile, o una empresa europea contrata IT con T-Systems — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: Q1 2026 reportado tiene 2 narrativas en tensión: (1) la huelga del sindicato *ver.di* en Alemania — 60,000 trabajadores piden +6.6% pay + €660 bono, se resolverá con compromiso ~4-5% (costo absorbible ~€500M sobre base de €119B revenue), (2) competencia de *cable MVNO en USA* — Comcast/Charter capturando ~39% de net adds wireless aprovechando red de T-Mobile, presiona margenes. Otros riesgos: (3) regulación europea telecom (UE empuja mejor cobertura rural sin compensar capex), (4) deuda neta ~€115B (apalancada por compras TMUS), (5) FX USD débil deprime traducción de TMUS a euros.\n\n🆕 Posición #76 — Abre Ciclo 16\n🔗 https://vectorialdata.com/stocks/DTEGY\n✅ Certificado por blockchain → vectorialdata.com/verify/DTEGY\n\n💡 Dato que ancla la tesis: hagamos la cuenta — Deutsche Telekom vale en bolsa *$165 mil millones*. Su pedazo del 57% de T-Mobile US vale *$119 mil millones* (TMUS cotiza a ~$209B mcap). Eso significa que el mercado le pone solo *$46 mil millones al resto del negocio* — toda Alemania (operador #1 mobile + #1 broadband + #1 fibra con 12.6M hogares conectados rumbo a 25M en 2030), 10 países europeos con 8.6M clientes convergentes, y T-Systems IT services. Esos negocios generaron *€20.5 mil millones de EBITDA en 2025*. Es como si te ofrecieran un departamento en Berlín + un coche premium + un negocio rentable funcionando — todo al precio de solo el coche. La valuación implícita del "resto" es 2.2x EV/EBITDA cuando telecoms europeas cotizan a 5-7x — descuento brutal. Comprar DTEGY a $33.82 (cerca del mínimo 52 semanas $30.31-$40.58) cuando Q1 2026 entregó +7.5% EBITDA orgánico, récord FCF Q1 de €5.7B, EPS +7.9%, guidance FY26 SUBIDA, dividendo récord €1.00 (+11%), buyback €2B activo. Analyst consensus Strong Buy 18-0-0 con target promedio €37.11 = ~+24% upside ADR ($42 vs $33.82 spot). Backup tesis: incluso si TMUS cae 20%, DT sigue barata por la cobertura del stake.`,
+  },
 ];
 
 type Cycle = {
@@ -11970,7 +12288,15 @@ export const cycles: Cycle[] = [
     cycle_number: 15,
     type: "new" as const,
     target_count: 5,
-    current_count: 4,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 16,
+    cycle_number: 16,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 1,
     status: "active" as const,
   },
 ];
