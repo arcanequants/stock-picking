@@ -50,11 +50,39 @@ struct PortfolioView: View {
 
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color("AppBackground").ignoresSafeArea()
-                content
+            ScrollView {
+                LazyVStack(spacing: 12) {
+                    if let resp = vm.response {
+                        TotalsRow(resp: resp)
+                        if let sectors = resp.sectorAllocation, !sectors.isEmpty {
+                            AllocationSection(title: "Sector mix", buckets: sectors)
+                        }
+                        if let regions = resp.regionAllocation, !regions.isEmpty {
+                            AllocationSection(title: "Region mix", buckets: regions)
+                        }
+                        PositionsHeader()
+                        ForEach(vm.displayedPositions) { p in
+                            NavigationLink(value: p) {
+                                PositionRow(position: p)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    } else if vm.isLoading {
+                        ProgressView().padding(.top, 40)
+                    } else if let msg = vm.errorMessage {
+                        Text(msg)
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                            .padding(.top, 40)
+                    }
+                }
+                .padding(16)
             }
+            .background(Color("AppBackground"))
             .navigationTitle("Portfolio")
+            .navigationDestination(for: Position.self) { position in
+                PositionDetailView(position: position)
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu {
@@ -72,33 +100,13 @@ struct PortfolioView: View {
             .task { await vm.load() }
         }
     }
-
-    @ViewBuilder private var content: some View {
-        if vm.isLoading && vm.response == nil {
-            ProgressView()
-        } else if let msg = vm.errorMessage, vm.response == nil {
-            Text(msg).font(.footnote).foregroundStyle(.secondary)
-        } else {
-            ScrollView {
-                LazyVStack(spacing: 10) {
-                    if let resp = vm.response {
-                        TotalsRow(resp: resp)
-                    }
-                    ForEach(vm.displayedPositions) { p in
-                        PositionRow(position: p)
-                    }
-                }
-                .padding(16)
-            }
-        }
-    }
 }
 
 private struct TotalsRow: View {
     let resp: PortfolioPositions
 
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Total return").font(.caption).foregroundStyle(.white.opacity(0.6))
                 Text(formatPct(resp.totalReturnPct))
@@ -106,16 +114,38 @@ private struct TotalsRow: View {
                     .foregroundStyle(resp.totalReturnPct >= 0 ? Color("BrandEmerald") : .red)
             }
             Spacer()
-            VStack(alignment: .trailing, spacing: 2) {
+            VStack(alignment: .center, spacing: 2) {
                 Text("Positions").font(.caption).foregroundStyle(.white.opacity(0.6))
                 Text("\(resp.totalPositions)")
                     .font(.title3.weight(.semibold))
                     .foregroundStyle(.white)
             }
+            Spacer()
+            if let dy = resp.avgDividendYield, dy > 0 {
+                VStack(alignment: .trailing, spacing: 2) {
+                    Text("Avg dividend").font(.caption).foregroundStyle(.white.opacity(0.6))
+                    Text(String(format: "%.2f%%", dy))
+                        .font(.title3.weight(.semibold))
+                        .foregroundStyle(.white)
+                }
+            }
         }
         .padding(16)
         .background(Color("CardBackground"))
         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+}
+
+private struct PositionsHeader: View {
+    var body: some View {
+        HStack {
+            Text("POSITIONS")
+                .font(.caption.weight(.semibold))
+                .tracking(1.1)
+                .foregroundStyle(.white.opacity(0.55))
+            Spacer()
+        }
+        .padding(.top, 4)
     }
 }
 

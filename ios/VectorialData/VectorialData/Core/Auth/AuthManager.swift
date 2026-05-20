@@ -1,5 +1,8 @@
 import Foundation
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 /// Observable auth state + magic-link flow coordinator.
 ///
@@ -25,7 +28,16 @@ final class AuthManager: ObservableObject {
         case signedIn
     }
 
-    private init() {}
+    private init() {
+        // Hook the network client into our refresh flow. APIClient calls back
+        // here whenever a request returns 401; we trade the refresh_token in
+        // the Keychain for a fresh access_token and let the request retry.
+        Task { [weak self] in
+            await APIClient.shared.setRefreshHandler {
+                await self?.refreshAccessToken() ?? false
+            }
+        }
+    }
 
     func restoreSession() async {
         if let token = KeychainHelper.get(accessTokenKey) {
@@ -37,17 +49,70 @@ final class AuthManager: ObservableObject {
     }
 
     /// Sends a magic-link email. Success shows "check your email" in the UI.
+    ///
+    /// In Debug builds, when the backend returns `dev_link` (RESEND not configured),
+    /// auto-open it so the simulator deep-links back into the app without needing
+    /// `xcrun simctl openurl` from a terminal.
     func requestMagicLink(email: String, locale: String) async throws {
         struct Body: Encodable {
             let email: String
             let locale: String
             let client: String
         }
-        _ = try await APIClient.shared.post(
+        struct Response: Decodable {
+            let ok: Bool?
+            let devLink: String?
+            enum CodingKeys: String, CodingKey {
+                case ok
+                case devLink = "dev_link"
+            }
+        }
+        let resp = try await APIClient.shared.post(
             "/api/auth/magic-link",
             body: Body(email: email, locale: locale, client: "ios"),
-            as: EmptyResponse.self
+            as: Response.self
         )
+
+        #if DEBUG && canImport(UIKit)
+        if let link = resp.devLink, let url = URL(string: link) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        #endif
+    }
+
+    /// Trades the Keychain refresh_token for a fresh access_token. Called
+    /// automatically by `APIClient` on 401s. Returns `true` if the bearer was
+    /// refreshed and the original request should retry.
+    func refreshAccessToken() async -> Bool {
+        guard let refreshToken = KeychainHelper.get(refreshTokenKey) else {
+            return false
+        }
+        struct Body: Encodable { let refreshToken: String }
+        struct Response: Decodable {
+            let accessToken: String
+            let refreshToken: String
+            let expiresAt: Int?
+        }
+        do {
+            let resp = try await APIClient.shared.post(
+                "/api/auth/ios-refresh",
+                body: Body(refreshToken: refreshToken),
+                as: Response.self
+            )
+            KeychainHelper.set(resp.accessToken, forKey: accessTokenKey)
+            KeychainHelper.set(resp.refreshToken, forKey: refreshTokenKey)
+            await APIClient.shared.setBearer(resp.accessToken)
+            return true
+        } catch {
+            return false
+        }
+    }
+
+    /// Public re-fetch of `/api/me`. Views that show subscription state
+    /// (e.g. AccountView) call this on appear so the user doesn't see stale
+    /// "Free" status after their Stripe payment activates.
+    func refreshCurrentUser() async {
+        await refreshProfile()
     }
 
     /// Called by the @main App when a `vectorialdata://auth?token_hash=X&type=Y` URL is opened.

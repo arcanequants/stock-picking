@@ -48,6 +48,8 @@ struct AccountView: View {
             }
             .navigationTitle("Account")
             .task { await notifications.refreshStatus() }
+            .task { await auth.refreshCurrentUser() }
+            .refreshable { await auth.refreshCurrentUser() }
         }
     }
 

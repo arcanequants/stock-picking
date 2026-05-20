@@ -8,7 +8,7 @@ enum AppConfig {
            let url = URL(string: override) {
             return url
         }
-        return URL(string: "https://www.vectorialdata.com")!
+        return URL(string: "https://vectorialdata.com")!
     }()
 
     /// Deep-link scheme registered in Info.plist CFBundleURLTypes.

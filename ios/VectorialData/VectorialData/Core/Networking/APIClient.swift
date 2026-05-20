@@ -9,6 +9,7 @@ actor APIClient {
     private let decoder: JSONDecoder
     private let encoder: JSONEncoder
     private var bearerToken: String?
+    private var refreshHandler: (() async -> Bool)?
 
     private init() {
         let config = URLSessionConfiguration.default
@@ -23,6 +24,12 @@ actor APIClient {
 
     func setBearer(_ token: String) { bearerToken = token }
     func clearBearer() { bearerToken = nil }
+
+    /// Installed once by `AuthManager`. Returns `true` if a refresh succeeded
+    /// and the bearer was updated; `false` if the refresh token is dead.
+    func setRefreshHandler(_ handler: @escaping () async -> Bool) {
+        self.refreshHandler = handler
+    }
 
     func get<T: Decodable>(_ path: String, as _: T.Type) async throws -> T {
         try await request(path: path, method: "GET", body: Optional<Never>.none, as: T.self)
@@ -40,7 +47,8 @@ actor APIClient {
         path: String,
         method: String,
         body: B?,
-        as _: T.Type
+        as _: T.Type,
+        allowRefresh: Bool = true
     ) async throws -> T {
         guard let url = URL(string: path, relativeTo: AppConfig.apiBaseURL) else {
             throw APIError.invalidURL
@@ -66,6 +74,22 @@ actor APIClient {
             }
             return try decoder.decode(T.self, from: data)
         case 401:
+            // Supabase access_tokens expire after 1h. Try to swap the refresh
+            // token for a fresh one and replay the request once. If the
+            // refresh also fails, the session is dead — bubble up so the
+            // caller can sign out.
+            if allowRefresh, let refresh = refreshHandler {
+                let didRefresh = await refresh()
+                if didRefresh {
+                    return try await request(
+                        path: path,
+                        method: method,
+                        body: body,
+                        as: T.self,
+                        allowRefresh: false
+                    )
+                }
+            }
             throw APIError.unauthorized
         case 429:
             throw APIError.rateLimited

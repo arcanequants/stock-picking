@@ -10,6 +10,8 @@ struct AuthView: View {
     @State private var isSending = false
     @State private var sent = false
     @State private var errorMessage: String?
+    @State private var resendCooldown: Int = 0
+    @State private var cooldownTimer: Timer?
 
     var body: some View {
         ZStack {
@@ -35,7 +37,13 @@ struct AuthView: View {
                 }
 
                 if sent {
-                    ConfirmationCard(email: email)
+                    ConfirmationCard(
+                        email: email,
+                        isResending: isSending,
+                        resendCooldown: resendCooldown,
+                        onResend: resend,
+                        onUseDifferentEmail: useDifferentEmail
+                    )
                 } else {
                     SignInCard(
                         email: $email,
@@ -56,6 +64,7 @@ struct AuthView: View {
             .padding(24)
         }
         .preferredColorScheme(.dark)
+        .onDisappear { cooldownTimer?.invalidate() }
     }
 
     private func send() {
@@ -74,8 +83,48 @@ struct AuthView: View {
                     locale: Locale.current.identifier
                 )
                 sent = true
+                startResendCooldown()
             } catch {
                 errorMessage = error.localizedDescription
+            }
+        }
+    }
+
+    private func resend() {
+        guard resendCooldown == 0, !isSending else { return }
+        isSending = true
+        Task {
+            defer { isSending = false }
+            do {
+                try await auth.requestMagicLink(
+                    email: email,
+                    locale: Locale.current.identifier
+                )
+                startResendCooldown()
+            } catch {
+                errorMessage = error.localizedDescription
+            }
+        }
+    }
+
+    private func useDifferentEmail() {
+        cooldownTimer?.invalidate()
+        cooldownTimer = nil
+        resendCooldown = 0
+        sent = false
+        errorMessage = nil
+    }
+
+    private func startResendCooldown() {
+        cooldownTimer?.invalidate()
+        resendCooldown = 30
+        cooldownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            Task { @MainActor in
+                if resendCooldown > 0 {
+                    resendCooldown -= 1
+                } else {
+                    timer.invalidate()
+                }
             }
         }
     }
@@ -135,23 +184,65 @@ private struct SignInCard: View {
 
 private struct ConfirmationCard: View {
     let email: String
+    let isResending: Bool
+    let resendCooldown: Int
+    let onResend: () -> Void
+    let onUseDifferentEmail: () -> Void
 
     var body: some View {
-        VStack(spacing: 12) {
-            Image(systemName: "envelope.badge.fill")
-                .font(.system(size: 44))
-                .foregroundStyle(Color("BrandEmerald"))
-            Text("Check your email")
-                .font(.title2.weight(.semibold))
-                .foregroundStyle(.white)
-            Text("We sent a sign-in link to \(email). Tap it on this device to continue.")
-                .font(.body)
+        VStack(spacing: 20) {
+            VStack(spacing: 12) {
+                Image(systemName: "envelope.badge.fill")
+                    .font(.system(size: 44))
+                    .foregroundStyle(Color("BrandEmerald"))
+                Text("Check your email")
+                    .font(.title2.weight(.semibold))
+                    .foregroundStyle(.white)
+                Text("We sent a sign-in link to \(email). Tap it on this device to continue.")
+                    .font(.body)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.white.opacity(0.75))
+            }
+
+            Text("Didn't receive it? Check your spam folder.")
+                .font(.footnote)
+                .foregroundStyle(.white.opacity(0.55))
                 .multilineTextAlignment(.center)
-                .foregroundStyle(.white.opacity(0.75))
+
+            VStack(spacing: 10) {
+                Button(action: onResend) {
+                    HStack {
+                        if isResending { ProgressView().tint(.white) }
+                        Text(resendLabel)
+                            .font(.subheadline.weight(.semibold))
+                    }
+                    .frame(maxWidth: .infinity, minHeight: 44)
+                    .foregroundStyle(.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .stroke(.white.opacity(0.25), lineWidth: 1)
+                    )
+                }
+                .disabled(resendCooldown > 0 || isResending)
+                .opacity(resendCooldown > 0 || isResending ? 0.5 : 1)
+
+                Button(action: onUseDifferentEmail) {
+                    Text("Use a different email")
+                        .font(.subheadline)
+                        .foregroundStyle(.white.opacity(0.7))
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }
+            }
         }
         .padding(24)
         .frame(maxWidth: .infinity)
         .background(Color("CardBackground"))
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
+
+    private var resendLabel: String {
+        if isResending { return "Resending…" }
+        if resendCooldown > 0 { return "Resend in \(resendCooldown)s" }
+        return "Resend email"
     }
 }
