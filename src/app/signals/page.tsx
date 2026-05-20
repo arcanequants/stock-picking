@@ -11,6 +11,9 @@ import {
 import { getSignalView } from "@/lib/signals-view";
 import { SignalCard } from "@/components/SignalCard";
 import { SignalViewToggle } from "@/components/SignalViewToggle";
+import { SignalsHormuzMap } from "@/components/SignalsHormuzMap";
+import { SignalsTropomiMap } from "@/components/SignalsTropomiMap";
+import { SignalsWhatsAppCta } from "@/components/SignalsWhatsAppCta";
 import { JsonLd, getServiceSchema } from "@/lib/seo";
 
 const SITE_URL = "https://vectorialdata.com";
@@ -66,12 +69,14 @@ async function loadSignals() {
 type EnrichedRow = Awaited<ReturnType<typeof loadSignals>>[number];
 
 function groupByDomain(rows: EnrichedRow[]) {
+  // Energy first — it's the only domain with all observations live today, so
+  // the user's first scroll lands on real numbers, not calibrating skeletons.
   const order: SignalDefinition["domain"][] = [
-    "maritime",
     "energy",
-    "geospatial",
+    "maritime",
     "atmospheric",
     "agricultural",
+    "geospatial",
     "cross",
   ];
   const map = new Map<string, EnrichedRow[]>();
@@ -99,6 +104,25 @@ export default async function SignalsIndexPage() {
   const enriched = await loadSignals();
   const grouped = groupByDomain(enriched);
 
+  // Honest live/calibrating counter for the hero — workers' Quant Alt Data +
+  // PM rule: show what's actually published, don't inflate.
+  const liveCount = enriched.filter((r) => r.latest).length;
+  const calibratingCount = enriched.length - liveCount;
+
+  // Pull the Hormuz row so the flagship map can quote the real baseline from
+  // DB (not invent one). When the ingestor hasn't produced an observation
+  // yet, baselineCount stays null and the map shows "—" honestly.
+  const hormuzRow = enriched.find((r) => r.def.id === "hormuz-transit");
+  const hormuzBaseline =
+    hormuzRow?.latest?.baseline_value !== null &&
+    hormuzRow?.latest?.baseline_value !== undefined
+      ? Number(hormuzRow.latest.baseline_value)
+      : null;
+  const hormuzLatest =
+    hormuzRow?.latest?.value !== null && hormuzRow?.latest?.value !== undefined
+      ? Number(hormuzRow.latest.value)
+      : null;
+
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -125,12 +149,17 @@ export default async function SignalsIndexPage() {
               Vectorial Signals
             </p>
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
-              The hedge fund&apos;s eyes. Translated.
+              Alt-data signals, translated for retail.
             </h1>
             <p className="text-text-muted max-w-2xl mt-2 leading-relaxed">
-              Alternative-data signals from public satellites, AIS, EIA, USDA, and
-              TROPOMI — cleaned, baselined, translated. One number, one baseline,
-              one sentence.
+              The same kind of data hedge funds buy — public satellites, AIS,
+              EIA, USDA, TROPOMI — cleaned, baselined, and explained in plain
+              language. One number, one baseline, one sentence.
+            </p>
+            <p className="text-xs text-text-faint mt-3 tabular-nums">
+              <span className="text-emerald-600 dark:text-emerald-400">●</span>{" "}
+              {liveCount} live · {calibratingCount} calibrating ·{" "}
+              {enriched.length} total
             </p>
           </div>
           {user && (
@@ -164,10 +193,33 @@ export default async function SignalsIndexPage() {
         </div>
       </header>
 
+      {/* Flagship live visuals — the "wow" surface. Two maps that move (one
+          AIS, one satellite raster), each tied to a real signal in the
+          catalog below. Maritime first because the AOI + ship dots animate
+          continuously; TROPOMI second because it's a daily refresh. */}
+      <section className="space-y-3">
+        <div className="flex items-baseline justify-between gap-3 flex-wrap">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-text-faint">
+            Live · seen from above
+          </h2>
+          <p className="text-xs text-text-faint">
+            Maps refresh on their natural cadence (AIS: seconds · NO₂: daily).
+            Open a card below for methodology, backtest, and provenance.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <SignalsHormuzMap
+            baselineCount={hormuzBaseline}
+            liveCountFallback={hormuzLatest}
+          />
+          <SignalsTropomiMap />
+        </div>
+      </section>
+
       {grouped.length === 0 ? (
         <p className="text-text-muted text-sm">No live signals yet.</p>
       ) : (
-        grouped.map((group) => (
+        grouped.map((group, groupIndex) => (
           <section key={group.domain} className="space-y-3">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-text-faint">
               {DOMAIN_LABEL[group.domain]}
@@ -184,9 +236,14 @@ export default async function SignalsIndexPage() {
                 />
               ))}
             </div>
+            {/* CTA after the first domain group only — avoids ad-fatigue while
+                still catching the scroll early. Footer CTA below repeats. */}
+            {groupIndex === 0 && <SignalsWhatsAppCta variant="compact" />}
           </section>
         ))
       )}
+
+      <SignalsWhatsAppCta variant="footer" />
 
       <footer className="border-t border-border pt-6 text-xs text-text-faint leading-relaxed max-w-3xl space-y-2">
         <p>

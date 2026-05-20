@@ -14,6 +14,9 @@ import {
 import { getSignalView } from "@/lib/signals-view";
 import { SignalViewToggle } from "@/components/SignalViewToggle";
 import { SignalSparkline } from "@/components/SignalSparkline";
+import { SignalsHormuzMap } from "@/components/SignalsHormuzMap";
+import { SignalsTropomiMap } from "@/components/SignalsTropomiMap";
+import { SignalsWhatsAppCta } from "@/components/SignalsWhatsAppCta";
 import { JsonLd } from "@/lib/seo";
 
 const SITE_URL = "https://vectorialdata.com";
@@ -165,6 +168,24 @@ export default async function SignalDetailPage({
         )}
       </section>
 
+      {/* Live visualization — gated by signal id so other detail pages stay
+          uncluttered. Maritime + Atmospheric flagships only for now. */}
+      {definition.id === "hormuz-transit" && (
+        <SignalsHormuzMap
+          baselineCount={
+            latest?.baseline_value !== null && latest?.baseline_value !== undefined
+              ? Number(latest.baseline_value)
+              : null
+          }
+          liveCountFallback={
+            latest?.value !== null && latest?.value !== undefined
+              ? Number(latest.value)
+              : null
+          }
+        />
+      )}
+      {definition.id === "tropomi-no2-economic" && <SignalsTropomiMap />}
+
       {view === "pro" ? (
         <section className="rounded-xl border border-border p-5 space-y-2">
           <p className="text-xs uppercase tracking-wide text-text-faint">
@@ -250,6 +271,8 @@ export default async function SignalDetailPage({
           )}
         </dl>
       </section>
+
+      <SignalsWhatsAppCta variant="footer" />
 
       <section className="rounded-xl border border-border bg-card p-5 space-y-2">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-text-faint">
