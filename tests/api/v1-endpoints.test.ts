@@ -85,10 +85,9 @@ describe("Auth registration", () => {
     expect(status).toBe(200);
     expect(body.data.api_key).toBeDefined();
     expect(body.data.api_key).toMatch(/^vd_live_/);
-    expect(body.data.tier).toBe("free");
-    expect(body.data.daily_limit).toBe(10);
-
     apiKey = body.data.api_key;
+
+    expect(body.data.credits_remaining).toBeGreaterThan(0);
   });
 });
 
@@ -102,12 +101,13 @@ describe("Edge cases", () => {
     expect(body.error).toContain("Missing API key");
   });
 
-  it("Request with invalid key → 401", async () => {
+  it("Request with invalid key → 402", async () => {
+    // Middleware does not distinguish invalid-key from no-credits to avoid
+    // leaking key validity — both land on 402.
     const res = await fetch(`${BASE}/picks`, {
       headers: { Authorization: "Bearer vd_live_invalid_key_12345" },
     });
-    const body = await res.json();
-    expect(res.status).toBe(401);
+    expect(res.status).toBe(402);
   });
 
   it("GET /research/XXXINVALID → 404 or 401", async () => {
@@ -126,7 +126,7 @@ describe("Free tier endpoints", () => {
     expect(Array.isArray(body.data)).toBe(true);
     expect(body.data.length).toBeLessThanOrEqual(3);
     expect(body.meta.tier).toBe("free");
-    expect(body.meta.requests_remaining).toBeDefined();
+    expect(body.meta.credits_remaining).toBeDefined();
     // Validate pick structure
     const pick = body.data[0];
     expect(pick).toHaveProperty("ticker");
