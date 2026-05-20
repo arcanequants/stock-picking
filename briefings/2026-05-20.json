@@ -1,0 +1,105 @@
+{
+  "date": "2026-05-20",
+  "summary": "La guerra en Irán mantiene el petróleo en $106/b, dispara las tasas de deuda en EEUU a máximos de 17 años y fuerza a bancos centrales del mundo a pausar o revertir recortes de tasas.",
+  "causalChain": "El bloqueo iraní del Estrecho de Ormuz recortó ~25% del comercio marítimo de petróleo global, elevando el Brent de ~$70 a un pico de $138/b; la inflación resultante frenó al Fed (3.5–3.75%), empujó el rendimiento del bono 30y de EEUU a 5.19% —máximo desde antes de 2008—, obligó a Australia a subir tasas y a la ECB/BoE a pausar recortes, mientras el oro tocó $4,600/oz y el Bitcoin superó $80K ante la fuga de activos tradicionales.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz blockade: largest oil supply shock in history, Brent still ~$106/b", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 30-year borrowing cost hits 5.19%, highest since pre-2008 financial crisis", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold near $4,600/oz as investors shift away from dollar assets amid war and tariffs", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts to 6.5% but Q1 GDP shrank 0.8%, worst since pandemic", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "USMCA formal review launches May 25, nearshoring FDI record at stake", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "Bank of Japan frozen at 0.75% as yen slides past 160/$ and inflation hits 2.8%", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "China: home prices, factory output, and consumer spending all weaken in April", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB holds at 2% but markets price in three hikes by year-end as inflation rebounds to 3%", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "UK retail confidence at worst on record (-68) even as March GDP beats forecasts", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA hikes to 4.35% to fight oil-driven inflation; RBNZ holds at 2.25%", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP and Rio Tinto explore sharing Pilbara iron ore mines, targeting 200M tonnes", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin above $80K on 9-day ETF inflow streak totaling $2.7B", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Digital-dollar supply tops $323B as US GENIUS Act and EU MiCA force compliance", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "Yale team: dark matter may come in two distinct forms, challenging 40 years of physics", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "King's College London creates aluminum compound 20,000x cheaper than platinum for chemical reactions", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Ultra-cold microscopy captures collagen fiber assembly step-by-step for the first time", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Iran has blocked the narrow waterway that one-quarter of the world's oil normally flows through. Since March, almost no tankers can get past. Oil hit $138 a barrel in April — the biggest supply crunch in recorded history, larger than the 1970s oil shocks, according to the International Energy Agency. Prices have eased to around $106 but remain far above pre-crisis levels. Governments are scrambling to find alternate shipping routes."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government now pays more to borrow money for 30 years than at any point since before the 2008 financial crisis — 5.19% per year. Why? Oil-driven inflation is back, and the Federal Reserve is keeping its benchmark rate at 3.5–3.75% with zero cuts planned for 2026. When the government has to pay more to borrow, mortgages, car loans, and credit cards all get pricier for everyone."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold hit roughly $4,600 an ounce — nearly three times its 2022 price. The Iran conflict is pushing global investors to park money outside US-dollar assets. Add a 10% tax on most US imports that took effect in February, and you have a classic recipe for gold demand: war, rising prices, and policy uncertainty. Analysts at JPMorgan see gold touching $5,000 before year-end."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.5% on May 7, making borrowing cheaper to try to boost the economy. The problem: Mexico's economy shrank 0.8% in the first quarter of 2026, its worst since the pandemic. Inflation sits at 4.5%, above the 3% target. The bank signals this may be its last cut for now — it needs to watch whether oil-driven inflation gets any worse."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "The US, Mexico, and Canada begin formally reviewing their trade deal — USMCA — on May 25. What is at stake: rules for how much of a product must be made in North America to avoid tariffs. For Mexico this matters enormously. Foreign companies invested a record $40.9 billion there in 2025, largely to build factories closer to US consumers. Stricter rules of origin could slow that factory-migration wave significantly."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's central bank held its interest rate at 0.75% and now forecasts inflation at 2.8%, far above its 2% target — mostly because of oil from the Iran conflict. Meanwhile, the yen weakened past 160-per-dollar, a level that makes Japanese officials nervous, forcing two rounds of market intervention in recent weeks. The root cause: US rates are nearly 3 points above Japan's, pulling money out of the yen."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "China's housing market slipped again in April, with new home prices falling at their fastest pace since mid-2025. Factory output hit its slowest since July 2023, and consumer spending grew just 0.2% — barely above zero. The yuan briefly touched its strongest level in three years in January, but investor optimism faded quickly as each new data release confirms domestic demand remains weak."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's central bank held its interest rate at 2% on April 30, but the math is getting complicated. Inflation across the eurozone jumped to 3% — above its 2% target — mostly because oil costs from the closed strait pushed energy bills higher. The economy grew just 0.8% in the first quarter. Markets now expect Europe's central bank to start raising rates as early as June, reversing a year of cuts."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "A key UK survey of retailers fell to -68 in April — the lowest reading since the survey began in 1983, meaning British shop owners are more pessimistic than at any point on record. Yet the broader economy grew unexpectedly in March, beating forecasts. The Bank of England held its rate at 3.75%. The contradiction: corporate fear is real, but household spending has not collapsed yet. Rising energy costs remain the central threat."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its main interest rate to 4.35% in May — a reversal after months of cuts. The reason: higher oil prices from the Middle East conflict pushed inflation back above the bank's comfort zone. New Zealand's central bank took the opposite view, holding its rate at 2.25%, betting the energy-price spike will prove temporary. Two neighboring economies, two very different calls."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "The world's two largest mining companies — BHP and Rio Tinto — are exploring a deal to share operations at neighboring iron ore mines in Australia's Pilbara region, potentially producing up to 200 million tonnes per year combined. Both depend heavily on Chinese demand for steel. As China's property sector cools, sharing infrastructure lowers costs at exactly the moment the iron ore outlook becomes cloudier."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin crossed $80,000 powered by nine straight days of buying through US investment funds that hold Bitcoin — roughly $2.7 billion in under two weeks. About 33,000–35,000 Bitcoin have been pulled out of active circulation and locked into these funds. BlackRock and Fidelity account for most of the buying. Supply is tighter too: the daily rate of new Bitcoin entering the market was cut in half after April's scheduled mining-reward reduction."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "The total value of digital dollars — tokens that mimic the US dollar but run on crypto networks — has crossed $323 billion. The two biggest issuers hold $189.6B and $77.6B respectively. In 2026 the US passed its first federal law requiring every digital dollar to be backed 1-for-1 with real money, pushing smaller, looser issuers to comply or shut down. Europe separately capped their use in payments at €200 million per day."
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "Most of what exists in the universe is invisible — scientists call it dark matter. Prof. Priyamvada Natarajan and PhD students Barry Chiang and Isaque Dutra at Yale used light-bending measurements around three galaxy clusters to challenge old assumptions. Their data fits only if dark matter comes in two distinct forms, or if a completely new type of particle exists. Either answer rewrites the physics textbook. 📄 Published in The Astrophysical Journal Letters · More: https://news.yale.edu/2026/05/14/it-time-expand-our-thinking-about-dark-matter-new-study-says-yes"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Platinum and palladium power thousands of industrial chemical reactions, but they cost tens of thousands of dollars per kilogram. Scientists at King's College London built a new aluminum compound shaped like a triangle of three atoms — stable enough to work in liquids and break chemistry's toughest bonds. Aluminum costs up to 20,000 times less than platinum, opening a path to far cheaper industrial processes. 📄 Published in Nature Communications · More: https://www.sciencedaily.com/releases/2026/04/260429102032.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Collagen is the protein scaffolding that holds your tendons, skin, and bones together. Using ultra-cold electron microscopy, researchers watched — in real time — individual collagen fibers forming, capturing two previously invisible steps in the process. The fibers pass through a fragile, unstable shape on the way to their final form, which explains why small genetic mutations can cause severe connective-tissue diseases. 📄 Published in Nature Communications · More: https://www.nature.com/articles/s41467-026-71205-5"
+    }
+  ]
+}
