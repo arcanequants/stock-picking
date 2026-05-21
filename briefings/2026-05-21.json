@@ -1,0 +1,117 @@
+{
+  "date": "2026-05-21",
+  "summary": "Hormuz peace signals push oil below $100 as markets reprice the global energy crisis",
+  "causalChain": "Trump's ceasefire signals with Iran erased the Hormuz blockade premium from oil prices, cooling inflation fears worldwide — but elevated US borrowing costs, a sliding yen, and back-to-back rate hikes from Australia to a paused Mexico show central banks still fighting an energy shock that isn't fully resolved.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Trump: US-Iran peace talks in final stages — oil drops 6.5% to $97", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US borrowing costs hit recent highs, gold steadies after Iran news", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "US-China tariff truce: 30%/10% ceasefire, structural tensions intact", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts to 6.50%, signals end of 14-meeting easing cycle", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Mexico Q1 GDP contracts 0.8%, worst quarterly drop since pandemic", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Nearshoring record: $40.9B FDI, factory wages 25% below China", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Yen slides to 159/dollar — seventh straight day, near intervention threshold", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "BoJ raises inflation forecast to 2.8%, cuts growth outlook to 0.5%", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Yuan gains 2% vs dollar since April — PBOC defending actively", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "ECB holds at 2.15%, stuck between energy inflation and weak growth", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "Germany factory output falls again, DAX drops 1.6%", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "RBA hikes 3rd time this year to 4.35%, signals possible pause", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "Rio Tinto + BHP explore joint 200M-tonne iron ore venture in Pilbara", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Bitcoin at $80K: large investors quietly bought 61K BTC in past month", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "US digital-dollar rules near finish line — regulated players to win", "worker": "—"},
+    {"n": 16, "region": "CIENCIA", "angle": "Lab-grown food pipe works in living animals without rejection drugs", "worker": "—"},
+    {"n": 17, "region": "CIENCIA", "angle": "Cambridge: LED lamp modifies drug molecules without toxic chemicals", "worker": "—"},
+    {"n": 18, "region": "CIENCIA", "angle": "Universe physics constants sit in narrow 'sweet spot' — without it, no liquid-based life", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Trump says the US is near a deal with Iran. If it holds, the naval blockade choking off a quarter of the world's oil supply eases — so oil fell over 6% to about $97 a barrel today. Less fear of a supply cut means lower energy prices, less pressure on inflation, and a little more breathing room for central banks around the world."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "What the US government pays to borrow money hit a recent high this week, pulling investors away from gold and stocks. When the US borrows at higher rates, holding other assets looks less attractive. Gold recovered slightly today as those rates eased after the Iran peace news reduced inflation fears. Watch this number — it sets the tone for almost every investment globally."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The US and China agreed to lower the taxes each charges on the other's goods — the US to 30%, China to 10%. It's a ceasefire, not peace: tech export controls and rare-earth restrictions remain. Companies have already moved 25% of iPhone production to India and Vietnam. The question is whether this fragile truce survives the next political shock from either side."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.5% on May 7 — the 14th cut in two years. Lower rates make borrowing cheaper, but the bank signaled this is likely the last cut for now. Inflation is still at 4.5%, above the 3% goal. The 3-point gap between Mexican and US rates keeps attracting investors seeking higher returns, helping support the peso."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's economy shrank 0.8% in the first three months of 2026 — the worst quarterly drop since the pandemic. US tariff uncertainty slowed exports, while domestic spending stayed weak. Analysts still project 1.5–1.8% full-year growth if conditions stabilize. The peso is forecast near 18 per dollar by year-end, roughly flat from today."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Companies leaving China are choosing Mexico at record speed. The country pulled in $40.9 billion in foreign investment through the first nine months of 2025 — the most ever. Factory wages sit at about $4.90 an hour, 25% cheaper than China. With the US-Mexico-Canada trade pact running at 89% compliance, the case for manufacturing in Mexico keeps strengthening."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "The Japanese yen fell to 159 per dollar this week — its seventh straight day of decline, and close to the level that triggered government intervention last month. Japan's central bank keeps rates at 0.75% while the US holds near 5%. Investors chase the higher US rate by selling yen. If the yen breaks 160, Japan's government will likely step in again to prop it up."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's central bank raised its inflation forecast to 2.8% for this fiscal year, driven by high oil prices from the Hormuz crisis. At the same time, it cut its growth forecast to 0.5%. The bank faces a classic bind: raise rates to fight inflation and you crush already weak growth; hold steady and the yen keeps falling. For now it's watching and waiting."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "China's yuan has gained about 2% against the dollar since April — unusual in a region where most currencies are losing ground. China's central bank actively controls how much its currency moves each day. A stronger yuan makes Chinese goods slightly more expensive for foreign buyers — the opposite of what you'd expect if Beijing wanted to offset US tariffs."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Europe's central bank left its main rate at 2.15% — caught between energy-driven inflation and weak growth. Cut rates and inflation gets worse. Keep them high and Germany's shrinking factories slow further. Economists expect the eurozone to grow only 0.9% this year. The longer the Middle East conflict keeps energy prices elevated, the harder this balancing act becomes."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Germany's factories produced less in March 2026 — and its main stock index fell 1.6% today. Europe's biggest economy is being hit from three sides at once: expensive energy from the Middle East conflict, slower Chinese demand, and US tariffs on European goods. Growth forecasts for Germany stay below 1% for 2026, with economists divided on whether a recession is avoidable."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised rates for the third time this year, pushing its main rate to 4.35%. Inflation hit 4.6% annually, driven partly by rising global energy costs. Higher rates mean larger monthly payments for millions of Australian mortgage holders — painful when everyday costs are also climbing. The bank hinted it may now pause to see if three hikes are enough."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "Mining giants Rio Tinto and BHP agreed to explore sharing iron ore mines in Western Australia, potentially extracting 200 million tonnes together. Sharing infrastructure cuts costs and makes both companies more competitive. Australia is deeply tied to Chinese steel demand — any slowdown in China's construction sector shows up almost immediately in Australian mining revenues."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading near $80,000 — up 15% since April but still 37% below its October 2025 record of $126,000. In the past month, large investors quietly bought over 61,000 Bitcoin, pushing the share of coins held long-term to 78%. Funds listed on US stock exchanges pulled in $2.44 billion in new money in April — the best month since October. This kind of quiet accumulation has historically come before larger price moves."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "US lawmakers are close to finalizing rules for digital dollars — coins designed to always be worth exactly one US dollar. Clear rules are expected to push out smaller, less trustworthy issuers and hand market share to regulated ones. Over $150 billion in digital dollars now circulate globally, powering a large chunk of daily trading volume. These rules could reshape how money moves across borders."
+    },
+    {
+      "n": 16,
+      "region": "CIENCIA",
+      "text": "Scientists grew a food pipe in a lab and implanted it into pigs — no rejection drugs needed. They stripped cells from a donor organ and rebuilt it with the recipient's own cells. All eight animals recovered and swallowed normally within three months. First full success of its kind. Team: Prof. Paolo De Coppi, UCL & Great Ormond Street Hospital. 📄 Published in Nature Biotechnology · More: https://www.gosh.nhs.uk/news/engineered-tissue-offers-hope-for-children-born-with-missing-food-pipe/"
+    },
+    {
+      "n": 17,
+      "region": "CIENCIA",
+      "text": "Cambridge chemists accidentally discovered how to modify finished drug molecules using just an LED lamp — no heavy metals, no toxic chemicals. Old methods only worked early in manufacturing; this works at the final stage. The discovery could speed up drug development and cut costs significantly. Led by Erwin Reisner's team, University of Cambridge. 📄 Published in Nature Synthesis · More: https://www.nature.com/articles/s44160-026-00994-w"
+    },
+    {
+      "n": 18,
+      "region": "CIENCIA",
+      "text": "Physicists at Queen Mary University of London calculated that the universe's basic physics constants — numbers governing how particles interact — sit in an incredibly narrow range. Shift them even slightly and liquids get too thick or sticky for cells to work. Life needs a very specific universe to exist. The research uses fluid physics to frame this question for the first time. 📄 Published via ScienceDaily · More: https://www.sciencedaily.com/releases/2026/05/260508022653.htm"
+    }
+  ]
+}
