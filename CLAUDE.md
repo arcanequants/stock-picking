@@ -44,6 +44,15 @@ I have a team of 31 specialized workers in `.claude/workers/`. **I must automati
 |--------|------|-------------|
 | **Application Security Engineer** (Latacora / tptacek) | `security-engineer.md` | Supabase RLS, secrets/keys, webhook signatures, auth/session security, API key rotation, OWASP, dependency audits, threat modeling |
 
+### EO Visualization Workers (4) — Vectorial Signals visual layer
+
+| Worker | File | Invoke When |
+|--------|------|-------------|
+| **EO Color & Imagery Scientist** (Robert Simmon / NASA Earth Observatory) | `eo-color-simmon.md` | Colormap selection, gamma correction, satellite imagery rendering, CVD-safe palettes, basemap-vs-data brightness, "this heatmap looks muddy", anything where someone might pick jet/rainbow |
+| **EO Cartography & Data-Density Designer** (Eric Fischer) | `eo-cartography-fischer.md` | "Show all N points vs aggregate", choropleth/hex/dot decision, zoom-dependent rendering, label hierarchy on satellite, cooperativeGestures, MapLibre/deck.gl, polar vs Mercator |
+| **EO Storytelling & Scientific Visualization** (NASA SVS — Mitchell/Shirah) | `eo-storytelling-svs.md` | Time-lapse narrative arc, camera moves on map data, "make this loop cinematic", 15s/90s/6min cuts, Remotion/Blender pipelines, audio cues, OG-image-from-frame |
+| **EO Basemap Aesthetic & Artistic Cartography** (Stamen Design — Rodenbeck) | `eo-stamen.md` | Basemap selection (Watercolor/Toner/Terrain/Esri/Black Marble), house basemap style, editorial/hero/OG map composition, framing, Climate TRACE-tier visual ambition |
+
 ### Alt Data & Signals Workers (6) — Vectorial Signals submarca
 
 | Worker | File | Invoke When |
@@ -123,6 +132,16 @@ I have a team of 31 specialized workers in `.claude/workers/`. **I must automati
 - **"China economic activity proxy"** → Atmospheric Science (NO₂) + Maritime Intelligence (port congestion) + Geospatial Intelligence (factory activity)
 - **"crop call for ag commodity futures"** → Agricultural Remote Sensing + Quant Alt Data + Energy & Commodities (positioning context)
 
+**EO Visualization (visual layer for any Vectorial Signal):**
+- **"pick the colormap / this heatmap is muddy / is this colorblind-safe / why does my satellite image look brown"** → EO Color (Simmon)
+- **"pick the basemap / make this hero map magazine-cover / OG image composition / framing"** → EO Basemap Aesthetic (Stamen)
+- **"show all N points vs aggregate / choropleth vs hex vs dots / labels colliding / zoom-dependent rendering / cooperative gestures"** → EO Cartography (Fischer)
+- **"make this map cinematic / autoplay loop length / animate vs small-multiples / 15s/90s/6min cuts / OG still from time-series"** → EO Storytelling (NASA SVS)
+- **"build a hero map for a signal end-to-end"** → EO Basemap (Stamen) + EO Color (Simmon) + EO Cartography (Fischer) + domain worker(s) + Copywriter
+- **"the map looks like a dashboard, not a piece"** → EO Basemap (Stamen) + EO Storytelling (NASA SVS)
+- **"WOW / Earth-from-space / cinematic basemap"** → EO Basemap (Stamen) + EO Color (Simmon) + EO Storytelling (NASA SVS)
+- **EO workers compose WITH domain workers** — domain owns the data, EO workers own how the data is rendered
+
 **Security:**
 - **"Supabase RLS / database linter errors"** → Security Engineer + Privacy & Data Protection
 - **"is this endpoint safe? / threat model this"** → Security Engineer
@@ -173,4 +192,4 @@ Sibling product `Vectorial Data Broker` lives at `/Users/albertosorno/vectoriald
 
 When editing any of these workers in stock-picking, remember they're also load-bearing for the broker — keep them product-agnostic where possible (no stock-picking-only assumptions in the worker spec, just in the example sections).
 
-**Workers exclusive to stock-picking** (broker does NOT use): email-designer, newsletter, retention, seo-ai-discovery, ui-designer, landing-conversion, legal-asia-pacific, legal-mena-africa, legal-latam, legal-consumer, legal-content-promotions, legal-ip-brand, **maritime-intelligence, energy-commodities, geospatial-intelligence, quant-alt-data, atmospheric-science, agricultural-remote-sensing** (6 alt-data workers — Vectorial Signals submarca lives only in stock-picking).
+**Workers exclusive to stock-picking** (broker does NOT use): email-designer, newsletter, retention, seo-ai-discovery, ui-designer, landing-conversion, legal-asia-pacific, legal-mena-africa, legal-latam, legal-consumer, legal-content-promotions, legal-ip-brand, **maritime-intelligence, energy-commodities, geospatial-intelligence, quant-alt-data, atmospheric-science, agricultural-remote-sensing** (6 alt-data workers — Vectorial Signals submarca lives only in stock-picking), **eo-color-simmon, eo-cartography-fischer, eo-storytelling-svs, eo-stamen** (4 EO visualization workers — they exist to serve the Vectorial Signals submarca).

@@ -45,16 +45,15 @@ const HORMUZ_VIEW = {
   zoom: 7.0,
 };
 
-// NASA GIBS — MODIS Terra true-color satellite imagery. Real Earth from space,
-// not a vector basemap. We use a date 3 days back to guarantee the tile is
-// fully composited (MODIS pipeline finishes within ~36 h of acquisition).
-function gibsDateBack(daysBack: number) {
-  const d = new Date();
-  d.setUTCDate(d.getUTCDate() - daysBack);
-  return d.toISOString().split("T")[0];
-}
-const SAT_DATE = gibsDateBack(3);
-const SAT_TILE = `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${SAT_DATE}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpeg`;
+// Esri World Imagery — global high-resolution true-color satellite mosaic.
+// Per Robert Simmon (NASA Earth Observatory): deep-blue ocean + crisp coastlines,
+// free for low-volume, the consumer floor for "Earth from space" basemaps in 2026.
+// No date dependency — Esri composites globally and refreshes their mosaic
+// quarterly, so we get a clean, cloud-masked image with no daily-cadence gaps.
+const SAT_TILE =
+  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+const SAT_ATTRIBUTION =
+  "Imagery © Esri · Maxar · Earthstar Geographics · USDA · USGS";
 
 const ACCENT_CYAN = "#00BCD4";
 const TANKER_RED = "#ef4444";
@@ -231,21 +230,33 @@ export function SignalsHormuzMap({
             type: "raster",
             tiles: [SAT_TILE],
             tileSize: 256,
-            attribution:
-              "Imagery © NASA GIBS / MODIS · OpenStreetMap contributors",
-            maxzoom: 9,
+            attribution: SAT_ATTRIBUTION,
+            maxzoom: 18,
           },
         },
         layers: [
           { id: "bg", type: "background", paint: { "background-color": "#000814" } },
-          { id: "satellite", type: "raster", source: "satellite", paint: { "raster-opacity": 0.92, "raster-saturation": -0.15, "raster-contrast": 0.08 } },
+          {
+            id: "satellite",
+            type: "raster",
+            source: "satellite",
+            paint: {
+              // Per Simmon: raster-resampling linear + slight saturation lift
+              // makes Esri's deep-blue ocean read as cinema, not as a screenshot.
+              "raster-opacity": 1.0,
+              "raster-resampling": "linear",
+              "raster-saturation": 0.15,
+              "raster-contrast": 0.1,
+              "raster-brightness-min": 0.02,
+            },
+          },
         ],
       },
       center: HORMUZ_VIEW.center,
       zoom: HORMUZ_VIEW.zoom,
       attributionControl: { compact: true },
       cooperativeGestures: true,
-      maxZoom: 9,
+      maxZoom: 12,
       minZoom: 5,
     });
 
@@ -1021,7 +1032,7 @@ export function SignalsHormuzMap({
             <span className="tracking-widest">MARITIME · HORMUZ TSS</span>
           </div>
           <div className="text-slate-400">
-            BASE <span className="text-slate-200">MODIS Terra · {SAT_DATE}</span>
+            BASE <span className="text-slate-200">Esri World Imagery · Maxar</span>
           </div>
           <div className="text-slate-400">
             VESSELS{" "}
@@ -1061,31 +1072,61 @@ export function SignalsHormuzMap({
         </div>
       </div>
 
-      {/* Stat strip */}
+      {/* Stat strip — when AIS is live, show vessel telemetry. When the AIS
+          feed is down, fall back to the always-available chokepoint facts so
+          the strip is never a wall of em-dashes (the prior failure mode). */}
       <div className="grid grid-cols-3 gap-3 px-5 py-4 text-sm bg-card border-t border-border">
-        <Stat
-          label="Tankers in view"
-          value={tankerDisplay}
-          tone="red"
-          subtle={status === "live" ? "live · AIS" : "AIS feed pending"}
-        />
-        <Stat
-          label="All vessels"
-          value={allVesselsDisplay}
-          tone="cyan"
-          subtle={status === "live" ? "live · AIS" : "last baseline"}
-        />
-        <Stat
-          label="30d transit avg"
-          value={baselineDisplay}
-          tone="muted"
-          subtle="from signal baseline"
-        />
+        {status === "live" ? (
+          <>
+            <Stat
+              label="Tankers in view"
+              value={tankerDisplay !== null ? String(tankerDisplay) : "—"}
+              tone="red"
+              subtle="live · AIS"
+            />
+            <Stat
+              label="All vessels"
+              value={allVesselsDisplay !== null ? String(allVesselsDisplay) : "—"}
+              tone="cyan"
+              subtle="live · AIS"
+            />
+            <Stat
+              label="30d transit avg"
+              value={baselineDisplay !== null ? String(baselineDisplay) : "—"}
+              tone="muted"
+              subtle="from signal baseline"
+            />
+          </>
+        ) : (
+          <>
+            <Stat
+              label="Daily transit"
+              value="~17"
+              suffix="Mb/d"
+              tone="red"
+              subtle="EIA · 2024 avg"
+            />
+            <Stat
+              label="Of seaborne oil"
+              value="21"
+              suffix="%"
+              tone="cyan"
+              subtle="passes this strait"
+            />
+            <Stat
+              label="Chokepoint width"
+              value="33"
+              suffix="km"
+              tone="muted"
+              subtle="Iran ↔ Oman narrows"
+            />
+          </>
+        )}
       </div>
 
       {(status === "no-key" || status === "error") && (
         <div className="px-5 pb-4 text-[11px] text-text-muted leading-relaxed border-t border-border pt-3 font-mono">
-          <span className="text-cyan-400">●</span> Live geospatial layer: MODIS Terra imagery ({SAT_DATE}), IMO Traffic Separation Scheme lanes, AOI per signal methodology. Vessel overlay activates when AIS feed reconnects.
+          <span className="text-cyan-400">●</span> Live geospatial layer: Esri World Imagery (Maxar mosaic), IMO Traffic Separation Scheme lanes, AOI per signal methodology. Vessel overlay activates when AIS feed reconnects.
         </div>
       )}
     </div>
@@ -1134,11 +1175,13 @@ function QuoteCell({
 function Stat({
   label,
   value,
+  suffix,
   tone,
   subtle,
 }: {
   label: string;
-  value: number | null;
+  value: string;
+  suffix?: string;
   tone: "red" | "cyan" | "muted";
   subtle?: string;
 }) {
@@ -1154,10 +1197,15 @@ function Stat({
         {label}
       </p>
       <p
-        key={value ?? "empty"}
+        key={value}
         className={`text-xl font-semibold tabular-nums ${colorClass} font-mono transition-opacity`}
       >
-        {value !== null ? value : "—"}
+        {value}
+        {suffix && (
+          <span className="text-[10px] font-normal text-text-faint ml-1">
+            {suffix}
+          </span>
+        )}
       </p>
       {subtle && (
         <p className="text-[9px] uppercase tracking-widest text-text-faint mt-0.5">
