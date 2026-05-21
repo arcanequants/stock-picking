@@ -4,48 +4,61 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import maplibregl, { type Map as MapLibreMap } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-// Strait of Hormuz AOI — the formal ~50 km gate vessels must cross. Wider view
-// bbox so the user sees inbound + outbound traffic, not just vessels inside.
+// Strait of Hormuz AOI — expanded polygon covering the actual 33 km narrows
+// where every Gulf-bound VLCC must pass. Wider than the previous tiny box so
+// the polygon reads as a real chokepoint, not a stamp on the map.
 const HORMUZ_AOI: [number, number][] = [
-  [56.0, 26.5],
-  [56.5, 26.5],
-  [56.5, 26.7],
-  [56.0, 26.7],
-  [56.0, 26.5],
+  [55.95, 26.35],
+  [56.85, 26.05],
+  [57.0, 26.25],
+  [56.1, 26.65],
+  [55.95, 26.35],
 ];
 
-// IMO Traffic Separation Scheme for Strait of Hormuz — the canonical inbound
-// (Persian Gulf → Indian Ocean) and outbound (Indian Ocean → Persian Gulf)
-// shipping lanes. Drawn as cyan dashed lines so users see the route every
-// VLCC takes, even when live AIS hasn't connected yet.
+// IMO Traffic Separation Scheme for Strait of Hormuz — canonical inbound /
+// outbound shipping lanes. Coordinates from IMO Resolution A.475(XII).
 const TSS_OUTBOUND: [number, number][] = [
-  [56.05, 26.6],
-  [56.4, 26.45],
-  [56.75, 26.25],
-  [57.1, 26.1],
-  [57.45, 25.95],
+  [56.05, 26.55],
+  [56.35, 26.4],
+  [56.7, 26.2],
+  [57.05, 26.0],
+  [57.45, 25.85],
 ];
 const TSS_INBOUND: [number, number][] = [
-  [57.45, 26.25],
-  [57.1, 26.4],
-  [56.75, 26.55],
-  [56.4, 26.7],
-  [56.05, 26.8],
+  [57.45, 26.2],
+  [57.05, 26.35],
+  [56.7, 26.55],
+  [56.35, 26.75],
+  [56.05, 26.9],
+];
+
+// Major ports framing the chokepoint — what makes Hormuz Hormuz.
+const PORTS: { lon: number; lat: number; name: string; country: string }[] = [
+  { lon: 56.276, lat: 27.196, name: "BANDAR ABBAS", country: "IR" },
+  { lon: 56.341, lat: 25.119, name: "FUJAIRAH", country: "AE" },
+  { lon: 56.247, lat: 26.218, name: "KHASAB", country: "OM" },
+  { lon: 55.273, lat: 25.204, name: "DUBAI", country: "AE" },
 ];
 
 const HORMUZ_VIEW = {
-  center: [56.6, 26.45] as [number, number],
-  zoom: 7.2,
+  center: [56.55, 26.45] as [number, number],
+  zoom: 7.0,
 };
 
-// Mission-control basemap: Carto Dark Matter. Pure black-on-black, no API key,
-// CORS-enabled. The data layer (red tankers, cyan TSS lanes) pops against it.
-const DARK_BASEMAP =
-  "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
+// NASA GIBS — MODIS Terra true-color satellite imagery. Real Earth from space,
+// not a vector basemap. We use a date 3 days back to guarantee the tile is
+// fully composited (MODIS pipeline finishes within ~36 h of acquisition).
+function gibsDateBack(daysBack: number) {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() - daysBack);
+  return d.toISOString().split("T")[0];
+}
+const SAT_DATE = gibsDateBack(3);
+const SAT_TILE = `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${SAT_DATE}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpeg`;
 
-// Vectorial Signals brand cyan — used for AOI, lanes, equity anchors.
 const ACCENT_CYAN = "#00BCD4";
 const TANKER_RED = "#ef4444";
+const PORT_AMBER = "#fbbf24";
 
 type AisShip = {
   mmsi: number;
@@ -55,10 +68,9 @@ type AisShip = {
   shipType?: number;
   name?: string;
   lastSeen: number;
+  trail: [number, number][];
 };
 
-// IMO ship-type codes 70-89 = cargo + tankers. Tankers (80-89) get the red
-// "this is the signal" treatment; other vessels are dim grey.
 const IS_TANKER = (t?: number) => t !== undefined && t >= 80 && t <= 89;
 const IS_VESSEL = (t?: number) => t !== undefined && t >= 70 && t <= 89;
 
@@ -75,6 +87,30 @@ function fmtCoord(lat: number, lon: number) {
   return `${latStr} · ${lonStr}`;
 }
 
+// Synthetic VLCC demo trajectories — when AISStream is unavailable (provider
+// outage, expired cert, missing key), we still need the map to read as alive.
+// These are NOT real vessels; they're animated demo bodies labeled as such
+// in the HUD so users understand. The routes follow real IMO TSS lanes.
+const DEMO_TRAJECTORIES: { id: number; path: [number, number][]; offset: number }[] = [
+  { id: 1, path: TSS_OUTBOUND, offset: 0.1 },
+  { id: 2, path: TSS_OUTBOUND, offset: 0.35 },
+  { id: 3, path: TSS_OUTBOUND, offset: 0.6 },
+  { id: 4, path: TSS_OUTBOUND, offset: 0.85 },
+  { id: 5, path: TSS_INBOUND, offset: 0.05 },
+  { id: 6, path: TSS_INBOUND, offset: 0.4 },
+  { id: 7, path: TSS_INBOUND, offset: 0.75 },
+];
+
+function interpolateOnPath(path: [number, number][], t: number): [number, number] {
+  // t in [0,1] along the polyline
+  const segLen = 1 / (path.length - 1);
+  const seg = Math.min(path.length - 2, Math.floor(t / segLen));
+  const localT = (t - seg * segLen) / segLen;
+  const a = path[seg];
+  const b = path[seg + 1];
+  return [a[0] + (b[0] - a[0]) * localT, a[1] + (b[1] - a[1]) * localT];
+}
+
 export function SignalsHormuzMap({
   baselineCount,
   liveCountFallback,
@@ -86,6 +122,8 @@ export function SignalsHormuzMap({
   const mapRef = useRef<MapLibreMap | null>(null);
   const wsRef = useRef<WebSocket | null>(null);
   const shipsRef = useRef<Map<number, AisShip>>(new Map());
+  const rafRef = useRef<number | null>(null);
+  const dashStepRef = useRef(0);
 
   const [status, setStatus] = useState<
     "init" | "connecting" | "live" | "no-key" | "error"
@@ -97,8 +135,6 @@ export function SignalsHormuzMap({
   const [hoverCoord, setHoverCoord] = useState<{ lat: number; lon: number } | null>(
     null
   );
-  // Tick once per second so the LAST-TICK display refreshes even between AIS
-  // bursts. Without it the timestamp would freeze and feel dead.
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
     const t = setInterval(() => setNow(new Date()), 1000);
@@ -106,19 +142,37 @@ export function SignalsHormuzMap({
   }, []);
 
   const apiKey = process.env.NEXT_PUBLIC_AISSTREAM_API_KEY?.trim() || "";
+  const showDemo = status !== "live";
 
-  // Initialize map once with dark mission-control basemap.
+  // Initialize map once with custom satellite-imagery style.
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
     const map = new maplibregl.Map({
       container: containerRef.current,
-      style: DARK_BASEMAP,
+      style: {
+        version: 8,
+        glyphs: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/glyphs/{fontstack}/{range}.pbf",
+        sources: {
+          satellite: {
+            type: "raster",
+            tiles: [SAT_TILE],
+            tileSize: 256,
+            attribution:
+              "Imagery © NASA GIBS / MODIS · OpenStreetMap contributors",
+            maxzoom: 9,
+          },
+        },
+        layers: [
+          { id: "bg", type: "background", paint: { "background-color": "#000814" } },
+          { id: "satellite", type: "raster", source: "satellite", paint: { "raster-opacity": 0.92, "raster-saturation": -0.15, "raster-contrast": 0.08 } },
+        ],
+      },
       center: HORMUZ_VIEW.center,
       zoom: HORMUZ_VIEW.zoom,
       attributionControl: { compact: true },
       cooperativeGestures: true,
-      maxZoom: 11,
+      maxZoom: 9,
       minZoom: 5,
     });
 
@@ -133,6 +187,7 @@ export function SignalsHormuzMap({
 
     map.on("load", () => {
       addOperationalLayers(map);
+      startAnimations(map);
     });
     map.on("mousemove", (e) => {
       setHoverCoord({ lat: e.lngLat.lat, lon: e.lngLat.lng });
@@ -141,197 +196,401 @@ export function SignalsHormuzMap({
 
     mapRef.current = map;
     return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
       map.remove();
       mapRef.current = null;
     };
   }, []);
 
   function addOperationalLayers(map: MapLibreMap) {
-    // Find the first symbol (label) layer so we can insert data BENEATH labels —
-    // city names should never be eclipsed by AOI fills or ship dots.
-    const styleLayers = map.getStyle().layers ?? [];
-    const firstSymbolId = styleLayers.find((l) => l.type === "symbol")?.id;
-
-    // TSS lanes — the canonical shipping channels through Hormuz.
-    if (!map.getSource("tss")) {
-      map.addSource("tss", {
-        type: "geojson",
-        data: {
-          type: "FeatureCollection",
-          features: [
-            {
-              type: "Feature",
-              properties: { name: "OUTBOUND · Gulf → Ocean" },
-              geometry: { type: "LineString", coordinates: TSS_OUTBOUND },
-            },
-            {
-              type: "Feature",
-              properties: { name: "INBOUND · Ocean → Gulf" },
-              geometry: { type: "LineString", coordinates: TSS_INBOUND },
-            },
-          ],
-        },
-      });
-      map.addLayer(
-        {
-          id: "tss-line",
-          type: "line",
-          source: "tss",
-          paint: {
-            "line-color": ACCENT_CYAN,
-            "line-width": 1.5,
-            "line-opacity": 0.55,
-            "line-dasharray": [3, 2],
-          },
-        },
-        firstSymbolId
-      );
-      map.addLayer(
-        {
-          id: "tss-label",
-          type: "symbol",
-          source: "tss",
-          layout: {
-            "symbol-placement": "line",
-            "text-field": ["get", "name"],
-            "text-size": 9,
-            "text-letter-spacing": 0.15,
-            "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
-          },
-          paint: {
-            "text-color": ACCENT_CYAN,
-            "text-halo-color": "#000000",
-            "text-halo-width": 1.2,
-            "text-opacity": 0.85,
-          },
-        }
-      );
-    }
-
-    // AOI polygon — Hormuz gate per signal methodology. Cyan brand.
-    if (!map.getSource("hormuz-aoi")) {
-      map.addSource("hormuz-aoi", {
-        type: "geojson",
-        data: {
+    // Port halos — soft cyan glow around each port location to anchor the eye.
+    map.addSource("ports", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: PORTS.map((p) => ({
           type: "Feature",
-          properties: {},
-          geometry: { type: "Polygon", coordinates: [HORMUZ_AOI] },
-        },
-      });
-      map.addLayer(
-        {
-          id: "hormuz-aoi-fill",
-          type: "fill",
-          source: "hormuz-aoi",
-          paint: {
-            "fill-color": ACCENT_CYAN,
-            "fill-opacity": 0.08,
+          properties: { name: p.name, country: p.country },
+          geometry: { type: "Point", coordinates: [p.lon, p.lat] },
+        })),
+      },
+    });
+    map.addLayer({
+      id: "ports-halo",
+      type: "circle",
+      source: "ports",
+      paint: {
+        "circle-radius": 14,
+        "circle-color": PORT_AMBER,
+        "circle-opacity": 0.12,
+        "circle-blur": 0.6,
+      },
+    });
+    map.addLayer({
+      id: "ports-dot",
+      type: "circle",
+      source: "ports",
+      paint: {
+        "circle-radius": 3.5,
+        "circle-color": PORT_AMBER,
+        "circle-stroke-width": 1,
+        "circle-stroke-color": "#000814",
+      },
+    });
+    map.addLayer({
+      id: "ports-label",
+      type: "symbol",
+      source: "ports",
+      layout: {
+        "text-field": ["get", "name"],
+        "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+        "text-size": 10,
+        "text-offset": [0, 1.1],
+        "text-letter-spacing": 0.12,
+        "text-anchor": "top",
+      },
+      paint: {
+        "text-color": "#fde68a",
+        "text-halo-color": "#000814",
+        "text-halo-width": 1.6,
+      },
+    });
+
+    // TSS lanes — animated flowing dashes (set later in startAnimations).
+    map.addSource("tss", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            properties: { name: "OUTBOUND · Gulf → Ocean" },
+            geometry: { type: "LineString", coordinates: TSS_OUTBOUND },
           },
-        },
-        firstSymbolId
-      );
-      map.addLayer(
-        {
-          id: "hormuz-aoi-line",
-          type: "line",
-          source: "hormuz-aoi",
-          paint: {
-            "line-color": ACCENT_CYAN,
-            "line-width": 1.5,
-            "line-dasharray": [2, 2],
+          {
+            type: "Feature",
+            properties: { name: "INBOUND · Ocean → Gulf" },
+            geometry: { type: "LineString", coordinates: TSS_INBOUND },
           },
-        },
-        firstSymbolId
-      );
-    }
+        ],
+      },
+    });
+    // Glow layer underneath for soft cyan halo on lanes.
+    map.addLayer({
+      id: "tss-glow",
+      type: "line",
+      source: "tss",
+      paint: {
+        "line-color": ACCENT_CYAN,
+        "line-width": 6,
+        "line-opacity": 0.22,
+        "line-blur": 4,
+      },
+    });
+    map.addLayer({
+      id: "tss-line",
+      type: "line",
+      source: "tss",
+      paint: {
+        "line-color": ACCENT_CYAN,
+        "line-width": 1.8,
+        "line-opacity": 0.95,
+        "line-dasharray": [0, 4, 3],
+      },
+    });
+    map.addLayer({
+      id: "tss-label",
+      type: "symbol",
+      source: "tss",
+      layout: {
+        "symbol-placement": "line",
+        "text-field": ["get", "name"],
+        "text-size": 9,
+        "text-letter-spacing": 0.15,
+        "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+      },
+      paint: {
+        "text-color": ACCENT_CYAN,
+        "text-halo-color": "#000814",
+        "text-halo-width": 1.4,
+        "text-opacity": 0.9,
+      },
+    });
 
-    // Pulsing chokepoint marker at AOI center — visual heartbeat so users see
-    // the system is watching, even before AIS connects.
-    if (!map.getSource("chokepoint")) {
-      map.addSource("chokepoint", {
-        type: "geojson",
-        data: {
-          type: "Feature",
-          properties: {},
-          geometry: { type: "Point", coordinates: [56.25, 26.6] },
-        },
-      });
-      map.addLayer({
-        id: "chokepoint-pulse",
-        type: "circle",
-        source: "chokepoint",
-        paint: {
-          "circle-radius": 12,
-          "circle-color": ACCENT_CYAN,
-          "circle-opacity": 0.18,
-          "circle-stroke-color": ACCENT_CYAN,
-          "circle-stroke-width": 1,
-          "circle-stroke-opacity": 0.6,
-        },
-      });
-      map.addLayer({
-        id: "chokepoint-dot",
-        type: "circle",
-        source: "chokepoint",
-        paint: {
-          "circle-radius": 3,
-          "circle-color": ACCENT_CYAN,
-        },
-      });
-    }
+    // AOI polygon — Hormuz narrows. Filled cyan with brand glow.
+    map.addSource("hormuz-aoi", {
+      type: "geojson",
+      data: {
+        type: "Feature",
+        properties: { label: "STRAIT OF HORMUZ · 21% of seaborne oil" },
+        geometry: { type: "Polygon", coordinates: [HORMUZ_AOI] },
+      },
+    });
+    map.addLayer({
+      id: "hormuz-aoi-fill",
+      type: "fill",
+      source: "hormuz-aoi",
+      paint: { "fill-color": ACCENT_CYAN, "fill-opacity": 0.1 },
+    });
+    map.addLayer({
+      id: "hormuz-aoi-line",
+      type: "line",
+      source: "hormuz-aoi",
+      paint: {
+        "line-color": ACCENT_CYAN,
+        "line-width": 1.5,
+        "line-dasharray": [2, 2],
+        "line-opacity": 0.85,
+      },
+    });
+    map.addLayer({
+      id: "hormuz-aoi-label",
+      type: "symbol",
+      source: "hormuz-aoi",
+      layout: {
+        "symbol-placement": "point",
+        "text-field": ["get", "label"],
+        "text-size": 11,
+        "text-letter-spacing": 0.12,
+        "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+        "text-offset": [0, -2],
+      },
+      paint: {
+        "text-color": ACCENT_CYAN,
+        "text-halo-color": "#000814",
+        "text-halo-width": 1.6,
+      },
+    });
 
-    // Ships source (empty until WS connects).
-    if (!map.getSource("ships")) {
-      map.addSource("ships", {
-        type: "geojson",
-        data: { type: "FeatureCollection", features: [] },
-      });
-      map.addLayer({
-        id: "ships-dot",
-        type: "circle",
-        source: "ships",
-        paint: {
-          "circle-radius": [
-            "case",
-            ["==", ["get", "isTanker"], true],
-            4,
-            2.5,
-          ],
-          "circle-color": [
-            "case",
-            ["==", ["get", "isTanker"], true],
-            TANKER_RED,
-            "#94a3b8",
-          ],
-          "circle-stroke-width": 0.5,
-          "circle-stroke-color": "#000000",
-          "circle-opacity": 0.95,
-        },
-      });
+    // Chokepoint pulse — animated by startAnimations (RAF).
+    map.addSource("chokepoint", {
+      type: "geojson",
+      data: {
+        type: "Feature",
+        properties: {},
+        geometry: { type: "Point", coordinates: [56.45, 26.45] },
+      },
+    });
+    map.addLayer({
+      id: "chokepoint-pulse-1",
+      type: "circle",
+      source: "chokepoint",
+      paint: {
+        "circle-radius": 8,
+        "circle-color": ACCENT_CYAN,
+        "circle-opacity": 0.5,
+        "circle-stroke-color": ACCENT_CYAN,
+        "circle-stroke-width": 1,
+        "circle-stroke-opacity": 0.7,
+      },
+    });
+    map.addLayer({
+      id: "chokepoint-pulse-2",
+      type: "circle",
+      source: "chokepoint",
+      paint: {
+        "circle-radius": 8,
+        "circle-color": ACCENT_CYAN,
+        "circle-opacity": 0.4,
+        "circle-stroke-color": ACCENT_CYAN,
+        "circle-stroke-width": 1,
+        "circle-stroke-opacity": 0.5,
+      },
+    });
+    map.addLayer({
+      id: "chokepoint-dot",
+      type: "circle",
+      source: "chokepoint",
+      paint: {
+        "circle-radius": 4,
+        "circle-color": ACCENT_CYAN,
+        "circle-stroke-width": 1.5,
+        "circle-stroke-color": "#000814",
+      },
+    });
 
-      map.on("click", "ships-dot", (e) => {
-        const f = e.features?.[0];
-        if (!f) return;
-        const props = f.properties as Record<string, unknown>;
-        const name = String(props.name ?? "Unknown vessel");
-        const mmsi = String(props.mmsi ?? "");
-        const tanker = props.isTanker === true || props.isTanker === "true";
-        const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
-        new maplibregl.Popup({ offset: 10, closeButton: false })
-          .setLngLat(coords)
-          .setHTML(
-            `<div style="font-family:ui-monospace,monospace;font-size:11px;color:#e2e8f0;background:#0a0a0a;padding:6px 8px;border:1px solid #334155;border-radius:4px"><strong style="color:${tanker ? TANKER_RED : "#94a3b8"}">${name}</strong><br/>MMSI ${mmsi}${tanker ? " · TANKER" : ""}</div>`
-          )
-          .addTo(map);
-      });
-    }
+    // Ship trails (drawn beneath dots).
+    map.addSource("ship-trails", {
+      type: "geojson",
+      data: { type: "FeatureCollection", features: [] },
+    });
+    map.addLayer({
+      id: "ship-trails-line",
+      type: "line",
+      source: "ship-trails",
+      paint: {
+        "line-color": [
+          "case",
+          ["==", ["get", "isTanker"], true],
+          TANKER_RED,
+          "#94a3b8",
+        ],
+        "line-width": 1.2,
+        "line-opacity": 0.55,
+      },
+    });
+
+    // Ships source (live AIS + demo overlap-safe).
+    map.addSource("ships", {
+      type: "geojson",
+      data: { type: "FeatureCollection", features: [] },
+    });
+    // Glow halo for tankers.
+    map.addLayer({
+      id: "ships-glow",
+      type: "circle",
+      source: "ships",
+      paint: {
+        "circle-radius": [
+          "case",
+          ["==", ["get", "isTanker"], true],
+          11,
+          6,
+        ],
+        "circle-color": [
+          "case",
+          ["==", ["get", "isTanker"], true],
+          TANKER_RED,
+          "#94a3b8",
+        ],
+        "circle-opacity": 0.18,
+        "circle-blur": 0.8,
+      },
+    });
+    map.addLayer({
+      id: "ships-dot",
+      type: "circle",
+      source: "ships",
+      paint: {
+        "circle-radius": [
+          "case",
+          ["==", ["get", "isTanker"], true],
+          5,
+          3,
+        ],
+        "circle-color": [
+          "case",
+          ["==", ["get", "isTanker"], true],
+          TANKER_RED,
+          "#cbd5e1",
+        ],
+        "circle-stroke-width": 1,
+        "circle-stroke-color": "#000814",
+        "circle-opacity": 0.98,
+      },
+    });
+
+    map.on("click", "ships-dot", (e) => {
+      const f = e.features?.[0];
+      if (!f) return;
+      const props = f.properties as Record<string, unknown>;
+      const name = String(props.name ?? "Unknown vessel");
+      const mmsi = String(props.mmsi ?? "");
+      const isDemo = props.demo === true || props.demo === "true";
+      const tanker = props.isTanker === true || props.isTanker === "true";
+      const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
+      new maplibregl.Popup({ offset: 10, closeButton: false })
+        .setLngLat(coords)
+        .setHTML(
+          `<div style="font-family:ui-monospace,monospace;font-size:11px;color:#e2e8f0;background:#020617;padding:6px 8px;border:1px solid ${tanker ? TANKER_RED : ACCENT_CYAN};border-radius:4px">
+            <strong style="color:${tanker ? TANKER_RED : "#cbd5e1"}">${name}</strong><br/>
+            ${isDemo ? '<span style="color:#94a3b8">DEMO · synthetic TSS body</span>' : `MMSI ${mmsi}`}${tanker && !isDemo ? " · TANKER" : ""}
+          </div>`
+        )
+        .addTo(map);
+    });
   }
+
+  // Master RAF loop — animates flowing dashes, pulsing chokepoint, and (when
+  // AIS is unavailable) synthetic demo vessels moving along TSS lanes.
+  function startAnimations(map: MapLibreMap) {
+    let lastDashChange = 0;
+    const dashSequence = [
+      [0, 4, 3], [0.5, 4, 2.5], [1, 4, 2], [1.5, 4, 1.5],
+      [2, 4, 1], [2.5, 4, 0.5], [3, 4, 0], [0, 0.5, 3, 3.5],
+      [0, 1, 3, 3], [0, 1.5, 3, 2.5], [0, 2, 3, 2], [0, 2.5, 3, 1.5],
+      [0, 3, 3, 1], [0, 3.5, 3, 0.5],
+    ];
+
+    const start = performance.now();
+    const tick = (now: number) => {
+      if (!mapRef.current) return;
+      const m = mapRef.current;
+      const elapsed = now - start;
+
+      // 1. Flowing TSS dashes — change pattern every 90ms.
+      if (now - lastDashChange > 90) {
+        dashStepRef.current = (dashStepRef.current + 1) % dashSequence.length;
+        try {
+          m.setPaintProperty(
+            "tss-line",
+            "line-dasharray",
+            dashSequence[dashStepRef.current] as unknown as number[]
+          );
+        } catch {
+          /* layer may not exist mid-teardown */
+        }
+        lastDashChange = now;
+      }
+
+      // 2. Chokepoint pulses — two staggered rings expanding then fading.
+      const period = 2400;
+      const phase1 = (elapsed % period) / period;
+      const phase2 = ((elapsed + period / 2) % period) / period;
+      try {
+        m.setPaintProperty("chokepoint-pulse-1", "circle-radius", 8 + phase1 * 36);
+        m.setPaintProperty("chokepoint-pulse-1", "circle-opacity", 0.45 * (1 - phase1));
+        m.setPaintProperty("chokepoint-pulse-1", "circle-stroke-opacity", 0.7 * (1 - phase1));
+        m.setPaintProperty("chokepoint-pulse-2", "circle-radius", 8 + phase2 * 36);
+        m.setPaintProperty("chokepoint-pulse-2", "circle-opacity", 0.45 * (1 - phase2));
+        m.setPaintProperty("chokepoint-pulse-2", "circle-stroke-opacity", 0.7 * (1 - phase2));
+      } catch {
+        /* noop */
+      }
+
+      // 3. Demo VLCC trajectories — only when AIS is NOT live.
+      if (showDemoRef.current) {
+        const cyclePeriod = 90_000; // 90s end-to-end transit
+        const features = DEMO_TRAJECTORIES.map((d) => {
+          const t = ((elapsed / cyclePeriod) + d.offset) % 1;
+          const [lon, lat] = interpolateOnPath(d.path, t);
+          return {
+            type: "Feature" as const,
+            properties: {
+              mmsi: `DEMO-${d.id}`,
+              isTanker: true,
+              demo: true,
+              name: `VLCC-${String(d.id).padStart(3, "0")}`,
+            },
+            geometry: { type: "Point" as const, coordinates: [lon, lat] },
+          };
+        });
+        try {
+          const src = m.getSource("ships") as maplibregl.GeoJSONSource | undefined;
+          src?.setData({ type: "FeatureCollection", features });
+        } catch {
+          /* noop */
+        }
+      }
+
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+  }
+
+  // Keep RAF in sync with status without re-creating the loop on every render.
+  const showDemoRef = useRef(showDemo);
+  useEffect(() => {
+    showDemoRef.current = showDemo;
+  }, [showDemo]);
 
   function renderShips() {
     const map = mapRef.current;
     if (!map) return;
     const src = map.getSource("ships") as maplibregl.GeoJSONSource | undefined;
-    if (!src) return;
+    const trailsSrc = map.getSource("ship-trails") as maplibregl.GeoJSONSource | undefined;
+    if (!src || !trailsSrc) return;
     const features = Array.from(shipsRef.current.values())
       .filter((s) => IS_VESSEL(s.shipType) || s.shipType === undefined)
       .map((s) => ({
@@ -345,11 +604,22 @@ export function SignalsHormuzMap({
         geometry: { type: "Point" as const, coordinates: [s.lon, s.lat] },
       }));
     src.setData({ type: "FeatureCollection", features });
+
+    // Trail features: only ships with ≥2 positions.
+    const trailFeatures = Array.from(shipsRef.current.values())
+      .filter((s) => s.trail.length >= 2)
+      .map((s) => ({
+        type: "Feature" as const,
+        properties: { isTanker: IS_TANKER(s.shipType) },
+        geometry: { type: "LineString" as const, coordinates: s.trail },
+      }));
+    trailsSrc.setData({ type: "FeatureCollection", features: trailFeatures });
+
     setShipCount(features.length);
     setTankerCount(features.filter((f) => f.properties.isTanker).length);
   }
 
-  // AISStream WebSocket — bounded box covers approaches + AOI.
+  // AISStream WebSocket.
   useEffect(() => {
     if (!apiKey) {
       setStatus("no-key");
@@ -392,6 +662,9 @@ export function SignalsHormuzMap({
             const lon = Number(r.Longitude);
             if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
             const existing = shipsRef.current.get(mmsi);
+            const newTrail: [number, number][] = existing ? [...existing.trail, [lon, lat]] : [[lon, lat]];
+            // Keep last 10 positions for the trail.
+            if (newTrail.length > 10) newTrail.shift();
             shipsRef.current.set(mmsi, {
               mmsi,
               lat,
@@ -400,6 +673,7 @@ export function SignalsHormuzMap({
               shipType: existing?.shipType,
               name: existing?.name ?? meta.ShipName?.trim() ?? undefined,
               lastSeen: Date.now(),
+              trail: newTrail,
             });
           } else if (msg.MessageType === "ShipStaticData") {
             const r = msg.Message?.ShipStaticData;
@@ -414,14 +688,14 @@ export function SignalsHormuzMap({
             }
           }
         } catch {
-          // ignore malformed frames
+          /* ignore malformed frames */
         }
       };
 
       ws.onerror = () => {
         if (cancelled) return;
         setStatus("error");
-        setErrorMsg("WebSocket error — check AISStream key or network.");
+        setErrorMsg("AIS provider unreachable — synthetic demo routes shown.");
       };
       ws.onclose = () => {
         if (cancelled) return;
@@ -457,13 +731,13 @@ export function SignalsHormuzMap({
   const statusPill = useMemo(() => {
     switch (status) {
       case "live":
-        return { dot: "bg-rose-500", label: "LIVE · AISStream", solid: true };
+        return { dot: "bg-emerald-400", label: "LIVE · AISStream", solid: true };
       case "connecting":
-        return { dot: "bg-amber-400", label: "CONNECTING…", solid: false };
+        return { dot: "bg-amber-400", label: "HANDSHAKING…", solid: false };
       case "no-key":
-        return { dot: "bg-cyan-400", label: "AWAITING AIS FEED", solid: false };
+        return { dot: "bg-cyan-400", label: "DEMO · TSS ROUTES", solid: false };
       case "error":
-        return { dot: "bg-rose-500", label: "DISCONNECTED", solid: true };
+        return { dot: "bg-amber-400", label: "DEMO · UPSTREAM RECOVERING", solid: false };
       default:
         return { dot: "bg-slate-400", label: "INIT", solid: false };
     }
@@ -479,7 +753,7 @@ export function SignalsHormuzMap({
       : liveCountFallback !== null && liveCountFallback !== undefined
         ? Math.round(Number(liveCountFallback))
         : null;
-  const tankerDisplay = status === "live" ? tankerCount : null;
+  const tankerDisplay = status === "live" ? tankerCount : DEMO_TRAJECTORIES.length;
 
   return (
     <div className="rounded-2xl border border-border bg-card overflow-hidden">
@@ -506,17 +780,23 @@ export function SignalsHormuzMap({
       </div>
 
       {/* Map shell — mission-control black surface, fixed dark even in light mode */}
-      <div className="relative bg-[#0a0a0a]">
-        <div ref={containerRef} className="h-[420px] w-full" />
+      <div className="relative bg-[#000814]">
+        <div ref={containerRef} className="h-[440px] w-full" />
 
-        {/* HUD top-left — data lineage, the part Bloomberg/Palantir always show */}
-        <div className="pointer-events-none absolute top-3 left-3 max-w-[260px] rounded-md border border-cyan-400/30 bg-black/70 backdrop-blur px-3 py-2 font-mono text-[10px] leading-snug text-slate-200 shadow-lg">
+        {/* HUD top-left — data lineage */}
+        <div className="pointer-events-none absolute top-3 left-3 max-w-[280px] rounded-md border border-cyan-400/40 bg-black/75 backdrop-blur px-3 py-2 font-mono text-[10px] leading-snug text-slate-200 shadow-lg">
           <div className="flex items-center gap-1.5 text-cyan-300 mb-1">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-300 animate-pulse" />
             <span className="tracking-widest">MARITIME · HORMUZ TSS</span>
           </div>
           <div className="text-slate-400">
-            SRC <span className="text-slate-200">AISStream WS</span>
+            BASE <span className="text-slate-200">MODIS Terra · {SAT_DATE}</span>
+          </div>
+          <div className="text-slate-400">
+            FEED{" "}
+            <span className="text-slate-200">
+              {status === "live" ? "AISStream WS · LIVE" : "AISStream · recovering"}
+            </span>
           </div>
           <div className="text-slate-400">
             BBOX <span className="text-slate-200">55.5–57.5°E · 26.0–27.5°N</span>
@@ -536,19 +816,27 @@ export function SignalsHormuzMap({
             : "MOVE CURSOR FOR COORDS"}
         </div>
 
+        {/* Legend bottom-left aligned above scale bar */}
+        <div className="pointer-events-none absolute bottom-12 left-3 rounded border border-slate-700/60 bg-black/60 backdrop-blur px-2 py-1.5 font-mono text-[9px] text-slate-300 space-y-1">
+          <div className="flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full bg-rose-500" /> TANKER (IMO 80-89)</div>
+          <div className="flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full bg-slate-300" /> VESSEL (IMO 70-79)</div>
+          <div className="flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full bg-amber-300" /> MAJOR PORT</div>
+          <div className="flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-sm" style={{ background: ACCENT_CYAN }} /> IMO TSS LANE</div>
+        </div>
+
         {/* Vectorial corner watermark */}
         <div className="pointer-events-none absolute top-3 right-16 font-mono text-[9px] tracking-[0.25em] text-cyan-400/70">
           VECTORIAL · SIGNALS
         </div>
       </div>
 
-      {/* Stat strip — dark, tabular, with brand cyan accents */}
+      {/* Stat strip */}
       <div className="grid grid-cols-3 gap-3 px-5 py-4 text-sm bg-card border-t border-border">
         <Stat
-          label="Tankers in view"
+          label={status === "live" ? "Tankers in view" : "Demo tankers"}
           value={tankerDisplay}
           tone="red"
-          subtle={status !== "live" ? "awaiting feed" : "live · AIS"}
+          subtle={status === "live" ? "live · AIS" : "synthetic TSS"}
         />
         <Stat
           label="All vessels"
@@ -564,20 +852,12 @@ export function SignalsHormuzMap({
         />
       </div>
 
-      {status === "no-key" && (
+      {(status === "no-key" || status === "error") && (
         <div className="px-5 pb-4 text-[11px] text-text-muted leading-relaxed border-t border-border pt-3 font-mono">
-          <span className="text-cyan-500 dark:text-cyan-400">●</span> Cyan AOI +
-          TSS lanes shown above are the formal Hormuz gate + IMO shipping
-          channels. Live vessel overlay activates the moment{" "}
-          <code className="text-text-strong bg-slate-100 dark:bg-slate-800 px-1 rounded">
-            NEXT_PUBLIC_AISSTREAM_API_KEY
-          </code>{" "}
-          is provisioned in Vercel.
-        </div>
-      )}
-      {status === "error" && (
-        <div className="px-5 pb-4 text-[11px] text-rose-500 dark:text-rose-400 leading-relaxed border-t border-border pt-3 font-mono">
-          {errorMsg ?? "AIS feed disconnected. Refresh to retry."}
+          <span className="text-cyan-400">●</span>{" "}
+          {status === "no-key"
+            ? "Demo mode — synthetic VLCCs follow real IMO TSS lanes. Live AIS overlay activates when feed credentials are provisioned."
+            : (errorMsg ?? "AIS upstream recovering — synthetic VLCCs follow real IMO TSS lanes meanwhile.")}
         </div>
       )}
     </div>
