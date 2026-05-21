@@ -12172,7 +12172,7 @@ export const transactions: Transaction[] = [
     date: "2026-05-20",
     day_of_week: "wednesday",
     wa_message: `🔄 *RECOMPRA* — May 20, 2026\n\n🏢 *Ecolab Inc.* (ECL) — $244.96\n🛍️ #1 mundial en tratamiento de agua + higiene industrial; dueño de CoolIT (enfriamiento líquido para data centers de AI, deal $4.75B)\n\n💵 Seguimos acumulando *Dividend Aristocrat con 33 años subiendo el dividendo sin parar* desde 1993. Yield actual *1.04% anual*.\n💪 *¿Por qué recompramos?* Compramos ECL el 13 de mayo a $250.79. Hoy está a $244.96 (*-2.3%*) y el catalizador grande — el cierre de la compra de CoolIT en el tercer trimestre — todavía no llega. Misma tesis, mejor entry. Comprar a diferentes precios baja tu precio promedio.\n\n🔄 Recompra #77\n🔗 https://vectorialdata.com/stocks/ECL\n✅ Certificado por blockchain → vectorialdata.com/verify/ECL\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en ECL. Ve el research completo: vectorialdata.com/stocks/ECL\n\n💡 Ecolab lleva 33 años seguidos subiendo el dividendo cada año — solo ~30 empresas en el mundo tienen ese track record. Y acaba de comprar por $4.75 mil millones a CoolIT, el líder en enfriamiento líquido para data centers de AI (los servidores Nvidia generan tanto calor que el aire ya no los enfría — necesitan agua). Bajar el precio promedio de un negocio que paga dividendo creciente 33 años seguidos, justo antes de que cierre su mayor adquisición de la historia, es exactamente la jugada.`,
-    attestation_uid: "",
+    attestation_uid: "0x8df76eddb45c07fc893cbcb043a279278a83eff4cb1448869acd6d5de57087d3",
   },
 ];
 
