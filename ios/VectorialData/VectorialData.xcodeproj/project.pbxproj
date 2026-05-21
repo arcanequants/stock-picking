@@ -31,6 +31,7 @@
 		88EFD99108CEE74FDA7C1C57 /* PickStatusStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275146A3F4915E0F9FDDDC1 /* PickStatusStore.swift */; };
 		8C8B2EB9B4AE59BA7DD9E29B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D1FB2EE1932989B11399BB99 /* Localizable.xcstrings */; };
 		8C9EC8A7D0E879F0A491E99F /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4586F5C2A73ABF34E95CF6B7 /* PortfolioView.swift */; };
+		928D6E26021D8AD058F99F4C /* DividendStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945448517C9F82AE56E6CD0 /* DividendStore.swift */; };
 		9ECE9BF8C1C931E240D0A5F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55080DD2AC6AC1F15A0B5AE0 /* HomeView.swift */; };
 		AA0E248DE9CD06AFA04BA575 /* VectorialDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8FFDA09FC877986B464CA /* VectorialDataApp.swift */; };
 		AD5F57B766CF61942F60434D /* WeeklyDigestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7839984778A3BECA5F20ACEE /* WeeklyDigestView.swift */; };
@@ -86,6 +87,7 @@
 		7839984778A3BECA5F20ACEE /* WeeklyDigestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyDigestView.swift; sourceTree = "<group>"; };
 		820C026C9E6BED77E2FAB77A /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
 		859B3769550D3ADC64FD4386 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		8945448517C9F82AE56E6CD0 /* DividendStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendStore.swift; sourceTree = "<group>"; };
 		97A3172884B277D3A9C65378 /* PortfolioHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHistory.swift; sourceTree = "<group>"; };
 		9995D70904166120C0B2A050 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		9EC722FBF6EABEF5AFA92FB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		7D151A17382D4E434779654E /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				8945448517C9F82AE56E6CD0 /* DividendStore.swift */,
 				F275146A3F4915E0F9FDDDC1 /* PickStatusStore.swift */,
 			);
 			path = Stores;
@@ -408,6 +411,7 @@
 				35627BC6698B033ACAA33AAC /* AuthManager.swift in Sources */,
 				247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */,
 				3BBC5D903B453F3AB95A3BEB /* ComingSoonPlaceholder.swift in Sources */,
+				928D6E26021D8AD058F99F4C /* DividendStore.swift in Sources */,
 				9ECE9BF8C1C931E240D0A5F6 /* HomeView.swift in Sources */,
 				16272C73128B7A5EB8EAB08C /* KeychainHelper.swift in Sources */,
 				29FD74B796ED48F032B03993 /* MainTabView.swift in Sources */,

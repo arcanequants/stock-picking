@@ -14,6 +14,7 @@ import { fetchSplitMap } from "@/lib/split-detection";
 import { fetchDividendMap } from "@/lib/dividend-detection";
 import { walkShares } from "@/lib/shares-walk";
 import { createEventWithExplanations } from "@/lib/notifications";
+import { sendAPNsMany } from "@/lib/apns";
 
 const yahooFinance = new YahooFinance({ suppressNotices: ["yahooSurvey"] });
 
@@ -181,12 +182,214 @@ export async function GET(request: Request) {
     }
   }
 
+  // 3. Fan out new dividend events to per-user ledger.
+  // Idempotent: unique(email, ticker, ex_date) prevents dup inserts on re-run.
+  const fanoutResult = await fanoutToUsers(supabase, since, errors);
+
+  // 4. Push any pending dividend notifications (notified_at IS NULL).
+  const pushResult = await sendPendingDividendPushes(supabase, errors);
+
   return NextResponse.json({
     success: true,
     scanned_tickers: tickers.length,
     dividends_inserted: inserted.length,
     events_emitted: eventsEmitted.length,
+    user_dividends_inserted: fanoutResult.inserted,
+    user_pushes_sent: pushResult.sent,
+    user_pushes_failed: pushResult.failed,
     inserted,
     errors: errors.length > 0 ? errors : undefined,
   });
+}
+
+type AdminClient = ReturnType<typeof getSupabaseAdmin>;
+
+/**
+ * For each dividend_events row inside the lookback window, find every user
+ * who held that ticker at ex_date (status='bought' and decided_at on or before
+ * the ex_date) and insert a user_dividend_events row keyed by
+ * (email, ticker, ex_date). Idempotent — the unique constraint drops dupes.
+ */
+async function fanoutToUsers(
+  supabase: AdminClient,
+  since: Date,
+  errors: string[],
+): Promise<{ inserted: number }> {
+  const sinceStr = since.toISOString().slice(0, 10);
+
+  const { data: divEvents, error: divErr } = await supabase
+    .from("dividend_events")
+    .select("ticker, ex_date, amount_per_share")
+    .gte("ex_date", sinceStr);
+
+  if (divErr) {
+    errors.push(`fanout fetch dividend_events: ${divErr.message}`);
+    return { inserted: 0 };
+  }
+  if (!divEvents || divEvents.length === 0) return { inserted: 0 };
+
+  let inserted = 0;
+  for (const div of divEvents) {
+    const { data: holders, error: holdersErr } = await supabase
+      .from("user_pick_status")
+      .select("email, pick_number, ticker, buy_price, amount_invested, decided_at")
+      .eq("ticker", div.ticker)
+      .eq("status", "bought")
+      .lte("decided_at", `${div.ex_date}T23:59:59Z`);
+
+    if (holdersErr) {
+      errors.push(`fanout holders ${div.ticker} ${div.ex_date}: ${holdersErr.message}`);
+      continue;
+    }
+    if (!holders || holders.length === 0) continue;
+
+    for (const h of holders) {
+      if (!h.buy_price || !h.amount_invested || h.buy_price <= 0) continue;
+      const shares = Number(h.amount_invested) / Number(h.buy_price);
+      const total = shares * Number(div.amount_per_share);
+      if (total <= 0) continue;
+
+      const { error: insertErr } = await supabase
+        .from("user_dividend_events")
+        .insert({
+          email: h.email,
+          ticker: div.ticker,
+          pick_number: h.pick_number,
+          ex_date: div.ex_date,
+          pay_date: null,
+          amount_per_share: div.amount_per_share,
+          shares_held: Number(shares.toFixed(8)),
+          total_amount: Number(total.toFixed(4)),
+          buy_price: h.buy_price,
+          amount_invested: h.amount_invested,
+        });
+
+      if (insertErr) {
+        // Dup is expected on re-run.
+        if (insertErr.code === "23505") continue;
+        errors.push(
+          `fanout insert ${h.email} ${div.ticker} ${div.ex_date}: ${insertErr.message}`,
+        );
+        continue;
+      }
+      inserted++;
+    }
+  }
+
+  return { inserted };
+}
+
+const MOTIVATION_BODIES = [
+  "Sigue invirtiendo. Tus dividendos crecen contigo.",
+  "Imagina vivir de tus dividendos.",
+  "Tu dinero trabaja mientras duermes.",
+  "Cada pick suma. Esto es solo el principio.",
+];
+
+function pickMotivationalBody(pickNumber: number): string {
+  const day = Math.floor(Date.now() / 86400_000);
+  return MOTIVATION_BODIES[(pickNumber + day) % MOTIVATION_BODIES.length];
+}
+
+/**
+ * Send a push for every user_dividend_events row that hasn't been pushed.
+ * One push per dividend — Alberto's call: "no importa el monto, que se vayan
+ * emocionando". Dead tokens (410/Unregistered) get is_active=false.
+ */
+async function sendPendingDividendPushes(
+  supabase: AdminClient,
+  errors: string[],
+): Promise<{ sent: number; failed: number }> {
+  if (!process.env.APNS_TEAM_ID) return { sent: 0, failed: 0 };
+
+  const { data: pending, error: pendingErr } = await supabase
+    .from("user_dividend_events")
+    .select("id, email, ticker, pick_number, total_amount, amount_per_share, shares_held")
+    .is("notified_at", null)
+    .order("created_at", { ascending: true })
+    .limit(200);
+
+  if (pendingErr) {
+    errors.push(`dividend pushes fetch pending: ${pendingErr.message}`);
+    return { sent: 0, failed: 0 };
+  }
+  if (!pending || pending.length === 0) return { sent: 0, failed: 0 };
+
+  const emails = Array.from(new Set(pending.map((p) => p.email)));
+  const { data: tokens } = await supabase
+    .from("device_tokens")
+    .select("email, token")
+    .in("email", emails)
+    .eq("platform", "ios")
+    .eq("is_active", true);
+
+  const tokensByEmail = new Map<string, string[]>();
+  for (const t of tokens ?? []) {
+    const list = tokensByEmail.get(t.email) ?? [];
+    list.push(t.token);
+    tokensByEmail.set(t.email, list);
+  }
+
+  const deadTokens: string[] = [];
+  let sent = 0;
+  let failed = 0;
+  const notifiedIds: string[] = [];
+
+  for (const row of pending) {
+    const deviceTokens = tokensByEmail.get(row.email) ?? [];
+    // Mark notified even if user has no device — otherwise we'd keep retrying
+    // forever. The web/iOS app surfaces the dividend regardless of push.
+    if (deviceTokens.length === 0) {
+      notifiedIds.push(row.id);
+      continue;
+    }
+
+    const amount = Number(row.total_amount);
+    const title = `💸 $${row.ticker} te pagó $${amount.toFixed(2)}`;
+    const body = pickMotivationalBody(row.pick_number);
+
+    const results = await sendAPNsMany(deviceTokens, {
+      aps: {
+        alert: { title, body },
+        sound: "default",
+        "thread-id": "dividends",
+      },
+      ticker: row.ticker,
+      pick_number: row.pick_number,
+      kind: "dividend_paid",
+    });
+
+    let anyOk = false;
+    for (const r of results) {
+      if (r.ok) {
+        sent++;
+        anyOk = true;
+      } else {
+        failed++;
+        if (r.status === 410 || r.reason === "Unregistered") {
+          deadTokens.push(r.token);
+        }
+      }
+    }
+    // Even if all devices were dead, flip notified_at so we don't retry forever.
+    notifiedIds.push(row.id);
+    void anyOk;
+  }
+
+  if (notifiedIds.length > 0) {
+    const { error: updErr } = await supabase
+      .from("user_dividend_events")
+      .update({ notified_at: new Date().toISOString() })
+      .in("id", notifiedIds);
+    if (updErr) errors.push(`mark notified: ${updErr.message}`);
+  }
+
+  if (deadTokens.length > 0) {
+    await supabase
+      .from("device_tokens")
+      .update({ is_active: false })
+      .in("token", deadTokens);
+  }
+
+  return { sent, failed };
 }

@@ -31,6 +31,7 @@ final class PickDetailViewModel: ObservableObject {
 
 struct PickDetailView: View {
     @EnvironmentObject private var store: PickStatusStore
+    @EnvironmentObject private var dividends: DividendStore
     @StateObject private var vm: PickDetailViewModel
     let pick: Pick
 
@@ -54,6 +55,7 @@ struct PickDetailView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     headerCard
                     decisionBanner
+                    dividendSection
                     if vm.isLoading && vm.research == nil {
                         ProgressView()
                             .frame(maxWidth: .infinity)
@@ -81,6 +83,11 @@ struct PickDetailView: View {
         .navigationTitle(pick.ticker)
         .navigationBarTitleDisplayMode(.inline)
         .task { await vm.load() }
+        .task {
+            if dividends.events.isEmpty {
+                await dividends.load()
+            }
+        }
         .sheet(isPresented: $showBuySheet) {
             PickBuySheet(pick: current, defaultInvestment: store.defaultInvestment)
                 .environmentObject(store)
@@ -162,6 +169,90 @@ struct PickDetailView: View {
             .background(Color.white.opacity(0.06))
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
         }
+    }
+
+    /// Only shows once the user actually bought this pick. Lists every
+    /// dividend they've collected on this position with the running total
+    /// and yield-on-cost (called "Yield real" — zero-jargon copy rule).
+    @ViewBuilder
+    private var dividendSection: some View {
+        let events = dividends.eventsForPick(pick.pickNumber)
+        if current.status == .bought && !events.isEmpty {
+            let total = events.reduce(0.0) { $0 + $1.totalAmount }
+            let yieldReal: Double? = {
+                guard let invested = current.amountInvested, invested > 0
+                else { return nil }
+                return (total / invested) * 100
+            }()
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 6) {
+                    Text("💸 DIVIDENDOS COBRADOS")
+                        .font(.caption.weight(.semibold))
+                        .tracking(1.1)
+                        .foregroundStyle(.white.opacity(0.55))
+                    Text("\(events.count)")
+                        .font(.caption2.weight(.semibold))
+                        .foregroundStyle(.white.opacity(0.5))
+                        .padding(.horizontal, 6)
+                        .padding(.vertical, 2)
+                        .background(Color.white.opacity(0.08))
+                        .clipShape(Capsule())
+                    Spacer()
+                }
+                VStack(spacing: 10) {
+                    ForEach(events.sorted { $0.exDate > $1.exDate }) { e in
+                        HStack {
+                            Text(formatDate(e.exDate))
+                                .font(.footnote)
+                                .foregroundStyle(.white.opacity(0.6))
+                            Spacer()
+                            Text("$\(format2(e.totalAmount))")
+                                .font(.footnote.weight(.semibold))
+                                .foregroundStyle(Color("BrandEmerald"))
+                        }
+                    }
+                }
+                Divider().overlay(Color.white.opacity(0.1))
+                HStack {
+                    Text("Total cobrado")
+                        .font(.footnote.weight(.medium))
+                        .foregroundStyle(.white.opacity(0.75))
+                    Spacer()
+                    Text("$\(format2(total))")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(Color("BrandEmerald"))
+                }
+                if let y = yieldReal {
+                    HStack {
+                        Text("Yield real")
+                            .font(.caption)
+                            .foregroundStyle(.white.opacity(0.55))
+                        Spacer()
+                        Text(String(format: "%.2f%%", y))
+                            .font(.caption.weight(.medium))
+                            .foregroundStyle(.white.opacity(0.7))
+                    }
+                }
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color("CardBackground"))
+            .overlay(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .stroke(Color("BrandEmerald").opacity(0.25), lineWidth: 1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        }
+    }
+
+    private func formatDate(_ isoDate: String) -> String {
+        let inFmt = DateFormatter()
+        inFmt.dateFormat = "yyyy-MM-dd"
+        guard let date = inFmt.date(from: isoDate) else { return isoDate }
+        let outFmt = DateFormatter()
+        outFmt.locale = Locale(identifier: "es")
+        outFmt.dateFormat = "d MMM"
+        return outFmt.string(from: date)
     }
 
     /// Sticky bottom bar with the user's primary actions. Reshapes based on

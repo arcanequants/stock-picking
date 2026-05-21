@@ -73,12 +73,20 @@ final class PortfolioViewModel: ObservableObject {
 struct PortfolioView: View {
     @StateObject private var vm = PortfolioViewModel()
     @EnvironmentObject private var pickStatus: PickStatusStore
+    @EnvironmentObject private var dividends: DividendStore
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 12) {
                     viewSwitcher
+                    if vm.selectedView == .personal && dividends.count > 0 {
+                        DividendsYTDCard(
+                            ytd: dividends.ytdTotal,
+                            count: dividends.count,
+                            companies: dividends.companies
+                        )
+                    }
                     if let resp = vm.response, !resp.positions.isEmpty {
                         TotalsRow(resp: resp)
                         if let sectors = resp.sectorAllocation, !sectors.isEmpty {
@@ -125,8 +133,16 @@ struct PortfolioView: View {
                     }
                 }
             }
-            .refreshable { await vm.load() }
+            .refreshable {
+                await vm.load()
+                await dividends.load()
+            }
             .task { await vm.load() }
+            .task {
+                if dividends.events.isEmpty {
+                    await dividends.load()
+                }
+            }
             .onChange(of: pickStatus.lastDecisionAt) { _, _ in
                 // Any pick decision invalidates the personal view's cache.
                 vm.personalResponse = nil
@@ -165,6 +181,48 @@ struct PortfolioView: View {
         .background(Color("CardBackground"))
         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         .padding(.top, 30)
+    }
+}
+
+private struct DividendsYTDCard: View {
+    let ytd: Double
+    let count: Int
+    let companies: Int
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 14) {
+            Text("💸")
+                .font(.system(size: 34))
+            VStack(alignment: .leading, spacing: 2) {
+                Text("COBRADO EN DIVIDENDOS")
+                    .font(.caption2.weight(.semibold))
+                    .tracking(1.1)
+                    .foregroundStyle(.white.opacity(0.55))
+                Text("$\(String(format: "%.2f", ytd))")
+                    .font(.title.weight(.bold))
+                    .foregroundStyle(Color("BrandEmerald"))
+                Text("YTD · \(count) \(count == 1 ? "pago" : "pagos") · \(companies) \(companies == 1 ? "empresa" : "empresas")")
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.55))
+            }
+            Spacer()
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            LinearGradient(
+                colors: [
+                    Color("BrandEmerald").opacity(0.18),
+                    Color("CardBackground"),
+                ],
+                startPoint: .topLeading, endPoint: .bottomTrailing
+            )
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(Color("BrandEmerald").opacity(0.35), lineWidth: 1)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }
 

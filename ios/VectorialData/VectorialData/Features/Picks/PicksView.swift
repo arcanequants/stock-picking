@@ -86,7 +86,7 @@ struct PicksView: View {
                             count: store.pending.count
                         )
                         ForEach(orderedPending(store.pending)) { pick in
-                            NavigationLink(value: pick) {
+                            NavigationLink(value: PicksDestination.pick(pick)) {
                                 PendingPickRow(pick: pick)
                             }
                             .buttonStyle(.plain)
@@ -98,7 +98,7 @@ struct PicksView: View {
                             count: store.historial.count
                         )
                         ForEach(store.historial) { pick in
-                            NavigationLink(value: pick) {
+                            NavigationLink(value: PicksDestination.pick(pick)) {
                                 HistoryPickRow(pick: pick)
                             }
                             .buttonStyle(.plain)

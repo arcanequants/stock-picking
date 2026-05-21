@@ -114,6 +114,15 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
                 }
             case "weekly_digest":
                 Self.shared.pendingWeeklyDigest = true
+            case "dividend_paid":
+                // Re-use the new-pick deep link: route to the pick detail
+                // where the new "DIVIDENDOS" section is already visible.
+                if let n = userInfo["pick_number"] as? Int {
+                    Self.shared.pendingPickNumber = n
+                } else if let s = userInfo["pick_number"] as? String,
+                          let n = Int(s) {
+                    Self.shared.pendingPickNumber = n
+                }
             default:
                 break
             }

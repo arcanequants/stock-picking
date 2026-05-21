@@ -19,7 +19,7 @@ struct WeeklyDigestView: View {
                         icon: "checkmark.circle.fill"
                     )
                     ForEach(boughtThisWeek) { pick in
-                        NavigationLink(value: pick) {
+                        NavigationLink(value: PicksDestination.pick(pick)) {
                             BoughtThisWeekRow(pick: pick)
                         }
                         .buttonStyle(.plain)
@@ -33,7 +33,7 @@ struct WeeklyDigestView: View {
                         icon: "clock.fill"
                     )
                     ForEach(pending) { pick in
-                        NavigationLink(value: pick) {
+                        NavigationLink(value: PicksDestination.pick(pick)) {
                             PendingDigestRow(pick: pick)
                         }
                         .buttonStyle(.plain)
