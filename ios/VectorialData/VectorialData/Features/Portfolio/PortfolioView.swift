@@ -2,9 +2,11 @@ import SwiftUI
 
 @MainActor
 final class PortfolioViewModel: ObservableObject {
-    @Published var response: PortfolioPositions?
+    @Published var modelResponse: PortfolioPositions?
+    @Published var personalResponse: PortfolioPositions?
     @Published var errorMessage: String?
     @Published var isLoading = false
+    @Published var selectedView: PortfolioViewMode = .model
 
     private enum SortMode: String, CaseIterable, Identifiable {
         case topReturn = "Top return"
@@ -15,6 +17,13 @@ final class PortfolioViewModel: ObservableObject {
     }
 
     @Published var sortMode: String = SortMode.topReturn.rawValue
+
+    var response: PortfolioPositions? {
+        switch selectedView {
+        case .model: return modelResponse
+        case .personal: return personalResponse
+        }
+    }
 
     var displayedPositions: [Position] {
         guard let positions = response?.positions else { return [] }
@@ -34,25 +43,43 @@ final class PortfolioViewModel: ObservableObject {
         isLoading = true
         defer { isLoading = false }
         do {
-            response = try await APIClient.shared.get(
-                "/api/portfolio/positions",
-                as: PortfolioPositions.self
-            )
+            switch selectedView {
+            case .model:
+                modelResponse = try await APIClient.shared.get(
+                    "/api/portfolio/positions",
+                    as: PortfolioPositions.self
+                )
+            case .personal:
+                personalResponse = try await APIClient.shared.get(
+                    "/api/portfolio/positions?view=personal",
+                    as: PortfolioPositions.self
+                )
+            }
             errorMessage = nil
         } catch {
             errorMessage = error.localizedDescription
+        }
+    }
+
+    func switchTo(_ view: PortfolioViewMode) async {
+        guard view != selectedView else { return }
+        selectedView = view
+        if response == nil {
+            await load()
         }
     }
 }
 
 struct PortfolioView: View {
     @StateObject private var vm = PortfolioViewModel()
+    @EnvironmentObject private var pickStatus: PickStatusStore
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 12) {
-                    if let resp = vm.response {
+                    viewSwitcher
+                    if let resp = vm.response, !resp.positions.isEmpty {
                         TotalsRow(resp: resp)
                         if let sectors = resp.sectorAllocation, !sectors.isEmpty {
                             AllocationSection(title: "Sector mix", buckets: sectors)
@@ -69,6 +96,8 @@ struct PortfolioView: View {
                         }
                     } else if vm.isLoading {
                         ProgressView().padding(.top, 40)
+                    } else if vm.selectedView == .personal && vm.response?.positions.isEmpty == true {
+                        personalEmptyState
                     } else if let msg = vm.errorMessage {
                         Text(msg)
                             .font(.footnote)
@@ -98,7 +127,44 @@ struct PortfolioView: View {
             }
             .refreshable { await vm.load() }
             .task { await vm.load() }
+            .onChange(of: pickStatus.lastDecisionAt) { _, _ in
+                // Any pick decision invalidates the personal view's cache.
+                vm.personalResponse = nil
+                if vm.selectedView == .personal {
+                    Task { await vm.load() }
+                }
+            }
         }
+    }
+
+    private var viewSwitcher: some View {
+        Picker("View", selection: Binding(
+            get: { vm.selectedView },
+            set: { newValue in Task { await vm.switchTo(newValue) } }
+        )) {
+            ForEach(PortfolioViewMode.allCases) { view in
+                Text(view.label).tag(view)
+            }
+        }
+        .pickerStyle(.segmented)
+        .padding(.bottom, 4)
+    }
+
+    private var personalEmptyState: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Tu portfolio personal está vacío")
+                .font(.headline)
+                .foregroundStyle(.white)
+            Text("Marca un pick como comprado en la pestaña Picks para empezar a tracking tu portfolio real.")
+                .font(.footnote)
+                .foregroundStyle(.white.opacity(0.7))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color("CardBackground"))
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .padding(.top, 30)
     }
 }
 

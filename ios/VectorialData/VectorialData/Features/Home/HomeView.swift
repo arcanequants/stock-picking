@@ -27,20 +27,21 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 16) {
+                VStack(spacing: 14) {
+                    PerformanceChart()
                     if let s = vm.snapshot {
-                        HeroCard(snapshot: s)
+                        QuickStatsCard(snapshot: s)
                         if let pick = s.latestPick {
                             LatestPickCard(pick: pick)
                         }
                         MarketStatusRow(status: s.marketStatus)
                     } else if vm.isLoading {
-                        ProgressView().padding(.top, 80)
+                        ProgressView().padding(.top, 40)
                     } else if let msg = vm.errorMessage {
                         Text(msg)
                             .font(.footnote)
                             .foregroundStyle(.secondary)
-                            .padding(.top, 80)
+                            .padding(.top, 40)
                     }
                 }
                 .padding(16)
@@ -53,43 +54,49 @@ struct HomeView: View {
     }
 }
 
-private struct HeroCard: View {
+private struct QuickStatsCard: View {
     let snapshot: PortfolioSnapshot
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Portfolio return")
-                .font(.footnote)
-                .foregroundStyle(.white.opacity(0.65))
-            Text(formatPct(snapshot.totalReturnPct))
-                .font(.system(size: 48, weight: .bold, design: .rounded))
-                .foregroundStyle(snapshot.totalReturnPct >= 0 ? Color("BrandEmerald") : .red)
-            HStack(spacing: 16) {
-                StatBadge(label: "Positions", value: "\(snapshot.totalPositions)")
-                if let best = snapshot.best {
-                    StatBadge(label: "Best", value: "\(best.ticker) \(formatPct(best.returnPct))")
-                }
-                if let worst = snapshot.worst {
-                    StatBadge(label: "Worst", value: "\(worst.ticker) \(formatPct(worst.returnPct))")
-                }
+        HStack(alignment: .top, spacing: 16) {
+            statColumn(
+                label: "Positions",
+                value: "\(snapshot.totalPositions)",
+                color: .white
+            )
+            if let best = snapshot.best {
+                statColumn(
+                    label: "Best",
+                    value: "\(best.ticker) \(formatPct(best.returnPct))",
+                    color: Color("BrandEmerald")
+                )
+            }
+            if let worst = snapshot.worst {
+                statColumn(
+                    label: "Worst",
+                    value: "\(worst.ticker) \(formatPct(worst.returnPct))",
+                    color: worst.returnPct >= 0 ? Color("BrandEmerald") : .red
+                )
             }
         }
-        .padding(20)
+        .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color("CardBackground"))
-        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
-}
 
-private struct StatBadge: View {
-    let label: String
-    let value: String
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text(label).font(.caption2).foregroundStyle(.white.opacity(0.55))
-            Text(value).font(.caption.weight(.medium)).foregroundStyle(.white)
+    private func statColumn(label: String, value: String, color: Color) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label)
+                .font(.caption2)
+                .foregroundStyle(.white.opacity(0.55))
+            Text(value)
+                .font(.footnote.weight(.semibold))
+                .foregroundStyle(color)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

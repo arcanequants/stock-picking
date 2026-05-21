@@ -26,7 +26,7 @@ type APNsPayload = {
   ticker?: string;
   pick_number?: number;
   return_pct?: number;
-  kind?: "new_pick" | "price_move" | "system";
+  kind?: "new_pick" | "price_move" | "system" | "weekly_digest";
 };
 
 let cachedJwt: { value: string; expiresAt: number } | null = null;

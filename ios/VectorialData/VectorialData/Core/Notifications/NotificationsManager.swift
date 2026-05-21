@@ -16,6 +16,14 @@ final class NotificationsManager: NSObject, ObservableObject {
     @Published private(set) var authorizationStatus: UNAuthorizationStatus = .notDetermined
     @Published private(set) var lastRegisteredToken: String?
 
+    /// When the user taps a "Nuevo pick" push the payload arrives here. The
+    /// Picks tab consumes and clears it via `consumePendingPickTap()`.
+    @Published var pendingPickNumber: Int?
+
+    /// Fires when the user taps a Friday-digest push. The weekly digest
+    /// screen consumes and clears it.
+    @Published var pendingWeeklyDigest: Bool = false
+
     private override init() {
         super.init()
         UNUserNotificationCenter.current().delegate = self
@@ -92,6 +100,23 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
         _ center: UNUserNotificationCenter,
         didReceive response: UNNotificationResponse
     ) async {
-        // Tap handling hook — for now we just noop; future: route to ticker detail.
+        let userInfo = response.notification.request.content.userInfo
+        let kind = userInfo["kind"] as? String
+
+        await MainActor.run {
+            switch kind {
+            case "new_pick":
+                if let n = userInfo["pick_number"] as? Int {
+                    Self.shared.pendingPickNumber = n
+                } else if let s = userInfo["pick_number"] as? String,
+                          let n = Int(s) {
+                    Self.shared.pendingPickNumber = n
+                }
+            case "weekly_digest":
+                Self.shared.pendingWeeklyDigest = true
+            default:
+                break
+            }
+        }
     }
 }

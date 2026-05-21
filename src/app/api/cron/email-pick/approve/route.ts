@@ -160,8 +160,8 @@ export async function GET(request: Request) {
           const results = await sendAPNsMany(tokenList, {
             aps: {
               alert: {
-                title: `Pick #${pickNumber}: ${stock.ticker}`,
-                body: stock.name,
+                title: "Nuevo pick",
+                body: `$${stock.ticker}`,
               },
               sound: "default",
               "thread-id": "new-pick",

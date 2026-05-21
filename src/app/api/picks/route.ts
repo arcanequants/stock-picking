@@ -11,6 +11,11 @@ export const dynamic = "force-dynamic";
  * Gating:
  *   - Subscribed users: all picks
  *   - Unsubscribed:     most recent 3 (teaser)
+ *
+ * For authed users we also join `user_pick_status` so the client knows
+ * which picks the user already marked as bought/skipped — anything not in
+ * the table is implicitly pending. We also return the user's
+ * `default_investment` so the buy mini-sheet can pre-fill the amount.
  */
 export async function GET(request: Request) {
   const authed = await getAuthedUser(request);
@@ -18,19 +23,53 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const { data: subscriber } = await getSupabaseAdmin()
+  const admin = getSupabaseAdmin();
+
+  const { data: subscriber } = await admin
     .from("subscribers")
-    .select("subscription_status")
+    .select("subscription_status, default_investment")
     .eq("email", authed.email)
     .single();
 
-  const status = subscriber?.subscription_status;
-  const isSubscribed = status === "active" || status === "trialing";
+  const subStatus = subscriber?.subscription_status;
+  const isSubscribed = subStatus === "active" || subStatus === "trialing";
 
   const picks = await getPicksData(undefined, isSubscribed ? "pro" : "free");
 
+  const { data: statusRows } = await admin
+    .from("user_pick_status")
+    .select("pick_number, status, buy_price, amount_invested, decided_at")
+    .eq("email", authed.email);
+
+  const byPick = new Map<number, {
+    status: "bought" | "skipped";
+    buy_price: number | null;
+    amount_invested: number | null;
+    decided_at: string;
+  }>();
+  for (const r of statusRows ?? []) {
+    byPick.set(r.pick_number, {
+      status: r.status,
+      buy_price: r.buy_price,
+      amount_invested: r.amount_invested,
+      decided_at: r.decided_at,
+    });
+  }
+
+  const enriched = picks.map((p) => {
+    const decision = byPick.get(p.pick_number);
+    return {
+      ...p,
+      status: decision?.status ?? "pending",
+      buy_price: decision?.buy_price ?? null,
+      amount_invested: decision?.amount_invested ?? null,
+      decided_at: decision?.decided_at ?? null,
+    };
+  });
+
   return NextResponse.json({
-    picks,
+    picks: enriched,
     is_subscribed: isSubscribed,
+    default_investment: subscriber?.default_investment ?? null,
   });
 }
