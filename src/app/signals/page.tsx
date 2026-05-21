@@ -102,12 +102,18 @@ export default async function SignalsIndexPage() {
   const { user } = await getAuthState();
   const view = await getSignalView();
   const enriched = await loadSignals();
-  const grouped = groupByDomain(enriched);
 
-  // Honest live/calibrating counter for the hero — workers' Quant Alt Data +
-  // PM rule: show what's actually published, don't inflate.
-  const liveCount = enriched.filter((r) => r.latest).length;
-  const calibratingCount = enriched.length - liveCount;
+  // Split live vs calibrating. The main grouped grid shows ONLY live signals
+  // so first-scroll trust is preserved — calibrating cards used to ghost the
+  // page with em-dashes that made working signals look unfinished too.
+  // Calibrating signals get a collapsed disclosure at the bottom (still
+  // discoverable, no longer foreground).
+  const liveRows = enriched.filter((r) => r.latest);
+  const calibratingRows = enriched.filter((r) => !r.latest);
+  const grouped = groupByDomain(liveRows);
+
+  const liveCount = liveRows.length;
+  const calibratingCount = calibratingRows.length;
 
   // Pull the Hormuz row so the flagship map can quote the real baseline from
   // DB (not invent one). When the ingestor hasn't produced an observation
@@ -241,6 +247,43 @@ export default async function SignalsIndexPage() {
             {groupIndex === 0 && <SignalsWhatsAppCta variant="compact" />}
           </section>
         ))
+      )}
+
+      {/* Upcoming signals — collapsed by default. Calibrating cards used to
+          live in the main grid alongside live ones, which made the page feel
+          unfinished. Now they're discoverable but don't lead. Quant Alt Data
+          + PM + Landing/Conversion all converged on this. */}
+      {calibratingRows.length > 0 && (
+        <details className="rounded-2xl border border-dashed border-border/60 bg-card/40">
+          <summary className="cursor-pointer list-none flex items-center justify-between gap-4 px-5 py-4 select-none">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-amber-500/40 text-amber-500 text-[10px] font-mono">
+                {calibratingRows.length}
+              </span>
+              <div>
+                <p className="text-sm font-semibold">Upcoming signals</p>
+                <p className="text-xs text-text-faint">
+                  Calibrating — first observation pending data-source onboarding.
+                </p>
+              </div>
+            </div>
+            <span className="text-xs text-text-faint font-mono uppercase tracking-widest">
+              expand →
+            </span>
+          </summary>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5 pb-5">
+            {calibratingRows.map((row) => (
+              <SignalCard
+                key={row.def.id}
+                definition={row.def}
+                latest={row.latest}
+                delta={row.delta}
+                locale={locale}
+                view={view}
+              />
+            ))}
+          </div>
+        </details>
       )}
 
       <SignalsWhatsAppCta variant="footer" />
