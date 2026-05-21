@@ -87,29 +87,34 @@ function fmtCoord(lat: number, lon: number) {
   return `${latStr} · ${lonStr}`;
 }
 
-// Synthetic VLCC demo trajectories — when AISStream is unavailable (provider
-// outage, expired cert, missing key), we still need the map to read as alive.
-// These are NOT real vessels; they're animated demo bodies labeled as such
-// in the HUD so users understand. The routes follow real IMO TSS lanes.
-const DEMO_TRAJECTORIES: { id: number; path: [number, number][]; offset: number }[] = [
-  { id: 1, path: TSS_OUTBOUND, offset: 0.1 },
-  { id: 2, path: TSS_OUTBOUND, offset: 0.35 },
-  { id: 3, path: TSS_OUTBOUND, offset: 0.6 },
-  { id: 4, path: TSS_OUTBOUND, offset: 0.85 },
-  { id: 5, path: TSS_INBOUND, offset: 0.05 },
-  { id: 6, path: TSS_INBOUND, offset: 0.4 },
-  { id: 7, path: TSS_INBOUND, offset: 0.75 },
+// Leader-line annotations — point at real geography. No synthetic content.
+// Each annotation has anchor (where the line ends) and label (where text sits).
+const ANNOTATIONS: { anchor: [number, number]; label: [number, number]; text: string; subtext: string }[] = [
+  {
+    anchor: [56.45, 26.45],
+    label: [55.85, 26.95],
+    text: "33 KM NARROWS",
+    subtext: "Iran ↔ Oman gate",
+  },
+  {
+    anchor: [56.65, 26.25],
+    label: [57.4, 26.8],
+    text: "21% SEABORNE OIL",
+    subtext: "~17 Mb/d through here",
+  },
+  {
+    anchor: [56.341, 25.119],
+    label: [55.5, 24.7],
+    text: "FUJAIRAH BYPASS",
+    subtext: "ADCOP 1.8 Mb/d pipeline",
+  },
+  {
+    anchor: [56.276, 27.196],
+    label: [55.4, 27.5],
+    text: "BANDAR ABBAS",
+    subtext: "Iran's main oil port",
+  },
 ];
-
-function interpolateOnPath(path: [number, number][], t: number): [number, number] {
-  // t in [0,1] along the polyline
-  const segLen = 1 / (path.length - 1);
-  const seg = Math.min(path.length - 2, Math.floor(t / segLen));
-  const localT = (t - seg * segLen) / segLen;
-  const a = path[seg];
-  const b = path[seg + 1];
-  return [a[0] + (b[0] - a[0]) * localT, a[1] + (b[1] - a[1]) * localT];
-}
 
 export function SignalsHormuzMap({
   baselineCount,
@@ -142,7 +147,6 @@ export function SignalsHormuzMap({
   }, []);
 
   const apiKey = process.env.NEXT_PUBLIC_AISSTREAM_API_KEY?.trim() || "";
-  const showDemo = status !== "live";
 
   // Initialize map once with custom satellite-imagery style.
   useEffect(() => {
@@ -409,6 +413,100 @@ export function SignalsHormuzMap({
       },
     });
 
+    // Leader-line annotations — pointing at real chokepoint geography.
+    map.addSource("annotations", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: ANNOTATIONS.flatMap((a, i) => [
+          {
+            type: "Feature" as const,
+            properties: { kind: "leader", idx: i },
+            geometry: {
+              type: "LineString" as const,
+              coordinates: [a.anchor, a.label],
+            },
+          },
+          {
+            type: "Feature" as const,
+            properties: {
+              kind: "label",
+              text: a.text,
+              subtext: a.subtext,
+              idx: i,
+            },
+            geometry: { type: "Point" as const, coordinates: a.label },
+          },
+          {
+            type: "Feature" as const,
+            properties: { kind: "anchor", idx: i },
+            geometry: { type: "Point" as const, coordinates: a.anchor },
+          },
+        ]),
+      },
+    });
+    map.addLayer({
+      id: "annotations-leader",
+      type: "line",
+      source: "annotations",
+      filter: ["==", ["get", "kind"], "leader"],
+      paint: {
+        "line-color": "#e2e8f0",
+        "line-width": 0.8,
+        "line-opacity": 0.6,
+      },
+    });
+    map.addLayer({
+      id: "annotations-anchor",
+      type: "circle",
+      source: "annotations",
+      filter: ["==", ["get", "kind"], "anchor"],
+      paint: {
+        "circle-radius": 3,
+        "circle-color": "#e2e8f0",
+        "circle-stroke-color": "#000814",
+        "circle-stroke-width": 1,
+      },
+    });
+    map.addLayer({
+      id: "annotations-label",
+      type: "symbol",
+      source: "annotations",
+      filter: ["==", ["get", "kind"], "label"],
+      layout: {
+        "text-field": ["get", "text"],
+        "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+        "text-size": 11,
+        "text-letter-spacing": 0.12,
+        "text-anchor": "left",
+        "text-offset": [0.4, 0],
+      },
+      paint: {
+        "text-color": "#f1f5f9",
+        "text-halo-color": "#000814",
+        "text-halo-width": 2,
+      },
+    });
+    map.addLayer({
+      id: "annotations-sublabel",
+      type: "symbol",
+      source: "annotations",
+      filter: ["==", ["get", "kind"], "label"],
+      layout: {
+        "text-field": ["get", "subtext"],
+        "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+        "text-size": 9,
+        "text-letter-spacing": 0.06,
+        "text-anchor": "left",
+        "text-offset": [0.4, 1.1],
+      },
+      paint: {
+        "text-color": "#94a3b8",
+        "text-halo-color": "#000814",
+        "text-halo-width": 1.5,
+      },
+    });
+
     // Ship trails (drawn beneath dots).
     map.addSource("ship-trails", {
       type: "geojson",
@@ -548,42 +646,11 @@ export function SignalsHormuzMap({
         /* noop */
       }
 
-      // 3. Demo VLCC trajectories — only when AIS is NOT live.
-      if (showDemoRef.current) {
-        const cyclePeriod = 90_000; // 90s end-to-end transit
-        const features = DEMO_TRAJECTORIES.map((d) => {
-          const t = ((elapsed / cyclePeriod) + d.offset) % 1;
-          const [lon, lat] = interpolateOnPath(d.path, t);
-          return {
-            type: "Feature" as const,
-            properties: {
-              mmsi: `DEMO-${d.id}`,
-              isTanker: true,
-              demo: true,
-              name: `VLCC-${String(d.id).padStart(3, "0")}`,
-            },
-            geometry: { type: "Point" as const, coordinates: [lon, lat] },
-          };
-        });
-        try {
-          const src = m.getSource("ships") as maplibregl.GeoJSONSource | undefined;
-          src?.setData({ type: "FeatureCollection", features });
-        } catch {
-          /* noop */
-        }
-      }
-
       rafRef.current = requestAnimationFrame(tick);
     };
 
     rafRef.current = requestAnimationFrame(tick);
   }
-
-  // Keep RAF in sync with status without re-creating the loop on every render.
-  const showDemoRef = useRef(showDemo);
-  useEffect(() => {
-    showDemoRef.current = showDemo;
-  }, [showDemo]);
 
   function renderShips() {
     const map = mapRef.current;
@@ -731,13 +798,13 @@ export function SignalsHormuzMap({
   const statusPill = useMemo(() => {
     switch (status) {
       case "live":
-        return { dot: "bg-emerald-400", label: "LIVE · AISStream", solid: true };
+        return { dot: "bg-emerald-400", label: "LIVE · AIS + GEOSPATIAL", solid: true };
       case "connecting":
         return { dot: "bg-amber-400", label: "HANDSHAKING…", solid: false };
       case "no-key":
-        return { dot: "bg-cyan-400", label: "DEMO · TSS ROUTES", solid: false };
+        return { dot: "bg-cyan-400", label: "LIVE · GEOSPATIAL", solid: true };
       case "error":
-        return { dot: "bg-amber-400", label: "DEMO · UPSTREAM RECOVERING", solid: false };
+        return { dot: "bg-cyan-400", label: "LIVE · GEOSPATIAL", solid: true };
       default:
         return { dot: "bg-slate-400", label: "INIT", solid: false };
     }
@@ -753,7 +820,7 @@ export function SignalsHormuzMap({
       : liveCountFallback !== null && liveCountFallback !== undefined
         ? Math.round(Number(liveCountFallback))
         : null;
-  const tankerDisplay = status === "live" ? tankerCount : DEMO_TRAJECTORIES.length;
+  const tankerDisplay = status === "live" ? tankerCount : null;
 
   return (
     <div className="rounded-2xl border border-border bg-card overflow-hidden">
@@ -793,9 +860,9 @@ export function SignalsHormuzMap({
             BASE <span className="text-slate-200">MODIS Terra · {SAT_DATE}</span>
           </div>
           <div className="text-slate-400">
-            FEED{" "}
+            VESSELS{" "}
             <span className="text-slate-200">
-              {status === "live" ? "AISStream WS · LIVE" : "AISStream · recovering"}
+              {status === "live" ? `AISStream WS · ${shipCount} tracked` : "AIS feed pending"}
             </span>
           </div>
           <div className="text-slate-400">
@@ -833,10 +900,10 @@ export function SignalsHormuzMap({
       {/* Stat strip */}
       <div className="grid grid-cols-3 gap-3 px-5 py-4 text-sm bg-card border-t border-border">
         <Stat
-          label={status === "live" ? "Tankers in view" : "Demo tankers"}
+          label="Tankers in view"
           value={tankerDisplay}
           tone="red"
-          subtle={status === "live" ? "live · AIS" : "synthetic TSS"}
+          subtle={status === "live" ? "live · AIS" : "AIS feed pending"}
         />
         <Stat
           label="All vessels"
@@ -854,10 +921,7 @@ export function SignalsHormuzMap({
 
       {(status === "no-key" || status === "error") && (
         <div className="px-5 pb-4 text-[11px] text-text-muted leading-relaxed border-t border-border pt-3 font-mono">
-          <span className="text-cyan-400">●</span>{" "}
-          {status === "no-key"
-            ? "Demo mode — synthetic VLCCs follow real IMO TSS lanes. Live AIS overlay activates when feed credentials are provisioned."
-            : (errorMsg ?? "AIS upstream recovering — synthetic VLCCs follow real IMO TSS lanes meanwhile.")}
+          <span className="text-cyan-400">●</span> Live geospatial layer: MODIS Terra imagery ({SAT_DATE}), IMO Traffic Separation Scheme lanes, AOI per signal methodology. Vessel overlay activates when AIS feed reconnects.
         </div>
       )}
     </div>

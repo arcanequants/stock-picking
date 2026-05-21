@@ -12,29 +12,48 @@ const TILE_FORMAT = "png";
 // any single day are filled by adjacent days. Real Earth-Observation teams
 // (Climate TRACE, ESA) use this technique to deliver a continuous map.
 const COMPOSITE_DAYS = 5;
-const PER_LAYER_BASE_OPACITY = 0.22;
-const PER_LAYER_PEAK_OPACITY = 0.55;
+const PER_LAYER_BASE_OPACITY = 0.45;
+const PER_LAYER_PEAK_OPACITY = 0.78;
 
 const ACCENT_CYAN = "#00BCD4";
 
+// Mission-control basemap — Carto Dark Matter. NO₂ red dominates on pure dark
+// vector base. Satellite imagery muddled the data layer in prior iteration.
+const DARK_BASEMAP =
+  "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
+
 const VIEW = {
-  center: [118.5, 33.0] as [number, number],
-  zoom: 5.0,
+  center: [115.5, 33.5] as [number, number],
+  zoom: 4.3,
 };
+
+// Cities labeled prominently so the reader registers "this is China" at first
+// glance, then can locate Beijing/Shanghai/Wuhan against the NO₂ plumes.
+const CITIES: { name: string; coords: [number, number]; tier: "primary" | "secondary" }[] = [
+  { name: "BEIJING", coords: [116.4, 39.9], tier: "primary" },
+  { name: "SHANGHAI", coords: [121.5, 31.2], tier: "primary" },
+  { name: "WUHAN", coords: [114.3, 30.6], tier: "primary" },
+  { name: "TIANJIN", coords: [117.2, 39.1], tier: "secondary" },
+  { name: "SHIJIAZHUANG", coords: [114.5, 38.0], tier: "secondary" },
+  { name: "ZHENGZHOU", coords: [113.6, 34.7], tier: "secondary" },
+  { name: "NANJING", coords: [118.8, 32.0], tier: "secondary" },
+  { name: "HANGZHOU", coords: [120.2, 30.3], tier: "secondary" },
+  { name: "CHONGQING", coords: [106.5, 29.5], tier: "secondary" },
+];
 
 const ANCHORS = [
   {
-    name: "Beijing / Hebei",
+    name: "BEIJING / HEBEI",
     coords: [116.4, 39.9] as [number, number],
     note: "BABA logistics hub",
   },
   {
-    name: "Shanghai / Yangtze Delta",
+    name: "YANGTZE DELTA",
     coords: [121.5, 31.2] as [number, number],
     note: "JD fulfillment cluster",
   },
   {
-    name: "Shenzhen",
+    name: "SHENZHEN",
     coords: [114.1, 22.5] as [number, number],
     note: "PDD merchant base",
   },
@@ -51,16 +70,6 @@ function gibsDate(offsetDays: number): string {
 function gibsTileTemplate(date: string): string {
   return `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/${GIBS_LAYER}/default/${date}/${TILE_MATRIX_SET}/{z}/{y}/{x}.${TILE_FORMAT}`;
 }
-
-// Satellite basemap — MODIS Terra true-color imagery for the freshest date
-// MODIS has produced (T-3 to guarantee full processing).
-function gibsDateBack(daysBack: number) {
-  const d = new Date();
-  d.setUTCDate(d.getUTCDate() - daysBack);
-  return d.toISOString().split("T")[0];
-}
-const SAT_DATE = gibsDateBack(3);
-const SAT_TILE = `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${SAT_DATE}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpeg`;
 
 function fmtUTC(d: Date) {
   const hh = String(d.getUTCHours()).padStart(2, "0");
@@ -101,34 +110,7 @@ export function SignalsTropomiMap() {
 
     const map = new maplibregl.Map({
       container: containerRef.current,
-      style: {
-        version: 8,
-        glyphs: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/glyphs/{fontstack}/{range}.pbf",
-        sources: {
-          satellite: {
-            type: "raster",
-            tiles: [SAT_TILE],
-            tileSize: 256,
-            attribution: "Imagery © NASA GIBS / MODIS",
-            maxzoom: 9,
-          },
-        },
-        layers: [
-          { id: "bg", type: "background", paint: { "background-color": "#000814" } },
-          {
-            id: "satellite",
-            type: "raster",
-            source: "satellite",
-            paint: {
-              // Mute saturation + darken so the red NO₂ data layer dominates.
-              "raster-opacity": 0.55,
-              "raster-saturation": -0.6,
-              "raster-contrast": -0.1,
-              "raster-brightness-max": 0.7,
-            },
-          },
-        ],
-      },
+      style: DARK_BASEMAP,
       center: VIEW.center,
       zoom: VIEW.zoom,
       attributionControl: { compact: true },
@@ -147,6 +129,7 @@ export function SignalsTropomiMap() {
 
     map.on("load", () => {
       addCompositeLayers(map, dates);
+      addCityLabels(map);
       addAnchors(map);
       startTimeLapse(map, dates.length);
     });
@@ -164,9 +147,9 @@ export function SignalsTropomiMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Time-lapse — cycles through composite days, briefly highlighting each.
-  // The composite stays as a static base (low opacity per day) and one day
-  // at a time fades up to peak opacity, creating a wave of "now playing day".
+  // Time-lapse — cycles emphasis across composite days. Base composite stays
+  // visible at moderate opacity; one day at a time fades up to peak, creating
+  // a "now playing" wave so the user sees the data refreshing.
   function startTimeLapse(map: MapLibreMap, count: number) {
     const dwellMs = 1400;
     let lastIdx = -1;
@@ -176,8 +159,7 @@ export function SignalsTropomiMap() {
       if (!mapRef.current) return;
       const elapsed = t - start;
       const idx = Math.floor(elapsed / dwellMs) % count;
-      const localT = (elapsed % dwellMs) / dwellMs; // 0..1 within the dwell
-      // Smooth cross-fade: ease-in-out
+      const localT = (elapsed % dwellMs) / dwellMs;
       const ease = localT < 0.5 ? 2 * localT * localT : 1 - Math.pow(-2 * localT + 2, 2) / 2;
 
       for (let i = 0; i < count; i++) {
@@ -185,7 +167,7 @@ export function SignalsTropomiMap() {
         if (i === idx) {
           opacity = PER_LAYER_BASE_OPACITY + ease * (PER_LAYER_PEAK_OPACITY - PER_LAYER_BASE_OPACITY);
         } else if (i === (idx - 1 + count) % count) {
-          opacity = PER_LAYER_BASE_OPACITY + (1 - ease) * (PER_LAYER_PEAK_OPACITY - PER_LAYER_BASE_OPACITY) * 0.4;
+          opacity = PER_LAYER_BASE_OPACITY + (1 - ease) * (PER_LAYER_PEAK_OPACITY - PER_LAYER_BASE_OPACITY) * 0.45;
         }
         try {
           mapRef.current.setPaintProperty(`gibs-no2-layer-${i}`, "raster-opacity", opacity);
@@ -225,19 +207,19 @@ export function SignalsTropomiMap() {
       </div>
 
       <div className="relative bg-[#000814]">
-        <div ref={containerRef} className="h-[440px] w-full" />
+        <div ref={containerRef} className="h-[460px] w-full" />
 
         {/* HUD top-left */}
-        <div className="pointer-events-none absolute top-3 left-3 max-w-[290px] rounded-md border border-cyan-400/40 bg-black/75 backdrop-blur px-3 py-2 font-mono text-[10px] leading-snug text-slate-200 shadow-lg">
+        <div className="pointer-events-none absolute top-3 left-3 max-w-[300px] rounded-md border border-cyan-400/40 bg-black/80 backdrop-blur px-3 py-2 font-mono text-[10px] leading-snug text-slate-200 shadow-lg">
           <div className="flex items-center gap-1.5 text-cyan-300 mb-1">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-rose-400 animate-pulse" />
-            <span className="tracking-widest">ATMOSPHERIC · NO₂ INDEX</span>
+            <span className="tracking-widest">ATMOSPHERIC · CHINA NO₂</span>
           </div>
           <div className="text-slate-400">
-            BASE <span className="text-slate-200">MODIS Terra · {SAT_DATE}</span>
+            SAT <span className="text-slate-200">Aura · OMI · L3 daily</span>
           </div>
           <div className="text-slate-400">
-            DATA <span className="text-slate-200">NASA GIBS · OMI L3</span>
+            RESOLUTION <span className="text-slate-200">~14 km / pixel</span>
           </div>
           <div className="text-slate-400">
             COMPOSITE{" "}
@@ -247,12 +229,19 @@ export function SignalsTropomiMap() {
           </div>
           <div className="text-slate-400">
             PLAYING{" "}
-            <span className="text-cyan-300">{dates[activeDayIdx]}</span>{" "}
-            <span className="text-slate-500">· 1.4s/frame</span>
+            <span className="text-rose-300">{dates[activeDayIdx]}</span>{" "}
+            <span className="text-slate-500">· 1.4 s/frame</span>
           </div>
           <div className="text-slate-400">
             TICK <span className="text-slate-200">{fmtUTC(now)}</span>
           </div>
+        </div>
+
+        {/* Reader caption — explicit at-glance brief, top-center under controls */}
+        <div className="pointer-events-none absolute top-3 left-1/2 -translate-x-1/2 max-w-[420px] rounded-md border border-rose-500/30 bg-black/80 backdrop-blur px-3 py-1.5 font-mono text-[10px] text-slate-200 text-center">
+          <span className="text-rose-400 font-semibold">RED</span> = active
+          factories &amp; diesel trucks emitting NO₂ ·{" "}
+          <span className="text-slate-400">darker red = denser industry</span>
         </div>
 
         {/* HUD bottom-right */}
@@ -262,38 +251,37 @@ export function SignalsTropomiMap() {
             : "MOVE CURSOR FOR COORDS"}
         </div>
 
-        {/* Timeline strip bottom-center — shows which day is currently emphasized */}
-        <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded border border-slate-700/60 bg-black/75 backdrop-blur px-3 py-1.5 font-mono text-[9px] text-slate-300">
-          <div className="flex items-center gap-2">
-            <span className="tracking-widest text-slate-400">T −</span>
-            <div className="flex gap-1">
-              {dates.map((_, i) => (
-                <span
-                  key={i}
-                  className={`inline-block h-1.5 w-5 rounded-sm transition-all ${
-                    i === activeDayIdx
-                      ? "bg-rose-400"
-                      : "bg-slate-700/80"
-                  }`}
-                />
-              ))}
+        {/* Timeline strip + legend bottom-center, stacked */}
+        <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5">
+          <div className="rounded border border-slate-700/60 bg-black/80 backdrop-blur px-3 py-1.5 font-mono text-[9px] text-slate-300">
+            <div className="flex items-center gap-2">
+              <span className="tracking-widest text-slate-400">NO₂ DENSITY</span>
+              <div className="flex h-2 w-40">
+                <span className="flex-1 bg-slate-700" />
+                <span className="flex-1 bg-blue-600" />
+                <span className="flex-1 bg-emerald-500" />
+                <span className="flex-1 bg-yellow-400" />
+                <span className="flex-1 bg-orange-500" />
+                <span className="flex-1 bg-rose-600" />
+              </div>
+              <span className="tracking-widest text-slate-400">low → high</span>
             </div>
-            <span className="tracking-widest text-slate-400">freshest</span>
           </div>
-        </div>
-
-        {/* NO₂ palette legend top-center */}
-        <div className="pointer-events-none absolute top-3 left-1/2 -translate-x-1/2 rounded border border-slate-700/60 bg-black/60 backdrop-blur px-3 py-1 font-mono text-[9px] text-slate-300">
-          <div className="flex items-center gap-2">
-            <span className="tracking-widest text-slate-400">NO₂</span>
-            <div className="flex h-2 w-32">
-              <span className="flex-1 bg-blue-600" />
-              <span className="flex-1 bg-emerald-500" />
-              <span className="flex-1 bg-yellow-400" />
-              <span className="flex-1 bg-orange-500" />
-              <span className="flex-1 bg-rose-600" />
+          <div className="rounded border border-slate-700/60 bg-black/80 backdrop-blur px-3 py-1.5 font-mono text-[9px] text-slate-300">
+            <div className="flex items-center gap-2">
+              <span className="tracking-widest text-slate-400">T −</span>
+              <div className="flex gap-1">
+                {dates.map((_, i) => (
+                  <span
+                    key={i}
+                    className={`inline-block h-1.5 w-6 rounded-sm transition-all ${
+                      i === activeDayIdx ? "bg-rose-400" : "bg-slate-700/80"
+                    }`}
+                  />
+                ))}
+              </div>
+              <span className="tracking-widest text-slate-400">freshest</span>
             </div>
-            <span className="tracking-widest text-slate-400">low → high</span>
           </div>
         </div>
 
@@ -339,6 +327,10 @@ export function SignalsTropomiMap() {
 }
 
 function addCompositeLayers(map: MapLibreMap, dates: string[]) {
+  // Place raster BELOW Carto's label layers so city names stay readable.
+  const styleLayers = map.getStyle().layers ?? [];
+  const firstSymbolId = styleLayers.find((l) => l.type === "symbol")?.id;
+
   dates.forEach((date, idx) => {
     const sourceId = `gibs-no2-${idx}`;
     const layerId = `gibs-no2-layer-${idx}`;
@@ -354,15 +346,78 @@ function addCompositeLayers(map: MapLibreMap, dates: string[]) {
           ? 'NO₂ imagery: <a href="https://gibs.earthdata.nasa.gov/" target="_blank" rel="noopener">NASA GIBS / OMI</a>'
           : undefined,
     });
-    map.addLayer({
-      id: layerId,
-      type: "raster",
-      source: sourceId,
-      paint: {
-        "raster-opacity": PER_LAYER_BASE_OPACITY,
-        "raster-resampling": "linear",
+    map.addLayer(
+      {
+        id: layerId,
+        type: "raster",
+        source: sourceId,
+        paint: {
+          "raster-opacity": PER_LAYER_BASE_OPACITY,
+          "raster-resampling": "linear",
+          "raster-saturation": 0.4,
+          "raster-contrast": 0.2,
+        },
       },
-    });
+      firstSymbolId
+    );
+  });
+}
+
+function addCityLabels(map: MapLibreMap) {
+  map.addSource("cities", {
+    type: "geojson",
+    data: {
+      type: "FeatureCollection",
+      features: CITIES.map((c) => ({
+        type: "Feature",
+        properties: { name: c.name, tier: c.tier },
+        geometry: { type: "Point", coordinates: c.coords },
+      })),
+    },
+  });
+  map.addLayer({
+    id: "cities-dot",
+    type: "circle",
+    source: "cities",
+    paint: {
+      "circle-radius": [
+        "case",
+        ["==", ["get", "tier"], "primary"],
+        3.5,
+        2,
+      ],
+      "circle-color": "#f8fafc",
+      "circle-stroke-color": "#000814",
+      "circle-stroke-width": 1.2,
+    },
+  });
+  map.addLayer({
+    id: "cities-label",
+    type: "symbol",
+    source: "cities",
+    layout: {
+      "text-field": ["get", "name"],
+      "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+      "text-size": [
+        "case",
+        ["==", ["get", "tier"], "primary"],
+        13,
+        10,
+      ],
+      "text-letter-spacing": 0.12,
+      "text-offset": [0, 1.0],
+      "text-anchor": "top",
+    },
+    paint: {
+      "text-color": [
+        "case",
+        ["==", ["get", "tier"], "primary"],
+        "#f8fafc",
+        "#cbd5e1",
+      ],
+      "text-halo-color": "#000814",
+      "text-halo-width": 2,
+    },
   });
 }
 
@@ -370,10 +425,10 @@ function addAnchors(map: MapLibreMap) {
   for (const a of ANCHORS) {
     const el = document.createElement("div");
     el.style.cssText = `
-      width: 14px; height: 14px;
+      width: 16px; height: 16px;
       border-radius: 50%;
       background: ${ACCENT_CYAN};
-      box-shadow: 0 0 0 2px rgba(0,188,212,0.25), 0 0 16px rgba(0,188,212,0.7);
+      box-shadow: 0 0 0 2px rgba(0,188,212,0.25), 0 0 18px rgba(0,188,212,0.75);
       border: 1.5px solid #000814;
       cursor: pointer;
       animation: vectorialPulse 2.4s ease-in-out infinite;
@@ -381,19 +436,17 @@ function addAnchors(map: MapLibreMap) {
     new maplibregl.Marker({ element: el })
       .setLngLat(a.coords)
       .setPopup(
-        new maplibregl.Popup({ offset: 14, closeButton: false }).setHTML(
+        new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(
           `<div style="font-family:ui-monospace,monospace;font-size:11px;background:#020617;color:#e2e8f0;padding:6px 8px;border:1px solid ${ACCENT_CYAN};border-radius:4px"><strong style="color:${ACCENT_CYAN}">${a.name}</strong><br/><span style="color:#94a3b8">${a.note}</span></div>`
         )
       )
       .addTo(map);
   }
 
-  // Inject the @keyframes once — MapLibre markers are real DOM nodes, so a
-  // global CSS rule reaches them.
   if (typeof document !== "undefined" && !document.getElementById("vectorial-pulse-css")) {
     const style = document.createElement("style");
     style.id = "vectorial-pulse-css";
-    style.textContent = `@keyframes vectorialPulse { 0%, 100% { box-shadow: 0 0 0 2px rgba(0,188,212,0.25), 0 0 16px rgba(0,188,212,0.7); } 50% { box-shadow: 0 0 0 6px rgba(0,188,212,0.08), 0 0 24px rgba(0,188,212,0.95); } }`;
+    style.textContent = `@keyframes vectorialPulse { 0%, 100% { box-shadow: 0 0 0 2px rgba(0,188,212,0.25), 0 0 18px rgba(0,188,212,0.75); } 50% { box-shadow: 0 0 0 6px rgba(0,188,212,0.08), 0 0 26px rgba(0,188,212,1); } }`;
     document.head.appendChild(style);
   }
 }
