@@ -12161,6 +12161,19 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #76* — May 19, 2026\n\n🏢 *Deutsche Telekom AG* (DTEGY) — $33.82\n\n📡 *Lo que hacen*: Deutsche Telekom es *la telecom más grande de Europa por revenue* (€119 mil millones FY2025) — es la sucesora del operador estatal alemán Deutsche Bundespost, privatizada en 1995. Tiene 4 negocios: (1) *T-Mobile US* — DT es dueña del *57.1% de T-Mobile US* (TMUS, #2 wireless USA con ~110M clientes postpaid, líder en cobertura 5G mid-band), (2) *Alemania* — operador #1 mobile (~38% market share), #1 fixed broadband + #1 en fibra (12.6M hogares ya conectados con FTTH, target 25M para 2030), (3) *Europa* — opera en 10 países (Austria, Croacia, República Checa, Grecia, Hungría, Polonia, Eslovaquia, Montenegro, Macedonia del Norte, Holanda), (4) *T-Systems* — IT services B2B para corporativos (cloud, ciberseguridad, integración).\n\n🌍 *Presencia*: HQ Bonn, Alemania. *~200,000 empleados* globales. La marca consumer es *Magenta* (el color magenta es trademark icónico de DT). *Tim Höttges es CEO desde 2014* — uno de los CEOs telco más respetados de Europa, arquitecto de la fusión T-Mobile US + Sprint (2020) que transformó TMUS de #3 a #2 wireless USA. Contrato extendido +5 años en 2025. En junio 2025 DT subió su participación en T-Mobile US a 57.1% comprando shares a SoftBank.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *3.5% anual* solo por ser dueño. Dividendo FY2025 €1.00/acción (+11% vs €0.90 — récord histórico), pagado 8 abril 2026 — el ADR DTEGY (ratio 1:1) recibió ~$1.18. Plus buyback FY26 hasta *€2 mil millones* (~3% del market cap retirement) — €471M / 15.6M shares ya completados en Q1. *Total capital return ~5% al año*. Cada vez que un alemán paga su factura de Magenta, un cliente en USA usa T-Mobile, o una empresa europea contrata IT con T-Systems — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: Q1 2026 reportado tiene 2 narrativas en tensión: (1) la huelga del sindicato *ver.di* en Alemania — 60,000 trabajadores piden +6.6% pay + €660 bono, se resolverá con compromiso ~4-5% (costo absorbible ~€500M sobre base de €119B revenue), (2) competencia de *cable MVNO en USA* — Comcast/Charter capturando ~39% de net adds wireless aprovechando red de T-Mobile, presiona margenes. Otros riesgos: (3) regulación europea telecom (UE empuja mejor cobertura rural sin compensar capex), (4) deuda neta ~€115B (apalancada por compras TMUS), (5) FX USD débil deprime traducción de TMUS a euros.\n\n🆕 Posición #76 — Abre Ciclo 16\n🔗 https://vectorialdata.com/stocks/DTEGY\n✅ Certificado por blockchain → vectorialdata.com/verify/DTEGY\n\n💡 Dato que ancla la tesis: hagamos la cuenta — Deutsche Telekom vale en bolsa *$165 mil millones*. Su pedazo del 57% de T-Mobile US vale *$119 mil millones* (TMUS cotiza a ~$209B mcap). Eso significa que el mercado le pone solo *$46 mil millones al resto del negocio* — toda Alemania (operador #1 mobile + #1 broadband + #1 fibra con 12.6M hogares conectados rumbo a 25M en 2030), 10 países europeos con 8.6M clientes convergentes, y T-Systems IT services. Esos negocios generaron *€20.5 mil millones de EBITDA en 2025*. Es como si te ofrecieran un departamento en Berlín + un coche premium + un negocio rentable funcionando — todo al precio de solo el coche. La valuación implícita del "resto" es 2.2x EV/EBITDA cuando telecoms europeas cotizan a 5-7x — descuento brutal. Comprar DTEGY a $33.82 (cerca del mínimo 52 semanas $30.31-$40.58) cuando Q1 2026 entregó +7.5% EBITDA orgánico, récord FCF Q1 de €5.7B, EPS +7.9%, guidance FY26 SUBIDA, dividendo récord €1.00 (+11%), buyback €2B activo. Analyst consensus Strong Buy 18-0-0 con target promedio €37.11 = ~+24% upside ADR ($42 vs $33.82 spot). Backup tesis: incluso si TMUS cae 20%, DT sigue barata por la cobertura del stake.`,
     attestation_uid: "0x6f4f7c9ad35dbc32c38e72faf5d7abc00ffc707b7a9487602748c461475b22a4",
   },
+  {
+    id: 77,
+    stock_id: 70,
+    ticker: "ECL",
+    type: "rebuy" as const,
+    cycle_number: 16,
+    price: 244.96,
+    open_price: 244.96,
+    date: "2026-05-20",
+    day_of_week: "wednesday",
+    wa_message: `🔄 *RECOMPRA* — May 20, 2026\n\n🏢 *Ecolab Inc.* (ECL) — $244.96\n🛍️ #1 mundial en tratamiento de agua + higiene industrial; dueño de CoolIT (enfriamiento líquido para data centers de AI, deal $4.75B)\n\n💵 Seguimos acumulando *Dividend Aristocrat con 33 años subiendo el dividendo sin parar* desde 1993. Yield actual *1.04% anual*.\n💪 *¿Por qué recompramos?* Compramos ECL el 13 de mayo a $250.79. Hoy está a $244.96 (*-2.3%*) y el catalizador grande — el cierre de la compra de CoolIT en el tercer trimestre — todavía no llega. Misma tesis, mejor entry. Comprar a diferentes precios baja tu precio promedio.\n\n🔄 Recompra #77\n🔗 https://vectorialdata.com/stocks/ECL\n✅ Certificado por blockchain → vectorialdata.com/verify/ECL\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en ECL. Ve el research completo: vectorialdata.com/stocks/ECL\n\n💡 Ecolab lleva 33 años seguidos subiendo el dividendo cada año — solo ~30 empresas en el mundo tienen ese track record. Y acaba de comprar por $4.75 mil millones a CoolIT, el líder en enfriamiento líquido para data centers de AI (los servidores Nvidia generan tanto calor que el aire ya no los enfría — necesitan agua). Bajar el precio promedio de un negocio que paga dividendo creciente 33 años seguidos, justo antes de que cierre su mayor adquisición de la historia, es exactamente la jugada.`,
+    attestation_uid: "",
+  },
 ];
 
 type Cycle = {
@@ -12298,7 +12311,7 @@ export const cycles: Cycle[] = [
     cycle_number: 16,
     type: "new" as const,
     target_count: 5,
-    current_count: 1,
+    current_count: 2,
     status: "active" as const,
   },
 ];
