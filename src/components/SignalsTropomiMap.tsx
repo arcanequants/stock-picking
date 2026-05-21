@@ -84,6 +84,28 @@ function fmtCoord(lat: number, lon: number) {
   return `${latStr} · ${lonStr}`;
 }
 
+type DensityClass = "low" | "med" | "high" | "extreme" | "n/a";
+
+function classifyDensity(r: number, g: number, b: number, a: number): DensityClass {
+  if (a < 16) return "n/a";
+  // GIBS NO₂ palette: low → blue/green/yellow/orange/red → extreme red/purple.
+  // Heuristic based on RGB; tested against the legend colors.
+  if (r > 200 && g < 80) return "extreme";
+  if (r > 220 && g > 120 && g < 200) return "high";
+  if (g > 180 && r < 200 && b < 120) return "med";
+  if (b > 120 && r < 150) return "low";
+  if (r > 180 && g > 180) return "med"; // yellow band
+  return "low";
+}
+
+const DENSITY_LABEL: Record<DensityClass, { text: string; color: string }> = {
+  "n/a": { text: "NO DATA", color: "text-slate-500" },
+  low: { text: "LOW · clean air", color: "text-blue-300" },
+  med: { text: "MED · moderate", color: "text-emerald-300" },
+  high: { text: "HIGH · busy industry", color: "text-orange-300" },
+  extreme: { text: "EXTREME · super-emitter", color: "text-rose-400" },
+};
+
 export function SignalsTropomiMap() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
@@ -98,6 +120,7 @@ export function SignalsTropomiMap() {
   const [hoverCoord, setHoverCoord] = useState<{ lat: number; lon: number } | null>(
     null
   );
+  const [density, setDensity] = useState<DensityClass>("n/a");
   const [activeDayIdx, setActiveDayIdx] = useState(0);
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
@@ -117,6 +140,8 @@ export function SignalsTropomiMap() {
       cooperativeGestures: true,
       maxZoom: 9,
       minZoom: 3,
+      // Required to sample pixel colors back from the WebGL canvas on hover.
+      canvasContextAttributes: { preserveDrawingBuffer: true },
     });
     map.addControl(
       new maplibregl.NavigationControl({ showCompass: false }),
@@ -132,11 +157,40 @@ export function SignalsTropomiMap() {
       addCityLabels(map);
       addAnchors(map);
       startTimeLapse(map, dates.length);
+      startOrbitalSweep(map);
     });
     map.on("mousemove", (e) => {
       setHoverCoord({ lat: e.lngLat.lat, lon: e.lngLat.lng });
+      // Sample the canvas pixel under the cursor to read NO₂ palette color.
+      try {
+        const canvas = map.getCanvas();
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        const x = Math.floor((e.point.x / rect.width) * canvas.width);
+        const y = Math.floor((e.point.y / rect.height) * canvas.height);
+        const gl = canvas.getContext("webgl2") || canvas.getContext("webgl");
+        if (gl) {
+          const pixel = new Uint8Array(4);
+          gl.readPixels(
+            x,
+            canvas.height - y, // WebGL origin is bottom-left
+            1,
+            1,
+            gl.RGBA,
+            gl.UNSIGNED_BYTE,
+            pixel
+          );
+          setDensity(classifyDensity(pixel[0], pixel[1], pixel[2], pixel[3]));
+        }
+        void dpr;
+      } catch {
+        /* canvas not ready */
+      }
     });
-    map.on("mouseout", () => setHoverCoord(null));
+    map.on("mouseout", () => {
+      setHoverCoord(null);
+      setDensity("n/a");
+    });
 
     mapRef.current = map;
     return () => {
@@ -146,6 +200,88 @@ export function SignalsTropomiMap() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Orbital sweep — animates a diagonal "satellite pass" line moving E→W
+  // across the map every 8 s, mimicking Aura's ~98° polar orbit. The line
+  // draws + fades so it doesn't dominate the data. Trailing dot marks the
+  // satellite sub-point.
+  function startOrbitalSweep(map: MapLibreMap) {
+    map.addSource("orbital-pass", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: [],
+      },
+    });
+    map.addLayer({
+      id: "orbital-pass-line",
+      type: "line",
+      source: "orbital-pass",
+      filter: ["==", ["get", "kind"], "track"],
+      paint: {
+        "line-color": "#67e8f9",
+        "line-width": 1.5,
+        "line-opacity": 0.55,
+        "line-blur": 0.5,
+        "line-dasharray": [3, 2],
+      },
+    });
+    map.addLayer({
+      id: "orbital-pass-glow",
+      type: "line",
+      source: "orbital-pass",
+      filter: ["==", ["get", "kind"], "track"],
+      paint: {
+        "line-color": "#67e8f9",
+        "line-width": 8,
+        "line-opacity": 0.12,
+        "line-blur": 6,
+      },
+    });
+    map.addLayer({
+      id: "orbital-pass-sub",
+      type: "circle",
+      source: "orbital-pass",
+      filter: ["==", ["get", "kind"], "sub"],
+      paint: {
+        "circle-radius": 5,
+        "circle-color": "#67e8f9",
+        "circle-stroke-color": "#000814",
+        "circle-stroke-width": 1.5,
+      },
+    });
+    map.addLayer({
+      id: "orbital-pass-sub-halo",
+      type: "circle",
+      source: "orbital-pass",
+      filter: ["==", ["get", "kind"], "sub"],
+      paint: {
+        "circle-radius": 14,
+        "circle-color": "#67e8f9",
+        "circle-opacity": 0.18,
+        "circle-blur": 0.8,
+      },
+    });
+    map.addLayer({
+      id: "orbital-pass-label",
+      type: "symbol",
+      source: "orbital-pass",
+      filter: ["==", ["get", "kind"], "sub"],
+      layout: {
+        "text-field": "AURA · OMI",
+        "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+        "text-size": 9,
+        "text-offset": [1.2, 0],
+        "text-anchor": "left",
+        "text-letter-spacing": 0.15,
+      },
+      paint: {
+        "text-color": "#67e8f9",
+        "text-halo-color": "#000814",
+        "text-halo-width": 1.6,
+      },
+    });
+  }
 
   // Time-lapse — cycles emphasis across composite days. Base composite stays
   // visible at moderate opacity; one day at a time fades up to peak, creating
@@ -179,6 +315,49 @@ export function SignalsTropomiMap() {
       if (idx !== lastIdx) {
         setActiveDayIdx(idx);
         lastIdx = idx;
+      }
+
+      // Orbital pass — diagonal NE→SW line crossing the map every 8 s.
+      // Position along the orbit (subPhase ∈ [0,1]) drives the sub-point.
+      const orbitPeriod = 8000;
+      const subPhase = (elapsed % orbitPeriod) / orbitPeriod;
+      // Track endpoints — angled to mimic Aura's polar orbit at this latitude.
+      const startLon = 90 + subPhase * 50;
+      const endLon = 145 + subPhase * 50;
+      const startLat = 50;
+      const endLat = 18;
+      // Sub-point sits 30% along the track for a leading-edge feel.
+      const subLon = startLon + (endLon - startLon) * 0.3;
+      const subLat = startLat + (endLat - startLat) * 0.3;
+      try {
+        const src = mapRef.current.getSource("orbital-pass") as
+          | maplibregl.GeoJSONSource
+          | undefined;
+        if (src) {
+          src.setData({
+            type: "FeatureCollection",
+            features: [
+              {
+                type: "Feature",
+                properties: { kind: "track" },
+                geometry: {
+                  type: "LineString",
+                  coordinates: [
+                    [startLon, startLat],
+                    [endLon, endLat],
+                  ],
+                },
+              },
+              {
+                type: "Feature",
+                properties: { kind: "sub" },
+                geometry: { type: "Point", coordinates: [subLon, subLat] },
+              },
+            ],
+          });
+        }
+      } catch {
+        /* noop */
       }
 
       rafRef.current = requestAnimationFrame(tick);
@@ -244,11 +423,18 @@ export function SignalsTropomiMap() {
           <span className="text-slate-400">darker red = denser industry</span>
         </div>
 
-        {/* HUD bottom-right */}
-        <div className="pointer-events-none absolute bottom-3 right-3 rounded border border-slate-700/60 bg-black/60 backdrop-blur px-2 py-1 font-mono text-[10px] text-slate-300">
-          {hoverCoord
-            ? fmtCoord(hoverCoord.lat, hoverCoord.lon)
-            : "MOVE CURSOR FOR COORDS"}
+        {/* HUD bottom-right — coord + sampled NO₂ density */}
+        <div className="pointer-events-none absolute bottom-3 right-3 rounded border border-slate-700/60 bg-black/80 backdrop-blur px-2 py-1.5 font-mono text-[10px] text-slate-300 space-y-0.5 min-w-[180px]">
+          <div>
+            <span className="text-slate-500">COORD </span>
+            {hoverCoord ? fmtCoord(hoverCoord.lat, hoverCoord.lon) : "—"}
+          </div>
+          <div>
+            <span className="text-slate-500">NO₂ </span>
+            <span className={DENSITY_LABEL[density].color}>
+              {DENSITY_LABEL[density].text}
+            </span>
+          </div>
         </div>
 
         {/* Timeline strip + legend bottom-center, stacked */}

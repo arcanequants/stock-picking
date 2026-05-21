@@ -87,6 +87,40 @@ function fmtCoord(lat: number, lon: number) {
   return `${latStr} · ${lonStr}`;
 }
 
+// Approximate ring around a lat/lon — degrees-only (flat-earth at this zoom).
+// Good enough for visual range rings; would distort near the poles.
+function ringCoords(
+  cx: number,
+  cy: number,
+  radiusDeg: number,
+  segments: number
+): [number, number][] {
+  const out: [number, number][] = [];
+  for (let i = 0; i <= segments; i++) {
+    const a = (i / segments) * Math.PI * 2;
+    out.push([cx + Math.cos(a) * radiusDeg, cy + Math.sin(a) * radiusDeg * 0.85]);
+  }
+  return out;
+}
+
+// Pie-slice wedge from angle a → angle b (radians), used for the sweep.
+function wedgeCoords(
+  cx: number,
+  cy: number,
+  rDeg: number,
+  a: number,
+  b: number,
+  segments = 18
+): [number, number][] {
+  const pts: [number, number][] = [[cx, cy]];
+  for (let i = 0; i <= segments; i++) {
+    const ang = a + ((b - a) * i) / segments;
+    pts.push([cx + Math.cos(ang) * rDeg, cy + Math.sin(ang) * rDeg * 0.85]);
+  }
+  pts.push([cx, cy]);
+  return pts;
+}
+
 // Leader-line annotations — point at real geography. No synthetic content.
 // Each annotation has anchor (where the line ends) and label (where text sits).
 const ANNOTATIONS: { anchor: [number, number]; label: [number, number]; text: string; subtext: string }[] = [
@@ -144,6 +178,41 @@ export function SignalsHormuzMap({
   useEffect(() => {
     const t = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(t);
+  }, []);
+
+  // Live oil ticker — gives the map a heartbeat even while AISStream's TLS
+  // is broken. Polls /api/markets/oil every 30 s; the route caches 20 s on
+  // the edge so we're not hammering Yahoo.
+  type Quote = {
+    symbol: string;
+    label: string;
+    price: number | null;
+    change_pct: number | null;
+    observed_at: string | null;
+  };
+  const [brent, setBrent] = useState<Quote | null>(null);
+  const [wti, setWti] = useState<Quote | null>(null);
+  const [tickerPulse, setTickerPulse] = useState(0);
+  useEffect(() => {
+    let cancelled = false;
+    async function poll() {
+      try {
+        const res = await fetch("/api/markets/oil", { cache: "no-store" });
+        if (!res.ok || cancelled) return;
+        const json = (await res.json()) as { brent: Quote; wti: Quote };
+        setBrent(json.brent);
+        setWti(json.wti);
+        setTickerPulse((p) => p + 1);
+      } catch {
+        /* noop */
+      }
+    }
+    poll();
+    const t = setInterval(poll, 30_000);
+    return () => {
+      cancelled = true;
+      clearInterval(t);
+    };
   }, []);
 
   const apiKey = process.env.NEXT_PUBLIC_AISSTREAM_API_KEY?.trim() || "";
@@ -363,6 +432,54 @@ export function SignalsHormuzMap({
         "text-color": ACCENT_CYAN,
         "text-halo-color": "#000814",
         "text-halo-width": 1.6,
+      },
+    });
+
+    // Radar sweep — a 1°-wide arc that orbits the chokepoint every 4s.
+    // Pure RAF-driven, no network needed. Gives the map a "always alive"
+    // feel even when AISStream is down.
+    map.addSource("radar-sweep", {
+      type: "geojson",
+      data: {
+        type: "Feature",
+        properties: {},
+        geometry: { type: "Polygon", coordinates: [[[56.45, 26.45]]] },
+      },
+    });
+    map.addLayer({
+      id: "radar-sweep-fill",
+      type: "fill",
+      source: "radar-sweep",
+      paint: {
+        "fill-color": ACCENT_CYAN,
+        "fill-opacity": 0.18,
+      },
+    });
+
+    // Radar concentric range rings (static) — anchors the sweep visually.
+    map.addSource("radar-rings", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: [0.25, 0.45, 0.65].map((r) => ({
+          type: "Feature" as const,
+          properties: { radius: r },
+          geometry: {
+            type: "LineString" as const,
+            coordinates: ringCoords(56.45, 26.45, r, 64),
+          },
+        })),
+      },
+    });
+    map.addLayer({
+      id: "radar-rings-line",
+      type: "line",
+      source: "radar-rings",
+      paint: {
+        "line-color": ACCENT_CYAN,
+        "line-width": 0.8,
+        "line-opacity": 0.25,
+        "line-dasharray": [2, 3],
       },
     });
 
@@ -646,6 +763,32 @@ export function SignalsHormuzMap({
         /* noop */
       }
 
+      // 3. Radar sweep — wedge rotates 360° every 4 s. We update geometry
+      // by rewriting the geojson source. Cheaper than rebuilding layers.
+      const sweepPeriod = 4000;
+      const sweepPhase = (elapsed % sweepPeriod) / sweepPeriod;
+      const angle = sweepPhase * Math.PI * 2 - Math.PI / 2;
+      const wedgeWidth = Math.PI / 6; // 30°
+      try {
+        const src = m.getSource("radar-sweep") as
+          | maplibregl.GeoJSONSource
+          | undefined;
+        if (src) {
+          src.setData({
+            type: "Feature",
+            properties: {},
+            geometry: {
+              type: "Polygon",
+              coordinates: [
+                wedgeCoords(56.45, 26.45, 0.65, angle - wedgeWidth, angle),
+              ],
+            },
+          });
+        }
+      } catch {
+        /* noop */
+      }
+
       rafRef.current = requestAnimationFrame(tick);
     };
 
@@ -846,6 +989,27 @@ export function SignalsHormuzMap({
         </span>
       </div>
 
+      {/* Live ticker tape — Brent + WTI quotes refreshing every 30 s.
+          Sits ABOVE the map so it's always legible regardless of basemap. */}
+      <div className="border-y border-border bg-black/95 overflow-hidden">
+        <div className="flex items-center gap-4 px-4 py-2 font-mono text-[11px] text-slate-200 whitespace-nowrap">
+          <span className="inline-flex items-center gap-1.5 text-[9px] uppercase tracking-widest text-cyan-300/90">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-cyan-300" />
+            </span>
+            LIVE · 30s
+          </span>
+          <QuoteCell label="BRENT" symbol="BZ=F" q={brent} pulse={tickerPulse} />
+          <span className="text-slate-700">·</span>
+          <QuoteCell label="WTI" symbol="CL=F" q={wti} pulse={tickerPulse} />
+          <span className="text-slate-700 hidden sm:inline">·</span>
+          <span className="hidden sm:inline text-[10px] text-slate-500">
+            ~17 Mb/d transits this strait — every $1 swing = $17M/day in flows.
+          </span>
+        </div>
+      </div>
+
       {/* Map shell — mission-control black surface, fixed dark even in light mode */}
       <div className="relative bg-[#000814]">
         <div ref={containerRef} className="h-[440px] w-full" />
@@ -925,6 +1089,45 @@ export function SignalsHormuzMap({
         </div>
       )}
     </div>
+  );
+}
+
+function QuoteCell({
+  label,
+  symbol,
+  q,
+  pulse,
+}: {
+  label: string;
+  symbol: string;
+  q: {
+    price: number | null;
+    change_pct: number | null;
+  } | null;
+  pulse: number;
+}) {
+  const up = q?.change_pct != null && q.change_pct >= 0;
+  return (
+    <span
+      key={pulse}
+      className="inline-flex items-baseline gap-1.5 transition-opacity duration-300"
+      title={symbol}
+    >
+      <span className="text-[10px] text-slate-500 tracking-widest">{label}</span>
+      <span className="text-slate-100 tabular-nums">
+        {q?.price != null ? `$${q.price.toFixed(2)}` : "—"}
+      </span>
+      {q?.change_pct != null && (
+        <span
+          className={`tabular-nums text-[10px] ${
+            up ? "text-emerald-400" : "text-rose-400"
+          }`}
+        >
+          {up ? "▲" : "▼"} {up ? "+" : ""}
+          {q.change_pct.toFixed(2)}%
+        </span>
+      )}
+    </span>
   );
 }
 

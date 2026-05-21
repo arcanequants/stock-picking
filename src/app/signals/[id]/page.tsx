@@ -13,7 +13,7 @@ import {
 } from "@/lib/signals";
 import { getSignalView } from "@/lib/signals-view";
 import { SignalViewToggle } from "@/components/SignalViewToggle";
-import { SignalSparkline } from "@/components/SignalSparkline";
+import { SignalChart } from "@/components/SignalChart";
 import { SignalsHormuzMap } from "@/components/SignalsHormuzMap";
 import { SignalsTropomiMap } from "@/components/SignalsTropomiMap";
 import { SignalsWhatsAppCta } from "@/components/SignalsWhatsAppCta";
@@ -78,7 +78,7 @@ export default async function SignalDetailPage({
   const snapshot = await getSignalSnapshot(id);
   if (!snapshot) notFound();
 
-  const { definition, latest, delta_vs_baseline_pct, history90d } = snapshot;
+  const { definition, latest, delta_vs_baseline_pct, history } = snapshot;
   const locale = normalizeLocale(await getLocale());
   const { user } = await getAuthState();
   const view = await getSignalView();
@@ -98,6 +98,17 @@ export default async function SignalDetailPage({
         timeZone: "UTC",
       }) + " UTC"
     : "no observation yet";
+
+  // Honest cadence note — EIA daily spots publish T+2 business days,
+  // weekly petroleum publishes Wed for prior Fri. Users were confused why
+  // the chart "ended on May 18" when today is May 21 — this names the lag.
+  const cadenceNote = (() => {
+    const cad = m.cadence.toLowerCase();
+    if (cad.includes("weekly")) return "Source publishes weekly, ~5-day lag.";
+    if (cad.includes("daily")) return "Source publishes T+1 to T+2 business days.";
+    if (cad.includes("monthly")) return "Source publishes monthly.";
+    return null;
+  })();
 
   const deltaPositive =
     delta_vs_baseline_pct !== null && delta_vs_baseline_pct >= 0;
@@ -153,16 +164,23 @@ export default async function SignalDetailPage({
             <span className="text-text-faint"> vs {m.baseline_method}</span>
           </div>
         </div>
-        <p className="text-xs text-text-faint">Observed: {observedAt}</p>
-        {history90d.length >= 2 && (
+        <p className="text-xs text-text-faint">
+          Observed: {observedAt}
+          {cadenceNote && (
+            <span className="text-text-faint/70"> · {cadenceNote}</span>
+          )}
+        </p>
+        {history.length >= 2 && (
           <div className="pt-3 border-t border-border">
             <p className="text-[10px] uppercase tracking-wide text-text-faint mb-2">
-              Last 90 days · dashed = {definition.methodology.baseline_method}
+              Interactive chart · hover for date + value · dashed ={" "}
+              {definition.methodology.baseline_method}
             </p>
-            <SignalSparkline
-              history={history90d}
+            <SignalChart
+              history={history}
               unit={definition.unit}
               decimals={definition.display_decimals}
+              baselineLabel={definition.methodology.baseline_method}
             />
           </div>
         )}

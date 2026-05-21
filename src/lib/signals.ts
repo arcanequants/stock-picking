@@ -219,6 +219,9 @@ export async function getLatestObservation(
 export type SignalSnapshot = {
   definition: SignalDefinition;
   latest: SignalObservation | null;
+  /** Up to 2 years of observations — chart picks the timeframe client-side. */
+  history: SignalObservation[];
+  /** Legacy alias: last 90 days. Kept for brief.md/JSON consumers. */
   history90d: SignalObservation[];
   delta_vs_baseline_pct: number | null;
 };
@@ -228,16 +231,26 @@ export async function getSignalSnapshot(
 ): Promise<SignalSnapshot | null> {
   const definition = await getSignal(id);
   if (!definition) return null;
-  const [latest, history90d] = await Promise.all([
+  const [latest, history] = await Promise.all([
     getLatestObservation(id),
-    getRecentObservations(id, 90),
+    getRecentObservations(id, 730),
   ]);
+  const ninetyAgo = Date.now() - 90 * 86400_000;
+  const history90d = history.filter(
+    (h) => new Date(h.observed_at).getTime() >= ninetyAgo
+  );
   const delta =
     latest && latest.baseline_value !== null && latest.baseline_value !== 0
       ? (Number(latest.value) - Number(latest.baseline_value)) /
         Math.abs(Number(latest.baseline_value))
       : null;
-  return { definition, latest, history90d, delta_vs_baseline_pct: delta };
+  return {
+    definition,
+    latest,
+    history,
+    history90d,
+    delta_vs_baseline_pct: delta,
+  };
 }
 
 const DISCLAIMER_ES =
