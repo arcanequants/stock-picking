@@ -1,0 +1,196 @@
+{
+  "date": "2026-05-22",
+  "summary": "La clausura efectiva del Estrecho de Hormuz lleva Brent a $105 y el bono a 30 anos de EE.UU. toca 5.19%, repreciando el riesgo global en todos los activos.",
+  "causalChain": "Iran bloqueo el Estrecho de Hormuz retirando 14.5 millones de barriles diarios del mercado, disparando el petroleo por encima de $100/barril y reactivando la inflacion mundial; los bancos centrales respondieron en direcciones opuestas: RBA sube por tercera vez, Banxico cierra su ciclo de recortes, BoJ congela tasas, mientras el costo del credito soberano de EE.UU. alcanza maximos desde 2007.",
+  "table": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "angle": "Strait of Hormuz: Brent at $105, WTI at $100 -- 14.5M bpd disrupted",
+      "worker": "-"
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "angle": "US 30-yr bond hits 5.19%, highest since pre-2008 financial crisis",
+      "worker": "-"
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "angle": "Gold at $4,535 -- near all-time high on Iran war + safe-haven demand",
+      "worker": "-"
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "angle": "Banxico cuts to 6.50%, ends 14-cut cycle; Q1 GDP shrank 0.8%",
+      "worker": "-"
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "angle": "USMCA July review launched; record $40.9B nearshoring FDI",
+      "worker": "-"
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "angle": "BoJ holds at 0.75%; yen falls to 159/dollar for 7th straight day",
+      "worker": "-"
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "angle": "China-US tariff thaw agreed in principle; PBOC manages gradual yuan drift",
+      "worker": "-"
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "angle": "ECB holds at 2.15%; euro area 2026 growth cut to 0.9% on energy shock",
+      "worker": "-"
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "angle": "UK hiring slowdown worst since May 2020; sterling slips to $1.34",
+      "worker": "-"
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "angle": "RBA hikes to 4.35% -- third straight raise this year in 8-1 vote",
+      "worker": "-"
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "angle": "Rio Tinto + BHP explore 200M-tonne joint iron ore venture in Pilbara",
+      "worker": "-"
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "angle": "Bitcoin $82K -- post-halving ETF inflow streak hits $2.7B in 9 days",
+      "worker": "-"
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "angle": "Digital-dollar market at $319B; GENIUS Act + MiCA rewrite the rules",
+      "worker": "-"
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "angle": "Echo Protocol hack: $77M in fake tokens minted on Monad blockchain",
+      "worker": "-"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "angle": "Physics: universe constants sit in narrow sweet spot that keeps blood flowing right",
+      "worker": "-"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "angle": "Biology: Berkeley chip ages human tissue 30 years in just four days",
+      "worker": "-"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "angle": "Genetics: tiny microbe rewrites 60-year-old rule about how DNA signals an end",
+      "worker": "-"
+    }
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil flows from the Middle East through a narrow channel called the Strait of Hormuz -- roughly 20% of the world's oil passes through it every day. Iran effectively closed it in early 2026. Brent crude now trades at $105 a barrel, up from below $65 at the start of the year. Every country that runs on gasoline, jet fuel, or diesel is paying more. That extra cost travels through factory inputs, grocery bills, and heating costs -- a hidden tax spreading across every economy on earth."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government pays interest when it borrows money for 30 years. That rate just hit 5.19% -- the highest in nearly two decades. When the US pays more to borrow, every mortgage, car loan, and corporate bond in the world eventually costs more too. Rising oil from the Iran conflict is pushing prices higher again, and investors are demanding bigger compensation to lend long-term. The cost of money is creeping up from oil wells to kitchen tables worldwide."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,535 an ounce -- nearly triple where it traded three years ago. When wars break out and governments borrow heavily, people move money into gold because it does not depend on any government's promise. The Iran conflict is pushing both oil and inflation higher, making gold even more attractive. A brief flicker of hope came when the US and China agreed in principle to cut some import taxes on each other's goods -- a rare piece of good news that briefly cooled gold's rise."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key interest rate to 6.50% in May 2026, ending a two-year easing run that spanned 14 meetings. The vote was tight: 3 to cut, 2 to hold. Why stop now? Mexico's economy shrank 0.8% in early 2026, the worst quarter since the pandemic. Lower rates make borrowing cheaper and can spark growth. But inflation still runs at 4.5% and the bank has signalled the cutting cycle is over. A slow recovery is expected in the second half of the year."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "The US-Mexico-Canada trade deal -- which governs most goods crossing North America -- faces a required review in July 2026. The US and Mexico began formal talks in March, focused on tightening rules on where products actually come from so that Asian-made goods cannot simply pass through Mexico to avoid US tariffs. At the same time, companies building factories closer to the US have poured a record $40.9 billion into Mexico over the past year. The review's outcome will determine whether that investment wave keeps coming."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's central bank kept interest rates at 0.75% and the yen has now fallen against the dollar for seven straight days, sitting near 159 per dollar. When a currency weakens, exports become cheaper for foreign buyers -- which helps Japanese carmakers. But Japan imports almost all its oil, and with prices near $100 a barrel, a weaker yen means Japan pays dramatically more for energy. The critical level to watch is 160 per dollar -- the point that previously triggered government action to defend the currency."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "The US and China agreed in principle to lower the import taxes they charge on each other's goods, following a high-level summit. China's central bank is allowing its currency to drift slightly lower -- a controlled move to keep Chinese exports competitively priced without sparking a currency war. Hong Kong's stock index rose 1.1% on the trade news. It is a small thaw in years of tension, but markets are watching whether the global commodity shock from the Iran conflict will derail any further progress."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's central bank held its main interest rate at 2.15% and cut its forecast for how fast the region will grow this year -- now just 0.9%. The Iran conflict pushed energy prices sharply higher, and Europe, especially Germany, relies heavily on imported fuel to power its factories. Germany is spending more on defence and infrastructure, which helps a little. But rising energy costs are eating into that benefit. Europe faces a painful squeeze: inflation from oil and stagnant growth at the same time."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "The UK is adding new workers at its slowest pace since the lockdowns of 2020. Fresh data this week showed a sharp drop in hiring, and April retail sales fell 1.3% -- about double what economists expected -- as higher fuel costs cut into household spending. The pound slipped to $1.34. Britain's central bank is now expected to leave rates unchanged rather than raise them, which makes the pound less attractive to global investors and keeps it under pressure. The country is caught between high energy costs and a cooling economy."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised interest rates for the third time this year, bringing them to 4.35% in a near-unanimous 8-1 vote. The reason: Iran's disruption of oil supplies sent fuel and commodity prices surging again, re-igniting inflation that Australia thought it had tamed. Higher rates mean Australians with mortgages pay more each month. The bank signalled it can now pause and wait -- but the message was clear: bringing prices back down is the priority, even if that slows the economy."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Two of the world's biggest mining companies, Rio Tinto and BHP, are exploring a deal to jointly dig up 200 million tonnes of iron ore a year from their neighbouring mines in Australia's Pilbara region. Iron ore is the main raw material for making steel, which goes into buildings, cars, and infrastructure globally. China buys more iron ore than any other country. A joint operation would cut costs but will face scrutiny from competition watchdogs. Rio Tinto alone spent $13 billion with Australian suppliers last year."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading around $82,000 and gained roughly 5% in five days. In April 2026, its built-in production schedule cut the daily creation of new Bitcoin in half -- an event that happens every four years. At the same time, US investment funds focused on Bitcoin pulled in $2.7 billion over just nine trading days, with BlackRock's fund alone attracting $335 million in one day. When demand stays steady and new supply shrinks, prices tend to rise. Large holders have been buying near $90,000, signalling confidence in the trend continuing."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Tokens that are always worth exactly $1 -- digital dollars running on blockchains -- now total $319.7 billion in circulation. Tether holds $189 billion of that; Circle holds $77 billion. They are backed by real US dollars and government bonds held in reserve. In 2025 the US passed a law called the GENIUS Act setting rules for how those reserves must work. Europe now caps digital dollar payments above $220 million a day. As regulation takes hold, these instruments are moving from crypto experiment to mainstream financial plumbing."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "An app called Echo Protocol suffered an attack in which a hacker created roughly $77 million worth of tokens that should not exist -- essentially counterfeiting digital money. These apps run on open code instead of a bank, locking user funds in automated programs. When the code has a flaw, there is no insurance and often no recovery. The attack happened on a newer blockchain called Monad. Money locked in these kinds of apps has grown to hundreds of billions of dollars globally, making security failures increasingly costly for real users."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Physics has a hidden puzzle: the numbers that govern the universe -- the charge of an electron, a constant called Planck's number -- could theoretically be almost anything. Physicist Kostya Trachenko and colleagues at Queen Mary University of London found that if these numbers shifted by even a few percent, water and blood would flow too thick or too thin for life to work. The universe did not have to land on these exact values. The fact that it did, precisely in the range that allows cells to function, is one of science's deepest open questions. Published in Science Advances. More: https://www.sciencedaily.com/releases/2026/05/260508022653.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Scientists at UC Berkeley built a tiny chip that mimics human organs and exposed it to proteins found in young versus old blood. By comparing which genes switched on and off, researchers Irina Conboy and Andreas Stahl showed that decades of biological aging can be replicated in just four days -- and that the process is partially reversible when old blood signals are replaced with young ones. Testing anti-aging treatments that used to take years of observation can now be done in a week, dramatically accelerating the search for ways to slow aging. Published in Nature Aging. More: https://nature.berkeley.edu/news/2026/03/organ-chip-technology-replicates-decades-human-aging-just-four-days"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Every living thing on Earth uses the same three-letter codes in DNA to signal where a gene ends -- a rule that has held across billions of years of evolution. Scientists at UC Berkeley discovered a microscopic single-celled creature that ignores one of those stop signals entirely, repurposing it to build something new instead of halting. This protist breaks a cornerstone assumption that has guided genetics for 60 years: that the genetic stop code is universal. It suggests life's rule book has more flexibility than textbooks taught, and that we may have missed other exceptions hiding in nature. Published in Cell. More: https://www.sciencedaily.com/releases/2026/05/260507024045.htm"
+    }
+  ]
+}
