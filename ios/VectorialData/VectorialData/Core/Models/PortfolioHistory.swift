@@ -9,6 +9,9 @@ struct PortfolioHistoryPoint: Codable, Equatable, Identifiable {
     let date: String
     let returnPct: Double
     let spyReturnPct: Double?
+    /// Only present when the chart is loaded with `?view=personal` AND the
+    /// authed user had at least one bought pick on or before this date.
+    let personalReturnPct: Double?
 
     var id: String { date }
 
