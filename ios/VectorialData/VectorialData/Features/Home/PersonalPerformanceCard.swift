@@ -109,13 +109,22 @@ struct PersonalPerformanceCard: View {
     @State private var selectedRange: PersonalRange = .itd
 
     var body: some View {
-        if auth.currentUser == nil {
-            EmptyView()
-        } else if vm.personalPoints.isEmpty && !vm.isLoading {
-            EmptyView()
-        } else {
-            card
-                .task(id: auth.currentUser?.email ?? "") { await vm.load() }
+        // The .task must live on a view that always renders, otherwise we
+        // hit a catch-22: no data → render EmptyView → task never fires →
+        // data stays empty forever. Wrap everything in a Group so the task
+        // attaches to a stable parent.
+        Group {
+            if auth.currentUser == nil {
+                EmptyView()
+            } else if vm.personalPoints.isEmpty {
+                EmptyView()
+            } else {
+                card
+            }
+        }
+        .task(id: auth.currentUser?.email ?? "") {
+            guard auth.currentUser != nil else { return }
+            await vm.load()
         }
     }
 
