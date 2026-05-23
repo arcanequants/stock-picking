@@ -108,9 +108,15 @@ struct PerformanceChart: View {
         }
     }
 
+    /// Only the days where the user actually had bought positions. Used to
+    /// keep the Mío series contiguous so a 1- or 2-point ramp still renders.
+    private var personalPoints: [PortfolioHistoryPoint] {
+        vm.history.filter { $0.personalReturnPct != nil }
+    }
+
     private var personalChart: some View {
         Chart {
-            ForEach(vm.history) { point in
+            ForEach(personalPoints) { point in
                 if let date = point.parsedDate, let personal = point.personalReturnPct {
                     LineMark(
                         x: .value("Date", date),
@@ -118,8 +124,13 @@ struct PerformanceChart: View {
                         series: .value("Series", "Mío")
                     )
                     .foregroundStyle(Color("BrandEmerald"))
-                    .interpolationMethod(.catmullRom)
+                    .interpolationMethod(.linear)
                     .lineStyle(StrokeStyle(lineWidth: 2.4))
+                    .symbol {
+                        Circle()
+                            .fill(Color("BrandEmerald"))
+                            .frame(width: 5, height: 5)
+                    }
                 }
             }
             ForEach(vm.history) { point in

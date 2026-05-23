@@ -74,6 +74,7 @@ async function personalView(request: Request) {
   // Pre-compute per-row shares + decided-at date key so we can replay cheaply.
   const buys = rows.map((r) => ({
     ticker: r.ticker,
+    buyPrice: r.buy_price,
     invested: r.amount_invested,
     shares: r.amount_invested / r.buy_price,
     decidedAt: r.decided_at.slice(0, 10),
@@ -86,11 +87,12 @@ async function personalView(request: Request) {
     let value = 0;
     for (const b of buys) {
       if (b.decidedAt <= dateKey) {
-        const price = prices[b.ticker];
-        if (typeof price === "number") {
-          invested += b.invested;
-          value += b.shares * price;
-        }
+        // If the snapshot is missing this ticker's price (recent pick not
+        // yet snapshotted, data gap, etc.), value the position at its
+        // entry price — same fallback as /api/portfolio/positions.
+        const price = typeof prices[b.ticker] === "number" ? prices[b.ticker] : b.buyPrice;
+        invested += b.invested;
+        value += b.shares * price;
       }
     }
     const personalReturnPct =
