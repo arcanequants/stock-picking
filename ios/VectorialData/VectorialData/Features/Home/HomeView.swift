@@ -29,6 +29,7 @@ struct HomeView: View {
             ScrollView {
                 VStack(spacing: 14) {
                     PerformanceChart()
+                    PersonalPerformanceCard()
                     if let s = vm.snapshot {
                         QuickStatsCard(snapshot: s)
                         if let pick = s.latestPick {

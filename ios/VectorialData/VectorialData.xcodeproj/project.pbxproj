@@ -25,6 +25,7 @@
 		4250B91694049724915CC9B6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC722FBF6EABEF5AFA92FB2 /* APIClient.swift */; };
 		44D14743FF76888E9EF671C4 /* VectorialDataWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A2D7489EA85BDA320179BCBD /* VectorialDataWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6590D8AD5CD51DAFFF1402F6 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C34C2724FC1FFF56DD4CC2 /* Position.swift */; };
+		70DF350C8E1041DBDF2ED3A6 /* PersonalPerformanceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98887C25CFE785B9ABFE0947 /* PersonalPerformanceCard.swift */; };
 		78864A0404A6921A42630148 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC321825CBB1A2AF7240EF /* UserProfile.swift */; };
 		7BE9D6C1214CD6E197396E4D /* StockResearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AD2BD246C515FF3FF827CE /* StockResearch.swift */; };
 		7CA2E17FEDDB5DDB6FA6448E /* PositionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14B2273C28FE958FFBCD3C /* PositionDetailView.swift */; };
@@ -89,6 +90,7 @@
 		859B3769550D3ADC64FD4386 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8945448517C9F82AE56E6CD0 /* DividendStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendStore.swift; sourceTree = "<group>"; };
 		97A3172884B277D3A9C65378 /* PortfolioHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHistory.swift; sourceTree = "<group>"; };
+		98887C25CFE785B9ABFE0947 /* PersonalPerformanceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPerformanceCard.swift; sourceTree = "<group>"; };
 		9995D70904166120C0B2A050 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		9EC722FBF6EABEF5AFA92FB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A2D7489EA85BDA320179BCBD /* VectorialDataWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = VectorialDataWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +276,7 @@
 			children = (
 				55080DD2AC6AC1F15A0B5AE0 /* HomeView.swift */,
 				FE2763080A45A8B9800ED6F2 /* PerformanceChart.swift */,
+				98887C25CFE785B9ABFE0947 /* PersonalPerformanceCard.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				29FD74B796ED48F032B03993 /* MainTabView.swift in Sources */,
 				279AB27528E3EE5E0F7B3019 /* NotificationsManager.swift in Sources */,
 				E590808D562222E17AC325C1 /* PerformanceChart.swift in Sources */,
+				70DF350C8E1041DBDF2ED3A6 /* PersonalPerformanceCard.swift in Sources */,
 				B7A1C5629877333DF22B652A /* Pick.swift in Sources */,
 				3CB5F1752EA6EC4A6F11B09F /* PickActivityAttributes.swift in Sources */,
 				AEECABCE4060F297AC915A99 /* PickBuySheet.swift in Sources */,
