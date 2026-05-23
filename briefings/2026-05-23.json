@@ -1,0 +1,111 @@
+{
+  "date": "2026-05-23",
+  "summary": "Iran keeps its uranium, oil stays near $110, and the world's central banks are stuck fighting inflation they did not cause.",
+  "causalChain": "Iran's decision to retain enriched uranium kills ceasefire hopes, keeping Hormuz oil disruption alive → energy inflation forces RBA to hike a third time and prevents ECB cuts → a Moody's US credit downgrade pushes 30-year government borrowing costs to 5.13% → risk assets whipsaw while Bitcoin whales quietly accumulate.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Iran retains enriched uranium — oil near $110 as Hormuz disruption continues", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Moody's strips US perfect credit score — 30-year government borrowing hits 5.13%", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,510 — caught between Iran fear and rising rate pressure", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts to 6.5% — peso anchor narrows as economy barely grows", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Record $40.9B nearshoring FDI — Mexico wages 25% cheaper than China", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "Yen at 159/dollar — BoJ vs Fed rate gap fuels carry trade pressure", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "PBOC lets yuan strengthen 2% — managing appreciation, not depreciation", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB holds rates — energy inflation hits 3.1%, DAX recovers 2.3% on ceasefire hopes", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "UK FTSE worst performer — Starmer political risk spooks investors", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA hikes to 4.35% — third straight rise as Iran-driven fuel inflation bites", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP and Rio Tinto explore joint 200M tonne iron ore venture in Pilbara", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin back to $77K — Senate war powers vote calms oil and risk markets", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Digital dollar supply tops $319B — USDT at $189.6B, USDC at $77.6B", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Whales buy 61,568 BTC during dip — $4.7B quiet accumulation in one month", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "MIT finds cysteine amino acid activates gut's own repair stem cells", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Münster chemists build high-energy ring molecules with blue light", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Queen Mary physicist finds universe constants sit in life-permitting sweet spot", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Iran's supreme leader ordered the country's enriched uranium to stay inside Iran, ending hopes for a quick peace deal. Oil is trading near $110 a barrel because 20% of the world's oil normally passes through the Strait of Hormuz, which has been effectively closed since March. Higher oil means higher fuel, higher shipping costs, and higher prices for almost everything delivered by truck or plane."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US just lost its last perfect credit score. Moody's — one of three major rating agencies — downgraded the US for the first time in history, flagging debt that could reach 134% of the economy by 2035. The result: what the government pays to borrow money for 30 years just hit 5.13%. That number matters because it sets the floor for mortgages, car loans, and business borrowing — everyone pays more."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell 0.75% to $4,510 today after briefly jumping 1.5% on rumors of an Iran peace deal. The metal moves in two directions: geopolitical fear pushes it up, while rising government borrowing costs pull it down since high rates make holding gold less attractive than earning interest. Today, profit-taking by large traders won out as Iran dashed ceasefire hopes once again."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.5% this month, citing an economy that barely grew 0.6% last year. The cut matters because the gap between Mexico's 6.5% and the US rate of 3.5-3.75% is what draws foreign money into pesos. If that gap keeps shrinking, the peso loses one of its strongest anchors. Growth is expected around 1.5% this year — better than 2025 but still fragile."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico pulled in a record $40.9 billion in foreign factory investment through 2025, driven by companies wanting to produce closer to the US market. Mexican factory wages average $4.90 per hour — 25% cheaper than China's. Trade compliance with the US-Mexico-Canada Agreement jumped from 45% to 89% in two years. The peso is benefiting directly from this flood of dollars arriving to build plants and hire workers."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's yen slipped past 159 per dollar this week, near the level where Japan's government previously stepped in to buy yen and prop it up. The reason: Japan's central bank charges only 0.75% to borrow yen, while the US charges 3.5-3.75%. Investors borrow cheap yen and put the money into higher-paying dollar assets — a trade that keeps pushing the yen lower. Tokyo is watching closely before deciding whether to intervene."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "China's central bank is carefully steering the yuan 2% stronger against the dollar since April, while preventing it from moving too fast. The method: loosening controls that used to protect against a weaker yuan, since it is now going the other direction. A stronger yuan makes Chinese goods slightly pricier abroad — but it signals Beijing feels confident about its economy and its financial system."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "European stocks crashed mid-May when oil spiked from the Iran conflict, then clawed back about 2.3% as ceasefire hopes emerged. Europe's central bank kept rates unchanged but expects inflation to hit 3.1% this quarter — well above its 2% target — because of energy costs. Germany's government borrowing rate sits at 3.17%, squeezing profits for companies that loaded up on cheap debt when rates were near zero."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Britain's FTSE 100 is the worst-performing major European index this week as investors worry that Prime Minister Keir Starmer is politically weakened and may even lose his own parliamentary seat. Political uncertainty is a red flag for international money — unclear leadership makes it harder to pass budgets, sign trade deals, and attract foreign business. Markets responded by selling UK stocks more than any other European index."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its main interest rate for the third time this year, bringing it to 4.35%. The culprit: the Iran conflict pushed fuel prices sharply higher in late 2025, reigniting inflation. Higher rates mean Australians with home loans pay more each month. The bank signaled it will probably pause here, but left the door open for another increase if energy prices stay elevated."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Mining giants BHP and Rio Tinto — both dig iron ore in Australia to sell to China for making steel — agreed to explore jointly mining up to 200 million tonnes from neighboring sites in Western Australia. China is by far the world's biggest buyer of iron ore and steel. Combining operations could cut costs significantly — a key advantage as Chinese demand for new construction remains uncertain."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin climbed back to around $77,000 after the US Senate voted 50-47 to limit President Trump's power to expand military operations against Iran. The vote sent oil prices lower and calmed broader market fear. Bitcoin tends to fall when fear rises and recover when it eases. The rebound followed a brutal May 18 session where forced selling wiped out $563 million in positions across major exchanges."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Digital dollars — coins that always equal exactly $1 and let people send money instantly across borders — now exceed $319 billion in total supply. Tether (USDT) holds $189.6 billion and USD Coin (USDC) holds $77.6 billion. US lawmakers are now writing formal rules for these products, which matter because they are the invisible plumbing connecting almost all cryptocurrency trading and settlement worldwide."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "A group of large Bitcoin holders — wallets holding between 100 and 10,000 coins — quietly accumulated 61,568 more Bitcoin over the past month while prices fell. At current prices, that is roughly $4.7 billion in purchases. Large holders historically buy during price drops and hold through volatility, a pattern that often precedes recoveries. Meanwhile, small retail holders were net sellers during the same period."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "MIT scientists found that cysteine — an amino acid found in meat, dairy, and beans — activates the gut's own repair system. In mice whose intestines were damaged by radiation, a cysteine-rich diet triggered immune cells to release healing signals, prompting stem cells to rebuild the gut lining from scratch. Researchers believe this could eventually lead to dietary therapies for cancer patients whose guts are harmed during radiation treatment. 📄 Published in ScienceDaily (MIT Koch Institute researchers) · More: https://www.sciencedaily.com/releases/2026/05/260520233223.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Chemists at Germany's University of Münster, led by Prof. Frank Glorius, used blue light to build housane molecules — tiny ring-shaped structures so internally compressed they carry enormous chemical energy. Making them was nearly impossible before because their internal tension tends to destroy them during synthesis. The light-driven method guides the reaction cleanly, opening new routes for designing more effective drugs and materials. 📄 Published in Nature Synthesis · More: https://www.uni-muenster.de/news/view.php?cmdid=15264"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "A physicist at Queen Mary University of London found that the universe's deepest physical rules — the constants governing how atoms and forces behave — sit within a tiny window that allows fluids to flow inside living cells. Even small changes to those constants would make blood too thick or water too sticky for life to function at all. The finding suggests life's existence may not be accidental but is embedded in the fundamental physics of the universe. 📄 Published in ScienceDaily (Queen Mary University of London) · More: https://www.sciencedaily.com/releases/2026/05/260508022653.htm"
+    }
+  ]
+}
