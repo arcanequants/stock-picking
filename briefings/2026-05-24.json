@@ -1,0 +1,111 @@
+{
+  "date": "2026-05-24",
+  "summary": "Hormuz oil shock drives a synchronized global inflation wave as central banks from Sydney to London reverse course.",
+  "causalChain": "The effective closure of the Strait of Hormuz cut ~14.5M barrels/day of supply, sending Brent oil above $105 and reaccelerating inflation worldwide. Central banks in Australia, the UK, and the US are all pivoting hawkish, Mexico ends its easing cycle, and the EU's digital-dollar deadline fractures the stablecoin market.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Strait of Hormuz stays shut, Brent oil holds above $105", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 30-year borrowing cost hits 5.19%, gold stalls at $4,600", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Trump-Xi trade thaw collides with Iran war energy shock", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico ends 14-cut easing cycle at 6.5%, Q1 GDP contracts", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Peso stable at 17.25, nearshoring FDI hits record $40.9B", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "BoJ holds at 0.75%, weak yen lifts Japan exports 14.8%", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "PBOC steady, China exports +6.6%, Hang Seng tests new highs", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB holds at 2.15%, Germany services sector contracts sharply", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "UK Q1 GDP +0.6%, Bank of England may hike in June", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA hikes to 4.35% for third straight meeting, ASX drops", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "Rio Tinto and BHP plan 200M-tonne joint Pilbara iron ore mine", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin ETFs pull in $1.97B in April, BTC holds above $80K", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "EU deadline forces USDC vs USDT split, Tether faces delisting", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Whales buy 140,000 ETH ($322M) in four days on DeFi thesis", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "String theory emerges from basic particle rules — no strings assumed", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "27-tonne dinosaur found in Thailand is Southeast Asia's largest ever", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "MIT finds cysteine amino acid triggers gut self-repair", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "A waterway the size of a small river controls nearly 20% of the world's oil. That route — the Strait of Hormuz — has been effectively shut since fighting broke out in the Middle East. With 14.5 million fewer barrels reaching markets each day, the price of oil has climbed above $105 a barrel, adding directly to what families pay for gas, heating, and food. The crisis is not yet resolved."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government now pays more to borrow money than at any point since before the 2008 financial crisis — the 30-year rate just crossed 5.19%. Normally gold surges when borrowing fears rise. But gold is hovering near $4,600 per ounce without breaking out: a strong dollar makes it more expensive for buyers outside the US, capping any rally even as inflation fears grow."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The US and China quietly agreed to ease their trade fight after a summit in May, reducing taxes on each other's goods — welcome relief for importers. But the Iran war has pushed energy prices up 53% since late February, making everything more expensive for everyone. The two forces nearly cancel out: trade costs fall a little, but energy costs rise a lot, leaving most households not much better off."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank just cut its main interest rate to 6.5% — the fourteenth cut in a row since 2024, and likely the last for a while. The problem: Mexico's economy actually shrank in early 2026 for the first time since the pandemic, while inflation is still well above the 3% target. Lower rates were meant to help growth, but the room to keep cutting has now run out."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico attracted a record $40.9 billion in foreign factory investment through late 2025 — companies relocating production closer to the US market. That steady demand for pesos has kept the currency stable at 17.25 per dollar even as global uncertainty rises. Mexico's factory wages of roughly $5/hr remain 25% cheaper than China's, giving the country a durable edge in the global manufacturing relocation wave."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's central bank is keeping its main interest rate at 0.75% — the highest since 1995. Even so, the Japanese yen trades at 159 per dollar because US rates are much higher, making the yen weak by comparison. That weakness is a double-edged sword: Japan's exporters love it — exports jumped 14.8% in April — but Japanese households pay more for imported food and energy every single month."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "China's central bank has kept its main lending rate unchanged for twelve straight months, confident that credit is flowing without further cuts. Meanwhile, China's exports jumped 6.6% after a partial trade truce with the US reduced tariffs. Stocks in Hong Kong are rising above key trend lines, reflecting investor belief that China is handling the global turbulence better than most had expected."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's central bank is keeping borrowing costs at 2.15% while the Middle East war rattles energy markets. Germany — Europe's largest economy — is being hit hardest: its service sector is shrinking because businesses depend on affordable energy that is no longer affordable. Overall eurozone growth is expected at just 0.9% this year, with Germany and Italy most exposed to the energy price shock."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "The UK's economy grew 0.6% in just the first three months of 2026 — a surprisingly strong number that beat most forecasts. Now markets are bracing for something unusual: the Bank of England might raise interest rates in June rather than cut them, because energy costs from the Middle East war are stoking inflation again. That would be the first hike in years, catching most investors off guard."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised interest rates for the third meeting in a row, pushing them to 4.35%. The driver: oil prices linked to the Middle East conflict are pushing Australia's own inflation toward 4.8% — well above what the bank is comfortable with. The hike pulled Australian stocks lower on the day. The bank signaled it will pause here, but only if the Middle East situation does not worsen further."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Mining giants Rio Tinto and BHP — both operating in Australia's iron-ore heartland — announced plans to jointly extract up to 200 million tonnes of iron ore from neighboring deposits in Western Australia. The move signals long-term confidence in demand from China, which uses iron ore to make steel for construction and manufacturing. First ore from the combined project is expected early next decade."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "In April, investment funds that hold Bitcoin on behalf of ordinary investors pulled in nearly $2 billion — the highest monthly total this year. Since these funds launched in January 2024, they have collected $58.7 billion in total. BlackRock's fund alone attracted $335 million in a single day last month. Bitcoin is holding above $80,000, supported by this steady stream of large institutional buying."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "The European Union requires all digital dollars — coins pegged to the US dollar used across crypto apps — to be fully licensed by July 1, 2026, or face delisting. Tether, the largest such coin with $185 billion in circulation, has not obtained its EU license. A rival coin from Circle, at $75 billion, has. European exchanges are already restricting Tether access, and Circle's coin saw 337% usage growth in Europe last year as a direct result."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "In just four days, large holders of digital assets bought 140,000 units of Ethereum — the second-biggest digital currency — worth about $322 million. These buyers focus on Ethereum because it powers a network of financial apps: lending, trading, and earning returns without a bank. Their concentrated buying is widely read as a signal that sophisticated money expects Ethereum's price to climb from here."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Physicists at Caltech, NYU, and a Barcelona institute started with just two basic rules about how particles collide at extreme energy, then let the math run. What emerged on its own: the full framework of string theory — the idea that everything is built from tiny vibrating threads. No one assumed strings existed; they appeared inevitably from the equations alone. 📄 Published in Physical Review Letters · More: https://www.nyu.edu/about/news-publications/news/2026/may/string-theory-emerges-from--almost-nothing-.html"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Workers in Chaiyaphum province, Thailand, found giant bones in 2016. Scientists spent years analyzing them. The result: a new dinosaur species that lived 100 million years ago, weighed 27 tonnes — as heavy as five elephants — and stretched 27 meters long. Named Nagatitan chaiyaphumensis, it is the largest dinosaur ever found in Southeast Asia. One arm bone alone was nearly 1.8 meters long. 📄 Published in Scientific Reports · More: https://www.sci.news/paleontology/nagatitan-chaiyaphumensis-14767.html"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "MIT researchers tested 20 different amino acids — the building blocks found in protein foods — to see which helps the gut repair itself after damage. One winner: cysteine, found in meat, dairy, beans, and nuts. It triggers immune cells to send a signal that activates the gut's own repair stem cells. This discovery could one day help patients recover faster from intestinal damage caused by chemotherapy or radiation. 📄 Published in Nature · More: https://news.mit.edu/2025/cysteine-rich-diet-may-promote-intestinal-lining-regeneration-study-suggests-1001"
+    }
+  ]
+}
