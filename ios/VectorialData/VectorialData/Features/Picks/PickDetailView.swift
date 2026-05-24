@@ -374,6 +374,45 @@ struct PickDetailView: View {
         if let risk = research.riskShort, !risk.isEmpty {
             accordionSection(title: "Riesgo principal", body: risk)
         }
+        proResearchCTA(ticker: research.ticker)
+    }
+
+    /// Tappable card that hands the curious off to the full research
+    /// blog on web. App stays mom-readable; the wall of analyst-grade
+    /// detail lives on `vectorialdata.com/stocks/{ticker}`.
+    @ViewBuilder
+    private func proResearchCTA(ticker: String) -> some View {
+        if let url = URL(string: "https://vectorialdata.com/stocks/\(ticker.lowercased())") {
+            Link(destination: url) {
+                HStack(spacing: 12) {
+                    Image(systemName: "doc.text.magnifyingglass")
+                        .font(.title3)
+                        .foregroundStyle(Color("BrandEmerald"))
+                        .frame(width: 24)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("¿Quieres más detalle?")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(.white)
+                        Text("Lee el análisis completo en vectorialdata.com")
+                            .font(.caption2)
+                            .foregroundStyle(.white.opacity(0.6))
+                    }
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.white.opacity(0.5))
+                }
+                .padding(16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color("CardBackground"))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .stroke(Color("BrandEmerald").opacity(0.25), lineWidth: 1)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            }
+            .buttonStyle(.plain)
+        }
     }
 
     /// One-sentence TL;DR. Body comes server-side already compacted
@@ -460,14 +499,16 @@ struct PickDetailView: View {
                 .font(.caption.weight(.semibold))
                 .tracking(1.1)
                 .foregroundStyle(.white.opacity(0.55))
-            VStack(spacing: 10) {
+            VStack(spacing: 12) {
                 ForEach(pills, id: \.text) { pill in
-                    HStack(spacing: 10) {
-                        Text(pill.emoji)
-                            .font(.body)
+                    HStack(alignment: .center, spacing: 12) {
+                        Image(systemName: pill.icon)
+                            .font(.title3)
+                            .foregroundStyle(pillColor(pill.tint))
+                            .frame(width: 24)
                         Text(pill.text)
                             .font(.footnote)
-                            .foregroundStyle(.white.opacity(0.85))
+                            .foregroundStyle(.white.opacity(0.9))
                             .fixedSize(horizontal: false, vertical: true)
                         Spacer(minLength: 0)
                     }
@@ -478,6 +519,17 @@ struct PickDetailView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color("CardBackground"))
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
+
+    /// Maps the backend tint hint to a brand-palette color. Unknowns
+    /// fall back to a soft white so we never render an empty pill.
+    private func pillColor(_ tint: String) -> Color {
+        switch tint {
+        case "emerald": return Color("BrandEmerald")
+        case "red": return .red
+        case "yellow": return .yellow
+        default: return .white.opacity(0.85)
+        }
     }
 
     private var disclaimer: some View {

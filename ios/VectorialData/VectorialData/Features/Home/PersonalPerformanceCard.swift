@@ -179,14 +179,20 @@ struct PersonalPerformanceCard: View {
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color("CardBackground"))
-        // Emerald 1px outline so this card visually owns "your money"
-        // and stops being confused with the Vectorial model portfolio
-        // above. Same treatment as the dividends card after you've
-        // bought a pick.
+        // Slightly tinted background + thicker emerald border so this
+        // card visually owns "your money" and stops being confused
+        // with the Vectorial model portfolio above. Two cues (tint +
+        // border) instead of just one so it reads from across the
+        // room.
+        .background(
+            ZStack {
+                Color("CardBackground")
+                Color("BrandEmerald").opacity(0.06)
+            }
+        )
         .overlay(
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .stroke(Color("BrandEmerald").opacity(0.35), lineWidth: 1)
+                .stroke(Color("BrandEmerald").opacity(0.55), lineWidth: 1.5)
         )
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
@@ -200,17 +206,21 @@ struct PersonalPerformanceCard: View {
 
     private var header: some View {
         HStack(alignment: .center) {
-            HStack(spacing: 6) {
+            HStack(spacing: 8) {
                 Text(userInitial)
                     .font(.caption2.weight(.bold))
-                    .foregroundStyle(Color("BrandEmerald"))
-                    .frame(width: 22, height: 22)
-                    .background(Color("BrandEmerald").opacity(0.18))
+                    .foregroundStyle(Color.black)
+                    .frame(width: 26, height: 26)
+                    .background(Color("BrandEmerald"))
                     .clipShape(Circle())
-                Text("TU PORTAFOLIO")
-                    .font(.caption.weight(.semibold))
-                    .tracking(1.0)
-                    .foregroundStyle(.white.opacity(0.7))
+                VStack(alignment: .leading, spacing: 1) {
+                    Text("TU PORTAFOLIO")
+                        .font(.headline.weight(.bold))
+                        .foregroundStyle(.white)
+                    Text("Tu dinero real · solo las picks que compraste")
+                        .font(.caption2)
+                        .foregroundStyle(.white.opacity(0.55))
+                }
             }
             Spacer()
         }

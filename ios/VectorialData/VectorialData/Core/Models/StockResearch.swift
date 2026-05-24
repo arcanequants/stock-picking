@@ -46,6 +46,12 @@ struct StockResearch: Codable, Equatable, Identifiable {
 }
 
 struct WhatsImportantPill: Codable, Equatable, Hashable {
-    let emoji: String
+    /// SF Symbol name (e.g. "dollarsign.circle.fill"). Native rendering
+    /// dodges the emoji-tofu the Simulator showed when these were
+    /// emoji code points.
+    let icon: String
+    /// Backend-suggested color bucket; the iOS layer maps to brand
+    /// palette. Unknown values fall back to neutral white.
+    let tint: String
     let text: String
 }

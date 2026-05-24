@@ -42,28 +42,33 @@ struct PerformanceChart: View {
     }
 
     private var header: some View {
-        HStack(alignment: .center) {
-            // Identity chip — instantly says "this is the public Vectorial
-            // model portfolio, not your money". Pairs with the user-initial
-            // chip on PersonalPerformanceCard so the two cards stop being
-            // confused for each other.
-            HStack(spacing: 6) {
-                Text("VD")
-                    .font(.caption2.weight(.bold))
-                    .foregroundStyle(Color.black)
-                    .frame(width: 22, height: 22)
-                    .background(Color("BrandEmerald"))
-                    .clipShape(Circle())
-                Text("PORTAFOLIO DE VECTORIAL")
-                    .font(.caption.weight(.semibold))
-                    .tracking(1.0)
-                    .foregroundStyle(.white.opacity(0.7))
-            }
-            Spacer()
-            if let latestVectorial, let latestSpy {
-                HStack(spacing: 10) {
-                    legendDot(color: Color("BrandEmerald"), text: "Vectorial \(formatPct(latestVectorial))")
-                    legendDot(color: .white.opacity(0.5), text: "S&P \(formatPct(latestSpy))", dashed: true)
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(alignment: .center) {
+                HStack(spacing: 8) {
+                    Text("VD")
+                        .font(.caption2.weight(.bold))
+                        .foregroundStyle(Color.black)
+                        .frame(width: 26, height: 26)
+                        .background(Color("BrandEmerald"))
+                        .clipShape(Circle())
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("VECTORIAL")
+                            .font(.headline.weight(.bold))
+                            .foregroundStyle(.white)
+                        // Sub-label spells out "this is the public model, not
+                        // your money" so users with two cards on the same
+                        // screen stop confusing them at a glance.
+                        Text("Modelo público · todas las picks")
+                            .font(.caption2)
+                            .foregroundStyle(.white.opacity(0.55))
+                    }
+                }
+                Spacer()
+                if let latestVectorial, let latestSpy {
+                    HStack(spacing: 10) {
+                        legendDot(color: Color("BrandEmerald"), text: "Vectorial \(formatPct(latestVectorial))")
+                        legendDot(color: .white.opacity(0.5), text: "S&P \(formatPct(latestSpy))", dashed: true)
+                    }
                 }
             }
         }

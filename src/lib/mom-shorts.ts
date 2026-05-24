@@ -114,8 +114,14 @@ export function compactShort(text: string | null | undefined): string {
 
 // ---------- LO IMPORTANTE pills (plain-language vital signs) ----------
 
+/**
+ * Pill icon is an SF Symbol name (not an emoji). Emojis rendered as
+ * tofu in early sim testing — SF Symbols are native and always render.
+ * `tint` is one of a small set the iOS layer maps to brand colors.
+ */
 export interface WhatsImportantPill {
-  emoji: string;
+  icon: string;
+  tint: "emerald" | "red" | "yellow" | "neutral";
   text: string;
 }
 
@@ -126,16 +132,25 @@ function dividendPill(
 ): WhatsImportantPill | null {
   if (dividendYield == null) return null;
   if (dividendYield <= 0) {
-    return { emoji: "🚫", text: "No paga dividendo" };
+    return {
+      icon: "xmark.circle.fill",
+      tint: "neutral",
+      text: "No paga dividendo",
+    };
   }
   if (price != null && price > 0) {
     const annualPerShare = (dividendYield / 100) * price;
     return {
-      emoji: "💸",
+      icon: "dollarsign.circle.fill",
+      tint: "emerald",
       text: `Te paga ~$${annualPerShare.toFixed(2)}/año por acción`,
     };
   }
-  return { emoji: "💸", text: `Paga ${dividendYield.toFixed(1)}% al año` };
+  return {
+    icon: "dollarsign.circle.fill",
+    tint: "emerald",
+    text: `Paga ${dividendYield.toFixed(1)}% al año`,
+  };
 }
 
 /** "¿Qué dice Wall Street?" — translate the analyst consensus word. */
@@ -143,16 +158,32 @@ function analystPill(consensus: string | null | undefined): WhatsImportantPill |
   if (!consensus) return null;
   const c = consensus.toLowerCase().trim();
   if (c.includes("strong buy")) {
-    return { emoji: "🚀", text: "Wall Street dice: compra fuerte" };
+    return {
+      icon: "arrow.up.right.circle.fill",
+      tint: "emerald",
+      text: "Wall Street dice: compra fuerte",
+    };
   }
   if (c === "buy" || c.includes("buy")) {
-    return { emoji: "👍", text: "Wall Street dice: cómprala" };
+    return {
+      icon: "hand.thumbsup.fill",
+      tint: "emerald",
+      text: "Wall Street dice: cómprala",
+    };
   }
   if (c.includes("hold") || c.includes("neutral")) {
-    return { emoji: "🤔", text: "Wall Street dice: mantenla, sin prisa" };
+    return {
+      icon: "minus.circle.fill",
+      tint: "yellow",
+      text: "Wall Street dice: mantenla, sin prisa",
+    };
   }
   if (c.includes("sell")) {
-    return { emoji: "👎", text: "Wall Street dice: no la compres" };
+    return {
+      icon: "hand.thumbsdown.fill",
+      tint: "red",
+      text: "Wall Street dice: no la compres",
+    };
   }
   return null;
 }
@@ -171,7 +202,11 @@ function sizePill(marketCapB: number | null | undefined): WhatsImportantPill | n
     marketCapB >= 1000
       ? `$${(marketCapB / 1000).toFixed(1)}T`
       : `$${Math.round(marketCapB)}B`;
-  return { emoji: "🏢", text: `${bucket} (${size})` };
+  return {
+    icon: "building.2.fill",
+    tint: "neutral",
+    text: `${bucket} (${size})`,
+  };
 }
 
 /**
