@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import { getAuthedUser, getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
+import {
+  buildWhatsImportant,
+  compactOneLiner,
+  compactShort,
+} from "@/lib/mom-shorts";
 
 export const dynamic = "force-dynamic";
 
@@ -44,6 +49,13 @@ export async function GET(
     .reverse()
     .find((t) => t.ticker === ticker);
 
+  // Mom-readable short fields. Always computed server-side from the long
+  // research blobs so the iOS app can render them verbatim. See
+  // src/lib/mom-shorts.ts for the cut/strip rules.
+  const one_liner = compactOneLiner(stock.summary_short);
+  const why_short = compactShort(stock.summary_why);
+  const risk_short = compactShort(stock.summary_risk);
+
   const base = {
     ticker: stock.ticker,
     name: stock.name,
@@ -53,6 +65,7 @@ export async function GET(
     region: stock.region,
     currency: stock.currency,
     summary_short: stock.summary_short,
+    one_liner,
     pick_number: tx ? transactions.indexOf(tx) + 1 : null,
     pick_date: tx?.date ?? null,
     is_subscribed: isSubscribed,
@@ -71,6 +84,14 @@ export async function GET(
     summary_what: stock.summary_what,
     summary_why: stock.summary_why,
     summary_risk: stock.summary_risk,
+    why_short,
+    risk_short,
+    whats_important: buildWhatsImportant({
+      dividend_yield: stock.dividend_yield,
+      price: stock.price,
+      analyst_consensus: stock.analyst_consensus,
+      market_cap_b: stock.market_cap_b,
+    }),
     pe_ratio: stock.pe_ratio,
     pe_forward: stock.pe_forward,
     dividend_yield: stock.dividend_yield,

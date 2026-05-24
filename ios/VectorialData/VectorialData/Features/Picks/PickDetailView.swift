@@ -37,6 +37,9 @@ struct PickDetailView: View {
 
     @State private var showBuySheet = false
     @State private var skipInFlight = false
+    /// Each deep-dive accordion is collapsed by default. Set holds the
+    /// titles of currently-expanded sections (small set, so O(N) is fine).
+    @State private var expandedSections: Set<String> = []
 
     init(pick: Pick) {
         self.pick = pick
@@ -327,11 +330,7 @@ struct PickDetailView: View {
 
     @ViewBuilder
     private func teaserSection(research: StockResearch) -> some View {
-        section(title: "In one line") {
-            Text(research.summaryShort)
-                .font(.body)
-                .foregroundStyle(.white.opacity(0.85))
-        }
+        tldrCard(text: research.oneLiner ?? research.summaryShort)
     }
 
     private var paywallCard: some View {
@@ -359,61 +358,118 @@ struct PickDetailView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
+    /// Mom-readable layout: one-liner + 3 plain-language pills, plus
+    /// two collapsed accordions for the curious. "Qué hace" is folded
+    /// into the one-liner — the average reader doesn't need a separate
+    /// section. Deep traders can open the full research on web.
     @ViewBuilder
     private func premiumSections(research: StockResearch) -> some View {
-        section(title: "In one line") {
-            Text(research.summaryShort)
-                .font(.body)
-                .foregroundStyle(.white.opacity(0.9))
+        tldrCard(text: research.oneLiner ?? research.summaryShort)
+        if let pills = research.whatsImportant, !pills.isEmpty {
+            whatsImportantCard(pills: pills)
         }
-        if let what = research.summaryWhat, !what.isEmpty {
-            section(title: "What they do") {
-                Text(what)
-                    .font(.callout)
-                    .foregroundStyle(.white.opacity(0.85))
-            }
+        if let why = research.whyShort, !why.isEmpty {
+            accordionSection(title: "Por qué la pickeamos", body: why)
         }
-        if let why = research.summaryWhy, !why.isEmpty {
-            section(title: "Why we picked it") {
-                Text(why)
-                    .font(.callout)
-                    .foregroundStyle(.white.opacity(0.85))
-            }
+        if let risk = research.riskShort, !risk.isEmpty {
+            accordionSection(title: "Riesgo principal", body: risk)
         }
-        if let risk = research.summaryRisk, !risk.isEmpty {
-            section(title: "Risk to watch") {
-                Text(risk)
-                    .font(.callout)
-                    .foregroundStyle(.white.opacity(0.85))
-            }
-        }
-        fundamentalsCard(research: research)
     }
 
-    @ViewBuilder
-    private func fundamentalsCard(research: StockResearch) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Fundamentals")
+    /// One-sentence TL;DR. Body comes server-side already compacted
+    /// (`one_liner`) so we render it verbatim — no client parsing.
+    private func tldrCard(text: String) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("EN POCAS PALABRAS")
                 .font(.caption.weight(.semibold))
                 .tracking(1.1)
                 .foregroundStyle(.white.opacity(0.55))
-            let rows = fundamentalRows(research: research)
-            if rows.isEmpty {
-                Text("—")
-                    .font(.footnote)
-                    .foregroundStyle(.white.opacity(0.5))
-            } else {
-                VStack(spacing: 8) {
-                    ForEach(rows, id: \.label) { row in
-                        HStack {
-                            Text(row.label)
-                                .font(.footnote)
-                                .foregroundStyle(.white.opacity(0.6))
-                            Spacer()
-                            Text(row.value)
-                                .font(.footnote.weight(.medium))
-                                .foregroundStyle(.white.opacity(0.9))
-                        }
+            Text(markdownText(text))
+                .font(.callout)
+                .foregroundStyle(.white.opacity(0.9))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color("CardBackground"))
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
+
+    /// Collapsed-by-default card for deep-dive research. Tap the header
+    /// to expand. Identity = `title`, which doubles as the dedup key.
+    private func accordionSection(title: String, body: String) -> some View {
+        let isExpanded = expandedSections.contains(title)
+        return VStack(alignment: .leading, spacing: 0) {
+            Button {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    if isExpanded {
+                        expandedSections.remove(title)
+                    } else {
+                        expandedSections.insert(title)
+                    }
+                }
+            } label: {
+                HStack {
+                    Text(title.uppercased())
+                        .font(.caption.weight(.semibold))
+                        .tracking(1.1)
+                        .foregroundStyle(.white.opacity(0.7))
+                    Spacer()
+                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.white.opacity(0.5))
+                }
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            if isExpanded {
+                // Body is server-compacted (~280 chars) — render verbatim.
+                // Full research lives on web, not in the app.
+                Text(markdownText(body))
+                    .font(.callout)
+                    .foregroundStyle(.white.opacity(0.85))
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 12)
+            }
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color("CardBackground"))
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
+
+    /// Renders markdown (`**bold**`, lists, etc.) preserving newlines so
+    /// paragraph breaks in the research API survive into the UI. Without
+    /// this, the literal `**` characters showed up on screen.
+    private func markdownText(_ s: String) -> AttributedString {
+        let opts = AttributedString.MarkdownParsingOptions(
+            interpretedSyntax: .inlineOnlyPreservingWhitespace
+        )
+        return (try? AttributedString(markdown: s, options: opts)) ?? AttributedString(s)
+    }
+
+    /// "LO IMPORTANTE" — three plain-language vital signs server-built
+    /// from dividend / analyst consensus / market cap. Replaces the old
+    /// DATOS CLAVE jargon (P/E ratio, Forward P/E, etc.) — average
+    /// reader doesn't know those terms.
+    @ViewBuilder
+    private func whatsImportantCard(pills: [WhatsImportantPill]) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("LO IMPORTANTE")
+                .font(.caption.weight(.semibold))
+                .tracking(1.1)
+                .foregroundStyle(.white.opacity(0.55))
+            VStack(spacing: 10) {
+                ForEach(pills, id: \.text) { pill in
+                    HStack(spacing: 10) {
+                        Text(pill.emoji)
+                            .font(.body)
+                        Text(pill.text)
+                            .font(.footnote)
+                            .foregroundStyle(.white.opacity(0.85))
+                            .fixedSize(horizontal: false, vertical: true)
+                        Spacer(minLength: 0)
                     }
                 }
             }
@@ -424,60 +480,12 @@ struct PickDetailView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
-    private func fundamentalRows(research: StockResearch) -> [FundamentalRow] {
-        var rows: [FundamentalRow] = []
-        if let pe = research.peRatio {
-            rows.append(.init(label: "P/E ratio", value: String(format: "%.2f", pe)))
-        }
-        if let fwd = research.peForward {
-            rows.append(.init(label: "Forward P/E", value: String(format: "%.2f", fwd)))
-        }
-        if let div = research.dividendYield {
-            let text = div > 0 ? String(format: "%.2f%%", div) : "No dividend"
-            rows.append(.init(label: "Dividend yield", value: text))
-        }
-        if let cap = research.marketCapB {
-            rows.append(.init(label: "Market cap", value: formatMarketCap(cap)))
-        }
-        if let consensus = research.analystConsensus, !consensus.isEmpty {
-            rows.append(.init(label: "Analyst consensus", value: consensus.capitalized))
-        }
-        if let upside = research.analystUpside {
-            rows.append(.init(label: "Analyst upside", value: String(format: "%+.1f%%", upside)))
-        }
-        return rows
-    }
-
-    private func formatMarketCap(_ billions: Double) -> String {
-        if billions >= 1000 {
-            return String(format: "$%.2fT", billions / 1000)
-        }
-        return String(format: "$%.1fB", billions)
-    }
-
     private var disclaimer: some View {
         Text("Informational only. Not personalized investment advice. Past performance does not guarantee future results.")
             .font(.caption2)
             .foregroundStyle(.white.opacity(0.4))
             .fixedSize(horizontal: false, vertical: true)
             .padding(.top, 4)
-    }
-
-    private func section<Content: View>(
-        title: String,
-        @ViewBuilder content: () -> Content
-    ) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(title.uppercased())
-                .font(.caption.weight(.semibold))
-                .tracking(1.1)
-                .foregroundStyle(.white.opacity(0.55))
-            content()
-        }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color("CardBackground"))
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
     private func tag(_ value: String) -> some View {
@@ -488,11 +496,6 @@ struct PickDetailView: View {
             .background(Color.white.opacity(0.08))
             .foregroundStyle(.white.opacity(0.75))
             .clipShape(Capsule())
-    }
-
-    private struct FundamentalRow {
-        let label: String
-        let value: String
     }
 
     private func formatPct(_ value: Double) -> String {

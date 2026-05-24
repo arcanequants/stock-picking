@@ -14,6 +14,9 @@ struct StockResearch: Codable, Equatable, Identifiable {
     let region: String
     let currency: String
     let summaryShort: String
+    /// One human sentence — server-side compacted from `summary_short`,
+    /// markdown stripped, enumerations cut. Render verbatim.
+    let oneLiner: String?
     let pickNumber: Int?
     let pickDate: String?
     let isSubscribed: Bool
@@ -22,6 +25,14 @@ struct StockResearch: Codable, Equatable, Identifiable {
     let summaryWhat: String?
     let summaryWhy: String?
     let summaryRisk: String?
+    /// Mom-readable short paragraphs (~280 chars). Server-side compacted
+    /// — render verbatim, no client parsing.
+    let whyShort: String?
+    let riskShort: String?
+    /// "LO IMPORTANTE" pills — 3 plain-language vital signs replacing
+    /// the old DATOS CLAVE (P/E ratio etc.). Server-built so the UI
+    /// stays jargon-free.
+    let whatsImportant: [WhatsImportantPill]?
     let peRatio: Double?
     let peForward: Double?
     let dividendYield: Double?
@@ -32,4 +43,9 @@ struct StockResearch: Codable, Equatable, Identifiable {
     let waMessage: String?
 
     var id: String { ticker }
+}
+
+struct WhatsImportantPill: Codable, Equatable, Hashable {
+    let emoji: String
+    let text: String
 }

@@ -42,11 +42,23 @@ struct PerformanceChart: View {
     }
 
     private var header: some View {
-        HStack(alignment: .firstTextBaseline) {
-            Text("PORTFOLIO PERFORMANCE")
-                .font(.caption.weight(.semibold))
-                .tracking(1.2)
-                .foregroundStyle(.white.opacity(0.55))
+        HStack(alignment: .center) {
+            // Identity chip — instantly says "this is the public Vectorial
+            // model portfolio, not your money". Pairs with the user-initial
+            // chip on PersonalPerformanceCard so the two cards stop being
+            // confused for each other.
+            HStack(spacing: 6) {
+                Text("VD")
+                    .font(.caption2.weight(.bold))
+                    .foregroundStyle(Color.black)
+                    .frame(width: 22, height: 22)
+                    .background(Color("BrandEmerald"))
+                    .clipShape(Circle())
+                Text("PORTAFOLIO DE VECTORIAL")
+                    .font(.caption.weight(.semibold))
+                    .tracking(1.0)
+                    .foregroundStyle(.white.opacity(0.7))
+            }
             Spacer()
             if let latestVectorial, let latestSpy {
                 HStack(spacing: 10) {
