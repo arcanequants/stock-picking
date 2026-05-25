@@ -4,9 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import maplibregl, { type Map as MapLibreMap } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-// Strait of Hormuz AOI — expanded polygon covering the actual 33 km narrows
-// where every Gulf-bound VLCC must pass. Wider than the previous tiny box so
-// the polygon reads as a real chokepoint, not a stamp on the map.
+// Strait of Hormuz AOI — the 33 km narrows where every Gulf-bound VLCC passes.
 const HORMUZ_AOI: [number, number][] = [
   [55.95, 26.35],
   [56.85, 26.05],
@@ -15,8 +13,8 @@ const HORMUZ_AOI: [number, number][] = [
   [55.95, 26.35],
 ];
 
-// IMO Traffic Separation Scheme for Strait of Hormuz — canonical inbound /
-// outbound shipping lanes. Coordinates from IMO Resolution A.475(XII).
+// IMO Traffic Separation Scheme — canonical inbound/outbound lanes per
+// IMO Resolution A.475(XII).
 const TSS_OUTBOUND: [number, number][] = [
   [56.05, 26.55],
   [56.35, 26.4],
@@ -32,7 +30,6 @@ const TSS_INBOUND: [number, number][] = [
   [56.05, 26.9],
 ];
 
-// Major ports framing the chokepoint — what makes Hormuz Hormuz.
 const PORTS: { lon: number; lat: number; name: string; country: string }[] = [
   { lon: 56.276, lat: 27.196, name: "BANDAR ABBAS", country: "IR" },
   { lon: 56.341, lat: 25.119, name: "FUJAIRAH", country: "AE" },
@@ -45,33 +42,23 @@ const HORMUZ_VIEW = {
   zoom: 7.0,
 };
 
-// Esri World Imagery — global high-resolution true-color satellite mosaic.
-// Per Robert Simmon (NASA Earth Observatory): deep-blue ocean + crisp coastlines,
-// free for low-volume, the consumer floor for "Earth from space" basemaps in 2026.
-// No date dependency — Esri composites globally and refreshes their mosaic
-// quarterly, so we get a clean, cloud-masked image with no daily-cadence gaps.
+// Esri World Imagery — deep-blue ocean, crisp coastlines. Per Robert Simmon,
+// the consumer floor for "Earth from space" basemaps in 2026.
 const SAT_TILE =
   "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
 const SAT_ATTRIBUTION =
   "Imagery © Esri · Maxar · Earthstar Geographics · USDA · USGS";
 
+// GFW tile proxy — Bearer token injected server-side. Variants:
+//   ais  → public-global-presence (all AIS-broadcasting vessels)
+//   sar  → public-global-sar-presence (Sentinel-1 detections, dark vessels)
+const GFW_TILE = (variant: "ais" | "sar") =>
+  `/api/signals/hormuz/gfw/tile/{z}/{x}/{y}?v=${variant}`;
+
 const ACCENT_CYAN = "#00BCD4";
-const TANKER_RED = "#ef4444";
+const DARK_MAGENTA = "#ff3df5";
+const STS_RED = "#ef4444";
 const PORT_AMBER = "#fbbf24";
-
-type AisShip = {
-  mmsi: number;
-  lat: number;
-  lon: number;
-  cog: number;
-  shipType?: number;
-  name?: string;
-  lastSeen: number;
-  trail: [number, number][];
-};
-
-const IS_TANKER = (t?: number) => t !== undefined && t >= 80 && t <= 89;
-const IS_VESSEL = (t?: number) => t !== undefined && t >= 70 && t <= 89;
 
 function fmtUTC(d: Date) {
   const hh = String(d.getUTCHours()).padStart(2, "0");
@@ -86,8 +73,6 @@ function fmtCoord(lat: number, lon: number) {
   return `${latStr} · ${lonStr}`;
 }
 
-// Approximate ring around a lat/lon — degrees-only (flat-earth at this zoom).
-// Good enough for visual range rings; would distort near the poles.
 function ringCoords(
   cx: number,
   cy: number,
@@ -102,7 +87,6 @@ function ringCoords(
   return out;
 }
 
-// Pie-slice wedge from angle a → angle b (radians), used for the sweep.
 function wedgeCoords(
   cx: number,
   cy: number,
@@ -120,9 +104,12 @@ function wedgeCoords(
   return pts;
 }
 
-// Leader-line annotations — point at real geography. No synthetic content.
-// Each annotation has anchor (where the line ends) and label (where text sits).
-const ANNOTATIONS: { anchor: [number, number]; label: [number, number]; text: string; subtext: string }[] = [
+const ANNOTATIONS: {
+  anchor: [number, number];
+  label: [number, number];
+  text: string;
+  subtext: string;
+}[] = [
   {
     anchor: [56.45, 26.45],
     label: [55.85, 26.95],
@@ -149,6 +136,36 @@ const ANNOTATIONS: { anchor: [number, number]; label: [number, number]; text: st
   },
 ];
 
+type GfwEvent = {
+  id: string;
+  type: string;
+  start: string;
+  end: string;
+  position: { lat: number; lon: number };
+  vessel: { name: string | null; flag: string | null; type: string | null } | null;
+  counterparty?: { name: string | null; flag: string | null } | null;
+  port?: { name: string; flag: string } | null;
+};
+
+type GfwEventsResponse = {
+  type: string;
+  window: { start: string; end: string };
+  total_global: number;
+  total_hormuz: number;
+  events: GfwEvent[];
+  fetched_at: string;
+};
+
+type EventBundle = {
+  gaps: GfwEventsResponse | null;
+  encounters: GfwEventsResponse | null;
+};
+
+const EMPTY_FC: GeoJSON.FeatureCollection = {
+  type: "FeatureCollection",
+  features: [],
+};
+
 export function SignalsHormuzMap({
   baselineCount,
   liveCountFallback,
@@ -158,30 +175,32 @@ export function SignalsHormuzMap({
 }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
-  const wsRef = useRef<WebSocket | null>(null);
-  const shipsRef = useRef<Map<number, AisShip>>(new Map());
   const rafRef = useRef<number | null>(null);
   const dashStepRef = useRef(0);
 
-  const [status, setStatus] = useState<
-    "init" | "connecting" | "live" | "no-key" | "error"
-  >("init");
-  const [shipCount, setShipCount] = useState(0);
-  const [tankerCount, setTankerCount] = useState(0);
-  const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  const [lastTick, setLastTick] = useState<Date | null>(null);
+  const [bundle, setBundle] = useState<EventBundle>({
+    gaps: null,
+    encounters: null,
+  });
+  const [bundleStatus, setBundleStatus] = useState<"loading" | "ready" | "error">(
+    "loading"
+  );
   const [hoverCoord, setHoverCoord] = useState<{ lat: number; lon: number } | null>(
     null
   );
+  const [layerToggles, setLayerToggles] = useState({
+    ais: true,
+    sar: true,
+    events: true,
+  });
   const [now, setNow] = useState(() => new Date());
+
   useEffect(() => {
     const t = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(t);
   }, []);
 
-  // Live oil ticker — gives the map a heartbeat even while AISStream's TLS
-  // is broken. Polls /api/markets/oil every 30 s; the route caches 20 s on
-  // the edge so we're not hammering Yahoo.
+  // Live oil ticker — Brent + WTI quotes via existing /api/markets/oil edge route.
   type Quote = {
     symbol: string;
     label: string;
@@ -214,9 +233,38 @@ export function SignalsHormuzMap({
     };
   }, []);
 
-  const apiKey = process.env.NEXT_PUBLIC_AISSTREAM_API_KEY?.trim() || "";
+  // GFW event bundle — three parallel fetches, cached 6h on the edge.
+  useEffect(() => {
+    let cancelled = false;
+    async function loadBundle() {
+      setBundleStatus("loading");
+      try {
+        // Only gaps + encounters are paginable under the edge budget. loitering
+        // and port-visits are 600k–1.9M events / 30d globally on the free tier
+        // and walking them server-side blows the 90s limit. Surface those in
+        // a later iteration via a nightly cron + cache.
+        const [gaps, encounters] = await Promise.all([
+          fetch("/api/signals/hormuz/gfw/events?type=gaps").then((r) =>
+            r.ok ? (r.json() as Promise<GfwEventsResponse>) : null
+          ),
+          fetch("/api/signals/hormuz/gfw/events?type=encounters").then((r) =>
+            r.ok ? (r.json() as Promise<GfwEventsResponse>) : null
+          ),
+        ]);
+        if (cancelled) return;
+        setBundle({ gaps, encounters });
+        setBundleStatus(gaps || encounters ? "ready" : "error");
+      } catch {
+        if (!cancelled) setBundleStatus("error");
+      }
+    }
+    loadBundle();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
-  // Initialize map once with custom satellite-imagery style.
+  // Initialize map.
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
@@ -224,7 +272,8 @@ export function SignalsHormuzMap({
       container: containerRef.current,
       style: {
         version: 8,
-        glyphs: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/glyphs/{fontstack}/{range}.pbf",
+        glyphs:
+          "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/glyphs/{fontstack}/{range}.pbf",
         sources: {
           satellite: {
             type: "raster",
@@ -232,6 +281,22 @@ export function SignalsHormuzMap({
             tileSize: 256,
             attribution: SAT_ATTRIBUTION,
             maxzoom: 18,
+          },
+          "gfw-ais": {
+            type: "vector",
+            tiles: [GFW_TILE("ais")],
+            attribution:
+              'AIS heat © <a href="https://globalfishingwatch.org/">Global Fishing Watch</a> (CC BY-SA 4.0)',
+            minzoom: 0,
+            maxzoom: 9,
+          },
+          "gfw-sar": {
+            type: "vector",
+            tiles: [GFW_TILE("sar")],
+            attribution:
+              'SAR detections © Global Fishing Watch / Sentinel-1 (CC BY-SA 4.0)',
+            minzoom: 0,
+            maxzoom: 9,
           },
         },
         layers: [
@@ -241,13 +306,33 @@ export function SignalsHormuzMap({
             type: "raster",
             source: "satellite",
             paint: {
-              // Per Simmon: raster-resampling linear + slight saturation lift
-              // makes Esri's deep-blue ocean read as cinema, not as a screenshot.
               "raster-opacity": 1.0,
               "raster-resampling": "linear",
               "raster-saturation": 0.15,
               "raster-contrast": 0.1,
               "raster-brightness-min": 0.02,
+            },
+          },
+          {
+            id: "gfw-ais-layer",
+            type: "fill",
+            source: "gfw-ais",
+            "source-layer": "main",
+            paint: {
+              "fill-color": ACCENT_CYAN,
+              "fill-opacity": 0.32,
+              "fill-outline-color": ACCENT_CYAN,
+            },
+          },
+          {
+            id: "gfw-sar-layer",
+            type: "fill",
+            source: "gfw-sar",
+            "source-layer": "main",
+            paint: {
+              "fill-color": DARK_MAGENTA,
+              "fill-opacity": 0.55,
+              "fill-outline-color": DARK_MAGENTA,
             },
           },
         ],
@@ -286,8 +371,85 @@ export function SignalsHormuzMap({
     };
   }, []);
 
+  // Toggle GFW raster layers when checkboxes flip.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !map.isStyleLoaded()) return;
+    try {
+      if (map.getLayer("gfw-ais-layer")) {
+        map.setLayoutProperty(
+          "gfw-ais-layer",
+          "visibility",
+          layerToggles.ais ? "visible" : "none"
+        );
+      }
+      if (map.getLayer("gfw-sar-layer")) {
+        map.setLayoutProperty(
+          "gfw-sar-layer",
+          "visibility",
+          layerToggles.sar ? "visible" : "none"
+        );
+      }
+      const eventLayers = [
+        "gaps-glow",
+        "gaps-dot",
+        "encounters-glow",
+        "encounters-dot",
+        "encounters-label",
+      ];
+      for (const id of eventLayers) {
+        if (map.getLayer(id)) {
+          map.setLayoutProperty(
+            id,
+            "visibility",
+            layerToggles.events ? "visible" : "none"
+          );
+        }
+      }
+    } catch {
+      /* noop */
+    }
+  }, [layerToggles]);
+
+  // When the GFW event bundle resolves, push features into the existing sources.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    const push = (sourceId: string, events: GfwEvent[]) => {
+      const src = map.getSource(sourceId) as maplibregl.GeoJSONSource | undefined;
+      if (!src) return;
+      src.setData({
+        type: "FeatureCollection",
+        features: events.map((e) => ({
+          type: "Feature",
+          properties: {
+            id: e.id,
+            vesselName: e.vessel?.name ?? "",
+            vesselFlag: e.vessel?.flag ?? "",
+            vesselType: e.vessel?.type ?? "",
+            counterpartyName: e.counterparty?.name ?? "",
+            counterpartyFlag: e.counterparty?.flag ?? "",
+            portName: e.port?.name ?? "",
+            start: e.start,
+            end: e.end,
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [e.position.lon, e.position.lat],
+          },
+        })),
+      });
+    };
+    const apply = () => {
+      push("gaps", bundle.gaps?.events ?? []);
+      push("encounters", bundle.encounters?.events ?? []);
+    };
+    if (map.isStyleLoaded()) apply();
+    else map.once("load", apply);
+  }, [bundle]);
+
   function addOperationalLayers(map: MapLibreMap) {
-    // Port halos — soft cyan glow around each port location to anchor the eye.
+    // Port anchors — soft amber halos at the four framing ports.
     map.addSource("ports", {
       type: "geojson",
       data: {
@@ -340,7 +502,7 @@ export function SignalsHormuzMap({
       },
     });
 
-    // TSS lanes — animated flowing dashes (set later in startAnimations).
+    // TSS lanes — animated flowing dashes (driven from startAnimations).
     map.addSource("tss", {
       type: "geojson",
       data: {
@@ -359,7 +521,6 @@ export function SignalsHormuzMap({
         ],
       },
     });
-    // Glow layer underneath for soft cyan halo on lanes.
     map.addLayer({
       id: "tss-glow",
       type: "line",
@@ -401,7 +562,7 @@ export function SignalsHormuzMap({
       },
     });
 
-    // AOI polygon — Hormuz narrows. Filled cyan with brand glow.
+    // AOI polygon — Hormuz narrows.
     map.addSource("hormuz-aoi", {
       type: "geojson",
       data: {
@@ -446,9 +607,7 @@ export function SignalsHormuzMap({
       },
     });
 
-    // Radar sweep — a 1°-wide arc that orbits the chokepoint every 4s.
-    // Pure RAF-driven, no network needed. Gives the map a "always alive"
-    // feel even when AISStream is down.
+    // Radar sweep + concentric range rings — always-alive scanning feel.
     map.addSource("radar-sweep", {
       type: "geojson",
       data: {
@@ -461,13 +620,9 @@ export function SignalsHormuzMap({
       id: "radar-sweep-fill",
       type: "fill",
       source: "radar-sweep",
-      paint: {
-        "fill-color": ACCENT_CYAN,
-        "fill-opacity": 0.18,
-      },
+      paint: { "fill-color": ACCENT_CYAN, "fill-opacity": 0.18 },
     });
 
-    // Radar concentric range rings (static) — anchors the sweep visually.
     map.addSource("radar-rings", {
       type: "geojson",
       data: {
@@ -494,7 +649,7 @@ export function SignalsHormuzMap({
       },
     });
 
-    // Chokepoint pulse — animated by startAnimations (RAF).
+    // Chokepoint pulse — RAF-animated double ping.
     map.addSource("chokepoint", {
       type: "geojson",
       data: {
@@ -541,7 +696,83 @@ export function SignalsHormuzMap({
       },
     });
 
-    // Leader-line annotations — pointing at real chokepoint geography.
+    // GFW event sources — initially empty, populated by bundle effect.
+    map.addSource("gaps", { type: "geojson", data: EMPTY_FC });
+    map.addSource("encounters", { type: "geojson", data: EMPTY_FC });
+
+    // Encounters — red double-ring + center dot. The smoking-gun layer.
+    map.addLayer({
+      id: "encounters-glow",
+      type: "circle",
+      source: "encounters",
+      paint: {
+        "circle-radius": 14,
+        "circle-color": STS_RED,
+        "circle-opacity": 0.15,
+        "circle-blur": 0.7,
+      },
+    });
+    map.addLayer({
+      id: "encounters-dot",
+      type: "circle",
+      source: "encounters",
+      paint: {
+        "circle-radius": 5,
+        "circle-color": STS_RED,
+        "circle-stroke-color": "#000814",
+        "circle-stroke-width": 1.2,
+        "circle-opacity": 0.95,
+      },
+    });
+    map.addLayer({
+      id: "encounters-label",
+      type: "symbol",
+      source: "encounters",
+      minzoom: 7,
+      layout: {
+        "text-field": ["concat", ["get", "vesselFlag"], "↔", ["get", "counterpartyFlag"]],
+        "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+        "text-size": 9,
+        "text-offset": [0, 1.1],
+        "text-letter-spacing": 0.1,
+        "text-anchor": "top",
+      },
+      paint: {
+        "text-color": "#fecaca",
+        "text-halo-color": "#000814",
+        "text-halo-width": 1.4,
+      },
+    });
+
+    // AIS gaps (dark transits) — magenta glow rings. These are vessels who
+    // stopped broadcasting AIS while inside the Hormuz frame — the canonical
+    // "dark vessel" signal that geopolitical analysts watch for sanctions
+    // evasion and grey-fleet activity.
+    map.addLayer({
+      id: "gaps-glow",
+      type: "circle",
+      source: "gaps",
+      paint: {
+        "circle-radius": 16,
+        "circle-color": DARK_MAGENTA,
+        "circle-opacity": 0.18,
+        "circle-blur": 0.8,
+      },
+    });
+    map.addLayer({
+      id: "gaps-dot",
+      type: "circle",
+      source: "gaps",
+      paint: {
+        "circle-radius": 4,
+        "circle-color": DARK_MAGENTA,
+        "circle-stroke-color": "#000814",
+        "circle-stroke-width": 1,
+        "circle-opacity": 0.95,
+      },
+    });
+
+    // Leader-line annotations — point at real geography.
     map.addSource("annotations", {
       type: "geojson",
       data: {
@@ -635,100 +866,51 @@ export function SignalsHormuzMap({
       },
     });
 
-    // Ship trails (drawn beneath dots).
-    map.addSource("ship-trails", {
-      type: "geojson",
-      data: { type: "FeatureCollection", features: [] },
-    });
-    map.addLayer({
-      id: "ship-trails-line",
-      type: "line",
-      source: "ship-trails",
-      paint: {
-        "line-color": [
-          "case",
-          ["==", ["get", "isTanker"], true],
-          TANKER_RED,
-          "#94a3b8",
-        ],
-        "line-width": 1.2,
-        "line-opacity": 0.55,
-      },
-    });
-
-    // Ships source (live AIS + demo overlap-safe).
-    map.addSource("ships", {
-      type: "geojson",
-      data: { type: "FeatureCollection", features: [] },
-    });
-    // Glow halo for tankers.
-    map.addLayer({
-      id: "ships-glow",
-      type: "circle",
-      source: "ships",
-      paint: {
-        "circle-radius": [
-          "case",
-          ["==", ["get", "isTanker"], true],
-          11,
-          6,
-        ],
-        "circle-color": [
-          "case",
-          ["==", ["get", "isTanker"], true],
-          TANKER_RED,
-          "#94a3b8",
-        ],
-        "circle-opacity": 0.18,
-        "circle-blur": 0.8,
-      },
-    });
-    map.addLayer({
-      id: "ships-dot",
-      type: "circle",
-      source: "ships",
-      paint: {
-        "circle-radius": [
-          "case",
-          ["==", ["get", "isTanker"], true],
-          5,
-          3,
-        ],
-        "circle-color": [
-          "case",
-          ["==", ["get", "isTanker"], true],
-          TANKER_RED,
-          "#cbd5e1",
-        ],
-        "circle-stroke-width": 1,
-        "circle-stroke-color": "#000814",
-        "circle-opacity": 0.98,
-      },
-    });
-
-    map.on("click", "ships-dot", (e) => {
-      const f = e.features?.[0];
-      if (!f) return;
-      const props = f.properties as Record<string, unknown>;
-      const name = String(props.name ?? "Unknown vessel");
-      const mmsi = String(props.mmsi ?? "");
-      const isDemo = props.demo === true || props.demo === "true";
-      const tanker = props.isTanker === true || props.isTanker === "true";
-      const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
-      new maplibregl.Popup({ offset: 10, closeButton: false })
-        .setLngLat(coords)
-        .setHTML(
-          `<div style="font-family:ui-monospace,monospace;font-size:11px;color:#e2e8f0;background:#020617;padding:6px 8px;border:1px solid ${tanker ? TANKER_RED : ACCENT_CYAN};border-radius:4px">
-            <strong style="color:${tanker ? TANKER_RED : "#cbd5e1"}">${name}</strong><br/>
-            ${isDemo ? '<span style="color:#94a3b8">DEMO · synthetic TSS body</span>' : `MMSI ${mmsi}`}${tanker && !isDemo ? " · TANKER" : ""}
-          </div>`
-        )
-        .addTo(map);
-    });
+    // Click handlers on event markers — show vessel identity popup.
+    const popupForVessel = (
+      layerId: string,
+      color: string,
+      label: string
+    ) => {
+      map.on("click", layerId, (e) => {
+        const f = e.features?.[0];
+        if (!f) return;
+        const props = f.properties as Record<string, unknown>;
+        const vesselName = String(props.vesselName ?? "Unknown");
+        const vesselFlag = String(props.vesselFlag ?? "");
+        const vesselType = String(props.vesselType ?? "");
+        const portName = String(props.portName ?? "");
+        const counterparty = String(props.counterpartyName ?? "");
+        const start = String(props.start ?? "").slice(0, 10);
+        const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
+        const extra = portName
+          ? `Port: ${portName}`
+          : counterparty
+            ? `↔ ${counterparty} (${String(props.counterpartyFlag ?? "")})`
+            : vesselType;
+        new maplibregl.Popup({ offset: 12, closeButton: false })
+          .setLngLat(coords)
+          .setHTML(
+            `<div style="font-family:ui-monospace,monospace;font-size:11px;color:#e2e8f0;background:#020617;padding:8px 10px;border:1px solid ${color};border-radius:4px;min-width:180px">
+              <div style="font-size:9px;letter-spacing:0.15em;color:${color};margin-bottom:4px">${label}</div>
+              <strong style="color:#f1f5f9">${vesselName}</strong>${vesselFlag ? ` <span style="color:#94a3b8">· ${vesselFlag}</span>` : ""}<br/>
+              <span style="color:#94a3b8">${extra}</span><br/>
+              <span style="color:#64748b;font-size:9px">${start}</span>
+            </div>`
+          )
+          .addTo(map);
+      });
+      map.on("mouseenter", layerId, () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", layerId, () => {
+        map.getCanvas().style.cursor = "";
+      });
+    };
+    popupForVessel("encounters-dot", STS_RED, "STS ENCOUNTER");
+    popupForVessel("gaps-dot", DARK_MAGENTA, "DARK TRANSIT · AIS GAP");
   }
 
-  // Master RAF loop — animates flowing dashes, pulsing chokepoint, and (when
-  // AIS is unavailable) synthetic demo vessels moving along TSS lanes.
   function startAnimations(map: MapLibreMap) {
     let lastDashChange = 0;
     const dashSequence = [
@@ -739,13 +921,12 @@ export function SignalsHormuzMap({
     ];
 
     const start = performance.now();
-    const tick = (now: number) => {
+    const tick = (t: number) => {
       if (!mapRef.current) return;
       const m = mapRef.current;
-      const elapsed = now - start;
+      const elapsed = t - start;
 
-      // 1. Flowing TSS dashes — change pattern every 90ms.
-      if (now - lastDashChange > 90) {
+      if (t - lastDashChange > 90) {
         dashStepRef.current = (dashStepRef.current + 1) % dashSequence.length;
         try {
           m.setPaintProperty(
@@ -754,12 +935,11 @@ export function SignalsHormuzMap({
             dashSequence[dashStepRef.current] as unknown as number[]
           );
         } catch {
-          /* layer may not exist mid-teardown */
+          /* noop */
         }
-        lastDashChange = now;
+        lastDashChange = t;
       }
 
-      // 2. Chokepoint pulses — two staggered rings expanding then fading.
       const period = 2400;
       const phase1 = (elapsed % period) / period;
       const phase2 = ((elapsed + period / 2) % period) / period;
@@ -774,12 +954,10 @@ export function SignalsHormuzMap({
         /* noop */
       }
 
-      // 3. Radar sweep — wedge rotates 360° every 4 s. We update geometry
-      // by rewriting the geojson source. Cheaper than rebuilding layers.
       const sweepPeriod = 4000;
       const sweepPhase = (elapsed % sweepPeriod) / sweepPeriod;
       const angle = sweepPhase * Math.PI * 2 - Math.PI / 2;
-      const wedgeWidth = Math.PI / 6; // 30°
+      const wedgeWidth = Math.PI / 6;
       try {
         const src = m.getSource("radar-sweep") as
           | maplibregl.GeoJSONSource
@@ -802,189 +980,45 @@ export function SignalsHormuzMap({
 
       rafRef.current = requestAnimationFrame(tick);
     };
-
     rafRef.current = requestAnimationFrame(tick);
   }
 
-  function renderShips() {
-    const map = mapRef.current;
-    if (!map) return;
-    const src = map.getSource("ships") as maplibregl.GeoJSONSource | undefined;
-    const trailsSrc = map.getSource("ship-trails") as maplibregl.GeoJSONSource | undefined;
-    if (!src || !trailsSrc) return;
-    const features = Array.from(shipsRef.current.values())
-      .filter((s) => IS_VESSEL(s.shipType) || s.shipType === undefined)
-      .map((s) => ({
-        type: "Feature" as const,
-        properties: {
-          mmsi: s.mmsi,
-          isTanker: IS_TANKER(s.shipType),
-          name: s.name ?? `MMSI ${s.mmsi}`,
-          shipType: s.shipType ?? null,
-        },
-        geometry: { type: "Point" as const, coordinates: [s.lon, s.lat] },
-      }));
-    src.setData({ type: "FeatureCollection", features });
-
-    // Trail features: only ships with ≥2 positions.
-    const trailFeatures = Array.from(shipsRef.current.values())
-      .filter((s) => s.trail.length >= 2)
-      .map((s) => ({
-        type: "Feature" as const,
-        properties: { isTanker: IS_TANKER(s.shipType) },
-        geometry: { type: "LineString" as const, coordinates: s.trail },
-      }));
-    trailsSrc.setData({ type: "FeatureCollection", features: trailFeatures });
-
-    setShipCount(features.length);
-    setTankerCount(features.filter((f) => f.properties.isTanker).length);
-  }
-
-  // AISStream WebSocket.
-  useEffect(() => {
-    if (!apiKey) {
-      setStatus("no-key");
-      return;
-    }
-    setStatus("connecting");
-    let cancelled = false;
-    let pruneTimer: ReturnType<typeof setInterval> | null = null;
-    let renderTimer: ReturnType<typeof setInterval> | null = null;
-
-    try {
-      const ws = new WebSocket("wss://stream.aisstream.io/v0/stream");
-      wsRef.current = ws;
-
-      ws.onopen = () => {
-        if (cancelled) return;
-        ws.send(
-          JSON.stringify({
-            APIKey: apiKey,
-            BoundingBoxes: [[[26.0, 55.5], [27.5, 57.5]]],
-            FilterMessageTypes: ["PositionReport", "ShipStaticData"],
-          })
-        );
-        setStatus("live");
-      };
-
-      ws.onmessage = (evt) => {
-        try {
-          const msg = JSON.parse(evt.data);
-          const meta = msg?.MetaData;
-          if (!meta) return;
-          const mmsi = Number(meta.MMSI);
-          if (!mmsi) return;
-          setLastTick(new Date());
-
-          if (msg.MessageType === "PositionReport") {
-            const r = msg.Message?.PositionReport;
-            if (!r) return;
-            const lat = Number(r.Latitude);
-            const lon = Number(r.Longitude);
-            if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
-            const existing = shipsRef.current.get(mmsi);
-            const newTrail: [number, number][] = existing ? [...existing.trail, [lon, lat]] : [[lon, lat]];
-            // Keep last 10 positions for the trail.
-            if (newTrail.length > 10) newTrail.shift();
-            shipsRef.current.set(mmsi, {
-              mmsi,
-              lat,
-              lon,
-              cog: Number(r.Cog ?? 0),
-              shipType: existing?.shipType,
-              name: existing?.name ?? meta.ShipName?.trim() ?? undefined,
-              lastSeen: Date.now(),
-              trail: newTrail,
-            });
-          } else if (msg.MessageType === "ShipStaticData") {
-            const r = msg.Message?.ShipStaticData;
-            if (!r) return;
-            const existing = shipsRef.current.get(mmsi);
-            if (existing) {
-              shipsRef.current.set(mmsi, {
-                ...existing,
-                shipType: Number(r.Type ?? existing.shipType),
-                name: r.Name?.trim() || existing.name,
-              });
-            }
-          }
-        } catch {
-          /* ignore malformed frames */
-        }
-      };
-
-      ws.onerror = () => {
-        if (cancelled) return;
-        setStatus("error");
-        setErrorMsg("AIS provider unreachable — synthetic demo routes shown.");
-      };
-      ws.onclose = () => {
-        if (cancelled) return;
-        if (status !== "error") setStatus("error");
-      };
-
-      renderTimer = setInterval(renderShips, 2000);
-      pruneTimer = setInterval(() => {
-        const cutoff = Date.now() - 10 * 60 * 1000;
-        for (const [mmsi, ship] of shipsRef.current) {
-          if (ship.lastSeen < cutoff) shipsRef.current.delete(mmsi);
-        }
-        renderShips();
-      }, 60_000);
-
-      return () => {
-        cancelled = true;
-        if (renderTimer) clearInterval(renderTimer);
-        if (pruneTimer) clearInterval(pruneTimer);
-        try {
-          ws.close();
-        } catch {
-          /* noop */
-        }
-      };
-    } catch (err) {
-      setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Unknown error");
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [apiKey]);
+  const totals = useMemo(() => {
+    return {
+      gaps: bundle.gaps?.total_hormuz ?? null,
+      encounters: bundle.encounters?.total_hormuz ?? null,
+      gapsGlobal: bundle.gaps?.total_global ?? null,
+      encountersGlobal: bundle.encounters?.total_global ?? null,
+      window: bundle.gaps?.window ?? bundle.encounters?.window ?? null,
+      fetched: bundle.gaps?.fetched_at ?? bundle.encounters?.fetched_at ?? null,
+    };
+  }, [bundle]);
 
   const statusPill = useMemo(() => {
-    switch (status) {
-      case "live":
-        return { dot: "bg-emerald-400", label: "LIVE · AIS + GEOSPATIAL", solid: true };
-      case "connecting":
-        return { dot: "bg-amber-400", label: "HANDSHAKING…", solid: false };
-      case "no-key":
-        return { dot: "bg-cyan-400", label: "LIVE · GEOSPATIAL", solid: true };
-      case "error":
-        return { dot: "bg-cyan-400", label: "LIVE · GEOSPATIAL", solid: true };
-      default:
-        return { dot: "bg-slate-400", label: "INIT", solid: false };
-    }
-  }, [status]);
+    if (bundleStatus === "loading")
+      return { dot: "bg-amber-400", label: "FETCHING SATELLITE…", solid: false };
+    if (bundleStatus === "error")
+      return { dot: "bg-slate-400", label: "RECONNECTING", solid: false };
+    return { dot: "bg-emerald-400", label: "LIVE · GFW T-4d", solid: true };
+  }, [bundleStatus]);
 
-  const baselineDisplay =
+  const _baselineDisplay =
     baselineCount !== null && baselineCount !== undefined
       ? Math.round(Number(baselineCount))
-      : null;
-  const allVesselsDisplay =
-    status === "live"
-      ? shipCount
       : liveCountFallback !== null && liveCountFallback !== undefined
         ? Math.round(Number(liveCountFallback))
         : null;
-  const tankerDisplay = status === "live" ? tankerCount : null;
+  void _baselineDisplay;
 
   return (
     <div className="rounded-2xl border border-border bg-card overflow-hidden">
       <div className="flex items-start justify-between gap-3 px-5 pt-4 pb-3">
         <div>
           <p className="text-[10px] uppercase tracking-widest text-text-faint">
-            Maritime · Strait of Hormuz
+            Maritime · Strait of Hormuz · Anomaly Console
           </p>
           <h3 className="text-base font-semibold mt-0.5">
-            Tankers passing the world&apos;s most sensitive oil chokepoint
+            Dark transits, STS encounters, port-calls — satellite-derived
           </h3>
         </div>
         <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-text-muted whitespace-nowrap tracking-widest">
@@ -1000,8 +1034,7 @@ export function SignalsHormuzMap({
         </span>
       </div>
 
-      {/* Live ticker tape — Brent + WTI quotes refreshing every 30 s.
-          Sits ABOVE the map so it's always legible regardless of basemap. */}
+      {/* Oil ticker — Brent + WTI live, sits above the map so it's always legible. */}
       <div className="border-y border-border bg-black/95 overflow-hidden">
         <div className="flex items-center gap-4 px-4 py-2 font-mono text-[11px] text-slate-200 whitespace-nowrap">
           <span className="inline-flex items-center gap-1.5 text-[9px] uppercase tracking-widest text-cyan-300/90">
@@ -1021,80 +1054,139 @@ export function SignalsHormuzMap({
         </div>
       </div>
 
-      {/* Map shell — mission-control black surface, fixed dark even in light mode */}
+      {/* Map surface — dark mission-control */}
       <div className="relative bg-[#000814]">
         <div ref={containerRef} className="h-[440px] w-full" />
 
         {/* HUD top-left — data lineage */}
-        <div className="pointer-events-none absolute top-3 left-3 max-w-[280px] rounded-md border border-cyan-400/40 bg-black/75 backdrop-blur px-3 py-2 font-mono text-[10px] leading-snug text-slate-200 shadow-lg">
+        <div className="pointer-events-none absolute top-3 left-3 max-w-[300px] rounded-md border border-cyan-400/40 bg-black/75 backdrop-blur px-3 py-2 font-mono text-[10px] leading-snug text-slate-200 shadow-lg">
           <div className="flex items-center gap-1.5 text-cyan-300 mb-1">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-300 animate-pulse" />
-            <span className="tracking-widest">MARITIME · HORMUZ TSS</span>
+            <span className="tracking-widest">HORMUZ · ANOMALY CONSOLE</span>
           </div>
           <div className="text-slate-400">
-            BASE <span className="text-slate-200">Esri World Imagery · Maxar</span>
+            BASE <span className="text-slate-200">Esri World Imagery</span>
           </div>
           <div className="text-slate-400">
-            VESSELS{" "}
+            HEAT{" "}
             <span className="text-slate-200">
-              {status === "live" ? `AISStream WS · ${shipCount} tracked` : "AIS feed pending"}
+              GFW 4Wings · AIS + SAR · 30d composite
             </span>
           </div>
           <div className="text-slate-400">
-            BBOX <span className="text-slate-200">55.5–57.5°E · 26.0–27.5°N</span>
+            EVENTS{" "}
+            <span className="text-slate-200">
+              {bundleStatus === "ready"
+                ? `${totals.gaps ?? 0} AIS gaps · ${totals.encounters ?? 0} STS`
+                : bundleStatus === "loading"
+                  ? "fetching…"
+                  : "unavailable"}
+            </span>
           </div>
           <div className="text-slate-400">
-            TICK{" "}
+            WINDOW{" "}
             <span className="text-slate-200">
-              {lastTick ? fmtUTC(lastTick) : fmtUTC(now)}
+              {totals.window
+                ? `${totals.window.start} → ${totals.window.end}`
+                : "—"}
             </span>
+          </div>
+          <div className="text-slate-400">
+            TICK <span className="text-slate-200">{fmtUTC(now)}</span>
           </div>
         </div>
 
-        {/* HUD bottom-right — coordinate readout on hover */}
+        {/* Layer toggles — top-right just below nav */}
+        <div className="absolute top-3 right-16 flex flex-col gap-1 font-mono text-[9px] tracking-widest">
+          <LayerToggle
+            checked={layerToggles.ais}
+            color="#7DD3FC"
+            label="AIS HEAT"
+            onChange={(v) => setLayerToggles((s) => ({ ...s, ais: v }))}
+          />
+          <LayerToggle
+            checked={layerToggles.sar}
+            color="#FFFFFF"
+            label="SAR DETECT"
+            onChange={(v) => setLayerToggles((s) => ({ ...s, sar: v }))}
+          />
+          <LayerToggle
+            checked={layerToggles.events}
+            color={DARK_MAGENTA}
+            label="EVENTS"
+            onChange={(v) => setLayerToggles((s) => ({ ...s, events: v }))}
+          />
+        </div>
+
+        {/* Coord readout — bottom-right */}
         <div className="pointer-events-none absolute bottom-3 right-3 rounded border border-slate-700/60 bg-black/60 backdrop-blur px-2 py-1 font-mono text-[10px] text-slate-300">
           {hoverCoord
             ? fmtCoord(hoverCoord.lat, hoverCoord.lon)
             : "MOVE CURSOR FOR COORDS"}
         </div>
 
-        {/* Legend bottom-left aligned above scale bar */}
+        {/* Legend — bottom-left above scale bar */}
         <div className="pointer-events-none absolute bottom-12 left-3 rounded border border-slate-700/60 bg-black/60 backdrop-blur px-2 py-1.5 font-mono text-[9px] text-slate-300 space-y-1">
-          <div className="flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full bg-rose-500" /> TANKER (IMO 80-89)</div>
-          <div className="flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full bg-slate-300" /> VESSEL (IMO 70-79)</div>
-          <div className="flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-full bg-amber-300" /> MAJOR PORT</div>
-          <div className="flex items-center gap-1.5"><span className="inline-block h-2 w-2 rounded-sm" style={{ background: ACCENT_CYAN }} /> IMO TSS LANE</div>
+          <div className="flex items-center gap-1.5">
+            <span
+              className="inline-block h-2 w-2 rounded-full"
+              style={{ background: DARK_MAGENTA }}
+            />{" "}
+            DARK TRANSIT (AIS gap)
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span
+              className="inline-block h-2 w-2 rounded-full"
+              style={{ background: STS_RED }}
+            />{" "}
+            STS ENCOUNTER
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span
+              className="inline-block h-2 w-2 rounded-full"
+              style={{ background: PORT_AMBER }}
+            />{" "}
+            GATEWAY PORT
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span
+              className="inline-block h-2 w-2 rounded-sm"
+              style={{ background: ACCENT_CYAN }}
+            />{" "}
+            IMO TSS LANE
+          </div>
         </div>
 
         {/* Vectorial corner watermark */}
-        <div className="pointer-events-none absolute top-3 right-16 font-mono text-[9px] tracking-[0.25em] text-cyan-400/70">
+        <div className="pointer-events-none absolute top-3 right-44 font-mono text-[9px] tracking-[0.25em] text-cyan-400/70">
           VECTORIAL · SIGNALS
         </div>
       </div>
 
-      {/* Stat strip — when AIS is live, show vessel telemetry. When the AIS
-          feed is down, fall back to the always-available chokepoint facts so
-          the strip is never a wall of em-dashes (the prior failure mode). */}
+      {/* Stat strip — three telemetry numbers from the GFW bundle. When data
+          is still loading or unavailable, show chokepoint facts so the strip
+          is never a wall of em-dashes. */}
       <div className="grid grid-cols-3 gap-3 px-5 py-4 text-sm bg-card border-t border-border">
-        {status === "live" ? (
+        {bundleStatus === "ready" ? (
           <>
             <Stat
-              label="Tankers in view"
-              value={tankerDisplay !== null ? String(tankerDisplay) : "—"}
+              label="STS encounters (30d)"
+              value={totals.encounters != null ? String(totals.encounters) : "—"}
               tone="red"
-              subtle="live · AIS"
+              subtle="ship-to-ship transfers in AOI"
             />
             <Stat
-              label="All vessels"
-              value={allVesselsDisplay !== null ? String(allVesselsDisplay) : "—"}
-              tone="cyan"
-              subtle="live · AIS"
+              label="AIS gaps (30d)"
+              value={totals.gaps != null ? String(totals.gaps) : "—"}
+              tone="magenta"
+              subtle="dark transit events in AOI"
             />
             <Stat
-              label="30d transit avg"
-              value={baselineDisplay !== null ? String(baselineDisplay) : "—"}
-              tone="muted"
-              subtle="from signal baseline"
+              label="Daily transit"
+              value="~17"
+              suffix="Mb/d"
+              tone="amber"
+              subtle="EIA · 2024 avg"
             />
           </>
         ) : (
@@ -1124,12 +1216,44 @@ export function SignalsHormuzMap({
         )}
       </div>
 
-      {(status === "no-key" || status === "error") && (
-        <div className="px-5 pb-4 text-[11px] text-text-muted leading-relaxed border-t border-border pt-3 font-mono">
-          <span className="text-cyan-400">●</span> Live geospatial layer: Esri World Imagery (Maxar mosaic), IMO Traffic Separation Scheme lanes, AOI per signal methodology. Vessel overlay activates when AIS feed reconnects.
-        </div>
-      )}
+      <div className="px-5 pb-4 text-[11px] text-text-muted leading-relaxed border-t border-border pt-3 font-mono">
+        <span className="text-cyan-400">●</span> Satellite-derived intelligence —
+        Esri World Imagery basemap, Global Fishing Watch 4Wings (AIS + Sentinel-1
+        SAR) heat layer, plus 30-day rolling events: dark transits, ship-to-ship
+        encounters, and port-calls. Updated every 6 h, lag T-96h (AIS) / T-5d
+        (SAR). GFW data: <em>non-commercial research use, CC BY-SA 4.0</em>.
+      </div>
     </div>
+  );
+}
+
+function LayerToggle({
+  checked,
+  color,
+  label,
+  onChange,
+}: {
+  checked: boolean;
+  color: string;
+  label: string;
+  onChange: (v: boolean) => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onChange(!checked)}
+      className={`inline-flex items-center gap-1.5 rounded border px-2 py-1 backdrop-blur transition-colors ${
+        checked
+          ? "border-cyan-400/60 bg-black/75 text-slate-100"
+          : "border-slate-700/60 bg-black/45 text-slate-500"
+      }`}
+    >
+      <span
+        className="inline-block h-2 w-2 rounded-sm"
+        style={{ background: checked ? color : "transparent", border: `1px solid ${color}` }}
+      />
+      {label}
+    </button>
   );
 }
 
@@ -1182,7 +1306,7 @@ function Stat({
   label: string;
   value: string;
   suffix?: string;
-  tone: "red" | "cyan" | "muted";
+  tone: "red" | "cyan" | "muted" | "amber" | "magenta";
   subtle?: string;
 }) {
   const colorClass =
@@ -1190,7 +1314,11 @@ function Stat({
       ? "text-rose-500 dark:text-rose-400"
       : tone === "cyan"
         ? "text-cyan-600 dark:text-cyan-400"
-        : "text-text-muted";
+        : tone === "amber"
+          ? "text-amber-600 dark:text-amber-400"
+          : tone === "magenta"
+            ? "text-fuchsia-500 dark:text-fuchsia-400"
+            : "text-text-muted";
   return (
     <div>
       <p className="text-[10px] uppercase tracking-widest text-text-faint">
