@@ -1,0 +1,527 @@
+{
+  "AMKBY": {
+    "one_liner": "A.P. Møller-Mærsk es una gran empresa danesa de transporte marítimo que está en un momento clave por problemas en el Canal de Suez que mantienen altas las tarifas de envío.",
+    "why_short": "Møller-Mærsk es una oportunidad porque las tarifas de envío están altas debido a problemas en el Canal de Suez, lo que beneficia a la empresa más de lo que se esperaba.",
+    "risk_short": "El mayor riesgo es que si el Canal de Suez se normaliza, habrá más barcos disponibles, lo que podría bajar las tarifas y afectar las ganancias de la empresa.",
+    "generated_at": "2026-05-25T00:15:08.027Z",
+    "model": "gpt-4o"
+  },
+  "ARM": {
+    "one_liner": "ARM diseña los cerebros de casi todos los celulares y ahora también de centros de datos, autos y computadoras, ganando dinero por cada chip que se vende.",
+    "why_short": "Es la reina en procesadores de celulares y gana cada vez que se vende uno. Con la inteligencia artificial, más empresas están cambiando a ARM. La mayoría de los expertos creen que es buena compra.",
+    "risk_short": "La empresa está cara y necesita hacerlo todo perfecto. Softbank tiene casi todo el control. Un competidor nuevo podría quitarle clientes en el futuro.",
+    "generated_at": "2026-05-25T00:13:56.913Z",
+    "model": "gpt-4o"
+  },
+  "ASBFY": {
+    "one_liner": "Associated British Foods es dueña de Primark y de negocios de alimentos y azúcar; podrían separar Primark para que cada parte valga más.",
+    "why_short": "La empresa parece barata para lo que ofrece y podría valer más si separan Primark. Además, Primark sigue abriendo tiendas y ganando dinero.",
+    "risk_short": "Primark no vende por internet, solo en tiendas físicas, y en Europa la gente está comprando menos. Además, el negocio del azúcar apenas cubre sus costos.",
+    "generated_at": "2026-05-25T00:13:58.142Z",
+    "model": "gpt-4o"
+  },
+  "ASML": {
+    "one_liner": "ASML es la única empresa que fabrica las máquinas necesarias para hacer los chips de los iPhones y la inteligencia artificial.",
+    "why_short": "ASML no tiene competencia en su campo. Sus máquinas son muy caras y tienen pedidos asegurados para años. Con el auge de la inteligencia artificial, se necesitan más chips, lo que significa más ventas para ASML.",
+    "risk_short": "La empresa está cara en comparación con sus ganancias. Además, las restricciones para vender a China pueden afectar sus ingresos, y dependen mucho de un solo tipo de máquina.",
+    "generated_at": "2026-05-25T00:14:03.840Z",
+    "model": "gpt-4o"
+  },
+  "AVGO": {
+    "one_liner": "Broadcom es una empresa que fabrica chips para conectar dispositivos a internet y tiene un gran impulso gracias a la inteligencia artificial.",
+    "why_short": "La inteligencia artificial está en auge y Broadcom fabrica los chips que conectan las supercomputadoras. Sus ingresos por AI se han triplicado y su software genera mucho dinero cada año.",
+    "risk_short": "Apple está empezando a hacer sus propios chips, lo que podría afectar a Broadcom. Además, dependen de pocos clientes grandes y tienen una deuda considerable por una compra reciente.",
+    "generated_at": "2026-05-25T00:14:02.528Z",
+    "model": "gpt-4o"
+  },
+  "AWK": {
+    "one_liner": "American Water Works lleva agua limpia a 14 millones de personas en EE.UU. y tiene un monopolio regulado, asegurando que no tenga competencia en su área.",
+    "why_short": "Es la empresa de agua más grande y su dividendo ha crecido por 18 años. El agua es esencial y AWK invierte mucho en mejorar la infraestructura de agua en EE.UU.",
+    "risk_short": "Depende de la aprobación del gobierno para subir tarifas y tiene mucha deuda por sus inversiones. Además, su fusión pendiente aún necesita aprobaciones.",
+    "generated_at": "2026-05-25T00:14:05.053Z",
+    "model": "gpt-4o"
+  },
+  "AXAHY": {
+    "one_liner": "AXA es la aseguradora más grande de Europa, con 92 millones de clientes en 50 países, y ofrece un atractivo dividendo del 5.4% al devolver gran parte de sus ganancias a los accionistas.",
+    "why_short": "AXA es muy barata para su tamaño y liderazgo. Ofrece un buen dividendo y tiene un plan para crecer entre 6-8% en los próximos años, lo que la hace atractiva para quienes buscan estabilidad y crecimiento.",
+    "risk_short": "El cambio climático podría aumentar los costos por desastres naturales, y operar en más de 50 países significa enfrentar muchas regulaciones diferentes.",
+    "generated_at": "2026-05-25T00:14:14.352Z",
+    "model": "gpt-4o"
+  },
+  "AXP": {
+    "one_liner": "American Express es la empresa número uno en tarjetas de crédito de lujo, manejando todo el proceso de pago sin usar Visa o Mastercard, y está creciendo al atraer a más jóvenes.",
+    "why_short": "American Express ha aumentado sus ingresos y ganancias al subir el costo de su tarjeta Platinum, pero los jóvenes siguen interesados. Además, tiene un sistema único que le permite manejar todo el proceso de pago, lo que le da una ventaja sobre otros.",
+    "risk_short": "Si la economía empeora, la gente y las empresas podrían gastar menos, afectando los ingresos de American Express. También, si la gente no renueva sus tarjetas Platinum debido al costo más alto, podría ser un problema.",
+    "generated_at": "2026-05-25T00:16:22.383Z",
+    "model": "gpt-4o"
+  },
+  "B": {
+    "one_liner": "Barrick Mining es una de las mayores empresas que extrae oro y cobre en el mundo, con ingresos de casi 17 mil millones de dólares.",
+    "why_short": "Si el oro sube a más de 5,000 dólares por onza, Barrick gana mucho más porque le cuesta menos extraerlo. Además, planea aumentar su producción de oro y cobre un 30% para 2030.",
+    "risk_short": "Barrick depende totalmente del precio del oro y opera en países con inestabilidad política, lo que puede afectar sus operaciones. Además, tiene una disputa con otra empresa que podría complicar sus planes.",
+    "generated_at": "2026-05-25T00:14:15.918Z",
+    "model": "gpt-4o"
+  },
+  "BABA": {
+    "one_liner": "Alibaba es el gigante de las compras por internet y tecnología en China, con más de 800 millones de usuarios y liderando en servicios de nube y tecnología de inteligencia artificial.",
+    "why_short": "Su negocio de tecnología en la nube crece rápidamente y está invirtiendo mucho en inteligencia artificial. Se considera que su precio es una ganga para su tamaño y potencial, y tiene un buen colchón de dinero guardado.",
+    "risk_short": "Las tensiones entre China y EE.UU. pueden afectar. Aunque antes se le consideró militar, ya no lo es. Está gastando mucho en tecnología, y su participación en el mercado de compras por internet ha bajado.",
+    "generated_at": "2026-05-25T00:14:17.411Z",
+    "model": "gpt-4o"
+  },
+  "BAC": {
+    "one_liner": "Bank of America es el segundo banco más grande de EE.UU., maneja cuentas de ahorro, inversiones y préstamos, y ganó $30.5 mil millones en 2025.",
+    "why_short": "Las ganancias por acción del banco crecieron 19% en 2025 y es el más barato entre los cuatro grandes bancos. Además, tiene espacio para aumentar los dividendos que paga a los accionistas.",
+    "risk_short": "Si las tasas de interés bajan más de lo esperado, el banco podría ganar menos dinero. También podría verse afectado si la economía se desacelera o si limitan las tasas de las tarjetas de crédito.",
+    "generated_at": "2026-05-25T00:14:18.804Z",
+    "model": "gpt-4o"
+  },
+  "BDX": {
+    "one_liner": "Becton Dickinson fabrica cosas esenciales para hospitales, como jeringas y tubos de sangre, y lleva 54 años seguidos aumentando lo que paga a sus accionistas.",
+    "why_short": "La empresa está más barata que otras similares y sigue aumentando lo que paga a sus accionistas. Además, vendió parte de su negocio para tener más dinero y mejorar sus productos.",
+    "risk_short": "Las tarifas por fabricar en México están afectando sus costos, y China está presionando para que bajen sus precios. Además, su crecimiento reciente ha sido lento.",
+    "generated_at": "2026-05-25T00:14:20.367Z",
+    "model": "gpt-4o"
+  },
+  "BG": {
+    "one_liner": "Bunge es el mayor procesador de semillas oleaginosas del mundo y se ha unido a Viterra para formar un gigante agrícola que opera en más de 40 países.",
+    "why_short": "La unión con Viterra está generando más ahorros de lo esperado y sus acciones son baratas para el tamaño del negocio. Además, planean recompensar a los accionistas con dividendos y recompras de acciones.",
+    "risk_short": "Dependen mucho de los precios de productos agrícolas, que pueden variar. Aún están integrando a Viterra, lo cual puede ser complicado, y enfrentan posibles problemas con aranceles y comercio internacional.",
+    "generated_at": "2026-05-25T00:14:29.007Z",
+    "model": "gpt-4o"
+  },
+  "BIDU": {
+    "one_liner": "Baidu es como el Google de China, lidera en búsquedas y está avanzando con taxis sin conductor y un chatbot popular.",
+    "why_short": "Baidu está creciendo rápido en inteligencia artificial, con un servicio en la nube que creció 34%. Además, tiene mucho dinero guardado y planea recompensar a sus inversionistas con recompra de acciones y dividendos.",
+    "risk_short": "Las ganancias bajaron un 3% y su negocio de búsquedas está perdiendo fuerza. Además, enfrenta riesgos por las regulaciones en China y las tensiones con EE.UU.",
+    "generated_at": "2026-05-25T00:14:30.598Z",
+    "model": "gpt-4o"
+  },
+  "BKNG": {
+    "one_liner": "Booking Holdings es la plataforma de viajes en línea más grande del mundo, dueña de sitios como Booking.com y Kayak, y maneja reservas en más de 220 países.",
+    "why_short": "La empresa tiene buenos dividendos y potencial de crecer en valor. A pesar de ser más barata que otras como Airbnb, sigue creciendo bien. Además, tiene mucho dinero para invertir en mejoras y recompensar a sus accionistas.",
+    "risk_short": "Las leyes en Europa podrían afectar sus precios y Google podría quitarle clientes con nuevas funciones. Además, la economía mundial podría crecer más lento en los próximos años.",
+    "generated_at": "2026-05-25T00:14:31.937Z",
+    "model": "gpt-4o"
+  },
+  "BLK": {
+    "one_liner": "BlackRock maneja más dinero que nadie en el mundo, incluyendo fondos populares como iShares y una plataforma tecnológica que gestiona enormes cantidades de dinero.",
+    "why_short": "BlackRock se beneficia de varias tendencias: más personas prefieren fondos pasivos como iShares, crece el interés en inversiones privadas y su tecnología Aladdin es clave. Ha aumentado sus dividendos por 17 años y sigue siendo una opción popular.",
+    "risk_short": "Si el mercado cae, BlackRock gana menos porque cobra según el dinero que maneja. Además, enfrenta competencia en sus fondos y críticas políticas por su enfoque ambiental.",
+    "generated_at": "2026-05-25T00:14:33.471Z",
+    "model": "gpt-4o"
+  },
+  "BTI": {
+    "one_liner": "British American Tobacco es una de las tabacaleras más grandes del mundo, famosa por marcas como Lucky Strike y Camel, y está innovando con productos sin humo como los cigarrillos electrónicos.",
+    "why_short": "Es una empresa que paga buenos dividendos, es decir, dinero a sus accionistas, y sus nuevas opciones sin humo están creciendo bien, lo que podría ser una buena oportunidad para quienes buscan ingresos seguros.",
+    "risk_short": "Las leyes contra el tabaco son cada vez más estrictas, lo que podría afectar sus ventas, y la competencia es fuerte, lo que podría complicar su crecimiento futuro.",
+    "generated_at": "2026-05-25T00:14:34.644Z",
+    "model": "gpt-4o"
+  },
+  "BX": {
+    "one_liner": "Blackstone maneja $1.27 billones en bienes como hoteles y empresas, paga buen dividendo y apuesta por tecnología avanzada.",
+    "why_short": "Blackstone es líder en manejar inversiones grandes y está creciendo rápido, especialmente en seguros y tecnología. Paga un buen dividendo que sube si les va bien.",
+    "risk_short": "Si las tasas de interés siguen altas, las inversiones de Blackstone podrían valer menos y ganarían menos dinero. También, si muchos quieren retirar su dinero a la vez, podría ser un problema.",
+    "generated_at": "2026-05-25T00:14:39.818Z",
+    "model": "gpt-4o"
+  },
+  "CAIXY": {
+    "one_liner": "CaixaBank es el banco más grande de España, con 18 millones de clientes y un premio como el mejor banco para consumidores en Europa.",
+    "why_short": "Es el banco más grande de España, manejando mucho dinero y ofreciendo un buen dividendo que crece cada año. Además, es muy eficiente y ha sido reconocido como el mejor banco para consumidores en Europa.",
+    "risk_short": "Dependen mucho de España para sus ingresos. Si las tasas de interés bajan, podrían ganar menos. Además, las reglas bancarias en Europa cambian mucho.",
+    "generated_at": "2026-05-25T00:14:06.851Z",
+    "model": "gpt-4o"
+  },
+  "CALM": {
+    "one_liner": "Cal-Maine Foods produce 1 de cada 5 huevos en EE.UU. y está creciendo en alimentos preparados como pancakes y tortillas.",
+    "why_short": "La acción está barata ahora porque los precios de los huevos están bajando. Están expandiéndose en alimentos preparados, lo que podría aumentar sus ganancias.",
+    "risk_short": "Dependen mucho del precio del huevo, que puede cambiar por enfermedades en aves y costos de alimentación. Además, los investigan por posible manipulación de precios.",
+    "generated_at": "2026-05-25T00:14:42.273Z",
+    "model": "gpt-4o"
+  },
+  "CCJ": {
+    "one_liner": "Cameco produce uranio, esencial para la energía nuclear que usan grandes empresas tecnológicas para sus centros de datos.",
+    "why_short": "Cameco se beneficia del interés creciente en energía nuclear: grandes empresas como Microsoft y Google necesitan energía constante y limpia, y más países quieren aumentar su capacidad nuclear.",
+    "risk_short": "El precio del uranio puede bajar si hay más minas, y la acción es cara. Además, si algo falla en sus operaciones o regulaciones, el valor podría caer.",
+    "generated_at": "2026-05-25T00:14:43.641Z",
+    "model": "gpt-4o"
+  },
+  "CDNS": {
+    "one_liner": "Cadence crea programas esenciales para diseñar chips, como los de Apple y NVIDIA, y es vital en la tecnología de hoy.",
+    "why_short": "Cadence es casi insustituible porque cambiar de proveedor sería muy complicado y costoso. Además, la demanda de chips más avanzados por la inteligencia artificial aumenta su negocio.",
+    "risk_short": "El precio de sus acciones es alto, así que si no cumplen expectativas, podría bajar mucho. Además, depende de China, que enfrenta restricciones comerciales.",
+    "generated_at": "2026-05-25T00:14:46.424Z",
+    "model": "gpt-4o"
+  },
+  "CEG": {
+    "one_liner": "Constellation Energy produce mucha electricidad limpia en EE.UU. y trabaja con Microsoft en un proyecto importante, pero su acción bajó 28% por retrasos.",
+    "why_short": "Esperan ganar mucho más en 2026, pero la acción cayó porque el proyecto con Microsoft se retrasó. Aun así, tienen una combinación única de energía nuclear, gas y renovables que es ideal para empresas tecnológicas.",
+    "risk_short": "El retraso del proyecto con Microsoft hasta 2031 hizo caer la acción. También preocupa que la reciente compra de otra empresa se integre bien y que los cambios políticos afecten sus beneficios fiscales.",
+    "generated_at": "2026-05-25T00:14:54.340Z",
+    "model": "gpt-4o"
+  },
+  "CICHY": {
+    "one_liner": "China Construction Bank es el segundo banco más grande del mundo, respaldado por el gobierno chino, y paga casi 5% de dividendo, aunque su precio es bajo por tensiones políticas.",
+    "why_short": "El banco está barato porque la gente teme que el sistema bancario chino colapse, pero el gobierno chino lo respalda y sus ganancias siguen creciendo. Además, ya han tomado medidas para enfrentar problemas en el sector inmobiliario.",
+    "risk_short": "El mayor riesgo es político: si las tensiones entre EE.UU. y China aumentan, podrían sacar al banco de las bolsas estadounidenses, lo que complicaría vender las acciones fácilmente.",
+    "generated_at": "2026-05-25T00:14:57.702Z",
+    "model": "gpt-4o"
+  },
+  "CNI": {
+    "one_liner": "Canadian National Railway conecta los océanos Atlántico, Pacífico y Golfo de México, moviendo granos y petróleo. Lleva 29 años subiendo sus pagos a accionistas y está cerca de su máximo valor en un año.",
+    "why_short": "El valor de la acción está cerca de su máximo porque la empresa se ha recuperado bien tras problemas pasados. Ahora mueve más carga y espera seguir mejorando. Además, ha aumentado sus pagos a accionistas por 29 años seguidos.",
+    "risk_short": "El mayor riesgo es que si bajan los precios de productos como granos o petróleo, la empresa podría ganar menos. También enfrenta problemas como incendios, huelgas y cambios en regulaciones de seguridad.",
+    "generated_at": "2026-05-25T00:14:56.205Z",
+    "model": "gpt-4o"
+  },
+  "COIN": {
+    "one_liner": "Coinbase es la plataforma más grande de EE.UU. para comprar y guardar criptomonedas, y maneja el Bitcoin de varios fondos importantes.",
+    "why_short": "Aunque las criptomonedas pueden bajar de precio, Coinbase gana dinero cuidando Bitcoin de fondos grandes y con intereses de reservas, lo que le da ingresos estables incluso si el mercado está bajo.",
+    "risk_short": "Coinbase no da dividendos y depende mucho de que la gente compre y venda criptomonedas. Si bajan las transacciones o cambian las leyes, sus ingresos pueden caer.",
+    "generated_at": "2026-05-25T00:14:59.153Z",
+    "model": "gpt-4o"
+  },
+  "COST": {
+    "one_liner": "Costco es un club de compras donde pagas una membresía para acceder a ofertas, y la mayoría de su dinero viene de estas membresías, no de lo que vende.",
+    "why_short": "Costco es una inversión sólida porque su negocio se basa en miembros que renuevan cada año sin pensarlo mucho, y su marca propia vende más que muchas grandes empresas.",
+    "risk_short": "El mayor riesgo es que la acción ya es cara, y si menos personas renuevan su membresía, podría perder valor. Además, depende mucho de EE.UU. y Canadá para sus ingresos.",
+    "generated_at": "2026-05-25T00:15:00.590Z",
+    "model": "gpt-4o"
+  },
+  "CP": {
+    "one_liner": "El único tren que conecta México, EE.UU. y Canadá, creado por la unión de dos empresas, reporta mañana sus primeras ganancias completas tras la fusión.",
+    "why_short": "Este tren es único porque ningún otro puede cruzar los tres países. Mañana podría mostrar que la unión de las empresas está dando frutos, lo que podría aumentar su valor.",
+    "risk_short": "Si mañana las ganancias no son las esperadas, el valor del tren podría bajar. Además, las tarifas de Trump a autos mexicanos podrían afectar sus ingresos.",
+    "generated_at": "2026-05-25T00:15:09.668Z",
+    "model": "gpt-4o"
+  },
+  "CRM": {
+    "one_liner": "Salesforce, la empresa líder en software de gestión de clientes, está a un precio bajo histórico mientras sus ingresos y flujo de caja crecen.",
+    "why_short": "Comprar acciones de Salesforce ahora es una oportunidad porque la inteligencia artificial está mejorando su negocio, y la empresa está más barata de lo que ha estado en años.",
+    "risk_short": "El riesgo principal es que Microsoft podría atraer más clientes con su tecnología de inteligencia artificial, lo cual podría afectar el crecimiento de Salesforce.",
+    "generated_at": "2026-05-25T00:15:14.226Z",
+    "model": "gpt-4o"
+  },
+  "CRRFY": {
+    "one_liner": "Carrefour es una de las tiendas más grandes del mundo, vendiendo desde alimentos hasta productos del hogar en más de 30 países, destacando en Francia, España y Brasil.",
+    "why_short": "Carrefour es una acción barata que paga un buen dividendo anual del 5.36%. Su plan hasta 2030 busca fortalecer su liderazgo en Francia, España y Brasil, y su negocio en Brasil está creciendo rápido.",
+    "risk_short": "Las ganancias de Carrefour pueden verse afectadas por costos altos y competencia fuerte en Europa. Además, dependen mucho del mercado francés, donde el consumo es débil.",
+    "generated_at": "2026-05-25T00:14:45.099Z",
+    "model": "gpt-4o"
+  },
+  "CSX": {
+    "one_liner": "CSX maneja trenes en el este de EE.UU., conectando a millones de personas y puertos importantes, y acaba de reportar buenas ganancias.",
+    "why_short": "CSX está mejorando sus números y podría unirse a otras grandes empresas de trenes, lo que podría hacerla más fuerte. Además, su nuevo jefe tiene experiencia en fusiones importantes.",
+    "risk_short": "Si otras empresas de trenes se unen y CSX no, podría quedarse atrás. Además, depende mucho del carbón, que cada vez se usa menos.",
+    "generated_at": "2026-05-25T00:15:19.756Z",
+    "model": "gpt-4o"
+  },
+  "DE": {
+    "one_liner": "Deere & Company, el mayor fabricante de maquinaria agrícola del mundo, está en un buen momento porque sus ganancias han superado las expectativas y sus inventarios están en niveles bajos.",
+    "why_short": "Deere está en su mejor momento porque sus ganancias recientes fueron mucho mejores de lo esperado y sus inventarios son los más bajos en 17 años. Además, están lanzando tractores autónomos que podrían aumentar sus ventas.",
+    "risk_short": "El mayor riesgo para Deere es que las tarifas de importación aumenten sus costos y que los precios de los productos agrícolas sigan bajos, lo que podría hacer que los agricultores gasten menos en nueva maquinaria.",
+    "generated_at": "2026-05-25T00:15:25.580Z",
+    "model": "gpt-4o"
+  },
+  "DEO": {
+    "one_liner": "Diageo es la mayor empresa de bebidas alcohólicas del mundo, dueña de marcas como Johnnie Walker y Guinness, y sus ventas han empezado a mejorar tras un año y medio de caídas.",
+    "why_short": "Diageo está a buen precio ahora porque sus ventas han comenzado a subir y se quitó un impuesto que afectaba sus ganancias. Además, su nuevo jefe tiene experiencia en rescatar empresas grandes.",
+    "risk_short": "El riesgo principal es que el nuevo plan de la empresa no sea tan bueno como se espera. Si decepciona, el valor de las acciones podría bajar más.",
+    "generated_at": "2026-05-25T00:17:02.995Z",
+    "model": "gpt-4o"
+  },
+  "DHLGY": {
+    "one_liner": "DHL es la mayor empresa de envíos rápidos del mundo, operando en más de 220 países, y acaba de firmar un importante acuerdo de combustible sostenible en Medio Oriente.",
+    "why_short": "DHL sigue siendo líder en envíos internacionales, con un aumento en sus ganancias recientes y un plan para ahorrar mucho dinero en los próximos años, lo que refuerza su posición en el mercado.",
+    "risk_short": "DHL enfrenta retos como tarifas más altas en EE.UU. y una posible recesión en Europa, lo que podría afectar sus ingresos, además de la competencia creciente de Amazon en el sector de envíos.",
+    "generated_at": "2026-05-25T00:16:00.593Z",
+    "model": "gpt-4o"
+  },
+  "DHR": {
+    "one_liner": "Danaher fabrica equipos para laboratorios y hospitales, y acaba de comprar otra empresa para mejorar sus diagnósticos.",
+    "why_short": "Danaher está a buen precio porque sus pedidos de equipos han subido mucho después de una pausa, y acaban de comprar una empresa que les ayudará a crecer más.",
+    "risk_short": "El riesgo es que esta subida de pedidos sea temporal y que la integración de la nueva empresa comprada sea complicada.",
+    "generated_at": "2026-05-25T00:16:06.990Z",
+    "model": "gpt-4o"
+  },
+  "DIDIY": {
+    "one_liner": "DiDi es como el Uber de China, moviendo a 30 millones de personas al día, pero enfrenta desafíos tras ser sacada de la bolsa de Nueva York.",
+    "why_short": "DiDi es una gran apuesta porque mueve más gente que Uber pero cuesta mucho menos en el mercado. Además, tiene mucho dinero ahorrado y podría volver a cotizar en Hong Kong, lo que podría aumentar su valor.",
+    "risk_short": "El mayor riesgo es que las autoridades chinas vuelvan a ponerle trabas, como ya ocurrió antes. También, si no logra controlar sus pérdidas, los inversores podrían perder la paciencia.",
+    "generated_at": "2026-05-25T00:16:10.529Z",
+    "model": "gpt-4o"
+  },
+  "DLR": {
+    "one_liner": "Digital Realty Trust es la empresa más grande de centros de datos en el mundo, con más de 300 centros y clientes como Oracle y Meta; su importancia crece gracias a contratos récord y expansión en inteligencia artificial.",
+    "why_short": "La empresa está creciendo porque acaba de firmar el contrato más grande de su historia para un centro de datos de inteligencia artificial, lo que asegura ingresos futuros. Además, sus ganancias recientes superaron las expectativas.",
+    "risk_short": "El mayor riesgo es que si las tasas de interés suben, el valor de la empresa podría bajar. También depende mucho de algunos clientes grandes, y si alguno se va, podría afectar sus ingresos.",
+    "generated_at": "2026-05-24T21:33:57.889Z",
+    "model": "gpt-4o"
+  },
+  "DOV": {
+    "one_liner": "Dover Corporation lleva 70 años seguidos aumentando su dividendo y fabrica productos industriales variados, como bombas y tecnologías para centros de datos.",
+    "why_short": "Dover es una de las pocas empresas en el mundo que ha aumentado su dividendo por 70 años consecutivos. Además, está creciendo gracias a su participación en tecnologías para enfriar centros de datos y en la industria farmacéutica.",
+    "risk_short": "El principal riesgo es que el mercado no valore bien a Dover por ser un conglomerado grande y diverso, lo que podría afectar su precio en comparación con otras empresas más especializadas.",
+    "generated_at": "2026-05-25T00:17:06.589Z",
+    "model": "gpt-4o"
+  },
+  "DTEGY": {
+    "one_liner": "Deutsche Telekom es la mayor empresa de telecomunicaciones de Europa y controla T-Mobile en EE.UU., lo que la hace muy influyente en el sector.",
+    "why_short": "Comprar acciones ahora es como adquirir la mayor parte de T-Mobile en EE.UU. a buen precio, y además te llevas el negocio en Europa casi gratis.",
+    "risk_short": "El riesgo principal es una huelga en Alemania que podría aumentar costos y afectar su reputación si no se resuelve pronto.",
+    "generated_at": "2026-05-25T00:17:07.997Z",
+    "model": "gpt-4o"
+  },
+  "EADSY": {
+    "one_liner": "Airbus es el mayor fabricante de aviones del mundo, superando a Boeing, y es importante porque tiene pedidos asegurados para los próximos 10 años.",
+    "why_short": "Airbus está a buen precio porque, aunque sus ganancias bajaron por falta de motores, tiene pedidos asegurados por 10 años y lidera el mercado de aviones comerciales.",
+    "risk_short": "El principal riesgo es que la falta de motores de Pratt & Whitney podría seguir afectando las entregas de aviones, lo que podría impactar sus ganancias futuras.",
+    "generated_at": "2026-05-25T00:16:40.962Z",
+    "model": "gpt-4o"
+  },
+  "ECL": {
+    "one_liner": "Ecolab es una empresa que ayuda a limpiar agua y lugares industriales en todo el mundo, y acaba de comprar una compañía que enfría computadoras potentes.",
+    "why_short": "Ecolab lleva 33 años aumentando sus pagos a los accionistas y ahora está invirtiendo en tecnología para enfriar centros de datos, lo que podría hacer crecer aún más su negocio.",
+    "risk_short": "El riesgo principal es que la nueva compra de Ecolab no funcione bien o que enfrente mucha competencia, lo que podría afectar sus ganancias.",
+    "generated_at": "2026-05-25T00:16:16.231Z",
+    "model": "gpt-4o"
+  },
+  "ESLOY": {
+    "one_liner": "EssilorLuxottica es el gigante de los lentes, dueños de marcas como Ray-Ban y Oakley, y controlan gran parte del mercado en EE.UU.",
+    "why_short": "Lograron ventas récord y un crecimiento impresionante gracias a sus lentes inteligentes Ray-Ban Meta, mientras que el mercado de estos productos sigue en aumento.",
+    "risk_short": "La posible entrada de Apple en el mercado de lentes inteligentes podría afectar su liderazgo, además de las tarifas que afectan sus ganancias en EE.UU.",
+    "generated_at": "2026-05-25T00:14:52.684Z",
+    "model": "gpt-4o"
+  },
+  "FCX": {
+    "one_liner": "Freeport-McMoRan es el mayor productor de cobre de EE.UU. y tiene una mina gigante en Indonesia que también extrae oro, vital para tecnología como centros de datos e autos eléctricos.",
+    "why_short": "El cobre es clave para la tecnología futura, y se espera que las necesidades superen la oferta en unos años. La mina Grasberg aumentará su producción en 2026, lo que podría aumentar mucho las ganancias.",
+    "risk_short": "Un accidente en la mina Grasberg redujo la producción y causó muertes. Además, Indonesia podría limitar las exportaciones y el precio del cobre cambia mucho, afectando las ganancias.",
+    "generated_at": "2026-05-25T00:14:21.567Z",
+    "model": "gpt-4o"
+  },
+  "GE": {
+    "one_liner": "GE Aerospace fabrica motores de avión y, tras separarse de otra parte de la empresa, ahora se enfoca solo en aviación, con muchos contratos pendientes y un buen momento en el mantenimiento de aviones.",
+    "why_short": "Las ventas de GE Aerospace crecieron mucho en 2025, ganaron más dinero y tienen un flujo de efectivo récord. La alta demanda de viajes aéreos y aviones más viejos ayuda a que sus servicios crezcan.",
+    "risk_short": "El Boeing 737 MAX tiene problemas que afectan la entrega de motores, y GE Aerospace necesita hacer todo perfecto porque su valor es alto. Además, un problema en otro motor podría retrasar un nuevo avión.",
+    "generated_at": "2026-05-25T00:14:26.232Z",
+    "model": "gpt-4o"
+  },
+  "GFI": {
+    "one_liner": "Gold Fields es una minera de oro sudafricana que ha triplicado sus ganancias y está devolviendo mucho dinero a sus accionistas mientras el oro alcanza precios récord.",
+    "why_short": "Las ganancias de Gold Fields se triplicaron, y están repartiendo un buen dividendo. Además, tienen una nueva mina en Canadá que producirá oro a bajo costo, justo cuando el oro está muy caro.",
+    "risk_short": "El precio del oro podría bajar si el mundo se calma. Además, hay riesgos en Sudáfrica y Ghana por temas políticos y de electricidad. La minería es cara y peligrosa, y el precio de la acción puede variar mucho.",
+    "generated_at": "2026-05-25T00:14:09.573Z",
+    "model": "gpt-4o"
+  },
+  "GILD": {
+    "one_liner": "Gilead Sciences es una empresa que lidera el tratamiento del VIH y acaba de lanzar un nuevo medicamento que protege por 6 meses con una sola inyección.",
+    "why_short": "Compramos Gilead porque tiene un nuevo tratamiento innovador contra el VIH que podría aumentar mucho sus ventas y ya tiene otros medicamentos importantes protegidos hasta 2036.",
+    "risk_short": "El mayor riesgo es que el gobierno de EE.UU. podría negociar precios más bajos para uno de sus medicamentos clave, lo que podría afectar sus ingresos en el futuro.",
+    "generated_at": "2026-05-25T00:15:06.571Z",
+    "model": "gpt-4o"
+  },
+  "GSK": {
+    "one_liner": "GSK es una de las farmacéuticas más grandes del mundo, centrada en medicamentos y vacunas, y está lanzando nuevos productos importantes bajo el liderazgo de su nuevo CEO.",
+    "why_short": "GSK es una buena compra porque está barata comparada con otras grandes farmacéuticas. Tiene 14 nuevos medicamentos en camino y su vacuna Shingrix aún tiene mucho mercado por cubrir.",
+    "risk_short": "El mayor riesgo es que una de sus vacunas, Arexvy, no venda tanto como esperaban porque solo se recomienda para personas mayores de 75 años, lo que limita su mercado.",
+    "generated_at": "2026-05-25T00:17:05.293Z",
+    "model": "gpt-4o"
+  },
+  "HCA": {
+    "one_liner": "HCA Healthcare es el operador de hospitales más grande de EE.UU., con 188 hospitales y más de 2,400 centros de atención, y está enfrentando cambios en las ayudas del gobierno que podrían afectar sus ingresos.",
+    "why_short": "HCA está a buen precio porque el mercado está exagerando los problemas por la reducción de ayudas del gobierno, pero la empresa sigue siendo fuerte y está devolviendo mucho dinero a los accionistas.",
+    "risk_short": "El mayor riesgo es que la eliminación de ayudas del gobierno aumente los costos para los pacientes, lo que podría afectar los ingresos de HCA si no logran compensarlo con más pacientes sin seguro.",
+    "generated_at": "2026-05-25T00:15:31.362Z",
+    "model": "gpt-4o"
+  },
+  "HEI": {
+    "one_liner": "HEICO fabrica piezas de avión más baratas y seguras, y ahora está en manos de los hijos del fundador tras su fallecimiento.",
+    "why_short": "HEICO ha crecido mucho vendiendo piezas de avión más económicas y seguras. Sus ventas recientes superaron expectativas, y se espera que siga creciendo con nuevos contratos y adquisiciones.",
+    "risk_short": "El principal riesgo es que las acciones de HEICO son caras. Si el mercado cambia de opinión, el precio podría bajar mucho, aunque la empresa siga funcionando bien.",
+    "generated_at": "2026-05-25T00:15:39.679Z",
+    "model": "gpt-4o"
+  },
+  "HWM": {
+    "one_liner": "Howmet Aerospace fabrica piezas esenciales para motores de avión y trabaja con gigantes como Boeing y Airbus, logrando ingresos récord de $8.25 mil millones en 2025.",
+    "why_short": "Logró un trimestre fuerte con ingresos de $2.2 mil millones y un crecimiento del 42% en ganancias. Planea crecer más con la compra de otra empresa por $1.8 mil millones.",
+    "risk_short": "La acción está muy cara comparada con sus ganancias. Si Boeing tiene problemas o las ganancias no cumplen expectativas, el precio podría caer. Ya bajó un 12% desde febrero.",
+    "generated_at": "2026-05-25T00:14:27.526Z",
+    "model": "gpt-4o"
+  },
+  "IEX": {
+    "one_liner": "IDEX fabrica bombas y equipos de rescate como las 'Jaws of Life', y ha aumentado sus dividendos por 17 años seguidos.",
+    "why_short": "A $197.85, IDEX se beneficia de la demanda en agua, centros de datos y ciencias de la vida. Compraron Mott Corporation para mejorar en filtración y tienen un contrato de $40 millones en aguas residuales.",
+    "risk_short": "IDEX es cara para su sector y si baja la demanda de centros de datos, su crecimiento podría frenarse. Además, algunos de sus mercados como químicos y seguridad están débiles.",
+    "generated_at": "2026-05-25T00:14:41.114Z",
+    "model": "gpt-4o"
+  },
+  "KHC": {
+    "one_liner": "Kraft Heinz, dueños de Heinz Ketchup y Kraft Mac & Cheese, está en el ojo del huracán porque Berkshire Hathaway está vendiendo todas sus acciones.",
+    "why_short": "La empresa ofrece un rendimiento del 6.5% y parece barata comparada con sus ganancias, además tiene 8 marcas que venden más de mil millones de dólares cada una.",
+    "risk_short": "Berkshire está vendiendo su parte del 27.5% y las ventas de la empresa están bajando entre 1.5% y 3.5%, lo que podría ser una trampa porque el dividendo es dudoso.",
+    "generated_at": "2026-05-25T00:13:52.290Z",
+    "model": "gpt-4o"
+  },
+  "LMT": {
+    "one_liner": "Lockheed Martin fabrica aviones de combate y tecnología militar avanzada, con contratos por $194 mil millones en espera de ser cobrados.",
+    "why_short": "Tiene contratos asegurados que valen más de dos veces lo que vende en un año, y la demanda de sus productos sigue creciendo por conflictos y aumentos en el presupuesto militar.",
+    "risk_short": "El gobierno de EE.UU. comprará menos aviones F-35, que son una parte importante de sus ventas, y hay retrasos y sobrecostos en algunos proyectos.",
+    "generated_at": "2026-05-25T00:14:22.845Z",
+    "model": "gpt-4o"
+  },
+  "MCD": {
+    "one_liner": "McDonald's, la cadena de comida rápida más grande del mundo, gana dinero con franquicias y lleva 50 años seguidos aumentando lo que paga a sus accionistas.",
+    "why_short": "McDonald's está mejorando su presencia digital con un programa de lealtad que ya tiene millones de usuarios, lo que ha aumentado sus ventas en línea. Además, está expandiendo su menú de bebidas para competir con Starbucks.",
+    "risk_short": "El mayor riesgo es que las personas con menos ingresos están gastando menos en McDonald's, y si esto afecta a más gente, las ventas podrían bajar. También enfrenta costos más altos y competencia feroz en comida rápida.",
+    "generated_at": "2026-05-25T00:14:49.508Z",
+    "model": "gpt-4o"
+  },
+  "MCO": {
+    "one_liner": "Moody's califica la deuda de países y empresas en todo el mundo, y acaba de reportar ganancias mejores de lo esperado, además de aumentar lo que espera ganar este año.",
+    "why_short": "Moody's es como un peaje que cobra por cada deuda nueva que se emite en el mundo. Junto con S&P, controla casi todo el mercado de calificaciones, y su negocio de análisis financiero crece constantemente.",
+    "risk_short": "El mayor riesgo es que si las empresas dejan de emitir deuda por una crisis, Moody's podría ganar menos dinero. Además, las regulaciones podrían cambiar y afectar su negocio.",
+    "generated_at": "2026-05-25T00:15:05.168Z",
+    "model": "gpt-4o"
+  },
+  "MDLZ": {
+    "one_liner": "Mondelez es la empresa detrás de Oreo y Cadbury, vendiendo snacks en más de 150 países y ganando alrededor de $36 mil millones al año.",
+    "why_short": "Mondelez es una apuesta segura porque sus marcas como Oreo y Cadbury son compradas incluso en tiempos difíciles. Sus acciones están más baratas de lo normal y pagan un buen dividendo del 3.5%.",
+    "risk_short": "Los costos de ingredientes como el cacao han subido mucho, afectando sus ganancias. Además, el dólar fuerte y las nuevas reglas sobre comida pueden complicar las cosas.",
+    "generated_at": "2026-05-25T00:14:36.012Z",
+    "model": "gpt-4o"
+  },
+  "MLI": {
+    "one_liner": "Mueller Industries fabrica tubos y piezas de cobre para plomería y aire acondicionado, y se beneficia del alto precio del cobre.",
+    "why_short": "Mueller gana mucho dinero porque el cobre está caro y sus productos son muy usados en construcciones. Aunque sus acciones son baratas, la empresa sigue creciendo y comprando sus propias acciones.",
+    "risk_short": "Si el precio del cobre baja, Mueller podría ganar menos. También enfrenta competencia de tubos de plástico y depende mucho del mercado de construcción en América del Norte.",
+    "generated_at": "2026-05-25T00:14:38.474Z",
+    "model": "gpt-4o"
+  },
+  "MMM": {
+    "one_liner": "3M fabrica productos conocidos como Scotch y Post-it, y está simplificando su negocio para enfocarse mejor, mostrando señales de mejora bajo su nuevo líder.",
+    "why_short": "3M parece estar recuperándose después de años difíciles gracias a su nuevo líder, William Brown, quien ha simplificado el negocio y mejorado las ganancias, lo que podría hacer que la empresa vuelva a crecer.",
+    "risk_short": "El mayor riesgo es que 3M aún enfrenta demandas costosas relacionadas con productos químicos, lo que podría costarles mucho dinero en el futuro, además de la competencia y la economía global que pueden afectar sus ventas.",
+    "generated_at": "2026-05-25T00:15:03.675Z",
+    "model": "gpt-4o"
+  },
+  "NOC": {
+    "one_liner": "Northrop Grumman fabrica aviones y misiles para el ejército de EE.UU. y tiene muchos pedidos pendientes por cobrar, además de que sus ventas internacionales están creciendo rápido.",
+    "why_short": "La empresa tiene muchos contratos asegurados, lo que le garantiza trabajo por mucho tiempo. Además, está aumentando su capacidad para fabricar más aviones, y las tensiones en el mundo hacen que los países gasten más en defensa.",
+    "risk_short": "Uno de sus proyectos de misiles está costando mucho más de lo planeado, y la empresa está cara en comparación con lo que se espera que crezca en los próximos años.",
+    "generated_at": "2026-05-25T00:14:24.601Z",
+    "model": "gpt-4o"
+  },
+  "NTR": {
+    "one_liner": "Nutrien es el mayor productor mundial de potasa y el minorista agrícola más grande, vendiendo semillas y fertilizantes en miles de tiendas.",
+    "why_short": "Nutrien es una buena compra porque sus ganancias crecieron y los precios de sus productos están subiendo. Además, India y China están comprando a precios altos, lo que asegura ingresos estables.",
+    "risk_short": "El principal riesgo es que los precios de la potasa bajen si otros países empiezan a vender más barato o si hay cambios políticos que afecten las sanciones actuales.",
+    "generated_at": "2026-05-25T00:16:27.449Z",
+    "model": "gpt-4o"
+  },
+  "NU": {
+    "one_liner": "Nu Holdings es un banco digital brasileño sin sucursales que crece rápido y ahora tiene 131 millones de clientes en Latinoamérica.",
+    "why_short": "Es el banco más rentable del mundo, creciendo al 45% anual, y está expandiéndose a EE.UU. con el apoyo de inversionistas importantes como Warren Buffett.",
+    "risk_short": "El valor de sus ganancias puede bajar si la moneda brasileña pierde valor frente al dólar, y enfrenta competencia fuerte en México y regulaciones en Brasil.",
+    "generated_at": "2026-05-25T00:15:54.074Z",
+    "model": "gpt-4o"
+  },
+  "PNR": {
+    "one_liner": "Pentair hace productos para tratar agua y equipos de piscinas, siendo la marca más grande en EE.UU. para estos equipos.",
+    "why_short": "Pentair se enfoca en el agua, un recurso esencial, y tiene un negocio estable con el mantenimiento de piscinas. Se ha reorganizado para concentrarse solo en agua, lo que mejora sus ganancias.",
+    "risk_short": "El negocio de piscinas depende del clima y la construcción de casas, por lo que un invierno largo o altas tasas de interés pueden afectar sus ventas. Además, enfrenta competencia de productos más baratos de China.",
+    "generated_at": "2026-05-25T00:14:47.845Z",
+    "model": "gpt-4o"
+  },
+  "RHHBY": {
+    "one_liner": "Roche es una empresa suiza que fabrica medicamentos y pruebas de diagnóstico, famosa por tratar el cáncer y otras enfermedades importantes.",
+    "why_short": "Roche ha tenido un buen inicio de año, vendiendo más de lo esperado y tiene nuevos medicamentos prometedores en camino, especialmente para la obesidad y el Alzheimer.",
+    "risk_short": "El mayor riesgo es que sus nuevos medicamentos no funcionen tan bien como esperan. También, cambios en tarifas de EE.UU. o competencia pueden afectar sus ventas.",
+    "generated_at": "2026-05-25T00:15:42.650Z",
+    "model": "gpt-4o"
+  },
+  "ROL": {
+    "one_liner": "Rollins es dueño de Orkin, la marca líder en control de plagas, y lleva 24 años creciendo sin parar porque las cucarachas no entienden de crisis económicas.",
+    "why_short": "Las plagas siempre estarán, así que su negocio no depende de la economía. Han crecido 24 años seguidos, ganan $3.8 mil millones al año y llevan 35 años pagando dividendos sin falta.",
+    "risk_short": "La acción está cara comparada con otras del sector. Ganaron menos de lo esperado por el clima y dependen mucho del verano para sus ingresos.",
+    "generated_at": "2026-05-25T00:14:08.241Z",
+    "model": "gpt-4o"
+  },
+  "ROP": {
+    "one_liner": "Roper Technologies compra empresas de software especializadas y las ayuda a crecer, pero ha caído un 44% por problemas temporales.",
+    "why_short": "Roper es una empresa sólida que está más barata de lo normal. Tiene ingresos estables y un historial de 33 años aumentando dividendos. Aunque ha bajado, sigue siendo una buena opción a largo plazo.",
+    "risk_short": "El mayor riesgo es que Roper no compre bien sus nuevas empresas. Tiene deudas y debe demostrar que sus adquisiciones recientes valen la pena.",
+    "generated_at": "2026-05-25T00:13:45.898Z",
+    "model": "gpt-4o"
+  },
+  "RTX": {
+    "one_liner": "RTX es una de las mayores empresas de defensa en EE.UU. y fabrica motores para aviones, destacando por sus contratos millonarios y un aumento en sus ganancias recientes.",
+    "why_short": "RTX ha conseguido contratos importantes que aseguran sus ventas por tres años, y sus ganancias han superado lo que esperaba el mercado. Además, han aumentado lo que esperan ganar este año.",
+    "risk_short": "Un nuevo impuesto podría costarle a RTX mucho dinero, y si suben más, podrían afectar sus ganancias. También hay problemas con algunos motores que tardarán años en solucionarse.",
+    "generated_at": "2026-05-25T00:15:43.962Z",
+    "model": "gpt-4o"
+  },
+  "SIEGY": {
+    "one_liner": "Siemens, una empresa alemana con 177 años de historia, es clave en automatización y trenes, con un récord de pedidos y un crecimiento del 35% en centros de datos gracias a la inteligencia artificial.",
+    "why_short": "Siemens está bien posicionada para aprovechar el auge de la inteligencia artificial y la infraestructura digital, con un fuerte crecimiento en centros de datos y alianzas con NVIDIA y Microsoft.",
+    "risk_short": "Enfrenta fuerte competencia de otras empresas y cambios en el valor del euro que pueden afectar su crecimiento. Además, la venta planificada de parte de Siemens Healthineers puede traer incertidumbre.",
+    "generated_at": "2026-05-25T00:14:12.567Z",
+    "model": "gpt-4o"
+  },
+  "TNL": {
+    "one_liner": "Travel + Leisure Co. es la empresa más grande del mundo en vender vacaciones compartidas, con más de 245 resorts y 830,000 familias dueñas.",
+    "why_short": "La empresa está bien valorada, ofreciendo un retorno anual del 8% gracias a sus dividendos y recompra de acciones. Además, sus ganancias están creciendo, lo que la hace atractiva para invertir.",
+    "risk_short": "El principal riesgo es que la empresa tiene una deuda alta. Si hay una recesión, sus ganancias podrían caer y tendrían que reducir los dividendos, como ya pasó en 2020.",
+    "generated_at": "2026-05-25T00:16:34.340Z",
+    "model": "gpt-4o"
+  },
+  "UBS": {
+    "one_liner": "UBS es el banco más grande de Suiza y acaba de hacerse aún más grande al absorber a Credit Suisse, manejando ahora $7 billones de activos.",
+    "why_short": "Al unir fuerzas con Credit Suisse, UBS está ahorrando mucho dinero y sus ganancias han subido un 53%. Planean comprar sus propias acciones y aumentar los dividendos en un 15%.",
+    "risk_short": "Las reglas bancarias en Suiza podrían volverse más estrictas. Además, no ganaron tanto como esperaban a finales de 2025 y aún tienen gastos pendientes por la integración.",
+    "generated_at": "2026-05-25T00:13:42.937Z",
+    "model": "gpt-4o"
+  },
+  "VGK": {
+    "one_liner": "Vanguard FTSE Europe ETF te permite invertir en 1,246 empresas europeas con una comisión muy baja y un buen dividendo del 3.7%.",
+    "why_short": "Es una forma económica de diversificar tus inversiones en Europa, donde las acciones están más baratas y pagan buenos dividendos.",
+    "risk_short": "La economía europea suele crecer más lento que la de EE.UU., y el valor del euro puede cambiar. No incluye grandes tecnológicas de EE.UU.",
+    "generated_at": "2026-05-25T00:13:53.752Z",
+    "model": "gpt-4o"
+  },
+  "VPL": {
+    "one_liner": "Este fondo de inversión de Vanguard incluye 2,363 empresas de Asia-Pacífico, como Samsung y Toyota, y te permite beneficiarte del crecimiento en tecnología y semiconductores de la región.",
+    "why_short": "Asia-Pacífico está creciendo rápidamente. Empresas como Samsung y SK Hynix son líderes en tecnología, y Japón está mejorando sus prácticas empresariales. Es una buena forma de invertir fuera de Estados Unidos.",
+    "risk_short": "Más de la mitad del fondo está en Japón, que tiene una población envejecida. Además, hay tensiones políticas en la región y el valor del yen japonés puede cambiar mucho.",
+    "generated_at": "2026-05-25T00:13:55.408Z",
+    "model": "gpt-4o"
+  },
+  "WAL": {
+    "one_liner": "Western Alliance Bancorporation es un banco que se enfoca en áreas de rápido crecimiento como tecnología y bienes raíces, y ha logrado recuperarse bien tras una crisis bancaria reciente.",
+    "why_short": "El banco aumentó sus depósitos en $15 mil millones en 2025 y tuvo un gran año con ganancias creciendo 33%. Esperan seguir creciendo en préstamos y depósitos en 2026.",
+    "risk_short": "Al crecer más de $100 mil millones en activos, enfrentará reglas más estrictas. Además, está expuesto a sectores como tecnología y bienes raíces, que pueden ser inestables.",
+    "generated_at": "2026-05-25T00:14:10.862Z",
+    "model": "gpt-4o"
+  },
+  "WFAFY": {
+    "one_liner": "Wesfarmers es el gigante de tiendas en Australia, dueño de Bunnings y Kmart, y ahora también produce litio para baterías.",
+    "why_short": "Wesfarmers sigue creciendo gracias a sus tiendas y su nueva producción de litio, justo cuando las baterías para autos eléctricos son más demandadas.",
+    "risk_short": "El precio de sus acciones es alto, y si no cumplen expectativas, podría bajar. Además, la economía australiana está complicada y hay más competencia online.",
+    "generated_at": "2026-05-25T00:14:51.106Z",
+    "model": "gpt-4o"
+  },
+  "WFC": {
+    "one_liner": "Wells Fargo es uno de los bancos más grandes de EE.UU., ahora puede crecer libremente tras años de restricciones y ofrece un dividendo del 2.15%.",
+    "why_short": "Wells Fargo es una oportunidad porque ya puede crecer después de años sin poder hacerlo por un castigo. Tiene muchos clientes y depósitos, lo que le da una base sólida para expandirse.",
+    "risk_short": "El mayor riesgo es que vuelva a tener problemas con las regulaciones, como el escándalo de cuentas falsas que le costó mucho dinero y confianza. También, si la economía empeora, podría afectar sus ganancias.",
+    "generated_at": "2026-05-25T00:15:01.937Z",
+    "model": "gpt-4o"
+  },
+  "ZTS": {
+    "one_liner": "Zoetis es la empresa líder en salud animal, vendiendo medicinas y vacunas para mascotas y ganado en más de 100 países.",
+    "why_short": "Zoetis se beneficia porque cada vez más personas tratan a sus mascotas como familia y gastan en su salud. Aunque su acción ha bajado, sigue siendo fuerte y tiene nuevos productos prometedores.",
+    "risk_short": "La FDA investiga dos productos de Zoetis por problemas en mascotas, lo que podría afectar su reputación y ventas. Además, si la economía empeora, la gente podría gastar menos en sus mascotas.",
+    "generated_at": "2026-05-25T00:14:37.234Z",
+    "model": "gpt-4o"
+  }
+}
