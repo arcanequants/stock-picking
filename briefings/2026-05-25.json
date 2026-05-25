@@ -1,0 +1,117 @@
+{
+  "date": "2026-05-25",
+  "summary": "Iran's Hormuz blockade links oil, inflation, and rate hikes across four continents",
+  "causalChain": "Iran's closure of the Strait of Hormuz pushed oil toward $98/bbl, fueling inflation spikes in Europe and Australia that forced central banks to hike rates; meanwhile Mexico navigates a pivotal trade review and Asia absorbs a stronger dollar and slowing demand.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Iran blocks Strait of Hormuz; 150 tankers stranded, oil near $98/bbl", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 10-yr borrowing cost at 4.61%; traders see 86% chance of rate hike by year-end", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Oil-gold paradox: a spike above $120 could drag gold down, not up", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts to 6.50%, likely last move; inflation to reach 3% target only in mid-2027", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "USMCA/T-MEC formal review opens July 1; $873B in annual trade at stake", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Record $40.9B FDI into Mexico factories; wages 25% cheaper than China", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Yen slides past 159/dollar; Japan exports surge 14.8%, Nikkei hits record 59,585", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "PBOC lets yuan drift weaker in controlled way; keeps Chinese exports price-competitive", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "Eurozone inflation jumps to 3%; ECB hints at U-turn rate hike", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "DAX rebounds 3.92% in one week as Middle East de-escalation signals emerge", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "Australia's RBA hikes to 4.35%; third straight increase, mortgage pain rises", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "Rio Tinto and BHP explore sharing 200Mt/yr Pilbara iron ore operations", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin near $77K; Fear and Greed index at 25, macro headwinds dominate", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "ETH whale accumulation returns; BlackRock spot ETF inflows turn positive", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "Digital dollar supply hits $269B record; US CLARITY Act may redefine oversight", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Wake Forest finds shared SP6/SP8 genes that may one day unlock human limb regrowth", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "KM3NeT catches most energetic particle ever from space: 220 PeV neutrino in Mediterranean", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Queen Mary London: universe physical constants finely tuned so liquids can support life", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Iran has blocked the Strait of Hormuz — the narrow channel where 1 in 5 barrels of oil on Earth passes every day — since late February. After the US and Israel launched air strikes and Iran's leader was killed, Iran sent its navy to stop ships from passing. Over 150 oil tankers are now anchored outside waiting, and ship insurance for one crossing jumped from a quarter-million dollars to several million. The result: oil has climbed toward $98 a barrel and energy costs are spreading into food, transport, and heating bills worldwide. The longer the blockade holds, the more every country that imports oil pays."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government is now paying 4.61% per year to borrow money for 10 years — near the highest level in decades. When the government pays more to borrow, banks raise rates on mortgages and business loans too. Traders now see an 86% chance that the US central bank will raise its own rate before the end of 2026, meaning borrowing will get more expensive everywhere from car loans to factory financing. A stronger dollar — which tends to follow rate hikes — also makes it harder for countries that owe money in dollars, like many in Latin America, to repay their debts."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold is near record highs, but faces a counterintuitive risk: if oil prices spike too far, gold could drop instead of rise. Here is why — if oil hits $120 to $140 a barrel, inflation would surge so severely that the US central bank would have to raise rates sharply and fast. Higher rates make safer investments like bank deposits and bonds more attractive, pulling money away from gold, which pays no interest. Analysts put the tipping point at around $120 oil. Below that, gold benefits from uncertainty. Above it, the cure (rate hikes) becomes worse for gold than the disease (war premium)."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key interest rate to 6.50% this month — its lowest level since 2022 — and most economists believe this is the last cut for a long while. Three of the five board members voted to cut; two wanted to hold steady. The bank now expects inflation to reach its 3% goal only by mid-2027, a delay partly caused by higher global energy prices. For Mexican borrowers, credit cards and mortgages get slightly cheaper. But as Mexico's rates approach US rates, the gap that has been attracting foreign money into pesos shrinks, which could put mild pressure on the currency."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "On July 1, 2026 — five weeks from now — the US, Mexico, and Canada will formally open the first scheduled review of their shared trade deal (known as USMCA or T-MEC). About $873 billion worth of goods cross these borders each year. US negotiators want tighter limits on Chinese-made parts inside cars, stricter factory inspections in Mexico, and possibly new tariff thresholds on autos. The outcome will determine which factories thrive, where new investment goes, and whether Mexico's nearshoring boom continues at its current pace or slows."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Foreign companies poured a record $40.9 billion into Mexico's factories in 2025, mostly driven by US companies moving supply chains out of China. Factory workers in Mexico earn roughly $4.90 per hour — about 25% less than comparable workers in China — and Mexico sits right next to the world's largest consumer market. Compliance with the trade deal's rules jumped from 45% to 89% in just a few years. The result: Mexico is now the top US trade partner, and nearshoring investments in industries from electronics to electric vehicles continue accelerating."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "The Japanese yen fell past 159 per dollar this week — its weakest in months — because Japanese inflation came in softer than expected. When inflation is low, Japan's central bank has less pressure to raise rates, and lower rates make the yen less attractive to foreign investors seeking yield. Meanwhile, Japan's exports jumped 14.8% in April, powered by strong demand from China, the US, and Europe for Japanese cars and machinery. The combination pushed Japan's main stock index to a record high near 59,585 — good for exporters but straining Japanese households paying more for imported food and energy in a weaker currency."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's central bank is allowing its currency to gradually weaken against the dollar — not dramatically, but in a deliberate, slow-motion way. The goal: keep Chinese-made products relatively cheap abroad, supporting the factories and workers that depend on exports. China still has tools unused — it could require banks to hold less money in reserve, freeing up cash for lending — but officials are signaling patience over speed. The side effect: Chinese goods stay price-competitive globally, which puts pressure on manufacturers in Mexico, Vietnam, and Southeast Asia who compete for the same US and European customers."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Inflation across the 20 countries that share the euro jumped from 2.6% in March to 3.0% in April — above the European Central Bank's 2% target. Higher oil prices from the Hormuz crisis are the main driver, spreading into delivery costs, transport, and heating bills across the continent. The ECB is now hinting it may raise rates at its next meeting, reversing the cuts that were expected earlier this year. The problem: the eurozone economy is projected to grow just 0.9% in 2026, meaning rate hikes risk choking a region that is already barely growing."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "European stock markets swung wildly this month. Germany's main index (the DAX) and the UK's FTSE dropped over 1% on Middle East fears in mid-May, then reversed course and the DAX surged 3.92% in a single week when early signals of possible peace talks in the region emerged. The episode shows how completely markets are focused on the Hormuz crisis right now: any hint of de-escalation is immediately bought, any escalation immediately sold. Germany is particularly exposed since it imports energy and exports precision machinery — a country squarely in the middle of both effects."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its main interest rate to 4.35% — the third increase this year — because inflation is running too hot, partly from higher global energy costs caused by the Middle East crisis. In practical terms: Australians with variable-rate mortgages will pay more each month. The bank voted 8 to 1 to raise, with one board member wanting to pause and check if earlier hikes were working. Most forecasters expect a pause at the next meeting, but at least one major Australian bank is warning that two more hikes before year-end would bring the rate to 4.85%."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Rio Tinto and BHP — two of the world's biggest mining companies — agreed earlier this year to explore sharing operations at neighboring iron ore mines in Western Australia's Pilbara region, potentially moving up to 200 million tonnes of ore together per year. Iron ore is the key ingredient in steel, and most of Australia's iron ore goes to China to build cities and infrastructure. By sharing equipment and logistics, both companies could lower costs as mines get deeper and harder to work. Rio Tinto also reported spending a record $19.7 billion with Australian suppliers in 2025, up $2 billion from the year before."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading near $76,000 to $77,000 this week, down from recent highs, under pressure from three directions: rising US interest rates (which make safe bank deposits and bonds look better than crypto), the Iran crisis (investors prefer cash when the world feels uncertain), and a wave of forced selling by traders who borrowed money to buy Bitcoin and got wiped out in the dip. The crypto market's fear-and-greed index sits at 25 out of 100 — firmly in fear territory. Analysts see a potential move back toward $80,000 if the Iran situation shows any sign of resolution."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Large Ethereum holders — often called whales — are quietly buying more ETH even as prices fall. The pattern mirrors what happened before earlier Bitcoin bull runs: big investors accumulate while small investors sell out of fear. Funds that let regular investors buy Ethereum through normal brokerage accounts saw money flowing back in during Q2 2026, led by BlackRock's product. Ethereum's growing role as the foundation for tokenized assets — things like government bonds, real estate, and company shares issued on a blockchain — is attracting institutions thinking about where financial infrastructure will live in 10 years."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "The total supply of digital dollars — cryptocurrencies designed to always equal exactly one US dollar — hit a record $269.65 billion. Tether (the largest) is growing while USD Coin is seeing withdrawals, suggesting users are splitting on which version they trust. In the US Congress, the CLARITY Act is advancing — a law that would define exactly which government agency oversees which type of digital asset, a question unresolved for nearly a decade. Clear rules could bring major banks and pension funds into crypto. The risk: it could also drive more activity to countries with lighter-touch regulation."
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Scientists at Wake Forest University found that axolotl salamanders, zebrafish, and mice all share two master genes — named SP6 and SP8 — that switch on the body's ability to regrow limbs. When lead researcher Prof. Josh Currie's team used a DNA-editing tool to remove SP8 from axolotls, the animals could not regrow their leg bones properly. Then, using a technique inspired by zebrafish biology, they partially restored limb regrowth in mice — animals that normally cannot regrow limbs at all. The finding suggests that humans carry similar genetic machinery that is simply switched off, and may one day be turned back on. 📄 Published in Proceedings of the National Academy of Sciences · More: https://www.sciencedaily.com/releases/2026/05/260508003121.htm"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Deep beneath the Mediterranean Sea near Sicily, an international science project called KM3NeT — a grid of sensors spanning a full cubic kilometer of water — caught the most energetic particle ever detected arriving from outside our galaxy. The particle, a type of near-massless ghost called a neutrino, carried 220 PeV of energy (220 million billion electron volts), roughly 30 million times more powerful than what the world's largest atom smasher produces. It likely came from a blazar — a supermassive black hole shooting a jet of matter straight at Earth. The KM3NeT collaboration, involving dozens of research institutions across Europe, published the finding in Nature. 📄 Published in Nature · More: https://www.nature.com/articles/s41586-024-08543-1"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "Researchers at Queen Mary University of London discovered that the universe's deepest physical rules — numbers like the mass of a proton and the charge of an electron — happen to fall into an incredibly narrow range that allows liquids like water to flow properly inside living cells. If those numbers were even slightly different, blood would be too thick to pump, water too sticky for nutrients to move through cells, and life as we know it would be impossible. The study links physics to biology in a striking way: life doesn't just need water — it needs the universe itself to be tuned so that water behaves the way it does. 📄 Published in Science Advances · More: https://www.sciencedaily.com/releases/2026/05/260508022653.htm"
+    }
+  ]
+}
