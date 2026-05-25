@@ -27,14 +27,23 @@ export async function GET(request: Request) {
 
   const { data: subscriber } = await admin
     .from("subscribers")
-    .select("subscription_status, default_investment")
+    .select("subscription_status, default_investment, access_started_at")
     .eq("email", authed.email)
     .single();
 
   const subStatus = subscriber?.subscription_status;
   const isSubscribed = subStatus === "active" || subStatus === "trialing";
 
-  const picks = await getPicksData(undefined, isSubscribed ? "pro" : "free");
+  const allPicks = await getPicksData(undefined, isSubscribed ? "pro" : "free");
+
+  // Newcomer principle: the picks feed shows what's happened since the user
+  // gained access — not all 70+ retroactive picks. Anything older lives in
+  // the Archivo (separate endpoint), so they don't feel "behind on 70 things".
+  const cutoffIso = subscriber?.access_started_at as string | null | undefined;
+  const cutoffDate = cutoffIso ? cutoffIso.slice(0, 10) : null;
+  const picks = cutoffDate
+    ? allPicks.filter((p) => p.date >= cutoffDate)
+    : allPicks;
 
   const { data: statusRows } = await admin
     .from("user_pick_status")
@@ -67,9 +76,15 @@ export async function GET(request: Request) {
     };
   });
 
+  const archiveCount = cutoffDate
+    ? allPicks.filter((p) => p.date < cutoffDate).length
+    : 0;
+
   return NextResponse.json({
     picks: enriched,
     is_subscribed: isSubscribed,
     default_investment: subscriber?.default_investment ?? null,
+    access_started_at: cutoffIso ?? null,
+    archive_count: archiveCount,
   });
 }

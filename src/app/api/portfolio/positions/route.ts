@@ -118,7 +118,7 @@ async function personalView(request: Request) {
 
   const admin = getSupabaseAdmin();
 
-  const [{ data: snapshots }, { data: bought }] = await Promise.all([
+  const [{ data: snapshots }, { data: bought }, { data: priorRaw }] = await Promise.all([
     getSupabase()
       .from("portfolio_snapshots")
       .select("prices, date")
@@ -129,6 +129,10 @@ async function personalView(request: Request) {
       .select("pick_number, ticker, buy_price, amount_invested, decided_at")
       .eq("email", authed.email)
       .eq("status", "bought"),
+    admin
+      .from("prior_holdings")
+      .select("ticker, buy_price, amount_invested, purchase_date")
+      .eq("email", authed.email),
   ]);
 
   const latestPrices: Record<string, number> =
@@ -140,8 +144,32 @@ async function personalView(request: Request) {
     buy_price: number;
     amount_invested: number;
     decided_at: string;
+    /// "vectorial" for picks bought through the app; "prior" for pre-Vectorial
+    /// holdings the user entered manually. Used to display position metadata
+    /// honestly ("includes prior holdings") without changing how shares are
+    /// summed.
+    source: "vectorial" | "prior";
   };
-  const rows: Row[] = (bought ?? []) as Row[];
+  // Prior holdings shape-match user_pick_status rows so the aggregation
+  // below treats them uniformly. The synthetic pick_number=0 keeps the
+  // type happy; we never key off it for prior rows.
+  const priorRows: Row[] = ((priorRaw ?? []) as Array<{
+    ticker: string;
+    buy_price: number;
+    amount_invested: number;
+    purchase_date: string;
+  }>).map((p) => ({
+    pick_number: 0,
+    ticker: p.ticker,
+    buy_price: Number(p.buy_price),
+    amount_invested: Number(p.amount_invested),
+    decided_at: `${p.purchase_date}T00:00:00Z`,
+    source: "prior",
+  }));
+  const vectorialRows: Row[] = ((bought ?? []) as Omit<Row, "source">[]).map(
+    (r) => ({ ...r, source: "vectorial" })
+  );
+  const rows: Row[] = [...vectorialRows, ...priorRows];
 
   // Group user's bought rows by ticker. Each row already carries the price and
   // amount the user told us — no $50 default, no open-price math.
@@ -154,6 +182,7 @@ async function personalView(request: Request) {
 
   let totalInvested = 0;
   let totalValue = 0;
+  let totalPriorInvested = 0;
 
   const positions = Array.from(byTicker.entries()).map(([ticker, txs]) => {
     const stock = stocks.find((s) => s.ticker === ticker);
@@ -161,10 +190,12 @@ async function personalView(request: Request) {
 
     let posInvested = 0;
     let posShares = 0;
+    let posPriorInvested = 0;
     for (const t of txs) {
       const shares = t.amount_invested / t.buy_price;
       posInvested += t.amount_invested;
       posShares += shares;
+      if (t.source === "prior") posPriorInvested += t.amount_invested;
     }
     const posValue = posShares * currentPrice;
     const returnPct =
@@ -181,14 +212,21 @@ async function personalView(request: Request) {
         )
       : 0;
 
+    const priorCount = txs.filter((t) => t.source === "prior").length;
+    const vectorialCount = txs.length - priorCount;
+
     totalInvested += posInvested;
     totalValue += posValue;
+    totalPriorInvested += posPriorInvested;
 
     return {
       ticker,
       name: stock?.name ?? ticker,
-      buys: txs.length,
+      buys: vectorialCount,
+      prior_count: priorCount,
+      has_prior: priorCount > 0,
       total_invested: Math.round(posInvested * 100) / 100,
+      total_prior_invested: Math.round(posPriorInvested * 100) / 100,
       total_shares: Math.round(posShares * 10000) / 10000,
       avg_price: Math.round(avgPrice * 100) / 100,
       current_price: Math.round(currentPrice * 100) / 100,
@@ -236,6 +274,8 @@ async function personalView(request: Request) {
     total_return_pct: totalReturnPct,
     total_positions: positions.length,
     total_invested: Math.round(totalInvested * 100) / 100,
+    total_prior_invested: Math.round(totalPriorInvested * 100) / 100,
+    has_prior_holdings: totalPriorInvested > 0,
     avg_dividend_yield: avgDividendYield,
     sector_allocation: sectorAllocation,
     region_allocation: regionAllocation,

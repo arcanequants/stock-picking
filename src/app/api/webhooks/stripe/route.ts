@@ -143,28 +143,37 @@ export async function POST(request: Request) {
         // Check if subscriber exists to avoid clobbering delivery_channel preference
         const { data: existing } = await supabase
           .from("subscribers")
-          .select("email")
+          .select("email, access_started_at")
           .eq("email", normalizedEmail)
           .maybeSingle();
 
+        const nowIso = new Date().toISOString();
+
         if (existing) {
-          // Update: do NOT touch delivery_channel (preserve user preference)
+          // Update: do NOT touch delivery_channel (preserve user preference).
+          // Set access_started_at only if it's still NULL — first-time access
+          // wins, returning subs keep their original cutoff.
+          const updatePayload: Record<string, unknown> = {
+            stripe_customer_id: customerId,
+            stripe_subscription_id: subscriptionId,
+            subscription_status: subscriptionStatus,
+            current_period_start: periodStart,
+            current_period_end: periodEnd,
+          };
+          if (!existing.access_started_at) {
+            updatePayload.access_started_at = nowIso;
+          }
           const { error: updateError } = await supabase
             .from("subscribers")
-            .update({
-              stripe_customer_id: customerId,
-              stripe_subscription_id: subscriptionId,
-              subscription_status: subscriptionStatus,
-              current_period_start: periodStart,
-              current_period_end: periodEnd,
-            })
+            .update(updatePayload)
             .eq("email", normalizedEmail);
 
           if (updateError) {
             console.error("Subscriber update error:", updateError);
           }
         } else {
-          // Insert: default delivery_channel to 'whatsapp' for new users
+          // Insert: new user. access_started_at = now (this is the moment
+          // they gained access — the iOS picks feed will count from here).
           const { error: insertError } = await supabase
             .from("subscribers")
             .insert({
@@ -175,6 +184,7 @@ export async function POST(request: Request) {
               current_period_start: periodStart,
               current_period_end: periodEnd,
               delivery_channel: "whatsapp",
+              access_started_at: nowIso,
             });
 
           if (insertError) {
