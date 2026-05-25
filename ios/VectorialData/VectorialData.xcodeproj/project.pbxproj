@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0254B0CD623F1FECC3258DCA /* PriorHolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979511B65522219EA59DA2A9 /* PriorHolding.swift */; };
+		09D4CC0E3A4DD0F97F03E66D /* ArchivePicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957634FF57AFDE1AD722732 /* ArchivePicksView.swift */; };
 		112524BB954122A83000FBC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7745AACBA037492169B68FC /* AppDelegate.swift */; };
 		16272C73128B7A5EB8EAB08C /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995D70904166120C0B2A050 /* KeychainHelper.swift */; };
 		247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040333E9484BEA0F3712479E /* AuthView.swift */; };
@@ -24,6 +26,7 @@
 		3D4909274492503AE55026C0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D87F188D573DF65FB58D8 /* AppConfig.swift */; };
 		4250B91694049724915CC9B6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC722FBF6EABEF5AFA92FB2 /* APIClient.swift */; };
 		44D14743FF76888E9EF671C4 /* VectorialDataWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A2D7489EA85BDA320179BCBD /* VectorialDataWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A502F49AEB6C70A383C7C3C /* PriorHoldingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D89EBF81F93D0A84FC8F835 /* PriorHoldingsView.swift */; };
 		6590D8AD5CD51DAFFF1402F6 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C34C2724FC1FFF56DD4CC2 /* Position.swift */; };
 		70DF350C8E1041DBDF2ED3A6 /* PersonalPerformanceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98887C25CFE785B9ABFE0947 /* PersonalPerformanceCard.swift */; };
 		78864A0404A6921A42630148 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC321825CBB1A2AF7240EF /* UserProfile.swift */; };
@@ -41,6 +44,7 @@
 		B7A1C5629877333DF22B652A /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE44B5DFC2F78E53E11663 /* Pick.swift */; };
 		C3AF5A03305B6EA4F84F6932 /* PicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA83372C812B3CD0F43FA4ED /* PicksView.swift */; };
 		CD5187543B275EE3083B6DB7 /* PortfolioSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095839A24B3CC3A03AD0D02 /* PortfolioSnapshot.swift */; };
+		DF46A23D618595C358585837 /* PriorHoldingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695CC3305AB75BDAF9415E78 /* PriorHoldingsStore.swift */; };
 		E590808D562222E17AC325C1 /* PerformanceChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2763080A45A8B9800ED6F2 /* PerformanceChart.swift */; };
 		E6C2129AECFC143477E9C091 /* PortfolioHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A3172884B277D3A9C65378 /* PortfolioHistory.swift */; };
 		F37EBB33990CBB056ECC618F /* AllocationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0587E8F1DD17C83080521 /* AllocationSection.swift */; };
@@ -79,16 +83,20 @@
 		16C34C2724FC1FFF56DD4CC2 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		2A1D87F188D573DF65FB58D8 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		3240CB1FDA7751B227248915 /* PickActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickActivityAttributes.swift; sourceTree = "<group>"; };
+		3D89EBF81F93D0A84FC8F835 /* PriorHoldingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHoldingsView.swift; sourceTree = "<group>"; };
 		3D9CD8BD67A0E6197487EC73 /* VectorialData.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VectorialData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4586F5C2A73ABF34E95CF6B7 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		4957634FF57AFDE1AD722732 /* ArchivePicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivePicksView.swift; sourceTree = "<group>"; };
 		55080DD2AC6AC1F15A0B5AE0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5E06DDF662A664CEECA7DF9D /* ComingSoonPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonPlaceholder.swift; sourceTree = "<group>"; };
+		695CC3305AB75BDAF9415E78 /* PriorHoldingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHoldingsStore.swift; sourceTree = "<group>"; };
 		6A17395E2504FDA008D3BE8E /* PickDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDetailView.swift; sourceTree = "<group>"; };
 		6A1BCC5FD3CD089181E6608E /* PickBuySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickBuySheet.swift; sourceTree = "<group>"; };
 		7839984778A3BECA5F20ACEE /* WeeklyDigestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyDigestView.swift; sourceTree = "<group>"; };
 		820C026C9E6BED77E2FAB77A /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
 		859B3769550D3ADC64FD4386 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8945448517C9F82AE56E6CD0 /* DividendStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendStore.swift; sourceTree = "<group>"; };
+		979511B65522219EA59DA2A9 /* PriorHolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHolding.swift; sourceTree = "<group>"; };
 		97A3172884B277D3A9C65378 /* PortfolioHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHistory.swift; sourceTree = "<group>"; };
 		98887C25CFE785B9ABFE0947 /* PersonalPerformanceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPerformanceCard.swift; sourceTree = "<group>"; };
 		9995D70904166120C0B2A050 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
@@ -199,6 +207,7 @@
 			children = (
 				8945448517C9F82AE56E6CD0 /* DividendStore.swift */,
 				F275146A3F4915E0F9FDDDC1 /* PickStatusStore.swift */,
+				695CC3305AB75BDAF9415E78 /* PriorHoldingsStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				FE702D73471F753F00FF42E3 /* AccountView.swift */,
+				3D89EBF81F93D0A84FC8F835 /* PriorHoldingsView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -219,6 +229,7 @@
 				97A3172884B277D3A9C65378 /* PortfolioHistory.swift */,
 				D095839A24B3CC3A03AD0D02 /* PortfolioSnapshot.swift */,
 				16C34C2724FC1FFF56DD4CC2 /* Position.swift */,
+				979511B65522219EA59DA2A9 /* PriorHolding.swift */,
 				C5AD2BD246C515FF3FF827CE /* StockResearch.swift */,
 				B3AC321825CBB1A2AF7240EF /* UserProfile.swift */,
 			);
@@ -304,6 +315,7 @@
 		FFB19DB43921C3FE4CF8CFA0 /* Picks */ = {
 			isa = PBXGroup;
 			children = (
+				4957634FF57AFDE1AD722732 /* ArchivePicksView.swift */,
 				6A1BCC5FD3CD089181E6608E /* PickBuySheet.swift */,
 				6A17395E2504FDA008D3BE8E /* PickDetailView.swift */,
 				AA83372C812B3CD0F43FA4ED /* PicksView.swift */,
@@ -411,6 +423,7 @@
 				F37EBB33990CBB056ECC618F /* AllocationSection.swift in Sources */,
 				3D4909274492503AE55026C0 /* AppConfig.swift in Sources */,
 				112524BB954122A83000FBC0 /* AppDelegate.swift in Sources */,
+				09D4CC0E3A4DD0F97F03E66D /* ArchivePicksView.swift in Sources */,
 				35627BC6698B033ACAA33AAC /* AuthManager.swift in Sources */,
 				247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */,
 				3BBC5D903B453F3AB95A3BEB /* ComingSoonPlaceholder.swift in Sources */,
@@ -432,6 +445,9 @@
 				8C9EC8A7D0E879F0A491E99F /* PortfolioView.swift in Sources */,
 				6590D8AD5CD51DAFFF1402F6 /* Position.swift in Sources */,
 				7CA2E17FEDDB5DDB6FA6448E /* PositionDetailView.swift in Sources */,
+				0254B0CD623F1FECC3258DCA /* PriorHolding.swift in Sources */,
+				DF46A23D618595C358585837 /* PriorHoldingsStore.swift in Sources */,
+				5A502F49AEB6C70A383C7C3C /* PriorHoldingsView.swift in Sources */,
 				3683B19F09CA5C2F510E5AE4 /* RootView.swift in Sources */,
 				7BE9D6C1214CD6E197396E4D /* StockResearch.swift in Sources */,
 				78864A0404A6921A42630148 /* UserProfile.swift in Sources */,

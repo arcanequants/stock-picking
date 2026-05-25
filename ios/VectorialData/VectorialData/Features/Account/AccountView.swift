@@ -47,6 +47,27 @@ struct AccountView: View {
                     Text("Se pre-rellena cuando marcas un pick como comprado. Lo puedes editar pick por pick.")
                 }
 
+                Section {
+                    NavigationLink {
+                        PriorHoldingsView()
+                    } label: {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Posiciones anteriores")
+                                    .foregroundStyle(.primary)
+                                Text("Acciones que ya tenías antes de Vectorial")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                        }
+                    }
+                } header: {
+                    Text("Portafolio")
+                } footer: {
+                    Text("Las sumamos a tu portafolio personal para que el precio promedio y el tamaño de tu posición reflejen tu realidad.")
+                }
+
                 Section("Notifications") {
                     NotificationsRow(status: notifications.authorizationStatus) {
                         Task { await notifications.requestAuthorization() }

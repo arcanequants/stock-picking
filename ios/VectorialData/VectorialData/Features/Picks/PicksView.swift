@@ -3,6 +3,7 @@ import SwiftUI
 enum PicksDestination: Hashable {
     case pick(Pick)
     case weeklyDigest
+    case archive
 }
 
 struct PicksView: View {
@@ -24,6 +25,8 @@ struct PicksView: View {
                         PickDetailView(pick: pick)
                     case .weeklyDigest:
                         WeeklyDigestView()
+                    case .archive:
+                        ArchivePicksView()
                     }
                 }
                 .refreshable { await store.load() }
@@ -70,10 +73,21 @@ struct PicksView: View {
                 .foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         } else if store.picks.isEmpty {
-            Text("No hay picks todavía.")
-                .font(.footnote)
-                .foregroundStyle(.secondary)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            ScrollView {
+                LazyVStack(spacing: 10) {
+                    if !store.isSubscribed {
+                        UpsellBanner()
+                    }
+                    CountdownEmptyCard()
+                    if store.isSubscribed && store.archiveCount > 0 {
+                        NavigationLink(value: PicksDestination.archive) {
+                            ArchiveEntryRow(count: store.archiveCount)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(16)
+            }
         } else {
             ScrollView {
                 LazyVStack(spacing: 10) {
@@ -103,6 +117,12 @@ struct PicksView: View {
                             }
                             .buttonStyle(.plain)
                         }
+                    }
+                    if store.isSubscribed && store.archiveCount > 0 {
+                        NavigationLink(value: PicksDestination.archive) {
+                            ArchiveEntryRow(count: store.archiveCount)
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding(16)
@@ -145,6 +165,9 @@ private struct PendingPickRow: View {
                         .font(.caption).foregroundStyle(.white.opacity(0.5))
                     Text(pick.ticker)
                         .font(.headline).foregroundStyle(.white)
+                    if pick.type == "rebuy" {
+                        RebuyBadge()
+                    }
                 }
                 Text(pick.name)
                     .font(.caption).foregroundStyle(.white.opacity(0.65))
@@ -194,6 +217,9 @@ private struct HistoryPickRow: View {
                         .font(.caption).foregroundStyle(.white.opacity(0.5))
                     Text(pick.ticker)
                         .font(.headline).foregroundStyle(.white)
+                    if pick.type == "rebuy" {
+                        RebuyBadge()
+                    }
                 }
                 Text(pick.name)
                     .font(.caption).foregroundStyle(.white.opacity(0.6))
@@ -270,6 +296,75 @@ private struct UpsellBanner: View {
         .overlay(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .stroke(Color("BrandEmerald").opacity(0.5), lineWidth: 1)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+}
+
+private struct RebuyBadge: View {
+    var body: some View {
+        Text("RECOMPRA")
+            .font(.system(size: 9, weight: .bold))
+            .tracking(0.6)
+            .foregroundStyle(Color("BrandIndigo"))
+            .padding(.horizontal, 5)
+            .padding(.vertical, 2)
+            .background(Color("BrandIndigo").opacity(0.18))
+            .clipShape(Capsule())
+    }
+}
+
+private struct CountdownEmptyCard: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 6) {
+                Image(systemName: "hourglass")
+                    .foregroundStyle(Color("BrandEmerald"))
+                Text("Aún no hay picks nuevos")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+            }
+            Text("Los picks llegan al ritmo de mercado, no del calendario. Te avisamos al instante cuando salga el siguiente.")
+                .font(.caption)
+                .foregroundStyle(.white.opacity(0.7))
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color("CardBackground"))
+        .overlay(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .stroke(Color.white.opacity(0.08), lineWidth: 1)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+}
+
+private struct ArchiveEntryRow: View {
+    let count: Int
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "archivebox.fill")
+                .font(.title3)
+                .foregroundStyle(Color("BrandIndigo"))
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Archivo")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                Text("\(count) picks anteriores a tu acceso")
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.6))
+            }
+            Spacer()
+            Image(systemName: "chevron.right")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(.white.opacity(0.4))
+        }
+        .padding(14)
+        .background(Color("CardBackground"))
+        .overlay(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .stroke(Color.white.opacity(0.06), lineWidth: 1)
         )
         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
     }

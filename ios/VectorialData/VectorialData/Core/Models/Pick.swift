@@ -77,9 +77,14 @@ struct PicksResponse: Codable, Equatable {
     let picks: [Pick]
     let isSubscribed: Bool
     let defaultInvestment: Double?
+    /// ISO timestamp when the user first gained access. Picks dated before
+    /// this live in the Archivo, not the main feed.
+    let accessStartedAt: String?
+    /// How many picks pre-date `accessStartedAt`. Drives the Archivo entry.
+    let archiveCount: Int
 
     enum CodingKeys: String, CodingKey {
-        case picks, isSubscribed, defaultInvestment
+        case picks, isSubscribed, defaultInvestment, accessStartedAt, archiveCount
     }
 
     init(from decoder: Decoder) throws {
@@ -87,11 +92,31 @@ struct PicksResponse: Codable, Equatable {
         self.picks = try c.decode([Pick].self, forKey: .picks)
         self.isSubscribed = try c.decode(Bool.self, forKey: .isSubscribed)
         self.defaultInvestment = try c.decodeIfPresent(Double.self, forKey: .defaultInvestment)
+        self.accessStartedAt = try c.decodeIfPresent(String.self, forKey: .accessStartedAt)
+        self.archiveCount = try c.decodeIfPresent(Int.self, forKey: .archiveCount) ?? 0
     }
 
     static func == (lhs: PicksResponse, rhs: PicksResponse) -> Bool {
         lhs.picks.map(\.pickNumber) == rhs.picks.map(\.pickNumber)
             && lhs.isSubscribed == rhs.isSubscribed
             && lhs.defaultInvestment == rhs.defaultInvestment
+            && lhs.accessStartedAt == rhs.accessStartedAt
+            && lhs.archiveCount == rhs.archiveCount
+    }
+}
+
+/// `GET /api/picks/archive` — subscribed-only list of pre-access picks.
+struct ArchivePicksResponse: Codable {
+    let picks: [Pick]
+    let accessStartedAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case picks, accessStartedAt
+    }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        self.picks = try c.decode([Pick].self, forKey: .picks)
+        self.accessStartedAt = try c.decodeIfPresent(String.self, forKey: .accessStartedAt)
     }
 }

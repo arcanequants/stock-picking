@@ -74,6 +74,7 @@ struct PortfolioView: View {
     @StateObject private var vm = PortfolioViewModel()
     @EnvironmentObject private var pickStatus: PickStatusStore
     @EnvironmentObject private var dividends: DividendStore
+    @ObservedObject private var priorHoldings = PriorHoldingsStore.shared
 
     var body: some View {
         NavigationStack {
@@ -145,6 +146,13 @@ struct PortfolioView: View {
             }
             .onChange(of: pickStatus.lastDecisionAt) { _, _ in
                 // Any pick decision invalidates the personal view's cache.
+                vm.personalResponse = nil
+                if vm.selectedView == .personal {
+                    Task { await vm.load() }
+                }
+            }
+            .onChange(of: priorHoldings.lastChangedAt) { _, _ in
+                // Same for adding/removing prior holdings.
                 vm.personalResponse = nil
                 if vm.selectedView == .personal {
                     Task { await vm.load() }
@@ -279,12 +287,17 @@ private struct PositionRow: View {
     var body: some View {
         HStack(spacing: 12) {
             VStack(alignment: .leading, spacing: 2) {
-                Text(position.ticker)
-                    .font(.headline).foregroundStyle(.white)
+                HStack(spacing: 6) {
+                    Text(position.ticker)
+                        .font(.headline).foregroundStyle(.white)
+                    if position.hasPrior == true {
+                        PriorPill(count: position.priorCount ?? 0)
+                    }
+                }
                 Text(position.name)
                     .font(.caption).foregroundStyle(.white.opacity(0.6))
                     .lineLimit(1)
-                Text("\(position.buys) \(position.buys == 1 ? "buy" : "buys") · \(position.daysHeld)d")
+                Text(metaLine)
                     .font(.caption2).foregroundStyle(.white.opacity(0.45))
             }
             Spacer()
@@ -295,6 +308,27 @@ private struct PositionRow: View {
         .padding(14)
         .background(Color("CardBackground"))
         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+
+    private var metaLine: String {
+        let buys = position.buys
+        let label = buys == 1 ? "buy" : "buys"
+        return "\(buys) \(label) · \(position.daysHeld)d"
+    }
+}
+
+private struct PriorPill: View {
+    let count: Int
+
+    var body: some View {
+        Text(count > 1 ? "PREVIAS · \(count)" : "PREVIA")
+            .font(.system(size: 9, weight: .bold))
+            .tracking(0.6)
+            .foregroundStyle(Color("BrandIndigo"))
+            .padding(.horizontal, 5)
+            .padding(.vertical, 2)
+            .background(Color("BrandIndigo").opacity(0.18))
+            .clipShape(Capsule())
     }
 }
 
