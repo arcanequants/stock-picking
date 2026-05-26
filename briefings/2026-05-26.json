@@ -1,0 +1,117 @@
+{
+  "date": "2026-05-26",
+  "summary": "Iran deal limbo keeps oil elevated, forcing central banks from Sydney to Mexico City to hold the line — while bitcoin whales quietly accumulate as retail ETF money exits.",
+  "causalChain": "Iran's unresolved Hormuz standoff keeps oil high, feeding global inflation and pushing rate-hike bets upward; that same cost pressure is slowing growth in Europe and Australia while in crypto the split deepens: institutional whales accumulate as short-term ETF holders take profits.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Iran deal 'largely negotiated' — Hormuz oil risk lingers", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Oil inflation pushes US rate-hike odds to 86% by year-end", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold drops as rising oil lifts dollar and borrowing-cost bets", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico at 6.75% after 13 cuts; more expected but inflation sticky", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "$40.9B FDI record in 2025; Mexico wages 25% below China's", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "Yen near 159/dollar; Japan inflation hits 4-year low at 1.4%", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "PBOC sets yuan at 3-year high; China EV exports up 40% y/y", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "EU slashes 2026 eurozone growth forecast to 0.9% on energy shock", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "UK unemployment rises to 5%; job openings at 5-year low", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA hikes to 4.35% — third increase this year, oil inflation cited", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP and Rio Tinto plan 200Mt iron ore joint venture in Pilbara", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin spot ETFs see 6-day, $1.55B outflow streak in May", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Whales quietly buy 270K BTC; exchange reserves at 7-year low", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "EU MiCA full enforcement hits July 1 — unlicensed firms must stop", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "US GENIUS Act: digital-dollar issuers now required to hold 1:1 cash reserves", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "UC Berkeley: archaea microbe ignores DNA's universal 'stop' signal (PNAS)", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "McGill: small-molecule drugs supercharge cancer-killing immune cells (EMBO Reports)", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "JWST captures first daily weather cycle on exoplanet 690 light-years away (Science)", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Trump says a peace deal with Iran is almost done. The proposed agreement would reopen the Strait of Hormuz — the narrow passage through which roughly 20% of the world's oil travels. Iran blocked it during the conflict, sending energy prices sharply higher. If the deal closes, oil falls and inflation eases worldwide. The catch: Iran and the US still disagree on nuclear terms, so the finish line keeps moving."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "Oil staying high means everything costs more to ship, heat, and make. When prices keep rising like this, the US government tends to raise what it charges to borrow money — and investors now see an 86% chance that happens before the year ends. Higher borrowing costs slow spending, which slows the whole economy. The oil situation in the Middle East is driving this chain reaction."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold usually rises when the world feels uncertain. But right now oil is the bigger trade: expensive oil means higher prices for everything, which makes investors bet the US will raise its borrowing cost. Higher borrowing costs make holding gold less attractive — so gold has dropped even as geopolitical tensions stay elevated. Oil is currently calling the shots across almost every market."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank has cut its main interest rate 13 times since early 2024 — it now sits at 6.75%, down from above 11%. Lower rates make loans cheaper, which should encourage businesses to invest and hire. But inflation is still running above the bank's 3% goal, so cuts will continue slowly. Economists expect the rate to reach around 6.5% by December."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Foreign companies poured $40.9 billion into Mexico in the first nine months of 2025 — a record — mostly to build factories supplying the US market. The logic is simple: a Mexican factory worker earns about $4.90 per hour, roughly 25% less than the equivalent in China. As long as US-China trade friction holds, Mexico keeps winning this competition for new manufacturing investment."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's yen is trading near 159 per dollar — weaker than it has been for most of the past decade. Japan's central bank wants to raise rates but can't move fast while the Middle East conflict clouds the economic outlook. Inflation there just slowed to 1.4%, its lowest in four years, giving the bank cover to wait. Slow inflation plus a weak yen is a squeeze on Japanese households."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "China's central bank set its currency at its strongest level since February 2023, a quiet signal of confidence in the economy. Meanwhile, China exported 278,000 electric vehicles in April — up 40% from a year ago. That means Chinese factories are gaining ground in global EV markets even while broader trade tensions with the US drag on other exports."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's official economic forecaster cut its 2026 growth estimate for the eurozone from 1.4% to just 0.9%, citing an energy shock. Expensive oil — driven by the Middle East conflict — is hammering European factories harder than expected, and inflation was revised up to 3%. Germany, the region's biggest economy, barely grew in early 2026 and is the main drag."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "The UK's unemployment rate climbed to 5%, its highest in years, and the number of job openings just hit a 5-year low of 705,000. At the same time, inflation slowed to 2.8%. That odd mix — a cooling job market but still-high prices — puts the Bank of England in a tricky spot: cut rates to protect jobs, or hold to keep fighting inflation."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its main interest rate to 4.35% — the third increase this year. The driver is the same as everywhere: oil from the Middle East conflict is pushing up costs across the Australian economy. The bank hinted it may pause now, but left the door open to more increases if prices keep rising. Australian homeowners with variable-rate mortgages feel every hike immediately."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — the two giants of Australian iron ore — agreed to explore combining operations on a deposit holding up to 200 million tonnes of ore in Western Australia. The logic: sharing equipment and infrastructure cuts costs for both. China still buys the majority of Australian iron ore, so the deal is partly a bet that Chinese steel demand stays strong enough to justify the investment."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "US funds that hold bitcoin directly saw investors pull out money for six straight days, totaling $1.55 billion — the longest exit streak since February. The result: the net money that flowed into those funds since January 2026 shrank from nearly $2 billion down to just $536 million. Smaller investors are nervous; larger players are not yet coming in to offset the exits."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "The largest bitcoin holders quietly bought 270,000 more bitcoin — roughly $27 billion worth — while the amount of bitcoin sitting on trading platforms fell to its lowest in 7 years. When coins move off exchanges it typically means holders plan to keep them long-term, not sell soon. Big money is accumulating even as smaller investors exit through exchange-traded funds."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Europe's rulebook for crypto companies reaches full enforcement on July 1, 2026. Any firm offering crypto services in the EU without a license by then must stop operations. The EU's financial regulator also just launched a review to check whether the rules need updating — especially for fully automated finance apps and the digital-dollar tokens that now hold $250 billion in combined value."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "The US law governing digital-dollar tokens — requiring every issuer to keep $1 of actual cash or short-term government debt behind every $1 issued — is now being rolled out by regulators. Tether (the biggest digital dollar, with $185 billion in circulation) and USDC ($64 billion) now operate under the first clear US legal framework their industry has ever had."
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Every known living thing uses DNA as an instruction manual and follows the same 'stop here' signal to end a protein. Scientists at UC Berkeley found the first exception: a methane-producing microbe called Methanosarcina acetivorans sometimes ignores the stop signal and adds an extra building block instead — letting it digest a food source no other organism can access that way. It is the first confirmed crack in a rule thought universal across all life. 📄 Published in Proceedings of the National Academy of Sciences · More: https://news.berkeley.edu/2025/12/01/all-life-copies-dna-unambiguously-into-proteins-archaea-may-be-the-exception/"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Our immune system has specialist cells called natural killers — they hunt and destroy cancer cells. The problem is tumors learn to hide from them. Researchers at McGill University found that temporarily blocking two specific proteins supercharges natural killer cells, letting them punch through the tumor's defenses. In lab tests, this worked against leukemia, brain tumors, kidney cancer, and an aggressive form of breast cancer. 📄 Published in EMBO Reports · More: https://www.mcgill.ca/newsroom/channels/news/unleashing-natural-killer-cells-against-cancer-372708"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "Astronomers watched a full daily weather cycle unfold on a planet 690 light-years away. The James Webb Space Telescope tracked clouds made of vaporized sand forming every 'morning' on one side of planet WASP-94Ab and vanishing completely by 'evening' — all within a single day. Because one face of this planet always points toward its sun, its 'morning' and 'evening' sides are permanently fixed. This is the first time scientists have recorded a daily weather cycle on a planet outside our solar system. 📄 Published in Science · More: https://www.nature.com/articles/d41586-026-01608-3"
+    }
+  ]
+}
