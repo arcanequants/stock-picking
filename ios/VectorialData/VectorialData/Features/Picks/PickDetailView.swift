@@ -101,9 +101,12 @@ struct PickDetailView: View {
 
     private var headerCard: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Pick #\(pick.pickNumber) · \(pick.date)")
-                .font(.footnote)
-                .foregroundStyle(.white.opacity(0.55))
+            Text("Análisis del \(formatLongDate(pick.date))")
+                .font(.footnote.weight(.semibold))
+                .foregroundStyle(.white.opacity(0.7))
+            Text("Pick #\(pick.pickNumber)")
+                .font(.caption2)
+                .foregroundStyle(.white.opacity(0.4))
             HStack(alignment: .firstTextBaseline) {
                 Text(pick.ticker)
                     .font(.largeTitle.weight(.bold))
@@ -557,5 +560,20 @@ struct PickDetailView: View {
 
     private func format2(_ value: Double) -> String {
         String(format: "%.2f", value)
+    }
+
+    /// "2026-05-23" → "23 de mayo de 2026". Falls back to the raw
+    /// string if parsing fails so we never show an empty field.
+    private func formatLongDate(_ iso: String) -> String {
+        let parser = DateFormatter()
+        parser.calendar = Calendar(identifier: .iso8601)
+        parser.locale = Locale(identifier: "en_US_POSIX")
+        parser.timeZone = TimeZone(identifier: "UTC")
+        parser.dateFormat = "yyyy-MM-dd"
+        guard let date = parser.date(from: iso) else { return iso }
+        let out = DateFormatter()
+        out.locale = Locale(identifier: "es_MX")
+        out.dateFormat = "d 'de' MMMM 'de' yyyy"
+        return out.string(from: date)
     }
 }

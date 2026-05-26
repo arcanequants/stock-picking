@@ -15,7 +15,7 @@ struct PicksView: View {
         NavigationStack(path: $navPath) {
             content
                 .background(Color("AppBackground"))
-                .navigationTitle("Picks")
+                .navigationTitle("Picks de Vectorial")
                 .navigationDestination(for: Pick.self) { pick in
                     PickDetailView(pick: pick)
                 }

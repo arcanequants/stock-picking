@@ -106,9 +106,9 @@ private struct LatestPickCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text("Pick #\(pick.pickNumber) · \(pick.date)")
-                .font(.footnote)
-                .foregroundStyle(.white.opacity(0.6))
+            Text("Análisis del \(formatLongDate(pick.date))")
+                .font(.footnote.weight(.semibold))
+                .foregroundStyle(.white.opacity(0.7))
             HStack(alignment: .firstTextBaseline) {
                 Text(pick.ticker)
                     .font(.title.weight(.bold))
@@ -127,6 +127,19 @@ private struct LatestPickCard: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color("CardBackground"))
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+    }
+
+    private func formatLongDate(_ iso: String) -> String {
+        let parser = DateFormatter()
+        parser.calendar = Calendar(identifier: .iso8601)
+        parser.locale = Locale(identifier: "en_US_POSIX")
+        parser.timeZone = TimeZone(identifier: "UTC")
+        parser.dateFormat = "yyyy-MM-dd"
+        guard let date = parser.date(from: iso) else { return iso }
+        let out = DateFormatter()
+        out.locale = Locale(identifier: "es_MX")
+        out.dateFormat = "d 'de' MMMM 'de' yyyy"
+        return out.string(from: date)
     }
 }
 

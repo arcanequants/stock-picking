@@ -42,7 +42,7 @@
     "model": "gpt-4o"
   },
   "AXAHY": {
-    "one_liner": "AXA es la aseguradora más grande de Europa, con 92 millones de clientes en 50 países, y ofrece un atractivo dividendo del 5.4% al devolver gran parte de sus ganancias a los accionistas.",
+    "one_liner": "AXA es la aseguradora más grande de Europa, con 92 millones de clientes en 50 países, y paga un dividendo del 5.4% al devolver gran parte de sus ganancias a los accionistas.",
     "why_short": "AXA es muy barata para su tamaño y liderazgo. Ofrece un buen dividendo y tiene un plan para crecer entre 6-8% en los próximos años, lo que la hace atractiva para quienes buscan estabilidad y crecimiento.",
     "risk_short": "El cambio climático podría aumentar los costos por desastres naturales, y operar en más de 50 países significa enfrentar muchas regulaciones diferentes.",
     "generated_at": "2026-05-25T00:14:14.352Z",
@@ -65,12 +65,12 @@
   "BABA": {
     "one_liner": "Alibaba es el gigante de las compras por internet y tecnología en China, con más de 800 millones de usuarios y liderando en servicios de nube y tecnología de inteligencia artificial.",
     "why_short": "Su negocio de tecnología en la nube crece rápidamente y está invirtiendo mucho en inteligencia artificial. Se considera que su precio es una ganga para su tamaño y potencial, y tiene un buen colchón de dinero guardado.",
-    "risk_short": "Las tensiones entre China y EE.UU. pueden afectar. Aunque antes se le consideró militar, ya no lo es. Está gastando mucho en tecnología, y su participación en el mercado de compras por internet ha bajado.",
+    "risk_short": "Las tensiones entre China y EE.UU. siguen siendo el mayor riesgo: Washington puede limitar su acceso a chips y tecnología clave. Además, está gastando mucho en inteligencia artificial y perdió participación frente a JD y PDD en compras por internet.",
     "generated_at": "2026-05-25T00:14:17.411Z",
     "model": "gpt-4o"
   },
   "BAC": {
-    "one_liner": "Bank of America es el segundo banco más grande de EE.UU., maneja cuentas de ahorro, inversiones y préstamos, y ganó $30.5 mil millones en 2025.",
+    "one_liner": "Bank of America es el segundo banco más grande de EE.UU., maneja cuentas de ahorro, inversiones y préstamos, y ganó 30.5 mil millones de dólares en 2025.",
     "why_short": "Las ganancias por acción del banco crecieron 19% en 2025 y es el más barato entre los cuatro grandes bancos. Además, tiene espacio para aumentar los dividendos que paga a los accionistas.",
     "risk_short": "Si las tasas de interés bajan más de lo esperado, el banco podría ganar menos dinero. También podría verse afectado si la economía se desacelera o si limitan las tasas de las tarjetas de crédito.",
     "generated_at": "2026-05-25T00:14:18.804Z",
@@ -119,7 +119,7 @@
     "model": "gpt-4o"
   },
   "BX": {
-    "one_liner": "Blackstone maneja $1.27 billones en bienes como hoteles y empresas, paga buen dividendo y apuesta por tecnología avanzada.",
+    "one_liner": "Blackstone maneja 1.27 billones de dólares en bienes como hoteles y empresas, paga buen dividendo y apuesta por tecnología avanzada.",
     "why_short": "Blackstone es líder en manejar inversiones grandes y está creciendo rápido, especialmente en seguros y tecnología. Paga un buen dividendo que sube si les va bien.",
     "risk_short": "Si las tasas de interés siguen altas, las inversiones de Blackstone podrían valer menos y ganarían menos dinero. También, si muchos quieren retirar su dinero a la vez, podría ser un problema.",
     "generated_at": "2026-05-25T00:14:39.818Z",
@@ -252,7 +252,7 @@
     "model": "gpt-4o"
   },
   "DLR": {
-    "one_liner": "Digital Realty Trust es la empresa más grande de centros de datos en el mundo, con más de 300 centros y clientes como Oracle y Meta; su importancia crece gracias a contratos récord y expansión en inteligencia artificial.",
+    "one_liner": "Digital Realty Trust es la empresa de centros de datos más grande del mundo, con más de 300 instalaciones y clientes como Oracle y Meta; su demanda crece con la inteligencia artificial.",
     "why_short": "La empresa está creciendo porque acaba de firmar el contrato más grande de su historia para un centro de datos de inteligencia artificial, lo que asegura ingresos futuros. Además, sus ganancias recientes superaron las expectativas.",
     "risk_short": "El mayor riesgo es que si las tasas de interés suben, el valor de la empresa podría bajar. También depende mucho de algunos clientes grandes, y si alguno se va, podría afectar sus ingresos.",
     "generated_at": "2026-05-24T21:33:57.889Z",
@@ -322,7 +322,7 @@
     "model": "gpt-4o"
   },
   "GSK": {
-    "one_liner": "GSK es una de las farmacéuticas más grandes del mundo, centrada en medicamentos y vacunas, y está lanzando nuevos productos importantes bajo el liderazgo de su nuevo CEO.",
+    "one_liner": "GSK es una de las farmacéuticas más grandes del mundo, centrada en medicamentos y vacunas, y está lanzando nuevos productos importantes bajo el liderazgo de su nueva directora.",
     "why_short": "GSK es una buena compra porque está barata comparada con otras grandes farmacéuticas. Tiene 14 nuevos medicamentos en camino y su vacuna Shingrix aún tiene mucho mercado por cubrir.",
     "risk_short": "El mayor riesgo es que una de sus vacunas, Arexvy, no venda tanto como esperaban porque solo se recomienda para personas mayores de 75 años, lo que limita su mercado.",
     "generated_at": "2026-05-25T00:17:05.293Z",
@@ -343,28 +343,28 @@
     "model": "gpt-4o"
   },
   "HWM": {
-    "one_liner": "Howmet Aerospace fabrica piezas esenciales para motores de avión y trabaja con gigantes como Boeing y Airbus, logrando ingresos récord de $8.25 mil millones en 2025.",
-    "why_short": "Logró un trimestre fuerte con ingresos de $2.2 mil millones y un crecimiento del 42% en ganancias. Planea crecer más con la compra de otra empresa por $1.8 mil millones.",
+    "one_liner": "Howmet Aerospace fabrica piezas esenciales para motores de avión y trabaja con gigantes como Boeing y Airbus, logrando ingresos récord de 8.25 mil millones de dólares en 2025.",
+    "why_short": "Logró un trimestre fuerte con ingresos de 2.2 mil millones de dólares y un crecimiento del 42% en ganancias. Planea crecer más con la compra de otra empresa por 1.8 mil millones de dólares.",
     "risk_short": "La acción está muy cara comparada con sus ganancias. Si Boeing tiene problemas o las ganancias no cumplen expectativas, el precio podría caer. Ya bajó un 12% desde febrero.",
     "generated_at": "2026-05-25T00:14:27.526Z",
     "model": "gpt-4o"
   },
   "IEX": {
     "one_liner": "IDEX fabrica bombas y equipos de rescate como las 'Jaws of Life', y ha aumentado sus dividendos por 17 años seguidos.",
-    "why_short": "A $197.85, IDEX se beneficia de la demanda en agua, centros de datos y ciencias de la vida. Compraron Mott Corporation para mejorar en filtración y tienen un contrato de $40 millones en aguas residuales.",
+    "why_short": "A 197 dólares por acción, IDEX se beneficia de la demanda en agua, centros de datos y ciencias de la vida. Compraron Mott Corporation para mejorar en filtración y tienen un contrato de 40 millones de dólares en aguas residuales.",
     "risk_short": "IDEX es cara para su sector y si baja la demanda de centros de datos, su crecimiento podría frenarse. Además, algunos de sus mercados como químicos y seguridad están débiles.",
     "generated_at": "2026-05-25T00:14:41.114Z",
     "model": "gpt-4o"
   },
   "KHC": {
     "one_liner": "Kraft Heinz, dueños de Heinz Ketchup y Kraft Mac & Cheese, está en el ojo del huracán porque Berkshire Hathaway está vendiendo todas sus acciones.",
-    "why_short": "La empresa ofrece un rendimiento del 6.5% y parece barata comparada con sus ganancias, además tiene 8 marcas que venden más de mil millones de dólares cada una.",
+    "why_short": "La empresa ofrece un un dividendo del 6.5% al año (lo que la empresa te paga por tener su acción) y parece barata comparada con sus ganancias, además tiene 8 marcas que venden más de mil millones de dólares cada una.",
     "risk_short": "Berkshire está vendiendo su parte del 27.5% y las ventas de la empresa están bajando entre 1.5% y 3.5%, lo que podría ser una trampa porque el dividendo es dudoso.",
     "generated_at": "2026-05-25T00:13:52.290Z",
     "model": "gpt-4o"
   },
   "LMT": {
-    "one_liner": "Lockheed Martin fabrica aviones de combate y tecnología militar avanzada, con contratos por $194 mil millones en espera de ser cobrados.",
+    "one_liner": "Lockheed Martin fabrica aviones de combate y tecnología militar avanzada, con contratos por 194 mil millones de dólares en espera de ser cobrados.",
     "why_short": "Tiene contratos asegurados que valen más de dos veces lo que vende en un año, y la demanda de sus productos sigue creciendo por conflictos y aumentos en el presupuesto militar.",
     "risk_short": "El gobierno de EE.UU. comprará menos aviones F-35, que son una parte importante de sus ventas, y hay retrasos y sobrecostos en algunos proyectos.",
     "generated_at": "2026-05-25T00:14:22.845Z",
@@ -379,15 +379,15 @@
   },
   "MCO": {
     "one_liner": "Moody's califica la deuda de países y empresas en todo el mundo, y acaba de reportar ganancias mejores de lo esperado, además de aumentar lo que espera ganar este año.",
-    "why_short": "Moody's es como un peaje que cobra por cada deuda nueva que se emite en el mundo. Junto con S&P, controla casi todo el mercado de calificaciones, y su negocio de análisis financiero crece constantemente.",
+    "why_short": "Moody's es como un peaje que cobra cada vez que un país o empresa pide dinero prestado. Junto con S&P, controla casi todo el mercado de calificaciones, y su negocio de análisis financiero crece constantemente.",
     "risk_short": "El mayor riesgo es que si las empresas dejan de emitir deuda por una crisis, Moody's podría ganar menos dinero. Además, las regulaciones podrían cambiar y afectar su negocio.",
     "generated_at": "2026-05-25T00:15:05.168Z",
     "model": "gpt-4o"
   },
   "MDLZ": {
-    "one_liner": "Mondelez es la empresa detrás de Oreo y Cadbury, vendiendo snacks en más de 150 países y ganando alrededor de $36 mil millones al año.",
+    "one_liner": "Mondelez es la empresa detrás de Oreo y Cadbury, vendiendo snacks en más de 150 países y ganando alrededor de 36 mil millones de dólares al año.",
     "why_short": "Mondelez es una apuesta segura porque sus marcas como Oreo y Cadbury son compradas incluso en tiempos difíciles. Sus acciones están más baratas de lo normal y pagan un buen dividendo del 3.5%.",
-    "risk_short": "Los costos de ingredientes como el cacao han subido mucho, afectando sus ganancias. Además, el dólar fuerte y las nuevas reglas sobre comida pueden complicar las cosas.",
+    "risk_short": "Los costos de ingredientes como el cacao han subido mucho, afectando sus ganancias. Además, un dólar fuerte (que reduce el valor de lo que cobra fuera de EE.UU.) y las nuevas reglas sobre comida pueden complicar las cosas.",
     "generated_at": "2026-05-25T00:14:36.012Z",
     "model": "gpt-4o"
   },
@@ -442,7 +442,7 @@
   },
   "ROL": {
     "one_liner": "Rollins es dueño de Orkin, la marca líder en control de plagas, y lleva 24 años creciendo sin parar porque las cucarachas no entienden de crisis económicas.",
-    "why_short": "Las plagas siempre estarán, así que su negocio no depende de la economía. Han crecido 24 años seguidos, ganan $3.8 mil millones al año y llevan 35 años pagando dividendos sin falta.",
+    "why_short": "Las plagas siempre estarán, así que su negocio no depende de la economía. Han crecido 24 años seguidos, generan 3.8 mil millones de dólares al año y llevan 35 años pagando dividendos sin falta.",
     "risk_short": "La acción está cara comparada con otras del sector. Ganaron menos de lo esperado por el clima y dependen mucho del verano para sus ingresos.",
     "generated_at": "2026-05-25T00:14:08.241Z",
     "model": "gpt-4o"
@@ -476,7 +476,7 @@
     "model": "gpt-4o"
   },
   "UBS": {
-    "one_liner": "UBS es el banco más grande de Suiza y acaba de hacerse aún más grande al absorber a Credit Suisse, manejando ahora $7 billones de activos.",
+    "one_liner": "UBS es el banco más grande de Suiza y acaba de hacerse aún más grande al absorber a Credit Suisse, manejando ahora 7 billones de dólares en activos.",
     "why_short": "Al unir fuerzas con Credit Suisse, UBS está ahorrando mucho dinero y sus ganancias han subido un 53%. Planean comprar sus propias acciones y aumentar los dividendos en un 15%.",
     "risk_short": "Las reglas bancarias en Suiza podrían volverse más estrictas. Además, no ganaron tanto como esperaban a finales de 2025 y aún tienen gastos pendientes por la integración.",
     "generated_at": "2026-05-25T00:13:42.937Z",
@@ -498,8 +498,8 @@
   },
   "WAL": {
     "one_liner": "Western Alliance Bancorporation es un banco que se enfoca en áreas de rápido crecimiento como tecnología y bienes raíces, y ha logrado recuperarse bien tras una crisis bancaria reciente.",
-    "why_short": "El banco aumentó sus depósitos en $15 mil millones en 2025 y tuvo un gran año con ganancias creciendo 33%. Esperan seguir creciendo en préstamos y depósitos en 2026.",
-    "risk_short": "Al crecer más de $100 mil millones en activos, enfrentará reglas más estrictas. Además, está expuesto a sectores como tecnología y bienes raíces, que pueden ser inestables.",
+    "why_short": "El banco aumentó sus depósitos en 15 mil millones de dólares en 2025 y tuvo un gran año con ganancias creciendo 33%. Esperan seguir creciendo en préstamos y depósitos en 2026.",
+    "risk_short": "Al crecer más de 100 mil millones de dólares en activos, enfrentará reglas más estrictas. Además, está expuesto a sectores como tecnología y bienes raíces, que pueden ser inestables.",
     "generated_at": "2026-05-25T00:14:10.862Z",
     "model": "gpt-4o"
   },
@@ -520,7 +520,7 @@
   "ZTS": {
     "one_liner": "Zoetis es la empresa líder en salud animal, vendiendo medicinas y vacunas para mascotas y ganado en más de 100 países.",
     "why_short": "Zoetis se beneficia porque cada vez más personas tratan a sus mascotas como familia y gastan en su salud. Aunque su acción ha bajado, sigue siendo fuerte y tiene nuevos productos prometedores.",
-    "risk_short": "La FDA investiga dos productos de Zoetis por problemas en mascotas, lo que podría afectar su reputación y ventas. Además, si la economía empeora, la gente podría gastar menos en sus mascotas.",
+    "risk_short": "La FDA (la agencia de salud de EE.UU.) investiga dos productos de Zoetis por problemas en mascotas, lo que podría afectar su reputación y ventas. Además, si la economía empeora, la gente podría gastar menos en sus mascotas.",
     "generated_at": "2026-05-25T00:14:37.234Z",
     "model": "gpt-4o"
   }
