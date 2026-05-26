@@ -32,6 +32,7 @@ final class PickDetailViewModel: ObservableObject {
 struct PickDetailView: View {
     @EnvironmentObject private var store: PickStatusStore
     @EnvironmentObject private var dividends: DividendStore
+    @Environment(\.dismiss) private var dismiss
     @StateObject private var vm: PickDetailViewModel
     let pick: Pick
 
@@ -92,10 +93,14 @@ struct PickDetailView: View {
             }
         }
         .sheet(isPresented: $showBuySheet) {
-            PickBuySheet(pick: current, defaultInvestment: store.defaultInvestment)
-                .environmentObject(store)
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
+            PickBuySheet(
+                pick: current,
+                defaultInvestment: store.defaultInvestment,
+                onSuccess: { dismiss() }
+            )
+            .environmentObject(store)
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
         }
     }
 
@@ -140,28 +145,40 @@ struct PickDetailView: View {
         case .pending:
             EmptyView()
         case .bought:
-            HStack(spacing: 10) {
-                Image(systemName: "checkmark.seal.fill")
-                    .foregroundStyle(Color("BrandEmerald"))
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Lo compraste")
-                        .font(.footnote.weight(.semibold))
-                        .foregroundStyle(.white)
-                    if let price = current.buyPrice, let amount = current.amountInvested {
-                        Text("$\(format2(price)) · invertiste $\(format2(amount))")
-                            .font(.caption2)
-                            .foregroundStyle(.white.opacity(0.6))
+            Button {
+                showBuySheet = true
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: "checkmark.seal.fill")
+                        .foregroundStyle(Color("BrandEmerald"))
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Lo compraste")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(.white)
+                        if let price = current.buyPrice, let amount = current.amountInvested {
+                            Text("$\(format2(price)) · invertiste $\(format2(amount)) · toca para editar")
+                                .font(.caption2)
+                                .foregroundStyle(.white.opacity(0.6))
+                        } else {
+                            Text("toca para editar")
+                                .font(.caption2)
+                                .foregroundStyle(.white.opacity(0.6))
+                        }
                     }
+                    Spacer()
+                    Image(systemName: "pencil")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(Color("BrandEmerald").opacity(0.8))
                 }
-                Spacer()
+                .padding(12)
+                .background(Color("BrandEmerald").opacity(0.12))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .stroke(Color("BrandEmerald").opacity(0.4), lineWidth: 1)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             }
-            .padding(12)
-            .background(Color("BrandEmerald").opacity(0.12))
-            .overlay(
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .stroke(Color("BrandEmerald").opacity(0.4), lineWidth: 1)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .buttonStyle(.plain)
         case .skipped:
             HStack(spacing: 10) {
                 Image(systemName: "xmark.circle.fill")

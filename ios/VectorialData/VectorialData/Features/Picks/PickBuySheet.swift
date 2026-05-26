@@ -13,6 +13,10 @@ struct PickBuySheet: View {
     @Environment(\.dismiss) private var dismiss
 
     let pick: Pick
+    /// Fires after the sheet successfully writes the decision. PickDetailView
+    /// uses this to pop the nav back to the picks list — closes the loop so
+    /// the user gets a clear "done" signal instead of staring at the detail.
+    let onSuccess: (() -> Void)?
 
     @State private var priceText: String
     @State private var amountText: String
@@ -23,10 +27,23 @@ struct PickBuySheet: View {
 
     private enum Field: Hashable { case price, amount }
 
-    init(pick: Pick, defaultInvestment: Double?) {
+    /// Edit mode = pick already bought. Pre-fills from the saved decision
+    /// instead of the open price / default amount, and changes the title.
+    private var isEditing: Bool { pick.status == .bought }
+
+    init(pick: Pick, defaultInvestment: Double?, onSuccess: (() -> Void)? = nil) {
         self.pick = pick
-        _priceText = State(initialValue: Self.format(pick.priceAtPick))
-        _amountText = State(initialValue: Self.format(defaultInvestment ?? 50))
+        self.onSuccess = onSuccess
+        if pick.status == .bought, let savedPrice = pick.buyPrice {
+            _priceText = State(initialValue: Self.format(savedPrice))
+        } else {
+            _priceText = State(initialValue: Self.format(pick.priceAtPick))
+        }
+        if pick.status == .bought, let savedAmount = pick.amountInvested {
+            _amountText = State(initialValue: Self.format(savedAmount))
+        } else {
+            _amountText = State(initialValue: Self.format(defaultInvestment ?? 50))
+        }
     }
 
     private var defaultIsSet: Bool {
@@ -75,7 +92,7 @@ struct PickBuySheet: View {
                 .padding(16)
             }
             .background(Color("AppBackground"))
-            .navigationTitle("Marcaste \(pick.ticker)")
+            .navigationTitle(isEditing ? "Editar tu compra de \(pick.ticker)" : "Marcaste \(pick.ticker)")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -174,6 +191,13 @@ struct PickBuySheet: View {
             isSubmitting = false
             if ok {
                 dismiss()
+                // Hand control back to PickDetailView so it can pop the nav.
+                // Slight delay so the sheet's dismiss animation completes
+                // before the underlying view starts its own pop.
+                if let onSuccess {
+                    try? await Task.sleep(nanoseconds: 250_000_000)
+                    onSuccess()
+                }
             } else {
                 errorMessage = store.errorMessage ?? "No se pudo guardar."
             }
