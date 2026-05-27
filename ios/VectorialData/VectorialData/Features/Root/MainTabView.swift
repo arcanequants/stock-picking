@@ -35,5 +35,10 @@ struct MainTabView: View {
         .onChange(of: notifications.pendingWeeklyDigest) { _, newValue in
             if newValue { selectedTab = .picks }
         }
+        // News pushes deep-link into the Home tab — that's where the
+        // news entry card and detail navigation live.
+        .onChange(of: notifications.pendingNewsId) { _, newValue in
+            if newValue != nil { selectedTab = .home }
+        }
     }
 }

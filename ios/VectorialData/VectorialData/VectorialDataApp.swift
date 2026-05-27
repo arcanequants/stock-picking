@@ -7,6 +7,7 @@ struct VectorialDataApp: App {
     @StateObject private var notifications = NotificationsManager.shared
     @StateObject private var pickStatus = PickStatusStore.shared
     @StateObject private var dividends = DividendStore.shared
+    @StateObject private var news = NewsStore.shared
 
     var body: some Scene {
         WindowGroup {
@@ -15,6 +16,7 @@ struct VectorialDataApp: App {
                 .environmentObject(notifications)
                 .environmentObject(pickStatus)
                 .environmentObject(dividends)
+                .environmentObject(news)
                 .preferredColorScheme(.dark)
                 .onOpenURL { url in
                     authManager.handleDeepLink(url)

@@ -21,14 +21,23 @@ final class HomeViewModel: ObservableObject {
     }
 }
 
+enum HomeDestination: Hashable {
+    case newsList
+    case newsItem(UUID)
+}
+
 struct HomeView: View {
     @StateObject private var vm = HomeViewModel()
+    @EnvironmentObject private var news: NewsStore
+    @EnvironmentObject private var notifications: NotificationsManager
+    @State private var navPath: [HomeDestination] = []
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navPath) {
             ScrollView {
                 VStack(spacing: 14) {
                     PerformanceChart()
+                    NewsHomeCard()
                     PersonalPerformanceCard()
                     if let s = vm.snapshot {
                         QuickStatsCard(snapshot: s)
@@ -49,9 +58,117 @@ struct HomeView: View {
             }
             .background(Color("AppBackground"))
             .navigationTitle("Vectorial Data")
-            .refreshable { await vm.load() }
-            .task { await vm.load() }
+            .refreshable {
+                await vm.load()
+                await news.load()
+            }
+            .task {
+                await vm.load()
+                if news.items.isEmpty {
+                    await news.load()
+                }
+            }
+            .navigationDestination(for: HomeDestination.self) { dest in
+                switch dest {
+                case .newsList:
+                    NewsListView()
+                case .newsItem(let id):
+                    if let item = news.item(byId: id) {
+                        NewsDetailView(item: item)
+                    } else {
+                        NewsListView()
+                    }
+                }
+            }
+            .navigationDestination(for: NewsItem.self) { item in
+                NewsDetailView(item: item)
+            }
+            .onChange(of: notifications.pendingNewsId) { _, newValue in
+                Task { await handlePendingNews(newValue) }
+            }
+            .task(id: notifications.pendingNewsId) {
+                // Catch the case where the tap fires before this view mounts.
+                await handlePendingNews(notifications.pendingNewsId)
+            }
         }
+    }
+
+    private func handlePendingNews(_ id: UUID?) async {
+        guard let id else { return }
+        if news.items.isEmpty {
+            await news.load()
+        }
+        // Push the detail (which sits on top of the list in the back stack
+        // so back goes to the list, then to Home).
+        navPath = [.newsList, .newsItem(id)]
+        notifications.pendingNewsId = nil
+    }
+}
+
+/// Entry card to the news feed. Hides itself if there's nothing
+/// to surface — no empty clutter on Home. When there are unread
+/// items it shows the most recent headline as preview.
+private struct NewsHomeCard: View {
+    @EnvironmentObject private var store: NewsStore
+
+    var body: some View {
+        if store.items.isEmpty {
+            EmptyView()
+        } else {
+            NavigationLink(value: HomeDestination.newsList) {
+                cardBody
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    private var cardBody: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 6) {
+                Image(systemName: "newspaper.fill")
+                    .font(.caption)
+                    .foregroundStyle(Color("BrandEmerald"))
+                Text("NOTICIAS")
+                    .font(.caption.weight(.semibold))
+                    .tracking(1.1)
+                    .foregroundStyle(.white.opacity(0.85))
+                if store.unreadCount > 0 {
+                    Text("● \(store.unreadCount) \(store.unreadCount == 1 ? "nueva" : "nuevas")")
+                        .font(.caption2.weight(.semibold))
+                        .foregroundStyle(Color("BrandEmerald"))
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.white.opacity(0.5))
+            }
+            Text("Lo último que cambia tu tesis")
+                .font(.footnote)
+                .foregroundStyle(.white.opacity(0.65))
+            if let preview = store.mostRecentUnread ?? store.items.first {
+                Divider().overlay(Color.white.opacity(0.1))
+                Text(preview.headline)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.white)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            LinearGradient(
+                colors: [Color("BrandIndigo"), Color("BrandEmerald")],
+                startPoint: .leading, endPoint: .trailing
+            )
+            .opacity(0.18)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(Color("BrandEmerald").opacity(0.4), lineWidth: 1)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }
 

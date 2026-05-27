@@ -24,6 +24,10 @@ final class NotificationsManager: NSObject, ObservableObject {
     /// screen consumes and clears it.
     @Published var pendingWeeklyDigest: Bool = false
 
+    /// Set when the user taps a curated-news push. HomeView consumes
+    /// and clears it after pushing the detail onto its nav stack.
+    @Published var pendingNewsId: UUID?
+
     private override init() {
         super.init()
         UNUserNotificationCenter.current().delegate = self
@@ -114,6 +118,11 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
                 }
             case "weekly_digest":
                 Self.shared.pendingWeeklyDigest = true
+            case "news":
+                if let s = userInfo["news_id"] as? String,
+                   let id = UUID(uuidString: s) {
+                    Self.shared.pendingNewsId = id
+                }
             case "dividend_paid":
                 // Re-use the new-pick deep link: route to the pick detail
                 // where the new "DIVIDENDOS" section is already visible.

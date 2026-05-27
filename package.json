@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "test:api": "vitest run tests/api/",
-    "mom:generate": "tsx --env-file=.env.local.vercel scripts/generate-mom-shorts.ts"
+    "mom:generate": "tsx --env-file=.env.local.vercel scripts/generate-mom-shorts.ts",
+    "news:publish": "tsx --env-file=.env.local.vercel scripts/news-publish.ts",
+    "news:edit": "tsx --env-file=.env.local.vercel scripts/news-edit.ts",
+    "news:delete": "tsx --env-file=.env.local.vercel scripts/news-delete.ts"
   },
   "dependencies": {
     "@coinbase/cdp-sdk": "^1.46.1",
