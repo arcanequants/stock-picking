@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0254B0CD623F1FECC3258DCA /* PriorHolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979511B65522219EA59DA2A9 /* PriorHolding.swift */; };
-		09D4CC0E3A4DD0F97F03E66D /* ArchivePicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957634FF57AFDE1AD722732 /* ArchivePicksView.swift */; };
 		112524BB954122A83000FBC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7745AACBA037492169B68FC /* AppDelegate.swift */; };
 		16272C73128B7A5EB8EAB08C /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995D70904166120C0B2A050 /* KeychainHelper.swift */; };
 		247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040333E9484BEA0F3712479E /* AuthView.swift */; };
@@ -86,7 +85,6 @@
 		3D89EBF81F93D0A84FC8F835 /* PriorHoldingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHoldingsView.swift; sourceTree = "<group>"; };
 		3D9CD8BD67A0E6197487EC73 /* VectorialData.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VectorialData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4586F5C2A73ABF34E95CF6B7 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
-		4957634FF57AFDE1AD722732 /* ArchivePicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivePicksView.swift; sourceTree = "<group>"; };
 		55080DD2AC6AC1F15A0B5AE0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5E06DDF662A664CEECA7DF9D /* ComingSoonPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonPlaceholder.swift; sourceTree = "<group>"; };
 		695CC3305AB75BDAF9415E78 /* PriorHoldingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHoldingsStore.swift; sourceTree = "<group>"; };
@@ -315,7 +313,6 @@
 		FFB19DB43921C3FE4CF8CFA0 /* Picks */ = {
 			isa = PBXGroup;
 			children = (
-				4957634FF57AFDE1AD722732 /* ArchivePicksView.swift */,
 				6A1BCC5FD3CD089181E6608E /* PickBuySheet.swift */,
 				6A17395E2504FDA008D3BE8E /* PickDetailView.swift */,
 				AA83372C812B3CD0F43FA4ED /* PicksView.swift */,
@@ -423,7 +420,6 @@
 				F37EBB33990CBB056ECC618F /* AllocationSection.swift in Sources */,
 				3D4909274492503AE55026C0 /* AppConfig.swift in Sources */,
 				112524BB954122A83000FBC0 /* AppDelegate.swift in Sources */,
-				09D4CC0E3A4DD0F97F03E66D /* ArchivePicksView.swift in Sources */,
 				35627BC6698B033ACAA33AAC /* AuthManager.swift in Sources */,
 				247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */,
 				3BBC5D903B453F3AB95A3BEB /* ComingSoonPlaceholder.swift in Sources */,

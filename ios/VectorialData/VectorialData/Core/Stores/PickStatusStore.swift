@@ -16,10 +16,8 @@ final class PickStatusStore: ObservableObject {
     @Published private(set) var isSubscribed: Bool = false
     @Published private(set) var isLoading: Bool = false
     @Published private(set) var errorMessage: String?
-    /// Picks dated before this live in the Archivo, not in the main feed.
+    /// Picks dated before this don't surface in the main feed.
     @Published private(set) var accessStartedAt: String?
-    /// How many picks pre-date `accessStartedAt`. Drives the Archivo entry.
-    @Published private(set) var archiveCount: Int = 0
 
     /// Bumped every time a decision lands. PortfolioViewModel observes this
     /// and refetches the personal view when it changes.
@@ -39,7 +37,6 @@ final class PickStatusStore: ObservableObject {
             self.defaultInvestment = resp.defaultInvestment
             self.isSubscribed = resp.isSubscribed
             self.accessStartedAt = resp.accessStartedAt
-            self.archiveCount = resp.archiveCount
             self.errorMessage = nil
         } catch APIError.unauthorized {
             errorMessage = "Please sign in again"

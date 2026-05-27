@@ -37,8 +37,9 @@ export async function GET(request: Request) {
   const allPicks = await getPicksData(undefined, isSubscribed ? "pro" : "free");
 
   // Newcomer principle: the picks feed shows what's happened since the user
-  // gained access — not all 70+ retroactive picks. Anything older lives in
-  // the Archivo (separate endpoint), so they don't feel "behind on 70 things".
+  // gained access — not all 70+ retroactive picks, so they don't feel
+  // "behind on 70 things". Older picks are still visible in the model
+  // portfolio (Portfolio tab) for anyone curious about history.
   const cutoffIso = subscriber?.access_started_at as string | null | undefined;
   const cutoffDate = cutoffIso ? cutoffIso.slice(0, 10) : null;
   const picks = cutoffDate
@@ -76,15 +77,10 @@ export async function GET(request: Request) {
     };
   });
 
-  const archiveCount = cutoffDate
-    ? allPicks.filter((p) => p.date < cutoffDate).length
-    : 0;
-
   return NextResponse.json({
     picks: enriched,
     is_subscribed: isSubscribed,
     default_investment: subscriber?.default_investment ?? null,
     access_started_at: cutoffIso ?? null,
-    archive_count: archiveCount,
   });
 }
