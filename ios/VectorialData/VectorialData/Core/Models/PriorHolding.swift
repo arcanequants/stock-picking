@@ -21,3 +21,18 @@ struct PriorHoldingsResponse: Codable {
 struct PriorHoldingResponse: Codable {
     let holding: PriorHolding
 }
+
+/// One row in the Vectorial ticker universe picker.
+/// Matches `GET /api/picks/universe → tickers[]`.
+struct TickerOption: Codable, Identifiable, Hashable {
+    let ticker: String
+    let name: String
+    let sector: String?
+    let region: String?
+
+    var id: String { ticker }
+}
+
+struct TickerUniverseResponse: Codable {
+    let tickers: [TickerOption]
+}

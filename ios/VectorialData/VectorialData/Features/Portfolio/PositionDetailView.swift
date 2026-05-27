@@ -32,10 +32,22 @@ final class PositionDetailViewModel: ObservableObject {
 struct PositionDetailView: View {
     let position: Position
     @StateObject private var vm: PositionDetailViewModel
+    @EnvironmentObject private var pickStatus: PickStatusStore
+
+    @State private var editingPick: Pick?
 
     init(position: Position) {
         self.position = position
         _vm = StateObject(wrappedValue: PositionDetailViewModel(ticker: position.ticker))
+    }
+
+    /// Bought picks for this ticker — drives the "Editar tu compra"
+    /// section. Most recent first so the freshest buy is the obvious
+    /// first edit target.
+    private var editableBuys: [Pick] {
+        pickStatus.picks
+            .filter { $0.ticker == position.ticker && $0.status == .bought }
+            .sorted { $0.pickNumber > $1.pickNumber }
     }
 
     var body: some View {
@@ -43,6 +55,9 @@ struct PositionDetailView: View {
             VStack(alignment: .leading, spacing: 14) {
                 headerCard
                 positionFactsCard
+                if !editableBuys.isEmpty {
+                    editBuyCard
+                }
                 if let r = vm.research {
                     if r.locked {
                         paywallCard
@@ -58,6 +73,66 @@ struct PositionDetailView: View {
         .navigationTitle(position.ticker)
         .navigationBarTitleDisplayMode(.inline)
         .task { await vm.load() }
+        .sheet(item: $editingPick) { pick in
+            PickBuySheet(
+                pick: pick,
+                defaultInvestment: pickStatus.defaultInvestment,
+                onSuccess: nil
+            )
+            .environmentObject(pickStatus)
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
+        }
+    }
+
+    /// Second entry point for editing a buy (the first lives in
+    /// PickDetailView). Surfaces here because users often spot a typo
+    /// while looking at their portfolio, not while re-opening the pick.
+    private var editBuyCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("EDITAR TU COMPRA")
+                .font(.caption.weight(.semibold))
+                .tracking(1.1)
+                .foregroundStyle(.white.opacity(0.55))
+            VStack(spacing: 8) {
+                ForEach(editableBuys) { pick in
+                    Button {
+                        editingPick = pick
+                    } label: {
+                        HStack(spacing: 10) {
+                            Image(systemName: "pencil")
+                                .foregroundStyle(Color("BrandEmerald"))
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Pick #\(pick.pickNumber) · \(pick.date)")
+                                    .font(.footnote.weight(.semibold))
+                                    .foregroundStyle(.white)
+                                if let price = pick.buyPrice, let amount = pick.amountInvested {
+                                    Text("$\(format2(price)) · invertiste $\(format2(amount))")
+                                        .font(.caption2)
+                                        .foregroundStyle(.white.opacity(0.6))
+                                }
+                            }
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption.weight(.semibold))
+                                .foregroundStyle(.white.opacity(0.4))
+                        }
+                        .padding(12)
+                        .background(Color.white.opacity(0.04))
+                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color("CardBackground"))
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
+
+    private func format2(_ value: Double) -> String {
+        String(format: "%.2f", value)
     }
 
     private var headerCard: some View {

@@ -12,11 +12,30 @@ final class PriorHoldingsStore: ObservableObject {
     @Published private(set) var isLoading: Bool = false
     @Published var errorMessage: String?
 
+    /// Full Vectorial pick universe (75+ tickers, NOT access-filtered).
+    /// Drives the searchable picker in AddPriorHoldingSheet — a user who
+    /// joined last week may still have owned a stock Vectorial picked
+    /// years ago, so this can't be derived from `picks` (which is gated).
+    @Published private(set) var availableTickers: [TickerOption] = []
+
     /// Bumped every time a holding is added or removed. Other stores
     /// (portfolio) can observe this to know when to refetch.
     @Published private(set) var lastChangedAt: Date?
 
     private init() {}
+
+    func loadUniverse() async {
+        do {
+            let resp = try await APIClient.shared.get(
+                "/api/picks/universe",
+                as: TickerUniverseResponse.self
+            )
+            self.availableTickers = resp.tickers
+        } catch {
+            // Non-blocking — picker just stays empty until next attempt.
+            errorMessage = error.localizedDescription
+        }
+    }
 
     func load() async {
         isLoading = true

@@ -5,7 +5,6 @@ import SwiftUI
 /// picks (server-validated). Aggregated into the personal portfolio.
 struct PriorHoldingsView: View {
     @StateObject private var store = PriorHoldingsStore.shared
-    @EnvironmentObject private var picks: PickStatusStore
     @State private var isAdding = false
 
     var body: some View {
@@ -20,11 +19,16 @@ struct PriorHoldingsView: View {
                     }
                 }
             }
-            .task { await store.load() }
+            .task {
+                await store.load()
+                if store.availableTickers.isEmpty {
+                    await store.loadUniverse()
+                }
+            }
             .refreshable { await store.load() }
             .sheet(isPresented: $isAdding) {
                 AddPriorHoldingSheet(
-                    availableTickers: availableTickers
+                    availableTickers: store.availableTickers
                 ) { ticker, date, price, amount in
                     let new = await store.add(
                         ticker: ticker,
@@ -63,27 +67,12 @@ struct PriorHoldingsView: View {
         }
     }
 
-    private var availableTickers: [TickerOption] {
-        let unique = Dictionary(grouping: picks.picks, by: \.ticker)
-            .compactMap { _, group -> TickerOption? in
-                guard let first = group.first else { return nil }
-                return TickerOption(ticker: first.ticker, name: first.name)
-            }
-        return unique.sorted { $0.ticker < $1.ticker }
-    }
-
     private func delete(at offsets: IndexSet) async {
         for index in offsets {
             let h = store.holdings[index]
             await store.remove(id: h.id)
         }
     }
-}
-
-struct TickerOption: Identifiable, Hashable {
-    let ticker: String
-    let name: String
-    var id: String { ticker }
 }
 
 private struct PriorHoldingRow: View {
@@ -152,7 +141,7 @@ private struct AddPriorHoldingSheet: View {
     let onSave: (String, String, Double, Double) async -> Bool
 
     @Environment(\.dismiss) private var dismiss
-    @State private var selectedTicker: String = ""
+    @State private var selected: TickerOption?
     @State private var purchaseDate: Date = Date()
     @State private var amountText: String = ""
     @State private var priceText: String = ""
@@ -163,11 +152,23 @@ private struct AddPriorHoldingSheet: View {
         NavigationStack {
             Form {
                 Section("Ticker") {
-                    Picker("Ticker", selection: $selectedTicker) {
-                        Text("Selecciona").tag("")
-                        ForEach(availableTickers) { option in
-                            Text("\(option.ticker) — \(option.name)")
-                                .tag(option.ticker)
+                    NavigationLink {
+                        TickerPickerView(
+                            tickers: availableTickers,
+                            selected: $selected
+                        )
+                    } label: {
+                        HStack {
+                            Text("Ticker")
+                            Spacer()
+                            if let s = selected {
+                                Text("\(s.ticker) — \(s.name)")
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(1)
+                            } else {
+                                Text("Selecciona")
+                                    .foregroundStyle(.secondary)
+                            }
                         }
                     }
                 }
@@ -226,7 +227,7 @@ private struct AddPriorHoldingSheet: View {
     }
 
     private var canSave: Bool {
-        !selectedTicker.isEmpty
+        selected != nil
             && parsedPrice != nil
             && parsedAmount != nil
     }
@@ -244,13 +245,17 @@ private struct AddPriorHoldingSheet: View {
     }
 
     private func save() async {
-        guard let price = parsedPrice, let amount = parsedAmount else { return }
+        guard
+            let ticker = selected?.ticker,
+            let price = parsedPrice,
+            let amount = parsedAmount
+        else { return }
         isSaving = true
         defer { isSaving = false }
         errorMessage = nil
 
         let dateStr = isoDate(purchaseDate)
-        let ok = await onSave(selectedTicker, dateStr, price, amount)
+        let ok = await onSave(ticker, dateStr, price, amount)
         if ok {
             dismiss()
         } else {
@@ -266,5 +271,61 @@ private struct AddPriorHoldingSheet: View {
         formatter.timeZone = TimeZone(identifier: "UTC")
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: date)
+    }
+}
+
+/// Searchable list of every Vectorial-picked ticker. Filters on both
+/// `ticker` and `name` so users can find e.g. NVDA by typing "nvidia".
+private struct TickerPickerView: View {
+    let tickers: [TickerOption]
+    @Binding var selected: TickerOption?
+
+    @Environment(\.dismiss) private var dismiss
+    @State private var query: String = ""
+
+    var body: some View {
+        List {
+            ForEach(filtered) { option in
+                Button {
+                    selected = option
+                    dismiss()
+                } label: {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(option.ticker)
+                                .font(.headline)
+                            Text(option.name)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
+                        }
+                        Spacer()
+                        if selected?.ticker == option.ticker {
+                            Image(systemName: "checkmark")
+                                .foregroundStyle(Color("BrandEmerald"))
+                        }
+                    }
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .listStyle(.plain)
+        .searchable(
+            text: $query,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: "Buscar por ticker o nombre"
+        )
+        .navigationTitle("Elige el ticker")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private var filtered: [TickerOption] {
+        let q = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !q.isEmpty else { return tickers }
+        let lower = q.lowercased()
+        return tickers.filter {
+            $0.ticker.lowercased().contains(lower)
+                || $0.name.lowercased().contains(lower)
+        }
     }
 }
