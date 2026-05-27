@@ -17,9 +17,9 @@ function unauthorized() {
 }
 
 function checkToken(request: Request): boolean {
-  const expected = process.env.ADMIN_NEWS_TOKEN;
+  const expected = process.env.ADMIN_NEWS_TOKEN?.trim();
   if (!expected) return false;
-  const header = request.headers.get("authorization") ?? "";
+  const header = (request.headers.get("authorization") ?? "").trim();
   return header === `Bearer ${expected}`;
 }
 
