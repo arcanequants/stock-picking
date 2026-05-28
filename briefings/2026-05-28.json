@@ -1,0 +1,111 @@
+{
+  "date": "2026-05-28",
+  "summary": "El bloqueo del Estrecho de Hormuz reescribe todos los mercados: desde bancos centrales en Tokio y Auckland hasta bitcoin y las remesas mexicanas.",
+  "causalChain": "El ataque de EE.UU. e Israel sobre Irán en febrero cerró el Estrecho de Hormuz — por donde circula el 20% del petróleo mundial — desencadenando el mayor corte de suministro energético de la historia; la inflación energética resultante forzó a los bancos centrales de México, Japón, Europa y Nueva Zelanda a pausar recortes o anticipar alzas, mientras el oro, bitcoin y las previsiones de crecimiento ajustan el nuevo escenario de riesgo.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz: 3 meses bloqueado — mayor corte de petróleo en la historia", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed holds 3.50–3.75%; Warsh toma la presidencia en 2 semanas", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Oro -2% a $4,400 mientras el petróleo cede por acercamiento EEUU-Irán", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico recorta a 6.50% y señala fin del ciclo de bajas", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "PIB 2026 revisado de 1.6% a 1.1%; Q1 creció solo 0.2%", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Remesas cayeron 5.1% — primera baja en más de una década", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ mantiene 0.75% pero eleva previsión de inflación por choque petrolero", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "Yen rebota a 159/USD; Nikkei +2.1% al bajar el petróleo", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "BCE pausa; inflación energética podría alcanzar 3.1% en Q2", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "Crecimiento UE recortado a 0.9% en 2026 por shock energético", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP + Rio Tinto unirán operaciones para extraer 200M toneladas de mineral de hierro", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "RBNZ mantiene 2.25% pero anticipa alzas a 3.25% para 2027", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin a $74,900 — fondos BTC con 6 días seguidos de salidas ($1.26B)", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Ballenas compraron 270,000 BTC en un mes; CLARITY Act avanza en Senado", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Queen Mary London: constantes del universo calibradas para que exista vida líquida", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Cambridge: primer LED construido con materiales que no conducen electricidad (Nature)", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Shibaura (Japón): análogos de vitamina K regeneran neuronas 3x más rápido", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The world's main oil shipping lane has been blocked for 3 months. When the US and Israel attacked Iran in late February, Iran shut the Strait of Hormuz — a narrow waterway through which 20% of the world's oil travels. The result: the biggest oil supply cut in recorded history. Gulf states, which import over 80% of their food through that same lane, saw grocery prices spike up to 120%. Even if a peace deal reopens it tomorrow, months of shipping backlogs remain."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US central bank kept borrowing costs unchanged for the third meeting in a row, holding the rate at 3.50–3.75%. Three of its officials pushed back against even hinting at future cuts. Meanwhile, the bank's incoming chairman — Kevin Warsh — takes charge in two weeks. Markets now expect cheaper loans only in late 2026. Money stays expensive, and the bar for cutting is rising, not falling."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell about 2% this week to around $4,400 per ounce. Oil prices eased as the US and Iran moved closer to a deal that could reopen the blocked Strait of Hormuz. When oil gets cheaper, fears of inflation subside — and gold, which people buy specifically to protect against inflation, becomes less appealing. The US government's 10-year borrowing cost still sits above 4.5%, making safe assets like bonds relatively attractive."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key interest rate to 6.50% and signaled this may be the last cut for a long time. Inflation sits at 4.1% — above the 3% target — so the bank is turning cautious. The good news: Mexico still pays investors far more than the US does, and that gap keeps foreign money flowing in and supports the peso's value."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank slashed its 2026 growth forecast from 1.6% to 1.1%. In the first three months of the year, the economy grew just 0.2% compared to a year ago — nearly flat. The main drag: weak consumer spending and uncertainty about the US trade deal, which is up for renegotiation in July. Less growth means fewer jobs created and less tax revenue for the government to work with."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Money sent home by Mexicans working abroad fell 5.1% in 2025 — the first drop in over a decade. The main reason: immigration enforcement in the US is making undocumented workers afraid to leave the house to go to work. About 4.3 million undocumented Mexicans live in the US. When they work less, Mexican families who depend on those transfers feel it immediately in their budgets."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank held its key interest rate at 0.75% but raised its forecast for how fast prices will rise, pointing to the Middle East war as the cause. Japan imports nearly all of its oil, so when oil gets expensive, it pushes up the cost of almost everything — from gasoline to groceries. The bank is watching US-Iran peace talks closely before deciding whether to raise rates further."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's currency strengthened past 159 yen per dollar as oil prices fell on signs of a possible US-Iran deal. Japan is one of the world's biggest oil importers, so cheaper oil reduces what it spends abroad, eases inflation, and removes pressure to raise rates quickly. Japan's stock market jumped 2.1% on the news — investors prefer lower rates because they make stocks comparatively more attractive."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank held its key interest rate unchanged in April but warned that energy costs could push overall price growth to 3.1% this spring — above its 2% goal. The reason: oil and gas supplies from the Middle East are disrupted by the Iran war. Europe still depends heavily on energy imports, and when those become expensive, factories and families absorb the hit before anything else."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "The European economy is now expected to grow just 0.9% in 2026, down from earlier forecasts. Germany — Europe's largest economy and its manufacturing engine — is particularly vulnerable to high energy prices because its factories are energy-intensive. As long as the Middle East conflict keeps oil and gas expensive, Europe's growth outlook stays under pressure."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Mining giants BHP and Rio Tinto, which operate neighboring iron ore fields in Western Australia, agreed to combine operations to extract up to 200 million tonnes jointly. Iron ore turns into steel, and China buys most of what Australia produces. By sharing infrastructure and equipment, both companies can mine deposits that would otherwise be too expensive to dig alone — extending supply for decades."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "New Zealand's central bank held its key rate at 2.25% on May 27 but signaled it will need to raise rates more than previously planned, possibly reaching 3.25% by early 2027. The reason: inflation is running at 3.1%, pushed above target by higher fuel prices from the Middle East crisis. Oil price shocks ripple through everything from shipping costs to food prices, even for a small island nation far from the conflict."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin fell to around $74,900 as US bitcoin investment funds recorded outflows for six straight days — the longest withdrawal streak since January — with about $1.26 billion pulled in just one week. This coincided with rising oil prices and inflation fears, which make investors less willing to hold risky assets. When traditional markets get nervous, digital assets tend to sell off first and fastest."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "While everyday investors pulled money out of bitcoin funds, large holders quietly bought roughly 270,000 coins in a single month — worth about $20 billion at current prices. Historically, this pattern of big buyers accumulating during retail sell-offs has come before price recoveries. Meanwhile, the US Senate is advancing a bill to clarify who regulates digital assets — the first major step toward clear rules for the industry."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Researchers at Queen Mary University of London found that the universe's core physical rules — the values determining how strong gravity is or how heavy atoms are — fall in a tiny sweet spot allowing liquids to flow inside living cells. Shift any one slightly and blood would be too thick, or water too sticky, for life to work at all. The universe may be fine-tuned for biology. 📄 Published via ScienceDaily (Queen Mary University of London) · More: https://www.sciencedaily.com/releases/2026/05/260508022653.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Scientists at University of Cambridge built the first light-emitting device from materials that cannot conduct electricity. They coated each tiny particle with molecules acting as energy antennas, capturing power and channeling 98% of it into light. The result is unusually pure light — ideal for imaging inside living tissue without surgery. 📄 Published in Nature · More: https://scitechdaily.com/the-impossible-led-cambridge-team-successfully-powers-insulating-nanoparticles/"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Scientists at the Shibaura Institute of Technology in Japan built new versions of vitamin K that are three times more potent at turning brain stem cells into working neurons. Brain diseases like Alzheimer's and Parkinson's involve losing neurons the body cannot replace. These new compounds activate a specific brain receptor that tells dormant cells to become neurons. 📄 Published in ACS Chemical Neuroscience · More: https://pmc.ncbi.nlm.nih.gov/articles/PMC12333027/"
+    }
+  ]
+}
