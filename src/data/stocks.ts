@@ -11133,6 +11133,664 @@ Implied stub = 2.2x EV/EBITDA vs sector telecom europeo 5-7x. Descuento brutal.
     last_updated_at: "2026-05-19T00:00:00Z",
     next_review_at: "2026-11-19T00:00:00Z",
   },
+  {
+    id: 78,
+    ticker: "WEGZY",
+    name: "WEG S.A.",
+    sector: "Industrials",
+    industry: "Electric Motors & Industrial Equipment",
+    country: "Brazil",
+    region: "Latin America",
+    currency: "USD",
+    price: 8.61,
+    pe_ratio: 28.78,
+    pe_forward: 26.0,
+    dividend_yield: 4.5,
+    market_cap_b: 32.4,
+    eps: 0.27,
+    summary_short:
+      "WEG es el fabricante de motores eléctricos #1 de Latinoamérica y top 5 mundial — fabrica más de 21 millones de motores al año desde Jaraguá do Sul (Santa Catarina, Brasil). Más allá de motores hace transformadores de alta tensión, turbinas eólicas, drives industriales y subestaciones — exactamente los productos cuello-de-botella para electrificar los data centers de AI (los transformadores grandes hoy tienen 5 años de espera vs 2 años antes de 2022). Fundada 1961, ~49,300 empleados, fábricas en 15 países. Cotiza como WEGE3 en B3 São Paulo y como ADR WEGZY (1:1 ratio) en OTC. Market cap $32B. CEO Alberto Yoshikazu Kuba desde abril 2024.",
+    summary_what:
+      "WEG S.A. es una empresa industrial brasileña fundada en 1961 por Werner Ricardo Voigt + Eggon João da Silva + Geraldo Werninghaus (las iniciales de los apellidos forman 'WEG'). HQ en Jaraguá do Sul, Santa Catarina. Hoy es el **fabricante de motores eléctricos #1 de las Américas** y **top 5 mundial**, compitiendo con ABB (Suiza), Siemens (Alemania), Nidec (Japón) y Toshiba.\n\n**4 negocios**:\n\n**(1) Industrial Electro-Electronic Equipment (~52% revenue)** — motores eléctricos de baja y alta tensión (más de 21 millones de unidades al año), drives, controles, soft-starters, automatización industrial. Cliente típico: cualquier fábrica del mundo con cintas transportadoras, bombas, compresores.\n\n**(2) GTD (Generation, Transmission & Distribution) ~36% revenue** — generadores para hidroeléctricas, turbinas eólicas onshore (WEG es #1 en Brasil), transformadores de alta tensión, subestaciones. Este es el segmento que se está acelerando por la demanda de electrificación de data centers de AI.\n\n**(3) Commercial & Appliance Motors** — motores chicos para línea blanca + HVAC.\n\n**(4) Paints & Coatings + Otros** — residual.\n\n**Geografía revenue**: Brasil ~38% / Internacional ~62% (USA, México, Europa, China, India). Vende a 135+ países, fábricas en 15. La adquisición de **Regal Rexnord motors** (cierre H1 2024, ~$400M, +~$541M revenue) sumó capacidad en USA, México, China, India e Italia.\n\n**Liderazgo**:\n- CEO: **Alberto Yoshikazu Kuba** desde abril 2024 (reemplazó a Harry Schmelzer Jr., quien estuvo 16 años). 21 años de carrera dentro de WEG, ingeniero eléctrico, 44 años.\n- Familias fundadoras siguen como accionistas controladores.\n\n**IPO**: B3 en 1971. ADR WEGZY desde sep 2010 (depositario JP Morgan).",
+    summary_why:
+      "WEGZY a $8.61 es comprar el productor de motores eléctricos #1 de Latinoamérica + un fabricante crítico de transformadores y turbinas justo cuando la demanda global de equipo eléctrico está cuello-de-botella por la electrificación de data centers de AI. Razones específicas: (1) **AI/data center tailwind estructural**: los transformadores de alta tensión que necesitan los hyperscalers (Microsoft, Amazon, Meta, Google — $80B+ capex/año cada uno) tienen lead times que pasaron de 24-30 meses pre-2020 a **5 años en 2026**. WEG es uno de los pocos fabricantes del mundo que los hace a escala. (2) **Margen EBITDA elite ~22%** sostenido — ABB y Siemens cotizan con margen similar a múltiplos 2x WEG, pero WEG tiene ventaja de costos por vertical integration en Brasil. ROIC FY2025 ~32%. (3) **Backlog GTD sólido** — management flagged 'solid order intake' Q1 2026 especialmente long-cycle T&D. (4) **Capex récord 2026 R$3.6B** financia expansión en Brasil, México, Colombia y China — Betim plant online H2 2026. (5) **Dividendo + JCP yield ~4.5%** + 55 años de historia de pago. (6) **Analyst target promedio R$51.60 = ~$10.30 ADR = +19.6% upside** desde $8.61. La compra ahora es contra-cíclica — Q1 2026 fue débil (revenue -6.1% YoY, primer negativo en años por colapso del pipeline solar centralizado en Brasil), el mercado castigó y la acción está -20% del máximo de 52 semanas. Entrada cómoda en una empresa que históricamente compone retornos ~25% anuales en BRL desde IPO 1971.",
+    summary_risk:
+      "Riesgos: (1) **Q1 2026 fue el primer trimestre con revenue negativo en años** (-6.1% YoY a R$9.47B) por colapso del pipeline solar centralizado en Brasil — Brasil doméstico -19.5%. Si solar no se recupera H2 2026, narrativa de growth se deteriora. (2) **EBITDA margin comprimido -3.2pp YoY** a 22.2% en Q1 — niveles aún elite pero trayectoria preocupante. (3) **BRL appreciation 2025-2026** comprime traducción del 62% del revenue que es internacional (Q1 USD +16% pero BRL solo +4.5% por FX). Si BRL sigue fortaleciendo, reported numbers seguirán abajo. (4) **P/E TTM 28.8x con earnings cayendo** es vulnerable — si Q2 también miss, multiple compression posible. (5) **Cyclical exposure a capex industrial** — si Chinese electrification capex desacelera o USA data center buildout pausea, GTD backlog se aplana. (6) **Cobre, acero y aluminio** son inputs principales — commodity price spikes presionan margenes. (7) **Integration Regal Rexnord** todavía en curso — culture clash y restructuring drag posibles. (8) **Liquidez ADR limitada** — WEGZY trades en OTC con volumen reducido. Para posiciones grandes, mejor WEGE3.SA directo.",
+    research_full: `# WEG S.A. (WEGZY / WEGE3) — Research Completo
+
+## Precio: $8.61 ADR | P/E TTM: 28.78 | Div Yield: ~4.5% | Market Cap: $32.4B | EPS: $0.27
+
+---
+
+## ¿Qué es WEG?
+
+Empresa industrial brasileña fundada en 1961 por **W**erner Ricardo Voigt + **E**ggon João da Silva + **G**eraldo Werninghaus en Jaraguá do Sul, Santa Catarina (de ahí el nombre 'WEG'). Hoy es el **fabricante de motores eléctricos #1 de las Américas** y **top 5 mundial**.
+
+~49,300 empleados. Fábricas en 15 países. Vende a 135+ países. IPO B3 1971. ADR WEGZY (1:1) en OTC desde sep 2010.
+
+## 4 Segmentos (FY2025)
+
+| Segmento | % Revenue | Productos |
+|----------|-----------|-----------|
+| **Industrial / Motors + Automation** | ~52% | Motores baja/alta tensión, drives, controles, soft-starters |
+| **GTD (Gen, Trans, Distribution)** | ~36% | Turbinas eólicas, generadores, transformadores, subestaciones |
+| **Commercial & Appliance Motors** | residual | Motores chicos para HVAC + línea blanca |
+| **Paints & Coatings** | residual | Pinturas industriales |
+
+## Q1 2026 (reportado abril 2026)
+
+- **Net revenue: R$9.47B (-6.1% YoY)** — primer negativo en años
+- **EBITDA: R$2.10B / margin 22.2%** (-3.2pp YoY)
+- **Net income: R$1.46B** (-5.7% YoY, ~7% miss vs Bloomberg consenso)
+- ROIC: **33.1%** (todavía elite)
+- Brasil doméstico: **-19.5%** (colapso solar pipeline)
+- Internacional (USD): **+16.1%**, (BRL): +4.5%
+
+## FY2025
+
+- **Net revenue: R$40.8B** (+7.4% YoY)
+- EBITDA margin: ~22%
+- **Capex: R$2.1B** (récord)
+- ROIC: ~32%
+
+## Capex 2026 — R$3.6B (récord)
+
+Foco T&D + nuevas plantas:
+- Brasil
+- México
+- Colombia
+- China
+- Plant Betim (Brasil) online mid-2026
+
+## AI / Data Center Exposure
+
+Los **transformadores de alta tensión** que necesitan los hyperscalers son cuello-de-botella global:
+- Pre-2020: 24-30 meses lead time
+- 2026: **5 años lead time**
+
+WEG es uno de los pocos fabricantes a escala mundial. T&D segment es el growth engine 2026-2030.
+
+## M&A Reciente
+
+- **Regal Rexnord motors business** (H1 2024, ~$400M): añadió +$541M revenue, capacidad en US, México, China, India, Italia, Países Bajos, Canadá — 2,800 empleados
+- **Volt Electric Motor (Turquía, 2024)**: expansión Europa/MEA
+
+## Liderazgo
+
+- **CEO**: Alberto Yoshikazu Kuba (desde abril 2024)
+  - Reemplazó a Harry Schmelzer Jr. (16 años CEO)
+  - 21 años en WEG, ingeniero eléctrico, 44 años
+- **Familias fundadoras**: Voigt + da Silva + Werninghaus siguen como controladores
+
+## Dividendo + IOC (Interest on Capital)
+
+- **R$2.15/acción/año** trailing (combinado dividendo + IOC)
+- Yield trailing ~4.78%
+- 15% withholding tax brasileño sobre IOC
+- Política: ~50-60% payout sostenible
+
+## Wind Turbines — Brasil leadership
+
+- **#1 en Brasil** en instalaciones de turbinas onshore
+- Joint launch con Petrobras + Statkraft: turbina **7 MW** más potente onshore de Brasil (Bahia, Sep 2025)
+- Exporta generadores gearless a Chile, Argentina, Colombia
+
+## Anchor Fact
+
+**WEG fabrica más de 21 millones de motores eléctricos al año desde Jaraguá do Sul. Hoy, los transformadores gigantes que necesitan los data centers de AI tardan 5 años en llegar (antes de 2022 era 2 años). WEG es uno de los pocos fabricantes en el mundo que los hace a escala.**
+
+## Top 3 Risks
+
+1. **Q1 2026 -6.1% revenue** — primer negativo en años; si Q2 confirma → multiple compression
+2. **BRL appreciation** comprime reported numbers
+3. **Cyclical capex industrial** — slowdown China o USA data center pause hit GTD
+
+## Analyst Consensus
+
+- Rating: **Hold/Neutral** (6 Buy / 5 Hold / 3 Sell)
+- Target promedio: **R$51.60** (rango R$38.38-R$73.50)
+- Upside ADR desde $8.61: **~+19.6%**
+
+## Tesis en una línea
+
+> Comprar el fabricante de motores eléctricos #1 de Latinoamérica y proveedor crítico de transformadores AI-data-center justo cuando Q1 2026 fue débil (colapso solar Brasil) y el mercado castigó la acción -20% del max 52 semanas. Yield 4.5% + Aristocrat-style track record desde 1971 + estructural AI tailwind + M&A pipeline activo (Regal Rexnord, Volt Turquía) + capex R$3.6B 2026.
+
+---
+
+*Research fecha: 27 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: 10.30,
+    analyst_upside: 19.6,
+    status: "active",
+    first_researched_at: "2026-05-27T00:00:00Z",
+    last_updated_at: "2026-05-27T00:00:00Z",
+    next_review_at: "2026-11-27T00:00:00Z",
+  },
+  {
+    id: 79,
+    ticker: "AEM",
+    name: "Agnico Eagle Mines Limited",
+    sector: "Materials",
+    industry: "Gold Mining",
+    country: "Canada",
+    region: "North America",
+    currency: "USD",
+    price: 176.60,
+    pe_ratio: 16.47,
+    pe_forward: 12.06,
+    dividend_yield: 1.03,
+    market_cap_b: 87.5,
+    eps: 10.62,
+    summary_short:
+      "Agnico Eagle es el **#2-#3 productor de oro del mundo** por onzas (~3.45 Moz en 2025) y uno de los seniors con AISC (all-in sustaining cost) más bajos del sector. 100% de su producción en jurisdicciones tier-1 — Canadá, Finlandia, Australia, México — sin exposición a regímenes inestables. Dueño de Detour Lake (la mina de oro más grande de Canadá) y Canadian Malartic (la mina open-pit más grande del país). En Q1 2026 vendió cada onza a $4,861 y le costó $1,483 producirla — margen 70%, $732M de cash libre en el trimestre. CEO Ammar Al-Joundi desde marzo 2022. Chair Sean Boyd (ex-CEO 1998-2022).",
+    summary_what:
+      "Agnico Eagle Mines Limited (NYSE: AEM, TSX: AEM) es una minera de oro canadiense fundada en 1957. HQ Toronto. **Top 3 productor mundial de oro** por onzas anuales (~3.45 Moz FY2025), compitiendo con Newmont (#1, ~6 Moz) y Barrick (#2, ~4 Moz).\n\n**Lo que la distingue**: 100% de su producción en **jurisdicciones tier-1** — Canadá (mayoría), Finlandia, Australia, México. Cero exposición a regímenes inestables (sin minas en África subsahariana, Rusia, América del Sur fuera de México). Eso reduce riesgo geopolítico vs peers.\n\n**Minas operativas** (2026):\n- **LaRonde** (Quebec, Canadá) — 70+ años de historia, mina flagship\n- **Detour Lake** (Ontario) — la mina de oro más grande de Canadá, ramping a ~1 Moz/año\n- **Canadian Malartic** (Quebec) — la mina open-pit más grande de Canadá; East Gouldie underground inició producción marzo 2026\n- **Meadowbank + Meliadine** (Nunavut, Ártico canadiense)\n- **Macassa** (Ontario, ex-Kirkland Lake)\n- **Kittila** (Finlandia) — la mina de oro más grande de la Unión Europea\n- **Fosterville** (Victoria, Australia, ex-Kirkland Lake)\n- **Pinos Altos + La India** (Chihuahua, México)\n\n**Pipeline de desarrollo**:\n- **Hope Bay** (Nunavut) — luz verde dada en 2026, capex ~US$2.4B, target 400-425koz/año\n- Upper Beaver, Wasamac, San Nicolas en development\n\n**Liderazgo**:\n- **CEO: Ammar Al-Joundi** (President & CEO desde marzo 2022; antes fue President desde 2015)\n- **Executive Chair: Sean Boyd** — legendario ex-CEO 1998-2022 (24 años al timón)\n- Fitch upgraded balance sheet a **A-** en 2026 (uno de los más fuertes del sector)\n\n**M&A**: estilo disciplinado — Kirkland Lake 2022 (deal acción + acción), Yamana JV 2023 (100% Canadian Malartic).",
+    summary_why:
+      "AEM a $176.60 es comprar el productor de oro senior con el mejor balance jurisdiccional + uno de los AISC más bajos del sector + balance sheet net cash, justo cuando el oro cotiza en torno a $4,500-4,700/oz (ATH 2026 fue >$5,500) y los márgenes son extremos. Razones específicas: (1) **Margen por onza brutal en Q1 2026**: vendió a $4,861/oz, le costó $1,483 producirla → **$3,378 limpios por onza = margen 70%**. Multiplicado por 825,109 oz producidas Q1 = $732M cash libre solo en 3 meses. (2) **Producción FY2025 récord de 3.45 Moz** + operating cash flow récord $6.8B + FCF récord $4.4B. Si AISC se mantiene en guía $1,400-1,550 FY2026 y oro promedia $4,000+/oz, AEM genera otro año récord. (3) **Balance sheet: net cash $2.9B** (vs net debt pre-2023). Deuda de largo plazo solo $197M. Fitch upgraded a A-. AEM ya no tiene que pagar deuda — todo el cash extra va a dividendos + buybacks. (4) **Capital return acelerando**: dividendo +12.5% en marzo 2026 (a $0.45/q = $1.80/año = $900M anualizado) + **NCIB hasta $2B renovado mayo 2026** (~5% del float, comprado tranche previo a avg $207). (5) **Pipeline Hope Bay greenlit ~$2.4B capex** → step toward 4+ Moz anual a inicios 2030s. (6) **Reservas +2% YoY a 55.4 Moz**, indicated +10%, inferred +15% — reservoir replacement sólido. (7) **Stock -31% del ATH $255 a $175** — pullback ofrece entrada con margen vs peak. Analyst target promedio ~$231 = +32% upside. (8) **Estructural tailwind oro**: central bank buying ~755t/año (~2x pre-2022), BRICS dedollarización, sticky inflation, geopolitical tension (Ucrania, Middle East). Si Fed mantiene rates dovish o USD se debilita, oro arriba.",
+    summary_risk:
+      "Riesgos: (1) **Gold price reversion** — el stock cayó -31% del ATH ($255 → $175) cuando el oro cooled de $5,500 a $4,500. Si Fed sorprende hawkish o se firma cease-fire en Middle East/Ucrania, oro puede romper $4,000 — equity AEM con operating leverage cae aún más fuerte. (2) **Operational disruption en flagships**: invierno extremo en Meadowbank/Meliadine (Nunavut Ártico) ha causado producción miss en años pasados. Indigenous consultation en Hope Bay puede demorar capex. East Gouldie underground ramp en Canadian Malartic tiene riesgo de execution. (3) **Cost inflation**: labor (Quebec sindicatos), diesel, cyanide, electricidad. FY2025 AISC overshot guía por $42/oz royalty drag (porque el oro promedió $3,453 vs $2,500 plan = más royalties pagados). FY2026 guía ya asume costos más altos. (4) **Concentración Quebec**: ~50% de la producción es Quebec/Ontario. Cualquier cambio fiscal/regulatorio (royalties, electricity rates) hit margins. (5) **Ammar Al-Joundi sigue probándose**: solo 4 años de CEO. Sean Boyd era leyenda; el mercado todavía juzga si Ammar mantiene la disciplina M&A. (6) **Dividend yield 1.03% es bajo**: si el oro cae y la apreciación de capital se evapora, el yield no compensa.",
+    research_full: `# Agnico Eagle Mines (AEM) — Research Completo
+
+## Precio: $176.60 | P/E TTM: 16.47 | P/E Forward: 12.06 | Div Yield: 1.03% | Market Cap: $87.5B | EPS: $10.62
+
+---
+
+## ¿Qué es Agnico Eagle?
+
+Minera de oro canadiense fundada 1957. HQ Toronto. **Top 3 productor de oro mundial** (~3.45 Moz FY2025) con **100% de producción en jurisdicciones tier-1** (Canadá, Finlandia, Australia, México).
+
+## Minas Operativas (2026)
+
+| Mina | País | Notas |
+|------|------|-------|
+| **LaRonde** | Quebec | Flagship 70+ años |
+| **Detour Lake** | Ontario | #1 oro Canadá, ramping a 1 Moz/año |
+| **Canadian Malartic** | Quebec | #1 open-pit Canadá; East Gouldie underground en producción marzo 2026 |
+| Meadowbank | Nunavut | Ártico canadiense |
+| Meliadine | Nunavut | Ártico canadiense |
+| Macassa | Ontario | Ex-Kirkland Lake (deal 2022) |
+| **Kittila** | Finlandia | #1 oro Unión Europea |
+| Fosterville | Victoria, Australia | Ex-Kirkland Lake |
+| Pinos Altos | Chihuahua, México | — |
+| La India | Chihuahua, México | — |
+
+## Pipeline de Desarrollo
+
+- **Hope Bay** (Nunavut) — greenlight 2026, capex ~$2.4B, target 400-425koz/año
+- Upper Beaver, Wasamac, San Nicolas
+
+## Q1 2026 (reportado 1 mayo 2026)
+
+| Métrica | Q1 2026 | Notas |
+|---------|---------|-------|
+| **Producción** | **825,109 oz** | |
+| **AISC** | **$1,483/oz** | Total cash costs $1,093/oz |
+| **Realized gold** | **$4,861/oz** | +68% YoY — récord |
+| **Net income** | **$1,695M** | $3.39/sh |
+| **Adjusted EPS** | **$3.41** | |
+| **FCF** | **$732.1M** | vs $594M Q1'25 |
+| Net cash | **$2,915M** | Cash $3.1B vs deuda LT solo $197M |
+| Shareholder returns | ~$375M | quarter |
+
+## FY2025
+
+- **Producción: 3,447,367 oz** (arriba del midpoint de guía)
+- **AISC: $1,339/oz** (TCC $979/oz)
+- **Operating cash flow: $6,817M** (récord, $13.58/sh)
+- **FCF: $4,399M** (récord, $8.76/sh)
+- Total shareholder returns: **$1.4B**
+- Dividendo +12.5%
+
+## Contexto Oro (mayo 2026)
+
+- Gold ATH 2026 > **$5,500/oz**
+- Intraday $4,689 (19 enero 2026)
+- Mid-mayo trading: $4,500-4,740
+- Drivers: central bank buying ~755t/año (~2x pre-2022), BRICS dedollarization, sticky inflation, Iran/Ukraine
+- Reservas +2% YoY a **55.4 Moz**
+
+## Capital Return
+
+- **Dividendo $0.45/q = $1.80/año** (+12.5% en marzo 2026)
+- ~$900M anualizado dividendos
+- **NCIB hasta $2B renovado mayo 2026** (~5% del float)
+- Tranche previo comprado a avg $207.68
+- Net cash $2.9B → modo pure return-of-capital
+
+## Liderazgo
+
+- **CEO**: **Ammar Al-Joundi** (President & CEO desde marzo 2022; President desde 2015)
+- **Executive Chair**: **Sean Boyd** (legendario ex-CEO 1998-2022, 24 años)
+- Fitch credit rating: **A-** (entre los más fuertes del sector minero)
+
+## Anchor Fact
+
+**En Q1 2026 Agnico vendió cada onza de oro a $4,861 y le costó producirla $1,483. Eso es una ganancia de $3,378 por onza — margen 70%. Por cada onza que sacaron del piso, se quedaron con $3,378 limpios. Multiplicado por 825,000 onzas en 3 meses = $732M de cash libre del trimestre. Hace 3 años el oro estaba en $1,800 y producirla costaba lo mismo. El precio subió, los costos casi no.**
+
+## Top 3 Risks
+
+1. **Gold price reversion** — stock ya cayó -31% del ATH $255 con oro de $5,500 a $4,500. Si rates suben o USD se fortalece, oro abajo.
+2. **Operational disruption** en flagships Nunavut/Quebec.
+3. **Cost inflation** + royalty drag (FY25 AISC overshot por $42/oz por royalties altos en oro >$3,400).
+
+## Analyst Consensus
+
+- Rating: **Buy** (10 Buy / 3 Hold / 1 Sell de 14 analistas)
+- Target promedio: **~$231** (median ~$205)
+- Range: $80-$256
+- Upside desde $176.60: **~+30.8%**
+
+## Tesis en una línea
+
+> Comprar el productor de oro senior con balance jurisdiccional tier-1, AISC de los más bajos, net cash $2.9B, NCIB $2B activo, y márgen 70% por onza en Q1 2026 — justo cuando el stock está -31% del ATH y el oro sigue en zona de $4,500 con tailwind estructural de central banks + dedollarización.
+
+---
+
+*Research fecha: 27 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 231.00,
+    analyst_upside: 30.8,
+    status: "active",
+    first_researched_at: "2026-05-27T00:00:00Z",
+    last_updated_at: "2026-05-27T00:00:00Z",
+    next_review_at: "2026-11-27T00:00:00Z",
+  },
+  {
+    id: 80,
+    ticker: "TUR",
+    name: "iShares MSCI Turkey ETF",
+    sector: "ETF",
+    industry: "Single-Country EM Equity ETF",
+    country: "Turkey",
+    region: "Europe",
+    currency: "USD",
+    price: 38.62,
+    pe_ratio: 18.9,
+    pe_forward: null,
+    dividend_yield: 1.8,
+    market_cap_b: 0.19,
+    eps: null,
+    summary_short:
+      "TUR es el ETF de iShares (BlackRock) que da exposición a la bolsa turca completa — sigue el índice MSCI Turkey IMI, cotiza en NasdaqGM en USD pero invierte 100% en acciones turcas en lira (sin hedge cambiario). 86 holdings, top 10 incluye Tüpraş (refinería), BIM (retail descuento), Turkish Airlines, Koç Holding, Akbank, Türk Telekom. Tesis macro: Turquía es la economía #16 del mundo, su moneda perdió 17.7% contra el dólar el último año, pero la bolsa local subió 47.6% en lira y +15.9% en dólares YTD 2026 — los extranjeros volvieron a meter $2,500M en lo que va del año. Expense ratio 0.59%. AUM ~$190M.",
+    summary_what:
+      "iShares MSCI Turkey ETF (NasdaqGM: TUR) es un fondo de BlackRock que replica el índice MSCI Turkey IMI — cobertura de equities turcos large + mid + small cap listados en Borsa Istanbul (BIST).\n\n**Metadata del ETF**:\n- **Issuer**: BlackRock iShares\n- **Expense ratio**: 0.59%\n- **AUM**: ~$190M (mayo 2026)\n- **Inception**: 26 marzo 2008\n- **Holdings**: 86 acciones turcas\n- **Listing**: NasdaqGM, ticker TUR\n- **Currency exposure**: TRY (lira turca) — **no hedge** (riesgo cambiario directo)\n- **Portfolio turnover**: 15%\n- **Distribución**: semi-anual\n\n**Top 10 holdings (mayo 2026)**:\n1. **Tüpraş** (Türkiye Petrol Rafinerileri, refinería) — 7.32%\n2. **BIM** (Birleşik Mağazalar, retail descuento, el 'Aldi turco') — 6.13%\n3. **Türk Hava Yolları** (Turkish Airlines, THYAO) — 6.09%\n4. **Koç Holding** (conglomerado #1 Turquía) — 5.14%\n5. **Akbank** (banco privado #1) — 4.71%\n6. **İş Bankası** (Türkiye İş Bankası, banco) — 4.24%\n7. **Şişe Cam** (vidrio industrial) — 3.69%\n8. **Turkcell** (telecom #1) — 3.61%\n9. **Ford Otomotiv** (JV Ford-Koç, auto)\n10. **Sabancı Holding** (conglomerado #2)\n\n**Sector breakdown**: Financials ~22% (mayor sleeve), Industriales (Turkish Airlines + Koç), Consumer Staples (BIM), Energy/Materials (Tüpraş, Şişe), Communications (Turkcell).\n\n**Lo único que da TUR que no dan otros productos**: exposición concentrada a una economía emergente (16ª del mundo por PIB) que cotiza barata, con upside de re-rating si la política monetaria ortodoxa sostiene la disinflación.",
+    summary_why:
+      "TUR a $38.62 es una apuesta concentrada y barata por la disinflación turca + reversión a la media de equity emergente. Razones específicas: (1) **Re-rating en curso**: BIST 100 P/E ~19x (mayo 2026) — todavía descuento vs Brazil/India/México EM peers a 13-20x, y mucho más barato que S&P 500 a ~26x. (2) **Disinflación todavía es base case**: Moody's proyecta CPI ~20% para fin 2026 (vs 32.4% abril 2026); si se cumple, CBRT (Banco Central) puede resumir cuts desde la actual 37% — y financials que pesan 22% de TUR ganan multiple expansion. (3) **Moody's upgrade path activa**: subió Turquía a Ba3 en julio 2025 con outlook stable, son 3 notches a investment grade. Fitch y S&P podrían seguir si ortodoxia se mantiene. Upgrade = capital inflow institucional + tasas más bajas. (4) **Foreigners regresando**: >$2,500M de equity inflows YTD 2026 (vs $6.7B full-year 2024). Flow asymmetry — posicionamiento foráneo está bajo, cualquier mejora macro acelera entrada. (5) **TUR YTD 2026 ~+15.9% total return** (a 22 mayo) — la tesis ya está funcionando, no es contrarian-cold-take. (6) **Demographics + manufacturing base + nearshoring**: Turquía es producción a las puertas de Europa, beneficiada por friend-shoring China-EU. (7) **Diversificación de portfolio**: para alguien con portafolio dominado por USA/global blue-chips, TUR añade un EM concentrado con correlación distinta a S&P. (8) **Asymmetric upside**: si la lira deja de devaluarse y BIST re-rata a 22x P/E (vs 19x actual), TUR podría hacer +30-40% en dólares en 12 meses. El downside está cap'd por el nivel actual de TRY (todo lo malo de Erdogan + inflación ya está reflejado en el precio).",
+    summary_risk:
+      "Riesgos importantes — TUR es un ETF de país emergente concentrado: (1) **Policy reversal — el riesgo #1**: Erdogan ya despidió 4 gobernadores hawkish del CBRT en los últimos años (Erkan, Ağbal, Çetinkaya y otro). Si pide cuts agresivos antes de tiempo (para boostear economía pre-elecciones o por presión política), la ortodoxia colapsa y TUR puede hacer -30% rápido. El 21 mayo 2026, un fallo de una corte de apelaciones de Ankara anuló la dirigencia del CHP (oposición) — BIST 100 cayó >6% en una sesión, gatilló circuit breaker. La política está viva. (2) **Lira blow-up — TUR es UNHEDGED**: USD/TRY tocó récord 45.90 el 27 mayo 2026 (lira -17.7% YoY). Si TRY se devalúa otro 15-20% (como ha pasado varias veces 2018-2023), TUR pierde valor en dólares aunque el BIST suba. La devaluación es el riesgo silencioso #1. (3) **Inflación se reaceleró**: CPI abril 2026 = 32.37% (vs 30.87% marzo); CBRT subió su target 2026 de 16% a 24%. La narrativa de disinflación está wobbleando. (4) **Geopolítica**: Middle East energy shock, fricción NATO-Rusia, Siria, conflicto interno con kurdos. Turquía está en una región sísmica. (5) **AUM chico ($190M)** = liquidez limitada en TUR, spread bid-ask más amplio que ETFs grandes (EWZ $1B+, EWY $2B+). (6) **Concentración**: top 10 ~50% del fondo. Si Tüpraş o Akbank tienen problema idiosyncrático, TUR sufre fuerte. (7) **Distribución variable**: TUR paga semi-anual pero el monto fluctúa con dividendos turcos y FX — no es income predictible.",
+    research_full: `# iShares MSCI Turkey ETF (TUR) — Research Completo
+
+## Precio: $38.62 | Expense Ratio: 0.59% | AUM: ~$190M | Holdings: 86 | Distribución: semi-anual
+
+---
+
+## ¿Qué es TUR?
+
+ETF de BlackRock iShares que replica el índice **MSCI Turkey IMI** — cobertura large + mid + small cap de la bolsa de Estambul (BIST). Cotiza en NasdaqGM en USD pero invierte 100% en acciones turcas en lira sin hedge cambiario.
+
+**Inception**: 26 marzo 2008.
+
+## Top 10 Holdings (mayo 2026)
+
+| # | Ticker | Empresa | Peso |
+|---|--------|---------|------|
+| 1 | TUPRS | Tüpraş (refinería) | 7.32% |
+| 2 | BIMAS | BIM (retail descuento) | 6.13% |
+| 3 | THYAO | Turkish Airlines | 6.09% |
+| 4 | KCHOL | Koç Holding | 5.14% |
+| 5 | AKBNK | Akbank | 4.71% |
+| 6 | ISCTR | İş Bankası | 4.24% |
+| 7 | SISE | Şişe Cam (vidrio) | 3.69% |
+| 8 | TCELL | Turkcell (telecom) | 3.61% |
+| 9 | FROTO | Ford Otomotiv | n/a |
+| 10 | SAHOL | Sabancı Holding | n/a |
+
+## Sector Breakdown
+
+- **Financials**: ~22% (mayor)
+- Industriales (Turkish Airlines, Koç)
+- Consumer Staples (BIM)
+- Energy/Materials (Tüpraş, Şişe)
+- Communications (Turkcell)
+
+## Turquía Macro (mayo 2026)
+
+| Métrica | Valor |
+|---------|-------|
+| **CPI YoY abril 2026** | **32.37%** (vs 30.87% marzo — re-acelerando) |
+| **Policy rate (CBRT)** | **37%** (overnight lending 40%, borrowing 35.5%) |
+| **CBRT Governor** | **Fatih Karahan** (desde feb 2024) |
+| **Finance Minister** | **Mehmet Şimşek** |
+| **Inflation target 2026** | **24%** (subido de 16% el 14 mayo) |
+| **USD/TRY 2026-05-27** | **45.90** (récord, lira -17.7% YoY) |
+| **BIST 100 P/E** | **18.9x** (abril 2026) |
+| **BIST 100 YoY (TRY)** | **+47.6%** |
+| **Foreign inflows YTD** | **>$2,500M** |
+
+## Recent Performance
+
+- **TUR YTD 2026**: **+15.9%** (a 22 mayo)
+- BIST 100 +47.6% en lira (re-rating de un mínimo deprimido)
+- TUR 52-week range: $29.64 – $43.98
+
+## Tesis (por qué Turquía ahora)
+
+1. **Disinflación es base case** — Moody's proyecta CPI ~20% fin 2026; si cumple, rate cuts → multiple expansion financials
+2. **Cheap valuations relativas**: BIST P/E ~19x todavía bajo vs EM peers
+3. **Moody's upgrade path** (Ba3 → BB- → BB → BB+ → investment grade)
+4. **Foreign flows regresando** ($2.5B YTD)
+5. **Demographics + nearshoring** desde China a Europa
+
+## Top 3 Risks
+
+1. **Policy reversal Erdogan** — ya despidió 4 governors hawkish. CHP court ruling 21 mayo 2026 → BIST -6% día
+2. **Lira blow-up** — USD/TRY 45.90 récord, ETF UNHEDGED
+3. **Geopolítica** — Middle East, NATO, kurdos
+
+## Anchor Fact
+
+**Turquía es la economía #16 del mundo, pero su moneda se devaluó 17.7% contra el dólar el último año. Aun así, su bolsa subió 47.6% en lira y casi 16% en dólares en lo que va de 2026, porque los extranjeros ya metieron $2,500 millones de regreso al país.**
+
+## TUR vs Otros EM ETFs
+
+| ETF | País | ER | AUM |
+|-----|------|----|----|
+| **TUR** | Turquía | 0.59% | $190M |
+| EWZ | Brasil | 0.59% | ~$5B |
+| EWY | Korea | 0.59% | $2B |
+| EWC | Canadá | 0.49% | $3B |
+
+TUR es chico → liquidez limitada vs EWZ/EWY.
+
+## Tesis en una línea
+
+> Apuesta concentrada por disinflación turca + re-rating de bolsa cheap (P/E 19x) + foreign flows ($2.5B YTD regresando) + Moody's upgrade path — con riesgo TRY unhedged y political risk vivo (CHP court ruling mayo 2026 mostró fragilidad institucional).
+
+---
+
+*Research fecha: 27 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Hold",
+    analyst_target: null,
+    analyst_upside: null,
+    status: "active",
+    first_researched_at: "2026-05-27T00:00:00Z",
+    last_updated_at: "2026-05-27T00:00:00Z",
+    next_review_at: "2026-11-27T00:00:00Z",
+  },
+  {
+    id: 81,
+    ticker: "ITUB",
+    name: "Itaú Unibanco Holding S.A.",
+    sector: "Financials",
+    industry: "Banking — Latin America",
+    country: "Brazil",
+    region: "Latin America",
+    currency: "USD",
+    price: 7.97,
+    pe_ratio: 8.6,
+    pe_forward: 8.6,
+    dividend_yield: 5.0,
+    market_cap_b: 95.0,
+    eps: 0.93,
+    summary_short:
+      "Itaú Unibanco es el **banco privado #1 de Brasil por assets** + la **marca más valiosa de toda América Latina** (Brand Finance ~R$25B). 70M clientes en Brasil + presencia en Argentina, Chile, Colombia, Paraguay y Uruguay. Q1 2026 entregó **ROE 24.8%** (vs JPMorgan 17%, bancos europeos 10%) y net income +10.4% YoY a R$12.3B. Lo único: **paga dividendo CADA MES** — el primer día hábil. Casi ningún banco grande del mundo lo hace; los REITs sí, los bancos casi nunca. ADR ITUB (1:1 ratio con la preferente ITUB4) cotiza a P/E forward 8.6x con yield ~5% USD. CEO Milton Maluhy Filho desde feb 2021. Familias controladoras: Setúbal + Villela + Moreira Salles (vía IUPAR).",
+    summary_what:
+      "Itaú Unibanco Holding S.A. (NYSE ADR: ITUB, BVMF: ITUB4) es el **banco privado #1 de Brasil por assets** y el **banco más grande de Latinoamérica**. Resultado de la fusión 2008 entre Banco Itaú + Unibanco. HQ São Paulo.\n\n**Brand**: la marca más valiosa de toda América Latina según Brand Finance (~R$25.0B, líder consistente del ranking desde 2017).\n\n**Segmentos de negocio**:\n- **Retail Banking** — 70M+ clientes en Brasil, ~32% market share retail (Q2 2025). 29.8M usuarios activos mensuales del mobile app. ~15M ya migrados al Super App.\n- **Wholesale + Investment Bank** — Itaú BBA es el franchise #1 de M&A y debt capital markets en Brasil/LATAM.\n- **Asset Management** — Itaú Asset.\n- **Cards & Payments** — Itaucard. Pix-on-WhatsApp rolled out a toda la base (agosto 2025).\n- **Latam Affiliates** — opera en Argentina, Chile, Colombia, Paraguay, Uruguay.\n\n**Liderazgo**:\n- **CEO**: **Milton Maluhy Filho** (desde feb 2021).\n- **Chairman**: **Pedro Moreira Salles**.\n- **Vice-Chair / ex-CEO**: Roberto Setúbal (todavía influyente).\n- **Familias controladoras**: Setúbal + Villela + Moreira Salles vía holding IUPAR. Long-term oriented, low-turnover board.\n\n**Estructura ADR**: 1 ADR ITUB = 1 acción preferida ITUB4 (no es 1:1 con ON común, importante). Depositario: BNY Mellon.\n\n**Capital**: Basel ratio 15.2%, LCR 215%, NSFR 124.8% — over-capitalizado vs requirement.",
+    summary_why:
+      "ITUB a $7.97 es comprar el banco privado #1 de Brasil + la marca más valiosa de LATAM, con ROE 24.8% (mejor que JPM y muy por encima de europeos), pagando dividendo cada mes a yield ~5% USD, a P/E forward 8.6x. Razones específicas: (1) **Monthly dividend + JCP — único en su clase**: paga R$0.01765 gross / R$0.0150 net por acción el 1er día hábil de cada mes (raro fuera de REITs). Plus **JCP supplementary** (Juros sobre Capital Próprio, tax-deductible en Brasil): feb 2026 declaró R$3.85B = R$0.34888/acción gross. **Yield efectivo USD ~5% para ADR** (después de 15% WHT brasileño en JCP). 2025 payout 73% sobre adjusted profit = R$33.7B repartidos. (2) **ROE 24.8% en Q1 2026** (26.4% Brazil-only) — record para bancos de su tamaño globalmente. JPMorgan ~17%, Bank of America ~14%, bancos europeos ~10%. Itaú genera 25 centavos de utilidad por cada dólar de capital propio. (3) **Q1 2026 fuerte**: net income +10.4% YoY a R$12.3B, NIM resiliente a pesar de Selic alta, NPL 90+ pristine a 1.9% (flat YoY). (4) **Selic está bajando** — Copom recortó a 14.50% el 28-29 abril 2026 (de 14.75%). Si la curva de cuts continúa, hay multiple expansion: bancos brasileños históricamente trade 12-14x forward cuando Selic baja. (5) **BRL +11.5% YoY contra USD** — tailwind real para ADR holders. Cada dividendo mensual vale más en dólares. (6) **Pix dominance + Open Finance**: Itaú es el #1 emisor de Pix en Brasil. Pix-on-WhatsApp activo desde agosto 2025 para toda la base. Open Finance acelera cross-sell. (7) **Capital fortress**: Basel 15.2% es muy alto vs minimum 11.5%. Permite seguir pagando dividendos + buybacks sin estresar el balance. (8) **Analyst target promedio $9 ADR = +13% upside**, plus ~5% USD cash yield = ~18% total return esperado a 12 meses.",
+    summary_risk:
+      "Riesgos: (1) **Riesgo fiscal Brasil — el #1**: si Lula rompe el arcabouço fiscal (spending cap), el mercado revalora Selic up, BRL devalúa, y todo el sector bancario se castiga. Copom warned el 5 mayo 2026 que puede pausar cuts por riesgo Iran-US — Selic stuck en 14.50% más tiempo = stress credit. (2) **BRL devaluation hits USD ADR returns**: Itaú está ganando en BRL; cada 5% que pierde BRL contra USD = -5% en los retornos del ADR aunque el banco local performe perfecto. La fortaleza actual de BRL (+11.5% YoY) no es garantía. (3) **Credit cycle**: NPL 1.9% es muy bajo — solo puede subir. Si Brasil entra recesión o el Iran-US oil shock crea estrés, NPLs suben → provisions suben → utilidad cae. (4) **Competencia Nubank (NU)**: ~100M clientes brasileños — sigue presionando el fee pool de Itaú en retail. La defensa de Itaú es Super App + corporate franchise + crédito complejo (Nu no tiene wholesale ni asset mgmt fuerte). (5) **Lula → Lula 2026? → 2027 election**: ruido político periódico afecta sentiment Brasil. (6) **JCP tax tratment**: si Brasil reforma JCP (rumores periódicos de eliminar la deducibilidad), payout efectivo cae. (7) **Itaú concentrado en Brasil ~85% net income** — diversificación LATAM es marginal. (8) **Selic floor**: si la baja se detiene en 13-14%, el repricing de financials no sucede; multiple stuck.",
+    research_full: `# Itaú Unibanco (ITUB) — Research Completo
+
+## Precio: $7.97 ADR | P/E Forward: 8.6x | P/B: 2.02x | Div Yield USD: ~5% | Market Cap: ~$95B | EPS: $0.93
+
+---
+
+## ¿Qué es Itaú Unibanco?
+
+**Banco privado #1 de Brasil por assets** + **banco #1 de toda Latinoamérica**. Resultado de la fusión 2008 Banco Itaú + Unibanco. HQ São Paulo. Marca #1 más valiosa de LATAM (Brand Finance R$25B).
+
+## Segmentos
+
+- **Retail Banking** — 70M+ clientes Brasil, ~32% market share retail
+- **Wholesale + Investment Bank (Itaú BBA)** — #1 M&A + DCM LATAM
+- **Asset Management** (Itaú Asset)
+- **Cards & Payments** (Itaucard)
+- **LATAM Affiliates** — Argentina, Chile, Colombia, Paraguay, Uruguay
+- 29.8M usuarios activos mensuales mobile app
+- ~15M migrados a Super App
+
+## Q1 2026 (reportado mayo 2026)
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| **Net income recurring** | **R$12.3B** | +10.4% |
+| Net income IFRS | R$11.9B | — |
+| **ROE consolidado** | **24.8%** | — |
+| ROE Brazil-only | **26.4%** | — |
+| Clients NII | R$31.5B | +4.5% |
+| **NPL 90+** | **1.9%** | flat |
+| Cost-to-income | <40% | trend |
+
+## FY2025
+
+- **Net profit: R$45.66B** (+9.2% YoY)
+- ROE FY2025: **~24.4%**
+- **Dividends + JCP allocated: R$33.70B gross** = 73% payout sobre adjusted profit
+- R$2.9554/share net total
+- **Capital**: Basel 15.2%, LCR 215%, NSFR 124.8%
+
+## Dividend / Capital Return — Monthly!
+
+- **Monthly dividend: R$0.01765 gross / R$0.0150 net por share** (1er día hábil)
+- **JCP supplementary periodic**: feb 2026 declaró R$3.85B = R$0.34888/share gross
+- Pagado por 31 ago 2026, record date 19 marzo 2026
+- 15% WHT brasileño aplica a JCP
+- **Yield USD efectivo ADR holder: ~5%** dependiendo de FX y JCP top-ups
+
+## Brazil Macro (mayo 2026)
+
+| Métrica | Valor |
+|---------|-------|
+| **Selic** | **14.50%** (post Copom 28-29 abril -25bp) |
+| BCB 2026 IPCA forecast | **4.6%** (subido de 3.9%, sobre target 1.5-4.5%) |
+| **USD/BRL 2026-05-27** | **5.0325** (BRL +11.5% YoY) |
+| Inflation target | 3.0% midpoint |
+
+## Liderazgo
+
+- **CEO**: **Milton Maluhy Filho** (desde feb 2021)
+- **Chairman**: Pedro Moreira Salles
+- Vice-Chair / ex-CEO: Roberto Setúbal
+- **Familias**: Setúbal + Villela + Moreira Salles vía IUPAR
+
+## Anchor Fact
+
+**Itaú te paga dividendo CADA MES — el primer día hábil. Casi ningún banco grande del mundo lo hace; los REITs sí, los bancos casi nunca. Encima, con ROE de 24.8% (vs JPMorgan ~17%, bancos europeos ~10%), tu cheque mensual viene del banco más rentable de su tamaño en Occidente.**
+
+## Top Risks
+
+1. **Riesgo fiscal Brasil** — Lula rompe arcabouço → Selic up → BRL down → sector castigado
+2. **BRL devaluation** comprime returns USD ADR
+3. **Credit cycle / Iran-US oil shock** — Copom warned 5 mayo
+4. **Competencia Nubank** (~100M clientes)
+5. **JCP tax reform** rumored
+
+## Analyst Consensus
+
+- Rating: **Buy** (6 Buy / 1 Hold / 1 Sell de 8 cobertura activa)
+- Avg 12-mo target ADR: **$8.36 – $10.09**
+- Midpoint: ~$9.00 = **+13% upside** vs $7.97
+- Plus **~5% USD cash yield** = ~18% total return esperado
+
+## Tesis en una línea
+
+> Banco privado #1 de Brasil + marca más valiosa LATAM, ROE 24.8% (mejor que JPM), pagando dividendo CADA MES a yield USD ~5%, a P/E forward 8.6x, con Selic bajando (multiple expansion) y BRL fortaleciendo (FX tailwind ADR holder). Triple tailwind monetario + cambiario + multiple.
+
+---
+
+*Research fecha: 27 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 9.00,
+    analyst_upside: 13.0,
+    status: "active",
+    first_researched_at: "2026-05-27T00:00:00Z",
+    last_updated_at: "2026-05-27T00:00:00Z",
+    next_review_at: "2026-11-27T00:00:00Z",
+  },
+  {
+    id: 82,
+    ticker: "EQIX",
+    name: "Equinix Inc.",
+    sector: "Real Estate",
+    industry: "Data Center REIT / Interconnection",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 1068.51,
+    pe_ratio: 60.0,
+    pe_forward: 55.0,
+    dividend_yield: 1.93,
+    market_cap_b: 105.6,
+    eps: 17.65,
+    summary_short:
+      "Equinix opera **280 IBX (International Business Exchange) data centers** en **77 ciudades de 36 países** — el operador #1 mundial de data centers de interconexión. Lo que la hace diferente de Digital Realty (DLR, su rival y nuestra pick #68): no compite tanto en megawatts puros, sino en la **densidad de conexiones físicas** dentro de cada edificio — más de **500,000 cross-connects** entre clientes adentro de sus campus. Una vez que tu empresa enchufa servidores con AWS, Azure, Google, Oracle dentro del mismo Equinix, irte cuesta meses y millones. Q1 2026: revenue $2.44B (+10%), AFFO +12%, margin EBITDA récord 51%. 11 años consecutivos subiendo el dividendo desde REIT conversion 2015. NVIDIA Instant AI Factory partnership lanzada 2026 — Equinix es el primer proveedor global de preconfigured DGX GB300 SuperPODs en 45 mercados. CEO Adaire Fox-Martin desde mayo 2024 (ex-Google Cloud y SAP).",
+    summary_what:
+      "Equinix Inc. (Nasdaq: EQIX) es el operador #1 mundial de data centers de **interconexión carrier-neutral**. Fundada 1998 en Silicon Valley por Albert Avery + Jay Adelson. REIT desde 2015.\n\n**Scale (2026)**:\n- **280 IBX data centers** (era ~270 hace un año)\n- **77 mercados / metros**\n- **36 países, 6 continentes**\n- **>10,500 clientes**\n- **13,700 empleados**\n- **~3 GW developable power capacity**\n- **854 MW PPAs operacionales 2025** (vs 299 MW en 2024)\n- **29 PPAs / 1,400+ MW** bajo contrato en 12 países\n- **>500,000 interconexiones totales** Q4 2025 (437,700 cross-connects físicos + 69,500 virtuales vía Equinix Fabric)\n\n**Equinix vs DLR (Digital Realty, nuestra pick #68 a $194.93)**:\n- DLR tiene **más megawatts brutos** para hyperscale wholesale (~5 GW buildable, ~2,850 MW operativos)\n- Equinix tiene **más metros + más densidad de colocation retail + más interconexiones**\n- Son los 2 únicos REITs públicos de scale en data centers; el resto es hyperscaler self-build (Microsoft, Amazon, Google build sus propios)\n\n**3 segmentos**:\n- **Retail Colocation** — mayoría del revenue, alto margen, enterprise sticky\n- **xScale** — joint venture wholesale para hyperscalers; JV con **GIC (37.5%) + CPP Investments (37.5%) + Equinix (25%)**; US JV target **>$15B / >1.5 GW** hyperscale capacity en campus de >100 MW\n- **Interconnection** (Equinix Fabric / Internet Exchange / Cloud Exchange Fabric) — Q1 2026 revenue +9% YoY constant currency\n\n**Liderazgo**:\n- **CEO/President**: **Adaire Fox-Martin** (mayo 2024, reemplazó a Charles Meyers; viene de Google Cloud, antes SAP/Oracle; en el board desde 2020)\n- **CFO**: Keith Taylor (anunció retirement 2026, sucesión en proceso)\n- Founders: Al Avery + Jay Adelson",
+    summary_why:
+      "EQIX a $1,068.51 es comprar el **operador #1 mundial de data centers de interconexión** + el **proveedor más densamente conectado del mundo** justo cuando la demanda de capacidad AI está rompiendo récords y Equinix tiene partnership exclusivo con NVIDIA para preconfigured AI factories. Razones específicas: (1) **Network effect moat — irreplicable**: >500,000 cross-connects físicos entre clientes adentro de los IBX. Cada nuevo cliente que llega quiere conectarse con los que ya están (AWS, Azure, Google, Oracle, Cloudflare, Akamai, todos los Tier-1 ISPs). Esto crea un flywheel que ni Microsoft ni Amazon pueden replicar — ellos quieren cerrar su ecosistema, Equinix abre el suyo. (2) **NVIDIA Instant AI Factory partnership** — Equinix es **el primer proveedor global** de preconfigured DGX GB300 / DGX B300 (Blackwell Ultra) SuperPODs en **45 mercados**. Para empresas que quieren AI ya sin comprar GPUs ni construir DC, Equinix es el on-ramp. (3) **xScale JV $15B / 1.5 GW** con GIC + CPP — financia growth sin diluir equity ni cargar deuda. Equinix aporta el land + ops know-how, los partners el capital. (4) **Q1 2026 récords**: revenue $2.44B (+10%), AFFO $1.065B (+12%), **margin EBITDA récord 51%**, raised FY2026 guidance. (5) **11 años consecutivos subiendo el dividendo** — REIT con dividendo creciente +10% en feb 2026 a $5.16/quarter = $20.64 anualizado = ~1.93% yield. (6) **~1 GW de powered land** añadido bajo control en Q1 2026 — pipeline para los próximos 3-5 años. (7) **Nuclear pivot 2025-2026** — PPAs Stellaria 500 MW, micro-reactors para data center power. La grid sola no alcanza para AI density; Equinix lock-ed power 5+ años adelante. (8) **Analyst recent target raises**: Deutsche Bank $1,207, Truist $1,215, Mizuho $1,200 — consensus skewing higher tras Q1 beat. Avg target ~$1,143 = +7% upside (conservador), pero los recientes targets están más arriba. (9) **Diversificación con DLR**: ya tenemos DLR (pick #68) — son las 2 caras del trade de data centers. DLR = más wholesale + AI hyperscale brute force. EQIX = más enterprise interconnection + retail premium. Owning both = cobertura del barrel completo.",
+    summary_risk:
+      "Riesgos: (1) **AI capex overcommitment es el #1**: Q1 2026 revenue **missed** consensus ($2.444B vs $2.516B esperado). Si los hyperscalers desaceleran (Microsoft canceló algunas leases finales 2025), el ~1 GW de land speculation under-earns. La pregunta no es si AI demand es real (lo es), sino si Equinix está construyendo demasiado para los precios futuros que pueden no materializarse. (2) **Power scarcity es el binding constraint**: en Northern Virginia, Phoenix, Santa Clara, Dublin, Singapore — no hay MW disponibles a corto plazo. Nuclear PPAs ayudan pero toman años. Equinix puede tener customers pero no power. (3) **Interest rate sensitivity**: REITs sell off cuando rates suben. Equinix tiene $14B+ debt stack. Si Fed gira hawkish, multiple compression. (4) **Competition**: DLR tiene más MW raw para wholesale; hyperscalers self-build (Microsoft pushed back on third-party leasing); edge entrantes (CoreWeave, Lambda) atacan AI-specific workloads. (5) **CEO transition risk**: Adaire Fox-Martin solo lleva 2 años — todavía probándose. CFO Keith Taylor retirando 2026 = additional transition simultaneous. (6) **REIT requirement 90% payout** limita capacidad de reinvertir sin emitir equity. Cada raise dilutes. (7) **Backlog growth dependiente de hyperscaler decisions** que son lumpy y opacos. (8) **Valuation rich**: 25x AFFO multiple. Si AFFO growth se modera a single digits, multiple comprime. (9) **Customer concentration**: top 10 customers son ~25% del revenue; hyperscaler decisions inversas pueden hit fuerte.",
+    research_full: `# Equinix Inc. (EQIX) — Research Completo
+
+## Precio: $1,068.51 | AFFO multiple: ~25x | Div Yield: 1.93% | Market Cap: ~$105.6B | Q1 2026 EPS: $4.20
+
+---
+
+## ¿Qué es Equinix?
+
+**Operador #1 mundial de data centers de interconexión carrier-neutral**. Fundada 1998 en Silicon Valley por Al Avery + Jay Adelson. REIT desde 2015. 11 años consecutivos subiendo dividendo.
+
+## Scale (2026)
+
+| Métrica | Valor |
+|---------|-------|
+| **IBX data centers** | **280** |
+| Metros | 77 |
+| Países | 36 |
+| Continentes | 6 |
+| Clientes | >10,500 |
+| Empleados | 13,700 |
+| **Power capacity (developable)** | **~3 GW** |
+| PPAs operacionales 2025 | **854 MW** (vs 299 MW 2024) |
+| PPAs bajo contrato | **29 / 1,400+ MW** en 12 países |
+| **Interconexiones totales Q4 2025** | **>500,000** |
+| Cross-connects físicos | 437,700 |
+| Virtual (Equinix Fabric) | 69,500 |
+
+## Equinix vs DLR (Digital Realty)
+
+| Métrica | EQIX | DLR |
+|---------|------|-----|
+| Strategy | Interconnection / enterprise | Wholesale / hyperscale |
+| Buildable MW | ~3 GW | ~5 GW |
+| Operacional MW | n/a | ~2,850 MW |
+| Metros | 77 | 50+ |
+| Moat principal | Network effect cross-connects | Sheer scale wholesale |
+
+Son los 2 únicos REITs públicos data center de scale.
+
+## 3 Segmentos
+
+- **Retail Colocation** — mayoría revenue, alto margen, enterprise sticky
+- **xScale** — JV hyperscale: **GIC 37.5% + CPP 37.5% + Equinix 25%**; US JV target **>$15B / >1.5 GW**
+- **Interconnection** — Equinix Fabric / IX / Cloud Exchange Fabric; +9% YoY constant currency Q1 2026
+
+## Q1 2026 (reportado 29 abril 2026)
+
+| Métrica | Q1 2026 | YoY |
+|---------|---------|-----|
+| **Revenue** | **$2.444B** | +10% (+8% org cc) |
+| AFFO | $1.065B | +12% |
+| AFFO/share | **$10.79** | — |
+| **Adj EBITDA** | **$1.245B** | +17% (récord 51% margin) |
+| Net income | $415M | +21% |
+| EPS | **$4.20** | +20% |
+| Backlog | récord | — |
+| Bookings | récord Q1 gross | — |
+
+**FY2026 guidance raised**: revenue $10.144-$10.244B (+10-11%); AFFO/share $42.31-$43.11 → AFFO multiple ~25x.
+
+## FY2025
+
+- **Revenue: $9,217M**
+- **AFFO: $3,761M** (+12%)
+- Expected cash dividends: ~$1,836M
+- 5-yr CAGR (FY21-FY25): revenue +9%, AFFO +11%
+
+## AI / Hyperscaler Tailwind
+
+- **xScale US JV >$15B / >1.5 GW** con GIC + CPP
+- **NVIDIA "Instant AI Factory"** managed service — **primer proveedor global** de preconfigured DGX GB300 / DGX B300 SuperPODs en **45 mercados**
+- Q1 2026: **16 project openings en 14 metros**, **>90 MW xScale capacity**, **~1 GW powered land** added under control
+- **Nuclear pivot** desde 2025: **Stellaria 500 MW PPA** (next-gen reactors)
+- Nuevos IBX 2026: Mumbai (abril), Kuala Lumpur (mayo), expansión Nordic ~$4B
+
+## Dividend History (REIT desde 2015)
+
+- **11 años consecutivos** subiendo dividendo
+- **Q4 2025 dividend: $5.16/q** (+10% en feb 2026)
+- Annualized: **$20.64**
+- Yield: **~1.93%**
+- Pay date 17 junio 2026; ex 25 feb 2026
+
+## Liderazgo
+
+- **CEO/President**: **Adaire Fox-Martin** (mayo 2024, reemplazó a Charles Meyers)
+  - Viene de Google Cloud, antes SAP, Oracle
+  - En el board desde 2020
+- **CFO**: Keith Taylor (anunció retirement 2026, sucesión en proceso)
+- Founders: Al Avery + Jay Adelson (1998 Silicon Valley)
+
+## Top 3 Risks
+
+1. **AI capex overcommitment** — Q1 revenue missed consensus; si hyperscalers desaceleran, ~1 GW land under-earns
+2. **Power scarcity** — grid binding constraint en NoVA, Dublin, Singapore
+3. **Interest rate sensitivity** + $14B+ debt stack
+4. **Competition**: DLR (más MW), hyperscalers self-build, edge entrantes
+
+## Anchor Fact
+
+**Equinix tiene 280 data centers en 77 ciudades — pero lo que importa no son los edificios, son los más de 500,000 cables que conectan a sus clientes entre ellos adentro. Una vez que tu empresa enchufa sus servidores a los de AWS, Azure, Google, Oracle dentro del mismo Equinix, irte cuesta meses y millones. Por eso Equinix lleva 11 años seguidos subiendo dividendo y acaba de reportar el margin EBITDA más alto de su historia (51%) en Q1 2026.**
+
+## Analyst Consensus
+
+- Consensus PT MarketBeat: **~$1,143.60**
+- Range (30-31 analistas): $1,093 – $1,197 promedio
+- **Recent raises** (mayo 2026): Deutsche Bank **$1,207**, Truist **$1,215**, Mizuho **$1,200**
+- Rating: **Buy / Moderate Buy**
+- Upside desde $1,068.51: **+7%** (conservador, recent targets implican +12-14%)
+
+## Tesis en una línea
+
+> El operador #1 mundial de data center interconnection (280 IBX, 77 metros, 500k+ cross-connects), partner exclusivo NVIDIA Instant AI Factory en 45 mercados, REIT con 11 años seguidos subiendo dividendo, margin EBITDA récord 51% Q1 2026 — comprando el moat de network effect que ni hyperscalers self-build pueden replicar.
+
+---
+
+*Research fecha: 27 May 2026 | Próxima revisión: Nov 2026*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 1143.60,
+    analyst_upside: 7.0,
+    status: "active",
+    first_researched_at: "2026-05-27T00:00:00Z",
+    last_updated_at: "2026-05-27T00:00:00Z",
+    next_review_at: "2026-11-27T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -12174,6 +12832,78 @@ export const transactions: Transaction[] = [
     wa_message: `🔄 *RECOMPRA* — May 20, 2026\n\n🏢 *Ecolab Inc.* (ECL) — $244.96\n🛍️ #1 mundial en tratamiento de agua + higiene industrial; dueño de CoolIT (enfriamiento líquido para data centers de AI, deal $4.75B)\n\n💵 Seguimos acumulando *Dividend Aristocrat con 33 años subiendo el dividendo sin parar* desde 1993. Yield actual *1.04% anual*.\n💪 *¿Por qué recompramos?* Compramos ECL el 13 de mayo a $250.79. Hoy está a $244.96 (*-2.3%*) y el catalizador grande — el cierre de la compra de CoolIT en el tercer trimestre — todavía no llega. Misma tesis, mejor entry. Comprar a diferentes precios baja tu precio promedio.\n\n🔄 Recompra #77\n🔗 https://vectorialdata.com/stocks/ECL\n✅ Certificado por blockchain → vectorialdata.com/verify/ECL\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en ECL. Ve el research completo: vectorialdata.com/stocks/ECL\n\n💡 Ecolab lleva 33 años seguidos subiendo el dividendo cada año — solo ~30 empresas en el mundo tienen ese track record. Y acaba de comprar por $4.75 mil millones a CoolIT, el líder en enfriamiento líquido para data centers de AI (los servidores Nvidia generan tanto calor que el aire ya no los enfría — necesitan agua). Bajar el precio promedio de un negocio que paga dividendo creciente 33 años seguidos, justo antes de que cierre su mayor adquisición de la historia, es exactamente la jugada.`,
     attestation_uid: "0x8df76eddb45c07fc893cbcb043a279278a83eff4cb1448869acd6d5de57087d3",
   },
+  {
+    id: 78,
+    stock_id: 78,
+    ticker: "WEGZY",
+    type: "new" as const,
+    cycle_number: 16,
+    price: 8.61,
+    open_price: 8.61,
+    date: "2026-05-27",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #78* — May 27, 2026\n\n🏢 *WEG S.A.* (WEGZY) — $8.61\n\n⚙️ *Lo que hacen*: WEG es *el fabricante #1 de motores eléctricos de Latinoamérica* y *top 5 mundial*. Fabrican más de *21 millones de motores al año* desde Jaraguá do Sul, en el sur de Brasil. Más allá de motores hacen transformadores de alta tensión, turbinas eólicas, generadores y subestaciones — exactamente los productos cuello-de-botella para electrificar los data centers de AI. Si una fábrica del mundo tiene cintas transportadoras, bombas o compresores, muy probablemente corre con motores WEG. Fundada en 1961 por las familias Voigt + da Silva + Werninghaus (las iniciales forman "WEG"). Cotiza como WEGE3 en B3 São Paulo y como ADR WEGZY (1 ADR = 1 acción) en OTC.\n\n🌍 *Presencia*: HQ Jaraguá do Sul, Santa Catarina, Brasil. *~49,300 empleados*. Fábricas en *15 países* (Brasil, USA, México, China, India, Italia, Holanda, Canadá, Colombia, Turquía y más). Vende a más de 135 países — Brasil ~38% del revenue, internacional ~62%. *Alberto Yoshikazu Kuba es CEO desde abril 2024* (reemplazó a Harry Schmelzer Jr., 16 años CEO). Las familias fundadoras siguen como accionistas controladores.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *4.5% anual* solo por ser dueño. Reparte una combinación de dividendos + IOC (Interest on Capital, figura tributaria brasileña) ~R$2.15 por acción al año. WEG tiene historia de pago ininterrumpido desde su IPO en 1971 — *55 años seguidos pagando*. Cada vez que un transformador WEG entra a un data center de AI en USA, un motor industrial arranca en una fábrica de México, o una turbina eólica de Bahía genera electricidad — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: Q1 2026 fue *el primer trimestre con revenue negativo en años* (-6.1% YoY a R$9.47B) por el *colapso del pipeline solar centralizado en Brasil* — el negocio doméstico cayó -19.5%. Si solar no se recupera H2 2026, la narrativa de growth se deteriora. Margen EBITDA se comprimió -3.2pp a 22.2% (todavía elite pero trayectoria preocupante). P/E 28.8x con earnings cayendo es vulnerable a multiple compression. La fortaleza del real brasileño (BRL +11.5% YoY) comprime el 62% del revenue que es internacional.\n\n🆕 Posición #78\n🔗 https://vectorialdata.com/stocks/WEGZY\n✅ Certificado por blockchain → vectorialdata.com/verify/WEGZY\n\n💡 Dato que ancla la tesis: los transformadores gigantes de alta tensión que necesitan los data centers de AI (Microsoft, Amazon, Google, Meta gastan más de $80 mil millones al año cada uno en infraestructura) tienen lead time de *5 años* hoy. Antes de 2022 era 2 años. WEG es uno de los pocos fabricantes del mundo que los hace a escala. ROIC 32% (mejor que la mayoría de industriales globales), capex récord R$3.6B en 2026 financia plantas nuevas en Brasil, México, Colombia y China. La entrada es contra-cíclica — el mercado castigó por Q1 débil, pero el AI tailwind estructural y el dividendo 4.5% con 55 años de historia siguen ahí. Analyst target promedio ~$10.30 ADR = +19.6% upside desde $8.61.`,
+  },
+  {
+    id: 79,
+    stock_id: 79,
+    ticker: "AEM",
+    type: "new" as const,
+    cycle_number: 16,
+    price: 176.60,
+    open_price: 176.60,
+    date: "2026-05-27",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #79* — May 27, 2026\n\n🏢 *Agnico Eagle Mines* (AEM) — $176.60\n\n⛏️ *Lo que hacen*: Agnico Eagle es el *#2-#3 productor de oro del mundo* por onzas (~3.45 millones de onzas producidas en 2025), después de Newmont y Barrick. Lo que la distingue: *100% de su producción está en jurisdicciones seguras* — Canadá (la mayoría), Finlandia, Australia y México. Cero exposición a regímenes inestables, sin minas en África subsahariana, Rusia, o Sudamérica fuera de México. Dueña de *Detour Lake* (la mina de oro más grande de Canadá), *Canadian Malartic* (la mina open-pit más grande del país), *Kittila* en Finlandia (la mina de oro más grande de la Unión Europea), Fosterville en Australia, y Pinos Altos + La India en Chihuahua, México.\n\n🌍 *Presencia*: HQ Toronto, Canadá. Operaciones en *4 países tier-1* — Canadá (Quebec, Ontario, Nunavut), Finlandia, Australia (Victoria) y México (Chihuahua). *CEO Ammar Al-Joundi desde marzo 2022* (antes fue President desde 2015). *Executive Chair Sean Boyd* — el legendario ex-CEO 1998-2022, 24 años al timón. Fitch upgraded el balance a *A-* en 2026 (uno de los más fuertes del sector minero global).\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.03% anual* solo por ser dueño. Dividendo $0.45/trimestre = $1.80/año, *subido +12.5% en marzo 2026*. Plus *buyback hasta $2 mil millones renovado en mayo 2026* (~5% del float). Total capital return ~$1.4B en 2025. Cada vez que el banco central de China compra otra tonelada de oro, India incrementa sus reservas, o un inversionista compra ETFs de oro físico — Agnico saca onzas del piso y parte de ese flujo llega a ti.\n\n⚠️ *El riesgo*: El #1 — *reversión del precio del oro*. El stock ya cayó -31% desde el ATH ($255 → $175) cuando el oro se enfrió de $5,500 a $4,500/oz. Si la Fed sorprende hawkish o se firma un cease-fire en Middle East/Ucrania, el oro puede romper $4,000 — y el equity de AEM (con operating leverage al precio) cae aún más fuerte. Otros riesgos: (2) operational disruption en flagships Nunavut/Quebec (inviernos extremos), (3) cost inflation (labor sindicatos Quebec, diesel, electricidad), (4) ~50% de la producción está concentrada en Quebec/Ontario — cualquier cambio fiscal/regulatorio hit margins, (5) Ammar Al-Joundi solo lleva 4 años de CEO — todavía probándose vs el legado de Sean Boyd.\n\n🆕 Posición #79\n🔗 https://vectorialdata.com/stocks/AEM\n✅ Certificado por blockchain → vectorialdata.com/verify/AEM\n\n💡 Dato que ancla la tesis: en Q1 2026 Agnico vendió cada onza de oro a *$4,861* y le costó producirla *$1,483*. Eso es una ganancia limpia de *$3,378 por onza — margen 70%*. Multiplicado por 825,109 onzas en 3 meses = *$732 millones de cash libre solo en un trimestre*. Hace 3 años el oro estaba en $1,800 y producirla costaba casi lo mismo. El precio subió 2.5x, los costos casi no. Plus balance sheet: *net cash $2.9B* (vs net debt antes de 2023), deuda largo plazo solo $197M, Fitch A-. Comprando a $176.60 cuando el stock está -31% del ATH $255 (oro a $4,500 vs ATH $5,500), con margen brutal por onza, capital return acelerando, y pipeline Hope Bay greenlit ($2.4B capex toward 4+ Moz anual). Analyst target promedio $231 = +30.8% upside.`,
+  },
+  {
+    id: 80,
+    stock_id: 27,
+    ticker: "HWM",
+    type: "rebuy" as const,
+    cycle_number: 16,
+    price: 262.50,
+    open_price: 262.50,
+    date: "2026-05-27",
+    day_of_week: "wednesday",
+    wa_message: `🔄 *RECOMPRA* — May 27, 2026\n\n🏢 *Howmet Aerospace* (HWM) — $262.50\n✈️ Líder mundial en componentes críticos para motores de avión — álabes que giran a 2,000° de temperatura en motores LEAP, GEnx, GE9X. Si Boeing o Airbus vuelan, llevan piezas de Howmet.\n\n💵 Seguimos acumulando un *Industrial con EBITDA margins récord 30.1%* y *EPS creciendo +20% anual* en el superciclo aeroespacial.\n💪 *¿Por qué recompramos?* Compramos HWM el 27 de marzo a $227.90 (pick #23). Hoy está a $262.50 (*+15.2%*) — la tesis ya pagó, pero las razones para tener más siguen mejorando: revenue récord $8.25B en 2025, guidance 2026 apunta a $9.1B (+10%), EPS $4.35-$4.55 (+20%), y la adquisición de Consolidated Aerospace Manufacturing por $1.8B cerró en H1 2026 sumando $490M de revenue. Promediar arriba es válido cuando la tesis estructural mejora — el superciclo de aviación comercial (backlog récord Boeing + Airbus) recién está empezando a entregar piezas.\n\n🔄 Recompra #80 — Cierra Ciclo 16\n🔗 https://vectorialdata.com/stocks/HWM\n✅ Certificado por blockchain → vectorialdata.com/verify/HWM\n\n🆕 *¿Nuevo en el portafolio?* Esta puede ser tu primera posición en HWM. Ve el research completo: vectorialdata.com/stocks/HWM\n\n💡 Howmet fabrica las piezas críticas DENTRO de los motores de avión — los álabes que giran a 2,000° grados de temperatura. Boeing, Airbus, Pratt & Whitney y GE Aerospace todos dependen de Howmet. Una vez que un motor está diseñado con piezas de Howmet, cambiar de proveedor es prácticamente imposible — programas de 30+ años. EBITDA margins 30.1% (récord de la empresa), EPS creciendo +20% anual, y la flota global de aviones es la más vieja de la historia, lo que requiere más mantenimiento y más piezas de repuesto que nunca.`,
+  },
+  {
+    id: 81,
+    stock_id: 80,
+    ticker: "TUR",
+    type: "new" as const,
+    cycle_number: 17,
+    price: 38.62,
+    open_price: 38.62,
+    date: "2026-05-27",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #81* — May 27, 2026\n\n🏢 *iShares MSCI Turkey ETF* (TUR) — $38.62\n\n🇹🇷 *Lo que hacen*: TUR no es una empresa — es un *ETF de BlackRock iShares* que te da exposición a *la bolsa turca completa en un solo click*. Sigue el índice MSCI Turkey IMI con *86 acciones turcas* (large + mid + small cap) listadas en Borsa Istanbul. Cotiza en Nasdaq en dólares pero invierte 100% en acciones turcas en lira (sin hedge cambiario). Top 10 holdings incluyen *Tüpraş* (la refinería más grande de Turquía, 7.3% del fondo), *BIM* (el "Aldi turco" de retail descuento, 6.1%), *Turkish Airlines* (6.1%), *Koç Holding* (el conglomerado #1 de Turquía, 5.1%), *Akbank* (banco privado #1, 4.7%) y *Türk Telekom*. Expense ratio 0.59%, distribución semi-anual.\n\n🌍 *Presencia*: Turquía es la *economía #16 del mundo* — 85 millones de habitantes, *manufactura a las puertas de Europa* (Turkish Airlines vuela a 340+ destinos, BIM tiene 12,000+ tiendas, Tüpraş refina ~28M toneladas de crudo al año). Fondo administrado por *BlackRock iShares* (el ETF issuer #1 del mundo). AUM ~$190M (chico vs EWZ Brasil $5B o EWY Korea $2B — liquidez limitada, spread bid-ask más amplio).\n\n💵 *Tu nuevo ingreso*: Este ETF te paga *~1.8% anual* solo por ser dueño — distribución semi-anual de los dividendos que pagan las empresas turcas en el fondo. Cada vez que Tüpraş reparte ganancia de refinación, Akbank declara dividendo bancario, o Turkish Airlines paga por su mejor año desde 2019 — parte de ese dinero llega a ti vía TUR.\n\n⚠️ *El riesgo*: El #1 — *policy reversal de Erdogan*. Ya despidió 4 gobernadores hawkish del banco central en los últimos años. Si pide cuts agresivos antes de tiempo (presión política), la ortodoxia colapsa y TUR puede caer -30% rápido. El 21 mayo 2026, un fallo de una corte de Ankara anuló la dirigencia del CHP (oposición) — BIST 100 cayó *>6% en una sesión*, gatilló circuit breaker. La política está viva. Riesgo #2: *la lira está unhedged*. USD/TRY tocó récord *45.90 hoy 27 mayo 2026* (lira -17.7% YoY). Si TRY se devalúa otro 15-20%, TUR pierde valor en dólares aunque BIST suba. Riesgo #3: *inflación re-acelerándose* — CPI abril 2026 = 32.4% (vs 30.9% marzo); CBRT subió el target 2026 de 16% a 24%.\n\n🆕 Posición #81 — Abre Ciclo 17\n🔗 https://vectorialdata.com/stocks/TUR\n✅ Certificado por blockchain → vectorialdata.com/verify/TUR\n\n💡 Dato que ancla la tesis: Turquía es la economía #16 del mundo, pero su moneda se devaluó *17.7% contra el dólar el último año*. Y aun así, su bolsa subió *47.6% en lira* y casi *16% en dólares* en lo que va de 2026, porque los extranjeros ya metieron *$2,500 millones de regreso al país*. ¿Por qué? Porque la inflación está bajando (de 75% en mayo 2024 a 32% en abril 2026), Moody's subió Turquía a Ba3 con outlook stable (a 3 escalones de investment grade), y el banco central ya empezó a cortar tasas desde 50% al actual 37%. BIST P/E ~19x todavía es descuento vs EM peers (Brasil 13x, México 15x, India 25x). Si la disinflación sigue y Moody's upgrade continúa, hay multiple expansion. Asymmetric upside con downside cap'd porque lo malo de Erdogan ya está reflejado en el precio.`,
+  },
+  {
+    id: 82,
+    stock_id: 81,
+    ticker: "ITUB",
+    type: "new" as const,
+    cycle_number: 17,
+    price: 7.97,
+    open_price: 7.97,
+    date: "2026-05-27",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #82* — May 27, 2026\n\n🏢 *Itaú Unibanco* (ITUB) — $7.97\n\n🏦 *Lo que hacen*: Itaú es el *banco privado #1 de Brasil por assets* y el *banco más grande de toda Latinoamérica*. Resultado de la fusión 2008 Banco Itaú + Unibanco. *70 millones de clientes* en Brasil (~32% market share retail), más operaciones en Argentina, Chile, Colombia, Paraguay y Uruguay. *La marca más valiosa de toda América Latina* según Brand Finance (R$25 mil millones — líder del ranking desde 2017, año tras año). Negocios: retail banking (29.8M usuarios activos del mobile app), investment bank Itaú BBA (#1 en M&A y debt capital markets de Brasil), asset management Itaú Asset, tarjetas Itaucard, y Pix-on-WhatsApp activo para toda la base desde agosto 2025.\n\n🌍 *Presencia*: HQ São Paulo, Brasil. ~95,000 empleados. Opera en *6 países LATAM*. *CEO Milton Maluhy Filho desde febrero 2021*. Chairman Pedro Moreira Salles. Las familias controladoras (Setúbal + Villela + Moreira Salles vía holding IUPAR) llevan décadas al frente — low-turnover board, long-term oriented. ADR ITUB (NYSE) = 1 acción preferida ITUB4 (1:1 ratio), depositario BNY Mellon.\n\n💵 *Tu nuevo ingreso*: Lo único — Itaú te paga *~5% anual en dólares* solo por ser dueño, pero lo hace de una forma que casi ningún banco grande del mundo hace: *te paga CADA MES*. El primer día hábil de cada mes recibes dividendo. Los REITs sí lo hacen, los bancos casi nunca. Plus JCP supplementary (Juros sobre Capital Próprio, figura tributaria brasileña): en febrero 2026 declaró R$3.85 mil millones extra. *Payout 2025 = 73%* sobre adjusted profit = R$33.7 mil millones repartidos. 15% withholding tax brasileño aplica sobre JCP.\n\n⚠️ *El riesgo*: El #1 — *riesgo fiscal en Brasil*. Si el gobierno rompe el arcabouço fiscal (la regla que limita el gasto), el mercado revalora la Selic up, el real brasileño devalúa, y todo el sector bancario se castiga. Copom warned el 5 mayo 2026 que puede *pausar cuts por riesgo Iran-US oil shock* — Selic stuck en 14.50% más tiempo = stress crediticio. Riesgo #2: el real puede devaluarse (devalúa 5% = -5% en retornos del ADR aunque el banco performe perfecto). Riesgo #3: NPL a 1.9% es muy bajo — solo puede subir; cualquier credit cycle hit utilidades. Riesgo #4: Nubank (NU) con ~100M clientes brasileños sigue presionando el fee pool en retail.\n\n🆕 Posición #82\n🔗 https://vectorialdata.com/stocks/ITUB\n✅ Certificado por blockchain → vectorialdata.com/verify/ITUB\n\n💡 Dato que ancla la tesis: Itaú te paga dividendo *CADA MES* — el primer día hábil. Casi ningún banco grande del mundo lo hace; los REITs sí, los bancos casi nunca. Encima, con *ROE de 24.8%* en Q1 2026 (vs JPMorgan ~17%, Bank of America ~14%, bancos europeos ~10%), tu cheque mensual viene del *banco más rentable de su tamaño en todo el Occidente*. Genera 25 centavos de utilidad por cada dólar de capital propio. A P/E forward 8.6x (descuento brutal vs JPM a 14x), con Selic bajando (multiple expansion para financials), BRL +11.5% YoY contra USD (FX tailwind para ADR holder), Pix dominance + Open Finance acelerando cross-sell, y capital fortress Basel 15.2% (muy alto vs requirement 11.5%). Analyst target promedio $9 = +13% upside, plus ~5% USD cash yield = ~18% total return esperado a 12 meses.`,
+  },
+  {
+    id: 83,
+    stock_id: 82,
+    ticker: "EQIX",
+    type: "new" as const,
+    cycle_number: 17,
+    price: 1068.51,
+    open_price: 1068.51,
+    date: "2026-05-27",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #83* — May 27, 2026\n\n🏢 *Equinix Inc.* (EQIX) — $1,068.51\n\n🏢 *Lo que hacen*: Equinix opera *280 data centers (IBX) en 77 ciudades de 36 países* — el operador #1 mundial de data centers de *interconexión*. Lo que la hace diferente de Digital Realty (DLR, su rival y nuestra pick #68): no compite tanto en megawatts puros, sino en la *densidad de conexiones físicas* dentro de cada edificio — *más de 500,000 cables (cross-connects) conectan a sus clientes entre ellos* adentro de sus campus. Una vez que tu empresa enchufa servidores con AWS, Azure, Google, Oracle y Cloudflare dentro del mismo Equinix, irte cuesta meses y millones. REIT desde 2015. 11 años consecutivos subiendo el dividendo. NVIDIA acaba de hacerla *el primer proveedor global* de "Instant AI Factory" — DGX GB300 SuperPODs preconfigurados en 45 mercados.\n\n🌍 *Presencia*: HQ Redwood City, California. *13,700 empleados*, *>10,500 clientes corporativos*. Operaciones en *6 continentes / 36 países / 77 metros*. *CEO Adaire Fox-Martin desde mayo 2024* — viene de Google Cloud (antes SAP), en el board desde 2020, reemplazó a Charles Meyers. Fundadores: Al Avery + Jay Adelson (Silicon Valley, 1998). CFO Keith Taylor anunció retirement 2026.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *1.93% anual* solo por ser dueño. Dividendo $5.16/trimestre = *$20.64/año*, subido *+10% en febrero 2026* — el *undécimo año consecutivo de aumentos* desde que se convirtió en REIT en 2015. Pay date 17 junio 2026. Cada vez que una empresa Fortune 500 conecta su nube privada con AWS dentro de un IBX de Equinix, un hyperscaler renta megawatts xScale, o un cliente engancha el nuevo DGX GB300 SuperPOD de NVIDIA — parte de ese dinero llega a ti.\n\n⚠️ *El riesgo*: El #1 — *AI capex overcommitment*. Q1 2026 revenue $2.444B *missed consensus* ($2.516B esperado). Si los hyperscalers desaceleran (Microsoft canceló algunas leases finales 2025), el ~1 GW de land speculation under-earns. La pregunta no es si AI demand es real (lo es), sino si Equinix está construyendo demasiado para precios futuros que pueden no materializarse. Riesgo #2: *power scarcity* en Northern Virginia, Phoenix, Dublin, Singapore — no hay MW disponibles a corto plazo, los PPAs nucleares (Stellaria 500 MW) toman años. Riesgo #3: *interest rate sensitivity* — $14B+ debt stack; los REITs sell off cuando rates suben. Riesgo #4: valuación rica (25x AFFO multiple) — si AFFO growth se modera a single digits, multiple comprime. Riesgo #5: CEO transition (Adaire solo 2 años) + CFO retiring simultaneous = double change risk.\n\n🆕 Posición #83\n🔗 https://vectorialdata.com/stocks/EQIX\n✅ Certificado por blockchain → vectorialdata.com/verify/EQIX\n\n💡 Dato que ancla la tesis: Equinix tiene 280 data centers en 77 ciudades — pero lo que importa no son los edificios, son los *más de 500,000 cables* que conectan a sus clientes entre ellos adentro. AWS hablando con tu empresa, Azure hablando con Salesforce, Google Cloud hablando con Cloudflare, *todos físicamente conectados en el mismo edificio* con cables que recorren metros, no internet pública. Una vez que estás enchufado, irte cuesta meses y millones. Por eso Equinix lleva *11 años seguidos subiendo dividendo* y acaba de reportar el *margin EBITDA más alto de su historia (51%)* en Q1 2026. Plus NVIDIA Instant AI Factory partnership lo hace el primer proveedor global de DGX GB300 SuperPODs en 45 mercados. Diversificación con DLR (pick #68) — son las 2 caras del trade de data centers. DLR = más wholesale hyperscale. EQIX = más enterprise interconnection + retail premium. Analyst consensus Buy con target promedio $1,143.60 = +7% upside conservador (recent raises de Deutsche Bank/Truist/Mizuho a $1,200-$1,215 implican +12-14%).`,
+  },
 ];
 
 type Cycle = {
@@ -12311,7 +13041,15 @@ export const cycles: Cycle[] = [
     cycle_number: 16,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 17,
+    cycle_number: 17,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 3,
     status: "active" as const,
   },
 ];

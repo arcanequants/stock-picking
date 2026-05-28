@@ -1,4 +1,11 @@
 {
+  "AEM": {
+    "one_liner": "Agnico Eagle es una de las mayores mineras de oro del mundo, vendiendo oro a buen precio y produciéndolo barato en países estables como Canadá y México.",
+    "why_short": "La empresa gana mucho porque vende el oro a $4,861 y le cuesta $1,483 producirlo, lo que le deja una gran ganancia. Además, tiene dinero extra para pagar dividendos y recomprar acciones.",
+    "risk_short": "Si el precio del oro baja, las acciones de Agnico Eagle pueden caer más. Además, el clima extremo en sus minas del Ártico puede afectar la producción.",
+    "generated_at": "2026-05-28T00:50:38.987Z",
+    "model": "gpt-4o"
+  },
   "AMKBY": {
     "one_liner": "A.P. Møller-Mærsk es una gran empresa danesa de transporte marítimo que está en un momento clave por problemas en el Canal de Suez que mantienen altas las tarifas de envío.",
     "why_short": "Møller-Mærsk es una oportunidad porque las tarifas de envío están altas debido a problemas en el Canal de Suez, lo que beneficia a la empresa más de lo que se esperaba.",
@@ -286,6 +293,13 @@
     "generated_at": "2026-05-25T00:16:16.231Z",
     "model": "gpt-4o"
   },
+  "EQIX": {
+    "one_liner": "Equinix maneja 280 centros de datos en 77 ciudades de 36 países, conectando empresas como AWS y Google, lo que hace difícil que se vayan.",
+    "why_short": "Equinix es líder mundial en centros de datos y tiene un acuerdo exclusivo con NVIDIA para ofrecer tecnología de IA, justo cuando la demanda de esta tecnología está creciendo rápidamente.",
+    "risk_short": "El mayor riesgo es que Equinix podría estar construyendo más centros de datos de los que realmente se necesitarán en el futuro, lo que podría afectar sus ingresos si la demanda no es tan alta como esperan.",
+    "generated_at": "2026-05-28T00:50:48.090Z",
+    "model": "gpt-4o"
+  },
   "ESLOY": {
     "one_liner": "EssilorLuxottica es el gigante de los lentes, dueños de marcas como Ray-Ban y Oakley, y controlan gran parte del mercado en EE.UU.",
     "why_short": "Lograron ventas récord y un crecimiento impresionante gracias a sus lentes inteligentes Ray-Ban Meta, mientras que el mercado de estos productos sigue en aumento.",
@@ -354,6 +368,13 @@
     "why_short": "A 197 dólares por acción, IDEX se beneficia de la demanda en agua, centros de datos y ciencias de la vida. Compraron Mott Corporation para mejorar en filtración y tienen un contrato de 40 millones de dólares en aguas residuales.",
     "risk_short": "IDEX es cara para su sector y si baja la demanda de centros de datos, su crecimiento podría frenarse. Además, algunos de sus mercados como químicos y seguridad están débiles.",
     "generated_at": "2026-05-25T00:14:41.114Z",
+    "model": "gpt-4o"
+  },
+  "ITUB": {
+    "one_liner": "Itaú Unibanco es el banco privado más grande de Brasil y paga dividendos cada mes, algo raro en bancos grandes.",
+    "why_short": "Es una inversión atractiva porque es el banco más importante de Brasil, con buenas ganancias y paga dividendos mensuales, lo que es poco común.",
+    "risk_short": "El mayor riesgo es que si Brasil tiene problemas económicos, el valor del banco podría bajar y afectar las ganancias de los inversionistas.",
+    "generated_at": "2026-05-28T00:50:45.602Z",
     "model": "gpt-4o"
   },
   "KHC": {
@@ -475,6 +496,13 @@
     "generated_at": "2026-05-25T00:16:34.340Z",
     "model": "gpt-4o"
   },
+  "TUR": {
+    "one_liner": "TUR es un fondo que te permite invertir en empresas turcas, como Turkish Airlines y Akbank, y ha subido un 15.9% este año pese a la caída de su moneda.",
+    "why_short": "TUR es atractivo porque la economía de Turquía podría mejorar, lo que haría que las empresas turcas valgan más. Además, su bolsa es más barata comparada con otros países.",
+    "risk_short": "El mayor riesgo es que el gobierno turco cambie sus políticas económicas, lo que podría hacer que el valor de las inversiones caiga rápidamente.",
+    "generated_at": "2026-05-28T00:50:42.092Z",
+    "model": "gpt-4o"
+  },
   "UBS": {
     "one_liner": "UBS es el banco más grande de Suiza y acaba de hacerse aún más grande al absorber a Credit Suisse, manejando ahora 7 billones de dólares en activos.",
     "why_short": "Al unir fuerzas con Credit Suisse, UBS está ahorrando mucho dinero y sus ganancias han subido un 53%. Planean comprar sus propias acciones y aumentar los dividendos en un 15%.",
@@ -501,6 +529,13 @@
     "why_short": "El banco aumentó sus depósitos en 15 mil millones de dólares en 2025 y tuvo un gran año con ganancias creciendo 33%. Esperan seguir creciendo en préstamos y depósitos en 2026.",
     "risk_short": "Al crecer más de 100 mil millones de dólares en activos, enfrentará reglas más estrictas. Además, está expuesto a sectores como tecnología y bienes raíces, que pueden ser inestables.",
     "generated_at": "2026-05-25T00:14:10.862Z",
+    "model": "gpt-4o"
+  },
+  "WEGZY": {
+    "one_liner": "WEG fabrica motores eléctricos y transformadores desde Brasil, esenciales para centros de datos de inteligencia artificial, y es uno de los más grandes del mundo.",
+    "why_short": "Comprar WEG ahora es aprovechar que sus transformadores son muy demandados por gigantes como Microsoft y Google, y la empresa está bien posicionada para crecer, aunque su acción está más barata tras un trimestre flojo.",
+    "risk_short": "El riesgo principal es que sus ventas cayeron recientemente por problemas en el sector solar en Brasil, y si no mejora, podría afectar su crecimiento esperado.",
+    "generated_at": "2026-05-28T00:50:31.720Z",
     "model": "gpt-4o"
   },
   "WFAFY": {
