@@ -1,0 +1,111 @@
+{
+  "date": "2026-05-29",
+  "summary": "Iran war chokes 27% of global seaborne oil while AI, quantum physics, and brain science rewrite what we thought we knew",
+  "causalChain": "US-Israel strikes on Iran since February 2026 disrupted the Strait of Hormuz, the bottleneck for 27% of seaborne oil, lifting pump prices and inflation globally; stubborn price pressures are forcing the US and European central banks toward higher rates, draining risk appetite and pulling Bitcoin down with it in late May.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz disruption: biggest oil supply shock in history — diesel jumped from $3.54 to $5.65 a gallon", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Gold falls 1% to $4,502 as oil-driven inflation bets lift dollar and borrowing costs", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Tariffs + Iran war corner the Fed: traders now price 58% chance of a 2026 rate hike", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts to 6.50%, likely its last move — Q1 GDP shrank 0.8%, worst since pandemic", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Nearshoring record: $40.9B FDI, USMCA compliance surges from 45% to 89%", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "Yen slides to 159/dollar as BOJ holds fire despite rising prices", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "PBOC signals reserve ratio and rate cuts to counter tariff drag on China's factories", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB holds at 2.15% but markets give 86% odds of a hike on June 11", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "DAX +0.1%, FTSE flat, CAC -0.2% — energy costs weigh, UK tariff talks add fog", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "BHP and Rio Tinto explore joint 200Mt iron ore mine in Pilbara as RBA eases to 2.9%", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "China's steady commodity demand at ~3% global growth sets the floor for Australian mining revenues", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin ETFs bleed $223M in one day — BTC holds $73,600 in late-May risk-off", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "GENIUS Act stablecoin compliance clock ticking: $318B market must back every token by July 2026", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "DeFi's $225B in deposits rides digital-dollar rails — new rules will tighten crypto lending", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "AI spots hidden plasma physics at 99%+ accuracy — PNAS / Emory University", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Supercharged Vitamin K 3× more potent than natural triggers new brain neurons in animals — ACS Chemical Neuroscience / Shibaura Institute of Technology", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Migdal effect confirmed after 87 years: 6 signals in 800,000 events open a door to dark matter — Nature / Chinese Academy of Sciences", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "A narrow waterway between Iran and Oman called the Strait of Hormuz has been partially blocked since March 2026, after the US and Israel struck Iran. About 27% of the world's oil shipped by sea moves through there. Since the disruption, diesel prices at US pumps jumped from $3.54 to $5.65 a gallon — what the International Energy Agency called the biggest oil supply shock in history. Ceasefire talks are ongoing but supply remains fragile."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "Gold dropped 1% to $4,502 an ounce today as oil prices rose. The chain: costlier oil pushes prices up across the whole economy → investors bet the US central bank will raise rates to cool inflation → higher rates make holding gold less attractive since gold pays no interest → gold sells off. The US dollar also strengthened, making gold pricier for buyers outside the US — a double hit."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The US economy is getting squeezed from two sides. Extra taxes on imported goods like steel and aluminum are raising manufacturing costs. The Iran conflict is raising energy costs. Together they keep prices high and limit how much the US central bank can cut rates to help growth. Traders now give a 58% chance of at least one rate increase in 2026, up from 48% just a day earlier."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key borrowing rate to 6.50% — likely its last cut for a while. The problem: the economy shrank 0.8% in the first three months of 2026, the worst quarter since the pandemic. The Iran war is raising energy costs and US tariffs are hurting some exports. Growth for all of 2026 is now expected at only 1.1%, down from a 1.6% forecast made just months ago."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "More factories are moving to Mexico to be closer to US customers — a shift called nearshoring. Companies poured in $40.9 billion in foreign investment through late 2025, a record. Mexico's manufacturing wages still run about 25% cheaper than China's ($4.90/hr). The share of goods made in Mexico that qualify for zero-tariff trade with the US jumped from 45% to 89%, making Mexican supply chains far more competitive."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's currency weakened to 159 yen per dollar, the worst level in a month. Japan's central bank chief warned that prices are rising but stopped short of signaling a rate increase. Without higher rates, money flows out of yen into currencies that pay more, pushing the yen lower. A weak yen makes Japanese exports cheaper for foreign buyers but makes imported oil and food far more expensive for ordinary Japanese households."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "China's central bank is weighing two tools to boost growth: lowering the share of deposits banks must keep on hand — freeing up more money to lend — and reducing the rate at which banks borrow from the government. Both moves push more money into the economy to offset damage from US tariffs. China's exports are still holding up, but the factory sector is showing visible strain."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's central bank kept its main interest rate at 2.15% at its last meeting, but markets now give an 86% chance of a 0.25% increase on June 11. The reason: oil prices are climbing because of the Iran conflict, which keeps inflation stubborn across the eurozone. Germany — Europe's biggest industrial economy — is hit hardest by energy cost spikes. The euro is trading at $1.1733, near its strongest level this year."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "European stock markets barely moved today. Germany's main index gained 0.1%, London's was flat, France's dipped 0.2%. Companies are navigating higher energy bills from the Iran-driven oil spike while consumer spending holds up. The UK is negotiating its own tariff deal with the US on a separate track from the EU, creating extra uncertainty for British manufacturers on top of everything else."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank is slowly lowering borrowing rates toward 2.9%, which helps fund large mining projects. Taking advantage, BHP and Rio Tinto — two of the world's three biggest mining companies — agreed to explore a joint operation to dig iron ore from neighboring properties in Western Australia's Pilbara region. The potential: 200 million tonnes, which would rank among the most efficient single mining operations on earth."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "China buys roughly two-thirds of Australia's iron ore, so Beijing's spending decisions directly set Australian mining revenues. China's government has been using targeted investment — infrastructure projects, subsidized manufacturing — to keep commodity demand steady despite its slowing property market. With global economic growth forecast at 3% in 2026, miners like BHP and Rio Tinto see enough demand to justify large long-term projects."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading around $73,600 after a rough end to May. Funds that hold real Bitcoin and trade on regular stock exchanges — spot Bitcoin ETFs — saw $223 million flow out in a single day on May 28. Earlier this month those same funds pulled in $2.7 billion over 9 days. The swings show big investors rapidly flipping between excitement and caution on Bitcoin as broader risk appetite shifts with oil prices and rate expectations."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Tokens pegged 1:1 to the US dollar — digital dollars — now total $318 billion in circulation. The two biggest: Tether at $189.6B and Circle's USDC at $77.6B. A US law called the GENIUS Act, signed last July, now requires every digital dollar to be backed by real, auditable assets — similar to how money market funds work. Issuers have until July 2026 to comply. The compliance deadline is two months away."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Apps that let people lend and borrow money without banks — decentralized finance — hold about $225 billion in deposited assets globally, mostly running on the Ethereum network. Nearly all of that lending uses digital dollars as collateral. So when new rules require tighter controls on digital dollars, the entire lending ecosystem feels it: less freely available digital dollars could mean tighter credit and higher borrowing costs inside crypto."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Plasma — the fourth state of matter, a hot soup of charged particles found in the sun, lightning, and experimental fusion reactors — follows rules scientists couldn't fully describe with equations. Researchers at Emory University trained an AI on precise 3D particle tracking data from dusty plasma, and the model discovered hidden force patterns with over 99% accuracy, overturning assumptions held for decades. This could improve designs for nuclear fusion power plants and help forecast dangerous solar storms. 📄 Published in PNAS · More: https://www.sciencedaily.com/releases/2026/04/260422044635.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Scientists at Shibaura Institute of Technology in Japan built a souped-up version of Vitamin K — the nutrient found in leafy greens — that is three times more potent than the natural form at nudging brain stem cells to grow into new neurons. In animal studies the compound crossed into the brain, stayed stable, and triggered new cell growth in areas typically damaged by Alzheimer's. No human trials yet, but this is one of the clearest early-stage paths to actually regrowing a damaged brain. 📄 Published in ACS Chemical Neuroscience · More: https://www.sciencedaily.com/releases/2026/05/260526233433.htm"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "In 1939 a Soviet physicist named Arkady Migdal predicted that when a fast particle strikes an atom's nucleus, it can knock an electron off the outer shell — leaving a faint ghost signal. Proving it took 87 years. Scientists at the University of the Chinese Academy of Sciences built a custom detector, filled it with helium and ether gas, bombarded it with neutrons, and found 6 clear signals in 800,000 candidate events. The discovery opens a new way to search for dark matter, the invisible stuff thought to make up 27% of the universe. 📄 Published in Nature · More: https://phys.org/news/2026-01-evidence-migdal-effect-path-dark.html"
+    }
+  ]
+}
