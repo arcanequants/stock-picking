@@ -13,12 +13,10 @@ struct NewsItem: Codable, Identifiable, Equatable, Hashable {
     let audience: String
     let publishedAt: String
 
-    enum CodingKeys: String, CodingKey {
-        case id, headline, body
-        case linkUrl = "link_url"
-        case audience
-        case publishedAt = "published_at"
-    }
+    // No CodingKeys overrides: the shared APIClient JSONDecoder uses
+    // `.convertFromSnakeCase`, so `link_url`/`published_at` become
+    // `linkUrl`/`publishedAt` automatically. Adding explicit raw values
+    // here would double-translate and silently break decoding.
 
     /// True for items published while the user was offline / asleep —
     /// drives the unread dot in the list and the badge count on the
