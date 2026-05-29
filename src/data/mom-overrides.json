@@ -34,6 +34,13 @@
     "generated_at": "2026-05-25T00:14:03.840Z",
     "model": "gpt-4o"
   },
+  "AUKNY": {
+    "one_liner": "Auckland International Airport maneja el aeropuerto principal de Nueva Zelanda, siendo la entrada aérea más importante del país.",
+    "why_short": "Es un monopolio en Nueva Zelanda, lo que significa que es la única opción para la mayoría de vuelos internacionales. Están invirtiendo mucho en mejoras, lo que podría aumentar su valor en el futuro.",
+    "risk_short": "El gobierno podría cambiar las reglas y afectar sus ganancias. Además, si el turismo baja o hay problemas económicos, podría ganar menos dinero.",
+    "generated_at": "2026-05-29T04:46:18.071Z",
+    "model": "gpt-4o"
+  },
   "AVGO": {
     "one_liner": "Broadcom es una empresa que fabrica chips para conectar dispositivos a internet y tiene un gran impulso gracias a la inteligencia artificial.",
     "why_short": "La inteligencia artificial está en auge y Broadcom fabrica los chips que conectan las supercomputadoras. Sus ingresos por AI se han triplicado y su software genera mucho dinero cada año.",
