@@ -1,0 +1,111 @@
+{
+  "date": "2026-05-30",
+  "summary": "Iran ceasefire eases oil prices while second-round inflation forces central banks worldwide into a hawkish pivot",
+  "causalChain": "A preliminary US-Iran deal to extend the Hormuz ceasefire is pulling crude down 17% in a month, but oil's earlier spike has already seeded global inflation — forcing Australia, Europe, and potentially the Fed into higher rates, raising the cost of all borrowing and cooling risk appetite from Tokyo to Mexico City.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "US-Iran ceasefire extends Hormuz access; crude falls 17% in a month to ~$87/bbl", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 30-year borrowing cost hits 5.19%, highest since pre-2008; new Fed chair unknown", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,580 — falling despite war; France joins de-dollarization wave", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico ends cutting cycle at 6.50% in split 3-2 vote; inflation target not seen until mid-2027", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "GDP growth 0.9–1.6%; nearshoring stalling on energy/water gaps ahead of July USMCA review", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Inflation decelerates to 4.11% in May but still 111bps above Banxico target", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BOJ holds at 0.75%; yen near 159/$ with Japan threatening FX intervention", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "China April exports surge 14.1% YoY to record $359B; Hang Seng at 25,182", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB rate hike expected June 11; Eurozone big-four inflation stubborn, France at 2.8%", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "EuroStoxx 600 +17.3% YTD, outpacing S&P 500 as energy and utilities lead rotation", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBA hikes to 4.35% (3rd hike in 2026); Iran oil spike triggers second-round inflation", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "BHP-Rio Tinto joint Pilbara deal; copper/lithium demand races for AI and energy transition", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin ~$81K but spot ETFs bleed $1.55B in 6 days as macro fears trigger institutional exit", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Total digital-dollar supply hits $320B milestone; half sits on Ethereum", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Oxford pond organism rewrites genetic code — PLoS Genetics (Earlham Institute)", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "CERN detects Bc*+ meson May 25; Standard Model cracks widen — ATLAS Collaboration", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Universe constants sit in bio-friendly 'sweet spot' — Science Advances, Queen Mary London", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil dropped 17% in a month to near $87 a barrel. The trigger: the US and Iran struck a deal to extend their ceasefire and keep shipments flowing through the Strait of Hormuz — the narrow channel where one in five barrels of global oil passes. Earlier this year, fears of that route closing sent prices 45% higher year-over-year. With tensions easing, traders are scaling back their risk estimates and prices are falling — reducing costs across transportation, manufacturing, and energy worldwide."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government is paying more to borrow money than since before the 2008 financial crisis — 5.19% per year on its longest loans. That rate anchors everything from home mortgages to corporate debt globally. The cause: oil-driven inflation is making investors bet the central bank will keep rates high or even raise them. Uncertainty deepens because the chair's term expires this month, and it is unclear who will lead the world's most influential monetary institution next."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold sits near $4,580 an ounce — falling despite an active war in the Middle East. The paradox: that war drove up oil prices, which drove up inflation, which made investors expect higher interest rates. Higher rates make holding gold costly since it pays no income, so large funds sold. Meanwhile France announced plans to reduce reliance on the US dollar for trade — the latest major Western economy to signal the dollar's four-decade dominance is quietly eroding."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank voted 3-2 to hold rates at 6.50%, ending a two-year cutting cycle. The split vote — two governors wanted to cut further — reveals genuine disagreement. The bank now projects inflation won't return to its 3% goal until mid-2027. Practically: mortgages, car loans, and business credit in Mexico stay expensive, slowing consumer spending and investment. The peso has been strengthening, which offsets some imported inflation but squeezes exporters."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's economy is expected to grow just 0.9–1.6% in 2026, far below what the nearshoring story promised. Companies are still moving factories closer to the US to avoid tariffs, but investment keeps hitting walls: power shortages, water scarcity in northern states, and security costs. The biggest near-term risk is July 1, 2026, when the US-Mexico-Canada trade agreement enters its first formal review — with roughly $873 billion in annual goods trade between the three countries at stake."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico's annual price increases slowed to 4.11% in May, down from 4.59% in March — a clear improvement but still more than a full percentage point above the central bank's 3% target. Progress came mainly from food and services, while energy prices remain volatile due to oil swings tied to the Middle East. For households, prices are still rising faster than wages in most sectors. The central bank now expects the gap to fully close only by mid-2027."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank kept its main rate at 0.75% — one of the lowest among wealthy economies — citing uncertainty about how the Middle East conflict will affect Japan's growth and prices. The side effect: Japan's currency weakened to around 159 yen per dollar, making every import from food to energy components more expensive. Japan's finance ministry publicly warned it could step into currency markets to stop the slide, but hasn't acted yet, keeping traders on edge."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China shipped a record $359 billion in goods abroad in April — 14.1% more than a year earlier, nearly double analyst estimates. Top categories: electronics, communications devices, and industrial machinery. The surge shows global demand for Chinese products remains strong despite trade tensions. Hong Kong's main stock index closed Friday at 25,182, recovering after a dip earlier in the week triggered by weakness in financial and technology stocks."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's four biggest economies — Germany, France, Italy, and Spain — are all reporting prices rising faster than expected. France's inflation hit 2.8% in May, driven by higher energy costs tied to the Middle East. Europe's central bank held its main rate at 2.15% in April, but investors now strongly expect a hike on June 11. Higher rates mean costlier mortgages and business loans across 20 euro-sharing countries — slowing growth in an economy facing US tariff headwinds."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "European stocks rose 17.3% this year — outpacing US markets that dominate financial headlines. Energy companies, utilities, and food producers are leading because their revenues benefit directly from higher commodity prices. The move also reflects portfolio rotation: as confidence in the US dollar softens and American companies face tariff headwinds, large institutional funds are moving into European stocks, reversing years of US-dominated strategy."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia raised its main interest rate to 4.35% — its third hike this year. The cause traces to the Middle East: surging oil prices pushed up fuel and transportation costs, which flowed into groceries, construction, and services. That is exactly the second-round inflation central banks fear most — where one price rise triggers a chain of others. The Reserve Bank is trying to break that chain early. Markets are split on whether a fourth hike comes in June or policymakers pause to assess."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — the two largest mining companies in the world — announced they will jointly develop an iron ore deposit in Western Australia's Pilbara region, potentially moving 200 million tonnes of ore. The move reflects urgent global demand for raw materials: copper for AI data centers and electric grids, lithium for batteries, iron ore for fast-growing cities. Both companies are racing to supply materials that underpin the next wave of global infrastructure and energy transition."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin trades around $81,000, but the large investment funds that hold Bitcoin on behalf of institutional clients have been exiting fast — more than $1.55 billion left those funds over six consecutive trading days in mid-May. Strong buying early in the month ($700M in a single day) reversed quickly as fears around oil inflation and central bank uncertainty grew. Crypto is increasingly behaving like a high-risk stock — one of the first things sold when investors want to hold cash instead."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "The supply of digital dollars — cryptocurrencies pegged to exactly one US dollar — hit $320 billion globally for the first time. These are used for trading, saving in countries with unstable currencies, and cross-border transfers without banks. About half sits on the Ethereum network. The two largest issuers, Tether and USD Coin, control over 85% of the market. The milestone signals that dollar-pegged digital money is now mainstream financial infrastructure, separate from Bitcoin's volatility."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Dr. Jamie McGowan at the Earlham Institute was testing a new DNA reading tool when he found something that should not exist: a tiny organism from a pond at Oxford University uses two DNA stop signals — sequences every known life form uses to end protein production — as actual building instructions instead. It is like repurposing a period at the end of a sentence to mean a new word. It challenges biology's most fundamental rule: that all life shares the same genetic code. 📄 Published in PLoS Genetics · More: https://www.technologynetworks.com/genomics/news/organism-found-in-university-pond-rewrites-the-rules-of-dna-379612"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "On May 25, physicists at CERN's Large Hadron Collider near Geneva detected a new particle — the Bc*+ meson, built from two types of heavy quarks, its mass never directly measured before. More significantly, experiments are showing tiny deviations from the Standard Model — the 50-year rulebook describing all known particles and forces. If those cracks are confirmed, they could point to completely new particles or forces beyond anything in current theory. It would be the biggest shift in fundamental physics in half a century. 📄 Published via ATLAS Collaboration, CERN · More: https://www.sci.news/physics/cern-bc-plus-meson-particle-14793.html"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Scientists at Queen Mary University of London found that the universe's fundamental constants — the fixed numbers governing electricity, gravity, and atomic behavior — sit within a vanishingly narrow range that allows liquids to flow correctly inside living cells. Off by a few percent, and water might behave like syrup; blood might not clot. The universe was not required to be this way — yet it is. The finding deepens one of science's oldest mysteries: why the cosmos appears tuned for life. 📄 Published in Science Advances · More: https://scitechdaily.com/scientists-have-made-a-discovery-that-could-change-our-understanding-of-the-universe/"
+    }
+  ]
+}
