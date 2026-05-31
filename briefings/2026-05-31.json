@@ -1,0 +1,153 @@
+{
+  "date": "2026-05-31",
+  "summary": "Iran ceasefire deflates oil 17% — every asset class recalibrates simultaneously",
+  "causalChain": "US-Iran 60-day ceasefire → Brent crude drops 17% in May (worst month since 2020) → lower energy costs ease global inflation fears → yet RBA, ECB, and BoJ still fight second-round energy price pressures, keeping rates higher for longer across three continents.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Oil falls 17% in May on US-Iran 60-day ceasefire; Brent at $91", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed holds at 4.25-4.50%; 30-yr US borrowing rate hits 17-year high of 5.2%", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,541/oz near record; dollar index near 99", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "US tariffs highest since WWII; $165B in trade rerouted away from US-China", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico cuts to 6.50%, signals end of easing cycle after Q1 GDP shrinks 0.6%", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Peso at 17.3/USD; Q1 remittances hit $14.45B — largest foreign income source", "worker": "—"},
+    {"n": 7, "region": "MEXICO", "angle": "Record $72B exports in April; formal USMCA review begins May 27", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "BoJ holds at 0.75%; yen tests 162/dollar as rate gap with US persists", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Yuan at 6.78/dollar — strongest since 2023 — as PBOC allows appreciation", "worker": "—"},
+    {"n": 10, "region": "ASIA", "angle": "Nikkei +2.5% vs Hang Seng -1.3% on same day: Japan and China diverge sharply", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "ECB holds at 2%; rate hike debated openly for first time amid energy inflation", "worker": "—"},
+    {"n": 12, "region": "EUROPE", "angle": "DAX at 24,796 — oil drop translates directly into German factory margin relief", "worker": "—"},
+    {"n": 13, "region": "EUROPE", "angle": "Germany grows 0.3% QoQ after two-year recession; but still 1.3% below year ago", "worker": "—"},
+    {"n": 14, "region": "EUROPE", "angle": "UK inflation cools to 2.8%; FTSE near record highs at 10,450", "worker": "—"},
+    {"n": 15, "region": "OCEANIA", "angle": "RBA hikes to 4.35% — third raise of 2026 — as inflation hits 4.6%", "worker": "—"},
+    {"n": 16, "region": "OCEANIA", "angle": "Rio Tinto +57%, BHP +40% year-to-date on global copper demand surge", "worker": "—"},
+    {"n": 17, "region": "OCEANIA", "angle": "Iron ore holds above $100/t but China steel output falls 2.8% in April", "worker": "—"},
+    {"n": 18, "region": "CRYPTO", "angle": "Bitcoin near $74k; holds 61% of total crypto market — near multi-year high share", "worker": "—"},
+    {"n": 19, "region": "CRYPTO", "angle": "Ethereum funds: $402M in net outflows in May; price down 12.6%", "worker": "—"},
+    {"n": 20, "region": "CRYPTO", "angle": "Digital dollar tokens hit $320B supply; USDC fastest-growing at $78B", "worker": "—"},
+    {"n": 21, "region": "CRYPTO", "angle": "Japan, EU, US all shift toward clear crypto rules simultaneously in 2026", "worker": "—"},
+    {"n": 22, "region": "CIENCIA", "angle": "Pond creature breaks DNA stop-sign rule — biology's most universal law (PLOS Genetics)", "worker": "—"},
+    {"n": 23, "region": "CIENCIA", "angle": "James Webb solves Saturn's decades-long rotation mystery (JGR Space Physics)", "worker": "—"},
+    {"n": 24, "region": "CIENCIA", "angle": "AI designs molecules from plain-English descriptions — compresses years of lab work (Matter)", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil just had its worst month since 2020 — Brent crude fell 17% in May to $91 a barrel. The reason: the US and Iran agreed to a 60-day ceasefire. The Strait of Hormuz, a narrow waterway where 20% of the world's oil passes through, had been partially blocked during the conflict. Traders now expect normal shipping to resume, removing the fear premium that had been built into prices."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government pays 4.45% a year to borrow money for 10 years — near a 3-week low. But the 30-year rate hit 5.2%, the highest since 2007. The central bank held its key rate at 4.25-4.50%. Why no cut? Inflation is still 3.8%, above the 2% target. In April, 4 of 12 officials voted for something different — the most disagreement since 1992. A new central bank chair arrives by mid-June."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,541 per ounce, near a record. When the US dollar weakens, gold tends to rise because foreign buyers can afford more of it. The dollar index sits near 99 — down slightly after ceasefire news eased global fear. Gold and the dollar usually move in opposite directions. Both are being watched as signals of how much danger investors still see in the world right now."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "US tariffs are the highest since World War II — yet global trade grew faster than the world economy in 2025. The paradox: companies just rerouted. Over $165 billion in trade shifted away from the US-China path to Mexico, Vietnam, and others. More tariffs caused more detours, not less trade. Starting June 1, Europe faces new 25% tariffs if a dispute over Greenland goes unresolved."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key lending rate to 6.50% — the lowest since April 2022. Why? Mexico's economy shrank 0.6% in the first three months of 2026. When an economy contracts, lowering borrowing costs encourages spending and investment. Inflation is also easing, from 4.63% in March to 4.45% in April. The vote was 3 to 2 — close — signaling the bank will likely hold here."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "The Mexican peso holds near 17.3 per dollar. Mexicans living abroad sent home $14.45 billion in the first three months of 2026 — up 1.4% year-over-year. March alone saw $5.39 billion arrive. These transfers are now Mexico's largest single source of foreign income, bigger than oil or tourism. Top-receiving states: Michoacan, Guanajuato, and Jalisco — each receiving over $1.1 billion in just three months."
+    },
+    {
+      "n": 7,
+      "region": "MEXICO",
+      "text": "Mexico set a new export record: $72 billion in goods shipped in April 2026 alone. Formal review of the US-Mexico-Canada trade agreement began May 27. The July session is described as the most important trade policy event of the year. The central tension: how much Chinese-made content can go inside a product before it loses free-trade benefits? Mexico is caught between its two biggest partners."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's central bank held rates at 0.75%, but 3 of 9 officials wanted to raise them. The gap between Japan's 0.75% and America's 4.25% drives a popular strategy: borrow cheap yen, invest in higher-paying US assets, pocket the difference. This keeps the yen weak near 162 per dollar. Japan faces a dilemma — raise rates to fight 2.8% inflation, or hold to protect fragile 0.5% economic growth."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "China's currency hit its strongest level since early 2023, at 6.78 per dollar. A stronger currency makes Chinese exports more expensive abroad — a real cost when you rely on selling globally. But China's central bank is quietly allowing the rise, signaling confidence in the economy. Despite this, Hong Kong's stock market dropped 1.3%, showing investors remain cautious about the longer-term growth path."
+    },
+    {
+      "n": 10,
+      "region": "ASIA",
+      "text": "Japan's main stock index hit 66,329 on May 29 — up 2.5% in a single session. Hong Kong's index dropped 1.3% the same day. The split tells the story: Japan benefits from a weak yen making exports cheap globally, plus easing energy costs as Iran tensions recede. Hong Kong reflects deeper doubts about China's domestic economy — especially weakness in banking, retail, and technology stocks."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Europe's central bank held its rate at 2%. But this time, officials openly debated a rate increase — a first. Why consider raising rates when growth is fragile? The Iran conflict pushed energy prices higher, threatening a return of high inflation. Markets now expect two rate increases before year-end. Higher borrowing costs would slow growth just as Germany tries to recover from two straight years of contraction."
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "text": "Germany's main stock index rose 0.77% to 24,796 on ceasefire relief. Why does Middle East peace news lift German stocks? When oil falls, European factories pay less to operate. Germany has been especially sensitive since it lost cheap Russian gas in 2022. Lower energy costs directly improve profit margins for German manufacturers. Ceasefire progress in the Middle East is real economic news for Frankfurt."
+    },
+    {
+      "n": 13,
+      "region": "EUROPE",
+      "text": "Germany's economy grew 0.3% in Q1 2026 — its first positive quarter after two years of contraction. But it is still 1.3% smaller than a year ago. The government approved a 500 billion euro infrastructure and defense fund — the biggest public spending plan since World War II. That money should slowly pull the economy forward. The 2026 growth forecast remains just 0.5%. Recovery is real but fragile."
+    },
+    {
+      "n": 14,
+      "region": "EUROPE",
+      "text": "UK stocks rose 0.6% in May, hovering near record highs around 10,450. Inflation cooled to 2.8% in April — the lowest in years — leaving more money in consumers' pockets. The economy grew 0.6% in Q1. Unlike Germany, the UK doesn't rely heavily on manufacturing, so energy cost shocks hit it less hard. Defense firms, banks, and pharmaceutical makers led the gains this month."
+    },
+    {
+      "n": 15,
+      "region": "OCEANIA",
+      "text": "Australia raised interest rates to 4.35% — its third increase of 2026. Inflation hit 4.6% in March, the highest since 2023. The Iran war pushed global fuel prices higher, and Australia imported those pressures. Eight of nine board members voted to raise rates, showing strong consensus. Higher rates make home loans more expensive — Australia carries some of the world's highest household debt — so each hike stings."
+    },
+    {
+      "n": 16,
+      "region": "OCEANIA",
+      "text": "Rio Tinto shares gained 57% year-to-date; BHP gained 40%. Both are major mining companies. The driver: the world needs massive amounts of copper for electric cars, solar panels, and power grids. Rio's new US copper project and BHP's Chilean mine are ramping up output. Iron ore also held above $100 per tonne all month. Both companies sit at the center of every major clean-energy supply chain."
+    },
+    {
+      "n": 17,
+      "region": "OCEANIA",
+      "text": "China buys more than half the world's iron ore, and Australia supplies most of it. Prices held above $100 per tonne in May, peaking at $114 on May 15. But there is a warning: China's steel production fell 2.8% in April — its weakest April since 2018. Fewer skyscrapers, cars, and factories being built in China means less demand for Australian iron. The current price strength may not survive late 2026."
+    },
+    {
+      "n": 18,
+      "region": "CRYPTO",
+      "text": "Bitcoin trades near $74,000. It now represents 61% of the total digital-asset market — near a multi-year high in its share. When Bitcoin dominates, investors are usually being cautious: they buy the most established digital asset first and wait before exploring others. Stability near $74k, following a volatile year, suggests the market is digesting recent regulatory changes and waiting for the next catalyst."
+    },
+    {
+      "n": 19,
+      "region": "CRYPTO",
+      "text": "Investment funds that hold Ethereum pulled out a net $402 million in May — the third-worst month ever. But long-term holders bought more during the dip. This split reveals two mindsets: funds judged on monthly performance are selling; people thinking in years are buying the discount. Ethereum ended May down 12.6%. The underlying technology has not changed — only short-term investor sentiment has shifted."
+    },
+    {
+      "n": 20,
+      "region": "CRYPTO",
+      "text": "Digital dollar tokens — coins that always equal exactly one US dollar — hit $320 billion in total supply. USDT leads with $190 billion; USDC holds $78 billion and is growing fastest. Companies now use digital dollars to pay workers across borders and settle invoices 24 hours a day, 7 days a week. Bank wires take days; digital dollars settle in seconds. A crypto trading tool is becoming financial infrastructure."
+    },
+    {
+      "n": 21,
+      "region": "CRYPTO",
+      "text": "Three regulatory shifts landed simultaneously. Japan will cut crypto taxes from 55% down to 20% — matching the rate on stocks — and officially recognize 105 coins as regulated assets. Europe's new crypto rules take full effect July 1, requiring digital dollar issuers to prove 100% reserves every month. The US dropped 7 pending lawsuits against crypto firms, ending its enforce-first approach. Rules are replacing chaos."
+    },
+    {
+      "n": 22,
+      "region": "CIENCIA",
+      "text": "A tiny pond creature just broke biology's oldest rule. All life on Earth uses three genetic stop signs to tell cells when to stop building proteins. This organism repurposed two of them to code for different proteins instead — never seen before in any species. Life's instruction code can vary more than textbooks assumed. Dr. Jamie McGowan, Earlham Institute & Prof. Thomas Richards, University of Oxford. 📄 Published in PLOS Genetics · More: https://www.sciencedaily.com/releases/2026/05/260507024045.htm"
+    },
+    {
+      "n": 23,
+      "region": "CIENCIA",
+      "text": "Saturn seemed to change speed every few years, baffling astronomers for decades. James Webb finally solved it: Saturn's northern lights heat the upper atmosphere, creating winds that generate electrical signals — and those signals were distorting our rotation readings all along. Saturn's actual spin has always been constant. We were measuring the aurora's interference, not the planet itself. Dr. Tom Stallard, Northumbria University. 📄 Published in Journal of Geophysical Research: Space Physics · More: https://www.sciencedaily.com/releases/2026/05/260529043658.htm"
+    },
+    {
+      "n": 24,
+      "region": "CIENCIA",
+      "text": "Chemists in Switzerland built an AI that designs new molecules from plain-English descriptions. You describe what you need, and it reasons through the chemistry, suggests building blocks, and maps out every step. Drug discovery normally takes years of lab trial and error. This system compresses that process dramatically. Dr. Philippe Schwaller and team, EPFL. 📄 Published in Matter · More: https://www.sciencedaily.com/releases/2026/05/260504023844.htm"
+    }
+  ]
+}
