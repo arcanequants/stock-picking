@@ -60,17 +60,20 @@ struct PriorHoldingsView: View {
                         PriorHoldingRow(holding: h)
                     }
                     .onDelete { offsets in
-                        Task { await delete(at: offsets) }
+                        // Resolve IDs synchronously from the current snapshot;
+                        // the array may mutate before the async delete runs, so
+                        // indexing by offset later could crash.
+                        let ids = offsets.map { store.holdings[$0].id }
+                        Task { await delete(ids: ids) }
                     }
                 }
             }
         }
     }
 
-    private func delete(at offsets: IndexSet) async {
-        for index in offsets {
-            let h = store.holdings[index]
-            await store.remove(id: h.id)
+    private func delete(ids: [Int]) async {
+        for id in ids {
+            await store.remove(id: id)
         }
     }
 }

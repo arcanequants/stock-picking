@@ -19,7 +19,17 @@ final class NewsStore: ObservableObject {
 
     private init() {}
 
+    /// Clears all cached state. Called on sign-out so the next user never
+    /// sees the previous user's news or unread cursor.
+    func reset() {
+        items = []
+        errorMessage = nil
+        isLoading = false
+        lastReadAtRaw = 0
+    }
+
     func load() async {
+        guard !isLoading else { return }
         isLoading = true
         defer { isLoading = false }
         do {

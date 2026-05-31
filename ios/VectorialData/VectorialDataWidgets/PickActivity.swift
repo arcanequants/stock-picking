@@ -84,8 +84,8 @@ private struct PickLockScreenView: View {
                 Text(formatPct(state.returnPct))
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundStyle(colorFor(state.returnPct))
-                Text("$\(String(format: "%.2f", state.currentPrice))")
-                    .font(.caption.weight(.medium))
+                Text("Updated \(relative(state.updatedAt))")
+                    .font(.caption2)
                     .foregroundStyle(.secondary)
             }
         }

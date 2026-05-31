@@ -48,7 +48,7 @@ struct AuthView: View {
                     SignInCard(
                         email: $email,
                         isSending: isSending,
-                        errorMessage: errorMessage,
+                        errorMessage: errorMessage ?? auth.lastAuthError,
                         onSend: send
                     )
                 }

@@ -72,7 +72,11 @@ actor APIClient {
             if T.self == EmptyResponse.self {
                 return EmptyResponse() as! T
             }
-            return try decoder.decode(T.self, from: data)
+            do {
+                return try decoder.decode(T.self, from: data)
+            } catch {
+                throw APIError.decoding(underlying: error)
+            }
         case 401:
             // Supabase access_tokens expire after 1h. Try to swap the refresh
             // token for a fresh one and replay the request once. If the
@@ -105,6 +109,7 @@ enum APIError: Error, LocalizedError {
     case unauthorized
     case rateLimited
     case server(status: Int, data: Data)
+    case decoding(underlying: Error)
 
     var errorDescription: String? {
         switch self {
@@ -113,6 +118,7 @@ enum APIError: Error, LocalizedError {
         case .unauthorized: return "Please sign in again"
         case .rateLimited: return "Too many requests — try again in a moment"
         case .server(let status, _): return "Server error (\(status))"
+        case .decoding: return "No pudimos leer la respuesta del servidor."
         }
     }
 }

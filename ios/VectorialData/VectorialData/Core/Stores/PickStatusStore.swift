@@ -25,7 +25,20 @@ final class PickStatusStore: ObservableObject {
 
     private init() {}
 
+    /// Clears all cached state. Called on sign-out so the next user never
+    /// sees the previous user's picks/decisions.
+    func reset() {
+        picks = []
+        defaultInvestment = nil
+        isSubscribed = false
+        accessStartedAt = nil
+        lastDecisionAt = nil
+        errorMessage = nil
+        isLoading = false
+    }
+
     func load() async {
+        guard !isLoading else { return }
         isLoading = true
         defer { isLoading = false }
         do {

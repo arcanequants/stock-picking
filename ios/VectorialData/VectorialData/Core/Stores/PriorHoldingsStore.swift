@@ -24,6 +24,16 @@ final class PriorHoldingsStore: ObservableObject {
 
     private init() {}
 
+    /// Clears all cached state. Called on sign-out so the next user never
+    /// sees the previous user's prior holdings.
+    func reset() {
+        holdings = []
+        availableTickers = []
+        lastChangedAt = nil
+        errorMessage = nil
+        isLoading = false
+    }
+
     func loadUniverse() async {
         do {
             let resp = try await APIClient.shared.get(
@@ -38,6 +48,7 @@ final class PriorHoldingsStore: ObservableObject {
     }
 
     func load() async {
+        guard !isLoading else { return }
         isLoading = true
         defer { isLoading = false }
         do {

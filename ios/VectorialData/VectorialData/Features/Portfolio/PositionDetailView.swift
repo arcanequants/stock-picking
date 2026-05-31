@@ -166,7 +166,6 @@ struct PositionDetailView: View {
                 .tracking(1.1)
                 .foregroundStyle(.white.opacity(0.55))
             VStack(spacing: 8) {
-                row(label: "Our entry price", value: formatUSD(position.avgPrice))
                 row(
                     label: position.buys == 1 ? "Buys" : "Buys (avg)",
                     value: "\(position.buys)"
@@ -256,12 +255,5 @@ struct PositionDetailView: View {
     private func formatPct(_ value: Double) -> String {
         let sign = value >= 0 ? "+" : ""
         return "\(sign)\(String(format: "%.2f", value))%"
-    }
-
-    private func formatUSD(_ value: Double) -> String {
-        if value >= 100 {
-            return String(format: "$%.2f", value)
-        }
-        return String(format: "$%.2f", value)
     }
 }

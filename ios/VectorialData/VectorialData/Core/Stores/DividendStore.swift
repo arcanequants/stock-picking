@@ -20,7 +20,20 @@ final class DividendStore: ObservableObject {
 
     private init() {}
 
+    /// Clears all cached state. Called on sign-out.
+    func reset() {
+        ytdTotal = 0
+        allTimeTotal = 0
+        count = 0
+        companies = 0
+        events = []
+        byTicker = [:]
+        errorMessage = nil
+        isLoading = false
+    }
+
     func load() async {
+        guard !isLoading else { return }
         isLoading = true
         defer { isLoading = false }
         do {

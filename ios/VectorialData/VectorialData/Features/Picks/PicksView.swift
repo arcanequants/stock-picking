@@ -32,18 +32,18 @@ struct PicksView: View {
                         await store.load()
                     }
                 }
-                .onChange(of: notifications.pendingPickNumber) { _, newValue in
-                    Task { await handlePendingPick(newValue) }
+                // `.task(id:)` re-runs on both the initial value (cold-launch
+                // tap, fired before mount) and subsequent changes, so it's the
+                // single owner of pending-push handling — no separate
+                // `.onChange` observer, which would double-fire and race.
+                .task(id: notifications.pendingPickNumber) {
+                    await handlePendingPick(notifications.pendingPickNumber)
                 }
-                .onChange(of: notifications.pendingWeeklyDigest) { _, newValue in
-                    if newValue {
+                .task(id: notifications.pendingWeeklyDigest) {
+                    if notifications.pendingWeeklyDigest {
                         navPath = [.weeklyDigest]
                         notifications.pendingWeeklyDigest = false
                     }
-                }
-                .task(id: notifications.pendingPickNumber) {
-                    // Catch the case where the tap fires before the view is mounted.
-                    await handlePendingPick(notifications.pendingPickNumber)
                 }
         }
     }

@@ -1,25 +1,22 @@
 import { NextResponse } from "next/server";
-import { createSupabaseServerClient } from "@/lib/supabase";
+import { getAuthedUser, getSupabaseAdmin } from "@/lib/supabase";
 import { markAsRead, markAllAsRead } from "@/lib/notifications";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
-    const supabase = await createSupabaseServerClient();
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
+    const user = await getAuthedUser(request);
 
     if (!user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     // Check subscription
-    const { data: subscriber } = await supabase
+    const { data: subscriber } = await getSupabaseAdmin()
       .from("subscribers")
       .select("subscription_status")
-      .eq("email", user.email?.toLowerCase() ?? "")
+      .eq("email", user.email)
       .single();
 
     const status = subscriber?.subscription_status ?? null;

@@ -18,6 +18,9 @@ final class AuthManager: ObservableObject {
 
     @Published private(set) var state: AuthState = .unknown
     @Published private(set) var currentUser: UserProfile?
+    /// Set when a magic-link exchange fails (expired/used/invalid link) so
+    /// the sign-in screen can tell the user instead of silently bouncing back.
+    @Published var lastAuthError: String?
 
     private let accessTokenKey = "access_token"
     private let refreshTokenKey = "refresh_token"
@@ -54,6 +57,7 @@ final class AuthManager: ObservableObject {
     /// auto-open it so the simulator deep-links back into the app without needing
     /// `xcrun simctl openurl` from a terminal.
     func requestMagicLink(email: String, locale: String) async throws {
+        lastAuthError = nil
         struct Body: Encodable {
             let email: String
             let locale: String
@@ -62,10 +66,6 @@ final class AuthManager: ObservableObject {
         struct Response: Decodable {
             let ok: Bool?
             let devLink: String?
-            enum CodingKeys: String, CodingKey {
-                case ok
-                case devLink = "dev_link"
-            }
         }
         let resp = try await APIClient.shared.post(
             "/api/auth/magic-link",
@@ -129,11 +129,30 @@ final class AuthManager: ObservableObject {
     }
 
     func signOut() async {
+        // Unregister the push token while we still hold a valid bearer, so
+        // this device stops receiving the signed-out user's notifications.
+        await NotificationsManager.shared.unregister()
+        await clearSession()
+    }
+
+    /// Wipes all local session state: keychain tokens, bearer, profile, and
+    /// every cached store. Used by sign-out and by any path that detects a
+    /// dead session, so a second user never sees the first user's cached data.
+    private func clearSession() async {
         KeychainHelper.delete(accessTokenKey)
         KeychainHelper.delete(refreshTokenKey)
         await APIClient.shared.clearBearer()
         currentUser = nil
         state = .signedOut
+        resetCaches()
+    }
+
+    private func resetCaches() {
+        PickStatusStore.shared.reset()
+        DividendStore.shared.reset()
+        PriorHoldingsStore.shared.reset()
+        NewsStore.shared.reset()
+        NotificationsManager.shared.clearPending()
     }
 
     private func exchange(tokenHash: String, type: String) async {
@@ -153,14 +172,12 @@ final class AuthManager: ObservableObject {
             KeychainHelper.set(resp.accessToken, forKey: accessTokenKey)
             KeychainHelper.set(resp.refreshToken, forKey: refreshTokenKey)
             await APIClient.shared.setBearer(resp.accessToken)
+            lastAuthError = nil
             await refreshProfile()
         } catch {
-            // Invalid or expired link — force back to sign-in.
-            KeychainHelper.delete(accessTokenKey)
-            KeychainHelper.delete(refreshTokenKey)
-            await APIClient.shared.clearBearer()
-            currentUser = nil
-            state = .signedOut
+            // Invalid or expired link — force back to sign-in with a reason.
+            lastAuthError = "Ese enlace expiró o ya se usó. Pide uno nuevo."
+            await clearSession()
         }
     }
 
@@ -169,12 +186,10 @@ final class AuthManager: ObservableObject {
             let me = try await APIClient.shared.get("/api/me", as: UserProfile.self)
             currentUser = me
             state = .signedIn
+            // Re-attach this device's push token to the now-signed-in user.
+            await NotificationsManager.shared.refreshRegistrationIfAuthorized()
         } catch {
-            KeychainHelper.delete(accessTokenKey)
-            KeychainHelper.delete(refreshTokenKey)
-            await APIClient.shared.clearBearer()
-            currentUser = nil
-            state = .signedOut
+            await clearSession()
         }
     }
 }

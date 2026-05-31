@@ -27,18 +27,24 @@ struct MainTabView: View {
                 .tag(AppTab.account)
         }
         .tint(Color("BrandEmerald"))
+        // A push tapped while the app was killed sets the pending payload
+        // before this view mounts, so `.onChange` never fires for it. Read the
+        // current values once on appear to catch the cold-launch case.
+        .task { routeToPendingTab() }
         // Any incoming push tap that targets a pick or the weekly digest lands
         // in the Picks tab — that's where both flows live.
-        .onChange(of: notifications.pendingPickNumber) { _, newValue in
-            if newValue != nil { selectedTab = .picks }
-        }
-        .onChange(of: notifications.pendingWeeklyDigest) { _, newValue in
-            if newValue { selectedTab = .picks }
-        }
+        .onChange(of: notifications.pendingPickNumber) { _, _ in routeToPendingTab() }
+        .onChange(of: notifications.pendingWeeklyDigest) { _, _ in routeToPendingTab() }
         // News pushes deep-link into the Home tab — that's where the
         // news entry card and detail navigation live.
-        .onChange(of: notifications.pendingNewsId) { _, newValue in
-            if newValue != nil { selectedTab = .home }
+        .onChange(of: notifications.pendingNewsId) { _, _ in routeToPendingTab() }
+    }
+
+    private func routeToPendingTab() {
+        if notifications.pendingNewsId != nil {
+            selectedTab = .home
+        } else if notifications.pendingPickNumber != nil || notifications.pendingWeeklyDigest {
+            selectedTab = .picks
         }
     }
 }

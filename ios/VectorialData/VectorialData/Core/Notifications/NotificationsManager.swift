@@ -16,6 +16,11 @@ final class NotificationsManager: NSObject, ObservableObject {
     @Published private(set) var authorizationStatus: UNAuthorizationStatus = .notDetermined
     @Published private(set) var lastRegisteredToken: String?
 
+    /// The APNs token persists across launches so `unregister()` can DELETE
+    /// it on sign-out even after a cold start (the in-memory copy is gone by
+    /// then). Stored in UserDefaults — it's a device token, not a secret.
+    private let tokenDefaultsKey = "apns.deviceToken"
+
     /// When the user taps a "Nuevo pick" push the payload arrives here. The
     /// Picks tab consumes and clears it via `consumePendingPickTap()`.
     @Published var pendingPickNumber: Int?
@@ -60,12 +65,36 @@ final class NotificationsManager: NSObject, ObservableObject {
     func didReceiveToken(_ data: Data) {
         let token = data.map { String(format: "%02x", $0) }.joined()
         lastRegisteredToken = token
+        UserDefaults.standard.set(token, forKey: tokenDefaultsKey)
         Task { await register(token: token) }
     }
 
-    /// Call on sign-out to stop receiving pushes on this device.
+    /// Re-attach this device's push token to the signed-in user. Called after
+    /// a successful profile load so a token minted while signed out (or under
+    /// the previous user) gets bound to the current account.
+    func refreshRegistrationIfAuthorized() async {
+        guard let token = lastRegisteredToken
+            ?? UserDefaults.standard.string(forKey: tokenDefaultsKey)
+        else { return }
+        lastRegisteredToken = token
+        await register(token: token)
+    }
+
+    /// Clears in-memory deep-link payloads. Called on sign-out so a tapped
+    /// push from the previous session doesn't route the next user.
+    func clearPending() {
+        pendingPickNumber = nil
+        pendingWeeklyDigest = false
+        pendingNewsId = nil
+    }
+
+    /// Call on sign-out to stop receiving pushes on this device. Reads the
+    /// token from persistence so it works even after a cold launch where the
+    /// in-memory copy was never repopulated.
     func unregister() async {
-        guard let token = lastRegisteredToken else { return }
+        guard let token = lastRegisteredToken
+            ?? UserDefaults.standard.string(forKey: tokenDefaultsKey)
+        else { return }
         struct Body: Encodable { let token: String }
         _ = try? await APIClient.shared.delete(
             "/api/notifications/register-device",
@@ -73,9 +102,13 @@ final class NotificationsManager: NSObject, ObservableObject {
             as: EmptyResponse.self
         )
         lastRegisteredToken = nil
+        UserDefaults.standard.removeObject(forKey: tokenDefaultsKey)
     }
 
     private func register(token: String) async {
+        // Only bind the token to a user once we actually have a session;
+        // otherwise the unauthenticated POST 401s and the token is dropped.
+        guard AuthManager.shared.state == .signedIn else { return }
         struct Body: Encodable {
             let token: String
             let platform: String

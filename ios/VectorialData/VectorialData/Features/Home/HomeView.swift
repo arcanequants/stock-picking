@@ -83,11 +83,10 @@ struct HomeView: View {
             .navigationDestination(for: NewsItem.self) { item in
                 NewsDetailView(item: item)
             }
-            .onChange(of: notifications.pendingNewsId) { _, newValue in
-                Task { await handlePendingNews(newValue) }
-            }
+            // `.task(id:)` covers both the cold-launch tap (initial value set
+            // before mount) and later changes, so it's the sole owner — a
+            // separate `.onChange` would double-fire and race.
             .task(id: notifications.pendingNewsId) {
-                // Catch the case where the tap fires before this view mounts.
                 await handlePendingNews(notifications.pendingNewsId)
             }
         }
