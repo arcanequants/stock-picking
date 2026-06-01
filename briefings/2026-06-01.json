@@ -1,0 +1,196 @@
+{
+  "date": "2026-06-01",
+  "summary": "Hormuz ceasefire hopes cool oil while Banxico signals its last cut and Bitcoin records its worst monthly ETF outflow of 2026.",
+  "causalChain": "Iran-US ceasefire talks ease energy prices and global inflation pressure; as growth slows, major central banks near the end of their tightening or easing cycles; institutional investors pull back from risk assets including Bitcoin while science delivers breakthroughs from Mars to the human brain.",
+  "table": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "angle": "Oil eases as US-Iran near Hormuz ceasefire extension",
+      "worker": "—"
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "angle": "Fed holds; 10yr yield at 4.47%; rate-hike bets climb to 46%",
+      "worker": "—"
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "angle": "Gold holds above $4,500 as China buys for 18 straight months",
+      "worker": "—"
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "angle": "Supreme Court voids IEEPA tariffs; new 10% levy faces fresh legal fight",
+      "worker": "—"
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "angle": "Banxico cuts to 6.50% in 3-2 vote, signals end of easing cycle",
+      "worker": "—"
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "angle": "Record $40.9B FDI in nearshoring; USMCA review kicks off July 1",
+      "worker": "—"
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "angle": "BoJ eyes June hike; Nikkei hits record 66,934 on AI rally",
+      "worker": "—"
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "angle": "China exports +6.6%, yuan strengthens, Hang Seng slips 1.3%",
+      "worker": "—"
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "angle": "ECB June hike at 91% market odds; euro-zone inflation back at 3%",
+      "worker": "—"
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "angle": "FTSE 100 near 10,400 record; UK inflation cools to 2.8%",
+      "worker": "—"
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "angle": "RBA cutting toward 2.9%; cheaper credit lifts Australia mining outlook",
+      "worker": "—"
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "angle": "BHP + Rio Tinto to jointly develop 200M-tonne Pilbara iron ore field",
+      "worker": "—"
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "angle": "Bitcoin at $73K, down 40% from peak; May ETF outflows hit $2.3B record",
+      "worker": "—"
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "angle": "USDT crosses $189.5B; EU MiCA compliance hard deadline July 1",
+      "worker": "—"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "angle": "Curiosity finds 21 carbon molecules in one Mars rock, 7 entirely new",
+      "worker": "—"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "angle": "Rockefeller maps first physical brain location of abstract thought",
+      "worker": "—"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "angle": "AI reveals hidden physics inside superheated plasma (PNAS 2026)",
+      "worker": "—"
+    }
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil slid to about $88 a barrel Friday — its lowest in six weeks — after reports that the US and Iran are close to extending their ceasefire. For months the Strait of Hormuz, the narrow lane that carries roughly one fifth of the world's oil, has been effectively blocked. OPEC+ added a symbolic 188,000 extra barrels a day, but the market needs millions more. If ceasefire talks collapse, prices spike right back up."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government is paying 4.47% a year to borrow money for 10 years — high by recent standards. That rate bleeds into every mortgage and car loan in the country. Inflation is still at 3.8%, almost double the central bank's 2% goal, so the Fed is keeping rates where they are. But nearly half of traders now bet the Fed will actually raise rates before year end, which would make all that borrowing even more expensive."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold is above $4,500 an ounce, near record highs. A big driver: China's central bank has added gold to its reserves every single month for 18 straight months, pushing its stockpile past 2,322 tonnes. Simultaneously, China has been quietly selling US government bonds. When the world's second-largest economy this deliberately moves out of dollar assets into gold, it signals distrust in the dollar system — and pushes gold higher for everyone."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "US courts ruled earlier this year that Trump's sweeping import taxes were illegal, forcing the government to refund $166 billion to American businesses. Trump responded with a new 10% tax on all imports under a different law — now being challenged in court too. The average US household pays about $1,500 more per year because of these policies. Other countries aren't retaliating; instead they're quietly building new trade alliances to depend less on both the US and China."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.50% — the lowest in four years — but just barely: the vote was 3 to 2, with two members wanting rates to stay higher. Mexico's economy actually shrank in early 2026, giving the bank reason to cut even though inflation is still at 4.45%. The bank signaled this is likely the last cut for now. A lower rate makes the peso slightly less attractive to foreign investors who park money there for the interest."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Foreign companies poured a record $40.9 billion into Mexico in 2025 to build factories closer to US customers, driven by wages of about $4.90 an hour — still 25% cheaper than China. But the biggest test comes July 1: the formal review of the US-Mexico-Canada trade deal kicks off, with $873 billion in annual trade at stake. If that review turns adversarial, many of those factory investment decisions could freeze overnight."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank has kept interest rates at 0.75% but is openly hinting at a June increase. This matters globally because Japan is a major source of cheap borrowed money — investors borrow yen at near-zero rates and invest it elsewhere. A rate hike could unwind that trade and shake assets worldwide. Meanwhile, Japan's Nikkei stock index hit a record 66,934, driven by AI-related companies — SoftBank alone jumped 14% in a single day."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's exports rose 6.6% year over year, a solid number. But China's currency is gradually strengthening, making its goods pricier for foreign buyers — which could eventually slow those exports. China's central bank has held lending rates unchanged for 10 straight months. Hong Kong's stock market dipped 1.3% Thursday. The big question: will Beijing let its currency keep rising, or step in to protect its export machine?"
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank is very likely to raise its main interest rate from 2.00% to 2.25% on June 11 — markets put the odds at 91%. Energy prices in Europe jumped after the Iran conflict, pushing regional inflation back up to 3%. The problem: higher rates slow the economy, and Germany — Europe's biggest economy — is already struggling. The bank must choose between fighting inflation or protecting growth. Right now, inflation is winning."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "The UK's main stock index hit 10,000 for the first time in January and is now trading around 10,400. The economy is quietly improving — services grew 1.4% and productivity rose in early 2026. Inflation cooled to 2.8% in April. But sterling tends to lose value every summer, and some economists fear unemployment could climb to 5.5%, an 11-year high. Britain's recovery is real but fragile, and currency weakness could erode gains for foreign investors."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank has been steadily cutting interest rates and is targeting a final rate of 2.9%, making home loans and business borrowing cheaper. The cuts come as inflation eases and the economy needs support. The RBA's easing also encourages investment in Australian mining and energy, which feeds directly into global supply chains for iron, copper, and lithium. Cheaper credit in Australia quietly supports commodity prices worldwide."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — the two biggest mining companies in the world, both based in Australia — just agreed to jointly develop up to 200 million tonnes of iron ore in Western Australia's Pilbara region. Iron ore is the key ingredient in steel. China buys the vast majority of it. The deal is a long-term bet that Chinese demand for steel stays strong enough to justify two rivals sharing one massive operation."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin opened June at $73,196, down about 40% from its peak of $126,000 last October. The biggest pressure: investment funds pulled $2.3 billion out of Bitcoin ETFs in May alone — the biggest monthly exit of 2026. Funds run by BlackRock and Fidelity saw the most selling. In 2026, large institutions move Bitcoin's price more than any other force. When they reduce risk, Bitcoin falls — no matter what any historical pattern says."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Tether's digital dollar (USDT) just crossed $189.5 billion in circulation — 60% of all dollar-pegged digital coins in existence. Under a US law signed last year, every digital dollar must be backed by real cash or government bonds. The EU has a similar hard deadline of July 1, 2026. More rules mean more legitimacy, but also scrutiny: Tether operates outside the US, and whether it complies with Western rules will determine which digital dollars people trust most."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "NASA's Curiosity rover found 21 carbon molecules inside one Martian rock — 7 never detected on Mars before. One resembles a building block of DNA. These chemicals sat locked in clay for 3.5 billion years. Scientists can't yet say if ancient life, geology, or a comet made them. But finding this variety in a single sample is the strongest sign yet that Mars once had conditions where life could form. Published in Nature Communications · More: https://www.nature.com/articles/s41467-026-70656-0"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Rockefeller University scientists found the first physical spot in the brain where abstract thoughts are built. A region called the ventral premotor cortex — sitting between your planning zone and movement zone — stores reusable idea pieces that snap together into thoughts you have never had before. Discovered studying macaque monkeys doing drawing tasks, the finding could unlock new treatments for cognitive disorders. Published in Nature · More: https://www.nature.com/articles/s41586-026-10297-x"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Physicists at Auburn University, University of Iowa, and UC San Diego built a machine that threads magnetic fields through glowing superheated gas, then used AI to map forces inside it. Even tiny magnetic pulses dramatically changed how nano-particles grow. The AI revealed hidden forces that standard equations could not capture. The insight could improve how ultra-thin coatings are made inside computer chips and solar cells. Published in PNAS · More: https://www.pnas.org/doi/10.1073/pnas.2505725122"
+    }
+  ]
+}
