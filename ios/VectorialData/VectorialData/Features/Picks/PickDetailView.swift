@@ -37,6 +37,7 @@ struct PickDetailView: View {
     let pick: Pick
 
     @State private var showBuySheet = false
+    @State private var showPaywall = false
     @State private var skipInFlight = false
     /// Each deep-dive accordion is collapsed by default. Set holds the
     /// titles of currently-expanded sections (small set, so O(N) is fine).
@@ -71,7 +72,8 @@ struct PickDetailView: View {
                     } else if let r = vm.research {
                         if r.locked {
                             teaserSection(research: r)
-                            paywallCard
+                            Button { showPaywall = true } label: { paywallCard }
+                                .buttonStyle(.plain)
                         } else {
                             premiumSections(research: r)
                         }
@@ -84,6 +86,7 @@ struct PickDetailView: View {
             decisionBar
         }
         .background(Color("AppBackground"))
+        .sheet(isPresented: $showPaywall) { PaywallView() }
         .navigationTitle(pick.ticker)
         .navigationBarTitleDisplayMode(.inline)
         .task { await vm.load() }
@@ -361,6 +364,14 @@ struct PickDetailView: View {
             Text("Get our complete research: what the company does, why we picked it, the key risk, valuation and analyst consensus.")
                 .font(.footnote)
                 .foregroundStyle(.white.opacity(0.75))
+            HStack(spacing: 4) {
+                Text("Suscríbete")
+                    .font(.subheadline.weight(.semibold))
+                Image(systemName: "chevron.right")
+                    .font(.caption.weight(.bold))
+            }
+            .foregroundStyle(Color("BrandEmerald"))
+            .padding(.top, 4)
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)

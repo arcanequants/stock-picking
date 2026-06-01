@@ -35,6 +35,7 @@ struct PositionDetailView: View {
     @EnvironmentObject private var pickStatus: PickStatusStore
 
     @State private var editingPick: Pick?
+    @State private var showPaywall = false
 
     init(position: Position) {
         self.position = position
@@ -60,7 +61,8 @@ struct PositionDetailView: View {
                 }
                 if let r = vm.research {
                     if r.locked {
-                        paywallCard
+                        Button { showPaywall = true } label: { paywallCard }
+                            .buttonStyle(.plain)
                     } else if let why = r.summaryWhy, !why.isEmpty {
                         whyCard(summary: why)
                     }
@@ -70,6 +72,7 @@ struct PositionDetailView: View {
             .padding(16)
         }
         .background(Color("AppBackground"))
+        .sheet(isPresented: $showPaywall) { PaywallView() }
         .navigationTitle(position.ticker)
         .navigationBarTitleDisplayMode(.inline)
         .task { await vm.load() }
@@ -216,6 +219,14 @@ struct PositionDetailView: View {
             Text("Subscribe to unlock our full thesis, the risk we're watching, and valuation on every position.")
                 .font(.footnote)
                 .foregroundStyle(.white.opacity(0.75))
+            HStack(spacing: 4) {
+                Text("Suscríbete")
+                    .font(.subheadline.weight(.semibold))
+                Image(systemName: "chevron.right")
+                    .font(.caption.weight(.bold))
+            }
+            .foregroundStyle(Color("BrandEmerald"))
+            .padding(.top, 4)
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)

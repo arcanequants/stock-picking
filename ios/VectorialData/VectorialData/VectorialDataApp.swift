@@ -24,6 +24,9 @@ struct VectorialDataApp: App {
                 .task {
                     await authManager.restoreSession()
                 }
+                .task {
+                    StoreManager.shared.start()
+                }
         }
     }
 }

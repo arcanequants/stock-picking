@@ -25,6 +25,7 @@ targets:
         excludes:
           - "Info.plist"
           - "VectorialData.entitlements"
+          - "VectorialData.storekit"
     resources:
       - path: VectorialData/PrivacyInfo.xcprivacy
     dependencies:
@@ -100,3 +101,20 @@ targets:
         GENERATE_INFOPLIST_FILE: NO
         SKIP_INSTALL: YES
         CODE_SIGN_STYLE: Automatic
+
+schemes:
+  VectorialData:
+    build:
+      targets:
+        VectorialData: all
+    run:
+      config: Debug
+      storeKitConfiguration: VectorialData/VectorialData.storekit
+    test:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

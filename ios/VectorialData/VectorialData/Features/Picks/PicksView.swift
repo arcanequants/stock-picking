@@ -9,11 +9,13 @@ struct PicksView: View {
     @EnvironmentObject private var store: PickStatusStore
     @EnvironmentObject private var notifications: NotificationsManager
     @State private var navPath: [PicksDestination] = []
+    @State private var showPaywall = false
 
     var body: some View {
         NavigationStack(path: $navPath) {
             content
                 .background(Color("AppBackground"))
+                .sheet(isPresented: $showPaywall) { PaywallView() }
                 .navigationTitle("Picks de Vectorial")
                 .navigationDestination(for: Pick.self) { pick in
                     PickDetailView(pick: pick)
@@ -73,7 +75,8 @@ struct PicksView: View {
             ScrollView {
                 LazyVStack(spacing: 10) {
                     if !store.isSubscribed {
-                        UpsellBanner()
+                        Button { showPaywall = true } label: { UpsellBanner() }
+                            .buttonStyle(.plain)
                     }
                     CountdownEmptyCard()
                 }
@@ -83,7 +86,8 @@ struct PicksView: View {
             ScrollView {
                 LazyVStack(spacing: 10) {
                     if !store.isSubscribed {
-                        UpsellBanner()
+                        Button { showPaywall = true } label: { UpsellBanner() }
+                            .buttonStyle(.plain)
                     }
                     if !store.pending.isEmpty {
                         sectionHeader(
@@ -268,6 +272,14 @@ private struct UpsellBanner: View {
             Text("Subscribe to unlock the full history and every new pick the moment it drops.")
                 .font(.caption)
                 .foregroundStyle(.white.opacity(0.7))
+            HStack(spacing: 4) {
+                Text("Suscríbete")
+                    .font(.caption.weight(.semibold))
+                Image(systemName: "chevron.right")
+                    .font(.caption2.weight(.bold))
+            }
+            .foregroundStyle(Color("BrandEmerald"))
+            .padding(.top, 2)
         }
         .padding(14)
         .frame(maxWidth: .infinity, alignment: .leading)
