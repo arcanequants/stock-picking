@@ -1,0 +1,117 @@
+{
+  "date": "2026-06-02",
+  "summary": "Hormuz war sends oil to $114, US 30-year borrowing cost cracks 5%, and Bitcoin ETFs suffer their worst monthly outflow of 2026.",
+  "causalChain": "A conflict near the Persian Gulf choked the shipping lane carrying 20% of the world's oil, pushing prices to $114 and stoking inflation globally; rising safe returns on US and European government debt are pulling money away from gold, stocks, and crypto, while Mexico's record exports race against a July trade-deal review that could reshape North American manufacturing.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Brent oil hits $114 as Hormuz conflict cuts supply", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 30-year government borrowing cost tops 5%", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold above $4,500 but dollar strength caps gains", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico slashes 2026 growth forecast to 1.1%, inflation sticky", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "July 1 USMCA review: $873B in annual trade on the line", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Mexico April exports hit all-time monthly record of $72B", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ holds rates; yen poised to strengthen on repatriation flows", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "PBOC nudges easing but yuan stays weakest major Asian currency", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB set to hike June 11; DAX slips 0.4% on stalled Iran talks", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "Euro's global role quietly growing, pressuring dollar dominance", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP and Rio Tinto team up on 200M-tonne Pilbara iron ore site", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "Australia mining sector eyes new boom in copper and lithium", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin near $73K after $2.43B ETF outflow in May — record for 2026", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "GENIUS Act + MiCA split global digital-dollar market: USDC vs USDT", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "Digital dollar issuers now hold $155B in US bonds — bigger than most nations", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Oxford achieves world-first quadsqueezing in quantum physics", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Fish gut bacteria found to help produce ocean carbon-trapping minerals", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "AI overturns textbook physics in dusty plasma — the most common matter in the universe", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "A war near the Persian Gulf is blocking one of the world's main oil shipping routes. Before the conflict, 20% of all oil moved through that narrow channel. With less supply reaching markets, oil hit $114 a barrel. That pushes up prices for nearly everything made or shipped using fuel — higher energy bills, more expensive groceries, pricier flights."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government now pays more than 5% a year to borrow money for 30 years — the highest in recent memory. When that cost rises, banks charge businesses and homeowners more too. It also makes people less willing to put money into riskier bets like stocks or crypto, since parking it in safe government bonds now pays quite well."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold is holding above $4,500 an ounce — near all-time highs. War in the Middle East and rising prices everywhere are pushing scared investors toward gold. But a stronger US dollar is acting as a brake: gold priced in dollars gets more expensive for buyers using other currencies. Fear is buying; the dollar is selling. Right now it's a draw."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank just cut its 2026 growth forecast nearly in half — from 1.6% to 1.1%. The bank has been lowering borrowing costs for over a year (currently at 6.75%) to boost the economy, but prices are still rising faster than the 3% annual target. That limits how much more they can cut. The result: slow growth and stubborn prices at the same time."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "On July 1, the US, Mexico, and Canada formally sit down to decide whether to keep their trade deal alive. About $873 billion in goods cross North American borders under this agreement every year. Factories relocating to Mexico from Asia are betting the deal holds. If talks go badly, billions in manufacturing investment could stall overnight."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico exported $72 billion worth of goods in April alone — a new all-time monthly record. The driver: companies moving factories from Asia to Mexico to be closer to US customers, since Mexican wages are about 25% cheaper than Chinese wages right now. The big test is whether the July trade deal review keeps the door open for this shift to continue."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank is keeping rates steady but plans to raise them. When it does, Japanese investors who moved money abroad to earn higher returns will start bringing it home — converting foreign currency back into yen, pushing the yen's value up. Analysts say the yen is one of the few currencies expected to strengthen as investors trim their dollar exposure."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's central bank wants to stimulate a slowing economy but is moving very carefully to avoid pushing its currency down too fast. The result: China's yuan has been the weakest major Asian currency this year. The culprit is China's property market, still struggling years into a crisis, keeping foreign investors cautious about putting money into China."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank is expected to raise its key interest rate on June 11. A war in the Middle East drove up oil prices, which pushed inflation higher, forcing the bank's hand. Germany's stock market slipped 0.4% after news that peace talks between Iran and the US broke down — markets had hoped a deal would mean cheaper oil and less pressure to raise rates."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "The euro is slowly gaining ground as a currency used in international trade and savings — a role long dominated by the US dollar. More countries are settling deals and storing reserves in euros. As the dollar's grip loosens, the US government faces slightly higher costs to borrow money, since global demand for dollar-denominated assets softens over time."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "The world's two biggest mining companies, BHP and Rio Tinto, just agreed to mine a massive Australian iron ore site together — enough to produce 200 million tonnes. Iron ore is the main ingredient in steel. They're sharing costs because China, their biggest customer, is building less housing, meaning lower demand and thinner profits. Together the economics work; alone they don't."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's mining sector may be starting a new boom — but in different metals than before. Iron ore is slowing as China builds less, but copper and lithium are surging because every electric car and power grid upgrade needs them. BHP and Rio Tinto are shifting spending toward both. Whether this pivot succeeds depends almost entirely on how fast the world electrifies."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin dropped to around $73,000 after a rough May. Funds that let regular investors buy Bitcoin through normal stock accounts saw $2.43 billion pulled out last month — the biggest monthly withdrawal of 2026. The main reason: US government bonds now pay over 5% a year, so investors are moving from risky bets like Bitcoin toward safer ones. Higher safe returns kill appetite for risk."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "The US just passed a law requiring companies that issue digital dollars — virtual tokens worth exactly $1 each — to hold 100% real dollars in reserve and get a federal license. Europe has had a similar rule since late 2024. Result: Circle's USDC is legal in Europe; Tether's USDT is not. Yet Tether still circulates $185B vs USDC's $75B. The regulatory gap is reshaping who wins globally."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "Companies that issue digital dollars — tokens pegged 1-to-1 to the real dollar — now collectively hold over $155 billion in US government bonds. That makes them the 17th largest holders of US debt in the world, bigger than most countries. Every time you hold or send a digital dollar, you are indirectly lending money to the US government. That is how intertwined crypto and traditional finance have become."
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Physicists at Oxford squeezed uncertainty in a single trapped particle to a fourth level of precision — something never done before, achieved 100 times faster than old methods. Called quadsqueezing, the trick was combining two opposing quantum forces in sequence. It opens doors for ultra-sensitive sensors and next-generation computers that were simply unreachable before. 📄 Published in Nature Physics · More: https://www.physics.ox.ac.uk/news/oxford-team-achieves-first-ever-quadsqueezing-quantum-interaction"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Scientists at the University of Miami — led by Anthony Bonacolta, Rosenstiel School — found that bacteria living in fish guts help produce a mineral that traps carbon in the ocean, a job thought to belong only to the fish itself. The microbes create tiny chemical zones inside the gut that accelerate mineral formation. This hidden partnership may be a bigger piece of ocean carbon storage than anyone realized. 📄 Published in PLOS Biology · More: https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.3003764"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "Physicists at Emory University — Wentao Yu, Justin C. Burton et al. — used an AI to study dusty plasma, a form of matter made of ions, electrons, and charged dust that makes up an estimated 99.9% of all visible matter in the universe. The AI found particles push each other unequally in opposite directions, overturning textbook assumptions held for decades. 📄 Published in PNAS · More: https://www.sciencedaily.com/releases/2026/04/260422044635.htm"
+    }
+  ]
+}
