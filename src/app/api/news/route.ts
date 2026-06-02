@@ -9,6 +9,7 @@ export const dynamic = "force-dynamic";
  * Filters by audience:
  *   - 'all'     → visible to everyone
  *   - 'premium' → visible only to active/trialing subscribers
+ *   - 'free'    → visible only to non-subscribers (upsell nudges)
  *
  * The iOS app reads from here; the web site has its own (different,
  * AI/SEO-oriented) news scheme and intentionally does not consume this.
@@ -30,7 +31,7 @@ export async function GET(request: Request) {
   const status = subscriber?.subscription_status;
   const isSubscribed = status === "active" || status === "trialing";
 
-  const audiences = isSubscribed ? ["all", "premium"] : ["all"];
+  const audiences = isSubscribed ? ["all", "premium"] : ["all", "free"];
 
   const { data: rows, error } = await admin
     .from("app_news")

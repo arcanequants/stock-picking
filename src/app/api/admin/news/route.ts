@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     headline?: string;
     body?: string;
     link_url?: string | null;
-    audience?: "all" | "premium";
+    audience?: "all" | "premium" | "free";
   };
   try {
     body = await request.json();
@@ -51,7 +51,7 @@ export async function POST(request: Request) {
   if (newsBody.length < 1 || newsBody.length > 4000) {
     return NextResponse.json({ error: "invalid_body" }, { status: 400 });
   }
-  if (audience !== "all" && audience !== "premium") {
+  if (audience !== "all" && audience !== "premium" && audience !== "free") {
     return NextResponse.json({ error: "invalid_audience" }, { status: 400 });
   }
 
@@ -76,7 +76,7 @@ export async function POST(request: Request) {
     id: inserted.id,
     headline: inserted.headline,
     body: inserted.body,
-    audience: inserted.audience as "all" | "premium",
+    audience: inserted.audience as "all" | "premium" | "free",
   });
 
   await admin

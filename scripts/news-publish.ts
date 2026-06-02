@@ -11,7 +11,7 @@
  *     --headline "Fed corta 25bp, S&P toca máximo histórico" \
  *     --body "El comité de la Fed bajó la tasa al 4.00%..." \
  *     [--link "https://example.com/article"] \
- *     [--audience all|premium]   (default: all)
+ *     [--audience all|premium|free]   (default: all)
  *     [--target prod|local]      (default: prod)
  *
  * Required env (in .env.local):
@@ -24,7 +24,7 @@ interface Args {
   headline?: string;
   body?: string;
   link?: string;
-  audience?: "all" | "premium";
+  audience?: "all" | "premium" | "free";
   target?: "prod" | "local";
 }
 
@@ -41,8 +41,8 @@ function parseArgs(argv: string[]): Args {
       case "--link":
         out.link = next; i++; break;
       case "--audience":
-        if (next !== "all" && next !== "premium") {
-          throw new Error("--audience must be 'all' or 'premium'");
+        if (next !== "all" && next !== "premium" && next !== "free") {
+          throw new Error("--audience must be 'all', 'premium', or 'free'");
         }
         out.audience = next; i++; break;
       case "--target":

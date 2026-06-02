@@ -4,8 +4,10 @@ import { sendAPNsMany } from "@/lib/apns";
 /**
  * Audience-aware push fan-out for a single app_news row.
  *
- * - `'all'`   → every active iOS device token
+ * - `'all'`     → every active iOS device token
  * - `'premium'` → only devices whose user has an active/trialing subscription
+ * - `'free'`    → only devices whose user is NOT an active/trialing subscriber
+ *                 (non-subscribers + lapsed/canceled), i.e. "all minus premium"
  *
  * Marks 410 BadDeviceToken / Unregistered responses as inactive so the
  * next push doesn't retry them. Returns delivery counts so the caller
@@ -15,29 +17,33 @@ export async function sendNewsPush(news: {
   id: string;
   headline: string;
   body: string;
-  audience: "all" | "premium";
+  audience: "all" | "premium" | "free";
 }): Promise<{ sent: number; failed: number; deactivated: number }> {
   const admin = getSupabaseAdmin();
 
-  let emails: string[] | null = null;
-  if (news.audience === "premium") {
+  let premiumEmails: Set<string> | null = null;
+  if (news.audience === "premium" || news.audience === "free") {
     const { data: subs } = await admin
       .from("subscribers")
       .select("email")
       .in("subscription_status", ["active", "trialing"]);
-    emails = (subs ?? []).map((s) => s.email);
-    if (emails.length === 0) return { sent: 0, failed: 0, deactivated: 0 };
+    premiumEmails = new Set((subs ?? []).map((s) => s.email));
   }
 
-  let query = admin
+  const { data: tokenRows } = await admin
     .from("device_tokens")
-    .select("token")
+    .select("token, email")
     .eq("platform", "ios")
     .eq("is_active", true);
-  if (emails) query = query.in("email", emails);
 
-  const { data: tokenRows } = await query;
-  const tokens = (tokenRows ?? []).map((r) => r.token);
+  let rows = tokenRows ?? [];
+  if (news.audience === "premium") {
+    rows = rows.filter((r) => r.email && premiumEmails!.has(r.email));
+  } else if (news.audience === "free") {
+    rows = rows.filter((r) => !r.email || !premiumEmails!.has(r.email));
+  }
+
+  const tokens = rows.map((r) => r.token);
   if (tokens.length === 0) return { sent: 0, failed: 0, deactivated: 0 };
 
   // First line of body becomes the push subtitle (lockscreen-friendly).
