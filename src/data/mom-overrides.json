@@ -321,6 +321,20 @@
     "generated_at": "2026-05-25T00:14:21.567Z",
     "model": "gpt-4o"
   },
+  "FMX": {
+    "one_liner": "FEMSA es la dueña de las tiendas OXXO que ves por todo México y también embotella Coca-Cola, siendo una de las empresas más grandes de Latinoamérica.",
+    "why_short": "Invertir en FEMSA es como apostar a que la gente seguirá comprando en OXXO y bebiendo Coca-Cola, mientras recibes un buen dividendo del 6% por esperar.",
+    "risk_short": "El mayor riesgo es que el valor del peso mexicano baje frente al dólar, lo que podría disminuir las ganancias si tienes acciones en dólares.",
+    "generated_at": "2026-06-02T01:59:59.085Z",
+    "model": "gpt-4o"
+  },
+  "FOX": {
+    "one_liner": "Fox Corporation es una gran cadena de televisión en EE.UU. que se enfoca en noticias y deportes en vivo, y tiene una plataforma de streaming gratis llamada Tubi.",
+    "why_short": "Comprar acciones de Fox ahora es apostar por su fuerte presencia en noticias y deportes en vivo, además de su plataforma de streaming gratis Tubi, que aún no ha sido valorada por el mercado.",
+    "risk_short": "El mayor riesgo es que cada vez menos personas contratan cable, de donde Fox obtiene gran parte de sus ingresos. La clave es si sus servicios de streaming crecen lo suficiente para compensar esta caída.",
+    "generated_at": "2026-06-02T01:59:53.593Z",
+    "model": "gpt-4o"
+  },
   "GE": {
     "one_liner": "GE Aerospace fabrica motores de avión y, tras separarse de otra parte de la empresa, ahora se enfoca solo en aviación, con muchos contratos pendientes y un buen momento en el mantenimiento de aviones.",
     "why_short": "Las ventas de GE Aerospace crecieron mucho en 2025, ganaron más dinero y tienen un flujo de efectivo récord. La alta demanda de viajes aéreos y aviones más viejos ayuda a que sus servicios crezcan.",
