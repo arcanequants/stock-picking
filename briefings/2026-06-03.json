@@ -1,0 +1,108 @@
+{
+  "date": "2026-06-03",
+  "summary": "El cierre del Estrecho de Ormuz fuerza alzas de tasas en dos continentes y saca capital de activos de riesgo.",
+  "causalChain": "El bloqueo intermitente de Irán en Ormuz retiró ~20% del suministro global de petróleo → precios de energía subieron en todo el mundo → bancos centrales en Europa y Australia subieron tasas para contener inflación → las tasas más altas presionaron bolsas → inversionistas rotaron fuera de Bitcoin → dólar se fortaleció → oro cedió levemente.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Oil $95/bbl — Hormuz brinkmanship keeps risk premium high", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "10-yr US govt loan rate 4.46% — Fed holds, no cut in sight", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold $4,456 — dollar rally on failed Iran ceasefire dips gold", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts to 6.5% — likely last move, signals pause", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "USMCA July 1 review — $873B in trade at stake", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "BoJ eyeing June hike as yen approaches 160/dollar", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "China PBOC holds rates 10th month; yuan strengthens, Hang Seng +0.86%", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB set to hike to 2.25% on June 11 — oil inflation forces hand", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "DAX falls ahead of ECB decision as oil cost pressure mounts", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA surprised markets — raised to 4.35% citing oil-driven inflation", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP + Rio Tinto merge Pilbara iron ore ops — 200M tonnes play", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin $73K — $2B+ ETF outflows in May, institutions derisk", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "GENIUS Act signed — US's first law governing digital dollars", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "Modified vitamin K compound makes brains grow neurons 3× faster", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Finnish sensor detects 0.83 zeptojoules — smallest energy ever measured", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Two gut bacteria protect babies from autism and ADHD risk", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The world's most important oil shipping lane has been on-and-off closed since March. Iran keeps reopening it, then shutting it again as peace talks collapse. That lane carries a fifth of all global oil. Every time talks fail, traders bid oil prices back up. Today crude sits at $95 a barrel — 52% higher than a year ago. If you pay for gas, groceries, or airline tickets, you are already paying a hidden war tax."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "When the US government borrows money for 10 years, it currently promises lenders a 4.46% annual return. That rate shapes every mortgage, car loan, and corporate bond on Earth. The Federal Reserve is keeping its own rate unchanged because inflation keeps running above its 2% target. Higher borrowing costs slow the whole economy — but the spread between short and long loans just turned positive again, a small signal that markets are not pricing in a recession right now."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold dropped to $4,456 per ounce today — still 32% higher than last year, but slipping as the US dollar surged. When Iran said it halted ceasefire talks, investors rushed into dollars as a safe haven. Gold and the dollar usually move in opposite directions: a stronger dollar means gold becomes more expensive for buyers using other currencies, so demand falls. Both are safety plays, but right now the dollar is winning the fear trade."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main lending rate to 6.5%, the lowest since early 2022, and hinted it is done cutting for now. The bank moved because Mexico's economy shrank in early 2026, creating room for cheaper credit without stoking inflation. But three of five board members who voted want to pause here: global oil prices, trade uncertainty, and a weak peso could bring inflation back quickly. Cheaper loans help businesses invest, only if the outside world cooperates."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Factories are migrating to Mexico at record speed — companies leaving China because Mexico sits next door to the US and hourly wages run 25% below Chinese levels. But on July 1, the US-Mexico-Canada trade deal holds its first formal review. Roughly $873 billion in goods cross those borders every year. If negotiators tighten rules or raise tariffs, the factory migration slows overnight. If the deal gets renewed smoothly, Mexico's manufacturing surge has another decade of runway."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's currency has weakened to nearly 160 per US dollar — so extreme that the Japanese government has spent roughly $78 billion this year buying its own currency to defend its value. A weaker currency makes everything imported cost more, pushing up prices. Japan's central bank is now 78% likely — per market pricing — to raise interest rates in June. Higher rates attract foreign money in, strengthening the currency and easing that price pressure."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "China's central bank held interest rates steady for the tenth straight month while letting its currency gradually strengthen. Hong Kong stocks climbed 0.86%. China's economy is growing at 4.4% this year — solid but below its old targets. The strategy: cheap rates keep businesses borrowing and factories running, while a stronger currency makes oil and food imports cheaper, cushioning the global energy shock. Whether that cushion holds depends on how long Hormuz stays disrupted."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's central bank is expected to raise the cost of borrowing across the eurozone on June 11. The pressure comes directly from oil: the Hormuz closure pushed fuel prices up across 20 countries, and everything from shipping to heating followed. The bank's dilemma is sharp — raising rates fights inflation but also slows an economy growing at barely 0.9% this year. Markets are pricing a 92% chance of the hike, meaning the decision is nearly certain."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Germany's main stock index fell today ahead of next week's central bank decision. Companies hate rate hikes because higher borrowing costs shrink their profits and slow investment. Germany is already the sick man of Europe — its economy contracted last year, and its factories rely on cheap energy that has now become expensive. Higher rates on top of high oil prices create a double squeeze that pushes investors toward safer assets and out of European stocks."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank surprised markets by raising its key interest rate to 4.35% rather than cutting as many had expected. The reason is a straight line from the Middle East: the Hormuz closure raised global oil prices, which raised Australian fuel and grocery costs, which forced the bank to act. For the roughly 3 million Australians with variable-rate home loans, this means higher monthly payments — a direct financial consequence of a conflict 8,000 kilometers away."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto, two of the biggest mining companies on Earth, agreed to combine operations at neighboring iron ore mines in Western Australia, aiming to process up to 200 million tonnes of ore together instead of separately. Iron ore goes mostly to China's steel mills. More efficient production means lower costs per tonne. The deal is a bet that Chinese demand for steel — for factories, roads, and buildings — stays strong even as China's growth moderates."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin fell to $73,196 as investors pulled over $2 billion out of Bitcoin investment funds in May — the largest monthly exit of 2026. Here is what's strange: Bitcoin's price only fell 3.7%, but money left at 10 times the rate of a worse drop earlier this year. That gap suggests this is not panic selling. It looks like deliberate repositioning: large institutions are quietly reducing exposure to risky assets as global uncertainty from oil, war, and rising interest rates grows."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "The US just passed its first law specifically governing digital dollars — units on blockchains that are meant to stay worth exactly $1. The GENIUS Act requires every company that issues them to hold the equivalent in real dollars or short-term government debt. Tether, the dominant digital dollar with $189 billion in circulation, now operates under a clear legal framework. The goal: prevent a digital dollar from collapsing suddenly, which once nearly froze the entire crypto market."
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "Scientists at Shibaura Institute of Technology in Japan built a new molecule based on vitamin K that pushes brain stem cells to become full neurons at three times the normal rate. In Alzheimer's and Parkinson's disease, neurons die faster than the brain can replace them. This compound crosses the brain's protective barrier easily and stays stable inside the body. Human trials have not started yet, but it is one of the first molecules that may one day instruct a damaged brain to rebuild itself. 📄 Published in (pre-clinical study, May 2026) · More: https://www.sciencedaily.com/releases/2026/05/260526233433.htm",
+      "institution": "Shibaura Institute of Technology, Japan"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Physicists at Aalto University in Finland, working with quantum computing firm IQM and the Finnish research center VTT, built a sensor that detected 0.83 zeptojoules of energy — that is 0.000000000000000000083 joules, smaller than the energy carried by a single particle of light. The device uses materials that conduct electricity with zero resistance near absolute zero temperature. Applications include more stable quantum computers, sharper medical imaging, and possibly the first direct detection of dark matter. 📄 Published in Nature Electronics · More: https://www.sciencedaily.com/releases/2026/05/260520093654.htm",
+      "institution": "Aalto University / IQM / VTT, Finland"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Researchers found that two specific bacteria living in a baby's gut during its first year of life can significantly lower the odds of developing autism or ADHD — even when the child's DNA suggests elevated risk. The bacteria, Lachnospira and Parabacteroides, appear to interact with chemical switches on the baby's genes, reshaping early brain development before any symptoms appear. Lead researcher Francis Ka Leung Chan said the finding could lead to diet or probiotic strategies to support brain development from birth. 📄 Published in Cell Press Blue (April 2026) · More: https://www.sciencedaily.com/releases/2026/06/260602021645.htm",
+      "institution": "Research team led by Francis Ka Leung Chan"
+    }
+  ]
+}
