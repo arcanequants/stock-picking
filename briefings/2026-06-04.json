@@ -1,0 +1,123 @@
+{
+  "date": "2026-06-04",
+  "summary": "Iran's Hormuz blockade reshapes global energy, rates, and risk appetite across every asset class",
+  "causalChain": "Iran's shutdown of the world's main oil shipping passage since February drove Brent above $96/barrel, reigniting inflation from Europe to Australia and pushing central banks toward rate hikes; that squeeze on growth drained risk appetite, pulling $4.2B out of Bitcoin funds in three weeks while gold climbed to a record $4,436 as investors sought safety.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz blockade: 95% of oil ships still can't pass, Brent near $97", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US government borrowing cost at 4.49% — jobs data keeps Fed hawkish", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,436 all-time high — weak dollar and war risk drive safe-haven demand", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "US proposes 10-12.5% new taxes on 60 countries over forced-labor trade practices", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico cuts rate to 6.50%, signals end of easing cycle amid sticky inflation", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Remittances record $19.7B Jan-Apr — each transfer up 5% to $401", "worker": "—"},
+    {"n": 7, "region": "MEXICO", "angle": "July 1 USMCA review: $873B trade at stake, nearshoring jobs still lag investment", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "Nikkei near all-time high at 66,934 — AI chips and weak yen lift Tokyo stocks", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Yuan at 3-year high vs dollar; Hang Seng drops 1.56% on China growth fears", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "ECB set to hike to 2.25% on June 11 — Middle East oil reignites European inflation", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "DAX falls 1.3% to 24,796 — Germany grows just 0.6%, UK squeezed by Iran war", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "RBA at 4.35% after 3 hikes this year — June 16 decision splits economists", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "BHP and Rio Tinto share Pilbara infrastructure to process 200M tonnes/yr together", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Bitcoin near $73,500 — $4.2B pulled from BTC funds in 3 consecutive weeks", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "Senate advances crypto rules bill 15-9 — SEC calls digital assets a 'revolution'", "worker": "—"},
+    {"n": 16, "region": "CRYPTO", "angle": "Digital dollars hit $250B — GENIUS Act rules due July 2026, Meta integration next", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Stanford discovers exploding immune cells in flatworms that kill 70 neighbors at once", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Single blood draw detects 50 cancers early — 140,000-person UK NHS trial shows 25% fewer emergencies", "worker": "—"},
+    {"n": 19, "region": "WOW", "angle": "Universe's physical constants sit in a razor-thin range that makes liquid-based life possible", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Iran blocked the world's busiest oil shipping lane in February after the US and Israel launched airstrikes. Before the conflict, 1 in 4 barrels of ocean oil traveled through this narrow passage. Now only 5% of normal ship traffic gets through. That pushed Brent crude above $96 per barrel — making fuel, plastics, and food more expensive for every country that imports energy."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government pays 4.49% a year to borrow money for 10 years — and that rate kept climbing Wednesday. Why: employers added 122,000 new private-sector jobs in May, better than expected. A strong job market means people keep spending, prices stay high, and the central bank has little reason to lower its rates. Markets now see an 85% chance of another rate increase by year-end, raising costs for mortgages and business loans worldwide."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,436 per ounce — an all-time high. The US dollar slipped to a near 3-year low, which matters because gold is priced in dollars: when the dollar drops, buyers in other currencies get gold cheaper, pushing demand and price up. Behind it: a Middle East war, a trade fight with 60 countries, and uncertainty about central bank policy. When the world feels unpredictable, investors buy gold because no government can print more of it."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The US proposed new import taxes of 10–12.5% on goods from 60 countries, saying those nations allow products made with forced labor into global supply chains. Canada and Mexico face 10%; China, Japan, and India face 12.5%. The legal basis is a 1974 trade law — used as a workaround after the Supreme Court struck down earlier emergency tariffs in February. The current stopgap taxes expire July 24, so either this new proposal sticks or prices on imported goods jump again."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.50% on May 7 — the lowest since 2022 — then signaled it may stop cutting. Lower rates make borrowing cheaper, which helps a slow-growing economy. But prices are still rising at 4.45% a year, above the 3% target. If the bank cuts too much while inflation stays high, the peso weakens and imports — from food to electronics — get more expensive for Mexican families."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexicans living abroad sent home $19.7 billion from January through April — the highest on record for those four months. Each transfer averaged $401, about 5% more than a year ago, even though fewer transfers were made. Remittances are now roughly as large as oil exports as a foreign income source for Mexico, making the economic health of migrants in the US a direct variable in Mexico's national finances."
+    },
+    {
+      "n": 7,
+      "region": "MEXICO",
+      "text": "On July 1, the US, Mexico, and Canada begin the formal review of their trade deal — the agreement that covers $873 billion in annual cross-border commerce. The outcome could change which factories qualify for tax-free US market access, especially in cars. Meanwhile, foreign companies poured record money into Mexico in 2025 to build factories closer to the US — but manufacturing jobs fell by 127,000, the worst drop since 2008. The investment boom hasn't yet reached workers' paychecks."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's main stock index hit 66,934 — near an all-time high — driven by AI chip demand and a weak currency that makes Japanese exports cheap for foreign buyers. The central bank kept its rate unchanged while watching oil prices rise. Japan imports nearly all its oil, so a blocked Persian Gulf directly raises fuel costs for its factories and families. Analysts expect the yen to weaken further toward 160 per dollar by year-end, since Japan's borrowing rates remain far below those in the US."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "China's currency hit a 3-year high against the dollar at 6.82 yuan — as the greenback weakened globally. Yet Hong Kong's stock market fell 1.56% Wednesday. The disconnect: a stronger currency makes Chinese exports more expensive abroad, worrying investors betting on China's growth. The economy expanded 4.5% last quarter — its slowest pace since COVID restrictions ended. China's central bank still has tools: it can cut rates and free up bank reserves to push more money into the economy."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "The European Central Bank is expected to raise its lending rate to 2.25% at its June 11 meeting — the third increase this year. The reason: oil prices climbed again as the Iran conflict disrupted Middle East shipping. Europe imports almost all its energy, so when oil supply shrinks, electricity bills and pump prices rise quickly, pushing inflation back up just as it was cooling. Higher rates make it more expensive for businesses and homeowners to borrow, slowing an economy growing below 1%."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Germany's main stock index fell 1.3% Wednesday to 24,796. The economy is expected to grow just 0.6% this year after two straight years of contraction — squeezed by US tariffs hurting exports, high energy costs from the Iran conflict, and factories slow to adapt. The UK faces similar pressure: economists say the Middle East war will weigh on British growth for several more quarters. Both countries need cheap energy and open trade to recover, and right now neither looks guaranteed."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's central bank has raised interest rates three times this year to 4.35%. The next decision is June 16. Economists are split: some expect a pause to let earlier hikes work through the economy; others say inflation risks still justify another increase. Each hike raises monthly payments for millions of homeowners on variable-rate mortgages, cooling consumer spending. Australia's economy faces pressure from both directions: slowing Chinese demand for its minerals and persistent domestic price increases."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — the world's two biggest mining companies, both rooted in Australia — agreed to share equipment and processing plants at neighboring iron ore mines in Western Australia. Together they could handle up to 200 million tonnes of ore per year from the same region. Sharing infrastructure cuts costs for both. The deal matters now because China, which buys most of their iron ore to make steel, is growing more slowly than expected — squeezing margins as prices soften."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading near $73,500 after three straight weeks of investors pulling money out of US-based Bitcoin investment funds — $4.2 billion total. These funds let everyday investors own Bitcoin through a normal brokerage account; they now drive roughly 45% of Bitcoin's weekly price moves. The selling appears tied to uncertainty about US crypto laws and broad market caution. Quietly, long-term buyers are purchasing large blocks of Bitcoin in private transactions, finding current prices attractive for an 18-month view."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "The US Senate Banking Committee voted 15-9 to advance a bill that would end years of confusion about who regulates digital assets — the stock market regulator or the commodities regulator. That ambiguity has kept large institutions on the sidelines. Bitcoin briefly jumped to $81,500 on the news before pulling back. The bill still needs a full Senate floor vote. Separately, the SEC published its 5-year plan calling digital asset technology a potential revolution for US financial infrastructure — a sharp tone shift."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "Digital dollars — tokens on the internet backed 1-for-1 by actual US dollars — now total $250 billion and handle 30% of all crypto transactions. A US law signed in 2025 requires issuers to hold full dollar reserves and publish monthly reports; final rules go live by January 2027. Meta is planning to plug these tokens into its apps in the second half of 2026. If that rolls out, billions of people who use Instagram or WhatsApp could send digital dollars to each other without touching a bank account."
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Scientists at Stanford University found a type of immune cell in flatworms that literally explodes on command to kill nearby threats. One detonating cell destroys up to 70 neighboring cells — including bacteria and human cells — within minutes. The cells, named ruptoblasts, fire when a specific stress signal is detected, then burst and spray toxic compounds outward. Flatworms share a common ancestor with humans from 600 million years ago, suggesting this immune strategy is one of the oldest ever discovered. 📄 Published in Cell · More: https://news.stanford.edu/stories/2026/06/flatworms-ruptoblasts-new-type-immune-cell-research"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "A single blood draw can now screen for signs of 50 different cancers before any symptoms appear. The largest real-world test ever — 140,000 NHS patients followed for three years — found people who took the test were 25% less likely to be diagnosed with cancer in an emergency. Earlier detection means treatment starts sooner and works better. The test reads tiny fragments of DNA that tumors shed into the bloodstream. First full results were presented May 30 at the world's biggest cancer conference in Chicago. 📄 Published at ASCO Annual Meeting 2026 · More: https://grail.com/press-releases/landmark-nhs-galleri-trial-demonstrates-a-substantial-reduction-in-stage-iv-cancer-diagnoses-increased-stage-i-and-ii-detection-of-deadly-cancers-and-four-fold-higher-cancer-detection-rate/"
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "text": "Physicists at Queen Mary University of London calculated that the basic rules of the universe — how strong electricity is, how heavy a proton is — fall within an incredibly narrow range that allows fluids to move inside living cells. Even tiny changes in these constants would make blood too thick, water too sticky, or cellular machinery seize up, and life as we know it would be impossible. The finding adds rigorous math to a longstanding philosophical question: why does the universe look like it was set up for life? 📄 Published in Physical Review Research · More: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12440066/"
+    }
+  ]
+}
