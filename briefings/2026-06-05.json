@@ -1,0 +1,105 @@
+{
+  "date": "2026-06-05",
+  "summary": "Middle East oil shock meets Bitcoin ETF exodus as central banks stay hawkish worldwide.",
+  "causalChain": "The Iran-Hormuz conflict keeps oil near $95 and pushes inflation globally, forcing the ECB, RBA and likely the Fed to hold or hike; separately, $4.4B in Bitcoin fund outflows signal institutional risk-off that mirrors the same macro caution.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Brent ~$95, down 20% from peak on Iran ceasefire hopes but Hormuz still blocked", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 10-yr rate at 4.49%, dollar index 99.3, markets pricing 85% chance of another Fed hike", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,448 — central bank hoarding plus Middle East fear keep record run alive", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "US-China 30% tariff ceasefire: 60-day pause on extra tariffs after London talks", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico at 6.50%, signaling end of cuts; inflation 4.45%, GDP contracted Q1 2026", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Record $40.9B FDI from nearshoring but Mexico's power grid is the bottleneck", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ holds at 0.75%, slashes Japan growth to 0.5% as oil war hits import-heavy economy", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "PBOC holds rates; China exports +6.6%; Hang Seng -1.27% to 25,006", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB almost certain to hike to 2.25% on June 11 — Middle East energy shock revives inflation", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA at 4.35%; June hike is a coin flip; Simandou iron ore mine threatens BHP/Rio profits", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBNZ holds OCR at 2.25%; NZ inflation heading to 4.3% peak despite weak economy", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin $66,650 — $4.4B ETF exodus in 13 days, biggest since launch in January 2024", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "SEC+CFTC classify BTC/ETH as commodities; MiCA full enforcement July 1; Japan flat 20% tax", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "EPFL puts a full-power ultrafast laser on a chip — 20 years of trying, published in Nature", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Fish gut bacteria secretly help produce minerals that pull CO2 from the ocean", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Webb telescope mystery red dots solved: baby black holes in superheated gas cocoons", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Brent crude is trading near $95 a barrel — down 20% from its 2026 high — because traders think the US and Iran might stop fighting. The Strait of Hormuz carries roughly 20% of the world's oil every day. When it reopens (or looks like it might), prices fall fast. But Iran fired missiles at Kuwait just this week, so the peace deal isn't signed yet. Until ships can actually pass freely again, oil will stay in the $90–$100 range."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government now pays 4.49% a year to borrow for 10 years — near the highest since 2007. Investors demand that rate because the US economy keeps growing and they think the Fed might raise borrowing costs once more this year. A firm dollar makes everything priced in dollars (like oil and gold) more expensive globally. The dollar index sits at 99.3, roughly flat since January."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,448 an ounce. Three years ago it was $2,000. What's driving it: central banks in China and India are hoarding gold instead of US dollars, inflation stayed stubbornly high, and the Middle East war created fear. When investors get scared, they buy gold because it holds value across centuries better than any paper currency."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The US and China agreed on a framework: 30% total US taxes on Chinese imports stay in place, but the threat of much higher tariffs is paused for 60 days. That's not a trade deal — it's a ceasefire. The average US household is paying roughly $1,500 more per year because of these tariffs. The next negotiation round must happen before the 60-day clock runs out."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.50% in May — the third cut this year — and signaled it's probably done cutting. Why? Inflation at 4.45% is still above its 3% goal, and the economy actually shrank in the first three months of 2026. Cutting rates further with inflation this high could weaken the peso. Banxico's message: no more cuts for now."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Companies are moving factories from China to Mexico at a record pace — $40.9 billion in foreign investment flowed in last year, a new record. But there's a big problem: Mexico's power grid can't handle the surge. Industrial electricity demand is rising sharply and the grid is already strained. Without reliable power, factories can't run around the clock. Nearshoring momentum is real, but energy is the bottleneck."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank kept its interest rate at 0.75% and cut its growth forecast for the year to just 0.5%. Why? The Iran war sent oil prices soaring, and Japan imports nearly all its oil. More expensive oil means higher prices for everything in Japan, squeezing consumers and slowing the economy. The bank faces a tough choice: raise rates to fight rising prices, or hold them to protect growth."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's central bank kept its lending rates unchanged at 3% as the yuan gradually strengthens against the dollar. Exports jumped 6.6% — a bright spot amid ongoing trade tensions with the US. Hong Kong's main stock index fell 1.27% to 25,006. Investors are cautious: the tariff ceasefire helps, but China's economy is still expected to slow to 4.4% growth this year."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank kept its deposit rate at 2% in April. But its June 11 meeting — next week — is almost certain to bring a 0.25% hike, with markets pricing that at 98%. The reason: the Middle East war pushed energy costs sharply higher across Europe, reviving inflation that policymakers thought was under control. Germany, one of the world's biggest energy importers, is feeling it most."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its rate three times in 2026, bringing it to 4.35%. The June 16 decision is a coin flip: some big banks say pause, others say hike again. Inflation is being kept high by oil from the Middle East — something rate hikes in Sydney can't fix. Meanwhile, BHP and Rio Tinto face a new threat: a massive iron ore mine opening in West Africa could flood the market and cut their profits."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "New Zealand's central bank held its rate at 2.25% for the third meeting in a row. The economy grew just 0.2% last year and unemployment hit an 11-year high of 5.4%, yet inflation is expected to peak at 4.3% by September — mainly because of oil. The next move is likely a hike, not a cut. Borrowers hoping for mortgage relief are being told to wait."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin fell to $66,650 this week, down more than 50% from its all-time high of $126,200 in October 2025. The main cause: large funds that bought Bitcoin through US exchange-listed products are now selling — $4.4 billion pulled out over 13 days, the biggest exit since those products launched in January 2024. Citigroup says these fund flows explain roughly 45% of Bitcoin's weekly price moves."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "The US, Europe, and Japan tightened crypto rules in 2026. The SEC and commodity regulator CFTC jointly classified Bitcoin, Ethereum, and Solana as digital commodities — not securities — ending years of legal uncertainty. Europe's full crypto rulebook takes effect July 1. Japan is pushing a flat 20% tax on crypto gains, replacing a rate that could hit 55%. Clearer rules reduce risk for big institutions eyeing entry."
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "Scientists at EPFL in Lausanne, Switzerland fit an ultrafast laser — normally desk-sized — onto a chip smaller than a stamp. These lasers fire pulses a million-billion times per second and are used in eye surgery, atomic clocks, and medical scanners. Making them tiny could bring hospital-grade diagnostics to a handheld device. Led by Prof. Tobias Kippenberg with researchers from Helmholtz-Zentrum Dresden-Rossendorf. 📄 Published in Nature · More: https://www.sciencedaily.com/releases/2026/06/260604044240.htm"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Scientists at the University of Miami Rosenstiel School found that bacteria living inside fish guts help fish produce calcium carbonate — the same mineral that makes seashells and coral. This mineral sinks to the ocean floor and absorbs CO₂ along the way. For years researchers thought fish did this alone. They don't. The gut bacteria are essential partners. Led by Anthony Bonacolta and Prof. Martin Grosell. 📄 Published in PLOS Biology · More: https://www.eurekalert.org/news-releases/1130182"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "For years, the James Webb telescope photographed mysterious red specks in early-universe images nobody could explain. Researchers at the Niels Bohr Institute, University of Copenhagen solved it: they are newborn black holes growing fast inside dense gas clouds, glowing red from extreme heat. They are 100 times less massive than expected yet grew into giants within 700 million years of the Big Bang. Led by V. Rusakov and Prof. Darach Watson. 📄 Published in Nature · More: https://nbi.ku.dk/english/news/news26/copenhagen-researchers-make-the-front-page-of-nature-solving-the-mystery-of-the-universes-little-red-dots/"
+    }
+  ]
+}
