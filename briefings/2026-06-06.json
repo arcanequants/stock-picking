@@ -1,0 +1,117 @@
+{
+  "date": "2026-06-06",
+  "summary": "Hormuz near-shut since February keeps oil high and forces Europe's central bank toward a rate hike, while Bitcoin's 13-day ETF outflow streak finally breaks.",
+  "causalChain": "Iran's blockade of the Strait of Hormuz (vessel traffic at 5% of normal since late February) keeps energy prices elevated across Europe, pushing the ECB to almost-certain hike on June 11; expensive credit globally presses risky assets, though spot Bitcoin ETFs ended a 13-day, $4.3B outflow streak on June 5 with a small positive inflow.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz near-shut: oil waterway at 5% normal traffic as Iran ceasefire holds but shipping fears linger", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 10-year borrowing cost at 4.48%; Fed holds June 16–17, no cut expected", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold drops 4% weekly on strong US jobs data while central banks quietly bought 244 tonnes in Q1", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts to 6.50%, signals pause as GDP contracts and inflation sits at 4.45%", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "USMCA formal review starts July 1; $873B annual trade and record nearshoring FDI at stake", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Remittances to Mexico up 1.4% in 2026 after immigration-driven 2025 plunge", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Nikkei hits record above 68,000 (+3%); BoJ rate hike expected June 16, yen at 160/USD", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "PBOC holds yuan steady; Chinese crude imports at 10-year low signal demand slump", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB 98%-likely to hike June 11 as oil-driven European inflation surges toward 3.1%", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "DAX falls on oil price surge and ECB rate-hike uncertainty squeezing German factories", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBA raised to 3.85% but markets price 70% odds of August cut — policy tension building", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "Iron ore holds above $100/t; BHP and Rio Tinto announce 200M-tonne Pilbara joint venture", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin ETF 13-day outflow streak ($4.3B exits) broken June 5 with tiny positive inflow; BTC ~$72,500", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Ethereum ETFs see 17 straight outflow days; ETH near $1,980 as macro pressure holds", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "GENIUS Act deadline July 18; Tether's digital dollar delisted from EU exchanges under MiCA", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "James Webb mystery solved: 'little red dots' are baby black holes wrapped in hot gas cocoons (Nature, Niels Bohr Institute)", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Blood test detects 50+ cancers early: 142,000-person UK NHS-Galleri trial presents landmark results", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "People who reach 100 have 37 blood proteins that look decades younger (Aging Cell, U. Geneva + Lausanne)", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The world's busiest oil corridor has been almost completely shut since late February. A narrow 33-mile waterway between Iran and Oman normally carries 1 in every 5 barrels of oil shipped globally. Today only about 5% of normal ship traffic flows through it, because Iran started blocking vessels after the US and Israel attacked it. Every barrel of oil now travels longer, costlier routes. That keeps fuel prices high — and drags up electricity, plastics, and airline costs everywhere."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government is paying 4.48% a year to borrow money for 10 years. That rate acts like gravity for the whole economy: mortgages, car loans, and credit cards all rise when it does. The central bank last met in late April and kept its rate at 3.62%, pausing a cycle of cuts from 2024. The next meeting is June 16–17. Markets expect no change — prices are still rising faster than the bank wants, and the job market is strong enough that spending has not slowed much."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell below $4,370 an ounce this week, its lowest point in all of 2026, dropping nearly 4% in five days. What happened? A surprisingly strong US jobs report made investors think the central bank will keep borrowing costs high for longer. When borrowing stays expensive, people prefer dollar deposits over gold — so gold falls. The odd subplot: national governments around the world bought 244 tonnes of gold just in the first three months of 2026, quietly building a floor under prices."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.50% last month — its lowest since April 2022 — and signaled it is probably done cutting for now. Why stop? Mexico's economy actually shrank in early 2026. When an economy contracts, there is less spending, which normally cools prices — giving the bank room to cut. But two of five board members voted against it, worried that inflation at 4.45% is still well above the 3% goal. The bank expects to hold rates here until mid-2027."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "In 25 days — July 1 — the US, Mexico, and Canada begin their formal review of their shared trade deal, which governs $873 billion in annual cross-border goods. For Mexico, the stakes are enormous: factories built to supply US companies have attracted a record $40.9 billion in investment in 2025 alone, and Mexican factory wages are about 25% below Chinese wages — a key selling point. Any new tariffs or restrictions could reverse that manufacturing boom. Boardrooms from Monterrey to Saltillo are watching closely."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Money sent home by Mexicans living in the US rose 1.4% in early 2026, after falling sharply in 2025 when US immigration enforcement tightened. These transfers equal about 3.5% of Mexico's entire annual economy — bigger than tourism and comparable to oil revenues. The recovery is tentative: workers fear deportation and send smaller amounts. A sustained pickup would give millions of Mexican households more spending power and help lift the economy out of its current soft patch."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's main stock index hit a fresh record above 68,000 this week, rising 3% in a single session. The driver: investors are betting Japan's central bank will raise interest rates on June 16 for the first time in months. Higher rates in Japan pull money back home from overseas, which strengthens the yen — currently at 160 to the dollar, its weakest in months. Rising rates also signal that Japan's central bank believes the economy is finally healthy enough to stand on its own after decades of near-zero borrowing costs."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's currency gained about 2% against the dollar since April, even as the economy faces headwinds. China's central bank is setting the yuan's daily reference rate virtually unchanged each day — a deliberate signal of stability over volatility. Meanwhile, Chinese crude oil imports hit a 10-year low this spring as factories run slower and construction has cooled. That weakness ripples outward: countries like Australia, Brazil, and Chile that export raw materials to China are feeling it in softer commodity prices."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank is almost certain to raise borrowing costs when it meets June 11 — markets put the odds at 98%. Why raise now, when Europe's economy is struggling? The closure of the oil waterway near Iran since February sent energy prices sharply higher, pushing European inflation toward 3.1%. That is well above the bank's 2% target. Higher rates are meant to slow spending and cool prices, but they also make business loans more expensive — a painful tradeoff when growth is already fragile."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Germany's main stock index has been falling, dragged down by two converging forces: oil that costs more because the Iran shipping waterway is mostly closed, and the near-certain prospect of Europe's central bank raising borrowing costs next week. More expensive energy squeezes the profit margins of German factories. Higher borrowing costs make the future profits of those companies worth less to investors today. Germany is the eurozone's industrial engine — when its factories hurt, the rest of Europe tends to slow with it."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its interest rate three times in 2026, bringing it to 3.85%. Yet financial markets are betting there is a 70% chance the bank will start cutting rates by August — a striking mismatch. The tension: Australia's economy is cooling partly because China, its biggest customer, is buying fewer raw materials. But inflation is still running hot, giving the bank reason to stay tough. Both cannot be right for long. The August meeting will reveal which force wins."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Iron ore — the main ingredient in steel — is holding above $100 a tonne, supported by Chinese steel mills exporting more steel abroad even as domestic building slows. BHP and Rio Tinto, the two mining giants anchoring Australia's export economy, agreed to jointly develop up to 200 million tonnes of iron ore reserves at neighboring mines in Western Australia. But analysts expect prices to ease as China's weaker domestic demand eventually outweighs the current export push."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading around $72,500. For 13 consecutive days ending June 3, US investors pulled money out of Bitcoin investment funds — the longest such streak since those funds launched in early 2024 — withdrawing $4.3 billion total and pushing assets from $104 billion down to $80 billion. The streak broke June 5 with a tiny $3 million inflow. What drove the selling? Sticky US inflation makes investors nervous about risky bets. The break is a small signal, but not yet a clear trend reversal."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Ethereum, the second-largest digital currency, is trading near $1,980. Funds holding Ethereum for investors saw 17 straight days of withdrawals — a worse streak than Bitcoin's — leaving $9.78 billion under management, about $2 billion below the January peak. The same inflation-fear logic driving Bitcoin outflows applies here, but with a twist: Ethereum has less institutional presence than Bitcoin, so when confidence drops, fewer large buyers step in to absorb the selling pressure."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "Two big rulebooks for digital dollars just arrived simultaneously. In the US, a new law requires any company issuing a dollar-pegged digital token to back it fully with real dollars and get a federal license — deadline July 18. In Europe, rules that just took effect mean Tether's token USDT — the world's most-used digital dollar at $189.6 billion in circulation — can no longer trade on regulated EU exchanges for refusing compliance. Regulators on both sides of the Atlantic are reshaping the digital-dollar market at the same time."
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Since 2022, the James Webb Space Telescope kept spotting thousands of mysterious bright red smudges from the very early universe that no one could explain. Researchers at the Niels Bohr Institute's Cosmic Dawn Centre in Copenhagen cracked it: each dot is a young, relatively small black hole wrapped in a thick cloud of hot gas it is actively eating. The heat from feeding burns red through the gas like a lamp under a blanket. They disappear a billion years later because the black hole eventually consumes its gas cocoon. 📄 Published in Nature · More: https://nbi.ku.dk/english/news/news26/copenhagen-researchers-make-the-front-page-of-nature-solving-the-mystery-of-the-universes-little-red-dots/"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "A single blood draw can now screen for more than 50 types of cancer — including ones that rarely produce early symptoms — before they reach dangerous stages. The NHS-Galleri trial, coordinated by the Cancer Prevention Trials Unit at Queen Mary University of London, gave the test to 142,000 UK volunteers aged 50–77, who gave blood once a year for three years. The test found cancers at an early stage four times more often than standard care alone. Results were presented at the world's largest cancer conference on May 30, 2026. 📄 Presented at ASCO 2026 · More: https://www.qmul.ac.uk/news/latest-news/2026/medicine-and-dentistry/fmd/first-results-from-nhs-galleri-trial-presented-at-international-conference-.html"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "People who live past 100 tend to have blood that looks decades younger. A Swiss study called SWISS100, led by researchers at the University of Geneva and University of Lausanne, measured 724 proteins in blood from centenarians (age 100–105), 80-year-olds, and people aged 30–60. The 100-year-olds closely matched the youngest group on 37 key proteins — especially ones linked to cellular damage from chemical reactions in the body. Lower levels of this internal cellular stress appear to be a biological hallmark of extreme longevity. 📄 Published in Aging Cell · More: https://www.unige.ch/medias/en/2026/le-sang-des-centenaires-eclaire-les-mecanismes-de-la-longevite"
+    }
+  ]
+}
