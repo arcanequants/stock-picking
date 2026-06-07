@@ -1,0 +1,111 @@
+{
+  "date": "2026-06-07",
+  "summary": "OPEC meets as Hormuz closure keeps oil near $100, Bitcoin ETFs bleed $4.4B, and global central banks diverge sharply on rates.",
+  "causalChain": "The US-Iran conflict closed the Strait of Hormuz, pushing oil near $100 and forcing the ECB and Australia's central bank to hike rates against energy-driven inflation; those higher borrowing costs then pressured all risk assets — Bitcoin, gold, and equities — as big money rotated into dollars and safe positions.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "OPEC+ ministers meet today — Hormuz still closed, Brent holds near $99", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 10-yr borrowing cost at 4.55% — Fed holds, market prices a hike by year-end", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold hits 2026 low at $4,366 — strong jobs data + stronger dollar double-tap", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico slashes 2026 GDP forecast to 1.1% — economy contracted in Q1", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "T-MEC review clock hits July 1 — record $72B exports give Mexico leverage", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "Yen at 160/USD — Japan spent $73B defending currency, BOJ hike expected June 16", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Nikkei above 68,000 record — but China oil imports hit 10-year low", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB 99% priced to hike June 11 — energy shock pushed eurozone inflation to 3.1%", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "Eurozone growth only 0.9% in 2026 — Germany dragged by energy costs + weak China demand", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA hiking again — rare tightener in 2026 while NZ holds rates low", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP + Rio Tinto explore 200M-tonne iron ore joint op — but China demand at decade low", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin ETFs: 13-day outflow streak, $4.4B exits, BTC at $62K (-21% in 3 weeks)", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Digital dollar supply hits $320B — US GENIUS Act mandates 1-to-1 backing now in force", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "60 mega ETH wallets emptied — whales rotating into Bitcoin as macro safe haven", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Fish gut bacteria secretly build ocean's carbon sink — PLOS Biology, U. of Miami", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "21 organic molecules found on Mars, 7 new — NASA Curiosity, Nature Communications", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "WPI engineers build carbon-negative concrete — enzyme turns CO₂ into stone in hours", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The world's biggest oil producers meet today in Vienna. The group approved pumping more oil last month, but a narrow shipping channel in the Middle East — where 20% of global oil passes — has been effectively blocked since February due to the US-Iran conflict. More supply exists on paper, but tankers can't get through. Brent crude holds near $99 a barrel."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government pays 4.55% a year on 10-year loans it takes from the public. This number sets the floor for home mortgages and business loans nationwide. The Federal Reserve is holding rates steady — the economy keeps adding jobs faster than expected, so officials see no reason to make borrowing cheaper right now. Markets are pricing in one more rate increase before year-end."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell to its lowest price since March — around $4,366 per ounce — and is on track for a nearly 4% weekly decline. Right after a surprisingly strong US jobs report, investors felt less scared and sold the safe-haven metal. The dollar strengthened on that same report, adding more pressure since gold and the dollar typically move in opposite directions."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its official growth forecast for 2026 from 1.6% to 1.1%. The economy actually shrank in the first quarter. The main drag: companies are not investing due to security concerns, and a global slowdown is hitting exports. Despite 13 consecutive interest rate cuts — now at 6.75% — the economic rebound hasn't arrived and inflation still sits above 4%."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "On July 1, the US, Mexico, and Canada must decide whether to extend their trade deal or start a countdown to its end in 2036. Around $873 billion in goods cross those borders every year. Mexico just posted record monthly exports of $72 billion — its strongest argument at the table. The US wants stricter rules on where car parts come from, which could disrupt supply chains built over decades."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "The Japanese yen hit 160 per US dollar — a level so weak that Japan spent $73 billion between April and May trying to stop the slide. The problem: Japan's interest rates are far below US levels, so investors sell yen to buy dollar assets that pay more. A rate increase is expected June 16, but the market doubts one move will close a gap that wide."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's main stock index climbed above 68,000 — a record high — as investors bet that rising interest rates will boost bank profits. But China's crude oil imports just fell to their lowest level in ten years, signaling weak industrial demand. That's a warning sign for the whole region: when China buys less energy, it usually means factories are running slower."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's central bank is almost certain to raise the cost of borrowing on June 11. The reason: the Middle East conflict disrupted oil shipping, sending European energy prices sharply higher and pushing inflation to 3.1%. The bank is trying to stop that energy shock from spreading into everyday goods and wages before it becomes a self-reinforcing cycle."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "The eurozone is expected to grow only 0.9% in 2026 — roughly half the US pace. Germany, the region's largest economy, is still weighed down by high energy costs and weak demand from China. European stocks are caught between rising interest rates — bad for most companies — and higher profits at energy firms benefiting from the oil price surge."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia raised its key interest rate three times already in 2026 and is expected to do so again in June. The reason: the economy is growing faster than its capacity, jobs are plentiful, and inflation stays sticky. This puts Australia in a rare club — most wealthy countries are cutting rates right now. Neighboring New Zealand is doing the opposite, holding rates low to support a much weaker economy."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — two of the world's largest mining companies — announced they will explore combining iron ore operations in Western Australia, potentially moving 200 million tonnes per year. The complication: China, which buys most of that iron ore to make steel, just logged its weakest import numbers in ten years, which dims the near-term financial case for the deal."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Investment funds that hold Bitcoin on behalf of everyday investors have now seen money leaving for 13 straight days — the longest such streak since these products launched in 2024. About $4.4 billion has exited. Bitcoin now trades near $62,000, down 21% in three weeks. The main driver: investors are pulling back from risky assets as interest rates stay high and oil prices climb."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Digital dollars — coins designed to always equal $1 — now total $320 billion worldwide, larger than Portugal's entire economy. A new US law now requires every digital dollar to be backed 1-to-1 by real cash or US government bonds, with no exceptions. It is the first serious federal rule for this corner of crypto and is now in the implementation phase."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "About 60 of Ethereum's largest wallets — each holding 10,000 or more coins — have been emptied or consolidated in recent weeks. At the same time, the number of Bitcoin wallets holding at least 100 coins hit a 2026 high. The pattern: large investors are rotating out of Ethereum and smaller coins into Bitcoin specifically, treating it as a macro safe haven rather than a bet on crypto broadly."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Scientists found that bacteria living inside fish intestines help produce a mineral that traps carbon and slowly sinks to the ocean floor. Researchers at the University of Miami — led by former graduate student Anthony Bonacolta — thought fish made this mineral alone, but the bacteria do much of the heavy lifting. Since fish are everywhere in the ocean, this hidden partnership may be one of nature's largest carbon removal systems. 📄 Published in PLOS Biology · More: https://www.sciencedaily.com/releases/2026/05/260530053414.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "NASA's Curiosity rover found 21 carbon-containing molecules in Martian rock — 7 of them never before detected on Mars. The sample came from 3.5-billion-year-old clay-rich sediment at a site called Mary Anning 3, drilled in 2020 but only now analyzed with a new chemical method. These molecules are building blocks that life could use, but scientists stress they do not prove life ever existed there. 📄 Published in Nature Communications · More: https://www.nature.com/articles/s41467-026-70656-0"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Engineers at Worcester Polytechnic Institute created a building material that absorbs more CO₂ than it releases — the reverse of concrete, one of the world's biggest emission sources. An enzyme converts CO₂ gas directly into solid mineral crystals, which become the structure's backbone. It hardens in hours and is fully recyclable. Led by Prof. Nima Rahbar. 📄 Published in Matter · More: https://www.wpi.edu/news/carbon-negative-building-material-developed-worcester-polytechnic-institute-published-matter"
+    }
+  ]
+}
