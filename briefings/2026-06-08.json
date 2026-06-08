@@ -1,0 +1,196 @@
+{
+  "date": "2026-06-08",
+  "summary": "Hormuz easing but oil stays above $100, keeping central banks worldwide on hold or hiking while Bitcoin's record ETF outflow streak ends and regulators on three continents formalize crypto rules.",
+  "causalChain": "Iran's blockade of the Strait of Hormuz since February 28 drove oil above $100/barrel, forcing the Fed, ECB, RBA, and BoJ to hold or raise rates; elevated rates strengthen the dollar, suppress gold, slow European and Mexican growth, and squeezed crypto ETF flows for six weeks until June 5 — the same week the US, EU, and Japan all tightened crypto regulation.",
+  "table": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "angle": "Oil tops $100 as Hormuz tankers cautiously resume under US Navy guidance",
+      "worker": "—"
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "angle": "US 10-yr gov borrowing cost at 4.49%; Fed meets June 16–17",
+      "worker": "—"
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "angle": "Dollar at 2-month high; gold slips below $4,500",
+      "worker": "—"
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "angle": "Banxico slashes 2026 growth forecast to 1.1%",
+      "worker": "—"
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "angle": "US-Mexico-Canada set to miss July 1 trade-deal renewal deadline",
+      "worker": "—"
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "angle": "Yen pierces 160/dollar; Japan spent $73B defending its currency",
+      "worker": "—"
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "angle": "Nikkei hits 68K record; PBOC cuts daily cash injections to zero",
+      "worker": "—"
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "angle": "Euro area Q1 GDP revised to -0.2%; energy shock the main drag",
+      "worker": "—"
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "angle": "Germany DAX -1.4%; Europe-wide inflation holds at 2.6%",
+      "worker": "—"
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "angle": "RBA at 4.35% after 3 hikes; June 16 decision splits economists",
+      "worker": "—"
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "angle": "BHP and Rio Tinto to share Pilbara mines for up to 200M tonnes/yr",
+      "worker": "—"
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "angle": "Bitcoin ETF record 13-day $4.4B outflow streak ends June 5",
+      "worker": "—"
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "angle": "Digital-dollar supply hits record $315B; Tether token at $188B all-time high",
+      "worker": "—"
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "angle": "SEC names BTC/ETH commodities; MiCA mandatory July 1; Japan plans flat 20% tax",
+      "worker": "—"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "angle": "UChicago: laser-cavity trick creates powerful quantum links without expensive hardware",
+      "worker": "—"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "angle": "Cold Spring Harbor Lab: first non-repeating genetic master clock found in a tiny worm",
+      "worker": "—"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "angle": "U of Miami: bacteria inside fish gut help lock carbon away in the seafloor",
+      "worker": "—"
+    }
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Brent crude oil costs over $100 per barrel — up 40% since the US and Israel attacked Iran in February. Iran's navy blocked the Strait of Hormuz, the narrow channel that carries a quarter of the world's oil. Nearly 40 tankers are now moving through again with US Navy coordination, but traffic remains far below normal. Higher oil feeds inflation everywhere and pushes governments to keep borrowing costs high."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government now pays 4.49% per year to borrow money for 10 years — up sharply from last year. The reason: oil above $100 keeps prices rising, so the Federal Reserve held its rate at 3.5–3.75% and meets June 16–17 to decide next steps. Markets expect no cut yet. Higher US borrowing costs ripple globally — they make mortgages pricier, pull cash into dollars, and slow investment worldwide."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The dollar just hit its strongest level against other currencies in two months. When the US pays more to borrow, investors pour money into dollars — pulling cash away from gold. Gold fell below $4,500 per ounce this week. A stronger dollar is a double-edged sword: cheaper imports for Americans, but a squeeze for every other country whose currency weakens and whose dollar-priced debts get heavier."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank just cut its 2026 growth forecast from 1.6% to 1.1%. The first quarter disappointed: companies held back investment while waiting to see what happens with the North American trade deal review. Add oil-driven inflation and the bank now expects prices to hit their 3% target only in mid-2027 — a full year later than planned. The peso holds at roughly 18 per dollar."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "The US, Mexico, and Canada are set to miss the July 1 deadline to review their shared trade deal. Canada wants 16 more years unchanged; the US wants renegotiation. The stakes are enormous: Mexico posted a record $72 billion in exports in April, almost all heading north. If talks collapse, the billions of dollars in factory investment flowing from Asia and Europe into Mexico could reverse course."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's currency just broke past 160 yen per dollar for the first time since April — a level that rattles Japanese officials. Japan spent $73 billion over the past month buying yen to prop it up. Its central bank kept rates unchanged at the last meeting, cautious about an oil-driven shock. The next decision on June 16 could bring a rate hike that makes yen more attractive and slows its slide."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's stock market surged 3% to above 68,000 points — a fresh all-time high. Investors are positioning ahead of the central bank's June 16 rate decision, betting a hike signals confidence. Meanwhile China's central bank cut its daily cash injections into the financial system to zero for the first time since 2024, a quiet tightening move to keep the yuan stable against a strong dollar."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's economy shrank 0.2% in the first quarter — worse than the initial estimate of a small 0.1% gain. The main drag: energy costs. The Persian Gulf oil blockade pushed fuel prices higher, raising factory bills and squeezing household budgets. The European Central Bank held its borrowing rate steady, caught between fighting inflation and avoiding a full recession. Annual growth is now expected at 0.9%."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Germany's DAX stock index fell 1.4% as Europe-wide inflation holds at 2.6% — above the 2% target. Germany, still heavily reliant on energy imports, feels the oil shock acutely. Economists cut the country's 2026 growth forecast to roughly 1%, down from 1.5% expected a year ago. The UK's FTSE also slipped as British households face renewed cost-of-living pressure from higher fuel bills."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank has raised its key borrowing rate three times this year to 4.35% and meets again on June 16 — the same day as Japan and the US Federal Reserve. The cause: inflation re-accelerated, fueled by Middle East oil shocks. Higher rates squeeze Australia's heavily indebted homeowners. Economists are split: some say hold, others expect one more hike before pausing."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Mining giants BHP and Rio Tinto agreed to share neighboring iron ore operations in Australia's Pilbara desert, combining to extract up to 200 million tonnes per year from deposits too small to mine separately. China buys roughly 70% of Pilbara iron ore to make steel. The deal is a quiet bet that China's construction sector will recover — even as its broader economy slows and its property sector struggles."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin's price fell 21% over six weeks — from $80,000 to around $63,400 — as investment funds bled $4.4 billion over 13 straight days of withdrawals, a record streak. On June 5 the streak finally stopped, with a small $3 million flowing back in. That matters because each outflow day created forced selling pressure; even a tiny reversal removes that daily headwind and can stabilize price."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Online tokens always worth exactly $1 each — digital dollars — now total a record $315 billion in circulation worldwide, more than the GDP of many countries. Tether's version just hit $188 billion, an all-time high. Circle's version, used by Visa and Stripe for business payments, grew 220% in two years to $78 billion. These digital dollars now process more payment volume than Visa and Mastercard combined."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Three major crypto rule changes landed in one week. The US formally named Bitcoin, Ethereum, and Solana as commodities — not securities — giving them clearer legal standing. Europe makes its full crypto rulebook mandatory July 1. Japan plans a flat 20% tax on crypto gains, replacing a progressive tax that could hit 55%, explicitly aiming to encourage more people to invest in digital assets."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Physicists at the University of Chicago found a simple way to create powerful quantum links between particles — links that quantum computers need to run complex calculations. By slightly adjusting the energy levels of atoms sitting inside a laser cavity, they can generate many types of these links without adding expensive extra hardware. The trick: a carefully tuned amount of background noise actually helps rather than hurts. 📄 Published in Physical Review X (2026) · More: https://news.uchicago.edu/story/uchicago-researchers-set-record-preserving-quantum-states-more-five-seconds"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Researchers at Cold Spring Harbor Laboratory discovered the first non-repeating master clock inside a tiny worm — a genetic timer that tells every cell exactly when to switch genes on and off during growth. Two proteins form a feedback loop, setting the rhythm for each developmental stage. When scientists disabled the clock, the worm stopped growing entirely. Nothing like it has been found in any organism before. 📄 Published in PNAS (May 2026) · More: https://www.eurekalert.org/news-releases/1130727"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Researchers at the University of Miami Rosenstiel School found that bacteria living inside the gut of a common reef fish help produce the mineral that makes seashells — and that mineral sinks to the seafloor, locking away carbon dioxide. Scientists had assumed fish did this alone. Lead researcher Anthony Bonacolta showed it depends on a bacterial partnership. If common across fish species worldwide, the ocean may store far more carbon than our climate models assume. 📄 Published in PLOS Biology (May 2026) · More: https://news.miami.edu/rosenstiel/stories/2026/05/new-study-suggests-fish-gut-microbe-helps-regulate-ocean-health.html"
+    }
+  ]
+}
