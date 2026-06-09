@@ -1,0 +1,141 @@
+{
+  "date": "2026-06-09",
+  "summary": "Iran-Israel ceasefire signals deflate oil and gold while a US jobs surprise fires up rate-hike fears, and crypto ETFs post a record 13-day outflow streak.",
+  "causalChain": "Progress on an Iran-Israel ceasefire cut the risk premium from oil ($95 to $91) and gold, but a US jobs print of 172k — double the 85k expected — simultaneously pushed December Fed rate-hike odds to ~70% and drove 10-year government borrowing costs to 4.57%; the day split between geopolitical relief and rate pressure.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Iran-Israel ceasefire signals crush oil from $95 to $91; Hormuz still 95% blocked", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US adds 172k jobs vs 85k expected — Fed rate-hike odds jump to ~70%, 10-yr yield hits 4.57%", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "OPEC+ adds 188k bbl/day despite Hormuz blockade — oil stays high on rerouting costs", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts to 6.50%, signals last cut as inflation stays at 4.45% above 3% target", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Remittances hit Q1 record $14.45B but 1% US cash-transfer tax creates permanent headwind", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Nearshoring FDI $12.3B in H1 2025 drives GDP forecast upgrades to 1.6–1.8% for 2026", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Nikkei up 31.8% YTD as weak yen inflates exporter profits despite $73B intervention", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "China exports surge 19.4% YoY on AI hardware demand; US-bound shipments up 35.4%", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Hang Seng hits March lows on Broadcom earnings miss and sticky US rate fears", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "ECB expected to hike to 2.25% as eurozone energy inflation hits 10.9% from oil shock", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "Germany industrial output +0.4% in April but still 12% below pre-pandemic levels", "worker": "—"},
+    {"n": 12, "region": "EUROPE", "angle": "Eurozone Q1 GDP +0.2%, France at 0% — stagflation squeeze tightens across the region", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "RBA at 4.35% after three 2026 hikes; Australia inflation expected to peak at 4.8% this quarter", "worker": "—"},
+    {"n": 14, "region": "OCEANIA", "angle": "Iron ore at ¥759/t as China portside stockpiles hit record 163M tonnes; BHP -2.5%, Rio -1.9%", "worker": "—"},
+    {"n": 15, "region": "OCEANIA", "angle": "New Zealand RBNZ at 2.25% but fuel-driven inflation toward 4% may force reversal", "worker": "—"},
+    {"n": 16, "region": "CRYPTO", "angle": "Bitcoin ETFs post record 13-day $4.4B outflow streak as hedge funds cut holdings 39%", "worker": "—"},
+    {"n": 17, "region": "CRYPTO", "angle": "DeFi money locked in apps collapses 55% to $69B as hackers steal $1.44B in 12 months", "worker": "—"},
+    {"n": 18, "region": "CRYPTO", "angle": "EU MiCA July 1 deadline forces crypto exchange consolidation — licenses cost up to €500k", "worker": "—"},
+    {"n": 19, "region": "WOW", "angle": "New CRISPR variant hunts RNA to kill cancer cells, leaves healthy cells intact — Nature May 2026", "worker": "—"},
+    {"n": 20, "region": "WOW", "angle": "APOE2 gene shields neurons from Alzheimer's by repairing DNA damage 25–30% better — Aging Cell", "worker": "—"},
+    {"n": 21, "region": "WOW", "angle": "Northwestern engineers print graphene circuits that fire electrical pulses into living mouse neurons", "worker": "—"},
+    {"n": 22, "region": "WOW", "angle": "Super-Earth Ross 318b discovered 28 light-years away in habitable zone — arXiv May 2026", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Iran and Israel moved closer to a ceasefire today, and that single piece of news pushed oil prices down to $91 a barrel from $95 earlier this week. When war escalates, traders buy oil as insurance. When peace looks possible, they sell. But the Strait of Hormuz — the narrow channel through which 20% of the world's oil flows — is still at only 5% of normal shipping traffic. The relief is borrowed confidence, not resolved supply."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US added 172,000 jobs in May — more than double the 85,000 economists expected. That single number changed what investors think the central bank will do next. More jobs means the economy is strong. A strong economy means prices could keep rising. And if prices keep rising, the central bank needs to keep what the government pays to borrow money at elevated levels. Result: the 10-year government borrowing rate just hit 4.57%, a two-week high, and odds of a December rate hike jumped to ~70%."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "OPEC+ approved adding 188,000 barrels of oil per day to global supply starting in July. Normally more supply means lower prices. But oil is still $91 a barrel. Why? The Strait of Hormuz — the narrow passage carrying 20% of global oil — remains blockaded at only 5% of normal traffic. OPEC+ is producing more but shipping it via longer, more expensive routes. The result: high production, constrained access, and prices that stay stubbornly elevated despite added supply."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its lending rate to 6.50% in May after the economy shrank 0.8% in the first quarter. When an economy slows, central banks lower borrowing costs to encourage spending. But the bank also signaled this is likely the last cut: inflation at 4.45% is still well above its 3% target, and Middle East tensions are pushing fuel costs higher, adding pressure to transportation prices. A pause — not more cuts — is the message for the rest of 2026."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexicans working in the US sent $14.45 billion back home in the first quarter of 2026 — a new record. But a permanent headwind appeared in January: the US now charges a 1% tax on cash-based money transfers sent abroad. Add stricter immigration enforcement and slower wage growth in low-skill jobs, and analysts expect total 2026 remittances to land around $60 billion — well below the $64.7 billion peak set in 2024. A record quarter inside a declining long-term trend."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico pays factory workers $4.90 per hour on average, compared to $6.50 in China. Add its shared border with the US — which cuts shipping time and costs by 30–50% — and you understand why manufacturers are moving there. Foreign investment into Mexican factories hit $12.3 billion in the first half of 2025, up over 10% year-on-year. Cars, aerospace parts, and electronics are leading the shift. Every major forecast for Mexico's 2026 growth has been quietly revised upward to 1.6–1.8%."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's stock market is up 31.8% this year — the strongest major index in the world, more than triple US gains. The reason is counterintuitive: Japan's currency, the yen, is weak at around 160 per dollar. When a Japanese company earns money overseas and converts it back home, the weak yen makes those earnings look larger on paper. Investors buy those inflated profits. Japan has spent $73 billion this year trying to strengthen its own currency. The stock market keeps climbing anyway."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's exports jumped 19.4% in May compared to a year ago — nearly double what economists expected. Shipments to the US alone surged 35.4%. The driver is not cheap consumer goods. It is AI hardware: global tech companies are racing to buy the components that power artificial intelligence systems, and China is a critical link in that supply chain. Even US-China trade tensions couldn't slow it. China's imports also rose 27.4%, as factories bought raw materials to keep up with demand."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "Hong Kong's stock index fell to its lowest point since March this week, dropping 1.5% in a single day. Two triggers hit at once: a major US chip company missed its earnings target (suggesting AI hardware demand may be peaking), and strong US job numbers revived fears that American interest rates will stay high for longer. Hong Kong is where global money bets on Chinese tech stocks. When AI optimism fades and US rates look sticky, those bets get unwound fast and hard."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Europe's central bank is expected to raise its lending rate from 2.00% to 2.25% on June 11, even as the region's economy barely grows. The reason: energy prices across Europe rose 10.9% in May, the highest in three years. That jump traces directly to Middle East conflict pushing oil higher. Europe imports most of its energy, so higher oil means higher costs for heating, transport, and manufacturing — which pushes prices up across the board, forcing the central bank to act."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Germany's factories produced 0.4% more in April — the first monthly increase since November 2025, and mostly driven by construction, not manufacturing. The deeper picture: industrial output is still 12% below pre-pandemic levels. Factory orders have dropped on average over 2% every month this year. Germany halved its 2026 growth forecast to just 0.5%. Europe's biggest economy is caught between expensive energy from Middle East tensions and weakening global demand for its machinery and cars."
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "text": "The eurozone economy grew just 0.2% in the first three months of 2026. France, Europe's second-largest economy, grew exactly 0%. Household spending fell. Business investment fell. Exports fell. Meanwhile, the European Central Bank is about to raise borrowing costs again to fight energy-driven inflation. That means Europe faces a painful combination: growth near zero, prices still rising, and interest rates going up. The plain version: the region is stuck and squeezed at the same time."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "Australia's central bank has raised its lending rate three times already in 2026 — it now sits at 4.35%, among the highest levels in years. Fuel prices driven up by the Middle East conflict have added roughly one full percentage point to Australia's inflation rate, currently at 4.2%. The bank's own forecasts show inflation peaking at 4.8% this quarter and staying above target until mid-2027. Most analysts now expect at least one more rate hike — possibly two — before year end."
+    },
+    {
+      "n": 14,
+      "region": "OCEANIA",
+      "text": "Iron ore — Australia's biggest export and the main ingredient for making steel — is falling in price. Futures hit roughly 759 yuan per tonne this week as China's stockpiles of the material reached a record 163 million tonnes. The reason: China's property sector is still contracting, so less steel is being used for construction. BHP shares fell 2.5% and Rio Tinto fell 1.9% in a single day. When Chinese construction stalls, Australian mining stocks feel it almost immediately."
+    },
+    {
+      "n": 15,
+      "region": "OCEANIA",
+      "text": "New Zealand's central bank held its lending rate at 2.25% in April, betting that inflation would cool. But the same fuel price shock hitting Australia is pushing New Zealand's inflation toward 4% this quarter — above the official target range. The bank has already signaled rates could start rising again in the second half of 2026. A country whose economy is growing at just 1.2% this year may soon face an uncomfortable choice between protecting growth and fighting stubbornly persistent inflation."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading around $63,500 today, down from $69,000 just one week ago. During that drop, investors pulled $4.4 billion out of Bitcoin investment funds over 13 consecutive days — the longest such streak on record. Hedge funds cut their Bitcoin positions by 39%, and brokerages by 53%. The reason: US inflation is still high, interest rates are expected to stay elevated, and Bitcoin now moves in near-lockstep with the stock market (84% correlation). When stocks feel risky, so does crypto."
+    },
+    {
+      "n": 17,
+      "region": "CRYPTO",
+      "text": "Money locked inside crypto apps fell from $150 billion to $69 billion over the past 12 months — a 55% collapse. In the same period, hackers stole $1.44 billion from those apps, pushing all-time crypto hack losses to $16.5 billion. These two trends feed each other: hacks reduce trust, people move money out, smaller apps lose critical mass and shut down. Meanwhile, the supply of digital dollars (stablecoins) barely grew in the first quarter of 2026 — the slowest pace in two years."
+    },
+    {
+      "n": 18,
+      "region": "CRYPTO",
+      "text": "In three weeks — July 1, 2026 — any company offering crypto trading in Europe must hold a full operating license under new EU rules, or shut down. Getting that license costs between €250,000 and €500,000, which smaller exchanges simply cannot afford. Of the 185+ firms that have already obtained licenses, almost all are large players. The practical result: consolidation. Bigger exchanges absorb the market share of smaller ones that cannot meet compliance costs. Europe is quietly reshaping who can operate in crypto."
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "text": "Scientists built a new version of CRISPR that kills cancer cells without touching healthy ones. Previous CRISPR tools worked by cutting DNA. This version hunts for abnormal RNA inside cells — when it finds it, it triggers the cell to destroy all its own DNA, killing only the sick cell. In mouse studies, it worked with no side effects. The work came from Utah State University, the University of Utah, and Germany's Helmholtz Institute for RNA-based Infection Research. 📄 Published in Nature · More: https://www.nature.com/articles/s41586-026-10466-y"
+    },
+    {
+      "n": 20,
+      "region": "WOW",
+      "text": "About 1 in 8 people carry a gene variant called APOE2 that protects their brain from Alzheimer's disease. Scientists at the Buck Institute for Research on Aging just discovered why: those brain cells are 25–30% better at repairing the DNA damage that accumulates naturally with age. When stressed with radiation, APOE2 neurons stayed far more intact than the high-risk APOE4 variant. This reframes Alzheimer's as a DNA repair problem, not just a cholesterol or protein build-up issue. 📄 Published in Aging Cell · More: https://onlinelibrary.wiley.com/doi/10.1111/acel.70494"
+    },
+    {
+      "n": 21,
+      "region": "WOW",
+      "text": "Engineers at Northwestern University printed circuits made of graphene and ultra-thin metal sheets that can send electrical signals directly into living brain cells. When laid on flexible plastic and placed near mouse neurons in the lab, the printed circuits fired pulses that real brain cells responded to — and held up reliably over a million cycles. The goal is brain implants thin and flexible enough to restore hearing, vision, or movement after injury. 📄 Published in Nature Nanotechnology · More: https://www.nature.com/articles/s41565-026-02149-6"
+    },
+    {
+      "n": 22,
+      "region": "WOW",
+      "text": "Astronomers found a new planet just 28 light-years away — our cosmic backyard — orbiting a dim red star called Ross 318. The planet is about 6 times Earth's mass and sits in the orbital zone where liquid water could exist on its surface. The discovery came from 15 years of data from Spain's CARMENES telescope and Hawaii's Keck Observatory, analyzed by researchers from Italy and Brazil. It is now one of the nearest potentially habitable worlds ever found. 📄 Published on arXiv · More: https://arxiv.org/pdf/2605.11123"
+    }
+  ]
+}
