@@ -579,5 +579,54 @@
     "risk_short": "La FDA (la agencia de salud de EE.UU.) investiga dos productos de Zoetis por problemas en mascotas, lo que podría afectar su reputación y ventas. Además, si la economía empeora, la gente podría gastar menos en sus mascotas.",
     "generated_at": "2026-05-25T00:14:37.234Z",
     "model": "gpt-4o"
+  },
+  "LEU": {
+    "one_liner": "Centrus es la única empresa de Estados Unidos que prepara el combustible especial que necesitan las plantas nucleares —algo que antes venía sobre todo de Rusia—.",
+    "why_short": "Comprar Centrus es apostar a que Estados Unidos necesita producir su propio combustible nuclear en casa ahora que dejó de comprarle a Rusia; el gobierno ya le firmó un pedido enorme.",
+    "risk_short": "El mayor riesgo es que la acción está cara y no paga dividendo: si la empresa se tarda en crecer, puede caer fuerte.",
+    "generated_at": "2026-06-08T19:11:44.732Z",
+    "model": "manual-claude (openai quota exhausted)"
+  },
+  "FICO": {
+    "one_liner": "Fair Isaac es dueña del \"puntaje FICO\", el número que casi todos los bancos de Estados Unidos miran para decidir si te prestan dinero.",
+    "why_short": "Comprar Fair Isaac es apostar a un negocio que cobra una pequeña comisión cada vez que un banco revisa tu crédito, millones de veces al día, y que cayó mucho en 2026 por miedo a un competidor.",
+    "risk_short": "El mayor riesgo es que el gobierno deje entrar a un competidor en las hipotecas y le quite parte de su dominio; además no paga dividendo.",
+    "generated_at": "2026-06-08T19:11:44.732Z",
+    "model": "manual-claude (openai quota exhausted)"
+  },
+  "BWXT": {
+    "one_liner": "BWXT es la única empresa que fabrica los reactores nucleares que mueven los submarinos y portaaviones de la Marina de Estados Unidos.",
+    "why_short": "Comprar BWXT es apostar a un negocio casi imposible de copiar: la Marina no tiene otro proveedor, lo que le da contratos de 20 o 30 años muy seguros.",
+    "risk_short": "El mayor riesgo es que depende del presupuesto militar de Estados Unidos: si recortan el gasto de defensa, le pega directo.",
+    "generated_at": "2026-06-08T19:11:44.732Z",
+    "model": "manual-claude (openai quota exhausted)"
+  },
+  "AU": {
+    "one_liner": "AngloGold es una de las mineras de oro más grandes del mundo: saca oro de la tierra y lo vende, ahora que el oro está en su precio más alto de la historia.",
+    "why_short": "Comprar AngloGold es tener oro pero cobrando un dividendo de ~4% mientras esperas —algo que el oro físico o un fondo de oro no te dan—.",
+    "risk_short": "El mayor riesgo es el precio del oro: si baja, las ganancias de la empresa caen aún más rápido.",
+    "generated_at": "2026-06-08T19:11:44.732Z",
+    "model": "manual-claude (openai quota exhausted)"
+  },
+  "SBS": {
+    "one_liner": "SABESP lleva el agua potable y se lleva el drenaje de más de 40 millones de personas en São Paulo, la zona más rica de Brasil.",
+    "why_short": "Comprar SABESP es apostar a que, ahora que pasó a manos privadas, una empresa de agua lenta se vuelva más eficiente y crezca llevando agua a más gente.",
+    "risk_short": "El mayor riesgo es político: las tarifas las fija la ley, y si el real brasileño se debilita, pierdes valor en dólares.",
+    "generated_at": "2026-06-08T19:11:44.732Z",
+    "model": "manual-claude (openai quota exhausted)"
+  },
+  "FTNT": {
+    "one_liner": "Fortinet hace la \"puerta blindada\" digital de las empresas: vende equipos y programas que bloquean a los hackers de la red de un negocio.",
+    "why_short": "Comprar Fortinet es apostar a una de las empresas de ciberseguridad más rentables del mundo, justo cuando muchos clientes deben reemplazar sus equipos viejos.",
+    "risk_short": "El mayor riesgo es que está cara: los analistas creen que su precio justo es más bajo de lo que pagamos, así que hay poco margen de error; además no paga dividendo.",
+    "generated_at": "2026-06-08T19:11:44.732Z",
+    "model": "manual-claude (openai quota exhausted)"
+  },
+  "FLKR": {
+    "one_liner": "FLKR no es una empresa: es una canasta que junta ~163 de las empresas más grandes de Corea del Sur en una sola compra, dominada por Samsung y SK hynix.",
+    "why_short": "Comprar FLKR es una forma barata de tenerle exposición a Corea y a sus gigantes de los chips de memoria, cobrando un dividendo de ~2% al año.",
+    "risk_short": "El mayor riesgo es que está muy concentrada: dos empresas de chips son la mitad de la canasta, así que si caen los chips, cae todo.",
+    "generated_at": "2026-06-08T19:11:44.732Z",
+    "model": "manual-claude (openai quota exhausted)"
   }
 }
