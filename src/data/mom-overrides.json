@@ -628,5 +628,12 @@
     "risk_short": "El mayor riesgo es que está muy concentrada: dos empresas de chips son la mitad de la canasta, así que si caen los chips, cae todo.",
     "generated_at": "2026-06-08T19:11:44.732Z",
     "model": "manual-claude (openai quota exhausted)"
+  },
+  "GD": {
+    "one_liner": "General Dynamics es una gigante de defensa de Estados Unidos: construye los submarinos nucleares de la Marina, fabrica los jets privados Gulfstream y hace tanques. Solo dos astilleros en todo el país pueden construir submarinos nucleares, y este es uno.",
+    "why_short": "Tiene 131 mil millones de dólares en pedidos ya firmados —casi dos años y medio de trabajo garantizado— y sube su dividendo cada año desde hace más de 28 años. La Marina no le puede comprar submarinos a nadie más.",
+    "risk_short": "Casi todo su dinero viene del gobierno de Estados Unidos, así que recortes de defensa o peleas de presupuesto le pegan. Construir submarinos es difícil y los retrasos cuestan caro, y los jets de lujo se venden menos en una recesión.",
+    "generated_at": "2026-06-10T03:10:52.171Z",
+    "model": "manual-claude (openai quota exhausted)"
   }
 }
