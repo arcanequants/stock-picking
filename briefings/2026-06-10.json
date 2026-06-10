@@ -1,0 +1,117 @@
+{
+  "date": "2026-06-10",
+  "summary": "Hormuz closure forces central banks worldwide into unwanted rate hikes as sticky energy inflation collides with slowing growth.",
+  "causalChain": "The US-Israel war on Iran (Feb 28) effectively closed the Strait of Hormuz, locking 14.5M barrels/day off markets and keeping energy prices elevated globally. Persistent inflation is now forcing the ECB (June 11) and BoJ (June 16) into rate hikes even as growth stalls, while institutional investors pull $4.3B from Bitcoin ETFs chasing safer 4.5%-yielding government bonds instead.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz still closed — Brent near $94 as US-Iran peace talks continue", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 10yr borrowing cost at 4.57% — Fed FOMC meets June 16-17", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,330 — 10% US import tax keeps inflation risk premium alive", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico ends rate-cut cycle — holds at 6.50% with inflation at 4.59%", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Nearshoring record: $40.9B FDI in 9 months, wages 25% below China", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Remittances fall 9th straight month — purchasing power -18.75% YoY", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Yen crosses 160/$ — Japan spent $73B intervening, BoJ hike expected June 16", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "Nikkei surges past 68,000 — 36% rally from March lows ahead of BoJ decision", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "PBOC drains $24.6B with zero injections — first time since 2024", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "ECB expected to raise rates June 11 — Hormuz energy inflation forces hawkish pivot", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "Germany deploys €127B — AI and energy investment to fight stagnation", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "RBA on path to 2.9% — China demand slowdown limits pace of cuts", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "BHP + Rio Tinto agree to jointly mine 200M tonnes of iron ore in Pilbara", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Bitcoin ETF 13-day outflow streak — $4.33B exits as bonds offer 4.5% yield", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "Digital dollar supply hits $310B — Tether alone holds $185B", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Mars: Curiosity finds 21 organic molecules including DNA-precursor compound", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "AI finds hidden physics in plasma — Emory University team publishes in PNAS", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Eggs 5x/week = 27% lower Alzheimer's risk — Loma Linda University, Journal of Nutrition", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil that moves through the Strait of Hormuz — a narrow waterway between Iran and the Arabian Gulf — still can't flow freely. Since the US and Israel attacked Iran in late February, around 14.5 million barrels a day got stuck. Brent crude sits near $94. Peace talks are ongoing and prices have eased from a $105 peak. But until ships sail again, every country that burns oil is paying a hidden war tax."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "What the US government pays to borrow money for 10 years just hit 4.57% — near a two-week high. The Federal Reserve meets June 16-17 and is expected to hold its rate steady at 3.5–3.75%. But strong job data now has markets pricing a 70% chance of another increase by December. Higher borrowing costs make safe government bonds more attractive — money shifts away from stocks, gold, and crypto when that happens."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold trades at $4,330 per ounce — still historically high but slowly retreating. A US import tax of 10% has been active since February, pushing up costs for companies and households. When trade policy is uncertain and wars are ongoing, investors buy gold as insurance against everything going wrong at once. Right now, calmer signals from Iran-US talks are leaking some of that fear out of the price."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank stopped cutting borrowing rates in May and locked them at 6.50%, ending a two-year easing campaign. The reason: consumer prices are still rising at 4.59% a year, above the 3% target. With the peso under pressure and global energy costs elevated, cutting further risks pushing prices even higher. Anyone borrowing in Mexico — for a home, a car, or a business — keeps paying elevated costs for now."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Companies moving production out of China and setting up in Mexico brought a record $40.9 billion in foreign investment in just the first nine months of 2025. Mexican factory wages of roughly $4.90 per hour are 25% below China's. The trade pact between Mexico, the US, and Canada now covers 89% of goods — up from 45% — meaning more products qualify for tariff-free treatment. Mexico is becoming the default factory floor for North American supply chains."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Money sent home by Mexicans living in the US fell for the ninth month in a row. In February, the peso value of those transfers dropped 15%, and after accounting for rising prices, Mexican families received 18.75% less purchasing power than a year ago. A fluctuating peso, fewer new migrants, and softer dollar earnings are all contributing. Remittances are one of Mexico's biggest income sources — larger than many entire industries."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's currency hit 160 yen per dollar — a level markets watch as a danger signal for imported inflation. Japan spent $73 billion between late April and late May trying to slow the slide. The country's central bank kept rates near zero for decades; now it's expected to raise them on June 16. Higher rates should attract investors back to yen, but until that happens, everything Japan imports — oil, food, tech — costs more."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's main stock index surged 3% to above 68,000 points — having already climbed 36% from its March lows. Investors are betting the central bank's June 16 rate decision will signal economic confidence rather than act as a brake. Japanese companies earn more in dollar terms when the yen is weak because overseas profits look bigger when converted back home. The rally could snap quickly if the bank signals it will hike faster than expected."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "China's central bank pulled the equivalent of $24.6 billion out of the banking system in a single day without injecting any fresh cash — the first time it has done this since 2024. The yuan is steady at 6.82 per dollar. This quiet tightening signals the bank feels conditions are under control. But it also leaves banks with less cushion if credit stress surfaces. China is managing carefully while export demand holds reasonably firm."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Europe's central bank is expected to raise borrowing costs on June 11 — a significant shift after holding steady in April. The Hormuz closure sent energy prices soaring and pushed European inflation toward 3.1% this quarter. Higher rates mean loans, mortgages, and corporate debt all cost more. European growth is already sluggish at 0.9% for 2026. Raising rates in a slow economy is painful, but the bank sees no choice while energy-driven prices stay high."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Germany is committing €127 billion in public investment this year — one of its biggest spending drives in decades. The money targets AI infrastructure and clean energy, with heavy private-sector co-investment. This is unusual for a country famous for fiscal restraint and balanced budgets. The driver: Germany's economy has stagnated, and without this push, Europe's largest economy risks falling further behind the US and China in the technology race."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's central bank is slowly cutting its interest rate toward 2.9%, trying to ease the pressure on households after years of high borrowing costs. Lower rates make mortgages cheaper — critical in a country with some of the world's most expensive housing. The bank moves carefully because China, Australia's biggest buyer of iron ore and coal, is growing more slowly than before. A cooler Chinese economy means less demand for what Australia mines and ships."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "Two of the world's biggest mining companies — BHP and Rio Tinto — agreed to jointly explore digging up 200 million tonnes of iron ore from side-by-side sites in Western Australia's Pilbara region. Iron ore makes steel, and steel makes everything from bridges to buildings. Combining neighboring operations could cut costs and extend mine life. Even fierce rivals cooperate when the resources are expensive to reach and process alone."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Investors pulled $4.33 billion out of US-listed bitcoin funds over 13 straight trading days — the longest exit streak since these funds launched in 2024. The trigger: strong US job numbers cut hopes for lower interest rates soon. When safe government bonds pay 4.5% with almost no risk, bitcoin — which pays nothing and can swing 20% in days — looks less attractive by comparison. BlackRock's fund alone lost $1.34 billion in a single week."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "The total supply of digital dollars — coins that hold a fixed $1 value and run on blockchain networks — has reached $310 billion. Tether alone holds $185 billion; Circle's USDC holds $75 billion. These coins are used to park money inside the crypto world without converting back to regular dollars. Versions that pay interest have doubled in supply over the past year. Governments are watching closely: at this scale, these coins can move real financial markets."
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "NASA's Curiosity rover drilled into ancient Martian rock and found 21 carbon-containing molecules in a single sample — the richest haul ever. One looks like a building block of DNA, never detected on Mars before. Clay preserved these compounds for 3.5 billion years. Scientists cannot yet say if life, geology, or meteorites made them. But finding this chemistry at all means Mars once had the right conditions for life — at least the same ones Earth had before life began. 📄 Published in Nature Communications · More: https://www.nature.com/articles/s41467-026-70656-0"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "A team at Emory University trained an AI on plasma — the superhot charged gas that makes lightning and powers stars. The AI found hidden rules about how charged dust particles push each other in ways physicists had never detected. When particle A pushes B, B pushes A back differently — an asymmetry that classic physics equations always missed. The discovery could improve nuclear fusion reactors and help forecast dangerous solar storms. 📄 Published in PNAS · More: https://www.sciencedaily.com/releases/2026/04/260422044635.htm"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "Researchers at Loma Linda University tracked adults over 65 and found that eating one egg per day at least five days a week was linked to a 27% lower risk of Alzheimer's disease. Even eating one to three eggs per month cut risk by 17%. Eggs contain choline, a nutrient that helps brain cells communicate. Lead investigator Joan Sabaté, MD, DrPH, says the pattern holds after adjusting for overall diet and lifestyle factors. 📄 Published in Journal of Nutrition · More: https://jn.nutrition.org/article/S0022-3166(26)00190-2/fulltext"
+    }
+  ]
+}
