@@ -1,0 +1,105 @@
+{
+  "date": "2026-06-11",
+  "summary": "ECB sube tasas hoy por primera vez desde 2023 mientras el mundo aguarda tres decisiones de bancos centrales en una semana, el Estrecho de Hormuz sigue bloqueado y los ETFs de Bitcoin sangran salidas récord.",
+  "causalChain": "El ataque EE.UU./Israel a Irán cerró el Estrecho de Hormuz → petróleo disparado → inflación global sube → bancos centrales que bajaban tasas ahora tienen que subirlas → crédito se encarece → cripto y activos de riesgo caen.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz closure keeps oil at $94/bbl; 95% fewer tankers getting through", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed frozen: 96-98% odds of hold at June 16-17, 10-yr US borrowing rate at 4.55%", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,091/oz; dollar at 100 — both rising together signals pure fear", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cut rate to 6.75% but GDP forecast slashed to 1.1%; USMCA review July 1 spooks investors", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "USMCA/T-MEC July 1 deadline: 52 US demands vs 12 Mexico, no extension likely — peso at risk", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "BoJ expected to hike June 16; yen at 160/USD near 2-yr low; Nikkei surges 3% past 68,000 record", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "PBOC holds yuan anchor at 6.8184; currency quietly +2% vs USD since April", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB hikes 25bps today — first rate increase since 2023 — as war-linked energy pushes EU inflation to 3.1%", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "DAX +1%, CAC40 +1%, FTSE +1.2% cautious green open ahead of ECB decision today", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA at 4.35% after third hike this year; June 16 decision split — banks divided on pause vs hike", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP and Rio Tinto explore 200Mt joint iron ore project in Pilbara; Rio ships its 8 billionth tonne", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin ETFs bled $4.4B in record 13-day outflow streak; BTC at $63K, down 13% on the week", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Whale borrows $142M in digital dollars to buy 87,680 ETH; USDT+USDC combined supply hits $267B", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "First true sugar found in interstellar space — erythrulose detected 26,000 light-years from Earth", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "100-year-olds have blood proteins that look 40 years younger — 37 key aging markers identified", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "NASA Juno catches electrons accelerating to near light-speed at Jupiter — cracking the cosmic ray mystery", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "About 20% of the world's oil used to pass through the Strait of Hormuz, a narrow strip of water between Iran and Oman. Since March, Iran has blocked nearly all ships — 95% fewer oil tankers are getting through. The result: oil surged to $94 a barrel. Fertilizer and gas prices also shot up. The world is scrambling to reroute supply, but alternative pipelines take years to build. Analysts estimate the conflict has cost the global economy $2.2 trillion in lost activity."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The rate the US government pays to borrow money for 10 years has climbed to 4.55% — making mortgages, car loans, and business loans more expensive across the whole economy. The US central bank meets June 16-17 and almost certainly won't change anything: traders give 96-98% odds of no move. The war-driven oil shock makes cutting rates risky, but hiking would slow an already cautious economy. The Fed is stuck between two bad options and chose neither."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold usually rises when the dollar falls. But today both are climbing together: gold hit $4,091 per ounce while the dollar index sits at 100. That's unusual and signals one dominant force: fear. The Iran war, sticky inflation, and three major central bank decisions happening within one week are pushing investors toward anything that can't be printed or defaulted on. Gold is up more than $1,000 versus one year ago."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank — Banxico — has cut its main lending rate 13 times since early 2024, now at 6.75%. The goal was to spark growth, but the economy is only expected to expand 1.1% this year — less than half of what was hoped six months ago. Inflation stays above 3%, the peso is under pressure, and businesses hold off investing while the US-Mexico-Canada trade deal faces its first major review on July 1. Rate cuts are working less well than Banxico planned."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "On July 1, the US, Mexico, and Canada must decide whether to extend their trade deal — USMCA in the US, T-MEC in Mexico — for another 16 years. About $1.8 trillion in annual trade depends on it. It's not going well: the US has 52 unresolved demands, Mexico has 12, and officials admit no deal will be done by the deadline. Factories considering moving to Mexico now face years of uncertainty. The peso could fall hard toward 20 per dollar if talks sour."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's central bank is expected to raise borrowing costs on June 16. Japan kept rates near zero for nearly 30 years, so when they rise, investors who borrowed cheap yen to buy assets elsewhere must sell those assets and repay in yen — potentially triggering sudden global market swings. Today the yen sits near 160 per dollar, close to its weakest in two years. Japan's stock market surged 3%, topping 68,000 points for the first time, as traders bet the move won't break anything."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "China's currency — the yuan — has quietly risen 2% against the US dollar since April. China's central bank sets a daily anchor price (today: 6.8184 yuan per dollar) to prevent sharp swings. A stronger yuan makes Chinese exports slightly more expensive for foreign buyers — a signal Beijing feels confident enough to let the currency rise rather than weaken it to boost exports. It also projects stability while global trade tensions stay elevated."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "The European Central Bank raises borrowing costs for the first time since 2023 today — a 0.25% increase. Just months ago, Europe was cutting rates to kickstart a sluggish economy. What changed: the Iran war sent energy prices surging, pushing EU inflation to 3.1%. Raising rates slows spending and tames prices, but also slows growth. Europe is now caught in the same trap as everyone else: fighting inflation while trying not to tip into recession."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "European stock markets opened cautiously but in the green — Germany's DAX and France's CAC 40 each gained 1%, while the UK's FTSE 100 led with a 1.2% rise — all ahead of the European Central Bank's rate decision today. Investors bet the hike is already priced in, meaning stocks can still rise if there are no surprises. If the ECB signals more increases ahead, that calm will likely reverse quickly as borrowing costs climb across the continent."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank — the RBA — raised its main lending rate for the third time this year in May, bringing it to 4.35%, the highest in over a decade. The next decision is June 16. Australia's four biggest banks are split: two expect a pause, one predicts two more hikes. The driver is the global energy shock. Higher rates make mortgages pricier in a country where home prices are already among the world's highest, squeezing millions of households."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — two of the world's biggest mining companies — are exploring a joint project in Australia's Pilbara region to extract up to 200 million tonnes of iron ore from neighboring deposits. Iron ore is the main ingredient in steel, and China buys most of it. Working together could eliminate duplicated roads, ports, and processing plants. Rio Tinto also celebrated a milestone: the 8 billionth tonne of iron ore shipped from Pilbara — enough steel to build roughly 80,000 Eiffel Towers."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Bitcoin ETFs — funds that let regular investors hold bitcoin through a normal brokerage account — just ended a brutal 13-day stretch where investors pulled out $4.4 billion, the longest outflow streak since these funds launched in 2024. What triggered it: strong US jobs data cut expectations of a rate cut, making bonds more attractive than bitcoin. Bitcoin fell to around $63,100, down over 13% in a week. A tiny $3 million inflow on June 5 technically ended the streak."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "An anonymous investor borrowed $142 million in digital dollars from a lending app called Aave — using existing crypto as collateral — and used it all to buy over 87,000 units of Ethereum in 30 hours. The position blows up if Ethereum's price drops to $1,354 (it trades near $1,660). Separately, the total supply of digital dollars — coins pegged 1-to-1 to the US dollar on blockchain networks — hit a combined $267 billion: USDT at $189.6B and USDC at $77.6B."
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "A team led by astrochemist Izaskun Jiménez-Serra at Spain's Centro de Astrobiología detected erythrulose — the first true sugar found in space — inside a gas cloud at the center of our galaxy, 26,000 light-years from Earth. Erythrulose is a direct chemical step toward the molecule scientists believe preceded DNA in the very first life on Earth. Finding it in deep space suggests life's ingredients form naturally in the cold void between stars, long before any planet exists. 📄 Published on arXiv (June 2, 2026) · More: https://arxiv.org/abs/2606.03313"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Researchers at the University of Geneva and the University of Lausanne studied blood from people aged 100 or older and found 37 key proteins — out of 724 measured — that looked as if they belonged to someone in their 30s or 40s. These proteins govern inflammation, fat and sugar handling, and cellular protection from damage. The finding suggests reaching 100 is not random luck but tied to specific biological brakes that could one day be targeted by medicine. 📄 Published in Aging Cell (Feb 8, 2026) · More: https://www.eurekalert.org/news-releases/1117588"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "NASA's Juno spacecraft caught electrons accelerating to near light-speed at Jupiter's outer boundary — where Jupiter's magnetic field pushes back against particles streaming from the Sun. The data reveal a universal rule: the bigger the magnetic shock, the higher the energy a particle can reach. This law applies from Jupiter to exploding stars across the galaxy, helping physicists explain where the universe's fastest-moving particles come from. 📄 Published in Nature Astronomy (2026) · More: https://www.nature.com/subjects/astronomy-and-astrophysics"
+    }
+  ]
+}
