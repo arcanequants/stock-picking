@@ -343,11 +343,11 @@
     "model": "gpt-4o"
   },
   "GFI": {
-    "one_liner": "Gold Fields es una minera de oro sudafricana que ha triplicado sus ganancias y está devolviendo mucho dinero a sus accionistas mientras el oro alcanza precios récord.",
-    "why_short": "Las ganancias de Gold Fields se triplicaron, y están repartiendo un buen dividendo. Además, tienen una nueva mina en Canadá que producirá oro a bajo costo, justo cuando el oro está muy caro.",
-    "risk_short": "El precio del oro podría bajar si el mundo se calma. Además, hay riesgos en Sudáfrica y Ghana por temas políticos y de electricidad. La minería es cara y peligrosa, y el precio de la acción puede variar mucho.",
-    "generated_at": "2026-05-25T00:14:09.573Z",
-    "model": "gpt-4o"
+    "one_liner": "Gold Fields es una de las mineras de oro más grandes del mundo: saca oro a ~$1,645 la onza y lo vende a más de $4,000 —y encima te paga ~3% de renta—.",
+    "why_short": "Sus ganancias se dispararon (+391% de efectivo en 2025) y su mina nueva en Chile, Salares Norte, saca oro a apenas ~$450-600 la onza. Cotiza a ~10x lo que ganará el próximo año y paga ~3.15% mientras esperas.",
+    "risk_short": "Todo depende de que el oro siga caro: si cae, el margen se aprieta rápido. Opera en países con riesgo (Sudáfrica, Ghana, Perú), su mina nueva puede tener tropiezos, y es una acción cíclica y muy volátil.",
+    "generated_at": "2026-06-10T00:00:00Z",
+    "model": "manual-claude"
   },
   "GILD": {
     "one_liner": "Gilead Sciences es una empresa que lidera el tratamiento del VIH y acaba de lanzar un nuevo medicamento que protege por 6 meses con una sola inyección.",

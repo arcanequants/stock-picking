@@ -12175,6 +12175,38 @@ Son los 2 únicos REITs públicos data center de scale.
     last_updated_at: "2026-06-09T00:00:00Z",
     next_review_at: "2026-12-09T00:00:00Z",
   },
+  {
+    id: 95,
+    ticker: "GFI",
+    name: "Gold Fields Limited",
+    sector: "Basic Materials",
+    industry: "Gold Mining",
+    country: "South Africa",
+    region: "Africa",
+    currency: "USD",
+    price: 33.60,
+    pe_ratio: 23.5,
+    pe_forward: 10.1,
+    dividend_yield: 3.15,
+    market_cap_b: 40.0,
+    eps: 1.43,
+    summary_short:
+      "Gold Fields es una de las mineras de oro más grandes del mundo —saca oro de la tierra en Sudáfrica, Australia, Ghana, Perú, Chile y Canadá—. Su negocio es simple: extrae una onza de oro a un costo de ~$1,645 dólares y la vende a más de $4,000 —se queda con la diferencia, y esa diferencia hoy es enorme—. En 2025 produjo 2.44 millones de onzas (+18%) y su flujo de efectivo libre se disparó +391%. La joya nueva: **Salares Norte** en Chile, una mina que saca oro a apenas ~$450-600 la onza —de las más baratas del planeta— y que sola generó $808 millones de efectivo. La acción cotiza a ~23x lo que ganó el año pasado pero solo ~10x lo que se espera que gane el próximo (las ganancias están explotando con el oro caro). Paga ~3.15% de dividendo: oro que además te paga renta. CEO Mike Fraser. HQ Johannesburgo. Analistas: Buy, target ~$58 (+74%).",
+    summary_what:
+      "Gold Fields Limited (NYSE: GFI) es una de las **mineras de oro más grandes del mundo**, con sede en **Johannesburgo, Sudáfrica**, y minas en operación en **Sudáfrica, Australia, Ghana, Perú, Chile y Canadá**.\n\n**Cómo gana dinero**: es de lo más sencillo que hay. Saca oro de la tierra a un **costo (AISC) de ~$1,645 dólares por onza** y lo vende al precio de mercado —hoy **por encima de $4,000 la onza**—. La diferencia es su ganancia. Cuando el oro sube y los costos se mantienen, cada onza vale mucho más.\n\n**Producción 2025**: **2.44 millones de onzas (+18%)**, con el flujo de efectivo libre disparándose **+391%**.\n\n**La joya nueva — Salares Norte (Chile)**: una mina recién arrancada que saca oro a apenas **~$450-600 la onza** —de las más baratas del planeta— y que por sí sola generó **$808 millones** de efectivo. También suma **Windfall (Canadá)** vía su socio Osisko.\n\n**Liderazgo**: CEO **Mike Fraser**. HQ **Johannesburgo, Sudáfrica**.",
+    summary_why:
+      "GFI a $33.60 es comprar oro que además te paga renta, justo cuando el oro está en máximos históricos y sus minas nuevas son baratísimas. Razones específicas: (1) **El margen está enorme**: extrae a ~$1,645 la onza y vende a más de $4,000 —se queda con ~$2,400 por onza, y produce 2.44 millones de onzas al año—. (2) **Las ganancias están explotando**: el flujo de efectivo libre subió +391% en 2025; por eso cotiza a ~23x lo que ganó el año pasado pero solo ~10x lo que se espera que gane el próximo. (3) **Salares Norte, la mina barata**: saca oro a ~$450-600 la onza —de las más baratas del mundo— y ya generó $808 millones; es ganancia casi pura mientras el oro siga caro. (4) **Diversificación geográfica**: minas en seis países, así un problema en uno no la hunde. (5) **Te paga ~3.15% de dividendo**: a diferencia del oro en lingotes (que solo lo guardas), aquí cobras renta mientras esperas. (6) **El oro como refugio**: con incertidumbre global, bancos centrales comprando oro y tasas bajando, el viento sopla a favor. Analistas: Buy, target ~$58 (+74%).",
+    summary_risk:
+      "Riesgos: (1) **El precio del oro — el #1**: toda la tesis depende de que el oro siga caro; si cae, el margen se comprime rápido y la acción sufre más que el metal. (2) **Riesgo país / minero**: opera en Sudáfrica, Ghana y Perú —jurisdicciones con riesgo de cortes de electricidad, conflictos laborales, cambios de regalías o inestabilidad política—. (3) **Riesgo de ejecución**: una mina nueva como Salares Norte puede tener tropiezos operativos, clima extremo (está en el desierto de Atacama, a gran altura) o sobrecostos. (4) **Costos al alza**: si la energía, el diésel o la mano de obra suben, el AISC de ~$1,645 sube y el margen se achica. (5) **Tipo de cambio**: gran parte de sus costos están en rand sudafricano, dólar australiano y otras monedas —movimientos cambiarios mueven sus números—. (6) **Es cíclica y volátil**: las mineras de oro amplifican los movimientos del metal en ambas direcciones —no es una acción para estómagos sensibles—.",
+    research_full: `# Gold Fields (GFI) — Research Completo\n\n## Precio: $33.60 | P/E TTM: ~23.5x | P/E fwd: ~10.1x | Div Yield: ~3.15% | Market Cap: ~$40B USD\n\n---\n\n## ¿Qué es Gold Fields?\n\nUna de las **mineras de oro más grandes del mundo**. NYSE: GFI (ADR). HQ Johannesburgo, Sudáfrica. Minas en **Sudáfrica, Australia, Ghana, Perú, Chile y Canadá**.\n\n## El negocio en una frase\n\nSaca oro de la tierra a un **costo (AISC) de ~$1,645/oz** y lo vende a **más de $4,000/oz**. La diferencia es la ganancia. Hoy esa diferencia es enorme.\n\n## Producción 2025\n\n| Métrica | 2025 | YoY |\n|---------|------|-----|\n| Producción | 2.44 millones oz | +18% |\n| Flujo de efectivo libre | disparado | +391% |\n| AISC | ~$1,645/oz | — |\n\n## Salares Norte (Chile) — la joya nueva\n\n- AISC de apenas **~$450-600/oz** —de las minas más baratas del planeta—.\n- Generó **$808 millones** de efectivo por sí sola.\n- Recién arrancada → rampa de producción en curso.\n\n## Windfall (Canadá)\n\n- Vía socio **Osisko** —pipeline de crecimiento futuro—.\n\n## Valuación — la clave\n\n- **~23x** lo que ganó el año pasado (TTM) **pero solo ~10x** lo que se espera el próximo año (forward).\n- La brecha refleja ganancias explotando con el oro caro + Salares Norte rampando.\n\n## Dividendo\n\n- Yield **~3.15%** —oro que te paga renta, a diferencia del lingote—.\n\n## Liderazgo\n\n- **CEO**: Mike Fraser.\n\n## Anchor Fact\n\n**Su mina nueva en Chile, Salares Norte, saca oro a apenas ~$450-600 dólares la onza —de las más baratas del mundo— mientras el oro se vende a más de $4,000. Eso es ~$3,500 de ganancia limpia por CADA onza. Esa sola mina ya generó $808 millones de efectivo.**\n\n## Top Risks\n\n1. **Precio del oro** — toda la tesis depende de que siga caro\n2. **Riesgo país** — Sudáfrica, Ghana, Perú\n3. **Ejecución** — Salares Norte recién arranca, Atacama es brutal\n4. **Costos** — energía/diésel/mano de obra suben el AISC\n5. **Tipo de cambio** — costos en rand, dólar australiano\n6. **Volatilidad** — las mineras amplifican el oro en ambos sentidos\n\n## Analyst Consensus\n\n- Rating: **Buy**\n- Target promedio: **~$58.41** (~+74% desde $33.60)\n\n## Tesis en una línea\n\n> Una de las mayores mineras de oro del mundo, con un margen enorme (extrae a ~$1,645, vende a >$4,000), ganancias explotando (~10x forward) y una mina nueva baratísima en Chile —oro que además te paga ~3% de renta—.\n\n---\n\n*Research fecha: 10 Jun 2026 | Próxima revisión: Dic 2026*\n*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 58.41,
+    analyst_upside: 73.8,
+    status: "active",
+    first_researched_at: "2026-06-10T00:00:00Z",
+    last_updated_at: "2026-06-10T00:00:00Z",
+    next_review_at: "2026-12-10T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -13463,6 +13495,19 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #96* — Jun 09, 2026\n\n🏢 *General Dynamics* (GD) — $340.87\n\n⚓ *Lo que hacen*: General Dynamics es uno de los gigantes de defensa de Estados Unidos. Hace cuatro cosas: construye los *submarinos nucleares* de la Marina de EE.UU., fabrica los jets privados *Gulfstream* (los aviones de los ultra-ricos), produce tanques *Abrams* y vehículos blindados, y da servicios de informática al gobierno. Su joya: hay solo DOS astilleros en todo Estados Unidos capaces de construir un submarino nuclear —y GD es uno de ellos—.\n\n🌍 *Presencia*: HQ en Reston, Virginia. CEO Phebe Novakovic. Último trimestre: ingresos $13.5 mil millones (+10%) y una cartera de pedidos récord de $131 mil millones (+48% en un año), con 38 entregas de jets Gulfstream.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~1.87% anual* solo por ser dueño —y aquí está lo bonito: lleva 28+ años seguidos SUBIENDO ese pago cada año (es un 'Dividend Aristocrat')—. Cada vez que la Marina paga por un submarino o un millonario recibe su Gulfstream, parte de ese dinero llega a ti, y el cheque crece año con año.\n\n⚠️ *El riesgo*: El #1 — *depende del presupuesto militar de EE.UU.*: la mayoría de su dinero viene del gobierno; si recortan defensa o el Congreso se pelea por el presupuesto, le pega. Otros: (2) construir submarinos es complejísimo y los retrasos cuestan caro, (3) los jets Gulfstream son un lujo —en una recesión, los ricos posponen comprar aviones—, (4) a ~21 veces utilidad cotiza a precio justo, no de ganga.\n\n🆕 Posición #96 — Abre Ciclo 20\n🔗 https://vectorialdata.com/stocks/GD\n✅ Certificado por blockchain → vectorialdata.com/verify/GD\n\n💡 Dato que ancla la tesis: Hay solo DOS astilleros en todo Estados Unidos capaces de construir un submarino nuclear, y General Dynamics es uno de ellos. La Marina literalmente no le puede comprar a nadie más, y certificar a otro tomaría décadas —así que los pedidos siguen llegando llueva o truene—. Hoy tiene $131 mil millones en pedidos ya firmados, casi 2.4 veces lo que factura en todo un año: años de trabajo garantizado. Pagas hoy $340.87 (los analistas ven ~$392, +15%).`,
     attestation_uid: "0x149bf36fca80548f625709fd12f3604f8f1b27e75220193d19809e3a68e74b9e",
   },
+  {
+    id: 97,
+    stock_id: 95,
+    ticker: "GFI",
+    type: "new" as const,
+    cycle_number: 20,
+    price: 33.60,
+    open_price: 33.60,
+    date: "2026-06-10",
+    day_of_week: "wednesday",
+    wa_message: `📊 *STOCK PICK #97* — Jun 10, 2026\n\n🏅 *Gold Fields* (GFI) — $33.60\n\n⛏️ *Lo que hacen*: Gold Fields es una de las mineras de oro más grandes del mundo. Su negocio es de lo más simple que existe: saca una onza de oro de la tierra a un costo de ~$1,645 dólares y la vende a más de $4,000 —se queda con la diferencia, y hoy esa diferencia es enorme—. Tiene minas en Sudáfrica, Australia, Ghana, Perú, Chile y Canadá.\n\n🌍 *Presencia*: HQ en Johannesburgo, Sudáfrica. CEO Mike Fraser. En 2025 produjo 2.44 millones de onzas (+18%) y su flujo de efectivo libre se disparó +391%. Su mina nueva estrella, Salares Norte en Chile, saca oro a apenas ~$450-600 la onza —de las más baratas del planeta—.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~3.15% anual* solo por ser dueño. Es la gracia de comprar oro así: el lingote guardado en una caja no te da nada, pero una minera de oro te paga renta mientras esperas. Cada vez que vende una onza con el oro caro, parte de esa ganancia llega a ti.\n\n⚠️ *El riesgo*: El #1 — *depende del precio del oro*: toda la tesis vive de que el oro siga caro; si cae, el margen se aprieta rápido. Otros: (2) opera en países con riesgo (Sudáfrica, Ghana, Perú) —cortes de luz, conflictos laborales—, (3) una mina nueva como Salares Norte puede tener tropiezos, (4) es cíclica y volátil —amplifica los movimientos del oro en ambas direcciones—.\n\n🆕 Posición #97\n🔗 https://vectorialdata.com/stocks/GFI\n✅ Certificado por blockchain → vectorialdata.com/verify/GFI\n\n💡 Dato que ancla la tesis: Su mina nueva en Chile, Salares Norte, saca oro a apenas ~$450-600 dólares la onza —de las más baratas del mundo— mientras el oro se vende a más de $4,000. Eso es ~$3,500 de ganancia limpia por CADA onza. Esa sola mina ya generó $808 millones de efectivo. Y mira la valuación: cotiza a ~23x lo que ganó el año pasado, pero solo ~10x lo que se espera que gane el próximo (las ganancias están explotando con el oro caro). Pagas hoy $33.60 (los analistas ven ~$58, +74%).`,
+    attestation_uid: "0xc527f156f4bbcb3596ec19df117572b93d12d313f1a16988de879bc23c2c42d9",
+  },
 ];
 
 type Cycle = {
@@ -13632,7 +13677,7 @@ export const cycles: Cycle[] = [
     cycle_number: 20,
     type: "new" as const,
     target_count: 5,
-    current_count: 1,
+    current_count: 2,
     status: "active" as const,
   },
 ];
