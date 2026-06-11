@@ -1,0 +1,17 @@
+{
+  "_doc": "Plain-language equivalents per locale for finance terms that must NEVER appear as jargon. The translation pipeline injects this into every prompt so 172 picks x 3 langs stay consistent. Value = how a non-finance reader would say it, NOT the dictionary term.",
+  "terms": {
+    "rendimiento por dividendo": { "en": "dividend (the cash they pay you)", "pt": "dividendo (o dinheiro que pagam a você)", "hi": "dividend (jo paisa wapas dete hain)" },
+    "tasas de interés": { "en": "borrowing costs", "pt": "custo do crédito", "hi": "udhaar ka kharcha" },
+    "P/E": { "en": "price vs. profit", "pt": "preço vs. lucro", "hi": "daam bनाम profit" },
+    "flujo de caja": { "en": "cash coming in", "pt": "dinheiro entrando", "hi": "aane wala cash" },
+    "valoración cara": { "en": "priced expensively", "pt": "está caro", "hi": "mehnga laga hua hai" },
+    "crecimiento": { "en": "growth", "pt": "crescimento", "hi": "growth (badhotri)" },
+    "volatilidad": { "en": "big price swings", "pt": "sobe e desce forte", "hi": "daam ka tezi se upar-neeche" },
+    "apuesta por crecimiento": { "en": "a bet on growth", "pt": "aposta no crescimento", "hi": "growth pe daav" },
+    "márgenes": { "en": "how much they keep per sale", "pt": "quanto sobra de cada venda", "hi": "har sale se kitna bachta hai" },
+    "deuda neta / EBITDA": { "en": "how big their debt is vs. earnings", "pt": "tamanho da dívida vs. o que ganham", "hi": "kamai ke muqable kitna karz hai" },
+    "recompra de acciones": { "en": "buying back their own shares", "pt": "recompra das próprias ações", "hi": "apne hi shares wapas khareedna" },
+    "consenso de analistas": { "en": "what Wall Street analysts expect", "pt": "o que os analistas esperam", "hi": "analysts kya expect karte hain" }
+  }
+}

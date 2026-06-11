@@ -1,0 +1,15 @@
+{
+  "_doc": "Tokens the translation pipeline must keep verbatim in every language. Tickers and company names are auto-protected from stocks.ts at runtime; this file holds brand/product terms and the categories of things to never translate.",
+  "brand": ["Vectorial Data", "WhatsApp", "App Store", "iOS", "Premium"],
+  "keep_verbatim_categories": [
+    "stock tickers (e.g. NVDA, PETR4, ASBFY)",
+    "company and product names (e.g. Nvidia, Booking.com, Orkin, iShares, Aladdin)",
+    "numbers, percentages and currency figures (localize only the decimal separator and currency word)",
+    "people's names and institutions"
+  ],
+  "number_format": {
+    "en": "1,000.50",
+    "pt": "1.000,50",
+    "hi": "1,000.50 (lakh/crore acceptable in body text)"
+  }
+}
