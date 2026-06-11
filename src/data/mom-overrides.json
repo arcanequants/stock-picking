@@ -336,11 +336,11 @@
     "model": "gpt-4o"
   },
   "GE": {
-    "one_liner": "GE Aerospace fabrica motores de avión y, tras separarse de otra parte de la empresa, ahora se enfoca solo en aviación, con muchos contratos pendientes y un buen momento en el mantenimiento de aviones.",
-    "why_short": "Las ventas de GE Aerospace crecieron mucho en 2025, ganaron más dinero y tienen un flujo de efectivo récord. La alta demanda de viajes aéreos y aviones más viejos ayuda a que sus servicios crezcan.",
-    "risk_short": "El Boeing 737 MAX tiene problemas que afectan la entrega de motores, y GE Aerospace necesita hacer todo perfecto porque su valor es alto. Además, un problema en otro motor podría retrasar un nuevo avión.",
-    "generated_at": "2026-05-25T00:14:26.232Z",
-    "model": "gpt-4o"
+    "one_liner": "GE Aerospace fabrica los motores de avión más vendidos del mundo, pero su verdadero negocio es cobrar repuestos y mantenimiento durante 20-30 años por cada uno de los ~80,000 motores que ya están volando.",
+    "why_short": "Vende el motor casi al costo y luego gana de alto margen por décadas con repuestos y servicio —más del 70% de sus ingresos comerciales—. El LEAP es el único motor del Boeing 737 MAX y tiene ~$211 mil millones en pedidos. Ojo: cotiza cara, a ~40x utilidad.",
+    "risk_short": "Está cara (~40x) y los analistas ven poco upside (~+8%), así que hay poco margen de error. Si la gente vuela menos (recesión, shock), se desgastan menos motores y baja el negocio de servicio. Y depende mucho de que Boeing produzca bien el 737 MAX.",
+    "generated_at": "2026-06-11T00:00:00Z",
+    "model": "manual-claude"
   },
   "GFI": {
     "one_liner": "Gold Fields es una de las mineras de oro más grandes del mundo: saca oro a ~$1,645 la onza y lo vende a más de $4,000 —y encima te paga ~3% de renta—.",
@@ -630,10 +630,10 @@
     "model": "manual-claude (openai quota exhausted)"
   },
   "GD": {
-    "one_liner": "General Dynamics es una gigante de defensa de Estados Unidos: construye los submarinos nucleares de la Marina, fabrica los jets privados Gulfstream y hace tanques. Solo dos astilleros en todo el país pueden construir submarinos nucleares, y este es uno.",
+    "one_liner": "General Dynamics es una gigante de defensa de EE.UU.: construye los submarinos nucleares de la Marina, fabrica jets Gulfstream y tanques. Solo dos astilleros en el país pueden hacer submarinos nucleares, y este es uno.",
     "why_short": "Tiene 131 mil millones de dólares en pedidos ya firmados —casi dos años y medio de trabajo garantizado— y sube su dividendo cada año desde hace más de 28 años. La Marina no le puede comprar submarinos a nadie más.",
     "risk_short": "Casi todo su dinero viene del gobierno de Estados Unidos, así que recortes de defensa o peleas de presupuesto le pegan. Construir submarinos es difícil y los retrasos cuestan caro, y los jets de lujo se venden menos en una recesión.",
-    "generated_at": "2026-06-10T03:10:52.171Z",
+    "generated_at": "2026-06-11T00:00:00Z",
     "model": "manual-claude (openai quota exhausted)"
   }
 }
