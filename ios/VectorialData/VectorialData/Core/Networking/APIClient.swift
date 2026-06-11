@@ -57,6 +57,8 @@ actor APIClient {
         req.httpMethod = method
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
         req.setValue("application/json", forHTTPHeaderField: "Accept")
+        let langTag = Locale.preferredLanguages.first.map { String($0.prefix(2)) } ?? "es"
+        req.setValue(langTag, forHTTPHeaderField: "Accept-Language")
         if let token = bearerToken {
             req.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
