@@ -1,18 +1,20 @@
 import { NextResponse } from "next/server";
 import { getAuthedUser, getSupabaseAdmin } from "@/lib/supabase";
+import { parseLocale } from "@/lib/locale";
 
 export const dynamic = "force-dynamic";
 
 /**
  * GET /api/news — chronological list of curated app news, newest first.
  *
+ * Locale: reads Accept-Language header (en/pt/es). When a translation exists
+ * in app_news_i18n it overlays headline + body; otherwise falls back to the
+ * Spanish original.
+ *
  * Filters by audience:
  *   - 'all'     → visible to everyone
  *   - 'premium' → visible only to active/trialing subscribers
  *   - 'free'    → visible only to non-subscribers (upsell nudges)
- *
- * The iOS app reads from here; the web site has its own (different,
- * AI/SEO-oriented) news scheme and intentionally does not consume this.
  */
 export async function GET(request: Request) {
   const authed = await getAuthedUser(request);
@@ -21,6 +23,7 @@ export async function GET(request: Request) {
   }
 
   const admin = getSupabaseAdmin();
+  const locale = parseLocale(request.headers.get("Accept-Language"));
 
   const { data: subscriber } = await admin
     .from("subscribers")
@@ -44,5 +47,24 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "fetch_failed" }, { status: 500 });
   }
 
-  return NextResponse.json({ news: rows ?? [] });
+  let news = rows ?? [];
+
+  if (locale !== "es" && news.length > 0) {
+    const ids = news.map((r) => r.id);
+    const { data: i18n } = await admin
+      .from("app_news_i18n")
+      .select("news_id, headline, body")
+      .eq("locale", locale)
+      .in("news_id", ids);
+
+    if (i18n?.length) {
+      const i18nMap = new Map(i18n.map((t) => [t.news_id, t]));
+      news = news.map((r) => {
+        const t = i18nMap.get(r.id);
+        return t ? { ...r, headline: t.headline, body: t.body } : r;
+      });
+    }
+  }
+
+  return NextResponse.json({ news });
 }

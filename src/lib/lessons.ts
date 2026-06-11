@@ -12,6 +12,11 @@
 import { aggregatePositions, type AggregatedPosition } from "@/lib/position-utils";
 import { transactions, stocks } from "@/data/stocks";
 import type { Transaction } from "@/lib/types";
+import enLessons from "@/data/lessons-i18n-en.json";
+import ptLessons from "@/data/lessons-i18n-pt.json";
+
+type LessonStore = Record<string, { thesis: string; whatHappened: string; lesson: string }>;
+const LESSON_I18N: Record<string, LessonStore> = { en: enLessons, pt: ptLessons };
 
 const MIN_HOLDING_DAYS = 30;
 const MAX_LESSONS = 5;
@@ -96,6 +101,15 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
 };
 
 export function getLessonContent(ticker: string): LessonContent | null {
+  return LESSON_CONTENT[ticker] ?? null;
+}
+
+/** Returns lesson content in the requested locale, falling back to Spanish. */
+export function getLessonContentLocalized(ticker: string, locale: string): LessonContent | null {
+  if (locale !== "es") {
+    const translated = LESSON_I18N[locale]?.[ticker];
+    if (translated) return translated;
+  }
   return LESSON_CONTENT[ticker] ?? null;
 }
 
