@@ -1,0 +1,123 @@
+{
+  "date": "2026-06-12",
+  "summary": "Cierre del Estrecho de Ormuz dispara petróleo a $105 y fuerza subidas de tasas en Europa y Japón",
+  "causalChain": "Ataques EEUU-Israel cerraron el Estrecho de Ormuz → 14.5 M bbl/día fuera del mercado → petróleo Brent a $105 → inflación energética global → BCE y BoJ suben tasas → activos de riesgo (cripto -21%) se hunden mientras el oro alcanza máximos históricos.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Brent oil at $105 as Strait of Hormuz stays shut after US-Iran strikes", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 10-year government borrowing rate holds at 4.53% as October rate-hike bets grow", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at record highs as US 10% import tax amplifies geopolitical uncertainty", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Peso strengthens to 17.39/dollar as May inflation cools faster than forecast", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "USMCA review on July 1 likely to trigger decade of annual reviews as 64 demands stay unresolved", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Mexico absorbed record $40.9B in foreign investment in first 9 months of 2025", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Nikkei surges 3% above 68,000 as markets price in BoJ rate hike to 1% on June 16", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "Chinese yuan up 2% since April as PBOC eases currency defense", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB raises rates for first time since 2023 as energy inflation pushes Eurozone forecast to 3%", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "German DAX near 24,230 despite 0.6% GDP forecast and 15% US tariff on EU goods", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBA expected to pause at 4.35% on June 16 after May hike", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "BHP and Rio Tinto explore joint development of 200M tonne iron ore deposit in Pilbara", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "New Zealand dairy exports forecast up just 1% to $27.4B as China demand stays soft", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Bitcoin ETFs lost $4.4B in record 13-day outflow streak; BTC price fell 21% from May peak", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "Tether delisted in EU as MiCA window closes July 1; USDC ($77.6B) stays compliant", "worker": "—"},
+    {"n": 16, "region": "CRYPTO", "angle": "Money locked in crypto lending apps hits $225B; digital dollars processed more than Visa in 2025", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Scientists at Germany's Leibniz Institute find the fat molecule that reverses cellular aging in days", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Chinese scientists confirm 86-year-old prediction that could unlock detection of invisible dark matter", "worker": "—"},
+    {"n": 19, "region": "WOW", "angle": "JWST maps a planet where morning and evening permanently have different weather", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "One waterway carries 25% of the world's seaborne oil. After US airstrikes on Iran, Iran's military shut it — the Strait of Hormuz. About 14.5 million barrels per day disappeared from global supply, with 150+ ships anchored outside waiting. Less oil reaching refineries → fuel prices climb → trucking costs more → prices at stores rise too. Brent crude hit $105/barrel. The chain from a conflict zone to your grocery bill is shorter than it looks."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government borrows money by issuing bonds. Right now it pays 4.53% on 10-year loans — and that rate is holding high. US companies' input costs jumped 6.5% in May from a year ago, the biggest increase since 2022. When business costs rise that fast, the central bank worries about inflation and tends to keep rates high. Higher government borrowing costs ripple out: mortgages get pricier, car loans cost more, businesses invest less. Markets now expect one more rate increase by October."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The US added a 10% tax on most imported goods starting February 2026. When import taxes rise, companies face higher costs and pass them to buyers — pushing prices up while also slowing growth. That combination is tricky for central bankers and scary for investors. Gold hit record highs this month: when people worry about inflation AND a slowdown at the same time, they reach for gold as protection. The dollar moves both ways — up when fear spikes, softer when growth worries dominate."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's currency strengthened to 17.39 pesos per dollar after May price data showed inflation cooling faster than expected. Slower inflation reduces pressure on the central bank to keep rates high. That matters: Mexico's central bank had pushed its main rate to a historic 11.25% to fight rising prices. When inflation eases, rate cuts become possible — and rate cuts support economic growth. The peso's advance signals markets believe Mexico's inflation battle is close to won."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "The trade deal covering $900 billion in annual US-Mexico-Canada trade has a deadline: July 1, 2026. All three countries must agree to renew it for 16 more years — or fall into mandatory annual reviews. Mexico's trade minister confirmed this week that too many disagreements remain: 52 US demands, 12 from Mexico. Annual reviews create ongoing uncertainty, and uncertainty makes companies hesitant to move factories to Mexico — slowing one of the country's biggest growth stories."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Companies moving factories away from China are choosing Mexico. In the first nine months of 2025, Mexico attracted $40.9 billion in foreign investment — 15% more than the year before. Manufacturing wages in Mexico run about $4.90 per hour, roughly 25% below China's. Products made in Mexico can enter the US without import taxes under the trade deal. That combination — lower wages plus tariff-free access — is driving a factory-building boom expected to lift Mexico's GDP 1.6% in 2026."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank kept interest rates near zero for most of the past 30 years. That is now changing. Japan's producer prices jumped 6.1% from last year as oil costs from the Iran conflict fed through the economy. The yen fell to 160 per dollar — making imports more expensive for Japanese households. To fight both, Japan's central bank is expected to raise its main rate to 1% on June 16, the highest since 1995. Stocks liked the signal: Japan's main index surged 3%, above 68,000."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's central bank has been carefully managing its currency — not letting it fall too fast against the dollar. Since April, the Chinese currency actually strengthened 2% against the dollar, its best stretch in months. A stronger currency makes imports cheaper for Chinese consumers, helping lower domestic prices. It also signals that China's policymakers feel confident enough about their economy to ease up on the tools they use to prevent the currency from dropping."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised its main interest rate by a quarter point this week — the first increase since 2023. The trigger: oil price spikes from the Iran-Hormuz disruption are spreading into European energy bills and food costs. Central bankers now expect prices across Europe to rise 3% this year, up from a prior forecast of 2.6%. That rate increase raises borrowing costs for homeowners and businesses across 20 countries where economic growth is already projected at just 0.8%."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Germany's main stock index trades near 24,230 even as the economy barely grows: GDP forecast for 2026 is just 0.6%. The US placed a 15% tax on European goods, squeezing German car and machinery exporters. The eurozone as a whole actually shrank 0.2% in Q1 2026. In the UK, the main stock index slipped 0.4% — the Iran conflict threatens to raise fuel costs and slow job creation just as the British economy was finding its footing."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its main interest rate to 4.35% in May — the highest in years. The culprit: oil costs from the Iran conflict are pushing fuel prices up, and those costs spread into food, rent, and services. When the bank meets June 16, most economists expect a pause — rates stay where they are. A pause signals the bank believes last month's increase needs time to work through the economy. For Australians with mortgages, relief isn't here yet, but the peak may be close."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "The world's two biggest iron ore miners just agreed to explore sharing operations at neighboring deposits in Western Australia. BHP and Rio Tinto would jointly develop the Pilbara region, potentially moving 200 million tonnes of iron ore — the main ingredient in steel. The logic: China's construction boom has slowed, meaning steel demand is softer. Rather than running duplicate infrastructure on lower revenue, sharing equipment and logistics cuts costs for both companies."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "New Zealand sells most of its dairy — butter, cheese, milk powder — to China. This year, dairy export revenues are forecast to rise just 1% to $27.4 billion. The constraint: China's property market slump has dented consumer spending, capping demand for New Zealand goods. A weaker New Zealand dollar is softening the blow by making exports cheaper for foreign buyers. This week the currency held steady as traders waited on US and Chinese economic data."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Products that let investors buy Bitcoin through a regular brokerage saw their longest losing streak since launching in 2024 — 13 straight trading days of withdrawals, totaling $4.33 billion pulled out. Bitcoin fell 21% from $80,000 to about $63,400. The reason: US job data came in strong, reducing chances the government will cut interest rates soon. When safe government bonds pay 4.5%, investors pull money from riskier bets. Fear in crypto markets hit levels last seen in the 2022 crash."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "Europe's new rules for digital dollar substitutes take full effect July 1, 2026. Tether — the biggest, with $189.6 billion in circulation — chose not to apply for European approval and is being delisted from regulated European exchanges. Circle's digital dollar, at $77.6 billion, did get approved and stays listed. This creates a split: compliant digital dollars inside Europe, unregulated ones outside. Together, these two products processed more transactions last year than Visa's entire global network."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "Apps that let people lend, borrow, and trade without a bank now hold $225 billion of user funds. On lending apps alone, $17.5 billion is actively out on loan. Digital dollar substitutes processed $33 trillion in payments in 2025 — more than Visa's annual volume for the entire world. Even as Bitcoin's price falls sharply, the underlying financial infrastructure being built in the crypto economy keeps quietly expanding."
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Your cells run on tiny power plants that fragment and slow down as you age. Scientists at Germany's Leibniz Institute on Aging found the culprit: your body stops making enough of a fat molecule — phosphatidylcholine — that holds those power plants together and keeps their membranes flexible. When aging worms received extra amounts, their fragmented power plants reassembled into efficient, youthful networks within two days. Cellular aging, at least partly, may be reversible. 📄 Published in Nature Communications · More: https://www.nature.com/articles/s41467-026-71508-7"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "A 1939 prediction said particle collisions can rattle an atom hard enough to knock out an outer electron — not just hit the center. For 86 years, no one confirmed it. In January 2026, Chinese scientists finally caught it happening directly, using a detector sensitive enough to photograph individual freed electrons. The same technique could now detect dark matter — the invisible substance making up 85% of the universe — that was previously too light to find. 📄 Published in Physical Review Letters · More: https://phys.org/news/2026-01-evidence-migdal-effect-path-dark.html"
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "text": "A planet 880 light-years away orbits so close to its star it never rotates — one side always faces the heat, the other always faces the dark. JWST has now mapped the boundary between those two sides and found something surprising: the morning edge and evening edge have completely different temperatures, clouds, and chemistry. Winds reaching 20,000 km/h carry heat unevenly across the divide. No planet in our solar system works this way. 📄 Published in Nature Astronomy · More: https://phys.org/news/2026-06-jwst-reveals-dawn-dusk-atmosphere.html"
+    }
+  ]
+}
