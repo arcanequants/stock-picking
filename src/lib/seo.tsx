@@ -1,5 +1,6 @@
 import type { Stock } from "@/lib/types";
 import { getLocalizedField } from "@/data/stock-translations";
+import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 
 const SITE_URL = "https://vectorialdata.com";
 
@@ -23,8 +24,9 @@ export function getOrganizationSchema() {
     name: "Vectorial Data",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    description:
-      "Vectorial Data is a multi-product market intelligence company. Branded house architecture: Vectorial Stocks (daily picks, $1/mo), Vectorial Signals (alternative-data signals), Vectorial Terminal (prediction markets + perps aggregator), Vectorial Quant Lab (systematic trading bots), and Vectorial News (real-time market events).",
+    description: QUANT_LAB_ENABLED
+      ? "Vectorial Data is a multi-product market intelligence company. Branded house architecture: Vectorial Stocks (daily picks, $1/mo), Vectorial Signals (alternative-data signals), Vectorial Terminal (prediction markets + perps aggregator), Vectorial Quant Lab (systematic trading bots), and Vectorial News (real-time market events)."
+      : "Vectorial Data is a multi-product market intelligence company. Branded house architecture: Vectorial Stocks (daily picks, $1/mo), Vectorial Signals (alternative-data signals), Vectorial Terminal (prediction markets + perps aggregator), and Vectorial News (real-time market events).",
     foundingDate: "2026",
     areaServed: "Worldwide",
     knowsAbout: [
@@ -46,7 +48,9 @@ export function getOrganizationSchema() {
         { "@type": "Offer", itemOffered: getServiceSchema("stocks") },
         { "@type": "Offer", itemOffered: getServiceSchema("signals") },
         { "@type": "Offer", itemOffered: getServiceSchema("terminal") },
-        { "@type": "Offer", itemOffered: getServiceSchema("quant-lab") },
+        ...(QUANT_LAB_ENABLED
+          ? [{ "@type": "Offer", itemOffered: getServiceSchema("quant-lab") }]
+          : []),
         { "@type": "Offer", itemOffered: getServiceSchema("news") },
       ],
     },

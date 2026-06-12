@@ -17,6 +17,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
 import { JsonLd, getOrganizationSchema } from "@/lib/seo";
+import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -142,12 +143,14 @@ export default async function RootLayout({
                     >
                       {t("noticias")}
                     </Link>
-                    <Link
-                      href="/quant-lab"
-                      className="text-text-muted hover:text-foreground transition-colors"
-                    >
-                      {t("quantLab")}
-                    </Link>
+                    {QUANT_LAB_ENABLED && (
+                      <Link
+                        href="/quant-lab"
+                        className="text-text-muted hover:text-foreground transition-colors"
+                      >
+                        {t("quantLab")}
+                      </Link>
+                    )}
                     <Link
                       href="/signals"
                       className="text-text-muted hover:text-foreground transition-colors"

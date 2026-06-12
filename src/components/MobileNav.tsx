@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { createSupabaseBrowserClient } from "@/lib/supabase-browser";
 import HelpModal from "@/components/HelpModal";
+import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 
 interface MobileNavProps {
   userEmail: string | null;
@@ -79,9 +80,11 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
           <Link href="/notifications" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
             {t("noticias")}
           </Link>
-          <Link href="/quant-lab" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
-            {t("quantLab")}
-          </Link>
+          {QUANT_LAB_ENABLED && (
+            <Link href="/quant-lab" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
+              {t("quantLab")}
+            </Link>
+          )}
           <Link href="/signals" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
             Signals
           </Link>

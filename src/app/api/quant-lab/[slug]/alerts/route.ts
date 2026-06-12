@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { getBot } from "@/lib/quant-lab";
+import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 
 export const dynamic = "force-dynamic";
 
@@ -8,6 +9,9 @@ export async function POST(
   req: Request,
   { params }: { params: Promise<{ slug: string }> }
 ) {
+  if (!QUANT_LAB_ENABLED) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
   const { slug } = await params;
   const bot = await getBot(slug);
   if (!bot) return NextResponse.json({ error: "Not found" }, { status: 404 });

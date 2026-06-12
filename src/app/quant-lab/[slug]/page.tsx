@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllBots, getBotView } from "@/lib/quant-lab";
+import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 import DisclosureBanner from "./_components/DisclosureBanner";
 import BotHero from "./_components/BotHero";
 import EquityCurve from "./_components/EquityCurve";
@@ -13,6 +14,7 @@ import AlertSubscribeForm from "./_components/AlertSubscribeForm";
 export const revalidate = 600;
 
 export async function generateStaticParams() {
+  if (!QUANT_LAB_ENABLED) return [];
   const bots = await getAllBots();
   return bots.map((b) => ({ slug: b.slug }));
 }
@@ -38,6 +40,7 @@ export default async function BotDetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  if (!QUANT_LAB_ENABLED) notFound();
   const { slug } = await params;
   const view = await getBotView(slug);
   if (!view) notFound();

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { stocks, transactions } from "@/data/stocks";
 import { listLiveSignals } from "@/lib/signals";
+import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 
 const BASE = "https://vectorialdata.com";
 
@@ -23,10 +24,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/signals/methodology`, lastModified: now, changeFrequency: "weekly", priority: 0.6, alternates: { languages: langs("/signals/methodology") } },
     { url: `${BASE}/signals/feed.xml`, lastModified: now, changeFrequency: "hourly", priority: 0.5 },
     { url: `${BASE}/signals/feed.json`, lastModified: now, changeFrequency: "hourly", priority: 0.5 },
-    { url: `${BASE}/quant-lab`, lastModified: now, changeFrequency: "hourly", priority: 0.8, alternates: { languages: langs("/quant-lab") } },
-    { url: `${BASE}/quant-lab/arcane-quant`, lastModified: now, changeFrequency: "hourly", priority: 0.8, alternates: { languages: langs("/quant-lab/arcane-quant") } },
-    { url: `${BASE}/quant-lab/guia-copy-trading-binance`, lastModified: now, changeFrequency: "monthly", priority: 0.5, alternates: { languages: langs("/quant-lab/guia-copy-trading-binance") } },
-    { url: `${BASE}/quant-lab/riesgos`, lastModified: now, changeFrequency: "monthly", priority: 0.5, alternates: { languages: langs("/quant-lab/riesgos") } },
+    ...(QUANT_LAB_ENABLED
+      ? ([
+          { url: `${BASE}/quant-lab`, lastModified: now, changeFrequency: "hourly", priority: 0.8, alternates: { languages: langs("/quant-lab") } },
+          { url: `${BASE}/quant-lab/arcane-quant`, lastModified: now, changeFrequency: "hourly", priority: 0.8, alternates: { languages: langs("/quant-lab/arcane-quant") } },
+          { url: `${BASE}/quant-lab/guia-copy-trading-binance`, lastModified: now, changeFrequency: "monthly", priority: 0.5, alternates: { languages: langs("/quant-lab/guia-copy-trading-binance") } },
+          { url: `${BASE}/quant-lab/riesgos`, lastModified: now, changeFrequency: "monthly", priority: 0.5, alternates: { languages: langs("/quant-lab/riesgos") } },
+        ] as MetadataRoute.Sitemap)
+      : []),
     { url: `${BASE}/verify`, lastModified: now, changeFrequency: "daily", priority: 0.8, alternates: { languages: langs("/verify") } },
     { url: `${BASE}/join`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: { languages: langs("/join") } },
     { url: `${BASE}/developers`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: { languages: langs("/developers") } },

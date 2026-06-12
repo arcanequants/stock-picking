@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllBotCards } from "@/lib/quant-lab";
 import { JsonLd, getServiceSchema } from "@/lib/seo";
+import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 import Sparkline from "./_components/Sparkline";
 
 export const metadata: Metadata = {
@@ -68,6 +70,7 @@ function formatPct(n: number | null | undefined, signed = true): string {
 }
 
 export default async function QuantLabPage() {
+  if (!QUANT_LAB_ENABLED) notFound();
   const cards = await getAllBotCards();
 
   return (

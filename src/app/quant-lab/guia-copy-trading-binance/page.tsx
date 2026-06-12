@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 
 export const metadata: Metadata = {
   title: "Guía: Copy Trading en Binance — Quant Lab",
@@ -39,6 +41,7 @@ const STEPS: Array<{ title: string; body: string }> = [
 ];
 
 export default function GuidePage() {
+  if (!QUANT_LAB_ENABLED) notFound();
   return (
     <div className="max-w-3xl mx-auto">
       <nav className="text-sm text-text-muted mb-6">
