@@ -148,7 +148,7 @@ export default async function RootLayout({
                         href="/quant-lab"
                         className="text-text-muted hover:text-foreground transition-colors"
                       >
-                        {t("quantLab")}
+                        Quant Lab
                       </Link>
                     )}
                     <Link
