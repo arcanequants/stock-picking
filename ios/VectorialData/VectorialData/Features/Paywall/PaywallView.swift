@@ -8,12 +8,12 @@ struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
 
-    private let benefits = [
-        "Every new pick the moment it drops",
-        "The full thesis: what the company does and why we picked it",
-        "The key risk we're watching on each position",
-        "Valuation and analyst consensus",
-    ]
+    /// ISO 639-1 language code derived from device preferred languages.
+    private var langCode: String {
+        Locale.preferredLanguages.first.map { String($0.prefix(2)) } ?? "es"
+    }
+
+    private var copy: PaywallCopy { PaywallCopy.for(langCode) }
 
     var body: some View {
         NavigationStack {
@@ -31,7 +31,7 @@ struct PaywallView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cerrar") { dismiss() }
+                    Button(copy.close) { dismiss() }
                         .foregroundStyle(.white.opacity(0.7))
                 }
             }
@@ -47,7 +47,7 @@ struct PaywallView: View {
             Text("Vectorial Data Premium")
                 .font(.title2.weight(.bold))
                 .foregroundStyle(.white)
-            Text("Unlock the full history and every new pick the moment it drops.")
+            Text(copy.subtitle)
                 .font(.subheadline)
                 .foregroundStyle(.white.opacity(0.7))
         }
@@ -56,7 +56,7 @@ struct PaywallView: View {
 
     private var benefitList: some View {
         VStack(alignment: .leading, spacing: 14) {
-            ForEach(benefits, id: \.self) { benefit in
+            ForEach(copy.benefits, id: \.self) { benefit in
                 HStack(alignment: .top, spacing: 10) {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundStyle(Color("BrandEmerald"))
@@ -106,7 +106,7 @@ struct PaywallView: View {
             Button {
                 Task { await store.restore() }
             } label: {
-                Text("Restore Purchases")
+                Text(copy.restore)
                     .font(.subheadline)
                     .foregroundStyle(.white.opacity(0.7))
             }
@@ -122,9 +122,9 @@ struct PaywallView: View {
 
     private var subscribeTitle: String {
         if let price = store.displayPrice {
-            return "Subscribe — \(price)/month"
+            return "\(copy.subscribeCTA) — \(price)/\(copy.month)"
         }
-        return "Subscribe"
+        return copy.subscribeCTA
     }
 
     private var isBusy: Bool {
@@ -133,20 +133,94 @@ struct PaywallView: View {
 
     private var legalLinks: some View {
         VStack(spacing: 4) {
-            Text("Auto-renews monthly until canceled. Manage or cancel anytime in your Apple ID settings.")
+            Text(copy.autoRenew)
                 .font(.caption2)
                 .foregroundStyle(.white.opacity(0.5))
                 .multilineTextAlignment(.center)
             HStack(spacing: 16) {
-                Button("Terms") {
-                    if let url = URL(string: "https://vectorialdata.com/terms") { openURL(url) }
+                Button(copy.terms) {
+                    if let url = URL(string: "https://vectorialdata.com/\(langCode)/terms") {
+                        openURL(url)
+                    }
                 }
-                Button("Privacy") {
-                    if let url = URL(string: "https://vectorialdata.com/privacy") { openURL(url) }
+                Button(copy.privacy) {
+                    if let url = URL(string: "https://vectorialdata.com/\(langCode)/privacy") {
+                        openURL(url)
+                    }
                 }
             }
             .font(.caption2)
             .foregroundStyle(.white.opacity(0.5))
+        }
+    }
+}
+
+// MARK: - Localized copy
+
+private struct PaywallCopy {
+    let close: String
+    let subtitle: String
+    let benefits: [String]
+    let subscribeCTA: String
+    let month: String
+    let restore: String
+    let autoRenew: String
+    let terms: String
+    let privacy: String
+
+    static func `for`(_ lang: String) -> PaywallCopy {
+        switch lang {
+        case "en":
+            return PaywallCopy(
+                close: "Close",
+                subtitle: "Unlock the full history and every new pick the moment it drops.",
+                benefits: [
+                    "Every new pick the moment it drops",
+                    "The full thesis: what the company does and why we picked it",
+                    "The key risk we're watching on each position",
+                    "Valuation and analyst consensus",
+                ],
+                subscribeCTA: "Subscribe",
+                month: "month",
+                restore: "Restore Purchases",
+                autoRenew: "Auto-renews monthly until canceled. Manage in Apple ID settings.",
+                terms: "Terms",
+                privacy: "Privacy"
+            )
+        case "pt":
+            return PaywallCopy(
+                close: "Fechar",
+                subtitle: "Desbloqueie o histórico completo e cada nova escolha assim que é publicada.",
+                benefits: [
+                    "Cada nova escolha assim que é publicada",
+                    "A tese completa: o que a empresa faz e por que escolhemos",
+                    "O risco principal que monitoramos em cada posição",
+                    "Valuation e consenso dos analistas",
+                ],
+                subscribeCTA: "Assinar",
+                month: "mês",
+                restore: "Restaurar Compras",
+                autoRenew: "Renova automaticamente todo mês até o cancelamento. Gerencie nas configurações do Apple ID.",
+                terms: "Termos",
+                privacy: "Privacidade"
+            )
+        default: // es
+            return PaywallCopy(
+                close: "Cerrar",
+                subtitle: "Desbloquea el historial completo y cada nuevo pick al momento en que se publica.",
+                benefits: [
+                    "Cada nuevo pick al momento en que se publica",
+                    "La tesis completa: qué hace la empresa y por qué la elegimos",
+                    "El riesgo clave que monitoreamos en cada posición",
+                    "Valuación y consenso de analistas",
+                ],
+                subscribeCTA: "Suscribirse",
+                month: "mes",
+                restore: "Restaurar Compras",
+                autoRenew: "Se renueva mensualmente hasta ser cancelada. Gestiona en la configuración del Apple ID.",
+                terms: "Términos",
+                privacy: "Privacidad"
+            )
         }
     }
 }
