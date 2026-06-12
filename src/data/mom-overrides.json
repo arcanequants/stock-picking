@@ -350,11 +350,11 @@
     "model": "manual-claude"
   },
   "GILD": {
-    "one_liner": "Gilead Sciences es una empresa que lidera el tratamiento del VIH y acaba de lanzar un nuevo medicamento que protege por 6 meses con una sola inyección.",
-    "why_short": "Compramos Gilead porque tiene un nuevo tratamiento innovador contra el VIH que podría aumentar mucho sus ventas y ya tiene otros medicamentos importantes protegidos hasta 2036.",
-    "risk_short": "El mayor riesgo es que el gobierno de EE.UU. podría negociar precios más bajos para uno de sus medicamentos clave, lo que podría afectar sus ingresos en el futuro.",
-    "generated_at": "2026-05-25T00:15:06.571Z",
-    "model": "gpt-4o"
+    "one_liner": "Gilead es el líder mundial en medicinas contra el VIH (su pastilla Biktarvy es la #1 en EE.UU.), y acaba de lanzar Yeztugo: una inyección que se pone dos veces al año y previno el VIH casi al 100% en estudios.",
+    "why_short": "Biktarvy es la pastilla #1 contra el VIH en EE.UU. (~$3,400 millones por trimestre) y su inyección nueva Yeztugo —dos veces al año, casi 100% efectiva— va camino a ~$1,000 millones en su primer año. Paga ~2.69% y cotiza a ~19x utilidad.",
+    "risk_short": "Depende demasiado de Biktarvy: una sola medicina genera >$13,000 millones al año y perderá su patente hacia ~2036, cuando los genéricos baratos le coman ventas. Además hay competencia fuerte (GSK, Merck) y la tesis depende de que Yeztugo se venda bien.",
+    "generated_at": "2026-06-11T00:00:00Z",
+    "model": "manual-claude"
   },
   "GSK": {
     "one_liner": "GSK es una de las farmacéuticas más grandes del mundo, centrada en medicamentos y vacunas, y está lanzando nuevos productos importantes bajo el liderazgo de su nueva directora.",
@@ -635,5 +635,12 @@
     "risk_short": "Casi todo su dinero viene del gobierno de Estados Unidos, así que recortes de defensa o peleas de presupuesto le pegan. Construir submarinos es difícil y los retrasos cuestan caro, y los jets de lujo se venden menos en una recesión.",
     "generated_at": "2026-06-11T00:00:00Z",
     "model": "manual-claude (openai quota exhausted)"
+  },
+  "EZA": {
+    "one_liner": "EZA no es una empresa: es un ETF, una canasta de ~33 grandes empresas de Sudáfrica (mineras de oro, Naspers y bancos) que te paga un dividendo gordo de ~6.25% al año.",
+    "why_short": "Te paga ~6.25% de dividendo, más del triple del ETF promedio de EE.UU. Es una doble apuesta al oro (AngloGold + Gold Fields son ~21% del fondo) más Naspers (dueño de Tencent) y bancos baratos —exposición a un país por solo 0.59% de comisión.",
+    "risk_short": "El #1 es la moneda: cotiza en dólares pero sus acciones están en rand, así que un rand débil te pega. Además ~40% es minería (si el oro cae, cae fuerte), hay riesgo político en Sudáfrica (cortes de luz) y está concentrada: 10 nombres son ~65%.",
+    "generated_at": "2026-06-12T00:00:00Z",
+    "model": "manual-claude"
   }
 }
