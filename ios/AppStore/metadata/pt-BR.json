@@ -1,0 +1,26 @@
+{
+  "_locale": "pt-BR",
+  "_note": "Colar cada campo no App Store Connect > App Information / Version Information (Portuguese).",
+
+  "app_name": "Vectorial Data",
+  "subtitle": "Ações com tese completa",
+  "promotional_text": "Mais de 97 picks. Tese completa em cada posição. Histórico real de rendimentos. US$0,99/mês.",
+
+  "description": "Um novo pick de ação toda semana — com a tese completa: o que a empresa faz, por que escolhemos, o risco real que monitoramos e os números que importam.\n\nNão é uma newsletter genérica. É uma carteira real: US$ 50 investidos em cada posição, histórico transparente desde o primeiro pick, rendimento publicado como está — com os erros incluídos.\n\nO QUE VOCÊ RECEBE\n• Tese completa em cada pick: o que a empresa faz, por que escolhemos, o risco-chave\n• Dados financeiros: P/L, P/L projetado, market cap, consenso de analistas\n• Notícias curadas que afetam sua carteira — sem ruído\n• Histórico completo de rendimentos (mais de 97 picks em 20 ciclos)\n• Carteira em tempo real com preços ao vivo e retorno por posição\n\nCOMO FUNCIONA\nInvestimos US$ 50 por posição. Cada pick vem com uma mensagem de WhatsApp e a pesquisa completa por escrito. Você vê nosso histórico real, sem edições.\n\nO QUE NÃO SOMOS\nA Vectorial Data é um serviço editorial de publicação — não assessoria de investimentos personalizada. O desempenho passado não garante resultados futuros. Este serviço não é registrado na CVM. Consulte sempre um assessor financeiro qualificado.\n\nASSINATURA\nUS$ 0,99 por mês. Sem contratos. Cancele quando quiser nas configurações do Apple ID.\nA assinatura é renovada automaticamente, a menos que seja cancelada com pelo menos 24 horas de antecedência em relação ao final do período vigente.",
+
+  "keywords": "ações,investimentos,carteira,picks,finanças,dividendos,mercado,análise,tese,bolsa",
+
+  "release_notes": "Primeira versão do Vectorial Data na App Store.",
+
+  "support_url": "https://vectorialdata.com",
+  "marketing_url": "https://vectorialdata.com",
+  "privacy_policy_url": "https://vectorialdata.com/pt/privacy",
+
+  "subscription_product": {
+    "reference_name": "Premium Mensal (PT)",
+    "display_name": "Premium Mensal",
+    "description": "Acesso completo a todos os picks, pesquisa e histórico da carteira.",
+    "promotional_offer_display_name": "Teste grátis",
+    "promotional_offer_description": "Teste grátis, depois US$0,99/mês."
+  }
+}

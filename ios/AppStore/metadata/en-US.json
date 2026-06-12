@@ -1,0 +1,26 @@
+{
+  "_locale": "en-US",
+  "_note": "Paste each field into App Store Connect > App Information / Version Information (English).",
+
+  "app_name": "Vectorial Data",
+  "subtitle": "Stock picks with full thesis",
+  "promotional_text": "97+ picks. Full thesis on every position. Real performance history. $0.99/month.",
+
+  "description": "A new stock pick every week — with the full thesis: what the company does, why we picked it, the real risk we're watching, and the numbers that matter.\n\nNot a generic newsletter. A real portfolio: $50 invested in each position, transparent track record from day one, performance published as-is — mistakes and all.\n\nWHAT YOU GET\n• Full thesis on every pick: what the company does, why we picked it, the key risk\n• Financial data: P/E ratio, forward P/E, market cap, analyst consensus\n• Curated news that affects your portfolio — no noise\n• Complete performance history (97+ picks across 20 cycles)\n• Real-time portfolio with live prices and return per position\n\nHOW IT WORKS\nWe invest $50 per position. Every pick comes with a WhatsApp message and full written research. You see our actual track record, unedited.\n\nWHAT WE'RE NOT\nVectorial Data is an editorial publishing service — not personalized investment advice. We operate under the publisher's exclusion (Section 202(a)(11)(D) of the U.S. Investment Advisers Act). Past performance does not guarantee future results. Always consult a qualified financial advisor.\n\nSUBSCRIPTION\n$0.99 per month. No contracts. Cancel anytime from your Apple ID settings.\nSubscription automatically renews unless canceled at least 24 hours before the end of the current period.",
+
+  "keywords": "stocks,investing,portfolio,picks,finance,dividends,market,research,analysis,thesis",
+
+  "release_notes": "First release of Vectorial Data on the App Store.",
+
+  "support_url": "https://vectorialdata.com",
+  "marketing_url": "https://vectorialdata.com",
+  "privacy_policy_url": "https://vectorialdata.com/en/privacy",
+
+  "subscription_product": {
+    "reference_name": "Monthly Premium (EN)",
+    "display_name": "Monthly Premium",
+    "description": "Full access to all picks, research, and portfolio history.",
+    "promotional_offer_display_name": "Free Trial",
+    "promotional_offer_description": "Try free, then $0.99/month."
+  }
+}
