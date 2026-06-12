@@ -3,7 +3,14 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import { createEventWithExplanations } from "@/lib/notifications";
 import { applySplitAdjustment, fetchSplitMap } from "@/lib/split-detection";
+import { fetchDividendMap } from "@/lib/dividend-detection";
+import { walkShares } from "@/lib/shares-walk";
 import YahooFinance from "yahoo-finance2";
+
+interface HistoricalRow {
+  date: Date;
+  close: number;
+}
 
 const yahooFinance = new YahooFinance();
 
@@ -90,12 +97,77 @@ export async function GET(request: Request) {
       (min, t) => (t.date < min ? t.date : min),
       transactions[0]?.date ?? new Date().toISOString(),
     );
-    const splitMap = await fetchSplitMap(activeTickers, yahooFinance, new Date(earliestTxDate));
+    // period2 is EXCLUSIVE in yahoo-finance2 historical — use tomorrow to
+    // include today's close in the reinvestment price history.
+    const tomorrow = new Date();
+    tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+    const period2Str = tomorrow.toISOString().split("T")[0];
 
-    // Calculate portfolio value ($50 per position)
+    // Splits + dividends + historical closes since the first transaction.
+    // walkShares reinvests each dividend at the close on its ex-date, so we
+    // need full price history (not just a recent window) for accuracy.
+    const [splitMap, dividendMap] = await Promise.all([
+      fetchSplitMap(activeTickers, yahooFinance, new Date(earliestTxDate)),
+      fetchDividendMap([...activeTickers, "SPY"], yahooFinance, new Date(earliestTxDate)),
+    ]);
+
+    const historicalPrices: Record<string, Record<string, number>> = {};
+    await Promise.all(
+      activeTickers.map(async (ticker) => {
+        try {
+          const rows = (await yahooFinance.historical(ticker, {
+            period1: earliestTxDate,
+            period2: period2Str,
+            interval: "1d",
+          })) as HistoricalRow[];
+          const byDate: Record<string, number> = {};
+          for (const row of rows) {
+            byDate[new Date(row.date).toISOString().split("T")[0]] = row.close;
+          }
+          historicalPrices[ticker] = byDate;
+        } catch {
+          historicalPrices[ticker] = {};
+        }
+      }),
+    );
+
+    // SPY historical closes for the DCA-equivalent DRIP benchmark.
+    const spyPrices: Record<string, number> = {};
+    const spyDateOrder: string[] = [];
+    try {
+      const spyRows = (await yahooFinance.historical("SPY", {
+        period1: earliestTxDate,
+        period2: period2Str,
+        interval: "1d",
+      })) as HistoricalRow[];
+      const spySorted = [...spyRows].sort(
+        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+      );
+      for (const row of spySorted) {
+        const dateStr = new Date(row.date).toISOString().split("T")[0];
+        spyPrices[dateStr] = row.close;
+        spyDateOrder.push(dateStr);
+      }
+    } catch (e) {
+      console.error("Failed to fetch SPY history:", e);
+    }
+    const spyOnOrAfter = (date: string): number | null => {
+      if (spyPrices[date] !== undefined) return spyPrices[date];
+      for (const d of spyDateOrder) {
+        if (d >= date) return spyPrices[d];
+      }
+      return null;
+    };
+
+    // Calculate portfolio value ($50 per position) with DRIP reinvestment.
+    // walkShares applies splits + reinvests dividends chronologically, so a
+    // dividend paid in cash is reinvested into shares at the ex-date close and
+    // grows the position — reflected in totalValue and position_shares.
     const INVESTMENT_PER_POSITION = 50;
+    const today = new Date().toISOString().split("T")[0];
     let totalInvested = 0;
     let totalValue = 0;
+    const positionShares: Record<string, number> = {};
     const splitEvents: { ticker: string; ratio: number; original: number; adjusted: number }[] = [];
 
     for (const tx of transactions) {
@@ -105,14 +177,22 @@ export async function GET(request: Request) {
         tx.date,
         splitMap[tx.ticker],
       );
-
       if (detected) {
         splitEvents.push({ ticker: tx.ticker, ratio: factor, original: tx.price, adjusted: adjustedPrice });
       }
 
-      const shares = INVESTMENT_PER_POSITION / adjustedPrice;
+      const { shares } = walkShares({
+        investment: INVESTMENT_PER_POSITION,
+        buyPrice: tx.open_price ?? tx.price,
+        buyDate: tx.date,
+        asOfDate: today,
+        splits: splitMap[tx.ticker] ?? [],
+        dividends: dividendMap[tx.ticker] ?? [],
+        priceHistory: historicalPrices[tx.ticker] ?? {},
+      });
       totalInvested += INVESTMENT_PER_POSITION;
       totalValue += shares * currentPrice;
+      positionShares[`${tx.ticker}|${tx.date}|${tx.type}`] = shares;
     }
 
     const returnPct =
@@ -120,26 +200,30 @@ export async function GET(request: Request) {
         ? ((totalValue - totalInvested) / totalInvested) * 100
         : 0;
 
-    const today = new Date().toISOString().split("T")[0];
-
-    // Calculate SPY benchmark return % vs first portfolio snapshot's SPY price
+    // SPY benchmark: DCA-equivalent with DRIP. For each tx, allocate $50 to SPY
+    // at that tx's date and reinvest SPY dividends through today — same
+    // money-weighted exposure + total-return treatment as the portfolio.
     let spyReturnPct = 0;
-    try {
-      if (spyCurrentPrice) {
-        const { data: firstSnapshot } = await getSupabaseAdmin()
-          .from("portfolio_snapshots")
-          .select("prices")
-          .order("date", { ascending: true })
-          .limit(1)
-          .single();
-
-        const firstSpyPrice = (firstSnapshot?.prices as Record<string, number> | undefined)?.SPY;
-        if (firstSpyPrice && firstSpyPrice > 0) {
-          spyReturnPct = ((spyCurrentPrice - firstSpyPrice) / firstSpyPrice) * 100;
-        }
+    if (spyCurrentPrice) {
+      let spyInvested = 0;
+      let spyValue = 0;
+      for (const tx of transactions) {
+        const spyAtBuy = spyOnOrAfter(tx.date);
+        if (spyAtBuy == null) continue;
+        const { shares: spyShares } = walkShares({
+          investment: INVESTMENT_PER_POSITION,
+          buyPrice: spyAtBuy,
+          buyDate: tx.date,
+          asOfDate: today,
+          splits: [],
+          dividends: dividendMap.SPY ?? [],
+          priceHistory: spyPrices,
+        });
+        spyInvested += INVESTMENT_PER_POSITION;
+        spyValue += spyShares * spyCurrentPrice;
       }
-    } catch (e) {
-      console.error("SPY baseline lookup error:", e);
+      spyReturnPct =
+        spyInvested > 0 ? ((spyValue - spyInvested) / spyInvested) * 100 : 0;
     }
 
     // Upsert snapshot (update if date exists, insert if not)
@@ -153,6 +237,7 @@ export async function GET(request: Request) {
           return_pct: Math.round(returnPct * 100) / 100,
           spy_return_pct: Math.round(spyReturnPct * 100) / 100,
           prices,
+          position_shares: positionShares,
         },
         { onConflict: "date" }
       );
