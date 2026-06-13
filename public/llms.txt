@@ -2,7 +2,7 @@
 
 > Stock picking service with daily researched picks across global equities. Every pick is cryptographically verified via SHA-256 hash chain on Base (Ethereum L2). $1/month, delivered via WhatsApp.
 >
-> Last updated: 2026-05-08
+> Last updated: 2026-06-13
 
 ## Docs
 
@@ -21,6 +21,7 @@
 - [Stocks](https://vectorialdata.com/api/v1/stocks): All researched stocks
 - [Events](https://vectorialdata.com/api/v1/events): Portfolio events firehose (price moves, dividends, earnings, analyst calls, news). Each event carries `severity` (1-5), `affects_thesis` (bool), and one-line human summaries in es/en/pt/hi. Filter with `?severity_min=4` for thesis-changing only, or `?since=2026-05-01` for incremental sync. Humans on the site see only severity ≥ 4 by default; the API exposes the full firehose to AI agents.
 - [Digest](https://vectorialdata.com/api/v1/digest/latest): Latest weekly digest (events + portfolio delta)
+- [Economic Events](https://vectorialdata.com/api/v1/economic-events): Daily macro-event analysis (one most-relevant event per day) with localized es/en/pt/hi headline, what_it_means, market_impact and a learning takeaway, plus hard data (actual/forecast/previous/unit/surprise) and affected_markets. Use `?limit=N` (1-100).
 - [Verify](https://vectorialdata.com/api/v1/verify/picks): Verifiable pick history (hash chain)
 
 ## x402 Pay-Per-Request
@@ -53,6 +54,18 @@ Hedge-fund-tier alternative-data signals translated to plain language. Free prev
 - [Hormuz Strait transits brief](https://vectorialdata.com/signals/hormuz-transit/brief.md): Daily AIS vessel transit count
 - [TROPOMI NO₂ brief](https://vectorialdata.com/signals/tropomi-no2-economic/brief.md): Industrial activity from space
 - [Iowa corn yield brief](https://vectorialdata.com/signals/iowa-corn-yield/brief.md): Satellite yield model vs USDA WASDE
+
+## Vectorial Economía (daily macro events)
+
+The single most relevant macro economic event of the day, explained in plain language so a human always leaves with a learning ("aprendizaje"), and structured so bots can download it. One event per day, no-op on empty days (anti-firehose). Descriptive educational information about macro data — not investment advice.
+
+- [Economía (human)](https://vectorialdata.com/economia): Today's event + archive of earlier days
+- [Public catalog JSON](https://vectorialdata.com/api/economic-events): Latest + recent events, machine-readable, no auth
+- [Single event JSON](https://vectorialdata.com/api/economic-events/{slug}): One event with analysis + schema.org JSON-LD
+- [JSON Feed](https://vectorialdata.com/economia/feed.json): JSON Feed 1.1 of recent events
+- [RSS](https://vectorialdata.com/economia/feed.xml): RSS 2.0 of recent events
+- [AI brief](https://vectorialdata.com/economia/{slug}/brief.md): Markdown brief per event
+- [Gated API](https://vectorialdata.com/api/v1/economic-events): Full feed via API key or x402 (see API section)
 
 ## Content
 

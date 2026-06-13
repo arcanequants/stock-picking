@@ -825,6 +825,7 @@
     "descStocks": "Todas las acciones investigadas",
     "descVerify": "Cadena de hashes verificable",
     "descEvents": "Eventos del portafolio (firehose con severidad 1-5)",
+    "descEconEvents": "Análisis del evento macro más relevante del día (es/en/pt/hi)",
     "descDigest": "Resumen semanal (eventos + delta del portafolio)",
     "descPayment": "Verificar pago USDC",
     "endpointsNote": "Todos los endpoints con prefijo",

@@ -173,6 +173,11 @@ print(f"Chain valid: {ledger['valid']}, {ledger['chain_length']} picks")`}
                 <td className="py-2">{t("descEvents")}</td>
               </tr>
               <tr className="border-b border-border/50">
+                <td className="py-2 pr-4 font-mono text-xs">GET /economic-events</td>
+                <td className="py-2 pr-4">{t("authApiKey")}</td>
+                <td className="py-2">{t("descEconEvents")}</td>
+              </tr>
+              <tr className="border-b border-border/50">
                 <td className="py-2 pr-4 font-mono text-xs">GET /digest/latest</td>
                 <td className="py-2 pr-4">{t("authApiKey")}</td>
                 <td className="py-2">{t("descDigest")}</td>
