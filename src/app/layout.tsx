@@ -143,6 +143,12 @@ export default async function RootLayout({
                     >
                       {t("noticias")}
                     </Link>
+                    <Link
+                      href="/economia"
+                      className="text-text-muted hover:text-foreground transition-colors"
+                    >
+                      {t("economia")}
+                    </Link>
                     {QUANT_LAB_ENABLED && (
                       <Link
                         href="/quant-lab"

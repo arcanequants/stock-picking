@@ -80,6 +80,9 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
           <Link href="/notifications" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
             {t("noticias")}
           </Link>
+          <Link href="/economia" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
+            {t("economia")}
+          </Link>
           {QUANT_LAB_ENABLED && (
             <Link href="/quant-lab" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
               Quant Lab
