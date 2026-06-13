@@ -15,7 +15,7 @@ const handler = createMcpHandler(
   (server) => {
     server.tool(
       "publish_economic_event",
-      "Publish the single most relevant macro event of the day to Vectorial Economía (vectorialdata.com/economia). Provide the analysis in Spanish (es, required) plus English (en) and Portuguese (pt). Each language needs headline, what_it_means, market_impact and a learning takeaway. Upserts one row per event_date.",
+      "Publish the single most relevant macro event of the day to Vectorial Economía (vectorialdata.com/economia). Provide the analysis in Spanish (es, required) plus English (en), Portuguese (pt) and Hindi (hi). Each language needs headline, what_it_means, market_impact and a learning takeaway. Upserts one row per event_date.",
       {
         event_date: z.string().describe("Release date, YYYY-MM-DD"),
         event_name: z.string().describe('e.g. "US CPI (May)"'),
@@ -43,6 +43,7 @@ const handler = createMcpHandler(
           es: analysisSchema,
           en: analysisSchema.optional(),
           pt: analysisSchema.optional(),
+          hi: analysisSchema.optional(),
         }),
       },
       async (args) => {

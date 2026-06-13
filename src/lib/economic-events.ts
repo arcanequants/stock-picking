@@ -100,9 +100,13 @@ const DISCLAIMER_EN =
 const DISCLAIMER_PT =
   "Vectorial Economía é informação educativa descritiva sobre dados macro. Não é aconselhamento de investimento. O comportamento histórico dos mercados não garante resultados futuros.";
 
+const DISCLAIMER_HI =
+  "Vectorial Economía मैक्रो डेटा के बारे में वर्णनात्मक शैक्षिक जानकारी है। यह निवेश सलाह नहीं है। बाज़ारों का पिछला प्रदर्शन भविष्य के परिणामों की गारंटी नहीं देता।";
+
 function disclaimerFor(locale: EconLocale): string {
   if (locale === "en") return DISCLAIMER_EN;
   if (locale === "pt") return DISCLAIMER_PT;
+  if (locale === "hi") return DISCLAIMER_HI;
   return DISCLAIMER_ES;
 }
 
