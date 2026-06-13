@@ -1,0 +1,129 @@
+{
+  "date": "2026-06-13",
+  "summary": "ECB sube tasas por primera vez desde 2023; Bitcoin ETFs pierden $4.4B en 13 días; James Webb detecta dos atmósferas distintas en un solo planeta",
+  "causalChain": "La restricción del Estrecho de Hormuz encareció el petróleo y la energía global; Europa respondió con su primera alza de tasas desde 2023 (BCE a 2.25%); tasas más altas hacen los bonos gubernamentales más atractivos, expulsando capital de activos de riesgo — Bitcoin ETFs sangran $4.4B en tiempo récord mientras el yen japonés cae a 160/dólar a la espera de la decisión del BoJ el 16-17 junio.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Oil swings from $101 to $84 in days — Hormuz fear unwinds", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed holds at 3.50-3.75%; FOMC meets June 16-17", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,195/oz — safe haven demand surges on Middle East tension", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico slashes 2026 GDP forecast to 1.1%", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Nearshoring lifts Mexico to #19 in global FDI confidence index", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Remittances recover +1.4% YoY after 2025 immigration shock", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Yen hits 160/USD — BoJ holds steady despite 6.1% factory inflation", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "PBOC injects zero money into banks — first time since 2015", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Nikkei above 68,000 — fresh all-time record high", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "ECB raises deposit rate to 2.25% — first hike since 2023", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "DAX -0.5% vs Italy +3.2% — divergent reactions to ECB hike", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "RBA holds at 4.35% as inflation and housing stress collide", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "BHP + Rio Tinto to share Pilbara iron ore mines", "worker": "—"},
+    {"n": 14, "region": "OCEANIA", "angle": "RBNZ holds low while rest of world raises — stagflation risk", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "Bitcoin ETFs bleed $4.4B in record 13-day outflow streak", "worker": "—"},
+    {"n": 16, "region": "CRYPTO", "angle": "Ethereum crashes below $2,000; whale rotation into Bitcoin", "worker": "—"},
+    {"n": 17, "region": "CRYPTO", "angle": "Tether delisted from EU exchanges ahead of MiCA deadline July 1", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "JWST: WASP-121b has two different twilight chemistries — first direct detection (Nature Astronomy)", "worker": "—"},
+    {"n": 19, "region": "WOW", "angle": "Amaterasu particle may be ultraheavy atom heavier than iron — Penn State/Kyoto (Phys Rev Letters)", "worker": "—"},
+    {"n": 20, "region": "WOW", "angle": "Walking during chemo keeps brains sharper — U of Rochester nationwide trial (JNCCN)", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil dropped from $101 to $84 per barrel in just days — one of the fastest falls this year. Oil markets swing on fear. When tensions near the Strait of Hormuz (the narrow waterway through which 20% of the world's oil flows) rise, prices spike. When traders bet conflict won't escalate, they unwind those bets fast. Countries that rely on oil revenue face massive budget uncertainty from swings this large."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government pays about 4.5% per year to borrow money — near the highest level in 15 years. Next week the US central bank meets to decide whether to hold that rate steady or cut. Energy prices are still high, so policymakers won't cut rates yet. Higher rates make safe government bonds more attractive, pulling money away from riskier assets like stocks and crypto."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold is trading at $4,195 per ounce — a price that seemed impossible just a few years ago. When wars, debt worries, and currency uncertainty pile up at once, investors worldwide flood into gold because it holds value across any currency or border. Right now all three are happening simultaneously. Central banks from China to Poland are buying gold at record rates, shrinking available supply and pushing prices higher."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its 2026 growth forecast to 1.1% — nearly half what was expected at the start of the year. The main reason: businesses are postponing new factories and investments until US trade rules become clearer. That uncertainty acts like a tax on growth. Meanwhile, prices are rising at 4.3% per year, meaning the central bank can't lower borrowing costs to stimulate the economy without risking a price spiral."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico jumped 6 places to rank 19th globally as a destination for foreign investment — one of the biggest annual leaps of any country. The driver: companies are moving supply chains away from China and toward Mexico, where wages average $4.90/hr (25% below China) and the US border is just a day's drive away. Compliance with the US-Mexico-Canada trade treaty jumped from 45% to 89%, meaning Mexican-made products now easily qualify for zero tariffs."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexicans living in the US sent $14.4 billion home in the first three months of 2026 — 1.4% more than a year earlier. This follows a painful 2025, when tougher US immigration enforcement caused transfers to fall 4.6% — the first drop in 11 years. The recovery is driven by Mexican families already settled in the US earning and sending more. These transfers are a lifeline for millions of Mexican households."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's currency hit 160 yen per dollar — its weakest level in over a year. Japan's central bank is keeping interest rates very low even as factory prices jump 6.1%, the fastest in three years. Low rates mean investors move money to higher-paying places, weakening the yen. A weak yen helps car and electronics exporters sell cheaply abroad, boosting profits — but squeezes ordinary families paying more for imported food and fuel."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's central bank injected zero new money into banks this week — the first time since 2015. Usually it pumps cash daily to keep lending flowing. Pulling back signals concern that adding more money would weaken China's currency further. China is threading a needle: stimulate enough to keep growth going, but not so much that the yuan slides and imports become more expensive — which would raise inflation for regular people."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "Japan's stock market hit a fresh record above 68,000 points — its highest ever. The paradox: a weak yen hurts Japanese families but helps Japanese companies. Toyota, Sony, and similar exporters see their goods become cheaper for foreign buyers, boosting sales and profits. International investors are also rotating into Japan as an alternative to US and European markets. Both effects combined pushed stocks to historic highs."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised its main interest rate for the first time since 2023, setting it at 2.25%. The trigger: energy costs surged when oil shipments through a narrow Middle East waterway became restricted — and rising energy costs push up prices for everything from food to manufacturing. The bank decided it had to act before people started expecting permanent inflation, even though higher rates will slow Europe's already-sluggish 0.8% growth."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "After Europe's central bank announced higher rates, stock markets split. Italy surged 3.2%, France gained 1.6%, the UK rose 1% — but Germany fell 0.5%. Germany's economy relies on manufacturing exports, which suffer when borrowing costs rise and demand slows. Italy and France have more banks and energy companies in their markets, which can actually benefit from higher interest rates and elevated energy prices."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's central bank held its key rate at 4.35% — high by historical standards. Policymakers are caught between two problems: inflation is still above target, but households are already stretched. The global energy shock adds uncertainty. The bank is watching whether slowing global growth will naturally cool prices, or whether another rate increase is needed — which would further pressure homeowners with variable-rate mortgages."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "The world's two largest iron ore miners — BHP and Rio Tinto — announced they'll coordinate mines in Australia's Pilbara desert to extract more ore together than either could alone. Iron ore is the main ingredient in steel, used in everything from skyscrapers to cars. For context: Rio Tinto just shipped its 8 billionth tonne from the region since operations began 60 years ago. Rising global steel demand is pushing both companies to maximize output."
+    },
+    {
+      "n": 14,
+      "region": "OCEANIA",
+      "text": "New Zealand's central bank is keeping rates low while the rest of the world raises them. The reason: New Zealand's economy isn't spending enough — businesses and households pulled back sharply. Low rates are meant to encourage borrowing and activity. The risk: if global energy prices keep rising and reach New Zealand, the country could end up with both a weak economy AND rising prices — a situation with no easy policy exit."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "In just 13 days, investors pulled $4.4 billion out of US funds that hold Bitcoin — the longest exit streak since these funds launched in January 2024. The reason: the US government's bonds now pay about 4.5% per year. When safe assets pay that much, speculative ones like Bitcoin look less attractive. Total money in Bitcoin funds dropped from $104 billion to $80 billion. Bitcoin's price fell to around $62,000 — down from $72,000 weeks earlier."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "Ethereum fell below $2,000 — down 65% from its record high of $4,950. Funds holding Ethereum suffered 17 straight days of investor withdrawals. On-chain data shows large holders are moving money from Ethereum into Bitcoin, betting Bitcoin's fixed supply makes it a better safeguard during uncertain times. Ethereum's value depends on activity in its apps, and with less new money entering crypto overall, that activity has slowed significantly."
+    },
+    {
+      "n": 17,
+      "region": "CRYPTO",
+      "text": "Europe's new rules for digital currencies kick in July 1. Tether — the world's largest digital dollar, with $185 billion in circulation — chose not to comply and is being removed from regulated European exchanges. The compliant alternative, USDC (with $75 billion), gains ground. This could shift billions in trading volume across Europe in coming weeks, reshaping how traders on the continent move money between assets."
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "A planet 900 light-years away has two completely different atmospheres at the same time. WASP-121 b orbits so close to its star it never rotates — one face bakes at 2,500°C while the other side is 1,800°C cooler. The James Webb telescope just detected that even the twilight zones — morning side vs evening side — have different chemistry. Theory predicted this; this is the first direct observation. By Cyril Gapp et al., Max Planck Institute for Astronomy (Heidelberg). 📄 Published in Nature Astronomy · More: https://www.mpg.de/26545415/from-dusk-till-dawn"
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "text": "A particle smashed into Earth's atmosphere in 2021 with the energy of a fast-moving brick — but it came from deep space. Scientists just found it is likely an atom heavier than iron, not the simple proton originally assumed. Heavier atoms lose energy slowly crossing the vast emptiness of space, which explains why it arrived so energized. This changes how we think about the universe's most violent events. By Penn State + Kyoto University researchers. 📄 Published in Physical Review Letters · More: https://www.sciencedaily.com/releases/2026/06/260608040015.htm"
+    },
+    {
+      "n": 20,
+      "region": "WOW",
+      "text": "During cancer treatment, many patients struggle to think clearly — a side effect so common it has a name: chemo brain. A nationwide trial found that patients who walked and did light resistance exercises during chemotherapy stayed significantly sharper mentally. The study, the largest of its kind in the US, suggests movement protects the brain while drugs target the tumor. By Karen Mustian et al., University of Rochester Medical Center. 📄 Published in JNCCN – Journal of the National Comprehensive Cancer Network · More: https://www.eurekalert.org/news-releases/1119331"
+    }
+  ]
+}
