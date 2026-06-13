@@ -16,7 +16,7 @@ export async function GET() {
 
   const { data: keys, error } = await getSupabaseAdmin()
     .from("api_keys")
-    .select("id, name, key, credits_remaining, last_used_at, created_at, revoked_at")
+    .select("id, name, key, balance_micro, last_used_at, created_at, revoked_at")
     .eq("account_id", user.id)
     .is("revoked_at", null)
     .order("created_at", { ascending: false });
@@ -30,7 +30,7 @@ export async function GET() {
     id: k.id,
     name: k.name,
     key_preview: k.key ? `vd_live_…${k.key.slice(-6)}` : null,
-    credits_remaining: k.credits_remaining,
+    balance_micro: k.balance_micro,
     last_used_at: k.last_used_at,
     created_at: k.created_at,
   }));
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       data: {
         api_key: result.key,
-        credits_remaining: result.credits_remaining,
+        balance_micro: result.balance_micro,
       },
       meta: {
         message: "Save this key now — it will not be shown again.",

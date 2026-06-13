@@ -27,14 +27,14 @@ export default async function ApiKeysPage({
 
   const { data: keys } = await admin
     .from("api_keys")
-    .select("id, name, key, credits_remaining, last_used_at, created_at")
+    .select("id, name, key, balance_micro, last_used_at, created_at")
     .eq("account_id", user.id)
     .is("revoked_at", null)
     .order("created_at", { ascending: false });
 
   const { data: ledger } = await admin
     .from("api_credit_ledger")
-    .select("id, delta_credits, source, endpoint, notes, created_at")
+    .select("id, delta_micro, source, endpoint, notes, created_at")
     .eq("account_id", user.id)
     .order("created_at", { ascending: false })
     .limit(20);
@@ -44,7 +44,7 @@ export default async function ApiKeysPage({
       id: k.id,
       name: k.name as string | null,
       key_preview: k.key ? `vd_live_…${(k.key as string).slice(-6)}` : null,
-      credits_remaining: k.credits_remaining as number,
+      balance_micro: k.balance_micro as number,
       last_used_at: k.last_used_at as string | null,
       created_at: k.created_at as string,
     }));
@@ -52,7 +52,7 @@ export default async function ApiKeysPage({
   const initialLedger =
     (ledger ?? []).map((l) => ({
       id: l.id as string,
-      delta_credits: l.delta_credits as number,
+      delta_micro: l.delta_micro as number,
       source: l.source as string,
       endpoint: l.endpoint as string | null,
       notes: l.notes as string | null,
@@ -62,7 +62,7 @@ export default async function ApiKeysPage({
   const sp = await searchParams;
   const flash =
     sp.topup === "success"
-      ? `Top-up complete — credits arriving in seconds (Stripe webhook).`
+      ? `Top-up complete — balance arriving in seconds (Stripe webhook).`
       : sp.topup === "cancel"
         ? `Top-up canceled. No charge.`
         : null;
@@ -72,7 +72,7 @@ export default async function ApiKeysPage({
       <header>
         <h1 className="text-3xl font-bold mb-2">API Keys</h1>
         <p className="text-text-muted">
-          Manage your Vectorial Data API keys and credit balance. 1 credit = 1 request = $0.002.
+          Manage your Vectorial Data API keys and prepaid USDC balance. You pay per request in USDC.
         </p>
       </header>
 

@@ -3,11 +3,20 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 
 const KEY_PREFIX = "vd_live_";
 
-// Pricing. 1 credit = 1 request = $0.002 USD (matches x402 price).
-// Routes can override the cost for heavier endpoints via withApiKey(req, costCredits).
-export const DEFAULT_REQUEST_COST_CREDITS = 1;
-// Lifetime free grant on signup. 100 credits = $0.20 USD gift.
-export const SIGNUP_GRANT_CREDITS = 100;
+// Billing unit: micro-USDC. 1 USDC = 1_000_000 micro.
+export const MICRO_PER_USDC = 1_000_000;
+
+/** Convert a USD-cents amount (Stripe) to micro-USDC. 500 cents = $5 = 5_000_000. */
+export function centsToMicroUsdc(cents: number): number {
+  return Math.round(cents * 10_000);
+}
+
+// Default per-request cost. 2000 micro = $0.002 (matches the legacy 1-credit price
+// and the cheapest x402 endpoint). Phase 2 sets real per-endpoint costs.
+export const DEFAULT_REQUEST_COST_MICRO_USDC = 2_000;
+// Trial grant for a brand-new signup key. 200_000 micro = $0.20 (unchanged from the
+// old 100-credit grant). Phase 4 may zero this in favor of a mandatory 5 USDC deposit.
+export const SIGNUP_GRANT_MICRO_USDC = 200_000;
 
 export function generateApiKey(): string {
   return KEY_PREFIX + randomBytes(24).toString("hex");
@@ -22,7 +31,7 @@ export async function createApiKey(opts: {
   email?: string;
   wallet_address?: string;
   name?: string;
-}): Promise<{ key: string; credits_remaining: number }> {
+}): Promise<{ key: string; balance_micro: number }> {
   const key = generateApiKey();
   const key_hash = hashApiKey(key);
 
@@ -37,7 +46,7 @@ export async function createApiKey(opts: {
       email: opts.email?.toLowerCase().trim(),
       wallet_address: opts.wallet_address?.toLowerCase(),
       name: opts.name,
-      credits_remaining: SIGNUP_GRANT_CREDITS,
+      balance_micro: SIGNUP_GRANT_MICRO_USDC,
     })
     .select("id")
     .single();
@@ -53,20 +62,20 @@ export async function createApiKey(opts: {
     await getSupabaseAdmin().rpc("credit_api_balance", {
       p_account_id: opts.account_id,
       p_api_key_id: null,
-      p_credits: SIGNUP_GRANT_CREDITS,
+      p_micro: SIGNUP_GRANT_MICRO_USDC,
       p_source: "grant_signup",
       p_stripe_payment_intent_id: null,
-      p_notes: `signup grant: ${SIGNUP_GRANT_CREDITS} credits`,
+      p_notes: `signup grant: ${SIGNUP_GRANT_MICRO_USDC} micro-USDC`,
     });
   }
 
-  return { key, credits_remaining: SIGNUP_GRANT_CREDITS };
+  return { key, balance_micro: SIGNUP_GRANT_MICRO_USDC };
 }
 
 export interface ApiKeyInfo {
   keyId: string;
   tier: string;
-  credits_remaining: number;
+  balance_micro: number;
 }
 
 /**
@@ -77,20 +86,20 @@ export interface ApiKeyInfo {
 export async function debitApiKey(
   key: string,
   endpoint: string,
-  costCredits: number = DEFAULT_REQUEST_COST_CREDITS
+  costMicroUsdc: number = DEFAULT_REQUEST_COST_MICRO_USDC
 ): Promise<ApiKeyInfo | null> {
   const key_hash = hashApiKey(key);
 
   const { data: newBalance, error: debitError } = await getSupabaseAdmin().rpc(
-    "debit_api_credits",
-    { p_key_hash: key_hash, p_credits: costCredits, p_endpoint: endpoint }
+    "debit_api_balance",
+    { p_key_hash: key_hash, p_micro: costMicroUsdc, p_endpoint: endpoint }
   );
 
   if (debitError || newBalance === null || newBalance === undefined) {
     return null;
   }
 
-  // debit_api_credits returns just the new balance; fetch id+tier for the caller.
+  // debit_api_balance returns just the new balance; fetch id+tier for the caller.
   const { data: row } = await getSupabaseAdmin()
     .from("api_keys")
     .select("id, tier")
@@ -101,12 +110,12 @@ export async function debitApiKey(
   return {
     keyId: row.id,
     tier: row.tier,
-    credits_remaining: newBalance as number,
+    balance_micro: newBalance as number,
   };
 }
 
 /**
- * @deprecated Use `debitApiKey(key, endpoint, costCredits)` — credits are now
+ * @deprecated Use `debitApiKey(key, endpoint, costMicroUsdc)` — balance is now
  * debited at validate-time in a single atomic RPC. Kept for compile compat.
  */
 export async function validateApiKey(key: string): Promise<ApiKeyInfo | null> {
@@ -130,7 +139,7 @@ export async function incrementUsage(_keyId: string): Promise<void> {
 export async function grantCredits(opts: {
   account_id: string;
   api_key_id: string;
-  credits: number;
+  micro_usdc: number;
   source: "grant_promo" | "topup_stripe" | "topup_crypto" | "refund" | "adjustment";
   stripe_payment_intent_id?: string;
   notes?: string;
@@ -138,7 +147,7 @@ export async function grantCredits(opts: {
   const { data, error } = await getSupabaseAdmin().rpc("credit_api_balance", {
     p_account_id: opts.account_id,
     p_api_key_id: opts.api_key_id,
-    p_credits: opts.credits,
+    p_micro: opts.micro_usdc,
     p_source: opts.source,
     p_stripe_payment_intent_id: opts.stripe_payment_intent_id ?? null,
     p_notes: opts.notes ?? null,

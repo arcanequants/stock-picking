@@ -8,7 +8,7 @@ import {
   sendPaymentFailedAlertToAdmin,
   sendApiTopupAlertToAdmin,
 } from "@/lib/resend";
-import { grantCredits } from "@/lib/api-keys";
+import { grantCredits, centsToMicroUsdc } from "@/lib/api-keys";
 import { getPack } from "@/lib/api-credit-packs";
 import { buildTrackedWaUrl } from "@/lib/wa-track";
 import type Stripe from "stripe";
@@ -78,11 +78,14 @@ export async function POST(request: Request) {
             break;
           }
 
+          // Credit the balance by the real dollars charged (USDC parity), not the
+          // legacy "credits" field. $5 paid → 5_000_000 micro-USDC.
+          const topupCents = session.amount_total ?? pack.priceUsdCents;
           try {
             const newBalance = await grantCredits({
               account_id: accountId,
               api_key_id: apiKeyId,
-              credits: pack.credits,
+              micro_usdc: centsToMicroUsdc(topupCents),
               source: "topup_stripe",
               stripe_payment_intent_id: paymentIntentId,
               notes: `Stripe top-up · pack=${pack.id}`,

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createApiKey, SIGNUP_GRANT_CREDITS } from "@/lib/api-keys";
+import { createApiKey, SIGNUP_GRANT_MICRO_USDC } from "@/lib/api-keys";
 
 export async function POST(request: Request) {
   try {
@@ -15,10 +15,11 @@ export async function POST(request: Request) {
     return NextResponse.json({
       data: {
         api_key: result.key,
-        credits_remaining: result.credits_remaining,
+        balance_micro_usdc: result.balance_micro,
+        balance_usdc: result.balance_micro / 1_000_000,
       },
       meta: {
-        message: `API key created with ${SIGNUP_GRANT_CREDITS} free credits. Include it as: Authorization: Bearer <key>`,
+        message: `API key created with a $${(SIGNUP_GRANT_MICRO_USDC / 1_000_000).toFixed(2)} USDC free trial balance. Include it as: Authorization: Bearer <key>`,
         docs: "https://vectorialdata.com/developers",
         topup: "https://vectorialdata.com/api-keys",
       },

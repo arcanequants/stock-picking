@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import {
   debitApiKey,
-  DEFAULT_REQUEST_COST_CREDITS,
+  DEFAULT_REQUEST_COST_MICRO_USDC,
   type ApiKeyInfo,
 } from "@/lib/api-keys";
 
@@ -11,7 +11,7 @@ export type AuthResult =
 
 export async function withApiKey(
   request: Request,
-  costCredits: number = DEFAULT_REQUEST_COST_CREDITS
+  costMicroUsdc: number = DEFAULT_REQUEST_COST_MICRO_USDC
 ): Promise<AuthResult> {
   const authHeader = request.headers.get("authorization");
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -27,7 +27,7 @@ export async function withApiKey(
   const key = authHeader.slice(7);
   const endpoint = new URL(request.url).pathname;
 
-  const info = await debitApiKey(key, endpoint, costCredits);
+  const info = await debitApiKey(key, endpoint, costMicroUsdc);
   if (!info) {
     // 402 is the right code for "valid key, no credits". Invalid keys also
     // land here — we don't distinguish to avoid leaking key validity.
@@ -55,14 +55,15 @@ export function apiResponse<T>(
     data,
     meta: {
       tier: auth.tier,
-      credits_remaining: auth.credits_remaining,
+      balance_micro_usdc: auth.balance_micro,
+      balance_usdc: auth.balance_micro / 1_000_000,
       timestamp: new Date().toISOString(),
     },
   };
 
   const res = NextResponse.json(body, { status });
   res.headers.set("X-VD-Tier", auth.tier);
-  res.headers.set("X-VD-Credits-Remaining", String(auth.credits_remaining));
+  res.headers.set("X-VD-Balance-Micro-USDC", String(auth.balance_micro));
   res.headers.set("X-VD-Version", "1");
   res.headers.set(
     "Cache-Control",

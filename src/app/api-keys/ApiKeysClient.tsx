@@ -7,19 +7,28 @@ type KeyRow = {
   id: string;
   name: string | null;
   key_preview: string | null;
-  credits_remaining: number;
+  balance_micro: number;
   last_used_at: string | null;
   created_at: string;
 };
 
 type LedgerRow = {
   id: string;
-  delta_credits: number;
+  delta_micro: number;
   source: string;
   endpoint: string | null;
   notes: string | null;
   created_at: string;
 };
+
+/** micro-USDC → "X.XXXX USDC". Up to 6 decimals so per-request debits stay visible. */
+function fmtUsdc(micro: number): string {
+  const usdc = micro / 1_000_000;
+  return `${usdc.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 6,
+  })} USDC`;
+}
 
 export default function ApiKeysClient({
   initialKeys,
@@ -109,7 +118,7 @@ export default function ApiKeysClient({
       <section className="border border-border rounded-2xl p-6 space-y-4">
         <h2 className="font-semibold text-lg">Create API key</h2>
         <p className="text-sm text-text-muted">
-          New keys start with 100 free credits ($0.20). Save the key immediately — it's only shown once.
+          New keys start with a $0.20 USDC free trial balance. Save the key immediately — it's only shown once.
         </p>
         <div className="flex flex-col sm:flex-row gap-2">
           <input
@@ -161,7 +170,7 @@ export default function ApiKeysClient({
                     {k.key_preview ?? "(legacy)"} {k.name && <span className="text-text-muted">· {k.name}</span>}
                   </div>
                   <div className="text-xs text-text-muted">
-                    {k.credits_remaining.toLocaleString()} credits ·{" "}
+                    {fmtUsdc(k.balance_micro)} ·{" "}
                     {k.last_used_at
                       ? `last used ${new Date(k.last_used_at).toLocaleDateString()}`
                       : "never used"}
@@ -182,13 +191,13 @@ export default function ApiKeysClient({
 
       {/* Top-up packs */}
       <section className="border border-border rounded-2xl p-6 space-y-4">
-        <h2 className="font-semibold text-lg">Add credits</h2>
+        <h2 className="font-semibold text-lg">Add balance</h2>
         {!primaryKey ? (
           <p className="text-sm text-text-muted">Create a key first, then come back to top up.</p>
         ) : (
           <>
             <p className="text-sm text-text-muted">
-              Credits are added to <span className="font-mono">{primaryKey.key_preview}</span> via Stripe Checkout.
+              USDC balance is added to <span className="font-mono">{primaryKey.key_preview}</span> via Stripe Checkout.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {packs.map((p) => (
@@ -200,7 +209,7 @@ export default function ApiKeysClient({
                 >
                   <div className="text-xs uppercase tracking-wide text-text-muted">{p.label}</div>
                   <div className="mt-1 text-2xl font-bold">${(p.priceUsdCents / 100).toFixed(0)}</div>
-                  <div className="text-sm text-text-muted">{p.credits.toLocaleString()} credits</div>
+                  <div className="text-sm text-text-muted">+{(p.priceUsdCents / 100).toFixed(2)} USDC balance</div>
                   {toppingUp === p.id && <div className="mt-2 text-xs text-brand">Opening Stripe…</div>}
                 </button>
               ))}
@@ -217,7 +226,7 @@ export default function ApiKeysClient({
         ) : (
           <ul className="divide-y divide-border text-sm">
             {initialLedger.map((l) => {
-              const positive = l.delta_credits > 0;
+              const positive = l.delta_micro > 0;
               return (
                 <li key={l.id} className="py-2 flex items-center justify-between gap-4">
                   <div className="min-w-0">
@@ -233,8 +242,8 @@ export default function ApiKeysClient({
                       positive ? "text-emerald-400" : "text-text-muted"
                     }`}
                   >
-                    {positive ? "+" : ""}
-                    {l.delta_credits}
+                    {positive ? "+" : "−"}
+                    {fmtUsdc(Math.abs(l.delta_micro))}
                   </div>
                 </li>
               );
