@@ -1,0 +1,111 @@
+{
+  "date": "2026-06-14",
+  "summary": "El cierre del Estrecho de Hormuz mantiene el petróleo en $105 mientras BoJ sube tasas al 1% por primera vez desde 1995, ECB retoma alzas y Bitcoin-ETFs pierden $5.4B en cuatro semanas.",
+  "causalChain": "La guerra con Irán bloqueó el 20% del suministro mundial de petróleo, disparando energía e inflación global; ECB y BoJ responden con alzas de tasas que fortalecen el dólar, presionan activos de riesgo como Bitcoin y abren espacio de política monetaria en México y Australia.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz strait shut since March 2 — 11M barrels/day offline, Brent at $105", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US 10-yr borrowing rate at 4.49% — Fed holds as jobs stay strong and inflation sticky", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold at $4,187 — geopolitical inflation resists rate cures, Goldman targets $5,400", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "US-China 30% tariff deal pauses higher levies 60 days — avg household pays $1,500 more/yr", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Inflation falls to 3.94% — back inside Banxico's 2-4% range for first time in months", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "USMCA formal review opens July 1 — $873B annual trade and nearshoring boom at stake", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Bank of Japan to hike to 1% on June 16 — highest rate since 1995, weak yen forces move", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "China exports surge 19% to $376.8B in May — PBOC holds yuan weak to protect market share", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB raises 25bps to 2.25% on June 11 — first hike since 2023 as Iran war stokes inflation", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "Germany halves 2026 growth forecast to 0.5%; DAX jumps 2% on Iran peace talk hopes", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBA easing cycle resumes — cash rate headed to 2.85% floor, GDP growth 1.8%", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "BHP and Rio Tinto to jointly mine 200M-tonne iron ore deposit in Australia's Pilbara", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin spot ETFs bleed $5.4B over 4 weeks — institutional share falls from 24.7% to 20.8%", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Digital dollar supply hits $320B — US GENIUS Act cleared Senate, banks eye mainstream use", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "87-yr-old quantum prediction confirmed: new path to detect dark matter opens (Nature, UCAS)", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Cancer mutations found in Alzheimer brain immune cells — Mount Sinai & Boston Children's (Cell)", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "James Webb's 'little red dots' solved: young black holes in hot gas cocoons (Nature, Copenhagen)", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Ships stopped moving through a narrow waterway between Iran and the Arabian Peninsula on March 2, after the US and Israel attacked Iran. That passage normally carries 20% of the world's oil and gas. With it closed, Middle Eastern producers cut output by 11 million barrels per day. Oil hit $105 — and everything that burns fuel costs more everywhere. UAE officials say full flows won't resume until 2027."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "What the US government pays to borrow money for 10 years just reached 4.49%. The central bank has not cut rates — inflation is still above its target and Americans are still working and spending. Higher borrowing costs make homes, cars, and business loans more expensive. They also pull foreign money into the US, strengthening the dollar and making it harder for other countries to manage their own finances."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold is sitting at $4,187 per ounce — still near historic highs. The war in the Middle East pushes oil prices up, which makes everything cost more, and that kind of inflation cannot be stopped by raising interest rates alone. Goldman Sachs analysts see gold reaching $5,400 by year's end. Central banks worldwide keep buying it as insurance against financial instability."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The US is charging a 30% tax on goods coming from China. The two countries agreed to pause even higher tariffs for 60 days while they negotiate. That tax gets passed to American shoppers — the average US household is paying $1,500 more per year as a result. Countries worldwide are rerouting trade flows to avoid getting caught in the middle of this standoff."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's annual price increase slowed to 3.94% in May — the first time in months it fell inside the central bank's comfort zone of 2% to 4%. The main driver was cheaper food, especially vegetables. The central bank had been cautious about cutting its interest rate, but this reading gives it room to ease borrowing costs in August without risking a renewed price surge."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "On July 1, Mexico, the US, and Canada formally open their 6-year review of their trade deal — $873 billion in goods cross those borders each year under it. American companies have moved factories to Mexico at record speed: foreign investment hit $40.9 billion in just three quarters of 2025, and Mexican factory wages at $4.90/hr are 25% below China's. The review outcome will decide whether that boom continues or stalls."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank is expected to raise its main interest rate to 1% on June 16 — the first time it has been that high since 1995. For decades Japan kept rates near zero to fight economic stagnation. Now rising prices and a weakening currency have forced the shift. Higher rates make Japan's currency more valuable, but they also raise the government's cost to service its enormous national debt."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China sold $376.8 billion in goods to the rest of the world in May — a 19% jump from a year ago. Factories rushed to ship before energy costs climbed further, and demand for computer chips and AI hardware stayed strong. To keep exports cheap for foreign buyers, China's central bank quietly prevents its currency from rising, making Chinese products more price-competitive against rivals."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised its main interest rate by a quarter point on June 11 — the first increase since 2023. The reason: war-driven oil prices are pushing inflation back up across the continent. The bank now expects average prices to rise 3% this year, up from a prior forecast of 2.6%. Higher rates slow borrowing and spending, which reduces inflation — but also slows economic growth."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Germany cut its 2026 growth forecast from 1% to just 0.5%. The Iran war hit German manufacturers hardest — Germany's economy relies on cheap energy to run its export machinery. On the bright side, Germany's main stock index jumped 2% last week on hopes that peace talks between the US and Iran could eventually reopen oil shipping lanes and ease energy prices."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank has been cutting its main interest rate steadily, with analysts expecting it to bottom out around 2.85%. Lower rates make mortgages cheaper and encourage households to spend — welcome relief after years of hikes. The economy is growing at 1.8% and expected to hit 2.2% by year's end. The main risk is weaker Chinese demand for Australian minerals and energy exports."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — two of the world's largest mining companies — agreed to jointly develop an iron ore deposit in Australia's Pilbara region that could produce 200 million tonnes. Iron ore is the key ingredient in steel. Sharing the site cuts costs for both companies. Australia supplies China with most of its iron ore, making this deal a long-term bet on continued Chinese demand for construction and manufacturing."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "For 13 straight trading days ending June 3, investors pulled money out of US funds that hold Bitcoin — $4.3 billion left in that streak alone, totaling $5.4 billion over four weeks. Strong US jobs data reduced hopes for an interest rate cut, making regular bonds more attractive than Bitcoin. Large institutional investors cut their share of Bitcoin fund holdings from 24.7% to 20.8% of total assets."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Digital dollars — currencies pegged 1-to-1 with the US dollar and stored on the internet — now total $320 billion in circulation. The largest one, Tether, holds $189.6 billion of that. The US Senate passed a law in 2025 defining rules for these products, clearing the path for banks to use them in everyday finance. That regulatory clarity is why traditional financial institutions are now seriously planning to adopt them."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "In 1939, a physicist predicted that when an invisible particle hits an atom, the atom's electrons briefly lag behind and release a tiny detectable burst of energy. No lab could prove this for 87 years. Researchers at the University of Chinese Academy of Sciences confirmed it by analyzing 800,000 particle collisions and isolating 6 clear signals. The discovery opens a new way to search for dark matter — the invisible substance making up 27% of the universe. 📄 Published in Nature · More: https://phys.org/news/2026-01-evidence-migdal-effect-path-dark.html"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Brain immune cells in Alzheimer's patients carry mutations normally only seen in blood cancer — yet these cells never become tumors. Instead, they create intense chronic inflammation that destroys neurons. Researchers at the Icahn School of Medicine at Mount Sinai and Boston Children's Hospital found this link studying human brain tissue. The finding suggests drugs already developed for cancer could one day slow Alzheimer's disease. 📄 Published in Cell · More: https://www.mountsinai.org/about/newsroom/2026/cancer-associated-mutations-in-brain-immune-cells-may-contribute-to-alzheimers-disease"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "The James Webb telescope kept spotting mysterious red smudges from when the universe was very young, and no one could explain them. Researchers at the University of Copenhagen solved the puzzle: each dot is a baby black hole — far smaller than thought — wrapped in hot gas it is rapidly eating. That feeding frenzy makes them glow red. This explains how some black holes grew a billion times heavier than our Sun within just 700 million years of the Big Bang. 📄 Published in Nature · More: https://nbi.ku.dk/english/news/news26/copenhagen-researchers-make-the-front-page-of-nature-solving-the-mystery-of-the-universes-little-red-dots/"
+    }
+  ]
+}
