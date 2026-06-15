@@ -1,0 +1,111 @@
+{
+  "date": "2026-06-15",
+  "summary": "US-Iran peace deal reopens Strait of Hormuz — oil crashes while Bank of Japan hikes to 1% for the first time in 30 years",
+  "causalChain": "Hormuz reopening pulls Brent from $114 toward $95, cutting global inflation pressure just as the ECB already hiked to 2.25%; simultaneously, Japan's first rate increase in three decades risks unwinding trillions in yen carry trades that have been propping up foreign assets worldwide.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "US-Iran sign peace deal, Strait of Hormuz to reopen — 20% of world oil supply unlocked", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Brent crude slides toward $95 after 3-month blockade ends — OPEC+ had already added 188k bpd", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold holds at $4,352/oz (+28% YoY) despite dollar strength — war premium slow to unwind", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "US 10-yr at 4.49%, Fed expected to hold in July — inflation still above 2% target", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico stops cutting at 6.50% — GDP shrank in Q1, inflation still at 4.45%", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "USMCA formal review launches July 1 — $873B in annual trade and nearshoring boom on the line", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Bank of Japan hikes to 1.0% — first increase in 30 years as inflation hits 2.8%, Nikkei at 66,934", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "China exports +6.6%, Hang Seng bullish — PBOC tolerates stronger yuan but iron ore demand softens", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB raised rates to 2.25% on June 11 — first hike this cycle, driven by Iran war energy shock", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "DAX at 24,687 — German GDP at 0.6% growth, auto sector squeezed by tariffs and weak demand", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBA holds at 4.35% — trimmed mean inflation at 3.7%, rate cuts not expected before late 2026", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "Iron ore forecast $77/tonne with 200Mt surplus — BHP and Rio pivot hard into copper and lithium", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin recovers to $65,695 (+2%) on Iran peace news — ETF inflows return at $85.8M on June 15", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Whales bought 57,578 BTC during dip — SEC unveils pro-crypto strategic plan for 2026-2030", "worker": "—"},
+    {"n": 15, "region": "WOW CIENCIA", "angle": "China's JUNO detector publishes neutrino results in Nature — 60% better precision than all prior experiments", "worker": "—"},
+    {"n": 16, "region": "WOW CIENCIA", "angle": "University of Birmingham perovskite catalyst makes hydrogen from waste heat at 500°C lower temperatures", "worker": "—"},
+    {"n": 17, "region": "WOW CIENCIA", "angle": "Hong Kong scientists build first DNA-guided CRISPR — targets viral RNA with higher stability than RNA-based tools", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The Strait of Hormuz is a narrow waterway between Iran and Oman that carries roughly 20% of all the world's oil and gas. Since late February, Iran had blocked it as part of a war with the US and Israel. Today, the US and Iran announced a peace deal: Iran agrees not to build a nuclear weapon, and the strait reopens toll-free starting this week. Stock markets jumped. Oil prices dropped to their lowest in two months. The formal signing happens June 19 in Switzerland, but 60 more days of detailed talks lie ahead."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "Oil had been stuck above $100 a barrel since Iran closed the strait in February, adding to inflation everywhere. With the reopening announced, Brent crude — the global oil price benchmark — fell toward $95 a barrel. OPEC+ had already been pumping an extra 188,000 barrels a day trying to compensate. If shipping through the strait fully resumes, analysts expect oil to fall further — easing the pressure on household energy bills and giving central banks more room to cut interest rates."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold hit $4,352 an ounce today, up 28% from a year ago. Gold rises when people fear inflation, war, or currencies losing value. The Iran conflict since February pushed gold from roughly $3,400 up past $4,500. With today's peace deal, gold dipped slightly from its peak but held well above $4,300. The dollar also rose sharply — which normally drags gold down. That gold kept climbing anyway suggests investors still want insurance against things going wrong, even after the ceasefire news."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The US government borrows money by selling bonds. Right now it pays 4.49% a year on its 10-year loans — among the highest rates in two decades. The Federal Reserve is expected to keep borrowing costs unchanged at its July meeting because inflation is still above its 2% target. Those high rates ripple everywhere: they make mortgages more expensive, slow business investment, and pull money toward US bonds instead of stocks or emerging markets — tightening financial conditions globally without the Fed lifting a finger."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its main interest rate to 6.50% in May — the third cut since early 2024 — and then signaled it may stop there. The reason to pause: inflation is still at 4.45%, well above the 3% target. The reason rates fell at all: Mexico's economy actually shrank in the first three months of 2026, reducing the risk that demand pushes prices higher. With the economy weak and inflation stubborn, the bank is stuck in the middle — too risky to cut more, no reason to raise."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "On July 1, the US, Mexico, and Canada begin their formal six-year review of the USMCA — the trade deal that replaced NAFTA. About $873 billion in goods cross those borders every year. The review could tighten rules on cars, food, or digital products, or it could open fresh tariff disputes. For Mexico, the stakes are enormous. The entire nearshoring wave — companies moving factories from Asia to Mexico to stay close to US customers — depends on predictable trade rules. An unfavorable outcome could slow that investment sharply."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank is expected to raise its main interest rate from 0.75% to 1.0% today — the highest in 30 years. Japan kept rates near zero for decades fighting falling prices. Now prices are rising at 2.8%, so the bank is slowly tightening. This matters far beyond Japan: Japanese investors have parked trillions of dollars overseas searching for better returns at home. As Japanese rates rise, some of that money returns home — which can weaken other currencies and shake stock and bond markets around the world."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's exports jumped 6.6% recently, lifted partly by a pause in US-China tariff increases. Hong Kong's main stock index, the Hang Seng, stayed in positive territory. China's central bank is quietly allowing its currency, the yuan, to rise — a sign it wants to attract foreign investors. But there's a catch: China's demand for iron ore, used to make steel, is softening as fewer homes and buildings are being built. That's creating headaches for Australia and Brazil, which depend heavily on selling iron ore to China."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised its main rate to 2.25% on June 11 — the first increase in this new cycle. The reason: when Iran closed the Strait of Hormuz in February, oil prices spiked and pushed euro-area inflation back up to 3%. The bank's target is 2%, so it had to act. The rate hike makes borrowing more expensive for households and businesses across 20 European countries — a drag on growth just as Germany, Europe's largest economy, is barely expanding at 0.6% this year."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Germany's main stock index, the DAX, sits near 24,700. The companies inside it — carmakers, machinery firms, chemical groups — sell most of what they make overseas. That creates three problems at once: a stronger euro makes German goods more expensive abroad, US tariffs cut into profits, and sluggish global growth reduces orders. First-quarter results showed revenues actually fell 3.7%, even though companies squeezed out a 4.4% profit gain by cutting costs aggressively. That can only last so long."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank raised its main rate to 4.35% in May and is expected to hold steady when it meets in June. It wants to bring inflation — running at 3.7% — back inside its 2–3% target band. High rates are painful here: most Australian mortgages are variable-rate, so homeowners feel every hike almost immediately. Australia's biggest banks are split on when relief comes — Commonwealth Bank and ANZ say hold through 2026, while Westpac sees possible cuts only in 2027."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia ships about 60% of its iron ore to China, which uses it to make steel. But China is building fewer homes and offices, so it needs less steel — and less iron ore. Analysts now forecast a 200-million-tonne glut of iron ore over the next two years, pushing prices down to roughly $77 a tonne. That's a massive drop from the $150+ peaks a few years ago. BHP and Rio Tinto, aware of the shift, are both expanding heavily into copper (for electric wiring) and lithium (for batteries) to reduce their dependence."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading at $65,695 today, up 2% after falling below $60,000 earlier this week — its lowest since late 2024. The recovery came as the US-Iran peace deal was announced, easing fear and making investors more willing to take on risk. US funds that track Bitcoin's price — called exchange-traded funds — saw $85.8 million flow back in on June 15, the first meaningful inflow after three weeks of withdrawals. It's a small amount relative to the prior outflows, but the reversal is being watched closely."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Between April and June, large Bitcoin holders — traders call them whales — quietly bought more than 57,000 Bitcoin while prices were falling. That's over $1.5 billion at today's prices, at a pace of roughly 1,000 coins per day. At the same time, the US Securities and Exchange Commission released a new five-year plan naming digital assets a top regulatory priority. Clearer rules tend to bring in institutional money. Whale buying before a regulatory clarity moment is a pattern traders treat as a bullish signal for the months ahead."
+    },
+    {
+      "n": 15,
+      "region": "WOW CIENCIA",
+      "text": "Neutrinos are particles so tiny that trillions pass through your body every second without touching anything. Scientists have long known neutrinos come in three types that spontaneously change into each other as they travel — but the exact math has been fuzzy. China's JUNO detector, buried under 650 meters of rock in Guangdong province, published its first results in Nature on June 10. Using just 59 days of data, it improved our measurements of how neutrinos change by 60% compared to everything learned from all previous experiments worldwide combined. · Institute: Chinese Academy of Sciences, Institute of High Energy Physics · Researchers: JUNO Collaboration (700+ scientists) · 📄 Published in Nature · More: https://www.sciencedaily.com/releases/2026/06/260612032026.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW CIENCIA",
+      "text": "Making clean hydrogen from water normally requires temperatures above 700°C — so hot it demands expensive, specialized equipment and lots of energy. A team at the University of Birmingham, led by Professor Yulong Ding, built a new kind of material called a perovskite catalyst that can split water into hydrogen starting at just 150°C. That's hot enough to use the waste heat already thrown off by steel plants, cement factories, and glass works. Those industries currently dump that heat into the air for free — now it could make clean fuel. · Institute: University of Birmingham, School of Chemical Engineering · Researchers: Prof. Yulong Ding et al. · 📄 Published in International Journal of Hydrogen Energy · More: https://www.birmingham.ac.uk/news/2026/water-splitting-catalyst-creates-hydrogen-at-low-temperatures"
+    },
+    {
+      "n": 17,
+      "region": "WOW CIENCIA",
+      "text": "CRISPR is a molecular tool that edits the genetic code inside cells. Every version until now used RNA — a fragile messenger molecule — to find and cut its target. Researchers at Hong Kong University of Science and Technology, led by Professor Hsing I-Ming, built the first CRISPR system that uses DNA as the guide instead of RNA, and targets RNA molecules rather than DNA. RNA is what many viruses use to copy themselves inside our cells. The new approach is more stable, more precise, and opens a path to faster viral disease tests and antiviral treatments. · Institute: Hong Kong University of Science and Technology · Researchers: Prof. Hsing I-Ming et al. · 📄 Published 2026 · More: https://phys.org/news/2026-05-dna-crispr-flips-gene-script.html"
+    }
+  ]
+}
