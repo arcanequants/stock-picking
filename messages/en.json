@@ -880,7 +880,11 @@
     "verifyTitle": "Verifiable Track Record",
     "verifyDesc": "Every pick is part of a SHA-256 hash chain committed to git. Agents can verify that no picks were edited retroactively.",
     "verifyAlgorithm": "Algorithm: SHA-256(ticker|price|date|previous_hash) — each pick chains to the previous",
-    "contact": "Need help integrating? Email us at Hello@vectorialdata.com"
+    "contact": "Need help integrating? Email us at Hello@vectorialdata.com",
+    "billingTitle": "API key billing",
+    "billingDesc": "One prepaid USDC balance per API key. Each request debits the per-endpoint price (the same prices as the x402 table below). No tiers, no daily limits.",
+    "billingTrial": "New keys start with a $0.20 USDC free trial balance.",
+    "billingNote": "Top up your balance with USDC via Stripe at the API keys dashboard."
   },
   "FreeSignup": {
     "separator": "Not sure yet?",

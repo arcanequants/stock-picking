@@ -7,6 +7,6 @@ export async function GET(request: Request) {
   const result = await withApiKey(request);
   if (!result.ok) return result.response;
 
-  const digest = await getDigestLatestData(result.auth.tier);
+  const digest = await getDigestLatestData("pro");
   return apiResponse(digest, result.auth);
 }

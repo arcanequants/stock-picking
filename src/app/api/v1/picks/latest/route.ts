@@ -7,6 +7,6 @@ export async function GET(request: Request) {
   const result = await withApiKey(request);
   if (!result.ok) return result.response;
 
-  const picks = await getPicksData(1, result.auth.tier);
+  const picks = await getPicksData(1, "pro");
   return apiResponse(picks[0] ?? null, result.auth);
 }

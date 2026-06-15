@@ -60,7 +60,6 @@ export function apiResponse<T>(
   const body = {
     data,
     meta: {
-      tier: auth.tier,
       balance_micro_usdc: auth.balance_micro,
       balance_usdc: auth.balance_micro / 1_000_000,
       timestamp: new Date().toISOString(),
@@ -68,7 +67,6 @@ export function apiResponse<T>(
   };
 
   const res = NextResponse.json(body, { status });
-  res.headers.set("X-VD-Tier", auth.tier);
   res.headers.set("X-VD-Balance-Micro-USDC", String(auth.balance_micro));
   res.headers.set("X-VD-Version", "1");
   res.headers.set(

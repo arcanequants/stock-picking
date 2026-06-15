@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   const limit = url.searchParams.get("limit");
   const picks = await getPicksData(
     limit ? parseInt(limit) : undefined,
-    result.auth.tier
+    "pro"
   );
 
   return apiResponse(picks, result.auth);

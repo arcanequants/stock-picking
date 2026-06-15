@@ -13,7 +13,7 @@ export async function GET(request: Request) {
   const since = url.searchParams.get("since");
 
   const events = await getEventsData(
-    result.auth.tier,
+    "pro",
     limit ? parseInt(limit) : undefined,
     {
       severityMin: severityMin ? parseInt(severityMin) : undefined,

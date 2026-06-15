@@ -7,6 +7,6 @@ export async function GET(request: Request) {
   const result = await withApiKey(request);
   if (!result.ok) return result.response;
 
-  const positions = await getPositions(result.auth.tier);
+  const positions = await getPositions("pro");
   return apiResponse(positions, result.auth);
 }

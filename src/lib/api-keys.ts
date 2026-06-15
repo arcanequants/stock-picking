@@ -73,15 +73,13 @@ export async function createApiKey(opts: {
 }
 
 export interface ApiKeyInfo {
-  keyId: string;
-  tier: string;
   balance_micro: number;
 }
 
 /**
  * Atomically debit one request from the caller's key.
- * Returns the key info + post-debit balance, or null when the key is invalid,
- * revoked, expired, or has insufficient credits (caller should respond 402).
+ * Returns the post-debit balance, or null when the key is invalid, revoked,
+ * expired, or has insufficient balance (caller should respond 402).
  */
 export async function debitApiKey(
   key: string,
@@ -99,19 +97,7 @@ export async function debitApiKey(
     return null;
   }
 
-  // debit_api_balance returns just the new balance; fetch id+tier for the caller.
-  const { data: row } = await getSupabaseAdmin()
-    .from("api_keys")
-    .select("id, tier")
-    .eq("key_hash", key_hash)
-    .single();
-  if (!row) return null;
-
-  return {
-    keyId: row.id,
-    tier: row.tier,
-    balance_micro: newBalance as number,
-  };
+  return { balance_micro: newBalance as number };
 }
 
 /**
@@ -156,21 +142,3 @@ export async function grantCredits(opts: {
   return data as number;
 }
 
-/**
- * @deprecated The pro-tier / daily-limit model is replaced by credit balances.
- * The /v1/auth/upgrade route still calls this; Phase 1.3 will rewire it to
- * grant credits proportional to the USDC payment via `grantCredits()`.
- */
-export async function upgradeToProTier(keyId: string): Promise<void> {
-  const expiresAt = new Date();
-  expiresAt.setDate(expiresAt.getDate() + 30);
-
-  await getSupabaseAdmin()
-    .from("api_keys")
-    .update({
-      tier: "pro",
-      daily_limit: 1000,
-      expires_at: expiresAt.toISOString(),
-    })
-    .eq("id", keyId);
-}

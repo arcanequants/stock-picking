@@ -63,16 +63,17 @@ paths:
                     properties:
                       api_key:
                         type: string
-                      tier:
-                        type: string
-                      daily_limit:
+                      balance_micro_usdc:
                         type: integer
+                        description: Prepaid balance in micro-USDC (1 USDC = 1,000,000 micro).
+                      balance_usdc:
+                        type: number
 
   /picks:
     get:
       operationId: getPicks
       summary: Get stock picks
-      description: Returns stock picks with current returns. Free tier gets latest 3; pro gets all.
+      description: Returns all stock picks with current returns.
       parameters:
         - name: limit
           in: query
@@ -102,7 +103,7 @@ paths:
     get:
       operationId: getResearch
       summary: Get research for a stock
-      description: Free tier gets summaries; pro gets full research.
+      description: Returns full research (financials + detailed summaries).
       parameters:
         - name: ticker
           in: path
@@ -147,7 +148,7 @@ paths:
     get:
       operationId: getPortfolioHistory
       summary: Historical daily snapshots
-      description: Free tier gets last 7 days; pro gets full history.
+      description: Returns the full portfolio history.
       responses:
         "200":
           description: Historical snapshots
@@ -226,7 +227,7 @@ paths:
         - name: limit
           in: query
           schema: { type: integer, default: 20 }
-          description: Free tier capped at 3.
+          description: Max events to return (default 20).
         - name: severity_min
           in: query
           schema: { type: integer, minimum: 1, maximum: 5 }
@@ -450,30 +451,6 @@ paths:
         "402":
           description: Payment required
 
-  /payments/verify:
-    post:
-      operationId: verifyPayment
-      summary: Verify USDC payment and upgrade to pro
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required:
-                - tx_hash
-              properties:
-                tx_hash:
-                  type: string
-                  description: Transaction hash from Base L2 USDC transfer
-      responses:
-        "200":
-          description: Payment verified, API key upgraded
-        "400":
-          description: Verification failed
-        "409":
-          description: Transaction already used
-
 components:
   securitySchemes:
     BearerAuth:
@@ -490,11 +467,11 @@ components:
         meta:
           type: object
           properties:
-            tier:
-              type: string
-              enum: [free, pro, enterprise]
-            requests_remaining:
+            balance_micro_usdc:
               type: integer
+              description: Remaining prepaid balance in micro-USDC (1 USDC = 1,000,000 micro).
+            balance_usdc:
+              type: number
             timestamp:
               type: string
               format: date-time
@@ -563,7 +540,7 @@ components:
           nullable: true
         explanations:
           type: object
-          description: Optional deeper explanations (meaning + action) per language. Only populated for severity ≥ 4. Stripped on free tier.
+          description: Optional deeper explanations (meaning + action) per language. Only populated for severity ≥ 4.
         created_at:
           type: string
           format: date-time

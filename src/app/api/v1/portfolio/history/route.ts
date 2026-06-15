@@ -7,6 +7,6 @@ export async function GET(request: Request) {
   const result = await withApiKey(request);
   if (!result.ok) return result.response;
 
-  const history = await getPortfolioHistory(result.auth.tier);
+  const history = await getPortfolioHistory("pro");
   return apiResponse(history, result.auth);
 }

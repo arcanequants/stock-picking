@@ -182,15 +182,10 @@ print(f"Chain valid: {ledger['valid']}, {ledger['chain_length']} picks")`}
                 <td className="py-2 pr-4">{t("authApiKey")}</td>
                 <td className="py-2">{t("descDigest")}</td>
               </tr>
-              <tr className="border-b border-border/50">
+              <tr>
                 <td className="py-2 pr-4 font-mono text-xs">GET /verify/picks</td>
                 <td className="py-2 pr-4 text-emerald-500">{t("authPublic")}</td>
                 <td className="py-2">{t("descVerify")}</td>
-              </tr>
-              <tr>
-                <td className="py-2 pr-4 font-mono text-xs">POST /payments/verify</td>
-                <td className="py-2 pr-4">{t("authApiKey")}</td>
-                <td className="py-2">{t("descPayment")}</td>
               </tr>
             </tbody>
           </table>
@@ -206,31 +201,12 @@ print(f"Chain valid: {ledger['valid']}, {ledger['chain_length']} picks")`}
         </Link>
       </div>
 
-      {/* Pricing */}
-      <div className="grid md:grid-cols-2 gap-4 mb-8">
-        <div className="border border-border rounded-xl p-6">
-          <h3 className="font-bold mb-2">{t("freeTitle")}</h3>
-          <p className="text-2xl font-mono font-bold mb-3">$0</p>
-          <ul className="text-sm text-text-secondary space-y-1">
-            <li>{t("freeFeat1")}</li>
-            <li>{t("freeFeat2")}</li>
-            <li>{t("freeFeat3")}</li>
-            <li>{t("freeFeat4")}</li>
-            <li>{t("freeFeat5")}</li>
-          </ul>
-        </div>
-        <div className="border border-brand/30 rounded-xl p-6 bg-brand/5">
-          <h3 className="font-bold mb-2 text-brand">{t("proTitle")}</h3>
-          <p className="text-2xl font-mono font-bold mb-3">5 USDC<span className="text-sm font-normal text-text-muted">{t("proPeriod")}</span></p>
-          <ul className="text-sm text-text-secondary space-y-1">
-            <li>{t("proFeat1")}</li>
-            <li>{t("proFeat2")}</li>
-            <li>{t("proFeat3")}</li>
-            <li>{t("proFeat4")}</li>
-            <li>{t("proFeat5")}</li>
-          </ul>
-          <p className="text-xs text-text-faint mt-3">{t("proPayNote")}</p>
-        </div>
+      {/* Pricing — prepaid USDC balance */}
+      <div className="border border-brand/30 rounded-xl p-6 mb-8 bg-brand/5">
+        <h3 className="font-bold mb-2 text-brand">{t("billingTitle")}</h3>
+        <p className="text-sm text-text-secondary mb-2">{t("billingDesc")}</p>
+        <p className="text-sm text-text-secondary mb-2">{t("billingTrial")}</p>
+        <p className="text-xs text-text-faint">{t("billingNote")}</p>
       </div>
 
       {/* x402 Pay-Per-Request */}
@@ -324,23 +300,6 @@ print(f"Chain valid: {ledger['valid']}, {ledger['chain_length']} picks")`}
           {t("x402Note")} <code className="text-text-muted">/api/v1</code>. Discovery: <code className="text-text-muted">GET /api/v1/x402/info</code>. Powered by{" "}
           <a href="https://github.com/coinbase/x402" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">x402 protocol</a> (Coinbase).
         </p>
-      </div>
-
-      {/* Payment Instructions */}
-      <div className="border border-border rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4">{t("paymentTitle")}</h2>
-        <ol className="text-sm text-text-secondary space-y-2 list-decimal list-inside">
-          <li dangerouslySetInnerHTML={{ __html: t("paymentStep1") }} />
-          <li>{t("paymentStep2")}</li>
-          <li dangerouslySetInnerHTML={{ __html: t("paymentStep3") }} />
-          <li>{t("paymentStep4")}</li>
-        </ol>
-        <pre className="bg-tag-bg rounded-lg p-3 text-sm overflow-x-auto mt-3">
-{`curl -X POST https://vectorialdata.com/api/v1/payments/verify \\
-  -H "Authorization: Bearer vd_live_YOUR_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{"tx_hash": "0x..."}'`}
-        </pre>
       </div>
 
       {/* Integration Methods */}

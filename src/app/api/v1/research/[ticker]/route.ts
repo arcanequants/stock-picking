@@ -12,7 +12,7 @@ export async function GET(
   if (!result.ok) return result.response;
 
   const { ticker } = await params;
-  const research = getResearchData(ticker, result.auth.tier);
+  const research = getResearchData(ticker, "pro");
 
   if (!research) {
     return NextResponse.json(

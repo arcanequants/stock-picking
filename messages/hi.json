@@ -868,7 +868,11 @@
     "verifyTitle": "सत्यापन योग्य ट्रैक रिकॉर्ड",
     "verifyDesc": "प्रत्येक पिक git में कमिट की गई SHA-256 हैश चेन का हिस्सा है। एजेंट सत्यापित कर सकते हैं कि कोई पिक पूर्वव्यापी रूप से संपादित नहीं की गई।",
     "verifyAlgorithm": "एल्गोरिदम: SHA-256(ticker|price|date|previous_hash) — प्रत्येक पिक पिछली से जुड़ती है",
-    "contact": "एकीकरण में मदद चाहिए? हमें Hello@vectorialdata.com पर लिखें"
+    "contact": "एकीकरण में मदद चाहिए? हमें Hello@vectorialdata.com पर लिखें",
+    "billingTitle": "API key बिलिंग",
+    "billingDesc": "हर API key के लिए एक प्रीपेड USDC बैलेंस। हर रिक्वेस्ट पर एंडपॉइंट की कीमत कटती है (नीचे दी गई x402 तालिका के समान दाम)। कोई टियर नहीं, कोई दैनिक सीमा नहीं।",
+    "billingTrial": "नई keys में $0.20 USDC का फ्री ट्रायल बैलेंस मिलता है।",
+    "billingNote": "API keys डैशबोर्ड पर Stripe के ज़रिए USDC से अपना बैलेंस टॉप अप करें।"
   },
   "FreeSignup": {
     "separator": "अभी तय नहीं कर पा रहे?",

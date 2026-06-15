@@ -22,37 +22,27 @@ export async function GET() {
       since: summary.since,
     },
     pricing: {
-      free: {
-        price: "0",
-        daily_limit: 10,
-        features: [
-          "Latest 3 picks",
-          "Portfolio summary",
-          "Basic stock list (ticker, name, sector, country, region, status)",
-          "Research: summary_short only",
-          "Top 3 positions",
-          "Last 7 days history",
-          "Latest 3 events (no AI explanations)",
-          "Digest summary (counts + portfolio)",
-        ],
-      },
-      pro: {
-        price: "5 USDC/month on Base L2",
-        daily_limit: 1000,
-        features: [
-          "All picks",
-          "Full research (financials, detailed summaries)",
-          "All positions",
-          "Full historical data",
-          "All events with AI explanations",
-          "Full digest with events + AI explanations",
-          "Verifiable track record",
-        ],
+      model: "prepaid_balance",
+      description:
+        "One prepaid USDC balance per API key. Each request debits the per-endpoint price below; no tiers, no daily limits. Top up at https://vectorialdata.com/api-keys. New keys start with a $0.20 USDC trial.",
+      unit: "USDC",
+      per_request_usdc: {
+        picks: 0.005,
+        latest_pick: 0.001,
+        research: 0.01,
+        portfolio: 0.002,
+        positions: 0.003,
+        history: 0.005,
+        sectors: 0.001,
+        regions: 0.001,
+        stocks: 0.005,
+        events: 0.002,
+        digest_latest: 0.003,
       },
     },
     payment_methods: [
-      "USDC on Base L2 (subscription)",
-      "x402 pay-per-request (USDC on Base)",
+      "Prepaid USDC balance per API key (Stripe top-up)",
+      "x402 pay-per-request (USDC on Base) — no API key needed",
     ],
     x402: {
       description: "Pay-per-request access — no API key needed. The payment IS the authentication.",
@@ -86,7 +76,6 @@ export async function GET() {
       type: "bearer",
       prefix: "vd_live_",
       register: "/api/v1/auth/register",
-      upgrade: "/api/v1/auth/upgrade",
     },
     endpoints: {
       info: "GET /api/v1/info",

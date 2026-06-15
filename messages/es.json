@@ -880,7 +880,11 @@
     "verifyTitle": "Registro Verificable",
     "verifyDesc": "Cada pick es parte de una cadena de hashes SHA-256 registrada en git. Los agentes pueden verificar que ningún pick fue editado retroactivamente.",
     "verifyAlgorithm": "Algoritmo: SHA-256(ticker|price|date|previous_hash) — cada pick se encadena al anterior",
-    "contact": "¿Necesitas ayuda integrando? Escríbenos a Hello@vectorialdata.com"
+    "contact": "¿Necesitas ayuda integrando? Escríbenos a Hello@vectorialdata.com",
+    "billingTitle": "Cobro por API key",
+    "billingDesc": "Un saldo prepagado en USDC por API key. Cada petición descuenta el precio del endpoint (los mismos precios de la tabla x402 de abajo). Sin planes, sin límites diarios.",
+    "billingTrial": "Las llaves nuevas incluyen un saldo de prueba de $0.20 USDC.",
+    "billingNote": "Recarga tu saldo con USDC vía Stripe en el panel de API keys."
   },
   "FreeSignup": {
     "separator": "¿Aún no estás seguro?",

@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   const sector = url.searchParams.get("sector");
   const region = url.searchParams.get("region");
 
-  let stocksList = getStocksList(result.auth.tier);
+  let stocksList = getStocksList("pro");
 
   if (ticker) {
     stocksList = stocksList.filter(

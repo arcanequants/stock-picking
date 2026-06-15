@@ -16,7 +16,7 @@ All endpoints (except /api/v1/info) require an API key via Bearer token:
 Authorization: Bearer vd_live_abc123...
 ```
 
-### Register (Free)
+### Register
 
 ```
 POST https://vectorialdata.com/api/v1/auth/register
@@ -30,36 +30,19 @@ Response:
 {
   "data": {
     "api_key": "vd_live_abc123...",
-    "tier": "free",
-    "daily_limit": 10
+    "balance_micro_usdc": 200000,
+    "balance_usdc": 0.2
   }
 }
 ```
 
-### Upgrade to Pro
+### Billing
 
-1. Send 5 USDC to our wallet on Base L2
-2. Call:
-
-```
-POST https://vectorialdata.com/api/v1/auth/upgrade
-Authorization: Bearer vd_live_abc123...
-Content-Type: application/json
-
-{"tx_hash": "0x..."}
-```
-
-Response:
-```json
-{
-  "data": {
-    "success": true,
-    "tier": "pro",
-    "daily_limit": 1000,
-    "expires_at": "2026-04-19T..."
-  }
-}
-```
+One prepaid USDC balance per API key (1 USDC = 1,000,000 micro-USDC). Each
+request debits the per-endpoint price (same prices as the x402 table below);
+there are no tiers and no daily limits. New keys start with a $0.20 USDC trial.
+Top up with USDC via Stripe at https://vectorialdata.com/api-keys. A request is
+rejected with HTTP 402 when the balance is insufficient.
 
 ## Response Format
 
@@ -68,16 +51,15 @@ All authenticated endpoints return:
 {
   "data": { ... },
   "meta": {
-    "tier": "free",
-    "requests_remaining": 7,
+    "balance_micro_usdc": 198000,
+    "balance_usdc": 0.198,
     "timestamp": "2026-03-20T..."
   }
 }
 ```
 
 Headers on every response:
-- X-VD-Tier: free|pro
-- X-VD-Remaining: requests left today
+- X-VD-Balance-Micro-USDC: remaining balance in micro-USDC
 - X-VD-Version: 1
 
 ## Endpoints
@@ -213,20 +195,16 @@ Verifiable pick history. Returns SHA-256 hash chain of all picks.
 
 Verify a single pick in the hash chain.
 
-### POST /api/v1/payments/verify
-
-Verify a USDC payment on Base L2 and upgrade API key to pro tier.
-
 ## x402 Pay-Per-Request (No API Key Needed)
 
-x402 is a native HTTP payment protocol. AI agents can access pro-tier data by paying per request — no registration, no API key, no subscription.
+x402 is a native HTTP payment protocol. AI agents can access the full data by paying per request — no registration, no API key, no subscription.
 
 ### How It Works
 
 1. `GET /api/v1/x402/picks` → HTTP 402 with payment instructions in headers
 2. Agent pays USDC on Base to the specified address
 3. Agent retries with payment proof in `X-PAYMENT` header
-4. Server verifies payment via facilitator → delivers pro-tier data
+4. Server verifies payment via facilitator → delivers the full data
 5. Agent is only charged if the response is successful (< 400 status)
 
 ### x402 Discovery
