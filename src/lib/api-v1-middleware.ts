@@ -4,6 +4,7 @@ import {
   DEFAULT_REQUEST_COST_MICRO_USDC,
   type ApiKeyInfo,
 } from "@/lib/api-keys";
+import { costForPath } from "@/lib/api-pricing";
 
 export type AuthResult =
   | { ok: true; auth: ApiKeyInfo }
@@ -11,7 +12,7 @@ export type AuthResult =
 
 export async function withApiKey(
   request: Request,
-  costMicroUsdc: number = DEFAULT_REQUEST_COST_MICRO_USDC
+  costMicroUsdc?: number
 ): Promise<AuthResult> {
   const authHeader = request.headers.get("authorization");
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -27,7 +28,12 @@ export async function withApiKey(
   const key = authHeader.slice(7);
   const endpoint = new URL(request.url).pathname;
 
-  const info = await debitApiKey(key, endpoint, costMicroUsdc);
+  // Explicit cost wins; otherwise price by pathname (x402 parity), falling back
+  // to the flat default for unknown/legacy paths.
+  const cost =
+    costMicroUsdc ?? costForPath(endpoint, DEFAULT_REQUEST_COST_MICRO_USDC);
+
+  const info = await debitApiKey(key, endpoint, cost);
   if (!info) {
     // 402 is the right code for "valid key, no credits". Invalid keys also
     // land here — we don't distinguish to avoid leaking key validity.
