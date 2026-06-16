@@ -1,0 +1,147 @@
+{
+  "date": "2026-06-16",
+  "summary": "Hormuz deal nears as BoJ and ECB both hike rates on the same day, Bitcoin outflows finally stop, and zombie cells reveal a cancer therapy breakthrough.",
+  "causalChain": "Iran's de-facto closure of the Strait of Hormuz since February pushed global energy prices up, forcing both the ECB and Bank of Japan to raise rates today to contain inflation — higher borrowing costs drained appetite for risky assets like Bitcoin. A tentative Hormuz reopening agreement is now the single event that, if confirmed, would reset oil prices, inflation expectations, and central bank trajectories worldwide.",
+  "table": [
+    {"n": 1,  "region": "GLOBAL",  "angle": "Strait of Hormuz: reopening deal nears after 3.5-month shutdown", "worker": "—"},
+    {"n": 2,  "region": "GLOBAL",  "angle": "OPEC+ pumps more oil even as its own demand forecasts fall", "worker": "—"},
+    {"n": 3,  "region": "GLOBAL",  "angle": "Gold at $4,100+ as central banks keep buying amid instability", "worker": "—"},
+    {"n": 4,  "region": "GLOBAL",  "angle": "US proposes import taxes on 60 countries over forced labor", "worker": "—"},
+    {"n": 5,  "region": "GLOBAL",  "angle": "Fed holds steady; US borrowing costs near 15-year high at 4.4%", "worker": "—"},
+    {"n": 6,  "region": "MEXICO",  "angle": "Banxico pauses at 6.50%, signals easing cycle is over", "worker": "—"},
+    {"n": 7,  "region": "MEXICO",  "angle": "USMCA review July 1: $873B in cross-border trade on the line", "worker": "—"},
+    {"n": 8,  "region": "MEXICO",  "angle": "Nearshoring FDI hits record $40.9B; remittances top $60B/yr", "worker": "—"},
+    {"n": 9,  "region": "ASIA",    "angle": "Bank of Japan hikes to 1%, highest rate since 1995", "worker": "—"},
+    {"n": 10, "region": "ASIA",    "angle": "China exports +14% Q1 but US shipments fall 16% as trade reroutes", "worker": "—"},
+    {"n": 11, "region": "ASIA",    "angle": "PBOC lets yuan gradually strengthen as dollar softens", "worker": "—"},
+    {"n": 12, "region": "EUROPE",  "angle": "ECB raises rates for first time since 2023, cites energy inflation", "worker": "—"},
+    {"n": 13, "region": "EUROPE",  "angle": "Germany: 3rd straight year of export stagnation, recovery below 1%", "worker": "—"},
+    {"n": 14, "region": "EUROPE",  "angle": "UK growth forecast halved to 0.7% by OECD", "worker": "—"},
+    {"n": 15, "region": "OCEANIA", "angle": "RBA holds at 4.35%; rate cuts still months away", "worker": "—"},
+    {"n": 16, "region": "OCEANIA", "angle": "BHP and Rio Tinto share iron ore infrastructure in Australia's Pilbara", "worker": "—"},
+    {"n": 17, "region": "OCEANIA", "angle": "New Zealand GDP rebound to 2.5% at risk as China demand softens", "worker": "—"},
+    {"n": 18, "region": "CRYPTO",  "angle": "Bitcoin funds shed $4.4B in 13 days straight; outflows stop June 12", "worker": "—"},
+    {"n": 19, "region": "CRYPTO",  "angle": "Digital dollar market tops $321B; new US law sets reserve rules", "worker": "—"},
+    {"n": 20, "region": "CRYPTO",  "angle": "EU crypto deadline July 2026: platforms need a license or must exit", "worker": "—"},
+    {"n": 21, "region": "WOW",     "angle": "Zombie cancer cells have one fatal weakness — a protein called GPX4", "worker": "—"},
+    {"n": 22, "region": "WOW",     "angle": "Dark matter and neutrinos may collide, challenging how we see the universe", "worker": "—"},
+    {"n": 23, "region": "WOW",     "angle": "A tiny wobble in a particle wins $3M prize and hints at new physics", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The Strait of Hormuz — the narrow water passage through which 1 in 5 oil tankers on Earth travel — has been effectively shut since February 28 after Iran and Israel clashed. A deal to reopen it now appears close. But even if signed today, hundreds of ships trapped inside the Persian Gulf need weeks to clear out, and Gulf oil producers that cut output need time to restart. Oil prices stay elevated while the world holds its breath."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "OPEC+ nations are pumping 188,000 extra barrels of oil per day — the fourth monthly increase since spring — while simultaneously cutting their own forecast of how much the world will want this year. More supply plus less demand typically means lower prices. The group is betting on volume over price, trying to win back customers who may otherwise turn to competing sellers outside the alliance."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold is trading around $4,106 per ounce — a level that would have seemed outlandish five years ago. The driver is fear: wars, trade fights, and rising prices push both people and governments to park money in gold because it can't be printed or defaulted on. Central banks from China to Poland have been buying steadily for two straight years. Goldman Sachs now sees gold hitting $5,400 by year-end."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The US government just proposed new import taxes on goods from 60 countries — including China, the EU, and Japan — accusing them of selling products made with forced labor at artificially cheap prices. If companies must pay more to bring those goods into America, they either absorb the cost or raise prices. US shoppers ultimately pay the difference. It arrives on top of existing tariff battles already reshaping global supply chains."
+    },
+    {
+      "n": 5,
+      "region": "GLOBAL",
+      "text": "The amount the US government pays to borrow money for 10 years sits near 4.4% — close to a 15-year high. The Federal Reserve, which sets short-term borrowing costs, shows no sign of reducing rates in 2026. Strong job numbers and sticky inflation keep them on hold. The result: loans for homes, cars, and business expansions stay expensive everywhere from Cincinnati to Guadalajara."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key rate to 6.50% last month — its third reduction this year — but officials are now signaling the cuts are done. Inflation hovers near 4%, above the 3% target, and the bank wants to wait. For Mexicans with mortgages, credit cards, or business loans, the cost of borrowing stays roughly where it is for the foreseeable future."
+    },
+    {
+      "n": 7,
+      "region": "MEXICO",
+      "text": "On July 1 — two weeks from today — the US, Mexico, and Canada formally open the review of their shared trade agreement governing $873 billion in annual cross-border goods. If the US pushes for harsh changes, the entire wave of factories relocating from Asia to Mexico could pause or reverse. No single event this year matters more to Mexico's industrial future than what happens in those negotiations."
+    },
+    {
+      "n": 8,
+      "region": "MEXICO",
+      "text": "Two quiet pillars are holding Mexico's economy up right now: companies relocating factories from Asia to Mexico brought in a record $40.9 billion last year, and Mexican migrants working abroad sent home over $60 billion — together rivaling Mexico's oil income. The challenge is that both flows depend on decisions made in Washington: tariff policy and immigration enforcement can shrink either number quickly."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "Japan's central bank raised its main interest rate to 1% today — the highest in 30 years. For decades Japan kept borrowing costs near zero to fight a stagnant economy. Now with energy prices jumping (partly because of the Hormuz closure) and the Japanese currency weakening, the bank is finally tightening. The Japanese yen nudged slightly stronger and the Nikkei stock index rose 0.46% on the decision."
+    },
+    {
+      "n": 10,
+      "region": "ASIA",
+      "text": "China's shipments abroad grew 14% in early 2026 compared to last year — but the headline hides a geographic split. Exports to Southeast Asia and Africa surged 20-32%, while shipments to the US fell 16% as American import taxes bite. Chinese companies are simply routing around the taxes by finding buyers elsewhere. The strategy is working for now, but it permanently rewires supply chains."
+    },
+    {
+      "n": 11,
+      "region": "ASIA",
+      "text": "China's currency is quietly getting stronger — and Beijing is letting it happen. For years, China kept its currency cheap so its factories could undercut foreign competitors on price. Now with the US dollar softening and global trade rerouting around American tariffs, a slightly stronger yuan makes importing food and energy cheaper for Chinese households. Small shift, big strategic signal."
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised its key rate to 2.25% today — the first increase since 2023. The trigger: the Middle East war is pushing energy prices up across Europe, threatening to reignite inflation the continent spent two years fighting down. Higher rates mean pricier loans for European businesses and homeowners. The bank now expects inflation to hit 3% this year, up from its earlier 2.6% estimate."
+    },
+    {
+      "n": 13,
+      "region": "EUROPE",
+      "text": "Germany's economy — Europe's largest — has shrunk or stagnated for three straight years, and 2026 looks like a recovery below 1%. The business model that made Germany rich was built on cheap Russian gas and booming Chinese demand for German cars and machines. Both are gone. US tariffs are now hitting German exports on top of that. Reinventing a century-old industrial engine takes far longer than a single election cycle."
+    },
+    {
+      "n": 14,
+      "region": "EUROPE",
+      "text": "The OECD cut its UK growth forecast to 0.7% for 2026 — about half what it predicted earlier. Britain faces three simultaneous headwinds: the government is cutting spending to close a budget gap, energy prices are rising because of the Middle East conflict, and trade friction from leaving the EU hasn't fully resolved. Growth exists, but it's too weak to feel in people's daily lives."
+    },
+    {
+      "n": 15,
+      "region": "OCEANIA",
+      "text": "Australia's central bank left its interest rate unchanged at 4.35% at its meeting today — a pause rather than a cut. Inflation came back stronger than expected in late 2025, and the bank wants more proof it's under control before loosening. Most economists believe the next move is a rate reduction, but it likely won't arrive until late 2026 or early 2027. Australian homeowners on variable-rate mortgages keep waiting."
+    },
+    {
+      "n": 16,
+      "region": "OCEANIA",
+      "text": "Mining companies BHP and Rio Tinto — two of the world's biggest iron ore producers — agreed to share processing facilities at their neighboring mines in Western Australia rather than each building separate infrastructure. In an industry where Chinese steel demand is slowing and margins are tighter, eliminating duplicate roads, equipment, and plants can save hundreds of millions of dollars a year. Cooperation is cheaper than competition."
+    },
+    {
+      "n": 17,
+      "region": "OCEANIA",
+      "text": "New Zealand expects its economy to grow 2.5% this year — a real bounce after near-stagnation in 2025. But the recovery is built on China buying New Zealand dairy, meat, and other farm products. Right now those exports to China are down slightly, adding fragility to the rebound. New Zealand is a small, trade-dependent country: when China's appetite softens, the effect shows up fast in Wellington."
+    },
+    {
+      "n": 18,
+      "region": "CRYPTO",
+      "text": "US-listed Bitcoin funds lost $4.4 billion in investor withdrawals over 13 straight trading days — the longest exit streak since these funds launched in early 2024. The reason: strong US jobs data reduced hopes that the Federal Reserve would cut interest rates, making ordinary savings accounts and bonds look relatively attractive compared to Bitcoin. On June 12, the outflows finally stopped and a small amount of money came back in."
+    },
+    {
+      "n": 19,
+      "region": "CRYPTO",
+      "text": "The total supply of digital dollars — coins that are always worth exactly $1 and exist entirely online — crossed $321 billion, nearly double from two years ago. The US government just finalized new rules under the GENIUS Act requiring every issuer of these coins to hold actual cash reserves equal to every coin in circulation. It's the first time Washington has given these instruments a clear legal framework, bringing them closer to regulated banking."
+    },
+    {
+      "n": 20,
+      "region": "CRYPTO",
+      "text": "Starting in July — two weeks away — every crypto exchange operating in Europe must hold an official government-issued license under EU rules called MiCA. Those without a license must stop serving European customers. It's the biggest regulatory cleanup crypto has ever seen in Europe. Fewer platforms will survive, but those that do will operate under clearer rules, potentially making them more trusted by mainstream users and banks."
+    },
+    {
+      "n": 21,
+      "region": "WOW",
+      "text": "When cells become damaged — from aging or chemotherapy — they don't always die. They turn into what scientists call zombie cells: still alive, still harmful, but stuck. Researchers at the MRC Laboratory of Medical Sciences in London discovered these cells survive by depending heavily on a single protective protein called GPX4. Blocking that protein causes the cells to collapse on their own. In mice, tumors shrank and animals lived longer. 📄 Published in Nature Cell Biology · More: https://www.eurekalert.org/news-releases/1125483"
+    },
+    {
+      "n": 22,
+      "region": "WOW",
+      "text": "The universe should contain more dense clumps — galaxies, galaxy clusters — than telescopes actually find. Researchers at the University of Sheffield found a possible explanation: dark matter (invisible mass that makes up most of the universe) and neutrinos (particles so light they barely interact with anything) may quietly bump into each other, slowing clump formation. If confirmed, it would force a rewrite of our standard model of how the cosmos evolved. 📄 Published in Nature Astronomy · More: https://www.nature.com/articles/s41550-025-02733-1"
+    },
+    {
+      "n": 23,
+      "region": "WOW",
+      "text": "A muon is a heavier electron — and for 20 years, Fermi National Laboratory found it spinning slightly differently than physics predicts. David Hertzog and Peter Kammel at the University of Washington spent decades nailing down that gap with record precision, winning a $3M Breakthrough Prize. The mismatch hints at particles or forces science hasn't discovered yet — a crack in our map of the universe. 📄 Published in Physical Review Letters · More: https://www.washington.edu/news/2026/04/21/2026-breakthrough-prize-physics-david-hertzog-peter-kammel-muons/"
+    }
+  ]
+}
