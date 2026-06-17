@@ -656,5 +656,19 @@
     "risk_short": "El #1 es geopolítico: una guerra o escalada en la región puede frenar la economía israelí, disparar la morosidad y castigar al banco. Además gana en shekels pero el ADR cotiza en dólares, y ese ADR (BKHYY) es poco líquido (OTC), se mueve a saltos.",
     "generated_at": "2026-06-16T00:00:00Z",
     "model": "manual-claude"
+  },
+  "VRT": {
+    "one_liner": "Vertiv es el 'pico y pala' de la IA: fabrica la energía y el enfriamiento que necesita cualquier data center antes de encender un chip. Crece rapidísimo, pero cotiza carísima y casi no paga dividendo (~0.08%).",
+    "why_short": "Apuesta directa al boom de la IA: todo data center necesita su energía y enfriamiento antes de encender un chip. Q1 2026 +30% en ventas, backlog récord de ~$15 mil millones y guía de utilidad +51%. Es 100% crecimiento —el dividendo es simbólico (~0.08%)—.",
+    "risk_short": "El #1 es la valuación: cotiza carísima (~75x ganancias) y cualquier tropiezo se castiga fuerte (hoy abrió en $314 y cerró cerca de $300). Además ~75% de sus ventas dependen del gasto en IA de los hyperscalers y casi no paga dividendo.",
+    "model": "manual-claude",
+    "generated_at": "2026-06-16T00:00:00Z"
+  },
+  "XLE": {
+    "one_liner": "XLE no es una empresa: es un ETF, una canasta con todas las grandes petroleras del S&P 500 (Exxon y Chevron son ~41%). Comisión bajísima (0.08%) y te paga ~3-4% de dividendo.",
+    "why_short": "La forma más simple y barata de tenerle exposición al petróleo y gas de EE.UU. (Exxon, Chevron, refinadoras, oleoductos) en una sola compra. Comisión mínima (0.08%) y dividendo de ~3-4%. Bonus: la IA tiene hambre de energía, viento de cola para el sector.",
+    "risk_short": "El #1: el precio del petróleo lo es todo —si el crudo cae, el fondo cae—. Además está muy concentrada (Exxon + Chevron son ~41%), la transición energética es un viento en contra a largo plazo, y el dividendo es variable (en años de petróleo barato, recortan).",
+    "model": "manual-claude",
+    "generated_at": "2026-06-16T00:00:00Z"
   }
 }
