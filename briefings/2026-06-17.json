@@ -1,0 +1,135 @@
+{
+  "date": "2026-06-17",
+  "summary": "Fed steady at Warsh's debut as Iran-Hormuz deal, Japan's rate hike, and Bitcoin ETF outflows reshape global markets.",
+  "causalChain": "A fragile US-Iran memorandum promises easier oil flows through Hormuz but awaits formal signing in Switzerland; simultaneously, strong US jobs data kills Fed rate-cut hopes for 2026, lifting the dollar and pushing investors from Bitcoin toward bonds — while Japan's first rate hike in years signals the end of a decade of cheap global money.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Fed holds rates steady at 3.50-3.75%; new chair Warsh drops rate-cut forecast for 2026", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "US-Iran MOU signals Hormuz reopening; oil above $92, gold under pressure at $4,106/oz", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Dollar and Treasury yields rise as gold loses safe-haven demand", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico cuts rate to 6.50%; peso strengthens to 17.39 per dollar", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Inflation projected at 5.5% for 2026; 3% target not reached until 2029", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Nearshoring drives World Bank to raise Mexico GDP forecast to 2.6%", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "Bank of Japan hikes to 1.00%; yen firms toward 160 per dollar", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "China steel output at 7-year low; BHP and Rio Tinto pivot to India", "worker": "—"},
+    {"n": 9, "region": "ASIA", "angle": "Nikkei under pressure as stronger yen squeezes Japanese exporters", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "DAX surges past 25,000 on Iran deal; STOXX 600 hits all-time high", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "ECB raises rates for first time since 2023 as eurozone inflation persists", "worker": "—"},
+    {"n": 12, "region": "EUROPE", "angle": "FTSE 100 gains 1% as easing oil fears lift UK energy and mining stocks", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "BHP and Rio Tinto redirect iron ore from China to India and SE Asia", "worker": "—"},
+    {"n": 14, "region": "OCEANIA", "angle": "Australia eyes mining boom driven by copper and lithium for electrification", "worker": "—"},
+    {"n": 15, "region": "OCEANIA", "angle": "RBA watches oil-linked inflation; Hormuz deal could ease Australia's import costs", "worker": "—"},
+    {"n": 16, "region": "CRYPTO", "angle": "Bitcoin ETF outflows hit $1.72B in one week; BTC trades near $66K", "worker": "—"},
+    {"n": 17, "region": "CRYPTO", "angle": "EU MiCA crypto law fully enforceable July 1; exchanges race to get licensed", "worker": "—"},
+    {"n": 18, "region": "CRYPTO", "angle": "Digital-dollar (stablecoin) market holds at $270B as BTC investors park on sidelines", "worker": "—"},
+    {"n": 19, "region": "WOW", "angle": "Cold Spring Harbor Lab discovers first one-shot biological clock in worms (PNAS 2026)", "worker": "—"},
+    {"n": 20, "region": "WOW", "angle": "Oxford physicists achieve 'quadsqueezing' — a fourth-order quantum effect (Nature Physics)", "worker": "—"},
+    {"n": 21, "region": "WOW", "angle": "JWST + UT Austin team finds strongest evidence yet for black-hole stars in early universe", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The US central bank held its overnight lending rate steady at 3.50-3.75% today — the first decision under new chair Kevin Warsh. More notably, the bank removed its forecast for any rate cuts this year, meaning borrowing costs for homes, cars, and businesses stay elevated through December. Strong jobs and inflation data left policymakers no room to ease. Markets now price a near-zero chance of a cut before 2027."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US and Iran signed a preliminary agreement to keep the Strait of Hormuz open — the narrow waterway that one in five oil tankers must pass through. Oil is still above $92 per barrel while formal signing awaits a ceremony in Switzerland. High oil raises prices at the gas pump, airline tickets, and shipping everywhere. Central banks hate that because it forces them to keep borrowing rates high longer."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold slipped to $4,106 per ounce. When the US government pays more to borrow money — because yields are rising — investors prefer bonds that pay regular interest over gold, which pays nothing. A stronger dollar also makes gold more expensive for buyers in other currencies, cutting global demand further. The result: gold loses ground even when the world feels uncertain, as long as yields stay elevated."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key rate to 6.50%, and the peso immediately strengthened to 17.39 pesos per dollar. Lower rates normally weaken a currency — but here markets read the cut as measured and confident, a sign the economy is on stable footing. Cheaper borrowing should now flow into housing, cars, and business loans, potentially lifting growth heading into the second half of 2026."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's inflation is projected to close 2026 at 5.5% — nearly double the central bank's 3% goal. Analysts at S&P Global now say the target won't be reached until 2029. The culprits: high oil raising transport costs, possible cuts to energy subsidies, drought disrupting crops, and security problems in farming regions. For everyday shoppers, groceries, fuel, and electricity keep eroding real wages."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Global companies are moving factories from Asia to Mexico to be closer to US customers — a trend economists call nearshoring. The World Bank now projects Mexico's economy will grow 2.6% this year, driven partly by this wave of factory investment. Each new plant brings construction jobs, logistics demand, and local spending. It's the biggest structural tailwind Mexico has seen in a generation."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank raised its overnight rate to 1.00%, the highest in 15 years. Japan spent decades keeping rates near zero to fight falling prices. Now, with inflation rising — partly because the yen is weak and imports cost more — the bank is tightening. The yen immediately firmed toward 160 per dollar. Higher Japanese rates pull global investors toward yen savings, reducing demand for dollar assets worldwide."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's steel output just hit a seven-year low, and demand is expected to keep falling as its property market stays in a slump. Steel is made from iron ore, which Australia, Brazil, and others ship to Chinese factories. Less Chinese construction means lower raw-material prices globally. Mining giants BHP and Rio Tinto are now actively courting India and Southeast Asia to fill the gap left by China."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "Japan's stock market faces a squeeze after the central bank's rate hike. Higher borrowing costs cut into corporate profit margins — especially for exporters like Toyota and Sony, which fund operations cheaply in yen and sell in dollars. A stronger yen also makes Japanese products more expensive overseas, compressing foreign revenue. Investors are weighing whether tighter money is worth the short-term earnings pain."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Germany's main stock index crossed 25,000 points after news that the US and Iran are near a Hormuz deal. Germany is Europe's largest economy and heavily dependent on imported energy. If oil flows more freely through the Middle East, German factories — cars, chemicals, machinery — pay less for energy, boosting margins. Europe's broader STOXX 600 index hit an all-time high the same day."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised its interest rates for the first time since late 2023. Inflation across 20 European countries remains above target, pushed up by high energy and supply chain costs. Higher rates mean mortgages, car loans, and business credit all cost more from Lisbon to Helsinki. The bank noted the outlook is 'uncertain' — code for not knowing whether more hikes are coming soon."
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "text": "London's FTSE 100 rose 1% as hopes for an Iran deal eased fears of a prolonged oil squeeze. The index is heavy with oil companies like BP and Shell, plus mining giants — all hit hard when Middle East risk spikes. Cheaper energy inputs could lift margins across UK industry, while lower inflation expectations reduce pressure on the Bank of England to hold borrowing rates at current highs."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — the world's largest mining companies, both based in Australia — are publicly shifting their sales focus from China to India and Southeast Asia. China's housing-driven construction boom is fading, shrinking demand for iron ore, the key ingredient in steel. India, meanwhile, is building highways, airports, and cities at record speed. The miners are betting the next decade of growth happens in South Asia."
+    },
+    {
+      "n": 14,
+      "region": "OCEANIA",
+      "text": "Australia's mining sector may be entering a new growth cycle — this time driven by copper and lithium rather than iron ore. The global push for electric cars and solar panels requires enormous amounts of both metals. BHP and Rio Tinto are expanding mines to capture that demand. Analysts call 2026 a pivotal year, though they warn iron ore prices could fall if Chinese demand keeps slipping."
+    },
+    {
+      "n": 15,
+      "region": "OCEANIA",
+      "text": "Australia's central bank is watching Middle East events closely. When Hormuz risk spiked, global shipping costs surged — raising the price of everything Australia imports, from electronics to food. A US-Iran deal keeping oil flowing could ease this imported inflation, giving Australian policymakers room to consider cutting rates later in 2026 without reigniting price pressures at home."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "US investment funds that hold Bitcoin saw investors pull out $1.72 billion in a single week — the biggest weekly exit since early 2025. Bitcoin itself is trading near $66,000, far below its all-time high of $126,000 reached earlier this year. The driver: strong US jobs data killed expectations for a rate cut soon. When government bonds pay more, people prefer them over Bitcoin, which pays no interest."
+    },
+    {
+      "n": 17,
+      "region": "CRYPTO",
+      "text": "Starting July 1, any company that holds or trades digital currencies for customers in Europe must hold an official license — or stop operating. Europe's crypto law, called MiCA, is the world's most comprehensive rulebook for digital assets. It covers how digital-dollar tokens are backed, company governance, and mandatory audits. US exchanges are watching closely because a similar law is moving through Congress now."
+    },
+    {
+      "n": 18,
+      "region": "CRYPTO",
+      "text": "Digital dollars — cryptocurrencies designed to always be worth exactly $1.00 — now total $270 billion globally and barely moved during Bitcoin's recent slide. While Bitcoin fell from $126,000 to around $66,000, holders parked funds in these stable tokens rather than cashing out entirely. It signals that many crypto users still trust the broader system — they're just waiting on the sidelines for better entry points."
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "text": "Researchers at Cold Spring Harbor Laboratory in New York discovered a biological clock in a tiny worm that runs exactly once and never repeats. Unlike the sleep clock that cycles every 24 hours, this timer tells the body when to start and stop each growth phase — and never resets. Two proteins, MYRF-1 and LIN-42, act as its gears. When researchers broke the clock, worm growth halted completely, offering clues to human growth disorders. 📄 Published in Proceedings of the National Academy of Sciences · More: https://www.sciencedaily.com/releases/2026/06/260604044236.htm"
+    },
+    {
+      "n": 20,
+      "region": "WOW",
+      "text": "Physicists at the University of Oxford did something with a single trapped electrically charged atom that had never been achieved before: they created a fourth-order quantum effect called quadsqueezing. In quantum systems, you can trade one kind of uncertainty for another. Getting to the fourth layer opens territory that was previously out of reach. The new technique is 100 times faster than older methods, speeding up quantum sensors and computers. 📄 Published in Nature Physics · More: https://www.physics.ox.ac.uk/news/oxford-team-achieves-first-ever-quadsqueezing-quantum-interaction"
+    },
+    {
+      "n": 21,
+      "region": "WOW",
+      "text": "A team led by Vasily Kokorev at the University of Texas at Austin used the James Webb Space Telescope to capture the most detailed light reading ever of a little red dot — an ancient object from 13 billion years ago. The data strongly suggest these are enormous stars with a black hole eating away at their core. If confirmed, they would prove that black holes came before galaxies did, rewriting the birth story of the cosmos. 📄 Published June 2026 · More: https://phys.org/news/2026-06-black-hole-jwst-red-dots.html"
+    }
+  ]
+}
