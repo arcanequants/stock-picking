@@ -642,5 +642,19 @@
     "risk_short": "El #1 es la moneda: cotiza en dólares pero sus acciones están en rand, así que un rand débil te pega. Además ~40% es minería (si el oro cae, cae fuerte), hay riesgo político en Sudáfrica (cortes de luz) y está concentrada: 10 nombres son ~65%.",
     "generated_at": "2026-06-12T00:00:00Z",
     "model": "manual-claude"
+  },
+  "EIS": {
+    "one_liner": "EIS no es una empresa: es un ETF, una canasta de ~129 grandes empresas de Israel —bancos (Leumi, Hapoalim), la farmacéutica Teva, chips (Tower, Nova) y defensa (Elbit)— que te paga ~1.1% de dividendo.",
+    "why_short": "Con una sola compra tienes el corazón de la 'nación startup': sus bancos, Teva, sus fabricantes de chips y el campeón de defensa Elbit. Pese a la guerra en la región, el mercado israelí ha sido resiliente. Comisión baja (0.59%) y te paga ~1.1%.",
+    "risk_short": "El #1 es geopolítico: Israel está en una región en conflicto y una guerra puede golpear todo de golpe. Además cotiza en dólares pero sus acciones están en shekels (si el shekel cae, pierdes), está concentrada (top 10 ~la mitad) y depende mucho de Teva.",
+    "generated_at": "2026-06-16T00:00:00Z",
+    "model": "manual-claude"
+  },
+  "BKHYY": {
+    "one_liner": "Bank Hapoalim es el banco más grande de Israel: en 2025 ganó un récord (+30%) y rinde un ROE de 13%, de los mejores del mundo. Cotiza barato (~9.5x) y paga ~4.4% de dividendo más recompras.",
+    "why_short": "El banco más grande y rentable de Israel: ROE de 13% (de los mejores del mundo), ganancia récord en 2025 y arranque fuerte en 2026. Cotiza barato (~9.5x sus ganancias) y te paga ~4.4% más recompras. Casi un duopolio con Bank Leumi.",
+    "risk_short": "El #1 es geopolítico: una guerra o escalada en la región puede frenar la economía israelí, disparar la morosidad y castigar al banco. Además gana en shekels pero el ADR cotiza en dólares, y ese ADR (BKHYY) es poco líquido (OTC), se mueve a saltos.",
+    "generated_at": "2026-06-16T00:00:00Z",
+    "model": "manual-claude"
   }
 }
