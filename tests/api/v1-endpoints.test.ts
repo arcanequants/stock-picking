@@ -32,8 +32,8 @@ describe("Public endpoints", () => {
     expect(status).toBe(200);
     expect(body.name).toBe("Vectorial Data");
     expect(body.pricing).toBeDefined();
-    expect(body.pricing.free).toBeDefined();
-    expect(body.pricing.pro).toBeDefined();
+    expect(body.pricing.model).toBe("prepaid_balance");
+    expect(body.pricing.per_request_usdc).toBeDefined();
     expect(body.track_record).toBeDefined();
     expect(body.track_record.total_positions).toBeGreaterThan(0);
   });
@@ -87,7 +87,8 @@ describe("Auth registration", () => {
     expect(body.data.api_key).toMatch(/^vd_live_/);
     apiKey = body.data.api_key;
 
-    expect(body.data.credits_remaining).toBeGreaterThan(0);
+    expect(body.data.balance_micro_usdc).toBeGreaterThan(0);
+    expect(typeof body.data.balance_usdc).toBe("number");
   });
 });
 
@@ -117,16 +118,17 @@ describe("Edge cases", () => {
   });
 });
 
-// ─── Authenticated endpoints (free tier) ───
+// ─── Authenticated endpoints (prepaid balance) ───
+// Tiers were retired (Fase 3); any balance-paying key gets the full payload.
+// meta carries the post-debit balance, not a tier.
 
-describe("Free tier endpoints", () => {
-  it("GET /picks — returns max 3 picks", async () => {
+describe("Authenticated endpoints", () => {
+  it("GET /picks — returns the full pick history", async () => {
     const { status, body } = await get("/picks", true);
     expect(status).toBe(200);
     expect(Array.isArray(body.data)).toBe(true);
-    expect(body.data.length).toBeLessThanOrEqual(3);
-    expect(body.meta.tier).toBe("free");
-    expect(body.meta.credits_remaining).toBeDefined();
+    expect(body.data.length).toBeGreaterThan(3);
+    expect(typeof body.meta.balance_micro_usdc).toBe("number");
     // Validate pick structure
     const pick = body.data[0];
     expect(pick).toHaveProperty("ticker");
@@ -140,7 +142,7 @@ describe("Free tier endpoints", () => {
     expect(body.data).toHaveProperty("ticker");
     expect(body.data).toHaveProperty("pick_number");
     expect(body.data).toHaveProperty("return_pct");
-    expect(body.meta.tier).toBe("free");
+    expect(typeof body.meta.balance_micro_usdc).toBe("number");
   });
 
   it("GET /portfolio — returns portfolio summary", async () => {
@@ -148,25 +150,25 @@ describe("Free tier endpoints", () => {
     expect(status).toBe(200);
     expect(typeof body.data.total_return_pct).toBe("number");
     expect(body.data.total_positions).toBeGreaterThan(0);
-    expect(body.meta.tier).toBe("free");
+    expect(typeof body.meta.balance_micro_usdc).toBe("number");
   });
 
-  it("GET /portfolio/positions — returns max 3 positions (free)", async () => {
+  it("GET /portfolio/positions — returns all open positions", async () => {
     const { status, body } = await get("/portfolio/positions", true);
     expect(status).toBe(200);
     expect(body.data.positions).toBeDefined();
     expect(Array.isArray(body.data.positions)).toBe(true);
-    expect(body.data.positions.length).toBeLessThanOrEqual(3);
+    expect(body.data.positions.length).toBeGreaterThan(3);
     expect(body.data.total_positions).toBeGreaterThan(0);
-    expect(body.meta.tier).toBe("free");
+    expect(typeof body.meta.balance_micro_usdc).toBe("number");
   });
 
-  it("GET /portfolio/history — returns max 7 days (free)", async () => {
+  it("GET /portfolio/history — returns the full history series", async () => {
     const { status, body } = await get("/portfolio/history", true);
     expect(status).toBe(200);
     expect(Array.isArray(body.data)).toBe(true);
-    expect(body.data.length).toBeLessThanOrEqual(7);
-    expect(body.meta.tier).toBe("free");
+    expect(body.data.length).toBeGreaterThan(7);
+    expect(typeof body.meta.balance_micro_usdc).toBe("number");
   });
 
   it("GET /stocks — returns stock list", async () => {
@@ -180,14 +182,16 @@ describe("Free tier endpoints", () => {
     expect(stock).toHaveProperty("sector");
   });
 
-  it("GET /research/UBS — free tier gets summary_short only", async () => {
+  it("GET /research/UBS — returns the full research payload", async () => {
     const { status, body } = await get("/research/UBS", true);
     expect(status).toBe(200);
     expect(body.data.ticker).toBe("UBS");
     expect(body.data.summary_short).toBeDefined();
-    // Free tier should NOT have full financials
-    expect(body.data.financials).toBeUndefined();
-    expect(body.meta.tier).toBe("free");
+    // Balance-paying keys get the full payload (summaries + fundamentals).
+    expect(body.data.summary_why).toBeDefined();
+    expect(body.data.summary_risk).toBeDefined();
+    expect(body.data.pe_ratio).toBeDefined();
+    expect(typeof body.meta.balance_micro_usdc).toBe("number");
   });
 
   it("GET /sectors + /regions — allocation endpoints work", async () => {
@@ -205,16 +209,14 @@ describe("Free tier endpoints", () => {
     expect(regions.body.data[0]).toHaveProperty("pct_of_portfolio");
   });
 
-  it("GET /events — returns max 3 events without explanations", async () => {
+  it("GET /events — returns events with explanations", async () => {
     const { status, body } = await get("/events", true);
     expect(status).toBe(200);
     expect(Array.isArray(body.data)).toBe(true);
-    expect(body.data.length).toBeLessThanOrEqual(3);
     if (body.data.length > 0) {
-      expect(body.data[0].explanation).toBeUndefined();
+      expect(body.data[0].explanations).toBeDefined();
     }
+    expect(typeof body.meta.balance_micro_usdc).toBe("number");
   });
-
-  // NOTE: /digest/latest not tested — requires 11th request, exceeds free tier limit of 10
 
 });
