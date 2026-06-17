@@ -47,6 +47,12 @@ struct PicksView: View {
                         notifications.pendingWeeklyDigest = false
                     }
                 }
+                .task(id: notifications.pendingShowPaywall) {
+                    if notifications.pendingShowPaywall {
+                        showPaywall = true
+                        notifications.pendingShowPaywall = false
+                    }
+                }
         }
     }
 

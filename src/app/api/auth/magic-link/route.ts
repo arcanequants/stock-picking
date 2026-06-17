@@ -71,7 +71,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true, dev_link: callbackUrl });
     }
 
-    await sendMagicLinkEmail(normalizedEmail, callbackUrl, locale || "es");
+    const emailOtp = linkData.properties?.email_otp ?? "";
+    await sendMagicLinkEmail(normalizedEmail, callbackUrl, locale || "es", emailOtp);
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Magic link error:", err);

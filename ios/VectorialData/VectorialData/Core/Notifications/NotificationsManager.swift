@@ -33,6 +33,10 @@ final class NotificationsManager: NSObject, ObservableObject {
     /// and clears it after pushing the detail onto its nav stack.
     @Published var pendingNewsId: UUID?
 
+    /// Triggers the paywall sheet in PicksView via URL scheme. Consumed
+    /// immediately after presentation; not persisted across launches.
+    @Published var pendingShowPaywall: Bool = false
+
     private override init() {
         super.init()
         UNUserNotificationCenter.current().delegate = self
@@ -86,6 +90,7 @@ final class NotificationsManager: NSObject, ObservableObject {
         pendingPickNumber = nil
         pendingWeeklyDigest = false
         pendingNewsId = nil
+        pendingShowPaywall = false
     }
 
     /// Call on sign-out to stop receiving pushes on this device. Reads the

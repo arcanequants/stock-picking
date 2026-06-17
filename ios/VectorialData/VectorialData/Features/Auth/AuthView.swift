@@ -12,6 +12,8 @@ struct AuthView: View {
     @State private var errorMessage: String?
     @State private var resendCooldown: Int = 0
     @State private var cooldownTimer: Timer?
+    @State private var otpCode: String = ""
+    @State private var isVerifyingOTP = false
 
     var body: some View {
         ZStack {
@@ -40,9 +42,13 @@ struct AuthView: View {
                     ConfirmationCard(
                         email: email,
                         isResending: isSending,
+                        isVerifyingOTP: isVerifyingOTP,
                         resendCooldown: resendCooldown,
+                        otpCode: $otpCode,
+                        errorMessage: errorMessage ?? auth.lastAuthError,
                         onResend: resend,
-                        onUseDifferentEmail: useDifferentEmail
+                        onUseDifferentEmail: useDifferentEmail,
+                        onVerifyOTP: verifyOTP
                     )
                 } else {
                     SignInCard(
@@ -113,6 +119,26 @@ struct AuthView: View {
         resendCooldown = 0
         sent = false
         errorMessage = nil
+        otpCode = ""
+        auth.lastAuthError = nil
+    }
+
+    private func verifyOTP() {
+        let code = otpCode.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard code.count == 6 else {
+            errorMessage = "Enter the 6-digit code from your email."
+            return
+        }
+        errorMessage = nil
+        isVerifyingOTP = true
+        Task {
+            defer { isVerifyingOTP = false }
+            do {
+                try await auth.verifyOTP(email: email, otp: code)
+            } catch {
+                // auth.lastAuthError is set by AuthManager
+            }
+        }
     }
 
     private func startResendCooldown() {
@@ -185,9 +211,13 @@ private struct SignInCard: View {
 private struct ConfirmationCard: View {
     let email: String
     let isResending: Bool
+    let isVerifyingOTP: Bool
     let resendCooldown: Int
+    @Binding var otpCode: String
+    let errorMessage: String?
     let onResend: () -> Void
     let onUseDifferentEmail: () -> Void
+    let onVerifyOTP: () -> Void
 
     var body: some View {
         VStack(spacing: 20) {
@@ -202,6 +232,56 @@ private struct ConfirmationCard: View {
                     .font(.body)
                     .multilineTextAlignment(.center)
                     .foregroundStyle(.white.opacity(0.75))
+            }
+
+            // OTP code entry — alternative to tapping the deep link
+            VStack(spacing: 8) {
+                Text("Or enter the 6-digit code from your email")
+                    .font(.footnote)
+                    .foregroundStyle(.white.opacity(0.55))
+                    .multilineTextAlignment(.center)
+                HStack(spacing: 10) {
+                    TextField("", text: $otpCode, prompt:
+                        Text("000000").foregroundStyle(.white.opacity(0.3))
+                    )
+                    .keyboardType(.numberPad)
+                    .textContentType(.oneTimeCode)
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: 22, weight: .semibold, design: .monospaced))
+                    .foregroundStyle(.white)
+                    .padding(12)
+                    .background(Color("CardBackground"))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .stroke(.white.opacity(0.18), lineWidth: 1)
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .onChange(of: otpCode) { _, newValue in
+                        otpCode = String(newValue.filter { $0.isNumber }.prefix(6))
+                    }
+                    Button(action: onVerifyOTP) {
+                        Group {
+                            if isVerifyingOTP {
+                                ProgressView().tint(.white)
+                            } else {
+                                Text("Verify")
+                                    .font(.subheadline.weight(.semibold))
+                            }
+                        }
+                        .frame(minWidth: 72, minHeight: 44)
+                        .foregroundStyle(.white)
+                        .background(Color("BrandEmerald"))
+                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    }
+                    .disabled(otpCode.count < 6 || isVerifyingOTP)
+                    .opacity(otpCode.count < 6 || isVerifyingOTP ? 0.5 : 1)
+                }
+                if let msg = errorMessage {
+                    Text(msg)
+                        .font(.footnote)
+                        .foregroundStyle(.red)
+                        .multilineTextAlignment(.center)
+                }
             }
 
             Text("Didn't receive it? Check your spam folder.")

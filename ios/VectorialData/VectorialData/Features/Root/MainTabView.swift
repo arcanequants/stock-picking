@@ -27,6 +27,28 @@ struct MainTabView: View {
                 .tag(AppTab.account)
         }
         .tint(Color("BrandEmerald"))
+        .onOpenURL { url in
+            let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+            // vectorialdata://tab?name=picks|portfolio|home|account
+            if url.host == "tab", let name = components?.queryItems?.first(where: { $0.name == "name" })?.value {
+                switch name {
+                case "picks":     selectedTab = .picks
+                case "portfolio": selectedTab = .portfolio
+                case "account":   selectedTab = .account
+                default:          selectedTab = .home
+                }
+            // vectorialdata://pick?number=<pickNumber>
+            } else if url.host == "pick",
+                      let numStr = components?.queryItems?.first(where: { $0.name == "number" })?.value,
+                      let num = Int(numStr) {
+                notifications.pendingPickNumber = num
+                selectedTab = .picks
+            // vectorialdata://paywall
+            } else if url.host == "paywall" {
+                notifications.pendingShowPaywall = true
+                selectedTab = .picks
+            }
+        }
         // A push tapped while the app was killed sets the pending payload
         // before this view mounts, so `.onChange` never fires for it. Read the
         // current values once on appear to catch the cold-launch case.

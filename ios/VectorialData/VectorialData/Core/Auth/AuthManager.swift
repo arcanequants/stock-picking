@@ -18,8 +18,8 @@ final class AuthManager: ObservableObject {
 
     @Published private(set) var state: AuthState = .unknown
     @Published private(set) var currentUser: UserProfile?
-    /// Set when a magic-link exchange fails (expired/used/invalid link) so
-    /// the sign-in screen can tell the user instead of silently bouncing back.
+    /// Set when a magic-link exchange or OTP verify fails so the sign-in
+    /// screen can tell the user. Views may clear this on dismiss.
     @Published var lastAuthError: String?
 
     private let accessTokenKey = "access_token"
@@ -126,6 +126,35 @@ final class AuthManager: ObservableObject {
         let type = items.first(where: { $0.name == "type" })?.value ?? "magiclink"
 
         Task { await exchange(tokenHash: tokenHash, type: type) }
+    }
+
+    /// Verifies the 6-digit OTP code from the sign-in email. Alternative to
+    /// tapping the magic link — works even when the deep link fails to open the
+    /// app (e.g. email opened on a different device or in a browser).
+    func verifyOTP(email: String, otp: String) async throws {
+        lastAuthError = nil
+        struct Body: Encodable { let email: String; let otp: String }
+        struct Response: Decodable {
+            let accessToken: String
+            let refreshToken: String
+            let expiresAt: Int?
+            let email: String
+        }
+        do {
+            let resp = try await APIClient.shared.post(
+                "/api/auth/ios-otp-verify",
+                body: Body(email: email, otp: otp),
+                as: Response.self
+            )
+            KeychainHelper.set(resp.accessToken, forKey: accessTokenKey)
+            KeychainHelper.set(resp.refreshToken, forKey: refreshTokenKey)
+            await APIClient.shared.setBearer(resp.accessToken)
+            lastAuthError = nil
+            await refreshProfile()
+        } catch {
+            lastAuthError = "Incorrect code or it has expired. Please try again."
+            throw error
+        }
     }
 
     func signOut() async {

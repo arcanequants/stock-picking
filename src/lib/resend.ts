@@ -1659,7 +1659,8 @@ const MAGIC_LINK_SUBJECTS: Record<string, string> = {
 export async function sendMagicLinkEmail(
   email: string,
   magicLinkUrl: string,
-  locale: string = "es"
+  locale: string = "es",
+  otp: string = ""
 ): Promise<void> {
   const subject = MAGIC_LINK_SUBJECTS[locale] || MAGIC_LINK_SUBJECTS.es;
 
@@ -1714,6 +1715,14 @@ export async function sendMagicLinkEmail(
     <p style="margin:24px 0 0;font-size:13px;color:#6b7280;text-align:center;">
       ${expiryText[l]}
     </p>
+    ${otp ? `<div style="margin:24px 0 0;text-align:center;">
+      <p style="margin:0 0 8px;font-size:13px;color:#6b7280;">
+        ${l === "es" ? "O escribe este código en la app:" : l === "en" ? "Or enter this code in the app:" : "Ou insira este código no app:"}
+      </p>
+      <div style="display:inline-block;background:#f3f4f6;border:1px solid #e4e4e7;border-radius:10px;padding:12px 28px;">
+        <span style="font-family:monospace,monospace;font-size:28px;font-weight:700;color:#111827;letter-spacing:8px;">${otp}</span>
+      </div>
+    </div>` : ""}
   </td></tr>
   <!-- Footer -->
   <tr><td style="padding:20px 32px;border-top:1px solid #e4e4e7;text-align:center;">
