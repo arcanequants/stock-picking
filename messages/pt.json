@@ -884,7 +884,7 @@
     "billingTitle": "Cobrança por chave de API",
     "billingDesc": "Um saldo pré-pago em USDC por chave de API. Cada requisição debita o preço do endpoint (os mesmos preços da tabela x402 abaixo). Sem planos, sem limites diários.",
     "billingTrial": "Chaves novas incluem um saldo de teste de $0,20 USDC.",
-    "billingNote": "Recarregue seu saldo com USDC via Stripe no painel de chaves de API."
+    "billingNote": "Recarregue seu saldo com USDC via Stripe no painel de chaves de API (mínimo 5 USDC)."
   },
   "FreeSignup": {
     "separator": "Ainda não tem certeza?",

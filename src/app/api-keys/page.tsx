@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient, getSupabaseAdmin } from "@/lib/supabase";
-import { CREDIT_PACKS } from "@/lib/api-credit-packs";
+import { TOPUP_PACKS } from "@/lib/api-credit-packs";
 import ApiKeysClient from "./ApiKeysClient";
 
 export const metadata: Metadata = {
@@ -85,7 +85,7 @@ export default async function ApiKeysPage({
       <ApiKeysClient
         initialKeys={initialKeys}
         initialLedger={initialLedger}
-        packs={Object.values(CREDIT_PACKS)}
+        packs={Object.values(TOPUP_PACKS)}
       />
     </div>
   );

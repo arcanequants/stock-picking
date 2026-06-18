@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { CreditPack } from "@/lib/api-credit-packs";
+import { type TopUpPack, MIN_TOPUP_USDC } from "@/lib/api-credit-packs";
 
 type KeyRow = {
   id: string;
@@ -37,7 +37,7 @@ export default function ApiKeysClient({
 }: {
   initialKeys: KeyRow[];
   initialLedger: LedgerRow[];
-  packs: CreditPack[];
+  packs: TopUpPack[];
 }) {
   const [keys, setKeys] = useState<KeyRow[]>(initialKeys);
   const [newKeyName, setNewKeyName] = useState("");
@@ -197,7 +197,7 @@ export default function ApiKeysClient({
         ) : (
           <>
             <p className="text-sm text-text-muted">
-              USDC balance is added to <span className="font-mono">{primaryKey.key_preview}</span> via Stripe Checkout.
+              USDC balance is added to <span className="font-mono">{primaryKey.key_preview}</span> via Stripe Checkout. Minimum top-up is {MIN_TOPUP_USDC} USDC.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {packs.map((p) => (

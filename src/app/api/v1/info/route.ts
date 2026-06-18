@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { transactions } from "@/data/stocks";
 import { getPortfolioSummary } from "@/lib/api-data";
+import { MIN_TOPUP_USDC } from "@/lib/api-credit-packs";
 
 export const dynamic = "force-dynamic";
 
@@ -24,8 +25,9 @@ export async function GET() {
     pricing: {
       model: "prepaid_balance",
       description:
-        "One prepaid USDC balance per API key. Each request debits the per-endpoint price below; no tiers, no daily limits. Top up at https://vectorialdata.com/api-keys. New keys start with a $0.20 USDC trial.",
+        "One prepaid USDC balance per API key. Each request debits the per-endpoint price below; no tiers, no daily limits. Top up at https://vectorialdata.com/api-keys (minimum 5 USDC). New keys start with a $0.20 USDC trial.",
       unit: "USDC",
+      min_deposit_usdc: MIN_TOPUP_USDC,
       per_request_usdc: {
         picks: 0.005,
         latest_pick: 0.001,

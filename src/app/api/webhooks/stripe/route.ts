@@ -96,14 +96,14 @@ export async function POST(request: Request) {
               accountId,
               apiKeyId,
               packId: pack.id,
-              credits: pack.credits,
+              usdc: pack.usdc,
               amountCents: session.amount_total ?? pack.priceUsdCents,
               currency: session.currency ?? "usd",
               newBalance,
               stripePaymentIntentId: paymentIntentId,
             }).catch((e) => console.error("Topup admin alert failed:", e));
 
-            console.log(`API top-up credited: ${apiKeyId} +${pack.credits} (balance=${newBalance})`);
+            console.log(`API top-up credited: ${apiKeyId} +${pack.usdc} USDC (balance=${newBalance})`);
           } catch (err) {
             console.error("Topup grantCredits failed:", err);
           }

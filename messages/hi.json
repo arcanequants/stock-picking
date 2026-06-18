@@ -872,7 +872,7 @@
     "billingTitle": "API key बिलिंग",
     "billingDesc": "हर API key के लिए एक प्रीपेड USDC बैलेंस। हर रिक्वेस्ट पर एंडपॉइंट की कीमत कटती है (नीचे दी गई x402 तालिका के समान दाम)। कोई टियर नहीं, कोई दैनिक सीमा नहीं।",
     "billingTrial": "नई keys में $0.20 USDC का फ्री ट्रायल बैलेंस मिलता है।",
-    "billingNote": "API keys डैशबोर्ड पर Stripe के ज़रिए USDC से अपना बैलेंस टॉप अप करें।"
+    "billingNote": "API keys डैशबोर्ड पर Stripe के ज़रिए USDC से अपना बैलेंस टॉप अप करें (न्यूनतम 5 USDC)।"
   },
   "FreeSignup": {
     "separator": "अभी तय नहीं कर पा रहे?",

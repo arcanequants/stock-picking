@@ -1,23 +1,26 @@
-// Tentative price packs for API credit top-ups. 1 credit = 1 request = $0.002.
-// Each pack ships pure credits at flat $0.002 each — no volume discount yet.
-// Phase 1.3 just wires payments; tier pricing can evolve once we see demand.
+// Preset top-up amounts for an API key's prepaid balance. Each pack adds USDC
+// directly to the balance — $1 charged via Stripe = 1 USDC credited (parity with
+// x402 per-request pricing). Minimum deposit is 5 USDC.
 
-export type CreditPackId = "starter" | "pro" | "scale";
+export type TopUpPackId = "starter" | "pro" | "scale";
 
-export interface CreditPack {
-  id: CreditPackId;
+export interface TopUpPack {
+  id: TopUpPackId;
   label: string;
-  credits: number;
-  priceUsdCents: number;
+  usdc: number; // USDC added to the prepaid balance
+  priceUsdCents: number; // amount charged by Stripe (cents)
 }
 
-export const CREDIT_PACKS: Record<CreditPackId, CreditPack> = {
-  starter: { id: "starter", label: "Starter",  credits: 2_500,  priceUsdCents: 500 },   // $5
-  pro:     { id: "pro",     label: "Pro",      credits: 10_000, priceUsdCents: 2_000 }, // $20
-  scale:   { id: "scale",   label: "Scale",    credits: 50_000, priceUsdCents: 10_000 },// $100
+/** Minimum top-up deposit, in USDC. */
+export const MIN_TOPUP_USDC = 5;
+
+export const TOPUP_PACKS: Record<TopUpPackId, TopUpPack> = {
+  starter: { id: "starter", label: "Starter", usdc: 5,   priceUsdCents: 500 },    // $5
+  pro:     { id: "pro",     label: "Pro",     usdc: 20,  priceUsdCents: 2_000 },  // $20
+  scale:   { id: "scale",   label: "Scale",   usdc: 100, priceUsdCents: 10_000 },// $100
 };
 
-export function getPack(id: string | null | undefined): CreditPack | null {
+export function getPack(id: string | null | undefined): TopUpPack | null {
   if (!id) return null;
-  return (CREDIT_PACKS as Record<string, CreditPack>)[id] ?? null;
+  return (TOPUP_PACKS as Record<string, TopUpPack>)[id] ?? null;
 }

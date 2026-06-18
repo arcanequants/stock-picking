@@ -41,8 +41,8 @@ Response:
 One prepaid USDC balance per API key (1 USDC = 1,000,000 micro-USDC). Each
 request debits the per-endpoint price (same prices as the x402 table below);
 there are no tiers and no daily limits. New keys start with a $0.20 USDC trial.
-Top up with USDC via Stripe at https://vectorialdata.com/api-keys. A request is
-rejected with HTTP 402 when the balance is insufficient.
+Top up with USDC via Stripe at https://vectorialdata.com/api-keys (minimum 5
+USDC). A request is rejected with HTTP 402 when the balance is insufficient.
 
 ## Response Format
 

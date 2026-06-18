@@ -2507,10 +2507,10 @@ interface ApiTopupAlertData {
   accountId: string;
   apiKeyId: string;
   packId: string;
-  credits: number;
+  usdc: number;
   amountCents: number;
   currency: string;
-  newBalance: number;
+  newBalance: number; // micro-USDC
   stripePaymentIntentId: string;
 }
 
@@ -2520,15 +2520,19 @@ export async function sendApiTopupAlertToAdmin(
 ): Promise<void> {
   const timestamp = new Date().toISOString();
   const amountUsd = (data.amountCents / 100).toFixed(2);
-  const subject = `💳 API top-up: ${data.email ?? data.accountId.slice(0, 8)} · +${data.credits.toLocaleString()} credits ($${amountUsd})`;
+  const newBalanceUsdc = (data.newBalance / 1_000_000).toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 4,
+  });
+  const subject = `💳 API top-up: ${data.email ?? data.accountId.slice(0, 8)} · +${data.usdc} USDC ($${amountUsd})`;
 
   const html = `<!DOCTYPE html>
 <html><body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 0;"><tr><td align="center">
 <table width="520" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;border:1px solid #e4e4e7;overflow:hidden;">
   <tr><td style="padding:24px 28px;background:#eef2ff;border-bottom:1px solid #c7d2fe;">
-    <p style="margin:0;font-size:13px;color:#4338ca;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">API credit top-up</p>
-    <h1 style="margin:4px 0 0;font-size:20px;font-weight:700;color:#1e1b4b;">+${data.credits.toLocaleString()} credits · $${amountUsd} ${data.currency.toUpperCase()}</h1>
+    <p style="margin:0;font-size:13px;color:#4338ca;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">API balance top-up</p>
+    <h1 style="margin:4px 0 0;font-size:20px;font-weight:700;color:#1e1b4b;">+${data.usdc} USDC · $${amountUsd} ${data.currency.toUpperCase()}</h1>
   </td></tr>
   <tr><td style="padding:24px 28px;">
     <table width="100%" cellpadding="0" cellspacing="0">
@@ -2537,7 +2541,7 @@ export async function sendApiTopupAlertToAdmin(
       <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Pack</td>
           <td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">${escapeHtml(data.packId)}</td></tr>
       <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">New balance</td>
-          <td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">${data.newBalance.toLocaleString()} credits</td></tr>
+          <td style="padding:8px 0;font-size:14px;color:#111827;font-weight:600;">${newBalanceUsdc} USDC</td></tr>
       <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">API key</td>
           <td style="padding:8px 0;font-size:12px;color:#6b7280;font-family:monospace;">${escapeHtml(data.apiKeyId)}</td></tr>
       <tr><td style="padding:8px 0;font-size:14px;color:#6b7280;">Payment intent</td>

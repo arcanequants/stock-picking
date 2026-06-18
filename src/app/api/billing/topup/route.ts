@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import { createSupabaseServerClient, getSupabaseAdmin } from "@/lib/supabase";
 import { getStripe } from "@/lib/stripe";
-import { CREDIT_PACKS, getPack, type CreditPackId } from "@/lib/api-credit-packs";
+import {
+  TOPUP_PACKS,
+  getPack,
+  MIN_TOPUP_USDC,
+  type TopUpPackId,
+} from "@/lib/api-credit-packs";
 
 export const dynamic = "force-dynamic";
 
@@ -26,7 +31,7 @@ export async function POST(request: Request) {
 
   const body = await request.json().catch(() => ({}));
   const { pack_id, api_key_id } = body as {
-    pack_id?: CreditPackId;
+    pack_id?: TopUpPackId;
     api_key_id?: string;
   };
 
@@ -35,8 +40,15 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error: "Invalid pack_id",
-        valid_packs: Object.values(CREDIT_PACKS).map((p) => p.id),
+        valid_packs: Object.values(TOPUP_PACKS).map((p) => p.id),
       },
+      { status: 400 }
+    );
+  }
+
+  if (pack.usdc < MIN_TOPUP_USDC) {
+    return NextResponse.json(
+      { error: `Minimum top-up is ${MIN_TOPUP_USDC} USDC` },
       { status: 400 }
     );
   }
@@ -86,8 +98,8 @@ export async function POST(request: Request) {
           currency: "usd",
           unit_amount: pack.priceUsdCents,
           product_data: {
-            name: `Vectorial Data API · ${pack.label} (${pack.credits.toLocaleString()} credits)`,
-            description: `${pack.credits.toLocaleString()} API credits at $0.002/request.`,
+            name: `Vectorial Data API · ${pack.label} (+${pack.usdc} USDC balance)`,
+            description: `Adds ${pack.usdc} USDC to your prepaid API balance. You pay per request in USDC.`,
           },
         },
       },
@@ -100,7 +112,7 @@ export async function POST(request: Request) {
       account_id: user.id,
       api_key_id: resolvedKeyId!,
       pack_id: pack.id,
-      credits: String(pack.credits),
+      usdc: String(pack.usdc),
     },
     payment_intent_data: {
       metadata: {
@@ -108,7 +120,7 @@ export async function POST(request: Request) {
         account_id: user.id,
         api_key_id: resolvedKeyId!,
         pack_id: pack.id,
-        credits: String(pack.credits),
+        usdc: String(pack.usdc),
       },
     },
   });
