@@ -128,6 +128,35 @@ final class AuthManager: ObservableObject {
         Task { await exchange(tokenHash: tokenHash, type: type) }
     }
 
+    /// Signs in using demo credentials (App Store Review bypass).
+    /// Calls /api/auth/demo-login which validates email+password server-side
+    /// and returns a JWT without requiring email verification.
+    func demoLogin(email: String, password: String) async throws {
+        lastAuthError = nil
+        struct Body: Encodable { let email: String; let password: String }
+        struct Response: Decodable {
+            let accessToken: String
+            let refreshToken: String
+            let expiresAt: Int?
+            let email: String
+        }
+        do {
+            let resp = try await APIClient.shared.post(
+                "/api/auth/demo-login",
+                body: Body(email: email, password: password),
+                as: Response.self
+            )
+            KeychainHelper.set(resp.accessToken, forKey: accessTokenKey)
+            KeychainHelper.set(resp.refreshToken, forKey: refreshTokenKey)
+            await APIClient.shared.setBearer(resp.accessToken)
+            lastAuthError = nil
+            await refreshProfile()
+        } catch {
+            lastAuthError = "Invalid credentials."
+            throw error
+        }
+    }
+
     /// Verifies the 6-digit OTP code from the sign-in email. Alternative to
     /// tapping the magic link — works even when the deep link fails to open the
     /// app (e.g. email opened on a different device or in a browser).

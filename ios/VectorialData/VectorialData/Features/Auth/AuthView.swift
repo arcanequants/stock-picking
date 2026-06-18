@@ -7,6 +7,7 @@ struct AuthView: View {
     @EnvironmentObject private var auth: AuthManager
 
     @State private var email: String = ""
+    @State private var password: String = ""
     @State private var isSending = false
     @State private var sent = false
     @State private var errorMessage: String?
@@ -53,6 +54,7 @@ struct AuthView: View {
                 } else {
                     SignInCard(
                         email: $email,
+                        password: $password,
                         isSending: isSending,
                         errorMessage: errorMessage ?? auth.lastAuthError,
                         onSend: send
@@ -81,6 +83,20 @@ struct AuthView: View {
         }
         errorMessage = nil
         isSending = true
+
+        // If password is provided, attempt demo/review login (no email required).
+        if !password.isEmpty {
+            Task {
+                defer { isSending = false }
+                do {
+                    try await auth.demoLogin(email: trimmed, password: password)
+                } catch {
+                    errorMessage = auth.lastAuthError ?? "Invalid credentials."
+                }
+            }
+            return
+        }
+
         Task {
             defer { isSending = false }
             do {
@@ -158,6 +174,7 @@ struct AuthView: View {
 
 private struct SignInCard: View {
     @Binding var email: String
+    @Binding var password: String
     let isSending: Bool
     let errorMessage: String?
     let onSend: () -> Void
@@ -184,10 +201,27 @@ private struct SignInCard: View {
             )
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
 
+            HStack(spacing: 10) {
+                Image(systemName: "lock.fill")
+                    .foregroundStyle(.white.opacity(0.5))
+                SecureField("", text: $password, prompt:
+                    Text("Password (optional)").foregroundStyle(.white.opacity(0.4))
+                )
+                .textContentType(.password)
+                .foregroundStyle(.white)
+            }
+            .padding(14)
+            .background(Color("CardBackground"))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .stroke(.white.opacity(0.12), lineWidth: 1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+
             Button(action: onSend) {
                 HStack {
                     if isSending { ProgressView().tint(.white) }
-                    Text(isSending ? "Sending…" : "Send magic link")
+                    Text(isSending ? "Signing in…" : password.isEmpty ? "Send magic link" : "Sign in")
                         .font(.headline)
                 }
                 .frame(maxWidth: .infinity, minHeight: 50)
