@@ -125,8 +125,8 @@ struct AuthView: View {
 
     private func verifyOTP() {
         let code = otpCode.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard code.count == 6 else {
-            errorMessage = "Enter the 6-digit code from your email."
+        guard code.count >= 4 else {
+            errorMessage = "Enter the code from your email."
             return
         }
         errorMessage = nil
@@ -257,7 +257,7 @@ private struct ConfirmationCard: View {
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     .onChange(of: otpCode) { _, newValue in
-                        otpCode = String(newValue.filter { $0.isNumber }.prefix(6))
+                        otpCode = String(newValue.filter { $0.isNumber }.prefix(8))
                     }
                     Button(action: onVerifyOTP) {
                         Group {
@@ -273,8 +273,8 @@ private struct ConfirmationCard: View {
                         .background(Color("BrandEmerald"))
                         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     }
-                    .disabled(otpCode.count < 6 || isVerifyingOTP)
-                    .opacity(otpCode.count < 6 || isVerifyingOTP ? 0.5 : 1)
+                    .disabled(otpCode.count < 4 || isVerifyingOTP)
+                    .opacity(otpCode.count < 4 || isVerifyingOTP ? 0.5 : 1)
                 }
                 if let msg = errorMessage {
                     Text(msg)
