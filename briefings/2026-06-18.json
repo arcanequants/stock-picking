@@ -1,0 +1,111 @@
+{
+  "date": "2026-06-18",
+  "summary": "US-Iran interim deal reopens Strait of Hormuz as BoJ hits 1% for first time since 1995",
+  "causalChain": "A 60-day US-Iran ceasefire unblocks 20% of global oil supply and crashes prices; the BoJ's historic rate hike and the Fed's hawkish hold simultaneously tighten global borrowing costs; Bitcoin ETF outflows hit a record 13-day streak while Mexico faces a make-or-break USMCA review on July 1.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "US-Iran interim deal reopens Strait of Hormuz; oil drops $4+ per barrel in one day", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed holds at 3.50–3.75%; new Chair Warsh hints at hike; 10-yr US borrowing rate at 4.49%", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold falls to $4,275/oz as geopolitical premium fades and Fed hawkishness bites", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico expected to cut 25bps to 6.50%; inflation still above 4% target at 4.45%", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "T-MEC/USMCA formal review opens July 1; $873B in trade and Chinese-content rules at stake", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Record $40.9B nearshoring FDI in 2025; industrial rents in northern Mexico up 39% in one year", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ hikes to 1.0%, highest since 1995; Nikkei briefly crosses 70,000 all-time high", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "China retail sales fall for first time since Dec 2022; PBOC expands yuan global liquidity program", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB raises rates for first time since Sept 2023; eurozone inflation forecast 3.0% in 2026", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "BoE holds at 3.75%; UK FTSE +1% on Hormuz deal; 2 dissenters voted to hike", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "RBA pauses at 4.35% after 3 hikes this year; warns more tightening possible if inflation stays above 4%", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "BHP + Rio Tinto to explore 200Mt shared iron ore mine; copper smelters now pay miners to take ore", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin ETF outflows: $4.33B over 13 straight days; BTC tests $62K as Treasury yields bite", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "EU MiCA deadline July 1: USDT delisted from European exchanges; USDC gains shelf space", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "Interstellar comet 3I/ATLAS holds 30x more semi-heavy water than any solar system comet (ALMA, Chile)", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Ciliate organism found with fully rewired genetic stop codes — first known rearrangement in billions of years", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Chemists at U. Santiago de Compostela convert methane into medicine building blocks at room temperature", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The US and Iran signed a preliminary deal on June 15 to pause their war and reopen the Strait of Hormuz — a narrow waterway where roughly 20% of the world's oil passes. Tankers had been blocked for months, pushing prices up globally. With the deal, traders expect supply to normalize, so oil dropped over $4 in a single day. The catch: it is only a 60-day pause, not final peace. Iran's nuclear program stays unresolved. Shipping companies remain cautious about actually sending vessels through."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government now pays 4.49% per year to borrow money for 10 years — near its highest in months. That rate rose this week because the Fed's new chief, Kevin Warsh, signaled he might raise borrowing costs rather than cut them. The Fed kept its rate at 3.50–3.75%, but US inflation is still above target at 3.3%. When government borrowing rates rise, riskier assets like stocks and crypto tend to fall — because safe government bonds suddenly pay more with no downside."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold dropped to $4,275 per ounce this week — nearly 2% in a single session, its biggest fall in months. Two things hit at once: the Fed's new chief signaled he might raise borrowing costs (making gold less attractive since it pays no interest), and the US-Iran ceasefire reduced fear of a wider Middle East war. Gold had surged earlier this year because both threats were very real. J.P. Morgan still forecasts $6,000/oz by year-end if the peace deal collapses."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank is expected to cut its overnight lending rate from 6.75% to 6.50% this month — the rate banks pay to borrow from each other. Mexico's annual inflation is still 4.45%, above the 3% official goal, so each cut is a calculated risk. Lower rates can nudge the peso weaker, since foreign investors earn less holding Mexican bonds. The balancing act: cut too fast and inflation stays sticky; cut too slowly and businesses cannot afford to invest or expand."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "On July 1, the US, Mexico, and Canada open talks to update their trade deal — covering $873 billion in goods crossing North American borders each year. The biggest flashpoint: how much Chinese-made content is allowed inside duty-free products. If rules tighten, Mexican factories using Chinese parts could lose tariff-free status overnight, forcing costlier local sourcing. The outcome will ripple through supply chains across the whole continent."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico received over $60 billion sent home by Mexicans abroad last year — more than tourism brings in. Foreign companies poured a record $40.9 billion into Mexican factories in 2025, drawn by wages 25% below China's and proximity to the US. But industrial real estate in northern Mexico jumped 39% in one year, with rents now rivaling Miami. When a location gets that expensive, the cost edge shrinks — and manufacturers are already reconsidering."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank raised its key rate to 1.0% — the highest since 1995, ending over 30 years of near-zero or negative rates. Japan kept rates ultra-low for decades to fight slow growth. Now, with prices rising partly due to the Iran war's energy shock, they are reversing course. The Japanese yen moved to about 160 per dollar after the decision — still historically weak, but recovering. Japan's main stock index briefly crossed 70,000 for the first time ever before pulling back after the news."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China sent mixed economic signals this week: factories produced more than expected in May, but stores recorded their first drop in sales since December 2022 — meaning regular people are buying less. Home prices have now fallen for 35 consecutive months. China's central bank responded by expanding a program letting foreign governments borrow Chinese yuan, aiming to make the yuan more used globally. The offshore yuan sits at 6.76 per dollar, near its strongest level in over three years."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised borrowing costs for the first time since September 2023 — a surprise reversal. The reason: eurozone prices are expected to rise 3.0% this year, above the 2% goal. The timing is awkward: the Iran war had already been slowing the economy, yet prices kept climbing. The ECB now says inflation will not return to 2% until 2028, meaning European rates could stay higher for longer than most businesses had planned."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "The UK's central bank voted 7-2 to hold its rate at 3.75%, choosing to wait rather than act. Their reasoning: the US-Iran ceasefire might push oil prices lower, reducing inflation without them doing anything. Two members disagreed and voted to raise rates, worried prices would stay high regardless. The UK's main stock index rose 1% that day, as investors bet cheaper oil would help British companies' cost bases. Whether the Iran deal holds is now the key variable for UK rate-setters."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's central bank held its rate at 4.35% — pausing after three hikes already this year. Inflation is still 4.2%, above the 2–3% target, even as households feel squeezed by high mortgage costs. The bank warned it might raise again if prices do not ease. Australia is especially exposed because most home loans carry floating rates, so every central bank move hits household budgets almost immediately — unlike countries where fixed-rate mortgages dominate."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "The world's two biggest iron ore miners, BHP and Rio Tinto, announced plans to jointly explore a shared mine in Australia's Pilbara region covering up to 200 million tonnes of ore. Meanwhile, copper — the metal inside every electric car, solar panel, and power line — has become so scarce that refiners are now paying miners to take their ore rather than charging a processing fee. That is a historic flip: global demand for copper is outrunning the world's ability to dig and refine it fast enough."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Over 13 straight trading days in early June, investors pulled $4.33 billion out of Bitcoin investment funds — the longest withdrawal streak since those products launched in early 2024. The main driver: US government bonds now pay 4.49% per year with essentially zero risk, making Bitcoin's wild price swings harder to justify. Bitcoin slid from around $73,500 to test $62,000 before the streak finally ended. Total money in these funds dropped from $104 billion to $80 billion during the stretch."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Starting July 1, any exchange in Europe must remove Tether — a digital dollar with $187 billion in circulation — because Tether lacks the required European banking license. Its rival USDC ($78 billion in supply) earned full compliance in France and stands to gain that shelf space. As Tether liquidity exits regulated platforms, some moves into less-regulated pools where the rules do not yet apply — quietly reshaping the $319 billion digital dollar market."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "A comet visiting from another star system carries a type of water never seen in any comet born in our solar system: semi-heavy water, where one hydrogen atom is a heavier version. Researchers from the ALMA Observatory in Chile found 30 times more of it than in any local comet. It means this visitor formed somewhere far colder than where our Sun was born — giving us a direct chemical sample from another star system. It is only the third interstellar object ever confirmed. 📄 Published by ALMA Observatory · More: https://www.sciencedaily.com/releases/2026/05/260508003117.htm"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Every living thing on Earth uses the same genetic stop signals — three-letter codes that tell a cell 'stop building this protein here.' This system has been locked in place for billions of years across all known life. Scientists just discovered a tiny single-celled organism called a ciliate that completely rewired those stop signals, using different letter combinations to mean the same thing. The rule still works, but with different words. Life's most fundamental instruction set is apparently more flexible than we thought. 📄 Published in ScienceDaily · More: https://www.sciencedaily.com/releases/2026/05/260507024045.htm"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Methane — the main ingredient in natural gas and a potent climate pollutant from cows and landfills — has always been notoriously hard to convert into anything useful without extreme heat or toxic chemicals. Researchers led by Martín Fañanás at the University of Santiago de Compostela found a way to transform methane directly into building blocks used to make medicines, at room temperature, in a single step. Until now this required multiple costly, polluting stages. If it scales, a waste gas becomes a pharmaceutical feedstock. 📄 Published in ScienceDaily · More: https://www.sciencedaily.com/releases/2026/02/260227071916.htm"
+    }
+  ]
+}
