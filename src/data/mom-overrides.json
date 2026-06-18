@@ -670,5 +670,12 @@
     "risk_short": "El #1: el precio del petróleo lo es todo —si el crudo cae, el fondo cae—. Además está muy concentrada (Exxon + Chevron son ~41%), la transición energética es un viento en contra a largo plazo, y el dividendo es variable (en años de petróleo barato, recortan).",
     "model": "manual-claude",
     "generated_at": "2026-06-16T00:00:00Z"
+  },
+  "GIS": {
+    "one_liner": "General Mills (dueña de Cheerios, Häagen-Dazs y Blue Buffalo) paga un dividendo gordo de ~7% y cotiza baratísima (~8x), pero ese 7% es alto porque la acción cayó ~30% al encogerse el negocio.",
+    "why_short": "Apuesta de valor + renta: una acción defensiva castigada que paga ~7% al año (127 años seguidos sin fallar) a un precio baratísimo (~8x ganancias vs ~15-18x del sector). La gente come Cheerios y compra comida de mascota en cualquier ciclo. Cobras 7% mientras esperas.",
+    "risk_short": "El #1 es la trampa de valor: está barata y rinde 7% porque el negocio se encoge —ventas orgánicas -3% y utilidad -37% el último trimestre, con guía a -10/-15% este año—. Presión de marcas blancas, efecto Ozempic (menos apetito) y deuda elevada. 'Barato' puede seguir cayendo.",
+    "model": "manual-claude",
+    "generated_at": "2026-06-17T00:00:00Z"
   }
 }
