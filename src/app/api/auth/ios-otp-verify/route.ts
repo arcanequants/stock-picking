@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "missing_email" }, { status: 400 });
     }
-    if (!otp || typeof otp !== "string" || !/^\d{4,8}$/.test(otp.trim())) {
+    if (!otp || typeof otp !== "string" || !/^\d{6}$/.test(otp.trim())) {
       return NextResponse.json({ error: "invalid_otp_format" }, { status: 400 });
     }
 

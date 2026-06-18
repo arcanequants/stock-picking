@@ -30,9 +30,12 @@ export async function POST(request: Request) {
     // Generate a magic link via Supabase Admin (does NOT send any email)
     const supabase = getSupabaseAdmin();
 
+    // type:"email" generates a 6-digit OTP code (email_otp) that the user can
+    // enter directly in the app — no deep-link tap required. The action_link
+    // still works as a one-click button. Both paths verify with type:"email".
     const { data: linkData, error: linkError } =
       await supabase.auth.admin.generateLink({
-        type: "magiclink",
+        type: "email",
         email: normalizedEmail,
       });
 
