@@ -1,0 +1,117 @@
+{
+  "date": "2026-06-19",
+  "summary": "Iran ceasefire collapses oil prices as Fed hawkishness sparks risk-off across equities, crypto and gold",
+  "causalChain": "The US-Iran peace deal ends four months of closed oil shipping lanes and pushes crude below $80, but new Fed chair Warsh signals rate hikes not cuts, strengthening the dollar and driving investors out of gold, Bitcoin and Ethereum into safer assets — a simultaneous supply shock and monetary shock rewriting every major trade of 2026.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Iran ceasefire: oil drops below $80 as Hormuz lane reopens after 4 months", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed's Warsh holds rates 3.50-3.75%, signals October hike — 10yr at 4.49%", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold falls 6% from $4,460 peak on hawkish Fed; still +25% year-on-year", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "US tariffs at WWII highs after Supreme Court strips IEEPA authority", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico ends easing at 6.50%; peso gains 3rd day; inflation 3.9%", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "USMCA July 1 review looms over record $40.9B nearshoring FDI; remittances -7.5%", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ hikes to 1% (highest since 1995); Nikkei 225 breaks 71,000 all-time high", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "China exports +14% Q1 rerouting to SE Asia/Africa/EU; Hang Seng -0.7%", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB first rate hike since 2023 to 2.25% — Hormuz-driven inflation forces the move", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "FTSE 100 surges on Iran ceasefire; UK BoE holds at 3.75% watching energy", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP +3.6% and Rio Tinto +2.7% hit all-time highs on Iran peace deal optimism", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "New Zealand meat exports +7% but soft China demand caps dairy gains", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin ETF outflows hit $4.4B in 13 days — Fed hawkishness kills risk appetite", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Ethereum whales flee to Bitcoin; ETH at $1,685; whale BTC wallets at 2026 high", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "MiCA deadline June 30 + US GENIUS Act = first simultaneous global crypto rules", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Birmingham perovskite catalyst turns factory waste heat into clean hydrogen", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Oxford physicists stack quantum uncertainty on itself — a global first", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Underground fungal web mapped: 110 quadrillion km, moves 4B tons CO2 yearly", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The US and Iran just signed a ceasefire, and oil prices immediately dropped below $80 a barrel. For almost four months, Iran blocked the world's busiest oil shipping lane — a narrow strait where 20% of the world's oil travels. Fewer ships passing through meant tighter supply and higher prices everywhere. Now the lane is reopening, so traders expect oil to flow again. Clearing the backlog of stranded ships could still take weeks, so the full price drop is likely not here yet."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "America's new central bank chief said: no rate cuts — and possibly a rate increase by October. What the US government pays to borrow money for 10 years jumped to 4.49%, up sharply after the announcement. When that cost rises, loans for houses, cars and businesses get more expensive too, which slows spending across the economy. Investors who had been betting on cheaper money all year are now scrambling to rethink those positions completely."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold dropped 6% this month from near $4,460 per ounce on June 1 to about $4,178 today. The reason: when the central bank hints at rate increases, even a simple savings account starts paying more. Gold pays nothing while it sits in a vault, so investors sell it to take the guaranteed cash return instead. Gold is still 25% higher than a year ago — this pullback is about this week's hawkish surprise, not about gold losing its long-run appeal."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "US taxes on imported goods are at their highest since World War II, adding roughly $1,500 per year to the average American household's bills. In February, the Supreme Court ruled the President could not use emergency powers to set these taxes unilaterally, forcing the White House to find new legal routes. The uncertainty is making companies delay factory investments and reroute supply chains. Over $165 billion in US-China trade has already shifted to other corridors as businesses adapt."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its key interest rate to 6.5% last month and signaled that is probably the bottom of this rate-cutting cycle. Inflation came back to 3.9%, close to the 3% target, which gave the bank room to ease. The Mexican peso gained for a third day in a row. Normally lower rates push a currency down because investors seek better returns elsewhere. But here, the controlled move with clear inflation signals is reassuring investors, keeping the peso steady."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico attracted a record $40.9 billion in foreign investment last year, largely from companies moving factories from Asia closer to the US border. But two risks shadow the story. Money sent home by Mexicans working in the US fell 7.5% as immigration enforcement tightened — those remittances directly feed millions of rural families. And the USMCA trade deal governing $873 billion in annual North American trade comes up for its first formal review on July 1."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank raised its main rate to 1% this week — the highest since 1995 — because the Japanese yen had been losing value and making imported goods more expensive. Normally higher rates strengthen a currency by attracting investors seeking better returns. This time the yen barely moved because markets had fully expected the hike already. Meanwhile Japan's stock market hit 71,000 points for the first time in history, up 30% this year, largely because a weaker yen makes Japanese exports cheaper abroad."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's exports grew 14% in the first three months of 2026 even as US trade slowed. How: Chinese companies pivoted fast — exports to Southeast Asia jumped 20%, to Africa 32%, and to Europe 21%. This rerouting absorbs some of the US slowdown. But it has not fixed domestic spending. China's stock market in Hong Kong fell 0.7% this week as consumers at home remain cautious. Strong shipments abroad have not yet translated into a strong economy inside China."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised interest rates for the first time since 2023, pushing its main rate to 2.25%. The trigger: the Iran war closed the world's biggest oil shipping lane for months, sending energy costs across Europe sharply higher. Higher energy costs ripple into everything — food, transport, manufacturing. To prevent that from becoming permanent inflation, the bank raised rates. European stocks fell on the news because higher rates mean more expensive business loans and slower growth."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "UK stocks surged this week after the Iran ceasefire news broke. Britain's biggest listed companies — oil producers, banks, and miners — had been hammered by high energy costs from the closed Iran shipping lane. A peace deal signals cheaper energy coming, boosting those sectors. The UK economy grew 0.6% in the first quarter. Britain's central bank is holding its rate at 3.75%, watching whether falling oil prices will drag inflation down enough to justify a cut later this year."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "Australia's two largest mining companies hit all-time high share prices this week after the Iran-US ceasefire. BHP rose 3.6% and Rio Tinto 2.7%. The logic: peace means oil shipping resumes, global factories restart at full capacity, and demand for copper, iron ore and other metals rebounds — exactly what Australian mines supply. Australia's central bank kept rates steady at 4.35%, the highest in over a decade, still fighting inflation without wanting to tip the economy into recession."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "New Zealand's meat exports are rising 7% this year to $13.2 billion because global beef and lamb supply is tight and buyers in Europe and the US are paying more. Dairy is up just 1% because new producers worldwide are competing and keeping prices flat. The economy is expected to grow 2.1% in 2026 after years of weakness. The main risk: China buys over 25% of New Zealand's exports and is still spending cautiously, which caps how strong the recovery can get."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "The funds that hold Bitcoin for everyday investors saw $4.4 billion pulled out in just 13 days — the biggest withdrawal streak since those products launched in early 2024. The trigger: America's central bank chief hinted at possible rate increases, not cuts. When savings accounts pay more, investors pull money from riskier bets like Bitcoin. The price fell to around $63,100, down 13% in one week. This is the first serious test of whether large institutional holders stay through a rate-hike scare."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "The biggest Ethereum holders — large investors sitting on millions in the digital currency — are moving their money into Bitcoin and away from Ethereum. Ethereum dropped 3.6% today to $1,685. Meanwhile, the number of large Bitcoin wallets hit a 2026 high of 20,229 accounts. The pattern: when markets get nervous, big money migrates to the perceived safer digital asset and away from alternatives. About $39 billion is still locked in Ethereum's network of apps, but that number is shrinking as confidence wobbles."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "Two major crypto rulebooks are taking effect simultaneously. Europe's MiCA law requires all crypto companies operating in the EU to be fully licensed by June 30. The US GENIUS Act is setting binding rules for digital dollars — online tokens pegged 1:1 to the US dollar used in global crypto trading. For the first time, the world's two biggest economies are regulating crypto at the same moment. The supply of US-dollar-pegged digital tokens on Ethereum's network fell 4.7% last month as companies adjusted ahead of compliance deadlines."
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Researchers at the University of Birmingham built a catalyst that turns factory waste heat into hydrogen fuel. Steel plants and cement works constantly release heat they cannot use — this device captures it to split water molecules into clean hydrogen gas using perovskite crystals, the same material revolutionizing solar panels. Most hydrogen today requires burning natural gas, which creates CO2. This approach skips that step entirely. If it scales, factories could generate clean fuel from energy they currently throw away. 📄 Published in ScienceDaily · More: https://www.sciencedaily.com/releases/2026/06/260601025345.htm"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Physicists at Oxford University created a new kind of quantum state that stacks uncertainty on top of uncertainty. The classic Schrodinger's cat thought experiment shows a coin can be heads and tails at the same time. Oxford's team put objects that were already in that double-state into a second, deeper layer of the same effect — never done before. This could make future quantum computers far more error-resistant and reopens fundamental questions about how reality behaves at the smallest scale. 📄 Published in Nature · More: https://www.nature.com/news"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "Scientists have mapped the largest hidden structure on Earth: an underground fungal web stretching 110 quadrillion kilometers — longer than a billion round trips to the Sun. These near-invisible threads connect plant roots across forests, helping trees share water and nutrients. They also lock 4 billion tons of CO2 into soil every year, acting as a natural climate pump that biologists are only beginning to understand. Researchers now believe this web rivals the Amazon rainforest in its importance for Earth's climate. 📄 Published in ScienceDaily · More: https://www.sciencedaily.com/"
+    }
+  ]
+}
