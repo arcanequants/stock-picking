@@ -1,0 +1,111 @@
+{
+  "date": "2026-06-20",
+  "summary": "US-Iran ceasefire crashes oil's fear premium while the Fed's rate-hold with December hike threat reshapes assets from Tokyo to Mexico City.",
+  "causalChain": "The US-Iran deal reopened the Strait of Hormuz, sending oil from $105 to ~$80 and evaporating gold's safe-haven bid; simultaneously, new Fed Chair Kevin Warsh held rates but signaled a possible December hike, driving the biggest 2-year Treasury yield jump on a Fed day since 2008 — a stronger-dollar cascade that hit Bitcoin (record $3.4B weekly ETF outflows), the Mexican peso, and European equities while Japan's central bank hiked to 1.0% for the first time since 1995.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Oil $80: US-Iran ceasefire reopens Hormuz Strait", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Fed holds at 3.50-3.75%; dot plot flips to December hike", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Gold drops to $4,150 as dollar strengthens and Iran fear fades", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "30% US tariffs on China: largest US tax hike since 1993", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico cuts GDP forecast to 1.1%; inflation cooling but sticky", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "Mexico stays #1 US trade partner; USMCA review starts July", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ hikes to 1.0%, highest since 1995; Nikkei hits 70,000 record", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "PBOC launches yuan-liquidity tool for foreign central banks", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB hikes to 2.25% as Germany barely grows 0.3% in Q1", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "DAX flat YTD while S&P 500 up 10%; US tariffs hit European exporters", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP/Rio pivot to copper as China steel hits 7-year low", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "RBA holds at 4.35%; RBNZ steady at 2.25%", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "Bitcoin ETF: record $3.4B weekly outflow; BTC near $62K, down 16%", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "60 ETH mega-whales empty wallets; digital dollars hit $268B total", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "U. Birmingham: 24,000 frozen atoms show time emerges from disorder", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "U. Portsmouth: Pre-Big Bang black holes may be today's dark matter", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Goethe University: dying stars may birth new universes, not black holes", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "The US and Iran agreed to stop fighting and reopen the Strait of Hormuz — the narrow water channel where 20% of the world's oil travels. Oil had spiked from below $60 to $105 a barrel when the channel was blocked. Now that ships can pass again, the fear premium is evaporating. WTI crude fell back near $80. Oil markets don't price slowly: the moment the threat shrinks, so does the price."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "US central bank boss Kevin Warsh — new to the job — kept the government's benchmark borrowing cost at 3.50-3.75% this week. But most officials now expect one increase before year-end. The interest rate on 2-year US government bonds had its biggest single-day jump since March 2008. When the US raises what it pays to borrow, every other risky investment — stocks, crypto, foreign currencies — gets repriced lower by comparison."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell to $4,150 per ounce, its lowest since June 11. Two things hit at once: the US dollar got stronger (since gold is priced in dollars, a stronger dollar means foreign buyers pay more, reducing demand), and the US-Iran ceasefire removed the fear that drives people to buy gold as a safety shield. Gold doesn't pay interest — you only buy it when you're scared. Right now, both fears eased."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The US still charges a 30% tax on most goods imported from China — the single biggest US tax increase as a share of the economy since 1993. The average US household pays roughly $1,500 more per year as a result. A 60-day pause on higher tariffs is in place while negotiations continue, but courts are also debating whether the president has the legal authority to set tariffs this way. The outcome reshapes global factory decisions."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its 2026 growth forecast from 1.6% to 1.1%. The main reason: businesses are pausing investment while waiting to see how US trade policy settles, and the first quarter of 2026 was weaker than expected. Inflation is cooling but still above the 3% target, so the central bank won't cut interest rates yet. The result: a Mexican economy stuck in wait-and-see mode, neither investing nor borrowing freely."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Mexico became the United States' biggest trading partner two years ago — more than China — and $873 billion in goods crossed the border in 2025. In July, the US, Mexico, and Canada begin a scheduled review of their trade deal. The core debate: how much Chinese-made content can be inside a product before it loses duty-free access? The answer will determine which factories move to Mexico and which stay in Asia."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank raised its key interest rate to 1% — the highest since 1995. The bank has been gradually raising rates because Japan's prices are rising faster than comfortable, partly because the yen's weakness makes imports expensive. But the yen barely responded, settling at 160 per dollar — still historically low. Japan's main stock index hit a record above 70,000 on the same day, as investors see higher rates as a sign the economy is healthy."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's central bank launched a new program letting foreign governments and sovereign wealth funds borrow Chinese yuan using Chinese government bonds as collateral. The goal: make the yuan easier to use globally and reduce the world's reliance on the US dollar for trade. The offshore yuan strengthened to 6.76 per dollar on the news. It's a slow-moving campaign, but China has been consistent: chip away at dollar dominance, one tool at a time."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised its benchmark interest rate to 2.25% — its first increase in this cycle — even though the eurozone economy is barely growing. Germany, Europe's manufacturing engine, grew just 0.3% in the first three months of 2026. Higher rates fight inflation but slow growth. Applying both at once when the economy is already weak is like pressing the brake and gas simultaneously. The risk: stalling the car entirely."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "European stocks are flat to down so far in 2026 while US stocks are up 10%. The gap has two causes: Europe imports most of its energy and absorbs oil shocks harder, and US tariffs hit Germany's export-heavy companies — cars, industrial equipment, chemicals — directly. Germany's main stock index traded around 24,687 this week. The companies most hurt by US tariffs are the same ones that dominate European equity indexes."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "China's steel production fell to a 7-year low in 2025 — bad news for Australian mining giants BHP and Rio Tinto, whose biggest customer is Chinese steelmakers. Both companies are accelerating a strategy shift: invest more in copper and lithium (needed for electric vehicles and power grids) and sell more to India and Southeast Asia. Iron ore still funds the bills, but copper is the growth bet. The pivot takes years; the urgency is now."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's Reserve Bank kept its interest rate at 4.35% even as business surveys show inflation building. The RBA faces a classic bind: cut too soon and inflation reignites; hold too long and homeowners — Australians carry some of the world's highest household debt — keep feeling the squeeze. New Zealand's central bank held at 2.25%, prioritizing a slowing economy. Both central banks are choosing patience over action this month."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "Bitcoin is trading near $62,000, down 16% from its May peak, after US investment funds that hold Bitcoin bled a record $3.4 billion in a single week — the biggest weekly exit since these products launched in 2024. The trigger was strong US jobs data, which killed hopes that the central bank would cut interest rates soon. When government bonds pay 4%+ and Bitcoin pays nothing, the case for holding Bitcoin weakens. Money rotates toward the thing that pays interest."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "On-chain data — public records of every crypto transaction — shows about 60 of Ethereum's largest wallets (each worth $30M+) have emptied or consolidated balances: a mid-term warning signal. Meanwhile, digital dollars (Tether's USDT at $190B + Circle's USDC at $78B) now total $268 billion in circulation. When crypto traders want safety without leaving the system, they park in digital dollars. The record supply suggests traders are defensive, not exiting."
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Physicists at the University of Birmingham built a tiny universe from 24,000 rubidium atoms chilled near absolute zero. Splitting it in two and letting disorder grow in one half, the other half experienced time — no clock needed. The result: time may not be fundamental. It could emerge from disorder spreading, the way heat emerges from friction — a side effect of chaos, not a built-in feature of reality. 📄 Published in Physical Review Research · More: https://journals.aps.org/prresearch/abstract/10.1103/1h9j-df4k"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "A University of Portsmouth physicist proposes that ancient black holes survived from a universe that existed before ours, collapsed, and bounced into the Big Bang. These relics would still exist today — invisible fossils scattered across galaxies. They might even explain dark matter: the unseen mass cosmologists have searched for since the 1970s. The universe may carry scars from a cosmos that existed before it. 📄 Published in Physical Review D · More: https://scitechdaily.com/ancient-black-holes-may-have-survived-a-cosmic-era-before-the-big-bang/"
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Physicists at Goethe University propose that when a massive star collapses, it may not form a black hole. Dark energy inside the dying star could push back hard enough to stop the collapse — creating a tiny new universe instead. The object left behind would look like a black hole from outside but have no singularity, the infinite-density point that breaks every equation in physics. 📄 Published in Physical Review D · More: https://phys.org/news/2026-06-collapsing-stars-spawn-mini-universes.html"
+    }
+  ]
+}
