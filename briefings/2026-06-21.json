@@ -1,0 +1,105 @@
+{
+  "date": "2026-06-21",
+  "summary": "Hormuz shipments resume as BoJ hits 1%, ECB hikes for the first time, and science discovers the brain is not running the show",
+  "causalChain": "Easing of the Iran-driven Hormuz shutdown slowly cools oil off its peak, but geopolitical risk keeps gold at a record $4,700 while the Fed, ECB, BoJ and RBA all tighten or hold to fight energy-driven inflation; separately, the most complete neural map ever built reveals that complex behavior emerges from distributed circuits across the body, not a central command in the brain.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "Hormuz oil shipments cautiously resuming after largest supply disruption in history", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Gold at record $4,700 as geopolitical risk beats rate headwinds", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Fed stuck — 60% probability of zero rate cuts through 2026", "worker": "—"},
+    {"n": 4, "region": "MEXICO", "angle": "Banxico slashes 2026 GDP forecast to 1.1% — third straight downgrade", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "USMCA T-MEC first bilateral round closed — July 1 deadline looms", "worker": "—"},
+    {"n": 6, "region": "ASIA", "angle": "BoJ hikes to 1% (highest since 1995), Nikkei 225 breaks 70,000 record", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "PBOC expands yuan lending abroad to reduce global dollar dependence", "worker": "—"},
+    {"n": 8, "region": "EUROPE", "angle": "ECB raises rates for the first time in this cycle to 2.25% — Iran energy costs the trigger", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "DAX split: German banks post record +16% profit while automakers bleed on tariffs", "worker": "—"},
+    {"n": 10, "region": "OCEANIA", "angle": "RBA pauses at 4.35% after 3 hikes — housing prices falling in major Australian cities", "worker": "—"},
+    {"n": 11, "region": "OCEANIA", "angle": "BHP and Rio Tinto explore joint 200Mt iron ore dig in Pilbara", "worker": "—"},
+    {"n": 12, "region": "CRYPTO", "angle": "Bitcoin ETF assets hit $67B; April inflows $2.4B best month since Oct 2025", "worker": "—"},
+    {"n": 13, "region": "CRYPTO", "angle": "SEC cuts crypto fund approval timeline from 240 days to 75 — 100+ funds could launch in 2026", "worker": "—"},
+    {"n": 14, "region": "WOW", "angle": "First complete fruit fly connectome (Harvard/Princeton, Nature) — the brain is not the conductor", "worker": "—"},
+    {"n": 15, "region": "WOW", "angle": "UV light + water alone destroys PFAS forever chemicals — Aarhus University, Env Sci & Tech", "worker": "—"},
+    {"n": 16, "region": "WOW", "angle": "Oxford creates entirely new family of Schrodinger cat quantum states in trapped ions (Phys Rev X)", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil flows through the Strait of Hormuz — a narrow passage that carries 1 in 4 barrels shipped worldwide — are picking up after months of near-total shutdown. The crisis began in February when the US and Israel struck Iran and Iran blocked the strait. A fragile deal is now letting some ships through again. But if talks collapse, oil prices spike fast — analysts say a full recovery could take months."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "Gold just crossed $4,700 an ounce — a record. Normally, high government borrowing costs make gold less attractive. But Middle East war and US-China trade friction are pushing investors to buy it as protection. The safety instinct is winning. When the world feels deeply unpredictable, gold tends to rise regardless of what central banks do with rates."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "The US central bank looks set to skip cutting borrowing costs all year. Inflation is still too high, mostly because energy tied to the Iran war is expensive. But the economy is also fragile. Cutting costs would risk more inflation; raising them risks recession. Wall Street now sees only a 40% chance of even one rate reduction before 2027."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank cut its 2026 growth forecast for the third straight month — now just 1.1%. The peso is holding up because Mexican interest rates are higher than US rates, which attracts foreign money. But inflation is stuck above 4%, well above the official 3% target, so rate cuts will stay slow and cautious through the rest of the year."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "The US and Mexico wrapped their first official round of NAFTA 2.0 renegotiation this month. The biggest fight: how much of each car sold in North America must be built there. The US wants 82% of a car's value made locally — at least half from the US itself. Mexico must reach a deal by July 1 or the whole trade agreement enters a 10-year countdown to expiry."
+    },
+    {
+      "n": 6,
+      "region": "ASIA",
+      "text": "Japan's central bank raised borrowing costs to 1% — the highest since 1995 — and the country's stock market hit a record above 70,000. But the yen is still weakening past 161 per dollar. Why? Even at 1%, Japan's rates are far below the US or Europe. Investors still prefer parking money elsewhere, which keeps the yen weak despite the historic hike."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "China's central bank is quietly pushing more countries to use the yuan instead of dollars. This month it expanded a program letting foreign governments borrow yuan by posting Chinese bonds as collateral. Hong Kong plans to launch yuan bond futures in August. The goal: reduce China's dependence on the US dollar system one step at a time."
+    },
+    {
+      "n": 8,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised borrowing costs for the first time in this cycle, setting its key rate at 2.25%. The trigger: inflation across the euro zone hit 3% in April, pushed mostly by expensive energy tied to the Iran conflict. Higher rates will slow consumer spending and business investment — but the bank decided rising prices were the bigger risk."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Germany's main stock index trades near 24,700. But look inside: banks are having their best year in decades — profits up 16%. Car companies are doing the opposite. Revenues fell and profits shrank as US tariffs hit exports and global auto demand softened. The index looks stable only because banking profits are masking what automakers are losing."
+    },
+    {
+      "n": 10,
+      "region": "OCEANIA",
+      "text": "Australia's central bank left its key rate unchanged at 4.35% this month, pausing after three straight hikes earlier in 2026. Higher rates are already biting — the economy is slowing and house prices are falling in some cities. The bank is watching how much damage the earlier hikes cause before deciding whether to raise again."
+    },
+    {
+      "n": 11,
+      "region": "OCEANIA",
+      "text": "BHP and Rio Tinto — two of the world's biggest mining companies — are exploring a joint dig of up to 200 million tonnes of iron ore from neighboring land in Western Australia. Iron ore is the main raw material for steel. Combining operations next door cuts costs significantly. China buys about 70% of Australia's iron ore, so any shift in Chinese demand hits both companies at once."
+    },
+    {
+      "n": 12,
+      "region": "CRYPTO",
+      "text": "Spot Bitcoin investment funds in the US now hold over $67 billion in assets — just 18 months after their launch. April saw $2.4 billion flow in, the strongest month since October 2025. Separately, digital dollars now total $315 billion globally, with 59% in Tether. Institutions are treating Bitcoin less like a casino chip and more like a long-term reserve asset."
+    },
+    {
+      "n": 13,
+      "region": "CRYPTO",
+      "text": "The US financial watchdog is cutting the time to approve new crypto investment funds — from 240 days down to 75. It is also building a rulebook to classify which digital tokens count as legal securities. Over 100 new crypto funds could launch in the US this year. This is the most open the US has ever been to crypto products entering mainstream finance."
+    },
+    {
+      "n": 14,
+      "region": "WOW",
+      "text": "Scientists at Harvard Medical School and Princeton University mapped every neuron in a fruit fly's nervous system — all 160,000 connections, brain and spine together. The surprise: the brain is not the boss. Complex movements come from distributed circuits spread across the body, not a central command. It changes how we think about intelligence itself. Published June 8. 📄 Published in Nature · More: https://phys.org/news/2026-06-publish-connectome-fruit-fly-brain.html"
+    },
+    {
+      "n": 15,
+      "region": "WOW",
+      "text": "Scientists found a way to destroy forever chemicals — the compounds in non-stick pans and waterproof gear that never break down in nature — using only UV light and water. The light splits water into tiny reactive particles that strip apart the chemicals' unbreakable bonds. No extra chemicals needed. Led by Lu Bai and Zongsu Wei at Aarhus University, Denmark. 📄 Published in Environmental Science & Technology · More: https://bce.au.dk/en/currently/news/show/artikel/new-insight-could-change-how-we-break-down-forever-chemicals"
+    },
+    {
+      "n": 16,
+      "region": "WOW",
+      "text": "Oxford physicists built an entirely new category of quantum superposition — think Schrodinger's cat, but where each 'alive' and 'dead' version is itself in a quantum blur. S. Saner, D.M. Lucas and colleagues used single trapped ions to produce states no lab had ever made. The payoff: more stable quantum computing with built-in error protection. 📄 Published in Physical Review X · More: https://www.physics.ox.ac.uk/news/oxford-physicists-create-new-family-schrodingers-cat-states"
+    }
+  ]
+}
