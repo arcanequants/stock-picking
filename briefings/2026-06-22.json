@@ -1,0 +1,123 @@
+{
+  "date": "2026-06-22",
+  "summary": "US-Iran peace talks collapse as Warsh signals Fed hikes, forcing rate rises from Tokyo to Frankfurt while crypto ETFs bleed $5B.",
+  "causalChain": "Oil stays elevated as Hormuz uncertainty persists → inflation won't fall fast enough → central banks in Japan, Europe, and the US hold or raise rates → dollar strengthens, gold and crypto sell off, and growth forecasts get cut.",
+  "table": [
+    {"n": 1, "region": "GLOBAL", "angle": "US-Iran Geneva talks collapse; Brent back to $80.57", "worker": "—"},
+    {"n": 2, "region": "GLOBAL", "angle": "Warsh Fed holds rates, market now prices a hike; 10-yr yield 4.46%", "worker": "—"},
+    {"n": 3, "region": "GLOBAL", "angle": "Dollar hits 13-month high; gold falls to $4,150", "worker": "—"},
+    {"n": 4, "region": "GLOBAL", "angle": "IEEPA tariffs struck down; Section 301 replaces them on 60+ countries", "worker": "—"},
+    {"n": 5, "region": "MEXICO", "angle": "Banxico cuts expected; inflation at 4.45%, GDP at 1.2%", "worker": "—"},
+    {"n": 6, "region": "MEXICO", "angle": "USMCA formal review starts July 1; FDI record $40.87B", "worker": "—"},
+    {"n": 7, "region": "ASIA", "angle": "BoJ hikes to 1%, highest since 1995; Nikkei hits record 70,000", "worker": "—"},
+    {"n": 8, "region": "ASIA", "angle": "PBOC expands yuan liquidity for foreign central banks; HK yuan futures Aug", "worker": "—"},
+    {"n": 9, "region": "EUROPE", "angle": "ECB first rate hike since 2023; deposit rate to 2.25%", "worker": "—"},
+    {"n": 10, "region": "EUROPE", "angle": "Germany four-year growth drought; ECB warns recession risk by year-end", "worker": "—"},
+    {"n": 11, "region": "EUROPE", "angle": "OECD cuts UK growth forecast to 0.7%, steepest downgrade this round", "worker": "—"},
+    {"n": 12, "region": "OCEANIA", "angle": "BHP + Rio agree to jointly mine 200Mt Pilbara iron ore; RBA holds", "worker": "—"},
+    {"n": 13, "region": "OCEANIA", "angle": "China steel consumption -3.1% WoW; iron ore demand in prolonged slump", "worker": "—"},
+    {"n": 14, "region": "CRYPTO", "angle": "Bitcoin ~$70K; ETF outflows $5B over 19 of last 22 sessions", "worker": "—"},
+    {"n": 15, "region": "CRYPTO", "angle": "USDT + USDC on Ethereum shrink $4.4B in 30 days to $128.6B", "worker": "—"},
+    {"n": 16, "region": "CRYPTO", "angle": "MiCA deadline July 1: only 194 of 3,000+ EU crypto firms licensed", "worker": "—"},
+    {"n": 17, "region": "WOW", "angle": "Swiss centenarians share 37 blood proteins with 30-year-olds (Aging Cell)", "worker": "—"},
+    {"n": 18, "region": "WOW", "angle": "Largest sulfur molecule found in deep space 27,000 light-years away (A&A)", "worker": "—"},
+    {"n": 19, "region": "WOW", "angle": "WPI enzyme concrete locks away CO2 instead of releasing it (Matter)", "worker": "—"}
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "A US-Iran ceasefire gave oil markets hope that the Strait of Hormuz — the narrow waterway used by 20% of the world's oil shipments — would fully reopen. But peace talks in Switzerland collapsed on Thursday, sending Brent crude back to $80.57. Without a deal, Iran keeps demanding mandatory insurance on every ship passing through, adding cost and uncertainty to global energy supply."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US government paid its highest borrowing cost in months this week. New Federal Reserve Chair Kevin Warsh held short-term rates steady at 3.5–3.75% but hinted future hikes are possible — the opposite of what investors had expected. The 10-year government borrowing rate climbed to 4.46%. Higher borrowing costs make businesses and governments pay more, slowing spending and growth."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold fell to $4,150 per ounce, its lowest in two weeks, as the US dollar hit a 13-month high. These two assets tend to move in opposite directions: when the dollar strengthens, gold gets more expensive for buyers using other currencies, so demand drops. The dollar surged after the new Fed chair signaled US borrowing rates might go up, not down, making dollar assets more attractive globally."
+    },
+    {
+      "n": 4,
+      "region": "GLOBAL",
+      "text": "The US Supreme Court ruled Trump's main tariff tool illegal this year, so the administration switched to a different 74-year-old trade law to tax imports from 60+ countries. These taxes average 7.7% on all US imports — the highest since 1947 — and act like an extra $1,500/year cost per US household. Global trade is growing despite them, but routes are shifting away from the US-China corridor."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "Mexico's inflation sits at 4.45%, above the central bank's 3% goal, but it's been falling. Banxico — Mexico's equivalent of the Federal Reserve — has been cutting its main borrowing rate and is expected to cut again if inflation keeps cooling. The challenge: Mexico's economy is only growing 1.2%, so rate cuts must balance fighting inflation against avoiding a deeper growth slowdown."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "On July 1, the US, Mexico, and Canada begin their formal review of USMCA — the trade deal covering $873 billion in yearly commerce between the three countries. Mexico's factory wages of roughly $4.90/hour, 25% below Chinese wages, make it a natural home for factories fleeing US tariffs. Foreign investment hit a record $40.87 billion last year — the July review will determine if those gains hold."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's central bank raised its main interest rate to 1% on June 16 — the highest since 1995. For 30 years Japan kept rates near zero to fight stagnation; now persistent inflation driven by a weak yen and expensive energy imports forced a change. The Nikkei stock index hit a record above 70,000 in response, but the yen barely moved, still sitting near 160 per dollar."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "China's central bank is pushing to get more countries to hold and use Chinese yuan instead of US dollars. This week it expanded a program that lets foreign central banks borrow yuan directly, and Hong Kong plans to launch yuan-denominated bond futures in August. If the yuan becomes a common global trade currency, China reduces dependence on the dollar — a decades-long strategic goal that could reshape how countries settle international payments."
+    },
+    {
+      "n": 9,
+      "region": "EUROPE",
+      "text": "Europe's central bank raised borrowing costs for the first time since 2023. The deposit rate at the European Central Bank went up to 2.25%, a response to inflation expected to average 3% this year — driven largely by Middle East war-related energy costs. European stock markets fell on the news, as higher borrowing rates make company loans and mortgages more expensive, squeezing business profits."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Germany has had near-zero or negative growth for four consecutive years — something not seen in postwar history. Its 2026 GDP is projected to grow just 0.6%, but the ECB explicitly warned that a prolonged Middle East conflict could push Germany into recession again by year-end. Its energy-intensive industries — chemicals, autos, steel — are being squeezed by high energy and rising borrowing costs simultaneously."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "The OECD cut its UK growth forecast by half a percentage point to just 0.7% for 2026 — one of the steepest downgrades among major economies this round. Two forces are squeezing UK households: planned government spending cuts reduce services, while Middle East conflict pushes up energy prices. The UK relies more heavily on imported gas than France or Germany, making it more exposed to energy price spikes."
+    },
+    {
+      "n": 12,
+      "region": "OCEANIA",
+      "text": "Australia's two biggest miners, BHP and Rio Tinto, agreed to jointly explore extracting 200 million tonnes of iron ore from neighboring fields in Western Australia's Pilbara region. Meanwhile, Australia's central bank held borrowing rates steady as financial conditions are already tight from prior hikes. The deal matters globally: China — which buys most of Australia's ore for steel — is seeing its weakest demand in years."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "China's weekly use of its five main steel products fell another 3.1% last week, a signal that the country's construction sector — the biggest driver of global demand for iron ore — remains in a prolonged slump. Lower steel demand drags down prices for Australian and Brazilian miners who ship billions of dollars of iron ore to Chinese steel mills every year."
+    },
+    {
+      "n": 14,
+      "region": "CRYPTO",
+      "text": "Bitcoin fell to around $70,000 after institutional funds pulled nearly $5 billion out of US-listed Bitcoin investment funds over 19 of the last 22 trading days — the biggest sustained exit since these funds launched in 2024. The trigger: stronger US job numbers made investors prefer interest-paying bonds over Bitcoin, which pays no yield. Large long-term holders are quietly buying while the funds sell."
+    },
+    {
+      "n": 15,
+      "region": "CRYPTO",
+      "text": "Digital dollars — tokens pegged 1:1 to the US dollar used to move money across crypto platforms — shrank on Ethereum's network. The two largest, USDT and USDC, together fell from $133B to $128.6B in 30 days. When this supply shrinks, it usually signals traders are exiting crypto entirely rather than rotating between coins, suggesting falling confidence across the broader market."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "Europe's new crypto rulebook takes full effect July 1 — just 9 days away. Any company providing digital asset services to EU customers without an official license must then stop. Of the 3,000+ crypto companies registered in Europe in 2024, only 194 have obtained that license. This could eliminate most crypto options available to 450 million Europeans, reshaping the continent's digital finance landscape."
+    },
+    {
+      "n": 17,
+      "region": "WOW",
+      "text": "Scientists at the Universities of Geneva and Lausanne measured 724 proteins in the blood of Swiss people aged 100+ and compared them to adults in their 30s–80s. In 37 of those proteins, the centenarians looked almost identical to much younger adults — especially in markers of cellular damage and oxidative stress. People who reach 100 appear to have biologically slower-aging cells, not just good fortune. 📄 Published in Aging Cell · More: https://onlinelibrary.wiley.com/doi/10.1111/acel.70409"
+    },
+    {
+      "n": 18,
+      "region": "WOW",
+      "text": "Astronomers at Germany's Max Planck Institute for Extraterrestrial Physics and Spain's Center for Astrobiology found the largest known sulfur molecule ever detected in deep space — a ring-shaped chemical called thiepine — in a gas cloud 27,000 light-years from Earth near the Milky Way's center. Sulfur is a key building block for proteins; finding large sulfur molecules in space supports the idea that life's ingredients form long before planets exist. 📄 Published in Astronomy & Astrophysics · More: https://www.cnn.com/2026/01/30/science/sulfur-molecule-space-discovery"
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "text": "Engineers at Worcester Polytechnic Institute in Massachusetts made a concrete-like material using an enzyme from human red blood cells that turns carbon dioxide into solid rock-like minerals in hours. Ordinary concrete releases 330 kg of CO2 per cubic meter when produced; this material locks carbon away instead. Strong enough for walls and roof panels, it could change how buildings are made. 📄 Published in Matter · More: https://www.wpi.edu/news/carbon-negative-building-material-developed-worcester-polytechnic-institute-published-matter"
+    }
+  ]
+}
