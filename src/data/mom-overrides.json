@@ -677,5 +677,35 @@
     "risk_short": "El #1 es la trampa de valor: está barata y rinde 7% porque el negocio se encoge —ventas orgánicas -3% y utilidad -37% el último trimestre, con guía a -10/-15% este año—. Presión de marcas blancas, efecto Ozempic (menos apetito) y deuda elevada. 'Barato' puede seguir cayendo.",
     "model": "manual-claude",
     "generated_at": "2026-06-17T00:00:00Z"
+  },
+  "HD": {
+    "one_liner": "Home Depot es la tienda de mejoras para el hogar más grande del mundo (las naranjas) —donde compras todo para arreglar y remodelar tu casa— y le paga dividendo a sus dueños desde hace 17 años.",
+    "why_short": "Es el líder absoluto de un mercado que no desaparece. Apostó ~$24 mil millones por ganarse al contratista profesional, te paga ~2.7% anual, y se reactiva cuando bajen las tasas de interés.",
+    "risk_short": "Las tasas de interés altas frenan las remodelaciones grandes: la gente no se muda ni renueva la cocina. Las ventas casi no crecieron (+0.6%) el último trimestre y a ~25x ya no está barata."
+  },
+  "RIO": {
+    "one_liner": "Rio Tinto es una de las 2 minas más grandes del mundo: saca hierro, cobre, aluminio y litio —los metales con que se hace el acero, la electricidad y las baterías—. La compras en dólares en Nueva York.",
+    "why_short": "Es el productor #1 de hierro del mundo, cotiza barata (~15x utilidad) y te paga ~4.2% al año con política fija de repartir el 60% de su ganancia ($6,500 millones en dividendos en 2025). Cobre y litio son el crecimiento.",
+    "risk_short": "Casi 3/4 de sus ganancias dependen del hierro, y el mayor comprador del mundo es China. Si la economía china se enfría, el precio del hierro cae y la utilidad de Rio cae con él. Además los metales son muy cíclicos."
+  },
+  "WMT": {
+    "one_liner": "Walmart es la tienda más grande del mundo —donde compra medio Estados Unidos—, y ahora también gana mucho con ventas en línea y publicidad dentro de su app.",
+    "why_short": "El 90% de EE.UU. vive a menos de 16 km de un Walmart. Su venta en línea creció 26% y su publicidad 44% el último trimestre —dos negocios nuevos de alta ganancia—. Paga dividendo hace 53 años seguidos.",
+    "risk_short": "Está cara (~41 veces su ganancia, el doble de lo que valía un supermercado antes). Si el crecimiento de las ventas en línea se frena, la acción puede bajar aunque las tiendas sigan bien."
+  },
+  "GOOGL": {
+    "one_liner": "Alphabet es la dueña de Google, YouTube, Android, Gemini (su IA) y Waymo (taxis sin conductor). Casi todo su dinero viene de los anuncios en búsquedas y videos.",
+    "why_short": "El miedo era que la IA matara al buscador; pasó lo contrario: la búsqueda creció +19% y su nube creció 63%. Vale $4.16 billones, crece 22% y cotiza barata (~26x). Analistas ven +26%.",
+    "risk_short": "Un tribunal de EE.UU. ya la declaró monopolio en búsqueda y el gobierno apeló pidiendo más castigo. Además gasta $180-190 mil millones al año en IA y casi todo su ingreso depende de los anuncios."
+  },
+  "AMZN": {
+    "one_liner": "Amazon es la tienda online más grande del mundo, pero su verdadera mina de oro es AWS, la \"nube\" que renta servidores a medio internet y es el corazón de la Inteligencia Artificial.",
+    "why_short": "AWS aporta casi 60% de la ganancia con solo ~21% de las ventas, y acaba de reacelerar a 28% (lo más rápido en casi 4 años) justo cuando la IA se construye encima. Margen récord. Analistas ven +38%.",
+    "risk_short": "Va a gastar ~$200 mil millones en 2026 (centros de datos para IA). Si no da retorno, el flujo de caja se hunde. Además cotiza cara (~32x), enfrenta a Microsoft y Google en la nube, y una demanda antimonopolio de la FTC."
+  },
+  "COPX": {
+    "one_liner": "COPX no es una empresa: es una canasta de ~40 mineras de cobre del mundo en una sola compra. Le apuestas al cobre, el metal de los coches eléctricos y los centros de datos de IA.",
+    "why_short": "El mundo necesita mucho más cobre del que las minas dan: un coche eléctrico usa ~4 veces más que uno de gasolina. Una canasta equilibrada (~40 mineras, ninguna pesa +5.6%) que paga ~2% al año.",
+    "risk_short": "Todo depende del precio del cobre: si la economía mundial (sobre todo China) se enfría, el cobre cae y todo el fondo cae. Además es muy volátil y las minas están en países con riesgo político."
   }
 }
