@@ -371,11 +371,9 @@
     "model": "gpt-4o"
   },
   "HEI": {
-    "one_liner": "HEICO fabrica piezas de avión más baratas y seguras, y ahora está en manos de los hijos del fundador tras su fallecimiento.",
-    "why_short": "HEICO ha crecido mucho vendiendo piezas de avión más económicas y seguras. Sus ventas recientes superaron expectativas, y se espera que siga creciendo con nuevos contratos y adquisiciones.",
-    "risk_short": "El principal riesgo es que las acciones de HEICO son caras. Si el mercado cambia de opinión, el precio podría bajar mucho, aunque la empresa siga funcionando bien.",
-    "generated_at": "2026-05-25T00:15:39.679Z",
-    "model": "gpt-4o"
+    "one_liner": "HEICO hace piezas de repuesto de avión aprobadas por la FAA que cuestan 30-50% menos que la original de Boeing o GE — con la misma seguridad. Empresa familiar de Miami.",
+    "why_short": "El último trimestre rompió récord: ventas +25% ($1,375.7M) y ganancias +49%. La familia Mendelson lleva 35 años comprando empresitas y haciéndolas crecer: la acción subió ~47,500% de 1990 a 2019.",
+    "risk_short": "Está carísima: a ~62 veces sus ganancias, el precio ya da por hecho años de crecimiento perfecto. Cualquier trimestre flojo puede tirar fuerte la acción. Casi no paga dividendo."
   },
   "HWM": {
     "one_liner": "Howmet Aerospace fabrica piezas esenciales para motores de avión y trabaja con gigantes como Boeing y Airbus, logrando ingresos récord de 8.25 mil millones de dólares en 2025.",
@@ -707,5 +705,10 @@
     "one_liner": "COPX no es una empresa: es una canasta de ~40 mineras de cobre del mundo en una sola compra. Le apuestas al cobre, el metal de los coches eléctricos y los centros de datos de IA.",
     "why_short": "El mundo necesita mucho más cobre del que las minas dan: un coche eléctrico usa ~4 veces más que uno de gasolina. Una canasta equilibrada (~40 mineras, ninguna pesa +5.6%) que paga ~2% al año.",
     "risk_short": "Todo depende del precio del cobre: si la economía mundial (sobre todo China) se enfría, el cobre cae y todo el fondo cae. Además es muy volátil y las minas están en países con riesgo político."
+  },
+  "HDB": {
+    "one_liner": "HDFC Bank es el banco privado #1 de India y uno de los 10 más valiosos del mundo: guarda y presta el dinero de millones de indios que apenas entran al sistema financiero.",
+    "why_short": "Es la apuesta más directa al crecimiento de India, el país grande que más crece. Sus depósitos subieron +14.4% en un año y casi no tiene préstamos impagos (1.15%). Analistas: Strong Buy, target ~$34.43 vs $25.42 hoy.",
+    "risk_short": "El ADR es en dólares pero el banco gana en rupias: si la rupia se debilita o la economía india se frena, tu retorno en dólares baja aunque al banco le vaya bien. También lo regula el banco central de India."
   }
 }
