@@ -10,7 +10,8 @@
     "economia": "Economy",
     "verify": "Verifiable Record",
     "verifyTooltip": "Verifiable record — digital notary",
-    "terminal": "Terminal"
+    "terminal": "Terminal",
+    "picks": "Picks"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Stock Portfolio. This is not financial advice.",
@@ -902,5 +903,15 @@
     "stocksTitle": "Every Sunday we send you how they did — free.",
     "portfolioTitle": "We'll update you every Sunday on the portfolio.",
     "portfolioSubtitle": "Get a weekly summary with the most important moves."
+  },
+  "PicksFeed": {
+    "title": "Your picks",
+    "subtitle": "Today’s pick and the full history. Drop in anytime.",
+    "todayPick": "Today’s pick",
+    "latestPick": "Latest pick",
+    "seeWhy": "See the why",
+    "pastPicks": "Past picks",
+    "ctaTitle": "Get every pick",
+    "ctaSubtitle": "Create your account and try 14 days free."
   }
 }
