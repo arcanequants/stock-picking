@@ -131,7 +131,7 @@ final class PickStatusStore: ObservableObject {
         }
     }
 
-    private func postDecision<B: Encodable>(pickNumber: Int, body: B) async -> Bool {
+    private func postDecision<B: Encodable & Sendable>(pickNumber: Int, body: B) async -> Bool {
         do {
             let resp = try await APIClient.shared.post(
                 "/api/picks/\(pickNumber)/decision",

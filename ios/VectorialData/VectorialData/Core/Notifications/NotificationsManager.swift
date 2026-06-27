@@ -142,37 +142,37 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
         _ center: UNUserNotificationCenter,
         didReceive response: UNNotificationResponse
     ) async {
+        // Parse everything into Sendable locals here, in the nonisolated
+        // context, so the closure hopped to the main actor never captures the
+        // non-Sendable `userInfo` ([AnyHashable: Any]).
         let userInfo = response.notification.request.content.userInfo
         let kind = userInfo["kind"] as? String
+        let pickNumber = parsePickNumber(userInfo)
+        let newsId = (userInfo["news_id"] as? String).flatMap(UUID.init(uuidString:))
 
         await MainActor.run {
             switch kind {
             case "new_pick":
-                if let n = userInfo["pick_number"] as? Int {
-                    Self.shared.pendingPickNumber = n
-                } else if let s = userInfo["pick_number"] as? String,
-                          let n = Int(s) {
-                    Self.shared.pendingPickNumber = n
-                }
+                if let pickNumber { Self.shared.pendingPickNumber = pickNumber }
             case "weekly_digest":
                 Self.shared.pendingWeeklyDigest = true
             case "news":
-                if let s = userInfo["news_id"] as? String,
-                   let id = UUID(uuidString: s) {
-                    Self.shared.pendingNewsId = id
-                }
+                if let newsId { Self.shared.pendingNewsId = newsId }
             case "dividend_paid":
                 // Re-use the new-pick deep link: route to the pick detail
                 // where the new "DIVIDENDOS" section is already visible.
-                if let n = userInfo["pick_number"] as? Int {
-                    Self.shared.pendingPickNumber = n
-                } else if let s = userInfo["pick_number"] as? String,
-                          let n = Int(s) {
-                    Self.shared.pendingPickNumber = n
-                }
+                if let pickNumber { Self.shared.pendingPickNumber = pickNumber }
             default:
                 break
             }
         }
+    }
+
+    /// Reads `pick_number` from a notification payload, tolerating both Int and
+    /// String encodings. Pure + nonisolated so it runs in the delegate context.
+    private nonisolated func parsePickNumber(_ userInfo: [AnyHashable: Any]) -> Int? {
+        if let n = userInfo["pick_number"] as? Int { return n }
+        if let s = userInfo["pick_number"] as? String { return Int(s) }
+        return nil
     }
 }

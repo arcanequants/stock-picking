@@ -12,7 +12,7 @@ struct AuthView: View {
     @State private var sent = false
     @State private var errorMessage: String?
     @State private var resendCooldown: Int = 0
-    @State private var cooldownTimer: Timer?
+    @State private var cooldownTask: Task<Void, Never>?
     @State private var otpCode: String = ""
     @State private var isVerifyingOTP = false
 
@@ -72,7 +72,7 @@ struct AuthView: View {
             .padding(24)
         }
         .preferredColorScheme(.dark)
-        .onDisappear { cooldownTimer?.invalidate() }
+        .onDisappear { cooldownTask?.cancel() }
     }
 
     private func send() {
@@ -130,8 +130,8 @@ struct AuthView: View {
     }
 
     private func useDifferentEmail() {
-        cooldownTimer?.invalidate()
-        cooldownTimer = nil
+        cooldownTask?.cancel()
+        cooldownTask = nil
         resendCooldown = 0
         sent = false
         errorMessage = nil
@@ -158,15 +158,16 @@ struct AuthView: View {
     }
 
     private func startResendCooldown() {
-        cooldownTimer?.invalidate()
+        cooldownTask?.cancel()
         resendCooldown = 30
-        cooldownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            Task { @MainActor in
-                if resendCooldown > 0 {
-                    resendCooldown -= 1
-                } else {
-                    timer.invalidate()
-                }
+        // Structured countdown instead of a Timer: no non-Sendable Timer is
+        // captured across the actor hop, so this is clean under Swift 6 strict
+        // concurrency. The Task is @MainActor (inherited from the View).
+        cooldownTask = Task { @MainActor in
+            while resendCooldown > 0 {
+                try? await Task.sleep(for: .seconds(1))
+                if Task.isCancelled { return }
+                resendCooldown -= 1
             }
         }
     }

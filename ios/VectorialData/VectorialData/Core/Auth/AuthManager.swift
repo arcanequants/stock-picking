@@ -36,7 +36,7 @@ final class AuthManager: ObservableObject {
         // here whenever a request returns 401; we trade the refresh_token in
         // the Keychain for a fresh access_token and let the request retry.
         Task { [weak self] in
-            await APIClient.shared.setRefreshHandler {
+            await APIClient.shared.setRefreshHandler { [weak self] in
                 await self?.refreshAccessToken() ?? false
             }
         }

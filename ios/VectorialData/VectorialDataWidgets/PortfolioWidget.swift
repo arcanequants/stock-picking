@@ -3,6 +3,13 @@ import WidgetKit
 
 // MARK: - Timeline
 
+/// Carries WidgetKit's non-Sendable completion handler across the `Task`
+/// boundary. Safe because each handler is stored once and invoked exactly once
+/// from a single Task — there is no concurrent access to wrap-around.
+private struct UncheckedSendable<T>: @unchecked Sendable {
+    let value: T
+}
+
 struct PortfolioEntry: TimelineEntry {
     let date: Date
     let snapshot: PortfolioSnapshot?
@@ -16,19 +23,21 @@ struct PortfolioTimelineProvider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (PortfolioEntry) -> Void) {
+        let box = UncheckedSendable(value: completion)
         Task {
             let snap = await fetchSnapshot()
-            completion(PortfolioEntry(date: Date(), snapshot: snap))
+            box.value(PortfolioEntry(date: Date(), snapshot: snap))
         }
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<PortfolioEntry>) -> Void) {
+        let box = UncheckedSendable(value: completion)
         Task {
             let snap = await fetchSnapshot()
             let now = Date()
             let next = Calendar.current.date(byAdding: .minute, value: 15, to: now) ?? now.addingTimeInterval(900)
             let timeline = Timeline(entries: [PortfolioEntry(date: now, snapshot: snap)], policy: .after(next))
-            completion(timeline)
+            box.value(timeline)
         }
     }
 

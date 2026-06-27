@@ -9,7 +9,7 @@ actor APIClient {
     private let decoder: JSONDecoder
     private let encoder: JSONEncoder
     private var bearerToken: String?
-    private var refreshHandler: (() async -> Bool)?
+    private var refreshHandler: (@Sendable () async -> Bool)?
 
     private init() {
         let config = URLSessionConfiguration.default
@@ -27,7 +27,7 @@ actor APIClient {
 
     /// Installed once by `AuthManager`. Returns `true` if a refresh succeeded
     /// and the bearer was updated; `false` if the refresh token is dead.
-    func setRefreshHandler(_ handler: @escaping () async -> Bool) {
+    func setRefreshHandler(_ handler: @escaping @Sendable () async -> Bool) {
         self.refreshHandler = handler
     }
 
