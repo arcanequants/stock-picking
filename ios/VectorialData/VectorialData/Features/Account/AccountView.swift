@@ -7,6 +7,9 @@ struct AccountView: View {
     @EnvironmentObject private var pickStatus: PickStatusStore
     @State private var isSigningOut = false
     @State private var isEditingDefault = false
+    @State private var showDeleteConfirm = false
+    @State private var isDeleting = false
+    @State private var deleteError: String?
 
     var body: some View {
         NavigationStack {
@@ -91,6 +94,21 @@ struct AccountView: View {
                     }
                     .disabled(isSigningOut)
                 }
+
+                Section {
+                    Button(role: .destructive) {
+                        showDeleteConfirm = true
+                    } label: {
+                        HStack {
+                            Text("Eliminar cuenta")
+                            Spacer()
+                            if isDeleting { ProgressView() }
+                        }
+                    }
+                    .disabled(isDeleting || isSigningOut)
+                } footer: {
+                    Text("Borra tu cuenta y todos tus datos de forma permanente. Esta acción no se puede deshacer. Si tienes una suscripción activa de App Store, cancélala por separado en Ajustes › tu nombre › Suscripciones.")
+                }
             }
             .navigationTitle("Account")
             .task { await notifications.refreshStatus() }
@@ -109,6 +127,32 @@ struct AccountView: View {
                     Task { await pickStatus.updateDefaultInvestment(newValue) }
                 }
                 .presentationDetents([.height(280)])
+            }
+            .confirmationDialog(
+                "¿Eliminar tu cuenta?",
+                isPresented: $showDeleteConfirm,
+                titleVisibility: .visible
+            ) {
+                Button("Eliminar cuenta", role: .destructive) {
+                    isDeleting = true
+                    Task {
+                        do {
+                            await notifications.unregister()
+                            try await auth.deleteAccount()
+                        } catch {
+                            deleteError = "No pudimos eliminar tu cuenta. Inténtalo de nuevo."
+                        }
+                        isDeleting = false
+                    }
+                }
+                Button("Cancelar", role: .cancel) {}
+            } message: {
+                Text("Esto borra tu cuenta, tu portafolio y todos tus datos de forma permanente. No se puede deshacer.")
+            }
+            .alert("No se pudo eliminar", isPresented: .constant(deleteError != nil)) {
+                Button("OK") { deleteError = nil }
+            } message: {
+                Text(deleteError ?? "")
             }
         }
     }

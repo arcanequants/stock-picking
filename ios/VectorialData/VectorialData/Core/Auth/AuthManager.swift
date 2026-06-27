@@ -193,6 +193,27 @@ final class AuthManager: ObservableObject {
         await clearSession()
     }
 
+    /// Permanently deletes the user's account on the server, then wipes the
+    /// local session. Required by App Store Guideline 5.1.1(v).
+    ///
+    /// The backend cancels any Stripe subscription and removes all user data;
+    /// it cannot cancel an Apple In-App Purchase subscription — the user does
+    /// that in App Store Settings (the confirmation UI tells them so).
+    ///
+    /// Throws if the server fails to delete the account, in which case the
+    /// local session is left intact so the user can retry.
+    func deleteAccount() async throws {
+        // Unregister this device's push token while we still hold a valid
+        // bearer, mirroring sign-out, before the account disappears.
+        await NotificationsManager.shared.unregister()
+        _ = try await APIClient.shared.post(
+            "/api/account/delete",
+            body: EmptyBody(),
+            as: EmptyResponse.self
+        )
+        await clearSession()
+    }
+
     /// Wipes all local session state: keychain tokens, bearer, profile, and
     /// every cached store. Used by sign-out and by any path that detects a
     /// dead session, so a second user never sees the first user's cached data.
@@ -253,3 +274,4 @@ final class AuthManager: ObservableObject {
 }
 
 struct EmptyResponse: Decodable {}
+struct EmptyBody: Encodable {}
