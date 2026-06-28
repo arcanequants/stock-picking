@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import DeliveryPreference from "@/components/DeliveryPreference";
 import DcaCalculator from "@/components/DcaCalculator";
 import AccountActions from "@/components/AccountActions";
+import ReferralCard from "@/components/ReferralCard";
 import { getAuthState } from "@/lib/auth";
 
 export const metadata: Metadata = {
@@ -24,6 +25,17 @@ export default async function AccountPage() {
 
   const t = await getTranslations("Welcome");
   const tAccount = await getTranslations("Account");
+  const tReferral = await getTranslations("Referral");
+
+  const referralLabels = {
+    title: tReferral("title"),
+    desc: tReferral("desc"),
+    copy: tReferral("copy"),
+    copied: tReferral("copied"),
+    referred: tReferral("referred"),
+    converted: tReferral("converted"),
+    monthsEarned: tReferral("monthsEarned"),
+  };
 
   const deliveryLabels = {
     title: t("deliveryTitle"),
@@ -93,6 +105,11 @@ export default async function AccountPage() {
             logout: tAccount("logout"),
           }}
         />
+      </section>
+
+      {/* Referrals */}
+      <section className="border border-border rounded-2xl p-6">
+        <ReferralCard labels={referralLabels} />
       </section>
 
       {/* Vectorial Signals */}
