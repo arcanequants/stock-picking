@@ -14,7 +14,12 @@ export async function GET(
     .replace(/[^A-Z0-9]/g, "")
     .slice(0, 16);
 
-  const res = NextResponse.redirect(new URL("/join", request.url));
+  // Optional ?to=/internal/path lets a shared pick link both attribute the
+  // referral and land on the pick. Only same-origin paths (block open redirect).
+  const to = new URL(request.url).searchParams.get("to");
+  const dest = to && /^\/(?!\/)[A-Za-z0-9/._-]*$/.test(to) ? to : "/join";
+
+  const res = NextResponse.redirect(new URL(dest, request.url));
   if (clean) {
     res.cookies.set("vd_ref", clean, {
       maxAge: 60 * 60 * 24 * 30, // 30 days

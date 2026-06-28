@@ -142,6 +142,7 @@ export default function PositionReturns({
                         url={`/share/${pos.ticker}`}
                         title={`${pos.ticker} ${pos.return_pct >= 0 ? "+" : ""}${pos.return_pct.toFixed(1)}%`}
                         variant="icon"
+                        referral
                       />
                     </td>
                   </>
@@ -155,6 +156,7 @@ export default function PositionReturns({
                         url={`/share/${pos.ticker}`}
                         title={`${pos.ticker} ${pos.return_pct >= 0 ? "+" : ""}${pos.return_pct.toFixed(1)}%`}
                         variant="icon"
+                        referral
                       />
                     </td>
                   </>
