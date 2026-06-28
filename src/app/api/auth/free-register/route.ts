@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { sendFreeSignupAlertToAdmin } from "@/lib/resend";
 import { ADMIN_EMAIL } from "@/lib/admin";
+import { attachReferral } from "@/lib/referrals";
 
 export const dynamic = "force-dynamic";
 
@@ -90,6 +91,14 @@ export async function POST(request: Request) {
     }
 
     console.log("Trial started:", normalizedEmail);
+
+    // Referral attribution: the /r/<code> link stored vd_ref (httpOnly cookie).
+    // attachReferral never throws — attribution must not block signup.
+    const cookieHeader = request.headers.get("cookie") || "";
+    const refMatch = cookieHeader.match(/(?:^|;\s*)vd_ref=([^;]+)/);
+    if (refMatch) {
+      await attachReferral(normalizedEmail, decodeURIComponent(refMatch[1]));
+    }
 
     // Fire-and-forget admin alert — never block signup on email failure.
     const totalFreeUsers = (allUsers?.users?.length ?? 0) + (userExists ? 0 : 1);

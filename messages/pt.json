@@ -902,5 +902,14 @@
     "stocksTitle": "Todo domingo te mandamos como elas foram — grátis.",
     "portfolioTitle": "Te avisamos todo domingo como vai o portfólio.",
     "portfolioSubtitle": "Receba um resumo semanal com os movimentos mais importantes."
+  },
+  "Referral": {
+    "title": "Indique e ganhe",
+    "desc": "Compartilhe seu link. Para cada amigo que assinar, você ganha 1 mês grátis. Sem limite.",
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "referred": "Convidados",
+    "converted": "Assinantes",
+    "monthsEarned": "Meses grátis"
   }
 }

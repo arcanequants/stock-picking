@@ -234,6 +234,7 @@ export default function NotificationsList({
                         url={`/stocks/${event.ticker}`}
                         title={renderHeadline(event)}
                         variant="icon"
+                        referral
                       />
                     </div>
                   )}

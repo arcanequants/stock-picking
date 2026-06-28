@@ -7,22 +7,41 @@ interface ShareButtonProps {
   url: string;
   title: string;
   variant?: "icon" | "button";
+  // When true, embed the user's referral code so the shared link both
+  // attributes the referral and lands on `url` (e.g. /r/<code>?to=/stocks/HEI).
+  referral?: boolean;
 }
 
 export default function ShareButton({
   url,
   title,
   variant = "button",
+  referral = false,
 }: ShareButtonProps) {
   const [copied, setCopied] = useState(false);
   const t = useTranslations("Share");
 
-  const fullUrl =
-    typeof window !== "undefined"
-      ? `${window.location.origin}${url}`
-      : url;
+  const buildShareUrl = async (): Promise<string> => {
+    const origin =
+      typeof window !== "undefined" ? window.location.origin : "";
+    if (referral) {
+      try {
+        const r = await fetch("/api/referral/me");
+        if (r.ok) {
+          const d = await r.json();
+          if (d?.code) {
+            return `${origin}/r/${d.code}?to=${encodeURIComponent(url)}`;
+          }
+        }
+      } catch {
+        // fall through to the plain link
+      }
+    }
+    return origin ? `${origin}${url}` : url;
+  };
 
   const handleShare = async () => {
+    const fullUrl = await buildShareUrl();
     if (navigator.share) {
       try {
         await navigator.share({ title, url: fullUrl });

@@ -902,5 +902,14 @@
     "stocksTitle": "Every Sunday we send you how they did — free.",
     "portfolioTitle": "We'll update you every Sunday on the portfolio.",
     "portfolioSubtitle": "Get a weekly summary with the most important moves."
+  },
+  "Referral": {
+    "title": "Refer & earn",
+    "desc": "Share your link. For every friend who subscribes, you earn 1 free month. No limit.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "referred": "Invited",
+    "converted": "Subscribed",
+    "monthsEarned": "Free months"
   }
 }
