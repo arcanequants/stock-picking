@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function FreeSignupForm() {
   const t = useTranslations("FreeSignup");
+  const locale = useLocale();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "already" | "error">("idle");
 
@@ -32,6 +33,18 @@ export default function FreeSignupForm() {
       if (!res.ok) {
         setStatus("error");
         return;
+      }
+
+      // Send a login link so the user can actually enter their trial.
+      // Fire-and-forget — the success copy tells them to check their email.
+      try {
+        await fetch("/api/auth/magic-link", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: email.trim(), locale }),
+        });
+      } catch {
+        // ignore — they can still log in from the nav
       }
 
       setStatus(data.already ? "already" : "success");

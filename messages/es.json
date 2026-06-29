@@ -888,19 +888,19 @@
   },
   "FreeSignup": {
     "separator": "¿Aún no estás seguro?",
-    "description": "Recibe nuestro resumen semanal gratis y decide después.",
+    "description": "Prueba 14 días gratis. Sin tarjeta, solo tu correo.",
     "emailPlaceholder": "Tu email",
-    "cta": "Recibe el resumen gratis",
-    "success": "¡Listo! Este domingo recibes tu primer resumen.",
-    "alreadyRegistered": "Ya estás registrado. ¡Nos vemos el domingo!",
+    "cta": "Probar 14 días gratis",
+    "success": "¡Tu prueba de 14 días empezó! Revisa tu correo para entrar.",
+    "alreadyRegistered": "Ya tienes una cuenta. Revisa tu correo para entrar.",
     "error": "Algo salió mal. Intenta de nuevo.",
     "invalidEmail": "Ingresa un email válido.",
-    "homeTitle": "Cada domingo, un resumen de cómo les fue a nuestras empresas.",
-    "homeSubtitle": "Gratis. Sin tarjeta.",
+    "homeTitle": "Prueba Vectorial Data 14 días gratis.",
+    "homeSubtitle": "Sin tarjeta. Solo tu correo.",
     "homeFinalAlt": "¿Solo quieres probar?",
-    "homeFinalDesc": "Recibe el resumen semanal gratis — sin tarjeta.",
-    "stocksTitle": "Cada domingo te mandamos cómo les fue — gratis.",
-    "portfolioTitle": "Te avisamos cada domingo cómo va el portafolio.",
-    "portfolioSubtitle": "Recibe un resumen semanal con los movimientos más importantes."
+    "homeFinalDesc": "14 días gratis — sin tarjeta.",
+    "stocksTitle": "Prueba 14 días gratis y ve el porqué de cada pick.",
+    "portfolioTitle": "Prueba 14 días gratis.",
+    "portfolioSubtitle": "Acceso completo al research y los picks. Sin tarjeta."
   }
 }
