@@ -887,20 +887,20 @@
     "billingNote": "Top up your balance with USDC via Stripe at the API keys dashboard (minimum 5 USDC)."
   },
   "FreeSignup": {
-    "separator": "Not sure yet?",
-    "description": "Get our free weekly summary and decide later.",
+    "separator": "Still not sure?",
+    "description": "Try 14 days free. No card — just your email.",
     "emailPlaceholder": "Your email",
-    "cta": "Get the free summary",
-    "success": "Done! You'll receive your first summary this Sunday.",
-    "alreadyRegistered": "You're already signed up. See you Sunday!",
+    "cta": "Try 14 days free",
+    "success": "Your 14-day trial started! Check your email to log in.",
+    "alreadyRegistered": "You already have an account. Check your email to log in.",
     "error": "Something went wrong. Try again.",
     "invalidEmail": "Enter a valid email.",
-    "homeTitle": "Every Sunday, a summary of how our companies did.",
-    "homeSubtitle": "Free. No credit card.",
-    "homeFinalAlt": "Just want to try?",
-    "homeFinalDesc": "Get the free weekly summary — no card required.",
-    "stocksTitle": "Every Sunday we send you how they did — free.",
-    "portfolioTitle": "We'll update you every Sunday on the portfolio.",
-    "portfolioSubtitle": "Get a weekly summary with the most important moves."
+    "homeTitle": "Try Vectorial Data free for 14 days.",
+    "homeSubtitle": "No card. Just your email.",
+    "homeFinalAlt": "Just want to try it?",
+    "homeFinalDesc": "14 days free — no card.",
+    "stocksTitle": "Try 14 days free and see the why behind every pick.",
+    "portfolioTitle": "Try 14 days free.",
+    "portfolioSubtitle": "Full access to the research and picks. No card."
   }
 }
