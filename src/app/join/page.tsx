@@ -25,43 +25,51 @@ export default async function JoinPage() {
         <p className="text-text-muted text-lg">{t("subtitle")}</p>
       </section>
 
+      {/* Trial — primary CTA: no card, just email */}
       <div className="border border-brand-border bg-brand-subtle rounded-2xl p-8 mx-auto max-w-md">
-        <p className="text-sm text-brand-text font-medium uppercase tracking-wider mb-2">{t("pricingLabel")}</p>
-        <div className="flex items-baseline justify-center gap-1 mb-2">
-          <span className="text-5xl font-bold">$1</span>
-          <span className="text-text-muted">{t("pricingPeriod")}</span>
-        </div>
-        <p className="text-text-faint text-sm mb-6">{t("pricingSubtitle")}</p>
-
-        <ul className="text-left space-y-3 mb-8 text-sm">
-          {[t("feature1"), t("feature2"), t("feature3"), t("feature4"), t("feature5")].map((item) => (
-            <li key={item} className="flex items-start gap-2 text-text-secondary">
-              <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        <a href={process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "#"} className="cta-glow block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center">
-          {t("cta")}
-        </a>
-        <p className="text-xs text-text-faint mt-3">{t("disclaimer")}</p>
-        <p className="text-xs text-text-faint mt-2">
-          {t.rich("consent", {
-            terms: (chunks) => <Link href="/terms" className="underline hover:text-text-muted">{chunks}</Link>,
-            privacy: (chunks) => <Link href="/privacy" className="underline hover:text-text-muted">{chunks}</Link>,
-          })}
-        </p>
+        <p className="inline-block text-xs text-brand-text font-semibold uppercase tracking-wider bg-brand/10 border border-brand-border rounded-full px-3 py-1 mb-3">{t("trialBadge")}</p>
+        <h2 className="text-2xl font-bold mb-1">{t("trialTitle")}</h2>
+        <p className="text-text-faint text-sm mb-6">{t("trialSubtitle")}</p>
+        <FreeSignupForm />
+        <p className="text-xs text-text-faint mt-3">{f("homeSubtitle")}</p>
       </div>
 
-      <div className="mx-auto max-w-md space-y-3">
+      {/* Or subscribe directly — secondary */}
+      <div className="mx-auto max-w-md space-y-4">
         <div className="flex items-center gap-3">
           <div className="flex-1 h-px bg-border" />
-          <p className="text-sm text-text-muted font-medium">{f("separator")}</p>
+          <p className="text-sm text-text-muted font-medium">{t("orSubscribe")}</p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <p className="text-sm text-text-faint">{f("description")}</p>
-        <FreeSignupForm />
+
+        <div className="border border-border rounded-2xl p-8">
+          <p className="text-sm text-brand-text font-medium uppercase tracking-wider mb-2">{t("pricingLabel")}</p>
+          <div className="flex items-baseline justify-center gap-1 mb-2">
+            <span className="text-5xl font-bold">$1</span>
+            <span className="text-text-muted">{t("pricingPeriod")}</span>
+          </div>
+          <p className="text-text-faint text-sm mb-6">{t("pricingSubtitle")}</p>
+
+          <ul className="text-left space-y-3 mb-8 text-sm">
+            {[t("feature1"), t("feature2"), t("feature3"), t("feature4")].map((item) => (
+              <li key={item} className="flex items-start gap-2 text-text-secondary">
+                <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">&#10003;</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <a href={process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "#"} className="cta-glow block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center">
+            {t("cta")}
+          </a>
+          <p className="text-xs text-text-faint mt-3">{t("disclaimer")}</p>
+          <p className="text-xs text-text-faint mt-2">
+            {t.rich("consent", {
+              terms: (chunks) => <Link href="/terms" className="underline hover:text-text-muted">{chunks}</Link>,
+              privacy: (chunks) => <Link href="/privacy" className="underline hover:text-text-muted">{chunks}</Link>,
+            })}
+          </p>
+        </div>
       </div>
 
       <section className="text-left space-y-4 mt-12">

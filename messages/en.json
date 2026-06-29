@@ -180,7 +180,7 @@
   },
   "Join": {
     "title": "Start earning income",
-    "subtitle": "Receive daily picks on your WhatsApp. Companies that pay you dividends for being an owner. Full research included.",
+    "subtitle": "Daily picks with full research. Companies that pay you dividends for owning them.",
     "pricingLabel": "Monthly membership",
     "pricingPeriod": "/mo",
     "pricingSubtitle": "One dollar a month. No catch.",
@@ -202,7 +202,11 @@
     "faq4Q": "Is this financial advice?",
     "faq4A": "No. This is educational and informational. Always consult a financial advisor before investing.",
     "faq5Q": "How do I receive the picks?",
-    "faq5A": "Straight to your WhatsApp. You receive a summary of each pick with a link to the full research on our website."
+    "faq5A": "Straight to your WhatsApp. You receive a summary of each pick with a link to the full research on our website.",
+    "trialBadge": "14 days free",
+    "trialTitle": "Try 14 days free",
+    "trialSubtitle": "Full access to the research and picks. No card.",
+    "orSubscribe": "Prefer to subscribe directly?"
   },
   "Portfolio": {
     "title": "Portfolio Dashboard",
@@ -902,5 +906,9 @@
     "stocksTitle": "Every Sunday we send you how they did — free.",
     "portfolioTitle": "We'll update you every Sunday on the portfolio.",
     "portfolioSubtitle": "Get a weekly summary with the most important moves."
+  },
+  "TrialBadge": {
+    "daysLeft": "Trial · {days, plural, one {# day} other {# days}}",
+    "cta": "Subscribe to keep access"
   }
 }
