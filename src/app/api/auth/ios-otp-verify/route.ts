@@ -7,11 +7,15 @@ export const dynamic = "force-dynamic";
  * POST /api/auth/ios-otp-verify
  *
  * Alternative to the magic-link deep-link flow. The iOS app can verify the
- * 6-digit code shown in the sign-in email directly, without needing to open
+ * numeric code shown in the sign-in email directly, without needing to open
  * a `vectorialdata://` deep link. Useful when the email is opened on a
  * different device or when the deep link fails to launch the app.
  *
- * Request:  { email: string, otp: string }  (otp = 6-digit code from email)
+ * The code length follows Supabase's "Email OTP Length" setting (currently 8).
+ * We accept 6–8 digits so the client never hardcodes a length that can drift
+ * out of sync with the dashboard setting.
+ *
+ * Request:  { email: string, otp: string }  (otp = numeric code from email)
  * Response: { access_token, refresh_token, expires_at, email }
  */
 export async function POST(request: Request) {
@@ -21,7 +25,7 @@ export async function POST(request: Request) {
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "missing_email" }, { status: 400 });
     }
-    if (!otp || typeof otp !== "string" || !/^\d{6}$/.test(otp.trim())) {
+    if (!otp || typeof otp !== "string" || !/^\d{6,8}$/.test(otp.trim())) {
       return NextResponse.json({ error: "invalid_otp_format" }, { status: 400 });
     }
 

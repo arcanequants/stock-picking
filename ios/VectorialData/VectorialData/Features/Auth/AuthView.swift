@@ -141,8 +141,8 @@ struct AuthView: View {
 
     private func verifyOTP() {
         let code = otpCode.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard code.count == 6 else {
-            errorMessage = "Enter the 6-digit code from your email."
+        guard code.count >= 6 else {
+            errorMessage = "Enter the code from your email."
             return
         }
         errorMessage = nil
@@ -271,13 +271,13 @@ private struct ConfirmationCard: View {
 
             // OTP code entry — alternative to tapping the deep link
             VStack(spacing: 8) {
-                Text("Or enter the 6-digit code from your email")
+                Text("Or enter the code from your email")
                     .font(.footnote)
                     .foregroundStyle(.white.opacity(0.55))
                     .multilineTextAlignment(.center)
                 HStack(spacing: 10) {
                     TextField("", text: $otpCode, prompt:
-                        Text("000000").foregroundStyle(.white.opacity(0.3))
+                        Text("00000000").foregroundStyle(.white.opacity(0.3))
                     )
                     .keyboardType(.numberPad)
                     .textContentType(.oneTimeCode)
@@ -292,7 +292,7 @@ private struct ConfirmationCard: View {
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     .onChange(of: otpCode) { _, newValue in
-                        otpCode = String(newValue.filter { $0.isNumber }.prefix(6))
+                        otpCode = String(newValue.filter { $0.isNumber }.prefix(8))
                     }
                     Button(action: onVerifyOTP) {
                         Group {
