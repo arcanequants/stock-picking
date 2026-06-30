@@ -157,7 +157,8 @@ final class AuthManager: ObservableObject {
         }
     }
 
-    /// Verifies the 6-digit OTP code from the sign-in email. Alternative to
+    /// Verifies the numeric OTP code from the sign-in email (length follows
+    /// Supabase's Email OTP Length setting — currently 8). Alternative to
     /// tapping the magic link — works even when the deep link fails to open the
     /// app (e.g. email opened on a different device or in a browser).
     func verifyOTP(email: String, otp: String) async throws {
