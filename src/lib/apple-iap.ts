@@ -75,7 +75,29 @@ export async function verifyNotification(
   return getVerifier(env).verifyAndDecodeNotification(signedPayload);
 }
 
-type SubscriptionStatus = "active" | "past_due" | "canceled";
+type SubscriptionStatus = "active" | "trialing" | "past_due" | "canceled";
+
+/**
+ * True when a decoded transaction is inside a free-trial introductory offer.
+ * Apple sets offerType=1 (INTRODUCTORY) and offerDiscountType="FREE_TRIAL"
+ * for the 14-day trial. Both 'trialing' and 'active' grant full access — the
+ * distinction only drives trial-aware UI and lifecycle emails.
+ */
+export function isFreeTrialTransaction(
+  tx: JWSTransactionDecodedPayload
+): boolean {
+  return tx.offerDiscountType === "FREE_TRIAL";
+}
+
+/** Access status for a verified transaction: canceled if expired, trialing if
+ *  in the free-trial period, otherwise active. */
+export function statusForTransaction(
+  tx: JWSTransactionDecodedPayload
+): SubscriptionStatus {
+  const expired = tx.expiresDate ? tx.expiresDate < Date.now() : false;
+  if (expired) return "canceled";
+  return isFreeTrialTransaction(tx) ? "trialing" : "active";
+}
 
 /**
  * Write a verified Apple transaction into the subscriber row identified by
@@ -142,11 +164,18 @@ export async function applyNotification(
   const originalTxId = tx.originalTransactionId;
   if (!originalTxId) return;
 
-  const status = statusForNotification(
+  let status = statusForNotification(
     notification.notificationType,
     notification.subtype
   );
   if (!status) return; // notification we don't act on (e.g. CONSUMPTION_REQUEST)
+
+  // Initial subscribe/redeem while inside the free trial is 'trialing', not a
+  // paid 'active' period. Paid renewals (DID_RENEW) carry no free-trial offer,
+  // so they stay 'active'.
+  if (status === "active" && isFreeTrialTransaction(tx)) {
+    status = "trialing";
+  }
 
   const supabase = getSupabaseAdmin();
   const payload: Record<string, unknown> = {

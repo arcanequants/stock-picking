@@ -24,7 +24,11 @@
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "63112121",
-          "introductoryOffer" : null,
+          "introductoryOffer" : {
+            "internalID" : "14112121",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P2W"
+          },
           "localizations" : [
             {
               "description" : "Every new pick the moment it drops, plus the full thesis on every position.",

@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { getAuthedUser } from "@/lib/supabase";
-import { verifyTransaction, applyTransactionForEmail } from "@/lib/apple-iap";
+import {
+  verifyTransaction,
+  applyTransactionForEmail,
+  statusForTransaction,
+} from "@/lib/apple-iap";
 
 export const dynamic = "force-dynamic";
 
@@ -49,13 +53,13 @@ export async function POST(request: Request) {
       );
     }
 
-    const expired = tx.expiresDate ? tx.expiresDate < Date.now() : false;
-    const status = expired ? "canceled" : "active";
+    const status = statusForTransaction(tx);
 
     await applyTransactionForEmail(user.email, tx, status);
 
     return NextResponse.json({
-      is_subscribed: status === "active",
+      // Both trialing and active grant full access.
+      is_subscribed: status === "active" || status === "trialing",
       subscription_status: status,
       current_period_end: tx.expiresDate
         ? new Date(tx.expiresDate).toISOString()
