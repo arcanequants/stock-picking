@@ -715,5 +715,15 @@
     "one_liner": "Honeywell, un gigante industrial de 140 años, se acaba de partir en 3. Lo que compras como HON es la pieza enfocada de automatización: el cerebro que controla edificios, fábricas y refinerías.",
     "why_short": "La ruptura ya se ejecutó (29 jun 2026): cada negocio vale solo. Queda una empresa de automatización pegajosa, con backlog de ~$38 mil millones, que paga ~4.1% de dividendo. Target de analistas ~$255 desde $231.35.",
     "risk_short": "Las cifras están en transición: el split inverso y la separación de aviones fueron apenas esta semana, así que target, P/E y dividendo aún mezclan el viejo conglomerado. El ~4% podría recortarse."
+  },
+  "IBM": {
+    "one_liner": "IBM es la abuela de la tecnología (115 años) que aprendió inteligencia artificial: hace el software, los consultores y las supercomputadoras con las que funcionan los bancos del mundo. Y vuelve a crecer como hace décadas no lo hacía.",
+    "why_short": "Sus ventas crecieron 9% el último trimestre —su mejor arranque en años— gracias a la IA para empresas y a su nueva supercomputadora z17. Además te paga ~2.4% anual en dividendos y lleva 31 años seguidos subiéndolos, sin fallar un pago desde 1916.",
+    "risk_short": "La acción ya está en máximos históricos y los analistas le ven poco margen inmediato (~3%). Si el crecimiento se enfría o la consultoría sigue floja, el precio puede corregir."
+  },
+  "ESLT": {
+    "one_liner": "Elbit fabrica equipo militar de casi todo tipo: drones, lanzacohetes, municiones y sistemas electrónicos. Con el mundo rearmándose, ya tiene vendidos por adelantado más de $30 mil millones en pedidos — récord en su historia.",
+    "why_short": "Los países están gastando en defensa como no se veía en décadas, sobre todo Europa, y Elbit crece 15% con la utilidad subiendo aún más rápido. Ojo: los analistas ven ~+14% de subida (target ~$868) pero recomiendan 'mantener' porque la acción ya subió mucho.",
+    "risk_short": "La acción está cara tras subir ~78% en un año: se paga ~61 veces la utilidad, sin margen para decepciones. Además, Elbit depende de que siga el ciclo de rearme y opera desde Israel, una zona de conflicto activo."
   }
 }
