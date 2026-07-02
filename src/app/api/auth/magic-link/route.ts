@@ -13,7 +13,9 @@ export async function POST(request: Request) {
       );
     }
 
-    const isIOSClient = client === "ios";
+    // iOS and Android both register the vectorialdata:// scheme and exchange
+    // the token_hash via /api/auth/ios-exchange.
+    const isNativeClient = client === "ios" || client === "android";
 
     // Whitelist next paths that the email link is allowed to land on.
     // Prevents open-redirect via crafted next values.
@@ -59,7 +61,7 @@ export async function POST(request: Request) {
         ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
         : "https://vectorialdata.com");
 
-    const callbackUrl = isIOSClient
+    const callbackUrl = isNativeClient
       ? `vectorialdata://auth?token_hash=${tokenHash}&type=${type}`
       : `${siteUrl}/auth/callback?token_hash=${tokenHash}&type=${type}&next=${encodeURIComponent(safeNext)}`;
 
