@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Simple "V" mark in brand emerald, centered in the adaptive safe zone. -->
+    <path
+        android:fillColor="#34CDA5"
+        android:pathData="M38,40 L54,70 L70,40 L62,40 L54,56 L46,40 Z" />
+</vector>

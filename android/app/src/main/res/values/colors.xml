@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_background">#FF05080A</color>
+    <color name="card_background">#FF0B1116</color>
+    <color name="brand_emerald">#FF34CDA5</color>
+    <color name="brand_indigo">#FF817DFA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ic_launcher_background">#FF05080A</color>
+</resources>

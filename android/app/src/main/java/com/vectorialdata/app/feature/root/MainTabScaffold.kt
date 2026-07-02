@@ -1,0 +1,69 @@
+package com.vectorialdata.app.feature.root
+
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ListAlt
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.PieChart
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
+import com.vectorialdata.app.feature.account.AccountScreen
+import com.vectorialdata.app.feature.home.HomeScreen
+import com.vectorialdata.app.feature.picks.PicksScreen
+import com.vectorialdata.app.feature.portfolio.PortfolioScreen
+
+private enum class AppTab(val label: String, val icon: ImageVector) {
+    HOME("Home", Icons.Filled.Home),
+    PORTFOLIO("Portfolio", Icons.Filled.PieChart),
+    PICKS("Picks", Icons.AutoMirrored.Filled.ListAlt),
+    ACCOUNT("Account", Icons.Filled.AccountCircle),
+}
+
+/** Four-tab shell mirroring iOS `MainTabView`. */
+@Composable
+fun MainTabScaffold() {
+    var selected by remember { mutableStateOf(AppTab.HOME) }
+
+    Scaffold(
+        containerColor = MaterialTheme.colorScheme.background,
+        bottomBar = {
+            NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
+                AppTab.entries.forEach { tab ->
+                    NavigationBarItem(
+                        selected = selected == tab,
+                        onClick = { selected = tab },
+                        icon = { Icon(tab.icon, contentDescription = tab.label) },
+                        label = { Text(tab.label) },
+                        colors = NavigationBarItemDefaults.colors(
+                            selectedIconColor = MaterialTheme.colorScheme.primary,
+                            selectedTextColor = MaterialTheme.colorScheme.primary,
+                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant,
+                        ),
+                    )
+                }
+            }
+        },
+    ) { padding ->
+        val content = Modifier.fillMaxSize().padding(padding)
+        when (selected) {
+            AppTab.HOME -> HomeScreen(content)
+            AppTab.PORTFOLIO -> PortfolioScreen(content)
+            AppTab.PICKS -> PicksScreen(content)
+            AppTab.ACCOUNT -> AccountScreen(content)
+        }
+    }
+}
