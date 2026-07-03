@@ -887,20 +887,20 @@
     "billingNote": "Recarregue seu saldo com USDC via Stripe no painel de chaves de API (mínimo 5 USDC)."
   },
   "FreeSignup": {
-    "separator": "Ainda não tem certeza?",
-    "description": "Receba nosso resumo semanal grátis e decida depois.",
-    "emailPlaceholder": "Seu email",
-    "cta": "Receba o resumo grátis",
-    "success": "Pronto! Você receberá seu primeiro resumo neste domingo.",
-    "alreadyRegistered": "Você já está cadastrado. Até domingo!",
-    "error": "Algo deu errado. Tente novamente.",
-    "invalidEmail": "Digite um email válido.",
-    "homeTitle": "Todo domingo, um resumo de como nossas empresas foram.",
-    "homeSubtitle": "Grátis. Sem cartão.",
+    "separator": "Ainda em dúvida?",
+    "description": "Teste 14 dias grátis. Sem cartão — só seu e-mail.",
+    "emailPlaceholder": "Seu e-mail",
+    "cta": "Testar 14 dias grátis",
+    "success": "Seu teste de 14 dias começou! Verifique seu e-mail para entrar.",
+    "alreadyRegistered": "Você já tem uma conta. Verifique seu e-mail para entrar.",
+    "error": "Algo deu errado. Tente de novo.",
+    "invalidEmail": "Digite um e-mail válido.",
+    "homeTitle": "Teste a Vectorial Data 14 dias grátis.",
+    "homeSubtitle": "Sem cartão. Só seu e-mail.",
     "homeFinalAlt": "Só quer experimentar?",
-    "homeFinalDesc": "Receba o resumo semanal grátis — sem cartão.",
-    "stocksTitle": "Todo domingo te mandamos como elas foram — grátis.",
-    "portfolioTitle": "Te avisamos todo domingo como vai o portfólio.",
-    "portfolioSubtitle": "Receba um resumo semanal com os movimentos mais importantes."
+    "homeFinalDesc": "14 dias grátis — sem cartão.",
+    "stocksTitle": "Teste 14 dias grátis e veja o porquê de cada pick.",
+    "portfolioTitle": "Teste 14 dias grátis.",
+    "portfolioSubtitle": "Acesso completo à análise e aos picks. Sem cartão."
   }
 }
