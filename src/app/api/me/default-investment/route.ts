@@ -23,7 +23,10 @@ export async function POST(request: Request) {
 
   const raw = body.amount;
   let amount: number | null;
-  if (raw === null) {
+  // Treat a missing key as an explicit clear: both apps' JSON encoders
+  // (Swift Encodable, kotlinx explicitNulls=false) drop nil/null fields,
+  // so "clear" arrives as {} — a strict null check 400'd it (live iOS bug).
+  if (raw === null || raw === undefined) {
     amount = null;
   } else if (typeof raw === "number" && Number.isFinite(raw) && raw > 0) {
     amount = Math.round(raw * 100) / 100;
