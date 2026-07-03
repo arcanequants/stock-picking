@@ -30,6 +30,10 @@ final class StoreManager: ObservableObject {
 
     @Published private(set) var product: Product?
     @Published private(set) var phase: PurchasePhase = .idle
+    /// Whether THIS Apple ID is still eligible for the introductory (free
+    /// trial) offer. Apple grants the intro offer at most once per account per
+    /// subscription group, so we must check before advertising "14 days free".
+    @Published private(set) var isEligibleForIntro = false
 
     private var updatesTask: Task<Void, Never>?
 
@@ -37,6 +41,32 @@ final class StoreManager: ObservableObject {
 
     /// Display price string from the App Store (localized, e.g. "$1.00").
     var displayPrice: String? { product?.displayPrice }
+
+    /// The configured introductory offer (App Store Connect), if any. For us
+    /// this is a 14-day free trial with `paymentMode == .freeTrial`.
+    var introOffer: Product.SubscriptionOffer? {
+        product?.subscription?.introductoryOffer
+    }
+
+    /// True when we should advertise the free trial: an intro offer exists, is
+    /// a free trial, and this account hasn't used it yet.
+    var showsFreeTrial: Bool {
+        isEligibleForIntro && introOffer?.paymentMode == .freeTrial
+    }
+
+    /// Number of days in the free-trial intro offer (e.g. 14), derived from the
+    /// offer period so copy always matches the App Store Connect config.
+    var trialDays: Int? {
+        guard let offer = introOffer, offer.paymentMode == .freeTrial else { return nil }
+        let p = offer.period
+        switch p.unit {
+        case .day: return p.value
+        case .week: return p.value * 7
+        case .month: return p.value * 30
+        case .year: return p.value * 365
+        @unknown default: return p.value
+        }
+    }
 
     /// Begin listening for transaction updates. Call once at app launch.
     func start() {
@@ -54,6 +84,11 @@ final class StoreManager: ObservableObject {
         do {
             let products = try await Product.products(for: [Self.productID])
             self.product = products.first
+            // Intro-offer eligibility is per Apple ID; check it so we only
+            // advertise the free trial to accounts that can actually redeem it.
+            if let sub = products.first?.subscription {
+                self.isEligibleForIntro = await sub.isEligibleForIntroOffer
+            }
             if phase == .loading { phase = .idle }
         } catch {
             phase = .failed("No pudimos cargar la suscripción.")
