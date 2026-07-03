@@ -10,7 +10,8 @@
     "economia": "Economía",
     "verify": "Registro Verificable",
     "verifyTooltip": "Registro verificable — notario digital",
-    "terminal": "Terminal"
+    "terminal": "Terminal",
+    "picks": "Picks"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — Portafolio de Acciones. Esto no es asesoría financiera.",
@@ -911,5 +912,15 @@
     "referred": "Invitados",
     "converted": "Suscritos",
     "monthsEarned": "Meses gratis"
+  },
+  "PicksFeed": {
+    "title": "Tus picks",
+    "subtitle": "El pick de hoy y todo el historial. Entra cuando quieras.",
+    "todayPick": "Pick de hoy",
+    "latestPick": "Último pick",
+    "seeWhy": "Ver el porqué",
+    "pastPicks": "Picks anteriores",
+    "ctaTitle": "Recibe cada pick",
+    "ctaSubtitle": "Crea tu cuenta y prueba 14 días gratis."
   }
 }

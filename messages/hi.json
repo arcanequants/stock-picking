@@ -10,7 +10,8 @@
     "economia": "अर्थव्यवस्था",
     "verify": "सत्यापन योग्य रिकॉर्ड",
     "verifyTooltip": "सत्यापन योग्य रिकॉर्ड — डिजिटल नोटरी",
-    "terminal": "Terminal"
+    "terminal": "Terminal",
+    "picks": "पिक्स"
   },
   "Footer": {
     "disclaimer": "Vectorial Data — स्टॉक पोर्टफोलियो। यह वित्तीय सलाह नहीं है।",
@@ -899,5 +900,15 @@
     "referred": "आमंत्रित",
     "converted": "सब्सक्राइब",
     "monthsEarned": "मुफ़्त महीने"
+  },
+  "PicksFeed": {
+    "title": "आपके पिक्स",
+    "subtitle": "आज का पिक और पूरा इतिहास। जब चाहें देखें।",
+    "todayPick": "आज का पिक",
+    "latestPick": "ताज़ा पिक",
+    "seeWhy": "वजह देखें",
+    "pastPicks": "पिछले पिक्स",
+    "ctaTitle": "हर पिक पाएं",
+    "ctaSubtitle": "खाता बनाएं और 14 दिन मुफ़्त आज़माएं।"
   }
 }
