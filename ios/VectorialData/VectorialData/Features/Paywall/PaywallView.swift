@@ -47,11 +47,24 @@ struct PaywallView: View {
             Text("Vectorial Data Premium")
                 .font(.title2.weight(.bold))
                 .foregroundStyle(.white)
+            if let headline = trialHeadline {
+                Text(headline)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(Color("BrandEmerald"))
+            }
             Text(copy.subtitle)
                 .font(.subheadline)
                 .foregroundStyle(.white.opacity(0.7))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    /// "14 days free, then $1.00/month" — only when the user is eligible for
+    /// the free trial and we know the price.
+    private var trialHeadline: String? {
+        guard store.showsFreeTrial, let days = store.trialDays,
+              let price = store.displayPrice else { return nil }
+        return String(format: copy.trialHeadlineFormat, days, price)
     }
 
     private var benefitList: some View {
@@ -121,6 +134,9 @@ struct PaywallView: View {
     }
 
     private var subscribeTitle: String {
+        if store.showsFreeTrial, let days = store.trialDays {
+            return String(format: copy.trialCTAFormat, days)
+        }
         if let price = store.displayPrice {
             return "\(copy.subscribeCTA) — \(price)/\(copy.month)"
         }
@@ -131,9 +147,20 @@ struct PaywallView: View {
         store.phase == .purchasing || store.phase == .restoring
     }
 
+    /// Apple 3.1.2 requires the trial length, price, and billing terms shown
+    /// adjacent to the purchase button. Falls back to the plain auto-renew
+    /// disclosure for accounts no longer eligible for the trial.
+    private var disclosure: String {
+        if store.showsFreeTrial, let days = store.trialDays,
+           let price = store.displayPrice {
+            return String(format: copy.trialAutoRenewFormat, days, price)
+        }
+        return copy.autoRenew
+    }
+
     private var legalLinks: some View {
         VStack(spacing: 4) {
-            Text(copy.autoRenew)
+            Text(disclosure)
                 .font(.caption2)
                 .foregroundStyle(.white.opacity(0.5))
                 .multilineTextAlignment(.center)
@@ -167,6 +194,12 @@ private struct PaywallCopy {
     let autoRenew: String
     let terms: String
     let privacy: String
+    /// "%d days free, then %@/month" (days, price)
+    let trialHeadlineFormat: String
+    /// "Start %d-day free trial" (days)
+    let trialCTAFormat: String
+    /// Apple-required trial + auto-renew disclosure. "%d days free, then %@…" (days, price)
+    let trialAutoRenewFormat: String
 
     static func `for`(_ lang: String) -> PaywallCopy {
         switch lang {
@@ -185,7 +218,10 @@ private struct PaywallCopy {
                 restore: "Restore Purchases",
                 autoRenew: "Auto-renews monthly until canceled. Manage in Apple ID settings.",
                 terms: "Terms",
-                privacy: "Privacy"
+                privacy: "Privacy",
+                trialHeadlineFormat: "%d days free, then %@/month",
+                trialCTAFormat: "Start %d-day free trial",
+                trialAutoRenewFormat: "Free for %d days, then %@/month. Your subscription auto-renews unless canceled at least 24 hours before the trial ends. Cancel anytime in Apple ID settings."
             )
         case "pt":
             return PaywallCopy(
@@ -202,7 +238,10 @@ private struct PaywallCopy {
                 restore: "Restaurar Compras",
                 autoRenew: "Renova automaticamente todo mês até o cancelamento. Gerencie nas configurações do Apple ID.",
                 terms: "Termos",
-                privacy: "Privacidade"
+                privacy: "Privacidade",
+                trialHeadlineFormat: "%d dias grátis, depois %@/mês",
+                trialCTAFormat: "Começar %d dias grátis",
+                trialAutoRenewFormat: "Grátis por %d dias, depois %@/mês. A assinatura renova automaticamente a menos que seja cancelada pelo menos 24 horas antes do fim do período gratuito. Cancele quando quiser nas configurações do Apple ID."
             )
         default: // es
             return PaywallCopy(
@@ -219,7 +258,10 @@ private struct PaywallCopy {
                 restore: "Restaurar Compras",
                 autoRenew: "Se renueva mensualmente hasta ser cancelada. Gestiona en la configuración del Apple ID.",
                 terms: "Términos",
-                privacy: "Privacidad"
+                privacy: "Privacidad",
+                trialHeadlineFormat: "%d días gratis, luego %@/mes",
+                trialCTAFormat: "Empieza %d días gratis",
+                trialAutoRenewFormat: "Gratis por %d días, luego %@/mes. Tu suscripción se renueva automáticamente a menos que la canceles al menos 24 horas antes de que termine la prueba. Cancela cuando quieras en la configuración del Apple ID."
             )
         }
     }
