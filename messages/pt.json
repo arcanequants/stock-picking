@@ -181,7 +181,7 @@
   },
   "Join": {
     "title": "Comece a gerar renda",
-    "subtitle": "Receba picks diários no seu WhatsApp. Empresas que te pagam dividendos por ser dono. Research completo incluso.",
+    "subtitle": "Picks diários com análise completa. Empresas que te pagam dividendos por ser dono.",
     "pricingLabel": "Assinatura mensal",
     "pricingPeriod": "/mês",
     "pricingSubtitle": "Um dólar por mês. Sem pegadinha.",
@@ -203,7 +203,11 @@
     "faq4Q": "É conselho financeiro?",
     "faq4A": "Não. Isso é educacional e informativo. Sempre consulte um assessor financeiro antes de investir.",
     "faq5Q": "Como recebo os picks?",
-    "faq5A": "Direto no seu WhatsApp. Você recebe um resumo de cada pick com um link para o research completo na nossa página."
+    "faq5A": "Direto no seu WhatsApp. Você recebe um resumo de cada pick com um link para o research completo na nossa página.",
+    "trialBadge": "14 dias grátis",
+    "trialTitle": "Teste 14 dias grátis",
+    "trialSubtitle": "Acesso completo à análise e aos picks. Sem cartão.",
+    "orSubscribe": "Prefere assinar direto?"
   },
   "Portfolio": {
     "title": "Painel do Portfólio",
@@ -922,5 +926,9 @@
     "pastPicks": "Picks anteriores",
     "ctaTitle": "Receba cada pick",
     "ctaSubtitle": "Crie sua conta e teste 14 dias grátis."
+  },
+  "TrialBadge": {
+    "daysLeft": "Teste · {days, plural, one {# dia} other {# dias}}",
+    "cta": "Assine para manter o acesso"
   }
 }

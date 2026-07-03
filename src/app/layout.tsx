@@ -7,6 +7,7 @@ import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 import AuthButton from "@/components/AuthButton";
 import NotificationBell from "@/components/NotificationBell";
+import TrialBadge from "@/components/TrialBadge";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import CookieConsent from "@/components/CookieConsent";
@@ -192,6 +193,7 @@ export default async function RootLayout({
                         <path d="M9 12l2 2 4-4" />
                       </svg>
                     </Link>
+                    <TrialBadge />
                     <LanguageSwitcher />
                     <ThemeToggle />
                     <NotificationBell isSubscribed={isSubscribed} />
@@ -211,6 +213,7 @@ export default async function RootLayout({
 
                   {/* Mobile Nav */}
                   <div className="flex md:hidden items-center gap-2">
+                    <TrialBadge />
                     <LanguageSwitcher />
                     <ThemeToggle />
                     <MobileNav
