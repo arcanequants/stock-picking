@@ -902,5 +902,14 @@
     "stocksTitle": "Try 14 days free and see the why behind every pick.",
     "portfolioTitle": "Try 14 days free.",
     "portfolioSubtitle": "Full access to the research and picks. No card."
+  },
+  "Referral": {
+    "title": "Refer & earn",
+    "desc": "Share your link. For every friend who subscribes, you earn 1 free month. No limit.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "referred": "Invited",
+    "converted": "Subscribed",
+    "monthsEarned": "Free months"
   }
 }

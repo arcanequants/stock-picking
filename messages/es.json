@@ -902,5 +902,14 @@
     "stocksTitle": "Prueba 14 días gratis y ve el porqué de cada pick.",
     "portfolioTitle": "Prueba 14 días gratis.",
     "portfolioSubtitle": "Acceso completo al research y los picks. Sin tarjeta."
+  },
+  "Referral": {
+    "title": "Invita y gana",
+    "desc": "Comparte tu link. Por cada amigo que se suscriba, ganas 1 mes gratis. Sin límite.",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "referred": "Invitados",
+    "converted": "Suscritos",
+    "monthsEarned": "Meses gratis"
   }
 }

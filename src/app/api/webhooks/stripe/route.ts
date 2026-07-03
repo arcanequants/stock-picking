@@ -11,6 +11,7 @@ import {
 import { grantCredits, centsToMicroUsdc } from "@/lib/api-keys";
 import { getPack } from "@/lib/api-credit-packs";
 import { buildTrackedWaUrl } from "@/lib/wa-track";
+import { convertReferral } from "@/lib/referrals";
 import type Stripe from "stripe";
 
 export const dynamic = "force-dynamic";
@@ -196,6 +197,10 @@ export async function POST(request: Request) {
             console.error("Subscriber insert error:", insertError);
           }
         }
+
+        // Referral reward: this is a real subscription payment. If the payer was
+        // referred, mark it converted and credit the referrer. Never throws.
+        await convertReferral(normalizedEmail);
 
         // Create Supabase Auth user if they don't exist (auto-confirmed)
         const { data: existingUsers } =
