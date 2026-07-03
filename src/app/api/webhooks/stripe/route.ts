@@ -186,7 +186,9 @@ export async function POST(request: Request) {
               subscription_status: subscriptionStatus,
               current_period_start: periodStart,
               current_period_end: periodEnd,
-              delivery_channel: "whatsapp",
+              // Default delivery is email now (the product moved off WhatsApp).
+              // Apple IAP and the web trial already default to "email".
+              delivery_channel: "email",
               access_started_at: nowIso,
             });
 
