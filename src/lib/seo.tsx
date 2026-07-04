@@ -76,7 +76,7 @@ const SERVICES: Record<
     url: `${SITE_URL}/stocks`,
     serviceType: "Stock Research and Analysis",
     description:
-      "Daily researched stock picks across global equities, delivered via WhatsApp. Every pick is cryptographically attested on Base (Ethereum L2) via SHA-256 hash chain. Subscription: $1/month.",
+      "Daily researched stock picks across global equities, delivered via email, web, and app. Every pick is cryptographically attested on Base (Ethereum L2) via SHA-256 hash chain. Subscription: $1/month.",
   },
   signals: {
     name: "Vectorial Signals",
@@ -205,7 +205,7 @@ export function getProductSchema() {
     "@type": "Product",
     name: "Vectorial Data Pro",
     description:
-      "Full access to daily stock picks, complete research reports, portfolio tracking, and historical data. Delivered via WhatsApp every day.",
+      "Full access to daily stock picks, complete research reports, portfolio tracking, and historical data. Delivered via email, web, and app every day.",
     brand: { "@type": "Organization", name: "Vectorial Data" },
     offers: {
       "@type": "Offer",
