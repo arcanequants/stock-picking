@@ -59,7 +59,7 @@
     "rebuy": "Recompra",
     "howItWorks": "Como funciona",
     "step1": "Fazemos um pick",
-    "step1Desc": "Selecionamos uma ação com research e enviamos via WhatsApp.",
+    "step1Desc": "Selecionamos uma ação com research e enviamos por e-mail, web e app.",
     "step2": "Registrado em blockchain",
     "step2Desc": "O ticker, preço e data são selados em um registro público imutável em Base (Ethereum L2).",
     "step3": "Qualquer um pode verificar",
@@ -70,7 +70,7 @@
     "lockedPicksTitle": "mais {count} picks verificados em blockchain",
     "fomoText": "Esses picks têm semanas. Os assinantes os receberam no mesmo dia.",
     "ctaButton": "Desbloquear todos os picks — $1/mês",
-    "ctaSubtext": "Inclui picks diários via WhatsApp + research completo",
+    "ctaSubtext": "Inclui picks diários por e-mail e no app + research completo",
     "urgencyText": "Ciclo atual: {current}/{target} picks entregues. O próximo sai em breve.",
     "interimNote": "Mostrando nossos primeiros picks certificados no mesmo dia. Novos picks são adicionados diariamente.",
     "statusSameDay": "Certificado no mesmo dia",
@@ -86,7 +86,7 @@
     "stocksTitle": "Pesquisa de Ações — Todos os Picks | Vectorial Data",
     "stocksDescription": "Explore todas as ações pesquisadas com retornos, ratings e análise setorial. Atualizado diariamente.",
     "joinTitle": "Junte-se ao Vectorial Data — Stock Picks por $1/mês",
-    "joinDescription": "Receba stock picks pesquisados diariamente via WhatsApp. Pesquisa completa, rastreamento de portfólio, verificação blockchain. A partir de $1/mês."
+    "joinDescription": "Receba stock picks pesquisados diariamente por e-mail, na web e no app. Pesquisa completa, rastreamento de portfólio, verificação blockchain. A partir de $1/mês."
   },
   "Theme": {
     "light": "Mudar para modo claro",
@@ -102,7 +102,7 @@
     "regions": "{count} regiões",
     "avgDivYield": "{yield}% dividend yield médio",
     "heroCta": "Comece por $1/mês",
-    "heroProof": "7 picks por semana · Pesquisa completa · Direto no seu WhatsApp",
+    "heroProof": "7 picks por semana · Pesquisa completa · No seu e-mail, web e app",
     "problemTitle": "Você sabe que deveria investir.",
     "problemSubtitle": "Mas não sabe por onde começar.",
     "noise": "Ruído demais",
@@ -113,7 +113,7 @@
     "fearDesc": "Sem orientação, investir parece apostar. Não deveria ser assim.",
     "howTitle": "Simples assim",
     "step1Title": "Você recebe um pick",
-    "step1Desc": "Todo dia chega uma empresa selecionada direto no seu WhatsApp. Com research incluso.",
+    "step1Desc": "Todo dia chega uma empresa selecionada direto no seu e-mail e no app. Com research incluso.",
     "step2Title": "Compra sua fração",
     "step2Desc": "$3, $5, $50 — o que você puder. Compra uma fração e já é dono daquela empresa.",
     "step3Title": "Recebe dividendos",
@@ -127,7 +127,7 @@
     "samplePickFooter": "Research completo disponível para membros",
     "seeMore": "Ver mais →",
     "featuresTitle": "Tudo que você precisa para gerar renda",
-    "feature1": "Toda manhã, uma empresa pesquisada no seu WhatsApp",
+    "feature1": "Toda manhã, uma empresa pesquisada no seu e-mail e no app",
     "feature2": "Dinheiro na sua conta a cada 3 meses — automático",
     "feature3": "Grupo privado onde discutimos as picks",
     "feature4": "Veja seu portfólio crescer, ao vivo",
@@ -147,7 +147,7 @@
     "faq3Q": "É conselho financeiro?",
     "faq3A": "Não. Isso é educacional e informativo. Sempre consulte um assessor financeiro antes de investir.",
     "faq4Q": "Como recebo os picks?",
-    "faq4A": "Direto no seu WhatsApp, 7 picks por semana de segunda a sexta. Inclui o ticker, um resumo e um link para o research completo.",
+    "faq4A": "Direto no seu e-mail e no app, 7 picks por semana de segunda a sexta. Inclui o ticker, um resumo e um link para o research completo.",
     "faq5Q": "Posso cancelar?",
     "faq5A": "Sim, a qualquer momento. Sem multa, sem perguntas.",
     "ctaTitle": "Seu próximo pick sai amanhã.",
@@ -177,7 +177,7 @@
     "quotableCountries": "Empresas em {count} países",
     "quotableSectors": "{count} setores cobertos",
     "quotableBlockchain": "Cada pick certificado em blockchain Base (Ethereum L2)",
-    "quotablePrice": "$1/mês com picks diários via WhatsApp"
+    "quotablePrice": "$1/mês com picks diários por e-mail e no app"
   },
   "Join": {
     "title": "Comece a gerar renda",
@@ -189,7 +189,7 @@
     "feature2": "Empresas que pagam dividendos a cada trimestre",
     "feature3": "Dashboard do portfólio em tempo real",
     "feature4": "Diversificação global (múltiplas regiões)",
-    "feature5": "Grupo privado no WhatsApp",
+    "feature5": "Histórico completo de picks na web",
     "cta": "Comece agora",
     "disclaimer": "A assinatura é renovada automaticamente a cada mês. Cancele quando quiser.",
     "consent": "Ao assinar, você concorda com nossos <terms>Termos de Serviço</terms> e <privacy>Política de Privacidade</privacy>.",
@@ -203,7 +203,7 @@
     "faq4Q": "É conselho financeiro?",
     "faq4A": "Não. Isso é educacional e informativo. Sempre consulte um assessor financeiro antes de investir.",
     "faq5Q": "Como recebo os picks?",
-    "faq5A": "Direto no seu WhatsApp. Você recebe um resumo de cada pick com um link para o research completo na nossa página.",
+    "faq5A": "Direto no seu e-mail e no app. Você recebe um resumo de cada pick com um link para o research completo na nossa página.",
     "trialBadge": "14 dias grátis",
     "trialTitle": "Teste 14 dias grátis",
     "trialSubtitle": "Acesso completo à análise e aos picks. Sem cartão.",
@@ -370,7 +370,7 @@
     "unlockTransactions": "Veja o histórico completo de transações",
     "unlockTransactionsDesc": "Todas as compras e recompras com preços exatos e datas.",
     "cta": "Desbloquear por $1/mês",
-    "includes": "Inclui picks diários via WhatsApp"
+    "includes": "Inclui picks diários por e-mail e no app"
   },
   "Auth": {
     "login": "Entrar",

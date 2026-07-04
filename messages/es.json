@@ -59,7 +59,7 @@
     "rebuy": "Recompra",
     "howItWorks": "Cómo funciona",
     "step1": "Hacemos un pick",
-    "step1Desc": "Seleccionamos una acción con research y la mandamos por WhatsApp.",
+    "step1Desc": "Seleccionamos una acción con research y te la mandamos por correo, web y app.",
     "step2": "Se registra en blockchain",
     "step2Desc": "El ticker, precio y fecha se sellan en un registro público inmutable en Base (Ethereum L2).",
     "step3": "Cualquiera puede verificar",
@@ -70,7 +70,7 @@
     "lockedPicksTitle": "{count} picks más verificados en blockchain",
     "fomoText": "Estos picks tienen semanas. Los suscriptores los recibieron el mismo día.",
     "ctaButton": "Desbloquear todos los picks — $1/mes",
-    "ctaSubtext": "Incluye picks diarios por WhatsApp + research completo",
+    "ctaSubtext": "Incluye picks diarios por correo y en la app + research completo",
     "urgencyText": "Ciclo actual: {current}/{target} picks entregados. El próximo sale pronto.",
     "interimNote": "Mostrando nuestras primeras picks certificadas el mismo día. Se agregan nuevas picks diariamente.",
     "statusSameDay": "Certificado el mismo día",
@@ -86,7 +86,7 @@
     "stocksTitle": "Research de Acciones — Todos los Picks | Vectorial Data",
     "stocksDescription": "Explora todas las acciones investigadas con rendimientos, ratings y análisis sectorial. Actualizado diariamente.",
     "joinTitle": "Únete a Vectorial Data — Stock Picks por $1/mes",
-    "joinDescription": "Recibe stock picks investigados diariamente por WhatsApp. Research completo, tracking del portafolio, verificación blockchain. Desde $1/mes."
+    "joinDescription": "Recibe stock picks investigados diariamente por correo, en la web y en la app. Research completo, tracking del portafolio, verificación blockchain. Desde $1/mes."
   },
   "Theme": {
     "light": "Cambiar a modo claro",
@@ -102,7 +102,7 @@
     "regions": "{count} regiones",
     "avgDivYield": "{yield}% dividend yield promedio",
     "heroCta": "Empieza por $1/mes",
-    "heroProof": "7 picks por semana · Research completo · Directo a tu WhatsApp",
+    "heroProof": "7 picks por semana · Research completo · En tu correo, web y app",
     "problemTitle": "Sabes que deberías invertir.",
     "problemSubtitle": "Pero no sabes por dónde empezar.",
     "noise": "Demasiado ruido",
@@ -113,7 +113,7 @@
     "fearDesc": "Sin guía, invertir se siente como apostar. No debería ser así.",
     "howTitle": "Así de simple funciona",
     "step1Title": "Recibes un pick",
-    "step1Desc": "Cada día te llega una empresa seleccionada directo a tu WhatsApp. Con research incluido.",
+    "step1Desc": "Cada día te llega una empresa seleccionada directo a tu correo y a la app. Con research incluido.",
     "step2Title": "Compras tu fracción",
     "step2Desc": "$3, $5, $50 — lo que puedas. Compras una fracción y ya eres dueño de esa empresa.",
     "step3Title": "Cobras dividendos",
@@ -127,7 +127,7 @@
     "samplePickFooter": "Research completo disponible para miembros",
     "seeMore": "Ver más →",
     "featuresTitle": "Todo lo que necesitas para generar ingresos",
-    "feature1": "Cada mañana, una empresa investigada en tu WhatsApp",
+    "feature1": "Cada mañana, una empresa investigada en tu correo y en la app",
     "feature2": "Dinero en tu cuenta cada 3 meses — automático",
     "feature3": "Grupo privado donde hablamos de las picks",
     "feature4": "Ve cómo crece tu portafolio, en vivo",
@@ -147,7 +147,7 @@
     "faq3Q": "¿Es consejo financiero?",
     "faq3A": "No. Esto es educacional e informativo. Siempre consulta con un asesor financiero antes de invertir.",
     "faq4Q": "¿Cómo recibo los picks?",
-    "faq4A": "Directo en tu WhatsApp, 7 picks por semana de lunes a viernes. Incluye el ticker, un resumen, y un link al research completo.",
+    "faq4A": "Directo en tu correo y en la app, 7 picks por semana de lunes a viernes. Incluye el ticker, un resumen, y un link al research completo.",
     "faq5Q": "¿Puedo cancelar?",
     "faq5A": "Sí, en cualquier momento. Sin penalización, sin preguntas.",
     "faq6Q": "¿Cómo sé que no cambian los resultados después?",
@@ -177,7 +177,7 @@
     "quotableCountries": "Empresas en {count} países",
     "quotableSectors": "{count} sectores cubiertos",
     "quotableBlockchain": "Cada pick certificado en blockchain Base (Ethereum L2)",
-    "quotablePrice": "$1/mes con picks diarios por WhatsApp"
+    "quotablePrice": "$1/mes con picks diarios en tu correo y en la app"
   },
   "Join": {
     "title": "Empieza a generar ingresos",
@@ -189,7 +189,7 @@
     "feature2": "Empresas que pagan dividendos cada trimestre",
     "feature3": "Portfolio dashboard en tiempo real",
     "feature4": "Diversificación global (múltiples regiones)",
-    "feature5": "Grupo privado de WhatsApp",
+    "feature5": "Historial completo de picks en la web",
     "cta": "Empieza ahora",
     "disclaimer": "Se renueva automáticamente cada mes. Cancela cuando quieras.",
     "consent": "Al suscribirte, aceptas nuestros <terms>Términos de Servicio</terms> y <privacy>Política de Privacidad</privacy>.",
@@ -203,7 +203,7 @@
     "faq4Q": "¿Es consejo financiero?",
     "faq4A": "No. Esto es educacional e informativo. Siempre consulta con un asesor financiero antes de invertir.",
     "faq5Q": "¿Cómo recibo los picks?",
-    "faq5A": "Directo en tu WhatsApp. Recibes un resumen de cada pick con un link al research completo en nuestra página.",
+    "faq5A": "Directo en tu correo y en la app. Recibes un resumen de cada pick con un link al research completo en nuestra página.",
     "trialBadge": "14 días gratis",
     "trialTitle": "Prueba 14 días gratis",
     "trialSubtitle": "Acceso completo al research y los picks. Sin tarjeta.",
@@ -370,7 +370,7 @@
     "unlockTransactions": "Ve el historial completo de transacciones",
     "unlockTransactionsDesc": "Todas las compras y recompras con precios exactos y fechas.",
     "cta": "Desbloquear por $1/mes",
-    "includes": "Incluye picks diarios por WhatsApp"
+    "includes": "Incluye picks diarios por correo y en la app"
   },
   "Auth": {
     "login": "Iniciar sesión",
