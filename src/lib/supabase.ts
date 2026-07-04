@@ -25,9 +25,30 @@ export function getSupabaseAdmin() {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
     if (!url || !key) throw new Error("Supabase admin env vars not configured");
-    _supabaseAdmin = createClient(url, key);
+    _supabaseAdmin = createClient(url, key, {
+      auth: { persistSession: false, autoRefreshToken: false },
+    });
   }
   return _supabaseAdmin;
+}
+
+/**
+ * Throwaway client for token exchanges (`verifyOtp`, password sign-in).
+ *
+ * NEVER run these on the `getSupabaseAdmin()` singleton: supabase-js stores
+ * the resulting user session on the client, so every later `.from()` query
+ * in that warm lambda goes out as the USER's JWT (`authenticated` role)
+ * instead of the service key — which 42501s on service-role-only tables
+ * like `user_pick_status`. A fresh client per exchange keeps the session
+ * scoped to the request and dies with it.
+ */
+export function getSupabaseAuthExchangeClient() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const anon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !anon) throw new Error("Supabase env vars not configured");
+  return createClient(url, anon, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
 }
 
 // ===== SSR-compatible server client for auth =====

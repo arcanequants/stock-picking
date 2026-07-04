@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSupabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAuthExchangeClient } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 
@@ -25,7 +25,9 @@ export async function POST(request: Request) {
 
     const verifyType = type === "signup" ? "signup" : type === "email" ? "email" : "magiclink";
 
-    const supabase = getSupabaseAdmin();
+    // Throwaway client: verifyOtp on the shared admin singleton would leave
+    // the user's session attached to it for the rest of the lambda's life.
+    const supabase = getSupabaseAuthExchangeClient();
     const { data, error } = await supabase.auth.verifyOtp({
       token_hash,
       type: verifyType,

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSupabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin, getSupabaseAuthExchangeClient } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 
@@ -54,7 +54,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "internal_error" }, { status: 500 });
     }
 
-    const { data, error } = await supabase.auth.verifyOtp({
+    // Throwaway client: verifyOtp on the shared admin singleton would leave
+    // the demo session attached to it for the rest of the lambda's life.
+    const { data, error } = await getSupabaseAuthExchangeClient().auth.verifyOtp({
       token_hash: tokenHash,
       type: "magiclink",
     });
