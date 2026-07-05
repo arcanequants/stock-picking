@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.vectorialdata.app.core.auth.AuthManager
+import com.vectorialdata.app.core.util.Formatters
 import kotlinx.coroutines.launch
 
 /** Account tab. M1: identity + subscription status + sign out. */
@@ -54,10 +55,14 @@ fun AccountScreen(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
             Text(user?.email ?: "—", color = MaterialTheme.colorScheme.onBackground, fontSize = 16.sp)
-            Text(
-                if (user?.isSubscribed == true) "Premium" else "Free",
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
+            val subLabel = when {
+                user?.subscriptionStatus == "trialing" ->
+                    user?.currentPeriodEnd?.let { "Trial gratis · termina el ${Formatters.longSpanishDate(it)}" }
+                        ?: "Trial gratis"
+                user?.isSubscribed == true -> "Premium"
+                else -> "Free"
+            }
+            Text(subLabel, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
 
         Spacer(Modifier.height(8.dp))

@@ -499,16 +499,16 @@ private fun PaywallCard() {
             color = Color.White,
         )
         Text(
-            "Get our complete research: what the company does, why we picked it, the key risk, valuation and analyst consensus.",
+            "Get our complete research: what the company does, why we picked it, the key risk, valuation and analyst consensus. Free for 14 days, no card needed.",
             fontSize = 12.sp,
             color = Color.White.copy(alpha = 0.8f),
         )
         Button(
-            onClick = { uriHandler.openUri("https://vectorialdata.com") },
+            onClick = { uriHandler.openUri("https://vectorialdata.com/join") },
             colors = ButtonDefaults.buttonColors(containerColor = BrandEmerald, contentColor = Color(0xFF05080A)),
             shape = RoundedCornerShape(10.dp),
         ) {
-            Text("Suscríbete", fontWeight = FontWeight.SemiBold)
+            Text("Prueba 14 días gratis", fontWeight = FontWeight.SemiBold)
         }
     }
 }

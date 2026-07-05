@@ -277,17 +277,17 @@ private fun UpsellBanner() {
             color = MaterialTheme.colorScheme.onBackground,
         )
         Text(
-            "Subscribe to unlock the full history and every new pick the moment it drops.",
+            "Try it free for 14 days — no card needed. Unlock the full history and every new pick the moment it drops.",
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         // M6 (Play Billing) replaces this with the native paywall.
         Button(
-            onClick = { uriHandler.openUri("https://vectorialdata.com") },
+            onClick = { uriHandler.openUri("https://vectorialdata.com/join") },
             colors = ButtonDefaults.buttonColors(containerColor = BrandEmerald, contentColor = Color(0xFF05080A)),
             shape = RoundedCornerShape(10.dp),
         ) {
-            Text("Suscríbete", fontWeight = FontWeight.SemiBold)
+            Text("Prueba 14 días gratis", fontWeight = FontWeight.SemiBold)
         }
     }
 }
