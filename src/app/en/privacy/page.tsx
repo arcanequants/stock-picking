@@ -19,9 +19,9 @@ export default function EnPrivacyPage() {
         <section>
           <h2>1. Data We Collect</h2>
           <p>
-            Email address (for authentication and communication), payment information
-            (processed by Stripe or Apple — we never store card data), phone number
-            (optional, for WhatsApp pick delivery), and usage data (page visit analytics).
+            Email address (for authentication, communication, and pick delivery), payment
+            information (processed by Stripe or Apple — we never store card data), and
+            usage data (page visit analytics).
           </p>
         </section>
 
@@ -38,7 +38,7 @@ export default function EnPrivacyPage() {
           <p>
             We share data with: Apple (In-App Purchase processing), Stripe (web payment
             processing), Supabase (database and authentication), Vercel (hosting), and
-            WhatsApp/Meta (optional message delivery). Each provider has their own privacy policy.
+            Resend (email delivery). Each provider has their own privacy policy.
           </p>
         </section>
 

@@ -2,7 +2,12 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.vectorialdata.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vectorialdata.com"
+        }
+      ],
       "destination": "https://vectorialdata.com/:path*",
       "permanent": true
     }
@@ -35,10 +40,6 @@
     {
       "path": "/api/cron/quant-lab-ingest",
       "schedule": "0 */2 * * *"
-    },
-    {
-      "path": "/api/cron/wa-join-followup",
-      "schedule": "0 15 * * *"
     },
     {
       "path": "/api/cron/budget-reminder",

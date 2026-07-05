@@ -2,7 +2,7 @@
 
 ## Project
 - **Tech:** Next.js 16 + Tailwind CSS v4 + Supabase + Vercel
-- **Product:** Stock picking subscription ($1/mo) — daily picks via WhatsApp
+- **Product:** Stock picking subscription ($1/mo) — daily picks via email, web, and iOS app
 - **Site:** vectorialdata.com
 - **Repo:** arcanequants/stock-picking
 

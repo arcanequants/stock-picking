@@ -3,7 +3,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
-import DeliveryPreference from "@/components/DeliveryPreference";
 import DcaCalculator from "@/components/DcaCalculator";
 import AccountActions from "@/components/AccountActions";
 import ReferralCard from "@/components/ReferralCard";
@@ -37,22 +36,6 @@ export default async function AccountPage() {
     monthsEarned: tReferral("monthsEarned"),
   };
 
-  const deliveryLabels = {
-    title: t("deliveryTitle"),
-    subtitle: t("deliverySubtitle"),
-    whatsapp: t("channelWhatsApp"),
-    whatsappDesc: t("channelWhatsAppDesc"),
-    email: t("channelEmail"),
-    emailDesc: t("channelEmailDesc"),
-    both: t("channelBoth"),
-    bothDesc: t("channelBothDesc"),
-    saved: t("deliverySaved"),
-    saving: t("deliverySaving"),
-    joinWhatsApp: t("joinWhatsApp"),
-    waFallbackTitle: t("waFallbackTitle"),
-    waFallbackDesc: t("waFallbackDesc"),
-  };
-
   const budgetLabels = {
     title: t("budgetCalcTitle"),
     subtitle: t("budgetCalcSubtitle"),
@@ -72,9 +55,10 @@ export default async function AccountPage() {
         <p className="text-text-muted">{tAccount("subtitle")}</p>
       </div>
 
-      {/* Delivery preference */}
+      {/* Delivery: email-only since the WhatsApp channel was retired */}
       <section className="border border-border rounded-2xl p-6">
-        <DeliveryPreference labels={deliveryLabels} />
+        <h2 className="font-semibold mb-2">{t("deliveryTitle")}</h2>
+        <p className="text-sm text-text-muted">{t("channelEmailDesc")}</p>
       </section>
 
       {/* DCA rule */}

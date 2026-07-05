@@ -2152,40 +2152,12 @@ const WELCOME_COPY: Record<
 export async function sendWelcomeEmail(
   email: string,
   magicLinkUrl: string,
-  waGroupLink: string | null,
-  deliveryChannel: DeliveryChannel,
   locale: string = "es"
 ): Promise<void> {
   const l = locale in WELCOME_COPY ? locale : "es";
   const c = WELCOME_COPY[l];
 
-  const channelText =
-    deliveryChannel === "whatsapp"
-      ? c.channelWhatsApp
-      : deliveryChannel === "email"
-        ? c.channelEmail
-        : c.channelBoth;
-
-  const showWaBlock =
-    (deliveryChannel === "whatsapp" || deliveryChannel === "both") &&
-    Boolean(waGroupLink);
-
-  const waBlockHtml = showWaBlock
-    ? `
-  <tr><td style="padding:0 32px 24px;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:12px;">
-      <tr><td style="padding:20px 20px 16px;">
-        <p style="margin:0 0 4px;font-size:15px;font-weight:600;color:#065f46;">${c.waCtaTitle}</p>
-        <p style="margin:0 0 16px;font-size:13px;line-height:1.5;color:#047857;">${c.waCtaDesc}</p>
-        <table cellpadding="0" cellspacing="0"><tr><td>
-          <a href="${waGroupLink}" style="display:inline-block;background:#25D366;color:#ffffff;padding:12px 24px;border-radius:10px;text-decoration:none;font-size:15px;font-weight:600;">
-            💬 ${c.waButton}
-          </a>
-        </td></tr></table>
-      </td></tr>
-    </table>
-  </td></tr>`
-    : "";
+  const channelText = c.channelEmail;
 
   const html = `<!DOCTYPE html>
 <html>
@@ -2210,9 +2182,8 @@ export async function sendWelcomeEmail(
       ${c.channelLabel}: <strong style="color:#111827;">${channelText}</strong>
     </p>
   </td></tr>
-  ${waBlockHtml}
   <!-- What to expect -->
-  <tr><td style="padding:${showWaBlock ? "0" : "16px"} 32px 8px;">
+  <tr><td style="padding:16px 32px 8px;">
     <p style="margin:0 0 12px;font-size:15px;font-weight:600;color:#111827;">${c.expectTitle}</p>
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="padding:0 0 8px;font-size:14px;line-height:1.6;color:#374151;">

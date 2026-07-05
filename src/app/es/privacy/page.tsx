@@ -20,10 +20,9 @@ export default function EsPrivacyPage() {
         <section>
           <h2>1. Datos que Recopilamos</h2>
           <p>
-            Dirección de correo electrónico (para autenticación y comunicación), información
-            de pago (procesada por Apple o Stripe — nunca almacenamos datos de tarjetas),
-            número de teléfono (opcional, para entrega de picks por WhatsApp) y datos de
-            uso (análisis de visitas).
+            Dirección de correo electrónico (para autenticación, comunicación y entrega de
+            picks), información de pago (procesada por Apple o Stripe — nunca almacenamos
+            datos de tarjetas) y datos de uso (análisis de visitas).
           </p>
         </section>
 
@@ -40,8 +39,8 @@ export default function EsPrivacyPage() {
           <p>
             Compartimos datos con: Apple (procesamiento de compras in-app), Stripe
             (procesamiento de pagos web), Supabase (base de datos y autenticación), Vercel
-            (hosting) y WhatsApp/Meta (entrega opcional de mensajes). Cada proveedor tiene
-            su propia política de privacidad.
+            (hosting) y Resend (envío de correos). Cada proveedor tiene su propia política
+            de privacidad.
           </p>
         </section>
 

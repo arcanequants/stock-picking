@@ -10,7 +10,6 @@ import {
 } from "@/lib/resend";
 import { grantCredits, centsToMicroUsdc } from "@/lib/api-keys";
 import { getPack } from "@/lib/api-credit-packs";
-import { buildTrackedWaUrl } from "@/lib/wa-track";
 import { convertReferral } from "@/lib/referrals";
 import type Stripe from "stripe";
 
@@ -220,19 +219,7 @@ export async function POST(request: Request) {
           }
         }
 
-        const deliveryChannel = existing
-          ? ((
-              await supabase
-                .from("subscribers")
-                .select("delivery_channel")
-                .eq("email", normalizedEmail)
-                .maybeSingle()
-            ).data?.delivery_channel as
-              | "whatsapp"
-              | "email"
-              | "both"
-              | null) ?? "whatsapp"
-          : "whatsapp";
+        const deliveryChannel = "email" as const;
 
         let magicLinkUrl: string | null = null;
         try {
@@ -254,19 +241,9 @@ export async function POST(request: Request) {
           console.error("Magic link generation error:", err);
         }
 
-        const waGroupLink = process.env.WHATSAPP_GROUP_LINK
-          ? buildTrackedWaUrl(normalizedEmail, getSiteUrl())
-          : null;
-
         if (magicLinkUrl) {
           try {
-            await sendWelcomeEmail(
-              normalizedEmail,
-              magicLinkUrl,
-              waGroupLink,
-              deliveryChannel,
-              "es"
-            );
+            await sendWelcomeEmail(normalizedEmail, magicLinkUrl, "es");
           } catch (err) {
             console.error("Welcome email send error:", err);
           }

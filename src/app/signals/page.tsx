@@ -13,7 +13,6 @@ import { SignalCard } from "@/components/SignalCard";
 import { SignalViewToggle } from "@/components/SignalViewToggle";
 import { SignalsHormuzMap } from "@/components/SignalsHormuzMap";
 import { SignalsTropomiMap } from "@/components/SignalsTropomiMap";
-import { SignalsWhatsAppCta } from "@/components/SignalsWhatsAppCta";
 import { JsonLd, getServiceSchema } from "@/lib/seo";
 
 const SITE_URL = "https://vectorialdata.com";
@@ -242,9 +241,6 @@ export default async function SignalsIndexPage() {
                 />
               ))}
             </div>
-            {/* CTA after the first domain group only — avoids ad-fatigue while
-                still catching the scroll early. Footer CTA below repeats. */}
-            {groupIndex === 0 && <SignalsWhatsAppCta variant="compact" />}
           </section>
         ))
       )}
@@ -285,9 +281,6 @@ export default async function SignalsIndexPage() {
           </div>
         </details>
       )}
-
-      <SignalsWhatsAppCta variant="footer" />
-
       <footer className="border-t border-border pt-6 text-xs text-text-faint leading-relaxed max-w-3xl space-y-2">
         <p>
           Vectorial Signals is descriptive market intelligence. Not investment

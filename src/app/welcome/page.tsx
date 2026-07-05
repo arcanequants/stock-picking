@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { getTranslations, getLocale } from "next-intl/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import DeliveryPreference from "@/components/DeliveryPreference";
 import DcaCalculator from "@/components/DcaCalculator";
 import WelcomeFlow from "@/components/WelcomeFlow";
 import { getAuthState } from "@/lib/auth";
@@ -26,22 +25,6 @@ export default async function WelcomePage({
 
   const t = await getTranslations("Welcome");
   const locale = await getLocale();
-
-  const deliveryLabels = {
-    title: t("deliveryTitle"),
-    subtitle: t("deliverySubtitle"),
-    whatsapp: t("channelWhatsApp"),
-    whatsappDesc: t("channelWhatsAppDesc"),
-    email: t("channelEmail"),
-    emailDesc: t("channelEmailDesc"),
-    both: t("channelBoth"),
-    bothDesc: t("channelBothDesc"),
-    saved: t("deliverySaved"),
-    saving: t("deliverySaving"),
-    joinWhatsApp: t("joinWhatsApp"),
-    waFallbackTitle: t("waFallbackTitle"),
-    waFallbackDesc: t("waFallbackDesc"),
-  };
 
   const budgetLabels = {
     title: t("budgetCalcTitle"),
@@ -87,7 +70,7 @@ export default async function WelcomePage({
               </div>
               <h2 className="font-semibold">{t("step1TitleNew")}</h2>
             </div>
-            <DeliveryPreference labels={deliveryLabels} />
+            <p className="text-sm text-text-muted">{t("channelEmailDesc")}</p>
           </div>
 
           {/* Step 2: Set your DCA rule (monthly budget ÷ 30) */}

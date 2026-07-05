@@ -20,10 +20,9 @@ export default function PtPrivacyPage() {
         <section>
           <h2>1. Dados que Coletamos</h2>
           <p>
-            Endereço de e-mail (para autenticação e comunicação), informações de pagamento
-            (processadas pela Apple ou pelo Stripe — nunca armazenamos dados de cartão),
-            número de telefone (opcional, para entrega de picks via WhatsApp) e dados de
-            uso (análises agregadas de visitas).
+            Endereço de e-mail (para autenticação, comunicação e entrega de picks),
+            informações de pagamento (processadas pela Apple ou pelo Stripe — nunca
+            armazenamos dados de cartão) e dados de uso (análises agregadas de visitas).
           </p>
         </section>
 
@@ -40,8 +39,8 @@ export default function PtPrivacyPage() {
           <p>
             Compartilhamos dados com: Apple (processamento de compras in-app), Stripe
             (processamento de pagamentos web), Supabase (banco de dados e autenticação),
-            Vercel (hospedagem) e WhatsApp/Meta (entrega opcional de mensagens). Cada
-            provedor tem sua própria política de privacidade.
+            Vercel (hospedagem) e Resend (envio de e-mails). Cada provedor tem sua própria
+            política de privacidade.
           </p>
         </section>
 

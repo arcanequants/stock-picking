@@ -16,7 +16,6 @@ import { SignalViewToggle } from "@/components/SignalViewToggle";
 import { SignalChart } from "@/components/SignalChart";
 import { SignalsHormuzMap } from "@/components/SignalsHormuzMap";
 import { SignalsTropomiMap } from "@/components/SignalsTropomiMap";
-import { SignalsWhatsAppCta } from "@/components/SignalsWhatsAppCta";
 import { JsonLd } from "@/lib/seo";
 
 const SITE_URL = "https://vectorialdata.com";
@@ -289,9 +288,6 @@ export default async function SignalDetailPage({
           )}
         </dl>
       </section>
-
-      <SignalsWhatsAppCta variant="footer" />
-
       <section className="rounded-xl border border-border bg-card p-5 space-y-2">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-text-faint">
           For developers and AI agents
