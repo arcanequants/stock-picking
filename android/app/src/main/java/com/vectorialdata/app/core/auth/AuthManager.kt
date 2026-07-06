@@ -7,6 +7,7 @@ import com.vectorialdata.app.core.net.EmptyResponse
 import com.vectorialdata.app.core.store.DividendStore
 import com.vectorialdata.app.core.store.PickStatusStore
 import com.vectorialdata.app.feature.home.resetHomeCaches
+import com.vectorialdata.app.feature.portfolio.resetPortfolioCache
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -207,6 +208,7 @@ object AuthManager {
         PickStatusStore.reset()
         DividendStore.reset()
         resetHomeCaches()
+        resetPortfolioCache()
     }
 
     private suspend fun refreshProfile() {
