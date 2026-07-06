@@ -53,12 +53,11 @@ APK lands in `app/build/outputs/apk/debug/`.
   paywall). Prior-holdings management UI (add/remove) not ported yet — display only.
   (No chart here: iOS Portfolio has none; the history chart lives on Home.)
 - **M4 — News** — `/api/news` list + detail.
-- **M5 — Push (FCM)** — device registration (`/api/notifications/register-device`,
-  `platform=android`). **Backend gap:** add an FCM sender branched by platform
-  (today only `src/lib/apns.ts` exists).
-- **M6 — Billing** — Google Play Billing + subscription verify.
-  **Backend gap:** add a Play-purchase verification endpoint (today `/api/iap/verify`
-  is Apple-JWS-only).
+- **M5 — Push (FCM)** — app side: FCM token registration
+  (`/api/notifications/register-device`, `platform=android`) + notification
+  channel `vd_default`. Backend sender ✅ built (`src/lib/push.ts`, see below).
+- **M6 — Billing** — app side: Google Play Billing flow. Backend verify ✅ built
+  (`POST /api/iap/verify-play`, see below). RTDN + token persistence land here.
 - **M7 — i18n (es/en/pt), Play Store assets, release signing, submission.**
 
 ## Backend deltas Android needs
