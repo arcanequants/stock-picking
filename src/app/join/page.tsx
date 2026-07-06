@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import FreeSignupForm from "@/components/FreeSignupForm";
 import { JsonLd, getProductSchema } from "@/lib/seo";
+import { getAuthState } from "@/lib/auth";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata");
@@ -17,6 +20,37 @@ export default async function JoinPage() {
   const t = await getTranslations("Join");
   const f = await getTranslations("FreeSignup");
 
+  // Trial-aware: paying users don't belong here; trialing users get an
+  // upgrade pitch instead of the signup form (the badge + reminder emails
+  // both land on this page).
+  const { user, subscriptionStatus } = await getAuthState();
+  if (subscriptionStatus === "active") redirect("/portfolio");
+
+  let trialDaysLeft: number | null = null;
+  let trialEnded = false;
+  if (user?.email) {
+    if (subscriptionStatus === "trialing") {
+      const { data } = await getSupabaseAdmin()
+        .from("subscribers")
+        .select("trial_ends_at")
+        .eq("email", user.email.toLowerCase())
+        .maybeSingle();
+      trialDaysLeft = data?.trial_ends_at
+        ? Math.max(
+            0,
+            Math.ceil(
+              (new Date(data.trial_ends_at).getTime() - Date.now()) / 86400000
+            )
+          )
+        : 0;
+    } else if (subscriptionStatus) {
+      // canceled / past_due etc. — pitch reactivation, not another trial
+      trialEnded = true;
+    }
+  }
+
+  const paymentLink = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || "#";
+
   return (
     <div className="max-w-2xl mx-auto text-center space-y-8">
       <JsonLd data={getProductSchema()} />
@@ -25,14 +59,37 @@ export default async function JoinPage() {
         <p className="text-text-muted text-lg">{t("subtitle")}</p>
       </section>
 
-      {/* Trial — primary CTA: no card, just email */}
-      <div className="border border-brand-border bg-brand-subtle rounded-2xl p-8 mx-auto max-w-md">
-        <p className="inline-block text-xs text-brand-text font-semibold uppercase tracking-wider bg-brand/10 border border-brand-border rounded-full px-3 py-1 mb-3">{t("trialBadge")}</p>
-        <h2 className="text-2xl font-bold mb-1">{t("trialTitle")}</h2>
-        <p className="text-text-faint text-sm mb-6">{t("trialSubtitle")}</p>
-        <FreeSignupForm />
-        <p className="text-xs text-text-faint mt-3">{f("homeSubtitle")}</p>
-      </div>
+      {trialDaysLeft !== null || trialEnded ? (
+        /* Logged-in trial user: upgrade pitch, not another signup form */
+        <div className="border border-brand-border bg-brand-subtle rounded-2xl p-8 mx-auto max-w-md">
+          <p className="inline-block text-xs text-brand-text font-semibold uppercase tracking-wider bg-brand/10 border border-brand-border rounded-full px-3 py-1 mb-3">
+            {trialEnded ? t("trialEndedBadge") : t("trialActiveBadge")}
+          </p>
+          <h2 className="text-2xl font-bold mb-1">
+            {trialEnded
+              ? t("trialEndedTitle")
+              : t("trialActiveTitle", { days: trialDaysLeft ?? 0 })}
+          </h2>
+          <p className="text-text-faint text-sm mb-6">
+            {trialEnded ? t("trialEndedSubtitle") : t("trialActiveSubtitle")}
+          </p>
+          <a
+            href={paymentLink}
+            className="cta-glow block w-full bg-brand hover:bg-brand-hover text-white py-3 rounded-xl font-semibold transition-colors text-center"
+          >
+            {t("cta")}
+          </a>
+        </div>
+      ) : (
+        /* Trial — primary CTA: no card, just email */
+        <div className="border border-brand-border bg-brand-subtle rounded-2xl p-8 mx-auto max-w-md">
+          <p className="inline-block text-xs text-brand-text font-semibold uppercase tracking-wider bg-brand/10 border border-brand-border rounded-full px-3 py-1 mb-3">{t("trialBadge")}</p>
+          <h2 className="text-2xl font-bold mb-1">{t("trialTitle")}</h2>
+          <p className="text-text-faint text-sm mb-6">{t("trialSubtitle")}</p>
+          <FreeSignupForm />
+          <p className="text-xs text-text-faint mt-3">{f("homeSubtitle")}</p>
+        </div>
+      )}
 
       {/* Or subscribe directly — secondary */}
       <div className="mx-auto max-w-md space-y-4">

@@ -207,7 +207,13 @@
     "trialBadge": "14 días gratis",
     "trialTitle": "Prueba 14 días gratis",
     "trialSubtitle": "Acceso completo al research y los picks. Sin tarjeta.",
-    "orSubscribe": "¿Prefieres suscribirte directo?"
+    "orSubscribe": "¿Prefieres suscribirte directo?",
+    "trialActiveBadge": "Prueba activa",
+    "trialActiveTitle": "Te {days, plural, =0 {queda menos de un día} one {queda # día} other {quedan # días}} de prueba",
+    "trialActiveSubtitle": "No pierdas el acceso cuando termine: suscríbete por $1 al mes y sigue sin interrupciones.",
+    "trialEndedBadge": "Prueba terminada",
+    "trialEndedTitle": "Tu prueba terminó",
+    "trialEndedSubtitle": "Reactiva el acceso completo por $1 al mes — picks diarios, research y portafolio."
   },
   "Portfolio": {
     "title": "Panel del Portafolio",
