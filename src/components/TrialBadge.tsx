@@ -29,7 +29,7 @@ export default function TrialBadge() {
     <Link
       href="/join"
       title={t("cta")}
-      className="inline-flex items-center gap-1.5 rounded-full border border-brand-border bg-brand-subtle px-3 py-1 text-xs font-medium text-brand-text hover:bg-brand/15 transition-colors"
+      className="inline-flex items-center gap-1.5 whitespace-nowrap shrink-0 rounded-full border border-brand-border bg-brand-subtle px-3 py-1 text-xs font-medium text-brand-text hover:bg-brand/15 transition-colors"
     >
       <span className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
       {t("daysLeft", { days })}

@@ -112,10 +112,10 @@ export default async function RootLayout({
             {!isMarketing && (
               <nav className="border-b border-border sticky top-0 backdrop-blur-md z-50 relative" style={{ background: 'var(--nav-bg)' }}>
                 <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                  <Link href="/" className="flex items-center gap-2">
+                  <Link href="/" className="flex items-center gap-2 shrink-0">
                     <Image src="/logo.png" alt="Vectorial Data" width={32} height={32} className="hidden md:block" />
                     <Image src="/logo.png" alt="Vectorial Data" width={28} height={28} className="block md:hidden" />
-                    <span className="font-semibold text-lg">Vectorial Data</span>
+                    <span className="font-semibold text-lg whitespace-nowrap">Vectorial Data</span>
                   </Link>
 
                   {/* Desktop Nav */}
