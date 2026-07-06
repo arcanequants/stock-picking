@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { getAuthState } from "@/lib/auth";
 import { getTranslations, getLocale } from "next-intl/server";
 import { getPublicEvents } from "@/lib/notifications";
 import { JsonLd, getServiceSchema } from "@/lib/seo";
 import NotificationsList from "./NotificationsList";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://vectorialdata.com/notifications" },
+};
 
 export default async function NotificationsPage() {
   const { isSubscribed, user } = await getAuthState();

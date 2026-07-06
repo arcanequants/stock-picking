@@ -288,11 +288,15 @@ body {
 }
 
 /* Markdown styles for research pages */
-.prose-research h1 {
+.prose-research h1,
+.prose-research .prose-h1 {
   font-size: 1.5rem;
   font-weight: 700;
+  margin-top: 0;
   margin-bottom: 1rem;
   color: var(--foreground);
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .prose-research h2 {

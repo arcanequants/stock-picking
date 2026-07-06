@@ -27,12 +27,6 @@ export const metadata: Metadata = {
     "Hedge-fund-tier alternative-data signals from satellites, AIS, EIA, USDA, TROPOMI. Free preview per signal; full history + alerts on the $1/mo subscription.",
   alternates: {
     canonical: `${SITE_URL}/signals`,
-    languages: {
-      es: `${SITE_URL}/signals`,
-      en: `${SITE_URL}/signals`,
-      pt: `${SITE_URL}/signals`,
-      hi: `${SITE_URL}/signals`,
-    },
     types: {
       "application/rss+xml": [
         { url: `${SITE_URL}/signals/feed.xml`, title: "Vectorial Signals (RSS)" },

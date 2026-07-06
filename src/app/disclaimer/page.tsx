@@ -6,6 +6,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${t("disclaimerTitle")} | Vectorial Data`,
     description: t("disclaimerIntro"),
+    alternates: { canonical: "https://vectorialdata.com/disclaimer" },
   };
 }
 

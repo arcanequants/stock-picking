@@ -57,4 +57,4 @@ Allow: /llms-full.txt
 Allow: /openapi.yaml
 Allow: /picks-ledger.json
 
-Sitemap: https://www.vectorialdata.com/sitemap.xml
+Sitemap: https://vectorialdata.com/sitemap.xml
