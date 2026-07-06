@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
-import { sendAPNsMany } from "@/lib/apns";
+import { configuredPlatforms, sendPushMany, type PushDevice } from "@/lib/push";
 import { transactions } from "@/data/stocks";
 
 export const dynamic = "force-dynamic";
@@ -45,11 +45,11 @@ export async function GET(request: Request) {
     .filter((p) => p.date >= sevenDaysAgo);
   const allPickNumbers = transactions.map((_, i) => i + 1);
 
-  // All active iOS subscribers who could receive a digest.
+  // All active devices (iOS + Android) that could receive a digest.
   const { data: tokens, error: tokensErr } = await admin
     .from("device_tokens")
-    .select("email, token")
-    .eq("platform", "ios")
+    .select("email, token, platform")
+    .in("platform", configuredPlatforms())
     .eq("is_active", true);
 
   if (tokensErr) {
@@ -57,17 +57,17 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "db_error" }, { status: 500 });
   }
 
-  // Group tokens by email so each user can receive on every device.
-  const tokensByEmail = new Map<string, string[]>();
+  // Group devices by email so each user can receive on every device.
+  const tokensByEmail = new Map<string, PushDevice[]>();
   for (const t of tokens ?? []) {
     const email = t.email.toLowerCase();
     const list = tokensByEmail.get(email) ?? [];
-    list.push(t.token);
+    list.push({ token: t.token, platform: t.platform });
     tokensByEmail.set(email, list);
   }
 
   if (tokensByEmail.size === 0) {
-    return NextResponse.json({ message: "No active iOS tokens" });
+    return NextResponse.json({ message: "No active device tokens" });
   }
 
   // Pull every decision row for these users in one query.
@@ -117,25 +117,18 @@ export async function GET(request: Request) {
 
     const body = buildBody(boughtThisWeek, totalPending);
 
-    const results = await sendAPNsMany(deviceTokens, {
-      aps: {
-        alert: {
-          title: "Recap semanal",
-          body,
-        },
-        sound: "default",
-        "thread-id": "weekly-digest",
-      },
-      kind: "weekly_digest",
+    const results = await sendPushMany(deviceTokens, {
+      title: "Recap semanal",
+      body,
+      threadId: "weekly-digest",
+      data: { kind: "weekly_digest" },
     });
 
     for (const r of results) {
       if (r.ok) sent++;
       else {
         failed++;
-        if (r.status === 410 || r.reason === "Unregistered") {
-          deadTokens.push(r.token);
-        }
+        if (r.dead) deadTokens.push(r.token);
       }
     }
   }

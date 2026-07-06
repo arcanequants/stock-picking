@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
 import { sendPickEmail } from "@/lib/resend";
-import { sendAPNsMany } from "@/lib/apns";
+import { configuredPlatforms, deadTokens, sendPushMany } from "@/lib/push";
 import { generatePickApprovalToken } from "../route";
 
 export const dynamic = "force-dynamic";
@@ -139,48 +139,44 @@ export async function GET(request: Request) {
       }
     }
 
-    // iOS push fanout — best-effort, does not block email delivery summary.
+    // Push fanout (iOS + Android) — best-effort, does not block email delivery summary.
     let pushSent = 0;
     let pushFailed = 0;
     try {
       const subscribedEmails = recipients.map((r) => r.email.toLowerCase());
-      if (subscribedEmails.length > 0 && process.env.APNS_TEAM_ID) {
+      const platforms = configuredPlatforms();
+      if (subscribedEmails.length > 0 && platforms.length > 0) {
         const { data: tokens } = await supabase
           .from("device_tokens")
-          .select("email, token")
-          .eq("platform", "ios")
+          .select("email, token, platform")
+          .in("platform", platforms)
           .eq("is_active", true)
           .in("email", subscribedEmails);
 
-        const tokenList = (tokens ?? []).map((t) => t.token);
-        if (tokenList.length > 0) {
+        const devices = tokens ?? [];
+        if (devices.length > 0) {
           const returnPct = tx.price > 0
             ? Math.round(((stock.price - tx.price) / tx.price) * 10000) / 100
             : 0;
-          const results = await sendAPNsMany(tokenList, {
-            aps: {
-              alert: {
-                title: "Nuevo pick",
-                body: `$${stock.ticker}`,
-              },
-              sound: "default",
-              "thread-id": "new-pick",
+          const results = await sendPushMany(devices, {
+            title: "Nuevo pick",
+            body: `$${stock.ticker}`,
+            threadId: "new-pick",
+            data: {
+              kind: "new_pick",
+              ticker: stock.ticker,
+              pick_number: pickNumber,
+              return_pct: returnPct,
             },
-            ticker: stock.ticker,
-            pick_number: pickNumber,
-            return_pct: returnPct,
-            kind: "new_pick",
           });
 
-          // Deactivate tokens Apple rejects as dead (410).
-          const deadTokens = results
-            .filter((r) => r.status === 410 || r.reason === "Unregistered")
-            .map((r) => r.token);
-          if (deadTokens.length > 0) {
+          // Deactivate tokens the stores reject as dead (APNs 410 / FCM UNREGISTERED).
+          const dead = deadTokens(results);
+          if (dead.length > 0) {
             await supabase
               .from("device_tokens")
               .update({ is_active: false })
-              .in("token", deadTokens);
+              .in("token", dead);
           }
 
           pushSent = results.filter((r) => r.ok).length;
@@ -188,7 +184,7 @@ export async function GET(request: Request) {
         }
       }
     } catch (e) {
-      console.error("APNs fanout failed (non-fatal):", e);
+      console.error("Push fanout failed (non-fatal):", e);
     }
 
     return htmlResponse(

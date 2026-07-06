@@ -14,7 +14,7 @@ import { fetchSplitMap } from "@/lib/split-detection";
 import { fetchDividendMap } from "@/lib/dividend-detection";
 import { walkShares } from "@/lib/shares-walk";
 import { createEventWithExplanations } from "@/lib/notifications";
-import { sendAPNsMany } from "@/lib/apns";
+import { anyPushConfigured, configuredPlatforms, sendPushMany, type PushDevice } from "@/lib/push";
 
 const yahooFinance = new YahooFinance({ suppressNotices: ["yahooSurvey"] });
 
@@ -300,7 +300,7 @@ async function sendPendingDividendPushes(
   supabase: AdminClient,
   errors: string[],
 ): Promise<{ sent: number; failed: number }> {
-  if (!process.env.APNS_TEAM_ID) return { sent: 0, failed: 0 };
+  if (!anyPushConfigured()) return { sent: 0, failed: 0 };
 
   const { data: pending, error: pendingErr } = await supabase
     .from("user_dividend_events")
@@ -318,15 +318,15 @@ async function sendPendingDividendPushes(
   const emails = Array.from(new Set(pending.map((p) => p.email)));
   const { data: tokens } = await supabase
     .from("device_tokens")
-    .select("email, token")
+    .select("email, token, platform")
     .in("email", emails)
-    .eq("platform", "ios")
+    .in("platform", configuredPlatforms())
     .eq("is_active", true);
 
-  const tokensByEmail = new Map<string, string[]>();
+  const tokensByEmail = new Map<string, PushDevice[]>();
   for (const t of tokens ?? []) {
     const list = tokensByEmail.get(t.email) ?? [];
-    list.push(t.token);
+    list.push({ token: t.token, platform: t.platform });
     tokensByEmail.set(t.email, list);
   }
 
@@ -348,15 +348,15 @@ async function sendPendingDividendPushes(
     const title = `💸 $${row.ticker} te pagó $${amount.toFixed(2)}`;
     const body = pickMotivationalBody(row.pick_number);
 
-    const results = await sendAPNsMany(deviceTokens, {
-      aps: {
-        alert: { title, body },
-        sound: "default",
-        "thread-id": "dividends",
+    const results = await sendPushMany(deviceTokens, {
+      title,
+      body,
+      threadId: "dividends",
+      data: {
+        kind: "dividend_paid",
+        ticker: row.ticker,
+        pick_number: row.pick_number,
       },
-      ticker: row.ticker,
-      pick_number: row.pick_number,
-      kind: "dividend_paid",
     });
 
     let anyOk = false;
@@ -366,9 +366,7 @@ async function sendPendingDividendPushes(
         anyOk = true;
       } else {
         failed++;
-        if (r.status === 410 || r.reason === "Unregistered") {
-          deadTokens.push(r.token);
-        }
+        if (r.dead) deadTokens.push(r.token);
       }
     }
     // Even if all devices were dead, flip notified_at so we don't retry forever.

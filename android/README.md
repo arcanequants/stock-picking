@@ -45,7 +45,13 @@ APK lands in `app/build/outputs/apk/debug/`.
   one-liner, "LO IMPORTANTE" pills, accordions, dividends), decision flow + buy sheet
   (`/api/picks/{n}/decision`, default investment). Weekly digest deferred to M5 (its only
   entry point is a push). Paywall/upsell hands off to web until M6 (Play Billing).
-- **M3 — Portfolio** — positions, allocation, dividends, portfolio history chart.
+- **M3 — Portfolio** ✅ — Model/"Mío" segmented views (`/api/portfolio/positions`
+  `[?view=personal]`, lazy per-view cache, decisions invalidate the personal side via
+  `lastDecisionAt`), sort menu (Top/Worst/Newest), "COBRADO EN DIVIDENDOS" YTD card,
+  totals row, SECTOR/REGION MIX capsule bars, position rows with PREVIA pill, position
+  detail ("Our position" facts + EDITAR TU COMPRA tiles reusing the buy sheet + why/
+  paywall). Prior-holdings management UI (add/remove) not ported yet — display only.
+  (No chart here: iOS Portfolio has none; the history chart lives on Home.)
 - **M4 — News** — `/api/news` list + detail.
 - **M5 — Push (FCM)** — device registration (`/api/notifications/register-device`,
   `platform=android`). **Backend gap:** add an FCM sender branched by platform
@@ -55,8 +61,14 @@ APK lands in `app/build/outputs/apk/debug/`.
   is Apple-JWS-only).
 - **M7 — i18n (es/en/pt), Play Store assets, release signing, submission.**
 
-## Backend deltas Android needs (tracked, not yet built)
-1. **FCM push sender** — branch `device_tokens.platform` in the notification cron/senders.
-2. **Play Billing verify endpoint** — Google Play Developer API receipt validation.
+## Backend deltas Android needs
+1. ~~**FCM push sender**~~ ✅ built — `src/lib/push.ts` routes device_tokens by
+   platform (ios→APNs, android→FCM v1); all 4 senders migrated. Activates when
+   `FCM_SERVICE_ACCOUNT` (Firebase service-account JSON) is set in Vercel.
+   App side (M5): register FCM token + create notification channel `vd_default`.
+2. ~~**Play Billing verify endpoint**~~ ✅ built — `POST /api/iap/verify-play`
+   (`src/lib/google-play.ts`): subscriptionsv2 lookup + acknowledge + subscriber
+   row update. Activates with `GOOGLE_PLAY_SERVICE_ACCOUNT` (+ optional
+   `PLAY_PACKAGE_NAME`, `PLAY_SUBSCRIPTION_ID`). RTDN + token persistence = M6.
 3. ~~**Magic-link Android branch**~~ ✅ done — `magic-link/route.ts` emits
    `vectorialdata://` for `client === "ios" | "android"`.
