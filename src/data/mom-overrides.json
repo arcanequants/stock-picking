@@ -725,5 +725,30 @@
     "one_liner": "Elbit fabrica equipo militar de casi todo tipo: drones, lanzacohetes, municiones y sistemas electrónicos. Con el mundo rearmándose, ya tiene vendidos por adelantado más de $30 mil millones en pedidos — récord en su historia.",
     "why_short": "Los países están gastando en defensa como no se veía en décadas, sobre todo Europa, y Elbit crece 15% con la utilidad subiendo aún más rápido. Ojo: los analistas ven ~+14% de subida (target ~$868) pero recomiendan 'mantener' porque la acción ya subió mucho.",
     "risk_short": "La acción está cara tras subir ~78% en un año: se paga ~61 veces la utilidad, sin margen para decepciones. Además, Elbit depende de que siga el ciclo de rearme y opera desde Israel, una zona de conflicto activo."
+  },
+  "TER": {
+    "one_liner": "Teradyne hace las máquinas que examinan los chips antes de venderse: cada chip de inteligencia artificial, de iPhone o de coche tiene que pasar esa prueba, y casi solo dos empresas en el mundo la aplican. Con el boom de la IA, sus ventas están explotando.",
+    "why_short": "Sus ventas crecieron 87% el último trimestre — el mejor de sus 66 años de historia — porque los chips de IA son más complejos y necesitan muchas más horas de prueba. Es como cobrar peaje: gane quien gane la carrera de la IA, sus chips pasan por estas máquinas.",
+    "risk_short": "La acción ya subió más de 4 veces en un año y está cara; los analistas le ven poco margen inmediato (~8%). Y este negocio es de ciclos: cuando las fábricas de chips frenan sus compras, las ventas y el precio caen fuerte."
+  },
+  "VALE": {
+    "one_liner": "Vale es la minera brasileña dueña del hierro más puro del planeta (Carajás): con él se hace el acero de medio mundo. También produce cobre y níquel, y reparte buena parte de su ganancia como dividendo.",
+    "why_short": "Produce hierro más barato que casi cualquiera: le cuesta ~$21 la tonelada que el mercado paga ~$93, así que gana dinero aun en años malos. En los últimos 12 meses pagó ~6% de dividendo y los analistas la ven ~15% arriba (target ~$17.40).",
+    "risk_short": "Depende de China: si compra menos acero, el hierro baja y el dividendo también — es variable, no fijo. Además Vale sigue pagando por los desastres de Mariana y Brumadinho (hasta 2043) y el gobierno brasileño se mete seguido en sus decisiones."
+  },
+  "AIA": {
+    "one_liner": "AIA no es una empresa: es una canasta que junta a los 50 gigantes de Asia —TSMC, Samsung, Tencent, Alibaba— en una sola compra en dólares que te paga ~1.5% al año.",
+    "why_short": "Con una sola compra eres dueño de las fábricas que hacen casi todos los chips avanzados del mundo (TSMC, Samsung) y de las plataformas de internet más grandes de Asia. El fondo junta los dividendos de las 50 empresas y te los reparte dos veces al año.",
+    "risk_short": "Está muy concentrada: solo TSMC y Samsung son ~42% del fondo, y Taiwán —centro de la tensión con China— es ~33%. Además viene de subir ~75% en un año, puede corregir, y el dividendo cambia de un semestre a otro."
+  },
+  "TLGPY": {
+    "one_liner": "Telstra es 'el Telcel de Australia': la compañía de teléfono más grande del país — más de 4 de cada 10 celulares australianos usan su red — y además es dueña de los cables bajo el mar por los que viaja el internet entre Asia, Australia y el mundo.",
+    "why_short": "Te paga ~4% al año en dividendos y lleva cuatro años seguidos subiendo ese pago. Como la gente paga su celular hasta en las crisis, es de los ingresos más estables que existen.",
+    "risk_short": "Es una empresa que crece lento: no esperes que la acción se dispare — aquí el premio es el pago anual. Y como paga en dólares australianos, si esa moneda baja frente al dólar, tu ingreso baja un poco."
+  },
+  "IBN": {
+    "one_liner": "ICICI es el banco privado #2 de India: guarda los ahorros y le presta a la clase media del país más poblado del mundo. Es el banco mejor manejado de India y vuelve a crecer fuerte.",
+    "why_short": "Sus préstamos crecieron 16% en un año y casi nadie le deja de pagar: solo 33 centavos en riesgo por cada $100 prestados. Ganó $5.3 mil millones de dólares el último año. El dividendo es chico (~0.8% anual); la apuesta real es que el banco siga creciendo.",
+    "risk_short": "La acción ya cotiza cara para ser un banco, y la rupia india perdió 11% frente al dólar en un año. Si la rupia sigue cayendo, tu inversión en dólares vale menos aunque al banco le vaya bien en India."
   }
 }
