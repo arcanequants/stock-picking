@@ -7,6 +7,8 @@ enum AppTab: Hashable {
 struct MainTabView: View {
     @EnvironmentObject private var notifications: NotificationsManager
     @State private var selectedTab: AppTab = .home
+    @AppStorage("vd.didFirstRunSetup") private var didFirstRunSetup = false
+    @State private var showFirstRun = false
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -53,6 +55,20 @@ struct MainTabView: View {
         // before this view mounts, so `.onChange` never fires for it. Read the
         // current values once on appear to catch the cold-launch case.
         .task { routeToPendingTab() }
+        // First run on this device: prime notifications, then set the consistent
+        // per-buy amount. Both steps are skippable and shown only once.
+        .task {
+            if !didFirstRunSetup {
+                try? await Task.sleep(for: .seconds(0.6))
+                showFirstRun = true
+            }
+        }
+        .fullScreenCover(isPresented: $showFirstRun) {
+            FirstRunSetupView {
+                didFirstRunSetup = true
+                showFirstRun = false
+            }
+        }
         // Any incoming push tap that targets a pick or the weekly digest lands
         // in the Picks tab — that's where both flows live.
         .onChange(of: notifications.pendingPickNumber) { _, _ in routeToPendingTab() }
@@ -67,6 +83,26 @@ struct MainTabView: View {
             selectedTab = .home
         } else if notifications.pendingPickNumber != nil || notifications.pendingWeeklyDigest {
             selectedTab = .picks
+        }
+    }
+}
+
+/// One-time post-signin setup: notification priming → consistent-amount setup.
+private struct FirstRunSetupView: View {
+    var onComplete: () -> Void
+    @State private var step = 0
+
+    var body: some View {
+        ZStack {
+            Color("AppBackground").ignoresSafeArea()
+            switch step {
+            case 0:
+                NotificationPrimingView { withAnimation { step = 1 } }
+            default:
+                NavigationStack {
+                    InvestmentAmountView(onDone: onComplete)
+                }
+            }
         }
     }
 }

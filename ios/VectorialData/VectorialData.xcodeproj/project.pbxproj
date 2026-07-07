@@ -18,8 +18,10 @@
 		2A2FF98C39B62F85E8037032 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE702D73471F753F00FF42E3 /* AccountView.swift */; };
 		2F96C056DF410A1FF685E387 /* PickDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A17395E2504FDA008D3BE8E /* PickDetailView.swift */; };
 		35627BC6698B033ACAA33AAC /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B3769550D3ADC64FD4386 /* AuthManager.swift */; };
+		35FD761EA884564A39230C0C /* InvestmentAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549FB3F3C0B7B993F6A1F8A /* InvestmentAmountView.swift */; };
 		3683B19F09CA5C2F510E5AE4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8287C5838F9CAC34FE69512 /* RootView.swift */; };
 		36EE2F85312ACCB281EB9D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121016996505501D88748C4E /* Assets.xcassets */; };
+		3BEB3050F8E472FFE7BEEF47 /* NotificationPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939BF169D4D9B3067A6FCD5 /* NotificationPrimingView.swift */; };
 		3C5BE17FF77A2540FF1F1410 /* PortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A65EF70CD74EBC64471D56 /* PortfolioWidget.swift */; };
 		3CB5F1752EA6EC4A6F11B09F /* PickActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240CB1FDA7751B227248915 /* PickActivityAttributes.swift */; };
 		3D4909274492503AE55026C0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D87F188D573DF65FB58D8 /* AppConfig.swift */; };
@@ -107,6 +109,7 @@
 		820C026C9E6BED77E2FAB77A /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
 		859B3769550D3ADC64FD4386 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8895AD50A21203555ADBCDD5 /* LaunchSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSplashView.swift; sourceTree = "<group>"; };
+		8939BF169D4D9B3067A6FCD5 /* NotificationPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPrimingView.swift; sourceTree = "<group>"; };
 		8945448517C9F82AE56E6CD0 /* DividendStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendStore.swift; sourceTree = "<group>"; };
 		919CB40028266953070F20DE /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		979511B65522219EA59DA2A9 /* PriorHolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHolding.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		9995D70904166120C0B2A050 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		9EC722FBF6EABEF5AFA92FB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A2D7489EA85BDA320179BCBD /* VectorialDataWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = VectorialDataWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A549FB3F3C0B7B993F6A1F8A /* InvestmentAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentAmountView.swift; sourceTree = "<group>"; };
 		A5CC7DF01DAD9CEE5253E3EE /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		A6E0BC2DC9A12CC4BAD8C084 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A7745AACBA037492169B68FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 		26CA924A54BAD5769E1465A8 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A549FB3F3C0B7B993F6A1F8A /* InvestmentAmountView.swift */,
+				8939BF169D4D9B3067A6FCD5 /* NotificationPrimingView.swift */,
 				1BF39174D40D14684D1AD9BC /* OnboardingView.swift */,
 			);
 			path = Onboarding;
@@ -492,6 +498,7 @@
 				247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */,
 				928D6E26021D8AD058F99F4C /* DividendStore.swift in Sources */,
 				9ECE9BF8C1C931E240D0A5F6 /* HomeView.swift in Sources */,
+				35FD761EA884564A39230C0C /* InvestmentAmountView.swift in Sources */,
 				16272C73128B7A5EB8EAB08C /* KeychainHelper.swift in Sources */,
 				4F287F80D585C8FE70EB69F3 /* LaunchSplashView.swift in Sources */,
 				29FD74B796ED48F032B03993 /* MainTabView.swift in Sources */,
@@ -499,6 +506,7 @@
 				823F557E6BA9209CCF59334C /* NewsItem.swift in Sources */,
 				C1A59750F67587F294CE8B17 /* NewsListView.swift in Sources */,
 				7B609EDF4633C333BD048D22 /* NewsStore.swift in Sources */,
+				3BEB3050F8E472FFE7BEEF47 /* NotificationPrimingView.swift in Sources */,
 				279AB27528E3EE5E0F7B3019 /* NotificationsManager.swift in Sources */,
 				41165DA7553C97388C8BE458 /* OnboardingView.swift in Sources */,
 				E00B7B4841E48E9EA27B9892 /* OwlReveal.swift in Sources */,

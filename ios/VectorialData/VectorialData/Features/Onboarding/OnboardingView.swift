@@ -240,14 +240,16 @@ private struct ProofPage: View {
 private struct OnboardingScaffold<Content: View>: View {
     @ViewBuilder let content: Content
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 14) {
-                content
+        GeometryReader { proxy in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 14) {
+                    Spacer(minLength: 12)
+                    content
+                    Spacer(minLength: 12)
+                }
+                .frame(maxWidth: .infinity, minHeight: proxy.size.height, alignment: .center)
+                .padding(.horizontal, 20)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 20)
-            .padding(.top, 24)
-            .padding(.bottom, 20)
         }
     }
 }
@@ -327,5 +329,35 @@ enum PercentFormat {
     static func signed(_ pct: Double) -> String {
         let sign = pct >= 0 ? "+" : ""
         return "\(sign)\(String(format: "%.1f", pct))%"
+    }
+}
+
+// MARK: - Philosophy (re-viewable later from Account)
+
+/// The same education screens as onboarding, browsable any time from the
+/// Account tab. No CTAs — pure "why we exist".
+struct PhilosophyView: View {
+    @State private var page = 0
+    private let pageCount = 4
+
+    var body: some View {
+        ZStack {
+            Color("AppBackground").ignoresSafeArea()
+            VStack(spacing: 0) {
+                TabView(selection: $page) {
+                    PhilosophyPage().tag(0)
+                    ConsistencyPage().tag(1)
+                    ProofPage().tag(2)
+                    PickAnatomyPage().tag(3)
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                OnboardingDots(count: pageCount, index: page)
+                    .padding(.bottom, 16)
+            }
+        }
+        .navigationTitle("Filosofía")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(Color("AppBackground"), for: .navigationBar)
+        .toolbarColorScheme(.dark, for: .navigationBar)
     }
 }

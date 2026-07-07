@@ -28,14 +28,14 @@ struct AccountView: View {
                 }
 
                 Section {
-                    Button {
-                        isEditingDefault = true
+                    NavigationLink {
+                        InvestmentAmountView()
                     } label: {
                         HStack {
                             VStack(alignment: .leading, spacing: 2) {
-                                Text("Monto por pick")
+                                Text("Monto por compra")
                                     .foregroundStyle(.primary)
-                                Text(defaultInvestmentSubtitle)
+                                Text("La misma cantidad cada vez")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }
@@ -45,9 +45,25 @@ struct AccountView: View {
                         }
                     }
                 } header: {
-                    Text("Picks")
+                    Text("Cómo inviertes")
                 } footer: {
-                    Text("Se pre-rellena cuando marcas un pick como comprado. Lo puedes editar pick por pick.")
+                    Text("La misma cantidad en cada compra. Empieza con lo que no te pese y súbelo por etapas con el tiempo.")
+                }
+
+                Section {
+                    NavigationLink {
+                        PhilosophyView()
+                    } label: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Filosofía")
+                                .foregroundStyle(.primary)
+                            Text("Por qué invertimos así — dueño, largo plazo, dividendos")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                } header: {
+                    Text("Vectorial")
                 }
 
                 Section {
