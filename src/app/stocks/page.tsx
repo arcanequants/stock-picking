@@ -95,14 +95,21 @@ export default async function StocksPage() {
   ).length;
 
   // Build showcase research data (only for showcase tickers — minimize data sent to client)
+  // Previews are plain text, so markdown markers would show literally — strip them.
+  const stripMd = (s: string) =>
+    s
+      .replace(/\*\*(.+?)\*\*/g, "$1")
+      .replace(/\*(.+?)\*/g, "$1")
+      .replace(/`(.+?)`/g, "$1")
+      .replace(/^[-#>]+\s*/gm, "");
   const showcaseResearch: Record<string, { what: string; whyPreview: string }> = {};
   for (const ticker of showcaseTickers) {
     const stock = stocks.find((s) => s.ticker === ticker);
     if (stock) {
-      const localizedWhy = getLocalizedField(stock, "summary_why", locale);
+      const localizedWhy = stripMd(getLocalizedField(stock, "summary_why", locale) || "");
       const firstParagraph = localizedWhy?.split("\n")[0] || localizedWhy?.substring(0, 200) || "";
       showcaseResearch[ticker] = {
-        what: getLocalizedField(stock, "summary_what", locale),
+        what: stripMd(getLocalizedField(stock, "summary_what", locale) || ""),
         whyPreview: firstParagraph,
       };
     }

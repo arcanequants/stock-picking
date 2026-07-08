@@ -122,6 +122,15 @@ export default async function StockResearchPage({
       .replace(/`(.+?)`/g, "<code>$1</code>");
   };
 
+  // Summaries are authored in markdown but were rendered as raw text (visible
+  // asterisks/dashes). Inline "(1) ... (2) ..." enumerations become list items
+  // so they read as bullets instead of a wall of text. Single-digit only, so
+  // things like "(2022)" or "(1 ADR = 5)" are left alone.
+  const summaryHtml = (field: "summary_what" | "summary_why" | "summary_risk") => {
+    const raw = getLocalizedField(stock, field, locale) || "";
+    return renderMarkdown(raw.replace(/\s*\((\d)\)\s+/g, "\n$1. "));
+  };
+
   const researchHtml = renderMarkdown(stock.research_full);
 
   const faqSchema = getFaqSchema(stock, locale);
@@ -183,15 +192,15 @@ export default async function StockResearchPage({
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         <div className="border border-border rounded-xl p-4">
           <h3 className="text-xs text-text-faint uppercase tracking-wider mb-2">{t("whatTheyDo")}</h3>
-          <p className="text-sm text-text-secondary">{getLocalizedField(stock, "summary_what", locale)}</p>
+          <div className="prose-research text-sm" dangerouslySetInnerHTML={{ __html: summaryHtml("summary_what") ?? "" }} />
         </div>
         <div className="border border-emerald-500/20 rounded-xl p-4 bg-emerald-500/5">
           <h3 className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">{t("whyWeLikeIt")}</h3>
-          <p className="text-sm text-text-secondary">{getLocalizedField(stock, "summary_why", locale)}</p>
+          <div className="prose-research text-sm" dangerouslySetInnerHTML={{ __html: summaryHtml("summary_why") ?? "" }} />
         </div>
         <div className="border border-red-500/20 rounded-xl p-4 bg-red-500/5">
           <h3 className="text-xs text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">{t("keyRisk")}</h3>
-          <p className="text-sm text-text-secondary">{getLocalizedField(stock, "summary_risk", locale)}</p>
+          <div className="prose-research text-sm" dangerouslySetInnerHTML={{ __html: summaryHtml("summary_risk") ?? "" }} />
         </div>
       </div>
 
