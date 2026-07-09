@@ -6,6 +6,28 @@ import {
   type SignalLocale,
   type WeeklySignalSnapshot,
 } from "@/lib/signals";
+import momOverrides from "@/data/mom-overrides.json";
+import { localized } from "@/data/stock-translations";
+import { compactOneLiner, compactShort } from "@/lib/mom-shorts";
+
+// Plain-language pick summary (the iOS "mom" format): one_liner + why_short +
+// risk_short, no jargon, no markdown. Emails use THIS instead of the dense
+// summary_what/research — the deep dive lives on the web research page.
+const MOM_OVERRIDES = momOverrides as Record<
+  string,
+  { one_liner: string; why_short: string; risk_short: string }
+>;
+function momShorts(stock: Stock, locale: string) {
+  const ov = MOM_OVERRIDES[stock.ticker];
+  const oneEs = ov?.one_liner ?? compactOneLiner(stock.summary_short);
+  const whyEs = ov?.why_short ?? compactShort(stock.summary_why);
+  const riskEs = ov?.risk_short ?? compactShort(stock.summary_risk);
+  return {
+    one_liner: localized(stock.ticker, "one_liner", locale, oneEs),
+    why_short: localized(stock.ticker, "why_short", locale, whyEs),
+    risk_short: localized(stock.ticker, "risk_short", locale, riskEs),
+  };
+}
 
 // Ticker → company name map (e.g., "ARM" → "Arm Holdings")
 const NAMES: Record<string, string> = Object.fromEntries(
@@ -883,6 +905,7 @@ const PICK_L: Record<string, Record<string, string>> = {
     date: "{date}",
     priceLabel: "Precio",
     whatTheyDo: "Qué hacen",
+    whyWeLike: "Por qué nos gusta",
     income: "Tu nuevo ingreso",
     incomeDesc: "Esta empresa te paga {yield}% anual solo por ser dueño.",
     noDiv: "{name} no paga dividendo todavía, pero tu ganancia viene del crecimiento del negocio.",
@@ -902,6 +925,7 @@ const PICK_L: Record<string, Record<string, string>> = {
     date: "{date}",
     priceLabel: "Price",
     whatTheyDo: "What they do",
+    whyWeLike: "Why we like it",
     income: "Your new income",
     incomeDesc: "This company pays you {yield}% per year just for owning it.",
     noDiv: "{name} doesn't pay a dividend yet, but your gain comes from business growth.",
@@ -921,6 +945,7 @@ const PICK_L: Record<string, Record<string, string>> = {
     date: "{date}",
     priceLabel: "Preço",
     whatTheyDo: "O que fazem",
+    whyWeLike: "Por que gostamos",
     income: "Sua nova renda",
     incomeDesc: "Esta empresa te paga {yield}% ao ano só por ser dono.",
     noDiv: "{name} ainda não paga dividendos, mas seu ganho vem do crescimento do negócio.",
@@ -940,6 +965,7 @@ const PICK_L: Record<string, Record<string, string>> = {
     date: "{date}",
     priceLabel: "कीमत",
     whatTheyDo: "यह कंपनी क्या करती है",
+    whyWeLike: "हमें यह क्यों पसंद है",
     income: "आपकी नई आय",
     incomeDesc: "यह कंपनी आपको मालिक होने के लिए सालाना {yield}% देती है।",
     noDiv: "{name} अभी लाभांश नहीं देता, लेकिन आपका लाभ व्यवसाय वृद्धि से आता है।",
@@ -974,7 +1000,8 @@ function buildPickEmailHtml(
     ? pickT(lang, "incomeDesc").replace("{yield}", stock.dividend_yield.toFixed(1))
     : pickT(lang, "noDiv").replace("{name}", name);
 
-  const riskLine = stock.summary_risk?.split(".")[0] || "";
+  // Plain-language shorts (iOS "mom" format) — no jargon, no markdown.
+  const { one_liner, why_short, risk_short } = momShorts(stock, lang);
 
   return `<!DOCTYPE html>
 <html>
@@ -997,24 +1024,31 @@ function buildPickEmailHtml(
         <p style="margin:8px 0 0;font-size:28px;font-weight:700;color:#111827;">$${stock.price?.toFixed(2)}</p>
       </div>
 
-      <!-- What they do -->
-      ${stock.summary_what ? `
+      <!-- What they do (plain one-liner) -->
+      ${one_liner ? `
       <div style="margin-bottom:16px;padding:12px 16px;background:#f0f0ff;border-radius:8px;">
         <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#4f46e5;text-transform:uppercase;letter-spacing:0.5px;">${pickT(lang, "whatTheyDo")}</p>
-        <p style="margin:0;font-size:14px;color:#374151;line-height:1.5;">${stock.summary_what}</p>
+        <p style="margin:0;font-size:14px;color:#374151;line-height:1.6;">${escapeHtml(one_liner)}</p>
+      </div>` : ""}
+
+      <!-- Why we like it (plain) -->
+      ${why_short ? `
+      <div style="margin-bottom:16px;padding:12px 16px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.5px;">${pickT(lang, "whyWeLike")}</p>
+        <p style="margin:0;font-size:14px;color:#374151;line-height:1.6;">${escapeHtml(why_short)}</p>
       </div>` : ""}
 
       <!-- Income -->
-      <div style="margin-bottom:16px;padding:12px 16px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;">
-        <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.5px;">${pickT(lang, "income")}</p>
-        <p style="margin:0;font-size:14px;color:#374151;line-height:1.5;">${incomeLine}</p>
+      <div style="margin-bottom:16px;padding:12px 16px;background:#eef2ff;border:1px solid #c7d2fe;border-radius:8px;">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#4338ca;text-transform:uppercase;letter-spacing:0.5px;">${pickT(lang, "income")}</p>
+        <p style="margin:0;font-size:14px;color:#374151;line-height:1.6;">${incomeLine}</p>
       </div>
 
-      <!-- Risk -->
-      ${riskLine ? `
+      <!-- Risk (plain) -->
+      ${risk_short ? `
       <div style="margin-bottom:16px;padding:12px 16px;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;">
         <p style="margin:0 0 4px;font-size:11px;font-weight:700;color:#dc2626;text-transform:uppercase;letter-spacing:0.5px;">${pickT(lang, "risk")}</p>
-        <p style="margin:0;font-size:14px;color:#374151;line-height:1.5;">${riskLine}.</p>
+        <p style="margin:0;font-size:14px;color:#374151;line-height:1.6;">${escapeHtml(risk_short)}</p>
       </div>` : ""}
 
       <!-- Position badge -->
@@ -1353,6 +1387,8 @@ export interface DailyBriefData {
   totalBotVisits: number;
   yesterdayBotVisits: number;
   totalSubscribers: number;
+  paidSubscribers: number;
+  freeUsers: number;
   newSubscribersToday: number;
   totalApiKeys: number;
   totalRequestsToday: number;
@@ -1436,9 +1472,10 @@ function buildNarrative(data: DailyBriefData): string {
     else parts.push(`${data.totalBotVisits} bot visits`);
   }
 
-  // Subscribers
-  if (data.newSubscribersToday > 0) parts.push(`${data.newSubscribersToday} new signup${data.newSubscribersToday > 1 ? "s" : ""}!`);
+  // Signups (free leads) vs paid base
+  if (data.newSubscribersToday > 0) parts.push(`${data.newSubscribersToday} new signup${data.newSubscribersToday > 1 ? "s" : ""} (free lead${data.newSubscribersToday > 1 ? "s" : ""})`);
   else parts.push("0 new signups");
+  parts.push(`${data.paidSubscribers} paid sub${data.paidSubscribers === 1 ? "" : "s"}`);
 
   return parts.join(". ") + ".";
 }
@@ -1455,9 +1492,9 @@ function buildAlerts(data: DailyBriefData): string {
     alerts.push(`<tr><td style="padding:4px 8px;font-size:13px;">&#128293; First bot visits today: ${data.totalBotVisits}</td></tr>`);
   }
 
-  // New subscriber
+  // New signup (free lead — not necessarily a paying subscriber)
   if (data.newSubscribersToday > 0) {
-    alerts.push(`<tr><td style="padding:4px 8px;font-size:13px;">&#127881; ${data.newSubscribersToday} new subscriber${data.newSubscribersToday > 1 ? "s" : ""} today!</td></tr>`);
+    alerts.push(`<tr><td style="padding:4px 8px;font-size:13px;">&#127881; ${data.newSubscribersToday} new signup${data.newSubscribersToday > 1 ? "s" : ""} today (free lead${data.newSubscribersToday > 1 ? "s" : ""})</td></tr>`);
   }
 
   // Portfolio move
@@ -1483,7 +1520,7 @@ function metricCard(label: string, value: string, detail: string, bg: string, bo
 }
 
 function buildDailyBriefHtml(data: DailyBriefData): string {
-  const { date, portfolioReturnPct, dailyChangePct, totalBotVisits, yesterdayBotVisits, totalSubscribers, newSubscribersToday, totalApiKeys, totalRequestsToday, portfolioSparkline, botSparkline } = data;
+  const { date, portfolioReturnPct, dailyChangePct, totalBotVisits, yesterdayBotVisits, paidSubscribers, freeUsers, newSubscribersToday, totalApiKeys, totalRequestsToday, portfolioSparkline, botSparkline } = data;
 
   const pctSign = portfolioReturnPct >= 0 ? "+" : "";
   const pctColor = portfolioReturnPct >= 0 ? "#16a34a" : "#dc2626";
@@ -1498,10 +1535,9 @@ function buildDailyBriefHtml(data: DailyBriefData): string {
     ? `${totalBotVisits >= yesterdayBotVisits ? "+" : ""}${totalBotVisits - yesterdayBotVisits} vs ayer`
     : "first day";
 
-  // Subscriber detail
-  const subDetail = newSubscribersToday > 0
-    ? `+${newSubscribersToday} new today`
-    : "0 new today";
+  // Paid-subscriber card detail: free leads on file + new signups today
+  const newToday = newSubscribersToday > 0 ? ` · +${newSubscribersToday} today` : "";
+  const subDetail = `${freeUsers} free lead${freeUsers === 1 ? "" : "s"}${newToday}`;
 
   return `<!DOCTYPE html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
@@ -1534,11 +1570,11 @@ function buildDailyBriefHtml(data: DailyBriefData): string {
             pctColor
           )}
           ${metricCard(
-            "Subscribers",
-            String(totalSubscribers),
+            "Paid Subs",
+            String(paidSubscribers),
             subDetail,
-            newSubscribersToday > 0 ? "#f0fdf4" : "#f9fafb",
-            newSubscribersToday > 0 ? "#bbf7d0" : "#e4e4e7",
+            paidSubscribers > 0 ? "#f0fdf4" : "#f9fafb",
+            paidSubscribers > 0 ? "#bbf7d0" : "#e4e4e7",
           )}
         </tr>
         <tr>
@@ -1616,12 +1652,12 @@ export async function sendDailyBrief(to: string, data: DailyBriefData) {
 
   // Dynamic subject with alerts
   const alertParts: string[] = [];
-  if (data.newSubscribersToday > 0) alertParts.push(`+${data.newSubscribersToday} sub`);
+  if (data.newSubscribersToday > 0) alertParts.push(`+${data.newSubscribersToday} lead`);
   if (data.yesterdayBotVisits > 0 && ((data.totalBotVisits - data.yesterdayBotVisits) / data.yesterdayBotVisits) > 0.5) alertParts.push("bot spike");
   if (Math.abs(data.dailyChangePct) > 1) alertParts.push(`portfolio ${daySign}${data.dailyChangePct.toFixed(1)}%`);
   const alertStr = alertParts.length > 0 ? ` [${alertParts.join(", ")}]` : "";
 
-  const subject = `${pctSign}${data.portfolioReturnPct.toFixed(2)}% | ${data.totalBotVisits} bots | ${data.totalSubscribers} subs${alertStr}`;
+  const subject = `${pctSign}${data.portfolioReturnPct.toFixed(2)}% | ${data.totalBotVisits} bots | ${data.paidSubscribers} paid${alertStr}`;
 
   const { error } = await getResend().emails.send({
     from: FROM,
