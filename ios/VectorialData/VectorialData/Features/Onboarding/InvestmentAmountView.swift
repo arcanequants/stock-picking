@@ -1,4 +1,5 @@
 import SwiftUI
+import UserNotifications
 
 /// Set the consistent per-buy amount. The whole philosophy: the SAME amount
 /// every time, starting with what you won't feel, raised in steps over time.
@@ -13,7 +14,10 @@ struct InvestmentAmountView: View {
 
     @State private var amount: Double = 2
     @State private var saving = false
+    @State private var customText = ""
+    @FocusState private var customFocused: Bool
     @AppStorage("vd.remindRaiseAmount") private var remindToRaise = true
+    @AppStorage("vd.amountSetAt") private var amountSetAt: Double = 0
 
     private let quickAmounts: [Double] = [1, 2, 5, 20]
 
@@ -23,6 +27,7 @@ struct InvestmentAmountView: View {
                 header
                 amountDisplay
                 quickChips
+                customField
                 ladder
                 reminderToggle
             }
@@ -69,21 +74,59 @@ struct InvestmentAmountView: View {
             ForEach(quickAmounts, id: \.self) { a in
                 Button {
                     amount = a
+                    customText = ""
+                    customFocused = false
                 } label: {
                     Text(currency(a))
                         .font(.subheadline.weight(.semibold).monospacedDigit())
-                        .foregroundStyle(amount == a ? Color("BrandEmerald") : .white.opacity(0.8))
+                        .foregroundStyle(isSelected(a) ? Color("BrandEmerald") : .white.opacity(0.8))
                         .frame(maxWidth: .infinity, minHeight: 44)
-                        .background(amount == a ? Color("BrandEmerald").opacity(0.12) : Color("CardBackground"))
+                        .background(isSelected(a) ? Color("BrandEmerald").opacity(0.12) : Color("CardBackground"))
                         .overlay(
                             RoundedRectangle(cornerRadius: 11)
-                                .stroke(amount == a ? Color("BrandEmerald") : Color.white.opacity(0.08), lineWidth: 1)
+                                .stroke(isSelected(a) ? Color("BrandEmerald") : Color.white.opacity(0.08), lineWidth: 1)
                         )
                         .clipShape(RoundedRectangle(cornerRadius: 11))
                 }
                 .buttonStyle(.plain)
             }
         }
+    }
+
+    /// A quick chip is selected only when it matches AND the user isn't typing
+    /// a custom amount.
+    private func isSelected(_ a: Double) -> Bool {
+        customText.isEmpty && amount == a
+    }
+
+    private var customField: some View {
+        HStack(spacing: 8) {
+            Text("Otro monto")
+                .font(.subheadline)
+                .foregroundStyle(.white.opacity(0.7))
+            Spacer()
+            Text("$")
+                .font(.title3.weight(.semibold))
+                .foregroundStyle(.white.opacity(0.5))
+            TextField("0", text: $customText)
+                .keyboardType(.decimalPad)
+                .focused($customFocused)
+                .multilineTextAlignment(.trailing)
+                .font(.title3.weight(.bold).monospacedDigit())
+                .foregroundStyle(Color("BrandEmerald"))
+                .frame(width: 90)
+                .onChange(of: customText) { _, newValue in
+                    let cleaned = newValue.replacingOccurrences(of: ",", with: ".")
+                    if let v = Double(cleaned), v > 0 { amount = v }
+                }
+        }
+        .padding(14)
+        .background(Color("CardBackground"))
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(customFocused ? Color("BrandEmerald") : Color.white.opacity(0.08), lineWidth: 1)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 
     private var ladder: some View {
@@ -143,6 +186,12 @@ struct InvestmentAmountView: View {
                 saving = true
                 Task {
                     _ = await pickStatus.updateDefaultInvestment(amount)
+                    amountSetAt = Date().timeIntervalSince1970
+                    if remindToRaise {
+                        await RaiseReminder.schedule(currentAmount: amount)
+                    } else {
+                        RaiseReminder.cancel()
+                    }
                     saving = false
                     if let onDone { onDone() } else { dismiss() }
                 }
@@ -174,5 +223,46 @@ struct InvestmentAmountView: View {
     private func currency(_ v: Double) -> String {
         if v.truncatingRemainder(dividingBy: 1) == 0 { return "$\(Int(v))" }
         return String(format: "$%.2f", v)
+    }
+}
+
+/// Schedules a one-shot LOCAL notification that nudges the user to raise their
+/// per-buy amount once they've held the current step long enough. Fires only if
+/// notification permission is granted (we prime it during onboarding). Rescheduled
+/// each time the amount is saved; canceled if the reminder toggle is off.
+enum RaiseReminder {
+    static let id = "vd.raiseAmountReminder"
+
+    /// The next rung of the ladder + how long to wait, based on the current
+    /// amount. Above ~$50 we stop nudging.
+    static func nextRung(for amount: Double) -> (next: Double, days: Double)? {
+        switch amount {
+        case ..<5:    return (5, 120)    // ~4 meses en el escalón inicial
+        case 5..<50:  return (50, 300)   // ~10 meses en el escalón medio
+        default:      return nil          // ya está alto — no molestar
+        }
+    }
+
+    static func schedule(currentAmount: Double) async {
+        cancel()
+        guard let rung = nextRung(for: currentAmount) else { return }
+        let content = UNMutableNotificationContent()
+        content.title = "¿Listo para el siguiente escalón?"
+        content.body = "Llevas un tiempo invirtiendo \(money(currentAmount)) en cada compra. Si ya no lo sientes, súbelo a \(money(rung.next))."
+        content.sound = .default
+        content.userInfo = ["kind": "raise_amount"]
+        let trigger = UNTimeIntervalNotificationTrigger(
+            timeInterval: rung.days * 86_400, repeats: false)
+        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+        try? await UNUserNotificationCenter.current().add(request)
+    }
+
+    static func cancel() {
+        UNUserNotificationCenter.current()
+            .removePendingNotificationRequests(withIdentifiers: [id])
+    }
+
+    private static func money(_ v: Double) -> String {
+        v.truncatingRemainder(dividingBy: 1) == 0 ? "$\(Int(v))" : String(format: "$%.2f", v)
     }
 }

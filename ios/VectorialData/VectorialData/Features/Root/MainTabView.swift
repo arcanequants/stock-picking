@@ -9,6 +9,7 @@ struct MainTabView: View {
     @State private var selectedTab: AppTab = .home
     @AppStorage("vd.didFirstRunSetup") private var didFirstRunSetup = false
     @State private var showFirstRun = false
+    @State private var showAmountEditor = false
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -68,6 +69,16 @@ struct MainTabView: View {
                 didFirstRunSetup = true
                 showFirstRun = false
             }
+        }
+        // Tapping the scheduled "raise your amount" reminder opens the editor.
+        .onChange(of: notifications.pendingOpenAmount) { _, open in
+            if open {
+                showAmountEditor = true
+                notifications.pendingOpenAmount = false
+            }
+        }
+        .sheet(isPresented: $showAmountEditor) {
+            NavigationStack { InvestmentAmountView() }
         }
         // Any incoming push tap that targets a pick or the weekly digest lands
         // in the Picks tab — that's where both flows live.

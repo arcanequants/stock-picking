@@ -37,6 +37,10 @@ final class NotificationsManager: NSObject, ObservableObject {
     /// immediately after presentation; not persisted across launches.
     @Published var pendingShowPaywall: Bool = false
 
+    /// Set when the user taps the scheduled "raise your amount" reminder, so
+    /// MainTabView opens the per-buy amount editor.
+    @Published var pendingOpenAmount: Bool = false
+
     private override init() {
         super.init()
         UNUserNotificationCenter.current().delegate = self
@@ -162,6 +166,8 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
                 // Re-use the new-pick deep link: route to the pick detail
                 // where the new "DIVIDENDOS" section is already visible.
                 if let pickNumber { Self.shared.pendingPickNumber = pickNumber }
+            case "raise_amount":
+                Self.shared.pendingOpenAmount = true
             default:
                 break
             }
