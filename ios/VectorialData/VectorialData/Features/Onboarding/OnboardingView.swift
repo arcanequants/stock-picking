@@ -159,14 +159,40 @@ private struct PickAnatomyPage: View {
     }
 }
 
-// MARK: - Proof (real data)
+// MARK: - Proof (real data) — "El portafolio Vectorial" ★
+
+private struct ProofRow: Identifiable {
+    let ticker: String
+    let pct: Double
+    let days: Int
+    var id: String { ticker }
+}
+
+private let lossColor = Color(red: 0.91, green: 0.54, blue: 0.42)
 
 @MainActor
 private final class ProofModel: ObservableObject {
-    @Published var snapshot: PortfolioSnapshot?
+    @Published var total: Double?
+    @Published var rows: [ProofRow] = []
+    @Published var count = 0
+    @Published var spark: [Double] = []
     @Published var loaded = false
+
     func load() async {
-        snapshot = try? await APIClient.shared.get("/api/portfolio/snapshot", as: PortfolioSnapshot.self)
+        if let p = try? await APIClient.shared.get("/api/portfolio/positions", as: PortfolioPositions.self) {
+            total = p.totalReturnPct
+            count = p.positions.count
+            let sorted = p.positions.sorted { $0.returnPct > $1.returnPct }
+            var top = Array(sorted.prefix(3))
+            if let worst = sorted.last, worst.returnPct < 0,
+               !top.contains(where: { $0.ticker == worst.ticker }) {
+                top.append(worst)   // always show a loss — that's the whole point
+            }
+            rows = top.map { ProofRow(ticker: $0.ticker, pct: $0.returnPct, days: $0.daysHeld) }
+        }
+        if let h = try? await APIClient.shared.get("/api/portfolio/history", as: [PortfolioHistoryPoint].self) {
+            spark = h.map(\.returnPct)
+        }
         loaded = true
     }
 }
@@ -176,40 +202,61 @@ private struct ProofPage: View {
 
     var body: some View {
         OnboardingScaffold {
-            OnboardingTitle("Historial real,\nsin edición.", small: true)
-            OnboardingBody {
-                Text("Invertimos contigo y mostramos todo — las que ganan y las que pierden.")
-            }
+            OnboardingTitle("El portafolio\nVectorial")
+            Text("Historial real, sin edición.")
+                .font(.subheadline)
+                .foregroundStyle(.white.opacity(0.6))
 
             VStack(alignment: .leading, spacing: 12) {
-                if let s = model.snapshot {
-                    HStack(alignment: .firstTextBaseline) {
-                        Text("Rendimiento total")
-                            .font(.caption).foregroundStyle(.white.opacity(0.6))
-                        Spacer()
-                        Text(PercentFormat.signed(s.totalReturnPct))
-                            .font(.title2.weight(.bold).monospacedDigit())
-                            .foregroundStyle(s.totalReturnPct >= 0 ? Color("BrandEmerald") : Color(red: 0.9, green: 0.45, blue: 0.4))
-                    }
+                if let total = model.total {
+                    Text("RENDIMIENTO TOTAL")
+                        .font(.caption2.weight(.semibold))
+                        .tracking(1)
+                        .foregroundStyle(.white.opacity(0.45))
+                    Text(PercentFormat.signed(total))
+                        .font(.system(size: 34, weight: .bold, design: .rounded).monospacedDigit())
+                        .foregroundStyle(total >= 0 ? Color("BrandEmerald") : lossColor)
+
+                    Sparkline(values: model.spark)
+                        .frame(height: 44)
+                        .padding(.vertical, 4)
+
                     Divider().overlay(Color.white.opacity(0.08))
-                    if let best = s.best {
-                        proofRow(best.ticker, best.returnPct)
+
+                    HStack {
+                        Text("PICK").frame(maxWidth: .infinity, alignment: .leading)
+                        Text("REND.").frame(width: 78, alignment: .trailing)
+                        Text("DÍAS").frame(width: 44, alignment: .trailing)
                     }
-                    if let worst = s.worst, worst.ticker != s.best?.ticker {
-                        proofRow(worst.ticker, worst.returnPct)
+                    .font(.system(size: 10, weight: .medium))
+                    .tracking(0.5)
+                    .foregroundStyle(.white.opacity(0.4))
+
+                    ForEach(model.rows) { row in
+                        HStack {
+                            Text(row.ticker).frame(maxWidth: .infinity, alignment: .leading)
+                                .foregroundStyle(.white.opacity(0.92))
+                            Text(PercentFormat.signed(row.pct)).frame(width: 78, alignment: .trailing)
+                                .foregroundStyle(row.pct >= 0 ? Color("BrandEmerald") : lossColor)
+                            Text("\(row.days)").frame(width: 44, alignment: .trailing)
+                                .foregroundStyle(.white.opacity(0.6))
+                        }
+                        .font(.system(.subheadline, design: .monospaced).monospacedDigit())
                     }
-                    Text("\(s.totalPositions) posiciones · desde el inicio")
+
+                    Text("\(model.count) posiciones · desde el inicio")
                         .font(.caption2).foregroundStyle(.white.opacity(0.4))
+                        .padding(.top, 2)
                 } else if model.loaded {
                     Text("Míralo tú mismo dentro de la app — el historial completo, posición por posición.")
                         .font(.subheadline).foregroundStyle(.white.opacity(0.75))
                 } else {
-                    ProgressView().tint(.white).frame(maxWidth: .infinity)
+                    ProgressView().tint(.white).frame(maxWidth: .infinity, minHeight: 120)
                 }
             }
             .padding(16)
             .background(Color("CardBackground"))
-            .clipShape(RoundedRectangle(cornerRadius: 14))
+            .clipShape(RoundedRectangle(cornerRadius: 16))
 
             HStack(spacing: 8) {
                 Image(systemName: "link")
@@ -217,20 +264,34 @@ private struct ProofPage: View {
             }
             .font(.footnote)
             .foregroundStyle(.white.opacity(0.55))
-            .padding(.top, 8)
+            .padding(.top, 4)
         }
         .task { await model.load() }
     }
+}
 
-    private func proofRow(_ ticker: String, _ pct: Double) -> some View {
-        HStack {
-            Text(ticker)
-                .font(.subheadline.monospaced())
-                .foregroundStyle(.white.opacity(0.9))
-            Spacer()
-            Text(PercentFormat.signed(pct))
-                .font(.subheadline.monospacedDigit())
-                .foregroundStyle(pct >= 0 ? Color("BrandEmerald") : Color(red: 0.9, green: 0.45, blue: 0.4))
+private struct Sparkline: View {
+    let values: [Double]
+    var body: some View {
+        GeometryReader { geo in
+            if values.count > 1 {
+                let minV = values.min() ?? 0
+                let maxV = values.max() ?? 1
+                let range = max(0.0001, maxV - minV)
+                let pts = values.enumerated().map { i, v in
+                    CGPoint(x: geo.size.width * CGFloat(i) / CGFloat(values.count - 1),
+                            y: geo.size.height * (1 - CGFloat((v - minV) / range)))
+                }
+                Path { p in
+                    p.move(to: pts[0])
+                    for pt in pts.dropFirst() { p.addLine(to: pt) }
+                }
+                .stroke(
+                    LinearGradient(colors: [Color(red: 0.20, green: 0.85, blue: 0.90), Color("BrandEmerald")],
+                                   startPoint: .leading, endPoint: .trailing),
+                    style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round)
+                )
+            }
         }
     }
 }
