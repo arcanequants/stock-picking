@@ -383,18 +383,14 @@
     "model": "gpt-4o"
   },
   "IEX": {
-    "one_liner": "IDEX fabrica bombas y equipos de rescate como las 'Jaws of Life', y ha aumentado sus dividendos por 17 años seguidos.",
-    "why_short": "A 197 dólares por acción, IDEX se beneficia de la demanda en agua, centros de datos y ciencias de la vida. Compraron Mott Corporation para mejorar en filtración y tienen un contrato de 40 millones de dólares en aguas residuales.",
-    "risk_short": "IDEX es cara para su sector y si baja la demanda de centros de datos, su crecimiento podría frenarse. Además, algunos de sus mercados como químicos y seguridad están débiles.",
-    "generated_at": "2026-05-25T00:14:41.114Z",
-    "model": "gpt-4o"
+    "one_liner": "IDEX es dueña de decenas de pequeñas empresas que hacen piezas críticas pero invisibles: bombas de precisión, los sistemas que mueven líquidos dentro de las máquinas de análisis médico, y el equipo de rescate de los bomberos. Va comprando más líderes de nicho, uno tras otro.",
+    "why_short": "Ya la teníamos desde abril y la reforzamos porque su tesis se confirmó: en el último trimestre tuvo pedidos récord (+13%) y subió su meta de crecimiento del año. Es una máquina de comprar negocios pequeños excelentes, con márgenes altos y un dividendo que sube 16 años seguidos.",
+    "risk_short": "No está barata (se paga ~32 veces la utilidad) y los analistas le ven poco margen inmediato (~8%). Además es cíclica: cuando la industria frena sus compras, sus ventas bajan, y todo el modelo depende de que siga comprando otras empresas a buen precio."
   },
   "ITUB": {
-    "one_liner": "Itaú Unibanco es el banco privado más grande de Brasil y paga dividendos cada mes, algo raro en bancos grandes.",
-    "why_short": "Es una inversión atractiva porque es el banco más importante de Brasil, con buenas ganancias y paga dividendos mensuales, lo que es poco común.",
-    "risk_short": "El mayor riesgo es que si Brasil tiene problemas económicos, el valor del banco podría bajar y afectar las ganancias de los inversionistas.",
-    "generated_at": "2026-05-28T00:50:45.602Z",
-    "model": "gpt-4o"
+    "one_liner": "Itaú es el banco más grande de Brasil y de toda América Latina. Ya lo teníamos y hoy compramos más: nos paga uno de los mejores dividendos del portafolio (casi todos los meses) y es un negocio de calidad rara, de los más rentables del mundo.",
+    "why_short": "Reforzamos porque la historia mejoró: el último trimestre ganó R$12.3 mil millones con una rentabilidad sobre su capital de casi 25% —de las mejores del mundo— y la menor morosidad de su historia. Y sigue pagándote alrededor de 6.5% al año solo por ser dueño, casi todos los meses.",
+    "risk_short": "Es un banco brasileño: la política, la economía de Brasil y el tipo de cambio real/dólar mueven su precio en dólares. Además, la tasa de interés ya empezó a bajar y la fintech Nubank le pelea clientes."
   },
   "KHC": {
     "one_liner": "Kraft Heinz, dueños de Heinz Ketchup y Kraft Mac & Cheese, está en el ojo del huracán porque Berkshire Hathaway está vendiendo todas sus acciones.",
@@ -750,5 +746,15 @@
     "one_liner": "ICICI es el banco privado #2 de India: guarda los ahorros y le presta a la clase media del país más poblado del mundo. Es el banco mejor manejado de India y vuelve a crecer fuerte.",
     "why_short": "Sus préstamos crecieron 16% en un año y casi nadie le deja de pagar: solo 33 centavos en riesgo por cada $100 prestados. Ganó $5.3 mil millones de dólares el último año. El dividendo es chico (~0.8% anual); la apuesta real es que el banco siga creciendo.",
     "risk_short": "La acción ya cotiza cara para ser un banco, y la rupia india perdió 11% frente al dólar en un año. Si la rupia sigue cayendo, tu inversión en dólares vale menos aunque al banco le vaya bien en India."
+  },
+  "IDCC": {
+    "one_liner": "InterDigital inventa la tecnología que va dentro de los teléfonos, televisores y aparatos conectados —el 5G, el Wi-Fi, el video digital—, la patenta, y cobra una pequeña regalía a los que sí fabrican esos aparatos: Apple, Samsung, Google, LG, Xiaomi. No fabrica nada; su único producto son las ideas.",
+    "why_short": "Es un negocio de márgenes enormes porque cobra por ideas, no por manufactura: casi todo lo que gana se convierte en efectivo. Sus patentes son imposibles de esquivar (si quieres 5G o Wi-Fi, tienes que usarlas), tiene contratos firmados por años con los grandes fabricantes, y reparte dinero a sus dueños con dividendo y recompras.",
+    "risk_short": "Sus ingresos son irregulares: a veces cobra pagos únicos que no se repiten y depende de renovar contratos y ganar pleitos de patentes (hoy pelea contra Amazon y Disney). De hecho, la propia empresa espera facturar menos este año que el pasado. Además, las patentes caducan con el tiempo, así que tiene que inventar sin parar."
+  },
+  "KLAC": {
+    "one_liner": "KLA hace las máquinas que inspeccionan las obleas de silicio mientras se fabrican los chips, cazando defectos que no se ven ni con microscopio. Es el paso anterior a Teradyne: KLA revisa la oblea durante la fabricación, Teradyne prueba el chip ya terminado. Domina más de la mitad de este mercado en el mundo.",
+    "why_short": "Los chips de inteligencia artificial tienen muchísimas más capas, y cada capa nueva es otro lugar donde puede aparecer un defecto que hay que inspeccionar. Más capas = más máquinas de KLA. Gane quien gane la carrera de la IA, sus chips pasan por la inspección de KLA.",
+    "risk_short": "La acción casi se triplicó en un año y está cara; los analistas le ven ~18% de margen. Además es un negocio de ciclos, y China es un riesgo real: los controles de exportación de EE.UU. pueden recortar una parte grande de sus ventas."
   }
 }
