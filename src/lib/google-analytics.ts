@@ -1,6 +1,32 @@
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import { google } from "googleapis";
 
+// The GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY stored in Vercel had stray spaces
+// injected into the PEM (markers AND base64 body → 66-char lines). OpenSSL 3
+// rejects that with ERR_OSSL_UNSUPPORTED, silently degrading GA4/GSC to "—".
+// A plain \n-unescape does NOT fix it — the spaces survive. Rebuild the PEM
+// from the base64 payload, stripping ALL whitespace.
+function normalizePrivateKey(raw: string): string {
+  let k = raw.trim();
+  if (
+    (k.startsWith('"') && k.endsWith('"')) ||
+    (k.startsWith("'") && k.endsWith("'"))
+  ) {
+    k = k.slice(1, -1);
+  }
+  k = k.replace(/\\+n/g, "\n");
+  const stripped = k.replace(/\s+/g, "");
+  const m = stripped.match(
+    /-----BEGIN[A-Z]*PRIVATEKEY-----(.+?)-----END[A-Z]*PRIVATEKEY-----/,
+  );
+  const payload = m?.[1];
+  if (!payload) return k;
+  const body = payload.match(/.{1,64}/g)?.join("\n") ?? payload;
+  const label = "PRIVATE KEY";
+  const dashes = "-----";
+  return `${dashes}BEGIN ${label}${dashes}\n${body}\n${dashes}END ${label}${dashes}\n`;
+}
+
 function getGA4Client() {
   const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
   const key = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY;
@@ -9,7 +35,7 @@ function getGA4Client() {
   const client = new BetaAnalyticsDataClient({
     credentials: {
       client_email: email,
-      private_key: key.replace(/\\n/g, "\n"),
+      private_key: normalizePrivateKey(key),
     },
   });
   return { client, property: `properties/${propertyId}` };
@@ -204,7 +230,7 @@ export async function fetchGSCData(daysBack = 7): Promise<GSCData | null> {
   try {
     const auth = new google.auth.JWT({
       email,
-      key: key.replace(/\\n/g, "\n"),
+      key: normalizePrivateKey(key),
       scopes: ["https://www.googleapis.com/auth/webmasters.readonly"],
     });
 
