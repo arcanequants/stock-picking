@@ -59,13 +59,15 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("title"),
     description: t("description"),
     openGraph: {
+      type: "website",
+      url: "/",
       images: [{ url: "/api/og/portfolio", width: 1200, height: 630 }],
       siteName: "Vectorial Data",
     },
     twitter: { card: "summary_large_image" },
-    alternates: {
-      canonical: SITE_URL,
-    },
+    // NOTE: no root-level alternates.canonical — a default canonical here is
+    // inherited by every page without its own, mislabeling them as the
+    // homepage. Each indexable page declares its own self-canonical.
     ...(process.env.GOOGLE_SITE_VERIFICATION && {
       verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
     }),

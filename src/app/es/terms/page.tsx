@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Términos de Servicio | Vectorial Data",
   description: "Términos de servicio de Vectorial Data, divulgación de renovación automática y avisos legales.",
+  alternates: { canonical: "https://vectorialdata.com/es/terms" },
 };
 
 export default function EsTermsPage() {

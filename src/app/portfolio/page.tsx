@@ -21,6 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${t("title")} | Vectorial Data`,
     description: t("subtitle"),
+    alternates: { canonical: "https://vectorialdata.com/portfolio" },
     openGraph: {
       title: `${t("title")} | Vectorial Data`,
       description: t("subtitle"),

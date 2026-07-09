@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Vectorial Data",
   description: "Vectorial Data privacy policy — what data we collect and how we use it.",
+  alternates: { canonical: "https://vectorialdata.com/en/privacy" },
 };
 
 export default function EnPrivacyPage() {

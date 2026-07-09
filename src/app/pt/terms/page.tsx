@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Termos de Serviço | Vectorial Data",
   description: "Termos de serviço da Vectorial Data, divulgação de renovação automática e avisos legais.",
+  alternates: { canonical: "https://vectorialdata.com/pt/terms" },
 };
 
 export default function PtTermsPage() {

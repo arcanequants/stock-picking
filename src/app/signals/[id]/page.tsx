@@ -44,7 +44,6 @@ export async function generateMetadata({
     description: casual.tagline || `${def.name} (${def.unit})`,
     alternates: {
       canonical: url,
-      languages: { es: url, en: url, pt: url, hi: url },
     },
     robots: { index: true, follow: true },
     openGraph: {

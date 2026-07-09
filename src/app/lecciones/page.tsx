@@ -26,12 +26,6 @@ export async function generateMetadata(): Promise<Metadata> {
     description: t("metaDescription"),
     alternates: {
       canonical: `${SITE_URL}/lecciones`,
-      languages: {
-        es: `${SITE_URL}/lecciones`,
-        en: `${SITE_URL}/lecciones`,
-        pt: `${SITE_URL}/lecciones`,
-        hi: `${SITE_URL}/lecciones`,
-      },
     },
     robots: { index: true, follow: true },
   };

@@ -4,6 +4,38 @@ import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 
 const SITE_URL = "https://vectorialdata.com";
 
+/* ── Plain-text helpers for meta/schema descriptions ──── */
+
+/** Strip markdown syntax so descriptions read as plain text. */
+export function stripMarkdown(md: string): string {
+  return (md || "")
+    .replace(/```[\s\S]*?```/g, " ") // fenced code blocks
+    .replace(/`([^`]*)`/g, "$1") // inline code
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1") // images
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1") // links
+    .replace(/^#{1,6}\s+/gm, "") // headings
+    .replace(/(\*\*|__)(.*?)\1/g, "$2") // bold
+    .replace(/(\*|_)([^*_]+)\1/g, "$2") // italic
+    .replace(/^\s*>\s?/gm, "") // blockquotes
+    .replace(/^\s*[-*+]\s+/gm, "") // list bullets
+    .replace(/^---+$/gm, " ") // horizontal rules
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** Markdown-free description truncated at a word boundary (~155 chars). */
+export function metaDescription(text: string, maxLength = 155): string {
+  const plain = stripMarkdown(text);
+  if (plain.length <= maxLength) return plain;
+  const cut = plain.slice(0, maxLength);
+  const lastSpace = cut.lastIndexOf(" ");
+  const clipped = (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).replace(
+    /[\s,;:.—–-]+$/,
+    ""
+  );
+  return `${clipped}…`;
+}
+
 /* ── JSON-LD renderer ─────────────────────────────────── */
 
 export function JsonLd({ data }: { data: Record<string, unknown> }) {
@@ -136,7 +168,9 @@ export function getServiceSchema(id: ServiceId) {
 /* ── Article (stock research pages) ───────────────────── */
 
 export function getArticleSchema(stock: Stock, locale: string) {
-  const description = getLocalizedField(stock, "summary_short", locale);
+  const description = stripMarkdown(
+    getLocalizedField(stock, "summary_short", locale)
+  );
   return {
     "@context": "https://schema.org",
     "@type": "Article",

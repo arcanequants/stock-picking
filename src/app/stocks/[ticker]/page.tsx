@@ -7,7 +7,7 @@ import BlockchainBadge from "@/components/BlockchainBadge";
 import StockDividendsReceived from "@/components/StockDividendsReceived";
 import { Suspense } from "react";
 import { getLocalizedField } from "@/data/stock-translations";
-import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema } from "@/lib/seo";
+import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema, metaDescription } from "@/lib/seo";
 
 const localeMap: Record<string, string> = {
   es: "es-MX",
@@ -33,16 +33,18 @@ export async function generateMetadata({
   const locale = await getLocale();
   if (!stock) return { title: `${t("stockNotFound")} | Vectorial Data` };
 
-  const localizedShort = getLocalizedField(stock, "summary_short", locale);
+  const description = metaDescription(
+    getLocalizedField(stock, "summary_short", locale)
+  );
   return {
     title: `${stock.ticker} — ${stock.name} | Vectorial Data Research`,
-    description: localizedShort,
+    description,
     alternates: {
       canonical: `https://vectorialdata.com/stocks/${stock.ticker}`,
     },
     openGraph: {
       title: `${stock.ticker} — ${stock.name}`,
-      description: localizedShort,
+      description,
       images: [{ url: `/api/og/stock/${stock.ticker}`, width: 1200, height: 630 }],
       type: "article",
     },
@@ -100,7 +102,9 @@ export default async function StockResearchPage({
       } else if (inTable) { html.push("</tbody></table>"); inTable = false; }
       if (line.startsWith("### ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<h3>${applyInline(line.slice(4))}</h3>`); continue; }
       if (line.startsWith("## ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<h2>${applyInline(line.slice(3))}</h2>`); continue; }
-      if (line.startsWith("# ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<h1>${applyInline(line.slice(2))}</h1>`); continue; }
+      // Markdown "# " renders as an h2 (styled like the research h1) so the
+      // page keeps a single h1 — the ticker heading above.
+      if (line.startsWith("# ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<h2 class="prose-h1">${applyInline(line.slice(2))}</h2>`); continue; }
       if (line.startsWith("> ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<blockquote>${applyInline(line.slice(2))}</blockquote>`); continue; }
       if (line.match(/^[-*]\s/) || line.match(/^\d+\.\s/)) {
         if (!inList) { html.push("<ul>"); inList = true; }

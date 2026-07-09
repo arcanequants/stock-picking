@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Política de Privacidade | Vectorial Data",
   description: "Política de privacidade da Vectorial Data — quais dados coletamos e como os utilizamos.",
+  alternates: { canonical: "https://vectorialdata.com/pt/privacy" },
 };
 
 export default function PtPrivacyPage() {
