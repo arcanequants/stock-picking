@@ -5,6 +5,7 @@ import com.vectorialdata.app.core.model.UserProfile
 import com.vectorialdata.app.core.net.ApiClient
 import com.vectorialdata.app.core.net.EmptyResponse
 import com.vectorialdata.app.core.store.DividendStore
+import com.vectorialdata.app.core.store.NewsStore
 import com.vectorialdata.app.core.store.PickStatusStore
 import com.vectorialdata.app.feature.home.resetHomeCaches
 import com.vectorialdata.app.feature.portfolio.resetPortfolioCache
@@ -207,6 +208,7 @@ object AuthManager {
         // Wipe cached stores so the next user never sees stale data.
         PickStatusStore.reset()
         DividendStore.reset()
+        NewsStore.reset()
         resetHomeCaches()
         resetPortfolioCache()
     }

@@ -14,15 +14,22 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Newspaper
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -35,7 +42,9 @@ import com.vectorialdata.app.core.model.LatestPick
 import com.vectorialdata.app.core.model.MarketStatus
 import com.vectorialdata.app.core.model.PortfolioSnapshot
 import com.vectorialdata.app.core.net.ApiClient
+import com.vectorialdata.app.core.store.NewsStore
 import com.vectorialdata.app.core.util.Formatters
+import com.vectorialdata.app.feature.news.NewsListScreen
 import com.vectorialdata.app.feature.common.VDCard
 import com.vectorialdata.app.ui.theme.BrandEmerald
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -80,7 +89,7 @@ fun resetHomeCaches() {
     resetPersonalPerformanceCache()
 }
 
-/** Home tab — mirror of iOS `HomeView` (news card lands with M4). */
+/** Home tab — mirror of iOS `HomeView`. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
@@ -89,7 +98,17 @@ fun HomeScreen(modifier: Modifier = Modifier) {
     val errorMessage by HomeState.errorMessage.collectAsStateWithLifecycle()
     val scope = rememberCoroutineScope()
 
-    LaunchedEffect(Unit) { HomeState.load() }
+    var showNews by rememberSaveable { mutableStateOf(false) }
+
+    LaunchedEffect(Unit) {
+        HomeState.load()
+        if (NewsStore.items.value.isEmpty()) NewsStore.load()
+    }
+
+    if (showNews) {
+        NewsListScreen(onBack = { showNews = false }, modifier = modifier)
+        return
+    }
 
     PullToRefreshBox(
         isRefreshing = isLoading && snapshot != null,
@@ -119,6 +138,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
                 snap != null -> {
                     QuickStatsCard(snap)
                     snap.latestPick?.let { LatestPickCard(it) }
+                    NewsCard(onOpen = { showNews = true })
                     MarketStatusRow(snap.marketStatus)
                 }
                 isLoading -> Box(Modifier.fillMaxWidth().padding(24.dp), contentAlignment = Alignment.Center) {
@@ -186,6 +206,58 @@ private fun LatestPickCard(pick: LatestPick) {
             )
         }
         Text(pick.name, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    }
+}
+
+/** "NOTICIAS" entry card with unread badge + latest headline — iOS `NewsCard`. */
+@Composable
+private fun NewsCard(onOpen: () -> Unit) {
+    val items by NewsStore.items.collectAsStateWithLifecycle()
+    val lastReadAt by NewsStore.lastReadAt.collectAsStateWithLifecycle()
+    val unread = NewsStore.unreadCount(items, lastReadAt)
+
+    VDCard(onClick = onOpen, innerSpacing = 6.dp) {
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            Icon(
+                Icons.Outlined.Newspaper,
+                contentDescription = null,
+                tint = BrandEmerald,
+                modifier = Modifier.size(16.dp),
+            )
+            Text(
+                "NOTICIAS",
+                fontSize = 12.sp,
+                fontWeight = FontWeight.SemiBold,
+                letterSpacing = 1.1.sp,
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.85f),
+            )
+            if (unread > 0) {
+                Text(
+                    "● $unread ${if (unread == 1) "nueva" else "nuevas"}",
+                    fontSize = 11.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = BrandEmerald,
+                )
+            }
+            Spacer(Modifier.weight(1f))
+            Text("›", fontSize = 15.sp, color = Color.White.copy(alpha = 0.5f))
+        }
+        Text(
+            "Lo último que cambia tu tesis",
+            fontSize = 12.sp,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        val preview = NewsStore.mostRecentUnread(items, lastReadAt) ?: items.firstOrNull()
+        preview?.let {
+            HorizontalDivider(color = Color.White.copy(alpha = 0.1f))
+            Text(
+                it.headline,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.onBackground,
+                maxLines = 2,
+            )
+        }
     }
 }
 

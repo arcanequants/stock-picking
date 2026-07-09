@@ -52,7 +52,12 @@ APK lands in `app/build/outputs/apk/debug/`.
   detail ("Our position" facts + EDITAR TU COMPRA tiles reusing the buy sheet + why/
   paywall). Prior-holdings management UI (add/remove) not ported yet — display only.
   (No chart here: iOS Portfolio has none; the history chart lives on Home.)
-- **M4 — News** — `/api/news` list + detail.
+- **M4 — News** ✅ — Home "NOTICIAS" card (unread badge + latest headline),
+  full list (`/api/news`, unread dots, relative dates), reader detail
+  (formatted date, light inline markdown, optional "Abrir enlace" CTA).
+  Unread cursor is device-local in encrypted prefs (`news.lastReadAt`), reset
+  on sign-out — mirror of iOS `NewsStore` @AppStorage. Push deep-link into the
+  list lands with M5.
 - **M5 — Push (FCM)** — app side: FCM token registration
   (`/api/notifications/register-device`, `platform=android`) + notification
   channel `vd_default`. Backend sender ✅ built (`src/lib/push.ts`, see below).
