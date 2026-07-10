@@ -54,7 +54,11 @@ export async function GET(request: Request) {
       .select("id", { count: "exact", head: true })
       .gte("created_at", todayStart.toISOString());
 
-    // --- 3. New subscribers today ---
+    // --- 3. Users: registered (auth) vs paid (subscribers table) ---
+    // `totalSubscribers` = every auth registration (free leads + paid). Paid =
+    // rows in `subscribers` with an active/trialing Stripe status. An unverified
+    // email signup is a FREE lead, NOT a paying subscriber — keep them separate
+    // so the brief stops inflating "subscribers" with leads.
     let totalSubscribers = 0;
     let newSubscribersToday = 0;
     let page = 1;
@@ -75,14 +79,31 @@ export async function GET(request: Request) {
       page++;
     }
 
-    // --- 4. API requests today ---
-    const { data: apiKeys } = await supabase
+    const { data: premiumSubs } = await supabase
+      .from("subscribers")
+      .select("email")
+      .in("subscription_status", ["active", "trialing"]);
+    const premiumCount = premiumSubs?.length ?? 0;
+    const freeUserCount = Math.max(totalSubscribers - premiumCount, 0);
+
+    // --- 4. API requests today (real keys only) ---
+    // The Vitest suite registers a key against PROD on every run (name
+    // "Vitest API Test", email *@vectorialdata-test.com). Those are test
+    // artifacts, not customers — exclude them so the brief reflects real keys.
+    const { data: apiKeysRaw } = await supabase
       .from("api_keys")
-      .select("id, requests_today, is_active")
+      .select("id, requests_today, is_active, name, email")
       .eq("is_active", true);
 
-    const totalApiKeys = apiKeys?.length ?? 0;
-    const totalRequestsToday = (apiKeys ?? []).reduce(
+    const isTestKey = (k: { name?: string | null; email?: string | null }) => {
+      const n = (k.name ?? "").toLowerCase();
+      const em = (k.email ?? "").toLowerCase();
+      return n.includes("vitest") || em.includes("vectorialdata-test.com");
+    };
+    const apiKeys = (apiKeysRaw ?? []).filter((k) => !isTestKey(k));
+
+    const totalApiKeys = apiKeys.length;
+    const totalRequestsToday = apiKeys.reduce(
       (sum: number, k: { requests_today?: number }) => sum + (k.requests_today ?? 0),
       0
     );
@@ -140,6 +161,8 @@ export async function GET(request: Request) {
         totalBotVisits: todayBotVisits ?? 0,
         yesterdayBotVisits: yesterdayBots,
         totalSubscribers,
+        paidSubscribers: premiumCount,
+        freeUsers: freeUserCount,
         newSubscribersToday,
         totalApiKeys,
         totalRequestsToday,
@@ -220,13 +243,7 @@ export async function GET(request: Request) {
       .sort((a, b) => b.count - a.count)
       .slice(0, 5);
 
-    // Subscribers for the week
-    const { data: premiumSubs } = await supabase
-      .from("subscribers")
-      .select("email")
-      .in("subscription_status", ["active", "trialing"]);
-    const premiumCount = premiumSubs?.length ?? 0;
-
+    // Subscribers for the week (premiumCount computed once in section 3 above)
     let newSubscribersThisWeek = 0;
     // Re-count for the full week
     let page2 = 1;
@@ -245,7 +262,7 @@ export async function GET(request: Request) {
       page2++;
     }
 
-    const freeCount = totalSubscribers - premiumCount;
+    const freeCount = freeUserCount;
     const activeApiKeysThisWeek = (apiKeys ?? []).filter(
       (k: { requests_today?: number }) => (k.requests_today ?? 0) > 0
     ).length;
