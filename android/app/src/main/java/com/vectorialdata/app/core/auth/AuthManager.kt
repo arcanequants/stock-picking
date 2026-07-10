@@ -3,6 +3,7 @@ package com.vectorialdata.app.core.auth
 import com.vectorialdata.app.core.config.AppConfig
 import com.vectorialdata.app.core.model.UserProfile
 import com.vectorialdata.app.core.net.ApiClient
+import com.vectorialdata.app.core.net.ApiError
 import com.vectorialdata.app.core.net.EmptyResponse
 import com.vectorialdata.app.core.store.DividendStore
 import com.vectorialdata.app.core.store.NewsStore
@@ -218,8 +219,15 @@ object AuthManager {
             val me = ApiClient.get<UserProfile>("/api/me")
             _currentUser.value = me
             _state.value = AuthState.SIGNED_IN
-        } catch (e: Exception) {
+        } catch (e: ApiError.Unauthorized) {
+            // The token is truly dead (ApiClient already tried a refresh-and-
+            // replay before surfacing this) — only now is a sign-out correct.
             clearSession()
+        } catch (e: Exception) {
+            // Transient failure (network timeout, 5xx). Don't bounce the user to
+            // the login screen — we still hold a valid-looking token. Stay signed
+            // in; individual screens surface their own load errors and retry.
+            _state.value = AuthState.SIGNED_IN
         }
     }
 }
