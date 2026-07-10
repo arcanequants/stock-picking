@@ -9,7 +9,7 @@ struct OnboardingView: View {
     @State private var page = 0
     @State private var showAuth = false
 
-    private let pageCount = 4
+    private let pageCount = 5
 
     var body: some View {
         ZStack {
@@ -22,6 +22,7 @@ struct OnboardingView: View {
                     ConsistencyPage().tag(1)
                     ProofPage().tag(2)
                     PickAnatomyPage().tag(3)
+                    HowItWorksPage().tag(4)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .animation(.easeInOut, value: page)
@@ -156,6 +157,73 @@ private struct PickAnatomyPage: View {
                 .multilineTextAlignment(.center)
                 .padding(.top, 8)
         }
+    }
+}
+
+// MARK: - How it works — "Nosotros elegimos. Tú compras."
+
+private struct HowItWorksPage: View {
+    var body: some View {
+        OnboardingScaffold {
+            OwlBadge()
+            OnboardingTitle("Nosotros elegimos.\nTú compras.")
+
+            VStack(spacing: 0) {
+                HowItWorksStep(
+                    icon: "bell.badge.fill",
+                    title: "Te avisamos",
+                    detail: "Qué acción comprar y cuándo vale la pena.")
+                Divider().overlay(Color.white.opacity(0.08))
+                HowItWorksStep(
+                    icon: "building.columns.fill",
+                    title: "Tú la compras en tu broker",
+                    detail: "El que ya usas. Tu dinero nunca pasa por nosotros.")
+                Divider().overlay(Color.white.opacity(0.08))
+                HowItWorksStep(
+                    icon: "chart.line.uptrend.xyaxis",
+                    title: "Seguimos juntos",
+                    detail: "La registras aquí y vemos crecer tu portafolio.")
+            }
+            .padding(.horizontal, 14)
+            .background(Color("CardBackground"))
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+            .padding(.top, 4)
+
+            HStack(alignment: .top, spacing: 8) {
+                Image(systemName: "info.circle")
+                Text("Vectorial no es un broker ni maneja tu dinero. Solo te guía.")
+            }
+            .font(.footnote)
+            .foregroundStyle(.white.opacity(0.5))
+            .padding(.top, 6)
+        }
+    }
+}
+
+private struct HowItWorksStep: View {
+    let icon: String
+    let title: String
+    let detail: String
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: icon)
+                .font(.body)
+                .foregroundStyle(Color("BrandEmerald"))
+                .frame(width: 34, height: 34)
+                .background(Color("BrandEmerald").opacity(0.12))
+                .clipShape(RoundedRectangle(cornerRadius: 9))
+            VStack(alignment: .leading, spacing: 3) {
+                Text(title)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.white)
+                Text(detail)
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.6))
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+        }
+        .padding(.vertical, 13)
     }
 }
 
@@ -399,7 +467,7 @@ enum PercentFormat {
 /// Account tab. No CTAs — pure "why we exist".
 struct PhilosophyView: View {
     @State private var page = 0
-    private let pageCount = 4
+    private let pageCount = 5
 
     var body: some View {
         ZStack {
@@ -410,6 +478,7 @@ struct PhilosophyView: View {
                     ConsistencyPage().tag(1)
                     ProofPage().tag(2)
                     PickAnatomyPage().tag(3)
+                    HowItWorksPage().tag(4)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 OnboardingDots(count: pageCount, index: page)
