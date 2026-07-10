@@ -69,6 +69,15 @@ export async function POST(request: Request) {
       }
     }
 
+    // iOS signups: only create the auth user. The 14-day trial on iOS is the
+    // Apple IAP introductory offer — /api/iap/verify writes the `trialing`
+    // subscriber row when the StoreKit purchase completes, and Apple bills
+    // $0.99/mo at day 14 unless the user cancels. Granting the no-card web
+    // trial here would hide the paywall and skip Apple entirely.
+    if (source === "ios") {
+      return NextResponse.json({ success: true, trial: false });
+    }
+
     // Start the 14-day free trial: a subscribers row gated by status='trialing'.
     // No card, no Stripe — the trial-expiry cron downgrades it at day 14.
     const nowIso = new Date().toISOString();
