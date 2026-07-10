@@ -80,6 +80,24 @@ final class AuthManager: ObservableObject {
         #endif
     }
 
+    /// Creates the account + starts the 14-day free trial (backend
+    /// `free-register`: auth user + `trialing` subscriber, no card). Idempotent —
+    /// if the email already has an account the backend answers `already: true`
+    /// and the caller just proceeds to the sign-in code. Throws on failure.
+    func startFreeTrial(email: String) async throws {
+        struct Body: Encodable { let email: String; let source: String }
+        struct Response: Decodable {
+            let success: Bool?
+            let already: Bool?
+            let trial: Bool?
+        }
+        _ = try await APIClient.shared.post(
+            "/api/auth/free-register",
+            body: Body(email: email.lowercased().trimmingCharacters(in: .whitespaces), source: "ios"),
+            as: Response.self
+        )
+    }
+
     /// Trades the Keychain refresh_token for a fresh access_token. Called
     /// automatically by `APIClient` on 401s. Returns `true` if the bearer was
     /// refreshed and the original request should retry.

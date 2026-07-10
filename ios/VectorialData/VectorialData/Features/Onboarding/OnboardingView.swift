@@ -7,7 +7,8 @@ import SwiftUI
 /// Filosofía section (see `PhilosophyView`).
 struct OnboardingView: View {
     @State private var page = 0
-    @State private var showAuth = false
+    @State private var showAuth = false        // returning users → sign in
+    @State private var showCreate = false      // new users → create account + trial
 
     private let pageCount = 5
 
@@ -34,6 +35,9 @@ struct OnboardingView: View {
         .preferredColorScheme(.dark)
         .fullScreenCover(isPresented: $showAuth) {
             AuthView()
+        }
+        .fullScreenCover(isPresented: $showCreate) {
+            CreateAccountView()
         }
     }
 
@@ -66,7 +70,7 @@ struct OnboardingView: View {
                 }
             } else {
                 Button {
-                    showAuth = true
+                    showCreate = true
                 } label: {
                     Text("Empezar 14 días gratis")
                         .primaryCTA(emerald: true)

@@ -17,6 +17,7 @@
 		29FD74B796ED48F032B03993 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF775B9BF9223F7ACE7AA1C2 /* MainTabView.swift */; };
 		2A2FF98C39B62F85E8037032 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE702D73471F753F00FF42E3 /* AccountView.swift */; };
 		2F96C056DF410A1FF685E387 /* PickDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A17395E2504FDA008D3BE8E /* PickDetailView.swift */; };
+		32D0FE14F23CF2004BAE8A26 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732B474ED10FAC5B19F2266 /* CreateAccountView.swift */; };
 		35627BC6698B033ACAA33AAC /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B3769550D3ADC64FD4386 /* AuthManager.swift */; };
 		35FD761EA884564A39230C0C /* InvestmentAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A549FB3F3C0B7B993F6A1F8A /* InvestmentAmountView.swift */; };
 		3683B19F09CA5C2F510E5AE4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8287C5838F9CAC34FE69512 /* RootView.swift */; };
@@ -121,6 +122,7 @@
 		A549FB3F3C0B7B993F6A1F8A /* InvestmentAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentAmountView.swift; sourceTree = "<group>"; };
 		A5CC7DF01DAD9CEE5253E3EE /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		A6E0BC2DC9A12CC4BAD8C084 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A732B474ED10FAC5B19F2266 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		A7745AACBA037492169B68FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA4D1D7BFB3A4618BC9761A6 /* OwlReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwlReveal.swift; sourceTree = "<group>"; };
 		AA83372C812B3CD0F43FA4ED /* PicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicksView.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				040333E9484BEA0F3712479E /* AuthView.swift */,
+				A732B474ED10FAC5B19F2266 /* CreateAccountView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				112524BB954122A83000FBC0 /* AppDelegate.swift in Sources */,
 				35627BC6698B033ACAA33AAC /* AuthManager.swift in Sources */,
 				247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */,
+				32D0FE14F23CF2004BAE8A26 /* CreateAccountView.swift in Sources */,
 				928D6E26021D8AD058F99F4C /* DividendStore.swift in Sources */,
 				9ECE9BF8C1C931E240D0A5F6 /* HomeView.swift in Sources */,
 				35FD761EA884564A39230C0C /* InvestmentAmountView.swift in Sources */,

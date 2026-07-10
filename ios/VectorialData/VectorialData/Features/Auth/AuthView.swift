@@ -30,10 +30,10 @@ struct AuthView: View {
                     .accessibilityHidden(true)
 
                 VStack(spacing: 8) {
-                    Text("Vectorial Data")
+                    Text("Bienvenido de vuelta")
                         .font(.largeTitle.weight(.semibold))
                         .foregroundStyle(.white)
-                    Text("One stock pick a day. Every day.")
+                    Text("Inicia sesión para ver tus picks y tu portafolio.")
                         .font(.body)
                         .foregroundStyle(.white.opacity(0.7))
                         .multilineTextAlignment(.center)
@@ -222,7 +222,7 @@ private struct SignInCard: View {
             Button(action: onSend) {
                 HStack {
                     if isSending { ProgressView().tint(.white) }
-                    Text(isSending ? "Signing in…" : password.isEmpty ? "Send magic link" : "Sign in")
+                    Text(isSending ? "Entrando…" : password.isEmpty ? "Enviarme el código" : "Iniciar sesión")
                         .font(.headline)
                 }
                 .frame(maxWidth: .infinity, minHeight: 50)
