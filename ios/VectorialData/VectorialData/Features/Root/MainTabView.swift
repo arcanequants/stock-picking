@@ -98,8 +98,10 @@ struct MainTabView: View {
     }
 }
 
-/// One-time post-signin setup: notification priming → consistent-amount setup.
+/// One-time post-signin setup: Apple trial activation → notification priming →
+/// consistent-amount setup. Skipping any step is always possible.
 private struct FirstRunSetupView: View {
+    @EnvironmentObject private var pickStatus: PickStatusStore
     var onComplete: () -> Void
     @State private var step = 0
 
@@ -108,7 +110,15 @@ private struct FirstRunSetupView: View {
             Color("AppBackground").ignoresSafeArea()
             switch step {
             case 0:
-                NotificationPrimingView { withAnimation { step = 1 } }
+                // Already-subscribed accounts (web Stripe or a previous Apple
+                // sub restored) skip straight to notifications.
+                if pickStatus.isSubscribed {
+                    Color("AppBackground").onAppear { step = 1 }
+                } else {
+                    TrialActivationView { withAnimation { step = 1 } }
+                }
+            case 1:
+                NotificationPrimingView { withAnimation { step = 2 } }
             default:
                 NavigationStack {
                     InvestmentAmountView(onDone: onComplete)

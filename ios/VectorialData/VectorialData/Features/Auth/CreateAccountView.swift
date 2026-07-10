@@ -2,10 +2,11 @@ import SwiftUI
 
 /// Guided account creation for the "Empezar 14 días gratis" CTA.
 ///
-/// Flow: email → `free-register` (creates the auth user + starts the no-card
-/// 14-day trial; idempotent for existing emails) → `magic-link` email with the
-/// 8-digit code → code entry → signed in. RootView flips to MainTabView the
-/// moment auth state changes, which dismisses this cover.
+/// Flow: email → `free-register` (source "ios": creates the auth user only —
+/// the 14-day trial is Apple's introductory offer, activated right after
+/// sign-in via TrialActivationView) → `magic-link` email with the 8-digit
+/// code → code entry → signed in. RootView flips to MainTabView the moment
+/// auth state changes, which dismisses this cover.
 ///
 /// No password field here — passwordless is the product. (The optional
 /// password lives only on the sign-in screen, where App Review uses the demo
@@ -73,7 +74,7 @@ struct CreateAccountView: View {
                 .font(.largeTitle.bold())
                 .foregroundStyle(.white)
 
-            Text("Tu prueba de 14 días empieza hoy. Sin tarjeta — nadie te cobra en automático.")
+            Text("Crea tu cuenta y activa tus 14 días gratis con tu Apple ID.")
                 .font(.body)
                 .foregroundStyle(.white.opacity(0.7))
 
@@ -119,7 +120,7 @@ struct CreateAccountView: View {
 
             VStack(alignment: .leading, spacing: 8) {
                 perk("checkmark.circle.fill", "14 días gratis, acceso completo")
-                perk("creditcard", "Sin tarjeta. Al terminar, tú decides si continúas por $0.99/mes.")
+                perk("creditcard", "Luego $0.99/mes con tu Apple ID — cancela cuando quieras antes del día 14 y no se te cobra.")
                 perk("key.fill", "Sin contraseña — te enviamos un código a tu correo.")
             }
             .padding(.top, 4)
