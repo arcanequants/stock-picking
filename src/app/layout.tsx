@@ -113,15 +113,15 @@ export default async function RootLayout({
             {/* Navigation — hidden on marketing dashboard */}
             {!isMarketing && (
               <nav className="border-b border-border sticky top-0 backdrop-blur-md z-50 relative" style={{ background: 'var(--nav-bg)' }}>
-                <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                  <Link href="/" className="flex items-center gap-2 shrink-0">
+                <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-6">
+                  <Link href="/" className="flex items-center gap-2 shrink-0 mr-2">
                     <Image src="/logo.png" alt="Vectorial Data" width={32} height={32} className="hidden md:block" />
                     <Image src="/logo.png" alt="Vectorial Data" width={28} height={28} className="block md:hidden" />
                     <span className="font-semibold text-lg whitespace-nowrap">Vectorial Data</span>
                   </Link>
 
                   {/* Desktop Nav */}
-                  <div className="hidden md:flex items-center gap-6 text-sm">
+                  <div className="hidden md:flex items-center gap-5 text-sm">
                     <Link
                       href="/"
                       className="text-text-muted hover:text-foreground transition-colors"
