@@ -63,7 +63,10 @@ APK lands in `app/build/outputs/apk/debug/`.
   channel `vd_default`. Backend sender ✅ built (`src/lib/push.ts`, see below).
 - **M6 — Billing** — app side: Google Play Billing flow. Backend verify ✅ built
   (`POST /api/iap/verify-play`, see below). RTDN + token persistence land here.
-- **M7 — i18n (es/en/pt), Play Store assets, release signing, submission.**
+- **M7 — i18n** ✅ (chrome es/en/pt via `res/values*` + `Localizer` for
+  non-Composable strings; verified E2E in all three locales). **Remaining
+  (needs your accounts):** Play Store listing assets, release signing keystore,
+  Play Console submission.
 
 ## Backend deltas Android needs
 1. ~~**FCM push sender**~~ ✅ built — `src/lib/push.ts` routes device_tokens by
