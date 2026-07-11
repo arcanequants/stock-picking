@@ -1,5 +1,6 @@
 package com.vectorialdata.app.core.model
 
+import com.vectorialdata.app.R
 import kotlinx.serialization.Serializable
 
 /**
@@ -54,7 +55,7 @@ data class PortfolioPositions(
 )
 
 /** Mirror of iOS `PortfolioViewMode` — segmented control on the Portfolio tab. */
-enum class PortfolioViewMode(val label: String) {
-    MODEL("Model"),
-    PERSONAL("Mío"),
+enum class PortfolioViewMode(val labelRes: Int) {
+    MODEL(R.string.view_model),
+    PERSONAL(R.string.view_personal),
 }

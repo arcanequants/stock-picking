@@ -21,16 +21,18 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
+import com.vectorialdata.app.R
 import com.vectorialdata.app.feature.account.AccountScreen
 import com.vectorialdata.app.feature.home.HomeScreen
 import com.vectorialdata.app.feature.picks.PicksScreen
 import com.vectorialdata.app.feature.portfolio.PortfolioScreen
 
-private enum class AppTab(val label: String, val icon: ImageVector) {
-    HOME("Home", Icons.Filled.Home),
-    PORTFOLIO("Portfolio", Icons.Filled.PieChart),
-    PICKS("Picks", Icons.AutoMirrored.Filled.ListAlt),
-    ACCOUNT("Account", Icons.Filled.AccountCircle),
+private enum class AppTab(val labelRes: Int, val icon: ImageVector) {
+    HOME(R.string.tab_home, Icons.Filled.Home),
+    PORTFOLIO(R.string.tab_portfolio, Icons.Filled.PieChart),
+    PICKS(R.string.tab_picks, Icons.AutoMirrored.Filled.ListAlt),
+    ACCOUNT(R.string.tab_account, Icons.Filled.AccountCircle),
 }
 
 /** Four-tab shell mirroring iOS `MainTabView`. */
@@ -46,8 +48,8 @@ fun MainTabScaffold() {
                     NavigationBarItem(
                         selected = selected == tab,
                         onClick = { selected = tab },
-                        icon = { Icon(tab.icon, contentDescription = tab.label) },
-                        label = { Text(tab.label) },
+                        icon = { Icon(tab.icon, contentDescription = stringResource(tab.labelRes)) },
+                        label = { Text(stringResource(tab.labelRes)) },
                         colors = NavigationBarItemDefaults.colors(
                             selectedIconColor = MaterialTheme.colorScheme.primary,
                             selectedTextColor = MaterialTheme.colorScheme.primary,

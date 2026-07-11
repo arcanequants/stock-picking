@@ -1,6 +1,8 @@
 package com.vectorialdata.app.core.net
 
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.config.AppConfig
+import com.vectorialdata.app.core.i18n.Localizer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -18,12 +20,24 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 
-/** Thrown by [ApiClient]; mirrors the Swift `APIError` cases. */
-sealed class ApiError(message: String) : Exception(message) {
-    data object Unauthorized : ApiError("Please sign in again")
-    data object RateLimited : ApiError("Too many requests — try again in a moment")
-    data class Server(val status: Int, val payload: String) : ApiError("Server error ($status)")
-    data class Decoding(val reason: Throwable) : ApiError("No pudimos leer la respuesta del servidor.")
+/**
+ * Thrown by [ApiClient]; mirrors the Swift `APIError` cases. Messages are
+ * localized lazily (getter, not constructor arg) so they resolve in the
+ * device locale at display time — stores surface `e.message` to the UI.
+ */
+sealed class ApiError : Exception() {
+    data object Unauthorized : ApiError() {
+        override val message get() = Localizer.get(R.string.err_unauthorized)
+    }
+    data object RateLimited : ApiError() {
+        override val message get() = Localizer.get(R.string.err_rate_limited)
+    }
+    data class Server(val status: Int, val payload: String) : ApiError() {
+        override val message get() = Localizer.get(R.string.err_server, status)
+    }
+    data class Decoding(val reason: Throwable) : ApiError() {
+        override val message get() = Localizer.get(R.string.err_decoding)
+    }
 }
 
 /** Marker for endpoints that return an empty 2xx body (mirror of Swift `EmptyResponse`). */

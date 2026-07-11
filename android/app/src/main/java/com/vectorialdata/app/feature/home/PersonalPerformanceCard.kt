@@ -22,11 +22,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.auth.AuthManager
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.PortfolioHistoryPoint
 import com.vectorialdata.app.core.net.ApiClient
 import com.vectorialdata.app.core.util.Formatters
@@ -37,8 +40,8 @@ import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 
 /** Range pills — mirror of iOS `PersonalRange`. */
-private enum class PersonalRange(val label: String) {
-    ITD("ITD"), YTD("YTD"), MOM("1M"), YOY("1A");
+private enum class PersonalRange(val labelRes: Int) {
+    ITD(R.string.personal_range_itd), YTD(R.string.personal_range_ytd), MOM(R.string.personal_range_mom), YOY(R.string.personal_range_yoy);
 
     fun cutoff(today: LocalDate): LocalDate? = when (this) {
         ITD -> null
@@ -62,7 +65,7 @@ private object PersonalState {
             val pts = ApiClient.get<List<PortfolioHistoryPoint>>("/api/portfolio/history?view=personal")
             points.value = pts.filter { it.personalReturnPct != null }
         } catch (e: Exception) {
-            errorMessage.value = e.message ?: "No pudimos cargar tu performance."
+            errorMessage.value = e.message ?: Localizer.get(R.string.personal_error)
         } finally {
             isLoading.value = false
         }
@@ -104,7 +107,7 @@ fun PersonalPerformanceCard() {
         points.isNotEmpty() -> CardBody(email, points, range, onRange = { range = it })
         isLoading -> VDCard {
             Text(
-                "Cargando tu performance…",
+                stringResource(R.string.personal_loading),
                 fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -144,14 +147,14 @@ private fun CardBody(
             }
             Column {
                 Text(
-                    "TU PORTAFOLIO",
+                    stringResource(R.string.personal_title),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
                     letterSpacing = 1.1.sp,
                     color = MaterialTheme.colorScheme.onBackground,
                 )
                 Text(
-                    "Tu dinero real · solo las picks que compraste",
+                    stringResource(R.string.personal_subtitle_label),
                     fontSize = 11.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -175,7 +178,7 @@ private fun CardBody(
             PersonalRange.entries.forEach { r ->
                 val selected = r == range
                 Text(
-                    r.label,
+                    stringResource(r.labelRes),
                     fontSize = 12.sp,
                     fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
                     color = if (selected) BrandEmerald else MaterialTheme.colorScheme.onSurfaceVariant,
@@ -206,19 +209,19 @@ private fun rangeReturn(points: List<PortfolioHistoryPoint>, range: PersonalRang
 private fun subtitle(points: List<PortfolioHistoryPoint>, range: PersonalRange, today: LocalDate): String {
     val firstDate = points.firstOrNull()?.let { Formatters.parseDate(it.date) } ?: return ""
     val days = ChronoUnit.DAYS.between(firstDate, today).coerceAtLeast(1)
-    val dayWord = if (days == 1L) "día" else "días"
+    val daysStr = Localizer.plural(R.plurals.days_count, days.toInt(), days.toInt())
     val cutoff = range.cutoff(today)
     val startedAfterCutoff = cutoff != null && firstDate.isAfter(cutoff)
     return when (range) {
-        PersonalRange.ITD -> "Llevas $days $dayWord invirtiendo"
+        PersonalRange.ITD -> Localizer.get(R.string.personal_sub_itd, daysStr)
         PersonalRange.YTD ->
-            if (startedAfterCutoff) "En lo que va del año · solo llevas $days $dayWord"
-            else "En lo que va del año"
+            if (startedAfterCutoff) Localizer.get(R.string.personal_sub_ytd_short, daysStr)
+            else Localizer.get(R.string.personal_sub_ytd)
         PersonalRange.MOM ->
-            if (startedAfterCutoff) "Últimos 30 días · solo llevas $days $dayWord"
-            else "Últimos 30 días"
+            if (startedAfterCutoff) Localizer.get(R.string.personal_sub_mom_short, daysStr)
+            else Localizer.get(R.string.personal_sub_mom)
         PersonalRange.YOY ->
-            if (startedAfterCutoff) "Últimos 12 meses · solo llevas $days $dayWord"
-            else "Últimos 12 meses"
+            if (startedAfterCutoff) Localizer.get(R.string.personal_sub_yoy_short, daysStr)
+            else Localizer.get(R.string.personal_sub_yoy)
     }
 }

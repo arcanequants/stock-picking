@@ -34,10 +34,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.LatestPick
 import com.vectorialdata.app.core.model.MarketStatus
 import com.vectorialdata.app.core.model.PortfolioSnapshot
@@ -69,7 +73,7 @@ private object HomeState {
             snapshot.value = ApiClient.get<PortfolioSnapshot>("/api/portfolio/snapshot")
             errorMessage.value = null
         } catch (e: Exception) {
-            errorMessage.value = e.message ?: "No pudimos cargar tu resumen."
+            errorMessage.value = e.message ?: Localizer.get(R.string.home_error)
         } finally {
             isLoading.value = false
         }
@@ -123,7 +127,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
             Text(
-                "Vectorial Data",
+                stringResource(R.string.app_name),
                 fontSize = 28.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onBackground,
@@ -161,13 +165,13 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 private fun QuickStatsCard(snapshot: PortfolioSnapshot) {
     VDCard {
         Row(Modifier.fillMaxWidth()) {
-            StatColumn("Positions", "${snapshot.totalPositions}", Color.White, Modifier.weight(1f))
+            StatColumn(stringResource(R.string.home_positions), "${snapshot.totalPositions}", Color.White, Modifier.weight(1f))
             snapshot.best?.let {
-                StatColumn("Best", "${it.ticker} ${Formatters.pct(it.returnPct)}", BrandEmerald, Modifier.weight(1f))
+                StatColumn(stringResource(R.string.home_best), "${it.ticker} ${Formatters.pct(it.returnPct)}", BrandEmerald, Modifier.weight(1f))
             }
             snapshot.worst?.let {
                 val color = if (it.returnPct >= 0) BrandEmerald else MaterialTheme.colorScheme.error
-                StatColumn("Worst", "${it.ticker} ${Formatters.pct(it.returnPct)}", color, Modifier.weight(1f))
+                StatColumn(stringResource(R.string.home_worst), "${it.ticker} ${Formatters.pct(it.returnPct)}", color, Modifier.weight(1f))
             }
         }
     }
@@ -186,7 +190,7 @@ private fun StatColumn(label: String, value: String, valueColor: Color, modifier
 private fun LatestPickCard(pick: LatestPick) {
     VDCard {
         Text(
-            "Análisis del ${Formatters.longSpanishDate(pick.date)}",
+            stringResource(R.string.analysis_of, Formatters.longSpanishDate(pick.date)),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -225,7 +229,7 @@ private fun NewsCard(onOpen: () -> Unit) {
                 modifier = Modifier.size(16.dp),
             )
             Text(
-                "NOTICIAS",
+                stringResource(R.string.home_news_title),
                 fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold,
                 letterSpacing = 1.1.sp,
@@ -233,7 +237,7 @@ private fun NewsCard(onOpen: () -> Unit) {
             )
             if (unread > 0) {
                 Text(
-                    "● $unread ${if (unread == 1) "nueva" else "nuevas"}",
+                    pluralStringResource(R.plurals.news_new_count, unread, unread),
                     fontSize = 11.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = BrandEmerald,
@@ -243,7 +247,7 @@ private fun NewsCard(onOpen: () -> Unit) {
             Text("›", fontSize = 15.sp, color = Color.White.copy(alpha = 0.5f))
         }
         Text(
-            "Lo último que cambia tu tesis",
+            stringResource(R.string.home_news_subtitle),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -265,12 +269,12 @@ private fun NewsCard(onOpen: () -> Unit) {
 @Composable
 private fun MarketStatusRow(status: MarketStatus) {
     val (color, label) = when (status) {
-        MarketStatus.OPEN -> BrandEmerald to "Market open"
-        MarketStatus.PRE -> MarketYellow to "Pre-market"
-        MarketStatus.POST -> MarketYellow to "After hours"
-        MarketStatus.CLOSED -> Color.Gray to "Market closed"
-        MarketStatus.WEEKEND -> Color.Gray to "Weekend — market closed"
-        MarketStatus.HOLIDAY -> Color.Gray to "Holiday — market closed"
+        MarketStatus.OPEN -> BrandEmerald to stringResource(R.string.home_market_open)
+        MarketStatus.PRE -> MarketYellow to stringResource(R.string.home_market_pre)
+        MarketStatus.POST -> MarketYellow to stringResource(R.string.home_market_post)
+        MarketStatus.CLOSED -> Color.Gray to stringResource(R.string.home_market_closed)
+        MarketStatus.WEEKEND -> Color.Gray to stringResource(R.string.home_market_weekend)
+        MarketStatus.HOLIDAY -> Color.Gray to stringResource(R.string.home_market_holiday)
     }
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         Box(Modifier.size(8.dp).clip(CircleShape).background(color))

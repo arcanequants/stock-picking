@@ -1,6 +1,8 @@
 package com.vectorialdata.app.core.auth
 
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.config.AppConfig
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.UserProfile
 import com.vectorialdata.app.core.net.ApiClient
 import com.vectorialdata.app.core.net.ApiError
@@ -103,7 +105,7 @@ object AuthManager {
             )
             persistAndLoad(resp)
         } catch (e: Exception) {
-            _lastAuthError.value = "Invalid credentials."
+            _lastAuthError.value = Localizer.get(R.string.auth_err_invalid_credentials)
             throw e
         }
     }
@@ -121,7 +123,7 @@ object AuthManager {
             )
             persistAndLoad(resp)
         } catch (e: Exception) {
-            _lastAuthError.value = "Incorrect code or it has expired. Please try again."
+            _lastAuthError.value = Localizer.get(R.string.auth_err_bad_code)
             throw e
         }
     }
@@ -144,7 +146,7 @@ object AuthManager {
             )
             persistAndLoad(resp)
         } catch (e: Exception) {
-            _lastAuthError.value = "Ese enlace expiró o ya se usó. Pide uno nuevo."
+            _lastAuthError.value = Localizer.get(R.string.auth_err_link_expired)
             clearSession()
         }
     }

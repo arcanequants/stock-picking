@@ -3,6 +3,8 @@ package com.vectorialdata.app.core.store
 import com.vectorialdata.app.core.model.DecisionResponse
 import com.vectorialdata.app.core.model.Pick
 import com.vectorialdata.app.core.model.PickStatus
+import com.vectorialdata.app.R
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.PicksResponse
 import com.vectorialdata.app.core.net.ApiClient
 import com.vectorialdata.app.core.net.ApiError
@@ -64,9 +66,9 @@ object PickStatusStore {
             _accessStartedAt.value = resp.accessStartedAt
             _errorMessage.value = null
         } catch (e: ApiError.Unauthorized) {
-            _errorMessage.value = "Please sign in again"
+            _errorMessage.value = Localizer.get(R.string.err_unauthorized)
         } catch (e: Exception) {
-            _errorMessage.value = e.message ?: "No pudimos cargar los picks."
+            _errorMessage.value = e.message ?: Localizer.get(R.string.picks_error)
         } finally {
             _isLoading.value = false
         }

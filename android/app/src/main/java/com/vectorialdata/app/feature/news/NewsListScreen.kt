@@ -34,11 +34,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.NewsItem
 import com.vectorialdata.app.core.store.NewsStore
 import com.vectorialdata.app.core.util.Formatters
@@ -84,12 +87,12 @@ fun NewsListScreen(onBack: () -> Unit, modifier: Modifier = Modifier) {
             IconButton(onClick = onBack) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Atrás",
+                    contentDescription = stringResource(R.string.back),
                     tint = MaterialTheme.colorScheme.onBackground,
                 )
             }
             Text(
-                "Noticias",
+                stringResource(R.string.news_title),
                 fontSize = 28.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onBackground,
@@ -179,11 +182,11 @@ private fun relativeDate(iso: String): String {
     val date = NewsItem.parseISO(iso) ?: return ""
     val secs = (Instant.now().toEpochMilli() - date.toEpochMilli()) / 1000
     return when {
-        secs < 60 -> "ahora"
-        secs < 3600 -> "hace ${secs / 60}m"
-        secs < 86400 -> "hace ${secs / 3600}h"
-        secs < 2 * 86400 -> "ayer"
-        secs < 7 * 86400 -> "hace ${secs / 86400}d"
+        secs < 60 -> Localizer.get(R.string.news_rel_now)
+        secs < 3600 -> Localizer.get(R.string.news_rel_min, (secs / 60).toInt())
+        secs < 86400 -> Localizer.get(R.string.news_rel_hour, (secs / 3600).toInt())
+        secs < 2 * 86400 -> Localizer.get(R.string.days_since_yesterday)
+        secs < 7 * 86400 -> Localizer.get(R.string.days_since_n, (secs / 86400).toInt())
         else -> Formatters.shortDate(iso.take(10))
     }
 }
@@ -199,14 +202,14 @@ private fun EmptyNewsCard() {
                 modifier = Modifier.size(18.dp),
             )
             Text(
-                "Aún no hay noticias",
+                stringResource(R.string.news_empty_title),
                 fontSize = 15.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onBackground,
             )
         }
         Text(
-            "Te avisamos al instante cuando publiquemos algo que cambie tu tesis.",
+            stringResource(R.string.news_empty_body),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )

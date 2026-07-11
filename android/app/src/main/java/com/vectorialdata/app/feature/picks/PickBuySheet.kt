@@ -26,11 +26,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.model.Pick
 import com.vectorialdata.app.core.model.PickStatus
 import com.vectorialdata.app.core.store.PickStatusStore
@@ -63,6 +65,10 @@ fun PickBuySheet(pick: Pick, onDismiss: () -> Unit, onSuccess: () -> Unit) {
 
     val defaultIsSet = defaultInvestment != null
 
+    val errPriceText = stringResource(R.string.buy_err_price)
+    val errAmountText = stringResource(R.string.buy_err_amount)
+    val errSaveText = stringResource(R.string.buy_err_save)
+
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         containerColor = MaterialTheme.colorScheme.background,
@@ -72,13 +78,14 @@ fun PickBuySheet(pick: Pick, onDismiss: () -> Unit, onSuccess: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
             Text(
-                if (editing) "Editar tu compra de ${pick.ticker}" else "Marcaste ${pick.ticker}",
+                if (editing) stringResource(R.string.buy_edit_title, pick.ticker)
+                else stringResource(R.string.buy_mark_title, pick.ticker),
                 fontSize = 20.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onBackground,
             )
             Text(
-                "Pick #${pick.pickNumber} · ${pick.date}",
+                stringResource(R.string.buy_pick_line, pick.pickNumber, pick.date),
                 fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -86,8 +93,8 @@ fun PickBuySheet(pick: Pick, onDismiss: () -> Unit, onSuccess: () -> Unit) {
             OutlinedTextField(
                 value = priceText,
                 onValueChange = { priceText = it },
-                label = { Text("Precio al que compraste") },
-                supportingText = { Text("Pre-llenado con el precio del momento del pick") },
+                label = { Text(stringResource(R.string.buy_price_label)) },
+                supportingText = { Text(stringResource(R.string.buy_price_support)) },
                 singleLine = true,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                 modifier = Modifier.fillMaxWidth(),
@@ -96,12 +103,12 @@ fun PickBuySheet(pick: Pick, onDismiss: () -> Unit, onSuccess: () -> Unit) {
             OutlinedTextField(
                 value = amountText,
                 onValueChange = { amountText = it },
-                label = { Text("Cuánto invertiste") },
+                label = { Text(stringResource(R.string.buy_amount_label)) },
                 prefix = { Text("$") },
                 supportingText = {
                     Text(
-                        if (defaultIsSet) "Tu default — puedes cambiarlo"
-                        else "Si pones la misma cantidad cada vez, guárdala abajo",
+                        if (defaultIsSet) stringResource(R.string.buy_amount_support_default)
+                        else stringResource(R.string.buy_amount_support_hint),
                     )
                 },
                 singleLine = true,
@@ -113,7 +120,7 @@ fun PickBuySheet(pick: Pick, onDismiss: () -> Unit, onSuccess: () -> Unit) {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                     Switch(checked = saveAsDefault, onCheckedChange = { saveAsDefault = it })
                     Text(
-                        "Recordar $$amountText como mi monto por pick",
+                        stringResource(R.string.buy_remember_default, amountText),
                         fontSize = 13.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -129,15 +136,15 @@ fun PickBuySheet(pick: Pick, onDismiss: () -> Unit, onSuccess: () -> Unit) {
                     onClick = onDismiss,
                     modifier = Modifier.weight(1f),
                     shape = RoundedCornerShape(12.dp),
-                ) { Text("Cancelar") }
+                ) { Text(stringResource(R.string.cancel)) }
 
                 Button(
                     onClick = {
                         val price = parseDouble(priceText)
                         val amount = parseDouble(amountText)
                         when {
-                            price == null || price <= 0 -> errorText = "Precio inválido."
-                            amount == null || amount <= 0 -> errorText = "Monto inválido."
+                            price == null || price <= 0 -> errorText = errPriceText
+                            amount == null || amount <= 0 -> errorText = errAmountText
                             else -> scope.launch {
                                 submitting = true
                                 errorText = null
@@ -152,7 +159,7 @@ fun PickBuySheet(pick: Pick, onDismiss: () -> Unit, onSuccess: () -> Unit) {
                                     delay(250)
                                     onSuccess()
                                 } else {
-                                    errorText = "No se pudo guardar."
+                                    errorText = errSaveText
                                 }
                             }
                         }
@@ -164,7 +171,7 @@ fun PickBuySheet(pick: Pick, onDismiss: () -> Unit, onSuccess: () -> Unit) {
                         containerColor = BrandEmerald,
                         contentColor = Color(0xFF05080A),
                     ),
-                ) { Text("Confirmar", fontWeight = FontWeight.SemiBold) }
+                ) { Text(stringResource(R.string.confirm), fontWeight = FontWeight.SemiBold) }
             }
         }
     }

@@ -55,10 +55,13 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.DividendEvent
 import com.vectorialdata.app.core.model.Pick
 import com.vectorialdata.app.core.model.PickStatus
@@ -99,7 +102,7 @@ fun PickDetailScreen(pickNumber: Int, onBack: () -> Unit, modifier: Modifier = M
         try {
             research = ApiClient.get<StockResearch>("/api/picks/research/$ticker")
         } catch (e: Exception) {
-            researchError = e.message ?: "No pudimos cargar el análisis."
+            researchError = e.message ?: Localizer.get(R.string.pick_research_error)
         } finally {
             isLoadingResearch = false
         }
@@ -120,7 +123,7 @@ fun PickDetailScreen(pickNumber: Int, onBack: () -> Unit, modifier: Modifier = M
         IconButton(onClick = onBack) {
             Icon(
                 Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = "Atrás",
+                contentDescription = stringResource(R.string.back),
                 tint = MaterialTheme.colorScheme.onBackground,
             )
         }
@@ -153,14 +156,14 @@ fun PickDetailScreen(pickNumber: Int, onBack: () -> Unit, modifier: Modifier = M
                 res != null -> {
                     TldrCard(res.oneLiner ?: res.summaryShort)
                     res.whatsImportant?.takeIf { it.isNotEmpty() }?.let { WhatsImportantCard(it) }
-                    res.whyShort?.takeIf { it.isNotEmpty() }?.let { AccordionSection("Por qué la pickeamos", it) }
-                    res.riskShort?.takeIf { it.isNotEmpty() }?.let { AccordionSection("Riesgo principal", it) }
+                    res.whyShort?.takeIf { it.isNotEmpty() }?.let { AccordionSection(stringResource(R.string.pick_why), it) }
+                    res.riskShort?.takeIf { it.isNotEmpty() }?.let { AccordionSection(stringResource(R.string.pick_risk), it) }
                     ProResearchCTA(res.ticker)
                 }
             }
 
             Text(
-                "Informational only. Not personalized investment advice. Past performance does not guarantee future results.",
+                stringResource(R.string.pick_disclaimer),
                 fontSize = 10.sp,
                 color = Color.White.copy(alpha = 0.35f),
             )
@@ -193,11 +196,11 @@ fun PickDetailScreen(pickNumber: Int, onBack: () -> Unit, modifier: Modifier = M
 private fun HeaderCard(pick: Pick) {
     VDCard(innerSpacing = 6.dp) {
         Text(
-            "Análisis del ${Formatters.longSpanishDate(pick.date)}",
+            stringResource(R.string.analysis_of, Formatters.longSpanishDate(pick.date)),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        Text("Pick #${pick.pickNumber}", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(stringResource(R.string.pick_hash, pick.pickNumber), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
                 pick.ticker,
@@ -245,7 +248,7 @@ private fun DecisionBanner(pick: Pick, onEdit: () -> Unit) {
                 Icon(Icons.Filled.CheckCircle, contentDescription = null, tint = BrandEmerald, modifier = Modifier.size(22.dp))
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                     Text(
-                        "Lo compraste",
+                        stringResource(R.string.pick_bought_title),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onBackground,
@@ -254,20 +257,20 @@ private fun DecisionBanner(pick: Pick, onEdit: () -> Unit) {
                     val amount = pick.amountInvested
                     if (price != null && amount != null) {
                         Text(
-                            "$${Formatters.money2(price)} · invertiste $${Formatters.money2(amount)} · toca para editar",
+                            stringResource(R.string.pick_bought_detail, Formatters.money2(price), Formatters.money2(amount)),
                             fontSize = 12.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
                 }
-                Icon(Icons.Filled.Edit, contentDescription = "Editar", tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(16.dp))
+                Icon(Icons.Filled.Edit, contentDescription = stringResource(R.string.pick_edit), tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(16.dp))
             }
         }
 
         PickStatus.SKIPPED -> VDCard(innerSpacing = 0.dp) {
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 Icon(Icons.Filled.Cancel, contentDescription = null, tint = Color.Gray, modifier = Modifier.size(22.dp))
-                Text("Lo skippeaste", fontSize = 14.sp, color = MaterialTheme.colorScheme.onBackground)
+                Text(stringResource(R.string.pick_skipped_title), fontSize = 14.sp, color = MaterialTheme.colorScheme.onBackground)
             }
         }
 
@@ -289,23 +292,23 @@ private fun DecisionBar(pick: Pick, onBuy: () -> Unit, onSkip: () -> Unit, onPen
         when (pick.status) {
             PickStatus.PENDING -> {
                 OutlinedButton(onClick = onSkip, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp)) {
-                    Text("⏰ Después")
+                    Text(stringResource(R.string.pick_after))
                 }
                 Button(onClick = onBuy, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp), colors = buyColors) {
-                    Text("✅ Lo compré", fontWeight = FontWeight.SemiBold)
+                    Text(stringResource(R.string.pick_bought_cta), fontWeight = FontWeight.SemiBold)
                 }
             }
             PickStatus.BOUGHT -> {
                 OutlinedButton(onClick = onPending, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp)) {
-                    Text("Cambiar a pendiente")
+                    Text(stringResource(R.string.pick_change_to_pending))
                 }
             }
             PickStatus.SKIPPED -> {
                 OutlinedButton(onClick = onPending, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp)) {
-                    Text("Volver a pendiente")
+                    Text(stringResource(R.string.pick_back_to_pending))
                 }
                 Button(onClick = onBuy, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp), colors = buyColors) {
-                    Text("✅ Sí lo compré", fontWeight = FontWeight.SemiBold)
+                    Text(stringResource(R.string.pick_yes_bought), fontWeight = FontWeight.SemiBold)
                 }
             }
         }
@@ -321,7 +324,7 @@ private fun DividendSection(pick: Pick, events: List<DividendEvent>) {
 
     VDCard(innerSpacing = 8.dp) {
         Text(
-            "💸 DIVIDENDOS COBRADOS",
+            stringResource(R.string.pick_dividends_header),
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
             letterSpacing = 1.1.sp,
@@ -336,14 +339,14 @@ private fun DividendSection(pick: Pick, events: List<DividendEvent>) {
         }
         HorizontalDivider(color = Color.White.copy(alpha = 0.1f))
         Row(Modifier.fillMaxWidth()) {
-            Text("Total cobrado", fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onBackground)
+            Text(stringResource(R.string.pick_total_collected), fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onBackground)
             Spacer(Modifier.weight(1f))
             Text("$${Formatters.money2(total)}", fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = BrandEmerald)
         }
         val invested = pick.amountInvested
         if (invested != null && invested > 0) {
             Row(Modifier.fillMaxWidth()) {
-                Text("Yield real", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(stringResource(R.string.pick_real_yield), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Spacer(Modifier.weight(1f))
                 Text(
                     "${Formatters.money2(total / invested * 100)}%",
@@ -361,7 +364,7 @@ private fun DividendSection(pick: Pick, events: List<DividendEvent>) {
 private fun TldrCard(text: String) {
     VDCard(innerSpacing = 8.dp) {
         Text(
-            "EN POCAS PALABRAS",
+            stringResource(R.string.pick_tldr),
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
             letterSpacing = 1.1.sp,
@@ -375,7 +378,7 @@ private fun TldrCard(text: String) {
 private fun WhatsImportantCard(pills: List<WhatsImportantPill>) {
     VDCard(innerSpacing = 10.dp) {
         Text(
-            "LO IMPORTANTE",
+            stringResource(R.string.pick_important),
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
             letterSpacing = 1.1.sp,
@@ -460,13 +463,13 @@ private fun ProResearchCTA(ticker: String) {
         Icon(Icons.Filled.TrendingUp, contentDescription = null, tint = BrandEmerald, modifier = Modifier.size(22.dp))
         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
             Text(
-                "¿Quieres más detalle?",
+                stringResource(R.string.pick_want_more),
                 fontSize = 13.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = Color.White,
             )
             Text(
-                "Lee el análisis completo en vectorialdata.com",
+                stringResource(R.string.pick_read_full),
                 fontSize = 11.sp,
                 color = Color.White.copy(alpha = 0.6f),
             )
@@ -493,13 +496,13 @@ private fun PaywallCard() {
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         Text(
-            "Unlock the full thesis",
+            stringResource(R.string.paywall_unlock_title),
             fontSize = 16.sp,
             fontWeight = FontWeight.SemiBold,
             color = Color.White,
         )
         Text(
-            "Get our complete research: what the company does, why we picked it, the key risk, valuation and analyst consensus. Free for 14 days, no card needed.",
+            stringResource(R.string.paywall_unlock_body),
             fontSize = 12.sp,
             color = Color.White.copy(alpha = 0.8f),
         )
@@ -508,7 +511,7 @@ private fun PaywallCard() {
             colors = ButtonDefaults.buttonColors(containerColor = BrandEmerald, contentColor = Color(0xFF05080A)),
             shape = RoundedCornerShape(10.dp),
         ) {
-            Text("Prueba 14 días gratis", fontWeight = FontWeight.SemiBold)
+            Text(stringResource(R.string.trial_cta), fontWeight = FontWeight.SemiBold)
         }
     }
 }

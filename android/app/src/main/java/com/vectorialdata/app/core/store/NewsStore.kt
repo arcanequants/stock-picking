@@ -1,6 +1,8 @@
 package com.vectorialdata.app.core.store
 
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.auth.SecureStore
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.NewsItem
 import com.vectorialdata.app.core.model.NewsListResponse
 import com.vectorialdata.app.core.net.ApiClient
@@ -52,9 +54,9 @@ object NewsStore {
             _items.value = resp.news
             _errorMessage.value = null
         } catch (e: ApiError.Unauthorized) {
-            _errorMessage.value = "Inicia sesión otra vez."
+            _errorMessage.value = Localizer.get(R.string.err_unauthorized)
         } catch (e: Exception) {
-            _errorMessage.value = e.message ?: "No pudimos cargar las noticias."
+            _errorMessage.value = e.message ?: Localizer.get(R.string.news_error)
         } finally {
             _isLoading.value = false
         }

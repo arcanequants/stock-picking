@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -33,6 +34,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.vectorialdata.app.R
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.NewsItem
 import com.vectorialdata.app.core.util.Formatters
 import com.vectorialdata.app.ui.theme.BrandEmerald
@@ -50,7 +53,7 @@ fun NewsDetailScreen(item: NewsItem, onBack: () -> Unit, modifier: Modifier = Mo
         IconButton(onClick = onBack) {
             Icon(
                 Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = "Atrás",
+                contentDescription = stringResource(R.string.back),
                 tint = MaterialTheme.colorScheme.onBackground,
             )
         }
@@ -102,7 +105,7 @@ fun NewsDetailScreen(item: NewsItem, onBack: () -> Unit, modifier: Modifier = Mo
                         modifier = Modifier.size(18.dp),
                     )
                     Text(
-                        "Abrir enlace",
+                        stringResource(R.string.news_open_link),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = BrandEmerald,
@@ -120,7 +123,7 @@ private fun longDate(iso: String): String {
     val date = NewsItem.parseISO(iso) ?: return iso
     val day = Formatters.longSpanishDate(iso.take(10))
     val local = java.time.ZonedDateTime.ofInstant(date, java.time.ZoneId.systemDefault())
-    return "$day · %02d:%02d".format(local.hour, local.minute)
+    return Localizer.get(R.string.date_at_time, day, "%02d:%02d".format(local.hour, local.minute))
 }
 
 /**

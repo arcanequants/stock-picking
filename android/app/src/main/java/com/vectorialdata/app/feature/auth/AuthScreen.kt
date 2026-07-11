@@ -31,12 +31,14 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.auth.AuthManager
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -61,6 +63,10 @@ fun AuthScreen() {
     var localError by remember { mutableStateOf<String?>(null) }
     var cooldown by remember { mutableIntStateOf(0) }
 
+    val invalidEmailError = stringResource(R.string.auth_invalid_email)
+    val genericError = stringResource(R.string.auth_generic_error)
+    val enterCodeError = stringResource(R.string.auth_enter_code_error)
+
     LaunchedEffect(cooldown) {
         if (cooldown > 0) {
             delay(1000)
@@ -73,7 +79,7 @@ fun AuthScreen() {
     fun send() {
         val trimmed = email.trim().lowercase(Locale.getDefault())
         if (!trimmed.contains("@") || !trimmed.contains(".")) {
-            localError = "Enter a valid email"; return
+            localError = invalidEmailError; return
         }
         localError = null
         isSending = true
@@ -87,7 +93,7 @@ fun AuthScreen() {
                     startCooldown()
                 }
             } catch (e: Exception) {
-                localError = AuthManager.lastAuthError.value ?: e.message ?: "Something went wrong"
+                localError = AuthManager.lastAuthError.value ?: e.message ?: genericError
             } finally {
                 isSending = false
             }
@@ -111,7 +117,7 @@ fun AuthScreen() {
 
     fun verify() {
         val code = otp.trim()
-        if (code.length < 6) { localError = "Enter the code from your email."; return }
+        if (code.length < 6) { localError = enterCodeError; return }
         localError = null
         isVerifying = true
         scope.launch {
@@ -145,7 +151,7 @@ fun AuthScreen() {
                 color = MaterialTheme.colorScheme.onBackground,
             )
             Text(
-                "One stock pick a day. Every day.",
+                stringResource(R.string.auth_tagline),
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
             )
@@ -179,7 +185,7 @@ fun AuthScreen() {
             Spacer(Modifier.weight(1f))
 
             Text(
-                "By continuing you agree to the Terms and Privacy Policy.",
+                stringResource(R.string.auth_terms),
                 fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
                 textAlign = TextAlign.Center,
@@ -198,7 +204,7 @@ private fun SignInCard(
         OutlinedTextField(
             value = email,
             onValueChange = onEmailChange,
-            placeholder = { Text("you@example.com") },
+            placeholder = { Text(stringResource(R.string.auth_email_placeholder)) },
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             colors = fieldColors(),
@@ -207,7 +213,7 @@ private fun SignInCard(
         OutlinedTextField(
             value = password,
             onValueChange = onPasswordChange,
-            placeholder = { Text("Password (optional)") },
+            placeholder = { Text(stringResource(R.string.auth_password_placeholder)) },
             singleLine = true,
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
@@ -228,7 +234,7 @@ private fun SignInCard(
                     modifier = Modifier.height(20.dp),
                 )
             } else {
-                Text(if (password.isEmpty()) "Send magic link" else "Sign in")
+                Text(if (password.isEmpty()) stringResource(R.string.auth_send_magic_link) else stringResource(R.string.auth_sign_in))
             }
         }
         error?.let {
@@ -254,14 +260,14 @@ private fun ConfirmationCard(
             .border(1.dp, MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f), RoundedCornerShape(16.dp))
             .padding(24.dp),
     ) {
-        Text("Check your email", fontSize = 22.sp, color = MaterialTheme.colorScheme.onSurface)
+        Text(stringResource(R.string.auth_check_email_title), fontSize = 22.sp, color = MaterialTheme.colorScheme.onSurface)
         Text(
-            "We sent a sign-in link to $email. Tap it on this device to continue.",
+            stringResource(R.string.auth_check_email_body, email),
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
         )
         Text(
-            "Or enter the code from your email",
+            stringResource(R.string.auth_enter_code),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -288,7 +294,7 @@ private fun ConfirmationCard(
                     modifier = Modifier.height(20.dp),
                 )
             } else {
-                Text("Verify")
+                Text(stringResource(R.string.auth_verify))
             }
         }
         error?.let { Text(it, color = MaterialTheme.colorScheme.error, fontSize = 13.sp, textAlign = TextAlign.Center) }
@@ -300,14 +306,14 @@ private fun ConfirmationCard(
         ) {
             Text(
                 when {
-                    isResending -> "Resending…"
-                    cooldown > 0 -> "Resend in ${cooldown}s"
-                    else -> "Resend email"
+                    isResending -> stringResource(R.string.auth_resending)
+                    cooldown > 0 -> stringResource(R.string.auth_resend_in, cooldown)
+                    else -> stringResource(R.string.auth_resend)
                 }
             )
         }
         TextButton(onClick = onUseDifferentEmail, modifier = Modifier.fillMaxWidth()) {
-            Text("Use a different email", color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(stringResource(R.string.auth_use_different_email), color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }

@@ -34,10 +34,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.model.Pick
 import com.vectorialdata.app.core.model.PickStatus
 import com.vectorialdata.app.core.model.Position
@@ -80,7 +82,7 @@ fun PositionDetailScreen(position: Position, onBack: () -> Unit, modifier: Modif
             IconButton(onClick = onBack) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Atrás",
+                    contentDescription = stringResource(R.string.back),
                     tint = MaterialTheme.colorScheme.onBackground,
                 )
             }
@@ -113,7 +115,7 @@ fun PositionDetailScreen(position: Position, onBack: () -> Unit, modifier: Modif
             }
 
             Text(
-                "Informational only. Not personalized investment advice. Past performance does not guarantee future results.",
+                stringResource(R.string.pick_disclaimer),
                 fontSize = 10.sp,
                 color = Color.White.copy(alpha = 0.4f),
             )
@@ -149,7 +151,7 @@ private fun HeaderCard(position: Position) {
             )
             Spacer(Modifier.weight(1f))
             Text(
-                "${position.daysHeld}d held",
+                stringResource(R.string.position_days_held, position.daysHeld),
                 fontSize = 12.sp,
                 color = Color.White.copy(alpha = 0.5f),
             )
@@ -161,23 +163,26 @@ private fun HeaderCard(position: Position) {
 private fun PositionFactsCard(position: Position) {
     VDCard(innerSpacing = 8.dp) {
         Text(
-            "Our position".uppercase(),
+            stringResource(R.string.position_our_position).uppercase(),
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
             letterSpacing = 1.1.sp,
             color = Color.White.copy(alpha = 0.55f),
         )
-        FactRow(if (position.buys == 1) "Buys" else "Buys (avg)", "${position.buys}")
-        FactRow("First bought", position.firstBought)
+        FactRow(
+            if (position.buys == 1) stringResource(R.string.position_buys_label) else stringResource(R.string.position_buys_avg_label),
+            "${position.buys}",
+        )
+        FactRow(stringResource(R.string.position_first_bought), position.firstBought)
         if (position.lastBought != position.firstBought) {
-            FactRow("Last bought", position.lastBought)
+            FactRow(stringResource(R.string.position_last_bought), position.lastBought)
         }
-        position.sector?.takeIf { it.isNotEmpty() }?.let { FactRow("Sector", it) }
-        position.region?.takeIf { it.isNotEmpty() }?.let { FactRow("Region", it) }
+        position.sector?.takeIf { it.isNotEmpty() }?.let { FactRow(stringResource(R.string.position_sector), it) }
+        position.region?.takeIf { it.isNotEmpty() }?.let { FactRow(stringResource(R.string.position_region), it) }
         position.dividendYield?.let { dy ->
             FactRow(
-                "Dividend yield",
-                if (dy > 0) String.format(Locale.US, "%.2f%%", dy) else "No dividend",
+                stringResource(R.string.position_dividend_yield),
+                if (dy > 0) String.format(Locale.US, "%.2f%%", dy) else stringResource(R.string.position_no_dividend),
             )
         }
     }
@@ -202,7 +207,7 @@ private fun FactRow(label: String, value: String) {
 private fun EditBuyCard(buys: List<Pick>, onEdit: (Pick) -> Unit) {
     VDCard(innerSpacing = 8.dp) {
         Text(
-            "EDITAR TU COMPRA",
+            stringResource(R.string.position_edit_buy_header),
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
             letterSpacing = 1.1.sp,
@@ -227,7 +232,7 @@ private fun EditBuyCard(buys: List<Pick>, onEdit: (Pick) -> Unit) {
                 )
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                     Text(
-                        "Pick #${pick.pickNumber} · ${pick.date}",
+                        stringResource(R.string.buy_pick_line, pick.pickNumber, pick.date),
                         fontSize = 13.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = Color.White,
@@ -236,7 +241,7 @@ private fun EditBuyCard(buys: List<Pick>, onEdit: (Pick) -> Unit) {
                     val amount = pick.amountInvested
                     if (price != null && amount != null) {
                         Text(
-                            "$${Formatters.money2(price)} · invertiste $${Formatters.money2(amount)}",
+                            stringResource(R.string.position_invested, Formatters.money2(price), Formatters.money2(amount)),
                             fontSize = 11.sp,
                             color = Color.White.copy(alpha = 0.6f),
                         )
@@ -257,7 +262,7 @@ private fun EditBuyCard(buys: List<Pick>, onEdit: (Pick) -> Unit) {
 private fun WhyCard(summary: String) {
     VDCard(innerSpacing = 8.dp) {
         Text(
-            "WHY WE PICKED IT",
+            stringResource(R.string.position_why_header),
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
             letterSpacing = 1.1.sp,
@@ -285,19 +290,19 @@ private fun PaywallCard(onOpen: () -> Unit) {
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         Text(
-            "See why we picked this",
+            stringResource(R.string.position_paywall_title),
             fontSize = 15.sp,
             fontWeight = FontWeight.SemiBold,
             color = Color.White,
         )
         Text(
-            "Subscribe to unlock our full thesis, the risk we're watching, and valuation on every position.",
+            stringResource(R.string.position_paywall_body),
             fontSize = 13.sp,
             color = Color.White.copy(alpha = 0.75f),
         )
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(
-                "Suscríbete",
+                stringResource(R.string.subscribe),
                 fontSize = 14.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = BrandEmerald,

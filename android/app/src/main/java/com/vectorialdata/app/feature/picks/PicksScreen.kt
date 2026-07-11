@@ -41,6 +41,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -49,6 +50,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.model.Pick
 import com.vectorialdata.app.core.model.PickStatus
 import com.vectorialdata.app.core.store.PickStatusStore
@@ -125,13 +127,13 @@ fun PicksScreen(modifier: Modifier = Modifier) {
                 item { ScreenTitle() }
                 if (!isSubscribed) item { UpsellBanner() }
                 if (pending.isNotEmpty()) {
-                    item { SectionHeader("PENDIENTES", pending.size) }
+                    item { SectionHeader(stringResource(R.string.picks_pending_header), pending.size) }
                     items(pending.size, key = { "p${pending[it].pickNumber}" }) { i ->
                         PendingPickRow(pending[i]) { openPickNumber = pending[i].pickNumber }
                     }
                 }
                 if (historial.isNotEmpty()) {
-                    item { SectionHeader("HISTORIAL", historial.size) }
+                    item { SectionHeader(stringResource(R.string.picks_history_header), historial.size) }
                     items(historial.size, key = { "h${historial[it].pickNumber}" }) { i ->
                         HistoryPickRow(historial[i]) { openPickNumber = historial[i].pickNumber }
                     }
@@ -145,7 +147,7 @@ fun PicksScreen(modifier: Modifier = Modifier) {
 @Composable
 private fun ScreenTitle() {
     Text(
-        "Picks de Vectorial",
+        stringResource(R.string.picks_title),
         fontSize = 28.sp,
         fontWeight = FontWeight.SemiBold,
         color = MaterialTheme.colorScheme.onBackground,
@@ -193,12 +195,13 @@ private fun PendingPickRow(pick: Pick, onClick: () -> Unit) {
             )
             if (pick.type == "rebuy") RebuyBadge()
             Spacer(Modifier.weight(1f))
-            Text("Decidir →", fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = BrandEmerald)
+            Text(stringResource(R.string.picks_decide), fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = BrandEmerald)
         }
         Text(pick.name, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Text(
             buildAnnotatedString {
-                append("${Formatters.daysSinceLabel(pick.date)} · va ")
+                append(Formatters.daysSinceLabel(pick.date))
+                append(stringResource(R.string.picks_now_connector))
                 withStyle(SpanStyle(color = if (pick.returnPct >= 0) BrandEmerald else MaterialTheme.colorScheme.error)) {
                     append(Formatters.pct(pick.returnPct))
                 }
@@ -212,7 +215,7 @@ private fun PendingPickRow(pick: Pick, onClick: () -> Unit) {
 @Composable
 private fun RebuyBadge() {
     Text(
-        "RECOMPRA",
+        stringResource(R.string.picks_rebuy_badge),
         fontSize = 9.sp,
         fontWeight = FontWeight.Bold,
         letterSpacing = 0.8.sp,
@@ -248,8 +251,8 @@ private fun HistoryPickRow(pick: Pick, onClick: () -> Unit) {
                 }
                 Text(pick.name, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 val subline = when (pick.status) {
-                    PickStatus.BOUGHT -> pick.buyPrice?.let { "comprado a $${Formatters.money2(it)}" } ?: "comprado"
-                    PickStatus.SKIPPED -> "skip · ${pick.date}"
+                    PickStatus.BOUGHT -> pick.buyPrice?.let { stringResource(R.string.picks_bought_at, Formatters.money2(it)) } ?: stringResource(R.string.picks_bought)
+                    PickStatus.SKIPPED -> stringResource(R.string.picks_skip_date, pick.date)
                     PickStatus.PENDING -> pick.date
                 }
                 Text(subline, fontSize = 11.sp, color = Color.White.copy(alpha = 0.45f))
@@ -271,13 +274,13 @@ private fun UpsellBanner() {
     val uriHandler = LocalUriHandler.current
     VDCard(innerSpacing = 8.dp) {
         Text(
-            "Showing latest 3 picks",
+            stringResource(R.string.picks_upsell_title),
             fontSize = 15.sp,
             fontWeight = FontWeight.SemiBold,
             color = MaterialTheme.colorScheme.onBackground,
         )
         Text(
-            "Try it free for 14 days — no card needed. Unlock the full history and every new pick the moment it drops.",
+            stringResource(R.string.picks_upsell_body),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -287,7 +290,7 @@ private fun UpsellBanner() {
             colors = ButtonDefaults.buttonColors(containerColor = BrandEmerald, contentColor = Color(0xFF05080A)),
             shape = RoundedCornerShape(10.dp),
         ) {
-            Text("Prueba 14 días gratis", fontWeight = FontWeight.SemiBold)
+            Text(stringResource(R.string.trial_cta), fontWeight = FontWeight.SemiBold)
         }
     }
 }
@@ -308,13 +311,13 @@ private fun CountdownEmptyCard() {
                 modifier = Modifier.size(28.dp),
             )
             Text(
-                "Aún no hay picks nuevos",
+                stringResource(R.string.picks_countdown_title),
                 fontSize = 15.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onBackground,
             )
             Text(
-                "Los picks llegan al ritmo de mercado, no del calendario. Te avisamos al instante cuando salga el siguiente.",
+                stringResource(R.string.picks_countdown_body),
                 fontSize = 12.sp,
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,

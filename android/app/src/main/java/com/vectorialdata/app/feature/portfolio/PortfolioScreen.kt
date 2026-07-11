@@ -42,10 +42,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
+import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.AllocationBucket
 import com.vectorialdata.app.core.model.PortfolioPositions
 import com.vectorialdata.app.core.model.PortfolioViewMode
@@ -63,10 +67,10 @@ import java.util.Locale
 import kotlin.math.abs
 
 /** Mirror of iOS `SortMode` (toolbar sort menu). */
-private enum class SortMode(val label: String) {
-    TOP("Top return"),
-    WORST("Worst return"),
-    NEWEST("Newest"),
+private enum class SortMode(val labelRes: Int) {
+    TOP(R.string.sort_top),
+    WORST(R.string.sort_worst),
+    NEWEST(R.string.sort_newest),
 }
 
 /**
@@ -105,7 +109,7 @@ private object PortfolioState {
             }
             errorMessage.value = null
         } catch (e: Exception) {
-            errorMessage.value = e.message ?: "No pudimos cargar el portfolio."
+            errorMessage.value = e.message ?: Localizer.get(R.string.portfolio_error)
         } finally {
             isLoading.value = false
         }
@@ -203,7 +207,7 @@ fun PortfolioScreen(modifier: Modifier = Modifier) {
             item {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        "Portfolio",
+                        stringResource(R.string.portfolio_title),
                         fontSize = 28.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onBackground,
@@ -226,7 +230,7 @@ fun PortfolioScreen(modifier: Modifier = Modifier) {
                                 inactiveContainerColor = MaterialTheme.colorScheme.surface,
                                 inactiveContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
                             ),
-                        ) { Text(mode.label) }
+                        ) { Text(stringResource(mode.labelRes)) }
                     }
                 }
             }
@@ -240,14 +244,14 @@ fun PortfolioScreen(modifier: Modifier = Modifier) {
                 response != null && response.positions.isNotEmpty() -> {
                     item { TotalsRow(response) }
                     response.sectorAllocation?.takeIf { it.isNotEmpty() }?.let { buckets ->
-                        item { AllocationSection("Sector mix", buckets) }
+                        item { AllocationSection(stringResource(R.string.portfolio_sector_mix), buckets) }
                     }
                     response.regionAllocation?.takeIf { it.isNotEmpty() }?.let { buckets ->
-                        item { AllocationSection("Region mix", buckets) }
+                        item { AllocationSection(stringResource(R.string.portfolio_region_mix), buckets) }
                     }
                     item {
                         Text(
-                            "POSITIONS",
+                            stringResource(R.string.portfolio_positions_header),
                             fontSize = 12.sp,
                             fontWeight = FontWeight.SemiBold,
                             letterSpacing = 1.1.sp,
@@ -292,7 +296,7 @@ private fun SortMenu(current: SortMode, onSelect: (SortMode) -> Unit) {
         IconButton(onClick = { expanded = true }) {
             Icon(
                 Icons.Filled.SwapVert,
-                contentDescription = "Sort",
+                contentDescription = stringResource(R.string.portfolio_sort),
                 tint = MaterialTheme.colorScheme.onBackground,
             )
         }
@@ -301,7 +305,7 @@ private fun SortMenu(current: SortMode, onSelect: (SortMode) -> Unit) {
                 DropdownMenuItem(
                     text = {
                         Text(
-                            mode.label,
+                            stringResource(mode.labelRes),
                             color = if (mode == current) BrandEmerald else MaterialTheme.colorScheme.onBackground,
                         )
                     },
@@ -334,7 +338,7 @@ private fun DividendsYTDCard(ytd: Double, count: Int, companies: Int) {
         Text("💸", fontSize = 34.sp)
         Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
             Text(
-                "COBRADO EN DIVIDENDOS",
+                stringResource(R.string.portfolio_dividends_header),
                 fontSize = 11.sp,
                 fontWeight = FontWeight.SemiBold,
                 letterSpacing = 1.1.sp,
@@ -346,8 +350,10 @@ private fun DividendsYTDCard(ytd: Double, count: Int, companies: Int) {
                 fontWeight = FontWeight.Bold,
                 color = BrandEmerald,
             )
+            val paymentsStr = pluralStringResource(R.plurals.dividend_payments, count, count)
+            val companiesStr = pluralStringResource(R.plurals.dividend_companies, companies, companies)
             Text(
-                "YTD · $count ${if (count == 1) "pago" else "pagos"} · $companies ${if (companies == 1) "empresa" else "empresas"}",
+                stringResource(R.string.portfolio_dividends_meta, paymentsStr, companiesStr),
                 fontSize = 12.sp,
                 color = Color.White.copy(alpha = 0.55f),
             )
@@ -361,7 +367,7 @@ private fun TotalsRow(response: PortfolioPositions) {
     VDCard {
         Row(Modifier.fillMaxWidth()) {
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text("Total return", fontSize = 11.sp, color = Color.White.copy(alpha = 0.6f))
+                Text(stringResource(R.string.portfolio_total_return), fontSize = 11.sp, color = Color.White.copy(alpha = 0.6f))
                 Text(
                     Formatters.pct(response.totalReturnPct),
                     fontSize = 18.sp,
@@ -370,7 +376,7 @@ private fun TotalsRow(response: PortfolioPositions) {
                 )
             }
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text("Positions", fontSize = 11.sp, color = Color.White.copy(alpha = 0.6f))
+                Text(stringResource(R.string.home_positions), fontSize = 11.sp, color = Color.White.copy(alpha = 0.6f))
                 Text(
                     "${response.totalPositions}",
                     fontSize = 18.sp,
@@ -381,7 +387,7 @@ private fun TotalsRow(response: PortfolioPositions) {
             val dy = response.avgDividendYield
             if (dy != null && dy > 0) {
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Text("Avg dividend", fontSize = 11.sp, color = Color.White.copy(alpha = 0.6f))
+                    Text(stringResource(R.string.portfolio_avg_dividend), fontSize = 11.sp, color = Color.White.copy(alpha = 0.6f))
                     Text(
                         String.format(Locale.US, "%.2f%%", dy),
                         fontSize = 18.sp,
@@ -430,7 +436,7 @@ private fun AllocationSection(title: String, buckets: List<AllocationBucket>) {
                         modifier = Modifier.weight(1f),
                     )
                     Text(
-                        "${bucket.pct.toInt()}% · ${bucket.count}",
+                        stringResource(R.string.portfolio_alloc_meta, bucket.pct.toInt(), bucket.count),
                         fontSize = 12.sp,
                         color = Color.White.copy(alpha = 0.55f),
                     )
@@ -476,8 +482,9 @@ private fun PositionRow(position: Position, onClick: () -> Unit) {
                     color = Color.White.copy(alpha = 0.6f),
                     maxLines = 1,
                 )
+                val buysStr = pluralStringResource(R.plurals.buys_count, position.buys, position.buys)
                 Text(
-                    "${position.buys} ${if (position.buys == 1) "buy" else "buys"} · ${position.daysHeld}d",
+                    stringResource(R.string.position_row_meta, buysStr, position.daysHeld),
                     fontSize = 11.sp,
                     color = Color.White.copy(alpha = 0.45f),
                 )
@@ -496,7 +503,7 @@ private fun PositionRow(position: Position, onClick: () -> Unit) {
 @Composable
 internal fun PriorPill(count: Int) {
     Text(
-        if (count > 1) "PREVIAS · $count" else "PREVIA",
+        if (count > 1) stringResource(R.string.prior_pill_many, count) else stringResource(R.string.prior_pill_one),
         fontSize = 9.sp,
         fontWeight = FontWeight.Bold,
         letterSpacing = 0.6.sp,
@@ -513,13 +520,13 @@ private fun PersonalEmptyState() {
     VDCard(innerSpacing = 6.dp) {
         Column(Modifier.padding(vertical = 14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(
-                "Tu portfolio personal está vacío",
+                stringResource(R.string.portfolio_personal_empty_title),
                 fontSize = 15.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onBackground,
             )
             Text(
-                "Marca un pick como comprado en la pestaña Picks para empezar a tracking tu portfolio real.",
+                stringResource(R.string.portfolio_personal_empty_body),
                 fontSize = 13.sp,
                 color = Color.White.copy(alpha = 0.7f),
             )

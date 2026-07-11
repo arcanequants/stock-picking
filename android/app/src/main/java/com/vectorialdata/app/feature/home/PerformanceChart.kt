@@ -29,6 +29,7 @@ import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.text.font.FontWeight
@@ -36,6 +37,7 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.model.PortfolioHistoryPoint
 import com.vectorialdata.app.core.net.ApiClient
 import com.vectorialdata.app.core.util.Formatters
@@ -94,14 +96,14 @@ fun PerformanceChart() {
             }
             Column {
                 Text(
-                    "VECTORIAL",
+                    stringResource(R.string.chart_model_label),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.SemiBold,
                     letterSpacing = 1.2.sp,
                     color = MaterialTheme.colorScheme.onBackground,
                 )
                 Text(
-                    "Modelo público · todas las picks",
+                    stringResource(R.string.chart_model_subtitle),
                     fontSize = 11.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -113,8 +115,8 @@ fun PerformanceChart() {
 
         if (latestVectorial != null) {
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                LegendDot(BrandEmerald, "Vectorial ${Formatters.pct(latestVectorial)}")
-                latestSpy?.let { LegendDot(Color.White.copy(alpha = 0.5f), "S&P ${Formatters.pct(it)}") }
+                LegendDot(BrandEmerald, stringResource(R.string.chart_legend_vectorial, Formatters.pct(latestVectorial)))
+                latestSpy?.let { LegendDot(Color.White.copy(alpha = 0.5f), stringResource(R.string.chart_legend_spy, Formatters.pct(it))) }
             }
         }
 
@@ -127,7 +129,7 @@ fun PerformanceChart() {
             points.isEmpty() -> Box(
                 Modifier.fillMaxWidth().height(200.dp),
                 contentAlignment = Alignment.Center,
-            ) { Text("No data yet", color = MaterialTheme.colorScheme.onSurfaceVariant) }
+            ) { Text(stringResource(R.string.chart_no_data), color = MaterialTheme.colorScheme.onSurfaceVariant) }
 
             else -> {
                 ChartCanvas(points, Modifier.fillMaxWidth().height(200.dp))
@@ -152,7 +154,7 @@ fun PerformanceChart() {
             val diff = latestVectorial - latestSpy
             val sign = if (diff >= 0) "+" else ""
             Text(
-                "Vectorial is $sign${String.format(Locale.US, "%.2f", diff)}% above the S&P 500",
+                stringResource(R.string.chart_vs_spy, "$sign${String.format(Locale.US, "%.2f", diff)}%"),
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Medium,
                 color = if (diff >= 0) BrandEmerald else MaterialTheme.colorScheme.error,
@@ -160,7 +162,7 @@ fun PerformanceChart() {
         }
 
         Text(
-            "Past performance does not guarantee future results. S&P 500 is shown as a reference, not a guarantee.",
+            stringResource(R.string.chart_disclaimer),
             fontSize = 10.sp,
             color = Color.White.copy(alpha = 0.35f),
         )

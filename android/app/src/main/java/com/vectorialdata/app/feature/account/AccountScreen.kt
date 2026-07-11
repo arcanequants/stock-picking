@@ -23,10 +23,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.vectorialdata.app.R
 import com.vectorialdata.app.core.auth.AuthManager
 import com.vectorialdata.app.core.util.Formatters
 import kotlinx.coroutines.launch
@@ -41,11 +43,13 @@ fun AccountScreen(modifier: Modifier = Modifier) {
     var isDeleting by remember { mutableStateOf(false) }
     var deleteError by remember { mutableStateOf<String?>(null) }
 
+    val deleteErrorText = stringResource(R.string.account_delete_error_body)
+
     Column(
         modifier = modifier.fillMaxSize().padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Text("Account", fontSize = 28.sp, fontWeight = FontWeight.SemiBold,
+        Text(stringResource(R.string.account_title), fontSize = 28.sp, fontWeight = FontWeight.SemiBold,
             color = MaterialTheme.colorScheme.onBackground)
 
         Column(
@@ -57,10 +61,11 @@ fun AccountScreen(modifier: Modifier = Modifier) {
             Text(user?.email ?: "—", color = MaterialTheme.colorScheme.onBackground, fontSize = 16.sp)
             val subLabel = when {
                 user?.subscriptionStatus == "trialing" ->
-                    user?.currentPeriodEnd?.let { "Trial gratis · termina el ${Formatters.longSpanishDate(it)}" }
-                        ?: "Trial gratis"
-                user?.isSubscribed == true -> "Premium"
-                else -> "Free"
+                    user?.currentPeriodEnd?.let {
+                        stringResource(R.string.account_status_trial_until, Formatters.longSpanishDate(it))
+                    } ?: stringResource(R.string.account_status_trial)
+                user?.isSubscribed == true -> stringResource(R.string.account_premium)
+                else -> stringResource(R.string.account_free)
             }
             Text(subLabel, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
@@ -73,7 +78,7 @@ fun AccountScreen(modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
         ) {
-            Text("Sign out")
+            Text(stringResource(R.string.account_sign_out))
         }
 
         Button(
@@ -90,12 +95,11 @@ fun AccountScreen(modifier: Modifier = Modifier) {
                     modifier = Modifier.height(20.dp),
                 )
             } else {
-                Text("Delete account")
+                Text(stringResource(R.string.account_delete))
             }
         }
         Text(
-            "Permanently deletes your account and all your data. This cannot be undone. " +
-                "If you have an active subscription, cancel it separately.",
+            stringResource(R.string.account_delete_footer),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -104,13 +108,8 @@ fun AccountScreen(modifier: Modifier = Modifier) {
     if (showDeleteConfirm) {
         AlertDialog(
             onDismissRequest = { showDeleteConfirm = false },
-            title = { Text("Delete your account?") },
-            text = {
-                Text(
-                    "This permanently deletes your account, your portfolio and all " +
-                        "your data. It cannot be undone."
-                )
-            },
+            title = { Text(stringResource(R.string.account_delete_confirm_title)) },
+            text = { Text(stringResource(R.string.account_delete_confirm_body)) },
             confirmButton = {
                 TextButton(
                     onClick = {
@@ -120,18 +119,18 @@ fun AccountScreen(modifier: Modifier = Modifier) {
                             try {
                                 AuthManager.deleteAccount()
                             } catch (e: Exception) {
-                                deleteError = "We couldn't delete your account. Please try again."
+                                deleteError = deleteErrorText
                             } finally {
                                 isDeleting = false
                             }
                         }
                     },
                 ) {
-                    Text("Delete account", color = MaterialTheme.colorScheme.error)
+                    Text(stringResource(R.string.account_delete), color = MaterialTheme.colorScheme.error)
                 }
             },
             dismissButton = {
-                TextButton(onClick = { showDeleteConfirm = false }) { Text("Cancel") }
+                TextButton(onClick = { showDeleteConfirm = false }) { Text(stringResource(R.string.cancel)) }
             },
         )
     }
@@ -139,10 +138,10 @@ fun AccountScreen(modifier: Modifier = Modifier) {
     deleteError?.let { message ->
         AlertDialog(
             onDismissRequest = { deleteError = null },
-            title = { Text("Couldn't delete") },
+            title = { Text(stringResource(R.string.account_delete_error_title)) },
             text = { Text(message) },
             confirmButton = {
-                TextButton(onClick = { deleteError = null }) { Text("OK") }
+                TextButton(onClick = { deleteError = null }) { Text(stringResource(R.string.ok)) }
             },
         )
     }

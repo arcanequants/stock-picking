@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tabs -->
+    <string name="tab_home">Home</string>
+    <string name="tab_portfolio">Portfolio</string>
+    <string name="tab_picks">Picks</string>
+    <string name="tab_account">Account</string>
+
+    <!-- Generic -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="confirm">Confirm</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="trial_cta">Try 14 days free</string>
+    <string name="analysis_of">Analysis from %1$s</string>
+    <string name="date_at_time">%1$s · %2$s</string>
+
+    <!-- Shared errors -->
+    <string name="err_unauthorized">Please sign in again</string>
+    <string name="err_rate_limited">Too many requests — try again in a moment</string>
+    <string name="err_server">Server error (%1$d)</string>
+    <string name="err_decoding">We couldn\'t read the server\'s response.</string>
+
+    <!-- Auth -->
+    <string name="auth_tagline">One stock pick a day. Every day.</string>
+    <string name="auth_email_placeholder">you@example.com</string>
+    <string name="auth_password_placeholder">Password (optional)</string>
+    <string name="auth_send_magic_link">Send magic link</string>
+    <string name="auth_sign_in">Sign in</string>
+    <string name="auth_invalid_email">Enter a valid email</string>
+    <string name="auth_generic_error">Something went wrong</string>
+    <string name="auth_check_email_title">Check your email</string>
+    <string name="auth_check_email_body">We sent a sign-in link to %1$s. Tap it on this device to continue.</string>
+    <string name="auth_enter_code">Or enter the code from your email</string>
+    <string name="auth_verify">Verify</string>
+    <string name="auth_resending">Resending…</string>
+    <string name="auth_resend_in">Resend in %1$ds</string>
+    <string name="auth_resend">Resend email</string>
+    <string name="auth_use_different_email">Use a different email</string>
+    <string name="auth_terms">By continuing you agree to the Terms and Privacy Policy.</string>
+    <string name="auth_enter_code_error">Enter the code from your email.</string>
+    <string name="auth_err_invalid_credentials">Invalid credentials.</string>
+    <string name="auth_err_bad_code">Incorrect code or it has expired. Please try again.</string>
+    <string name="auth_err_link_expired">That link expired or was already used. Request a new one.</string>
+
+    <!-- Account -->
+    <string name="account_title">Account</string>
+    <string name="account_status_trial_until">Free trial · ends %1$s</string>
+    <string name="account_status_trial">Free trial</string>
+    <string name="account_premium">Premium</string>
+    <string name="account_free">Free</string>
+    <string name="account_sign_out">Sign out</string>
+    <string name="account_delete">Delete account</string>
+    <string name="account_delete_footer">Permanently deletes your account and all your data. This cannot be undone. If you have an active subscription, cancel it separately.</string>
+    <string name="account_delete_confirm_title">Delete your account?</string>
+    <string name="account_delete_confirm_body">This permanently deletes your account, your portfolio and all your data. It cannot be undone.</string>
+    <string name="account_delete_error_title">Couldn\'t delete</string>
+    <string name="account_delete_error_body">We couldn\'t delete your account. Please try again.</string>
+
+    <!-- Home -->
+    <string name="home_positions">Positions</string>
+    <string name="home_best">Best</string>
+    <string name="home_worst">Worst</string>
+    <string name="home_market_open">Market open</string>
+    <string name="home_market_pre">Pre-market</string>
+    <string name="home_market_post">After hours</string>
+    <string name="home_market_closed">Market closed</string>
+    <string name="home_market_weekend">Weekend — market closed</string>
+    <string name="home_market_holiday">Holiday — market closed</string>
+    <string name="home_news_title">NEWS</string>
+    <string name="home_news_subtitle">The latest that changes your thesis</string>
+    <string name="home_error">We couldn\'t load your summary.</string>
+
+    <!-- Performance chart -->
+    <string name="chart_model_label">VECTORIAL</string>
+    <string name="chart_model_subtitle">Public model · all picks</string>
+    <string name="chart_legend_vectorial">Vectorial %1$s</string>
+    <string name="chart_legend_spy">S&amp;P %1$s</string>
+    <string name="chart_no_data">No data yet</string>
+    <string name="chart_vs_spy">Vectorial is %1$s vs. the S&amp;P 500</string>
+    <string name="chart_disclaimer">Past performance does not guarantee future results. S&amp;P 500 is shown as a reference, not a guarantee.</string>
+
+    <!-- Personal performance -->
+    <string name="personal_range_itd">ITD</string>
+    <string name="personal_range_ytd">YTD</string>
+    <string name="personal_range_mom">1M</string>
+    <string name="personal_range_yoy">1Y</string>
+    <string name="personal_loading">Loading your performance…</string>
+    <string name="personal_error">We couldn\'t load your performance.</string>
+    <string name="personal_title">YOUR PORTFOLIO</string>
+    <string name="personal_subtitle_label">Your real money · only the picks you bought</string>
+    <string name="personal_sub_itd">You\'ve been investing for %1$s</string>
+    <string name="personal_sub_ytd">Year to date</string>
+    <string name="personal_sub_ytd_short">Year to date · only %1$s so far</string>
+    <string name="personal_sub_mom">Last 30 days</string>
+    <string name="personal_sub_mom_short">Last 30 days · only %1$s so far</string>
+    <string name="personal_sub_yoy">Last 12 months</string>
+    <string name="personal_sub_yoy_short">Last 12 months · only %1$s so far</string>
+
+    <!-- Picks feed -->
+    <string name="picks_title">Vectorial picks</string>
+    <string name="picks_upsell_title">Showing latest 3 picks</string>
+    <string name="picks_upsell_body">Try it free for 14 days — no card needed. Unlock the full history and every new pick the moment it drops.</string>
+    <string name="picks_pending_header">PENDING</string>
+    <string name="picks_history_header">HISTORY</string>
+    <string name="picks_decide">Decide →</string>
+    <string name="picks_rebuy_badge">REBUY</string>
+    <string name="picks_days_va">%1$s · now %2$s</string>
+    <string name="picks_now_connector">" · now "</string>
+    <string name="picks_bought_at">bought at $%1$s</string>
+    <string name="picks_bought">bought</string>
+    <string name="picks_skip_date">skipped · %1$s</string>
+    <string name="picks_countdown_title">No new picks yet</string>
+    <string name="picks_countdown_body">Picks arrive at the market\'s pace, not the calendar\'s. We\'ll ping you the moment the next one drops.</string>
+    <string name="picks_error">We couldn\'t load the picks.</string>
+
+    <!-- Relative dates -->
+    <string name="days_since_today">today</string>
+    <string name="days_since_yesterday">yesterday</string>
+    <string name="days_since_n">%1$dd ago</string>
+    <string name="news_rel_now">now</string>
+    <string name="news_rel_min">%1$dm ago</string>
+    <string name="news_rel_hour">%1$dh ago</string>
+
+    <!-- Buy sheet -->
+    <string name="buy_edit_title">Edit your %1$s buy</string>
+    <string name="buy_mark_title">You marked %1$s</string>
+    <string name="buy_pick_line">Pick #%1$d · %2$s</string>
+    <string name="buy_price_label">Price you bought at</string>
+    <string name="buy_price_support">Pre-filled with the price at pick time</string>
+    <string name="buy_amount_label">How much you invested</string>
+    <string name="buy_amount_support_default">Your default — you can change it</string>
+    <string name="buy_amount_support_hint">If you use the same amount each time, save it below</string>
+    <string name="buy_remember_default">Remember $%1$s as my amount per pick</string>
+    <string name="buy_err_price">Invalid price.</string>
+    <string name="buy_err_amount">Invalid amount.</string>
+    <string name="buy_err_save">Couldn\'t save.</string>
+
+    <!-- Pick detail -->
+    <string name="pick_hash">Pick #%1$d</string>
+    <string name="pick_bought_title">You bought it</string>
+    <string name="pick_bought_detail">$%1$s · you invested $%2$s · tap to edit</string>
+    <string name="pick_skipped_title">You skipped it</string>
+    <string name="pick_edit">Edit</string>
+    <string name="pick_after">⏰ Later</string>
+    <string name="pick_bought_cta">✅ I bought it</string>
+    <string name="pick_change_to_pending">Change to pending</string>
+    <string name="pick_back_to_pending">Back to pending</string>
+    <string name="pick_yes_bought">✅ Yes, I bought it</string>
+    <string name="pick_dividends_header">💸 DIVIDENDS COLLECTED</string>
+    <string name="pick_total_collected">Total collected</string>
+    <string name="pick_real_yield">Real yield</string>
+    <string name="pick_tldr">IN SHORT</string>
+    <string name="pick_important">WHAT MATTERS</string>
+    <string name="pick_why">Why we picked it</string>
+    <string name="pick_risk">Main risk</string>
+    <string name="pick_disclaimer">Informational only. Not personalized investment advice. Past performance does not guarantee future results.</string>
+    <string name="pick_want_more">Want more detail?</string>
+    <string name="pick_read_full">Read the full analysis at vectorialdata.com</string>
+    <string name="pick_research_error">We couldn\'t load the analysis.</string>
+    <string name="paywall_unlock_title">Unlock the full thesis</string>
+    <string name="paywall_unlock_body">Get our complete research: what the company does, why we picked it, the key risk, valuation and analyst consensus. Free for 14 days, no card needed.</string>
+
+    <!-- News -->
+    <string name="news_title">News</string>
+    <string name="news_empty_title">No news yet</string>
+    <string name="news_empty_body">We\'ll ping you the moment we post something that changes your thesis.</string>
+    <string name="news_error">We couldn\'t load the news.</string>
+    <string name="news_open_link">Open link</string>
+
+    <!-- Portfolio -->
+    <string name="portfolio_title">Portfolio</string>
+    <string name="portfolio_sort">Sort</string>
+    <string name="sort_top">Top return</string>
+    <string name="sort_worst">Worst return</string>
+    <string name="sort_newest">Newest</string>
+    <string name="view_model">Model</string>
+    <string name="view_personal">Mine</string>
+    <string name="portfolio_dividends_header">DIVIDENDS COLLECTED</string>
+    <string name="portfolio_dividends_meta">YTD · %1$s · %2$s</string>
+    <string name="portfolio_total_return">Total return</string>
+    <string name="portfolio_avg_dividend">Avg dividend</string>
+    <string name="portfolio_positions_header">POSITIONS</string>
+    <string name="portfolio_sector_mix">Sector mix</string>
+    <string name="portfolio_region_mix">Region mix</string>
+    <string name="portfolio_alloc_meta">%1$d%% · %2$d</string>
+    <string name="position_row_meta">%1$s · %2$dd</string>
+    <string name="prior_pill_one">PRIOR</string>
+    <string name="prior_pill_many">PRIOR · %1$d</string>
+    <string name="portfolio_personal_empty_title">Your personal portfolio is empty</string>
+    <string name="portfolio_personal_empty_body">Mark a pick as bought in the Picks tab to start tracking your real portfolio.</string>
+    <string name="portfolio_error">We couldn\'t load the portfolio.</string>
+
+    <!-- Position detail -->
+    <string name="position_days_held">%1$dd held</string>
+    <string name="position_our_position">Our position</string>
+    <string name="position_buys_label">Buys</string>
+    <string name="position_buys_avg_label">Buys (avg)</string>
+    <string name="position_first_bought">First bought</string>
+    <string name="position_last_bought">Last bought</string>
+    <string name="position_sector">Sector</string>
+    <string name="position_region">Region</string>
+    <string name="position_dividend_yield">Dividend yield</string>
+    <string name="position_no_dividend">No dividend</string>
+    <string name="position_edit_buy_header">EDIT YOUR BUY</string>
+    <string name="position_invested">$%1$s · you invested $%2$s</string>
+    <string name="position_why_header">WHY WE PICKED IT</string>
+    <string name="position_paywall_title">See why we picked this</string>
+    <string name="position_paywall_body">Subscribe to unlock our full thesis, the risk we\'re watching, and valuation on every position.</string>
+
+    <!-- Plurals -->
+    <plurals name="days_count">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+    <plurals name="news_new_count">
+        <item quantity="one">● %1$d new</item>
+        <item quantity="other">● %1$d new</item>
+    </plurals>
+    <plurals name="dividend_payments">
+        <item quantity="one">%1$d payment</item>
+        <item quantity="other">%1$d payments</item>
+    </plurals>
+    <plurals name="dividend_companies">
+        <item quantity="one">%1$d company</item>
+        <item quantity="other">%1$d companies</item>
+    </plurals>
+    <plurals name="buys_count">
+        <item quantity="one">%1$d buy</item>
+        <item quantity="other">%1$d buys</item>
+    </plurals>
+</resources>
