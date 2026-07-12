@@ -75,11 +75,15 @@ struct PortfolioView: View {
     @EnvironmentObject private var pickStatus: PickStatusStore
     @EnvironmentObject private var dividends: DividendStore
     @ObservedObject private var priorHoldings = PriorHoldingsStore.shared
+    @State private var showPaywall = false
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 12) {
+                    if !pickStatus.isSubscribed {
+                        freeUpsellBanner
+                    }
                     viewSwitcher
                     if vm.selectedView == .personal && dividends.count > 0 {
                         DividendsYTDCard(
@@ -121,6 +125,7 @@ struct PortfolioView: View {
             .navigationDestination(for: Position.self) { position in
                 PositionDetailView(position: position)
             }
+            .sheet(isPresented: $showPaywall) { PaywallView() }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu {
@@ -172,6 +177,39 @@ struct PortfolioView: View {
         }
         .pickerStyle(.segmented)
         .padding(.bottom, 4)
+    }
+
+    /// Shown to free users atop the (intentionally public) model portfolio:
+    /// the track record is the marketing; the full thesis is the product.
+    private var freeUpsellBanner: some View {
+        Button { showPaywall = true } label: {
+            HStack(spacing: 12) {
+                Image(systemName: "lock.fill")
+                    .font(.body)
+                    .foregroundStyle(Color("BrandEmerald"))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Desbloquea la tesis completa de cada posición")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.leading)
+                    Text("14 días gratis, luego $0.99/mes")
+                        .font(.caption)
+                        .foregroundStyle(.white.opacity(0.6))
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.4))
+            }
+            .padding(14)
+            .background(Color("BrandEmerald").opacity(0.10))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(Color("BrandEmerald").opacity(0.35), lineWidth: 1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+        }
+        .buttonStyle(.plain)
     }
 
     private var personalEmptyState: some View {

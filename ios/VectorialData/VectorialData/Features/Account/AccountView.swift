@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 import UserNotifications
 
 struct AccountView: View {
@@ -8,6 +9,9 @@ struct AccountView: View {
     @State private var isSigningOut = false
     @State private var isEditingDefault = false
     @State private var showDeleteConfirm = false
+    @State private var showManageSubs = false
+    @State private var showTrial = false
+    @State private var restoring = false
     @State private var isDeleting = false
     @State private var deleteError: String?
 
@@ -24,6 +28,56 @@ struct AccountView: View {
                         if let locale = user.locale {
                             LabeledContent("Language", value: locale)
                         }
+                    }
+                }
+
+                Section {
+                    if auth.currentUser?.isSubscribed == true {
+                        Button {
+                            showManageSubs = true
+                        } label: {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Administrar suscripción")
+                                    .foregroundStyle(.primary)
+                                Text("Renueva o cancela — lo maneja Apple")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    } else {
+                        Button {
+                            showTrial = true
+                        } label: {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Activar 14 días gratis")
+                                    .foregroundStyle(Color("BrandEmerald"))
+                                Text("Luego $0.99/mes · cancela cuando quieras")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        Button {
+                            restoring = true
+                            Task {
+                                _ = await StoreManager.shared.restore()
+                                await auth.refreshCurrentUser()
+                                await pickStatus.load()
+                                restoring = false
+                            }
+                        } label: {
+                            HStack {
+                                Text("Restaurar compras")
+                                Spacer()
+                                if restoring { ProgressView() }
+                            }
+                        }
+                        .disabled(restoring)
+                    }
+                } header: {
+                    Text("Suscripción")
+                } footer: {
+                    if auth.currentUser?.isSubscribed != true {
+                        Text("El acceso gratis muestra el portafolio y los últimos picks. Premium desbloquea la tesis completa de cada pick.")
                     }
                 }
 
@@ -127,6 +181,16 @@ struct AccountView: View {
                 }
             }
             .navigationTitle("Account")
+            .manageSubscriptionsSheet(isPresented: $showManageSubs)
+            .fullScreenCover(isPresented: $showTrial) {
+                TrialActivationView {
+                    showTrial = false
+                    Task {
+                        await auth.refreshCurrentUser()
+                        await pickStatus.load()
+                    }
+                }
+            }
             .task { await notifications.refreshStatus() }
             .task { await auth.refreshCurrentUser() }
             .task {
@@ -193,8 +257,9 @@ struct AccountView: View {
     }
 
     private func statusLabel(_ user: UserProfile) -> String {
-        if user.isSubscribed { return "Active" }
-        return user.subscriptionStatus?.capitalized ?? "Free"
+        if user.isSubscribed { return String(localized: "Premium") }
+        if user.subscriptionStatus == "canceled" { return String(localized: "Cancelada") }
+        return String(localized: "Gratis")
     }
 }
 

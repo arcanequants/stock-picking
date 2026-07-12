@@ -207,10 +207,22 @@ struct CreateAccountView: View {
                 .frame(maxWidth: .infinity)
                 .disabled(busy)
 
-            Text("¿No llega? Revisa tu carpeta de spam.")
-                .font(.caption)
-                .foregroundStyle(.white.opacity(0.4))
-                .frame(maxWidth: .infinity)
+            HStack(alignment: .top, spacing: 10) {
+                Image(systemName: "tray.full.fill")
+                    .foregroundStyle(Color("BrandEmerald"))
+                Text("¿No llega el código? Revisa tu carpeta de spam o correo no deseado — a veces cae ahí.")
+                    .font(.footnote)
+                    .foregroundStyle(.white.opacity(0.85))
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(12)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color("BrandEmerald").opacity(0.10))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color("BrandEmerald").opacity(0.35), lineWidth: 1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 12))
         }
         .onAppear { focused = true }
     }
