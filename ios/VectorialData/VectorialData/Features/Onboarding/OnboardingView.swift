@@ -140,7 +140,7 @@ private struct PickAnatomyPage: View {
                         Image(systemName: row.0)
                             .foregroundStyle(Color("BrandEmerald"))
                             .frame(width: 24)
-                        Text(row.1)
+                        Text(LocalizedStringKey(row.1))
                             .font(.subheadline)
                             .foregroundStyle(.white.opacity(0.92))
                         Spacer()
@@ -206,8 +206,8 @@ private struct HowItWorksPage: View {
 
 private struct HowItWorksStep: View {
     let icon: String
-    let title: String
-    let detail: String
+    let title: LocalizedStringKey
+    let detail: LocalizedStringKey
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: icon)
@@ -401,9 +401,9 @@ private struct OwlBadge: View {
 }
 
 private struct OnboardingTitle: View {
-    let text: String
+    let text: LocalizedStringKey
     var small = false
-    init(_ text: String, small: Bool = false) { self.text = text; self.small = small }
+    init(_ text: LocalizedStringKey, small: Bool = false) { self.text = text; self.small = small }
     var body: some View {
         Text(text)
             .font(small ? .title.bold() : .largeTitle.bold())

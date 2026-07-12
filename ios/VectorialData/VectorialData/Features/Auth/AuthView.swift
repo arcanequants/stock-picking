@@ -222,7 +222,7 @@ private struct SignInCard: View {
             Button(action: onSend) {
                 HStack {
                     if isSending { ProgressView().tint(.white) }
-                    Text(isSending ? "Entrando…" : password.isEmpty ? "Enviarme el código" : "Iniciar sesión")
+                    Group { if isSending { Text("Entrando…") } else if password.isEmpty { Text("Enviarme el código") } else { Text("Iniciar sesión") } }
                         .font(.headline)
                 }
                 .frame(maxWidth: .infinity, minHeight: 50)

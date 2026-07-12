@@ -37,7 +37,7 @@ struct InvestmentAmountView: View {
         }
         .background(Color("AppBackground").ignoresSafeArea())
         .safeAreaInset(edge: .bottom) { saveBar }
-        .navigationTitle(onDone == nil ? "Tu monto" : "")
+        .navigationTitle(onDone == nil ? String(localized: "Tu monto") : "")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(Color("AppBackground"), for: .navigationBar)
         .toolbarColorScheme(.dark, for: .navigationBar)
@@ -147,7 +147,7 @@ struct InvestmentAmountView: View {
         .clipShape(RoundedRectangle(cornerRadius: 14))
     }
 
-    private func ladderBar(_ amt: String, _ when: String, _ h: CGFloat) -> some View {
+    private func ladderBar(_ amt: String, _ when: LocalizedStringKey, _ h: CGFloat) -> some View {
         VStack(spacing: 6) {
             Text(amt)
                 .font(.caption.weight(.bold).monospacedDigit())
@@ -198,7 +198,7 @@ struct InvestmentAmountView: View {
             } label: {
                 HStack {
                     if saving { ProgressView().tint(.black) }
-                    else { Text(onDone == nil ? "Guardar" : "Guardar mi monto") }
+                    else if onDone == nil { Text("Guardar") } else { Text("Guardar mi monto") }
                 }
                 .font(.headline)
                 .foregroundStyle(.black)
@@ -247,8 +247,8 @@ enum RaiseReminder {
         cancel()
         guard let rung = nextRung(for: currentAmount) else { return }
         let content = UNMutableNotificationContent()
-        content.title = "¿Listo para el siguiente escalón?"
-        content.body = "Llevas un tiempo invirtiendo \(money(currentAmount)) en cada compra. Si ya no lo sientes, súbelo a \(money(rung.next))."
+        content.title = String(localized: "¿Listo para el siguiente escalón?")
+        content.body = String(localized: "Llevas un tiempo invirtiendo \(money(currentAmount)) en cada compra. Si ya no lo sientes, súbelo a \(money(rung.next)).")
         content.sound = .default
         content.userInfo = ["kind": "raise_amount"]
         let trigger = UNTimeIntervalNotificationTrigger(

@@ -133,7 +133,7 @@ struct CreateAccountView: View {
         .onAppear { focused = true }
     }
 
-    private func perk(_ icon: String, _ text: String) -> some View {
+    private func perk(_ icon: String, _ text: LocalizedStringKey) -> some View {
         HStack(alignment: .top, spacing: 9) {
             Image(systemName: icon)
                 .font(.footnote)
@@ -220,7 +220,7 @@ struct CreateAccountView: View {
     private func createAccount() {
         let trimmed = email.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         guard trimmed.contains("@"), trimmed.contains(".") else {
-            errorMessage = "Escribe un correo válido."
+            errorMessage = String(localized: "Escribe un correo válido.")
             return
         }
         errorMessage = nil
@@ -234,7 +234,7 @@ struct CreateAccountView: View {
                 try await auth.requestMagicLink(email: trimmed, locale: Locale.current.identifier)
                 withAnimation { step = .code }
             } catch {
-                errorMessage = "No pudimos crear tu cuenta. Revisa tu conexión e inténtalo de nuevo."
+                errorMessage = String(localized: "No pudimos crear tu cuenta. Revisa tu conexión e inténtalo de nuevo.")
             }
         }
     }
@@ -248,7 +248,7 @@ struct CreateAccountView: View {
                 try await auth.verifyOTP(email: email.lowercased(), otp: code)
                 // Auth state flips to signedIn → RootView swaps to MainTabView.
             } catch {
-                errorMessage = "Código incorrecto o vencido. Inténtalo de nuevo."
+                errorMessage = String(localized: "Código incorrecto o vencido. Inténtalo de nuevo.")
             }
         }
     }

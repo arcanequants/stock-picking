@@ -94,7 +94,7 @@ struct TrialActivationView: View {
         .clipShape(RoundedRectangle(cornerRadius: 13))
     }
 
-    private func timelineRow(_ when: String, _ what: String) -> some View {
+    private func timelineRow(_ when: LocalizedStringKey, _ what: LocalizedStringKey) -> some View {
         HStack {
             Text(when)
                 .font(.subheadline.weight(.semibold).monospacedDigit())
@@ -108,7 +108,7 @@ struct TrialActivationView: View {
         .padding(.vertical, 11)
     }
 
-    private func check(_ text: String) -> some View {
+    private func check(_ text: LocalizedStringKey) -> some View {
         HStack(spacing: 9) {
             Image(systemName: "checkmark.circle.fill")
                 .font(.footnote)
@@ -140,8 +140,8 @@ enum TrialEndReminder {
 
     static func schedule() {
         let content = UNMutableNotificationContent()
-        content.title = "Tu prueba termina en 2 días"
-        content.body = "El día 14 empieza el cobro de $0.99/mes con tu Apple ID. Si no quieres continuar, cancela en Ajustes — sin preguntas."
+        content.title = String(localized: "Tu prueba termina en 2 días")
+        content.body = String(localized: "El día 14 empieza el cobro de $0.99/mes con tu Apple ID. Si no quieres continuar, cancela en Ajustes — sin preguntas.")
         content.sound = .default
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 12 * 86_400, repeats: false)
         UNUserNotificationCenter.current().add(
