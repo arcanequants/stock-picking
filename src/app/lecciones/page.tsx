@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
@@ -47,11 +47,14 @@ async function loadLatestPrices(): Promise<Record<string, number>> {
 export default async function LeccionesPage() {
   const t = await getTranslations("Lecciones");
   const tLegal = await getTranslations("Legal");
+  const locale = await getLocale();
+  const bcp47 =
+    ({ es: "es-MX", en: "en-US", pt: "pt-BR", hi: "hi-IN" } as Record<string, string>)[locale] || "es-MX";
 
   const prices = await loadLatestPrices();
   const lessons = selectCurrentLessons(prices);
   const now = new Date();
-  const timestamp = now.toLocaleString("es-MX", {
+  const timestamp = now.toLocaleString(bcp47, {
     dateStyle: "medium",
     timeStyle: "short",
     timeZone: "America/Mexico_City",

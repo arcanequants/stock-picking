@@ -1,7 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useLocale } from "next-intl";
 import type { QuantLabCurve, CurveTab } from "@/lib/quant-lab";
+
+const BCP47: Record<string, string> = { es: "es-MX", en: "en-US", pt: "pt-BR", hi: "hi-IN" };
 
 interface Point {
   t: string;
@@ -14,7 +17,7 @@ const M = { l: 12, r: 12, t: 14, b: 28 };
 const PW = W - M.l - M.r;
 const PH = H - M.t - M.b;
 
-function buildView(curve: QuantLabCurve) {
+function buildView(curve: QuantLabCurve, bcp47 = "es-MX") {
   const bot = curve.bot;
   if (bot.length < 2) return null;
   const bench = curve.benchmark?.series ?? [];
@@ -54,7 +57,7 @@ function buildView(curve: QuantLabCurve) {
 
   const fmtDate = (iso: string) => {
     const d = new Date(iso);
-    return d.toLocaleDateString("es-MX", { day: "numeric", month: "short" });
+    return d.toLocaleDateString(bcp47, { day: "numeric", month: "short" });
   };
 
   return {
@@ -81,8 +84,10 @@ export default function EquityCurve({
   defaultTab: CurveTab;
 }) {
   const [activeTab, setActiveTab] = useState<CurveTab>(defaultTab);
+  const locale = useLocale();
+  const bcp47 = BCP47[locale] || "es-MX";
   const curve = curves.find((c) => c.tab === activeTab) ?? curves[0];
-  const view = useMemo(() => (curve ? buildView(curve) : null), [curve]);
+  const view = useMemo(() => (curve ? buildView(curve, bcp47) : null), [curve, bcp47]);
 
   if (!curve) return null;
 

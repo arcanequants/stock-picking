@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale } from "next-intl";
+
+const BCP47: Record<string, string> = { es: "es-MX", en: "en-US", pt: "pt-BR", hi: "hi-IN" };
 
 const PRESETS = [100, 500, 1000, 5000];
 const MIN = 100;
@@ -13,6 +16,8 @@ export default function SimulatedCopierCard({
   roi: number | null;
 }) {
   const [amount, setAmount] = useState(100);
+  const locale = useLocale();
+  const bcp47 = BCP47[locale] || "en-US";
   if (roi == null) return null;
 
   const profitShare = 0.1;
@@ -24,7 +29,7 @@ export default function SimulatedCopierCard({
   const positive = netDiff >= 0;
 
   const fmt = (n: number) =>
-    n.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 });
+    n.toLocaleString(bcp47, { maximumFractionDigits: 2, minimumFractionDigits: 2 });
 
   return (
     <div className="border border-border rounded-2xl p-5">
@@ -66,7 +71,7 @@ export default function SimulatedCopierCard({
                   : "border-border hover:border-foreground/40"
               }`}
             >
-              ${p.toLocaleString("en-US")}
+              ${p.toLocaleString(bcp47)}
             </button>
           ))}
         </div>

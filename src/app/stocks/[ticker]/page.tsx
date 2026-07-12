@@ -2,7 +2,7 @@ import { stocks, transactions } from "@/data/stocks";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, getLocale, getMessages } from "next-intl/server";
 import BlockchainBadge from "@/components/BlockchainBadge";
 import StockDividendsReceived from "@/components/StockDividendsReceived";
 import { Suspense } from "react";
@@ -68,6 +68,14 @@ export default async function StockResearchPage({
   const tLegal = await getTranslations("Legal");
   const locale = await getLocale();
   const dateLocale = localeMap[locale] || "es-MX";
+
+  // Data fields (sector/region/country/consensus) are stored in English in
+  // stocks.ts; translate for display via the Labels dictionaries, falling back
+  // to the raw value for anything unmapped (e.g. free-text consensus notes).
+  const messages = (await getMessages()) as Record<string, unknown>;
+  const labels = (messages.Labels ?? {}) as Record<string, Record<string, string>>;
+  const label = (dict: string, value: string | null | undefined): string | undefined =>
+    value ? labels[dict]?.[value] ?? value : undefined;
 
   const renderMarkdown = (md: string) => {
     if (!md) return null;
@@ -167,9 +175,9 @@ export default async function StockResearchPage({
             {stock.ticker} <span className="text-text-muted font-normal text-xl">— {stock.name}</span>
           </h1>
           <div className="flex gap-2 mt-2 flex-wrap">
-            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{stock.sector}</span>
-            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{stock.region}</span>
-            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{stock.country}</span>
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{label("sector", stock.sector)}</span>
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{label("region", stock.region)}</span>
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{label("country", stock.country)}</span>
             <BlockchainBadge
               ticker={stock.ticker}
               attestationUid={transactions.find((t) => t.ticker === stock.ticker)?.attestation_uid}
@@ -190,7 +198,7 @@ export default async function StockResearchPage({
         <MetricBox label={t("dividend")} value={stock.dividend_yield ? `${stock.dividend_yield}%` : "—"} />
         <MetricBox label={t("marketCap")} value={stock.market_cap_b ? `$${stock.market_cap_b}B` : "—"} />
         <MetricBox label={t("eps")} value={stock.eps ? `$${stock.eps}` : "—"} />
-        <MetricBox label={t("consensus")} value={stock.analyst_consensus} />
+        <MetricBox label={t("consensus")} value={label("consensus", stock.analyst_consensus)} />
       </div>
 
       <div className="grid md:grid-cols-3 gap-4 mb-8">

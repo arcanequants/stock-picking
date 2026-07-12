@@ -25,8 +25,10 @@ export default async function Home() {
   const activeStocks = stocks.filter((s) => s.status === "active");
   const regions = new Set(activeStocks.map((s) => s.region)).size;
   const tickers = activeStocks.map((s) => s.ticker);
+  const dateLocale =
+    ({ es: "es-MX", en: "en-US", pt: "pt-BR", hi: "hi-IN" } as Record<string, string>)[locale] || "es-MX";
   const firstDate = transactions.length > 0
-    ? new Date(transactions[0].date).toLocaleDateString("en-US", {
+    ? new Date(transactions[0].date).toLocaleDateString(dateLocale, {
         month: "short",
         year: "numeric",
       })
@@ -47,7 +49,7 @@ export default async function Home() {
     : activeStocks[0];
   const samplePickNumber = sampleTx?.id ?? 1;
   const samplePickDate = sampleTx
-    ? new Date(sampleTx.date).toLocaleDateString("en-US", {
+    ? new Date(sampleTx.date).toLocaleDateString(dateLocale, {
         month: "short",
         day: "numeric",
       })

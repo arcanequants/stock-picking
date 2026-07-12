@@ -101,15 +101,13 @@ export default async function AccountPage() {
         <div className="flex items-center justify-between gap-4">
           <div>
             <h2 className="font-semibold mb-1">Vectorial Signals</h2>
-            <p className="text-sm text-text-muted">
-              Alt-data signals (satélites, AIS, EIA, TROPOMI). Usa el toggle Pro para vista densa.
-            </p>
+            <p className="text-sm text-text-muted">{tAccount("signalsDesc")}</p>
           </div>
           <Link
             href="/signals"
             className="shrink-0 px-3 py-2 rounded-lg border border-border text-sm text-text-secondary hover:text-foreground hover:bg-card-hover transition-colors"
           >
-            Ver signals
+            {tAccount("signalsCta")}
           </Link>
         </div>
       </section>
@@ -118,14 +116,14 @@ export default async function AccountPage() {
       <section className="border border-border rounded-2xl p-6">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <h2 className="font-semibold mb-1">Soporte</h2>
-            <p className="text-sm text-text-muted">Ve tus tickets y respuestas del equipo.</p>
+            <h2 className="font-semibold mb-1">{tAccount("supportTitle")}</h2>
+            <p className="text-sm text-text-muted">{tAccount("supportDesc")}</p>
           </div>
           <Link
             href="/account/tickets"
             className="shrink-0 px-3 py-2 rounded-lg border border-border text-sm text-text-secondary hover:text-foreground hover:bg-card-hover transition-colors"
           >
-            Mis tickets
+            {tAccount("supportCta")}
           </Link>
         </div>
       </section>

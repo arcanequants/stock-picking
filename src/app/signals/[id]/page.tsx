@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { getAuthState } from "@/lib/auth";
 import {
   getSignal,
@@ -35,7 +35,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const def = await getSignal(id);
-  if (!def) return { title: "Signal not found — Vectorial Signals" };
+  if (!def) {
+    const t = await getTranslations("Signals");
+    return { title: `${t("notFound")} — Vectorial Signals` };
+  }
 
   const casual = pickCopyCasual(def.copy, "en");
   const url = `${SITE_URL}/signals/${def.id}`;
@@ -55,8 +58,10 @@ export async function generateMetadata({
   };
 }
 
-function fmtValue(value: number, decimals: number) {
-  return value.toLocaleString("en-US", {
+const BCP47: Record<string, string> = { es: "es-MX", en: "en-US", pt: "pt-BR", hi: "hi-IN" };
+
+function fmtValue(value: number, decimals: number, bcp47 = "en-US") {
+  return value.toLocaleString(bcp47, {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   });
@@ -84,29 +89,44 @@ export default async function SignalDetailPage({
   const casual = pickCopyCasual(definition.copy, locale);
   const pro = pickCopyPro(definition.copy, locale);
   const m = definition.methodology;
+  const tS = await getTranslations("Signals");
+  const bcp47 = BCP47[locale] || "en-US";
 
   const valueDisplay = latest
-    ? `${fmtValue(Number(latest.value), definition.display_decimals)} ${definition.unit}`
+    ? `${fmtValue(Number(latest.value), definition.display_decimals, bcp47)} ${definition.unit}`
     : "—";
 
   const observedAt = latest?.observed_at
-    ? new Date(latest.observed_at).toLocaleString("en-US", {
+    ? new Date(latest.observed_at).toLocaleString(bcp47, {
         dateStyle: "medium",
         timeStyle: "short",
         timeZone: "UTC",
       }) + " UTC"
-    : "no observation yet";
+    : tS("noObservation");
 
   // Honest cadence note — EIA daily spots publish T+2 business days,
   // weekly petroleum publishes Wed for prior Fri. Users were confused why
   // the chart "ended on May 18" when today is May 21 — this names the lag.
   const cadenceNote = (() => {
     const cad = m.cadence.toLowerCase();
-    if (cad.includes("weekly")) return "Source publishes weekly, ~5-day lag.";
-    if (cad.includes("daily")) return "Source publishes T+1 to T+2 business days.";
-    if (cad.includes("monthly")) return "Source publishes monthly.";
+    if (cad.includes("weekly")) return tS("cadenceWeekly");
+    if (cad.includes("daily")) return tS("cadenceDaily");
+    if (cad.includes("monthly")) return tS("cadenceMonthly");
     return null;
   })();
+
+  const DOMAIN_LABEL: Record<string, string> = {
+    maritime: tS("domainMaritime"),
+    energy: tS("domainEnergy"),
+    geospatial: tS("domainGeospatial"),
+    atmospheric: tS("domainAtmospheric"),
+    agricultural: tS("domainAgricultural"),
+    cross: tS("domainCross"),
+  };
+  const STATUS_LABEL: Record<string, string> = {
+    live: tS("statusLive"),
+    calibrating: tS("statusCalibrating"),
+  };
 
   const deltaPositive =
     delta_vs_baseline_pct !== null && delta_vs_baseline_pct >= 0;
@@ -117,7 +137,7 @@ export default async function SignalDetailPage({
 
       <nav className="text-xs text-text-faint">
         <Link href="/signals" className="hover:text-signals-accent-hover">
-          ← All signals
+          ← {tS("allSignals")}
         </Link>
       </nav>
 
@@ -125,7 +145,8 @@ export default async function SignalDetailPage({
         <div className="flex items-start justify-between gap-4 flex-wrap">
           <div>
             <p className="text-xs uppercase tracking-widest text-text-faint">
-              {definition.domain} · {definition.status}
+              {DOMAIN_LABEL[definition.domain] ?? definition.domain} ·{" "}
+              {STATUS_LABEL[definition.status] ?? definition.status}
             </p>
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
               {view === "pro" ? definition.name : casual.title || definition.name}
@@ -289,7 +310,7 @@ export default async function SignalDetailPage({
       </section>
       <section className="rounded-xl border border-border bg-card p-5 space-y-2">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-text-faint">
-          For developers and AI agents
+          {tS("devsTitle")}
         </h2>
         <ul className="text-sm space-y-1">
           <li>

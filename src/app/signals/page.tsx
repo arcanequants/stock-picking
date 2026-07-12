@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { getAuthState } from "@/lib/auth";
 import {
   listLiveSignals,
@@ -20,23 +20,25 @@ const SITE_URL = "https://vectorialdata.com";
 export const dynamic = "force-dynamic";
 export const revalidate = 60;
 
-export const metadata: Metadata = {
-  title: "Vectorial Signals — alt-data signals translated to plain language",
-  description:
-    "Hedge-fund-tier alternative-data signals from satellites, AIS, EIA, USDA, TROPOMI. Free preview per signal; full history + alerts on the $1/mo subscription.",
-  alternates: {
-    canonical: `${SITE_URL}/signals`,
-    types: {
-      "application/rss+xml": [
-        { url: `${SITE_URL}/signals/feed.xml`, title: "Vectorial Signals (RSS)" },
-      ],
-      "application/feed+json": [
-        { url: `${SITE_URL}/signals/feed.json`, title: "Vectorial Signals (JSON Feed)" },
-      ],
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Signals");
+  return {
+    title: t("metaTitle"),
+    description: t("metaDesc"),
+    alternates: {
+      canonical: `${SITE_URL}/signals`,
+      types: {
+        "application/rss+xml": [
+          { url: `${SITE_URL}/signals/feed.xml`, title: "Vectorial Signals (RSS)" },
+        ],
+        "application/feed+json": [
+          { url: `${SITE_URL}/signals/feed.json`, title: "Vectorial Signals (JSON Feed)" },
+        ],
+      },
     },
-  },
-  robots: { index: true, follow: true },
-};
+    robots: { index: true, follow: true },
+  };
+}
 
 function normalizeLocale(locale: string): SignalLocale {
   if (locale === "en" || locale === "pt" || locale === "hi") return locale;
@@ -81,17 +83,17 @@ function groupByDomain(rows: EnrichedRow[]) {
   return order.filter((d) => map.has(d)).map((d) => ({ domain: d, rows: map.get(d)! }));
 }
 
-const DOMAIN_LABEL: Record<SignalDefinition["domain"], string> = {
-  maritime: "Maritime",
-  energy: "Energy & Commodities",
-  geospatial: "Geospatial",
-  atmospheric: "Atmospheric",
-  agricultural: "Agricultural",
-  cross: "Cross-domain",
-};
-
 export default async function SignalsIndexPage() {
   const locale = normalizeLocale(await getLocale());
+  const tS = await getTranslations("Signals");
+  const DOMAIN_LABEL: Record<SignalDefinition["domain"], string> = {
+    maritime: tS("domainMaritime"),
+    energy: tS("domainEnergy"),
+    geospatial: tS("domainGeospatial"),
+    atmospheric: tS("domainAtmospheric"),
+    agricultural: tS("domainAgricultural"),
+    cross: tS("domainCross"),
+  };
   const { user } = await getAuthState();
   const view = await getSignalView();
   const enriched = await loadSignals();
@@ -148,17 +150,15 @@ export default async function SignalsIndexPage() {
               Vectorial Signals
             </p>
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
-              Alt-data signals, translated for retail.
+              {tS("tagline")}
             </h1>
             <p className="text-text-muted max-w-2xl mt-2 leading-relaxed">
-              The same kind of data hedge funds buy — public satellites, AIS,
-              EIA, USDA, TROPOMI — cleaned, baselined, and explained in plain
-              language. One number, one baseline, one sentence.
+              {tS("heroDesc")}
             </p>
             <p className="text-xs text-text-faint mt-3 tabular-nums">
               <span className="text-emerald-600 dark:text-emerald-400">●</span>{" "}
-              {liveCount} live · {calibratingCount} calibrating ·{" "}
-              {enriched.length} total
+              {liveCount} {tS("statusLive")} · {calibratingCount} {tS("statusCalibrating")} ·{" "}
+              {enriched.length} {tS("total")}
             </p>
           </div>
           {user && (
@@ -199,11 +199,10 @@ export default async function SignalsIndexPage() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between gap-3 flex-wrap">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-text-faint">
-            Live · seen from above
+            {tS("liveBadge")}
           </h2>
           <p className="text-xs text-text-faint">
-            Maps refresh on their natural cadence (AIS: seconds · NO₂: daily).
-            Open a card below for methodology, backtest, and provenance.
+            {tS("mapsNote")} {tS("mapsNote2")}
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -216,7 +215,7 @@ export default async function SignalsIndexPage() {
       </section>
 
       {grouped.length === 0 ? (
-        <p className="text-text-muted text-sm">No live signals yet.</p>
+        <p className="text-text-muted text-sm">{tS("emptyLive")}</p>
       ) : (
         grouped.map((group, groupIndex) => (
           <section key={group.domain} className="space-y-3">
@@ -251,14 +250,14 @@ export default async function SignalsIndexPage() {
                 {calibratingRows.length}
               </span>
               <div>
-                <p className="text-sm font-semibold">Upcoming signals</p>
+                <p className="text-sm font-semibold">{tS("upcomingTitle")}</p>
                 <p className="text-xs text-text-faint">
-                  Calibrating — first observation pending data-source onboarding.
+                  {tS("upcomingDesc")}
                 </p>
               </div>
             </div>
             <span className="text-xs text-text-faint font-mono uppercase tracking-widest">
-              expand →
+              {tS("expand")}
             </span>
           </summary>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5 pb-5">

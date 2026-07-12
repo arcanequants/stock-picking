@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function HowToCopy({
   leadDetailsUrl,
@@ -7,20 +8,17 @@ export default function HowToCopy({
   leadDetailsUrl: string;
   referralUrl: string | null;
 }) {
+  const t = useTranslations("QuantLabCopy");
   return (
     <div className="border border-border rounded-2xl p-5">
-      <h2 className="font-semibold mb-1">¿Cómo lo copio?</h2>
-      <p className="text-xs text-text-muted mb-5">
-        Tres caminos según dónde estés. Binance se encarga del KYC, las reglas
-        de tu país y la ejecución — nosotros sólo te llevamos a la página
-        correcta.
-      </p>
+      <h2 className="font-semibold mb-1">{t("title")}</h2>
+      <p className="text-xs text-text-muted mb-5">{t("intro")}</p>
 
       <div className="space-y-5 text-sm">
         <Door
           step="1"
-          title="Ya hago copy trading en Binance"
-          body="Toca el botón y empieza la copia desde tu cuenta."
+          title={t("path1Title")}
+          body={t("path1Body")}
           cta={
             <a
               href={leadDetailsUrl}
@@ -28,22 +26,20 @@ export default function HowToCopy({
               rel="noopener noreferrer"
               className="inline-block bg-foreground text-background px-4 py-2 rounded-lg hover:opacity-90 transition-opacity font-medium"
             >
-              Abrir en Binance Copy Trading →
+              {t("openBinance")}
             </a>
           }
         />
 
         <Door
           step="2"
-          title="Tengo Binance pero nunca he copiado"
+          title={t("path2Title")}
           body={
             <>
               <ol className="list-decimal pl-4 space-y-1 text-text-secondary">
-                <li>
-                  Entra a Binance → menú <em>Trading</em> → <em>Copy Trading</em> → <em>Futures</em>.
-                </li>
-                <li>Activa el módulo si es la primera vez (firma rápida, sin KYC extra).</li>
-                <li>Toca <em>Abrir en Binance Copy Trading</em> aquí abajo y elige tu monto.</li>
+                <li>{t("path2Step1")}</li>
+                <li>{t("path2Step2")}</li>
+                <li>{t("path2Step3")}</li>
               </ol>
               <a
                 href={leadDetailsUrl}
@@ -51,7 +47,7 @@ export default function HowToCopy({
                 rel="noopener noreferrer"
                 className="inline-block mt-3 border border-border px-3 py-1.5 rounded-lg text-xs hover:border-foreground/40"
               >
-                Abrir en Binance Copy Trading →
+                {t("openBinance")}
               </a>
             </>
           }
@@ -59,7 +55,7 @@ export default function HowToCopy({
 
         <Door
           step="3"
-          title="Todavía no tengo cuenta de Binance"
+          title={t("path3Title")}
           body={
             <div className="flex flex-wrap gap-2 text-xs">
               {referralUrl && (
@@ -69,25 +65,21 @@ export default function HowToCopy({
                   rel="noopener noreferrer"
                   className="border border-border px-3 py-1.5 rounded-lg hover:border-foreground/40"
                 >
-                  Crear cuenta con nuestro referral
+                  {t("createAccount")}
                 </a>
               )}
               <Link
                 href="/quant-lab/guia-copy-trading-binance"
                 className="border border-border px-3 py-1.5 rounded-lg hover:border-foreground/40"
               >
-                Guía paso a paso
+                {t("stepGuide")}
               </Link>
             </div>
           }
         />
       </div>
 
-      <p className="text-xs text-text-faint mt-5 leading-relaxed">
-        El copy trading de futuros puede no estar disponible en tu país. Si
-        Binance te bloquea el módulo, no podrás copiar — esto está fuera de
-        nuestro control.
-      </p>
+      <p className="text-xs text-text-faint mt-5 leading-relaxed">{t("disclaimer")}</p>
     </div>
   );
 }
