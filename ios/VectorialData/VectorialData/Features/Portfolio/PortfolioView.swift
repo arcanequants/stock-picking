@@ -107,6 +107,9 @@ struct PortfolioView: View {
                             }
                             .buttonStyle(.plain)
                         }
+                        if resp.limited == true, resp.totalPositions > resp.positions.count {
+                            lockedMoreRow(hidden: resp.totalPositions - resp.positions.count)
+                        }
                     } else if vm.isLoading {
                         ProgressView().padding(.top, 40)
                     } else if vm.selectedView == .personal && vm.response?.positions.isEmpty == true {
@@ -179,8 +182,33 @@ struct PortfolioView: View {
         .padding(.bottom, 4)
     }
 
-    /// Shown to free users atop the (intentionally public) model portfolio:
-    /// the track record is the marketing; the full thesis is the product.
+    /// Free tier: the API sends only the top-3 teaser; this row sells the rest.
+    private func lockedMoreRow(hidden: Int) -> some View {
+        Button { showPaywall = true } label: {
+            HStack(spacing: 12) {
+                Image(systemName: "lock.fill")
+                    .foregroundStyle(Color("BrandEmerald"))
+                Text("+\(hidden) posiciones más")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.white)
+                Spacer()
+                Text("Desbloquear")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(Color("BrandEmerald"))
+            }
+            .padding(14)
+            .background(Color("CardBackground"))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(Color("BrandEmerald").opacity(0.3), lineWidth: 1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+        }
+        .buttonStyle(.plain)
+    }
+
+    /// Shown to free users atop the teaser portfolio: the total return is the
+    /// marketing; the full pick list + thesis is the product.
     private var freeUpsellBanner: some View {
         Button { showPaywall = true } label: {
             HStack(spacing: 12) {

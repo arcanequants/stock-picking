@@ -184,6 +184,35 @@
         }
       }
     },
+    "+%lld posiciones más": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%lld more positions"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%lld posiciones más"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%lld और पोज़ीशन"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%lld posições a mais"
+          }
+        }
+      }
+    },
     ". Escríbelo aquí y listo — tu cuenta queda creada.": {
       "extractionState": "manual",
       "localizations": {
@@ -1092,6 +1121,35 @@
           "stringUnit": {
             "state": "translated",
             "value": "Desbloqueie a tese completa de cada posição"
+          }
+        }
+      }
+    },
+    "Desbloquear": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desbloquear"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अनलॉक करें"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desbloquear"
           }
         }
       }

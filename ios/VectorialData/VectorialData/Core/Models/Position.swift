@@ -70,13 +70,25 @@ struct AllocationBucket: Codable, Equatable, Identifiable {
 /// Response envelope for `GET /api/portfolio/positions`.
 struct PortfolioPositions: Codable, Equatable {
     let view: String?
+    /// True on the free/unauthed teaser payload: top-3 positions + `worst`,
+    /// no allocations. Subscribers get the full portfolio and `limited` nil.
+    let limited: Bool?
     let positions: [Position]
+    /// Present on the teaser payload only — the worst open position (also
+    /// public via /api/portfolio/snapshot), so honesty survives the gate.
+    let worst: WorstPosition?
     let totalReturnPct: Double
     let totalPositions: Int
     let avgDividendYield: Double?
     let sectorAllocation: [AllocationBucket]?
     let regionAllocation: [AllocationBucket]?
     let since: String?
+}
+
+struct WorstPosition: Codable, Equatable {
+    let ticker: String
+    let returnPct: Double
+    let daysHeld: Int
 }
 
 enum PortfolioViewMode: String, CaseIterable, Identifiable {

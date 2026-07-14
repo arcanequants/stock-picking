@@ -253,14 +253,21 @@ private final class ProofModel: ObservableObject {
     func load() async {
         if let p = try? await APIClient.shared.get("/api/portfolio/positions", as: PortfolioPositions.self) {
             total = p.totalReturnPct
-            count = p.positions.count
+            count = p.totalPositions
             let sorted = p.positions.sorted { $0.returnPct > $1.returnPct }
-            var top = Array(sorted.prefix(3))
-            if let worst = sorted.last, worst.returnPct < 0,
-               !top.contains(where: { $0.ticker == worst.ticker }) {
-                top.append(worst)   // always show a loss — that's the whole point
+            var top = Array(sorted.prefix(3)).map {
+                ProofRow(ticker: $0.ticker, pct: $0.returnPct, days: $0.daysHeld)
             }
-            rows = top.map { ProofRow(ticker: $0.ticker, pct: $0.returnPct, days: $0.daysHeld) }
+            // The worst open position ships as its own field on the teaser
+            // payload; on the full payload derive it. Always show a loss —
+            // that's the whole point.
+            if let w = p.worst, !top.contains(where: { $0.ticker == w.ticker }) {
+                top.append(ProofRow(ticker: w.ticker, pct: w.returnPct, days: w.daysHeld))
+            } else if let last = sorted.last, last.returnPct < 0,
+                      !top.contains(where: { $0.ticker == last.ticker }) {
+                top.append(ProofRow(ticker: last.ticker, pct: last.returnPct, days: last.daysHeld))
+            }
+            rows = top
         }
         if let h = try? await APIClient.shared.get("/api/portfolio/history", as: [PortfolioHistoryPoint].self) {
             spark = h.map(\.returnPct)
