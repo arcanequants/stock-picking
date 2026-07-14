@@ -25,11 +25,27 @@ export async function GET(request: Request) {
   if (view === "personal") {
     return personalView(request);
   }
-  return modelView();
+  return modelView(request);
 }
 
-async function modelView() {
+async function modelView(request: Request) {
   try {
+    // Subscribers get the full portfolio. Everyone else (unauthed or free)
+    // gets the same teaser the web shows: the top 3 positions plus the worst
+    // one (both already public via /api/portfolio/snapshot) — never the full
+    // pick list or the sector/region weights. The track record total stays
+    // public: that's the marketing.
+    let isSubscribed = false;
+    const authed = await getAuthedUser(request);
+    if (authed) {
+      const { data: sub } = await getSupabaseAdmin()
+        .from("subscribers")
+        .select("subscription_status")
+        .eq("email", authed.email)
+        .maybeSingle();
+      const st = sub?.subscription_status;
+      isSubscribed = st === "active" || st === "trialing";
+    }
     const [{ data: snapshots }, splitMap] = await Promise.all([
       getSupabase()
         .from("portfolio_snapshots")
@@ -82,6 +98,34 @@ async function modelView() {
           ) / 100
         : 0;
 
+    if (!isSubscribed) {
+      const FREE_PREVIEW_COUNT = 3;
+      const teaser = enriched.slice(0, FREE_PREVIEW_COUNT);
+      const last = enriched[enriched.length - 1];
+      const worst =
+        last && last.return_pct < 0 && !teaser.some((p) => p.ticker === last.ticker)
+          ? { ticker: last.ticker, return_pct: last.return_pct, days_held: last.days_held }
+          : null;
+      return NextResponse.json(
+        {
+          view: "model",
+          limited: true,
+          positions: teaser,
+          worst,
+          total_return_pct: totalReturnPct,
+          total_positions: enriched.length,
+          avg_dividend_yield: avgDividendYield,
+          since: transactions.length > 0 ? transactions[0].date : null,
+        },
+        {
+          headers: {
+            "Cache-Control":
+              "public, s-maxage=300, stale-while-revalidate=600",
+          },
+        }
+      );
+    }
+
     const { sectorAllocation, regionAllocation } = computeAllocations(enriched);
 
     return NextResponse.json(
@@ -96,10 +140,8 @@ async function modelView() {
         since: transactions.length > 0 ? transactions[0].date : null,
       },
       {
-        headers: {
-          "Cache-Control":
-            "public, s-maxage=300, stale-while-revalidate=600",
-        },
+        // Full payload varies by auth — never let a CDN serve it to free users.
+        headers: { "Cache-Control": "private, no-store" },
       }
     );
   } catch {
