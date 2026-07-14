@@ -57,7 +57,11 @@ export default function PositionReturns({
     : data.positions.slice(0, FREE_PREVIEW_COUNT);
   const hiddenCount = isSubscribed
     ? 0
-    : data.positions.length - FREE_PREVIEW_COUNT;
+    : Math.max(
+        0,
+        (data.total_positions ?? data.positions.length) -
+          visiblePositions.length
+      );
 
   return (
     <section className="border border-border rounded-xl p-5">
