@@ -45,7 +45,13 @@ export function playConfigured(): boolean {
 function getServiceAccount(): PlayServiceAccount {
   const raw = process.env.GOOGLE_PLAY_SERVICE_ACCOUNT;
   if (!raw) throw new Error("GOOGLE_PLAY_SERVICE_ACCOUNT not configured");
-  const sa = JSON.parse(raw.trim()) as PlayServiceAccount;
+  // Accept raw JSON or a base64 encoding of it — base64 is the safer form to
+  // store in Vercel (single line, no whitespace to mangle the PEM private_key).
+  const trimmed = raw.trim();
+  const json = trimmed.startsWith("{")
+    ? trimmed
+    : Buffer.from(trimmed, "base64").toString("utf8");
+  const sa = JSON.parse(json) as PlayServiceAccount;
   if (!sa.client_email || !sa.private_key) {
     throw new Error("GOOGLE_PLAY_SERVICE_ACCOUNT missing client_email/private_key");
   }

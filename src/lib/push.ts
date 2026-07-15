@@ -85,7 +85,15 @@ let cachedFcmToken: { value: string; expiresAt: number } | null = null;
 function getFcmServiceAccount(): FcmServiceAccount {
   const raw = process.env.FCM_SERVICE_ACCOUNT;
   if (!raw) throw new Error("FCM_SERVICE_ACCOUNT not configured");
-  const sa = JSON.parse(raw.trim()) as FcmServiceAccount;
+  // Accept either the raw service-account JSON or a base64 encoding of it.
+  // base64 is the safer form to store in Vercel: a single line with no
+  // whitespace, so the multi-line PEM `private_key` can't get mangled by the
+  // env-var editor (a documented failure mode with GCP keys pasted raw).
+  const trimmed = raw.trim();
+  const json = trimmed.startsWith("{")
+    ? trimmed
+    : Buffer.from(trimmed, "base64").toString("utf8");
+  const sa = JSON.parse(json) as FcmServiceAccount;
   if (!sa.project_id || !sa.client_email || !sa.private_key) {
     throw new Error("FCM_SERVICE_ACCOUNT missing project_id/client_email/private_key");
   }
