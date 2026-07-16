@@ -7,7 +7,7 @@ import BlockchainBadge from "@/components/BlockchainBadge";
 import StockDividendsReceived from "@/components/StockDividendsReceived";
 import { Suspense } from "react";
 import { getLocalizedField } from "@/data/stock-translations";
-import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema, metaDescription } from "@/lib/seo";
+import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema, getStockMetaTitle, getStockMetaDescription } from "@/lib/seo";
 
 const localeMap: Record<string, string> = {
   es: "es-MX",
@@ -33,17 +33,16 @@ export async function generateMetadata({
   const locale = await getLocale();
   if (!stock) return { title: `${t("stockNotFound")} | Vectorial Data` };
 
-  const description = metaDescription(
-    getLocalizedField(stock, "summary_short", locale)
-  );
+  const title = getStockMetaTitle(stock, locale);
+  const description = getStockMetaDescription(stock, locale);
   return {
-    title: `${stock.ticker} — ${stock.name} | Vectorial Data Research`,
+    title,
     description,
     alternates: {
       canonical: `https://vectorialdata.com/stocks/${stock.ticker}`,
     },
     openGraph: {
-      title: `${stock.ticker} — ${stock.name}`,
+      title,
       description,
       images: [{ url: `/api/og/stock/${stock.ticker}`, width: 1200, height: 630 }],
       type: "article",

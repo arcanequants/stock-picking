@@ -36,6 +36,74 @@ export function metaDescription(text: string, maxLength = 155): string {
   return `${clipped}…`;
 }
 
+/* ── Stock meta: intent-query titles + descriptions ───── */
+
+const META_LOCALE_TAGS: Record<string, string> = {
+  es: "es-MX",
+  en: "en-US",
+  pt: "pt-BR",
+  hi: "hi-IN",
+};
+
+/** ETFs are tagged via sector ("ETF" / "Broad Market ETF") in stocks.ts. */
+export function isEtf(stock: Stock): boolean {
+  return stock.sector.toLowerCase().includes("etf");
+}
+
+function formatMetaDate(iso: string, locale: string): string {
+  return new Date(`${iso}T12:00:00`).toLocaleDateString(
+    META_LOCALE_TAGS[locale] ?? "es-MX",
+    { day: "numeric", month: "short", year: "numeric" }
+  );
+}
+
+/**
+ * Title matches the questions people actually search ("¿comprar X?") instead
+ * of the internal "TICKER — Name | Research" format. Three variants: ETF,
+ * dividend pick (≥2.5% yield), plain company. Evergreen on purpose — no
+ * prices or targets that go stale.
+ */
+export function getStockMetaTitle(stock: Stock, locale: string): string {
+  const n = `${stock.name} (${stock.ticker})`;
+  const etf = isEtf(stock);
+  const div = !etf && (stock.dividend_yield ?? 0) >= 2.5;
+  switch (locale) {
+    case "en":
+      if (etf) return `Is ${n} a Good Investment? ETF Analysis & Risks`;
+      if (div) return `Should You Buy ${n}? Dividend, Analysis & Risks`;
+      return `Should You Buy ${n}? Analysis, Price Target & Risks`;
+    case "pt":
+      if (etf) return `Vale a pena investir em ${n}? Análise do ETF e riscos`;
+      if (div) return `Vale a pena comprar ${n}? Dividendos, análise e riscos`;
+      return `Vale a pena comprar ${n}? Análise, preço-alvo e riscos`;
+    case "hi":
+      if (etf) return `क्या ${n} ETF में निवेश करें? विश्लेषण और जोखिम`;
+      if (div) return `क्या ${n} शेयर खरीदें? डिविडेंड, विश्लेषण और जोखिम`;
+      return `क्या ${n} शेयर खरीदें? विश्लेषण, टारगेट और जोखिम`;
+    default:
+      if (etf) return `¿Invertir en ${n}? Análisis del ETF y riesgos`;
+      if (div) return `¿Comprar ${n}? Análisis, dividendo y riesgos`;
+      return `¿Comprar ${n}? Análisis, precio objetivo y riesgos`;
+  }
+}
+
+/** Localized summary prefixed with the last-updated date (freshness signal). */
+export function getStockMetaDescription(stock: Stock, locale: string): string {
+  const summary = getLocalizedField(stock, "summary_short", locale);
+  const date = stock.last_updated_at
+    ? formatMetaDate(stock.last_updated_at, locale)
+    : null;
+  const prefix = date
+    ? {
+        en: `Updated ${date}. `,
+        pt: `Atualizado em ${date}. `,
+        hi: `${date} को अपडेट किया गया। `,
+        es: `Actualizado el ${date}. `,
+      }[locale] ?? `Actualizado el ${date}. `
+    : "";
+  return metaDescription(`${prefix}${summary}`);
+}
+
 /* ── JSON-LD renderer ─────────────────────────────────── */
 
 export function JsonLd({ data }: { data: Record<string, unknown> }) {
