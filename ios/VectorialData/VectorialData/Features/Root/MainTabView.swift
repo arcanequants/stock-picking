@@ -8,7 +8,9 @@ struct MainTabView: View {
     @EnvironmentObject private var notifications: NotificationsManager
     @State private var selectedTab: AppTab = .home
     @AppStorage("vd.didFirstRunSetup") private var didFirstRunSetup = false
+    @AppStorage("vd.didCoachTour") private var didCoachTour = false
     @State private var showFirstRun = false
+    @State private var showTour = false
     @State private var showAmountEditor = false
 
     var body: some View {
@@ -68,6 +70,30 @@ struct MainTabView: View {
             FirstRunSetupView {
                 didFirstRunSetup = true
                 showFirstRun = false
+            }
+        }
+        // Coach-marks tour: once, right after first-run setup finishes (or on
+        // this launch if setup already happened). "Ver tutorial" in Cuenta
+        // flips didCoachTour back to false to replay it.
+        .task(id: showFirstRun) {
+            guard didFirstRunSetup, !didCoachTour, !showFirstRun else { return }
+            try? await Task.sleep(for: .seconds(0.8))
+            withAnimation { showTour = true }
+        }
+        .onChange(of: didCoachTour) { _, done in
+            if !done && didFirstRunSetup && !showFirstRun {
+                withAnimation { showTour = true }
+            }
+        }
+        .overlay {
+            if showTour {
+                CoachTourView(
+                    onSelectTab: { selectedTab = $0 },
+                    onFinished: {
+                        didCoachTour = true
+                        withAnimation { showTour = false }
+                    }
+                )
             }
         }
         // Tapping the scheduled "raise your amount" reminder opens the editor.

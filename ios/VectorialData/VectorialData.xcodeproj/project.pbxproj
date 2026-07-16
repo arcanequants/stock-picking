@@ -55,6 +55,7 @@
 		B7A1C5629877333DF22B652A /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE44B5DFC2F78E53E11663 /* Pick.swift */; };
 		C1A59750F67587F294CE8B17 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65A381D9042A688E480D0F /* NewsListView.swift */; };
 		C3AF5A03305B6EA4F84F6932 /* PicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA83372C812B3CD0F43FA4ED /* PicksView.swift */; };
+		C4F0FC9607DC8FC3194D4E57 /* CoachTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B627F1668F0769298F747EA /* CoachTourView.swift */; };
 		CD5187543B275EE3083B6DB7 /* PortfolioSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095839A24B3CC3A03AD0D02 /* PortfolioSnapshot.swift */; };
 		DF46A23D618595C358585837 /* PriorHoldingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695CC3305AB75BDAF9415E78 /* PriorHoldingsStore.swift */; };
 		E00B7B4841E48E9EA27B9892 /* OwlReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D1D7BFB3A4618BC9761A6 /* OwlReveal.swift */; };
@@ -99,6 +100,7 @@
 		2153A56ED3B466C3D79B6813 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		2A1D87F188D573DF65FB58D8 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		2B3905F80E08DF2C12D70CD8 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2B627F1668F0769298F747EA /* CoachTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachTourView.swift; sourceTree = "<group>"; };
 		3240CB1FDA7751B227248915 /* PickActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickActivityAttributes.swift; sourceTree = "<group>"; };
 		3D89EBF81F93D0A84FC8F835 /* PriorHoldingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHoldingsView.swift; sourceTree = "<group>"; };
 		3D9CD8BD67A0E6197487EC73 /* VectorialData.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VectorialData.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 		26CA924A54BAD5769E1465A8 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				2B627F1668F0769298F747EA /* CoachTourView.swift */,
 				A549FB3F3C0B7B993F6A1F8A /* InvestmentAmountView.swift */,
 				8939BF169D4D9B3067A6FCD5 /* NotificationPrimingView.swift */,
 				1BF39174D40D14684D1AD9BC /* OnboardingView.swift */,
@@ -502,6 +505,7 @@
 				112524BB954122A83000FBC0 /* AppDelegate.swift in Sources */,
 				35627BC6698B033ACAA33AAC /* AuthManager.swift in Sources */,
 				247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */,
+				C4F0FC9607DC8FC3194D4E57 /* CoachTourView.swift in Sources */,
 				32D0FE14F23CF2004BAE8A26 /* CreateAccountView.swift in Sources */,
 				928D6E26021D8AD058F99F4C /* DividendStore.swift in Sources */,
 				9ECE9BF8C1C931E240D0A5F6 /* HomeView.swift in Sources */,

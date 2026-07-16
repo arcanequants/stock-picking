@@ -1,0 +1,174 @@
+import SwiftUI
+
+/// Game-style first-run coach marks: the screen dims, ONE element lights up
+/// with a one-sentence tooltip, tap anywhere advances. 4 steps, ~15 seconds,
+/// always skippable. Shown once after first-run setup; replayable from
+/// Cuenta → "Ver tutorial".
+struct CoachTourView: View {
+    /// Called with the tab the tour wants visible behind the overlay.
+    var onSelectTab: (AppTab) -> Void
+    var onFinished: () -> Void
+
+    @State private var step = 0
+
+    private struct Step {
+        let title: LocalizedStringKey
+        let message: LocalizedStringKey
+        let target: Target
+        let tab: AppTab?          // switch the visible tab when entering
+        enum Target { case tabItem(Int), contentCard }
+    }
+
+    private let steps: [Step] = [
+        Step(title: "📥 Aquí llegan tus picks",
+             message: "Cuando haya una compra que valga la pena, te avisamos y aparece en Elecciones.",
+             target: .tabItem(2), tab: nil),
+        Step(title: "🏦 Compra en tu broker, márcala aquí",
+             message: "La compra la haces en tu broker. Luego tócala aquí y la marcas — así seguimos tu portafolio real.",
+             target: .contentCard, tab: .picks),
+        Step(title: "📈 Tu portafolio, en vivo",
+             message: "El historial completo de Vectorial y el tuyo con lo que has comprado — solo porcentajes, sin humo.",
+             target: .tabItem(1), tab: nil),
+        Step(title: "⚙️ Tu monto y tu plan",
+             message: "Cambia tu monto por compra, repasa la filosofía y maneja tu suscripción.",
+             target: .tabItem(3), tab: nil),
+    ]
+
+    var body: some View {
+        GeometryReader { geo in
+            let rect = spotlightRect(for: steps[step].target, in: geo)
+            ZStack {
+                // Dim everything except the spotlight cutout.
+                SpotlightMask(cutout: rect, corner: 14)
+                    .fill(Color.black.opacity(0.72), style: FillStyle(eoFill: true))
+                    .ignoresSafeArea()
+
+                // Glow ring around the highlighted element.
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(Color("BrandEmerald"), lineWidth: 3)
+                    .shadow(color: Color("BrandEmerald").opacity(0.65), radius: 14)
+                    .frame(width: rect.width, height: rect.height)
+                    .position(x: rect.midX, y: rect.midY)
+
+                tooltip(for: steps[step], near: rect, in: geo)
+
+                // Skip — always visible, top right.
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button("Saltar") { onFinished() }
+                            .font(.subheadline)
+                            .foregroundStyle(.white.opacity(0.7))
+                            .padding(.trailing, 20)
+                            .padding(.top, 8)
+                    }
+                    Spacer()
+                }
+            }
+            .contentShape(Rectangle())
+            .onTapGesture { advance() }
+            .animation(.spring(duration: 0.4), value: step)
+        }
+        .transition(.opacity)
+    }
+
+    private func advance() {
+        if step < steps.count - 1 {
+            step += 1
+            if let tab = steps[step].tab { onSelectTab(tab) }
+        } else {
+            onFinished()
+        }
+    }
+
+    // MARK: - Geometry
+
+    /// Approximate frames: the 4 tab items sit evenly spaced in the bottom
+    /// bar; the content card target is the first card under the nav title.
+    private func spotlightRect(for target: Step.Target, in geo: GeometryProxy) -> CGRect {
+        let w = geo.size.width
+        let h = geo.size.height + geo.safeAreaInsets.top + geo.safeAreaInsets.bottom
+        switch target {
+        case .tabItem(let i):
+            let slot = w / 4
+            let width = slot - 16
+            return CGRect(x: slot * CGFloat(i) + 8,
+                          y: h - geo.safeAreaInsets.bottom - 74,
+                          width: width, height: 60)
+        case .contentCard:
+            return CGRect(x: 14,
+                          y: geo.safeAreaInsets.top + 46,
+                          width: w - 28, height: 96)
+        }
+    }
+
+    @ViewBuilder
+    private func tooltip(for s: Step, near rect: CGRect, in geo: GeometryProxy) -> some View {
+        let above = rect.midY > geo.size.height * 0.55
+        let tipWidth: CGFloat = min(258, geo.size.width - 36)
+        VStack(alignment: .leading, spacing: 4) {
+            Text(s.title)
+                .font(.subheadline.weight(.bold))
+                .foregroundStyle(.white)
+            Text(s.message)
+                .font(.footnote)
+                .foregroundStyle(Color(red: 0.79, green: 0.84, blue: 0.81))
+                .fixedSize(horizontal: false, vertical: true)
+            HStack {
+                Text("\(step + 1) de \(steps.count)")
+                    .font(.caption2)
+                    .foregroundStyle(.white.opacity(0.55))
+                Spacer()
+                Text(step == steps.count - 1 ? "¡Listo!" : "Siguiente")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.black)
+                    .padding(.horizontal, 13)
+                    .padding(.vertical, 6)
+                    .background(Color("BrandEmerald"))
+                    .clipShape(Capsule())
+            }
+            .padding(.top, 6)
+        }
+        .padding(14)
+        .frame(width: tipWidth, alignment: .leading)
+        .background(Color(red: 0.055, green: 0.10, blue: 0.086))
+        .overlay(
+            RoundedRectangle(cornerRadius: 14)
+                .stroke(Color("BrandEmerald").opacity(0.45), lineWidth: 1)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .shadow(color: .black.opacity(0.5), radius: 16)
+        .position(
+            x: min(max(tipWidth / 2 + 16, rect.midX), geo.size.width - tipWidth / 2 - 16),
+            y: above ? rect.minY - 86 : rect.maxY + 86
+        )
+    }
+}
+
+/// Full-screen rect with a rounded-rect hole (even-odd fill).
+private struct SpotlightMask: Shape {
+    var cutout: CGRect
+    var corner: CGFloat
+
+    var animatableData: CGRect.AnimatableData {
+        get { cutout.animatableData }
+        set { cutout.animatableData = newValue }
+    }
+
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        p.addRect(rect)
+        p.addRoundedRect(in: cutout, cornerSize: CGSize(width: corner, height: corner))
+        return p
+    }
+}
+
+extension CGRect {
+    var animatableData: AnimatablePair<AnimatablePair<CGFloat, CGFloat>, AnimatablePair<CGFloat, CGFloat>> {
+        get { AnimatablePair(AnimatablePair(origin.x, origin.y), AnimatablePair(size.width, size.height)) }
+        set {
+            origin.x = newValue.first.first; origin.y = newValue.first.second
+            size.width = newValue.second.first; size.height = newValue.second.second
+        }
+    }
+}

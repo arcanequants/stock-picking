@@ -116,6 +116,18 @@ struct AccountView: View {
                                 .foregroundStyle(.secondary)
                         }
                     }
+                    Button {
+                        // Flip the flag; MainTabView observes it and replays.
+                        UserDefaults.standard.set(false, forKey: "vd.didCoachTour")
+                    } label: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Ver tutorial")
+                                .foregroundStyle(.primary)
+                            Text("Repite el recorrido rápido de la app")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
                 } header: {
                     Text("Vectorial")
                 }
