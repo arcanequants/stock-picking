@@ -3143,3 +3143,19 @@ export async function sendBudgetReminderEmail(
 
   if (error) throw new Error(`Failed to send budget-reminder email: ${error.message}`);
 }
+
+// ── Weekly SEO report (cron /api/cron/seo-weekly) ───────────
+
+export async function sendSeoWeeklyReport(
+  to: string,
+  subject: string,
+  html: string
+): Promise<void> {
+  const { error } = await getResend().emails.send({
+    from: FROM,
+    to,
+    subject,
+    html,
+  });
+  if (error) throw new Error(`Failed to send SEO weekly report: ${error.message}`);
+}
