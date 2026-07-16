@@ -272,18 +272,83 @@ export function getFaqSchema(stock: Stock, locale: string) {
   const why = getLocalizedField(stock, "summary_why", locale);
   const risk = getLocalizedField(stock, "summary_risk", locale);
 
+  const loc = ["en", "pt", "hi"].includes(locale) ? locale : "es";
+  const name = stock.name;
+  const ticker = stock.ticker;
+  const etf = isEtf(stock);
+  const yieldPct = stock.dividend_yield;
+
+  // Questions in the page's language (they were hardcoded in English before,
+  // which mismatched the visible es/pt/hi content). Answers beyond the three
+  // summaries are derived strictly from stocks.ts fields — nothing invented.
+  const q = {
+    es: {
+      what: `¿Qué hace ${name}?`,
+      why: `¿Por qué Vectorial Data eligió ${ticker}?`,
+      risk: `¿Cuáles son los riesgos de invertir en ${ticker}?`,
+      dividend: `¿${ticker} paga dividendos?`,
+      dividendA: `Sí. ${name} paga un dividendo de aproximadamente ${yieldPct}% anual.`,
+      etf: `¿${ticker} es un ETF o una acción?`,
+      etfA: `${name} es un ETF (fondo cotizado): una sola compra te da un pedacito de muchas empresas a la vez, en lugar de una empresa individual.`,
+      how: `¿Cómo puedo comprar ${ticker} con poco dinero?`,
+      howA: `Puedes comprar fracciones de ${ticker} desde unos pocos dólares con cualquier bróker que ofrezca fracciones de acciones. El método de Vectorial Data: invierte la misma cantidad en cada pick, siempre.`,
+      updated: `¿Cuándo se actualizó este análisis de ${ticker}?`,
+      updatedA: (d: string) => `El análisis de ${ticker} se actualizó por última vez el ${d}.`,
+    },
+    en: {
+      what: `What does ${name} do?`,
+      why: `Why did Vectorial Data pick ${ticker}?`,
+      risk: `What are the risks of investing in ${ticker}?`,
+      dividend: `Does ${ticker} pay dividends?`,
+      dividendA: `Yes. ${name} pays a dividend of about ${yieldPct}% per year.`,
+      etf: `Is ${ticker} an ETF or a stock?`,
+      etfA: `${name} is an ETF (exchange-traded fund): one purchase gives you a small piece of many companies at once, instead of a single company.`,
+      how: `How can I buy ${ticker} with little money?`,
+      howA: `You can buy fractional shares of ${ticker} starting from a few dollars with any broker that offers fractional shares. The Vectorial Data method: invest the same amount in every pick, every time.`,
+      updated: `When was this ${ticker} analysis last updated?`,
+      updatedA: (d: string) => `The ${ticker} analysis was last updated on ${d}.`,
+    },
+    pt: {
+      what: `O que a ${name} faz?`,
+      why: `Por que a Vectorial Data escolheu ${ticker}?`,
+      risk: `Quais são os riscos de investir em ${ticker}?`,
+      dividend: `${ticker} paga dividendos?`,
+      dividendA: `Sim. A ${name} paga um dividendo de cerca de ${yieldPct}% ao ano.`,
+      etf: `${ticker} é um ETF ou uma ação?`,
+      etfA: `${name} é um ETF (fundo negociado em bolsa): uma única compra te dá um pedacinho de muitas empresas de uma vez, em vez de uma empresa individual.`,
+      how: `Como posso comprar ${ticker} com pouco dinheiro?`,
+      howA: `Você pode comprar frações de ${ticker} a partir de poucos dólares com qualquer corretora que ofereça ações fracionadas. O método da Vectorial Data: invista o mesmo valor em cada pick, sempre.`,
+      updated: `Quando esta análise de ${ticker} foi atualizada?`,
+      updatedA: (d: string) => `A análise de ${ticker} foi atualizada pela última vez em ${d}.`,
+    },
+    hi: {
+      what: `${name} क्या करती है?`,
+      why: `Vectorial Data ने ${ticker} क्यों चुना?`,
+      risk: `${ticker} में निवेश के जोखिम क्या हैं?`,
+      dividend: `क्या ${ticker} डिविडेंड देती है?`,
+      dividendA: `हाँ। ${name} लगभग ${yieldPct}% वार्षिक डिविडेंड देती है।`,
+      etf: `${ticker} ETF है या शेयर?`,
+      etfA: `${name} एक ETF (एक्सचेंज-ट्रेडेड फंड) है: एक ही खरीद से आपको एक कंपनी की जगह कई कंपनियों का छोटा हिस्सा मिलता है।`,
+      how: `कम पैसों में ${ticker} कैसे खरीदें?`,
+      howA: `फ्रैक्शनल शेयर देने वाले किसी भी ब्रोकर से आप कुछ ही डॉलर से ${ticker} के अंश खरीद सकते हैं। Vectorial Data का तरीका: हर pick में हमेशा एक जैसी राशि लगाएँ।`,
+      updated: `${ticker} का यह विश्लेषण कब अपडेट हुआ?`,
+      updatedA: (d: string) => `${ticker} का विश्लेषण आखिरी बार ${d} को अपडेट किया गया था।`,
+    },
+  }[loc]!;
+
   const questions: { q: string; a: string }[] = [];
 
-  if (what) questions.push({ q: `What does ${stock.name} do?`, a: what });
-  if (why)
+  if (what) questions.push({ q: q.what, a: stripMarkdown(what) });
+  if (why) questions.push({ q: q.why, a: stripMarkdown(why) });
+  if (risk) questions.push({ q: q.risk, a: stripMarkdown(risk) });
+  if (etf) questions.push({ q: q.etf, a: q.etfA });
+  if (!etf && yieldPct && yieldPct > 0)
+    questions.push({ q: q.dividend, a: q.dividendA });
+  questions.push({ q: q.how, a: q.howA });
+  if (stock.last_updated_at)
     questions.push({
-      q: `Why did Vectorial Data pick ${stock.ticker}?`,
-      a: why,
-    });
-  if (risk)
-    questions.push({
-      q: `What are the risks of investing in ${stock.ticker}?`,
-      a: risk,
+      q: q.updated,
+      a: q.updatedA(formatMetaDate(stock.last_updated_at, loc)),
     });
 
   if (questions.length === 0) return null;
