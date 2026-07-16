@@ -1,4 +1,5 @@
 import { getSupabaseAdmin } from "@/lib/supabase";
+import { translateFields } from "@/lib/translate-content";
 import type {
   AffectedMarket,
   EconAnalysis,
@@ -102,6 +103,23 @@ export async function ingestEconomicEvent(
       error:
         "analysis.es is required with headline, what_it_means, market_impact, learning",
     };
+  }
+
+  // Auto-fill any locale the publisher didn't send (en/pt/hi) by translating
+  // the Spanish analysis. Non-fatal: a failed translation just leaves that
+  // locale empty and the reader falls back to es.
+  const missing = LOCALES.filter((l) => l !== "es" && !analysis[l]);
+  if (missing.length > 0) {
+    await Promise.allSettled(
+      missing.map(async (loc) => {
+        const tr = await translateFields(
+          analysis.es as unknown as Record<string, string>,
+          loc as "en" | "pt" | "hi",
+        );
+        const cleaned = cleanAnalysis(tr);
+        if (cleaned) analysis[loc] = cleaned;
+      }),
+    );
   }
 
   const importance =

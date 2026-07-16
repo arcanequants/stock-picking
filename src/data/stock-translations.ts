@@ -3,8 +3,9 @@
  * Spanish text lives in stocks.ts + mom-overrides.json (source of truth).
  * EN/PT/HI translations live in separate files to keep bundles manageable.
  *
- * hi is intentionally frozen for investment CONTENT (SEBI legal gate): the
- * hi store may stay empty and every field falls back to Spanish until cleared.
+ * hi content UNFROZEN 2026-07-12 (founder decision): full es→hi backfill of
+ * all tickers; new picks ship i18n_hi alongside en/pt. Any missing field
+ * still falls back to Spanish.
  */
 import { enTranslations } from "./stock-i18n-en";
 import { ptTranslations } from "./stock-i18n-pt";

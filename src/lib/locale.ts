@@ -1,4 +1,4 @@
-export type Locale = "es" | "en" | "pt";
+export type Locale = "es" | "en" | "pt" | "hi";
 
 /** Parse Accept-Language header to a supported locale, defaulting to "es". */
 export function parseLocale(acceptLanguage: string | null | undefined): Locale {
@@ -6,5 +6,6 @@ export function parseLocale(acceptLanguage: string | null | undefined): Locale {
   const tag = acceptLanguage.split(",")[0].split(";")[0].trim().slice(0, 2).toLowerCase();
   if (tag === "en") return "en";
   if (tag === "pt") return "pt";
+  if (tag === "hi") return "hi";
   return "es";
 }

@@ -18,10 +18,12 @@ Plain-Spanish rewrites of `summary_short` / `summary_why` / `summary_risk` for t
 - Legacy: `npm run mom:generate -- $TICKER` (`scripts/generate-mom-shorts.ts`, OpenAI gpt-4o) exists as an OPTIONAL automation fallback only — NOT the default; founder decided Claude does this in-session (2026-06-10).
 - NOT a daily cron — source text doesn't change on its own
 
-### Content i18n (es → en + pt; hi FROZEN)
-Every pick's content exists in 3 languages: **es is the source of truth**, en + pt are derived. **Hindi investment content is FROZEN** (SEBI legal gate) — UI chrome only; content falls back to es until legal clears it.
+### Content i18n (es → en + pt + hi)
+Every pick's content exists in 4 languages: **es is the source of truth**, en + pt + hi are derived. **Hindi was UNFROZEN 2026-07-12** (founder decision; full backfill done with Sonnet agents) — new picks MUST ship `i18n_hi` alongside `i18n_en`/`i18n_pt`.
 - 8 translatable fields per ticker: `summary_short/what/why/risk` + `research_full` (web, from stocks.ts) and `one_liner/why_short/risk_short` (app, from mom-overrides.json).
-- Storage: `src/data/stock-i18n-{en,pt}.json` (committed), loaded via the `stock-i18n-*.ts` wrappers, resolved by `localized()` in `src/data/stock-translations.ts` with es fallback always.
+- Storage: `src/data/stock-i18n-{en,pt,hi}.json` (committed), loaded via the `stock-i18n-*.ts` wrappers, resolved by `localized()` in `src/data/stock-translations.ts` with es fallback always.
+- Hindi register: Devanagari, retail-clear; tickers/brands/technical terms India uses in English stay in Latin script (stock, ETF, EPS, P/E); dividend = लाभांश; "mil millones" → अरब; never lakh/crore.
+- Dynamic content (app news via `/api/admin/news`, econ events via ingest) auto-translates server-side to en/pt/hi with `src/lib/translate-content.ts` (OpenAI gpt-4o-mini, non-fatal on failure).
 - **Claude translates directly in-session** when adding/updating a pick (founder decision 2026-06-10 — no OpenAI):
   - summary_* + research_full → TRANSLATE faithfully (every fact/name/ticker/number survives) + anti-jargon pass.
   - one_liner/why_short/risk_short → RE-AUTHOR from facts in the target language (literal translation reintroduces jargon).

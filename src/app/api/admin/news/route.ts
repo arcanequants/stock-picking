@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { sendNewsPush } from "@/lib/news-push";
+import { translateFields } from "@/lib/translate-content";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -87,9 +88,33 @@ export async function POST(request: Request) {
     })
     .eq("id", inserted.id);
 
+  // Auto-translate to en/pt/hi so iOS/web overlay them by Accept-Language.
+  // Non-fatal: a failed translation just means that locale falls back to es.
+  const translations = await Promise.allSettled(
+    (["en", "pt", "hi"] as const).map(async (loc) => {
+      const tr = await translateFields({ headline, body: newsBody }, loc);
+      if (!tr) throw new Error(`translate ${loc} failed`);
+      const { error: i18nError } = await admin.from("app_news_i18n").upsert(
+        {
+          news_id: inserted.id,
+          locale: loc,
+          headline: tr.headline.slice(0, 80),
+          body: tr.body.slice(0, 4000),
+        },
+        { onConflict: "news_id,locale" },
+      );
+      if (i18nError) throw new Error(`upsert ${loc}: ${i18nError.message}`);
+      return loc;
+    }),
+  );
+  const translated = translations
+    .filter((r): r is PromiseFulfilledResult<"en" | "pt" | "hi"> => r.status === "fulfilled")
+    .map((r) => r.value);
+
   return NextResponse.json({
     ok: true,
     news: inserted,
     delivery,
+    translated,
   });
 }
