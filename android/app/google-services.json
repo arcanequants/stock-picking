@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "380745917149",
+    "project_id": "vectorial-data",
+    "storage_bucket": "vectorial-data.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380745917149:android:2639c6ce689c118f61b134",
+        "android_client_info": {
+          "package_name": "com.vectorialdata.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB6DJ88WNxB_5SSrdiH1n522p1vlLEESw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380745917149:android:b78a70068cd886c061b134",
+        "android_client_info": {
+          "package_name": "com.vectorialdata.app.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB6DJ88WNxB_5SSrdiH1n522p1vlLEESw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
