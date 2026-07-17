@@ -85,6 +85,15 @@ export default async function MetodologiaPage() {
           <p>{t("auditBody")}</p>
         </section>
 
+        <p>
+          <Link
+            href="/metodo"
+            className="text-brand hover:text-brand-hover transition-colors"
+          >
+            {t("metodoCrossLink")}
+          </Link>
+        </p>
+
         <div className="pt-4 border-t border-border">
           <Link
             href="/lecciones"

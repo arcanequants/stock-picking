@@ -483,9 +483,9 @@
     "methodLearnMore": "Learn the method →"
   },
   "Metodo": {
-    "metaTitle": "The method — Vectorial Data",
-    "metaDescription": "One simple rule: monthly budget ÷ 30 = per-pick amount. Same amount, every time. For at least one year.",
-    "pageTitle": "The method",
+    "metaTitle": "How to Invest Small Amounts Every Day: The Method | Vectorial Data",
+    "metaDescription": "Want to start investing with little money? One simple rule: monthly budget ÷ 30 = your amount per pick. Same amount, every time, for at least one year.",
+    "pageTitle": "How to invest small amounts every day",
     "pageSubtitle": "One rule. Three steps. One year.",
     "heroBody": "You're not competing against traders. You're competing against the urge to guess. The method takes that decision away from you, every day.",
     "ruleTitle": "The rule",
@@ -511,7 +511,10 @@
     "ctaTitle": "Start your rule today",
     "ctaBody": "$1/month for the picks. Your rule, your amount, your decision.",
     "ctaButton": "Subscribe for $1/month",
-    "disclaimer": "This is not investment advice. Investing always involves risk of loss."
+    "disclaimer": "This is not investment advice. Investing always involves risk of loss.",
+    "methodologyCrossTitle": "And how do we choose each pick?",
+    "methodologyCrossBody": "The method tells you how much to invest. Pick selection has its own methodology — algorithmic and verifiable on blockchain.",
+    "methodologyCrossLink": "See the methodology →"
   },
   "Account": {
     "title": "Account",
@@ -689,10 +692,10 @@
     "perPickFootnote": "Past performance does not guarantee future results. Return calculated as (current_price − weighted_avg_buy_price) / weighted_avg_buy_price. See methodology."
   },
   "Metodologia": {
-    "pageTitle": "Methodology",
-    "pageSubtitle": "How we compute returns, select picks, and handle re-buys.",
-    "metaTitle": "Methodology | Vectorial Data",
-    "metaDescription": "Vectorial Data full methodology: return calculation with weighted-average price, algorithmic pick selection, handling of re-buys and splits.",
+    "pageTitle": "How we choose and measure our picks",
+    "pageSubtitle": "Returns, algorithmic selection, and re-buys — all public and verifiable on blockchain.",
+    "metaTitle": "How We Choose Our Picks: Blockchain-Verifiable Methodology | Vectorial Data",
+    "metaDescription": "How Vectorial Data selects and measures its picks: weighted-average return math, algorithmic selection, and public verification on the Base blockchain.",
     "introTitle": "1. Introduction",
     "introBody": "This page documents the exact method we use to compute portfolio returns and select the positions that appear on pages like /lecciones. The goal is to let anyone (human or AI agent) audit our track record without having to take our word for it.",
     "positionSizeTitle": "2. Position size",
@@ -719,7 +722,8 @@
     "limitsTitle": "9. Known limitations",
     "limitsBody": "Our model assumes instant execution at closing price, perfect reinvestment of dividends (not currently modelled), and availability of fractional shares (not always possible at all brokers). These simplifications are standard in most backtests but matter when comparing with real account performance.",
     "auditTitle": "10. How to audit all of this",
-    "auditBody": "All code is public. The calculations live in `src/lib/position-utils.ts` (aggregatePositions) and `src/lib/lessons.ts` (selectLessons). Transactions live in `src/data/stocks.ts` and each one has an on-chain attestation UID. If you find a bug in the calculation or methodology, open an issue on GitHub or email Hello@vectorialdata.com."
+    "auditBody": "All code is public. The calculations live in `src/lib/position-utils.ts` (aggregatePositions) and `src/lib/lessons.ts` (selectLessons). Transactions live in `src/data/stocks.ts` and each one has an on-chain attestation UID. If you find a bug in the calculation or methodology, open an issue on GitHub or email Hello@vectorialdata.com.",
+    "metodoCrossLink": "Looking for how to start investing little by little? That's the method →"
   },
   "Disclosures": {
     "pageTitle": "Disclosures",
