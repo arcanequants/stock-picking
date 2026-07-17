@@ -320,7 +320,9 @@
     "dividendsTablePerShare": "प्रति शेयर",
     "dividendsTableShares": "शेयर",
     "dividendsTableTotal": "कुल (पोर्टफोलियो को)",
-    "dividendsTotal": "कुल प्राप्त: ${total}"
+    "dividendsTotal": "कुल प्राप्त: ${total}",
+    "relatedSectorTitle": "{sector} सेक्टर के अन्य picks",
+    "relatedCountryTitle": "{country} के अन्य picks"
   },
   "Components": {
     "portfolio": "पोर्टफोलियो",

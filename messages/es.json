@@ -320,7 +320,9 @@
     "dividendsTablePerShare": "Por acción",
     "dividendsTableShares": "Acciones",
     "dividendsTableTotal": "Total al portafolio",
-    "dividendsTotal": "Total recibido: ${total}"
+    "dividendsTotal": "Total recibido: ${total}",
+    "relatedSectorTitle": "Otros picks de {sector}",
+    "relatedCountryTitle": "Otros picks de {country}"
   },
   "Components": {
     "portfolio": "Portafolio",
