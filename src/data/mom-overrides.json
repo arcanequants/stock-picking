@@ -756,5 +756,47 @@
     "one_liner": "KLA hace las máquinas que inspeccionan las obleas de silicio mientras se fabrican los chips, cazando defectos que no se ven ni con microscopio. Es el paso anterior a Teradyne: KLA revisa la oblea durante la fabricación, Teradyne prueba el chip ya terminado. Domina más de la mitad de este mercado en el mundo.",
     "why_short": "Los chips de inteligencia artificial tienen muchísimas más capas, y cada capa nueva es otro lugar donde puede aparecer un defecto que hay que inspeccionar. Más capas = más máquinas de KLA. Gane quien gane la carrera de la IA, sus chips pasan por la inspección de KLA.",
     "risk_short": "La acción casi se triplicó en un año y está cara; los analistas le ven ~18% de margen. Además es un negocio de ciclos, y China es un riesgo real: los controles de exportación de EE.UU. pueden recortar una parte grande de sus ventas."
+  },
+  "EWY": {
+    "one_liner": "Una sola canasta con casi 100 de las empresas más grandes de Corea del Sur —la bolsa que más sube en el mundo en 2026— y paga ~1% al año en dividendos.",
+    "why_short": "Corea tiene la bolsa número 1 del mundo en 2026: sube ~76% en el año porque SK Hynix y Samsung fabrican la memoria que toda la inteligencia artificial necesita, y faltará memoria hasta 2030. Acaba de caer 20% desde su pico de junio: entramos con ese descuento.",
+    "risk_short": "La mitad de la canasta son solo 2 empresas: SK Hynix y Samsung. Si los chips de memoria se enfrían, el fondo cae con fuerza —ya cayó más de 20% en julio—. Además la moneda coreana se debilitó ~6% este año y eso le resta a tu rendimiento en dólares.",
+    "generated_at": "2026-07-16T00:00:00.000Z"
+  },
+  "MU": {
+    "one_liner": "Micron fabrica la memoria que los chips de inteligencia artificial necesitan para funcionar, y ya vendió toda su producción de 2026 por adelantado. El dividendo es simbólico (0.06%): aquí se busca crecimiento.",
+    "why_short": "En su último trimestre vendió $41.46 mil millones, más que en todo su año fiscal anterior, y de cada $100 vendidos le quedaron casi $85. La memoria para inteligencia artificial escasea, los precios se dispararon y solo tres empresas en el mundo saben fabricarla.",
+    "risk_short": "Es un negocio de ciclos: hoy la memoria escasea y los precios están en máximos, pero toda la industria construye fábricas nuevas a la vez. Si en 2028 sobra memoria, precios y ganancias pueden caer rápido; en 2023 Micron llegó a perder más de $5 mil millones en un año.",
+    "generated_at": "2026-07-16T00:00:00.000Z"
+  },
+  "NVT": {
+    "one_liner": "nVent hace los gabinetes, las conexiones eléctricas y el enfriamiento líquido que todo data center de inteligencia artificial necesita para funcionar: el lado eléctrico del boom de la IA.",
+    "why_short": "Los chips nuevos de IA generan tanto calor que ya se enfrían con líquido, no con aire — y nVent vende justo eso. Sus ventas crecieron 53% el último trimestre y tiene $2.6 mil millones en pedidos ya contratados. Gana mientras se construyan data centers, sin importar qué chip gane.",
+    "risk_short": "Casi todo su crecimiento depende de que Microsoft, Amazon, Google y Meta sigan construyendo data centers. Si frenan esa inversión, el crecimiento se desinfla y la acción, que ya cotiza cara, puede caer fuerte. Ya tenemos varias posiciones ligadas al mismo tema.",
+    "generated_at": "2026-07-16T00:00:00.000Z"
+  },
+  "AMAT": {
+    "one_liner": "La fábrica de las fábricas de chips: Applied Materials hace las máquinas con las que se construye casi cualquier chip del mundo. Es el que vende los picos y las palas de la fiebre del oro de la IA.",
+    "why_short": "Trimestre récord: $7.9 mil millones en ventas y ganancias creciendo 20%. La memoria que usa la IA necesita 3-4 veces más máquinas que la normal, y sus clientes ya le adelantaron pedidos con años de anticipación. La propia empresa espera crecer más de 30% en equipos este año.",
+    "risk_short": "EE.UU. le prohibió venderle varias de sus máquinas a China, antes su mayor mercado: eso le costará unos $600-700 millones este año. Y es una industria de ciclos bruscos: si el gasto en IA se enfría, sus ventas caen rápido y la acción, que ya subió mucho, lo resiente.",
+    "generated_at": "2026-07-16T00:00:00.000Z"
+  },
+  "ON": {
+    "one_liner": "onsemi hace los chips que mueven la electricidad dentro de los autos eléctricos y de los centros de datos de inteligencia artificial. Tras dos años difíciles, sus ventas volvieron a crecer.",
+    "why_short": "Sus ventas volvieron a crecer después de dos años de caída, su negocio de energía para centros de datos de IA casi se duplicó en un año y trabaja con NVIDIA. Los analistas le ven casi 30% de subida desde nuestro precio de compra.",
+    "risk_short": "La acción ya subió mucho el último año, así que hay poco margen para malas noticias. Y si los autos eléctricos se venden menos de lo esperado o fábricas chinas inundan el mercado con chips baratos parecidos, la recuperación se frena.",
+    "generated_at": "2026-07-16T00:00:00.000Z"
+  },
+  "KO": {
+    "one_liner": "La empresa de los 2,200 millones de bebidas al día: lleva 64 años seguidos subiendo su dividendo (hoy paga 2.57% al año) y es la inversión que Warren Buffett no ha tocado en 30 años. El ancla estable del portafolio.",
+    "why_short": "Vende en más de 200 países y acaba de crecer 10% con su mejor margen en años. Lleva 64 años seguidos pagando un dividendo cada vez mayor, y Buffett no ha vendido una sola acción desde 1994. Mientras las tecnológicas suben y bajan, Coca-Cola paga y aguanta.",
+    "risk_short": "La acción está en máximos históricos y ya no está barata: los analistas le ven poco espacio para subir a corto plazo. Además crece despacio (4-5% al año) y cada vez más gente evita el refresco con azúcar. Es para dormir tranquilo, no para hacerse rico rápido.",
+    "generated_at": "2026-07-16T00:00:00.000Z"
+  },
+  "KSA": {
+    "one_liner": "Compramos KSA: una canasta con ~120 de las empresas más grandes de Arabia Saudita —bancos gigantes, la petrolera Aramco, telefónicas— en un solo ticker. Paga ~2.8% de dividendo al año.",
+    "why_short": "La bolsa saudí tuvo su peor año en una década en 2025 y hoy está más barata que su promedio histórico. En febrero de 2026 el país la abrió a todos los extranjeros por primera vez, y sus bancos —el corazón de la canasta— ganan cifras récord. Compramos lo que otros abandonaron.",
+    "risk_short": "Todo en Arabia Saudita depende del petróleo: si el precio cae, el gobierno gasta menos y toda la economía lo resiente. Además la región vive tensiones militares reales con Irán, y el país lo decide en la práctica una sola persona. Es una apuesta de paciencia, no un boleto seguro.",
+    "generated_at": "2026-07-16T00:00:00.000Z"
   }
 }
