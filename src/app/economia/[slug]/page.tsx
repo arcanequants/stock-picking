@@ -9,7 +9,7 @@ import {
   type EconLocale,
 } from "@/lib/economic-events";
 import { EconEventCard } from "@/components/EconEventCard";
-import { JsonLd } from "@/lib/seo";
+import { JsonLd, metaDescription } from "@/lib/seo";
 
 const SITE_URL = "https://vectorialdata.com";
 
@@ -21,24 +21,50 @@ function normalizeLocale(locale: string): EconLocale {
   return "es";
 }
 
+// Human title framing per locale — the raw event_name alone isn't a query
+// anyone types; "qué significa" is.
+const META_COPY: Record<EconLocale, { suffix: string; notFound: string }> = {
+  es: { suffix: "qué significa para los mercados", notFound: "No encontrado — Vectorial Economía" },
+  en: { suffix: "what it means for markets", notFound: "Not found — Vectorial Economía" },
+  pt: { suffix: "o que significa para os mercados", notFound: "Não encontrado — Vectorial Economía" },
+  hi: { suffix: "बाज़ारों के लिए इसका मतलब", notFound: "नहीं मिला — Vectorial Economía" },
+};
+
+const DATE_TAGS: Record<EconLocale, string> = {
+  es: "es-MX",
+  en: "en-US",
+  pt: "pt-BR",
+  hi: "hi-IN",
+};
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const locale = normalizeLocale(await getLocale());
+  const copy = META_COPY[locale];
   const ev = await getEventBySlug(slug);
-  if (!ev) return { title: "No encontrado — Vectorial Economía" };
-  const a = pickAnalysis(ev, "en");
+  if (!ev) return { title: copy.notFound };
+  const a = pickAnalysis(ev, locale);
   const url = `${SITE_URL}/economia/${ev.slug}`;
+  const date = new Date(`${ev.event_date}T12:00:00`).toLocaleDateString(
+    DATE_TAGS[locale],
+    { day: "numeric", month: "short", year: "numeric" }
+  );
+  const title = `${ev.event_name} (${date}): ${copy.suffix}`;
+  const description = metaDescription(
+    [a.headline, a.what_it_means].filter(Boolean).join(" ")
+  );
   return {
-    title: `${ev.event_name} (${ev.event_date}) — Vectorial Economía`,
-    description: a.headline,
+    title,
+    description,
     alternates: { canonical: url },
     robots: { index: true, follow: true },
     openGraph: {
-      title: `${ev.event_name} — Vectorial Economía`,
-      description: a.headline,
+      title,
+      description,
       url,
       siteName: "Vectorial Data",
     },

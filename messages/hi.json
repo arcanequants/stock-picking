@@ -320,7 +320,9 @@
     "dividendsTablePerShare": "प्रति शेयर",
     "dividendsTableShares": "शेयर",
     "dividendsTableTotal": "कुल (पोर्टफोलियो को)",
-    "dividendsTotal": "कुल प्राप्त: ${total}"
+    "dividendsTotal": "कुल प्राप्त: ${total}",
+    "relatedSectorTitle": "{sector} सेक्टर के अन्य picks",
+    "relatedCountryTitle": "{country} के अन्य picks"
   },
   "Components": {
     "portfolio": "पोर्टफोलियो",
@@ -481,9 +483,9 @@
     "methodLearnMore": "method जानें →"
   },
   "Metodo": {
-    "metaTitle": "विधि — Vectorial Data",
-    "metaDescription": "एक सरल नियम: मासिक बजट ÷ 30 = प्रति-pick राशि। वही राशि, हर बार। कम से कम एक साल।",
-    "pageTitle": "विधि",
+    "metaTitle": "हर दिन थोड़ा-थोड़ा निवेश कैसे करें: हमारा तरीका | Vectorial Data",
+    "metaDescription": "कम पैसों से निवेश शुरू करना चाहते हैं? एक सरल नियम: मासिक बजट ÷ 30 = हर pick की राशि। वही राशि, हर बार, कम से कम एक साल तक।",
+    "pageTitle": "हर दिन थोड़ा-थोड़ा निवेश कैसे करें",
     "pageSubtitle": "एक नियम। तीन चरण। एक साल।",
     "heroBody": "आप traders के खिलाफ नहीं, अनुमान लगाने के प्रलोभन के खिलाफ हैं। विधि हर दिन यह निर्णय आपसे दूर रखती है।",
     "ruleTitle": "नियम",
@@ -509,7 +511,10 @@
     "ctaTitle": "आज अपना नियम शुरू करें",
     "ctaBody": "picks के लिए $1/माह। आपका नियम, आपकी राशि, आपका निर्णय।",
     "ctaButton": "$1/माह में सदस्यता लें",
-    "disclaimer": "यह निवेश सलाह नहीं है। निवेश में हमेशा नुकसान का जोखिम होता है।"
+    "disclaimer": "यह निवेश सलाह नहीं है। निवेश में हमेशा नुकसान का जोखिम होता है।",
+    "methodologyCrossTitle": "और हम हर pick कैसे चुनते हैं?",
+    "methodologyCrossBody": "यह तरीका बताता है कि कितना निवेश करें। Picks का चुनाव अपनी अलग methodology से होता है — algorithmic और blockchain पर verify करने योग्य।",
+    "methodologyCrossLink": "Methodology देखें →"
   },
   "Account": {
     "title": "खाता",
@@ -632,8 +637,8 @@
   "Lecciones": {
     "pageTitle": "सबक: हमारे सबसे खराब पिक्स",
     "pageSubtitle": "हमारे पोर्टफोलियो के शीर्ष 5 सबसे खराब प्रदर्शन करने वाले पिक्स। कोई छिपाव नहीं।",
-    "metaTitle": "सबक — हमारे सबसे खराब स्टॉक पिक्स | Vectorial Data",
-    "metaDescription": "हमारे पोर्टफोलियो के शीर्ष 5 सबसे खराब प्रदर्शन करने वाले स्टॉक पिक्स के साथ ईमानदार पूर्वव्यापी विश्लेषण। रीयल-टाइम, एल्गोरिथम, नो चेरी-पिकिंग।",
+    "metaTitle": "निवेश की गलतियाँ: हमारे 5 सबसे खराब picks से सीख | Vectorial Data",
+    "metaDescription": "असली गलतियों से निवेश करना सीखें: हमारे पोर्टफोलियो के 5 सबसे खराब picks, ईमानदार विश्लेषण के साथ — blockchain पर verify करने योग्य। कोई cherry-picking नहीं।",
     "noticeTitle": "महत्वपूर्ण सूचना",
     "noticeBody": "यह पृष्ठ केवल शैक्षिक है। यह न तो निवेश सलाह है और न ही खरीदने या बेचने का सुझाव। पिछला प्रदर्शन भविष्य के परिणामों की गारंटी नहीं देता। यह पृष्ठ हमारी कार्यप्रणाली के तहत शीर्ष 5 सबसे खराब प्रदर्शन करने वाली पोजीशन को एल्गोरिथमिक रूप से चुनता है। कोई मैनुअल चयन नहीं।",
     "howWeChoseTitle": "हमने कैसे चुना",
@@ -687,10 +692,10 @@
     "disclosuresF8Link": "पूरे डिस्क्लोज़र देखें →"
   },
   "Metodologia": {
-    "pageTitle": "कार्यप्रणाली",
-    "pageSubtitle": "हम रिटर्न कैसे गणना करते हैं, पिक्स कैसे चुनते हैं, और पुनर्खरीद कैसे संभालते हैं",
-    "metaTitle": "कार्यप्रणाली — हमारा दृष्टिकोण कैसे काम करता है | Vectorial Data",
-    "metaDescription": "रिटर्न की सटीक गणना, हारने वालों का चयन, पुनर्खरीद और स्प्लिट्स को संभालने के लिए पूरी कार्यप्रणाली।",
+    "pageTitle": "हम picks कैसे चुनते और मापते हैं",
+    "pageSubtitle": "Returns, algorithmic चुनाव और पुनर्खरीद — सब सार्वजनिक और blockchain पर verify करने योग्य।",
+    "metaTitle": "हम picks कैसे चुनते हैं: blockchain पर verify होने वाली methodology | Vectorial Data",
+    "metaDescription": "Vectorial Data picks कैसे चुनती और मापती है: weighted average से return की गणना, algorithmic चुनाव, और Base blockchain पर सार्वजनिक verification।",
     "returnCalcTitle": "रिटर्न गणना",
     "returnCalcBody": "प्रत्येक पोजीशन के लिए: shares = $50 / buy_price, फिर current_value = shares × current_price, और return_pct = ((current_value - $50) / $50) × 100। हम कमीशन, फिसलन या करों के लिए समायोजन नहीं करते।",
     "weightedAvgTitle": "भारित औसत मूल्य",
@@ -717,7 +722,8 @@
     "selectionStep3": "3. वे पोज़िशन छाँटें जिनकी पहली खरीद को कम से कम 30 दिन हो चुके हैं (शॉर्ट-टर्म शोर से बचने के लिए)",
     "selectionStep4": "4. return < 0 वाली पोज़िशन छाँटें",
     "selectionStep5": "5. return_pct के हिसाब से ASC क्रम में लगाएँ (सबसे खराब पहले)। बराबरी होने पर: पहली खरीद की सबसे पुरानी तारीख",
-    "selectionStep6": "6. पहली 5 लें। अगर 5 से कम नेगेटिव हैं, तो जितनी हैं उतनी ही दिखाएँ"
+    "selectionStep6": "6. पहली 5 लें। अगर 5 से कम नेगेटिव हैं, तो जितनी हैं उतनी ही दिखाएँ",
+    "metodoCrossLink": "थोड़ा-थोड़ा निवेश शुरू करने का तरीका खोज रहे हैं? वह यहाँ है →"
   },
   "Disclosures": {
     "pageTitle": "प्रकटीकरण",

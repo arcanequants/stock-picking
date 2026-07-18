@@ -137,6 +137,20 @@ export default async function MetodoPage() {
         </ul>
       </section>
 
+      {/* Cross-link: how much to invest (this page) vs how picks are chosen (/metodologia) */}
+      <section className="rounded-2xl border border-border p-6 bg-surface">
+        <h2 className="font-semibold mb-3">{t("methodologyCrossTitle")}</h2>
+        <p className="text-sm text-text-muted leading-relaxed mb-3">
+          {t("methodologyCrossBody")}
+        </p>
+        <Link
+          href="/metodologia"
+          className="text-sm text-brand hover:text-brand-hover transition-colors"
+        >
+          {t("methodologyCrossLink")}
+        </Link>
+      </section>
+
       {/* CTA — hidden for existing subscribers */}
       {!isSubscribed && (
         <section className="rounded-2xl border border-brand/30 bg-brand-subtle p-8 text-center space-y-3">

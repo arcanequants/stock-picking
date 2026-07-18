@@ -7,7 +7,8 @@ import BlockchainBadge from "@/components/BlockchainBadge";
 import StockDividendsReceived from "@/components/StockDividendsReceived";
 import { Suspense } from "react";
 import { getLocalizedField } from "@/data/stock-translations";
-import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema, metaDescription } from "@/lib/seo";
+import { getRelatedPicks } from "@/lib/related-picks";
+import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema, getStockMetaTitle, getStockMetaDescription } from "@/lib/seo";
 
 const localeMap: Record<string, string> = {
   es: "es-MX",
@@ -33,17 +34,16 @@ export async function generateMetadata({
   const locale = await getLocale();
   if (!stock) return { title: `${t("stockNotFound")} | Vectorial Data` };
 
-  const description = metaDescription(
-    getLocalizedField(stock, "summary_short", locale)
-  );
+  const title = getStockMetaTitle(stock, locale);
+  const description = getStockMetaDescription(stock, locale);
   return {
-    title: `${stock.ticker} — ${stock.name} | Vectorial Data Research`,
+    title,
     description,
     alternates: {
       canonical: `https://vectorialdata.com/stocks/${stock.ticker}`,
     },
     openGraph: {
-      title: `${stock.ticker} — ${stock.name}`,
+      title,
       description,
       images: [{ url: `/api/og/stock/${stock.ticker}`, width: 1200, height: 630 }],
       type: "article",
@@ -147,6 +147,7 @@ export default async function StockResearchPage({
 
   const faqSchema = getFaqSchema(stock, locale);
   const tx = transactions.find(t => t.ticker === stock.ticker);
+  const related = getRelatedPicks(stock);
 
   return (
     <>
@@ -240,6 +241,27 @@ export default async function StockResearchPage({
         </div>
       )}
 
+      {(related.sector.length > 0 || related.country.length > 0) && (
+        <section className="mt-10 space-y-6">
+          {related.sector.length > 0 && (
+            <div>
+              <h2 className="text-sm font-semibold text-text-secondary mb-3">
+                {t("relatedSectorTitle", { sector: label("sector", stock.sector) ?? stock.sector })}
+              </h2>
+              <RelatedPickLinks picks={related.sector} />
+            </div>
+          )}
+          {related.country.length > 0 && (
+            <div>
+              <h2 className="text-sm font-semibold text-text-secondary mb-3">
+                {t("relatedCountryTitle", { country: label("country", stock.country) ?? stock.country })}
+              </h2>
+              <RelatedPickLinks picks={related.country} />
+            </div>
+          )}
+        </section>
+      )}
+
       <div className="mt-8 text-xs text-text-faint flex gap-4">
         <span>{t("researched")}: {new Date(stock.first_researched_at).toLocaleDateString(dateLocale)}</span>
         <span>{t("updated")}: {new Date(stock.last_updated_at).toLocaleDateString(dateLocale)}</span>
@@ -258,6 +280,24 @@ export default async function StockResearchPage({
       )}
     </div>
     </>
+  );
+}
+
+function RelatedPickLinks({ picks }: { picks: { ticker: string; name: string }[] }) {
+  return (
+    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      {picks.map((s) => (
+        <li key={s.ticker}>
+          <Link
+            href={`/stocks/${s.ticker}`}
+            className="block border border-border rounded-lg px-3 py-2 hover:border-brand/50 transition-colors"
+          >
+            <span className="font-mono font-semibold text-sm">{s.ticker}</span>
+            <span className="text-sm text-text-muted"> — {s.name}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
 

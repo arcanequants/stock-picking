@@ -320,7 +320,9 @@
     "dividendsTablePerShare": "Por ação",
     "dividendsTableShares": "Ações",
     "dividendsTableTotal": "Total ao portfólio",
-    "dividendsTotal": "Total recebido: ${total}"
+    "dividendsTotal": "Total recebido: ${total}",
+    "relatedSectorTitle": "Outros picks de {sector}",
+    "relatedCountryTitle": "Outros picks de {country}"
   },
   "Components": {
     "portfolio": "Portfólio",
@@ -481,9 +483,9 @@
     "methodLearnMore": "Conheça o método →"
   },
   "Metodo": {
-    "metaTitle": "O método — Vectorial Data",
-    "metaDescription": "Uma regra simples: orçamento mensal ÷ 30 = quantia por pick. Mesma quantia, todas as vezes. Por pelo menos um ano.",
-    "pageTitle": "O método",
+    "metaTitle": "Como investir pouco dinheiro todos os dias: o método | Vectorial Data",
+    "metaDescription": "Quer começar a investir com pouco dinheiro? Uma regra simples: orçamento mensal ÷ 30 = seu valor por pick. Mesmo valor, sempre, por pelo menos um ano.",
+    "pageTitle": "Como investir pouco dinheiro todos os dias",
     "pageSubtitle": "Uma regra. Três passos. Um ano.",
     "heroBody": "Você não compete contra traders. Você compete contra a tentação de adivinhar. O método tira essa decisão de você todo dia.",
     "ruleTitle": "A regra",
@@ -509,7 +511,10 @@
     "ctaTitle": "Comece sua regra hoje",
     "ctaBody": "$1/mês pelos picks. Sua regra, sua quantia, sua decisão.",
     "ctaButton": "Assinar por $1/mês",
-    "disclaimer": "Isto não é conselho de investimento. Investir sempre envolve risco de perda."
+    "disclaimer": "Isto não é conselho de investimento. Investir sempre envolve risco de perda.",
+    "methodologyCrossTitle": "E como escolhemos cada pick?",
+    "methodologyCrossBody": "O método diz quanto investir. A seleção dos picks tem sua própria metodologia — algorítmica e verificável em blockchain.",
+    "methodologyCrossLink": "Ver a metodologia →"
   },
   "Account": {
     "title": "Conta",
@@ -632,8 +637,8 @@
   "Lecciones": {
     "pageTitle": "O que aprendemos perdendo",
     "pageSubtitle": "Os 5 picks com pior desempenho do portfólio. Sem filtros. Sem edições. Verificável on-chain.",
-    "metaTitle": "O que aprendemos perdendo | Vectorial Data",
-    "metaDescription": "Os 5 picks com pior desempenho do nosso portfólio. Análise honesta, calculada em tempo real, verificável em blockchain. Sem cherry-picking.",
+    "metaTitle": "Erros ao investir em ações: o que aprendemos com nossos 5 piores picks | Vectorial Data",
+    "metaDescription": "Aprenda a investir com erros reais: os 5 picks com pior desempenho do nosso portfólio, com análise honesta e verificável em blockchain. Sem cherry-picking.",
     "lastUpdated": "Atualizado em tempo real · calculado em {timestamp}",
     "noticeTitle": "Aviso importante",
     "noticeBody": "Esta página mostra perdas reais do portfólio. O desempenho passado não garante resultados futuros. Isto NÃO é assessoria financeira personalizada.",
@@ -687,10 +692,10 @@
     "perPickFootnote": "Desempenho passado não garante resultados futuros. Retorno calculado como (preço_atual − preço_médio_ponderado) / preço_médio_ponderado. Ver metodologia."
   },
   "Metodologia": {
-    "pageTitle": "Metodologia",
-    "pageSubtitle": "Como calculamos retornos, selecionamos picks e lidamos com recompras.",
-    "metaTitle": "Metodologia | Vectorial Data",
-    "metaDescription": "Metodologia completa da Vectorial Data: cálculo de retornos com preço médio ponderado, seleção algorítmica de picks, tratamento de recompras e splits.",
+    "pageTitle": "Como escolhemos e medimos os picks",
+    "pageSubtitle": "Retornos, seleção algorítmica e recompras — tudo público e verificável em blockchain.",
+    "metaTitle": "Como escolhemos os picks: metodologia verificável em blockchain | Vectorial Data",
+    "metaDescription": "Como a Vectorial Data escolhe e mede seus picks: retornos com preço médio ponderado, seleção algorítmica e verificação pública na blockchain Base.",
     "introTitle": "1. Introdução",
     "introBody": "Esta página documenta o método exato com o qual calculamos o desempenho do portfólio e selecionamos as posições que aparecem em páginas como /lecciones. O objetivo é que qualquer pessoa (humana ou agente de IA) possa auditar nosso histórico sem precisar confiar em nossa palavra.",
     "positionSizeTitle": "2. Tamanho da posição",
@@ -717,7 +722,8 @@
     "limitsTitle": "9. Limitações conhecidas",
     "limitsBody": "Nosso modelo assume execução instantânea a preço de fechamento, reinvestimento perfeito de dividendos (atualmente não modelados), e disponibilidade de frações de shares (o que nem sempre é possível em todas as corretoras). Essas simplificações são padrão na maioria dos backtests mas importam ao comparar com desempenho real de uma conta.",
     "auditTitle": "10. Como auditar tudo isto",
-    "auditBody": "Todo o código é público. Os cálculos vivem em `src/lib/position-utils.ts` (aggregatePositions) e `src/lib/lessons.ts` (selectLessons). As transações vivem em `src/data/stocks.ts` e cada uma tem um attestation UID on-chain. Se você encontrar um erro no cálculo ou metodologia, abra uma issue no GitHub ou escreva para Hello@vectorialdata.com."
+    "auditBody": "Todo o código é público. Os cálculos vivem em `src/lib/position-utils.ts` (aggregatePositions) e `src/lib/lessons.ts` (selectLessons). As transações vivem em `src/data/stocks.ts` e cada uma tem um attestation UID on-chain. Se você encontrar um erro no cálculo ou metodologia, abra uma issue no GitHub ou escreva para Hello@vectorialdata.com.",
+    "metodoCrossLink": "Procurando como começar a investir aos poucos? Esse é o método →"
   },
   "Disclosures": {
     "pageTitle": "Disclosures",
