@@ -71,6 +71,20 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         GENERATE_INFOPLIST_FILE: NO
 
+  VectorialDataUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: VectorialDataUITests
+    dependencies:
+      - target: VectorialData
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.vectorialdata.app.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: VectorialData
+
   VectorialDataWidgets:
     type: app-extension
     platform: iOS
@@ -113,6 +127,8 @@ schemes:
       storeKitConfiguration: VectorialData/VectorialData.storekit
     test:
       config: Debug
+      targets:
+        - VectorialDataUITests
     profile:
       config: Release
     analyze:

@@ -83,22 +83,24 @@ struct CoachTourView: View {
 
     // MARK: - Geometry
 
-    /// Approximate frames: the 4 tab items sit evenly spaced in the bottom
-    /// bar; the content card target is the first card under the nav title.
+    /// Approximate frames in the overlay's local space (origin at the top
+    /// safe edge), tuned against accessibility frames on the iOS 26 floating
+    /// tab bar (iPhone 17 Pro: tab items at screen y 795–849, centers at
+    /// 72.5 + 85.7·i on a 402pt-wide screen; first pick card at y 219).
     private func spotlightRect(for target: Step.Target, in geo: GeometryProxy) -> CGRect {
         let w = geo.size.width
-        let h = geo.size.height + geo.safeAreaInsets.top + geo.safeAreaInsets.bottom
         switch target {
         case .tabItem(let i):
-            let slot = w / 4
-            let width = slot - 16
-            return CGRect(x: slot * CGFloat(i) + 8,
-                          y: h - geo.safeAreaInsets.bottom - 74,
-                          width: width, height: 60)
+            // Item centers sit symmetrically inset ~18% from each edge; the
+            // bar hugs the bottom safe edge, so anchor to the local bottom.
+            let edge = w * 0.18
+            let centerX = edge + (w - edge * 2) * CGFloat(i) / 3
+            return CGRect(x: centerX - 40,
+                          y: geo.size.height - 45,
+                          width: 80, height: 54)
         case .contentCard:
-            return CGRect(x: 14,
-                          y: geo.safeAreaInsets.top + 46,
-                          width: w - 28, height: 96)
+            // First pick card, right below the large-title header.
+            return CGRect(x: 15, y: 155, width: w - 30, height: 88)
         }
     }
 
@@ -140,7 +142,7 @@ struct CoachTourView: View {
         .shadow(color: .black.opacity(0.5), radius: 16)
         .position(
             x: min(max(tipWidth / 2 + 16, rect.midX), geo.size.width - tipWidth / 2 - 16),
-            y: above ? rect.minY - 86 : rect.maxY + 86
+            y: above ? rect.minY - 86 : rect.maxY + 96
         )
     }
 }

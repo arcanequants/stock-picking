@@ -64,9 +64,17 @@
 		F37EBB33990CBB056ECC618F /* AllocationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0587E8F1DD17C83080521 /* AllocationSection.swift */; };
 		FC94DD3672CE56CD7316CB37 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820C026C9E6BED77E2FAB77A /* WidgetBundle.swift */; };
 		FD4DE857EE7CB14865A45D21 /* PortfolioSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095839A24B3CC3A03AD0D02 /* PortfolioSnapshot.swift */; };
+		FF5D31F64A41E364002F55B3 /* CoachTourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFEA529D0C29E8782D98C20 /* CoachTourUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9C2F3B0E5DF2C92E008F3F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB66975442BE99C04204049A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B44FEFD46A2626B9B52C05FA;
+			remoteInfo = VectorialData;
+		};
 		DCC9A84FE12B44D20D8741D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EB66975442BE99C04204049A /* Project object */;
@@ -106,6 +114,7 @@
 		3D9CD8BD67A0E6197487EC73 /* VectorialData.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VectorialData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4586F5C2A73ABF34E95CF6B7 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		55080DD2AC6AC1F15A0B5AE0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		609562D05362C2597337DA83 /* VectorialDataUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VectorialDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		695CC3305AB75BDAF9415E78 /* PriorHoldingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHoldingsStore.swift; sourceTree = "<group>"; };
 		6A17395E2504FDA008D3BE8E /* PickDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDetailView.swift; sourceTree = "<group>"; };
 		6A1BCC5FD3CD089181E6608E /* PickBuySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickBuySheet.swift; sourceTree = "<group>"; };
@@ -141,6 +150,7 @@
 		D0131EF1A2AE55B596D2E5EF /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		D095839A24B3CC3A03AD0D02 /* PortfolioSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSnapshot.swift; sourceTree = "<group>"; };
 		D1FB2EE1932989B11399BB99 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		DCFEA529D0C29E8782D98C20 /* CoachTourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachTourUITests.swift; sourceTree = "<group>"; };
 		E4A65EF70CD74EBC64471D56 /* PortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidget.swift; sourceTree = "<group>"; };
 		EE55E75F58BEC69030C82856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F275146A3F4915E0F9FDDDC1 /* PickStatusStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickStatusStore.swift; sourceTree = "<group>"; };
@@ -155,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				3D9CD8BD67A0E6197487EC73 /* VectorialData.app */,
+				609562D05362C2597337DA83 /* VectorialDataUITests.xctest */,
 				A2D7489EA85BDA320179BCBD /* VectorialDataWidgets.appex */,
 			);
 			name = Products;
@@ -173,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				B7DA17B88F2E0B3A576087F4 /* VectorialData */,
+				A2DB393EF9D446F150EF498B /* VectorialDataUITests */,
 				F8D4AFED19A5330BAF7E0A5D /* VectorialDataWidgets */,
 				0CD6976A9C4FD887CF7AE226 /* Products */,
 			);
@@ -302,6 +314,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		A2DB393EF9D446F150EF498B /* VectorialDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DCFEA529D0C29E8782D98C20 /* CoachTourUITests.swift */,
+			);
+			path = VectorialDataUITests;
+			sourceTree = "<group>";
+		};
 		A5D39BB8DC2CE7084BD86B89 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +433,24 @@
 			productReference = 3D9CD8BD67A0E6197487EC73 /* VectorialData.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BDEEBAF8A224AD3D2CAF5B40 /* VectorialDataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 962C6F497B9C6DF4CD5A8C6D /* Build configuration list for PBXNativeTarget "VectorialDataUITests" */;
+			buildPhases = (
+				3DB054B44CBB3A1F88695233 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E3A912A1BC0C588AEEEB727 /* PBXTargetDependency */,
+			);
+			name = VectorialDataUITests;
+			packageProductDependencies = (
+			);
+			productName = VectorialDataUITests;
+			productReference = 609562D05362C2597337DA83 /* VectorialDataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E37DA19C7EDB928044D6E8A5 /* VectorialDataWidgets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F2DAE747A62A32EAB47CB31 /* Build configuration list for PBXNativeTarget "VectorialDataWidgets" */;
@@ -443,6 +481,10 @@
 					B44FEFD46A2626B9B52C05FA = {
 						DevelopmentTeam = QMHJWQPS7H;
 					};
+					BDEEBAF8A224AD3D2CAF5B40 = {
+						DevelopmentTeam = QMHJWQPS7H;
+						TestTargetID = B44FEFD46A2626B9B52C05FA;
+					};
 					E37DA19C7EDB928044D6E8A5 = {
 						DevelopmentTeam = QMHJWQPS7H;
 						ProvisioningStyle = Automatic;
@@ -467,6 +509,7 @@
 			projectRoot = "";
 			targets = (
 				B44FEFD46A2626B9B52C05FA /* VectorialData */,
+				BDEEBAF8A224AD3D2CAF5B40 /* VectorialDataUITests */,
 				E37DA19C7EDB928044D6E8A5 /* VectorialDataWidgets */,
 			);
 		};
@@ -494,6 +537,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3DB054B44CBB3A1F88695233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5D31F64A41E364002F55B3 /* CoachTourUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		406033258B9487046F7D8663 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -568,9 +619,32 @@
 			target = E37DA19C7EDB928044D6E8A5 /* VectorialDataWidgets */;
 			targetProxy = DCC9A84FE12B44D20D8741D3 /* PBXContainerItemProxy */;
 		};
+		6E3A912A1BC0C588AEEEB727 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B44FEFD46A2626B9B52C05FA /* VectorialData */;
+			targetProxy = 9C2F3B0E5DF2C92E008F3F38 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		01C79C32B98DF85C82B29DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vectorialdata.app.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VectorialData;
+			};
+			name = Release;
+		};
 		1E7EB8B87B2E018C977C590B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -780,6 +854,24 @@
 			};
 			name = Debug;
 		};
+		C8E900142133CAB26775DE84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vectorialdata.app.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VectorialData;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -797,6 +889,15 @@
 			buildConfigurations = (
 				A3FF1F3BEE9924B64788FA35 /* Debug */,
 				7F82B71060346BBAB18B45AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		962C6F497B9C6DF4CD5A8C6D /* Build configuration list for PBXNativeTarget "VectorialDataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8E900142133CAB26775DE84 /* Debug */,
+				01C79C32B98DF85C82B29DEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
