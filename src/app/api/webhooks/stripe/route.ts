@@ -10,6 +10,7 @@ import {
 } from "@/lib/resend";
 import { grantCredits, centsToMicroUsdc } from "@/lib/api-keys";
 import { getPack } from "@/lib/api-credit-packs";
+import { sendMetaEvent } from "@/lib/meta-capi";
 import { convertReferral } from "@/lib/referrals";
 import type Stripe from "stripe";
 
@@ -121,6 +122,18 @@ export async function POST(request: Request) {
         }
 
         const normalizedEmail = email.toLowerCase().trim();
+
+        // Server-side ad conversion (Meta CAPI). Fire-and-forget — ad
+        // tracking must never affect webhook processing. event_id = session
+        // id, so Stripe webhook retries can't double-count.
+        sendMetaEvent({
+          eventName: "Purchase",
+          email: normalizedEmail,
+          eventId: session.id,
+          sourceUrl: "https://vectorialdata.com/welcome",
+          value: (session.amount_total ?? 100) / 100,
+          currency: session.currency?.toUpperCase() ?? "USD",
+        }).catch(() => {});
 
         // Fetch subscription details for period dates
         let subscriptionStatus = "active";

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import DcaCalculator from "@/components/DcaCalculator";
 import WelcomeFlow from "@/components/WelcomeFlow";
+import PurchasePing from "@/components/PurchasePing";
 import { getAuthState } from "@/lib/auth";
 
 export default async function WelcomePage({
@@ -40,6 +41,7 @@ export default async function WelcomePage({
 
   return (
     <Suspense fallback={null}>
+      {params.session_id && <PurchasePing sessionId={params.session_id} />}
       <WelcomeFlow locale={locale}>
         <div className="max-w-2xl mx-auto text-center space-y-8 py-8">
           {/* Success checkmark */}

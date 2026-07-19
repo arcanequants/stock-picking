@@ -3,6 +3,7 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 import { sendFreeSignupAlertToAdmin } from "@/lib/resend";
 import { ADMIN_EMAIL } from "@/lib/admin";
 import { attachReferral } from "@/lib/referrals";
+import { sendMetaEvent, metaCookiesFromRequest } from "@/lib/meta-capi";
 
 export const dynamic = "force-dynamic";
 
@@ -108,6 +109,31 @@ export async function POST(request: Request) {
     if (refMatch) {
       await attachReferral(normalizedEmail, decodeURIComponent(refMatch[1]));
     }
+
+    // Ad attribution + server-side conversion event. Both best-effort:
+    // tracking must never block or break a signup.
+    const { fbp, fbc, attribution } = metaCookiesFromRequest(request);
+    if (attribution) {
+      // Column added by migration 037 — if it isn't applied yet this update
+      // fails quietly and signup continues unaffected.
+      supabase
+        .from("subscribers")
+        .update({ attribution })
+        .eq("email", normalizedEmail)
+        .then(({ error }) => {
+          if (error) console.error("attribution save failed:", error.message);
+        });
+    }
+    sendMetaEvent({
+      eventName: "CompleteRegistration",
+      email: normalizedEmail,
+      eventId: `reg-${normalizedEmail}`,
+      sourceUrl: "https://vectorialdata.com/join",
+      clientIp: request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? null,
+      userAgent: request.headers.get("user-agent"),
+      fbp,
+      fbc,
+    }).catch(() => {});
 
     // Fire-and-forget admin alert — never block signup on email failure.
     const totalFreeUsers = (allUsers?.users?.length ?? 0) + (userExists ? 0 : 1);

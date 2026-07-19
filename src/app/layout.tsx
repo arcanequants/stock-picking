@@ -11,6 +11,7 @@ import TrialBadge from "@/components/TrialBadge";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import CookieConsent from "@/components/CookieConsent";
+import AdPixels from "@/components/AdPixels";
 import SupabaseAuthListener from "@/components/SupabaseAuthListener";
 import { getAuthState } from "@/lib/auth";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -71,6 +72,13 @@ export async function generateMetadata(): Promise<Metadata> {
     ...(process.env.GOOGLE_SITE_VERIFICATION && {
       verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
     }),
+    // Meta Business Manager domain verification (paid ads). Set the env var
+    // with the code from Business Settings → Brand Safety → Domains.
+    ...(process.env.META_DOMAIN_VERIFICATION && {
+      other: {
+        "facebook-domain-verification": process.env.META_DOMAIN_VERIFICATION,
+      },
+    }),
   };
 }
 
@@ -107,6 +115,7 @@ export default async function RootLayout({
             </Script>
           </>
         )}
+        <AdPixels />
         <ThemeProvider>
           <SupabaseAuthListener />
           <NextIntlClientProvider messages={messages}>

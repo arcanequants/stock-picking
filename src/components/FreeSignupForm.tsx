@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { trackXSignup } from "@/lib/ad-client";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -47,6 +48,7 @@ export default function FreeSignupForm() {
         // ignore — they can still log in from the nav
       }
 
+      if (!data.already) trackXSignup(email.trim().toLowerCase());
       setStatus(data.already ? "already" : "success");
     } catch {
       setStatus("error");
