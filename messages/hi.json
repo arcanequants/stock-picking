@@ -1161,6 +1161,26 @@
     "moduleSave": "सहेजें",
     "moduleCancel": "रद्द करें",
     "moduleHint": "जब आप कोई pick खरीदी हुई mark करते हैं तो यही रक़म पहले से भरी आती है। नियमितता रक़म से जीतती है।",
-    "moduleReplayTutorial": "Tutorial फिर से देखें"
+    "moduleReplayTutorial": "Tutorial फिर से देखें",
+    "ladder1When": "महीना 1 से 4",
+    "ladder2When": "महीना 5 से 14",
+    "ladder3When": "जब भारी न लगे",
+    "ladderNote": "जब रक़म भारी लगना बंद हो जाए तब अगला कदम। कभी दबाव में नहीं।",
+    "prevName": "The Coca-Cola Company",
+    "prevTicker": "KO · Pick #132",
+    "prevOneLiner": "रोज़ 2.2 अरब drinks वाली कंपनी: लगातार 64 साल से लाभांश बढ़ा रही है। portfolio की स्थिर नींव।",
+    "prevRiskLabel": "जो जोखिम हम देखते हैं",
+    "prevRisk": "क़ीमत अब तक की सबसे ऊँचाई पर — कमाई का ~27 गुना।",
+    "prevValLabel": "Valuation और राय",
+    "prevVal": "24 analysts · राय: ख़रीदें · औसत target ~$87।",
+    "prevCert": "Blockchain पर प्रमाणित",
+    "proofTitle": "Portfolio,\nसबके सामने।",
+    "proofBody": "असली इतिहास, बिना काट-छाँट। हर खरीद उसी दिन digital notary से दर्ज होती है — वे भी जो घाटे में हैं।",
+    "proofHighlight": "घाटे वालियों को छिपाना पारदर्शिता नहीं होती।",
+    "proofReturn": "Return",
+    "proofPositions": "खरीदें",
+    "proofSince": "कब से",
+    "proofBest": "सबसे अच्छी",
+    "proofWorst": "सबसे खराब"
   }
 }

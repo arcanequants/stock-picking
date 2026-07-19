@@ -14,6 +14,7 @@ interface PickItem {
   return_pct: number;
   date: string;
   type: "new" | "rebuy";
+  one_liner?: string;
   status: "pending" | "bought" | "skipped";
   buy_price: number | null;
   amount_invested: number | null;
@@ -222,6 +223,11 @@ function PickCard({
           <p className="mt-1 text-xs text-text-faint font-mono">
             {t("pickNumber", { n: pick.pick_number })} · {pick.date} · ${pick.price_at_pick.toFixed(2)}
           </p>
+          {pick.one_liner && (
+            <p className="mt-2 text-sm text-text-secondary leading-snug max-w-xl">
+              {pick.one_liner}
+            </p>
+          )}
           <p className={`mt-1 text-sm font-mono ${positive ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}>
             {positive ? "+" : ""}
             {pick.return_pct.toFixed(2)}% {t("sincePick")}

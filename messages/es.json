@@ -1161,6 +1161,26 @@
     "moduleSave": "Guardar",
     "moduleCancel": "Cancelar",
     "moduleHint": "Este monto se prellena cuando marcas una elección como comprada. La constancia le gana al monto.",
-    "moduleReplayTutorial": "Ver tutorial otra vez"
+    "moduleReplayTutorial": "Ver tutorial otra vez",
+    "ladder1When": "mes 1 al 4",
+    "ladder2When": "mes 5 al 14",
+    "ladder3When": "cuando ya no lo sientas",
+    "ladderNote": "Subes de escalón cuando el monto ya no te pesa. Nunca por presión.",
+    "prevName": "The Coca-Cola Company",
+    "prevTicker": "KO · Pick #132",
+    "prevOneLiner": "La empresa de los 2,200 millones de bebidas al día: lleva 64 años seguidos subiendo su dividendo. El ancla estable del portafolio.",
+    "prevRiskLabel": "El riesgo que vigilamos",
+    "prevRisk": "Valuación en máximos históricos — se paga ~27 veces la utilidad.",
+    "prevValLabel": "Valuación y consenso",
+    "prevVal": "24 analistas · consenso Compra · target promedio ~$87.",
+    "prevCert": "Certificada en blockchain",
+    "proofTitle": "El portafolio,\na la vista.",
+    "proofBody": "Historial real, sin edición. Cada compra queda registrada con notario digital el día que se hace — también las que van mal.",
+    "proofHighlight": "Si te escondemos las perdedoras, no es transparencia.",
+    "proofReturn": "Rendimiento",
+    "proofPositions": "Compras",
+    "proofSince": "Desde",
+    "proofBest": "La mejor",
+    "proofWorst": "La peor"
   }
 }

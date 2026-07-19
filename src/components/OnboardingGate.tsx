@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
@@ -68,24 +68,35 @@ function OnboardingFlow({ onFinish, onSkip }: { onFinish: () => void; onSkip: ()
       title: t("s1Title"),
       body: t("s1Body"),
       highlight: t("s1Highlight"),
+      visual: null as ReactNode,
     },
     {
       icon: "🌱",
       title: t("s2Title"),
       body: t("s2Body"),
       highlight: t("s2Highlight"),
+      visual: <LadderVisual />,
     },
     {
       icon: "📄",
       title: t("s3Title"),
       body: t("s3Body"),
       highlight: t("s3Highlight"),
+      visual: <PickPreview />,
+    },
+    {
+      icon: "📈",
+      title: t("proofTitle"),
+      body: t("proofBody"),
+      highlight: t("proofHighlight"),
+      visual: <ProofVisual />,
     },
     {
       icon: "🤝",
       title: t("s4Title"),
       body: t("s4Body"),
       highlight: t("s4Legal"),
+      visual: <ThreeSteps />,
     },
   ];
 
@@ -93,23 +104,23 @@ function OnboardingFlow({ onFinish, onSkip }: { onFinish: () => void; onSkip: ()
 
   return (
     <div className="fixed inset-0 z-[70] bg-background flex flex-col overflow-y-auto">
-      <div className="flex-1 flex flex-col justify-center max-w-lg mx-auto w-full px-6 py-10">
+      <div className="flex-1 flex flex-col justify-center max-w-2xl mx-auto w-full px-6 py-10">
         {!isAmountStep ? (
           <div key={step} className="space-y-5">
             <div className="text-5xl">{slides[step].icon}</div>
             <h2 className="text-3xl font-bold whitespace-pre-line leading-tight">
               {slides[step].title}
             </h2>
-            <p className="text-text-secondary leading-relaxed">{slides[step].body}</p>
+            <p className="text-text-secondary leading-relaxed max-w-lg">{slides[step].body}</p>
             <p className="text-sm text-brand font-medium">{slides[step].highlight}</p>
-            {step === 3 && <ThreeSteps />}
+            {slides[step].visual}
           </div>
         ) : (
           <AmountStep onDone={onFinish} />
         )}
       </div>
 
-      <div className="max-w-lg mx-auto w-full px-6 pb-8 space-y-4">
+      <div className="max-w-2xl mx-auto w-full px-6 pb-8 space-y-4">
         {/* progress dots */}
         <div className="flex items-center justify-center gap-1.5">
           {[...slides, null].map((_, i) => (
@@ -123,7 +134,7 @@ function OnboardingFlow({ onFinish, onSkip }: { onFinish: () => void; onSkip: ()
         </div>
 
         {!isAmountStep && (
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 max-w-lg mx-auto w-full">
             <button
               onClick={onSkip}
               className="px-4 py-2.5 text-sm text-text-faint hover:text-text-muted transition-colors"
@@ -138,6 +149,122 @@ function OnboardingFlow({ onFinish, onSkip }: { onFinish: () => void; onSkip: ()
             </button>
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+/** Slide 2: the escalation ladder — start small, raise it in steps. */
+function LadderVisual() {
+  const t = useTranslations("Onboarding");
+  const rungs = [
+    { amount: "$2", when: t("ladder1When"), h: "h-10" },
+    { amount: "$5", when: t("ladder2When"), h: "h-16" },
+    { amount: "$50", when: t("ladder3When"), h: "h-24" },
+  ];
+  return (
+    <div className="border border-border rounded-xl p-5 max-w-lg">
+      <div className="flex items-end justify-around gap-4">
+        {rungs.map((r) => (
+          <div key={r.amount} className="flex flex-col items-center gap-2 flex-1">
+            <span className="font-mono font-bold text-foreground">{r.amount}</span>
+            <div className={`w-full ${r.h} rounded-t-lg bg-brand-subtle border border-brand/30`} />
+            <span className="text-xs text-text-faint text-center">{r.when}</span>
+          </div>
+        ))}
+      </div>
+      <p className="mt-4 text-xs text-text-faint text-center">{t("ladderNote")}</p>
+    </div>
+  );
+}
+
+/** Slide 3: a real pick, miniature — shows what "the full thesis" means. */
+function PickPreview() {
+  const t = useTranslations("Onboarding");
+  return (
+    <div className="border border-border rounded-xl p-5 max-w-lg space-y-3 bg-card-hover/30">
+      <div className="flex items-baseline gap-2 flex-wrap">
+        <span className="font-bold">{t("prevName")}</span>
+        <span className="font-mono text-sm text-text-muted">{t("prevTicker")}</span>
+      </div>
+      <p className="text-sm text-text-secondary leading-snug">{t("prevOneLiner")}</p>
+      <div className="space-y-2 text-sm">
+        <div className="flex gap-2">
+          <span aria-hidden>⚠️</span>
+          <p>
+            <span className="font-semibold">{t("prevRiskLabel")}: </span>
+            <span className="text-text-muted">{t("prevRisk")}</span>
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <span aria-hidden>📊</span>
+          <p>
+            <span className="font-semibold">{t("prevValLabel")}: </span>
+            <span className="text-text-muted">{t("prevVal")}</span>
+          </p>
+        </div>
+      </div>
+      <p className="inline-flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 rounded-full px-2.5 py-1">
+        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+        {t("prevCert")}
+      </p>
+    </div>
+  );
+}
+
+/** Slide 4: live proof — the real model portfolio, wins AND losses. */
+function ProofVisual() {
+  const t = useTranslations("Onboarding");
+  const [snap, setSnap] = useState<{
+    total_return_pct: number;
+    total_positions: number;
+    since: string;
+    best: { ticker: string; return_pct: number };
+    worst: { ticker: string; return_pct: number };
+  } | null>(null);
+
+  useEffect(() => {
+    fetch("/api/portfolio/snapshot")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setSnap(j))
+      .catch(() => {});
+  }, []);
+
+  if (!snap) {
+    return <div className="border border-border rounded-xl p-5 max-w-lg h-32 animate-pulse" />;
+  }
+
+  const fmt = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
+  const sinceYear = snap.since?.slice(0, 4) ?? "";
+
+  return (
+    <div className="border border-border rounded-xl p-5 max-w-lg space-y-4">
+      <div className="grid grid-cols-3 gap-3 text-center">
+        <div>
+          <p className={`text-xl font-bold font-mono ${snap.total_return_pct >= 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}>
+            {fmt(snap.total_return_pct)}
+          </p>
+          <p className="text-xs text-text-faint mt-1">{t("proofReturn")}</p>
+        </div>
+        <div>
+          <p className="text-xl font-bold font-mono">{snap.total_positions}</p>
+          <p className="text-xs text-text-faint mt-1">{t("proofPositions")}</p>
+        </div>
+        <div>
+          <p className="text-xl font-bold font-mono">{sinceYear}</p>
+          <p className="text-xs text-text-faint mt-1">{t("proofSince")}</p>
+        </div>
+      </div>
+      <div className="flex gap-3 text-xs font-mono justify-center flex-wrap">
+        <span className="border border-emerald-500/30 rounded-full px-2.5 py-1 text-emerald-600 dark:text-emerald-400">
+          {t("proofBest")}: {snap.best.ticker} {fmt(snap.best.return_pct)}
+        </span>
+        <span className="border border-red-500/30 rounded-full px-2.5 py-1 text-red-600 dark:text-red-400">
+          {t("proofWorst")}: {snap.worst.ticker} {fmt(snap.worst.return_pct)}
+        </span>
       </div>
     </div>
   );
@@ -323,12 +450,18 @@ function CoachTour({ onFinish }: { onFinish: () => void }) {
       }
     : null;
 
-  // Tooltip below the spotlight when there's room, else above; centered fallback.
+  // Tooltip below the spotlight when there's room, else above; horizontally
+  // anchored to the target's center, clamped to the viewport. Centered fallback.
+  const vw = window.innerWidth;
+  const tooltipW = Math.min(vw * 0.92, 380);
   const tooltipTop = spot
     ? spot.top + spot.height + 12 + 180 < window.innerHeight
       ? spot.top + spot.height + 12
       : Math.max(16, spot.top - 192)
     : window.innerHeight / 2 - 90;
+  const tooltipLeft = spot
+    ? Math.min(Math.max(spot.left + spot.width / 2 - tooltipW / 2, 16), vw - tooltipW - 16)
+    : (vw - tooltipW) / 2;
 
   return (
     <div className="fixed inset-0 z-[80]" onClick={advance} role="dialog" aria-modal="true">
@@ -350,8 +483,8 @@ function CoachTour({ onFinish }: { onFinish: () => void }) {
 
       {/* Tooltip */}
       <div
-        className="absolute left-1/2 -translate-x-1/2 w-[min(92vw,380px)] rounded-xl border border-emerald-400/40 bg-background p-4 space-y-2 shadow-2xl transition-all duration-300"
-        style={{ top: tooltipTop }}
+        className="absolute rounded-xl border border-emerald-400/40 bg-background p-4 space-y-2 shadow-2xl transition-all duration-300"
+        style={{ top: tooltipTop, left: tooltipLeft, width: tooltipW }}
         onClick={(e) => e.stopPropagation()}
       >
         <p className="text-xs font-mono text-text-faint">

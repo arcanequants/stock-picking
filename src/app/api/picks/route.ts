@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { getAuthedUser, getSupabaseAdmin } from "@/lib/supabase";
 import { getPicksData } from "@/lib/api-data";
+import { stocks } from "@/data/stocks";
+import momOverrides from "@/data/mom-overrides.json";
+import { localized } from "@/data/stock-translations";
+import { compactOneLiner } from "@/lib/mom-shorts";
+import { parseLocale } from "@/lib/locale";
 
 export const dynamic = "force-dynamic";
 
@@ -66,10 +72,22 @@ export async function GET(request: Request) {
     });
   }
 
+  // Locale for the mom-readable one-liner: site language cookie first
+  // (matches next-intl request config), Accept-Language as fallback.
+  const cookieLocale = (await cookies()).get("NEXT_LOCALE")?.value;
+  const locale = ["es", "en", "pt", "hi"].includes(cookieLocale ?? "")
+    ? (cookieLocale as string)
+    : parseLocale(request.headers.get("Accept-Language"));
+  const overrides = momOverrides as Record<string, { one_liner?: string }>;
+
   const enriched = picks.map((p) => {
     const decision = byPick.get(p.pick_number);
+    const stock = stocks.find((s) => s.ticker === p.ticker);
+    const oneLinerEs =
+      overrides[p.ticker]?.one_liner ?? compactOneLiner(stock?.summary_short);
     return {
       ...p,
+      one_liner: localized(p.ticker, "one_liner", locale, oneLinerEs),
       status: decision?.status ?? "pending",
       buy_price: decision?.buy_price ?? null,
       amount_invested: decision?.amount_invested ?? null,

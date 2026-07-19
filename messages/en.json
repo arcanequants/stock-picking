@@ -1161,6 +1161,26 @@
     "moduleSave": "Save",
     "moduleCancel": "Cancel",
     "moduleHint": "This amount pre-fills when you mark a pick as bought. Consistency beats size.",
-    "moduleReplayTutorial": "Watch the tutorial again"
+    "moduleReplayTutorial": "Watch the tutorial again",
+    "ladder1When": "months 1–4",
+    "ladder2When": "months 5–14",
+    "ladder3When": "when you no longer feel it",
+    "ladderNote": "You step up when the amount stops hurting. Never out of pressure.",
+    "prevName": "The Coca-Cola Company",
+    "prevTicker": "KO · Pick #132",
+    "prevOneLiner": "The company behind 2.2 billion drinks a day: 64 straight years raising its dividend. The portfolio's steady anchor.",
+    "prevRiskLabel": "The risk we watch",
+    "prevRisk": "Valuation at all-time highs — priced at ~27 times earnings.",
+    "prevValLabel": "Valuation & consensus",
+    "prevVal": "24 analysts · Buy consensus · avg. target ~$87.",
+    "prevCert": "Certified on the blockchain",
+    "proofTitle": "The portfolio,\nin plain sight.",
+    "proofBody": "Real history, unedited. Every buy is notarized digitally the day it happens — including the ones going badly.",
+    "proofHighlight": "Hiding the losers wouldn't be transparency.",
+    "proofReturn": "Return",
+    "proofPositions": "Buys",
+    "proofSince": "Since",
+    "proofBest": "Best",
+    "proofWorst": "Worst"
   }
 }
