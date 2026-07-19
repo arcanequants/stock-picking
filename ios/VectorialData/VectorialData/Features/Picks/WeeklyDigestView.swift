@@ -123,7 +123,7 @@ struct WeeklyDigestView: View {
         return fmt.string(from: cutoff)
     }
 
-    private func sectionHeader(title: String, count: Int, icon: String) -> some View {
+    private func sectionHeader(title: LocalizedStringKey, count: Int, icon: String) -> some View {
         HStack(spacing: 6) {
             Image(systemName: icon)
                 .font(.caption)

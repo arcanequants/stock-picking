@@ -6,12 +6,14 @@ enum AppTab: Hashable {
 
 struct MainTabView: View {
     @EnvironmentObject private var notifications: NotificationsManager
+    @Environment(\.vdSplashDone) private var splashDone
     @State private var selectedTab: AppTab = .home
     @AppStorage("vd.didFirstRunSetup") private var didFirstRunSetup = false
     @AppStorage("vd.didCoachTour") private var didCoachTour = false
     @State private var showFirstRun = false
     @State private var showTour = false
     @State private var showAmountEditor = false
+    @State private var coachTargets: [String: CGRect] = [:]
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -60,9 +62,11 @@ struct MainTabView: View {
         .task { routeToPendingTab() }
         // First run on this device: prime notifications, then set the consistent
         // per-buy amount. Both steps are skippable and shown only once.
-        .task {
-            if !didFirstRunSetup {
-                try? await Task.sleep(for: .seconds(0.6))
+        // Waits for the splash: a cover presented while the scene is still
+        // activating behind it is silently dropped on cold launches.
+        .task(id: splashDone) {
+            if splashDone && !didFirstRunSetup {
+                try? await Task.sleep(for: .seconds(0.4))
                 showFirstRun = true
             }
         }
@@ -75,14 +79,21 @@ struct MainTabView: View {
         // Coach-marks tour: once, right after first-run setup finishes (or on
         // this launch if setup already happened). "Ver tutorial" in Cuenta
         // flips didCoachTour back to false to replay it.
-        .task(id: showFirstRun) {
-            guard didFirstRunSetup, !didCoachTour, !showFirstRun else { return }
+        .task(id: "\(showFirstRun)-\(splashDone)") {
+            guard splashDone, didFirstRunSetup, !didCoachTour, !showFirstRun else { return }
             try? await Task.sleep(for: .seconds(0.8))
             withAnimation { showTour = true }
         }
         .onChange(of: didCoachTour) { _, done in
             if !done && didFirstRunSetup && !showFirstRun {
                 withAnimation { showTour = true }
+            }
+        }
+        // Spotlighted views report their global frames; keep the last known
+        // value so a tab switch mid-tour doesn't drop the rect.
+        .onPreferenceChange(CoachTargetKey.self) { targets in
+            Task { @MainActor in
+                coachTargets.merge(targets) { $1 }
             }
         }
         .overlay {
@@ -92,7 +103,8 @@ struct MainTabView: View {
                     onFinished: {
                         didCoachTour = true
                         withAnimation { showTour = false }
-                    }
+                    },
+                    firstCardFrame: coachTargets["first-pick"]
                 )
             }
         }

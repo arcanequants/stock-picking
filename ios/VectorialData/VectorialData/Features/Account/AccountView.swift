@@ -250,14 +250,14 @@ struct AccountView: View {
     }
 
     private var defaultInvestmentDisplay: String {
-        guard let amount = pickStatus.defaultInvestment else { return "No fijado" }
+        guard let amount = pickStatus.defaultInvestment else { return String(localized: "No fijado") }
         return formatAmount(amount)
     }
 
     private var defaultInvestmentSubtitle: String {
         pickStatus.defaultInvestment == nil
-            ? "Te lo preguntamos en cada pick"
-            : "Pre-rellenamos este monto"
+            ? String(localized: "Te lo preguntamos en cada pick")
+            : String(localized: "Pre-rellenamos este monto")
     }
 
     private func formatAmount(_ value: Double) -> String {

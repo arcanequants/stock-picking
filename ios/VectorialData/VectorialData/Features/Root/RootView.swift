@@ -1,5 +1,19 @@
 import SwiftUI
 
+/// Whether the launch splash has finished. First-run and the coach tour wait
+/// for it: a fullScreenCover presented while the scene is still activating
+/// behind the splash is silently dropped on cold launches.
+private struct SplashDoneKey: EnvironmentKey {
+    static let defaultValue = true
+}
+
+extension EnvironmentValues {
+    var vdSplashDone: Bool {
+        get { self[SplashDoneKey.self] }
+        set { self[SplashDoneKey.self] = newValue }
+    }
+}
+
 /// Top-level router. On launch it plays the animated owl splash over the
 /// resolving content, then reveals:
 ///   • signed-out  → onboarding (new users) with a sign-in escape hatch
@@ -13,6 +27,7 @@ struct RootView: View {
     var body: some View {
         ZStack {
             content
+                .environment(\.vdSplashDone, splashDone)
 
             if !splashDone {
                 LaunchSplashView {

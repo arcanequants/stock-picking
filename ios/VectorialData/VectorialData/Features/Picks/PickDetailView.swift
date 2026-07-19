@@ -480,7 +480,7 @@ struct PickDetailView: View {
                 }
             } label: {
                 HStack {
-                    Text(title.uppercased())
+                    Text(String(localized: String.LocalizationValue(title)).uppercased())
                         .font(.caption.weight(.semibold))
                         .tracking(1.1)
                         .foregroundStyle(.white.opacity(0.7))

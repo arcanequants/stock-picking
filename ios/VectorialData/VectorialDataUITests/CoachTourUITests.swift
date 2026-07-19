@@ -84,6 +84,67 @@ final class CoachTourUITests: XCTestCase {
         attach(app, name: "after-tour")
     }
 
+    /// Shell localization smoke test: under English, no Spanish leaks on the
+    /// main screens (nav title, section headers).
+    @MainActor
+    func testEnglishShellLocalized() throws {
+        let app = XCUIApplication()
+        app.launchArguments += [
+            "-vd.didFirstRunSetup", "YES",
+            "-vd.didCoachTour", "YES",
+            "-AppleLanguages", "(en)",
+            "-AppleLocale", "en_US",
+        ]
+        app.launch()
+        let tabs = app.tabBars.firstMatch
+        XCTAssertTrue(tabs.waitForExistence(timeout: 20), "not signed in? run the tour test first")
+
+        // The launch splash eats taps for a few seconds — retry until the
+        // picks content actually shows.
+        let pendingHeader = app.staticTexts["PENDING"].firstMatch
+        for _ in 0..<6 where !pendingHeader.exists {
+            tabs.buttons.element(boundBy: 2).tap()
+            _ = pendingHeader.waitForExistence(timeout: 3)
+        }
+        XCTAssertTrue(pendingHeader.exists,
+                      "PENDING header missing — Spanish leaking into en?")
+        XCTAssertTrue(app.navigationBars["Vectorial Picks"].firstMatch.waitForExistence(timeout: 5),
+                      "nav title not localized")
+        attach(app, name: "en-picks")
+
+        for (index, name) in [(3, "en-account"), (1, "en-portfolio"), (0, "en-home")] {
+            tabs.buttons.element(boundBy: index).tap()
+            sleep(1)
+            attach(app, name: name)
+        }
+    }
+
+    /// The real new-user sequence: first-run setup completes → tour fires by
+    /// itself. Run with app defaults cleared and NO launch-arg pins.
+    @MainActor
+    func testNaturalFirstRunThenTour() throws {
+        let app = XCUIApplication()
+        app.launchArguments += ["-AppleLanguages", "(es)", "-AppleLocale", "es_MX"]
+        app.launch()
+
+        // Trial step (if subscription state hasn't resolved) and notification
+        // priming both exit via "Ahora no".
+        let guardar = app.buttons["Guardar mi monto"].firstMatch
+        for _ in 0..<3 where !guardar.exists {
+            let ahoraNo = app.buttons["Ahora no"].firstMatch
+            if ahoraNo.waitForExistence(timeout: 15) { ahoraNo.tap() }
+            _ = guardar.waitForExistence(timeout: 5)
+        }
+        XCTAssertTrue(guardar.exists, "amount step never showed")
+        guardar.tap()
+
+        let skip = app.buttons["Saltar"].firstMatch
+        XCTAssertTrue(skip.waitForExistence(timeout: 10), "tour did not auto-fire after first-run")
+        sleep(1)
+        attach(app, name: "auto-tour-after-firstrun")
+        skip.tap()
+    }
+
     @MainActor
     private func attach(_ app: XCUIApplication, name: String) {
         let shot = XCTAttachment(screenshot: app.screenshot())

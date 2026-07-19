@@ -8,10 +8,15 @@ struct CoachTourView: View {
     /// Called with the tab the tour wants visible behind the overlay.
     var onSelectTab: (AppTab) -> Void
     var onFinished: () -> Void
+    /// Global frame of the first pending pick card, reported by PicksView via
+    /// `.coachTarget(...)` — free accounts have an upsell banner above the
+    /// list, so the card's position can't be approximated.
+    var firstCardFrame: CGRect?
 
     @State private var step = 0
 
     private struct Step {
+        let icon: String
         let title: LocalizedStringKey
         let message: LocalizedStringKey
         let target: Target
@@ -20,18 +25,22 @@ struct CoachTourView: View {
     }
 
     private let steps: [Step] = [
-        Step(title: "📥 Aquí llegan tus picks",
+        Step(icon: "📥",
+             title: "Aquí llegan tus picks",
              message: "Cuando haya una compra que valga la pena, te avisamos y aparece en Elecciones.",
-             target: .tabItem(2), tab: nil),
-        Step(title: "🏦 Compra en tu broker, márcala aquí",
+             target: .tabItem(2), tab: .home),
+        Step(icon: "🏦",
+             title: "Compra en tu broker, márcala aquí",
              message: "La compra la haces en tu broker. Luego tócala aquí y la marcas — así seguimos tu portafolio real.",
              target: .contentCard, tab: .picks),
-        Step(title: "📈 Tu portafolio, en vivo",
+        Step(icon: "📈",
+             title: "Tu portafolio, en vivo",
              message: "El historial completo de Vectorial y el tuyo con lo que has comprado — solo porcentajes, sin humo.",
-             target: .tabItem(1), tab: nil),
-        Step(title: "⚙️ Tu monto y tu plan",
+             target: .tabItem(1), tab: .portfolio),
+        Step(icon: "⚙️",
+             title: "Tu monto y tu plan",
              message: "Cambia tu monto por compra, repasa la filosofía y maneja tu suscripción.",
-             target: .tabItem(3), tab: nil),
+             target: .tabItem(3), tab: .account),
     ]
 
     var body: some View {
@@ -70,6 +79,8 @@ struct CoachTourView: View {
             .animation(.spring(duration: 0.4), value: step)
         }
         .transition(.opacity)
+        // Replay can start from any tab — force the one step 1 talks about.
+        .onAppear { if let tab = steps[0].tab { onSelectTab(tab) } }
     }
 
     private func advance() {
@@ -99,7 +110,15 @@ struct CoachTourView: View {
                           y: geo.size.height - 45,
                           width: 80, height: 54)
         case .contentCard:
-            // First pick card, right below the large-title header.
+            // Prefer the real card frame reported by PicksView (free accounts
+            // have an upsell banner above the list that shifts it down).
+            if let global = firstCardFrame, !global.isEmpty {
+                let origin = geo.frame(in: .global).origin
+                return global
+                    .offsetBy(dx: -origin.x, dy: -origin.y)
+                    .insetBy(dx: -4, dy: -4)
+            }
+            // Fallback: first card right below the large-title header.
             return CGRect(x: 15, y: 155, width: w - 30, height: 88)
         }
     }
@@ -109,9 +128,15 @@ struct CoachTourView: View {
         let above = rect.midY > geo.size.height * 0.55
         let tipWidth: CGFloat = min(258, geo.size.width - 36)
         VStack(alignment: .leading, spacing: 4) {
-            Text(s.title)
-                .font(.subheadline.weight(.bold))
-                .foregroundStyle(.white)
+            // Icon outside the title Text so a wrapping title stays aligned
+            // under its own first word, not under the emoji.
+            HStack(alignment: .firstTextBaseline, spacing: 7) {
+                Text(s.icon)
+                Text(s.title)
+                    .font(.subheadline.weight(.bold))
+                    .foregroundStyle(.white)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
             Text(s.message)
                 .font(.footnote)
                 .foregroundStyle(Color(red: 0.79, green: 0.84, blue: 0.81))
@@ -144,6 +169,32 @@ struct CoachTourView: View {
             x: min(max(tipWidth / 2 + 16, rect.midX), geo.size.width - tipWidth / 2 - 16),
             y: above ? rect.minY - 86 : rect.maxY + 96
         )
+    }
+}
+
+/// Views the coach tour spotlights report their global frame under a string
+/// id; MainTabView collects them and hands them to CoachTourView.
+struct CoachTargetKey: PreferenceKey {
+    static let defaultValue: [String: CGRect] = [:]
+    static func reduce(value: inout [String: CGRect], nextValue: () -> [String: CGRect]) {
+        value.merge(nextValue()) { $1 }
+    }
+}
+
+extension View {
+    /// Report this view's global frame as a coach-tour target.
+    @ViewBuilder
+    func coachTarget(_ id: String, active: Bool = true) -> some View {
+        if active {
+            background(
+                GeometryReader { g in
+                    Color.clear.preference(key: CoachTargetKey.self,
+                                           value: [id: g.frame(in: .global)])
+                }
+            )
+        } else {
+            self
+        }
     }
 }
 

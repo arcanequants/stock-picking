@@ -93,14 +93,14 @@ private struct NewsRow: View {
     private func relativeDate(_ iso: String) -> String {
         guard let date = NewsItem.parseISO(iso) else { return "" }
         let secs = Date().timeIntervalSince(date)
-        if secs < 60 { return "ahora" }
-        if secs < 3600 { return "hace \(Int(secs/60))m" }
-        if secs < 86400 { return "hace \(Int(secs/3600))h" }
+        if secs < 60 { return String(localized: "ahora") }
+        if secs < 3600 { return String(localized: "hace \(Int(secs/60))m") }
+        if secs < 86400 { return String(localized: "hace \(Int(secs/3600))h") }
         let days = Int(secs / 86400)
-        if days == 1 { return "ayer" }
-        if days < 7 { return "hace \(days)d" }
+        if days == 1 { return String(localized: "ayer") }
+        if days < 7 { return String(localized: "hace \(days)d") }
         let f = DateFormatter()
-        f.locale = Locale(identifier: "es")
+        f.locale = Locale.current
         f.dateFormat = "d MMM"
         return f.string(from: date)
     }
