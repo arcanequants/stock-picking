@@ -130,6 +130,7 @@ export default async function RootLayout({
                     </Link>
                     <Link
                       href="/portfolio"
+                      data-tour="nav-portfolio"
                       className="text-text-muted hover:text-foreground transition-colors"
                     >
                       {t("portfolio")}

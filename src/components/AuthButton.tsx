@@ -57,6 +57,7 @@ export default function AuthButton({
       <div className="relative">
         <button
           onClick={() => setShowMenu(!showMenu)}
+          data-tour="nav-account"
           className="text-sm text-text-muted hover:text-foreground transition-colors flex items-center gap-1"
         >
           <svg

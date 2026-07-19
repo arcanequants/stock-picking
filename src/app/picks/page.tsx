@@ -6,6 +6,9 @@ import { stocks, transactions } from "@/data/stocks";
 import { localized } from "@/data/stock-translations";
 import PremiumGate from "@/components/PremiumGate";
 import FreeSignupForm from "@/components/FreeSignupForm";
+import PicksFeed from "@/components/PicksFeed";
+import OnboardingGate from "@/components/OnboardingGate";
+import { Suspense } from "react";
 import type { Stock, Transaction } from "@/lib/types";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -65,7 +68,8 @@ function PicksRows({
 
 export default async function PicksPage() {
   const locale = await getLocale();
-  const { isSubscribed } = await getAuthState();
+  const { user, isSubscribed } = await getAuthState();
+  const isAuthed = user !== null;
   const t = await getTranslations("PicksFeed");
   const tP = await getTranslations("Portfolio");
   const tPremium = await getTranslations("Premium");
@@ -117,8 +121,24 @@ export default async function PicksPage() {
         </section>
       )}
 
-      {/* Past picks — full history for subscribers, partial + fade for free */}
-      {rest.length > 0 && (
+      {/* Authed: interactive feed — mark each pick bought/skipped, builds the
+          personal portfolio. Replaces the static history below. */}
+      {isAuthed && (
+        <>
+          <section>
+            <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
+              {t("yourFeedHeader")}
+            </h3>
+            <PicksFeed />
+          </section>
+          <Suspense fallback={null}>
+            <OnboardingGate />
+          </Suspense>
+        </>
+      )}
+
+      {/* Anonymous: static history — partial + premium fade */}
+      {!isAuthed && rest.length > 0 && (
         <section className="border border-border rounded-xl p-5">
           <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">{t("pastPicks")}</h3>
           <PicksRows rows={freeRows} labels={labels} />

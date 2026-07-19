@@ -16,7 +16,7 @@ export async function GET(request: Request) {
   const { data: subscriber } = await getSupabaseAdmin()
     .from("subscribers")
     .select(
-      "email, subscription_status, delivery_channel, created_at, current_period_end"
+      "email, subscription_status, delivery_channel, created_at, current_period_end, default_investment"
     )
     .eq("email", authed.email)
     .single();
@@ -29,6 +29,7 @@ export async function GET(request: Request) {
     is_subscribed: isSubscribed,
     subscription_status: status,
     delivery_channel: subscriber?.delivery_channel ?? null,
+    default_investment: subscriber?.default_investment ?? null,
     locale: null,
     created_at: subscriber?.created_at ?? null,
     current_period_end: subscriber?.current_period_end ?? null,

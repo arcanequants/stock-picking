@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import DcaCalculator from "@/components/DcaCalculator";
+import InvestmentAmountModule from "@/components/InvestmentAmountModule";
 import AccountActions from "@/components/AccountActions";
 import ReferralCard from "@/components/ReferralCard";
 import { getAuthState } from "@/lib/auth";
@@ -25,6 +26,7 @@ export default async function AccountPage() {
   const t = await getTranslations("Welcome");
   const tAccount = await getTranslations("Account");
   const tReferral = await getTranslations("Referral");
+  const tOnboarding = await getTranslations("Onboarding");
 
   const referralLabels = {
     title: tReferral("title"),
@@ -59,6 +61,12 @@ export default async function AccountPage() {
       <section className="border border-border rounded-2xl p-6">
         <h2 className="font-semibold mb-2">{t("deliveryTitle")}</h2>
         <p className="text-sm text-text-muted">{t("channelEmailDesc")}</p>
+      </section>
+
+      {/* Per-buy amount (default_investment) + tutorial replay */}
+      <section className="border border-border rounded-2xl p-6">
+        <h2 className="font-semibold mb-3">{tOnboarding("moduleTitle")}</h2>
+        <InvestmentAmountModule />
       </section>
 
       {/* DCA rule */}

@@ -8,6 +8,8 @@ import PortfolioDividendsSummary from "@/components/PortfolioDividendsSummary";
 import PremiumGate from "@/components/PremiumGate";
 import FreeSignupForm from "@/components/FreeSignupForm";
 import LoginExpiredBanner from "@/components/LoginExpiredBanner";
+import PortfolioTabs from "@/components/PortfolioTabs";
+import OnboardingGate from "@/components/OnboardingGate";
 import { Suspense } from "react";
 import { stocks, transactions, cycles } from "@/data/stocks";
 import Link from "next/link";
@@ -57,6 +59,20 @@ export default async function PortfolioPage() {
   const freeTransactions = transactions.slice(0, 3);
   const hasPremiumTransactions = transactions.length > 3;
 
+  const modelContent = (
+    <ModelContent
+      isSubscribed={isSubscribed}
+      t={t}
+      tPremium={tPremium}
+      tFree={tFree}
+      tLegal={tLegal}
+      currentCycle={currentCycle}
+      activeStocks={activeStocks}
+      freeTransactions={freeTransactions}
+      hasPremiumTransactions={hasPremiumTransactions}
+    />
+  );
+
   return (
     <div className="space-y-10">
       {showUkBanner && (
@@ -104,6 +120,42 @@ export default async function PortfolioPage() {
         </Link>
       </section>
 
+      {/* Model portfolio content — for authed users it lives inside the
+          Modelo/Mi portafolio tabs; anonymous visitors see it directly. */}
+      {isAuthed ? (
+        <PortfolioTabs>{modelContent}</PortfolioTabs>
+      ) : (
+        modelContent
+      )}
+
+      <Suspense fallback={null}><OnboardingGate /></Suspense>
+    </div>
+  );
+}
+
+function ModelContent({
+  isSubscribed,
+  t,
+  tPremium,
+  tFree,
+  tLegal,
+  currentCycle,
+  activeStocks,
+  freeTransactions,
+  hasPremiumTransactions,
+}: {
+  isSubscribed: boolean;
+  t: Awaited<ReturnType<typeof getTranslations>>;
+  tPremium: Awaited<ReturnType<typeof getTranslations>>;
+  tFree: Awaited<ReturnType<typeof getTranslations>>;
+  tLegal: Awaited<ReturnType<typeof getTranslations>>;
+  currentCycle: (typeof cycles)[number] | null;
+  activeStocks: typeof stocks;
+  freeTransactions: typeof transactions;
+  hasPremiumTransactions: boolean;
+}) {
+  return (
+    <div className="space-y-10">
       {/* Curated events — top 1-2 severity≥4 movements. Hides if none. */}
       <Suspense fallback={null}><PortfolioEventsHero /></Suspense>
 
