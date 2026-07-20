@@ -7,6 +7,7 @@ import com.vectorialdata.app.core.model.UserProfile
 import com.vectorialdata.app.core.net.ApiClient
 import com.vectorialdata.app.core.net.ApiError
 import com.vectorialdata.app.core.net.EmptyResponse
+import com.vectorialdata.app.core.notifications.NotificationsManager
 import com.vectorialdata.app.core.store.DividendStore
 import com.vectorialdata.app.core.store.NewsStore
 import com.vectorialdata.app.core.store.PickStatusStore
@@ -178,12 +179,16 @@ object AuthManager {
     // ---- Sign-out / delete ----------------------------------------------------
 
     suspend fun signOut() {
-        // TODO(M-push): unregister this device's push token before clearing.
+        // Unregister the push token while we still hold a valid bearer, so
+        // this device stops receiving the signed-out user's notifications.
+        NotificationsManager.unregister()
         clearSession()
     }
 
     /** Permanently deletes the account on the server, then wipes local session. */
     suspend fun deleteAccount() {
+        // Same as sign-out: drop the token before the account disappears.
+        NotificationsManager.unregister()
         ApiClient.post<Unit, EmptyResponse>("/api/account/delete", Unit)
         clearSession()
     }
@@ -214,6 +219,8 @@ object AuthManager {
         NewsStore.reset()
         resetHomeCaches()
         resetPortfolioCache()
+        // A tapped push from the previous session must not route the next user.
+        NotificationsManager.clearPending()
     }
 
     private suspend fun refreshProfile() {
@@ -221,6 +228,8 @@ object AuthManager {
             val me = ApiClient.get<UserProfile>("/api/me")
             _currentUser.value = me
             _state.value = AuthState.SIGNED_IN
+            // Re-attach this device's push token to the now-signed-in user.
+            NotificationsManager.refreshRegistrationIfEnabled()
         } catch (e: ApiError.Unauthorized) {
             // The token is truly dead (ApiClient already tried a refresh-and-
             // replay before surfacing this) — only now is a sign-out correct.

@@ -33,6 +33,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -53,6 +54,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.vectorialdata.app.R
 import com.vectorialdata.app.core.model.Pick
 import com.vectorialdata.app.core.model.PickStatus
+import com.vectorialdata.app.core.notifications.NotificationsManager
 import com.vectorialdata.app.core.store.PickStatusStore
 import com.vectorialdata.app.core.util.Formatters
 import com.vectorialdata.app.feature.common.VDCard
@@ -72,9 +74,28 @@ fun PicksScreen(modifier: Modifier = Modifier) {
 
     // 0 = list; otherwise the open pick's number (mirror of NavigationStack push).
     var openPickNumber by rememberSaveable { mutableIntStateOf(0) }
+    var showDigest by rememberSaveable { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         if (PickStatusStore.picks.value.isEmpty()) PickStatusStore.load()
+    }
+
+    // Push-tap payloads (consumed once, then cleared — mirror of iOS PicksView).
+    val pendingPick by NotificationsManager.pendingPickNumber.collectAsStateWithLifecycle()
+    val pendingDigest by NotificationsManager.pendingWeeklyDigest.collectAsStateWithLifecycle()
+    LaunchedEffect(pendingPick) {
+        pendingPick?.let {
+            showDigest = false
+            openPickNumber = it
+            NotificationsManager.pendingPickNumber.value = null
+        }
+    }
+    LaunchedEffect(pendingDigest) {
+        if (pendingDigest) {
+            openPickNumber = 0
+            showDigest = true
+            NotificationsManager.pendingWeeklyDigest.value = false
+        }
     }
 
     if (openPickNumber != 0) {
@@ -82,6 +103,15 @@ fun PicksScreen(modifier: Modifier = Modifier) {
         PickDetailScreen(
             pickNumber = openPickNumber,
             onBack = { openPickNumber = 0 },
+            modifier = modifier,
+        )
+        return
+    }
+
+    if (showDigest) {
+        WeeklyDigestScreen(
+            onBack = { showDigest = false },
+            onOpenPick = { openPickNumber = it },
             modifier = modifier,
         )
         return

@@ -23,10 +23,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -45,9 +47,12 @@ import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.LatestPick
 import com.vectorialdata.app.core.model.MarketStatus
 import com.vectorialdata.app.core.model.PortfolioSnapshot
+import com.vectorialdata.app.core.model.NewsItem
 import com.vectorialdata.app.core.net.ApiClient
+import com.vectorialdata.app.core.notifications.NotificationsManager
 import com.vectorialdata.app.core.store.NewsStore
 import com.vectorialdata.app.core.util.Formatters
+import com.vectorialdata.app.feature.news.NewsDetailScreen
 import com.vectorialdata.app.feature.news.NewsListScreen
 import com.vectorialdata.app.feature.common.VDCard
 import com.vectorialdata.app.ui.theme.BrandEmerald
@@ -103,10 +108,28 @@ fun HomeScreen(modifier: Modifier = Modifier) {
     val scope = rememberCoroutineScope()
 
     var showNews by rememberSaveable { mutableStateOf(false) }
+    var openNews by remember { mutableStateOf<NewsItem?>(null) }
 
     LaunchedEffect(Unit) {
         HomeState.load()
         if (NewsStore.items.value.isEmpty()) NewsStore.load()
+    }
+
+    // News push tap → open that item's detail directly (mirror of iOS
+    // HomeView.handlePendingNews). Consumed once, then cleared.
+    val pendingNewsId by NotificationsManager.pendingNewsId.collectAsStateWithLifecycle()
+    LaunchedEffect(pendingNewsId) {
+        val id = pendingNewsId ?: return@LaunchedEffect
+        if (NewsStore.items.value.isEmpty()) NewsStore.load()
+        NewsStore.items.value.firstOrNull { it.id == id }?.let { openNews = it }
+        NotificationsManager.pendingNewsId.value = null
+    }
+
+    val openItem = openNews
+    if (openItem != null) {
+        BackHandler { openNews = null }
+        NewsDetailScreen(item = openItem, onBack = { openNews = null }, modifier = modifier)
+        return
     }
 
     if (showNews) {

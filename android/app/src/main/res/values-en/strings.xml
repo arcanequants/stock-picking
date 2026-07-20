@@ -230,4 +230,35 @@
         <item quantity="one">%1$d buy</item>
         <item quantity="other">%1$d buys</item>
     </plurals>
+
+    <!-- M5 · Push notifications -->
+    <string name="notif_channel_name">Notifications</string>
+    <string name="account_notifications_header">NOTIFICATIONS</string>
+    <string name="account_notifications_enabled">Enabled</string>
+    <string name="account_notifications_disabled">Disabled</string>
+    <string name="account_notifications_enable">Enable</string>
+    <string name="account_notifications_body">We\'ll let you know when a new pick lands.</string>
+
+    <!-- M5 · Weekly digest -->
+    <string name="digest_title">Weekly recap</string>
+    <string name="digest_header">This week at Vectorial</string>
+    <string name="digest_bought_header">YOU BOUGHT</string>
+    <string name="digest_pending_header">STILL TO DECIDE</string>
+    <string name="digest_up_to_date_suffix">all caught up on picks</string>
+    <string name="digest_no_moves">No moves this week</string>
+    <string name="digest_caught_up_title">All caught up</string>
+    <string name="digest_caught_up_body">No pending picks and nothing new landed this week. Enjoy your Friday.</string>
+    <string name="digest_goes">now %1$s</string>
+    <plurals name="digest_bought_count">
+        <item quantity="one">%d bought</item>
+        <item quantity="other">%d bought</item>
+    </plurals>
+    <plurals name="digest_pending_count">
+        <item quantity="one">%d pending</item>
+        <item quantity="other">%d pending</item>
+    </plurals>
+    <plurals name="digest_pick_pending_count">
+        <item quantity="one">%d pick pending</item>
+        <item quantity="other">%d picks pending</item>
+    </plurals>
 </resources>

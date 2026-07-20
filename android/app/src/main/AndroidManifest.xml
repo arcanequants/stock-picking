@@ -31,5 +31,21 @@
                 <data android:scheme="vectorialdata" />
             </intent-filter>
         </activity>
+
+        <!-- M5 push: FCM token rotations + foreground message display. -->
+        <service
+            android:name=".core.notifications.PushMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="vd_default" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_notify" />
     </application>
 </manifest>
