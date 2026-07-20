@@ -16,6 +16,17 @@ export interface GscPageRow {
   impressions: number;
 }
 
+export interface SubdomainReportInput {
+  /** Human label, e.g. "terminal.vectorialdata.com" */
+  label: string;
+  /** When true, render top queries/pages for this subdomain (or "sin datos aún"). */
+  detail?: boolean;
+  currentTotals: { clicks: number; impressions: number };
+  previousTotals: { clicks: number; impressions: number };
+  currentQueries: GscQueryRow[];
+  currentPages: GscPageRow[];
+}
+
 export interface PropertyReportInput {
   /** Human label, e.g. "vectorialdata.com" */
   label: string;
@@ -26,6 +37,23 @@ export interface PropertyReportInput {
   currentQueries: GscQueryRow[];
   previousQueries: GscQueryRow[];
   currentPages: GscPageRow[];
+  /**
+   * Optional split of the same property (e.g. main site vs terminal subdomain).
+   * The property totals above stay combined for historic comparability; these
+   * render as an extra breakdown below them.
+   */
+  subdomains?: SubdomainReportInput[];
+}
+
+export interface SubdomainSummary {
+  label: string;
+  detail: boolean;
+  clicks: number;
+  impressions: number;
+  clicksDeltaPct: number | null;
+  impressionsDeltaPct: number | null;
+  topQueries: GscQueryRow[];
+  topPages: GscPageRow[];
 }
 
 export interface PropertySummary {
@@ -45,6 +73,8 @@ export interface PropertySummary {
   topPages: GscPageRow[];
   /** One-line "qué significa" heuristic in Spanish. */
   insight: string;
+  /** Optional subdomain breakdown (rendered below the combined totals). */
+  subdomains?: SubdomainSummary[];
 }
 
 function deltaPct(current: number, previous: number): number | null {
@@ -105,6 +135,19 @@ export function computePropertySummary(input: PropertyReportInput): PropertySumm
     parts.push(`${newQueries.length} consulta${newQueries.length === 1 ? "" : "s"} nueva${newQueries.length === 1 ? "" : "s"} esta semana.`);
   }
 
+  const subdomains = input.subdomains?.map((s): SubdomainSummary => ({
+    label: s.label,
+    detail: s.detail ?? false,
+    clicks: s.currentTotals.clicks,
+    impressions: s.currentTotals.impressions,
+    clicksDeltaPct: deltaPct(s.currentTotals.clicks, s.previousTotals.clicks),
+    impressionsDeltaPct: deltaPct(s.currentTotals.impressions, s.previousTotals.impressions),
+    topQueries: [...s.currentQueries].sort((a, b) => b.impressions - a.impressions).slice(0, 5),
+    topPages: [...s.currentPages]
+      .sort((a, b) => b.clicks - a.clicks || b.impressions - a.impressions)
+      .slice(0, 5),
+  }));
+
   return {
     label: input.label,
     clicks: currentTotals.clicks,
@@ -116,6 +159,7 @@ export function computePropertySummary(input: PropertyReportInput): PropertySumm
     page2Candidates,
     topPages,
     insight: parts.join(" "),
+    subdomains,
   };
 }
 
@@ -167,9 +211,9 @@ function queriesTable(title: string, rows: GscQueryRow[], emptyMsg: string): str
 </table>`;
 }
 
-function pagesTable(rows: GscPageRow[]): string {
+function pagesTable(rows: GscPageRow[], title = "Páginas principales"): string {
   if (rows.length === 0) {
-    return `<p style="margin:16px 0 4px;font-size:13px;font-weight:600;color:#374151;">Páginas principales</p>
+    return `<p style="margin:16px 0 4px;font-size:13px;font-weight:600;color:#374151;">${esc(title)}</p>
 <p style="margin:0;font-size:13px;color:#9ca3af;">Sin datos de páginas esta semana.</p>`;
   }
   const body = rows
@@ -182,11 +226,39 @@ function pagesTable(rows: GscPageRow[]): string {
 </tr>`;
     })
     .join("");
-  return `<p style="margin:16px 0 4px;font-size:13px;font-weight:600;color:#374151;">Páginas principales</p>
+  return `<p style="margin:16px 0 4px;font-size:13px;font-weight:600;color:#374151;">${esc(title)}</p>
 <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
   <tr><th style="${TH}">Página</th><th style="${TH}text-align:right;">Clics</th><th style="${TH}text-align:right;">Impresiones</th></tr>
   ${body}
 </table>`;
+}
+
+function subdomainBreakdown(subs: SubdomainSummary[]): string {
+  const rows = subs
+    .map(
+      (s) => `<tr>
+  <td style="${TD}">${esc(s.label)}</td>
+  <td style="${TD_NUM}">${fmtInt(s.clicks)} ${fmtDelta(s.clicksDeltaPct)}</td>
+  <td style="${TD_NUM}">${fmtInt(s.impressions)} ${fmtDelta(s.impressionsDeltaPct)}</td>
+</tr>`
+    )
+    .join("");
+  const detailBlocks = subs
+    .filter((s) => s.detail)
+    .map((s) => {
+      if (s.impressions <= 0) {
+        return `<p style="margin:12px 0 0;font-size:13px;color:#9ca3af;">${esc(s.label)}: sin datos aún — Google todavía no muestra este subdominio en resultados.</p>`;
+      }
+      return `${queriesTable(`${s.label} — top consultas`, s.topQueries, "Sin consultas registradas esta semana.")}
+${pagesTable(s.topPages, `${s.label} — páginas principales`)}`;
+    })
+    .join("");
+  return `<p style="margin:16px 0 4px;font-size:13px;font-weight:600;color:#374151;">Desglose por subdominio</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+  <tr><th style="${TH}">Subdominio</th><th style="${TH}text-align:right;">Clics</th><th style="${TH}text-align:right;">Impresiones</th></tr>
+  ${rows}
+</table>
+${detailBlocks}`;
 }
 
 function propertySection(s: PropertySummary): string {
@@ -206,6 +278,7 @@ function propertySection(s: PropertySummary): string {
     </tr>
   </table>
   <p style="margin:10px 0 0;font-size:13px;line-height:1.5;color:#374151;"><strong>Qué significa:</strong> ${esc(s.insight)}</p>
+  ${s.subdomains && s.subdomains.length > 0 ? subdomainBreakdown(s.subdomains) : ""}
   ${queriesTable("Top 5 consultas (por impresiones)", s.topQueries, "Sin consultas registradas esta semana.")}
   ${queriesTable("Consultas nuevas esta semana", s.newQueries, "Ninguna consulta nueva vs. la semana anterior.")}
   ${queriesTable("Oportunidades de página 2 (posición 8–25, ≥5 impresiones)", s.page2Candidates, "Ninguna consulta en rango de página 2 todavía.")}
