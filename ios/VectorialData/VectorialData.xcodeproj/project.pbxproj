@@ -51,17 +51,20 @@
 		AEECABCE4060F297AC915A99 /* PickBuySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1BCC5FD3CD089181E6608E /* PickBuySheet.swift */; };
 		AF38DA12F4616D318DDA680A /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC7DF01DAD9CEE5253E3EE /* NewsDetailView.swift */; };
 		B1451BD4642DBEBD8394A0E1 /* PickActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240CB1FDA7751B227248915 /* PickActivityAttributes.swift */; };
+		B329D69B2AD9906ED810908C /* NewsPrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6075ECD3506DF0358BE0E107 /* NewsPrefsView.swift */; };
 		B75697E7774B515FA79D1728 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2153A56ED3B466C3D79B6813 /* PaywallView.swift */; };
 		B7A1C5629877333DF22B652A /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE44B5DFC2F78E53E11663 /* Pick.swift */; };
 		C1A59750F67587F294CE8B17 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65A381D9042A688E480D0F /* NewsListView.swift */; };
 		C3AF5A03305B6EA4F84F6932 /* PicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA83372C812B3CD0F43FA4ED /* PicksView.swift */; };
 		C4F0FC9607DC8FC3194D4E57 /* CoachTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B627F1668F0769298F747EA /* CoachTourView.swift */; };
 		CD5187543B275EE3083B6DB7 /* PortfolioSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095839A24B3CC3A03AD0D02 /* PortfolioSnapshot.swift */; };
+		CE4B0ED89C667FD8C2FB4AE6 /* NewsWowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D335ED94C26510847FA20CF /* NewsWowUITests.swift */; };
 		DF46A23D618595C358585837 /* PriorHoldingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695CC3305AB75BDAF9415E78 /* PriorHoldingsStore.swift */; };
 		E00B7B4841E48E9EA27B9892 /* OwlReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D1D7BFB3A4618BC9761A6 /* OwlReveal.swift */; };
 		E590808D562222E17AC325C1 /* PerformanceChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2763080A45A8B9800ED6F2 /* PerformanceChart.swift */; };
 		E6C2129AECFC143477E9C091 /* PortfolioHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A3172884B277D3A9C65378 /* PortfolioHistory.swift */; };
 		F37EBB33990CBB056ECC618F /* AllocationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0587E8F1DD17C83080521 /* AllocationSection.swift */; };
+		F53FE09215E51350F727A565 /* NewsChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237B46D002AFB2F45489C23 /* NewsChatView.swift */; };
 		FC94DD3672CE56CD7316CB37 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820C026C9E6BED77E2FAB77A /* WidgetBundle.swift */; };
 		FD4DE857EE7CB14865A45D21 /* PortfolioSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095839A24B3CC3A03AD0D02 /* PortfolioSnapshot.swift */; };
 		FF5D31F64A41E364002F55B3 /* CoachTourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFEA529D0C29E8782D98C20 /* CoachTourUITests.swift */; };
@@ -114,10 +117,12 @@
 		3D9CD8BD67A0E6197487EC73 /* VectorialData.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VectorialData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4586F5C2A73ABF34E95CF6B7 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		55080DD2AC6AC1F15A0B5AE0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6075ECD3506DF0358BE0E107 /* NewsPrefsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPrefsView.swift; sourceTree = "<group>"; };
 		609562D05362C2597337DA83 /* VectorialDataUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VectorialDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		695CC3305AB75BDAF9415E78 /* PriorHoldingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHoldingsStore.swift; sourceTree = "<group>"; };
 		6A17395E2504FDA008D3BE8E /* PickDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDetailView.swift; sourceTree = "<group>"; };
 		6A1BCC5FD3CD089181E6608E /* PickBuySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickBuySheet.swift; sourceTree = "<group>"; };
+		6D335ED94C26510847FA20CF /* NewsWowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWowUITests.swift; sourceTree = "<group>"; };
 		7839984778A3BECA5F20ACEE /* WeeklyDigestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyDigestView.swift; sourceTree = "<group>"; };
 		820C026C9E6BED77E2FAB77A /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
 		859B3769550D3ADC64FD4386 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 		8939BF169D4D9B3067A6FCD5 /* NotificationPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPrimingView.swift; sourceTree = "<group>"; };
 		8945448517C9F82AE56E6CD0 /* DividendStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendStore.swift; sourceTree = "<group>"; };
 		919CB40028266953070F20DE /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		9237B46D002AFB2F45489C23 /* NewsChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsChatView.swift; sourceTree = "<group>"; };
 		979511B65522219EA59DA2A9 /* PriorHolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorHolding.swift; sourceTree = "<group>"; };
 		97A3172884B277D3A9C65378 /* PortfolioHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHistory.swift; sourceTree = "<group>"; };
 		98887C25CFE785B9ABFE0947 /* PersonalPerformanceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPerformanceCard.swift; sourceTree = "<group>"; };
@@ -174,8 +180,10 @@
 		225C8318C536036629B36976 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				9237B46D002AFB2F45489C23 /* NewsChatView.swift */,
 				A5CC7DF01DAD9CEE5253E3EE /* NewsDetailView.swift */,
 				0F65A381D9042A688E480D0F /* NewsListView.swift */,
+				6075ECD3506DF0358BE0E107 /* NewsPrefsView.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -318,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				DCFEA529D0C29E8782D98C20 /* CoachTourUITests.swift */,
+				6D335ED94C26510847FA20CF /* NewsWowUITests.swift */,
 			);
 			path = VectorialDataUITests;
 			sourceTree = "<group>";
@@ -542,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5D31F64A41E364002F55B3 /* CoachTourUITests.swift in Sources */,
+				CE4B0ED89C667FD8C2FB4AE6 /* NewsWowUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,9 +574,11 @@
 				16272C73128B7A5EB8EAB08C /* KeychainHelper.swift in Sources */,
 				4F287F80D585C8FE70EB69F3 /* LaunchSplashView.swift in Sources */,
 				29FD74B796ED48F032B03993 /* MainTabView.swift in Sources */,
+				F53FE09215E51350F727A565 /* NewsChatView.swift in Sources */,
 				AF38DA12F4616D318DDA680A /* NewsDetailView.swift in Sources */,
 				823F557E6BA9209CCF59334C /* NewsItem.swift in Sources */,
 				C1A59750F67587F294CE8B17 /* NewsListView.swift in Sources */,
+				B329D69B2AD9906ED810908C /* NewsPrefsView.swift in Sources */,
 				7B609EDF4633C333BD048D22 /* NewsStore.swift in Sources */,
 				3BEB3050F8E472FFE7BEEF47 /* NotificationPrimingView.swift in Sources */,
 				279AB27528E3EE5E0F7B3019 /* NotificationsManager.swift in Sources */,

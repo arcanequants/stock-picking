@@ -39,6 +39,10 @@ actor APIClient {
         try await request(path: path, method: "POST", body: body, as: T.self)
     }
 
+    func put<B: Encodable, T: Decodable>(_ path: String, body: B, as _: T.Type) async throws -> T {
+        try await request(path: path, method: "PUT", body: body, as: T.self)
+    }
+
     func delete<B: Encodable, T: Decodable>(_ path: String, body: B, as _: T.Type) async throws -> T {
         try await request(path: path, method: "DELETE", body: body, as: T.self)
     }
