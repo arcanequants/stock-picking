@@ -1,4 +1,5 @@
 import OpenAI from "openai";
+import { newsModel, isReasoningModel } from "@/lib/news-model";
 
 /**
  * Ingest-time enrichment for app news: classify (topic / regions / tickers)
@@ -105,10 +106,15 @@ export async function classifyNews(
   const c = client();
   if (!c) return null;
   try {
+    const model = newsModel();
     const res = await c.chat.completions.create({
-      model: process.env.OPENAI_NEWS_MODEL ?? "gpt-4o",
+      model,
       response_format: { type: "json_object" },
-      temperature: 0.4,
+      // Enrichment runs once per news, offline — think more, the blocks ARE
+      // the product.
+      ...(isReasoningModel(model)
+        ? { reasoning_effort: "medium" as const, max_completion_tokens: 2000 }
+        : { temperature: 0.4 }),
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: `TITULAR: ${headline}\n\nCUERPO:\n${body}` },
