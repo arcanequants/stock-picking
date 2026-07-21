@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { getAuthedUser, getSupabaseAdmin } from "@/lib/supabase";
 import { parseLocale } from "@/lib/locale";
+import { newsModel, isReasoningModel } from "@/lib/news-model";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -196,10 +197,13 @@ RULES:
 
   let reply: string;
   try {
+    const model = newsModel();
     const res = await client.chat.completions.create({
-      model: process.env.OPENAI_NEWS_MODEL ?? "gpt-4o",
-      temperature: 0.5,
-      max_tokens: 400,
+      model,
+      // Chat is the user-facing moment: low effort keeps replies snappy.
+      ...(isReasoningModel(model)
+        ? { reasoning_effort: "low" as const, max_completion_tokens: 1500 }
+        : { temperature: 0.5, max_tokens: 400 }),
       messages: chatMessages,
     });
     reply = res.choices[0]?.message?.content?.trim() ?? "";
