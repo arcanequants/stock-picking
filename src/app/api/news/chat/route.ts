@@ -64,6 +64,9 @@ export async function GET(request: Request) {
     .eq("email", authed.email)
     .eq("news_id", newsId)
     .order("created_at", { ascending: true })
+    // Each Q+A pair is inserted in one statement and shares created_at;
+    // "user" > "assistant" descending keeps the question before its answer.
+    .order("role", { ascending: false })
     .limit(200);
 
   return NextResponse.json({ messages: messages ?? [] });
@@ -143,6 +146,7 @@ export async function POST(request: Request) {
     .eq("email", authed.email)
     .eq("news_id", newsId)
     .order("created_at", { ascending: true })
+    .order("role", { ascending: false })
     .limit(200);
   const history = prior ?? [];
   const userCount = history.filter((m) => m.role === "user").length;
