@@ -1,0 +1,251 @@
+{
+  "date": "2026-07-21",
+  "summary": "Middle East shipping tensions are pushing up oil prices and inflation fears worldwide, keeping major central banks cautious and the dollar strong.",
+  "causalChain": "Attacks near the Strait of Hormuz and Houthi threats to Red Sea shipping pushed oil higher, which is feeding inflation fears and keeping the Fed, BoJ and RBA on a hawkish or wait-and-see footing; that is strengthening the US dollar, pressuring the yen and gold, while commodity exporters like Australia and Mexico navigate the crosscurrents and crypto ETFs show a tentative institutional rebound.",
+  "table": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "angle": "Oil holds near $89/bbl as Hormuz and Red Sea shipping risk rises",
+      "worker": "—"
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "angle": "Fed holds rates but hawkish tilt pushes Treasury yields higher",
+      "worker": "—"
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "angle": "Gold slips ~4% on the month as the dollar hits a 6-month high",
+      "worker": "—"
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "angle": "Banxico holds rate at 6.5%, ending its cutting cycle",
+      "worker": "—"
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "angle": "Peso strengthens to ~17.4/USD on trade-talk optimism",
+      "worker": "—"
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "angle": "Remittances rise 3.8% y/y in May, third straight monthly gain",
+      "worker": "—"
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "angle": "Nikkei jumps 1.8% led by chipmakers on earnings optimism",
+      "worker": "—"
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "angle": "Yen near 40-year low despite BoJ hike, oil costs outweigh it",
+      "worker": "—"
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "angle": "South Korea exports up 54% y/y on semiconductor boom",
+      "worker": "—"
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "angle": "Eurozone inflation cools to 2.8%, ECB expected to hold rates",
+      "worker": "—"
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "angle": "FTSE falls on Mideast-driven oil fears after DAX record highs",
+      "worker": "—"
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "angle": "German factory survey ticks up but on old orders, not new demand",
+      "worker": "—"
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "angle": "RBA holds at 4.35% after energy-shock rate hikes this year",
+      "worker": "—"
+    },
+    {
+      "n": 14,
+      "region": "OCEANIA",
+      "angle": "Rio Tinto posts best iron ore quarter in 5 years on China demand",
+      "worker": "—"
+    },
+    {
+      "n": 15,
+      "region": "OCEANIA",
+      "angle": "RBNZ hikes to 2.5%, first hike since November, on hot inflation",
+      "worker": "—"
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "angle": "Bitcoin ETFs post 5th straight day of inflows, fragile rebound",
+      "worker": "—"
+    },
+    {
+      "n": 17,
+      "region": "CRYPTO",
+      "angle": "Digital-dollar market splits as regulation favors Circle over Tether",
+      "worker": "—"
+    },
+    {
+      "n": 18,
+      "region": "CRYPTO",
+      "angle": "SEC drafts formal crypto rulebook, shift from lawsuits to rules",
+      "worker": "—"
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "angle": "First atmosphere confirmed on a habitable-zone rocky exoplanet",
+      "worker": "—"
+    },
+    {
+      "n": 20,
+      "region": "WOW",
+      "angle": "Toads evolve self-made defense against mass-extinction fungus",
+      "worker": "—"
+    },
+    {
+      "n": 21,
+      "region": "WOW",
+      "angle": "200-year-old light trick creates exotic optical data-storage pattern",
+      "worker": "—"
+    },
+    {
+      "n": 22,
+      "region": "WOW",
+      "angle": "Natural gas turned directly into graphene oxide plus clean hydrogen",
+      "worker": "—"
+    }
+  ],
+  "drafts": [
+    {
+      "n": 1,
+      "region": "GLOBAL",
+      "text": "Oil prices are holding near $89 a barrel after ships avoided the Strait of Hormuz this week following attacks on tankers, and Iran-backed rebels in Yemen said they'll block ships tied to Saudi Arabia too. Why it matters: those two narrow sea lanes carry a huge share of the world's oil, so blocking either one makes fuel more expensive everywhere, from gas pumps to the cost of shipping everything you buy."
+    },
+    {
+      "n": 2,
+      "region": "GLOBAL",
+      "text": "The US central bank kept its main interest rate steady this week, but a top Fed official said prices are rising faster than expected, which spooked investors into thinking another rate hike could come later this year. Why it matters: what the US government pays to borrow money jumped as a result, and that number ripples into mortgage rates, credit card rates, and stock prices worldwide."
+    },
+    {
+      "n": 3,
+      "region": "GLOBAL",
+      "text": "Gold usually gets more expensive when people are scared, and less useful when the dollar is strong. It just proved the second part: gold slipped about 4% over the past month even as Middle East tensions stayed high, because the US dollar hit its strongest level in six months. A stronger dollar makes gold cost more for buyers using other currencies, so demand for it cools."
+    },
+    {
+      "n": 4,
+      "region": "MEXICO",
+      "text": "Mexico's central bank kept its key interest rate unchanged at 6.5% for a second straight meeting, ending a year of rate cuts. Why: inflation has been running hotter than the bank wants, and officials don't expect to hit their target until 2027. That means Mexican consumers likely won't see cheaper loans or credit anytime soon, even as economic growth stays weak."
+    },
+    {
+      "n": 5,
+      "region": "MEXICO",
+      "text": "The Mexican peso strengthened to about 17.4 per US dollar this week, one of its best levels in weeks. Why: investors are betting Mexico and the US are heading toward friendlier trade talks rather than a new round of tariffs, easing fears that had been weighing the peso down. A stronger peso makes imported goods cheaper for Mexicans, but squeezes exporters who earn in dollars."
+    },
+    {
+      "n": 6,
+      "region": "MEXICO",
+      "text": "Money sent home by Mexicans working abroad rose 3.8% in May from a year earlier, the third straight monthly increase after nearly a year of declines. Why it matters: stricter US immigration enforcement had been expected to choke off this flow, but migrants are still finding ways to send money back, and those dollars are a major support for household spending across Mexico."
+    },
+    {
+      "n": 7,
+      "region": "ASIA",
+      "text": "Japan's stock market jumped 1.8% in a single day, its best day in weeks, led almost entirely by computer-chip companies. Why: investors are betting that upcoming earnings from tech and chip companies will beat expectations, riding the same wave of AI-driven demand that's been lifting chip makers worldwide. Four out of five stocks on the exchange rose that day."
+    },
+    {
+      "n": 8,
+      "region": "ASIA",
+      "text": "Japan's currency, the yen, is trading near its weakest level in about 40 years, even though Japan's central bank raised interest rates last month for the first time since December. Why: rising oil prices from Middle East tensions are pushing up Japan's import costs faster than the rate hike can offset, since Japan has to buy nearly all its oil from abroad using dollars."
+    },
+    {
+      "n": 9,
+      "region": "ASIA",
+      "text": "South Korea's exports jumped 54% in the first ten days of July compared with a year earlier, driven almost entirely by computer chips, which nearly tripled in value. Why it matters: Korea's chip factories are an early warning signal for the whole world's tech industry, and this surge suggests the global boom in AI-related spending is still accelerating, not slowing down."
+    },
+    {
+      "n": 10,
+      "region": "EUROPE",
+      "text": "Prices in the countries that use the euro rose 2.8% over the past year, down from 3.2% the month before, close to what Europe's central bank considers healthy. Why it matters: with inflation cooling, the bank is expected to leave interest rates unchanged at its meeting this week instead of raising them again, which has already made the euro a bit weaker against other currencies."
+    },
+    {
+      "n": 11,
+      "region": "EUROPE",
+      "text": "Britain's stock market fell half a percent this week as rising oil prices from Middle East tensions spooked investors worldwide. That's a reversal from just weeks earlier, when Germany's stock market hit an all-time high on hopes that central banks were done raising interest rates. Why it matters: oil-driven fear is now outweighing the earlier optimism across European markets."
+    },
+    {
+      "n": 12,
+      "region": "EUROPE",
+      "text": "A monthly survey of German factory managers ticked up slightly in June, suggesting manufacturing may be stabilizing after a long slump. But there's a catch: much of the extra output is companies working through orders placed earlier, not fresh new demand. Why it matters: the improvement could fade once those old orders run out, unless real new demand shows up soon."
+    },
+    {
+      "n": 13,
+      "region": "OCEANIA",
+      "text": "Australia's central bank left interest rates unchanged at 4.35%, after three rate hikes earlier this year triggered by a global spike in energy prices tied to the war involving Iran. Why it matters: the bank says it's ready to raise rates again if energy costs keep climbing, so the next move for Australian borrowers depends heavily on what happens next in the Middle East."
+    },
+    {
+      "n": 14,
+      "region": "OCEANIA",
+      "text": "Mining giant Rio Tinto shipped the most iron ore in five years last quarter, and prices for the raw material used to make steel just hit a two-week high. Why: Chinese buyers ramped up purchases by over 15% in a month. Meanwhile rival BHP is facing a possible worker strike at its main shipping port, which could squeeze supply and push prices even higher if it happens."
+    },
+    {
+      "n": 15,
+      "region": "OCEANIA",
+      "text": "New Zealand's central bank raised its key interest rate for the first time since November, moving it up a quarter point to 2.5%. Why: inflation has been running hotter than expected even as the economy shows signs of recovering, with business confidence at its highest level in over a year. The tricky part: rising costs are increasingly being passed on to shoppers."
+    },
+    {
+      "n": 16,
+      "region": "CRYPTO",
+      "text": "Funds that let ordinary investors buy Bitcoin through a regular stock account pulled in $227 million on Monday, the fifth straight day of gains after a painful 10-day losing streak. Ethereum funds are showing the same pattern, taking in new money after eight weeks of people pulling cash out. Why it matters: big institutional investors are cautiously creeping back into crypto."
+    },
+    {
+      "n": 17,
+      "region": "CRYPTO",
+      "text": "Two digital dollars are drifting apart. Tether's coin, the biggest, still has more money in circulation, but Circle's coin now handles about 70% of daily trading activity versus Tether's 25%. Why: European regulators are pushing platforms like Revolut to drop Tether's coin by the end of August, so regulated exchanges are quietly shifting toward the more rule-compliant option."
+    },
+    {
+      "n": 18,
+      "region": "CRYPTO",
+      "text": "US regulators are drafting three new formal rules for crypto this month, covering how new tokens can be sold, how exchanges must safeguard customer coins, and how crypto trading venues should operate. Why it matters: this is a shift from years of suing crypto companies after the fact to actually writing rules in advance, which could make it easier for crypto businesses to operate legally in the US."
+    },
+    {
+      "n": 19,
+      "region": "WOW",
+      "text": "Astronomers found real air escaping from a rocky planet 48 light-years away, sitting at the exact distance from its star where liquid water could exist. It's the first time anyone has confirmed a lasting atmosphere on a planet like this. Why it matters: it's the strongest evidence yet that Earth-like, potentially life-friendly planets outside our solar system are real. 📄 Published in Science · More: https://phys.org/news/2026-07-life-solar-atmosphere-habitable-zone.html"
+    },
+    {
+      "n": 20,
+      "region": "WOW",
+      "text": "A fungus has wiped out more amphibian species than almost any other disease on Earth. But scientists found toads in the Pyrenees mountains that survive it by making their own germ-fighting skin chemicals while still tadpoles, before the fungus can take hold. Why it matters: it shows how animals evolve defenses against mass die-offs, and the chemicals could become new medicines. 📄 Published in Nature Chemical Biology · More: https://www.sciencedaily.com/releases/2026/07/260714225523.htm"
+    },
+    {
+      "n": 21,
+      "region": "WOW",
+      "text": "Scientists made a swirling light pattern useful for future data storage, using a 200-year-old trick: shine a laser at a small disc and study the bright spot in its shadow, first noticed in 1818. Why it matters: this cheap trick could replace costly lab materials usually needed, possibly unlocking denser computer storage. 📄 Published in Optica · More: https://www.ntu.edu.sg/news/detail/ntu-singapore-scientists-create-optical-skyrmions-using-a-two-century-old-light-phenomenon"
+    },
+    {
+      "n": 22,
+      "region": "WOW",
+      "text": "Engineers accidentally found that zapping natural gas with electrically charged gas next to water turns it directly into a valuable material used in batteries and water filters, plus clean hydrogen gas as a bonus, skipping a toxic step normally required. Why it matters: it could make this material much cheaper and greener to produce. 📄 Published in Nature Communications · More: https://stories.tamu.edu/news/2026/07/13/unexpected-discovery-yields-new-graphene-oxide-production-method/"
+    }
+  ]
+}
