@@ -152,7 +152,7 @@ private struct ChatBubble: View {
     var body: some View {
         HStack {
             if message.role == "user" { Spacer(minLength: 40) }
-            Text(message.content)
+            Text(attributedContent)
                 .font(.callout)
                 .foregroundStyle(message.role == "user" ? .black : Color(red: 0.9, green: 0.94, blue: 0.92))
                 .padding(.horizontal, 13)
@@ -162,6 +162,15 @@ private struct ChatBubble: View {
                 .frame(maxWidth: 300, alignment: message.role == "user" ? .trailing : .leading)
             if message.role != "user" { Spacer(minLength: 40) }
         }
+    }
+
+    /// The model answers with inline markdown (**bold**); a plain String in
+    /// `Text` would show the raw asterisks.
+    private var attributedContent: AttributedString {
+        (try? AttributedString(
+            markdown: message.content,
+            options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace)
+        )) ?? AttributedString(message.content)
     }
 
     @ViewBuilder
