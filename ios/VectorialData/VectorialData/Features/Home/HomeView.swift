@@ -204,7 +204,7 @@ private struct QuickStatsCard: View {
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
-    private func statColumn(label: String, value: String, color: Color) -> some View {
+    private func statColumn(label: LocalizedStringKey, value: String, color: Color) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
                 .font(.caption2)
@@ -284,12 +284,12 @@ private struct MarketStatusRow: View {
 
     private var label: String {
         switch status {
-        case .open: return "Market open"
-        case .pre: return "Pre-market"
-        case .post: return "After hours"
-        case .closed: return "Market closed"
-        case .weekend: return "Weekend — market closed"
-        case .holiday: return "Holiday — market closed"
+        case .open: return String(localized: "Market open")
+        case .pre: return String(localized: "Pre-market")
+        case .post: return String(localized: "After hours")
+        case .closed: return String(localized: "Market closed")
+        case .weekend: return String(localized: "Weekend — market closed")
+        case .holiday: return String(localized: "Holiday — market closed")
         }
     }
 }

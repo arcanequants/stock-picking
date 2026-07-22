@@ -4352,6 +4352,35 @@
         }
       }
     },
+    "Holiday — market closed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Holiday — market closed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feriado — mercado cerrado"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feriado — mercado fechado"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "छुट्टी — market बंद है"
+          }
+        }
+      }
+    },
     "Market closed" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -8921,6 +8950,35 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quanto em cada compra?"
+          }
+        }
+      }
+    },
+    "Weekend — market closed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weekend — market closed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fin de semana — mercado cerrado"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fim de semana — mercado fechado"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सप्ताहांत — market बंद है"
           }
         }
       }
