@@ -47,8 +47,16 @@ struct CoachTourView: View {
         GeometryReader { geo in
             let rect = spotlightRect(for: steps[step].target, in: geo)
             ZStack {
-                // Dim everything except the spotlight cutout.
-                SpotlightMask(cutout: rect, corner: 14)
+                // Dim everything except the spotlight cutout. ignoresSafeArea
+                // expands this layer to the physical screen, shifting its
+                // coordinate origin above the geo space the ring uses — offset
+                // the cutout by the insets or the hole lands ~62pt higher than
+                // the ring (visible as a bright band over whatever sits there).
+                SpotlightMask(
+                    cutout: rect.offsetBy(dx: geo.safeAreaInsets.leading,
+                                          dy: geo.safeAreaInsets.top),
+                    corner: 14
+                )
                     .fill(Color.black.opacity(0.72), style: FillStyle(eoFill: true))
                     .ignoresSafeArea()
 
