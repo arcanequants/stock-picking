@@ -1,6 +1,7 @@
 import { createMcpHandler } from "mcp-handler";
 import { z } from "zod";
 import { ingestEconomicEvent } from "@/lib/economic-events-ingest";
+import { listRecentNews, publishNewsItem } from "@/lib/news-ingest";
 
 export const maxDuration = 60;
 
@@ -61,6 +62,66 @@ const handler = createMcpHandler(
             {
               type: "text",
               text: `Published ${result.event_date}: ${result.page_url}`,
+            },
+          ],
+        };
+      }
+    );
+    server.tool(
+      "list_recent_news",
+      "List the news items published to Vectorial Noticias (the app's news feed) in the last 7 days. ALWAYS call this before publish_news and never publish the same story again unless there is a genuinely new development.",
+      {},
+      async () => {
+        const recent = await listRecentNews(7);
+        const text =
+          recent.length === 0
+            ? "No news published in the last 7 days."
+            : recent
+                .map(
+                  (r) =>
+                    `- [${r.published_at.slice(0, 10)}] (${r.topic ?? "?"} · ${(r.regions ?? []).join(",") || "?"}) ${r.headline}`,
+                )
+                .join("\n");
+        return { content: [{ type: "text", text }] };
+      }
+    );
+
+    server.tool(
+      "publish_news",
+      "Publish one news item to Vectorial Noticias (the mobile app's news feed). Send plain Spanish headline+body only — the server automatically classifies topic/regions/tickers, writes the 4-block explainer + glossary, translates to en/pt/hi and sends the preference-aware push. Rejects same-story repeats from the last 7 days (409 duplicate_story) — call list_recent_news first.",
+      {
+        headline: z
+          .string()
+          .describe("Spanish, ≤80 chars, concrete — the number/fact up front"),
+        body: z
+          .string()
+          .describe(
+            "Spanish, ≤4000 chars. The full story in plain language: what happened (with the real numbers), why it matters, which sectors/prices it touches. No jargon.",
+          ),
+        link_url: z
+          .string()
+          .optional()
+          .describe("Source URL for 'leer más' (optional)"),
+      },
+      async (args) => {
+        const result = await publishNewsItem({
+          headline: args.headline,
+          body: args.body,
+          link_url: args.link_url ?? null,
+        });
+        if (!result.ok) {
+          const detail =
+            result.error === "duplicate_story"
+              ? `duplicate_story — already covered: "${result.duplicate_of}" (${result.reason}). Do NOT retry with a rephrase; only publish if there is a genuinely new development, framed around what changed.`
+              : `Error: ${result.error}`;
+          return { content: [{ type: "text", text: detail }], isError: true };
+        }
+        const news = result.news as { id?: string; topic?: string };
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Published ${news.id} (topic ${news.topic ?? "legacy"}) · enriched=${result.enriched} · push sent=${result.delivery.sent} · translated=${result.translated.join(",")}`,
             },
           ],
         };
