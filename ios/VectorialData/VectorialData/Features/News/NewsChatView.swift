@@ -15,6 +15,7 @@ struct NewsChatView: View {
 
     private let suggestions: [LocalizedStringKey] = [
         "¿Cómo me afecta a mí?",
+        "¿El mercado está exagerando?",
         "¿Por qué pasó?",
         "Explícamelo más fácil",
     ]
@@ -97,7 +98,8 @@ struct NewsChatView: View {
     private func suggestionText(_ i: Int) -> String {
         switch i {
         case 0: return String(localized: "¿Cómo me afecta a mí?")
-        case 1: return String(localized: "¿Por qué pasó?")
+        case 1: return String(localized: "¿El mercado está exagerando?")
+        case 2: return String(localized: "¿Por qué pasó?")
         default: return String(localized: "Explícamelo más fácil")
         }
     }

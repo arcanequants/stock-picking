@@ -9041,6 +9041,35 @@
         }
       }
     },
+    "¿El mercado está exagerando?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Is the market overreacting?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿El mercado está exagerando?"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O mercado está exagerando?"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "क्या market ज़रूरत से ज़्यादा react कर रहा है?"
+          }
+        }
+      }
+    },
     "¿Por qué pasó?" : {
       "extractionState" : "manual",
       "localizations" : {
