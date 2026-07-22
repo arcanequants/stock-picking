@@ -34,14 +34,33 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_amount" }, { status: 400 });
   }
 
-  const { error } = await getSupabaseAdmin()
+  const admin = getSupabaseAdmin();
+  const { data: updated, error } = await admin
     .from("subscribers")
     .update({ default_investment: amount })
-    .eq("email", authed.email);
+    .eq("email", authed.email)
+    .select("email");
 
   if (error) {
     console.error("[default-investment] update failed:", error);
     return NextResponse.json({ error: "db_error" }, { status: 500 });
+  }
+
+  // iOS free accounts have an auth user but no subscribers row (ios
+  // free-register creates the auth user only), so the update above matches
+  // 0 rows and Supabase reports no error — the save silently vanished and
+  // Cuenta kept showing "No fijado". Create a bare free row instead.
+  if (!updated || updated.length === 0) {
+    const { error: insertError } = await admin.from("subscribers").insert({
+      email: authed.email,
+      subscription_status: "inactive",
+      delivery_channel: "email",
+      default_investment: amount,
+    });
+    if (insertError) {
+      console.error("[default-investment] insert failed:", insertError);
+      return NextResponse.json({ error: "db_error" }, { status: 500 });
+    }
   }
 
   return NextResponse.json({ ok: true, default_investment: amount });
