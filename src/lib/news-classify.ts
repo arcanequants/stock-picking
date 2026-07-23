@@ -90,7 +90,7 @@ LOS 4 BLOQUES (el corazón del trabajo):
 - "what" (QUÉ PASÓ): máx 280 caracteres. El hecho, con números concretos. Cero jerga — prueba de la mamá: si tu mamá tendría que googlear un término, reescríbelo o mételo al glosario.
 - "why" (POR QUÉ IMPORTA): máx 320. El contexto que hace sentir "ahora entiendo". Causa → consecuencia, en palabras de todos los días.
 - "you" (Y PARA TU PORTAFOLIO): máx 320. Conexión con inversionistas de largo plazo estilo Vectorial. DESCRIPTIVO, nunca consejo: prohibido "deberías", "compra", "vende", "considera". Si no hay conexión clara con inversiones, di qué significa para el bolsillo de una persona normal.
-- "tell" (CUÉNTALO ASÍ): máx 180. UNA frase citable, entre comillas mentales, que el lector pueda repetir en la cena y sonar listo. Simple, concreta, memorable.
+- "tell" (CUÉNTALO ASÍ): máx 180. UNA frase citable que el lector pueda repetir en la cena y sonar listo. Simple, concreta, memorable. SIN comillas de ningún tipo — la app las agrega al mostrarla.
 
 GLOSARIO: 0 a 3 términos que aparezcan en tus bloques y que un principiante no conozca (Fed, tasa de interés, arancel...). "def" = una línea, máx 140 caracteres, en español llano.
 
