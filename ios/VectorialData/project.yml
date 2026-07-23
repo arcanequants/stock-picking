@@ -9,8 +9,8 @@ options:
 settings:
   base:
     DEVELOPMENT_TEAM: QMHJWQPS7H
-    MARKETING_VERSION: "1.1.0"
-    CURRENT_PROJECT_VERSION: "6"
+    MARKETING_VERSION: "1.2.0"
+    CURRENT_PROJECT_VERSION: "7"
     SWIFT_VERSION: "5.10"
     ENABLE_USER_SCRIPT_SANDBOXING: YES
     SWIFT_STRICT_CONCURRENCY: complete
@@ -71,6 +71,20 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         GENERATE_INFOPLIST_FILE: NO
 
+  VectorialDataUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: VectorialDataUITests
+    dependencies:
+      - target: VectorialData
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.vectorialdata.app.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: VectorialData
+
   VectorialDataWidgets:
     type: app-extension
     platform: iOS
@@ -113,6 +127,8 @@ schemes:
       storeKitConfiguration: VectorialData/VectorialData.storekit
     test:
       config: Debug
+      targets:
+        - VectorialDataUITests
     profile:
       config: Release
     analyze:

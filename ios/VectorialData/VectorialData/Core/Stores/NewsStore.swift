@@ -14,6 +14,10 @@ final class NewsStore: ObservableObject {
     @Published private(set) var items: [NewsItem] = []
     @Published private(set) var isLoading: Bool = false
     @Published private(set) var errorMessage: String?
+    /// Per-news AI chat availability, from the last /api/news response.
+    @Published private(set) var chatEnabled: Bool = false
+    /// Active feed filter — nil = "Todo". Matches a NewsTaxonomy topic id.
+    @Published var selectedTopic: String?
 
     @AppStorage("news.lastReadAt") private var lastReadAtRaw: Double = 0
 
@@ -25,6 +29,8 @@ final class NewsStore: ObservableObject {
         items = []
         errorMessage = nil
         isLoading = false
+        chatEnabled = false
+        selectedTopic = nil
         lastReadAtRaw = 0
     }
 
@@ -38,12 +44,25 @@ final class NewsStore: ObservableObject {
                 as: NewsListResponse.self
             )
             self.items = resp.news
+            self.chatEnabled = resp.chatEnabled ?? false
             self.errorMessage = nil
         } catch APIError.unauthorized {
-            errorMessage = "Inicia sesión otra vez."
+            errorMessage = String(localized: "Inicia sesión otra vez.")
         } catch {
             errorMessage = error.localizedDescription
         }
+    }
+
+    /// Topics present in the current feed — only these chips are shown.
+    var availableTopics: [String] {
+        let present = Set(items.compactMap { $0.topic })
+        return NewsTaxonomy.topics.map(\.id).filter { present.contains($0) }
+    }
+
+    /// Feed filtered by the selected topic chip.
+    var visibleItems: [NewsItem] {
+        guard let topic = selectedTopic else { return items }
+        return items.filter { $0.topic == topic }
     }
 
     /// Call when the user actually opens the news list. Stamps the

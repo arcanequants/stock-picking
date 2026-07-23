@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 import UserNotifications
 
 struct AccountView: View {
@@ -8,6 +9,9 @@ struct AccountView: View {
     @State private var isSigningOut = false
     @State private var isEditingDefault = false
     @State private var showDeleteConfirm = false
+    @State private var showManageSubs = false
+    @State private var showTrial = false
+    @State private var restoring = false
     @State private var isDeleting = false
     @State private var deleteError: String?
 
@@ -28,14 +32,64 @@ struct AccountView: View {
                 }
 
                 Section {
-                    Button {
-                        isEditingDefault = true
+                    if auth.currentUser?.isSubscribed == true {
+                        Button {
+                            showManageSubs = true
+                        } label: {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Administrar suscripción")
+                                    .foregroundStyle(.primary)
+                                Text("Renueva o cancela — lo maneja Apple")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    } else {
+                        Button {
+                            showTrial = true
+                        } label: {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Activar 14 días gratis")
+                                    .foregroundStyle(Color("BrandEmerald"))
+                                Text("Luego $0.99/mes · cancela cuando quieras")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        Button {
+                            restoring = true
+                            Task {
+                                _ = await StoreManager.shared.restore()
+                                await auth.refreshCurrentUser()
+                                await pickStatus.load()
+                                restoring = false
+                            }
+                        } label: {
+                            HStack {
+                                Text("Restaurar compras")
+                                Spacer()
+                                if restoring { ProgressView() }
+                            }
+                        }
+                        .disabled(restoring)
+                    }
+                } header: {
+                    Text("Suscripción")
+                } footer: {
+                    if auth.currentUser?.isSubscribed != true {
+                        Text("El acceso gratis muestra el portafolio y los últimos picks. Premium desbloquea la tesis completa de cada pick.")
+                    }
+                }
+
+                Section {
+                    NavigationLink {
+                        InvestmentAmountView()
                     } label: {
                         HStack {
                             VStack(alignment: .leading, spacing: 2) {
-                                Text("Monto por pick")
+                                Text("Monto por compra")
                                     .foregroundStyle(.primary)
-                                Text(defaultInvestmentSubtitle)
+                                Text("La misma cantidad cada vez")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }
@@ -45,9 +99,37 @@ struct AccountView: View {
                         }
                     }
                 } header: {
-                    Text("Picks")
+                    Text("Cómo inviertes")
                 } footer: {
-                    Text("Se pre-rellena cuando marcas un pick como comprado. Lo puedes editar pick por pick.")
+                    Text("La misma cantidad en cada compra. Empieza con lo que no te pese y súbelo por etapas con el tiempo.")
+                }
+
+                Section {
+                    NavigationLink {
+                        PhilosophyView()
+                    } label: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Filosofía")
+                                .foregroundStyle(.primary)
+                            Text("Por qué invertimos así — dueño, largo plazo, dividendos")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    Button {
+                        // Flip the flag; MainTabView observes it and replays.
+                        UserDefaults.standard.set(false, forKey: "vd.didCoachTour")
+                    } label: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Ver tutorial")
+                                .foregroundStyle(.primary)
+                            Text("Repite el recorrido rápido de la app")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                } header: {
+                    Text("Vectorial")
                 }
 
                 Section {
@@ -111,6 +193,16 @@ struct AccountView: View {
                 }
             }
             .navigationTitle("Account")
+            .manageSubscriptionsSheet(isPresented: $showManageSubs)
+            .fullScreenCover(isPresented: $showTrial) {
+                TrialActivationView {
+                    showTrial = false
+                    Task {
+                        await auth.refreshCurrentUser()
+                        await pickStatus.load()
+                    }
+                }
+            }
             .task { await notifications.refreshStatus() }
             .task { await auth.refreshCurrentUser() }
             .task {
@@ -158,14 +250,14 @@ struct AccountView: View {
     }
 
     private var defaultInvestmentDisplay: String {
-        guard let amount = pickStatus.defaultInvestment else { return "No fijado" }
+        guard let amount = pickStatus.defaultInvestment else { return String(localized: "No fijado") }
         return formatAmount(amount)
     }
 
     private var defaultInvestmentSubtitle: String {
         pickStatus.defaultInvestment == nil
-            ? "Te lo preguntamos en cada pick"
-            : "Pre-rellenamos este monto"
+            ? String(localized: "Te lo preguntamos en cada pick")
+            : String(localized: "Pre-rellenamos este monto")
     }
 
     private func formatAmount(_ value: Double) -> String {
@@ -177,8 +269,9 @@ struct AccountView: View {
     }
 
     private func statusLabel(_ user: UserProfile) -> String {
-        if user.isSubscribed { return "Active" }
-        return user.subscriptionStatus?.capitalized ?? "Free"
+        if user.isSubscribed { return String(localized: "Premium") }
+        if user.subscriptionStatus == "canceled" { return String(localized: "Cancelada") }
+        return String(localized: "Gratis")
     }
 }
 

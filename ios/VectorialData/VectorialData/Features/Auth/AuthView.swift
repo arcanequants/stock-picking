@@ -30,10 +30,10 @@ struct AuthView: View {
                     .accessibilityHidden(true)
 
                 VStack(spacing: 8) {
-                    Text("Vectorial Data")
+                    Text("Bienvenido de vuelta")
                         .font(.largeTitle.weight(.semibold))
                         .foregroundStyle(.white)
-                    Text("One stock pick a day. Every day.")
+                    Text("Inicia sesión para ver tus picks y tu portafolio.")
                         .font(.body)
                         .foregroundStyle(.white.opacity(0.7))
                         .multilineTextAlignment(.center)
@@ -78,7 +78,7 @@ struct AuthView: View {
     private func send() {
         let trimmed = email.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         guard trimmed.contains("@"), trimmed.contains(".") else {
-            errorMessage = "Enter a valid email"
+            errorMessage = String(localized: "Enter a valid email")
             return
         }
         errorMessage = nil
@@ -91,7 +91,7 @@ struct AuthView: View {
                 do {
                     try await auth.demoLogin(email: trimmed, password: password)
                 } catch {
-                    errorMessage = auth.lastAuthError ?? "Invalid credentials."
+                    errorMessage = auth.lastAuthError ?? String(localized: "Invalid credentials.")
                 }
             }
             return
@@ -142,7 +142,7 @@ struct AuthView: View {
     private func verifyOTP() {
         let code = otpCode.trimmingCharacters(in: .whitespacesAndNewlines)
         guard code.count >= 6 else {
-            errorMessage = "Enter the code from your email."
+            errorMessage = String(localized: "Enter the code from your email.")
             return
         }
         errorMessage = nil
@@ -222,7 +222,7 @@ private struct SignInCard: View {
             Button(action: onSend) {
                 HStack {
                     if isSending { ProgressView().tint(.white) }
-                    Text(isSending ? "Signing in…" : password.isEmpty ? "Send magic link" : "Sign in")
+                    Group { if isSending { Text("Entrando…") } else if password.isEmpty { Text("Enviarme el código") } else { Text("Iniciar sesión") } }
                         .font(.headline)
                 }
                 .frame(maxWidth: .infinity, minHeight: 50)
@@ -356,8 +356,8 @@ private struct ConfirmationCard: View {
     }
 
     private var resendLabel: String {
-        if isResending { return "Resending…" }
-        if resendCooldown > 0 { return "Resend in \(resendCooldown)s" }
-        return "Resend email"
+        if isResending { return String(localized: "Resending…") }
+        if resendCooldown > 0 { return String(localized: "Resend in \(resendCooldown)s") }
+        return String(localized: "Resend email")
     }
 }

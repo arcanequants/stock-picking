@@ -64,9 +64,9 @@ struct HomeView: View {
             }
             .task {
                 await vm.load()
-                if news.items.isEmpty {
-                    await news.load()
-                }
+                // Always refetch — news go stale within a session (the feed
+                // publishes twice a day); cached items stay visible meanwhile.
+                await news.load()
             }
             .navigationDestination(for: HomeDestination.self) { dest in
                 switch dest {
@@ -132,7 +132,9 @@ private struct NewsHomeCard: View {
                     .tracking(1.1)
                     .foregroundStyle(.white.opacity(0.85))
                 if store.unreadCount > 0 {
-                    Text("● \(store.unreadCount) \(store.unreadCount == 1 ? "nueva" : "nuevas")")
+                    Text(store.unreadCount == 1
+                         ? String(localized: "● 1 nueva")
+                         : String(localized: "● \(store.unreadCount) nuevas"))
                         .font(.caption2.weight(.semibold))
                         .foregroundStyle(Color("BrandEmerald"))
                 }
@@ -202,7 +204,7 @@ private struct QuickStatsCard: View {
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
-    private func statColumn(label: String, value: String, color: Color) -> some View {
+    private func statColumn(label: LocalizedStringKey, value: String, color: Color) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
                 .font(.caption2)
@@ -252,10 +254,7 @@ private struct LatestPickCard: View {
         parser.timeZone = TimeZone(identifier: "UTC")
         parser.dateFormat = "yyyy-MM-dd"
         guard let date = parser.date(from: iso) else { return iso }
-        let out = DateFormatter()
-        out.locale = Locale(identifier: "es_MX")
-        out.dateFormat = "d 'de' MMMM 'de' yyyy"
-        return out.string(from: date)
+        return date.formatted(date: .long, time: .omitted)
     }
 }
 
@@ -285,12 +284,12 @@ private struct MarketStatusRow: View {
 
     private var label: String {
         switch status {
-        case .open: return "Market open"
-        case .pre: return "Pre-market"
-        case .post: return "After hours"
-        case .closed: return "Market closed"
-        case .weekend: return "Weekend — market closed"
-        case .holiday: return "Holiday — market closed"
+        case .open: return String(localized: "Market open")
+        case .pre: return String(localized: "Pre-market")
+        case .post: return String(localized: "After hours")
+        case .closed: return String(localized: "Market closed")
+        case .weekend: return String(localized: "Weekend — market closed")
+        case .holiday: return String(localized: "Holiday — market closed")
         }
     }
 }

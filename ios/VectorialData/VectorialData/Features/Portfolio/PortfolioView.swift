@@ -75,11 +75,15 @@ struct PortfolioView: View {
     @EnvironmentObject private var pickStatus: PickStatusStore
     @EnvironmentObject private var dividends: DividendStore
     @ObservedObject private var priorHoldings = PriorHoldingsStore.shared
+    @State private var showPaywall = false
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 12) {
+                    if !pickStatus.isSubscribed {
+                        freeUpsellBanner
+                    }
                     viewSwitcher
                     if vm.selectedView == .personal && dividends.count > 0 {
                         DividendsYTDCard(
@@ -103,6 +107,9 @@ struct PortfolioView: View {
                             }
                             .buttonStyle(.plain)
                         }
+                        if resp.limited == true, resp.totalPositions > resp.positions.count {
+                            lockedMoreRow(hidden: resp.totalPositions - resp.positions.count)
+                        }
                     } else if vm.isLoading {
                         ProgressView().padding(.top, 40)
                     } else if vm.selectedView == .personal && vm.response?.positions.isEmpty == true {
@@ -121,6 +128,7 @@ struct PortfolioView: View {
             .navigationDestination(for: Position.self) { position in
                 PositionDetailView(position: position)
             }
+            .sheet(isPresented: $showPaywall) { PaywallView() }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu {
@@ -172,6 +180,64 @@ struct PortfolioView: View {
         }
         .pickerStyle(.segmented)
         .padding(.bottom, 4)
+    }
+
+    /// Free tier: the API sends only the top-3 teaser; this row sells the rest.
+    private func lockedMoreRow(hidden: Int) -> some View {
+        Button { showPaywall = true } label: {
+            HStack(spacing: 12) {
+                Image(systemName: "lock.fill")
+                    .foregroundStyle(Color("BrandEmerald"))
+                Text("+\(hidden) posiciones más")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.white)
+                Spacer()
+                Text("Desbloquear")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(Color("BrandEmerald"))
+            }
+            .padding(14)
+            .background(Color("CardBackground"))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(Color("BrandEmerald").opacity(0.3), lineWidth: 1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+        }
+        .buttonStyle(.plain)
+    }
+
+    /// Shown to free users atop the teaser portfolio: the total return is the
+    /// marketing; the full pick list + thesis is the product.
+    private var freeUpsellBanner: some View {
+        Button { showPaywall = true } label: {
+            HStack(spacing: 12) {
+                Image(systemName: "lock.fill")
+                    .font(.body)
+                    .foregroundStyle(Color("BrandEmerald"))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Desbloquea la tesis completa de cada posición")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.leading)
+                    Text("14 días gratis, luego $0.99/mes")
+                        .font(.caption)
+                        .foregroundStyle(.white.opacity(0.6))
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.4))
+            }
+            .padding(14)
+            .background(Color("BrandEmerald").opacity(0.10))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(Color("BrandEmerald").opacity(0.35), lineWidth: 1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+        }
+        .buttonStyle(.plain)
     }
 
     private var personalEmptyState: some View {

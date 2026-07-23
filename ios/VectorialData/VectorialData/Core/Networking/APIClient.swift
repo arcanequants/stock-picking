@@ -39,6 +39,10 @@ actor APIClient {
         try await request(path: path, method: "POST", body: body, as: T.self)
     }
 
+    func put<B: Encodable, T: Decodable>(_ path: String, body: B, as _: T.Type) async throws -> T {
+        try await request(path: path, method: "PUT", body: body, as: T.self)
+    }
+
     func delete<B: Encodable, T: Decodable>(_ path: String, body: B, as _: T.Type) async throws -> T {
         try await request(path: path, method: "DELETE", body: body, as: T.self)
     }
@@ -83,8 +87,11 @@ actor APIClient {
             // Supabase access_tokens expire after 1h. Try to swap the refresh
             // token for a fresh one and replay the request once. If the
             // refresh also fails, the session is dead — bubble up so the
-            // caller can sign out.
-            if allowRefresh, let refresh = refreshHandler {
+            // caller can sign out. Auth endpoints are exempt: a 401 from
+            // /api/auth/ios-refresh itself would re-enter the refresh handler
+            // and recurse forever (black screen + request storm on any
+            // revoked session).
+            if allowRefresh, !path.hasPrefix("/api/auth/"), let refresh = refreshHandler {
                 let didRefresh = await refresh()
                 if didRefresh {
                     return try await request(

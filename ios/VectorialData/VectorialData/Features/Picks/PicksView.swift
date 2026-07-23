@@ -100,11 +100,14 @@ struct PicksView: View {
                             title: "PENDIENTES",
                             count: store.pending.count
                         )
-                        ForEach(orderedPending(store.pending)) { pick in
+                        let ordered = orderedPending(store.pending)
+                        ForEach(ordered) { pick in
                             NavigationLink(value: PicksDestination.pick(pick)) {
                                 PendingPickRow(pick: pick)
                             }
                             .buttonStyle(.plain)
+                            // The coach tour spotlights the newest card.
+                            .coachTarget("first-pick", active: pick.id == ordered.first?.id)
                         }
                     }
                     if !store.historial.isEmpty {
@@ -130,7 +133,7 @@ struct PicksView: View {
         picks.sorted { $0.pickNumber > $1.pickNumber }
     }
 
-    private func sectionHeader(title: String, count: Int) -> some View {
+    private func sectionHeader(title: LocalizedStringKey, count: Int) -> some View {
         HStack {
             Text(title)
                 .font(.caption.weight(.semibold))
@@ -189,9 +192,9 @@ private struct PendingPickRow: View {
         formatter.dateFormat = "yyyy-MM-dd"
         guard let date = formatter.date(from: dateStr) else { return dateStr }
         let days = Int(Date().timeIntervalSince(date) / 86400)
-        if days <= 0 { return "hoy" }
-        if days == 1 { return "ayer" }
-        return "hace \(days)d"
+        if days <= 0 { return String(localized: "hoy") }
+        if days == 1 { return String(localized: "ayer") }
+        return String(localized: "hace \(days)d")
     }
 
     private func formatPct(_ value: Double) -> String {
