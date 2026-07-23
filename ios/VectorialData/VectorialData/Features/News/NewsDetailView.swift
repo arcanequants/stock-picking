@@ -76,7 +76,7 @@ struct NewsDetailView: View {
         block(title: "QUÉ PASÓ", body: item.blockWhat)
         block(title: "POR QUÉ IMPORTA", body: item.blockWhy)
         block(title: "Y PARA TU PORTAFOLIO", body: item.blockYou)
-        if let tell = item.blockTell, !tell.isEmpty {
+        if let tell = item.blockTell.map(strippingQuotes), !tell.isEmpty {
             VStack(alignment: .leading, spacing: 6) {
                 Text("💬 CUÉNTALO ASÍ")
                     .font(.caption2.weight(.bold))
@@ -203,7 +203,7 @@ struct NewsDetailView: View {
 
     /// The shareable unit is the "cuéntalo así" line — that's the wow.
     private var shareText: String {
-        if let tell = item.blockTell, !tell.isEmpty {
+        if let tell = item.blockTell.map(strippingQuotes), !tell.isEmpty {
             return "“\(tell)”\n\n— \(item.headline) · Vectorial Data"
         }
         return "\(item.headline)\n\n— Vectorial Data"
@@ -306,4 +306,12 @@ struct FlowLayout: Layout {
             rowHeight = max(rowHeight, size.height)
         }
     }
+}
+
+/// The model sometimes wraps the "cuéntalo así" line in its own quotation
+/// marks; the UI supplies the typographic quotes, so strip any incoming ones.
+private func strippingQuotes(_ s: String) -> String {
+    s.trimmingCharacters(in: .whitespacesAndNewlines)
+        .trimmingCharacters(in: CharacterSet(charactersIn: "\"\u{201C}\u{201D}\u{00AB}\u{00BB}'\u{2018}\u{2019}"))
+        .trimmingCharacters(in: .whitespacesAndNewlines)
 }
