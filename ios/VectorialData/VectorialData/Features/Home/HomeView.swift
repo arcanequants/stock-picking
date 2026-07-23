@@ -64,9 +64,9 @@ struct HomeView: View {
             }
             .task {
                 await vm.load()
-                if news.items.isEmpty {
-                    await news.load()
-                }
+                // Always refetch — news go stale within a session (the feed
+                // publishes twice a day); cached items stay visible meanwhile.
+                await news.load()
             }
             .navigationDestination(for: HomeDestination.self) { dest in
                 switch dest {

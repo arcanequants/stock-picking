@@ -28,9 +28,10 @@ struct NewsListView: View {
             }
             .refreshable { await store.load() }
             .task {
-                if store.items.isEmpty {
-                    await store.load()
-                }
+                // Always refetch on opening the section — a news feed must
+                // never show only yesterday's cache; existing items stay
+                // visible while the request runs.
+                await store.load()
                 store.markAllAsRead()
             }
     }
