@@ -575,11 +575,9 @@
     "model": "gpt-4o"
   },
   "LEU": {
-    "one_liner": "Centrus es la única empresa de Estados Unidos que prepara el combustible especial que necesitan las plantas nucleares —algo que antes venía sobre todo de Rusia—.",
-    "why_short": "Comprar Centrus es apostar a que Estados Unidos necesita producir su propio combustible nuclear en casa ahora que dejó de comprarle a Rusia; el gobierno ya le firmó un pedido enorme.",
-    "risk_short": "El mayor riesgo es que la acción está cara y no paga dividendo: si la empresa se tarda en crecer, puede caer fuerte.",
-    "generated_at": "2026-06-08T19:11:44.732Z",
-    "model": "manual-claude (openai quota exhausted)"
+    "one_liner": "Centrus es la única empresa de capital estadounidense que enriquece uranio (el combustible nuclear) en EE.UU. Ya la teníamos y hoy la reforzamos: su contrato de $900M con el gobierno ya quedó firmado en firme.",
+    "why_short": "EE.UU. tiene prohibido comprarle uranio a Rusia, y Centrus es la pieza para producirlo en casa, con la única planta autorizada para el combustible de los reactores nuevos. La tesis se fortaleció y la acción está 63% abajo de su máximo.",
+    "risk_short": "Está cara (~62 veces la utilidad) y es extremadamente volátil: tocó $464 y hoy vale ~63% menos. Depende mucho del dinero del gobierno, no paga dividendo, y sigue emitiendo acciones que diluyen a los dueños."
   },
   "FICO": {
     "one_liner": "Fair Isaac es dueña del \"puntaje FICO\", el número que casi todos los bancos de Estados Unidos miran para decidir si te prestan dinero.",
@@ -723,9 +721,9 @@
     "risk_short": "La acción está cara tras subir ~78% en un año: se paga ~61 veces la utilidad, sin margen para decepciones. Además, Elbit depende de que siga el ciclo de rearme y opera desde Israel, una zona de conflicto activo."
   },
   "TER": {
-    "one_liner": "Teradyne hace las máquinas que examinan los chips antes de venderse: cada chip de inteligencia artificial, de iPhone o de coche tiene que pasar esa prueba, y casi solo dos empresas en el mundo la aplican. Con el boom de la IA, sus ventas están explotando.",
-    "why_short": "Sus ventas crecieron 87% el último trimestre — el mejor de sus 66 años de historia — porque los chips de IA son más complejos y necesitan muchas más horas de prueba. Es como cobrar peaje: gane quien gane la carrera de la IA, sus chips pasan por estas máquinas.",
-    "risk_short": "La acción ya subió más de 4 veces en un año y está cara; los analistas le ven poco margen inmediato (~8%). Y este negocio es de ciclos: cuando las fábricas de chips frenan sus compras, las ventas y el precio caen fuerte."
+    "one_liner": "Teradyne hace las máquinas que examinan cada chip antes de venderse: casi solo dos empresas en el mundo las fabrican, y con el boom de la IA sus ventas explotan. Ya la teníamos y hoy la reforzamos más barata.",
+    "why_short": "Su último trimestre fue el mejor de sus 66 años (+87%). La acción cayó ~26% no por un problema suyo, sino por un susto de todo el sector de chips — y mientras caía, los analistas subían sus precios objetivo. Reforzamos a mejor precio.",
+    "risk_short": "Sigue cara (~50 veces la utilidad esperada) y es muy cíclica: cuando las fábricas de chips frenan sus compras, sus ventas caen fuerte. Si el temido exceso de memoria es real, sus pedidos pueden enfriarse."
   },
   "VALE": {
     "one_liner": "Vale es la minera brasileña dueña del hierro más puro del planeta (Carajás): con él se hace el acero de medio mundo. También produce cobre y níquel, y reparte buena parte de su ganancia como dividendo.",
@@ -798,5 +796,15 @@
     "why_short": "La bolsa saudí tuvo su peor año en una década en 2025 y hoy está más barata que su promedio histórico. En febrero de 2026 el país la abrió a todos los extranjeros por primera vez, y sus bancos —el corazón de la canasta— ganan cifras récord. Compramos lo que otros abandonaron.",
     "risk_short": "Todo en Arabia Saudita depende del petróleo: si el precio cae, el gobierno gasta menos y toda la economía lo resiente. Además la región vive tensiones militares reales con Irán, y el país lo decide en la práctica una sola persona. Es una apuesta de paciencia, no un boleto seguro.",
     "generated_at": "2026-07-16T00:00:00.000Z"
+  },
+  "LLY": {
+    "one_liner": "Eli Lilly es la farmacéutica más valiosa del mundo y la reina de los medicamentos para bajar de peso y la diabetes (Mounjaro y Zepbound). Acaba de lanzar la primera pastilla del mercado para adelgazar.",
+    "why_short": "El último trimestre vendió 56% más y subió su meta del año; controla casi el 60% de este mercado, el más grande que ha abierto la medicina. La compramos ~8% abajo de su máximo histórico, sin malas noticias detrás.",
+    "risk_short": "Está cara y ya corrió mucho: los analistas le ven poco margen (~8%). Su rival Novo Nordisk pelea el mercado con una guerra de precios, y el gobierno de EE.UU. presiona para que estos medicamentos cuesten menos."
+  },
+  "ALC": {
+    "one_liner": "Alcon es la empresa #1 del mundo en cuidado de los ojos: hace las máquinas y lentes con que se operan las cataratas, más lentes de contacto y gotas. La compramos en oferta.",
+    "why_short": "Cayó de ~$92 a ~$66 por dos sustos que ya pasaron, pero el negocio nunca se rompió: el último trimestre creció 10% y subió su meta de utilidad. Parece cara (~40x), pero es un truco contable: sobre las ganancias reales cotiza a ~17 veces.",
+    "risk_short": "Su mayor riesgo es que las cirugías de catarata sigan flojas, que son más de la mitad de sus ventas. Compite con J&J y otros, los aranceles le suben costos, y su dividendo es tan chico que da poco colchón si baja."
   }
 }

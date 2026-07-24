@@ -11700,28 +11700,28 @@ Son los 2 únicos REITs públicos data center de scale.
     country: "United States",
     region: "North America",
     currency: "USD",
-    price: 167.07,
-    pe_ratio: 58.6,
-    pe_forward: 61.79,
+    price: 170,
+    pe_ratio: 61.8,
+    pe_forward: 43.1,
     dividend_yield: 0,
-    market_cap_b: 3.25,
-    eps: 2.85,
+    market_cap_b: 3.36,
+    eps: 2.75,
     summary_short:
-      "Centrus Energy es la ÚNICA empresa de capital estadounidense que enriquece uranio —el combustible de las plantas nucleares— en suelo de EE.UU. Durante décadas, Rusia y Europa dominaron este proceso; hoy, con la guerra y la prohibición de importar uranio ruso, EE.UU. necesita producirlo en casa, y Centrus es la pieza clave. Opera la planta de Piketon, Ohio —la única autorizada para producir HALEU (uranio enriquecido de alta pureza), el combustible que necesitan los reactores nucleares de nueva generación (SMRs)—. Tiene una orden del Departamento de Energía de EE.UU. de ~$900M y un backlog de pedidos de ~$3.9 mil millones hasta 2040. NO paga dividendo: todo el efectivo va a expandir capacidad. Q1 2026: ingresos $76.7M, EPS $0.45. CEO Amir Vexler. Cotiza caro (~58x utilidad) porque el mercado paga por un activo estratégico e insustituible para la independencia energética y nuclear de EE.UU.",
+      "Reforzamos Centrus a $170.00 — la teníamos desde el 8 de junio a $167.07, y la tesis solo se fortaleció desde entonces. Lo que cambió: el 1 de julio, el contrato con el Departamento de Energía pasó de 'adjudicado' a FIRMADO en firme (~$900 millones, hasta ~$1,070 millones con las opciones), y su producción de HALEU va adelantada (ya pasó las 1,900 kg acumuladas). Centrus es la ÚNICA empresa de capital estadounidense que enriquece uranio —el combustible de las plantas nucleares— en suelo de EE.UU. Durante décadas Rusia dominó este proceso; hoy, con la prohibición de importar uranio ruso (todos los permisos vencen el 1 de enero de 2028), EE.UU. necesita producirlo en casa, y Centrus es la pieza clave. Opera la planta de Piketon, Ohio —la única autorizada para producir HALEU (uranio de alta pureza), el combustible de los reactores nucleares de nueva generación—, con un backlog de pedidos de ~$3.9 mil millones hasta 2040. NO paga dividendo: todo va a expandir capacidad. La acción viene de un derrumbe brutal: tocó $464 en octubre de 2025 y hoy cotiza ~63% abajo, castigada por un trimestre flojo, la dilución de sus emisiones y el enfriamiento del boom nuclear tras la calma con Irán — nada de eso toca su monopolio. Q1 2026: ingresos $76.7M, y subió su guía del año a $450-500M. CEO Amir Vexler. Reporta el 11 de agosto. Es cara (~62x utilidad) y muy volátil, pero el mercado paga por un activo estratégico e insustituible; consenso 'Buy' con target promedio ~$265 (incluso el más bajo de Wall Street iguala el precio de hoy).",
     summary_what:
       "Centrus Energy Corp. (NYSE American: LEU) es una empresa estadounidense de combustible nuclear. Su negocio principal es el **enriquecimiento de uranio**: tomar uranio natural y elevar su concentración del isótopo U-235 hasta el nivel que necesita un reactor para generar electricidad. HQ Bethesda, Maryland; planta de producción en Piketon, Ohio.\n\n**Dos segmentos**:\n\n**(1) LEU (Low-Enriched Uranium)** — vende combustible nuclear estándar a las empresas de servicios eléctricos que operan plantas nucleares en EE.UU. y el mundo. Históricamente compraba parte del material a terceros (incluida Rusia) y lo revendía; ahora está reconstruyendo capacidad propia de enriquecimiento doméstico.\n\n**(2) HALEU (High-Assay Low-Enriched Uranium)** — la joya estratégica. Es uranio enriquecido a mayor pureza (hasta ~20%), el combustible que requieren los **reactores modulares pequeños (SMRs)** y reactores avanzados de nueva generación. Centrus es la **única instalación con licencia de la NRC** para producir HALEU en EE.UU., en su planta de Piketon, Ohio.\n\n**Por qué importa**: tras la invasión de Ucrania, EE.UU. prohibió importar uranio enriquecido ruso (Rusia controlaba ~⁠40-50% del mercado mundial de enriquecimiento). Eso dejó un hueco enorme en la cadena de suministro nuclear occidental. Centrus es la apuesta del gobierno de EE.UU. para volver a tener producción doméstica: recibió una **orden del Departamento de Energía (DOE) de ~$900M** y mantiene un **backlog de ~$3.9 mil millones** de pedidos a futuro (hasta 2040).\n\n**Liderazgo**: CEO **Amir Vexler**. La empresa NO paga dividendo —reinvierte todo en expandir capacidad de enriquecimiento—. Q1 2026: ingresos $76.7M, EPS $0.45. La acción es muy volátil: cayó de ~$189 a ~$165 tras un Q1 por debajo de lo esperado.",
     summary_why:
-      "LEU a $167.07 es comprar el ÚNICO productor de capital estadounidense capaz de enriquecer uranio en EE.UU., justo cuando el país está obligado por ley a dejar de depender de Rusia para su combustible nuclear. Razones específicas: (1) **Monopolio estratégico de HALEU**: Centrus es la única instalación con licencia para producir el combustible (HALEU) que necesitan los reactores nucleares de nueva generación. Sin ese combustible, toda la industria de SMRs no arranca —y Centrus es el cuello de botella—. (2) **Viento de cola geopolítico**: EE.UU. prohibió el uranio enriquecido ruso; Rusia controlaba ~40-50% del mercado mundial. Reconstruir capacidad occidental es ahora prioridad de seguridad nacional, con dinero federal detrás. (3) **Respaldo del gobierno**: orden del DOE de ~$900M + backlog de ~$3.9 mil millones de pedidos hasta 2040 —visibilidad de ingresos a muy largo plazo—. (4) **Renacimiento nuclear**: la demanda eléctrica de los centros de datos de IA está empujando a las tecnológicas (Microsoft, Amazon, Google) a firmar acuerdos nucleares; más reactores = más demanda de combustible enriquecido. (5) **Catalizador de capacidad**: cada nueva cascada de centrifugadoras que Centrus pone en línea en Piketon multiplica su capacidad de producción. Analistas: 'Moderate Buy', target promedio ~$268 (~+60%).",
+      "LEU a $170.00 es REFORZAR (ya la teníamos desde el 8 de junio a $167.07) al ÚNICO productor de capital estadounidense capaz de enriquecer uranio en EE.UU., justo cuando el país está obligado por ley a dejar de depender de Rusia para su combustible nuclear — y ahora con el contrato de $900M del gobierno ya firmado en firme. Razones específicas: (1) **Monopolio estratégico de HALEU**: Centrus es la única instalación con licencia para producir el combustible (HALEU) que necesitan los reactores nucleares de nueva generación. Sin ese combustible, toda la industria de SMRs no arranca —y Centrus es el cuello de botella—. (2) **Viento de cola geopolítico**: EE.UU. prohibió el uranio enriquecido ruso; Rusia controlaba ~40-50% del mercado mundial. Reconstruir capacidad occidental es ahora prioridad de seguridad nacional, con dinero federal detrás. (3) **Respaldo del gobierno**: orden del DOE de ~$900M + backlog de ~$3.9 mil millones de pedidos hasta 2040 —visibilidad de ingresos a muy largo plazo—. (4) **Renacimiento nuclear**: la demanda eléctrica de los centros de datos de IA está empujando a las tecnológicas (Microsoft, Amazon, Google) a firmar acuerdos nucleares; más reactores = más demanda de combustible enriquecido. (5) **Catalizador de capacidad**: cada nueva cascada de centrifugadoras que Centrus pone en línea en Piketon multiplica su capacidad de producción. Analistas: 'Moderate Buy', target promedio ~$268 (~+60%).",
     summary_risk:
       "Riesgos: (1) **Valuación muy alta — el #1**: a ~58x utilidad, el precio ya descuenta mucho optimismo. Si la expansión de capacidad se retrasa o los pedidos de HALEU llegan más lento, la acción puede corregir fuerte (como ya pasó: -⁠13% tras un trimestre flojo). (2) **NO paga dividendo**: es 100% apuesta por crecimiento; no recibes ingreso mientras esperas. (3) **Dependencia del gobierno**: gran parte del caso depende de fondos y contratos del DOE; un cambio de prioridades políticas o de presupuesto federal golpea directo. (4) **Ejecución técnica**: enriquecer uranio es de lo más complejo y regulado que existe; cualquier problema operativo, de licencia (NRC) o de seguridad puede frenar la producción. (5) **Volatilidad extrema**: es una acción 'de tema' que se mueve con titulares de energía nuclear, no con fundamentales estables —no es para estómagos débiles—. (6) **Demanda aún incipiente de SMRs**: los reactores de nueva generación todavía se están construyendo; si su despliegue se atrasa años, la demanda de HALEU tarda en materializarse.",
     research_full: `# Centrus Energy (LEU) — Research Completo\n\n## Precio: $167.07 | P/E TTM: ~58.6x | Div Yield: 0% | Market Cap: ~$3.25B USD\n\n---\n\n## ¿Qué es Centrus?\n\nLa **única empresa de capital estadounidense** que enriquece uranio —el combustible nuclear— en suelo de EE.UU. HQ Bethesda, Maryland; planta en Piketon, Ohio. NO paga dividendo: reinvierte todo en capacidad.\n\n## 2 Segmentos\n\n| Segmento | Qué es | Nota |\n|----------|--------|------|\n| **LEU (bajo enriquecimiento)** | Combustible nuclear estándar para plantas | Reconstruyendo producción doméstica |\n| **HALEU (alto enriquecimiento)** | Combustible para reactores de nueva generación (SMRs) | ÚNICA planta con licencia NRC en EE.UU. |\n\n## El caso geopolítico\n\n- Tras invadir Ucrania, EE.UU. **prohibió importar uranio enriquecido ruso**.\n- Rusia controlaba **~40-50% del mercado mundial** de enriquecimiento.\n- Centrus = la apuesta de EE.UU. para recuperar producción doméstica.\n- **Orden del DOE: ~$900M** | **Backlog: ~$3.9 mil millones** hasta 2040.\n\n## Q1 2026\n\n| Métrica | Q1 2026 |\n|---------|---------|\n| Ingresos | $76.7M |\n| EPS | $0.45 |\n| Reacción | -⁠13% (cayó de ~$189 a ~$165, trimestre bajo expectativas) |\n\n## Liderazgo\n\n- **CEO**: Amir Vexler.\n- Dividendo: **$0** (100% reinversión).\n\n## Anchor Fact\n\n**Hay UNA sola empresa con permiso del gobierno de EE.UU. para fabricar el combustible que necesitan los reactores nucleares del futuro —y es Centrus—. Durante décadas, este combustible venía sobre todo de Rusia. Cuando EE.UU. prohibió comprarle a Rusia tras la guerra, quedó un hueco gigante: alguien tenía que producirlo en casa. Centrus es esa empresa, y el propio Departamento de Energía le firmó un pedido de ~$900 millones para que lo haga.**\n\n## Top 5 Risks\n\n1. **Valuación altísima** (~58x) — el precio ya descuenta mucho optimismo\n2. **NO paga dividendo** — 100% apuesta por crecimiento\n3. **Dependencia del gobierno** — el caso depende de fondos del DOE\n4. **Ejecución técnica + regulatoria** (NRC) — enriquecer uranio es complejísimo\n5. **Demanda de SMRs aún incipiente** — los reactores nuevos tardan en desplegarse\n\n## Analyst Consensus\n\n- Rating: **Moderate Buy**\n- Target promedio: **~$268** (~+60% desde $167.07)\n\n## Tesis en una línea\n\n> El único productor estadounidense de combustible nuclear enriquecido, insustituible para la independencia energética de EE.UU. justo cuando el país tiene prohibido comprarle a Rusia.\n\n---\n\n*Research fecha: 08 Jun 2026 | Próxima revisión: Dic 2026*\n*Esto no es asesoría financiera.*`,
-    analyst_consensus: "Moderate Buy",
-    analyst_target: 268.18,
-    analyst_upside: 60.5,
+    analyst_consensus: "Buy",
+    analyst_target: 264.73,
+    analyst_upside: 55.7,
     status: "active",
     first_researched_at: "2026-06-08T00:00:00Z",
-    last_updated_at: "2026-06-08T00:00:00Z",
-    next_review_at: "2026-12-08T00:00:00Z",
+    last_updated_at: "2026-07-23T00:00:00Z",
+    next_review_at: "2027-01-23T00:00:00Z",
   },
   {
     id: 87,
@@ -12552,24 +12552,24 @@ Son los 2 únicos REITs públicos data center de scale.
     country: "United States",
     region: "North America",
     currency: "USD",
-    price: 386.58,
-    pe_ratio: 71.7,
-    pe_forward: 37.7,
-    dividend_yield: 0.13,
-    market_cap_b: 60.5,
+    price: 362.67,
+    pe_ratio: 67.3,
+    pe_forward: 35.3,
+    dividend_yield: 0.14,
+    market_cap_b: 56.5,
     eps: 5.39,
-    summary_short: "Teradyne es la mitad estadounidense del duopolio mundial de equipos de prueba de semiconductores: junto con la japonesa Advantest, fabrica las máquinas que examinan cada chip antes de venderse — los de los iPhone, los aceleradores de IA, las memorias HBM, los de los coches. Su momento es histórico: los chips de IA son tan complejos que necesitan muchas más horas de prueba, y eso convirtió el Q1 2026 (reportado el 28 de abril) en el mejor trimestre de sus 66 años de historia: ingresos de $1.28 mil millones (+87%), utilidad por acción ajustada de $2.56 (más del triple que un año antes) y ~70% de las ventas ya ligadas a la IA. El plan de la empresa para 2026 apunta a ~$6 mil millones de ingresos — casi el doble de los $3.19 mil millones de 2025. También tiene un negocio menor de robots colaborativos (Universal Robots y MiR, ~7% de las ventas) que lleva años decepcionando. Sede en North Reading, Massachusetts; ~6,600 empleados; CEO Greg Smith. SÍ paga dividendo, pero simbólico: $0.13 por trimestre = ~0.1% anual al precio de hoy — aquí la apuesta es 100% el crecimiento. La honestidad obliga: la acción subió más de 4 veces en un año, cotiza a ~72x utilidad histórica (~38x la guía 2026) y el consenso 'Strong Buy' tiene un target promedio de ~$417 (~+8% desde $386.58) — y en junio llegó a tocar $488 antes de corregir. La tesis: el cobrador de peaje del boom de chips de IA — cada chip nuevo, sea de quien sea, tiene que pasar por sus máquinas.",
+    summary_short: "Reforzamos Teradyne a $362.67 — la teníamos desde el 6 de julio a $386.58 y hoy la compramos ~6% más barata, con la tesis intacta. ¿Por qué cayó? No por la empresa: fue una tormenta de todo el sector de chips (miedo a un exceso de memoria tras noticias de SK Hynix y TSMC) que tumbó ~25 acciones de semiconductores más de 20% en pocas semanas; Teradyne no reportó nada malo, ni recortó guía, ni perdió clientes. Teradyne es la mitad estadounidense del duopolio mundial de equipos de prueba de semiconductores: junto con la japonesa Advantest, fabrica las máquinas que examinan cada chip antes de venderse — los de los iPhone, los aceleradores de IA, las memorias HBM, los de los coches. Su Q1 2026 fue el mejor trimestre de sus 66 años de historia: ingresos de $1.28 mil millones (+87%) y ~70% de las ventas ya ligadas a la IA. El plan para 2026 apunta a ~$6 mil millones de ingresos, casi el doble de 2025. También tiene un negocio menor de robots colaborativos (Universal Robots y MiR) que lleva años decepcionando. Sede en North Reading, Massachusetts; ~6,600 empleados; CEO Greg Smith. Dividendo simbólico (~0.1%): aquí la apuesta es 100% el crecimiento. Reporta su próximo trimestre el 28 de julio — el catalizador cercano. Lo honesto: sigue cara (~50x la utilidad esperada) y si el exceso de memoria es real, los pedidos pueden enfriarse; pero los analistas están SUBIENDO sus targets en plena caída ($500-550 de UBS, BofA, Cantor, Susquehanna), con promedio ~$420. La tesis: el cobrador de peaje del boom de chips de IA, ahora ~26% abajo de su máximo — cada chip nuevo, sea de quien sea, tiene que pasar por sus máquinas.",
     summary_what: "Teradyne (Nasdaq: TER) fabrica **equipos de prueba automatizada de semiconductores** (ATE, por sus siglas en inglés): las máquinas que toman cada chip recién fabricado y lo someten a millones de pruebas eléctricas antes de que pueda venderse. Ningún chip del mundo —el de tu iPhone, el de un coche, un acelerador de IA, una memoria— llega al mercado sin pasar ese examen. Y ese examen lo aplican, en la práctica, **solo dos empresas en el mundo**: Teradyne (EE.UU., fundada en 1960 por ingenieros salidos del MIT) y **Advantest** (Japón).\n\n**Los 3 negocios (cifras Q1 2026):**\n\n- **Semiconductor Test ($1.11 mil millones en el trimestre — 87% de las ventas)** — el corazón. Máquinas que prueban procesadores y chips de lógica (los de celulares, coches y centros de datos) y también **memoria** — incluida la HBM, la memoria apilada que alimenta a los aceleradores de IA y que es especialmente difícil de probar. Sus clientes son las grandes fábricas y ensambladoras de chips del mundo: el ecosistema de TSMC, Samsung, SK Hynix y compañía.\n- **Robotics ($91 millones)** — **Universal Robots** (el pionero danés de los 'cobots': brazos robóticos que trabajan junto a personas sin jaulas de seguridad) y **MiR** (robots móviles que mueven material en fábricas y bodegas). Es la parte que ha decepcionado: su pico fue 2022 y desde entonces hubo caídas y despidos, aunque ya lleva 4 trimestres seguidos creciendo.\n- **Product Test ($80 millones)** — prueba de sistemas y tarjetas electrónicas, discos de almacenamiento y prueba inalámbrica (**LitePoint**).\n\n**Por qué explota ahora:** cada generación de chips de IA es más compleja — más transistores, chips apilados, memoria HBM pegada al procesador, redes que conectan miles de aceleradores. Más complejidad = **más tiempo de prueba por chip** = más máquinas de Teradyne. En Q1 2026, **~70% de sus ingresos ya estaba ligado a la demanda de IA** (venía de ~60% el trimestre anterior): aceleradores a la medida de los gigantes de la nube, memoria HBM de nueva generación y chips de redes.\n\n**Liderazgo:** CEO **Greg Smith** (en el cargo desde febrero de 2023). Sede en **North Reading, Massachusetts**. **~6,600 empleados** en el mundo, con operaciones fuertes en Filipinas, Dinamarca (la casa de Universal Robots), Costa Rica y Asia.\n\n**Dividendo (simbólico):** $0.13 por acción al trimestre (lo subió de $0.12 a inicios de 2026) = $0.52 anuales = **~0.1%** al precio de hoy. Además recompra acciones, pero seamos claros: aquí nadie invierte por la renta — la apuesta es el crecimiento.\n\n**Contexto 2026:** Q1 récord histórico ($1.28 mil millones, +87%, 18% arriba del récord anterior que databa de 2021), margen bruto de 60.9%, y un 'modelo objetivo' de la empresa para el año completo de **~$6 mil millones de ingresos** con utilidad ajustada por acción de $9.50-$11.00 — casi el doble de las ventas de 2025 ($3.19 mil millones). Próximo reporte: 28 de julio de 2026.",
-    summary_why: "TER a $386.58 es comprar el peaje del boom de chips de IA: no apuestas a que gane NVIDIA, AMD o los chips propios de los gigantes de la nube — gane quien gane, sus chips tienen que probarse en máquinas como las de Teradyne. Razones específicas: (1) **Duopolio real**: en equipos de prueba de semiconductores prácticamente solo existen Teradyne y la japonesa Advantest. Diseñar estas máquinas toma décadas de tecnología acumulada y los clientes no cambian de proveedor a la ligera — una barrera de entrada altísima. (2) **La IA multiplica las horas de examen**: los chips de IA son enormes, apilados y carísimos, y cada generación necesita más tiempo de prueba (la memoria HBM es el ejemplo extremo). En Q1 2026, ~70% de los ingresos de Teradyne ya venía de demanda ligada a IA, y las ventas crecieron +87% — el mejor trimestre en 66 años de historia. (3) **El año apunta a casi duplicarse**: el modelo objetivo de la empresa para 2026 es ~$6 mil millones de ingresos (2025 cerró en $3.19 mil millones) con utilidad ajustada por acción de $9.50-$11.00 — el tipo de salto que casi ninguna empresa de este tamaño logra. (4) **Rentabilidad de élite**: margen bruto de ~61% y utilidad neta ajustada equivalente al 31% de las ventas en Q1 — cuando el ciclo acompaña, este negocio imprime dinero. (5) **Wall Street sigue subiendo apuestas**: consenso 'Strong Buy' (11 de 12 analistas dicen comprar), con targets recién elevados — BofA a $525, Susquehanna y Cantor a $550. Honestidad: el target promedio (~$417) queda solo ~8% arriba del precio de hoy, y la acción ya tocó $488 en junio antes de corregir — no es una ganga escondida, es un negocio excepcional en pleno rally.",
+    summary_why: "TER a $362.67 es REFORZAR una posición que ya teníamos (comprada el 6 de julio a $386.58), ahora ~6% más barata por una caída de todo el sector de chips —no de la empresa—. Sigues comprando el peaje del boom de chips de IA: no apuestas a que gane NVIDIA, AMD o los chips propios de los gigantes de la nube — gane quien gane, sus chips tienen que probarse en máquinas como las de Teradyne. Razones específicas: (1) **Duopolio real**: en equipos de prueba de semiconductores prácticamente solo existen Teradyne y la japonesa Advantest. Diseñar estas máquinas toma décadas de tecnología acumulada y los clientes no cambian de proveedor a la ligera — una barrera de entrada altísima. (2) **La IA multiplica las horas de examen**: los chips de IA son enormes, apilados y carísimos, y cada generación necesita más tiempo de prueba (la memoria HBM es el ejemplo extremo). En Q1 2026, ~70% de los ingresos de Teradyne ya venía de demanda ligada a IA, y las ventas crecieron +87% — el mejor trimestre en 66 años de historia. (3) **El año apunta a casi duplicarse**: el modelo objetivo de la empresa para 2026 es ~$6 mil millones de ingresos (2025 cerró en $3.19 mil millones) con utilidad ajustada por acción de $9.50-$11.00 — el tipo de salto que casi ninguna empresa de este tamaño logra. (4) **Rentabilidad de élite**: margen bruto de ~61% y utilidad neta ajustada equivalente al 31% de las ventas en Q1 — cuando el ciclo acompaña, este negocio imprime dinero. (5) **Wall Street sigue subiendo apuestas**: consenso 'Strong Buy' (11 de 12 analistas dicen comprar), con targets recién elevados — BofA a $525, Susquehanna y Cantor a $550. Honestidad: el target promedio (~$417) queda solo ~8% arriba del precio de hoy, y la acción ya tocó $488 en junio antes de corregir — no es una ganga escondida, es un negocio excepcional en pleno rally.",
     summary_risk: "Riesgos: (1) **Valuación tras el rally — el #1**: la acción subió más de 4 veces en un año (de un mínimo de ~$89 a un máximo de ~$488, hoy $386.58) y cotiza a ~72x la utilidad histórica. El target promedio de los analistas (~$417) queda solo ~8% arriba, y el mercado está nervioso: en abril la acción cayó 19% en un día... después de reportar un trimestre récord. A estos múltiplos no hay margen de error. (2) **Ciclicidad brutal**: el equipo de prueba de chips es de los negocios más cíclicos que existen — cuando las fábricas frenan sus compras, las ventas se desploman (Teradyne facturó $3.19 mil millones en 2025, la mitad de lo que proyecta para 2026: así de violento es el sube-y-baja, en ambas direcciones). La propia empresa admite 'poca visibilidad' para el segundo semestre y su guía del Q2 es menor que el Q1. (3) **Concentración de clientes**: unos cuantos gigantes (el ecosistema de TSMC, Samsung, SK Hynix y las grandes ensambladoras asiáticas) concentran buena parte de los pedidos; perder o retrasar un solo programa grande mueve el trimestre. (4) **Advantest pelea cada contrato**: es un duopolio, pero feroz — históricamente Advantest se ha quedado, por ejemplo, con la prueba de las GPUs de NVIDIA; si gana los programas nuevos de IA, el boom se lo lleva el rival. (5) **La robótica lleva años decepcionando**: Universal Robots pasó de $326 millones en 2022 a ~$232 millones en 2025 (-28%), con dos rondas de despidos; hoy crece de nuevo, pero sigue siendo una promesa incumplida. (6) **Geopolítica**: casi todos sus clientes fabrican en Asia (Taiwán, Corea, China); controles de exportación, aranceles o un conflicto en Taiwán golpearían directo.",
     research_full: "# Teradyne (TER) — Research Completo\n\n## Precio: $386.58 | P/E TTM: ~72x | P/E fwd: ~38x | Div Yield: ~0.1% | Market Cap: ~$60 mil millones USD\n\n---\n\n## ¿Qué es Teradyne?\n\nLa mitad estadounidense del **duopolio mundial de equipos de prueba automatizada de semiconductores (ATE)**, junto con la japonesa **Advantest**. Sus máquinas someten cada chip recién fabricado a millones de pruebas eléctricas antes de que pueda venderse — ningún chip llega al mercado sin ese examen. Fundada en **1960** por ingenieros salidos del MIT. Sede en **North Reading, Massachusetts**. **~6,600 empleados** (10-K al 31 dic 2025), con operaciones fuertes en Filipinas, Dinamarca, Costa Rica y Asia. CEO: **Greg Smith** (desde febrero 2023).\n\n## Los 3 negocios (Q1 2026)\n\n| Segmento | Ventas Q1 2026 | Qué es |\n|----------|----------------|--------|\n| **Semiconductor Test** | $1,111 millones (87% del total) | Máquinas que prueban procesadores, chips de lógica y memoria (incluida HBM para IA) |\n| **Robotics** | $91 millones | Universal Robots (brazos colaborativos, Dinamarca) + MiR (robots móviles) |\n| **Product Test** | $80 millones | Prueba de sistemas y tarjetas, almacenamiento, prueba inalámbrica (LitePoint) |\n\n## Último trimestre (Q1 2026, reportado 28 abr 2026)\n\n| Métrica | Q1 2026 |\n|---------|---------|\n| Ingresos | $1,282 millones (+87% vs $686M en Q1 2025; +18% secuencial) |\n| Récord | Mejor trimestre de la historia — 18% arriba del récord anterior (Q2 2021) |\n| Margen bruto | 60.9% |\n| Utilidad neta GAAP | $398.9 millones |\n| EPS GAAP / non-GAAP | $2.53 / $2.56 (esperado: ~$2.08; un año antes: $0.75) |\n| Ingresos ligados a IA | ~70% (vs ~60% en Q4 2025) |\n\n**Guía Q2 2026:** ingresos de $1,150-$1,250 millones y EPS non-GAAP de $1.86-$2.15 — secuencialmente menor que Q1: la demanda es 'grumosa' (lumpy) y la empresa admite visibilidad limitada al segundo semestre. Próximo reporte: **28 de julio de 2026**.\n\n**Modelo objetivo FY2026:** ~**$6,000 millones** de ingresos y EPS non-GAAP de **$9.50-$11.00** — casi el doble de 2025.\n\n## Año completo 2025\n\n| Métrica | FY2025 |\n|---------|--------|\n| Ingresos | $3.19 mil millones (+13% vs $2.82 mil millones en 2024) |\n| Utilidad neta GAAP | $554 millones |\n| Q4 2025 | $1,083 millones (+44%) — el trimestre en que arrancó la aceleración de IA |\n\n## La tesis del boom de IA\n\n- **Cada chip se prueba antes de venderse** — y los chips de IA (aceleradores, HBM, redes) son los más complejos jamás fabricados: más transistores, chips apilados, memoria pegada al procesador. Más complejidad = **más tiempo de prueba por chip** = más máquinas.\n- **~70% de los ingresos ya ligado a IA**: aceleradores a la medida de los gigantes de la nube (los 'ASICs' propios de los hyperscalers), memoria **HBM4** de nueva generación y chips de networking.\n- **Duopolio con Advantest**: décadas de tecnología acumulada; los clientes no cambian de proveedor a la ligera. La competencia es por programa (chip por chip), no por precio de lista.\n- **Rentabilidad de élite cuando el ciclo acompaña**: margen bruto ~61%, utilidad neta non-GAAP = 31% de las ventas en Q1 2026.\n- **Robotics como opcionalidad**: Universal Robots + MiR — hoy pequeña (~7%) y venida a menos desde 2022, pero con 4 trimestres seguidos de crecimiento y apalancada a la automatización con IA ('physical AI').\n\n## Dividendo (simbólico)\n\n- **$0.13 por acción al trimestre** (subió de $0.12 a inicios de 2026; declarado el 7 may 2026, pagado el 12 jun 2026) → $0.52 anuales = **~0.1%** a $386.58.\n- También recompra acciones. Pero la apuesta aquí es crecimiento, no renta.\n\n## Liderazgo\n\n- **CEO**: Greg Smith (desde febrero 2023; veterano de la casa, venía de dirigir Semiconductor Test).\n- Sede: North Reading, Massachusetts. ~6,600 empleados; ~156.5 millones de acciones en circulación.\n\n## Anchor Fact\n\n**Ningún chip del mundo se puede vender sin pasar antes un examen eléctrico, y las máquinas que aplican ese examen las hacen básicamente dos empresas: Teradyne y la japonesa Advantest. Los chips de IA son tan complejos que necesitan muchas más horas de prueba que un chip normal — por eso Teradyne acaba de romper su récord de ventas de 66 años con un trimestre de +87%.**\n\n## Top 6 Risks\n\n1. **Valuación tras el rally** — ~72x utilidad TTM; la acción subió más de 4x en un año (mínimo ~$89 → máximo ~$488) y cayó 19% en un día tras reportar un trimestre récord; target promedio (~$417) solo ~8% arriba\n2. **Ciclicidad brutal** — 2025 facturó la mitad de lo que proyecta 2026; el ciclo baja igual de rápido; guía Q2 secuencialmente menor y visibilidad limitada al H2\n3. **Concentración de clientes** — el ecosistema TSMC/Samsung/SK Hynix y las grandes ensambladoras asiáticas concentran los pedidos\n4. **Advantest** — el otro lado del duopolio; históricamente se quedó con la prueba de las GPUs de NVIDIA; cada programa nuevo de IA se pelea chip por chip\n5. **Robotics decepciona** — Universal Robots: $326M (2022) → ~$232M (2025), dos rondas de despidos (~25% y ~14%); recuperándose, pero promesa incumplida\n6. **Geopolítica** — clientes concentrados en Taiwán/Corea/China; controles de exportación, aranceles o conflicto en Taiwán pegan directo\n\n## Analyst Consensus\n\n- Rating: **Strong Buy** (TipRanks: 11 Buy, 1 Hold, 0 Sell)\n- Target promedio: **~$417** (~+8% desde $386.58); rango $270-$550\n- Targets recién elevados: BofA $525, Susquehanna $550, Cantor $550\n- *Lectura honesta: la acción llegó a cotizar en junio (~$488) por ARRIBA del target promedio y ha corregido ~20% desde ese máximo. Los alcistas más agresivos ven $525-550; el promedio ve upside moderado. Es momentum de ciclo, no ganga.*\n\n## Tesis en una línea\n\n> El cobrador de peaje del boom de chips de IA: gane quien gane la carrera —NVIDIA, AMD o los chips propios de los gigantes de la nube—, cada chip tiene que pasar por las máquinas del duopolio Teradyne-Advantest, y el examen es cada vez más largo y más caro.\n\n---\n\n*Research fecha: 6 Jul 2026 | Próxima revisión: Ene 2027*\n*Esto no es asesoría financiera.*",
     analyst_consensus: "Strong Buy",
-    analyst_target: 416.65,
-    analyst_upside: 7.8,
+    analyst_target: 420,
+    analyst_upside: 15.8,
     status: "active",
     first_researched_at: "2026-07-06T00:00:00Z",
-    last_updated_at: "2026-07-06T00:00:00Z",
-    next_review_at: "2027-01-06T00:00:00Z",
+    last_updated_at: "2026-07-23T00:00:00Z",
+    next_review_at: "2027-01-23T00:00:00Z",
   },
   {
     id: 115,
@@ -12934,6 +12934,244 @@ Son los 2 únicos REITs públicos data center de scale.
     first_researched_at: "2026-07-16T00:00:00Z",
     last_updated_at: "2026-07-16T00:00:00Z",
     next_review_at: "2027-01-16T00:00:00Z",
+  },
+  {
+    id: 128,
+    ticker: "LLY",
+    name: "Eli Lilly and Company",
+    sector: "Healthcare",
+    industry: "Salud — Farmacéutica (Diabetes, Obesidad y Neurociencia)",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 1146.62,
+    pe_ratio: 40.7,
+    pe_forward: 25.6,
+    dividend_yield: 0.54,
+    market_cap_b: 1057.5,
+    eps: 28.14,
+    summary_short:
+      "Eli Lilly es la farmacéutica más valiosa del mundo y hoy la reina indiscutible de la mayor ola de la medicina moderna: los medicamentos para bajar de peso y controlar la diabetes. Sus dos estrellas —Mounjaro (para diabetes) y Zepbound (para obesidad)— son en realidad el mismo medicamento, la tirzepatida, y juntas facturaron 12.8 mil millones de dólares en un solo trimestre (Q1 2026), creciendo más de 80% al año. En abril de 2026 Lilly lanzó además Foundayo (orforglipron), la primera pastilla de su clase para bajar de peso —hasta entonces solo existían inyecciones—, aprobada por la FDA el 1 de abril, sin restricciones de comida ni agua. Más allá de la obesidad hace medicinas para el Alzheimer (Kisunla), el cáncer de mama (Verzenio) y la psoriasis (Taltz). En el Q1 2026 (reportado el 30 de abril) facturó 19.8 mil millones (+56%) y subió su meta del año a 82-85 mil millones de dólares —un salto de más de 40% frente a 2025—; controla cerca del 60% del mercado mundial de estos medicamentos. HQ en Indianápolis, fundada en 1876 (cumple 150 años en 2026), ~50,000 empleados, CEO David Ricks desde 2017. Paga un dividendo pequeño (~0.5%) pero que lleva 12 años seguidos subiendo. La compramos a $1,146.62, ~8% por debajo de su máximo histórico de $1,249 alcanzado apenas el 7 de julio: una toma de ganancias, sin malas noticias detrás. Cotiza a ~26 veces la utilidad esperada, lo más barata que ha estado en años para una empresa que crece a este ritmo. Reporta su próximo trimestre el 5 de agosto. Consenso 'Buy', target promedio ~$1,236.",
+    summary_what: `Eli Lilly (NYSE: LLY) es una de las farmacéuticas más grandes y antiguas del mundo, fundada en Indianápolis en 1876. Hoy su motor de crecimiento es una sola familia de medicamentos —los llamados **incretinas** o **GLP-1**— que imitan una hormona del cuerpo para reducir el apetito y controlar el azúcar en sangre.
+
+**Los productos estrella:**
+
+- **Mounjaro (tirzepatida, inyección)** — para diabetes tipo 2. En el Q1 2026 facturó **$8.66 mil millones (+125%)**, y por primera vez vende más fuera de EE.UU. que dentro.
+- **Zepbound (la misma tirzepatida)** — aprobado para obesidad y apnea del sueño. Ventas en EE.UU. de **$4.16 mil millones (+80%)** en el trimestre.
+- **Foundayo (orforglipron)** — la joya nueva: la **primera pastilla** de tipo GLP-1 para bajar de peso, aprobada por la FDA el **1 de abril de 2026**. Hasta ahora estos medicamentos solo existían en inyección; una pastilla es mucho más fácil de fabricar y de tomar (sin restricciones de comida ni agua), y abre la puerta a cientos de millones de pacientes nuevos.
+- **Kisunla (donanemab)** — para el **Alzheimer** temprano: limpia las placas del cerebro. Apenas empezando a despegar.
+- **Verzenio** (cáncer de mama), **Taltz** (psoriasis), **Jardiance** (diabetes/corazón, con Boehringer), y una fila de lanzamientos más jóvenes (Ebglyss para eczema, Omvoh, Jaypirca).
+
+**Por qué explota ahora:** la obesidad es el mercado farmacéutico más grande jamás abierto —cientos de millones de personas—, y Lilly llegó con el medicamento más potente y ahora también con la primera pastilla. Controla cerca del **60% del mercado mundial** de GLP-1.
+
+**Liderazgo:** CEO **David A. Ricks** (desde enero de 2017, también presidente del consejo). Sede en **Indianápolis, Indiana**. **~50,000 empleados**. En 2026 la empresa cumple **150 años**.`,
+    summary_why: `LLY a $1,146.62 es comprar al líder indiscutible de la mayor ola de la medicina moderna, en una toma de ganancias sin malas noticias detrás. Razones concretas:
+
+1. **Crecimiento que casi ninguna empresa de su tamaño logra.** En el Q1 2026 (reportado el 30 de abril) facturó **$19.8 mil millones, +56%**, con la utilidad ajustada por acción subiendo **+156%**. Y subió su meta del año a **$82-85 mil millones** de ingresos —más de 40% arriba de 2025—.
+
+2. **Dominio del mercado.** Sus dos versiones de tirzepatida (Mounjaro + Zepbound) facturaron **$12.8 mil millones en un solo trimestre** (~$51 mil millones al año). Lilly tiene ~60% del mercado global de GLP-1.
+
+3. **La pastilla lo cambia todo.** Foundayo, la primera pastilla GLP-1 para bajar de peso, se aprobó el 1 de abril. Una pastilla es más barata de producir y llega a muchísima más gente que una inyección: es el siguiente escalón de un mercado ya enorme.
+
+4. **Su rival acaba de tropezar.** El medicamento rival de Novo Nordisk (CagriSema) perdió una comparación directa contra Zepbound (**20% vs 24%** de pérdida de peso), y Novo proyecta que sus ventas de obesidad se **encojan** en 2026 mientras Lilly sube su meta.
+
+5. **Está más barata de lo que parece.** Cotiza a ~26 veces la utilidad **esperada** para una empresa que crece +40% —de las valuaciones más razonables que ha tenido en años—, y la compramos ~8% abajo de su máximo histórico de $1,249, tocado el 7 de julio. Consenso 'Buy', target promedio ~$1,236 (UBS ve $1,425). Reporta el 5 de agosto: un catalizador cercano.`,
+    summary_risk: `Riesgos: (1) **Valuación y expectativas altísimas — el #1**: a ~$1.06 billones de valor de mercado y ~41 veces la utilidad histórica, el precio ya descuenta una ejecución impecable; el target promedio (~$1,236) queda apenas ~8% arriba, y un solo tropiezo en el reporte del 5 de agosto se castiga fuerte. (2) **Competencia**: Novo Nordisk pelea el mercado y ya arrancó una guerra de precios —los precios reales de Lilly cayeron ~13% en el trimestre—; más adelante llegan Amgen y Viking con sus propios medicamentos (primeros lanzamientos ~2027). (3) **Presión de precios del gobierno**: EE.UU. está forzando precios más bajos (un acuerdo pone Mounjaro/Zepbound en ~$245/mes para Medicare), y algunos de sus medicamentos ya entraron a la negociación obligatoria de precios de Medicare. (4) **Vencimiento de patentes**: aunque la tirzepatida está protegida hasta ~2036, otros medicamentos (Trulicity, Jardiance, Verzenio) pierden protección esta década y hay que reemplazar esos ingresos —por eso Lilly compra empresas sin parar (acaba de pagar hasta $3.8 mil millones por AtaiBeckley)—. (5) **Un negocio, una apuesta**: gran parte del valor depende de la tirzepatida; un problema de seguridad, fabricación o regulatorio en esa familia golpearía muy duro.`,
+    research_full: `# Eli Lilly (LLY) — Research Completo
+
+## Precio: $1,146.62 | P/E TTM: ~41x | P/E fwd: ~26x | Div Yield: ~0.5% | Market Cap: ~$1.06 billones USD
+
+---
+
+## ¿Qué es Eli Lilly?
+
+Una de las farmacéuticas más grandes y antiguas del mundo, **fundada en Indianápolis en 1876** por el coronel Eli Lilly. En noviembre de 2025 se convirtió en la **primera empresa de salud de la historia en valer un billón de dólares**. Su motor hoy es la familia de medicamentos **GLP-1 / incretinas**: imitan una hormona natural que reduce el apetito y controla el azúcar en sangre. CEO **David A. Ricks** (desde enero 2017). ~50,000 empleados. En 2026 cumple 150 años.
+
+## Los productos (Q1 2026)
+
+| Producto | Para qué | Ventas Q1 2026 |
+|----------|----------|----------------|
+| **Mounjaro** (tirzepatida) | Diabetes tipo 2 | $8.66 mil millones (+125%) |
+| **Zepbound** (tirzepatida) | Obesidad / apnea del sueño | $4.16 mil millones EE.UU. (+80%) |
+| **Foundayo** (orforglipron) | Primera **pastilla** GLP-1 para bajar de peso | Recién lanzada (aprobada 1 abr 2026) |
+| **Kisunla** (donanemab) | Alzheimer temprano | $124 millones (rampa) |
+| **Verzenio** | Cáncer de mama HR+ | ~$5.5 mil millones/año |
+| **Jardiance, Taltz, Ebglyss…** | Diabetes/corazón, psoriasis, eczema | Franquicias multimillonarias |
+
+Mounjaro + Zepbound = **$12.8 mil millones en un solo trimestre** (~$51 mil millones anualizados). Lilly tiene **~60% del mercado mundial** de GLP-1.
+
+## Último trimestre (Q1 2026, reportado 30 abr 2026)
+
+| Métrica | Q1 2026 |
+|---------|---------|
+| Ingresos | **$19.8 mil millones (+56%)** (volumen +65%, precio −13%) |
+| EPS ajustado (non-GAAP) | $8.55 (+156%) |
+| EPS GAAP | $8.26 (+170%) |
+
+**Guía 2026 subida:** ingresos **$82-85 mil millones** (antes $80-83), EPS ajustado **$35.50-37.00**. Implica ~+40% de crecimiento vs 2025. **Próximo reporte: 5 de agosto de 2026** (consenso ~$20.5 mil millones / EPS $7.74).
+
+## La historia: la ola GLP-1
+
+- **La obesidad es el mercado farmacéutico más grande jamás abierto**: cientos de millones de pacientes potenciales en el mundo.
+- **Foundayo (la pastilla)** es el catalizador clave: aprobada el 1 de abril de 2026, es la primera pastilla GLP-1 para bajar de peso; hasta ~12% de pérdida de peso en estudios, sin restricciones de comida ni agua. Una pastilla se fabrica más barato y llega a mucha más gente que una inyección.
+- **El rival tropezó**: CagriSema de Novo Nordisk perdió la comparación directa contra Zepbound (20% vs 24% de pérdida de peso); Novo proyecta que sus ventas de obesidad se encojan en 2026.
+- **El siguiente as bajo la manga**: retatrutida, en fase final, logró en mayo de 2026 lo nunca visto — **30%+ de pérdida de peso promedio (~38 kilos)** en un estudio grande (TRIUMPH-1), el mayor de cualquier medicamento; el 23 de julio despejó dudas de seguridad cardiaca.
+
+## Dividendo (pequeño pero creciente)
+
+- **$1.73 por acción al trimestre** = $6.92 anuales = **~0.5%** a $1,146.62. Es bajo porque la acción se disparó, no porque el pago sea débil.
+- **12 años consecutivos** subiéndolo (el último aumento +15%).
+
+## Anchor Fact
+
+**El 21 de noviembre de 2025, Eli Lilly se convirtió en la primera empresa de salud de la historia en valer un billón de dólares (un millón de millones). Un solo trimestre de sus medicamentos para bajar de peso ($12.8 mil millones) factura más que compañías farmacéuticas enteras — y su próximo medicamento, la retatrutida, acaba de lograr 30% de pérdida de peso promedio en un estudio grande, algo nunca antes visto.**
+
+## Top 5 Riesgos
+
+1. **Valuación / expectativas** — ~41x utilidad histórica, ~$1.06 billones de valor; target promedio (~$1,236) solo ~8% arriba; el reporte del 5 de agosto es un examen exigente
+2. **Competencia** — Novo Nordisk (guerra de precios: −13% en precios reales), y Amgen/Viking llegando ~2027
+3. **Presión de precios del gobierno** — acuerdo MFN (~$245/mes Medicare), negociación obligatoria de Medicare
+4. **Patentes** — Trulicity (~2027), Jardiance (~2028), Verzenio (~2029) erosionan esta década; compras constantes para reemplazar ingresos (AtaiBeckley, hasta $3.8 mil millones, jul 2026)
+5. **Concentración en tirzepatida** — un problema de seguridad/fabricación/regulatorio en esa familia pegaría muy fuerte
+
+## Consenso de analistas
+
+- Rating: **Buy / Overweight** (~38 analistas)
+- Target promedio: **~$1,236** (~+8% desde $1,146.62); S&P ~$1,270
+- Alzas recientes (jul 2026): UBS $1,425, JPMorgan $1,400, Morgan Stanley $1,347
+
+## Tesis en una línea
+
+> El líder indiscutible de la mayor ola de la medicina moderna —los medicamentos para bajar de peso—, con la primera pastilla del mercado, ~60% de participación y crecimiento de +40%, comprado ~8% abajo de su máximo histórico.
+
+---
+
+*Research fecha: 23 Jul 2026 | Próxima revisión: Ene 2027*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 1236,
+    analyst_upside: 7.8,
+    status: "active",
+    first_researched_at: "2026-07-23T00:00:00Z",
+    last_updated_at: "2026-07-23T00:00:00Z",
+    next_review_at: "2027-01-23T00:00:00Z",
+  },
+  {
+    id: 129,
+    ticker: "ALC",
+    name: "Alcon Inc.",
+    sector: "Healthcare",
+    industry: "Salud — Equipos y Productos para el Cuidado de los Ojos",
+    country: "Switzerland",
+    region: "Europe",
+    currency: "USD",
+    price: 66.4,
+    pe_ratio: 39.8,
+    pe_forward: 16.7,
+    dividend_yield: 0.53,
+    market_cap_b: 32.8,
+    eps: 1.67,
+    summary_short:
+      "Alcon es la empresa #1 del mundo en cuidado de los ojos, y la compramos en oferta. Hace dos cosas: (1) equipos y lentes para cirugía —las máquinas con las que se operan las cataratas y los lentes intraoculares que se implantan (PanOptix, Vivity)— y (2) productos de visión —lentes de contacto (Precision1, Total30, Dailies) y gotas para ojo seco (Systane)—. Entre Alcon y Johnson & Johnson controlan cerca de la mitad del mercado mundial de equipos para cirugía de cataratas, y el mundo hace más de 20 millones de esas cirugías al año. La acción cayó de ~$92 a ~$66 en el último año por dos golpes puntuales: a mediados de 2025 recortó su meta de ventas (cirugías de catarata más flojas de lo esperado + aranceles), y en enero de 2026 se cayó la compra de STAAR Surgical que había anunciado. Pero el negocio nunca se rompió: en el Q1 2026 (reportado el 6 de mayo) las ventas crecieron +10% a $2.7 mil millones y la utilidad ajustada +16%, y hasta subió su meta de crecimiento de utilidad del año. Ojo con un detalle clave: se ve 'cara' a ~40 veces la utilidad, pero eso es casi todo por un cargo contable que no es dinero real (amortización de compras viejas); sobre las ganancias de verdad cotiza a ~17 veces —lo más barata desde que se volvió independiente en 2019—. HQ en Ginebra, Suiza; nació en Fort Worth, Texas, en 1945; ~25,600 empleados; CEO David Endicott. La compramos a $66.40 con consenso 'Buy' y target promedio ~$87.",
+    summary_what: `Alcon (NYSE y bolsa suiza SIX: ALC) es la **empresa #1 del mundo dedicada por completo al cuidado de los ojos**. Nació en Fort Worth, Texas, en 1945 (de una farmacia de dos socios: **Al**exander y **Con**ner), fue de Nestlé y luego de Novartis, y se volvió una empresa independiente en bolsa en **abril de 2019**. Tiene dos negocios:
+
+**(1) Cirugía (~54% de las ventas)** — el corazón de la empresa:
+- **Equipos de cirugía de cataratas**: las máquinas (sistemas de facoemulsificación; la nueva plataforma UNITY) con las que un cirujano remueve el cristalino nublado por la catarata.
+- **Lentes intraoculares**: el lente artificial que se implanta en ese ojo. Sus estrellas son **PanOptix** y **PanOptix Pro** (corrigen la vista de cerca y de lejos) y **Vivity**.
+- Más equipo para cirugía de retina y refractiva.
+
+**(2) Visión (~46% de las ventas)** — el negocio de consumo:
+- **Lentes de contacto**: Precision1, Total30, Dailies.
+- **Salud ocular**: gotas para ojo seco **Systane** (líder del mercado) y Tryptyr, una receta nueva para ojo seco.
+
+**Por qué es un negocio de calidad:** el ojo envejece con todos —las cataratas son prácticamente inevitables con la edad—, el mundo hace **más de 20 millones de cirugías de catarata al año**, y entre Alcon y Johnson & Johnson controlan **~50% del mercado de equipos** para esa cirugía. Es equipo médico especializado donde el cirujano confía en la marca y no cambia a la ligera.
+
+**Liderazgo:** CEO **David J. Endicott** (desde que se independizó en 2019). HQ en **Ginebra, Suiza**, con un centro operativo grande en Fort Worth, Texas. **~25,600 empleados**.`,
+    summary_why: `ALC a $66.40 es comprar al líder mundial del cuidado de los ojos después de una caída fuerte —de ~$92 a ~$66— cuyas causas ya quedaron atrás. Razones concretas:
+
+1. **La valuación se reseteó y el 'PE caro' es un espejismo.** A ~40 veces la utilidad **contable** parece cara, pero ese número está inflado por un cargo que **no es dinero real**: la amortización de compras viejas (~$696 millones al año, herencia de cuando la separaron de Novartis). Sobre las ganancias **de verdad** (utilidad 'core' de $3.07 por acción, creciendo 10-13%) cotiza a ~17 veces —lo más barata desde que salió a bolsa en 2019—.
+
+2. **Las malas noticias ya pasaron.** Los dos golpes que hundieron la acción —el recorte de meta de mediados de 2025 y el fracaso de la compra de STAAR en enero de 2026— ya están en el pasado. La caída fue por titulares, no porque el negocio dejara de funcionar.
+
+3. **El negocio nunca se rompió.** En el Q1 2026 (reportado el 6 de mayo) las ventas crecieron **+10% a $2.7 mil millones**, la utilidad ajustada **+16%**, y la empresa **subió** su meta de crecimiento de utilidad del año a +10-13%. Eso no es una empresa en problemas.
+
+4. **Viento demográfico casi garantizado.** La población mayor de 60 años se va a duplicar hacia 2050, y las cataratas llegan con la edad. La demanda de cirugías y lentes solo sube con el tiempo.
+
+5. **Ola de productos nuevos.** Justo ahora está lanzando su plataforma UNITY, PanOptix Pro, la gota Tryptyr y Valeda (para una enfermedad de la retina) — varias palancas para superar expectativas ya rebajadas. Consenso 'Buy', target promedio ~$87 (~+31% desde $66.40). Reporta el 10 de agosto.`,
+    summary_risk: `Riesgos: (1) **Cirugías de catarata más flojas — el #1**: justo eso fue lo que provocó el recorte de meta de 2025, y la cirugía es el 54% de las ventas; si el volumen de operaciones no repunta, la tesis se retrasa. (2) **Competencia**: Alcon y Johnson & Johnson se reparten ~50% del mercado de cataratas, pero en lentes de contacto pierde terreno frente a CooperVision y J&J, y en cirugía compiten Bausch+Lomb y Zeiss. (3) **Aranceles de EE.UU.**: aunque Alcon ya bajó su supuesto a 10%, sigue siendo un costo vivo en 2026. (4) **Tipo de cambio**: es una empresa suiza que reporta en dólares; el vaivén de las monedas mueve sus números (en el Q1 hubo 4 puntos de diferencia entre el crecimiento 'real' y el reportado). (5) **Ejecución de los lanzamientos**: la tesis se apoya en que UNITY, PanOptix Pro, Tryptyr y Valeda despeguen; si se atrasan, vuelve el fantasma del recorte de meta. Y el dividendo (~0.5%) es tan chico que no ofrece casi ningún colchón si la acción baja.`,
+    research_full: `# Alcon (ALC) — Research Completo
+
+## Precio: $66.40 | P/E TTM: ~40x (contable) / ~17x (core) | Div Yield: ~0.5% | Market Cap: ~$32.8 mil millones USD
+
+---
+
+## ¿Qué es Alcon?
+
+La **empresa #1 del mundo dedicada por completo al cuidado de los ojos**. Fundada en **Fort Worth, Texas, en 1945** (de la farmacia de **Al**exander y **Con**ner). Pasó por Nestlé y Novartis, y se independizó en bolsa en **abril de 2019**. HQ hoy en **Ginebra, Suiza**; cotiza en Nueva York (NYSE) y en la bolsa suiza (SIX). CEO **David J. Endicott** (desde el spin-off de 2019). ~25,600 empleados.
+
+## Los 2 negocios (Q1 2026)
+
+| Segmento | % ventas | Qué es | Ventas Q1 2026 |
+|----------|----------|--------|----------------|
+| **Cirugía** | ~54% | Equipos de cirugía de cataratas (UNITY), lentes intraoculares (PanOptix, Vivity), retina, refractiva | $1.46 mil millones (+10%) |
+| **Visión (Vision Care)** | ~46% | Lentes de contacto (Precision1, Total30, Dailies) + salud ocular (Systane, Tryptyr) | $1.23 mil millones (+9%) |
+
+## Último trimestre (Q1 2026, reportado 6 may 2026)
+
+| Métrica | Q1 2026 |
+|---------|---------|
+| Ingresos | **$2.7 mil millones (+10% reportado / +6% en moneda constante)** |
+| EPS core (ajustado) | $0.85 (+16%), superó lo esperado |
+| Guía 2026 | Ventas +5-7%; **utilidad core subida a +10-13%** |
+
+**FY2025:** ingresos ~$10.4 mil millones; utilidad core por acción **$3.07**. **Próximo reporte: ~10 de agosto de 2026** (consenso ~$2.76 mil millones).
+
+## Por qué cayó de ~$92 a ~$66
+
+No fue un golpe único, sino una serie de decepciones a lo largo de un año:
+
+1. **Recorte de meta a mediados de 2025**: bajó su meta de ventas del año (a +4-5% desde +6-7%) por **cirugías de catarata más flojas, pérdida de algo de participación y aranceles de EE.UU.**. La acción cayó ~11-12% ese día; varias casas la bajaron de calificación.
+2. **Se cayó la compra de STAAR Surgical**: en agosto de 2025 Alcon acordó comprar STAAR (lentes implantables para corregir la vista) por ~$28-30.75 por acción, pero **los accionistas de STAAR la rechazaron el 6 de enero de 2026** y Alcon canceló el trato. Le quitó una pata de crecimiento esperada.
+3. **BofA la bajó a 'Underperform'** tras el fracaso del trato, con precio objetivo de $75.
+
+El resultado: el múltiplo se comprimió aunque los ingresos seguían creciendo a doble dígito.
+
+## El punto clave de valuación: el 'PE caro' es un espejismo
+
+El P/E contable de ~40 asusta, pero está inflado por **~$696 millones al año de amortización de intangibles** —un cargo contable que **no es salida de dinero**, herencia de las compras viejas y de la separación de Novartis—. Si miras las ganancias **de verdad** (utilidad core de $3.07 por acción, creciendo 10-13%), el P/E baja a **~17 veces**: lo más barata que ha estado desde 2019.
+
+## Anchor Fact
+
+**El mundo hace más de 20 millones de cirugías de catarata cada año, y entre Alcon y Johnson & Johnson fabrican cerca de la mitad de los equipos y lentes que se usan en ellas — es decir, la tecnología de Alcon está en el quirófano de unos ~10 millones de operaciones que le devuelven la vista a la gente cada año. Y como las cataratas llegan con la edad, y la población mayor de 60 se duplicará hacia 2050, la demanda es una de las más predecibles de toda la medicina.**
+
+## Top 5 Riesgos
+
+1. **Cirugías de catarata flojas** — fue lo que causó el recorte de 2025; la cirugía es el 54% de las ventas
+2. **Competencia** — Cooper/J&J en lentes de contacto; Bausch+Lomb/Zeiss en cirugía
+3. **Aranceles de EE.UU.** — costo vivo en 2026 aun al 10% supuesto
+4. **Tipo de cambio** — empresa suiza que reporta en dólares
+5. **Ejecución de lanzamientos** — UNITY, PanOptix Pro, Tryptyr, Valeda deben despegar; dividendo (~0.5%) da poco colchón
+
+## Consenso de analistas
+
+- Rating: **Buy / Overweight** (~22 Buy / 3 Hold / 1 Sell)
+- Target promedio: **~$87** (~+31% desde $66.40); rango $66-$107
+
+## Tesis en una línea
+
+> El líder mundial del cuidado de los ojos, en oferta tras dos sustos ya superados: el negocio crece a doble dígito, la valuación real es ~17x, y la demografía del envejecimiento le garantiza clientes por décadas.
+
+---
+
+*Research fecha: 23 Jul 2026 | Próxima revisión: Ene 2027*
+*Esto no es asesoría financiera.*`,
+    analyst_consensus: "Buy",
+    analyst_target: 87,
+    analyst_upside: 31.0,
+    status: "active",
+    first_researched_at: "2026-07-23T00:00:00Z",
+    last_updated_at: "2026-07-23T00:00:00Z",
+    next_review_at: "2027-01-23T00:00:00Z",
   },
 ];
 
@@ -14704,6 +14942,58 @@ export const transactions: Transaction[] = [
     wa_message: "📊 *STOCK PICK #133* — Jul 16, 2026\n\n🏢 *iShares MSCI Saudi Arabia ETF* (KSA) — $36.97\n\n🧺 *Lo que hacen*: Ojo, esto NO es una empresa: es un *ETF*, una sola canasta con ~120 de las empresas más grandes de Arabia Saudita — los bancos gigantes (Al Rajhi ~14%), la petrolera más grande del mundo (Aramco ~11%), telefónicas y mineras. Es nuestra *primera posición de Medio Oriente* en el portafolio.\n\n🌍 *Presencia*: Lo emite iShares (BlackRock), sigue el índice MSCI Saudi Arabia IMI 25/50 y cobra 0.75% al año. Aquí vamos CONTRA la corriente: la bolsa saudí viene de su peor año en una década (-12.8% en 2025, cuando sus vecinos del Golfo subieron +17% a +28%) y hoy se paga ~16 veces la utilidad contra ~20 de su promedio histórico. Compramos barato lo que nadie quiere, y nos pagan por esperar.\n\n💵 *Tu nuevo ingreso*: Esta canasta te paga *~2.8% anual* solo por ser dueño — sale de los dividendos de los bancos y petroleras saudíes que lleva dentro. Cada vez que alguien en Riad pide un préstamo o llena el tanque, una parte de ese negocio llega a ti como dividendo.\n\n⚠️ *El riesgo*: El #1 — *el petróleo, y no es teórico*: las cuentas del gobierno saudí necesitan un barril entre $80 y $94 para cuadrar y el Brent ronda $85 — justo en el filo; Aramco ya recortó su dividendo ~30%. Otros: (2) geopolítica caliente — en 2026 hubo conflicto real alrededor del Estrecho de Ormuz y la bolsa saudí llegó a caer 5% en un día, (3) los megaproyectos de Vision 2030 van tarde — de los 170 km prometidos de The Line solo hay cimientos en 2.4, (4) casi la mitad de la canasta son bancos: si el gobierno gasta menos, prestan menos.\n\n🆕 Posición #133\n🔗 https://vectorialdata.com/stocks/KSA\n✅ Certificado por blockchain → vectorialdata.com/verify/KSA\n\n💡 Dato que ancla la tesis: En febrero de 2026, Arabia Saudita abrió su bolsa a CUALQUIER inversionista extranjero por primera vez en su historia — antes solo entraban fondos gigantes. Compramos justo después de su peor año en una década: la apuesta es sencilla — cobrar ~2.8% al año mientras el mundo descubre un mercado que acaba de abrir sus puertas.",
     attestation_uid: "0x85dbeb963f4ad51c3c5f436dd4d377244a07ea5f458f2ec2179cf2ddf02fbb11",
   },
+  {
+    id: 134,
+    stock_id: 128,
+    ticker: "LLY",
+    type: "new" as const,
+    cycle_number: 27,
+    price: 1146.62,
+    open_price: 1146.62,
+    date: "2026-07-23",
+    day_of_week: "thursday",
+    wa_message:
+      "📊 *STOCK PICK #134* — Jul 23, 2026\n\n🏢 *Eli Lilly* (LLY) — $1,146.62\n\n🏭 *Lo que hacen*: La farmacéutica más valiosa del mundo y hoy la reina de los medicamentos para bajar de peso y controlar la diabetes. Sus dos estrellas —*Mounjaro* (diabetes) y *Zepbound* (obesidad)— son el mismo medicamento (tirzepatida) y juntas facturaron *$12.8 mil millones en un solo trimestre*. En abril de 2026 lanzó *Foundayo*, la primera *pastilla* de su tipo para bajar de peso —hasta entonces solo existían inyecciones—. También hace medicinas para el Alzheimer (Kisunla), el cáncer de mama (Verzenio) y la psoriasis (Taltz).\n\n🌍 *Presencia*: HQ en Indianápolis, fundada en *1876* (cumple 150 años en 2026). *~50,000 empleados*. CEO *David Ricks* desde 2017. El último trimestre (Q1 2026) facturó *$19.8 mil millones (+56%)* y subió su meta del año a $82-85 mil millones. Controla cerca del *60% del mercado* mundial de estos medicamentos.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~0.5% anual* solo por ser dueño — es un dividendo chico, seamos honestos: aquí la apuesta real es el crecimiento. Pero lleva *12 años seguidos* subiéndolo, así que cada trimestre una parte de sus ganancias llega a ti como dividendo.\n\n⚠️ *El riesgo*: El #1 — *la acción está cara y ya corrió mucho*: se paga ~41 veces la utilidad y el target promedio de los analistas (~$1,236) queda apenas ~8% arriba. Otros: (2) su rival Novo Nordisk pelea el mercado y ya empezó una guerra de precios (los precios reales cayeron ~13%), (3) el gobierno de EE.UU. presiona para que estos medicamentos cuesten menos (~$245/mes en Medicare), (4) reporta el 5 de agosto y a estos múltiplos un solo tropiezo se castiga fuerte, (5) nuevos competidores (Amgen, Viking) llegan hacia 2027.\n\n🆕 Posición #134\n🔗 https://vectorialdata.com/stocks/LLY\n✅ Certificado por blockchain → vectorialdata.com/verify/LLY\n\n💡 Dato que ancla la tesis: En noviembre de 2025, Eli Lilly se convirtió en la *primera empresa de salud de la historia* en valer un billón de dólares (un millón de millones). Y su próximo medicamento, la retatrutida, acaba de lograr algo nunca visto: *30% de pérdida de peso promedio* (unos 38 kilos) en un estudio grande. Compramos al líder indiscutible de la mayor ola de la medicina moderna, ~8% abajo de su máximo histórico.",
+  },
+  {
+    id: 135,
+    stock_id: 129,
+    ticker: "ALC",
+    type: "new" as const,
+    cycle_number: 27,
+    price: 66.4,
+    open_price: 66.4,
+    date: "2026-07-23",
+    day_of_week: "thursday",
+    wa_message:
+      "📊 *STOCK PICK #135* — Jul 23, 2026\n\n🏢 *Alcon* (ALC) — $66.40\n\n🏭 *Lo que hacen*: La empresa *#1 del mundo en cuidado de los ojos*. Hace dos cosas: (1) los equipos y lentes para *cirugía* —las máquinas con las que se operan las cataratas y el lente que se implanta (PanOptix, Vivity)— y (2) productos de *visión* —lentes de contacto (Precision1, Total30, Dailies) y las gotas para ojo seco Systane—. Entre Alcon y Johnson & Johnson fabrican cerca de la *mitad* de los equipos para cirugía de cataratas del mundo, y se hacen *más de 20 millones* de esas cirugías al año.\n\n🌍 *Presencia*: HQ en Ginebra, Suiza; nació en Fort Worth, Texas, en *1945*. *~25,600 empleados*. CEO *David Endicott*. El último trimestre (Q1 2026) vendió *$2.7 mil millones (+10%)* y subió su meta de utilidad del año. Reporta el 10 de agosto.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~0.5% anual* solo por ser dueño — es un dividendo chico, aquí la apuesta es el crecimiento. Pero lo lleva subiendo 4 años seguidos, así que una parte de sus ganancias llega a ti como dividendo.\n\n⚠️ *El riesgo*: El #1 — *que las cirugías de catarata sigan flojas*: justo eso hizo caer la acción de ~$92 a ~$66 el año pasado, y la cirugía es más de la mitad de sus ventas. Otros: (2) compite con J&J, Cooper y Bausch+Lomb, (3) los aranceles de EE.UU. le suben costos, (4) es suiza pero cobra en dólares: el tipo de cambio mueve sus números, (5) su plan depende de que sus productos nuevos (UNITY, PanOptix Pro) despeguen.\n\n🆕 Posición #135\n🔗 https://vectorialdata.com/stocks/ALC\n✅ Certificado por blockchain → vectorialdata.com/verify/ALC\n\n💡 Dato que ancla la tesis: Se ve 'cara' a ~40 veces la utilidad, pero es un espejismo: casi todo ese número es un cargo contable que no es dinero real (amortización de compras viejas). Sobre las ganancias de verdad cotiza a ~17 veces —lo más barata desde que se volvió independiente en 2019—. Y como las cataratas llegan con la edad y la población mayor de 60 se duplicará hacia 2050, la demanda de sus productos es una de las más seguras de toda la medicina. Compramos al líder mundial en oferta, tras dos sustos que ya pasaron.",
+  },
+  {
+    id: 136,
+    stock_id: 114,
+    ticker: "TER",
+    type: "rebuy" as const,
+    cycle_number: 28,
+    price: 362.67,
+    open_price: 362.67,
+    date: "2026-07-23",
+    day_of_week: "thursday",
+    wa_message:
+      "📊 *STOCK PICK #136* — Jul 23, 2026\n\n🏢 *Teradyne* (TER) — $362.67\n\n🏭 *Lo que hacen*: Cada chip del mundo —el de tu celular, el de un coche, los de IA— tiene que pasar un *examen* eléctrico antes de venderse, y las máquinas que aplican ese examen las hacen básicamente *solo dos empresas*: Teradyne (EE.UU.) y la japonesa Advantest. Ya la teníamos desde el 6 de julio (a $386.58) y hoy la *reforzamos* a $362.67, ~6% más barata.\n\n🌍 *Presencia*: HQ en North Reading, Massachusetts. *~6,600 empleados*. CEO *Greg Smith*. Su Q1 2026 fue el mejor trimestre de sus 66 años de historia: ingresos de *$1.28 mil millones (+87%)*, con ~70% de las ventas ya ligadas a la IA. Reporta el próximo trimestre el 28 de julio.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~0.1% anual* solo por ser dueño — casi simbólico, seamos honestos: aquí la apuesta es 100% el crecimiento. Aun así, cada trimestre una parte de sus ganancias llega a ti como dividendo.\n\n⚠️ *El riesgo*: El #1 — *sigue cara* (~50 veces la utilidad esperada) y muy *cíclica*: cuando las fábricas de chips frenan sus compras, sus ventas se desploman. Ojo: cayó ~26% desde su máximo no por un problema suyo, sino por un susto de todo el sector (miedo a un exceso de memoria); si ese exceso es real, sus pedidos pueden enfriarse. Otros: (2) pocos clientes gigantes concentran los pedidos, (3) Advantest le pelea cada contrato, (4) su negocio de robots lleva años decepcionando.\n\n🔄 Posición #136 (recompra)\n🔗 https://vectorialdata.com/stocks/TER\n✅ Certificado por blockchain → vectorialdata.com/verify/TER\n\n💡 Dato que ancla la tesis: La caída no vino de Teradyne — no reportó nada malo, no recortó su guía ni perdió clientes. Fue una tormenta de todo el sector de chips. Y mientras la acción caía, los analistas SUBÍAN sus precios objetivo ($500-550 de varios bancos). Reforzamos el 'cobrador de peaje' del boom de chips de IA a mejor precio: gane quien gane la carrera, cada chip tiene que pasar por sus máquinas.",
+  },
+  {
+    id: 137,
+    stock_id: 86,
+    ticker: "LEU",
+    type: "rebuy" as const,
+    cycle_number: 28,
+    price: 170,
+    open_price: 170,
+    date: "2026-07-23",
+    day_of_week: "thursday",
+    wa_message:
+      "📊 *STOCK PICK #137* — Jul 23, 2026\n\n🏢 *Centrus Energy* (LEU) — $170.00\n\n⚛️ *Lo que hacen*: Centrus es la *única* empresa de capital estadounidense que enriquece uranio —el combustible de las plantas nucleares— en suelo de EE.UU. Ya la teníamos desde el 8 de junio (a $167.07) y hoy la *reforzamos* a $170.00 porque la tesis se fortaleció: el 1 de julio el gobierno le *firmó en firme* el contrato de ~$900 millones (antes solo estaba adjudicado), y su producción del combustible especial va adelantada.\n\n🌍 *Presencia*: HQ en Maryland, planta en Piketon, Ohio —la única del país autorizada para producir HALEU, el combustible de los reactores nucleares de nueva generación—. CEO *Amir Vexler*. Tiene una cartera de pedidos de ~$3,900 millones hasta 2040 y subió su meta de ingresos del año a $450-500 millones. Reporta el 11 de agosto.\n\n💵 *Tu nuevo ingreso*: Esta empresa *no paga dividendo* — reinvierte todo en construir más capacidad. Ganas si la acción sube con la demanda nuclear, no por un pago periódico.\n\n⚠️ *El riesgo*: El #1 — *está cara* (~62 veces la utilidad) y es *extremadamente volátil*: tocó $464 en octubre de 2025 y hoy vale ~63% menos. Otros: (2) depende mucho del dinero y los contratos del gobierno de EE.UU., (3) enriquecer uranio es técnicamente complejísimo y muy regulado, (4) la demanda de los reactores nuevos todavía está arrancando, (5) sigue emitiendo acciones para financiar su expansión, lo que diluye a los dueños.\n\n🔄 Posición #137 (recompra)\n🔗 https://vectorialdata.com/stocks/LEU\n✅ Certificado por blockchain → vectorialdata.com/verify/LEU\n\n💡 Dato que ancla la tesis: EE.UU. tiene prohibido comprarle uranio enriquecido a Rusia, y todos los permisos temporales vencen el 1 de enero de 2028 — así que las plantas nucleares del país están obligadas a buscar proveedores como Centrus. Reforzamos al único productor estadounidense justo después de que el gobierno le firmara en firme su contrato de $900 millones, y 63% abajo de su máximo.",
+  },
 ];
 
 type Cycle = {
@@ -14929,7 +15219,15 @@ export const cycles: Cycle[] = [
     cycle_number: 27,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
+    current_count: 5,
+    status: "completed" as const,
+  },
+  {
+    id: 28,
+    cycle_number: 28,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 2,
     status: "active" as const,
   },
 ];

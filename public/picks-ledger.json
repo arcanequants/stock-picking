@@ -158,5 +158,941 @@
     "date": "2026-03-24",
     "previous_hash": "8540808f7ca122aee54a28ee01bab300cf406438fda5224f5b03d2dfa72dc5f4",
     "hash": "26fc5c6778de0398ca9f6648bcf119d7474c3ab7d1470dca9a8b5197defa4de8"
+  },
+  {
+    "pick_number": 21,
+    "ticker": "NOC",
+    "price": 691.43,
+    "date": "2026-03-25",
+    "previous_hash": "26fc5c6778de0398ca9f6648bcf119d7474c3ab7d1470dca9a8b5197defa4de8",
+    "hash": "123625a6d52ec9abdbe773c502be03da7a647669e46d7a2119c3c10a095d70d8"
+  },
+  {
+    "pick_number": 22,
+    "ticker": "GE",
+    "price": 288.68,
+    "date": "2026-03-25",
+    "previous_hash": "123625a6d52ec9abdbe773c502be03da7a647669e46d7a2119c3c10a095d70d8",
+    "hash": "42ad5094321673a0f4187b82fd45ed521e0ef27071f111c184871e3e26ac92e1"
+  },
+  {
+    "pick_number": 23,
+    "ticker": "HWM",
+    "price": 227.9,
+    "date": "2026-03-27",
+    "previous_hash": "42ad5094321673a0f4187b82fd45ed521e0ef27071f111c184871e3e26ac92e1",
+    "hash": "b3cb710033bf491c2a3c7bc4082cb9f80d88a845b275d11932f61b284c4ab9ef"
+  },
+  {
+    "pick_number": 24,
+    "ticker": "BG",
+    "price": 126.28,
+    "date": "2026-03-30",
+    "previous_hash": "b3cb710033bf491c2a3c7bc4082cb9f80d88a845b275d11932f61b284c4ab9ef",
+    "hash": "92c46f5eb69d8f927cd47bcd0ee94de307e555a247f6048a1854e5f7ae2b0e7f"
+  },
+  {
+    "pick_number": 25,
+    "ticker": "BIDU",
+    "price": 106.6,
+    "date": "2026-03-30",
+    "previous_hash": "92c46f5eb69d8f927cd47bcd0ee94de307e555a247f6048a1854e5f7ae2b0e7f",
+    "hash": "0a992ee5a7c6e032b770c4c1391d6ae7f5e0ad6ad9b288e60cf5b2ff13b5f709"
+  },
+  {
+    "pick_number": 26,
+    "ticker": "BKNG",
+    "price": 4204.22,
+    "date": "2026-03-31",
+    "previous_hash": "0a992ee5a7c6e032b770c4c1391d6ae7f5e0ad6ad9b288e60cf5b2ff13b5f709",
+    "hash": "4ae3e01cb6e79c8f9f4530bcb2d22a1c113d3100d89b4aeea287bd1f6d403156"
+  },
+  {
+    "pick_number": 27,
+    "ticker": "BLK",
+    "price": 962.11,
+    "date": "2026-03-31",
+    "previous_hash": "4ae3e01cb6e79c8f9f4530bcb2d22a1c113d3100d89b4aeea287bd1f6d403156",
+    "hash": "1929b0bebe1d481aa51d03d68027a35db37bfec22164c52a98afc709aebfb2ed"
+  },
+  {
+    "pick_number": 28,
+    "ticker": "BTI",
+    "price": 57.89,
+    "date": "2026-04-02",
+    "previous_hash": "1929b0bebe1d481aa51d03d68027a35db37bfec22164c52a98afc709aebfb2ed",
+    "hash": "be8a1aed043a0028a2821186ca32a84d0e3952e9f080c7d1c5c0d9253bffa215"
+  },
+  {
+    "pick_number": 29,
+    "ticker": "MDLZ",
+    "price": 57.03,
+    "date": "2026-04-02",
+    "previous_hash": "be8a1aed043a0028a2821186ca32a84d0e3952e9f080c7d1c5c0d9253bffa215",
+    "hash": "56736588129c86af5a6db4fb3571165a1f1f85d8d7978351b3b617de09087df1"
+  },
+  {
+    "pick_number": 30,
+    "ticker": "ZTS",
+    "price": 118.08,
+    "date": "2026-04-06",
+    "previous_hash": "56736588129c86af5a6db4fb3571165a1f1f85d8d7978351b3b617de09087df1",
+    "hash": "e64b6c3f2169ab7c7ce23b1013eae78cbf68ac61408912efed052acbe26d76ac"
+  },
+  {
+    "pick_number": 31,
+    "ticker": "MLI",
+    "price": 112.67,
+    "date": "2026-04-06",
+    "previous_hash": "e64b6c3f2169ab7c7ce23b1013eae78cbf68ac61408912efed052acbe26d76ac",
+    "hash": "a15710ea8e0a29e3dee64c5d63b9b2fc577e3cdf585a70360113770e1580abc7"
+  },
+  {
+    "pick_number": 32,
+    "ticker": "ROP",
+    "price": 360.46,
+    "date": "2026-04-06",
+    "previous_hash": "a15710ea8e0a29e3dee64c5d63b9b2fc577e3cdf585a70360113770e1580abc7",
+    "hash": "4c0ae3c4da9cd670342c0e38bbe8ea4c0bd0e15af3425b00be5de604639ed9c9"
+  },
+  {
+    "pick_number": 33,
+    "ticker": "BX",
+    "price": 117.67,
+    "date": "2026-04-08",
+    "previous_hash": "4c0ae3c4da9cd670342c0e38bbe8ea4c0bd0e15af3425b00be5de604639ed9c9",
+    "hash": "d92fc6fc02b0406b512a22421f67e247ccef9fcf02cdf35d0737185d07e2bb0a"
+  },
+  {
+    "pick_number": 34,
+    "ticker": "CAIXY",
+    "price": 4.12,
+    "date": "2026-04-08",
+    "previous_hash": "d92fc6fc02b0406b512a22421f67e247ccef9fcf02cdf35d0737185d07e2bb0a",
+    "hash": "4ad10920d49bc5de3086b1f7123c36e1ab32bf97b1bdc6aa995d6faa0fbdd0df"
+  },
+  {
+    "pick_number": 35,
+    "ticker": "IEX",
+    "price": 197.85,
+    "date": "2026-04-08",
+    "previous_hash": "4ad10920d49bc5de3086b1f7123c36e1ab32bf97b1bdc6aa995d6faa0fbdd0df",
+    "hash": "2497c92798f66e70efa2bf7060322f8812772c8d2480b44ad481191ff7fad960"
+  },
+  {
+    "pick_number": 36,
+    "ticker": "CALM",
+    "price": 77.72,
+    "date": "2026-04-09",
+    "previous_hash": "2497c92798f66e70efa2bf7060322f8812772c8d2480b44ad481191ff7fad960",
+    "hash": "199aaf29031b6e6dab4c63580c18c76a02329546fb6d223d234e9008a12f9c28"
+  },
+  {
+    "pick_number": 37,
+    "ticker": "CCJ",
+    "price": 116.66,
+    "date": "2026-04-10",
+    "previous_hash": "199aaf29031b6e6dab4c63580c18c76a02329546fb6d223d234e9008a12f9c28",
+    "hash": "e6d651ab5f1d0ef2cd87fcbbe4b3f8d81d612b623908a4c1ea30e536bc4884df"
+  },
+  {
+    "pick_number": 38,
+    "ticker": "CRRFY",
+    "price": 3.94,
+    "date": "2026-04-14",
+    "previous_hash": "e6d651ab5f1d0ef2cd87fcbbe4b3f8d81d612b623908a4c1ea30e536bc4884df",
+    "hash": "09ccf7dff4da52233182e9f4d5522e7e369cceb510f7c4303a63917d94b3062c"
+  },
+  {
+    "pick_number": 39,
+    "ticker": "CDNS",
+    "price": 293.32,
+    "date": "2026-04-14",
+    "previous_hash": "09ccf7dff4da52233182e9f4d5522e7e369cceb510f7c4303a63917d94b3062c",
+    "hash": "37f467724769780db70f2b495e2d546c6fac0b2fe68872cbb1698c8a2da1091b"
+  },
+  {
+    "pick_number": 40,
+    "ticker": "PNR",
+    "price": 90.81,
+    "date": "2026-04-14",
+    "previous_hash": "37f467724769780db70f2b495e2d546c6fac0b2fe68872cbb1698c8a2da1091b",
+    "hash": "9c654092064ddad6dcdfaab534f179fb00cc6cbda58eea6583b997245198fb07"
+  },
+  {
+    "pick_number": 41,
+    "ticker": "MCD",
+    "price": 306.26,
+    "date": "2026-04-15",
+    "previous_hash": "9c654092064ddad6dcdfaab534f179fb00cc6cbda58eea6583b997245198fb07",
+    "hash": "f649f31f228342577f8e113663dff274438f6641d8396ac8fd9aae9c0713d564"
+  },
+  {
+    "pick_number": 42,
+    "ticker": "WFAFY",
+    "price": 26.73,
+    "date": "2026-04-15",
+    "previous_hash": "f649f31f228342577f8e113663dff274438f6641d8396ac8fd9aae9c0713d564",
+    "hash": "2f88926cc677d887fbe7b119505dc69d0ae817f0bbeefbcc21a953fe32b68c7e"
+  },
+  {
+    "pick_number": 43,
+    "ticker": "ESLOY",
+    "price": 122.75,
+    "date": "2026-04-15",
+    "previous_hash": "2f88926cc677d887fbe7b119505dc69d0ae817f0bbeefbcc21a953fe32b68c7e",
+    "hash": "eaa35e3c15dff45144365ed2bf2a1b291dae75e37d5acfe41781c6c40bd050bf"
+  },
+  {
+    "pick_number": 44,
+    "ticker": "CEG",
+    "price": 295.49,
+    "date": "2026-04-17",
+    "previous_hash": "eaa35e3c15dff45144365ed2bf2a1b291dae75e37d5acfe41781c6c40bd050bf",
+    "hash": "4aa2bc37044c5a3d0726758bd591a0a0fad662d7d8fc080aff51890fd7148683"
+  },
+  {
+    "pick_number": 45,
+    "ticker": "CNI",
+    "price": 110.26,
+    "date": "2026-04-20",
+    "previous_hash": "4aa2bc37044c5a3d0726758bd591a0a0fad662d7d8fc080aff51890fd7148683",
+    "hash": "7e3e8db8cbaa9a0e29bee075bc992ede9d6df48e3c1798df37abc3cae6e20cf4"
+  },
+  {
+    "pick_number": 46,
+    "ticker": "CICHY",
+    "price": 22.66,
+    "date": "2026-04-20",
+    "previous_hash": "7e3e8db8cbaa9a0e29bee075bc992ede9d6df48e3c1798df37abc3cae6e20cf4",
+    "hash": "ca173b0418eb4a5de0dab67c2eee59b3504037c43be98eec34917562e5c7a7e5"
+  },
+  {
+    "pick_number": 47,
+    "ticker": "COIN",
+    "price": 208.58,
+    "date": "2026-04-21",
+    "previous_hash": "ca173b0418eb4a5de0dab67c2eee59b3504037c43be98eec34917562e5c7a7e5",
+    "hash": "55d5b6cf9bb930f0493396c568ee1afe18237b9206449fd928b01d51ab368fac"
+  },
+  {
+    "pick_number": 48,
+    "ticker": "COST",
+    "price": 994.87,
+    "date": "2026-04-21",
+    "previous_hash": "55d5b6cf9bb930f0493396c568ee1afe18237b9206449fd928b01d51ab368fac",
+    "hash": "ac9878eb50496796afa640373d01b7187284be3bb4f4434a49a47b3b54052633"
+  },
+  {
+    "pick_number": 49,
+    "ticker": "WFC",
+    "price": 81.08,
+    "date": "2026-04-22",
+    "previous_hash": "ac9878eb50496796afa640373d01b7187284be3bb4f4434a49a47b3b54052633",
+    "hash": "08a08116f639e038040da8bd572cba60123b5fa6142397e657c838bf3d6747dd"
+  },
+  {
+    "pick_number": 50,
+    "ticker": "MMM",
+    "price": 145.48,
+    "date": "2026-04-23",
+    "previous_hash": "08a08116f639e038040da8bd572cba60123b5fa6142397e657c838bf3d6747dd",
+    "hash": "1cbf2f08f6d85d81035ac40cd880cdda9ca5fe29bd904f499aba0d59de4070a5"
+  },
+  {
+    "pick_number": 51,
+    "ticker": "MCO",
+    "price": 457.97,
+    "date": "2026-04-24",
+    "previous_hash": "1cbf2f08f6d85d81035ac40cd880cdda9ca5fe29bd904f499aba0d59de4070a5",
+    "hash": "65625cc5dbd95e94e649fe09b7a5db209398204eb221f478d9b873b44445c6e6"
+  },
+  {
+    "pick_number": 52,
+    "ticker": "GILD",
+    "price": 129.83,
+    "date": "2026-04-27",
+    "previous_hash": "65625cc5dbd95e94e649fe09b7a5db209398204eb221f478d9b873b44445c6e6",
+    "hash": "2bb7701d74e8ead3b51e62157f5db22b7ed630aac6374a6643e176850c86664b"
+  },
+  {
+    "pick_number": 53,
+    "ticker": "AMKBY",
+    "price": 11.51,
+    "date": "2026-04-27",
+    "previous_hash": "2bb7701d74e8ead3b51e62157f5db22b7ed630aac6374a6643e176850c86664b",
+    "hash": "5831820b2b54e289acb1d2103123a4350b519d599d3ee46074473e6cbba207c2"
+  },
+  {
+    "pick_number": 54,
+    "ticker": "CP",
+    "price": 87.3,
+    "date": "2026-04-28",
+    "previous_hash": "5831820b2b54e289acb1d2103123a4350b519d599d3ee46074473e6cbba207c2",
+    "hash": "f45fdf8fa81c07408ade559e4f02278a5dcc277e0c7938cca307007aa95ddda2"
+  },
+  {
+    "pick_number": 55,
+    "ticker": "CRM",
+    "price": 182.21,
+    "date": "2026-04-28",
+    "previous_hash": "f45fdf8fa81c07408ade559e4f02278a5dcc277e0c7938cca307007aa95ddda2",
+    "hash": "bb0a65e6841de3e91fe7156af3d0c854e0cb6acce23f9ca864b5b0187b9939f4"
+  },
+  {
+    "pick_number": 56,
+    "ticker": "CRRFY",
+    "price": 4,
+    "date": "2026-05-04",
+    "previous_hash": "bb0a65e6841de3e91fe7156af3d0c854e0cb6acce23f9ca864b5b0187b9939f4",
+    "hash": "75f094ac4e215aa94367421dc074093cabd9a5fd618825dd255b9642d125e829"
+  },
+  {
+    "pick_number": 57,
+    "ticker": "CSX",
+    "price": 45.14,
+    "date": "2026-05-04",
+    "previous_hash": "75f094ac4e215aa94367421dc074093cabd9a5fd618825dd255b9642d125e829",
+    "hash": "980ab12722850f56ada507becf48e51f57f4f77481d29ae1f9e48ed3aaa5128a"
+  },
+  {
+    "pick_number": 58,
+    "ticker": "DE",
+    "price": 578.79,
+    "date": "2026-05-04",
+    "previous_hash": "980ab12722850f56ada507becf48e51f57f4f77481d29ae1f9e48ed3aaa5128a",
+    "hash": "9c966c9b5aa263b3ac9eb0cb346179c89b5b67b53814453a45d998f52c6dd432"
+  },
+  {
+    "pick_number": 59,
+    "ticker": "HCA",
+    "price": 429.01,
+    "date": "2026-05-04",
+    "previous_hash": "9c966c9b5aa263b3ac9eb0cb346179c89b5b67b53814453a45d998f52c6dd432",
+    "hash": "ba4bdbaddb640de4182b0a58520e814a4c35793bed722f1c688f014af62b0f60"
+  },
+  {
+    "pick_number": 60,
+    "ticker": "HEI",
+    "price": 270.34,
+    "date": "2026-05-04",
+    "previous_hash": "ba4bdbaddb640de4182b0a58520e814a4c35793bed722f1c688f014af62b0f60",
+    "hash": "05c11e85817adf0a24883445755942b6a2b12f13b915737b6d49e1b2c8548a38"
+  },
+  {
+    "pick_number": 61,
+    "ticker": "RHHBY",
+    "price": 50.84,
+    "date": "2026-05-05",
+    "previous_hash": "05c11e85817adf0a24883445755942b6a2b12f13b915737b6d49e1b2c8548a38",
+    "hash": "0821708e0f9a2f282bc0c8924761970ff996e3705c18425d229f313eb0fd6537"
+  },
+  {
+    "pick_number": 62,
+    "ticker": "RTX",
+    "price": 172.87,
+    "date": "2026-05-05",
+    "previous_hash": "0821708e0f9a2f282bc0c8924761970ff996e3705c18425d229f313eb0fd6537",
+    "hash": "9b12796376a61164b53445e8aae807b121e264fa07a625e924a49914e0ae9f20"
+  },
+  {
+    "pick_number": 63,
+    "ticker": "NU",
+    "price": 14.5,
+    "date": "2026-05-06",
+    "previous_hash": "9b12796376a61164b53445e8aae807b121e264fa07a625e924a49914e0ae9f20",
+    "hash": "f28d34b5892c7007c98936222234665f4c97bdeab01cdc63bc87859abbc92f77"
+  },
+  {
+    "pick_number": 64,
+    "ticker": "DEO",
+    "price": 83.2,
+    "date": "2026-05-07",
+    "previous_hash": "f28d34b5892c7007c98936222234665f4c97bdeab01cdc63bc87859abbc92f77",
+    "hash": "a2cf183f6a5574b76239d3ffbfcd176ea376706ca4153c86e94a678c26471208"
+  },
+  {
+    "pick_number": 65,
+    "ticker": "DHLGY",
+    "price": 27.89,
+    "date": "2026-05-13",
+    "previous_hash": "a2cf183f6a5574b76239d3ffbfcd176ea376706ca4153c86e94a678c26471208",
+    "hash": "e6eb4b19f886d22ce6c622bece53d49844e0327a7f60136f6ad11f315eb9b966"
+  },
+  {
+    "pick_number": 66,
+    "ticker": "DHR",
+    "price": 166.29,
+    "date": "2026-05-13",
+    "previous_hash": "e6eb4b19f886d22ce6c622bece53d49844e0327a7f60136f6ad11f315eb9b966",
+    "hash": "170e438cf962cac7dc3619674d23d75a413ad86338eeb7b9614aadb46c5263a5"
+  },
+  {
+    "pick_number": 67,
+    "ticker": "DIDIY",
+    "price": 3.61,
+    "date": "2026-05-13",
+    "previous_hash": "170e438cf962cac7dc3619674d23d75a413ad86338eeb7b9614aadb46c5263a5",
+    "hash": "4f21d49bdd3c43d2403eb9c03ffb790033878fe0c4349a862d1e734933e060f7"
+  },
+  {
+    "pick_number": 68,
+    "ticker": "DLR",
+    "price": 194.93,
+    "date": "2026-05-13",
+    "previous_hash": "4f21d49bdd3c43d2403eb9c03ffb790033878fe0c4349a862d1e734933e060f7",
+    "hash": "906e935138a591490f8aebc4eb5a2730d3dc4fd65a9f4b3cab424658daeb0083"
+  },
+  {
+    "pick_number": 69,
+    "ticker": "ECL",
+    "price": 250.79,
+    "date": "2026-05-13",
+    "previous_hash": "906e935138a591490f8aebc4eb5a2730d3dc4fd65a9f4b3cab424658daeb0083",
+    "hash": "74b3dfa6d1b9ad66cc6c9eeb9ee727b7176be2afcf4a4e569ab88e7fa80eabf0"
+  },
+  {
+    "pick_number": 70,
+    "ticker": "GSK",
+    "price": 50.33,
+    "date": "2026-05-13",
+    "previous_hash": "74b3dfa6d1b9ad66cc6c9eeb9ee727b7176be2afcf4a4e569ab88e7fa80eabf0",
+    "hash": "70d866ae6bd176d6c5b138efb4d1290c5a80fb93402a8fe36af5aece31da87d5"
+  },
+  {
+    "pick_number": 71,
+    "ticker": "AXP",
+    "price": 314.29,
+    "date": "2026-05-18",
+    "previous_hash": "70d866ae6bd176d6c5b138efb4d1290c5a80fb93402a8fe36af5aece31da87d5",
+    "hash": "4cc3d6f1667598775de1fb8c20fb5e746c36e43b6b9b33bb717ca1cae0989f06"
+  },
+  {
+    "pick_number": 72,
+    "ticker": "DOV",
+    "price": 210.95,
+    "date": "2026-05-18",
+    "previous_hash": "4cc3d6f1667598775de1fb8c20fb5e746c36e43b6b9b33bb717ca1cae0989f06",
+    "hash": "6dae329ce60e7e842faff692fb970cd19a2206065b6402eb0ebd11347038a5c9"
+  },
+  {
+    "pick_number": 73,
+    "ticker": "NTR",
+    "price": 71.27,
+    "date": "2026-05-18",
+    "previous_hash": "6dae329ce60e7e842faff692fb970cd19a2206065b6402eb0ebd11347038a5c9",
+    "hash": "8f0e1ae3148dcecba1434da7becb6e09c391980fa296a701017badc24c57914d"
+  },
+  {
+    "pick_number": 74,
+    "ticker": "TNL",
+    "price": 62.75,
+    "date": "2026-05-18",
+    "previous_hash": "8f0e1ae3148dcecba1434da7becb6e09c391980fa296a701017badc24c57914d",
+    "hash": "224f0698a5632ebc18990feee293eefcfba7562631e5fc32527ea190ef43dce2"
+  },
+  {
+    "pick_number": 75,
+    "ticker": "EADSY",
+    "price": 50.12,
+    "date": "2026-05-19",
+    "previous_hash": "224f0698a5632ebc18990feee293eefcfba7562631e5fc32527ea190ef43dce2",
+    "hash": "ceb82fe06ae511cd9416661e09d959a120545357837fc1726d1b6b9f0005646d"
+  },
+  {
+    "pick_number": 76,
+    "ticker": "DTEGY",
+    "price": 33.82,
+    "date": "2026-05-19",
+    "previous_hash": "ceb82fe06ae511cd9416661e09d959a120545357837fc1726d1b6b9f0005646d",
+    "hash": "98fb924105191bed64f3727bc6f77d2223ee22799cc8f0bb78edd25afa35160e"
+  },
+  {
+    "pick_number": 77,
+    "ticker": "ECL",
+    "price": 244.96,
+    "date": "2026-05-20",
+    "previous_hash": "98fb924105191bed64f3727bc6f77d2223ee22799cc8f0bb78edd25afa35160e",
+    "hash": "57e42434a189edc411dd96ab0d82f3a3dc7869d4f04722d133e7eca068752a00"
+  },
+  {
+    "pick_number": 78,
+    "ticker": "WEGZY",
+    "price": 8.61,
+    "date": "2026-05-27",
+    "previous_hash": "57e42434a189edc411dd96ab0d82f3a3dc7869d4f04722d133e7eca068752a00",
+    "hash": "4e53105fb4ee2fea073f3a263770d94b77bd7027e91680e061d60dee829366fd"
+  },
+  {
+    "pick_number": 79,
+    "ticker": "AEM",
+    "price": 176.6,
+    "date": "2026-05-27",
+    "previous_hash": "4e53105fb4ee2fea073f3a263770d94b77bd7027e91680e061d60dee829366fd",
+    "hash": "d8eec43804799bf3d736a7aeaf43cb61e04412666149c14e49fc6fe1b7fbdbb9"
+  },
+  {
+    "pick_number": 80,
+    "ticker": "HWM",
+    "price": 262.5,
+    "date": "2026-05-27",
+    "previous_hash": "d8eec43804799bf3d736a7aeaf43cb61e04412666149c14e49fc6fe1b7fbdbb9",
+    "hash": "57c0034355eb2b24e36cb43839dc8d6b0056694401cd881bd4f332a60628a148"
+  },
+  {
+    "pick_number": 81,
+    "ticker": "TUR",
+    "price": 38.62,
+    "date": "2026-05-27",
+    "previous_hash": "57c0034355eb2b24e36cb43839dc8d6b0056694401cd881bd4f332a60628a148",
+    "hash": "ff766d2873bca7716d0e3e6074e2228a4a82a8b9d68c9bd8ea47f6389099906f"
+  },
+  {
+    "pick_number": 82,
+    "ticker": "ITUB",
+    "price": 7.97,
+    "date": "2026-05-27",
+    "previous_hash": "ff766d2873bca7716d0e3e6074e2228a4a82a8b9d68c9bd8ea47f6389099906f",
+    "hash": "d7487b058fbb7740a0374c8d95a745ba233e5c3c5787e30cea91eb3a813ec6fc"
+  },
+  {
+    "pick_number": 83,
+    "ticker": "EQIX",
+    "price": 1068.51,
+    "date": "2026-05-27",
+    "previous_hash": "d7487b058fbb7740a0374c8d95a745ba233e5c3c5787e30cea91eb3a813ec6fc",
+    "hash": "c02e54dd217c5233a26b73cf71071a0ab5728d2e8dcded3a8c0498c922a4d9db"
+  },
+  {
+    "pick_number": 84,
+    "ticker": "AUKNY",
+    "price": 24.55,
+    "date": "2026-05-28",
+    "previous_hash": "c02e54dd217c5233a26b73cf71071a0ab5728d2e8dcded3a8c0498c922a4d9db",
+    "hash": "732ccdabaf9baabfdb3d15c9ada4bb163fddd41463da0d1131df20cbe6a62594"
+  },
+  {
+    "pick_number": 85,
+    "ticker": "FCX",
+    "price": 63.23,
+    "date": "2026-05-28",
+    "previous_hash": "732ccdabaf9baabfdb3d15c9ada4bb163fddd41463da0d1131df20cbe6a62594",
+    "hash": "5f4ebc6eccbcefe318db490c45ff2e85d4913862a7c4b876ddd87b9210cd86ef"
+  },
+  {
+    "pick_number": 86,
+    "ticker": "FOX",
+    "price": 57.44,
+    "date": "2026-06-01",
+    "previous_hash": "5f4ebc6eccbcefe318db490c45ff2e85d4913862a7c4b876ddd87b9210cd86ef",
+    "hash": "ce488c536da374f4540311bd56957e953ebb83c86cb4a1047bc39c830ba9c777"
+  },
+  {
+    "pick_number": 87,
+    "ticker": "FMX",
+    "price": 118.71,
+    "date": "2026-06-01",
+    "previous_hash": "ce488c536da374f4540311bd56957e953ebb83c86cb4a1047bc39c830ba9c777",
+    "hash": "c51637ba2e45656cf70dde3f9131d17d18b3720d00ea7ae18ebbe36a72e8baa8"
+  },
+  {
+    "pick_number": 88,
+    "ticker": "LEU",
+    "price": 167.07,
+    "date": "2026-06-08",
+    "previous_hash": "c51637ba2e45656cf70dde3f9131d17d18b3720d00ea7ae18ebbe36a72e8baa8",
+    "hash": "ff1aaa398b2bb72fcea3a5bf0107610d4027beb53b2a566469f03617c708ee53"
+  },
+  {
+    "pick_number": 89,
+    "ticker": "FICO",
+    "price": 1144.02,
+    "date": "2026-06-08",
+    "previous_hash": "ff1aaa398b2bb72fcea3a5bf0107610d4027beb53b2a566469f03617c708ee53",
+    "hash": "e965af7c2af43bf3c27bd442842ed450f92ae586f11edc7f8b1a9861d19e907f"
+  },
+  {
+    "pick_number": 90,
+    "ticker": "BWXT",
+    "price": 189.31,
+    "date": "2026-06-08",
+    "previous_hash": "e965af7c2af43bf3c27bd442842ed450f92ae586f11edc7f8b1a9861d19e907f",
+    "hash": "8deead19c0ea4556caeb86753e43f45708fedcb32a8e4290f6bf42cf78920fd6"
+  },
+  {
+    "pick_number": 91,
+    "ticker": "AU",
+    "price": 83.96,
+    "date": "2026-06-08",
+    "previous_hash": "8deead19c0ea4556caeb86753e43f45708fedcb32a8e4290f6bf42cf78920fd6",
+    "hash": "863d524b85282b0228f1e2cd51cb9fb7b8132eb565c055c00b4b296c3124616c"
+  },
+  {
+    "pick_number": 92,
+    "ticker": "SBS",
+    "price": 5.35,
+    "date": "2026-06-08",
+    "previous_hash": "863d524b85282b0228f1e2cd51cb9fb7b8132eb565c055c00b4b296c3124616c",
+    "hash": "7299190de487e1243e7f9abad55a61f6b88a5e3dd71c3a5e238376be92adb902"
+  },
+  {
+    "pick_number": 93,
+    "ticker": "FTNT",
+    "price": 146,
+    "date": "2026-06-08",
+    "previous_hash": "7299190de487e1243e7f9abad55a61f6b88a5e3dd71c3a5e238376be92adb902",
+    "hash": "832dd1dc76ebee312f71326ab9220de63bb7c26447c9b0c761631137af394dfd"
+  },
+  {
+    "pick_number": 94,
+    "ticker": "FLKR",
+    "price": 60.1,
+    "date": "2026-06-08",
+    "previous_hash": "832dd1dc76ebee312f71326ab9220de63bb7c26447c9b0c761631137af394dfd",
+    "hash": "952928a8e7583c828c2071717452416b3359786d4594c8ab77c1ef9f0c1346dc"
+  },
+  {
+    "pick_number": 95,
+    "ticker": "GE",
+    "price": 324.65,
+    "date": "2026-06-09",
+    "previous_hash": "952928a8e7583c828c2071717452416b3359786d4594c8ab77c1ef9f0c1346dc",
+    "hash": "209d9167ba31b99c6655e167cce31fbe61c5a33de42fed1757d067ea789007b4"
+  },
+  {
+    "pick_number": 96,
+    "ticker": "GD",
+    "price": 340.87,
+    "date": "2026-06-09",
+    "previous_hash": "209d9167ba31b99c6655e167cce31fbe61c5a33de42fed1757d067ea789007b4",
+    "hash": "f820479991bfe9a6e3ed5a9c74a5c93878e4e947697addbd4a6b359eef2b8bb1"
+  },
+  {
+    "pick_number": 97,
+    "ticker": "GFI",
+    "price": 33.6,
+    "date": "2026-06-10",
+    "previous_hash": "f820479991bfe9a6e3ed5a9c74a5c93878e4e947697addbd4a6b359eef2b8bb1",
+    "hash": "873114d2b478a9baf1ea6ef68332007dc5bee4b4502be236c0d339945943a38f"
+  },
+  {
+    "pick_number": 98,
+    "ticker": "GILD",
+    "price": 121.79,
+    "date": "2026-06-11",
+    "previous_hash": "873114d2b478a9baf1ea6ef68332007dc5bee4b4502be236c0d339945943a38f",
+    "hash": "f8940d85af8a8214eb02d4ce72a8db8607f31af486a0082e549c8e06d0a282de"
+  },
+  {
+    "pick_number": 99,
+    "ticker": "EZA",
+    "price": 66.54,
+    "date": "2026-06-12",
+    "previous_hash": "f8940d85af8a8214eb02d4ce72a8db8607f31af486a0082e549c8e06d0a282de",
+    "hash": "788252b51f11207832ced49b39e05d6912dbc910c47dcad95434b41b9ae78b90"
+  },
+  {
+    "pick_number": 100,
+    "ticker": "EIS",
+    "price": 125.61,
+    "date": "2026-06-16",
+    "previous_hash": "788252b51f11207832ced49b39e05d6912dbc910c47dcad95434b41b9ae78b90",
+    "hash": "0dd34301ca8a63c2a191ef9f54cff5f70ecf43a5617176e1d8b47122dad13139"
+  },
+  {
+    "pick_number": 101,
+    "ticker": "BKHYY",
+    "price": 119.33,
+    "date": "2026-06-16",
+    "previous_hash": "0dd34301ca8a63c2a191ef9f54cff5f70ecf43a5617176e1d8b47122dad13139",
+    "hash": "92fe9c31460b814b73c53bbf341bfeee3f7a73da1ab3868ee8e773e8fec4f734"
+  },
+  {
+    "pick_number": 102,
+    "ticker": "VRT",
+    "price": 314.2,
+    "date": "2026-06-16",
+    "previous_hash": "92fe9c31460b814b73c53bbf341bfeee3f7a73da1ab3868ee8e773e8fec4f734",
+    "hash": "fbe18834da980421acac42f13fd363052c6ef3216a2d250db8a6cd9143c097a5"
+  },
+  {
+    "pick_number": 103,
+    "ticker": "XLE",
+    "price": 55,
+    "date": "2026-06-16",
+    "previous_hash": "fbe18834da980421acac42f13fd363052c6ef3216a2d250db8a6cd9143c097a5",
+    "hash": "16d6d6029dadd3857090eca970249b640d78573a2572d9c65af8b4db73a1d2cb"
+  },
+  {
+    "pick_number": 104,
+    "ticker": "GIS",
+    "price": 34.25,
+    "date": "2026-06-17",
+    "previous_hash": "16d6d6029dadd3857090eca970249b640d78573a2572d9c65af8b4db73a1d2cb",
+    "hash": "33ddee934addf4b77a37d893306d519f64167334c1ff0a68da45039ae5f2029c"
+  },
+  {
+    "pick_number": 105,
+    "ticker": "HD",
+    "price": 347.9,
+    "date": "2026-06-26",
+    "previous_hash": "33ddee934addf4b77a37d893306d519f64167334c1ff0a68da45039ae5f2029c",
+    "hash": "697ca1c5d99cf70149aa4e519ff9965b1d27458c6c4ffa6c604ee20a568e8f05"
+  },
+  {
+    "pick_number": 106,
+    "ticker": "RIO",
+    "price": 94.45,
+    "date": "2026-06-26",
+    "previous_hash": "697ca1c5d99cf70149aa4e519ff9965b1d27458c6c4ffa6c604ee20a568e8f05",
+    "hash": "2166bacf705b26af75b180010599e268580a36c9bdebc070d7cc1ca6f5509204"
+  },
+  {
+    "pick_number": 107,
+    "ticker": "WMT",
+    "price": 117.03,
+    "date": "2026-06-26",
+    "previous_hash": "2166bacf705b26af75b180010599e268580a36c9bdebc070d7cc1ca6f5509204",
+    "hash": "d0f872e7285c3bb6fad7d525fd868a221ad670c7b818feb741abe923f92f280a"
+  },
+  {
+    "pick_number": 108,
+    "ticker": "HCA",
+    "price": 388.84,
+    "date": "2026-06-26",
+    "previous_hash": "d0f872e7285c3bb6fad7d525fd868a221ad670c7b818feb741abe923f92f280a",
+    "hash": "c01848b0d667478fd63a1f5fbaab756ee6c98a220efe3d669ce9488d9c0a7cbe"
+  },
+  {
+    "pick_number": 109,
+    "ticker": "GOOGL",
+    "price": 342.65,
+    "date": "2026-06-26",
+    "previous_hash": "c01848b0d667478fd63a1f5fbaab756ee6c98a220efe3d669ce9488d9c0a7cbe",
+    "hash": "9370662b1ae67bba9c4aae6a52715419598e417f1dbc29b62d22bd7d8c122893"
+  },
+  {
+    "pick_number": 110,
+    "ticker": "AMZN",
+    "price": 227.39,
+    "date": "2026-06-26",
+    "previous_hash": "9370662b1ae67bba9c4aae6a52715419598e417f1dbc29b62d22bd7d8c122893",
+    "hash": "4adaa70e2e21ee464710e08adc17efc32f7832d43d32905760b7404b7a20de8f"
+  },
+  {
+    "pick_number": 111,
+    "ticker": "COPX",
+    "price": 75.71,
+    "date": "2026-06-26",
+    "previous_hash": "4adaa70e2e21ee464710e08adc17efc32f7832d43d32905760b7404b7a20de8f",
+    "hash": "c165b6f9ef9f3574140f9da9fd2ec52c81c602b4f3ec2e81fbdff186a9520d27"
+  },
+  {
+    "pick_number": 112,
+    "ticker": "HDB",
+    "price": 25.42,
+    "date": "2026-06-26",
+    "previous_hash": "c165b6f9ef9f3574140f9da9fd2ec52c81c602b4f3ec2e81fbdff186a9520d27",
+    "hash": "cd79a0af4f56d21a69c38dec0c7eb7f768ca6fe376a86d7b1dfcaf5a48bef0b1"
+  },
+  {
+    "pick_number": 113,
+    "ticker": "HEI",
+    "price": 341.87,
+    "date": "2026-06-26",
+    "previous_hash": "cd79a0af4f56d21a69c38dec0c7eb7f768ca6fe376a86d7b1dfcaf5a48bef0b1",
+    "hash": "d43c05d3dc1f1edd587692ffe95d1b6d4baca712d46873f6fe7d3eae89c90cfc"
+  },
+  {
+    "pick_number": 114,
+    "ticker": "HON",
+    "price": 231.35,
+    "date": "2026-06-30",
+    "previous_hash": "d43c05d3dc1f1edd587692ffe95d1b6d4baca712d46873f6fe7d3eae89c90cfc",
+    "hash": "9a0056d517e150bf15f975f902dc550c0ac2e972403870cfde3164b04b0a2f62"
+  },
+  {
+    "pick_number": 115,
+    "ticker": "HWM",
+    "price": 271.99,
+    "date": "2026-06-30",
+    "previous_hash": "9a0056d517e150bf15f975f902dc550c0ac2e972403870cfde3164b04b0a2f62",
+    "hash": "8de57d964d67f1a267c511972721b4c4957e2a9cab3626c9d39358a23df92f98"
+  },
+  {
+    "pick_number": 116,
+    "ticker": "IBM",
+    "price": 286.25,
+    "date": "2026-07-01",
+    "previous_hash": "8de57d964d67f1a267c511972721b4c4957e2a9cab3626c9d39358a23df92f98",
+    "hash": "af3438c0beff33056ad13a4c60213a5fe1745e891d5576b9b293ee6ed31a1268"
+  },
+  {
+    "pick_number": 117,
+    "ticker": "ESLT",
+    "price": 759.98,
+    "date": "2026-07-01",
+    "previous_hash": "af3438c0beff33056ad13a4c60213a5fe1745e891d5576b9b293ee6ed31a1268",
+    "hash": "bdae50a30b4b2d7caba43899e417d0ef32fa562aafda81e2607f2b5a57fa8f89"
+  },
+  {
+    "pick_number": 118,
+    "ticker": "TER",
+    "price": 386.58,
+    "date": "2026-07-06",
+    "previous_hash": "bdae50a30b4b2d7caba43899e417d0ef32fa562aafda81e2607f2b5a57fa8f89",
+    "hash": "2a608a1ccde42db09f5891070a38f1eecd65a47444d1121a45d44c250767eebf"
+  },
+  {
+    "pick_number": 119,
+    "ticker": "VALE",
+    "price": 15.13,
+    "date": "2026-07-06",
+    "previous_hash": "2a608a1ccde42db09f5891070a38f1eecd65a47444d1121a45d44c250767eebf",
+    "hash": "0cc5554172d66ab42cfc5fd10db695689c1cf030be0fbc8016c17171524b614f"
+  },
+  {
+    "pick_number": 120,
+    "ticker": "AIA",
+    "price": 138.69,
+    "date": "2026-07-06",
+    "previous_hash": "0cc5554172d66ab42cfc5fd10db695689c1cf030be0fbc8016c17171524b614f",
+    "hash": "b18cf32cfa68f83d96cd6d54f7c2a01084c104b697bc59f1351fe587ec254fca"
+  },
+  {
+    "pick_number": 121,
+    "ticker": "TLGPY",
+    "price": 17.1,
+    "date": "2026-07-06",
+    "previous_hash": "b18cf32cfa68f83d96cd6d54f7c2a01084c104b697bc59f1351fe587ec254fca",
+    "hash": "8136cda01b83d1bd8839bfb09837fce9aa6bb8af00757f3ae36d5bb37d68ddc4"
+  },
+  {
+    "pick_number": 122,
+    "ticker": "IBN",
+    "price": 29.81,
+    "date": "2026-07-06",
+    "previous_hash": "8136cda01b83d1bd8839bfb09837fce9aa6bb8af00757f3ae36d5bb37d68ddc4",
+    "hash": "1343d8074d577d7284bcec92713d812b574e913f39f008e8bc59c43f802320fa"
+  },
+  {
+    "pick_number": 123,
+    "ticker": "IEX",
+    "price": 220.84,
+    "date": "2026-07-09",
+    "previous_hash": "1343d8074d577d7284bcec92713d812b574e913f39f008e8bc59c43f802320fa",
+    "hash": "5ccfaee9648b242cc227fc2e046d2c81afd9156d968efd6a6a714c80937b447a"
+  },
+  {
+    "pick_number": 124,
+    "ticker": "IDCC",
+    "price": 269.5,
+    "date": "2026-07-09",
+    "previous_hash": "5ccfaee9648b242cc227fc2e046d2c81afd9156d968efd6a6a714c80937b447a",
+    "hash": "be1691a255e246c83a3a75d885a1cf132b186996e1b588980ac9dd9fa99530b5"
+  },
+  {
+    "pick_number": 125,
+    "ticker": "ITUB",
+    "price": 8.14,
+    "date": "2026-07-09",
+    "previous_hash": "be1691a255e246c83a3a75d885a1cf132b186996e1b588980ac9dd9fa99530b5",
+    "hash": "16d9211acd6b9d29b0719f7d43f5d2fda525ed7cce3716fa2450b5297c3e2b68"
+  },
+  {
+    "pick_number": 126,
+    "ticker": "KLAC",
+    "price": 239.02,
+    "date": "2026-07-09",
+    "previous_hash": "16d9211acd6b9d29b0719f7d43f5d2fda525ed7cce3716fa2450b5297c3e2b68",
+    "hash": "1f449e4bff00c28b2ef822124d52ad18c0f4de63accf8b91e83157c433f10bbe"
+  },
+  {
+    "pick_number": 127,
+    "ticker": "EWY",
+    "price": 166.68,
+    "date": "2026-07-16",
+    "previous_hash": "1f449e4bff00c28b2ef822124d52ad18c0f4de63accf8b91e83157c433f10bbe",
+    "hash": "096c504054bbdd068284f7c57b2608ab23b5632d97ba7942c1343a4141fe9bdb"
+  },
+  {
+    "pick_number": 128,
+    "ticker": "MU",
+    "price": 866.38,
+    "date": "2026-07-16",
+    "previous_hash": "096c504054bbdd068284f7c57b2608ab23b5632d97ba7942c1343a4141fe9bdb",
+    "hash": "84256cc496f745c4aa861aaf690646ba538af9a6731b95d5d30b9e95eb537933"
+  },
+  {
+    "pick_number": 129,
+    "ticker": "NVT",
+    "price": 154.41,
+    "date": "2026-07-16",
+    "previous_hash": "84256cc496f745c4aa861aaf690646ba538af9a6731b95d5d30b9e95eb537933",
+    "hash": "48aff48c2294cde95882d44af952e9dbf6e1865d61b48efec5ec1e099906892a"
+  },
+  {
+    "pick_number": 130,
+    "ticker": "AMAT",
+    "price": 562.43,
+    "date": "2026-07-16",
+    "previous_hash": "48aff48c2294cde95882d44af952e9dbf6e1865d61b48efec5ec1e099906892a",
+    "hash": "0b8f6599ae4cf51dfa738e8c8f0336a3d12ba1b712b74a3f745e848776591a94"
+  },
+  {
+    "pick_number": 131,
+    "ticker": "ON",
+    "price": 88.95,
+    "date": "2026-07-16",
+    "previous_hash": "0b8f6599ae4cf51dfa738e8c8f0336a3d12ba1b712b74a3f745e848776591a94",
+    "hash": "d35f3da1e0bd685a36b5786913a942bc9534387371f1290086b5285519083254"
+  },
+  {
+    "pick_number": 132,
+    "ticker": "KO",
+    "price": 83.5,
+    "date": "2026-07-16",
+    "previous_hash": "d35f3da1e0bd685a36b5786913a942bc9534387371f1290086b5285519083254",
+    "hash": "4f7029d70394ab9c73a0a63c54ef2fc05b1acadb50d7d0a88e3c3e88f0075d53"
+  },
+  {
+    "pick_number": 133,
+    "ticker": "KSA",
+    "price": 36.97,
+    "date": "2026-07-16",
+    "previous_hash": "4f7029d70394ab9c73a0a63c54ef2fc05b1acadb50d7d0a88e3c3e88f0075d53",
+    "hash": "88080b53aee2189a457f6d385d8cc919a8fcf7293d06245e7758e05ffd652112"
+  },
+  {
+    "pick_number": 134,
+    "ticker": "LLY",
+    "price": 1146.62,
+    "date": "2026-07-23",
+    "previous_hash": "88080b53aee2189a457f6d385d8cc919a8fcf7293d06245e7758e05ffd652112",
+    "hash": "f297d3edb8bb617f2005f4306e65deb9eedae54b57f125c16886d724eeb0b789"
+  },
+  {
+    "pick_number": 135,
+    "ticker": "ALC",
+    "price": 66.4,
+    "date": "2026-07-23",
+    "previous_hash": "f297d3edb8bb617f2005f4306e65deb9eedae54b57f125c16886d724eeb0b789",
+    "hash": "ad77bde0a8c43e5f911e320244b4484f56607e30ef9a2df1a2d4a8fd70b93a9d"
+  },
+  {
+    "pick_number": 136,
+    "ticker": "TER",
+    "price": 362.67,
+    "date": "2026-07-23",
+    "previous_hash": "ad77bde0a8c43e5f911e320244b4484f56607e30ef9a2df1a2d4a8fd70b93a9d",
+    "hash": "faaeac70a76c66b46f6e73c80db4ae262f51832c63fd92762f918d2f3d172bdf"
+  },
+  {
+    "pick_number": 137,
+    "ticker": "LEU",
+    "price": 170,
+    "date": "2026-07-23",
+    "previous_hash": "faaeac70a76c66b46f6e73c80db4ae262f51832c63fd92762f918d2f3d172bdf",
+    "hash": "c062613873d5934c58d1230ad6585c24f4b889a9f24ddf51eb1d4e086dbfd8f3"
   }
 ]
