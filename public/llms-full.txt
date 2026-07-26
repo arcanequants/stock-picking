@@ -4,9 +4,17 @@
 
 ## Overview
 
-Vectorial Data publishes daily stock picks with deep fundamental research covering global equities across all sectors and regions. Every pick is tracked in a SHA-256 hash chain committed to git for tamper-proof verification.
+Vectorial Data publishes opportunistic stock picks with deep fundamental research
+covering global equities across all sectors and regions. Picks are published when a
+company is worth buying — not on a daily schedule. Every pick is tracked in a SHA-256
+hash chain committed to git and attested on Base (Ethereum L2) for tamper-proof
+verification.
 
 Portfolio model: $50 per position (fractional shares). Returns shown as percentages only.
+
+Human product (separate from this API): $1/month with a 14-day free trial, delivered
+through the iOS app, the website, and email. Content in Spanish (source), English,
+Portuguese and Hindi. Last updated: 2026-07-26.
 
 ## Authentication
 
@@ -79,7 +87,7 @@ All stock picks with current returns.
 Query params:
 - limit (optional): Number of picks to return
 
-Free tier: latest 3 picks only. Pro tier: all picks.
+Returns every pick. There is no truncated free response — see Billing.
 
 ```
 curl -H "Authorization: Bearer vd_live_xxx" https://vectorialdata.com/api/v1/picks
@@ -114,8 +122,8 @@ Most recent pick only.
 
 Full research for a stock.
 
-Free tier: summaries only (summary_short, summary_what, summary_why, summary_risk).
-Pro tier: includes research_full (complete markdown analysis).
+Returns the summaries (summary_short, summary_what, summary_why, summary_risk) and
+research_full (complete markdown analysis).
 
 ```
 curl -H "Authorization: Bearer vd_live_xxx" https://vectorialdata.com/api/v1/research/UBS
@@ -141,9 +149,7 @@ All positions with live returns, sorted by return (best first).
 
 ### GET /api/v1/portfolio/history
 
-Historical daily snapshots.
-
-Free tier: last 7 days. Pro tier: full history.
+Historical daily snapshots — full history.
 
 ### GET /api/v1/sectors
 
@@ -255,22 +261,20 @@ response = client.get("https://vectorialdata.com/api/v1/x402/picks")
 # Payment is handled automatically — agent pays, gets data
 ```
 
-## Rate Limits
+## Rate Limits and Tiers
 
-- Free: 10 requests/day
-- Pro: 1000 requests/day
-- Resets daily at 00:00 UTC
-- Returns 429 when exceeded
+There are none. No tiers, no per-day request cap, no truncated responses: every
+key receives full data on every endpoint, and the only limit is your prepaid
+balance. A request with an insufficient balance is rejected with HTTP 402 (never
+429), and the error names the top-up URL.
 
-## Tier Comparison
-
-| Feature | Free | Pro (5 USDC/mo) |
-|---------|------|-----------------|
-| Picks | Latest 3 | All |
-| Research | Summaries | Full analysis |
-| History | 7 days | Full |
-| Requests/day | 10 | 1,000 |
-| Verification | Yes | Yes |
+| Feature | Every API key |
+|---------|---------------|
+| Picks | All |
+| Research | Full analysis (summaries + research_full) |
+| History | Full |
+| Requests/day | Unmetered — priced per request |
+| Verification | Yes |
 
 ## MCP Server
 

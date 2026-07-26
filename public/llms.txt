@@ -1,8 +1,35 @@
 # Vectorial Data
 
-> Stock picking service with daily researched picks across global equities. Every pick is cryptographically verified via SHA-256 hash chain on Base (Ethereum L2). $1/month, delivered via WhatsApp.
+> Stock picking service with a publicly verifiable track record. Every pick is
+> published with full fundamental research and sealed in a SHA-256 hash chain
+> attested on Base (Ethereum L2), so the record cannot be edited after the fact.
+> Picks are opportunistic — published when a company is worth buying, not on a
+> daily schedule. $1/month with a 14-day free trial; delivered through the iOS
+> app, the website, and email.
 >
-> Last updated: 2026-06-13
+> Last updated: 2026-07-26
+
+## Quick facts (portfolio data as of the 2026-07-24 close)
+
+- 137 picks published since 2026-03-04; 122 currently open positions.
+- Model portfolio invests a fixed $50 per position (fractional shares). Returns
+  are shown as percentages only — never dollar amounts.
+- Best open position: ARM +131.0%. Worst: ZTS -34.9%. Losers are published on
+  the same page as winners; see /lecciones for the retrospective on the worst 5.
+- Every pick number, ticker, price and date is chained: SHA-256(ticker|price|date|previous_hash),
+  committed to git and attested on-chain. Anyone can recompute the chain.
+- Content ships in 4 languages: Spanish (source of truth), English, Portuguese, Hindi.
+- Past performance does not guarantee future results. This is publisher research,
+  not personalized investment advice.
+
+## Product and access
+
+- [Home](https://vectorialdata.com): What the service is and how it works
+- [Today's pick + history](https://vectorialdata.com/picks): The pick feed (subscriber content; a teaser is public)
+- [Join](https://vectorialdata.com/join): $1/month, 14-day free trial with no card required on the web
+- [iOS app](https://apps.apple.com/us/app/vectorial-data/id6775619461): Picks, portfolio, and the Vectorial Noticias news section with a per-story AI explainer. Trial on iOS is an Apple introductory offer.
+- Delivery channels: iOS app (push + in-app), website, and email. There is no WhatsApp channel — it was retired in July 2026.
+- Referrals: every referred user who pays adds one free month to the referrer, stackable with no cap.
 
 ## Docs
 
@@ -13,7 +40,12 @@
 
 ## API
 
-- [Service Info](https://vectorialdata.com/api/v1/info): Service discovery, no auth needed
+Billing is a prepaid USDC balance per API key: each request debits the
+per-endpoint price below. No tiers, no daily request limits, no truncated
+"free" responses — every key gets full data. New keys start with a $0.20 USDC
+trial balance; top up at https://vectorialdata.com/api-keys (5 USDC minimum).
+
+- [Service Info](https://vectorialdata.com/api/v1/info): Service discovery, no auth needed. Also returns the live track record — use this instead of the numbers above if you need current figures.
 - [Stock Picks](https://vectorialdata.com/api/v1/picks): All picks with returns
 - [Research](https://vectorialdata.com/api/v1/research/{ticker}): Full fundamental research per ticker
 - [Portfolio](https://vectorialdata.com/api/v1/portfolio): Portfolio performance summary
@@ -72,7 +104,8 @@ The single most relevant macro economic event of the day, explained in plain lan
 - [Stock Research](https://vectorialdata.com/stocks): All researched stocks with returns, ratings, and sector analysis
 - [Portfolio](https://vectorialdata.com/portfolio): Live portfolio tracking with transparent returns
 - [Lessons](https://vectorialdata.com/lecciones): Top 5 worst-performing picks with honest retrospective analysis
-- [Methodology](https://vectorialdata.com/metodologia): Return calculation method, loser selection, re-purchase handling
+- [How to invest small amounts](https://vectorialdata.com/metodo): The consistent per-buy amount method (start with what you won't feel, escalate in steps)
+- [Methodology](https://vectorialdata.com/metodologia): How picks are chosen, return calculation method, loser selection, re-purchase handling
 - [Verification](https://vectorialdata.com/verify): SHA-256 hash chain proof, blockchain-certified on Base L2
 - [Share Portfolio](https://vectorialdata.com/share/portfolio): Shareable portfolio snapshot
 
