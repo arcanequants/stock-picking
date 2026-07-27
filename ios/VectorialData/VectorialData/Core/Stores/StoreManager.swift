@@ -210,8 +210,12 @@ final class StoreManager: ObservableObject {
         await transaction.finish()
 
         if backendOK {
+            // Refresh every tier-scoped cache, not just picks: stale free-tier
+            // responses (news chat_enabled, portfolio `limited`) otherwise
+            // keep showing locked rows/paywalls after a purchase or restore.
             await PickStatusStore.shared.load()
             await AuthManager.shared.refreshCurrentUser()
+            await NewsStore.shared.load()
         }
         return backendOK
     }
