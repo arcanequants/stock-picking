@@ -91,7 +91,7 @@ final class StoreManager: ObservableObject {
             }
             if phase == .loading { phase = .idle }
         } catch {
-            phase = .failed("No pudimos cargar la suscripción.")
+            phase = .failed(String(localized: "No pudimos cargar la suscripción."))
         }
     }
 
@@ -102,7 +102,7 @@ final class StoreManager: ObservableObject {
         guard let product else {
             await loadProduct()
             guard product != nil else {
-                phase = .failed("Suscripción no disponible.")
+                phase = .failed(String(localized: "Suscripción no disponible."))
                 return false
             }
             return await purchase()
@@ -110,11 +110,19 @@ final class StoreManager: ObservableObject {
 
         phase = .purchasing
         do {
-            let result = try await product.purchase()
+            // Tag the purchase with the signed-in user's id so Apple's
+            // server notifications carry it back as `appAccountToken` — the
+            // webhook can then link the subscriber row even if the verify
+            // POST below never lands.
+            var options: Set<Product.PurchaseOption> = []
+            if let uid = AuthManager.shared.userUUID {
+                options.insert(.appAccountToken(uid))
+            }
+            let result = try await product.purchase(options: options)
             switch result {
             case .success(let verification):
                 let ok = await handle(verificationResult: verification, syncToBackend: true)
-                phase = ok ? .success : .failed("No pudimos confirmar tu compra.")
+                phase = ok ? .success : .failed(String(localized: "No pudimos confirmar tu compra."))
                 return ok
             case .userCancelled:
                 phase = .idle
@@ -128,7 +136,7 @@ final class StoreManager: ObservableObject {
                 return false
             }
         } catch {
-            phase = .failed("La compra no se completó.")
+            phase = .failed(String(localized: "La compra no se completó."))
             return false
         }
     }
@@ -147,11 +155,38 @@ final class StoreManager: ObservableObject {
         for await result in Transaction.currentEntitlements {
             if case .verified(let tx) = result, tx.productID == Self.productID {
                 let ok = await handle(verificationResult: result, syncToBackend: true)
-                phase = ok ? .success : .failed("No pudimos restaurar tu compra.")
+                phase = ok ? .success : .failed(String(localized: "No pudimos restaurar tu compra."))
                 return ok
             }
         }
-        phase = .failed("No encontramos una suscripción activa.")
+        phase = .failed(String(localized: "No encontramos una suscripción activa."))
+        return false
+    }
+
+    /// True when this Apple ID already holds an entitlement to the
+    /// subscription, regardless of what the backend thinks.
+    func hasEntitlement() async -> Bool {
+        for await result in Transaction.currentEntitlements {
+            if case .verified(let tx) = result, tx.productID == Self.productID {
+                return true
+            }
+        }
+        return false
+    }
+
+    /// Re-post the current entitlement (if any) to the backend without any
+    /// UI phase changes. Heals installs whose purchase-time verify POST
+    /// failed (e.g. the build-7 snake_case outage): those transactions were
+    /// already `finish()`ed, so they never re-deliver via
+    /// `Transaction.updates` — `currentEntitlements` is the only place they
+    /// survive. Idempotent; safe to call on every launch.
+    @discardableResult
+    func syncEntitlements() async -> Bool {
+        for await result in Transaction.currentEntitlements {
+            if case .verified(let tx) = result, tx.productID == Self.productID {
+                return await handle(verificationResult: result, syncToBackend: true)
+            }
+        }
         return false
     }
 

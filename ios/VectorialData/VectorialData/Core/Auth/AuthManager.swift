@@ -42,6 +42,24 @@ final class AuthManager: ObservableObject {
         }
     }
 
+    /// Supabase auth user id, decoded from the access token's `sub` claim.
+    /// Used as the StoreKit `appAccountToken` so App Store Server
+    /// Notifications can be matched back to this user server-side even when
+    /// the post-purchase verify call never landed.
+    var userUUID: UUID? {
+        guard let token = KeychainHelper.get(accessTokenKey) else { return nil }
+        let parts = token.split(separator: ".")
+        guard parts.count >= 2 else { return nil }
+        var b64 = String(parts[1])
+            .replacingOccurrences(of: "-", with: "+")
+            .replacingOccurrences(of: "_", with: "/")
+        while b64.count % 4 != 0 { b64 += "=" }
+        guard let data = Data(base64Encoded: b64),
+              let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let sub = json["sub"] as? String else { return nil }
+        return UUID(uuidString: sub)
+    }
+
     func restoreSession() async {
         if let token = KeychainHelper.get(accessTokenKey) {
             await APIClient.shared.setBearer(token)
