@@ -38,8 +38,15 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json().catch(() => null);
-    const purchaseToken: unknown = body?.purchaseToken;
+    // Accept both spellings (snake_case clients + camelCase), mirroring
+    // /api/iap/verify — see the iOS encoder gotcha that broke build 7.
+    const purchaseToken: unknown =
+      body?.purchase_token ?? body?.purchaseToken;
     if (typeof purchaseToken !== "string" || !purchaseToken) {
+      console.error(
+        "Play verify: missing purchaseToken; body keys:",
+        body ? Object.keys(body) : null
+      );
       return NextResponse.json(
         { error: "Missing purchaseToken" },
         { status: 400 }

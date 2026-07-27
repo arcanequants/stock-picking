@@ -186,11 +186,20 @@ export async function applyNotification(
     apple_product_id: tx.productId,
   };
 
-  const { error } = await supabase
+  const { data: updated, error } = await supabase
     .from("subscribers")
     .update(payload)
-    .eq("apple_original_transaction_id", originalTxId);
+    .eq("apple_original_transaction_id", originalTxId)
+    .select("email");
   if (error) throw error;
+  // PostgREST updates matching 0 rows are NOT errors — surface them loudly,
+  // otherwise a renewal/refund for an unlinked subscriber vanishes silently
+  // (this is how the build-7 IAP outage stayed invisible).
+  if (!updated || updated.length === 0) {
+    console.error(
+      `Apple webhook: ${notification.notificationType} for originalTransactionId=${originalTxId} matched 0 subscriber rows — entitlement NOT recorded`
+    );
+  }
 }
 
 function statusForNotification(

@@ -27,8 +27,16 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json().catch(() => null);
-    const signedTransaction: unknown = body?.signedTransaction;
+    // The iOS APIClient encodes bodies with .convertToSnakeCase, so build 7+
+    // sends `signed_transaction`; accept both spellings forever so shipped
+    // clients keep working.
+    const signedTransaction: unknown =
+      body?.signed_transaction ?? body?.signedTransaction;
     if (typeof signedTransaction !== "string" || !signedTransaction) {
+      console.error(
+        "IAP verify: missing signedTransaction; body keys:",
+        body ? Object.keys(body) : null
+      );
       return NextResponse.json(
         { error: "Missing signedTransaction" },
         { status: 400 }
