@@ -160,6 +160,24 @@ struct AccountView: View {
                 }
 
                 Section {
+                    // iOS owns per-app language (Settings → app → Language);
+                    // this row just deep-links there so users can find it.
+                    Button {
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url)
+                        }
+                    } label: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Idioma")
+                                .foregroundStyle(.primary)
+                            Text("Cámbialo solo para esta app, en Ajustes")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+
+                Section {
                     Button(role: .destructive) {
                         isSigningOut = true
                         Task {
