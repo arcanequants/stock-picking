@@ -8,6 +8,7 @@ import StockDividendsReceived from "@/components/StockDividendsReceived";
 import { Suspense } from "react";
 import { getLocalizedField } from "@/data/stock-translations";
 import { getRelatedPicks } from "@/lib/related-picks";
+import { sectorPathFor, countryPathFor } from "@/lib/stock-lists";
 import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema, getStockMetaTitle, getStockMetaDescription } from "@/lib/seo";
 
 const localeMap: Record<string, string> = {
@@ -65,6 +66,7 @@ export default async function StockResearchPage({
   if (!stock) return notFound();
 
   const t = await getTranslations("StockDetail");
+  const tLists = await getTranslations("StockLists");
   const tLegal = await getTranslations("Legal");
   const locale = await getLocale();
   const dateLocale = localeMap[locale] || "es-MX";
@@ -148,6 +150,8 @@ export default async function StockResearchPage({
   const faqSchema = getFaqSchema(stock, locale);
   const tx = transactions.find(t => t.ticker === stock.ticker);
   const related = getRelatedPicks(stock);
+  const sectorPath = sectorPathFor(stock.sector);
+  const countryPath = countryPathFor(stock.country);
 
   return (
     <>
@@ -249,6 +253,16 @@ export default async function StockResearchPage({
                 {t("relatedSectorTitle", { sector: label("sector", stock.sector) ?? stock.sector })}
               </h2>
               <RelatedPickLinks picks={related.sector} />
+              {sectorPath && (
+                <Link
+                  href={sectorPath}
+                  className="mt-2 inline-block text-sm text-brand hover:text-brand-hover transition-colors"
+                >
+                  {tLists("seeAllSector", {
+                    sector: label("sector", stock.sector) ?? stock.sector,
+                  })}
+                </Link>
+              )}
             </div>
           )}
           {related.country.length > 0 && (
@@ -257,6 +271,16 @@ export default async function StockResearchPage({
                 {t("relatedCountryTitle", { country: label("country", stock.country) ?? stock.country })}
               </h2>
               <RelatedPickLinks picks={related.country} />
+              {countryPath && (
+                <Link
+                  href={countryPath}
+                  className="mt-2 inline-block text-sm text-brand hover:text-brand-hover transition-colors"
+                >
+                  {tLists("seeAllCountry", {
+                    country: label("country", stock.country) ?? stock.country,
+                  })}
+                </Link>
+              )}
             </div>
           )}
         </section>

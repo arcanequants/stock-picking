@@ -431,6 +431,34 @@ export function getGenericFaqSchema(
   };
 }
 
+/* ── CollectionPage + ItemList (the /acciones/* list pages) ── */
+
+export function getCollectionSchema(args: {
+  name: string;
+  description: string;
+  url: string;
+  items: { name: string; ticker: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: args.name,
+    description: args.description,
+    url: args.url,
+    isPartOf: { "@type": "WebSite", name: "Vectorial Data", url: SITE_URL },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: args.items.length,
+      itemListElement: args.items.map((item, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${item.name} (${item.ticker})`,
+        url: `${SITE_URL}/stocks/${item.ticker}`,
+      })),
+    },
+  };
+}
+
 /* ── BreadcrumbList ───────────────────────────────────── */
 
 export function getBreadcrumbSchema(

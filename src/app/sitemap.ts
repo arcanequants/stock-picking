@@ -2,6 +2,11 @@ import type { MetadataRoute } from "next";
 import { stocks, transactions } from "@/data/stocks";
 import { listLiveSignals } from "@/lib/signals";
 import { listEvents } from "@/lib/economic-events";
+import {
+  getSectorGroups,
+  getCountryGroups,
+  groupLastModified,
+} from "@/lib/stock-lists";
 import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
 
 const BASE = "https://vectorialdata.com";
@@ -59,6 +64,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
+  /* ── Category list pages (/acciones/*) ────────────── */
+  const listPages: MetadataRoute.Sitemap = [
+    { url: `${BASE}/acciones`, changeFrequency: "weekly", priority: 0.8 },
+    {
+      url: `${BASE}/acciones/dividendos`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...getSectorGroups().map((g) => ({
+      url: `${BASE}/acciones/sector/${g.slug}`,
+      ...(groupLastModified(g.stocks)
+        ? { lastModified: groupLastModified(g.stocks) }
+        : {}),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
+    ...getCountryGroups().map((g) => ({
+      url: `${BASE}/acciones/pais/${g.slug}`,
+      ...(groupLastModified(g.stocks)
+        ? { lastModified: groupLastModified(g.stocks) }
+        : {}),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   /* ── Per-ticker verify pages (/verify/[ticker]) ───── */
   const latestTxDate = new Map<string, string>();
   for (const tx of transactions) {
@@ -110,5 +141,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // economic_events table not yet provisioned in this env — skip
   }
 
-  return [...staticPages, ...stockPages, ...verifyPages, ...signalPages, ...economiaPages];
+  return [
+    ...staticPages,
+    ...listPages,
+    ...stockPages,
+    ...verifyPages,
+    ...signalPages,
+    ...economiaPages,
+  ];
 }
