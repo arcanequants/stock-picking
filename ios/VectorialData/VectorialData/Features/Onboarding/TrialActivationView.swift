@@ -78,7 +78,17 @@ struct TrialActivationView: View {
             .padding(.bottom, 18)
         }
         .preferredColorScheme(.dark)
-        .task { await store.loadProduct() }
+        .task {
+            await store.loadProduct()
+            // An Apple ID that already holds the subscription (repaired
+            // install, first-run replay) has nothing to activate — sync the
+            // entitlement to the backend and move on instead of offering a
+            // trial StoreKit will refuse with "You're currently subscribed".
+            if await store.hasEntitlement() {
+                await store.syncEntitlements()
+                onDone?()
+            }
+        }
     }
 
     private var timeline: some View {

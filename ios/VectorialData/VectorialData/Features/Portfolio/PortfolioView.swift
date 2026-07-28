@@ -146,7 +146,10 @@ struct PortfolioView: View {
                 await vm.load()
                 await dividends.load()
             }
-            .task { await vm.load() }
+            // Keyed to the subscription flag so a purchase/restore while this
+            // tab is alive refetches immediately — otherwise the cached free
+            // response (`limited: true`) keeps the locked row + paywall up.
+            .task(id: pickStatus.isSubscribed) { await vm.load() }
             .task {
                 if dividends.events.isEmpty {
                     await dividends.load()

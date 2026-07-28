@@ -60,6 +60,14 @@ struct MainTabView: View {
         // before this view mounts, so `.onChange` never fires for it. Read the
         // current values once on appear to catch the cold-launch case.
         .task { routeToPendingTab() }
+        // Self-heal IAP state: if this Apple ID holds an entitlement the
+        // backend doesn't know about (the purchase-time verify POST failed),
+        // re-post it. No-op for web subscribers and users with no purchase.
+        .task {
+            if AuthManager.shared.currentUser?.isSubscribed != true {
+                await StoreManager.shared.syncEntitlements()
+            }
+        }
         // First run on this device: prime notifications, then set the consistent
         // per-buy amount. Both steps are skippable and shown only once.
         // Waits for the splash: a cover presented while the scene is still

@@ -196,6 +196,23 @@ export async function applyNotification(
   // otherwise a renewal/refund for an unlinked subscriber vanishes silently
   // (this is how the build-7 IAP outage stayed invisible).
   if (!updated || updated.length === 0) {
+    // Build 8+ clients tag purchases with appAccountToken = the Supabase
+    // auth user id. Resolve it to an email and write the row (including
+    // apple_original_transaction_id, so future notifications match directly).
+    if (tx.appAccountToken) {
+      try {
+        const { data: userData } = await supabase.auth.admin.getUserById(
+          tx.appAccountToken
+        );
+        const email = userData?.user?.email;
+        if (email) {
+          await applyTransactionForEmail(email, tx, status);
+          return;
+        }
+      } catch {
+        // fall through to the loud log below
+      }
+    }
     console.error(
       `Apple webhook: ${notification.notificationType} for originalTransactionId=${originalTxId} matched 0 subscriber rows — entitlement NOT recorded`
     );

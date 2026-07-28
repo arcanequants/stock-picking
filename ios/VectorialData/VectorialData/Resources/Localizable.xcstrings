@@ -1990,6 +1990,35 @@
         }
       }
     },
+    "Cámbialo solo para esta app, en Ajustes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change it for this app only, in Settings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cámbialo solo para esta app, en Ajustes"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सिर्फ़ इस ऐप के लिए Settings में बदलें"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mude só para este app, nos Ajustes"
+          }
+        }
+      }
+    },
     "Código incorrecto o vencido. Inténtalo de nuevo." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3475,6 +3504,35 @@
         }
       }
     },
+    "Idioma" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भाषा"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
+          }
+        }
+      }
+    },
     "India" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3763,6 +3821,35 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Você compra na sua corretora. Depois toque aqui e marque — assim seguimos seu portfólio real."
+          }
+        }
+      }
+    },
+    "La compra no se completó." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The purchase didn't go through."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La compra no se completó."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "खरीदारी पूरी नहीं हुई।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A compra não foi concluída."
           }
         }
       }
@@ -4763,6 +4850,35 @@
         }
       }
     },
+    "No encontramos una suscripción activa." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We didn't find an active subscription."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No encontramos una suscripción activa."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हमें कोई सक्रिय सदस्यता नहीं मिली।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não encontramos uma assinatura ativa."
+          }
+        }
+      }
+    },
     "No fijado" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -4850,6 +4966,64 @@
         }
       }
     },
+    "No pudimos cargar la suscripción." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We couldn't load the subscription."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No pudimos cargar la suscripción."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हम सदस्यता लोड नहीं कर सके।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não conseguimos carregar a assinatura."
+          }
+        }
+      }
+    },
+    "No pudimos confirmar tu compra." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We couldn't confirm your purchase."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No pudimos confirmar tu compra."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हम आपकी खरीदारी की पुष्टि नहीं कर सके।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não conseguimos confirmar sua compra."
+          }
+        }
+      }
+    },
     "No pudimos crear tu cuenta. Revisa tu conexión e inténtalo de nuevo." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -4875,6 +5049,35 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Não conseguimos criar sua conta. Verifique sua conexão e tente de novo."
+          }
+        }
+      }
+    },
+    "No pudimos restaurar tu compra." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We couldn't restore your purchase."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No pudimos restaurar tu compra."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हम आपकी खरीदारी रीस्टोर नहीं कर सके।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não conseguimos restaurar sua compra."
           }
         }
       }
@@ -7144,6 +7347,35 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Assinatura"
+          }
+        }
+      }
+    },
+    "Suscripción no disponible." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscription unavailable."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suscripción no disponible."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सदस्यता उपलब्ध नहीं है।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assinatura indisponível."
           }
         }
       }
