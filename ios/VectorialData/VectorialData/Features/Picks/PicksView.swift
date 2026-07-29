@@ -80,7 +80,7 @@ struct PicksView: View {
         } else if store.picks.isEmpty {
             ScrollView {
                 LazyVStack(spacing: 10) {
-                    if !store.isSubscribed {
+                    if store.hasLoaded && !store.isSubscribed {
                         Button { showPaywall = true } label: { UpsellBanner() }
                             .buttonStyle(.plain)
                     }
@@ -91,7 +91,7 @@ struct PicksView: View {
         } else {
             ScrollView {
                 LazyVStack(spacing: 10) {
-                    if !store.isSubscribed {
+                    if store.hasLoaded && !store.isSubscribed {
                         Button { showPaywall = true } label: { UpsellBanner() }
                             .buttonStyle(.plain)
                     }

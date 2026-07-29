@@ -81,7 +81,10 @@ struct PortfolioView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 12) {
-                    if !pickStatus.isSubscribed {
+                    // hasLoaded gate: before the first /api/picks load the
+                    // subscription state is UNKNOWN, not free — premium users
+                    // were greeted with this banner on every cold launch.
+                    if pickStatus.hasLoaded && !pickStatus.isSubscribed {
                         freeUpsellBanner
                     }
                     viewSwitcher

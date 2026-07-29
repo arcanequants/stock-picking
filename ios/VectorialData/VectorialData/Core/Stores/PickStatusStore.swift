@@ -14,6 +14,10 @@ final class PickStatusStore: ObservableObject {
     @Published private(set) var picks: [Pick] = []
     @Published private(set) var defaultInvestment: Double?
     @Published private(set) var isSubscribed: Bool = false
+    /// False until the first successful /api/picks load. Upsell banners must
+    /// check this — `isSubscribed == false` before any load means "unknown",
+    /// not "free", and premium users briefly saw free-tier upsells on launch.
+    @Published private(set) var hasLoaded: Bool = false
     @Published private(set) var isLoading: Bool = false
     @Published private(set) var errorMessage: String?
     /// Picks dated before this don't surface in the main feed.
@@ -31,6 +35,7 @@ final class PickStatusStore: ObservableObject {
         picks = []
         defaultInvestment = nil
         isSubscribed = false
+        hasLoaded = false
         accessStartedAt = nil
         lastDecisionAt = nil
         errorMessage = nil
@@ -50,6 +55,7 @@ final class PickStatusStore: ObservableObject {
             self.defaultInvestment = resp.defaultInvestment
             self.isSubscribed = resp.isSubscribed
             self.accessStartedAt = resp.accessStartedAt
+            self.hasLoaded = true
             self.errorMessage = nil
         } catch APIError.unauthorized {
             errorMessage = "Please sign in again"

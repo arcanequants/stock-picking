@@ -128,11 +128,13 @@ struct PerformanceChart: View {
                 }
             }
             .chartXAxis {
-                AxisMarks(values: .stride(by: .day, count: 7)) { value in
+                // One label per month — weekly labels over months of history
+                // stacked ~20 dates into an unreadable smear under the chart.
+                AxisMarks(values: .stride(by: .month, count: 1)) { value in
                     AxisGridLine().foregroundStyle(.white.opacity(0.05))
                     AxisValueLabel {
                         if let date = value.as(Date.self) {
-                            Text(date, format: .dateTime.month(.abbreviated).day())
+                            Text(date, format: .dateTime.month(.abbreviated))
                                 .font(.caption2)
                                 .foregroundStyle(.white.opacity(0.45))
                         }

@@ -60,10 +60,15 @@ struct MainTabView: View {
         // before this view mounts, so `.onChange` never fires for it. Read the
         // current values once on appear to catch the cold-launch case.
         .task { routeToPendingTab() }
-        // Self-heal IAP state: if this Apple ID holds an entitlement the
-        // backend doesn't know about (the purchase-time verify POST failed),
-        // re-post it. No-op for web subscribers and users with no purchase.
+        // Resolve the subscription state at launch: nothing else loads
+        // PickStatusStore until the Picks tab is visited, so upsell banners
+        // keyed on `!isSubscribed` fired for premium users on cold start.
+        // Then self-heal IAP: if this Apple ID holds an entitlement the
+        // backend doesn't know about (purchase-time verify failed), re-post.
         .task {
+            if !PickStatusStore.shared.hasLoaded {
+                await PickStatusStore.shared.load()
+            }
             if AuthManager.shared.currentUser?.isSubscribed != true {
                 await StoreManager.shared.syncEntitlements()
             }

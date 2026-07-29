@@ -5283,6 +5283,35 @@
         }
       }
     },
+    "Or enter the code from your email" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Or enter the code from your email"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O escribe el código de tu correo"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "या अपने ईमेल का कोड लिखें"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ou digite o código do seu e-mail"
+          }
+        }
+      }
+    },
     "Otro monto" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8454,6 +8483,35 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ver tutorial"
+          }
+        }
+      }
+    },
+    "Verify" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verify"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verificar"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सत्यापित करें"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verificar"
           }
         }
       }

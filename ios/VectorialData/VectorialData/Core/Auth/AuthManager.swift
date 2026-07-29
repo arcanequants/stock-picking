@@ -116,11 +116,18 @@ final class AuthManager: ObservableObject {
         )
     }
 
+    /// True only when the LAST refresh attempt was explicitly rejected by the
+    /// server (4xx from ios-refresh, or no stored token) — the only evidence
+    /// that the session is truly dead. A refresh that failed because we're
+    /// offline must NOT cascade into a sign-out.
+    private var refreshDeniedByServer = false
+
     /// Trades the Keychain refresh_token for a fresh access_token. Called
     /// automatically by `APIClient` on 401s. Returns `true` if the bearer was
     /// refreshed and the original request should retry.
     func refreshAccessToken() async -> Bool {
         guard let refreshToken = KeychainHelper.get(refreshTokenKey) else {
+            refreshDeniedByServer = true
             return false
         }
         struct Body: Encodable { let refreshToken: String }
@@ -138,8 +145,17 @@ final class AuthManager: ObservableObject {
             KeychainHelper.set(resp.accessToken, forKey: accessTokenKey)
             KeychainHelper.set(resp.refreshToken, forKey: refreshTokenKey)
             await APIClient.shared.setBearer(resp.accessToken)
+            refreshDeniedByServer = false
             return true
+        } catch APIError.unauthorized {
+            refreshDeniedByServer = true
+            return false
+        } catch APIError.server(let status, _) where (400..<500).contains(status) {
+            refreshDeniedByServer = true
+            return false
         } catch {
+            // Network/timeout/5xx: the token may still be perfectly valid.
+            refreshDeniedByServer = false
             return false
         }
     }
@@ -304,8 +320,16 @@ final class AuthManager: ObservableObject {
             state = .signedIn
             // Re-attach this device's push token to the now-signed-in user.
             await NotificationsManager.shared.refreshRegistrationIfAuthorized()
-        } catch {
+        } catch APIError.unauthorized where refreshDeniedByServer {
+            // 401 AND the server explicitly rejected our refresh token: the
+            // session is dead for real (revoked/rotated elsewhere). Sign out.
             await clearSession()
+        } catch {
+            // Anything else — offline, timeout, 5xx, or a 401 whose refresh
+            // failed for network reasons — keeps the session. Signed-in UI
+            // with cached/stale data beats logging the user out on a bad
+            // connection; stores surface their own load errors.
+            if state == .unknown { state = .signedIn }
         }
     }
 }
