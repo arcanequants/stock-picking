@@ -1,4 +1,5 @@
 import Foundation
+import LocalAuthentication
 import SwiftUI
 #if canImport(UIKit)
 import UIKit
@@ -24,6 +25,10 @@ final class AuthManager: ObservableObject {
 
     private let accessTokenKey = "access_token"
     private let refreshTokenKey = "refresh_token"
+    /// Long-lived server credential for Face ID / Touch ID re-login, stored
+    /// biometric-protected. Survives sign-out on purpose: only the enrolled
+    /// face/finger can release it.
+    private let deviceCredentialKey = "device_credential"
 
     enum AuthState: Equatable {
         case unknown
@@ -156,6 +161,81 @@ final class AuthManager: ObservableObject {
         } catch {
             // Network/timeout/5xx: the token may still be perfectly valid.
             refreshDeniedByServer = false
+            return false
+        }
+    }
+
+    // MARK: - Face ID / Touch ID re-login
+
+    /// True when this device can offer biometric sign-in: a device credential
+    /// is enrolled AND the hardware has usable biometrics.
+    var canBiometricLogin: Bool {
+        guard KeychainHelper.hasBiometricItem(deviceCredentialKey) else { return false }
+        var error: NSError?
+        return LAContext().canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+    }
+
+    /// Which biometry the hardware has, for button copy (Face ID vs Touch ID).
+    var biometryType: LABiometryType {
+        let ctx = LAContext()
+        _ = ctx.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+        return ctx.biometryType
+    }
+
+    /// Ask the server for a long-lived device credential and store it behind
+    /// biometrics. No-op when one is already enrolled, biometrics are
+    /// unavailable, or the server errors (best-effort — never blocks login).
+    private func enrollDeviceCredentialIfNeeded() async {
+        guard !KeychainHelper.hasBiometricItem(deviceCredentialKey) else { return }
+        var error: NSError?
+        guard LAContext().canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else { return }
+
+        struct Resp: Decodable { let deviceToken: String }
+        guard let resp = try? await APIClient.shared.post(
+            "/api/auth/device-credential",
+            body: EmptyBody(),
+            as: Resp.self
+        ) else { return }
+        KeychainHelper.setBiometric(resp.deviceToken, forKey: deviceCredentialKey)
+    }
+
+    /// Face ID / Touch ID sign-in: release the stored credential with a
+    /// biometric match and exchange it for a fresh session. Returns true when
+    /// the user ends up signed in.
+    func biometricLogin() async -> Bool {
+        lastAuthError = nil
+        guard let token = await KeychainHelper.getBiometric(
+            deviceCredentialKey,
+            prompt: String(localized: "Inicia sesión en Vectorial Data")
+        ) else {
+            // Canceled, mismatch, or invalidated by re-enrolled biometrics.
+            return false
+        }
+
+        struct Body: Encodable { let deviceToken: String }
+        struct Response: Decodable {
+            let accessToken: String
+            let refreshToken: String
+            let expiresAt: Int?
+        }
+        do {
+            let resp = try await APIClient.shared.post(
+                "/api/auth/device-login",
+                body: Body(deviceToken: token),
+                as: Response.self
+            )
+            KeychainHelper.set(resp.accessToken, forKey: accessTokenKey)
+            KeychainHelper.set(resp.refreshToken, forKey: refreshTokenKey)
+            await APIClient.shared.setBearer(resp.accessToken)
+            await refreshProfile()
+            return state == .signedIn
+        } catch APIError.unauthorized {
+            // Revoked server-side — drop the credential so the button hides.
+            KeychainHelper.delete(deviceCredentialKey)
+            lastAuthError = String(localized: "Tu acceso con Face ID expiró. Entra con tu correo.")
+            return false
+        } catch {
+            lastAuthError = String(localized: "No hubo conexión. Intenta de nuevo.")
             return false
         }
     }
@@ -320,6 +400,10 @@ final class AuthManager: ObservableObject {
             state = .signedIn
             // Re-attach this device's push token to the now-signed-in user.
             await NotificationsManager.shared.refreshRegistrationIfAuthorized()
+            // Enroll Face ID / Touch ID re-login in the background. Running
+            // here (not per login call) also covers users who were already
+            // signed in before this feature shipped.
+            Task { await self.enrollDeviceCredentialIfNeeded() }
         } catch APIError.unauthorized where refreshDeniedByServer {
             // 401 AND the server explicitly rejected our refresh token: the
             // session is dead for real (revoked/rotated elsewhere). Sign out.

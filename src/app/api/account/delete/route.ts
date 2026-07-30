@@ -92,6 +92,16 @@ export async function POST(request: Request) {
     if (error) failures.push(`notification_reads: ${error.message}`);
   }
 
+  // Face ID / Touch ID device credentials — dead once the user is gone,
+  // but delete them so no orphan hashes linger.
+  {
+    const { error } = await admin
+      .from("device_credentials")
+      .delete()
+      .eq("email", email);
+    if (error) failures.push(`device_credentials: ${error.message}`);
+  }
+
   if (failures.length > 0) {
     console.error("[account/delete] row deletion errors", { email, failures });
   }

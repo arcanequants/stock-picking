@@ -1,3 +1,4 @@
+import LocalAuthentication
 import SwiftUI
 
 /// Magic-link entry screen. User types email → we POST to `/api/auth/magic-link`
@@ -5,6 +6,7 @@ import SwiftUI
 /// completes sign-in via `AuthManager.handleDeepLink`.
 struct AuthView: View {
     @EnvironmentObject private var auth: AuthManager
+    @State private var isBiometricSigning = false
 
     @State private var email: String = ""
     @State private var password: String = ""
@@ -37,6 +39,33 @@ struct AuthView: View {
                         .font(.body)
                         .foregroundStyle(.white.opacity(0.7))
                         .multilineTextAlignment(.center)
+                }
+
+                // Face ID / Touch ID fast path — only when a device credential
+                // is enrolled from a previous sign-in on this device.
+                if !sent && auth.canBiometricLogin {
+                    Button {
+                        isBiometricSigning = true
+                        Task {
+                            _ = await auth.biometricLogin()
+                            isBiometricSigning = false
+                        }
+                    } label: {
+                        HStack(spacing: 8) {
+                            if isBiometricSigning {
+                                ProgressView().tint(.black)
+                            } else {
+                                Image(systemName: auth.biometryType == .touchID ? "touchid" : "faceid")
+                                Text(auth.biometryType == .touchID ? "Entrar con Touch ID" : "Entrar con Face ID")
+                            }
+                        }
+                        .font(.headline)
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity, minHeight: 52)
+                        .background(Color("BrandEmerald"))
+                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                    }
+                    .disabled(isBiometricSigning)
                 }
 
                 if sent {

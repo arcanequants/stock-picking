@@ -78,7 +78,7 @@ export async function GET(
               border: "1px solid #3f3f46",
             }}
           >
-            PICK #{pickNumber}
+            {`PICK #${pickNumber}`}
           </div>
         </div>
 
@@ -104,14 +104,13 @@ export async function GET(
                 lineHeight: 1,
               }}
             >
-              {isPositive ? "+" : ""}
-              {returnPct.toFixed(1)}%
+              {`${isPositive ? "+" : ""}${returnPct.toFixed(1)}%`}
             </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
             <div style={{ fontSize: "16px", color: "#71717a" }}>Days</div>
             <div style={{ fontSize: "36px", fontWeight: 600, color: "#d4d4d8" }}>
-              {daysHeld}
+              {String(daysHeld)}
             </div>
           </div>
         </div>
@@ -126,7 +125,7 @@ export async function GET(
             }}
           >
             <div style={{ fontSize: "18px", color: "#71717a" }}>
-              vectorialdata.com/stocks/{upperTicker}
+              {`vectorialdata.com/stocks/${upperTicker}`}
             </div>
             <div
               style={{
