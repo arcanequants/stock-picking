@@ -138,6 +138,8 @@ struct MainTabView: View {
         // News pushes deep-link into the Home tab — that's where the
         // news entry card and detail navigation live.
         .onChange(of: notifications.pendingNewsId) { _, _ in routeToPendingTab() }
+        // Day-12 trial reminder routes to Account (manage subscription).
+        .onChange(of: notifications.pendingOpenAccount) { _, _ in routeToPendingTab() }
     }
 
     private func routeToPendingTab() {
@@ -145,6 +147,10 @@ struct MainTabView: View {
             selectedTab = .home
         } else if notifications.pendingPickNumber != nil || notifications.pendingWeeklyDigest {
             selectedTab = .picks
+        } else if notifications.pendingOpenAccount {
+            // Day-12 trial reminder: subscription management lives in Account.
+            selectedTab = .account
+            notifications.pendingOpenAccount = false
         }
     }
 }

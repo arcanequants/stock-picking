@@ -153,6 +153,9 @@ enum TrialEndReminder {
         content.title = String(localized: "Tu prueba termina en 2 días")
         content.body = String(localized: "El día 14 empieza el cobro de $0.99/mes con tu Apple ID. Si no quieres continuar, cancela en Ajustes — sin preguntas.")
         content.sound = .default
+        // Tap → Account tab, where "Administrar suscripción" (cancel/renew)
+        // lives. Without a kind the tap just opened the app on Home.
+        content.userInfo = ["kind": "trial_end"]
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 12 * 86_400, repeats: false)
         UNUserNotificationCenter.current().add(
             UNNotificationRequest(identifier: id, content: content, trigger: trigger))

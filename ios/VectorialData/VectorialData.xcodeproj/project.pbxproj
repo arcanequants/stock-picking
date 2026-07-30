@@ -10,6 +10,7 @@
 		0254B0CD623F1FECC3258DCA /* PriorHolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979511B65522219EA59DA2A9 /* PriorHolding.swift */; };
 		112524BB954122A83000FBC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7745AACBA037492169B68FC /* AppDelegate.swift */; };
 		16272C73128B7A5EB8EAB08C /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995D70904166120C0B2A050 /* KeychainHelper.swift */; };
+		1BEC28FE49EE4D46B1862982 /* NotificationTapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF1EB3A1CEE30B2579246C /* NotificationTapUITests.swift */; };
 		247ED4CCFE8A22E6765F8F4B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040333E9484BEA0F3712479E /* AuthView.swift */; };
 		25C37BD191ECCBBD14B06D78 /* PickActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D3F934E413E3D4131BAA0 /* PickActivity.swift */; };
 		278D511AE511825A60C66319 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0131EF1A2AE55B596D2E5EF /* StoreManager.swift */; };
@@ -124,6 +125,7 @@
 		6A1BCC5FD3CD089181E6608E /* PickBuySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickBuySheet.swift; sourceTree = "<group>"; };
 		6D335ED94C26510847FA20CF /* NewsWowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWowUITests.swift; sourceTree = "<group>"; };
 		7839984778A3BECA5F20ACEE /* WeeklyDigestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyDigestView.swift; sourceTree = "<group>"; };
+		7DEF1EB3A1CEE30B2579246C /* NotificationTapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTapUITests.swift; sourceTree = "<group>"; };
 		820C026C9E6BED77E2FAB77A /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
 		859B3769550D3ADC64FD4386 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8895AD50A21203555ADBCDD5 /* LaunchSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSplashView.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			children = (
 				DCFEA529D0C29E8782D98C20 /* CoachTourUITests.swift */,
 				6D335ED94C26510847FA20CF /* NewsWowUITests.swift */,
+				7DEF1EB3A1CEE30B2579246C /* NotificationTapUITests.swift */,
 			);
 			path = VectorialDataUITests;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 			files = (
 				FF5D31F64A41E364002F55B3 /* CoachTourUITests.swift in Sources */,
 				CE4B0ED89C667FD8C2FB4AE6 /* NewsWowUITests.swift in Sources */,
+				1BEC28FE49EE4D46B1862982 /* NotificationTapUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,7 +695,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QMHJWQPS7H;
 				ENABLE_MODULE_VERIFIER = YES;
@@ -831,7 +835,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QMHJWQPS7H;
 				ENABLE_MODULE_VERIFIER = YES;
