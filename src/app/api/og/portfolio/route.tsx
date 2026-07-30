@@ -84,11 +84,10 @@ export async function GET() {
               lineHeight: 1,
             }}
           >
-            {isPositive ? "+" : ""}
-            {totalReturnPct.toFixed(1)}%
+            {`${isPositive ? "+" : ""}${totalReturnPct.toFixed(1)}%`}
           </div>
           <div style={{ fontSize: "22px", color: "#a1a1aa" }}>
-            {positions.length} positions · since {since}
+            {`${positions.length} positions · since ${since}`}
           </div>
         </div>
 
@@ -137,7 +136,7 @@ export async function GET() {
           })}
           {remaining > 0 && (
             <div style={{ fontSize: "16px", color: "#71717a", marginTop: "4px" }}>
-              + {remaining} more
+              {`+ ${remaining} more`}
             </div>
           )}
         </div>
