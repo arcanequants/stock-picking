@@ -5,6 +5,7 @@ import {
   getCountryGroups,
   findCountryGroup,
   averageYield,
+  formatYield,
 } from "@/lib/stock-lists";
 import {
   JsonLd,
@@ -113,7 +114,7 @@ export default async function CountryListPage({
       </p>
       <p className="text-text-muted mb-8">
         {avg !== null
-          ? t("groupYieldNote", { payers: payers.length, avg })
+          ? t("groupYieldNote", { payers: payers.length, avg: formatYield(avg, locale) })
           : t("groupNoYieldNote")}
       </p>
 

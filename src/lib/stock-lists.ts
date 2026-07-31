@@ -188,3 +188,23 @@ export function averageYield(list: ListStock[]): number | null {
   const sum = payers.reduce((acc, s) => acc + (s.dividend_yield ?? 0), 0);
   return Math.round((sum / payers.length) * 100) / 100;
 }
+
+/* ── Number formatting ────────────────────────────────────
+ * Yields are decimals rendered in 4 locales. A bare {avg} ICU argument is
+ * substituted as-is (pt-BR came out "2.26%" instead of "2,26%"), so every
+ * yield goes through here instead.
+ */
+const NUMBER_LOCALE_TAGS: Record<string, string> = {
+  es: "es-MX",
+  en: "en-US",
+  pt: "pt-BR",
+  hi: "hi-IN",
+};
+
+/** Two-decimal yield in the active locale — "2,26" in pt-BR, "2.26" in es-MX. */
+export function formatYield(value: number, locale: string): string {
+  return new Intl.NumberFormat(NUMBER_LOCALE_TAGS[locale] ?? "es-MX", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+}

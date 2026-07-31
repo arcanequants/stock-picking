@@ -4,6 +4,7 @@ import {
   getPickedStocks,
   getDividendStocks,
   averageYield,
+  formatYield,
 } from "@/lib/stock-lists";
 import {
   JsonLd,
@@ -33,11 +34,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function DividendosPage() {
   const t = await getTranslations("StockLists");
   const locale = await getLocale();
-  const yieldFormat = new Intl.NumberFormat(
-    ({ es: "es-MX", en: "en-US", pt: "pt-BR", hi: "hi-IN" } as Record<string, string>)[locale] ??
-      "es-MX",
-    { minimumFractionDigits: 2, maximumFractionDigits: 2 }
-  );
   const picked = getPickedStocks();
   const payers = getDividendStocks(picked);
   const avg = averageYield(picked);
@@ -68,14 +64,16 @@ export default async function DividendosPage() {
         {t("dividendIntro", {
           count: payers.length,
           total: picked.length,
-          avg: avg ?? 0,
+          // Formatted here rather than left to ICU: a bare {avg} argument is
+          // substituted as-is, so pt-BR was getting "2.26%" instead of "2,26%".
+          avg: formatYield(avg ?? 0, locale),
         })}
       </p>
       <p className="text-text-muted mb-4">
         {t("dividendTop", {
           name: top.name,
           ticker: top.ticker,
-          yield: yieldFormat.format(top.dividend_yield ?? 0),
+          yield: formatYield(top.dividend_yield ?? 0, locale),
         })}
       </p>
       <p className="text-sm text-text-faint mb-8">{t("dividendNote")}</p>
