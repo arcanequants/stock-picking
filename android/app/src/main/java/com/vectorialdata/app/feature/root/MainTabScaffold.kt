@@ -23,6 +23,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -33,6 +35,7 @@ import com.vectorialdata.app.core.store.PickStatusStore
 import androidx.compose.runtime.saveable.rememberSaveable
 import com.vectorialdata.app.feature.account.AccountScreen
 import com.vectorialdata.app.feature.home.HomeScreen
+import com.vectorialdata.app.feature.onboarding.CoachTourOverlay
 import com.vectorialdata.app.feature.onboarding.FirstRunFlags
 import com.vectorialdata.app.feature.onboarding.FirstRunSetupFlow
 import com.vectorialdata.app.feature.onboarding.InvestmentAmountScreen
@@ -104,10 +107,34 @@ fun MainTabScaffold() {
         AmountEditorSheet(onDismiss = { showAmountEditor = false })
     }
 
+    // Coach-marks tour: once, right after first-run setup finishes. "Ver
+    // tutorial" in Cuenta flips the flag back to replay it.
+    var showTour by rememberSaveable { mutableStateOf(!FirstRunFlags.didCoachTour) }
+    val replayRequested by FirstRunFlags.tourReplayRequested.collectAsStateWithLifecycle()
+    LaunchedEffect(replayRequested) {
+        if (replayRequested) {
+            showTour = true
+            FirstRunFlags.tourReplayRequested.value = false
+        }
+    }
+    var tabBarBounds by remember { mutableStateOf<androidx.compose.ui.geometry.Rect?>(null) }
+
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
-            NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
+            NavigationBar(
+                containerColor = MaterialTheme.colorScheme.surface,
+                modifier = Modifier.onGloballyPositioned { coords ->
+                    val pos = coords.positionInRoot()
+                    tabBarBounds = androidx.compose.ui.geometry.Rect(
+                        pos,
+                        androidx.compose.ui.geometry.Size(
+                            coords.size.width.toFloat(),
+                            coords.size.height.toFloat(),
+                        ),
+                    )
+                },
+            ) {
                 AppTab.entries.forEach { tab ->
                     NavigationBarItem(
                         selected = selected == tab,
@@ -132,7 +159,19 @@ fun MainTabScaffold() {
             AppTab.ACCOUNT -> AccountScreen(content)
         }
     }
+
+    if (showTour) {
+        CoachTourOverlay(
+            tabBarBounds = tabBarBounds,
+            onSelectTab = { selected = AppTab.entries[it] },
+            onFinished = {
+                FirstRunFlags.didCoachTour = true
+                showTour = false
+            },
+        )
+    }
 }
+
 
 /** The per-buy amount editor as a bottom sheet (raise-reminder tap / Account). */
 @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)

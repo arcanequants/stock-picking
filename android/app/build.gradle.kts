@@ -74,4 +74,5 @@ dependencies {
 
     implementation(libs.billing.ktx)
     implementation(libs.work.runtime.ktx)
+    implementation(libs.androidx.biometric)
 }

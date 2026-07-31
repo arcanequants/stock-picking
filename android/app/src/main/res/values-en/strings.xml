@@ -434,4 +434,28 @@
     <string name="trial_reminder_body">On day 14 the $0.99/month charge starts on your Google Play account. If you don\'t want to continue, cancel in Google Play — no questions asked.</string>
     <string name="raise_reminder_title">Ready for the next step?</string>
     <string name="raise_reminder_body">You\'ve been investing %1$s per buy for a while. If you no longer feel it, raise it to %2$s.</string>
+
+    <!-- Fase 4: tour, teaser, cuenta, biometría -->
+    <string name="tour_s1_title">Your picks land here</string>
+    <string name="tour_s1_msg">When there\'s a buy worth making, we notify you and it shows up in Picks.</string>
+    <string name="tour_s2_title">Buy in your broker, mark it here</string>
+    <string name="tour_s2_msg">You make the purchase in your broker. Then tap it here and mark it — that\'s how we track your real portfolio.</string>
+    <string name="tour_s3_title">Your portfolio, live</string>
+    <string name="tour_s3_msg">Vectorial\'s full history and yours with what you\'ve bought — only percentages, no smoke.</string>
+    <string name="tour_s4_title">Your amount and your plan</string>
+    <string name="tour_s4_msg">Change your per-buy amount, revisit the philosophy and manage your subscription.</string>
+    <string name="tour_progress">%1$d of %2$d</string>
+    <string name="tour_done">Done!</string>
+    <string name="portfolio_locked_more">+%1$d more positions</string>
+    <string name="portfolio_unlock">Unlock</string>
+    <string name="account_amount_title">Amount per buy</string>
+    <string name="account_amount_sub">The same amount every time</string>
+    <string name="account_philosophy_title">Philosophy</string>
+    <string name="account_philosophy_sub">Why we invest this way — owner, long term, dividends</string>
+    <string name="account_tour_title">See tutorial</string>
+    <string name="account_tour_sub">Replay the quick app walkthrough</string>
+    <string name="biometric_sign_in">Sign in with fingerprint or face</string>
+    <string name="biometric_prompt_title">Sign in to Vectorial Data</string>
+    <string name="biometric_expired">Your biometric access expired. Sign in with your email.</string>
+    <string name="biometric_offline">No connection. Try again.</string>
 </resources>

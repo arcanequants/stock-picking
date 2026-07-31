@@ -434,4 +434,28 @@
     <string name="trial_reminder_body">No dia 14 começa a cobrança de $0.99/mês na sua conta do Google Play. Se não quiser continuar, cancele no Google Play — sem perguntas.</string>
     <string name="raise_reminder_title">Pronto para o próximo degrau?</string>
     <string name="raise_reminder_body">Você investe %1$s em cada compra há um tempo. Se já não sente, aumente para %2$s.</string>
+
+    <!-- Fase 4: tour, teaser, cuenta, biometría -->
+    <string name="tour_s1_title">Suas escolhas chegam aqui</string>
+    <string name="tour_s1_msg">Quando houver uma compra que valha a pena, avisamos e ela aparece em Picks.</string>
+    <string name="tour_s2_title">Compre na sua corretora, marque aqui</string>
+    <string name="tour_s2_msg">A compra você faz na sua corretora. Depois toque aqui e marque — assim seguimos seu portfólio real.</string>
+    <string name="tour_s3_title">Seu portfólio, ao vivo</string>
+    <string name="tour_s3_msg">O histórico completo da Vectorial e o seu com o que você comprou — só porcentagens, sem fumaça.</string>
+    <string name="tour_s4_title">Seu valor e seu plano</string>
+    <string name="tour_s4_msg">Mude seu valor por compra, reveja a filosofia e gerencie sua assinatura.</string>
+    <string name="tour_progress">%1$d de %2$d</string>
+    <string name="tour_done">Pronto!</string>
+    <string name="portfolio_locked_more">+%1$d posições a mais</string>
+    <string name="portfolio_unlock">Desbloquear</string>
+    <string name="account_amount_title">Valor por compra</string>
+    <string name="account_amount_sub">O mesmo valor toda vez</string>
+    <string name="account_philosophy_title">Filosofia</string>
+    <string name="account_philosophy_sub">Por que investimos assim — dono, longo prazo, dividendos</string>
+    <string name="account_tour_title">Ver tutorial</string>
+    <string name="account_tour_sub">Repita o passeio rápido pelo app</string>
+    <string name="biometric_sign_in">Entrar com digital ou rosto</string>
+    <string name="biometric_prompt_title">Entre no Vectorial Data</string>
+    <string name="biometric_expired">Seu acesso biométrico expirou. Entre com seu e-mail.</string>
+    <string name="biometric_offline">Sem conexão. Tente de novo.</string>
 </resources>

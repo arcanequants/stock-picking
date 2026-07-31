@@ -3,9 +3,9 @@ package com.vectorialdata.app
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import com.vectorialdata.app.core.auth.AuthManager
 import com.vectorialdata.app.core.notifications.NotificationsManager
@@ -13,7 +13,8 @@ import com.vectorialdata.app.feature.root.RootRouter
 import com.vectorialdata.app.ui.theme.VectorialDataTheme
 import kotlinx.coroutines.launch
 
-class MainActivity : ComponentActivity() {
+// FragmentActivity (not ComponentActivity): BiometricPrompt requires it.
+class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

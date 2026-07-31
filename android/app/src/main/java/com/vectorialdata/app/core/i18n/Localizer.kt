@@ -14,7 +14,8 @@ import android.content.Context
  * which is process-lived and safe to hold statically.
  */
 object Localizer {
-    private lateinit var appContext: Context
+    lateinit var appContext: Context
+        private set
 
     fun init(context: Context) {
         appContext = context.applicationContext

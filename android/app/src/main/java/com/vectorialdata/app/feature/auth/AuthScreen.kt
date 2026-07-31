@@ -12,7 +12,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Fingerprint
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -180,6 +184,34 @@ fun AuthScreen() {
                     error = localError ?: authError,
                     onSend = ::send,
                 )
+
+                // Biometric re-login — shown only when a device credential is
+                // enrolled AND the hardware has usable biometrics.
+                val context = androidx.compose.ui.platform.LocalContext.current
+                val activity = context as? androidx.fragment.app.FragmentActivity
+                var biometricAvailable by remember {
+                    mutableStateOf(AuthManager.canBiometricLogin(context))
+                }
+                if (biometricAvailable && activity != null) {
+                    OutlinedButton(
+                        onClick = {
+                            scope.launch {
+                                AuthManager.biometricLogin(activity)
+                                // A revoked credential hides the button.
+                                biometricAvailable = AuthManager.canBiometricLogin(context)
+                            }
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Icon(
+                            Icons.Filled.Fingerprint,
+                            contentDescription = null,
+                            modifier = Modifier.size(18.dp),
+                        )
+                        Spacer(Modifier.size(8.dp))
+                        Text(stringResource(R.string.biometric_sign_in))
+                    }
+                }
             }
 
             Spacer(Modifier.weight(1f))

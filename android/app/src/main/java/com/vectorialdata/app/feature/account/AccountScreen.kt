@@ -6,16 +6,22 @@ import android.os.Build
 import android.provider.Settings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -31,6 +37,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
@@ -43,6 +50,7 @@ import com.vectorialdata.app.R
 import com.vectorialdata.app.core.auth.AuthManager
 import com.vectorialdata.app.core.billing.BillingManager
 import com.vectorialdata.app.core.notifications.NotificationsManager
+import com.vectorialdata.app.core.store.PickStatusStore
 import com.vectorialdata.app.core.util.Formatters
 import com.vectorialdata.app.feature.paywall.rememberPaywallLauncher
 import com.vectorialdata.app.ui.theme.BrandEmerald
@@ -86,6 +94,8 @@ fun AccountScreen(modifier: Modifier = Modifier) {
         }
 
         SubscriptionSection(isSubscribed = user?.isSubscribed == true)
+
+        VectorialSection()
 
         NotificationsSection()
 
@@ -231,6 +241,114 @@ private fun SubscriptionSection(isSubscribed: Boolean) {
 
 /** Release package id — the debug build's `.debug` suffix has no Play listing. */
 private const val PLAY_PACKAGE_NAME = "com.vectorialdata.app"
+
+/**
+ * "Cómo inviertes" + "Vectorial" rows — mirror of the iOS Account sections:
+ * per-buy amount editor, the re-viewable Filosofía pager, and the coach-tour
+ * replay ("Ver tutorial").
+ */
+@Composable
+private fun VectorialSection() {
+    val defaultInvestment by PickStatusStore.defaultInvestment.collectAsStateWithLifecycle()
+    var showAmount by remember { mutableStateOf(false) }
+    var showPhilosophy by remember { mutableStateOf(false) }
+
+    if (showAmount) {
+        com.vectorialdata.app.feature.root.AmountEditorSheet(onDismiss = { showAmount = false })
+    }
+    if (showPhilosophy) {
+        PhilosophySheet(onDismiss = { showPhilosophy = false })
+    }
+
+    Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        AccountRow(
+            title = stringResource(R.string.account_amount_title),
+            subtitle = stringResource(R.string.account_amount_sub),
+            trailing = defaultInvestment?.let {
+                if (it % 1.0 == 0.0) "$${it.toInt()}" else "$%.2f".format(it)
+            } ?: "—",
+        ) { showAmount = true }
+        AccountRow(
+            title = stringResource(R.string.account_philosophy_title),
+            subtitle = stringResource(R.string.account_philosophy_sub),
+        ) { showPhilosophy = true }
+        AccountRow(
+            title = stringResource(R.string.account_tour_title),
+            subtitle = stringResource(R.string.account_tour_sub),
+        ) {
+            com.vectorialdata.app.feature.onboarding.FirstRunFlags.didCoachTour = false
+            com.vectorialdata.app.feature.onboarding.FirstRunFlags.tourReplayRequested.value = true
+        }
+    }
+}
+
+@Composable
+private fun AccountRow(
+    title: String,
+    subtitle: String,
+    trailing: String? = null,
+    onClick: () -> Unit,
+) {
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(MaterialTheme.colorScheme.surface)
+            .clickable(onClick = onClick)
+            .padding(12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            Text(title, fontSize = 15.sp, color = MaterialTheme.colorScheme.onBackground)
+            Text(subtitle, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+        if (trailing != null) {
+            Text(
+                trailing,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = BrandEmerald,
+            )
+        }
+        Icon(
+            Icons.AutoMirrored.Filled.KeyboardArrowRight,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
+/** Full-screen re-viewable Filosofía pager (iOS `PhilosophyView`). */
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
+@Composable
+private fun PhilosophySheet(onDismiss: () -> Unit) {
+    androidx.compose.material3.ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = androidx.compose.material3.rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        containerColor = MaterialTheme.colorScheme.background,
+    ) {
+        val pagerState = androidx.compose.foundation.pager.rememberPagerState(pageCount = { 5 })
+        Column(
+            Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.92f),
+        ) {
+            androidx.compose.foundation.pager.HorizontalPager(
+                state = pagerState,
+                modifier = Modifier.weight(1f),
+            ) { page ->
+                com.vectorialdata.app.feature.onboarding.OnboardingPage(page)
+            }
+            androidx.compose.foundation.layout.Box(
+                Modifier.fillMaxWidth().padding(bottom = 16.dp),
+                contentAlignment = Alignment.Center,
+            ) {
+                com.vectorialdata.app.feature.onboarding.OnboardingDots(5, pagerState.currentPage)
+            }
+        }
+    }
+}
 
 /**
  * Push-permission row — mirror of iOS `NotificationsRow`. On Android 13+ the

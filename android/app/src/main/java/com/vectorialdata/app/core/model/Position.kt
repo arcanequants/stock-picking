@@ -49,6 +49,11 @@ data class PortfolioPositions(
     val totalReturnPct: Double,
     val totalPositions: Int,
     val avgDividendYield: Double? = null,
+    /**
+     * Free tier: true when the API sent only the top-3 teaser (no thesis,
+     * no allocations). Subscribers get the full portfolio and `limited` null.
+     */
+    val limited: Boolean? = null,
     val sectorAllocation: List<AllocationBucket>? = null,
     val regionAllocation: List<AllocationBucket>? = null,
     val since: String? = null,

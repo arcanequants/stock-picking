@@ -58,6 +58,7 @@ import com.vectorialdata.app.core.notifications.NotificationsManager
 import com.vectorialdata.app.core.store.PickStatusStore
 import com.vectorialdata.app.core.util.Formatters
 import com.vectorialdata.app.feature.common.VDCard
+import com.vectorialdata.app.feature.onboarding.coachTargetFirstPick
 import com.vectorialdata.app.ui.theme.BrandEmerald
 import com.vectorialdata.app.ui.theme.BrandIndigo
 import kotlinx.coroutines.launch
@@ -162,7 +163,14 @@ fun PicksScreen(modifier: Modifier = Modifier) {
                 if (pending.isNotEmpty()) {
                     item { SectionHeader(stringResource(R.string.picks_pending_header), pending.size) }
                     items(pending.size, key = { "p${pending[it].pickNumber}" }) { i ->
-                        PendingPickRow(pending[i]) { openPickNumber = pending[i].pickNumber }
+                        // The first card reports its frame — the coach tour
+                        // spotlights it (free accounts have an upsell banner
+                        // above, so its position can't be approximated).
+                        Box(
+                            if (i == 0) Modifier.coachTargetFirstPick() else Modifier,
+                        ) {
+                            PendingPickRow(pending[i]) { openPickNumber = pending[i].pickNumber }
+                        }
                     }
                 }
                 if (historial.isNotEmpty()) {

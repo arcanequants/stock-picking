@@ -222,6 +222,65 @@ object AuthManager {
 
     suspend fun refreshCurrentUser() = refreshProfile()
 
+    // ---- Biometric re-login ---------------------------------------------------
+
+    @Serializable
+    private data class DeviceCredentialResponse(val deviceToken: String)
+
+    @Serializable
+    private data class DeviceLoginBody(val deviceToken: String)
+
+    /**
+     * True when this device can offer biometric sign-in: a device credential
+     * is enrolled AND the hardware has usable biometrics.
+     */
+    fun canBiometricLogin(context: android.content.Context): Boolean =
+        BiometricAuth.hasCredential() && BiometricAuth.canAuthenticate(context)
+
+    /**
+     * Ask the server for a long-lived device credential and store it behind
+     * biometrics. No-op when one is already enrolled, biometrics are
+     * unavailable, or the server errors (best-effort — never blocks login).
+     */
+    private suspend fun enrollDeviceCredentialIfNeeded(context: android.content.Context) {
+        if (BiometricAuth.hasCredential()) return
+        if (!BiometricAuth.canAuthenticate(context)) return
+        val resp = runCatching {
+            ApiClient.post<Unit, DeviceCredentialResponse>("/api/auth/device-credential", Unit)
+        }.getOrNull() ?: return
+        BiometricAuth.storeCredential(resp.deviceToken)
+    }
+
+    /**
+     * Fingerprint/face sign-in: release the stored credential with a
+     * biometric match and exchange it for a fresh session. Returns true when
+     * the user ends up signed in.
+     */
+    suspend fun biometricLogin(activity: androidx.fragment.app.FragmentActivity): Boolean {
+        _lastAuthError.value = null
+        val token = BiometricAuth.releaseCredential(
+            activity,
+            Localizer.get(R.string.biometric_prompt_title),
+        ) ?: return false // Canceled, mismatch, or invalidated by re-enrollment.
+
+        return try {
+            val resp = ApiClient.post<DeviceLoginBody, SessionResponse>(
+                "/api/auth/device-login",
+                DeviceLoginBody(token),
+            )
+            persistAndLoad(resp)
+            _state.value == AuthState.SIGNED_IN
+        } catch (e: ApiError.Unauthorized) {
+            // Revoked server-side — drop the credential so the button hides.
+            BiometricAuth.deleteCredential()
+            _lastAuthError.value = Localizer.get(R.string.biometric_expired)
+            false
+        } catch (e: Exception) {
+            _lastAuthError.value = Localizer.get(R.string.biometric_offline)
+            false
+        }
+    }
+
     // ---- Sign-out / delete ----------------------------------------------------
 
     suspend fun signOut() {
@@ -236,6 +295,10 @@ object AuthManager {
         // Same as sign-out: drop the token before the account disappears.
         NotificationsManager.unregister()
         ApiClient.post<Unit, EmptyResponse>("/api/account/delete", Unit)
+        // The server dropped device_credentials; the local half dies too.
+        // (Plain sign-out keeps it on purpose — that's what biometric
+        // re-login is for.)
+        BiometricAuth.deleteCredential()
         clearSession()
     }
 
@@ -281,6 +344,10 @@ object AuthManager {
             if (me.subscriptionStatus == "active") {
                 LocalReminders.cancelTrialEndReminder()
             }
+            // Enroll biometric re-login in the background. Running here (not
+            // per login call) also covers users who were already signed in
+            // before this feature shipped.
+            scope.launch { enrollDeviceCredentialIfNeeded(Localizer.appContext) }
         } catch (e: ApiError.Unauthorized) {
             if (refreshDeniedByServer) {
                 // 401 AND the server explicitly rejected our refresh token:

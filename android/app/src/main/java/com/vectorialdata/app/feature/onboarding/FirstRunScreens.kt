@@ -94,13 +94,21 @@ fun FirstRunSetupFlow(onComplete: () -> Unit) {
     }
 }
 
-/** Per-device first-run flag (iOS @AppStorage "vd.didFirstRunSetup"). */
+/** Per-device first-run flags (iOS @AppStorage "vd.didFirstRunSetup" etc.). */
 object FirstRunFlags {
     private const val SETUP_KEY = "vd.didFirstRunSetup"
+    private const val TOUR_KEY = "vd.didCoachTour"
 
     var didFirstRunSetup: Boolean
         get() = SecureStore.get(SETUP_KEY) == "true"
         set(value) = SecureStore.set(value.toString(), SETUP_KEY)
+
+    var didCoachTour: Boolean
+        get() = SecureStore.get(TOUR_KEY) == "true"
+        set(value) = SecureStore.set(value.toString(), TOUR_KEY)
+
+    /** "Ver tutorial" in Cuenta sets this; the scaffold replays the tour. */
+    val tourReplayRequested = kotlinx.coroutines.flow.MutableStateFlow(false)
 }
 
 // ---- Step 0: Play-billed trial activation -----------------------------------

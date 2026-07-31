@@ -15,7 +15,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.SwapVert
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
@@ -59,6 +63,7 @@ import com.vectorialdata.app.core.store.DividendStore
 import com.vectorialdata.app.core.store.PickStatusStore
 import com.vectorialdata.app.core.util.Formatters
 import com.vectorialdata.app.feature.common.VDCard
+import com.vectorialdata.app.feature.paywall.rememberPaywallLauncher
 import com.vectorialdata.app.ui.theme.BrandEmerald
 import com.vectorialdata.app.ui.theme.BrandIndigo
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -159,6 +164,7 @@ fun resetPortfolioCache() = PortfolioState.reset()
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PortfolioScreen(modifier: Modifier = Modifier) {
+    val openPaywall = rememberPaywallLauncher()
     val modelResponse by PortfolioState.modelResponse.collectAsStateWithLifecycle()
     val personalResponse by PortfolioState.personalResponse.collectAsStateWithLifecycle()
     val selectedView by PortfolioState.selectedView.collectAsStateWithLifecycle()
@@ -289,6 +295,12 @@ fun PortfolioScreen(modifier: Modifier = Modifier) {
                     }
                     items(displayed.size, key = { displayed[it].ticker }) { i ->
                         PositionRow(displayed[i]) { openTicker = displayed[i].ticker }
+                    }
+                    // Free tier: the API sends only the top-3 teaser; this
+                    // locked row sells the rest (mirror of iOS lockedMoreRow).
+                    val resp = response
+                    if (resp?.limited == true && resp.totalPositions > resp.positions.size) {
+                        item { LockedMoreRow(resp.totalPositions - resp.positions.size, openPaywall) }
                     }
                 }
 
@@ -559,5 +571,41 @@ private fun PersonalEmptyState() {
                 color = Color.White.copy(alpha = 0.7f),
             )
         }
+    }
+}
+
+/** "+N posiciones más · Desbloquear" — free-tier teaser row. */
+@Composable
+private fun LockedMoreRow(hidden: Int, onTap: () -> Unit) {
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(14.dp))
+            .background(MaterialTheme.colorScheme.surface)
+            .border(1.dp, BrandEmerald.copy(alpha = 0.3f), RoundedCornerShape(14.dp))
+            .clickable(onClick = onTap)
+            .padding(14.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Icon(
+            Icons.Filled.Lock,
+            contentDescription = null,
+            tint = BrandEmerald,
+            modifier = Modifier.size(18.dp),
+        )
+        Text(
+            stringResource(R.string.portfolio_locked_more, hidden),
+            fontSize = 14.sp,
+            fontWeight = FontWeight.SemiBold,
+            color = Color.White,
+        )
+        Spacer(Modifier.weight(1f))
+        Text(
+            stringResource(R.string.portfolio_unlock),
+            fontSize = 12.sp,
+            fontWeight = FontWeight.SemiBold,
+            color = BrandEmerald,
+        )
     }
 }

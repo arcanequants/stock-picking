@@ -436,4 +436,28 @@
     <string name="trial_reminder_body">El día 14 empieza el cobro de $0.99/mes con tu cuenta de Google Play. Si no quieres continuar, cancela en Google Play — sin preguntas.</string>
     <string name="raise_reminder_title">¿Listo para el siguiente escalón?</string>
     <string name="raise_reminder_body">Llevas un tiempo invirtiendo %1$s en cada compra. Si ya no lo sientes, súbelo a %2$s.</string>
+
+    <!-- Fase 4: tour, teaser, cuenta, biometría -->
+    <string name="tour_s1_title">Aquí llegan tus picks</string>
+    <string name="tour_s1_msg">Cuando haya una compra que valga la pena, te avisamos y aparece en Picks.</string>
+    <string name="tour_s2_title">Compra en tu broker, márcala aquí</string>
+    <string name="tour_s2_msg">La compra la haces en tu broker. Luego tócala aquí y la marcas — así seguimos tu portafolio real.</string>
+    <string name="tour_s3_title">Tu portafolio, en vivo</string>
+    <string name="tour_s3_msg">El historial completo de Vectorial y el tuyo con lo que has comprado — solo porcentajes, sin humo.</string>
+    <string name="tour_s4_title">Tu monto y tu plan</string>
+    <string name="tour_s4_msg">Cambia tu monto por compra, repasa la filosofía y maneja tu suscripción.</string>
+    <string name="tour_progress">%1$d de %2$d</string>
+    <string name="tour_done">¡Listo!</string>
+    <string name="portfolio_locked_more">+%1$d posiciones más</string>
+    <string name="portfolio_unlock">Desbloquear</string>
+    <string name="account_amount_title">Monto por compra</string>
+    <string name="account_amount_sub">La misma cantidad cada vez</string>
+    <string name="account_philosophy_title">Filosofía</string>
+    <string name="account_philosophy_sub">Por qué invertimos así — dueño, largo plazo, dividendos</string>
+    <string name="account_tour_title">Ver tutorial</string>
+    <string name="account_tour_sub">Repite el recorrido rápido de la app</string>
+    <string name="biometric_sign_in">Entrar con huella o rostro</string>
+    <string name="biometric_prompt_title">Inicia sesión en Vectorial Data</string>
+    <string name="biometric_expired">Tu acceso biométrico expiró. Entra con tu correo.</string>
+    <string name="biometric_offline">No hubo conexión. Intenta de nuevo.</string>
 </resources>
