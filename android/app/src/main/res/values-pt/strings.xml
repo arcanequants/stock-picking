@@ -261,4 +261,28 @@
         <item quantity="one">%d pick pendente</item>
         <item quantity="other">%d picks pendentes</item>
     </plurals>
+
+    <!-- M6 — Play Billing paywall -->
+    <string name="paywall_title">Vectorial Data Premium</string>
+    <string name="paywall_subtitle">Desbloqueie o histórico completo e cada nova escolha assim que é publicada.</string>
+    <string name="paywall_benefit_picks">Cada nova escolha assim que é publicada</string>
+    <string name="paywall_benefit_thesis">A tese completa: o que a empresa faz e por que escolhemos</string>
+    <string name="paywall_benefit_risk">O risco principal que monitoramos em cada posição</string>
+    <string name="paywall_benefit_valuation">Valuation e consenso dos analistas</string>
+    <string name="paywall_trial_headline">%1$d dias grátis, depois %2$s/mês</string>
+    <string name="paywall_cta_trial">Começar %1$d dias grátis</string>
+    <string name="paywall_cta_subscribe_price">Assinar — %1$s/mês</string>
+    <string name="paywall_cta_subscribe">Assinar</string>
+    <string name="paywall_restore">Restaurar compras</string>
+    <string name="paywall_auto_renew">Renova automaticamente todo mês até o cancelamento. Gerencie no Google Play.</string>
+    <string name="paywall_trial_auto_renew">Grátis por %1$d dias, depois %2$s/mês. A assinatura renova automaticamente a menos que seja cancelada pelo menos 24 horas antes do fim do período gratuito. Cancele quando quiser no Google Play.</string>
+    <string name="paywall_terms">Termos</string>
+    <string name="paywall_privacy">Privacidade</string>
+    <string name="account_manage_subscription">Gerenciar assinatura</string>
+    <string name="account_subscribe">Assinar</string>
+    <string name="billing_unavailable">A assinatura não está disponível no momento.</string>
+    <string name="billing_purchase_failed">A compra não foi concluída.</string>
+    <string name="billing_verify_failed">Não conseguimos confirmar sua compra.</string>
+    <string name="billing_restore_none">Não encontramos uma assinatura ativa.</string>
+    <string name="billing_restore_failed">Não conseguimos restaurar sua compra.</string>
 </resources>

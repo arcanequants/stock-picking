@@ -41,7 +41,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalUriHandler
+import com.vectorialdata.app.feature.paywall.rememberPaywallLauncher
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -301,7 +301,7 @@ private fun HistoryPickRow(pick: Pick, onClick: () -> Unit) {
 /** Free-tier banner — copy mirrors iOS `UpsellBanner` (English, deliberate). */
 @Composable
 private fun UpsellBanner() {
-    val uriHandler = LocalUriHandler.current
+    val openPaywall = rememberPaywallLauncher()
     VDCard(innerSpacing = 8.dp) {
         Text(
             stringResource(R.string.picks_upsell_title),
@@ -314,9 +314,8 @@ private fun UpsellBanner() {
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        // M6 (Play Billing) replaces this with the native paywall.
         Button(
-            onClick = { uriHandler.openUri("https://vectorialdata.com/join") },
+            onClick = openPaywall,
             colors = ButtonDefaults.buttonColors(containerColor = BrandEmerald, contentColor = Color(0xFF05080A)),
             shape = RoundedCornerShape(10.dp),
         ) {

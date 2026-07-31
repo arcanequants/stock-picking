@@ -261,4 +261,28 @@
         <item quantity="one">%d pick pending</item>
         <item quantity="other">%d picks pending</item>
     </plurals>
+
+    <!-- M6 — Play Billing paywall -->
+    <string name="paywall_title">Vectorial Data Premium</string>
+    <string name="paywall_subtitle">Unlock the full history and every new pick the moment it drops.</string>
+    <string name="paywall_benefit_picks">Every new pick the moment it drops</string>
+    <string name="paywall_benefit_thesis">The full thesis: what the company does and why we picked it</string>
+    <string name="paywall_benefit_risk">The key risk we are watching on each position</string>
+    <string name="paywall_benefit_valuation">Valuation and analyst consensus</string>
+    <string name="paywall_trial_headline">%1$d days free, then %2$s/month</string>
+    <string name="paywall_cta_trial">Start %1$d-day free trial</string>
+    <string name="paywall_cta_subscribe_price">Subscribe — %1$s/month</string>
+    <string name="paywall_cta_subscribe">Subscribe</string>
+    <string name="paywall_restore">Restore purchases</string>
+    <string name="paywall_auto_renew">Auto-renews monthly until canceled. Manage in Google Play.</string>
+    <string name="paywall_trial_auto_renew">Free for %1$d days, then %2$s/month. Your subscription auto-renews unless canceled at least 24 hours before the trial ends. Cancel anytime in Google Play.</string>
+    <string name="paywall_terms">Terms</string>
+    <string name="paywall_privacy">Privacy</string>
+    <string name="account_manage_subscription">Manage subscription</string>
+    <string name="account_subscribe">Subscribe</string>
+    <string name="billing_unavailable">The subscription is not available right now.</string>
+    <string name="billing_purchase_failed">The purchase did not complete.</string>
+    <string name="billing_verify_failed">We could not confirm your purchase.</string>
+    <string name="billing_restore_none">We could not find an active subscription.</string>
+    <string name="billing_restore_failed">We could not restore your purchase.</string>
 </resources>

@@ -33,7 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalUriHandler
+import com.vectorialdata.app.feature.paywall.rememberPaywallLauncher
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -61,7 +61,7 @@ import java.util.Locale
 @Composable
 fun PositionDetailScreen(position: Position, onBack: () -> Unit, modifier: Modifier = Modifier) {
     val picks by PickStatusStore.picks.collectAsStateWithLifecycle()
-    val uriHandler = LocalUriHandler.current
+    val openPaywall = rememberPaywallLauncher()
 
     var research by remember { mutableStateOf<StockResearch?>(null) }
     var editingPick by remember { mutableStateOf<Pick?>(null) }
@@ -110,7 +110,7 @@ fun PositionDetailScreen(position: Position, onBack: () -> Unit, modifier: Modif
             val res = research
             when {
                 res == null -> Unit
-                res.locked -> PaywallCard { uriHandler.openUri("https://vectorialdata.com/join") }
+                res.locked -> PaywallCard(openPaywall)
                 !res.summaryWhy.isNullOrEmpty() -> WhyCard(res.summaryWhy)
             }
 
@@ -272,7 +272,7 @@ private fun WhyCard(summary: String) {
     }
 }
 
-/** Locked-research paywall — deep-links to the 14-day trial on web (M6 = Play Billing). */
+/** Locked-research paywall — opens the native Play sheet (web checkout as fallback). */
 @Composable
 private fun PaywallCard(onOpen: () -> Unit) {
     Column(

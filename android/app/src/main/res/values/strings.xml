@@ -263,4 +263,28 @@
         <item quantity="one">%d pick pendiente</item>
         <item quantity="other">%d picks pendientes</item>
     </plurals>
+
+    <!-- M6 — Play Billing paywall -->
+    <string name="paywall_title">Vectorial Data Premium</string>
+    <string name="paywall_subtitle">Desbloquea el historial completo y cada nuevo pick al momento en que se publica.</string>
+    <string name="paywall_benefit_picks">Cada nuevo pick al momento en que se publica</string>
+    <string name="paywall_benefit_thesis">La tesis completa: qué hace la empresa y por qué la elegimos</string>
+    <string name="paywall_benefit_risk">El riesgo clave que monitoreamos en cada posición</string>
+    <string name="paywall_benefit_valuation">Valuación y consenso de analistas</string>
+    <string name="paywall_trial_headline">%1$d días gratis, luego %2$s/mes</string>
+    <string name="paywall_cta_trial">Empieza %1$d días gratis</string>
+    <string name="paywall_cta_subscribe_price">Suscribirse — %1$s/mes</string>
+    <string name="paywall_cta_subscribe">Suscribirse</string>
+    <string name="paywall_restore">Restaurar compras</string>
+    <string name="paywall_auto_renew">Se renueva mensualmente hasta ser cancelada. Gestiona en Google Play.</string>
+    <string name="paywall_trial_auto_renew">Gratis por %1$d días, luego %2$s/mes. Tu suscripción se renueva automáticamente a menos que la canceles al menos 24 horas antes de que termine la prueba. Cancela cuando quieras en Google Play.</string>
+    <string name="paywall_terms">Términos</string>
+    <string name="paywall_privacy">Privacidad</string>
+    <string name="account_manage_subscription">Gestionar suscripción</string>
+    <string name="account_subscribe">Suscribirse</string>
+    <string name="billing_unavailable">La suscripción no está disponible en este momento.</string>
+    <string name="billing_purchase_failed">La compra no se completó.</string>
+    <string name="billing_verify_failed">No pudimos confirmar tu compra.</string>
+    <string name="billing_restore_none">No encontramos una suscripción activa.</string>
+    <string name="billing_restore_failed">No pudimos restaurar tu compra.</string>
 </resources>

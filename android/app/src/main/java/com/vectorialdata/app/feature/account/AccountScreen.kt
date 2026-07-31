@@ -32,6 +32,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -40,8 +41,10 @@ import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.vectorialdata.app.R
 import com.vectorialdata.app.core.auth.AuthManager
+import com.vectorialdata.app.core.billing.BillingManager
 import com.vectorialdata.app.core.notifications.NotificationsManager
 import com.vectorialdata.app.core.util.Formatters
+import com.vectorialdata.app.feature.paywall.rememberPaywallLauncher
 import com.vectorialdata.app.ui.theme.BrandEmerald
 import kotlinx.coroutines.launch
 
@@ -81,6 +84,8 @@ fun AccountScreen(modifier: Modifier = Modifier) {
             }
             Text(subLabel, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
+
+        SubscriptionSection(isSubscribed = user?.isSubscribed == true)
 
         NotificationsSection()
 
@@ -160,6 +165,72 @@ fun AccountScreen(modifier: Modifier = Modifier) {
         )
     }
 }
+
+/**
+ * Subscription row — Android counterpart of the iOS Account "Manage
+ * subscription" link. Subscribers get the Play subscription-center deep link
+ * (Play, not us, owns cancellation); everyone else gets the paywall.
+ *
+ * "Restore purchases" only appears when Play Billing is actually live: on a
+ * build with no Play listing there is nothing to restore, and a button that
+ * can only fail is worse than no button.
+ */
+@Composable
+private fun SubscriptionSection(isSubscribed: Boolean) {
+    val scope = rememberCoroutineScope()
+    val uriHandler = LocalUriHandler.current
+    val openPaywall = rememberPaywallLauncher()
+    val billingAvailable by BillingManager.available.collectAsStateWithLifecycle()
+    val phase by BillingManager.phase.collectAsStateWithLifecycle()
+
+    Column(
+        Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        if (isSubscribed) {
+            OutlinedButton(
+                onClick = {
+                    uriHandler.openUri(
+                        "https://play.google.com/store/account/subscriptions" +
+                            "?sku=${BillingManager.SUBSCRIPTION_ID}&package=$PLAY_PACKAGE_NAME",
+                    )
+                },
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(12.dp),
+            ) {
+                Text(stringResource(R.string.account_manage_subscription))
+            }
+        } else {
+            Button(
+                onClick = openPaywall,
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(12.dp),
+            ) {
+                Text(stringResource(R.string.account_subscribe))
+            }
+        }
+
+        if (billingAvailable && !isSubscribed) {
+            TextButton(
+                onClick = { scope.launch { BillingManager.restore() } },
+                enabled = phase !is BillingManager.Phase.Restoring,
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(stringResource(R.string.paywall_restore), fontSize = 13.sp)
+            }
+            (phase as? BillingManager.Phase.Failed)?.let {
+                Text(
+                    it.message,
+                    fontSize = 12.sp,
+                    color = MaterialTheme.colorScheme.error,
+                )
+            }
+        }
+    }
+}
+
+/** Release package id — the debug build's `.debug` suffix has no Play listing. */
+private const val PLAY_PACKAGE_NAME = "com.vectorialdata.app"
 
 /**
  * Push-permission row — mirror of iOS `NotificationsRow`. On Android 13+ the

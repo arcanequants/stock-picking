@@ -61,8 +61,19 @@ APK lands in `app/build/outputs/apk/debug/`.
 - **M5 — Push (FCM)** — app side: FCM token registration
   (`/api/notifications/register-device`, `platform=android`) + notification
   channel `vd_default`. Backend sender ✅ built (`src/lib/push.ts`, see below).
-- **M6 — Billing** — app side: Google Play Billing flow. Backend verify ✅ built
-  (`POST /api/iap/verify-play`, see below). RTDN + token persistence land here.
+- **M6 — Billing** ✅ app side — Play Billing wired end to end in code:
+  `core/billing/BillingManager` (connect → query `premium_monthly` → purchase →
+  POST `purchaseToken` to `/api/iap/verify-play` → refresh stores; acknowledge
+  stays server-side) + native `feature/paywall/PaywallSheet` replacing the three
+  web `/join` handoffs (pick detail, picks upsell, position detail) + Account
+  "Manage subscription"/"Restore purchases" + strings in es/en/pt.
+  `rememberPaywallLauncher()` falls back to the web checkout whenever Play can't
+  serve the product, so builds without a Play listing behave exactly as before.
+  **Cannot be exercised end to end until your accounts exist**: Play Console
+  listing + `premium_monthly` subscription with a 14-day free-trial offer, a
+  release keystore, and `GOOGLE_PLAY_SERVICE_ACCOUNT` in Vercel. Until then the
+  emulator only reaches the fallback path (verified) and the sheet's no-product
+  error state (verified). RTDN + purchaseToken persistence still to come.
 - **M7 — i18n** ✅ (chrome es/en/pt via `res/values*` + `Localizer` for
   non-Composable strings; verified E2E in all three locales). **Remaining
   (needs your accounts):** Play Store listing assets, release signing keystore,

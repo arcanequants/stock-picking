@@ -55,6 +55,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalUriHandler
+import com.vectorialdata.app.feature.paywall.rememberPaywallLauncher
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -478,10 +479,10 @@ private fun ProResearchCTA(ticker: String) {
     }
 }
 
-/** Locked-research card. M6 (Play Billing) replaces the web handoff. */
+/** Locked-research card — opens the native Play sheet (web checkout if Play can't sell). */
 @Composable
 private fun PaywallCard() {
-    val uriHandler = LocalUriHandler.current
+    val openPaywall = rememberPaywallLauncher()
     Column(
         Modifier
             .fillMaxWidth()
@@ -507,7 +508,7 @@ private fun PaywallCard() {
             color = Color.White.copy(alpha = 0.8f),
         )
         Button(
-            onClick = { uriHandler.openUri("https://vectorialdata.com/join") },
+            onClick = openPaywall,
             colors = ButtonDefaults.buttonColors(containerColor = BrandEmerald, contentColor = Color(0xFF05080A)),
             shape = RoundedCornerShape(10.dp),
         ) {
