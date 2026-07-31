@@ -7,6 +7,7 @@ import com.vectorialdata.app.core.model.UserProfile
 import com.vectorialdata.app.core.net.ApiClient
 import com.vectorialdata.app.core.net.ApiError
 import com.vectorialdata.app.core.net.EmptyResponse
+import com.vectorialdata.app.core.notifications.LocalReminders
 import com.vectorialdata.app.core.notifications.NotificationsManager
 import com.vectorialdata.app.core.store.DividendStore
 import com.vectorialdata.app.core.store.NewsStore
@@ -82,6 +83,30 @@ object AuthManager {
         ApiClient.post<MagicLinkBody, MagicLinkResponse>(
             "/api/auth/magic-link",
             MagicLinkBody(email = email, locale = locale, client = "android"),
+        )
+    }
+
+    @Serializable
+    private data class FreeRegisterBody(val email: String, val source: String)
+
+    @Serializable
+    private data class FreeRegisterResponse(
+        val success: Boolean? = null,
+        val already: Boolean? = null,
+        val trial: Boolean? = null,
+    )
+
+    /**
+     * Creates the account + starts the 14-day free trial (backend
+     * `free-register` with source "android" takes the server-trial branch —
+     * unlike iOS, whose trial is Apple's introductory offer). Idempotent: if
+     * the email already has an account the backend answers `already: true`
+     * and the caller just proceeds to the sign-in code. Throws on failure.
+     */
+    suspend fun startFreeTrial(email: String) {
+        ApiClient.post<FreeRegisterBody, FreeRegisterResponse>(
+            "/api/auth/free-register",
+            FreeRegisterBody(email = email.trim().lowercase(), source = "android"),
         )
     }
 
@@ -251,6 +276,11 @@ object AuthManager {
             _state.value = AuthState.SIGNED_IN
             // Re-attach this device's push token to the now-signed-in user.
             NotificationsManager.refreshRegistrationIfEnabled()
+            // Paid period started → the day-12 "your trial is ending" local
+            // reminder is wrong/noise; drop it if still pending.
+            if (me.subscriptionStatus == "active") {
+                LocalReminders.cancelTrialEndReminder()
+            }
         } catch (e: ApiError.Unauthorized) {
             if (refreshDeniedByServer) {
                 // 401 AND the server explicitly rejected our refresh token:

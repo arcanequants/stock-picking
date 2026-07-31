@@ -73,4 +73,5 @@ dependencies {
     implementation(libs.firebase.messaging)
 
     implementation(libs.billing.ktx)
+    implementation(libs.work.runtime.ktx)
 }

@@ -72,6 +72,9 @@ object NotificationsManager {
      */
     val pendingOpenAccount = MutableStateFlow(false)
 
+    /** Set when the user taps the "raise your amount" reminder. */
+    val pendingOpenAmount = MutableStateFlow(false)
+
     /** Called once from [com.vectorialdata.app.VectorialDataApp]. */
     fun init(context: Context) {
         appContext = context.applicationContext
@@ -129,6 +132,7 @@ object NotificationsManager {
         pendingWeeklyDigest.value = false
         pendingNewsId.value = null
         pendingOpenAccount.value = false
+        pendingOpenAmount.value = false
     }
 
     /**
@@ -144,7 +148,27 @@ object NotificationsManager {
             "news" -> newsId?.let { pendingNewsId.value = it }
             // Day-12 trial reminder: subscription management lives in Account.
             "trial_end" -> pendingOpenAccount.value = true
+            // "Raise your amount" reminder → the per-buy amount editor.
+            "raise_amount" -> pendingOpenAmount.value = true
         }
+    }
+
+    /**
+     * PendingIntent into MainActivity carrying push-style extras — shared by
+     * [PushMessagingService] (foreground renders) and [LocalReminders].
+     */
+    fun tapIntent(context: Context, extras: Map<String, String>): android.app.PendingIntent {
+        val intent = android.content.Intent(context, com.vectorialdata.app.MainActivity::class.java).apply {
+            flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or
+                android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP
+            extras.forEach { (k, v) -> putExtra(k, v) }
+        }
+        return android.app.PendingIntent.getActivity(
+            context,
+            extras.hashCode(),
+            intent,
+            android.app.PendingIntent.FLAG_IMMUTABLE or android.app.PendingIntent.FLAG_UPDATE_CURRENT,
+        )
     }
 
     // ---- Internals ------------------------------------------------------------

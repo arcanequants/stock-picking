@@ -1,6 +1,8 @@
 package com.vectorialdata.app.feature.root
 
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ListAlt
@@ -28,8 +30,12 @@ import com.vectorialdata.app.R
 import com.vectorialdata.app.core.billing.BillingManager
 import com.vectorialdata.app.core.notifications.NotificationsManager
 import com.vectorialdata.app.core.store.PickStatusStore
+import androidx.compose.runtime.saveable.rememberSaveable
 import com.vectorialdata.app.feature.account.AccountScreen
 import com.vectorialdata.app.feature.home.HomeScreen
+import com.vectorialdata.app.feature.onboarding.FirstRunFlags
+import com.vectorialdata.app.feature.onboarding.FirstRunSetupFlow
+import com.vectorialdata.app.feature.onboarding.InvestmentAmountScreen
 import com.vectorialdata.app.feature.picks.PicksScreen
 import com.vectorialdata.app.feature.portfolio.PortfolioScreen
 
@@ -74,6 +80,30 @@ fun MainTabScaffold() {
         if (!PickStatusStore.isSubscribed.value) BillingManager.start()
     }
 
+    // First run on this device: trial (when Play can sell) → notification
+    // priming → consistent per-buy amount. All skippable, shown once.
+    var showFirstRun by rememberSaveable { mutableStateOf(!FirstRunFlags.didFirstRunSetup) }
+    if (showFirstRun) {
+        FirstRunSetupFlow {
+            FirstRunFlags.didFirstRunSetup = true
+            showFirstRun = false
+        }
+        return
+    }
+
+    // Tapping the scheduled "raise your amount" reminder opens the editor.
+    val pendingAmount by NotificationsManager.pendingOpenAmount.collectAsStateWithLifecycle()
+    var showAmountEditor by rememberSaveable { mutableStateOf(false) }
+    LaunchedEffect(pendingAmount) {
+        if (pendingAmount) {
+            showAmountEditor = true
+            NotificationsManager.pendingOpenAmount.value = false
+        }
+    }
+    if (showAmountEditor) {
+        AmountEditorSheet(onDismiss = { showAmountEditor = false })
+    }
+
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
@@ -100,6 +130,25 @@ fun MainTabScaffold() {
             AppTab.PORTFOLIO -> PortfolioScreen(content)
             AppTab.PICKS -> PicksScreen(content)
             AppTab.ACCOUNT -> AccountScreen(content)
+        }
+    }
+}
+
+/** The per-buy amount editor as a bottom sheet (raise-reminder tap / Account). */
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
+@Composable
+fun AmountEditorSheet(onDismiss: () -> Unit) {
+    androidx.compose.material3.ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = androidx.compose.material3.rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        containerColor = MaterialTheme.colorScheme.background,
+    ) {
+        androidx.compose.foundation.layout.Box(
+            Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.92f),
+        ) {
+            InvestmentAmountScreen(onDismiss = onDismiss)
         }
     }
 }
