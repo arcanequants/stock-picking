@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import {
   getPickedStocks,
   getDividendStocks,
@@ -32,6 +32,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function DividendosPage() {
   const t = await getTranslations("StockLists");
+  const locale = await getLocale();
+  const yieldFormat = new Intl.NumberFormat(
+    ({ es: "es-MX", en: "en-US", pt: "pt-BR", hi: "hi-IN" } as Record<string, string>)[locale] ??
+      "es-MX",
+    { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+  );
   const picked = getPickedStocks();
   const payers = getDividendStocks(picked);
   const avg = averageYield(picked);
@@ -69,7 +75,7 @@ export default async function DividendosPage() {
         {t("dividendTop", {
           name: top.name,
           ticker: top.ticker,
-          yield: (top.dividend_yield ?? 0).toFixed(2),
+          yield: yieldFormat.format(top.dividend_yield ?? 0),
         })}
       </p>
       <p className="text-sm text-text-faint mb-8">{t("dividendNote")}</p>

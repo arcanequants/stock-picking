@@ -1,6 +1,13 @@
 import Link from "next/link";
-import { getTranslations, getMessages } from "next-intl/server";
+import { getTranslations, getMessages, getLocale } from "next-intl/server";
 import type { ListStock } from "@/lib/stock-lists";
+
+const NUMBER_LOCALE_TAGS: Record<string, string> = {
+  es: "es-MX",
+  en: "en-US",
+  pt: "pt-BR",
+  hi: "hi-IN",
+};
 
 /**
  * Shared table for the /acciones/* list pages.
@@ -17,6 +24,13 @@ export default async function StockListTable({
   secondColumn: "sector" | "country";
 }) {
   const t = await getTranslations("StockLists");
+  const locale = await getLocale();
+  // Yields are numbers on a page that ships in 4 locales — es/pt want "3,45%",
+  // not the "." that toFixed() hardcodes.
+  const yieldFormat = new Intl.NumberFormat(NUMBER_LOCALE_TAGS[locale] ?? "es-MX", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
   const messages = (await getMessages()) as Record<string, unknown>;
   const labels = (messages.Labels ?? {}) as Record<
     string,
@@ -57,7 +71,7 @@ export default async function StockListTable({
               </td>
               <td className="px-4 py-3 text-right text-text-muted tabular-nums whitespace-nowrap">
                 {s.dividend_yield && s.dividend_yield > 0
-                  ? `${s.dividend_yield.toFixed(2)}%`
+                  ? `${yieldFormat.format(s.dividend_yield)}%`
                   : "—"}
               </td>
             </tr>
