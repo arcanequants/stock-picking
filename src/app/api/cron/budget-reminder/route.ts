@@ -38,6 +38,10 @@ export async function GET(request: Request) {
     .select("email")
     .lt("created_at", cutoff)
     .is("monthly_budget", null)
+    // iOS sets the rule as a flat per-buy amount (default_investment), not a
+    // monthly budget — checking only monthly_budget nagged users whose rule
+    // was already set from the app.
+    .is("default_investment", null)
     .is("budget_reminder_sent_at", null)
     .in("subscription_status", ["active", "trialing"])
     .limit(50);

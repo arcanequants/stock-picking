@@ -43,7 +43,6 @@ export async function GET(request: Request) {
   const thisWeekPicks = transactions
     .map((tx, idx) => ({ pick_number: idx + 1, ticker: tx.ticker, date: tx.date }))
     .filter((p) => p.date >= sevenDaysAgo);
-  const allPickNumbers = transactions.map((_, i) => i + 1);
 
   // All active devices (iOS + Android) that could receive a digest.
   const { data: tokens, error: tokensErr } = await admin
@@ -77,6 +76,20 @@ export async function GET(request: Request) {
     .select("email, pick_number, status, decided_at")
     .in("email", emails);
 
+  // Per-user access cutoff — same rule as the picks feed: picks published
+  // before the account gained access are context, NOT the user's homework.
+  // Without this, a brand-new user got "Tienes 137 picks pendientes".
+  const { data: subRows } = await admin
+    .from("subscribers")
+    .select("email, access_started_at")
+    .in("email", emails);
+  const accessByEmail = new Map<string, string>();
+  for (const s of subRows ?? []) {
+    if (s.email && s.access_started_at) {
+      accessByEmail.set(s.email.toLowerCase(), s.access_started_at.slice(0, 10));
+    }
+  }
+
   type Decision = {
     email: string;
     pick_number: number;
@@ -105,8 +118,14 @@ export async function GET(request: Request) {
         thisWeekPicks.some((p) => p.pick_number === d.pick_number),
     ).length;
 
-    const totalPending = allPickNumbers.filter(
-      (n) => !decidedPickNumbers.has(n),
+    // Only picks published since this account's access started count as
+    // pending. No access date (legacy web subscribers, pre-tracking) keeps
+    // the full count — those accounts really did have access all along.
+    const accessDate = accessByEmail.get(email);
+    const totalPending = transactions.filter(
+      (tx, idx) =>
+        !decidedPickNumbers.has(idx + 1) &&
+        (!accessDate || tx.date >= accessDate),
     ).length;
 
     // Skip users with nothing actionable to surface.
