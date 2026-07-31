@@ -1350,6 +1350,35 @@
         }
       }
     },
+    "Borra tu cuenta y todos tus datos de forma permanente. Esta acción no se puede deshacer. Si tienes una suscripción activa de App Store, cancélala por separado en Ajustes › tu nombre › Suscripciones." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permanently deletes your account and all your data. This cannot be undone. If you have an active App Store subscription, cancel it separately in Settings › your name › Subscriptions."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borra tu cuenta y todos tus datos de forma permanente. Esta acción no se puede deshacer. Si tienes una suscripción activa de App Store, cancélala por separado en Ajustes › tu nombre › Suscripciones."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आपका खाता और सारा डेटा स्थायी रूप से हट जाएगा। इसे वापस नहीं किया जा सकता। अगर App Store की सदस्यता चालू है, तो उसे Settings › आपका नाम › Subscriptions में अलग से रद्द करें।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exclui permanentemente sua conta e todos os seus dados. Isso não pode ser desfeito. Se você tem uma assinatura ativa da App Store, cancele-a separadamente em Ajustes › seu nome › Assinaturas."
+          }
+        }
+      }
+    },
     "Brasil" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2632,6 +2661,35 @@
         }
       }
     },
+    "Eliminar cuenta" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete account"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar cuenta"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "खाता हटाएँ"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Excluir conta"
+          }
+        }
+      }
+    },
     "Email" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -3121,6 +3179,35 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estas posiciones se suman a tu portafolio personal y ajustan el precio promedio de cada ticker. Solo aceptamos tickers que son picks de Vectorial."
+          }
+        }
+      }
+    },
+    "Esto borra tu cuenta, tu portafolio y todos tus datos de forma permanente. No se puede deshacer." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This permanently deletes your account, your portfolio and all your data. It cannot be undone."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esto borra tu cuenta, tu portafolio y todos tus datos de forma permanente. No se puede deshacer."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इससे आपका खाता, आपका portfolio और आपका सारा डेटा स्थायी रूप से हट जाएगा। इसे वापस नहीं किया जा सकता।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isso exclui permanentemente sua conta, seu portfólio e todos os seus dados. Não pode ser desfeito."
           }
         }
       }
@@ -5198,6 +5285,35 @@
         }
       }
     },
+    "No se pudo guardar. Revisa tu conexión." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't save. Check your connection."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo guardar. Revisa tu conexión."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेव नहीं हो सका। अपना कनेक्शन जाँचें।"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível salvar. Verifique sua conexão."
+          }
+        }
+      }
+    },
     "No son tips. Es la tesis completa — la entiendes en dos minutos, sin necesitar un MBA." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -5629,6 +5745,35 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "POSITIONS"
+          }
+        }
+      }
+    },
+    "Password (optional)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password (optional)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contraseña (opcional)"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पासवर्ड (वैकल्पिक)"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senha (opcional)"
           }
         }
       }

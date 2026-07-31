@@ -1,6 +1,7 @@
 import Foundation
 import LocalAuthentication
 import SwiftUI
+import UserNotifications
 #if canImport(UIKit)
 import UIKit
 #endif
@@ -400,6 +401,12 @@ final class AuthManager: ObservableObject {
             state = .signedIn
             // Re-attach this device's push token to the now-signed-in user.
             await NotificationsManager.shared.refreshRegistrationIfAuthorized()
+            // Paid period started → the day-12 "your trial is ending" local
+            // reminder is wrong/noise; drop it if still pending.
+            if me.subscriptionStatus == "active" {
+                UNUserNotificationCenter.current()
+                    .removePendingNotificationRequests(withIdentifiers: [TrialEndReminder.id])
+            }
             // Enroll Face ID / Touch ID re-login in the background. Running
             // here (not per login call) also covers users who were already
             // signed in before this feature shipped.

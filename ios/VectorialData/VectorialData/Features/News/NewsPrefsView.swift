@@ -48,7 +48,9 @@ struct NewsPrefsView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    Task { await model.save(); dismiss() }
+                    // Dismiss ONLY when the server accepted the prefs —
+                    // closing on failure made the toggles look saved.
+                    Task { if await model.save() { dismiss() } }
                 } label: {
                     if model.isSaving { ProgressView() }
                     else { Text("Guardar").font(.headline).foregroundStyle(Color("BrandEmerald")) }
@@ -57,6 +59,16 @@ struct NewsPrefsView: View {
             }
         }
         .task { await model.load() }
+        .safeAreaInset(edge: .bottom) {
+            if let err = model.saveError {
+                Text(err)
+                    .font(.footnote)
+                    .foregroundStyle(.red)
+                    .padding(10)
+                    .frame(maxWidth: .infinity)
+                    .background(.ultraThinMaterial)
+            }
+        }
     }
 
     private func section(_ title: LocalizedStringKey) -> some View {
@@ -147,6 +159,7 @@ final class NewsPrefsModel: ObservableObject {
     @Published var regions: Set<String> = []
     @Published var delivery: String = "instant"
     @Published private(set) var isSaving = false
+    @Published var saveError: String?
 
     struct Row { let id: String; let emoji: String; let title: LocalizedStringKey; let subtitle: LocalizedStringKey? }
     struct DRow { let id: String; let title: LocalizedStringKey; let subtitle: LocalizedStringKey }
@@ -200,10 +213,21 @@ final class NewsPrefsModel: ObservableObject {
         }
     }
 
-    func save() async {
+    @discardableResult
+    func save() async -> Bool {
         isSaving = true
         defer { isSaving = false }
         let payload = PrefsPayload(topics: Array(topics), regions: Array(regions), delivery: delivery)
-        _ = try? await APIClient.shared.put("/api/news/prefs", body: payload, as: PrefsResponse.self)
+        do {
+            _ = try await APIClient.shared.put("/api/news/prefs", body: payload, as: PrefsResponse.self)
+            saveError = nil
+            return true
+        } catch {
+            // Swallowing this left the server on old prefs while the toggles
+            // looked saved — e.g. "daily" flipped locally but instant pushes
+            // kept coming.
+            saveError = String(localized: "No se pudo guardar. Revisa tu conexión.")
+            return false
+        }
     }
 }
