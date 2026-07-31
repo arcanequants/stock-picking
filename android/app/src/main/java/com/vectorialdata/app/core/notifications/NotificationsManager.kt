@@ -66,6 +66,12 @@ object NotificationsManager {
     /** Set when the user taps a curated-news push; Home consumes it. */
     val pendingNewsId = MutableStateFlow<String?>(null)
 
+    /**
+     * Set when the user taps the day-12 trial-end reminder: route to the
+     * Account tab, where subscription management lives.
+     */
+    val pendingOpenAccount = MutableStateFlow(false)
+
     /** Called once from [com.vectorialdata.app.VectorialDataApp]. */
     fun init(context: Context) {
         appContext = context.applicationContext
@@ -122,6 +128,7 @@ object NotificationsManager {
         pendingPickNumber.value = null
         pendingWeeklyDigest.value = false
         pendingNewsId.value = null
+        pendingOpenAccount.value = false
     }
 
     /**
@@ -135,6 +142,8 @@ object NotificationsManager {
             "new_pick", "dividend_paid" -> pickNumber?.let { pendingPickNumber.value = it }
             "weekly_digest" -> pendingWeeklyDigest.value = true
             "news" -> newsId?.let { pendingNewsId.value = it }
+            // Day-12 trial reminder: subscription management lives in Account.
+            "trial_end" -> pendingOpenAccount.value = true
         }
     }
 

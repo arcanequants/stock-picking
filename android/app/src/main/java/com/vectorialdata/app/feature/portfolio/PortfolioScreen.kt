@@ -122,6 +122,21 @@ private object PortfolioState {
         if (current() == null) load()
     }
 
+    /** Last PickStatusStore.isSubscribed this screen reacted to (null = never). */
+    var lastSeenSubscribed: Boolean? = null
+
+    /**
+     * Drop BOTH cached views and refetch the visible one. Used when the
+     * subscription state flips: `load()` alone only refreshes the current
+     * view, and `switchTo` skips the network when a (now stale, free-tier)
+     * response is already cached — the other tab would keep its locked rows.
+     */
+    suspend fun reloadDroppingCaches() {
+        modelResponse.value = null
+        personalResponse.value = null
+        load()
+    }
+
     fun invalidatePersonal() {
         personalResponse.value = null
     }
@@ -133,6 +148,7 @@ private object PortfolioState {
         errorMessage.value = null
         isLoading.value = false
         lastSeenDecisionAt = null
+        lastSeenSubscribed = null
     }
 }
 
@@ -158,6 +174,18 @@ fun PortfolioScreen(modifier: Modifier = Modifier) {
     LaunchedEffect(Unit) {
         if (PortfolioState.current() == null) PortfolioState.load()
         if (DividendStore.events.value.isEmpty()) DividendStore.load()
+    }
+
+    // A subscription flip (purchase/restore/expiry) makes BOTH view caches
+    // stale — the free-tier response keeps locked rows up. Drop both and
+    // refetch (mirror of iOS `.task(id: isSubscribed) { reloadDroppingCaches }`).
+    val isSubscribed by PickStatusStore.isSubscribed.collectAsStateWithLifecycle()
+    LaunchedEffect(isSubscribed) {
+        val last = PortfolioState.lastSeenSubscribed
+        PortfolioState.lastSeenSubscribed = isSubscribed
+        if (last != null && last != isSubscribed) {
+            PortfolioState.reloadDroppingCaches()
+        }
     }
 
     // Any decision invalidates the personal cache; refetch now only if the

@@ -157,9 +157,21 @@ object AuthManager {
     @Serializable
     private data class RefreshBody(val refreshToken: String)
 
+    /**
+     * True only when the LAST refresh attempt was explicitly rejected by the
+     * server (4xx from ios-refresh, or no stored token) — the only evidence
+     * that the session is truly dead. A refresh that failed because we're
+     * offline must NOT cascade into a sign-out.
+     */
+    @Volatile private var refreshDeniedByServer = false
+
     /** Trades the stored refresh_token for a fresh access_token. Returns true on success. */
     suspend fun refreshAccessToken(): Boolean {
-        val refreshToken = SecureStore.get(REFRESH_TOKEN_KEY) ?: return false
+        val refreshToken = SecureStore.get(REFRESH_TOKEN_KEY)
+        if (refreshToken == null) {
+            refreshDeniedByServer = true
+            return false
+        }
         return try {
             val resp = ApiClient.post<RefreshBody, SessionResponse>(
                 "/api/auth/ios-refresh",
@@ -168,8 +180,17 @@ object AuthManager {
             SecureStore.set(resp.accessToken, ACCESS_TOKEN_KEY)
             SecureStore.set(resp.refreshToken, REFRESH_TOKEN_KEY)
             ApiClient.setBearer(resp.accessToken)
+            refreshDeniedByServer = false
             true
+        } catch (e: ApiError.Unauthorized) {
+            refreshDeniedByServer = true
+            false
+        } catch (e: ApiError.Server) {
+            refreshDeniedByServer = e.status in 400..499
+            false
         } catch (e: Exception) {
+            // Network/timeout: the token may still be perfectly valid.
+            refreshDeniedByServer = false
             false
         }
     }
@@ -231,14 +252,20 @@ object AuthManager {
             // Re-attach this device's push token to the now-signed-in user.
             NotificationsManager.refreshRegistrationIfEnabled()
         } catch (e: ApiError.Unauthorized) {
-            // The token is truly dead (ApiClient already tried a refresh-and-
-            // replay before surfacing this) — only now is a sign-out correct.
-            clearSession()
+            if (refreshDeniedByServer) {
+                // 401 AND the server explicitly rejected our refresh token:
+                // the session is dead for real (revoked/rotated elsewhere).
+                clearSession()
+            } else {
+                // 401 whose refresh failed for network reasons — the token
+                // may still be valid; keep the session alive.
+                if (_state.value == AuthState.UNKNOWN) _state.value = AuthState.SIGNED_IN
+            }
         } catch (e: Exception) {
             // Transient failure (network timeout, 5xx). Don't bounce the user to
             // the login screen — we still hold a valid-looking token. Stay signed
             // in; individual screens surface their own load errors and retry.
-            _state.value = AuthState.SIGNED_IN
+            if (_state.value == AuthState.UNKNOWN) _state.value = AuthState.SIGNED_IN
         }
     }
 }

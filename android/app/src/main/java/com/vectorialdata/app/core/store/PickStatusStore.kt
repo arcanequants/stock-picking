@@ -30,6 +30,14 @@ object PickStatusStore {
     private val _isSubscribed = MutableStateFlow(false)
     val isSubscribed: StateFlow<Boolean> = _isSubscribed.asStateFlow()
 
+    /**
+     * False until the first successful /api/picks load. Upsell banners must
+     * check this — `isSubscribed == false` before any load means "unknown",
+     * not "free", and premium users briefly saw free-tier upsells on launch.
+     */
+    private val _hasLoaded = MutableStateFlow(false)
+    val hasLoaded: StateFlow<Boolean> = _hasLoaded.asStateFlow()
+
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
@@ -49,6 +57,7 @@ object PickStatusStore {
         _picks.value = emptyList()
         _defaultInvestment.value = null
         _isSubscribed.value = false
+        _hasLoaded.value = false
         _accessStartedAt.value = null
         _lastDecisionAt.value = null
         _errorMessage.value = null
@@ -64,6 +73,7 @@ object PickStatusStore {
             _defaultInvestment.value = resp.defaultInvestment
             _isSubscribed.value = resp.isSubscribed
             _accessStartedAt.value = resp.accessStartedAt
+            _hasLoaded.value = true
             _errorMessage.value = null
         } catch (e: ApiError.Unauthorized) {
             _errorMessage.value = Localizer.get(R.string.err_unauthorized)

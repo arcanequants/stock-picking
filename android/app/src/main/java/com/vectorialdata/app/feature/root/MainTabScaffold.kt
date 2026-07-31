@@ -25,7 +25,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.vectorialdata.app.R
+import com.vectorialdata.app.core.billing.BillingManager
 import com.vectorialdata.app.core.notifications.NotificationsManager
+import com.vectorialdata.app.core.store.PickStatusStore
 import com.vectorialdata.app.feature.account.AccountScreen
 import com.vectorialdata.app.feature.home.HomeScreen
 import com.vectorialdata.app.feature.picks.PicksScreen
@@ -48,11 +50,28 @@ fun MainTabScaffold() {
     val pendingPick by NotificationsManager.pendingPickNumber.collectAsStateWithLifecycle()
     val pendingDigest by NotificationsManager.pendingWeeklyDigest.collectAsStateWithLifecycle()
     val pendingNews by NotificationsManager.pendingNewsId.collectAsStateWithLifecycle()
-    LaunchedEffect(pendingPick, pendingDigest, pendingNews) {
+    val pendingAccount by NotificationsManager.pendingOpenAccount.collectAsStateWithLifecycle()
+    LaunchedEffect(pendingPick, pendingDigest, pendingNews, pendingAccount) {
         when {
             pendingNews != null -> selected = AppTab.HOME
             pendingPick != null || pendingDigest -> selected = AppTab.PICKS
+            pendingAccount -> {
+                // Day-12 trial reminder: subscription management lives in Account.
+                selected = AppTab.ACCOUNT
+                NotificationsManager.pendingOpenAccount.value = false
+            }
         }
+    }
+
+    // Resolve the subscription state at launch: nothing else loads
+    // PickStatusStore until the Picks tab is visited, so upsell banners
+    // keyed on `!isSubscribed` fired for premium users on cold start.
+    // Then self-heal IAP: if this Play account holds an entitlement the
+    // backend doesn't know about (purchase-time verify failed), connecting
+    // re-posts it (BillingManager.syncExistingPurchases on connect).
+    LaunchedEffect(Unit) {
+        if (!PickStatusStore.hasLoaded.value) PickStatusStore.load()
+        if (!PickStatusStore.isSubscribed.value) BillingManager.start()
     }
 
     Scaffold(

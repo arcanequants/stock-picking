@@ -132,7 +132,12 @@ object ApiClient {
             }
             401 -> {
                 val handler = refreshHandler
-                if (allowRefresh && handler != null) {
+                // Auth endpoints are exempt from refresh-and-replay: a 401
+                // from /api/auth/ios-refresh itself would re-enter the
+                // refresh handler while it already holds refreshMutex — a
+                // guaranteed deadlock on any revoked session (iOS had the
+                // same bug as infinite recursion — black screen on launch).
+                if (allowRefresh && !path.startsWith("/api/auth/") && handler != null) {
                     val didRefresh = refreshMutex.withLock { handler.invoke() }
                     if (didRefresh) {
                         return@withContext execute(path, method, body, deserializer, allowRefresh = false)

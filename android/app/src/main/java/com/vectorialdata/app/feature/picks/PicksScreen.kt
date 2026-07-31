@@ -68,6 +68,9 @@ import kotlinx.coroutines.launch
 fun PicksScreen(modifier: Modifier = Modifier) {
     val picks by PickStatusStore.picks.collectAsStateWithLifecycle()
     val isSubscribed by PickStatusStore.isSubscribed.collectAsStateWithLifecycle()
+    // Before the first /api/picks load the subscription state is UNKNOWN,
+    // not free — premium users used to get flashed the upsell banner.
+    val hasLoaded by PickStatusStore.hasLoaded.collectAsStateWithLifecycle()
     val isLoading by PickStatusStore.isLoading.collectAsStateWithLifecycle()
     val errorMessage by PickStatusStore.errorMessage.collectAsStateWithLifecycle()
     val scope = rememberCoroutineScope()
@@ -145,7 +148,7 @@ fun PicksScreen(modifier: Modifier = Modifier) {
                 verticalArrangement = Arrangement.spacedBy(14.dp),
             ) {
                 ScreenTitle()
-                if (!isSubscribed) UpsellBanner()
+                if (hasLoaded && !isSubscribed) UpsellBanner()
                 CountdownEmptyCard()
             }
 
@@ -155,7 +158,7 @@ fun PicksScreen(modifier: Modifier = Modifier) {
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
                 item { ScreenTitle() }
-                if (!isSubscribed) item { UpsellBanner() }
+                if (hasLoaded && !isSubscribed) item { UpsellBanner() }
                 if (pending.isNotEmpty()) {
                     item { SectionHeader(stringResource(R.string.picks_pending_header), pending.size) }
                     items(pending.size, key = { "p${pending[it].pickNumber}" }) { i ->
