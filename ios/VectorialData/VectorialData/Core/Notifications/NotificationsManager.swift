@@ -150,18 +150,26 @@ final class NotificationsManager: NSObject, ObservableObject {
 }
 
 extension NotificationsManager: UNUserNotificationCenterDelegate {
+    // COMPLETION-HANDLER variants on purpose: the async variants of these
+    // delegate methods can crash with an executor assertion (EXC_BREAKPOINT)
+    // when iOS delivers them during a cold launch from a notification tap —
+    // production symptom: tap → black screen → dead. The completion form is
+    // called plainly on iOS's queue and we hop to the main actor ourselves.
+
     // Show notifications while app is foregrounded.
     nonisolated func userNotificationCenter(
         _ center: UNUserNotificationCenter,
-        willPresent notification: UNNotification
-    ) async -> UNNotificationPresentationOptions {
-        [.banner, .sound, .badge]
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
+        completionHandler([.banner, .sound, .badge])
     }
 
     nonisolated func userNotificationCenter(
         _ center: UNUserNotificationCenter,
-        didReceive response: UNNotificationResponse
-    ) async {
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void
+    ) {
         // Parse everything into Sendable locals here, in the nonisolated
         // context, so the closure hopped to the main actor never captures the
         // non-Sendable `userInfo` ([AnyHashable: Any]).
@@ -170,7 +178,7 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
         let pickNumber = parsePickNumber(userInfo)
         let newsId = (userInfo["news_id"] as? String).flatMap(UUID.init(uuidString:))
 
-        await MainActor.run {
+        Task { @MainActor in
             switch kind {
             case "new_pick":
                 if let pickNumber { Self.shared.pendingPickNumber = pickNumber }
@@ -190,6 +198,7 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
                 break
             }
         }
+        completionHandler()
     }
 
     /// Reads `pick_number` from a notification payload, tolerating both Int and

@@ -1,20 +1,16 @@
 import XCTest
 
-/// Verifies the push-tap deep-link chain end-to-end without springboard
-/// automation (cover-sheet taps aren't reliably automatable on iOS 26):
-/// `-vd.debugPendingNewsId` (DEBUG-only seam in NotificationsManager.init)
-/// injects the pending news id at the exact point a real cold-launch tap's
-/// `didReceive` would — everything downstream (MainTabView tab switch →
-/// HomeView list+detail navigation → NewsDetailView render) runs identically.
+/// Push-tap deep-link coverage, two layers:
 ///
-/// The two pieces this doesn't cover are intentionally tiny and reviewed:
-/// didReceive's userInfo parsing (5 lines) and the delegate-at-launch
-/// ordering (AppDelegate; Apple's documented contract), covered by device QA.
+/// 1. `testInjectedNewsPushDeepLinksToDetail` — the in-app chain via the
+///    DEBUG seam (`-vd.debugPendingNewsId`), deterministic.
+/// 2. `testForegroundBannerTapOpensDetail` — a REAL banner tap: the HOST
+///    injects a push via `xcrun simctl push` while the app is foregrounded;
+///    the test taps the banner and asserts the news detail appears. This is
+///    the layer the seam can't cover (didReceive parsing + delegate wiring).
 ///
-/// Requires: sim signed in (demo) and NEWS_ID/HEADLINE env vars pointing at
-/// a real feed item:
-///   TEST_RUNNER_NEWS_ID=<uuid> TEST_RUNNER_HEADLINE=<substring> \
-///     xcodebuild test -only-testing:VectorialDataUITests/NotificationTapUITests
+/// Assertions use language-neutral substrings (the sim renders Spanish
+/// content; asserting English text was a previous false negative).
 final class NotificationTapUITests: XCTestCase {
 
     func testInjectedNewsPushDeepLinksToDetail() throws {
@@ -28,14 +24,47 @@ final class NotificationTapUITests: XCTestCase {
         app.launchArguments += ["-vd.debugPendingNewsId", newsId]
         app.launch()
 
-        // Splash (~4s) → MainTabView routes to Home → HomeView loads the
-        // feed and pushes list + detail. The detail shows the headline.
         let headlineText = app.staticTexts
             .matching(NSPredicate(format: "label CONTAINS[c] %@", headline))
             .firstMatch
         XCTAssertTrue(
             headlineText.waitForExistence(timeout: 40),
             "News detail never appeared for the injected push tap"
+        )
+    }
+
+    func testForegroundBannerTapOpensDetail() throws {
+        let env = ProcessInfo.processInfo.environment
+        let headline = env["HEADLINE"] ?? ""
+        XCTAssertFalse(headline.isEmpty, "HEADLINE env var missing")
+
+        let app = XCUIApplication()
+        app.launch()
+        // Past the splash; the host injects the push around now.
+        Thread.sleep(forTimeInterval: 6)
+
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+        let banner = springboard.descendants(matching: .any)
+            .matching(NSPredicate(format: "label CONTAINS[c] %@", "Vectorial Noticias"))
+            .firstMatch
+
+        var tapped = false
+        for _ in 0..<25 {
+            if banner.isHittable {
+                banner.tap()
+                tapped = true
+                break
+            }
+            Thread.sleep(forTimeInterval: 2)
+        }
+        XCTAssertTrue(tapped, "The foreground banner never became tappable")
+
+        let headlineText = app.staticTexts
+            .matching(NSPredicate(format: "label CONTAINS[c] %@", headline))
+            .firstMatch
+        XCTAssertTrue(
+            headlineText.waitForExistence(timeout: 30),
+            "REAL tap did not navigate to the news detail"
         )
     }
 }
