@@ -8,7 +8,13 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions:
             [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        true
+        // Touch the singleton NOW so UNUserNotificationCenter.delegate is set
+        // before launch finishes. iOS only delivers a cold-launch push tap to
+        // a delegate that already exists at this point — leaving it to the
+        // first SwiftUI render (@StateObject) is too late, and every tap on a
+        // push with the app killed was silently dropped.
+        _ = NotificationsManager.shared
+        return true
     }
 
     func application(

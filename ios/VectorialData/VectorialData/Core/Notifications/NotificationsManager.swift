@@ -41,9 +41,23 @@ final class NotificationsManager: NSObject, ObservableObject {
     /// MainTabView opens the per-buy amount editor.
     @Published var pendingOpenAmount: Bool = false
 
+    /// Set when the user taps the day-12 trial-end reminder: route to the
+    /// Account tab, where subscription management lives.
+    @Published var pendingOpenAccount: Bool = false
+
     private override init() {
         super.init()
         UNUserNotificationCenter.current().delegate = self
+        #if DEBUG
+        // Test seam: `-vd.debugPendingNewsId <uuid>` simulates a cold-launch
+        // news-push tap — the flag lands at singleton init, exactly when a
+        // real tap's didReceive would set it, so the whole downstream chain
+        // (tab switch → list → detail) runs identically. DEBUG builds only.
+        if let raw = UserDefaults.standard.string(forKey: "vd.debugPendingNewsId"),
+           let id = UUID(uuidString: raw) {
+            pendingNewsId = id
+        }
+        #endif
         Task { await refreshStatus() }
     }
 
@@ -95,6 +109,8 @@ final class NotificationsManager: NSObject, ObservableObject {
         pendingWeeklyDigest = false
         pendingNewsId = nil
         pendingShowPaywall = false
+        pendingOpenAmount = false
+        pendingOpenAccount = false
     }
 
     /// Call on sign-out to stop receiving pushes on this device. Reads the
@@ -168,6 +184,8 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
                 if let pickNumber { Self.shared.pendingPickNumber = pickNumber }
             case "raise_amount":
                 Self.shared.pendingOpenAmount = true
+            case "trial_end":
+                Self.shared.pendingOpenAccount = true
             default:
                 break
             }

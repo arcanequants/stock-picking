@@ -25,6 +25,16 @@ final class PortfolioViewModel: ObservableObject {
         }
     }
 
+    /// Drop BOTH cached views and refetch the visible one. Used when the
+    /// subscription state flips: `load()` alone only refreshes the current
+    /// view, and `switchTo` skips the network when a (now stale, free-tier)
+    /// response is already cached — the other tab would keep its locked rows.
+    func reloadDroppingCaches() async {
+        modelResponse = nil
+        personalResponse = nil
+        await load()
+    }
+
     var displayedPositions: [Position] {
         guard let positions = response?.positions else { return [] }
         switch sortMode {
@@ -81,7 +91,10 @@ struct PortfolioView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 12) {
-                    if !pickStatus.isSubscribed {
+                    // hasLoaded gate: before the first /api/picks load the
+                    // subscription state is UNKNOWN, not free — premium users
+                    // were greeted with this banner on every cold launch.
+                    if pickStatus.hasLoaded && !pickStatus.isSubscribed {
                         freeUpsellBanner
                     }
                     viewSwitcher
@@ -149,7 +162,8 @@ struct PortfolioView: View {
             // Keyed to the subscription flag so a purchase/restore while this
             // tab is alive refetches immediately — otherwise the cached free
             // response (`limited: true`) keeps the locked row + paywall up.
-            .task(id: pickStatus.isSubscribed) { await vm.load() }
+            // Drops BOTH view caches: the non-visible one is equally stale.
+            .task(id: pickStatus.isSubscribed) { await vm.reloadDroppingCaches() }
             .task {
                 if dividends.events.isEmpty {
                     await dividends.load()

@@ -60,10 +60,15 @@ struct MainTabView: View {
         // before this view mounts, so `.onChange` never fires for it. Read the
         // current values once on appear to catch the cold-launch case.
         .task { routeToPendingTab() }
-        // Self-heal IAP state: if this Apple ID holds an entitlement the
-        // backend doesn't know about (the purchase-time verify POST failed),
-        // re-post it. No-op for web subscribers and users with no purchase.
+        // Resolve the subscription state at launch: nothing else loads
+        // PickStatusStore until the Picks tab is visited, so upsell banners
+        // keyed on `!isSubscribed` fired for premium users on cold start.
+        // Then self-heal IAP: if this Apple ID holds an entitlement the
+        // backend doesn't know about (purchase-time verify failed), re-post.
         .task {
+            if !PickStatusStore.shared.hasLoaded {
+                await PickStatusStore.shared.load()
+            }
             if AuthManager.shared.currentUser?.isSubscribed != true {
                 await StoreManager.shared.syncEntitlements()
             }
@@ -133,6 +138,8 @@ struct MainTabView: View {
         // News pushes deep-link into the Home tab — that's where the
         // news entry card and detail navigation live.
         .onChange(of: notifications.pendingNewsId) { _, _ in routeToPendingTab() }
+        // Day-12 trial reminder routes to Account (manage subscription).
+        .onChange(of: notifications.pendingOpenAccount) { _, _ in routeToPendingTab() }
     }
 
     private func routeToPendingTab() {
@@ -140,6 +147,10 @@ struct MainTabView: View {
             selectedTab = .home
         } else if notifications.pendingPickNumber != nil || notifications.pendingWeeklyDigest {
             selectedTab = .picks
+        } else if notifications.pendingOpenAccount {
+            // Day-12 trial reminder: subscription management lives in Account.
+            selectedTab = .account
+            notifications.pendingOpenAccount = false
         }
     }
 }
