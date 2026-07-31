@@ -2,19 +2,26 @@ package com.vectorialdata.app.feature.news
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Schedule
+import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.outlined.Newspaper
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -43,6 +50,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.vectorialdata.app.R
 import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.NewsItem
+import com.vectorialdata.app.core.model.NewsTaxonomy
 import com.vectorialdata.app.core.store.NewsStore
 import com.vectorialdata.app.core.util.Formatters
 import com.vectorialdata.app.feature.common.VDCard
@@ -52,7 +60,8 @@ import java.time.Instant
 
 /**
  * Full-screen news feed + in-place detail — mirror of iOS `NewsListView`
- * (navigation uses the same open-state pattern as PicksScreen).
+ * (navigation uses the same open-state pattern as PicksScreen). Topic chips
+ * filter the feed; the tune icon opens "Tu mezcla" (delivery prefs).
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,17 +70,25 @@ fun NewsListScreen(onBack: () -> Unit, modifier: Modifier = Modifier) {
     val isLoading by NewsStore.isLoading.collectAsStateWithLifecycle()
     val errorMessage by NewsStore.errorMessage.collectAsStateWithLifecycle()
     val lastReadAt by NewsStore.lastReadAt.collectAsStateWithLifecycle()
+    val selectedTopic by NewsStore.selectedTopic.collectAsStateWithLifecycle()
     val scope = rememberCoroutineScope()
 
     var openNewsId by rememberSaveable { mutableStateOf<String?>(null) }
+    var showPrefs by rememberSaveable { mutableStateOf(false) }
 
+    // Always refetch on opening the section — a news feed must never show
+    // only yesterday's cache; existing items stay visible while it runs.
     // The read cursor is stamped once on entry; rows compare against the
     // value captured when the screen opened so dots stay visible this visit.
     LaunchedEffect(Unit) {
-        if (NewsStore.items.value.isEmpty()) NewsStore.load()
+        NewsStore.load()
         NewsStore.markAllAsRead()
     }
     val cursorAtOpen = rememberSaveable { lastReadAt }
+
+    if (showPrefs) {
+        NewsPrefsSheet(onDismiss = { showPrefs = false })
+    }
 
     val openItem = items.firstOrNull { it.id == openNewsId }
     if (openItem != null) {
@@ -97,6 +114,14 @@ fun NewsListScreen(onBack: () -> Unit, modifier: Modifier = Modifier) {
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onBackground,
             )
+            Spacer(Modifier.weight(1f))
+            IconButton(onClick = { showPrefs = true }) {
+                Icon(
+                    Icons.Filled.Tune,
+                    contentDescription = stringResource(R.string.news_prefs_title),
+                    tint = BrandEmerald,
+                )
+            }
         }
 
         PullToRefreshBox(
@@ -123,18 +148,22 @@ fun NewsListScreen(onBack: () -> Unit, modifier: Modifier = Modifier) {
                     EmptyNewsCard()
                 }
 
-                else -> LazyColumn(
-                    Modifier.fillMaxSize(),
-                    contentPadding = androidx.compose.foundation.layout.PaddingValues(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(10.dp),
-                ) {
-                    items(items.size, key = { items[it].id }) { i ->
-                        val item = items[i]
-                        NewsRow(
-                            item = item,
-                            isUnread = item.isUnread(cursorAtOpen),
-                            onClick = { openNewsId = item.id },
-                        )
+                else -> {
+                    val visible = NewsStore.visibleItems(items, selectedTopic)
+                    LazyColumn(
+                        Modifier.fillMaxSize(),
+                        contentPadding = PaddingValues(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(10.dp),
+                    ) {
+                        item { TopicChips(items, selectedTopic) }
+                        items(visible.size, key = { visible[it].id }) { i ->
+                            val item = visible[i]
+                            NewsRow(
+                                item = item,
+                                isUnread = item.isUnread(cursorAtOpen),
+                                onClick = { openNewsId = item.id },
+                            )
+                        }
                     }
                 }
             }
@@ -142,39 +171,147 @@ fun NewsListScreen(onBack: () -> Unit, modifier: Modifier = Modifier) {
     }
 }
 
-/** Unread dot + headline + first body line + relative date — iOS `NewsRow`. */
+/** Horizontal filter chips: "Todo" + one per topic present in the feed. */
+@Composable
+private fun TopicChips(items: List<NewsItem>, selected: String?) {
+    Row(
+        Modifier.horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Chip(label = stringResource(R.string.news_chip_all), active = selected == null) {
+            NewsStore.selectedTopic.value = null
+        }
+        NewsStore.availableTopics(items).forEach { id ->
+            val meta = NewsTaxonomy.topics.first { it.id == id }
+            Chip(
+                label = "${meta.emoji} ${stringResource(meta.labelRes)}",
+                active = selected == id,
+            ) {
+                NewsStore.selectedTopic.value = if (selected == id) null else id
+            }
+        }
+    }
+}
+
+@Composable
+private fun Chip(label: String, active: Boolean, tap: () -> Unit) {
+    Text(
+        label,
+        fontSize = 13.sp,
+        fontWeight = FontWeight.SemiBold,
+        color = if (active) BrandEmerald else Color.White.copy(alpha = 0.62f),
+        modifier = Modifier
+            .clip(CircleShape)
+            .background(
+                if (active) BrandEmerald.copy(alpha = 0.14f)
+                else MaterialTheme.colorScheme.surface,
+            )
+            .border(
+                1.dp,
+                if (active) BrandEmerald.copy(alpha = 0.4f) else Color.White.copy(alpha = 0.08f),
+                CircleShape,
+            )
+            .clickable(onClick = tap)
+            .padding(horizontal = 13.dp, vertical = 7.dp),
+    )
+}
+
+/** Meta line + headline + summary + read-time/ticker hint — iOS `NewsRow`. */
 @Composable
 private fun NewsRow(item: NewsItem, isUnread: Boolean, onClick: () -> Unit) {
-    VDCard(onClick = onClick, innerSpacing = 0.dp) {
-        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            Box(
-                Modifier
-                    .padding(top = 7.dp)
-                    .size(8.dp)
-                    .clip(CircleShape)
-                    .background(if (isUnread) BrandEmerald else Color.Transparent),
+    VDCard(onClick = onClick, innerSpacing = 7.dp) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            TopicTag(item.topic)
+            item.regions.orEmpty().forEach { r ->
+                Text(NewsTaxonomy.regionFlag(r), fontSize = 11.sp)
+            }
+            Text(
+                relativeDate(item.publishedAt),
+                fontSize = 11.sp,
+                color = Color.White.copy(alpha = 0.4f),
             )
-            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Spacer(Modifier.weight(1f))
+            if (isUnread) {
+                Box(Modifier.size(7.dp).clip(CircleShape).background(BrandEmerald))
+            }
+        }
+        Text(
+            item.headline,
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onBackground,
+        )
+        Text(
+            summaryLine(item),
+            fontSize = 12.sp,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 2,
+        )
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Icon(
+                Icons.Filled.Schedule,
+                contentDescription = null,
+                tint = BrandEmerald.copy(alpha = 0.9f),
+                modifier = Modifier.size(12.dp),
+            )
+            Text(
+                readTime(item),
+                fontSize = 11.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = BrandEmerald.copy(alpha = 0.9f),
+            )
+            item.tickers?.takeIf { it.isNotEmpty() }?.let { tickers ->
                 Text(
-                    item.headline,
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.onBackground,
-                )
-                Text(
-                    item.body.lineSequence().firstOrNull()?.trim() ?: item.body,
-                    fontSize = 12.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 2,
-                )
-                Text(
-                    relativeDate(item.publishedAt),
+                    "· ${tickers.take(2).joinToString(", ")}",
                     fontSize = 11.sp,
-                    color = Color.White.copy(alpha = 0.4f),
+                    color = Color.White.copy(alpha = 0.45f),
                 )
             }
         }
     }
+}
+
+/** Colored pill for the news topic — mirror of iOS `TopicTag`. */
+@Composable
+fun TopicTag(topic: String?) {
+    val color = when (topic) {
+        "economy" -> Color(0xFF80B8FF)
+        "companies", "picks" -> BrandEmerald
+        "politics" -> Color(0xFFF5B561)
+        else -> Color(0xFFC9A3FF) // markets
+    }
+    Text(
+        stringResource(NewsTaxonomy.topicLabelRes(topic)).uppercase(),
+        fontSize = 10.sp,
+        fontWeight = FontWeight.Bold,
+        letterSpacing = 0.4.sp,
+        color = color,
+        modifier = Modifier
+            .clip(RoundedCornerShape(6.dp))
+            .background(color.copy(alpha = 0.15f))
+            .padding(horizontal = 7.dp, vertical = 3.dp),
+    )
+}
+
+private fun summaryLine(item: NewsItem): String =
+    item.blockWhat?.takeIf { it.isNotEmpty() }
+        ?: item.body.lineSequence().firstOrNull()?.trim().orEmpty().ifEmpty { item.body }
+
+/** ~200 words per minute → seconds, rounded to a friendly bucket. */
+private fun readTime(item: NewsItem): String {
+    val text = if (item.hasExplainer) {
+        listOfNotNull(item.blockWhat, item.blockWhy, item.blockYou).joinToString(" ")
+    } else item.body
+    val words = maxOf(1, text.split(' ', '\n').count { it.isNotBlank() })
+    val secs = (words / 200.0 * 60).toInt()
+    val bucket = maxOf(30, minOf(90, (secs / 15) * 15 + 15))
+    return Localizer.get(R.string.news_read_time, bucket)
 }
 
 /** "ahora" / "hace 5m" / "hace 3h" / "ayer" / "hace 4d" / "23 may". */

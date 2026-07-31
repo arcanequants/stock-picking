@@ -85,6 +85,9 @@ object ApiClient {
     suspend inline fun <reified B, reified T> post(path: String, body: B): T =
         execute(path, "POST", json.encodeToString(serializer<B>(), body), serializer())
 
+    suspend inline fun <reified B, reified T> put(path: String, body: B): T =
+        execute(path, "PUT", json.encodeToString(serializer<B>(), body), serializer())
+
     suspend inline fun <reified B, reified T> delete(path: String, body: B): T =
         execute(path, "DELETE", json.encodeToString(serializer<B>(), body), serializer())
 

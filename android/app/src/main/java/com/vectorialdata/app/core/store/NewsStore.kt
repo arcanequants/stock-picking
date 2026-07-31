@@ -5,6 +5,7 @@ import com.vectorialdata.app.core.auth.SecureStore
 import com.vectorialdata.app.core.i18n.Localizer
 import com.vectorialdata.app.core.model.NewsItem
 import com.vectorialdata.app.core.model.NewsListResponse
+import com.vectorialdata.app.core.model.NewsTaxonomy
 import com.vectorialdata.app.core.net.ApiClient
 import com.vectorialdata.app.core.net.ApiError
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,6 +32,13 @@ object NewsStore {
     private val _errorMessage = MutableStateFlow<String?>(null)
     val errorMessage: StateFlow<String?> = _errorMessage.asStateFlow()
 
+    /** Per-news AI chat availability, from the last /api/news response. */
+    private val _chatEnabled = MutableStateFlow(false)
+    val chatEnabled: StateFlow<Boolean> = _chatEnabled.asStateFlow()
+
+    /** Active feed filter — null = "Todo". Matches a NewsTaxonomy topic id. */
+    val selectedTopic = MutableStateFlow<String?>(null)
+
     /** Epoch millis of the last time the user opened the list; 0 = never. */
     private val _lastReadAt = MutableStateFlow(
         SecureStore.get(LAST_READ_KEY)?.toLongOrNull() ?: 0L
@@ -42,6 +50,8 @@ object NewsStore {
         _items.value = emptyList()
         _errorMessage.value = null
         _isLoading.value = false
+        _chatEnabled.value = false
+        selectedTopic.value = null
         _lastReadAt.value = 0L
         SecureStore.delete(LAST_READ_KEY)
     }
@@ -52,6 +62,7 @@ object NewsStore {
         try {
             val resp: NewsListResponse = ApiClient.get("/api/news")
             _items.value = resp.news
+            _chatEnabled.value = resp.chatEnabled ?: false
             _errorMessage.value = null
         } catch (e: ApiError.Unauthorized) {
             _errorMessage.value = Localizer.get(R.string.err_unauthorized)
@@ -68,6 +79,16 @@ object NewsStore {
         _lastReadAt.value = now
         SecureStore.set(now.toString(), LAST_READ_KEY)
     }
+
+    /** Topics present in the current feed — only these chips are shown. */
+    fun availableTopics(items: List<NewsItem>): List<String> {
+        val present = items.mapNotNull { it.topic }.toSet()
+        return NewsTaxonomy.topics.map { it.id }.filter { present.contains(it) }
+    }
+
+    /** Feed filtered by the selected topic chip. */
+    fun visibleItems(items: List<NewsItem>, topic: String?): List<NewsItem> =
+        if (topic == null) items else items.filter { it.topic == topic }
 
     fun unreadCount(items: List<NewsItem>, lastReadAt: Long): Int =
         items.count { it.isUnread(lastReadAt) }
