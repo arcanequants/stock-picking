@@ -57,6 +57,7 @@ import com.vectorialdata.app.feature.news.NewsListScreen
 import com.vectorialdata.app.feature.common.VDCard
 import com.vectorialdata.app.ui.theme.BrandEmerald
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 private val MarketYellow = Color(0xFFFFD60A)
@@ -121,6 +122,10 @@ fun HomeScreen(modifier: Modifier = Modifier) {
     LaunchedEffect(pendingNewsId) {
         val id = pendingNewsId ?: return@LaunchedEffect
         if (NewsStore.items.value.isEmpty()) NewsStore.load()
+        // load() coalesces into an in-flight request (isLoading guard) — on a
+        // cold tap-launch the list is still loading here, so wait for it or
+        // the pending id gets consumed with nothing to open.
+        NewsStore.isLoading.first { !it }
         NewsStore.items.value.firstOrNull { it.id == id }?.let { openNews = it }
         NotificationsManager.pendingNewsId.value = null
     }
