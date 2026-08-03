@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
 import { getPublicEvents } from "@/lib/notifications";
 import type { EventExplanation } from "@/lib/types";

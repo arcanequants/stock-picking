@@ -1,6 +1,8 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import createIntlMiddleware from "next-intl/middleware";
 import { authCookieOverrides } from "@/lib/auth-session";
+import { routing } from "@/i18n/routing";
 
 // ─── AI Bot Detection ───
 const AI_BOTS: Record<string, "search" | "training"> = {
@@ -36,6 +38,47 @@ function detectBot(ua: string): { name: string; category: "search" | "training" 
 
 const MARKETING_PUBLIC = ["/marketing/login", "/marketing/setup"];
 
+/**
+ * Paths served outside the [locale] segment: the signed-in app, the internal
+ * dashboards, auth callbacks, and everything under /api. next-intl must not
+ * rewrite these — they have no localized URL — so they skip it entirely.
+ */
+const UNLOCALIZED = [
+  "/account",
+  "/admin",
+  "/api",
+  "/api-keys",
+  "/auth",
+  "/login",
+  "/marketing",
+  "/notifications",
+  "/share",
+  "/welcome",
+  "/r/",
+];
+
+/**
+ * Root-level files: /sitemap.xml, /robots.txt, /llms.txt, /openapi.yaml,
+ * /logo.png … A single segment carrying an extension is never a page, and
+ * running it through the locale rewrite turns it into /es/sitemap.xml, which
+ * does not exist — that 404s the sitemap and robots.txt, the two files the
+ * whole crawl depends on.
+ *
+ * Deliberately anchored to a single segment so the localized machine-readable
+ * briefs (/signals/[id]/brief.md, /economia/[slug]/brief.md) keep their
+ * per-language URLs.
+ */
+const ROOT_FILE = /^\/[^/]+\.[a-z0-9]+$/i;
+
+function isUnlocalized(pathname: string): boolean {
+  if (ROOT_FILE.test(pathname)) return true;
+  return UNLOCALIZED.some(
+    (p) => pathname === p || pathname.startsWith(p.endsWith("/") ? p : `${p}/`)
+  );
+}
+
+const handleI18n = createIntlMiddleware(routing);
+
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -61,7 +104,13 @@ export async function middleware(request: NextRequest) {
         }),
       }).catch(() => {});
     }
-    return NextResponse.next();
+    // Crawlers still need the locale rewrite. Returning NextResponse.next()
+    // here would hand Googlebot a 404 on every public page, because the
+    // pages now live under /[locale]/ and only this rewrite maps /picks
+    // onto /es/picks. Bots skip the auth refresh, not the routing.
+    return isUnlocalized(pathname)
+      ? NextResponse.next()
+      : handleI18n(request);
   }
 
   // ─── Marketing dashboard auth gate ───
@@ -85,8 +134,19 @@ export async function middleware(request: NextRequest) {
     return response;
   }
 
-  // ─── Main app: Supabase auth session refresh ───
-  let supabaseResponse = NextResponse.next({ request });
+  // ─── Main app: Supabase auth session refresh + locale routing ───
+  //
+  // Order matters. The session refresh runs first and only *records* the
+  // cookies it wants to set, mutating request.cookies so the downstream
+  // render sees the fresh session. The response is built afterwards, so the
+  // locale rewrite survives: the previous code recreated the response inside
+  // setAll(), which would have thrown away next-intl's rewrite and left every
+  // /pt and /en URL resolving to nothing.
+  const pendingCookies: {
+    name: string;
+    value: string;
+    options: Record<string, unknown>;
+  }[] = [];
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -97,15 +157,13 @@ export async function middleware(request: NextRequest) {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) => {
-            request.cookies.set(name, value);
-          });
-          supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) => {
+            request.cookies.set(name, value);
             const isDelete = options?.maxAge === 0;
-            supabaseResponse.cookies.set(name, value, {
-              ...options,
-              ...authCookieOverrides(isDelete),
+            pendingCookies.push({
+              name,
+              value,
+              options: { ...options, ...authCookieOverrides(isDelete) },
             });
           });
         },
@@ -116,7 +174,15 @@ export async function middleware(request: NextRequest) {
   // Refresh auth session — uses getUser() not getSession() for security
   await supabase.auth.getUser();
 
-  return supabaseResponse;
+  const response = isUnlocalized(pathname)
+    ? NextResponse.next({ request })
+    : handleI18n(request);
+
+  for (const { name, value, options } of pendingCookies) {
+    response.cookies.set(name, value, options);
+  }
+
+  return response;
 }
 
 export const config = {
