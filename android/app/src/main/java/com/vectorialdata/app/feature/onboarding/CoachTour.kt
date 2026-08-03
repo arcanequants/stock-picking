@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
@@ -168,7 +169,8 @@ fun CoachTourOverlay(
             color = Color.White.copy(alpha = 0.7f),
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .padding(top = 40.dp, end = 20.dp)
+                .statusBarsPadding()
+                .padding(top = 10.dp, end = 20.dp)
                 .clickable(onClick = onFinished),
         )
 
