@@ -1,0 +1,336 @@
+import { localizedAlternates } from "@/lib/hreflang";
+import { stocks, transactions } from "@/data/stocks";
+import { notFound } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import type { Metadata } from "next";
+import { getTranslations, getLocale, getMessages } from "next-intl/server";
+import BlockchainBadge from "@/components/BlockchainBadge";
+import StockDividendsReceived from "@/components/StockDividendsReceived";
+import { Suspense } from "react";
+import { getLocalizedField } from "@/data/stock-translations";
+import { getRelatedPicks } from "@/lib/related-picks";
+import { sectorPathFor, countryPathFor } from "@/lib/stock-lists";
+import { JsonLd, getArticleSchema, getFaqSchema, getBreadcrumbSchema, getStockMetaTitle, getStockMetaDescription } from "@/lib/seo";
+
+const localeMap: Record<string, string> = {
+  es: "es-MX",
+  en: "en-US",
+  pt: "pt-BR",
+  hi: "hi-IN",
+};
+
+export function generateStaticParams() {
+  return stocks.map((stock) => ({ ticker: stock.ticker }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ ticker: string }>;
+}): Promise<Metadata> {
+  const { ticker } = await params;
+  const stock = stocks.find(
+    (s) => s.ticker.toLowerCase() === ticker.toLowerCase()
+  );
+  const t = await getTranslations("StockDetail");
+  const locale = await getLocale();
+  if (!stock) return { title: `${t("stockNotFound")} | Vectorial Data` };
+
+  const title = getStockMetaTitle(stock, locale);
+  const description = getStockMetaDescription(stock, locale);
+  return {
+    title,
+    description,
+    alternates: {
+      ...localizedAlternates(locale, `/stocks/${stock.ticker}`),
+    },
+    openGraph: {
+      title,
+      description,
+      images: [{ url: `/api/og/stock/${stock.ticker}`, width: 1200, height: 630 }],
+      type: "article",
+    },
+    twitter: { card: "summary_large_image" },
+  };
+}
+
+export default async function StockResearchPage({
+  params,
+}: {
+  params: Promise<{ ticker: string }>;
+}) {
+  const { ticker } = await params;
+  const stock = stocks.find(
+    (s) => s.ticker.toLowerCase() === ticker.toLowerCase()
+  );
+
+  if (!stock) return notFound();
+
+  const t = await getTranslations("StockDetail");
+  const tLists = await getTranslations("StockLists");
+  const tLegal = await getTranslations("Legal");
+  const locale = await getLocale();
+  const dateLocale = localeMap[locale] || "es-MX";
+
+  // Data fields (sector/region/country/consensus) are stored in English in
+  // stocks.ts; translate for display via the Labels dictionaries, falling back
+  // to the raw value for anything unmapped (e.g. free-text consensus notes).
+  const messages = (await getMessages()) as Record<string, unknown>;
+  const labels = (messages.Labels ?? {}) as Record<string, Record<string, string>>;
+  const label = (dict: string, value: string | null | undefined): string | undefined =>
+    value ? labels[dict]?.[value] ?? value : undefined;
+
+  const renderMarkdown = (md: string) => {
+    if (!md) return null;
+    const lines = md.split("\n");
+    const html: string[] = [];
+    let inTable = false;
+    let inList = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      if (line.match(/^---+$/)) {
+        if (inList) { html.push("</ul>"); inList = false; }
+        if (inTable) { html.push("</tbody></table>"); inTable = false; }
+        html.push("<hr />");
+        continue;
+      }
+      if (line.includes("|") && line.trim().startsWith("|")) {
+        if (inList) { html.push("</ul>"); inList = false; }
+        const cells = line.split("|").filter((c) => c.trim()).map((c) => c.trim());
+        if (cells.every((c) => c.match(/^[-:]+$/))) continue;
+        if (!inTable) {
+          html.push('<table><thead><tr>');
+          cells.forEach((c) => (html[html.length - 1] += `<th>${applyInline(c)}</th>`));
+          html[html.length - 1] += "</tr></thead><tbody>";
+          inTable = true;
+        } else {
+          html.push("<tr>");
+          cells.forEach((c) => (html[html.length - 1] += `<td>${applyInline(c)}</td>`));
+          html[html.length - 1] += "</tr>";
+        }
+        continue;
+      } else if (inTable) { html.push("</tbody></table>"); inTable = false; }
+      if (line.startsWith("### ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<h3>${applyInline(line.slice(4))}</h3>`); continue; }
+      if (line.startsWith("## ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<h2>${applyInline(line.slice(3))}</h2>`); continue; }
+      // Markdown "# " renders as an h2 (styled like the research h1) so the
+      // page keeps a single h1 — the ticker heading above.
+      if (line.startsWith("# ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<h2 class="prose-h1">${applyInline(line.slice(2))}</h2>`); continue; }
+      if (line.startsWith("> ")) { if (inList) { html.push("</ul>"); inList = false; } html.push(`<blockquote>${applyInline(line.slice(2))}</blockquote>`); continue; }
+      if (line.match(/^[-*]\s/) || line.match(/^\d+\.\s/)) {
+        if (!inList) { html.push("<ul>"); inList = true; }
+        const content = line.replace(/^[-*]\s/, "").replace(/^\d+\.\s/, "");
+        html.push(`<li>${applyInline(content)}</li>`);
+        continue;
+      } else if (inList && line.trim() === "") { html.push("</ul>"); inList = false; }
+      if (line.trim()) html.push(`<p>${applyInline(line)}</p>`);
+    }
+    if (inList) html.push("</ul>");
+    if (inTable) html.push("</tbody></table>");
+    return html.join("\n");
+  };
+
+  const applyInline = (text: string) => {
+    return text
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.+?)\*/g, "<em>$1</em>")
+      .replace(/`(.+?)`/g, "<code>$1</code>");
+  };
+
+  // Summaries are authored in markdown but were rendered as raw text (visible
+  // asterisks/dashes). Inline "(1) ... (2) ..." enumerations become list items
+  // so they read as bullets instead of a wall of text. Single-digit only, so
+  // things like "(2022)" or "(1 ADR = 5)" are left alone.
+  const summaryHtml = (field: "summary_what" | "summary_why" | "summary_risk") => {
+    const raw = getLocalizedField(stock, field, locale) || "";
+    return renderMarkdown(raw.replace(/\s*\((\d)\)\s+/g, "\n$1. "));
+  };
+
+  const researchHtml = renderMarkdown(stock.research_full);
+
+  const faqSchema = getFaqSchema(stock, locale);
+  const tx = transactions.find(t => t.ticker === stock.ticker);
+  const related = getRelatedPicks(stock);
+  const sectorPath = sectorPathFor(stock.sector);
+  const countryPath = countryPathFor(stock.country);
+
+  return (
+    <>
+    <JsonLd data={{
+      "@context": "https://schema.org",
+      "@graph": [
+        getArticleSchema(stock, locale),
+        ...(faqSchema ? [faqSchema] : []),
+      ],
+    }} />
+    <JsonLd data={getBreadcrumbSchema([
+      { name: "Home", url: "https://vectorialdata.com" },
+      { name: "Stocks", url: "https://vectorialdata.com/stocks" },
+      { name: stock.ticker, url: `https://vectorialdata.com/stocks/${stock.ticker}` },
+    ])} />
+    <div className="max-w-4xl mx-auto">
+      <div className="text-sm text-text-faint mb-6">
+        <Link href="/stocks" className="hover:text-text-secondary">{t("breadcrumb")}</Link>
+        <span className="mx-2">/</span>
+        <span className="text-text-secondary">{stock.ticker}</span>
+      </div>
+
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-8">
+        <div>
+          <h1 className="text-3xl font-bold">
+            {stock.ticker} <span className="text-text-muted font-normal text-xl">— {stock.name}</span>
+          </h1>
+          <div className="flex gap-2 mt-2 flex-wrap">
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{label("sector", stock.sector)}</span>
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{label("region", stock.region)}</span>
+            <span className="text-xs px-2 py-1 rounded bg-tag-bg text-text-muted">{label("country", stock.country)}</span>
+            <BlockchainBadge
+              ticker={stock.ticker}
+              attestationUid={transactions.find((t) => t.ticker === stock.ticker)?.attestation_uid}
+            />
+          </div>
+        </div>
+        <div className="text-left md:text-right">
+          <p className="text-3xl font-mono font-bold">${stock.price?.toFixed(2)}</p>
+          <p className="text-sm text-text-muted mt-1">
+            {t("target")}: ${stock.analyst_target?.toFixed(2)} ({stock.analyst_upside && stock.analyst_upside > 0 ? "+" : ""}{stock.analyst_upside}%)
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-8">
+        <MetricBox label={t("peRatio")} value={stock.pe_ratio?.toFixed(1)} />
+        <MetricBox label={t("peForward")} value={stock.pe_forward?.toFixed(1)} />
+        <MetricBox label={t("dividend")} value={stock.dividend_yield ? `${stock.dividend_yield}%` : "—"} />
+        <MetricBox label={t("marketCap")} value={stock.market_cap_b ? `$${stock.market_cap_b}B` : "—"} />
+        <MetricBox label={t("eps")} value={stock.eps ? `$${stock.eps}` : "—"} />
+        <MetricBox label={t("consensus")} value={label("consensus", stock.analyst_consensus)} />
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-4 mb-8">
+        <div className="border border-border rounded-xl p-4">
+          <h3 className="text-xs text-text-faint uppercase tracking-wider mb-2">{t("whatTheyDo")}</h3>
+          <div className="prose-research text-sm" dangerouslySetInnerHTML={{ __html: summaryHtml("summary_what") ?? "" }} />
+        </div>
+        <div className="border border-emerald-500/20 rounded-xl p-4 bg-emerald-500/5">
+          <h3 className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">{t("whyWeLikeIt")}</h3>
+          <div className="prose-research text-sm" dangerouslySetInnerHTML={{ __html: summaryHtml("summary_why") ?? "" }} />
+        </div>
+        <div className="border border-red-500/20 rounded-xl p-4 bg-red-500/5">
+          <h3 className="text-xs text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">{t("keyRisk")}</h3>
+          <div className="prose-research text-sm" dangerouslySetInnerHTML={{ __html: summaryHtml("summary_risk") ?? "" }} />
+        </div>
+      </div>
+
+      {/* Disclaimer above the fold */}
+      <p className="text-xs text-text-faint italic border-t border-border pt-3 mb-8">
+        {tLegal("notFinancialAdvice")} {tLegal("consultAdvisor")}
+      </p>
+
+      <p className="text-sm text-text-muted mb-6">
+        {t("bluf", { ticker: stock.ticker, date: tx?.date ?? stock.first_researched_at, price: stock.price.toFixed(2) })}
+      </p>
+
+      <time dateTime={stock.last_updated_at} className="text-xs text-text-faint">
+        {t("lastUpdated", { date: new Date(stock.last_updated_at + "T12:00:00").toLocaleDateString(localeMap[locale] ?? "es-MX", { day: "numeric", month: "short", year: "numeric" }) })}
+      </time>
+
+      <Suspense fallback={null}>
+        <StockDividendsReceived ticker={stock.ticker} />
+      </Suspense>
+
+      {researchHtml && (
+        <div className="border border-border rounded-xl p-6 md:p-8">
+          <h2 className="text-xl font-bold mb-6">{t("fullResearch")}</h2>
+          <div className="prose-research" dangerouslySetInnerHTML={{ __html: researchHtml }} />
+        </div>
+      )}
+
+      {(related.sector.length > 0 || related.country.length > 0) && (
+        <section className="mt-10 space-y-6">
+          {related.sector.length > 0 && (
+            <div>
+              <h2 className="text-sm font-semibold text-text-secondary mb-3">
+                {t("relatedSectorTitle", { sector: label("sector", stock.sector) ?? stock.sector })}
+              </h2>
+              <RelatedPickLinks picks={related.sector} />
+              {sectorPath && (
+                <Link
+                  href={sectorPath}
+                  className="mt-2 inline-block text-sm text-brand hover:text-brand-hover transition-colors"
+                >
+                  {tLists("seeAllSector", {
+                    sector: label("sector", stock.sector) ?? stock.sector,
+                  })}
+                </Link>
+              )}
+            </div>
+          )}
+          {related.country.length > 0 && (
+            <div>
+              <h2 className="text-sm font-semibold text-text-secondary mb-3">
+                {t("relatedCountryTitle", { country: label("country", stock.country) ?? stock.country })}
+              </h2>
+              <RelatedPickLinks picks={related.country} />
+              {countryPath && (
+                <Link
+                  href={countryPath}
+                  className="mt-2 inline-block text-sm text-brand hover:text-brand-hover transition-colors"
+                >
+                  {tLists("seeAllCountry", {
+                    country: label("country", stock.country) ?? stock.country,
+                  })}
+                </Link>
+              )}
+            </div>
+          )}
+        </section>
+      )}
+
+      <div className="mt-8 text-xs text-text-faint flex gap-4">
+        <span>{t("researched")}: {new Date(stock.first_researched_at).toLocaleDateString(dateLocale)}</span>
+        <span>{t("updated")}: {new Date(stock.last_updated_at).toLocaleDateString(dateLocale)}</span>
+        {stock.next_review_at && (
+          <span>{t("nextReview")}: {new Date(stock.next_review_at).toLocaleDateString(dateLocale)}</span>
+        )}
+      </div>
+
+      <p className="mt-4 text-xs text-text-faint italic">{t("legalDisclaimer")}</p>
+      <p className="mt-1 text-xs text-text-faint">{tLegal("holdPositions")}</p>
+      <p className="mt-1 text-xs text-text-faint">{tLegal("pastPerformance")}</p>
+      {locale === "hi" && (
+        <p className="mt-2 text-xs text-text-faint border border-border rounded-lg p-3">
+          {tLegal("sebiDisclaimer")}
+        </p>
+      )}
+    </div>
+    </>
+  );
+}
+
+function RelatedPickLinks({ picks }: { picks: { ticker: string; name: string }[] }) {
+  return (
+    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      {picks.map((s) => (
+        <li key={s.ticker}>
+          <Link
+            href={`/stocks/${s.ticker}`}
+            className="block border border-border rounded-lg px-3 py-2 hover:border-brand/50 transition-colors"
+          >
+            <span className="font-mono font-semibold text-sm">{s.ticker}</span>
+            <span className="text-sm text-text-muted"> — {s.name}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function MetricBox({ label, value }: { label: string; value: string | undefined }) {
+  return (
+    <div className="border border-border rounded-lg p-3">
+      <p className="text-xs text-text-faint">{label}</p>
+      <p className="text-lg font-mono font-bold text-foreground mt-1">{value || "—"}</p>
+    </div>
+  );
+}

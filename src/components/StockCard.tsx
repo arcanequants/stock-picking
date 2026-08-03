@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Stock } from "@/lib/types";
 import { getTranslations, getLocale } from "next-intl/server";
 import { getLocalizedField } from "@/data/stock-translations";

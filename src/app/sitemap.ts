@@ -8,12 +8,37 @@ import {
   groupLastModified,
 } from "@/lib/stock-lists";
 import { QUANT_LAB_ENABLED } from "@/lib/feature-flags";
+import { locales, defaultLocale } from "@/i18n/routing";
+import { localeHref } from "@/lib/hreflang";
 
 const BASE = "https://vectorialdata.com";
 
-// NOTE: hreflang alternates are intentionally omitted — all locales serve the
-// same URL today, and hreflang entries pointing at a single URL are
-// spec-invalid. Reintroduce them only once real /[locale]/ URLs exist.
+/**
+ * Every entry below is written once, as the Spanish (unprefixed) URL, and
+ * then expanded into one entry per language with hreflang annotations by
+ * `withLocales()`. Writing the four variants by hand is how a sitemap drifts:
+ * one forgotten locale and a whole language silently stops being submitted.
+ *
+ * hreflang is only valid now that each language has its own URL — before the
+ * routing migration all four served the same path, which made the annotation
+ * spec-invalid and it was deliberately left out.
+ */
+function withLocales(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
+  return entries.flatMap((entry) => {
+    const path = entry.url.startsWith(BASE)
+      ? entry.url.slice(BASE.length)
+      : entry.url;
+    const languages: Record<string, string> = {};
+    for (const l of locales) languages[l] = localeHref(l, path);
+    languages["x-default"] = localeHref(defaultLocale, path);
+
+    return locales.map((l) => ({
+      ...entry,
+      url: localeHref(l, path),
+      alternates: { languages },
+    }));
+  });
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   /* ── Static pages (no lastmod — stamping build time is noise) ── */
@@ -141,12 +166,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // economic_events table not yet provisioned in this env — skip
   }
 
-  return [
+  return withLocales([
     ...staticPages,
     ...listPages,
     ...stockPages,
     ...verifyPages,
     ...signalPages,
     ...economiaPages,
-  ];
+  ]);
 }

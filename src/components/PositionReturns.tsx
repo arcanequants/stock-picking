@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import ReturnBadge from "./ReturnBadge";
 import ShareButton from "./ShareButton";
 import type { AggregatedPosition } from "@/lib/types";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 interface PositionReturnsProps {
   isSubscribed: boolean;

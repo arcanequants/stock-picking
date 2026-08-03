@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { createSupabaseBrowserClient } from "@/lib/supabase-browser";
 import HelpModal from "@/components/HelpModal";

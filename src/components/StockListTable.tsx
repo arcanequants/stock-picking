@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { getTranslations, getMessages, getLocale } from "next-intl/server";
 import { formatYield, type ListStock } from "@/lib/stock-lists";
 

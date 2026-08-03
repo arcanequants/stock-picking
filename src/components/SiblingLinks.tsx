@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { getTranslations, getMessages } from "next-intl/server";
 import { getSectorGroups, getCountryGroups } from "@/lib/stock-lists";
 

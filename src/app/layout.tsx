@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Noto_Sans_Devanagari } from "next/font/google";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 import AuthButton from "@/components/AuthButton";
