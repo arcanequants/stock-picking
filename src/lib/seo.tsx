@@ -125,15 +125,12 @@ export function getOrganizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description: QUANT_LAB_ENABLED
-      ? "Vectorial Data is a multi-product market intelligence company. Branded house architecture: Vectorial Stocks (daily picks, $1/mo), Vectorial Signals (alternative-data signals), Vectorial Terminal (prediction markets + perps aggregator), Vectorial Quant Lab (systematic trading bots), and Vectorial News (real-time market events)."
-      : "Vectorial Data is a multi-product market intelligence company. Branded house architecture: Vectorial Stocks (daily picks, $1/mo), Vectorial Signals (alternative-data signals), Vectorial Terminal (prediction markets + perps aggregator), and Vectorial News (real-time market events).",
+      ? "Vectorial Data is a multi-product market intelligence company. Branded house architecture: Vectorial Stocks (researched picks, $1/mo), Vectorial Terminal (prediction markets + perps aggregator), Vectorial Quant Lab (systematic trading bots), and Vectorial News (real-time market events)."
+      : "Vectorial Data is a multi-product market intelligence company. Branded house architecture: Vectorial Stocks (researched picks, $1/mo), Vectorial Terminal (prediction markets + perps aggregator), and Vectorial News (real-time market events).",
     foundingDate: "2026",
     areaServed: "Worldwide",
     knowsAbout: [
       "Stock Analysis",
-      "Alternative Data",
-      "Satellite Intelligence",
-      "AIS / Maritime Intelligence",
       "Prediction Markets",
       "Perpetual Futures",
       "Systematic Trading",
@@ -146,7 +143,6 @@ export function getOrganizationSchema() {
       name: "Vectorial Data services",
       itemListElement: [
         { "@type": "Offer", itemOffered: getServiceSchema("stocks") },
-        { "@type": "Offer", itemOffered: getServiceSchema("signals") },
         { "@type": "Offer", itemOffered: getServiceSchema("terminal") },
         ...(QUANT_LAB_ENABLED
           ? [{ "@type": "Offer", itemOffered: getServiceSchema("quant-lab") }]
@@ -159,7 +155,7 @@ export function getOrganizationSchema() {
 
 /* ── Service (per branded-house product) ──────────────── */
 
-type ServiceId = "stocks" | "signals" | "terminal" | "quant-lab" | "news";
+type ServiceId = "stocks" | "terminal" | "quant-lab" | "news";
 
 const SERVICES: Record<
   ServiceId,
@@ -177,13 +173,6 @@ const SERVICES: Record<
     serviceType: "Stock Research and Analysis",
     description:
       "Daily researched stock picks across global equities, delivered via email, web, and app. Every pick is cryptographically attested on Base (Ethereum L2) via SHA-256 hash chain. Subscription: $1/month.",
-  },
-  signals: {
-    name: "Vectorial Signals",
-    url: `${SITE_URL}/signals`,
-    serviceType: "Alternative Data Signals",
-    description:
-      "Alternative-data signals from public satellites, AIS, EIA, USDA, and TROPOMI — cleaned, baselined, and translated to plain language. Descriptive market intelligence with publicly-published Information Coefficient per signal.",
   },
   terminal: {
     name: "Vectorial Terminal",

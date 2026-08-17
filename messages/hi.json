@@ -526,11 +526,9 @@
     "logout": "लॉग आउट",
     "accountInfoTitle": "खाता",
     "email": "ईमेल",
-    "signalsDesc": "Alt-data सिग्नल (सैटेलाइट, AIS, EIA, TROPOMI)। डेंस व्यू के लिए Pro टॉगल इस्तेमाल करें।",
     "supportTitle": "सपोर्ट",
     "supportDesc": "अपने टिकट और टीम के जवाब देखें।",
-    "supportCta": "मेरे टिकट",
-    "signalsCta": "सिग्नल्स देखें"
+    "supportCta": "मेरे टिकट"
   },
   "Notifications": {
     "title": "सूचनाएं",
@@ -1034,35 +1032,6 @@
       "Strong Buy": "मज़बूत खरीद",
       "N/A (ETF)": "N/A (ETF)"
     }
-  },
-  "Signals": {
-    "tagline": "Alt-data सिग्नल, रिटेल निवेशकों की भाषा में।",
-    "heroDesc": "सैटेलाइट, AIS, EIA, USDA, TROPOMI से hedge-fund स्तर के वैकल्पिक डेटा सिग्नल — साफ़ किए हुए, बेसलाइन के साथ, और आसान भाषा में समझाए गए।",
-    "liveBadge": "लाइव · ऊपर से देखा गया",
-    "mapsNote": "मैप अपनी स्वाभाविक गति से रिफ्रेश होते हैं (AIS: सेकंड · NO₂: रोज़ाना)।",
-    "emptyLive": "अभी कोई लाइव सिग्नल नहीं है।",
-    "upcomingTitle": "आने वाले सिग्नल",
-    "upcomingDesc": "कैलिब्रेशन जारी — डेटा स्रोत जुड़ने के बाद पहला ऑब्ज़र्वेशन आएगा।",
-    "expand": "विस्तार करें →",
-    "notFound": "सिग्नल नहीं मिला",
-    "noObservation": "अभी कोई ऑब्ज़र्वेशन नहीं",
-    "devsTitle": "डेवलपर्स और AI एजेंट्स के लिए",
-    "domainMaritime": "समुद्री",
-    "domainEnergy": "ऊर्जा & कमोडिटीज़",
-    "domainGeospatial": "जियोस्पेशियल",
-    "domainAtmospheric": "वायुमंडलीय",
-    "domainAgricultural": "कृषि",
-    "domainCross": "क्रॉस-डोमेन",
-    "statusLive": "लाइव",
-    "statusCalibrating": "कैलिब्रेट हो रहा है",
-    "metaTitle": "Vectorial Signals — सरल भाषा में alt-data संकेत",
-    "metaDesc": "हेज-फंड स्तर के alternative-data संकेत: सैटेलाइट, AIS, EIA, USDA, TROPOMI। हर संकेत का मुफ्त प्रीव्यू; पूरा इतिहास और अलर्ट $1/माह सदस्यता पर।",
-    "total": "कुल",
-    "mapsNote2": "पद्धति, backtest और स्रोत देखने के लिए नीचे कोई कार्ड खोलें।",
-    "cadenceWeekly": "स्रोत साप्ताहिक प्रकाशित करता है, ~5 दिन की देरी से।",
-    "cadenceDaily": "स्रोत 1-2 कार्यदिवसों की देरी से प्रकाशित करता है।",
-    "cadenceMonthly": "स्रोत मासिक प्रकाशित करता है।",
-    "allSignals": "सभी संकेत"
   },
   "QuantLabCopy": {
     "title": "मैं इसे कैसे कॉपी करूँ?",

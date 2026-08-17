@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { stocks, transactions } from "@/data/stocks";
-import { listLiveSignals } from "@/lib/signals";
 import { listEvents } from "@/lib/economic-events";
 import {
   getSectorGroups,
@@ -49,8 +48,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/picks`, changeFrequency: "daily", priority: 0.9 },
     { url: `${BASE}/lecciones`, changeFrequency: "daily", priority: 0.9 },
     { url: `${BASE}/economia`, changeFrequency: "daily", priority: 0.8 },
-    { url: `${BASE}/signals`, changeFrequency: "daily", priority: 0.9 },
-    { url: `${BASE}/signals/methodology`, changeFrequency: "weekly", priority: 0.6 },
     ...(QUANT_LAB_ENABLED
       ? ([
           { url: `${BASE}/quant-lab`, changeFrequency: "hourly", priority: 0.8 },
@@ -71,7 +68,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/terms`, lastModified: "2026-03-04", changeFrequency: "monthly", priority: 0.3 },
     { url: `${BASE}/privacy`, lastModified: "2026-03-04", changeFrequency: "monthly", priority: 0.3 },
     { url: `${BASE}/disclaimer`, lastModified: "2026-03-04", changeFrequency: "monthly", priority: 0.3 },
-    { url: `${BASE}/legal/signals-terms`, lastModified: "2026-05-17", changeFrequency: "monthly", priority: 0.4 },
   ];
 
   /* ── Per-stock pages (/stocks/[ticker]) — deduped ─────── */
@@ -130,28 +126,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
-  /* ── Per-signal pages (/signals/[id] + /signals/[id]/brief.md) ─── */
-  let signalPages: MetadataRoute.Sitemap = [];
-  try {
-    const signals = await listLiveSignals();
-    signalPages = signals.flatMap((s) => [
-      {
-        url: `${BASE}/signals/${s.id}`,
-        ...(s.updated_at ? { lastModified: s.updated_at } : {}),
-        changeFrequency: "daily" as const,
-        priority: 0.7,
-      },
-      {
-        url: `${BASE}/signals/${s.id}/brief.md`,
-        ...(s.updated_at ? { lastModified: s.updated_at } : {}),
-        changeFrequency: "daily" as const,
-        priority: 0.5,
-      },
-    ]);
-  } catch {
-    // signals table not yet provisioned in this env — skip
-  }
-
   /* ── Per-event economia pages (/economia/[slug]) ──── */
   let economiaPages: MetadataRoute.Sitemap = [];
   try {
@@ -171,7 +145,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...listPages,
     ...stockPages,
     ...verifyPages,
-    ...signalPages,
     ...economiaPages,
   ]);
 }

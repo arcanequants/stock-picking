@@ -50,10 +50,6 @@
       "schedule": "0 13 * * *"
     },
     {
-      "path": "/api/cron/signals-ingest",
-      "schedule": "0 */6 * * *"
-    },
-    {
       "path": "/api/cron/subscriber-briefing",
       "schedule": "0 9 * * 1"
     },
@@ -68,10 +64,6 @@
     {
       "path": "/api/cron/pending-picks-digest",
       "schedule": "0 18 * * 5"
-    },
-    {
-      "path": "/api/cron/hormuz-events-sync",
-      "schedule": "0 4 * * *"
     },
     {
       "path": "/api/cron/seo-weekly",

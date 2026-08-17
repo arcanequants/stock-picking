@@ -526,11 +526,9 @@
     "logout": "Sair",
     "accountInfoTitle": "Conta",
     "email": "E-mail",
-    "signalsDesc": "Sinais de alt-data (satélites, AIS, EIA, TROPOMI). Use o toggle Pro para a visão densa.",
     "supportTitle": "Suporte",
     "supportDesc": "Veja seus tickets e as respostas da equipe.",
-    "supportCta": "Meus tickets",
-    "signalsCta": "Ver signals"
+    "supportCta": "Meus tickets"
   },
   "Notifications": {
     "title": "Notificações",
@@ -1034,35 +1032,6 @@
       "Strong Buy": "Compra forte",
       "N/A (ETF)": "N/A (ETF)"
     }
-  },
-  "Signals": {
-    "tagline": "Sinais de alt-data, traduzidos para o investidor de varejo.",
-    "heroDesc": "Sinais de dados alternativos de nível hedge fund a partir de satélites, AIS, EIA, USDA, TROPOMI — limpos, com linha de base e explicados em linguagem simples.",
-    "liveBadge": "Ao vivo · visto de cima",
-    "mapsNote": "Os mapas se atualizam no seu ritmo natural (AIS: segundos · NO₂: diário).",
-    "emptyLive": "Ainda não há sinais ao vivo.",
-    "upcomingTitle": "Próximos sinais",
-    "upcomingDesc": "Em calibração — primeira observação pendente da integração da fonte de dados.",
-    "expand": "expandir →",
-    "notFound": "Sinal não encontrado",
-    "noObservation": "ainda sem observação",
-    "devsTitle": "Para desenvolvedores e agentes de IA",
-    "domainMaritime": "Marítimo",
-    "domainEnergy": "Energia & commodities",
-    "domainGeospatial": "Geoespacial",
-    "domainAtmospheric": "Atmosférico",
-    "domainAgricultural": "Agrícola",
-    "domainCross": "Multidomínio",
-    "statusLive": "ao vivo",
-    "statusCalibrating": "calibrando",
-    "metaTitle": "Vectorial Signals — sinais de dados alternativos em linguagem simples",
-    "metaDesc": "Sinais de dados alternativos de nível hedge fund: satélites, AIS, EIA, USDA, TROPOMI. Prévia grátis por sinal; histórico completo e alertas na assinatura de US$ 1/mês.",
-    "total": "no total",
-    "mapsNote2": "Abra um card abaixo para ver metodologia, backtest e procedência.",
-    "cadenceWeekly": "A fonte publica semanalmente, com ~5 dias de atraso.",
-    "cadenceDaily": "A fonte publica com 1-2 dias úteis de atraso.",
-    "cadenceMonthly": "A fonte publica mensalmente.",
-    "allSignals": "Todos os sinais"
   },
   "QuantLabCopy": {
     "title": "Como eu copio?",
