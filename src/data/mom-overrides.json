@@ -806,5 +806,10 @@
     "one_liner": "Alcon es la empresa #1 del mundo en cuidado de los ojos: hace las máquinas y lentes con que se operan las cataratas, más lentes de contacto y gotas. La compramos en oferta.",
     "why_short": "Cayó de ~$92 a ~$66 por dos sustos que ya pasaron, pero el negocio nunca se rompió: el último trimestre creció 10% y subió su meta de utilidad. Parece cara (~40x), pero es un truco contable: sobre las ganancias reales cotiza a ~17 veces.",
     "risk_short": "Su mayor riesgo es que las cirugías de catarata sigan flojas, que son más de la mitad de sus ventas. Compite con J&J y otros, los aranceles le suben costos, y su dividendo es tan chico que da poco colchón si baja."
+  },
+  "SKHY": {
+    "one_liner": "SK hynix fabrica la memoria HBM que va pegada a los chips de IA de Nvidia. Es la #1 del mundo en eso y su producción está vendida por adelantado a ~10 clientes con contratos largos.",
+    "why_short": "La IA disparó su negocio: el último trimestre facturó ~$57 mil millones (+257%) con margen operativo récord de 76%. Aun así cotiza a ~5 veces la utilidad esperada porque el mercado duda que dure — ese descuento es lo que compramos. Analistas ven ~$245 (+42%).",
+    "risk_short": "La memoria es el negocio más cíclico de los chips: esta misma empresa perdía dinero en 2023. Si la inversión en IA se pausa o Samsung/Micron la alcanzan en HBM4, cae fuerte. Y las expectativas están tan altas que con resultados récord la acción bajó ese día."
   }
 }

@@ -13173,6 +13173,115 @@ El P/E contable de ~40 asusta, pero está inflado por **~$696 millones al año d
     last_updated_at: "2026-07-23T00:00:00Z",
     next_review_at: "2027-01-23T00:00:00Z",
   },
+  {
+    id: 130,
+    ticker: "SKHY",
+    name: "SK hynix Inc.",
+    sector: "Technology",
+    industry: "Tecnología — Semiconductores (Memoria e IA)",
+    country: "South Korea",
+    region: "Asia",
+    currency: "USD",
+    price: 172.6,
+    pe_ratio: 23.0,
+    pe_forward: 5.3,
+    dividend_yield: 0.1,
+    market_cap_b: 1216.5,
+    eps: 7.45,
+    summary_short:
+      "SK hynix es el líder mundial de la memoria para inteligencia artificial — y desde julio de 2026 por fin se puede comprar en Nasdaq (ADR SKHY; 10 ADRs = 1 acción coreana). Su producto estrella es la HBM ('memoria de alto ancho de banda'), la memoria que va pegada a los chips de IA de Nvidia: sin HBM, el chip más potente del mundo se queda esperando datos. La IA disparó ese negocio a niveles nunca vistos: en el Q2 2026 (reportado el 28 de julio) facturó ₩79.3 billones de wones (~$57 mil millones de dólares, +257% vs el año pasado) con un margen operativo de 76% — el más alto de su historia y de casi cualquier fabricante del planeta —, y su nueva generación HBM4 ya está en producción masiva, esencialmente vendida por adelantado a ~10 clientes con contratos de largo plazo. Tiene ~$63 mil millones en efectivo. La honestidad: la memoria es el negocio más cíclico de los chips — esta misma empresa PERDÍA dinero en 2023 — y por eso, aun con estos números, cotiza a ~5 veces la utilidad esperada: el mercado duda que el auge dure. Nosotros compramos al #1 del cuello de botella del hardware de IA. HQ en Icheon, Corea del Sur; ~47,600 empleados; CEO Kwak Noh-jung. La compramos a $172.60 con consenso 'Strong Buy' y target promedio ~$245 (+42%).",
+    summary_what: `SK hynix (Nasdaq: SKHY; Corea: 000660) es el **fabricante de memoria #2 del mundo por tamaño — y #1 en la memoria que importa para la inteligencia artificial**. Fundada en 1983 (como Hyundai Electronics), es parte del grupo coreano SK desde 2012. Desde el **10 de julio de 2026** cotiza también en Nasdaq vía ADRs (**10 ADRs = 1 acción coreana**), tras levantar ~$29.6 mil millones en la mayor emisión coreana en EE.UU.
+
+**Qué vende:**
+
+**(1) HBM — la joya.** La 'memoria de alto ancho de banda' se apila en capas y se pega directamente al procesador de IA para alimentarlo de datos a velocidad extrema. Cada acelerador de Nvidia lleva varios paquetes de HBM. SK hynix es el **líder mundial** — fue el primero en producir HBM3, HBM3E y ahora **HBM4 en producción masiva** (con HBM4E ya en muestras). Su producción está esencialmente **vendida por adelantado**: ~10 clientes amarrados con contratos de largo plazo.
+
+**(2) DRAM convencional** — memoria para servidores, PCs y celulares. En el boom de IA, hasta esta memoria 'normal' subió ~30% de precio en un trimestre.
+
+**(3) NAND y SSD** — almacenamiento. Los SSD para centros de datos (eSSD) duplicaron ventas en un trimestre.
+
+**Por qué es un negocio de calidad hoy:** la IA convirtió la memoria — históricamente un commodity brutal — en el **cuello de botella del hardware**: no hay HBM suficiente para todos los centros de datos que se están construyendo, y el que la fabrica mejor pone las condiciones.
+
+**Liderazgo:** CEO **Kwak Noh-jung**. HQ en **Icheon, Corea del Sur**; fábricas en Corea (Icheon, Cheongju) y China (Wuxi, Dalian), con una planta en construcción en Indiana, EE.UU. **~47,600 empleados**.`,
+    summary_why: `SKHY a $172.60 es comprar al proveedor #1 del componente más escaso de la inteligencia artificial, justo cuando sus números están en récord y su valuación sigue asumiendo que el auge se acaba. Razones concretas:
+
+1. **Es el cuello de botella de la IA.** Cada chip de Nvidia necesita HBM pegada al lado, y SK hynix es el líder mundial indiscutido: primero en HBM3, primero en HBM3E, y ya con **HBM4 en producción masiva** mientras los rivales todavía la maduran. Su producción está esencialmente **vendida por adelantado** (~10 clientes con contratos de largo plazo).
+
+2. **Los números del último trimestre no tienen precedente.** Q2 2026 (reportado el 28 de julio): ingresos ₩79.3 billones (~$57 mil millones, **+257%**), utilidad operativa ~$44 mil millones con **margen operativo de 76%** — récord absoluto de la empresa y nivel casi inédito en manufactura. El precio de la DRAM subió ~30% y el del NAND ~50% en UN trimestre.
+
+3. **Caja enorme y retorno en camino.** Terminó el trimestre con **₩88 billones (~$63 mil millones) en efectivo** (+$24 mil millones en 3 meses). Su política 2025-2027 compromete el **50% del flujo libre** a retornos al accionista, y el plan adicional se anuncia en septiembre.
+
+4. **La valuación ya asume que la fiesta se acaba.** A ~23 veces la utilidad pasada pero **~5 veces la esperada**, el mercado está descontando un desplome de márgenes. Si el superciclo dura aunque sea un poco más de lo que se teme, está barata. Consenso **'Strong Buy'** (13 analistas), target promedio **~$245 (+42%)**.
+
+5. **Por fin comprable en dólares.** El ADR de Nasdaq (julio 2026) eliminó la barrera que mantenía a muchos inversionistas fuera del líder de HBM — antes había que comprar en la bolsa de Corea.`,
+    summary_risk: `Riesgos: (1) **El ciclo de memoria — el #1 con mucho**: es el negocio más cíclico de los semiconductores; el margen de 76% es un pico histórico, y esta MISMA empresa tuvo pérdidas operativas en 2023. Si la inversión en centros de datos de IA se pausa, los precios de la memoria caen rápido y las ganancias se desploman con ellos. (2) **Competencia en HBM4**: Samsung y Micron están invirtiendo agresivamente para alcanzarla; si lo logran, el precio premium de la HBM se comprime. (3) **Concentración de clientes**: Nvidia domina la compra mundial de HBM — mucha venta depende de pocas manos. (4) **Geopolítica**: fábricas en Corea Y China (Wuxi, Dalian) en plena era de controles de exportación EE.UU.-China; además el negocio gana en wones y el ADR cotiza en dólares. (5) **Expectativas altísimas**: el día que reportó resultados récord, la acción BAJÓ — el listón está tan alto que 'excelente' puede no bastar. Y el dividendo (~0.1%) es simbólico: no hay colchón de renta si la acción cae.`,
+    research_full: `# SK hynix (SKHY) — Research Completo
+
+## Precio: $172.60 | P/E TTM: ~23x | P/E forward: ~5.3x | Div Yield: ~0.1% | Market Cap: ~$1.22 billones USD (trillion)
+
+---
+
+## ¿Qué es SK hynix?
+
+El **fabricante de memoria #1 de Corea y líder mundial en HBM**, la memoria de alto ancho de banda que alimenta los chips de inteligencia artificial. Fundada en 1983 como Hyundai Electronics; parte del grupo SK desde 2012. CEO **Kwak Noh-jung**. HQ en **Icheon, Corea del Sur**; ~47,600 empleados. Desde el **10 de julio de 2026** cotiza en Nasdaq vía ADR (**SKHY**, 10 ADRs = 1 acción coreana) tras levantar **~$29.6 mil millones** — la mayor salida coreana a los mercados de EE.UU.
+
+## ¿Qué es la HBM y por qué importa?
+
+Un chip de IA (como los de Nvidia) procesa cantidades gigantescas de datos, pero solo puede procesar lo que su memoria le entrega. La **HBM (High Bandwidth Memory)** apila capas de memoria una encima de otra y las pega directamente al procesador — el 'embudo' por el que pasan todos los datos de la IA. **No hay chip de IA de punta sin HBM**, y SK hynix la fabrica mejor que nadie: primero en HBM3, primero en HBM3E, y **HBM4 ya en producción masiva** (rendimientos cerca de los de HBM3E madura) con **HBM4E en muestras** a clientes clave.
+
+## Q2 2026 (reportado 28 jul 2026) — récord absoluto
+
+| Métrica | Valor | vs año pasado |
+|---------|-------|----------------|
+| Ingresos | ₩79.3 billones (~$57 mil millones) | **+257%** |
+| Utilidad operativa | ₩60.5 billones (~$44 mil millones) | **+557%** |
+| Margen operativo | **76%** | récord histórico |
+| Efectivo | ₩88 billones (~$63 mil millones) | +₩33.6 billones en el trimestre |
+
+Drivers: precio promedio de DRAM **+~30%** y de NAND **+~50%** en el trimestre; ventas de SSD empresarial (eSSD) **duplicadas**; ~10 clientes con **contratos de suministro de largo plazo** (visibilidad de demanda de años, no meses).
+
+## Competencia
+
+| Rival | Posición en HBM |
+|-------|-----------------|
+| **Samsung** | El gigante que llegó tarde a HBM; invirtiendo masivamente para recuperar terreno en HBM4 |
+| **Micron** | Tercero en la carrera; capacidad creciendo pero por detrás en generaciones |
+
+La ventaja de SK hynix es de **ejecución y tiempo**: llegó primero a cada generación desde HBM3. La pregunta de la tesis no es si los rivales alcanzan capacidad — es si lo hacen antes de que el superciclo pague la posición.
+
+## Valuación
+
+- **P/E pasado ~23x, forward ~5.3x**: la brecha refleja que el mercado NO cree que estos márgenes duren. Ese escepticismo es el descuento que compramos.
+- Consenso **'Strong Buy'** (13 analistas), target promedio **$245 (+42%)**.
+- Referencia del ciclo: en 2023, con el mercado de memoria deprimido, la empresa tuvo **pérdidas operativas**. El rango completo del negocio va de 'pierde dinero' a 'margen de 76%' — hoy estamos en el extremo alto.
+
+## Dividendo y retornos
+
+- Dividendo fijo actual: **₩375 por trimestre por acción coreana** (~0.1% anual en el ADR) — simbólico.
+- Política 2025-2027: **50% del flujo de caja libre** como bolsa de retornos adicionales; para 2026 esa bolsa se estima en **₩79.55 billones (~$55 mil millones)**. El plan concreto se anuncia en **septiembre de 2026** — el potencial de retorno real está ahí, no en el dividendo fijo.
+
+## Riesgos (resumen)
+
+1. **Ciclo de memoria** — pico histórico de márgenes; en 2023 hubo pérdidas.
+2. **Samsung/Micron en HBM4** — compresión del premium si alcanzan.
+3. **Concentración en Nvidia** como comprador dominante de HBM.
+4. **Geopolítica** — fabs en China, controles de exportación, won coreano.
+5. **Expectativas** — récord absoluto y la acción bajó ese día; listón altísimo.
+
+## Fuentes
+
+- Resultados Q2 2026: news.skhynix.com (28 jul 2026)
+- Listado Nasdaq: SEC Form 424B4 / F-1 (jul 2026), CNBC (24 jun 2026)
+- Dividendo/retornos: anuncio Q2 + política 2025-2027 (SBS/Aju Press, ago 2026)
+- Precio y consenso: Yahoo Finance (17 ago 2026, open $172.60)`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 245.2,
+    analyst_upside: 42.1,
+    status: "active",
+    first_researched_at: "2026-08-17T00:00:00Z",
+    last_updated_at: "2026-08-17T00:00:00Z",
+    next_review_at: "2027-02-17T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -14998,6 +15107,18 @@ export const transactions: Transaction[] = [
       "📊 *STOCK PICK #137* — Jul 23, 2026\n\n🏢 *Centrus Energy* (LEU) — $170.00\n\n⚛️ *Lo que hacen*: Centrus es la *única* empresa de capital estadounidense que enriquece uranio —el combustible de las plantas nucleares— en suelo de EE.UU. Ya la teníamos desde el 8 de junio (a $167.07) y hoy la *reforzamos* a $170.00 porque la tesis se fortaleció: el 1 de julio el gobierno le *firmó en firme* el contrato de ~$900 millones (antes solo estaba adjudicado), y su producción del combustible especial va adelantada.\n\n🌍 *Presencia*: HQ en Maryland, planta en Piketon, Ohio —la única del país autorizada para producir HALEU, el combustible de los reactores nucleares de nueva generación—. CEO *Amir Vexler*. Tiene una cartera de pedidos de ~$3,900 millones hasta 2040 y subió su meta de ingresos del año a $450-500 millones. Reporta el 11 de agosto.\n\n💵 *Tu nuevo ingreso*: Esta empresa *no paga dividendo* — reinvierte todo en construir más capacidad. Ganas si la acción sube con la demanda nuclear, no por un pago periódico.\n\n⚠️ *El riesgo*: El #1 — *está cara* (~62 veces la utilidad) y es *extremadamente volátil*: tocó $464 en octubre de 2025 y hoy vale ~63% menos. Otros: (2) depende mucho del dinero y los contratos del gobierno de EE.UU., (3) enriquecer uranio es técnicamente complejísimo y muy regulado, (4) la demanda de los reactores nuevos todavía está arrancando, (5) sigue emitiendo acciones para financiar su expansión, lo que diluye a los dueños.\n\n🔄 Posición #137 (recompra)\n🔗 https://vectorialdata.com/stocks/LEU\n✅ Certificado por blockchain → vectorialdata.com/verify/LEU\n\n💡 Dato que ancla la tesis: EE.UU. tiene prohibido comprarle uranio enriquecido a Rusia, y todos los permisos temporales vencen el 1 de enero de 2028 — así que las plantas nucleares del país están obligadas a buscar proveedores como Centrus. Reforzamos al único productor estadounidense justo después de que el gobierno le firmara en firme su contrato de $900 millones, y 63% abajo de su máximo.",
     attestation_uid: "0xfe3ec17349334707c91eece93c4b4d8c2c9d705e16b6a21428fe3aee9a38678a",
   },
+  {
+    id: 138,
+    stock_id: 130,
+    ticker: "SKHY",
+    type: "new" as const,
+    cycle_number: 28,
+    price: 172.6,
+    open_price: 172.6,
+    date: "2026-08-17",
+    day_of_week: "monday",
+    wa_message: `📊 *STOCK PICK #138* — Aug 17, 2026\n\n🏢 *SK hynix* (SKHY) — $172.60\n\n🧠 *Lo que hacen*: SK hynix fabrica la memoria de las computadoras — y sobre todo la *HBM*, la memoria especial que va pegada a los chips de inteligencia artificial de Nvidia. Sin ella, el chip de IA más potente del mundo se queda esperando datos: es como un motor de Fórmula 1 sin gasolina. SK hynix es el *#1 mundial* en esa memoria, y su nueva generación (HBM4) ya está en producción masiva y esencialmente *vendida por adelantado* a ~10 clientes con contratos de largo plazo. Desde julio cotiza en Nasdaq como ADR (10 ADRs = 1 acción coreana), así que por fin se puede comprar en dólares.\n\n🌍 *Presencia*: HQ en Icheon, Corea del Sur; ~47,600 empleados; CEO *Kwak Noh-jung*. Último trimestre (reportado el 28 de julio): facturó el equivalente a *~$57 mil millones de dólares* (+257% vs el año pasado) con margen operativo de *76%* — el más alto de su historia. Tiene ~$63 mil millones en efectivo.\n\n💵 *Tu nuevo ingreso*: El dividendo hoy es *simbólico* (~0.1% anual) — la tesis es crecimiento, no renta. Pero ojo: la empresa comprometió el 50% de su flujo libre a retornos para accionistas y anuncia su plan adicional en septiembre; con la caja que trae, ese plan puede ser grande.\n\n⚠️ *El riesgo*: El #1 — *la memoria es EL negocio más cíclico de los chips*: hoy gana 76 de cada 100 dólares que factura (récord), pero en 2023 esta MISMA empresa perdía dinero; si la inversión en IA se pausa, cae fuerte. Otros: (2) Samsung y Micron pelean por alcanzarla en HBM4 — si lo logran, los precios premium se comprimen, (3) su cliente dominante es Nvidia — mucha venta concentrada en pocas manos, (4) fábricas en Corea y China en medio de la tensión EE.UU.-China, (5) las expectativas están tan altas que el día que reportó números RÉCORD… la acción bajó.\n\n🆕 Posición #138\n🔗 https://vectorialdata.com/stocks/SKHY\n✅ Certificado por blockchain → vectorialdata.com/verify/SKHY\n\n💡 Dato que ancla la tesis: De cada $100 que facturó el trimestre pasado, $76 fueron ganancia operativa — un margen que casi ningún fabricante del planeta ha logrado jamás. Y aun así cotiza a ~5 veces la utilidad esperada, porque el mercado duda que el auge dure: ese descuento por miedo al ciclo es exactamente lo que compramos. Pagas hoy $172.60 por el proveedor #1 del componente más escaso de la IA (los analistas ven ~$245, +42%).`,
+  },
 ];
 
 type Cycle = {
@@ -15231,7 +15352,7 @@ export const cycles: Cycle[] = [
     cycle_number: 28,
     type: "new" as const,
     target_count: 5,
-    current_count: 2,
+    current_count: 3,
     status: "active" as const,
   },
 ];
