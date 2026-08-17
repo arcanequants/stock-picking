@@ -176,12 +176,6 @@ export default async function RootLayout({
                         Quant Lab
                       </Link>
                     )}
-                    <Link
-                      href="/signals"
-                      className="text-text-muted hover:text-foreground transition-colors"
-                    >
-                      Signals
-                    </Link>
                     <a
                       href="https://terminal.vectorialdata.com"
                       target="_blank"
@@ -260,8 +254,6 @@ export default async function RootLayout({
                   </div>
                   <div className="flex items-center justify-center gap-3 mb-3 text-text-muted flex-wrap text-xs">
                     <Link href="/acciones" className="hover:text-foreground transition-colors">{tFooter("categories")}</Link>
-                    <span className="text-border">·</span>
-                    <Link href="/signals" className="hover:text-foreground transition-colors">Signals</Link>
                     <span className="text-border">·</span>
                     <a href="https://terminal.vectorialdata.com" target="_blank" rel="noopener" className="hover:text-foreground transition-colors">Terminal</a>
                     <span className="text-border">·</span>

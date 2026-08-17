@@ -91,9 +91,6 @@ export default function MobileNav({ userEmail, isSubscribed }: MobileNavProps) {
               Quant Lab
             </Link>
           )}
-          <Link href="/signals" onClick={() => setOpen(false)} className="block text-text-secondary hover:text-foreground py-2">
-            Signals
-          </Link>
           <a
             href="https://terminal.vectorialdata.com"
             target="_blank"

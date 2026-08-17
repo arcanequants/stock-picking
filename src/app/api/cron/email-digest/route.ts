@@ -4,7 +4,6 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 import { getEventsForDigest } from "@/lib/notifications";
 import { sendDigestApprovalEmail } from "@/lib/resend";
 import type { DigestSummary, WeeklyDividend } from "@/lib/resend";
-import { getWeeklySignalsSummary } from "@/lib/signals";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -104,10 +103,9 @@ export async function GET(request: Request) {
       return NextResponse.json({ message: "Digest already sent this week", week_key: weekKey });
     }
 
-    // Get portfolio performance + signals weekly snapshot + dividends this week
-    const [summary, signalsWeekly, weeklyDivs] = await Promise.all([
+    // Get portfolio performance + dividends this week
+    const [summary, weeklyDivs] = await Promise.all([
       getWeeklyPerformance(),
-      getWeeklySignalsSummary().catch(() => []),
       getWeeklyDividends().catch(() => []),
     ]);
 
@@ -151,7 +149,6 @@ export async function GET(request: Request) {
       recipientCount,
       premiumCount,
       summary,
-      signalsWeekly,
       weeklyDivs
     );
 
@@ -164,7 +161,6 @@ export async function GET(request: Request) {
       premium: premiumCount,
       free: recipientCount - premiumCount,
       portfolio: summary,
-      signals_count: signalsWeekly.length,
       dividends_count: weeklyDivs.length,
     });
   } catch (error) {

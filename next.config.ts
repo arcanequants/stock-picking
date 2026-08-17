@@ -16,6 +16,20 @@ const nextConfig: NextConfig = {
        */
       { source: "/es/privacy", destination: "/privacy", permanent: true },
       { source: "/es/terms", destination: "/terms", permanent: true },
+      /**
+       * Vectorial Signals retired 2026-08-17 (founder decision). The pages,
+       * APIs, crons and email section are gone; permanent redirects so the
+       * URLs Google/LLMs indexed don't rot into 404s. Covers the bare and
+       * locale-prefixed page routes plus the public JSON/OpenAPI endpoints.
+       */
+      { source: "/signals", destination: "/", permanent: true },
+      { source: "/signals/:path*", destination: "/", permanent: true },
+      { source: "/:locale(en|pt|hi)/signals", destination: "/", permanent: true },
+      { source: "/:locale(en|pt|hi)/signals/:path*", destination: "/", permanent: true },
+      { source: "/legal/signals-terms", destination: "/terms", permanent: true },
+      { source: "/:locale(en|pt|hi)/legal/signals-terms", destination: "/terms", permanent: true },
+      { source: "/api/signals", destination: "/", permanent: true },
+      { source: "/api/signals/:path*", destination: "/", permanent: true },
     ];
   },
 };

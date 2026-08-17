@@ -65,8 +65,7 @@ const UNLOCALIZED = [
  * whole crawl depends on.
  *
  * Deliberately anchored to a single segment so the localized machine-readable
- * briefs (/signals/[id]/brief.md, /economia/[slug]/brief.md) keep their
- * per-language URLs.
+ * briefs (/economia/[slug]/brief.md) keep their per-language URLs.
  */
 const ROOT_FILE = /^\/[^/]+\.[a-z0-9]+$/i;
 

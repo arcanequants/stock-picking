@@ -526,11 +526,9 @@
     "logout": "Log out",
     "accountInfoTitle": "Account",
     "email": "Email",
-    "signalsDesc": "Alt-data signals (satellites, AIS, EIA, TROPOMI). Use the Pro toggle for a dense view.",
     "supportTitle": "Support",
     "supportDesc": "View your tickets and replies from the team.",
-    "supportCta": "My tickets",
-    "signalsCta": "View signals"
+    "supportCta": "My tickets"
   },
   "Notifications": {
     "title": "Notifications",
@@ -1034,35 +1032,6 @@
       "Strong Buy": "Strong Buy",
       "N/A (ETF)": "N/A (ETF)"
     }
-  },
-  "Signals": {
-    "tagline": "Alt-data signals, translated for retail.",
-    "heroDesc": "Hedge-fund-tier alternative-data signals from satellites, AIS, EIA, USDA, TROPOMI — cleaned, baselined, and explained in plain language.",
-    "liveBadge": "Live · seen from above",
-    "mapsNote": "Maps refresh on their natural cadence (AIS: seconds · NO₂: daily).",
-    "emptyLive": "No live signals yet.",
-    "upcomingTitle": "Upcoming signals",
-    "upcomingDesc": "Calibrating — first observation pending data-source onboarding.",
-    "expand": "expand →",
-    "notFound": "Signal not found",
-    "noObservation": "no observation yet",
-    "devsTitle": "For developers and AI agents",
-    "domainMaritime": "Maritime",
-    "domainEnergy": "Energy & Commodities",
-    "domainGeospatial": "Geospatial",
-    "domainAtmospheric": "Atmospheric",
-    "domainAgricultural": "Agricultural",
-    "domainCross": "Cross-domain",
-    "statusLive": "live",
-    "statusCalibrating": "calibrating",
-    "metaTitle": "Vectorial Signals — alt-data signals translated to plain language",
-    "metaDesc": "Hedge-fund-tier alternative-data signals from satellites, AIS, EIA, USDA, TROPOMI. Free preview per signal; full history + alerts on the $1/mo subscription.",
-    "total": "total",
-    "mapsNote2": "Open a card below for methodology, backtest, and provenance.",
-    "cadenceWeekly": "Source publishes weekly, ~5-day lag.",
-    "cadenceDaily": "Source publishes T+1 to T+2 business days.",
-    "cadenceMonthly": "Source publishes monthly.",
-    "allSignals": "All signals"
   },
   "QuantLabCopy": {
     "title": "How do I copy it?",
