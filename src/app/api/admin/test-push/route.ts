@@ -84,6 +84,9 @@ export async function GET(request: Request) {
 
   const msg: PushMessage = {
     title: url.searchParams.get("title") ?? "Prueba de Vectorial Data",
+    ...(url.searchParams.get("subtitle")
+      ? { subtitle: url.searchParams.get("subtitle")! }
+      : {}),
     body:
       url.searchParams.get("body") ??
       "Si ves esto, las notificaciones están funcionando.",

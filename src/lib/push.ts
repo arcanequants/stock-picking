@@ -21,6 +21,9 @@ export type PushDevice = { token: string; platform: string };
 
 export type PushMessage = {
   title: string;
+  /** iOS renders this as the bold second line; Android (no native subtitle)
+   *  gets it prefixed to the body. */
+  subtitle?: string;
   body?: string;
   sound?: string;
   threadId?: string;
@@ -155,7 +158,13 @@ async function sendFCM(deviceToken: string, msg: PushMessage): Promise<PushResul
       body: JSON.stringify({
         message: {
           token: deviceToken,
-          notification: { title: msg.title, body: msg.body },
+          notification: {
+            title: msg.title,
+            // Android has no subtitle slot — fold it into the body.
+            body: msg.subtitle
+              ? [msg.subtitle, msg.body].filter(Boolean).join(" — ")
+              : msg.body,
+          },
           data,
           android: {
             priority: "HIGH",
@@ -208,7 +217,11 @@ export async function sendPushMany(
       try {
         const apnsResults = await sendAPNsMany(iosTokens, {
           aps: {
-            alert: { title: msg.title, body: msg.body },
+            alert: {
+              title: msg.title,
+              ...(msg.subtitle ? { subtitle: msg.subtitle } : {}),
+              body: msg.body,
+            },
             sound: msg.sound ?? "default",
             ...(msg.threadId ? { "thread-id": msg.threadId } : {}),
           },

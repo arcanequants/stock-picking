@@ -2,8 +2,20 @@ import crypto from "crypto";
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { stocks, transactions } from "@/data/stocks";
+import momOverrides from "@/data/mom-overrides.json";
 import { sendPickEmail } from "@/lib/resend";
 import { configuredPlatforms, deadTokens, sendPushMany } from "@/lib/push";
+
+/** Push body: the pick's plain-Spanish one-liner (mom-shorts) — the real
+ *  thesis hook, written per pick. Falls back to a headline-safe slice of
+ *  summary_short. Lock-screen budget: ~150 chars before iOS truncates. */
+function pickPushBody(ticker: string, summaryShort: string): string {
+  const oneLiner = (
+    momOverrides as Record<string, { one_liner?: string }>
+  )[ticker]?.one_liner;
+  const text = oneLiner ?? summaryShort;
+  return text.length > 150 ? text.slice(0, 147).trimEnd() + "…" : text;
+}
 import { generatePickApprovalToken } from "../route";
 
 export const dynamic = "force-dynamic";
@@ -159,8 +171,11 @@ export async function GET(request: Request) {
             ? Math.round(((stock.price - tx.price) / tx.price) * 10000) / 100
             : 0;
           const results = await sendPushMany(devices, {
-            title: "Nuevo pick",
-            body: `$${stock.ticker}`,
+            // "Propuesta A": ticker up front, company+sector as subtitle,
+            // the pick's own one-liner as the hook.
+            title: `🎯 Nueva pick: $${stock.ticker}`,
+            subtitle: `${stock.name} · ${stock.sector}`,
+            body: pickPushBody(stock.ticker, stock.summary_short),
             threadId: "new-pick",
             data: {
               kind: "new_pick",
