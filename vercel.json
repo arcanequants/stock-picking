@@ -84,6 +84,10 @@
     {
       "path": "/api/cron/news-digest",
       "schedule": "0 14 * * *"
+    },
+    {
+      "path": "/api/cron/health-sentinel",
+      "schedule": "20 */6 * * *"
     }
   ]
 }
