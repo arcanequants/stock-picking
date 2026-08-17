@@ -6,6 +6,19 @@ import {
   type BriefingPayload,
 } from "@/lib/briefing-email";
 
+/**
+ * Manual backfill only — no longer on a schedule.
+ *
+ * This ran at 12:30 UTC while the routine that writes briefings/YYYY-MM-DD.json
+ * runs at 14:00 UTC, so it always looked for the file ~100 minutes before it
+ * existed and 404'd every single day since it was added (2026-05-08). The
+ * routine now emails the briefing itself through the `publish_briefing` MCP
+ * tool (see src/lib/briefing-ingest.ts), so the schedule was dropped from
+ * vercel.json on 2026-07-29.
+ *
+ * The route stays because it's the only way to re-send one of the 48 legacy
+ * briefings archived in briefings/: GET with ?date=YYYY-MM-DD.
+ */
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 

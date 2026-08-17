@@ -50,10 +50,6 @@
       "schedule": "0 13 * * *"
     },
     {
-      "path": "/api/cron/daily-briefing",
-      "schedule": "30 12 * * *"
-    },
-    {
       "path": "/api/cron/signals-ingest",
       "schedule": "0 */6 * * *"
     },

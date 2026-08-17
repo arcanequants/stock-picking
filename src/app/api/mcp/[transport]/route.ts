@@ -2,6 +2,7 @@ import { createMcpHandler } from "mcp-handler";
 import { z } from "zod";
 import { ingestEconomicEvent } from "@/lib/economic-events-ingest";
 import { listRecentNews, publishNewsItem } from "@/lib/news-ingest";
+import { publishBriefing } from "@/lib/briefing-ingest";
 
 export const maxDuration = 60;
 
@@ -122,6 +123,68 @@ const handler = createMcpHandler(
             {
               type: "text",
               text: `Published ${news.id} (topic ${news.topic ?? "legacy"}) · enriched=${result.enriched} · push sent=${result.delivery.sent} · translated=${result.translated.join(",")}`,
+            },
+          ],
+        };
+      }
+    );
+
+    server.tool(
+      "publish_briefing",
+      "Publish the daily marketing briefing: emails it to the founder and archives it. Call this ONCE per run, at the end, with every draft you wrote — there is no other delivery path, so a briefing you don't publish here is lost. Do NOT write files to the repo and do NOT curl GitHub.",
+      {
+        date: z.string().describe("CDMX date, YYYY-MM-DD"),
+        summary: z.string().describe("The day's theme in one sentence"),
+        causalChain: z
+          .string()
+          .optional()
+          .describe("The day's causal chain, 1-2 sentences"),
+        table: z
+          .array(
+            z.object({
+              n: z.number(),
+              region: z.string(),
+              angle: z.string().describe("One-line headline for the angle"),
+              worker: z.string().optional(),
+            }),
+          )
+          .optional()
+          .describe("Consolidated table, one row per draft"),
+        drafts: z
+          .array(
+            z.object({
+              n: z.number().describe("Sequential across regions, starting at 1"),
+              region: z
+                .string()
+                .describe("GLOBAL | MEXICO | ASIA | EUROPE | OCEANIA | CRYPTO | WOW CIENCIA"),
+              text: z.string().describe("The full X draft, 280-500 chars"),
+            }),
+          )
+          .min(1)
+          .describe("Every draft of the run"),
+      },
+      async (args) => {
+        const result = await publishBriefing({
+          date: args.date,
+          summary: args.summary,
+          causalChain: args.causalChain,
+          table: args.table,
+          drafts: args.drafts,
+        });
+        if (!result.ok) {
+          return {
+            content: [{ type: "text", text: `Error: ${result.error}` }],
+            isError: true,
+          };
+        }
+        const archive = result.archived
+          ? "archived"
+          : `NOT archived (${result.archiveError ?? "unknown"}) — email did go out, report this`;
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Briefing ${result.date} emailed (${result.drafts} drafts, id ${result.emailId ?? "?"}) · ${archive}`,
             },
           ],
         };
