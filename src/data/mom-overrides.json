@@ -405,11 +405,9 @@
     "risk_short": "Depende del presupuesto de EE.UU. y del F-35 (~30% de ventas): recortes o retrasos pegan directo. Y los analistas están tibios (Hold, target ~$633): parte del rearme ya está en el precio tras subir +37% desde el mínimo del año."
   },
   "MCD": {
-    "one_liner": "McDonald's, la cadena de comida rápida más grande del mundo, gana dinero con franquicias y lleva 50 años seguidos aumentando lo que paga a sus accionistas.",
-    "why_short": "McDonald's está mejorando su presencia digital con un programa de lealtad que ya tiene millones de usuarios, lo que ha aumentado sus ventas en línea. Además, está expandiendo su menú de bebidas para competir con Starbucks.",
-    "risk_short": "El mayor riesgo es que las personas con menos ingresos están gastando menos en McDonald's, y si esto afecta a más gente, las ventas podrían bajar. También enfrenta costos más altos y competencia feroz en comida rápida.",
-    "generated_at": "2026-05-25T00:14:49.508Z",
-    "model": "gpt-4o"
+    "one_liner": "McDonald's no vende hamburguesas: cobra rentas y regalías al 95% de sus 45,000+ restaurantes, con margen de ~46%. La reforzamos ~13% más barata que en abril, cerca de su mínimo del año.",
+    "why_short": "Cayó por miedo al consumidor: tráfico -4.6% en EE.UU. y un menú de valor mal ejecutado. Pero la utilidad BATIÓ expectativas — el modelo de regalías aguanta — y lleva ~50 años subiendo el dividendo (2.8% anual). Analistas ven ~$316 (+18%).",
+    "risk_short": "Si la debilidad del consumidor de bajos ingresos alcanza a la clase media, los volúmenes sufren más. Arreglar el menú de valor toma trimestres, la guerra de precios aprieta a franquiciatarios y los GLP-1 son viento en contra lento pero real."
   },
   "MCO": {
     "one_liner": "Moody's califica la deuda de países y empresas en todo el mundo, y acaba de reportar ganancias mejores de lo esperado, además de aumentar lo que espera ganar este año.",
@@ -814,5 +812,15 @@
     "one_liner": "Mastercard cobra un peaje diminuto cada vez que alguien paga con tarjeta — miles de millones de veces al día en más de 210 países — sin prestar dinero. La compramos con descuento por el miedo a los stablecoins.",
     "why_short": "El negocio creció +14% el último trimestre con margen operativo de 61%, pero la acción está casi plana en el año por el miedo a los dólares digitales. Mastercard respondió comprándose la 'amenaza' (BVNK, ~$1,800 millones). Analistas ven ~$667 (+18%).",
     "risk_short": "Si los pagos con stablecoins escalan fuera de las redes de tarjetas, su peaje crece menos. Además: reguladores queriendo topar comisiones, litigios de comercios, y una valuación premium que no perdona decepciones."
+  },
+  "KXIAY": {
+    "one_liner": "Kioxia inventó la memoria flash y es el #3 mundial del NAND — los chips donde se guarda todo. Su producción de 2026 está completamente vendida y la compramos a mitad de precio de su máximo.",
+    "why_short": "El boom de IA volteó su negocio: trimestre récord (~$12,000 millones, margen operativo 75%), más del 60% de ventas ya es SSD para centros de datos, caja neta y recompra de ~$5,400 millones. Cayó ~50% del máximo por una guía que decepcionó — ese descuento es la entrada.",
+    "risk_short": "El NAND es la memoria más cíclica de todas: en 2023 el sector entero perdía dinero y el 75% de margen de hoy es pico, no norma. Compite contra Samsung, SK hynix y Micron — todos más grandes — y el ADR es OTC: menos liquidez."
+  },
+  "MARA": {
+    "one_liner": "MARA es el minero de Bitcoin más grande en bolsa, con 35,577 BTC en el balance (~$2,100 millones). Es la posición más especulativa del portafolio: pierde dinero y todo depende de Bitcoin y de su pivote a IA.",
+    "why_short": "Aritmética de valor extremo: toda la empresa vale ~$3,500 millones y solo su Bitcoin vale ~$2,100 — pagas ~$1,400 millones por el minero #1 y sus sitios con energía a gran escala, el activo más escaso del boom de IA. Si Bitcoin rebota o el pivote aterriza, el margen es grande.",
+    "risk_short": "Pierde dinero (último trimestre: -27% de ingresos y pérdida de $1.60/acción), vendió medio tesoro para pagar deuda, y Morgan Stanley ve $6 — menos de lo que cotiza. Todo depende de Bitcoin (~$58,500). Posición chica, ojos abiertos."
   }
 }

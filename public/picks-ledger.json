@@ -1118,5 +1118,29 @@
     "date": "2026-08-18",
     "previous_hash": "ab3c4e05958c2f13d73e226809a9648fda5c0075d3e79598b720032a8a37e0df",
     "hash": "21661b7e03b7fd708a50fa61cfb56119432575363b781dc23a6fd0de2c42df5f"
+  },
+  {
+    "pick_number": 141,
+    "ticker": "KXIAY",
+    "price": 35.5,
+    "date": "2026-08-18",
+    "previous_hash": "21661b7e03b7fd708a50fa61cfb56119432575363b781dc23a6fd0de2c42df5f",
+    "hash": "50ce4c0c1a92756f80195f3670b0c95cb7e1fc7237ad7b8906449c0d5fd7975f"
+  },
+  {
+    "pick_number": 142,
+    "ticker": "MARA",
+    "price": 9.4,
+    "date": "2026-08-18",
+    "previous_hash": "50ce4c0c1a92756f80195f3670b0c95cb7e1fc7237ad7b8906449c0d5fd7975f",
+    "hash": "b477a8548e7ef7bdcb73d8076f3e3627b73847dda3b13da0f416123c276a2650"
+  },
+  {
+    "pick_number": 143,
+    "ticker": "MCD",
+    "price": 267.47,
+    "date": "2026-08-18",
+    "previous_hash": "b477a8548e7ef7bdcb73d8076f3e3627b73847dda3b13da0f416123c276a2650",
+    "hash": "9ec3262388d5da7249c594ded2e21c346d36bcb4ec4cc9e13379704d816b437e"
   }
 ]

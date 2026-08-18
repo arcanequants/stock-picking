@@ -5138,23 +5138,35 @@ Pentair es la apuesta más pura y accesible a la megatendencia del agua. Con 47 
     country: "United States",
     region: "North America",
     currency: "USD",
-    price: 306.26,
-    pe_ratio: 25.48,
-    pe_forward: 23.19,
-    dividend_yield: 2.43,
-    market_cap_b: 215.45,
-    eps: 11.95,
+    price: 267.47,
+    pe_ratio: 21.8,
+    pe_forward: 19.2,
+    dividend_yield: 2.8,
+    market_cap_b: 189.9,
+    eps: 12.32,
     summary_short:
-      "La cadena de restaurantes más grande del mundo con 45,000+ ubicaciones en 100+ países. Modelo de franquicias (95% franquiciado) que genera flujo de caja predecible a través de rentas y regalías. 50 años consecutivos de aumento de dividendo (Dividend Aristocrat).",
+      "Reforzamos McDonald's a $267.47 — la teníamos desde el 15 de abril a $306.26 y hoy la compramos ~13% más barata, cerca de su mínimo de 52 semanas. La cadena de restaurantes más grande del mundo (45,000+ ubicaciones en 100+ países) no vende hamburguesas: cobra rentas y regalías — 95% de los restaurantes son de franquiciatarios que le pagan renta por el local y ~4% de regalía sobre cada venta, de ahí su margen operativo de ~46%. ¿Por qué cayó? El consumidor de bajos ingresos en EE.UU. está apretado (tráfico -4.6% en el semestre) y el relanzamiento de su menú de valor salió mal ejecutado — dos tercios del bache fue error propio, según la propia empresa. Pero el Q2 (reportado a inicios de agosto) batió en utilidad ($3.38 vs $3.34) y el modelo de regalías aguanta ciclos: ~50 años consecutivos subiendo el dividendo (~2.8% anual hoy). Consenso Buy con target ~$316 (+18%). Promediamos un loser con tesis intacta: el casero global del fast food, en oferta.",
     summary_what:
       "McDonald's no es realmente un negocio de hamburguesas — es un negocio de bienes raíces y franquicias. La empresa posee o arrienda la mayoría de los terrenos e inmuebles donde operan sus 45,356 restaurantes, y los sub-arrienda a franquiciatarios. Solo ~5% de los restaurantes son operados directamente por McDonald's. Gana dinero de tres formas: (1) rentas fijas y variables sobre los inmuebles, (2) regalías del ~4% sobre ventas de cada franquiciatario, y (3) ventas directas de los pocos restaurantes propios. Este modelo de 'cobrar renta' es la razón de sus márgenes operativos de ~46% — extraordinarios para la industria de alimentos. Su ventaja competitiva es su escala global incomparable, su poder de negociación con proveedores, y el reconocimiento de marca #1 en fast food.",
     summary_why:
-      "McDonald's está en un punto de inflexión digital. Su programa de lealtad MyMcDonald's Rewards ya tiene ~210 millones de usuarios activos (19% más que el año anterior), generando $40B en ventas digitales a nivel global. Los ingresos 2025 crecieron 4% a $26.9B con margen operativo expandido a 46.1%. La empresa abrió 2,276 restaurantes nuevos en 2025 y apunta a 50,000 totales para 2027. Además, está lanzando bebidas energéticas y refrescos artesanales para competir con Starbucks en el segmento de bebidas de alto margen. Free cash flow creció 8% a $7.2B, y la empresa devolvió $7.1B a accionistas entre dividendos y recompras.",
+      "La recompra en 5 datos: (1) ~13% más barata que nuestra compra de abril y cerca de su mínimo de 52 semanas ($260.96) — el pesimismo del consumidor ya está en el precio; (2) el Q2 2026 batió en utilidad ($3.38 vs $3.34 esperado) — el problema es de tráfico y ejecución del menú de valor, no de rentabilidad del modelo; (3) el modelo es de rentas y regalías con ~46% de margen operativo: McDonald's casi no siente el costo de la carne o el pan; (4) ~50 años consecutivos subiendo el dividendo (~2.8% anual hoy) — uno de los historiales más largos del mercado; (5) a ~19x utilidad esperada, cotiza por debajo de su promedio histórico, con consenso Buy (31 analistas) y target ~$316 (+18%). El programa de lealtad (~210M de usuarios) y las nuevas bebidas siguen siendo las palancas de mediano plazo.",
     summary_risk:
-      "El riesgo principal es la presión sobre el consumidor de bajos ingresos: el CEO advirtió de una 'economía de dos niveles' donde el tráfico de clientes de menores ingresos ha caído ~10%, y los aranceles están elevando costos de insumos. Si la debilidad del consumidor se extiende a la clase media, los volúmenes podrían caer significativamente. Riesgos adicionales: guerra de precios intensificándose en fast food, inflación salarial presionando márgenes de franquiciatarios, exposición a ~100 países con riesgos geopolíticos variados, y equity negativo por las recompras masivas de acciones que limita flexibilidad financiera en caso de crisis.",
+      "Riesgos: (1) el consumidor de bajos ingresos — el #1: el tráfico en EE.UU. cayó 4.6% en el primer semestre de 2026 y la 'economía de dos niveles' que advirtió el CEO se está cumpliendo; si la debilidad alcanza a la clase media, los volúmenes sufren más; (2) la reparación del menú de valor toma tiempo — dos tercios del bache del Q2 fue mala ejecución propia, y recuperar la percepción de 'barato' cuesta trimestres; (3) guerra de precios del fast food comprimiendo a los franquiciatarios, con inflación salarial encima; (4) los medicamentos GLP-1 para bajar de peso son un viento en contra estructural y lento para toda la comida rápida; (5) equity negativo por recompras masivas — limita flexibilidad en una crisis; y mientras el tráfico no regrese, el crecimiento es lento.",
     research_full: `# McDonald's Corporation (MCD) — Research Completo
 
-## Precio: $306.26 | P/E: 25.5 | P/E Forward: 23.2 | Div Yield: 2.43% | Market Cap: $215B
+## Precio: $267.47 | P/E: 21.8 | P/E Forward: 19.2 | Div Yield: 2.8% | Market Cap: $190B
+
+---
+
+## 🔄 Actualización — Recompra 18 ago 2026 (Pick #143)
+
+La teníamos desde el 15 de abril a $306.26; hoy la reforzamos a $267.47 (~13% más barata), cerca de su mínimo de 52 semanas ($260.96). Lo que cambió:
+
+- **Q2 2026 (inicios de agosto)**: utilidad $3.38 (batió los $3.34 esperados); ingresos $7.1B (leve miss). Comparables globales +1.3%, EE.UU. solo +0.8%.
+- **El problema es tráfico, no rentabilidad**: visitas en EE.UU. -4.6% en el semestre; la propia empresa reconoció que ~2/3 del bache fue la mala ejecución del relanzamiento del menú de valor.
+- **El modelo aguanta**: rentas + regalías con ~46% de margen operativo; ~50 años subiendo el dividendo (hoy ~2.8%).
+- Consenso: **Buy** (31 analistas), target promedio ~$316 (+18%).
+- La tesis del rebuy: promediar al casero global del fast food en pesimismo de consumidor, cobrando el dividendo mientras el tráfico se repara.
 
 ---
 
@@ -5252,11 +5264,11 @@ McDonald's también posee o arrienda la mayoría de los terrenos donde operan lo
 *Research fecha: 15 Abr 2026 | Próxima revisión: Oct 2026*
 *Esto no es asesoría financiera.*`,
     analyst_consensus: "Buy",
-    analyst_target: 342.0,
-    analyst_upside: 11.7,
+    analyst_target: 316.1,
+    analyst_upside: 18.2,
     status: "active",
     first_researched_at: "2026-04-15T00:00:00Z",
-    last_updated_at: "2026-04-15T00:00:00Z",
+    last_updated_at: "2026-08-18T00:00:00Z",
     next_review_at: "2026-10-15T00:00:00Z",
   },
   {
@@ -13397,6 +13409,223 @@ Las acciones de las redes (Visa, Mastercard, Amex) cayeron fuerte desde máximos
     last_updated_at: "2026-08-18T00:00:00Z",
     next_review_at: "2027-02-18T00:00:00Z",
   },
+  {
+    id: 132,
+    ticker: "KXIAY",
+    name: "Kioxia Holdings Corporation",
+    sector: "Technology",
+    industry: "Tecnología — Semiconductores (Memoria NAND)",
+    country: "Japan",
+    region: "Asia",
+    currency: "USD",
+    price: 35.5,
+    pe_ratio: 53.5,
+    pe_forward: null,
+    dividend_yield: null,
+    market_cap_b: 184.4,
+    eps: 0.63,
+    summary_short:
+      "Kioxia es la empresa que inventó la memoria flash (como parte de Toshiba, en los años 80) y hoy el #3 mundial del NAND — los chips donde se guarda todo: las fotos de tu teléfono, los archivos de tu laptop y, cada vez más, los datos de los centros de IA. El superciclo de memoria la alcanzó de lleno: en su último trimestre (abril-junio, reportado a fines de julio) facturó un récord de ¥1.77 billones de yenes (~$12,000 millones) con margen operativo de ~75% — casi inédito en manufactura —, más del 60% de sus ventas ya viene de SSD para centros de datos, su producción de 2026 está completamente vendida, tiene caja neta y anunció una recompra de ~$5,400 millones. La honestidad: la acción ya mostró las dos caras del ciclo — subió ~17 veces desde su mínimo del año y luego cayó ~50% desde su máximo cuando su guía decepcionó unas expectativas estratosféricas. El NAND es la memoria más 'commodity' y más cíclica de todas, y Kioxia compite contra gigantes más grandes (Samsung, SK hynix, Micron). Compramos al inventor del flash a mitad de precio del pico, en pleno superciclo. HQ en Tokio; encabezada por Stacy Smith (ex-CFO de Intel). ADR OTC en dólares (la acción principal cotiza en Tokio, 285A). La compramos a $35.50.",
+    summary_what: `Kioxia (Tokio: 285A; ADR OTC: KXIAY) es **la empresa que inventó la memoria flash NAND** — nació dentro de Toshiba, donde su ingeniero Fujio Masuoka creó el flash en los años 80 — y hoy es el **#3 mundial del NAND** por participación de mercado, detrás de Samsung y SK hynix. Se separó de Toshiba en 2018 (como Toshiba Memory, renombrada Kioxia) y salió a bolsa en Tokio en diciembre de 2024.
+
+**Qué vende:**
+
+**(1) SSD para centros de datos y empresas (>60% de las ventas)** — el motor del momento: los centros de IA necesitan almacenar océanos de datos en discos rápidos, y los SSD empresariales se convirtieron en el producto estrella. Los precios promedio del NAND subieron ~70% en un año.
+
+**(2) Memoria para teléfonos y PCs** — el negocio tradicional: chips de almacenamiento para smartphones, laptops y consolas.
+
+**(3) Fabricación conjunta con SanDisk** — opera fábricas gigantes en Yokkaichi y Kitakami (Japón) en sociedad con la estadounidense SanDisk, compartiendo capacidad e inversión.
+
+**El momento:** la demanda de IA dejó el NAND en escasez — Kioxia declaró su producción de 2026 **completamente vendida** — y los márgenes pasaron de pérdidas (el NAND venía de su peor ciclo en 2023) a ~75% operativo en un año.
+
+**Liderazgo:** encabezada por **Stacy Smith** (ex-CFO de Intel) como presidente ejecutivo. HQ en **Tokio (Minato), Japón**.`,
+    summary_why: `KXIAY a $35.50 es comprar al inventor de la memoria flash a la mitad de su máximo, en el mejor momento operativo de su historia. Razones concretas:
+
+1. **El trimestre récord no es promesa — ya pasó.** Abril-junio 2026: ingresos ¥1.77 billones (~$12,000 millones, récord histórico), margen operativo ~**75%**, y guía del siguiente trimestre aún mayor (¥2.39 billones). Hace dos años el NAND estaba en pérdidas: el ciclo dio la vuelta completa.
+
+2. **La producción de 2026 está VENDIDA.** Kioxia confirmó que su capacidad del año está completamente comprometida — visibilidad casi total de ingresos a corto plazo, con los precios del NAND subiendo ~70% interanual.
+
+3. **La IA cambió la mezcla.** Más del 60% de las ventas ya es SSD para centros de datos y empresas — el segmento de mayor valor —, lejos del NAND 'commodity' de teléfonos que dominaba antes.
+
+4. **Balance sano y retorno.** Caja neta positiva y una recompra de ~¥800 mil millones (~$5,400 millones) anunciada — más un split 3:1 para hacer la acción más accesible en Tokio.
+
+5. **El descuento ya ocurrió.** La acción subió ~17x desde el mínimo del año a su máximo ($70.95) y cayó ~50% cuando la guía decepcionó expectativas estratosféricas. A ~53x la utilidad PASADA (que incluye trimestres flojos del ciclo anterior), el múltiplo sobre la utilidad actual anualizada es mucho menor. Compramos el pánico del derating, no el pico de la euforia.`,
+    summary_risk: `Riesgos: (1) **El ciclo del NAND — el #1 y es brutal**: el NAND es la memoria más 'commodity' de todas (más que la DRAM, mucho más que la HBM); en 2023 el sector entero perdía dinero, y el margen de ~75% de hoy es un pico histórico que NO es sostenible a perpetuidad. Si el capex de IA se pausa, los precios caen rápido. (2) **Competencia de gigantes**: Samsung y SK hynix son mucho más grandes y Micron invierte agresivo; Kioxia es el #3 defendiendo cuota. (3) **Ya decepcionó una vez**: la caída de ~50% desde el máximo vino de una guía por debajo de expectativas — el listón sigue alto. (4) **ADR OTC**: menos liquidez que una acción de NYSE/Nasdaq, y el negocio gana en yenes mientras el ADR cotiza en dólares. (5) **Sin dividendo**: no hay colchón de renta; el retorno depende 100% del precio. Y la estructura accionaria post-IPO (fondos de private equity como Bain vendiendo tramos) puede meter presión de oferta.`,
+    research_full: `# Kioxia (KXIAY) — Research Completo
+
+## Precio ADR: $35.50 | P/E TTM: ~53x | Div: no paga | Market Cap: ~$184 mil millones | Tokio: 285A
+
+---
+
+## ¿Qué es Kioxia?
+
+**La empresa que inventó la memoria flash NAND** (dentro de Toshiba, años 80) y hoy el **#3 mundial del NAND** detrás de Samsung y SK hynix. Separada de Toshiba en 2018, salió a bolsa en Tokio en diciembre de 2024 y multiplicó su valor con el superciclo de memoria impulsado por la IA. Encabezada por **Stacy Smith** (ex-CFO de Intel). HQ en Tokio; fábricas gigantes en Yokkaichi y Kitakami (Japón), operadas en sociedad con SanDisk.
+
+## El momento del NAND
+
+La IA necesita almacenar océanos de datos, y eso volteó el mercado de NAND de su peor ciclo (2023, pérdidas sectoriales) a escasez:
+
+- Precios promedio del NAND **+~70% interanual**.
+- **>60% de las ventas** de Kioxia ya es SSD para centros de datos y empresas.
+- Producción de 2026 **completamente vendida** (confirmado por la empresa).
+
+## Último trimestre (abr-jun 2026, reportado fines de julio)
+
+| Métrica | Valor | Nota |
+|---------|-------|------|
+| Ingresos | ¥1.77 billones (~$12,000 M) | récord histórico |
+| Margen operativo (Non-GAAP) | **~75%** | casi inédito en manufactura |
+| Guía próximo trimestre | ¥2.39 billones | aún mayor |
+| Balance | caja neta | + recompra de ~¥800 mil millones (~$5,400 M) |
+| Extra | split 3:1 anunciado | acción más accesible en Tokio |
+
+Año fiscal cerrado en marzo 2026: ingresos ¥2.34 billones (+37%), utilidad neta ¥554 mil millones (~2x año previo).
+
+## Por qué cayó ~50% desde el máximo
+
+El ADR subió ~17x desde su mínimo del año hasta $70.95… y la guía de la empresa —siendo récord— quedó por debajo de unas expectativas estratosféricas (Bloomberg: 'Kioxia's outlook miss clouds optimism about memory chip boom'). El derating fue violento. Ese descuento es la entrada: compramos después del ajuste de expectativas, no en la euforia.
+
+## Competencia
+
+| Rival | Posición |
+|-------|----------|
+| **Samsung** | #1 en NAND, escala imbatible |
+| **SK hynix** | #2 (con Solidigm); también en nuestro portafolio vía SKHY |
+| **Micron** | #4, invirtiendo agresivo |
+| **YMTC (China)** | comodín geopolítico de bajo costo |
+
+## Riesgos (resumen)
+
+1. **Ciclo del NAND** — el más commodity de las memorias; 75% de margen es pico, no norma; en 2023 el sector perdía dinero.
+2. **Gigantes al frente** — #3 defendiendo cuota contra Samsung/SK hynix/Micron.
+3. **Listón alto** — ya hubo un -50% por una guía 'decepcionante' siendo récord.
+4. **ADR OTC + yen** — menos liquidez; gana en yenes, cotiza en dólares.
+5. **Oferta de acciones** — private equity (Bain) del IPO puede vender tramos.
+
+## Fuentes
+
+- Resultados abr-jun 2026 + buyback + split: Kioxia IR / Investing.com / Bloomberg (fines jul 2026)
+- 'NAND 2026 fully booked': TrendForce (feb 2026)
+- Precio ADR: Yahoo Finance (18 ago 2026, open $35.50)`,
+    analyst_consensus: "N/A",
+    analyst_target: null,
+    analyst_upside: null,
+    status: "active",
+    first_researched_at: "2026-08-18T00:00:00Z",
+    last_updated_at: "2026-08-18T00:00:00Z",
+    next_review_at: "2027-02-18T00:00:00Z",
+  },
+  {
+    id: 133,
+    ticker: "MARA",
+    name: "MARA Holdings, Inc.",
+    sector: "Financial Services",
+    industry: "Financiero — Minería de Bitcoin y Cómputo (HPC)",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 9.4,
+    pe_ratio: null,
+    pe_forward: null,
+    dividend_yield: null,
+    market_cap_b: 3.5,
+    eps: -9.39,
+    summary_short:
+      "MARA es el minero de Bitcoin más grande que cotiza en bolsa y el 4º mayor tenedor corporativo de Bitcoin del mundo: 35,577 BTC en el balance (~$2,100 millones a ~$58,500 por bitcoin). Y ES LA POSICIÓN MÁS ESPECULATIVA DEL PORTAFOLIO — lo decimos sin rodeos: hoy pierde dinero (el último trimestre facturó -27% y perdió $1.60 por acción cuando se esperaba ganancia), en 6 meses vendió 23,093 BTC (~$1,630 millones) para pagar deuda, y pignoró otros 18,750 BTC por un préstamo de $600 millones. ¿Entonces por qué comprarla? Aritmética de valor extremo: a $9.40 toda la empresa vale ~$3,500 millones y solo su Bitcoin vale ~$2,100 millones — pagas ~$1,400 millones por el minero #1 en bolsa Y sus sitios con acceso a energía a gran escala (el activo más escaso del boom de IA), que está reconvirtiendo en centros de cómputo para IA (JV con Starwood). Es una apuesta de doble filo: a que Bitcoin rebote desde ~$58,500 y/o a que el pivote a IA aterrice en contratos reales. Los analistas están partidos: promedio ~$18 (+91%), pero Morgan Stanley ve $6 — menos de lo que cotiza. HQ en Florida; ~266 empleados; CEO Fred Thiel. Cerca del mínimo del año ($6.66), -60% del máximo ($23.45). Posición chica, ojos abiertos: la compramos a $9.40.",
+    summary_what: `MARA Holdings (Nasdaq: MARA, antes Marathon Digital) es el **minero de Bitcoin más grande que cotiza en bolsa** y el **4º mayor tenedor corporativo de Bitcoin del mundo**.
+
+**Qué hace hoy:**
+
+**(1) Minar Bitcoin.** Opera granjas de servidores especializados (en EE.UU. y el extranjero) que compiten por validar transacciones de la red Bitcoin a cambio de bitcoins nuevos. Es un negocio de commodity puro: sus ingresos dependen del precio del bitcoin, del costo de la energía y de cuánta competencia haya (el 'hashrate' global).
+
+**(2) Tesoro de Bitcoin.** Mantiene **35,577 BTC** en el balance (~$2,100 millones a ~$58,500/BTC) — aunque el modelo 'nunca vender' se acabó: en el primer semestre de 2026 vendió 23,093 BTC (~$1,630 millones) para pagar deuda y financiar infraestructura, y pignoró 18,750 BTC como colateral de un préstamo de $600 millones.
+
+**(3) El pivote a IA/HPC.** Sus sitios tienen algo escasísimo: **acceso a energía a gran escala ya contratado**. Los está reconvirtiendo en centros de cómputo de alto rendimiento (HPC) para IA, incluida una sociedad (JV) con Starwood para desarrollar sitios. Todavía es promesa: no hay un gran contrato firmado.
+
+**Liderazgo:** CEO **Fred Thiel**. HQ en **Hallandale Beach, Florida**; ~266 empleados.`,
+    summary_why: `MARA a $9.40 es una apuesta de valor extremo con doble gatillo — y hay que entenderla como lo que es. Las razones, con su tamaño real:
+
+1. **La aritmética del balance.** Market cap ~$3,500 millones; solo el Bitcoin del balance vale ~$2,100 millones. Estás pagando ~$1,400 millones por: el minero más grande en bolsa, sus granjas de servidores, y sus sitios con energía contratada a gran escala.
+
+2. **La energía es el activo escaso del boom de IA.** Los centros de datos de IA no encuentran dónde enchufarse — los sitios 'power-ready' valen oro. MARA los tiene y los está reconvirtiendo (JV con Starwood). Si UN contrato grande de HPC aterriza, la acción se re-valúa.
+
+3. **Palanca a Bitcoin.** A ~$58,500, Bitcoin está lejos de sus máximos. Si rebota, MARA sube apalancado: su tesoro se re-valúa Y su minería vuelve a márgenes positivos — el doble efecto clásico de los mineros.
+
+4. **El pesimismo ya está en el precio.** -60% desde el máximo del año, cerca del mínimo ($6.66), con Morgan Stanley en $6. El promedio de 11 analistas ve ~$18 (+91%) — la dispersión enorme ES la información: nadie sabe, y por eso está barata contra el balance.
+
+5. **Posición chica por diseño.** Es la compra más especulativa del portafolio; el modelo invierte $50 como en todas — el tamaño uniforme es el control de riesgo.`,
+    summary_risk: `Riesgos — léelos TODOS antes de copiar esta compra: (1) **Pierde dinero HOY**: último trimestre -27% de ingresos ($174.9M vs $203.7M esperados) y pérdida de $1.60/acción cuando se esperaba ganancia; su eficiencia empeoró (el poder de cómputo subió 22.5% pero la producción de bitcoin solo 2.7%). (2) **Dependencia total de Bitcoin**: a ~$58,500 y lejos de máximos; si cae más, el tesoro vale menos, la minería pierde más, y el 'piso' del balance baja — el colateral pignorado puede requerir más garantías. (3) **El tesoro ya no es intocable**: vendió 23,093 BTC en 6 meses y pignoró 18,750 más — la opcionalidad 'hodl' se consumió pagando deuda. (4) **El pivote a IA es promesa**: cero contratos grandes firmados; competidores (Core Scientific, Iris, Riot) corren la misma carrera con más avance. (5) **Dilución y deuda**: historial largo de emitir acciones para financiarse; el préstamo de $600M agrega apalancamiento con colateral volátil. (6) **Halving 2028**: cada 4 años la recompensa de minado se corta a la mitad — el reloj estructural corre en contra. Sin dividendo: no hay colchón ninguno.`,
+    research_full: `# MARA Holdings (MARA) — Research Completo
+
+## Precio: $9.40 | P/E: N/A (pierde dinero) | Div: no paga | Market Cap: ~$3.5 mil millones
+
+---
+
+## ⚠️ Aviso primero
+
+Esta es **la posición más especulativa del portafolio**. MARA pierde dinero, depende del precio de Bitcoin y su pivote a IA todavía no genera ingresos. La tesis es de valor de balance + opcionalidad, no de flujos. Posición estándar de $50, como todas — el tamaño ES el control de riesgo.
+
+## ¿Qué es MARA?
+
+El **minero de Bitcoin más grande en bolsa** (Nasdaq, antes Marathon Digital) y **4º tenedor corporativo de BTC del mundo**. CEO **Fred Thiel**; HQ Hallandale Beach, Florida; ~266 empleados.
+
+## La aritmética que sostiene el pick
+
+| Concepto | Valor |
+|----------|-------|
+| Market cap (a $9.40) | ~$3,500 M |
+| Bitcoin en balance (35,577 BTC × ~$58,500) | **~$2,100 M** |
+| → Valor implícito del negocio operativo | **~$1,400 M** |
+
+Por ~$1,400 M te llevas: las granjas de minado más grandes en bolsa + sitios con **acceso a energía a gran escala** (el cuello de botella real del boom de IA) + la opción del pivote HPC/IA (JV con Starwood).
+
+## Q2 2026 — los números malos, sin maquillar
+
+- Ingresos **$174.9 M (-27% interanual)**, por debajo de los $203.7 M esperados.
+- **Pérdida ajustada de $1.60/acción** (se esperaba +$0.26).
+- Eficiencia en deterioro: hashrate energizado +22.5%, producción de BTC solo +2.7%.
+
+## El tesoro — y cómo cambió
+
+- **35,577 BTC** (~$2,100 M) al cierre de junio; 4,742 prestados a terceros y 4,528 en garantía → ~26,300 sin restricciones.
+- **Vendió 23,093 BTC (~$1,630 M) en el primer semestre de 2026** para pagar deuda y financiar infraestructura — fin del modelo 'nunca vender'.
+- En agosto pignoró **18,750 BTC** en dos líneas de crédito por **$600 M**.
+
+## El pivote a IA/HPC
+
+Los sitios de minado tienen contratos de energía a gran escala — exactamente lo que los centros de IA no consiguen. MARA los está reconvirtiendo (JV con **Starwood**; Morgan Stanley espera al menos un lease de HPC y dos de sitios hacia fin de año). **Hoy: promesa sin contrato firmado.** Riot, Core Scientific e Iris corren la misma carrera.
+
+## Analistas — la dispersión es el mensaje
+
+| Casa | Target |
+|------|--------|
+| Promedio (11 analistas) | **~$18 (+91%)** |
+| Clear Street | $10 (Hold) |
+| **Morgan Stanley** | **$6 — debajo del precio actual** |
+
+## Riesgos (resumen)
+
+1. Pierde dinero hoy; eficiencia en deterioro.
+2. Palanca total a Bitcoin (~$58,500) — para bien y para mal.
+3. Tesoro ya no intocable: ventas masivas + BTC pignorado.
+4. Pivote IA sin ingresos aún; competencia adelantada.
+5. Dilución histórica + $600 M de deuda con colateral volátil.
+6. Halving 2028.
+
+## Fuentes
+
+- Q2 2026 shareholder letter (SEC 8-K, ago 2026); Benzinga, Blockspace
+- Tesoro/ventas BTC: crypto.news, bitcointreasuries.net (ago 2026)
+- Targets: Morgan Stanley/Clear Street vía prensa (ago 2026); promedio Yahoo Finance
+- Precio: Yahoo Finance (18 ago 2026, open $9.40)`,
+    analyst_consensus: "Buy",
+    analyst_target: 18.0,
+    analyst_upside: 91.4,
+    status: "active",
+    first_researched_at: "2026-08-18T00:00:00Z",
+    last_updated_at: "2026-08-18T00:00:00Z",
+    next_review_at: "2027-02-18T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -15261,6 +15490,42 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #140* — Aug 18, 2026\n\n🏢 *Lockheed Martin* (LMT) — $600.07\n\n✈️ *Lo que hacen*: El contratista de defensa #1 del mundo: el caza F-35, los misiles PAC-3 y THAAD, los lanzadores HIMARS, helicópteros Sikorsky y satélites militares. Ya la teníamos desde el 24 de marzo (a $610.17) y hoy la *reforzamos* a $600.07 porque la tesis se fortaleció con su trimestre más contundente en años.\n\n🌍 *Presencia*: HQ en Bethesda, Maryland; ~123,000 empleados; CEO *James Taiclet*. Q2 (reportado el 22 de julio): facturó $20,100 millones (+11%) y su cartera de pedidos tocó *récord histórico: $230,400 millones* — con $65,000 millones de órdenes NUEVAS en un solo trimestre (un contrato THAAD de $35,000 millones, HIMARS, radares). Subió su meta de ventas del año.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~2.3% anual* solo por ser dueño ($13.80 por acción al año) — lleva *24 años seguidos* subiendo el dividendo. Cada vez que EE.UU. o un gobierno aliado compra defensa, parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El #1 — *depende del presupuesto de defensa de EE.UU. y del F-35* (~30% de las ventas): un recorte de compras o los retrasos del programa (Block 4) le pegan directo — ya pasó en 2026. Otros: (2) los analistas están tibios tras el rally (consenso 'Hold', target ~$633): parte del rearme ya está en el precio, (3) contratos a precio fijo pueden comer margen si los costos suben, (4) la política mueve contratos de un plumazo, (5) está -13% de su máximo pero +37% arriba de su mínimo del año — ya no está barata-barata.\n\n🔄 Posición #140 (recompra)\n🔗 https://vectorialdata.com/stocks/LMT\n✅ Certificado por blockchain → vectorialdata.com/verify/LMT\n\n💡 Dato que ancla la tesis: Su cartera de pedidos de $230,400 millones equivale a ~3 años de ventas YA FIRMADAS — una visibilidad que casi ningún negocio del mundo tiene. En un solo trimestre sumó $65,000 millones en órdenes nuevas, incluido un contrato THAAD de $35,000 millones. Reforzamos al #1 de la defensa occidental con su libro de pedidos en máximo histórico, pagando ~$10 menos que en marzo y cobrando 2.3% anual mientras esperamos.`,
     attestation_uid: "0x7a67e8b23d473a83334f3b73df20206221a8ea1f3acfbeb281e0cc369f1e343e",
   },
+  {
+    id: 141,
+    stock_id: 132,
+    ticker: "KXIAY",
+    type: "new" as const,
+    cycle_number: 29,
+    price: 35.5,
+    open_price: 35.5,
+    date: "2026-08-18",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #141* — Aug 18, 2026\n\n🏢 *Kioxia* (KXIAY) — $35.50\n\n💾 *Lo que hacen*: Kioxia inventó la memoria flash (cuando era parte de Toshiba, en los años 80) y hoy es el *#3 mundial del NAND* — los chips donde se guardan las fotos de tu teléfono, los archivos de tu laptop y, cada vez más, los datos de los centros de IA. El boom la alcanzó de lleno: su producción de 2026 ya está *completamente vendida* y más del 60% de sus ventas viene de discos SSD para centros de datos.\n\n🌍 *Presencia*: HQ en Tokio, Japón; encabezada por *Stacy Smith* (ex-CFO de Intel). Último trimestre (reportado a fines de julio): ingresos récord de ¥1.77 billones de yenes (*~$12,000 millones*) con margen operativo de *75%* — casi inédito en manufactura — y anunció una recompra de acciones de ~$5,400 millones. Cotiza en Tokio; su ADR (KXIAY) se compra en dólares.\n\n💵 *Tu nuevo ingreso*: Esta empresa *no paga dividendo* — reinvierte todo y recompra sus propias acciones. Ganas si la acción sube con el superciclo de memoria, no por un pago periódico.\n\n⚠️ *El riesgo*: El #1 — *el ciclo del NAND es aún más brutal* que el resto de los chips, y esta acción ya mostró las dos caras: subió ~17 veces desde su mínimo del año… y luego cayó ~50% desde su máximo cuando su guía decepcionó. Otros: (2) compite contra Samsung, SK hynix y Micron — todos más grandes, (3) gana en yenes y el ADR cotiza en dólares, (4) el ADR es de mercado OTC: menos liquidez que una acción normal, (5) a ~53 veces la utilidad pasada, el precio ya asume que el boom sigue.\n\n🆕 Posición #141\n🔗 https://vectorialdata.com/stocks/KXIAY\n✅ Certificado por blockchain → vectorialdata.com/verify/KXIAY\n\n💡 Dato que ancla la tesis: La empresa que INVENTÓ la memoria flash tiene su producción de 2026 completamente vendida, acaba de reportar 75% de margen operativo… y aun así cuesta la MITAD que hace unas semanas, porque su guía no alcanzó unas expectativas estratosféricas. Compramos al #3 del NAND en pleno superciclo, con caja neta y una recompra de ~$5,400 millones en marcha. Pagas hoy $35.50.`,
+  },
+  {
+    id: 142,
+    stock_id: 133,
+    ticker: "MARA",
+    type: "new" as const,
+    cycle_number: 29,
+    price: 9.4,
+    open_price: 9.4,
+    date: "2026-08-18",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #142* — Aug 18, 2026\n\n🏢 *MARA Holdings* (MARA) — $9.40\n\n₿ *Lo que hacen*: MARA es el minero de Bitcoin más grande que cotiza en bolsa y el *4º mayor tenedor corporativo de Bitcoin del mundo*: tiene 35,577 BTC en su balance (~$2,100 millones). Mina bitcoin con granjas de servidores propias y está reconvirtiendo sus sitios — que ya tienen acceso a energía a gran escala, el activo más escaso del boom de IA — en centros de cómputo para inteligencia artificial.\n\n🌍 *Presencia*: HQ en Hallandale Beach, Florida; ~266 empleados; CEO *Fred Thiel*.\n\n💵 *Tu nuevo ingreso*: *No paga dividendo y hoy PIERDE dinero* — es la posición más especulativa del portafolio, y lo decimos así de claro. Es una apuesta de doble filo: al precio de Bitcoin y a que el pivote hacia IA aterrice.\n\n⚠️ *El riesgo* (léelo completo antes de copiar esta compra): (1) *pierde dinero* — el último trimestre facturó 27% menos que hace un año y perdió $1.60 por acción cuando se esperaba ganancia, (2) *TODO depende del precio de Bitcoin* (hoy ~$58,500, lejos de sus máximos): si cae, el valor de su tesoro cae con él, (3) en 6 meses *vendió 23,093 BTC* (~$1,630 millones) para pagar deuda — y pignoró otros 18,750 BTC por un préstamo de $600 millones, (4) el pivote a IA es *promesa, no ingresos*: aún no firma su primer gran contrato, (5) los analistas están partidos: el promedio ve ~$18, pero Morgan Stanley ve $6 — *menos* de lo que cotiza hoy.\n\n🆕 Posición #142\n🔗 https://vectorialdata.com/stocks/MARA\n✅ Certificado por blockchain → vectorialdata.com/verify/MARA\n\n💡 Dato que ancla la tesis: A $9.40, TODA la empresa vale ~$3,500 millones — y solo el Bitcoin de su balance vale ~$2,100 millones. Es decir: pagas ~$1,400 millones por el minero más grande en bolsa Y sus sitios de energía listos para IA. Si Bitcoin rebota o el pivote a IA aterriza, el margen es grande; si no, el piso también puede bajar. Posición chica, ojos abiertos.`,
+  },
+  {
+    id: 143,
+    stock_id: 43,
+    ticker: "MCD",
+    type: "rebuy" as const,
+    cycle_number: 29,
+    price: 267.47,
+    open_price: 267.47,
+    date: "2026-08-18",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #143* — Aug 18, 2026\n\n🏢 *McDonald's* (MCD) — $267.47\n\n🍟 *Lo que hacen*: McDonald's no vende hamburguesas — *cobra rentas y regalías*: el 95% de sus 45,000+ restaurantes son de franquiciatarios que le pagan renta por el local (McDonald's es dueña del inmueble) y ~4% de regalía sobre cada venta. Por eso su margen operativo es ~46% — el negocio casi no siente lo que cueste la carne o el pan. Ya la teníamos desde el 15 de abril (a $306.26) y hoy la *reforzamos ~13% más barata*, cerca de su mínimo de 52 semanas.\n\n🌍 *Presencia*: HQ en Chicago; ~150,000 empleados corporativos; CEO *Chris Kempczinski*. Q2 (reportado a inicios de agosto): utilidad MEJOR a lo esperado ($3.38 vs $3.34), pero ventas comparables de EE.UU. casi planas (+0.8%) y menos tráfico — el consumidor de bajos ingresos está apretado y el relanzamiento del menú de valor salió mal ejecutado.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~2.8% anual* solo por ser dueño — y lleva ~50 años subiendo el dividendo CADA año (aristócrata del dividendo). Cada vez que alguien compra unas papas en cualquier parte del mundo, parte de la renta y la regalía llega a ti como dividendo.\n\n⚠️ *El riesgo*: El #1 — *el consumidor de bajos ingresos*: el tráfico en EE.UU. cayó 4.6% en el semestre; si la debilidad se extiende a la clase media, los volúmenes sufren. Otros: (2) arreglar el menú de valor toma tiempo — dos tercios del bache fue mala ejecución propia, (3) la guerra de precios del fast food aprieta a los franquiciatarios, (4) los medicamentos para bajar de peso (GLP-1) son un viento en contra lento pero real para toda la comida rápida, (5) mientras el tráfico no regrese, el crecimiento es lento.\n\n🔄 Posición #143 (recompra)\n🔗 https://vectorialdata.com/stocks/MCD\n✅ Certificado por blockchain → vectorialdata.com/verify/MCD\n\n💡 Dato que ancla la tesis: McDonald's cobra renta y regalías sobre TODO lo que venden 45,000 restaurantes que no opera — un casero global con margen de 46% y ~50 años subiendo el dividendo sin fallar uno. La reforzamos ~13% más barata que en abril, cerca de su mínimo del año, cobrando 2.8% anual mientras el tráfico se recupera (los analistas ven ~$316, +18%).`,
+  },
 ];
 
 type Cycle = {
@@ -15496,5 +15761,13 @@ export const cycles: Cycle[] = [
     target_count: 5,
     current_count: 5,
     status: "completed" as const,
+  },
+  {
+    id: 29,
+    cycle_number: 29,
+    type: "new" as const,
+    target_count: 5,
+    current_count: 3,
+    status: "active" as const,
   },
 ];
