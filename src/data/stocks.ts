@@ -2651,23 +2651,35 @@ FCX a $56.48 es una **apuesta directa a la megatendencia del cobre** — IA, dat
     country: "United States",
     region: "North America",
     currency: "USD",
-    price: 610.17,
-    pe_ratio: 28.4,
-    pe_forward: 20.5,
-    dividend_yield: 2.26,
-    market_cap_b: 141.0,
-    eps: 21.49,
+    price: 600.07,
+    pe_ratio: 22.4,
+    pe_forward: 18.6,
+    dividend_yield: 2.32,
+    market_cap_b: 140.0,
+    eps: 27.13,
     summary_short:
-      "El contratista de defensa #1 del mundo. Fabricante del F-35 (el caza más avanzado del mundo), HIMARS, PAC-3, helicópteros Sikorsky, y la nave Orion de la NASA. Backlog récord de $194 mil millones.",
+      "Reforzamos Lockheed Martin a $600.07 — la teníamos desde el 24 de marzo a $610.17 y hoy la compramos ~$10 más barata, con la tesis más fuerte que nunca. El contratista de defensa #1 del mundo (F-35, PAC-3, THAAD, HIMARS, Sikorsky, satélites) reportó el 22 de julio su trimestre más contundente en años: ingresos $20,100 millones (+11%), utilidad por acción $7.94 (mejor a lo esperado) y una cartera de pedidos RÉCORD de $230,400 millones — con $65,000 millones de órdenes nuevas en un solo trimestre (incluido un contrato THAAD de $35,000 millones) — que equivale a ~3 años de ventas ya firmadas. Subió su meta de ventas 2026 a $79,750-81,750 millones. Paga ~2.3% anual de dividendo con 24 años seguidos subiéndolo. Lo honesto: el consenso está en Hold con target ~$633 (+5.5%) — parte del rearme global ya está en el precio, a -13% del máximo pero +37% sobre el mínimo del año.",
     summary_what:
-      "Lockheed Martin es el mayor contratista de defensa del Pentágono y del mundo. Opera en 4 segmentos: Aeronautics (F-35, F-16, C-130J — 40% revenue), Missiles & Fire Control (HIMARS, PAC-3, JASSM — 19%), Rotary & Mission Systems (Sikorsky, Aegis, radares — 23%), y Space (Orion, GPS III, defensa de misiles — 17%). 100% enfocado en defensa.",
+      "Lockheed Martin es el mayor contratista de defensa del Pentágono y del mundo. Opera en 4 segmentos: Aeronautics (F-35, F-16, C-130J — ~40% de ventas; +9% en Q2 2026 por mayor producción del F-35), Missiles & Fire Control (PAC-3, THAAD, HIMARS, JASSM — el motor del momento: +19% en Q2), Rotary & Mission Systems (helicópteros Sikorsky, Aegis, radares), y Space (Orion, GPS III, defensa antimisiles). 100% enfocado en defensa. HQ en Bethesda, Maryland; ~123,000 empleados; CEO James Taiclet.",
     summary_why:
-      "Backlog récord de $194B (2.6x ventas anuales). NATO se comprometió a subir gasto a 5% del PIB para 2035. EPS 2026 guiado a $29.80 (+39% vs 2025). Presupuesto de defensa de EE.UU. sube ~15% en FY2026. Demanda sin precedentes de misiles por conflictos en Ucrania y Medio Oriente. 24 años consecutivos de dividendo creciente.",
+      "La recompra en 5 datos: (1) cartera de pedidos RÉCORD de $230,400 millones (~3 años de ventas ya firmadas), desde $193,600 millones al cierre de 2025; (2) $65,000 millones de órdenes NUEVAS en un solo trimestre — contrato THAAD de $35,000 millones, GMLRS $3,000M, HIMARS $1,100M, radares $2,300M; (3) Q2 2026: ingresos +11% y utilidad mejor a lo esperado, con guía de ventas del año SUBIDA; (4) el mundo se está rearmando: OTAN comprometida a subir el gasto a 5% del PIB hacia 2035 y demanda de misiles sin precedentes — los misiles (MFC) crecieron +19%; (5) 24 años consecutivos subiendo el dividendo (~2.3% anual hoy). La compramos $10 más barata que en marzo.",
     summary_risk:
-      "Pentágono recortó compras de F-35 casi 50% en FY2026, cambiando enfoque a sostenimiento. Block 4/TR-3 tiene $6B de sobrecosto y años de retraso. F-35 es ~30% del revenue — concentración alta.",
+      "Riesgos: (1) dependencia del presupuesto de defensa de EE.UU. y del F-35 (~30% de las ventas): recortes de compras o los retrasos del Block 4 pegan directo — ya pasó en 2026; (2) consenso tibio: Hold con target ~$633 (+5.5%) — parte del rearme ya está en el precio tras subir +37% desde el mínimo del año; (3) contratos a precio fijo: si los costos suben, el margen sufre (historia conocida en programas clasificados); (4) riesgo político: los contratos se mueven con las elecciones y las prioridades del Pentágono; (5) concentración: un solo cliente (el gobierno de EE.UU.) domina los ingresos.",
     research_full: `# Lockheed Martin (LMT) — Research Completo
 
-## Precio: $610.17 | P/E: 28.4 | P/E Forward: 20.5 | Div Yield: 2.26% | Market Cap: $141B
+## Precio: $600.07 | P/E: 22.4 | P/E Forward: 18.6 | Div Yield: 2.32% | Market Cap: $140B
+
+---
+
+## 🔄 Actualización — Recompra 18 ago 2026 (Pick #140)
+
+La teníamos desde el 24 de marzo a $610.17; hoy la reforzamos a $600.07. Lo que cambió desde entonces:
+
+- **Q2 2026 (22 jul)**: ingresos $20,100 millones (+11%), EPS $7.94 (mejor a lo esperado). La acción saltó ~11% ese día.
+- **Cartera de pedidos RÉCORD: $230,400 millones** (desde $193,600M al cierre de 2025) — ~3 años de ventas ya firmadas. $65,000 millones de órdenes nuevas en el trimestre: THAAD $35,000M, GMLRS $3,000M, HIMARS $1,100M, radar $2,300M.
+- **Guía 2026 subida** a $79,750–81,750 millones de ventas.
+- Misiles (MFC) +19% — el motor del rearme; Aeronautics +9% por más producción de F-35.
+- Consenso hoy: **Hold**, target promedio ~$633 (+5.5%) — los analistas están tibios tras el rally; nuestra tesis es la visibilidad del backlog, no el múltiplo.
 
 ---
 
@@ -2787,11 +2799,11 @@ LMT a $610.17 es una **compra defensiva en el sentido literal** — el contratis
 *Research fecha: 24 Mar 2026 | Próxima revisión: Sep 2026*
 *Esto no es asesoría financiera.*`,
     analyst_consensus: "Hold",
-    analyst_target: 660.0,
-    analyst_upside: 8.2,
+    analyst_target: 632.9,
+    analyst_upside: 5.5,
     status: "active",
     first_researched_at: "2026-03-24T00:00:00Z",
-    last_updated_at: "2026-03-24T00:00:00Z",
+    last_updated_at: "2026-08-18T00:00:00Z",
     next_review_at: "2026-09-24T00:00:00Z",
   },
   {
@@ -13282,6 +13294,109 @@ La ventaja de SK hynix es de **ejecución y tiempo**: llegó primero a cada gene
     last_updated_at: "2026-08-17T00:00:00Z",
     next_review_at: "2027-02-17T00:00:00Z",
   },
+  {
+    id: 131,
+    ticker: "MA",
+    name: "Mastercard Incorporated",
+    sector: "Financial Services",
+    industry: "Financiero — Redes de Pago",
+    country: "United States",
+    region: "North America",
+    currency: "USD",
+    price: 563.87,
+    pe_ratio: 31.7,
+    pe_forward: 25.0,
+    dividend_yield: 0.62,
+    market_cap_b: 505.4,
+    eps: 18.16,
+    summary_short:
+      "Mastercard es la mitad del duopolio mundial de redes de pago (con Visa): cada vez que alguien paga con tarjeta, cobra un peaje diminuto por conectar el banco del comprador con el del comercio — miles de millones de veces al día, en más de 210 países, sin prestar un solo dólar (el riesgo de crédito lo toma el banco emisor). Por eso su margen operativo es de ~61%, de los más altos de cualquier negocio grande del planeta. La compramos tras un año raro: el negocio creció +14% en el Q2 2026 (reportado el 30 de julio, $9,280 millones de ingresos, utilidad por acción +21%, volumen cross-border +12%), pero la acción está casi plana en el año y ~6% bajo su máximo porque el mercado teme que los stablecoins (dólares digitales) le quiten pagos a las redes de tarjetas — un miedo que llegó a tumbarla ~18%. La respuesta de Mastercard fue comprarse la 'amenaza': pagó ~$1,800 millones por BVNK (infraestructura de stablecoins) y lanzó pilotos de pagos cross-border con sus estándares Crypto Credential — quiere cobrar peaje también en los rieles nuevos. HQ en Purchase, Nueva York; ~39,800 empleados; CEO Michael Miebach. Dividendo pequeño (~0.6%) pero creciente cada año + recompras agresivas. La compramos a $563.87 con consenso 'Strong Buy' (37 analistas) y target promedio ~$667 (+18%).",
+    summary_what: `Mastercard (NYSE: MA) es una de las dos grandes **redes de pago del mundo** (la otra es Visa). Su negocio es simple de entender y casi imposible de replicar:
+
+**El peaje invisible.** Cuando pagas con una tarjeta Mastercard, la red conecta en segundos al banco que emitió tu tarjeta con el banco del comercio, autoriza la operación y liquida el dinero. Por ese servicio cobra una fracción diminuta de cada transacción. **No presta dinero**: el riesgo de crédito lo toma tu banco. Mastercard solo opera la autopista y cobra el peaje — miles de millones de veces al día, en **más de 210 países y territorios**.
+
+**Dos motores:**
+
+**(1) La red de pagos (~60% de ingresos)** — crece con el volumen de pagos del mundo: más consumo, más tarjetas, más comercio electrónico, más viajes (el volumen entre países es el más rentable: +12% en el último trimestre).
+
+**(2) Servicios de valor agregado (~40%)** — ciberseguridad, prevención de fraude, analítica y consultoría para bancos y comercios. Creció +20% el último trimestre — más rápido que la red misma.
+
+**Por qué es un negocio de calidad:** efecto de red (más tarjetas → más comercios que la aceptan → más tarjetas), costos marginales casi cero (una transacción más no cuesta casi nada), y pricing power. Margen operativo ~61%.
+
+**Liderazgo:** CEO **Michael Miebach** (desde 2021). HQ en **Purchase, Nueva York**. **~39,800 empleados**.`,
+    summary_why: `MA a $563.87 es comprar uno de los mejores modelos de negocio del planeta con descuento por un miedo que la empresa está convirtiendo en oportunidad. Razones concretas:
+
+1. **El negocio nunca dejó de crecer.** Q2 2026 (reportado el 30 de julio): ingresos $9,280 millones (**+14%**), utilidad por acción ajustada **+21%**, margen operativo **61.1%** (subió 1.2 puntos), volumen total de pagos +8%, cross-border **+12%**, servicios de valor agregado **+20%**.
+
+2. **El miedo a los stablecoins comprimió la valuación.** La acción llegó a caer ~18% desde su máximo por el temor a que los dólares digitales muevan pagos fuera de las redes; hoy sigue ~6% abajo y casi plana en el año, con el múltiplo en ~25x utilidad esperada — barato para su historia reciente.
+
+3. **Mastercard se está comprando la 'amenaza'.** Pagó ~$1,800 millones por BVNK (infraestructura de stablecoins) y el 12 de agosto anunció un piloto de pagos cross-border con stablecoins usando sus estándares Crypto Credential. La jugada: si los pagos migran de riel, cobrar peaje también en el riel nuevo.
+
+4. **Máquina de retorno al accionista.** Recompra acciones agresivamente y sube el dividendo todos los años (hoy $3.48/acción, ~0.6%). Con 61% de margen y sin riesgo de crédito, el efectivo sobra.
+
+5. **Consenso 'Strong Buy'** de 37 analistas con target promedio **~$667 (+18%)** — y venimos comprando calidad castigada por miedos puntuales: mismo patrón que ALC y FICO.`,
+    summary_risk: `Riesgos: (1) **Stablecoins — el #1 y el que explica el descuento**: si los pagos con dólares digitales escalan FUERA de las redes de tarjetas (comercio a comercio, sin peaje), el volumen de Mastercard crece menos; la compra de BVNK mitiga pero no elimina el riesgo estructural. (2) **Regulación en EE.UU.**: hay propuestas recurrentes de topes a tasas de tarjetas de crédito y de forzar competencia en el ruteo (Credit Card Competition Act); cualquier avance real comprime el peaje. (3) **Litigios de comercios**: demandas por las comisiones de intercambio son un clásico recurrente — multas y acuerdos siempre son posibles. (4) **Ciclo de consumo**: si el gasto global se enfría (recesión, menos viajes), el volumen crece menos — es un negocio ligado al consumo del mundo. (5) **Valuación premium**: ~25x utilidad esperada no es ganga; si el crecimiento decepciona, el múltiplo tiene de dónde caer. Y el dividendo (~0.6%) es chico: el retorno depende de que el negocio siga creciendo.`,
+    research_full: `# Mastercard (MA) — Research Completo
+
+## Precio: $563.87 | P/E TTM: ~31.7x | P/E forward: ~25x | Div Yield: ~0.6% | Market Cap: ~$505 mil millones
+
+---
+
+## ¿Qué es Mastercard?
+
+La mitad del **duopolio mundial de redes de pago** (con Visa). Conecta ~más de 210 países: cuando pagas con tarjeta, su red autoriza y liquida la operación entre tu banco y el del comercio, cobrando una fracción diminuta por transacción. **No presta dinero** — el riesgo de crédito es del banco emisor. CEO **Michael Miebach** (desde 2021). HQ en **Purchase, Nueva York**; ~39,800 empleados.
+
+## Los 2 motores
+
+| Segmento | ~% ingresos | Qué es | Q2 2026 |
+|----------|-------------|--------|---------|
+| **Red de pagos** | ~60% | El peaje por autorizar/liquidar pagos | +10% |
+| **Servicios de valor agregado** | ~40% | Ciberseguridad, antifraude, analítica, consultoría | **+20%** |
+
+## Q2 2026 (reportado 30 jul 2026)
+
+| Métrica | Valor | vs año pasado |
+|---------|-------|----------------|
+| Ingresos | $9,280 millones | **+14%** |
+| Utilidad por acción ajustada | $5.04 | **+21%** |
+| Margen operativo | **61.1%** | +1.2 puntos |
+| Volumen bruto de pagos | — | +8% |
+| Volumen cross-border | — | **+12%** |
+| Transacciones | — | +9% |
+
+## La historia de 2026: el miedo a los stablecoins
+
+Las acciones de las redes (Visa, Mastercard, Amex) cayeron fuerte desde máximos (MA llegó a -18%) por dos miedos: la propuesta de topes a las tasas de tarjetas en EE.UU. y la idea de que los **stablecoins** (dólares digitales) muevan pagos fuera de las redes. El resultado: MA casi plana en el año pese a crecer doble dígito.
+
+**La respuesta de Mastercard**: comprarse la amenaza. Pagó **~$1,800 millones por BVNK** (infraestructura de stablecoins) y el 12 de agosto lanzó un piloto de pagos cross-border con stablecoins sobre sus estándares **Crypto Credential**. La apuesta: ser también el peaje del riel nuevo, como ya lo es del viejo.
+
+## Valuación y retorno
+
+- **~25x utilidad esperada** — por debajo de su promedio reciente tras el derating por stablecoins.
+- Dividendo **$3.48/acción (~0.6%)**, subiéndolo cada año + recompras agresivas.
+- Consenso **'Strong Buy'** (37 analistas), target promedio **~$667 (+18%)**.
+
+## Riesgos (resumen)
+
+1. **Stablecoins** — migración de pagos fuera de las redes; BVNK mitiga, no elimina.
+2. **Regulación** — topes de tasas / competencia de ruteo en EE.UU.
+3. **Litigios de comercios** por comisiones de intercambio.
+4. **Ciclo de consumo global** — el volumen es consumo.
+5. **Valuación premium** — ~25x forward; sin margen para decepciones.
+
+## Fuentes
+
+- Q2 2026: mastercard.com investor relations + prensa (30 jul 2026)
+- Stablecoins/BVNK: anuncios de Mastercard (ago 2026), CoinDesk, Payments Dive
+- Precio y consenso: Yahoo Finance (18 ago 2026, open $563.87)`,
+    analyst_consensus: "Strong Buy",
+    analyst_target: 667.3,
+    analyst_upside: 18.3,
+    status: "active",
+    first_researched_at: "2026-08-18T00:00:00Z",
+    last_updated_at: "2026-08-18T00:00:00Z",
+    next_review_at: "2027-02-18T00:00:00Z",
+  },
 ];
 
 export const transactions: Transaction[] = [
@@ -15120,6 +15235,30 @@ export const transactions: Transaction[] = [
     wa_message: `📊 *STOCK PICK #138* — Aug 17, 2026\n\n🏢 *SK hynix* (SKHY) — $172.60\n\n🧠 *Lo que hacen*: SK hynix fabrica la memoria de las computadoras — y sobre todo la *HBM*, la memoria especial que va pegada a los chips de inteligencia artificial de Nvidia. Sin ella, el chip de IA más potente del mundo se queda esperando datos: es como un motor de Fórmula 1 sin gasolina. SK hynix es el *#1 mundial* en esa memoria, y su nueva generación (HBM4) ya está en producción masiva y esencialmente *vendida por adelantado* a ~10 clientes con contratos de largo plazo. Desde julio cotiza en Nasdaq como ADR (10 ADRs = 1 acción coreana), así que por fin se puede comprar en dólares.\n\n🌍 *Presencia*: HQ en Icheon, Corea del Sur; ~47,600 empleados; CEO *Kwak Noh-jung*. Último trimestre (reportado el 28 de julio): facturó el equivalente a *~$57 mil millones de dólares* (+257% vs el año pasado) con margen operativo de *76%* — el más alto de su historia. Tiene ~$63 mil millones en efectivo.\n\n💵 *Tu nuevo ingreso*: El dividendo hoy es *simbólico* (~0.1% anual) — la tesis es crecimiento, no renta. Pero ojo: la empresa comprometió el 50% de su flujo libre a retornos para accionistas y anuncia su plan adicional en septiembre; con la caja que trae, ese plan puede ser grande.\n\n⚠️ *El riesgo*: El #1 — *la memoria es EL negocio más cíclico de los chips*: hoy gana 76 de cada 100 dólares que factura (récord), pero en 2023 esta MISMA empresa perdía dinero; si la inversión en IA se pausa, cae fuerte. Otros: (2) Samsung y Micron pelean por alcanzarla en HBM4 — si lo logran, los precios premium se comprimen, (3) su cliente dominante es Nvidia — mucha venta concentrada en pocas manos, (4) fábricas en Corea y China en medio de la tensión EE.UU.-China, (5) las expectativas están tan altas que el día que reportó números RÉCORD… la acción bajó.\n\n🆕 Posición #138\n🔗 https://vectorialdata.com/stocks/SKHY\n✅ Certificado por blockchain → vectorialdata.com/verify/SKHY\n\n💡 Dato que ancla la tesis: De cada $100 que facturó el trimestre pasado, $76 fueron ganancia operativa — un margen que casi ningún fabricante del planeta ha logrado jamás. Y aun así cotiza a ~5 veces la utilidad esperada, porque el mercado duda que el auge dure: ese descuento por miedo al ciclo es exactamente lo que compramos. Pagas hoy $172.60 por el proveedor #1 del componente más escaso de la IA (los analistas ven ~$245, +42%).`,
     attestation_uid: "0x10505c4975bfa31fb1d7b95884d8a866f30e9fba715183ebbf66169f14b36af3",
   },
+  {
+    id: 139,
+    stock_id: 131,
+    ticker: "MA",
+    type: "new" as const,
+    cycle_number: 28,
+    price: 563.87,
+    open_price: 563.87,
+    date: "2026-08-18",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #139* — Aug 18, 2026\n\n🏢 *Mastercard* (MA) — $563.87\n\n💳 *Lo que hacen*: Cada vez que alguien paga con tarjeta, Mastercard cobra un peaje diminuto por conectar el banco del comprador con el del comercio. No presta dinero (ese riesgo lo toma tu banco): solo opera la red y cobra por transacción — miles de millones de veces al día, en más de 210 países. De cada $100 que factura, ~$61 son ganancia operativa: uno de los negocios más rentables del planeta.\n\n🌍 *Presencia*: HQ en Purchase, Nueva York; ~39,800 empleados; CEO *Michael Miebach*. Último trimestre (reportado el 30 de julio): facturó $9,280 millones (+14%) con utilidad por acción +21% — y el volumen de pagos entre países, el más rentable, creció +12%.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~0.6% anual* solo por ser dueño ($3.48 por acción al año). Es pequeño a propósito: además recompra sus propias acciones agresivamente y sube el dividendo cada año. Cada vez que alguien paga con tarjeta en el súper, en un viaje o en línea — parte de ese peaje llega a ti como dividendo.\n\n⚠️ *El riesgo*: El #1 — *los 'stablecoins'* (dólares digitales): el miedo a que los pagos migren fuera de las redes de tarjetas llegó a tumbar la acción ~18% desde su máximo. Ojo: Mastercard respondió comprándose la 'amenaza' — pagó ~$1,800 millones por BVNK, una empresa de infraestructura de stablecoins — para cobrar peaje también ahí. Otros: (2) reguladores en EE.UU. con propuestas de topes a tasas y comisiones, (3) litigios recurrentes de comercios por las comisiones, (4) si el consumo global se enfría, el volumen de pagos crece menos, (5) valuación premium (~25 veces la utilidad esperada) — calidad que no está regalada.\n\n🆕 Posición #139\n🔗 https://vectorialdata.com/stocks/MA\n✅ Certificado por blockchain → vectorialdata.com/verify/MA\n\n💡 Dato que ancla la tesis: Mastercard gana un peaje diminuto en miles de millones de pagos al día sin prestar un solo dólar — por eso su margen operativo es de 61%. El pánico por los stablecoins la dejó ~6% bajo su máximo mientras factura +14%, y su respuesta fue comprar la 'amenaza' (BVNK) para cobrar también en los pagos con dólares digitales. Pagas hoy $563.87 (los analistas ven ~$667, +18%).`,
+  },
+  {
+    id: 140,
+    stock_id: 24,
+    ticker: "LMT",
+    type: "rebuy" as const,
+    cycle_number: 28,
+    price: 600.07,
+    open_price: 600.07,
+    date: "2026-08-18",
+    day_of_week: "tuesday",
+    wa_message: `📊 *STOCK PICK #140* — Aug 18, 2026\n\n🏢 *Lockheed Martin* (LMT) — $600.07\n\n✈️ *Lo que hacen*: El contratista de defensa #1 del mundo: el caza F-35, los misiles PAC-3 y THAAD, los lanzadores HIMARS, helicópteros Sikorsky y satélites militares. Ya la teníamos desde el 24 de marzo (a $610.17) y hoy la *reforzamos* a $600.07 porque la tesis se fortaleció con su trimestre más contundente en años.\n\n🌍 *Presencia*: HQ en Bethesda, Maryland; ~123,000 empleados; CEO *James Taiclet*. Q2 (reportado el 22 de julio): facturó $20,100 millones (+11%) y su cartera de pedidos tocó *récord histórico: $230,400 millones* — con $65,000 millones de órdenes NUEVAS en un solo trimestre (un contrato THAAD de $35,000 millones, HIMARS, radares). Subió su meta de ventas del año.\n\n💵 *Tu nuevo ingreso*: Esta empresa te paga *~2.3% anual* solo por ser dueño ($13.80 por acción al año) — lleva *24 años seguidos* subiendo el dividendo. Cada vez que EE.UU. o un gobierno aliado compra defensa, parte de ese dinero llega a ti como dividendo.\n\n⚠️ *El riesgo*: El #1 — *depende del presupuesto de defensa de EE.UU. y del F-35* (~30% de las ventas): un recorte de compras o los retrasos del programa (Block 4) le pegan directo — ya pasó en 2026. Otros: (2) los analistas están tibios tras el rally (consenso 'Hold', target ~$633): parte del rearme ya está en el precio, (3) contratos a precio fijo pueden comer margen si los costos suben, (4) la política mueve contratos de un plumazo, (5) está -13% de su máximo pero +37% arriba de su mínimo del año — ya no está barata-barata.\n\n🔄 Posición #140 (recompra)\n🔗 https://vectorialdata.com/stocks/LMT\n✅ Certificado por blockchain → vectorialdata.com/verify/LMT\n\n💡 Dato que ancla la tesis: Su cartera de pedidos de $230,400 millones equivale a ~3 años de ventas YA FIRMADAS — una visibilidad que casi ningún negocio del mundo tiene. En un solo trimestre sumó $65,000 millones en órdenes nuevas, incluido un contrato THAAD de $35,000 millones. Reforzamos al #1 de la defensa occidental con su libro de pedidos en máximo histórico, pagando ~$10 menos que en marzo y cobrando 2.3% anual mientras esperamos.`,
+  },
 ];
 
 type Cycle = {
@@ -15353,7 +15492,7 @@ export const cycles: Cycle[] = [
     cycle_number: 28,
     type: "new" as const,
     target_count: 5,
-    current_count: 3,
-    status: "active" as const,
+    current_count: 5,
+    status: "completed" as const,
   },
 ];

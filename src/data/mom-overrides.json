@@ -400,11 +400,9 @@
     "model": "gpt-4o"
   },
   "LMT": {
-    "one_liner": "Lockheed Martin fabrica aviones de combate y tecnología militar avanzada, con contratos por 194 mil millones de dólares en espera de ser cobrados.",
-    "why_short": "Tiene contratos asegurados que valen más de dos veces lo que vende en un año, y la demanda de sus productos sigue creciendo por conflictos y aumentos en el presupuesto militar.",
-    "risk_short": "El gobierno de EE.UU. comprará menos aviones F-35, que son una parte importante de sus ventas, y hay retrasos y sobrecostos en algunos proyectos.",
-    "generated_at": "2026-05-25T00:14:22.845Z",
-    "model": "gpt-4o"
+    "one_liner": "Lockheed Martin es el contratista de defensa #1 del mundo (F-35, THAAD, HIMARS). La reforzamos $10 más barata que en marzo, con su cartera de pedidos en récord histórico: $230,400 millones.",
+    "why_short": "Su Q2 fue el más contundente en años: ventas +11%, $65,000 millones de órdenes nuevas en un solo trimestre (incluido un THAAD de $35,000M) y ~3 años de ventas ya firmadas. Subió su meta del año. Paga 2.3% anual y lleva 24 años subiendo el dividendo.",
+    "risk_short": "Depende del presupuesto de EE.UU. y del F-35 (~30% de ventas): recortes o retrasos pegan directo. Y los analistas están tibios (Hold, target ~$633): parte del rearme ya está en el precio tras subir +37% desde el mínimo del año."
   },
   "MCD": {
     "one_liner": "McDonald's, la cadena de comida rápida más grande del mundo, gana dinero con franquicias y lleva 50 años seguidos aumentando lo que paga a sus accionistas.",
@@ -811,5 +809,10 @@
     "one_liner": "SK hynix fabrica la memoria HBM que va pegada a los chips de IA de Nvidia. Es la #1 del mundo en eso y su producción está vendida por adelantado a ~10 clientes con contratos largos.",
     "why_short": "La IA disparó su negocio: el último trimestre facturó ~$57 mil millones (+257%) con margen operativo récord de 76%. Aun así cotiza a ~5 veces la utilidad esperada porque el mercado duda que dure — ese descuento es lo que compramos. Analistas ven ~$245 (+42%).",
     "risk_short": "La memoria es el negocio más cíclico de los chips: esta misma empresa perdía dinero en 2023. Si la inversión en IA se pausa o Samsung/Micron la alcanzan en HBM4, cae fuerte. Y las expectativas están tan altas que con resultados récord la acción bajó ese día."
+  },
+  "MA": {
+    "one_liner": "Mastercard cobra un peaje diminuto cada vez que alguien paga con tarjeta — miles de millones de veces al día en más de 210 países — sin prestar dinero. La compramos con descuento por el miedo a los stablecoins.",
+    "why_short": "El negocio creció +14% el último trimestre con margen operativo de 61%, pero la acción está casi plana en el año por el miedo a los dólares digitales. Mastercard respondió comprándose la 'amenaza' (BVNK, ~$1,800 millones). Analistas ven ~$667 (+18%).",
+    "risk_short": "Si los pagos con stablecoins escalan fuera de las redes de tarjetas, su peaje crece menos. Además: reguladores queriendo topar comisiones, litigios de comercios, y una valuación premium que no perdona decepciones."
   }
 }
