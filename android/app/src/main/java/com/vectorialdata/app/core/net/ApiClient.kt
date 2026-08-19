@@ -64,6 +64,12 @@ object ApiClient {
     private val client = OkHttpClient.Builder()
         .connectTimeout(20, TimeUnit.SECONDS)
         .readTimeout(20, TimeUnit.SECONDS)
+        // HARD ceiling on the whole call (mirror of iOS
+        // timeoutIntervalForResource=30 from build 16): connect/read timeouts
+        // bound each phase, but a request stalled across a network handoff
+        // could still pin a store's isLoading flag. callTimeout bounds
+        // everything to seconds.
+        .callTimeout(30, TimeUnit.SECONDS)
         .build()
 
     private val jsonMedia = "application/json; charset=utf-8".toMediaType()

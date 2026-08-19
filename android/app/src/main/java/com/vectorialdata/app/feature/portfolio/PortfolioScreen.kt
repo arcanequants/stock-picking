@@ -113,6 +113,11 @@ private object PortfolioState {
                 PortfolioViewMode.PERSONAL -> personalResponse.value = resp
             }
             errorMessage.value = null
+        } catch (e: kotlinx.coroutines.CancellationException) {
+            // Cancellation is not an error — a tab switch cancelled the load;
+            // surfacing it as errorMessage painted "The coroutine scope left
+            // the composition" in the UI (found porting iOS build 16).
+            throw e
         } catch (e: Exception) {
             errorMessage.value = e.message ?: Localizer.get(R.string.portfolio_error)
         } finally {

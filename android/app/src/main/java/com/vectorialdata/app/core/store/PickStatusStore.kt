@@ -65,7 +65,10 @@ object PickStatusStore {
     }
 
     suspend fun load() {
-        if (_isLoading.value) return
+        // No re-entry guard (iOS build 16): skipping while "loading" turned a
+        // single hung request into a permanently frozen list. Concurrent
+        // loads are benign — same data, last writer wins — and the client's
+        // callTimeout bounds any hang to seconds.
         _isLoading.value = true
         try {
             val resp: PicksResponse = ApiClient.get("/api/picks")
@@ -77,6 +80,11 @@ object PickStatusStore {
             _errorMessage.value = null
         } catch (e: ApiError.Unauthorized) {
             _errorMessage.value = Localizer.get(R.string.err_unauthorized)
+        } catch (e: kotlinx.coroutines.CancellationException) {
+            // Cancellation is not an error — a tab switch cancelled the load;
+            // surfacing it as errorMessage painted "The coroutine scope left
+            // the composition" in the UI (found porting iOS build 16).
+            throw e
         } catch (e: Exception) {
             _errorMessage.value = e.message ?: Localizer.get(R.string.picks_error)
         } finally {
@@ -123,6 +131,11 @@ object PickStatusStore {
             updateLocal(pickNumber, PickStatus.PENDING, buyPrice = null, amount = null)
             _lastDecisionAt.value = System.currentTimeMillis()
             true
+        } catch (e: kotlinx.coroutines.CancellationException) {
+            // Cancellation is not an error — a tab switch cancelled the load;
+            // surfacing it as errorMessage painted "The coroutine scope left
+            // the composition" in the UI (found porting iOS build 16).
+            throw e
         } catch (e: Exception) {
             _errorMessage.value = e.message
             false
@@ -146,6 +159,11 @@ object PickStatusStore {
             )
             _defaultInvestment.value = resp.defaultInvestment
             true
+        } catch (e: kotlinx.coroutines.CancellationException) {
+            // Cancellation is not an error — a tab switch cancelled the load;
+            // surfacing it as errorMessage painted "The coroutine scope left
+            // the composition" in the UI (found porting iOS build 16).
+            throw e
         } catch (e: Exception) {
             _errorMessage.value = e.message
             false
@@ -166,6 +184,11 @@ object PickStatusStore {
             resp.defaultInvestment?.let { _defaultInvestment.value = it }
             _lastDecisionAt.value = System.currentTimeMillis()
             true
+        } catch (e: kotlinx.coroutines.CancellationException) {
+            // Cancellation is not an error — a tab switch cancelled the load;
+            // surfacing it as errorMessage painted "The coroutine scope left
+            // the composition" in the UI (found porting iOS build 16).
+            throw e
         } catch (e: Exception) {
             _errorMessage.value = e.message
             false

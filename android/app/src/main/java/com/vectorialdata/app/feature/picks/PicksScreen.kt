@@ -80,18 +80,29 @@ fun PicksScreen(modifier: Modifier = Modifier) {
     var openPickNumber by rememberSaveable { mutableIntStateOf(0) }
     var showDigest by rememberSaveable { mutableStateOf(false) }
 
-    LaunchedEffect(Unit) {
-        if (PickStatusStore.picks.value.isEmpty()) PickStatusStore.load()
-    }
+    // Always refresh on tab appearance (iOS build 16) — the if-empty guard
+    // kept yesterday's list while push notifications announced picks the
+    // user then couldn't find here.
+    LaunchedEffect(Unit) { PickStatusStore.load() }
 
     // Push-tap payloads (consumed once, then cleared — mirror of iOS PicksView).
     val pendingPick by NotificationsManager.pendingPickNumber.collectAsStateWithLifecycle()
     val pendingDigest by NotificationsManager.pendingWeeklyDigest.collectAsStateWithLifecycle()
     LaunchedEffect(pendingPick) {
-        pendingPick?.let {
+        val target = pendingPick ?: return@LaunchedEffect
+        // Always consume the tap first: an unknown pick must not leave the
+        // flag armed (it would re-fire on every recomposition).
+        NotificationsManager.pendingPickNumber.value = null
+        // A push can announce a pick newer than the cached list — reload
+        // whenever we don't have it yet, not only when the list is empty.
+        if (PickStatusStore.picks.value.none { it.pickNumber == target }) {
+            PickStatusStore.load()
+        }
+        // Open only if the pick is actually visible to this account; a stale
+        // or out-of-tier pick would otherwise strand the user on a spinner.
+        if (PickStatusStore.picks.value.any { it.pickNumber == target }) {
             showDigest = false
-            openPickNumber = it
-            NotificationsManager.pendingPickNumber.value = null
+            openPickNumber = target
         }
     }
     LaunchedEffect(pendingDigest) {

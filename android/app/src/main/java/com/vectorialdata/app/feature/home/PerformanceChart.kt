@@ -83,16 +83,27 @@ fun PerformanceChart() {
     LaunchedEffect(Unit) { ChartState.load() }
 
     VDCard(innerSpacing = 12.dp) {
-        // Header: VD badge + model label
+        // Header: owl brand mark + model label (iOS build 16 — the owl with a
+        // soft emerald glow replaces the generic "VD" monogram).
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             Box(
                 Modifier
-                    .clip(RoundedCornerShape(6.dp))
-                    .background(BrandEmerald)
-                    .size(26.dp),
+                    .size(30.dp)
+                    .background(
+                        androidx.compose.ui.graphics.Brush.radialGradient(
+                            listOf(BrandEmerald.copy(alpha = 0.45f), Color.Transparent),
+                        ),
+                    ),
                 contentAlignment = Alignment.Center,
             ) {
-                Text("VD", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFF05080A))
+                androidx.compose.foundation.Image(
+                    androidx.compose.ui.res.painterResource(R.drawable.ic_launcher_foreground),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(26.dp)
+                        .clip(androidx.compose.foundation.shape.CircleShape)
+                        .background(MaterialTheme.colorScheme.surface),
+                )
             }
             Column {
                 Text(
