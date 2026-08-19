@@ -96,6 +96,13 @@ No API key needed. Pay USDC on Base per request. HTTP 402 flow.
 - Agent API is non-custodial (prepare → sign → submit; private keys never
   reach the server) with per-agent limits, a kill switch, 24h-maturing
   withdrawal allowlists, and an optional human passkey guardian.
+- Machine-auditable: the API's full contract is public (OpenAPI 3.1), every
+  action is signed as inspectable EIP-712 typed-data before signing, and paper
+  mode allows testing the entire flow without funds. Fee collection uses a
+  separate user-signed permission, policy-scoped to service destinations and
+  co-signed by the watchdog.
+- Rails: Hyperliquid (on-chain exchange), Polymarket, and Privy embedded
+  self-custodial wallets.
 - Honest limits: custody security does not remove market risk (leveraged
   derivatives can lose all capital) or underlying-protocol risk.
 

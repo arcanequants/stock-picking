@@ -204,6 +204,7 @@ export default async function LabHome() {
             <div className="vl-spec2"><span className="m">{t("sec4T")}</span><span>{t("sec4D")}</span></div>
             <div className="vl-spec2"><span className="m">{t("sec5T")}</span><span>{t("sec5D")}</span></div>
             <div className="vl-spec2"><span className="m">{t("sec6T")}</span><span>{t("sec6D")}</span></div>
+            <div className="vl-spec2"><span className="m">{t("sec7T")}</span><span>{t("sec7D")}</span></div>
           </div>
         </div>
       </div>
