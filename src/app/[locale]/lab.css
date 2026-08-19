@@ -62,7 +62,7 @@
 .vlab .vl-container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
 
 /* ---------- nav ---------- */
-.vlab .vl-nav-wrap { border-bottom: 1px solid var(--vl-line); background: var(--vl-navbg); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 40; }
+.vlab .vl-nav-wrap { border-bottom: 1px solid var(--vl-line); background: var(--vl-navbg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 40; }
 .vlab .vl-nav { display: flex; align-items: center; height: 78px; gap: 14px; }
 .vlab .vl-nav img { width: 42px; height: 42px; border-radius: 10px; }
 .vlab .vl-nav .vl-name { font-weight: 650; color: var(--vl-head); font-size: 18px; letter-spacing: -0.012em; }
@@ -71,7 +71,17 @@
 .vlab .vl-nav nav a:hover { color: var(--vl-head); }
 .vlab .vl-btn { background: var(--vl-btnbg); color: var(--vl-btntx) !important; padding: 11px 24px; border-radius: 7px; font-weight: 500; font-size: 14px; }
 .vlab .vl-btn:hover { background: var(--vl-btnh); }
-@media (max-width: 880px) { .vlab .vl-nav nav a:not(.vl-btn) { display: none; } }
+.vlab .vl-burger { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; border: 1px solid var(--vl-line); border-radius: 8px; background: transparent; color: var(--vl-head); cursor: pointer; flex-shrink: 0; }
+.vlab .vl-mmenu { display: none; }
+@media (max-width: 880px) {
+  .vlab .vl-nav nav a:not(.vl-btn) { display: none; }
+  .vlab .vl-nav nav { gap: 10px; }
+  .vlab .vl-burger { display: inline-flex; }
+  .vlab .vl-mmenu { display: block; border-top: 1px solid var(--vl-line); }
+  .vlab .vl-mmenu a { display: block; padding: 15px 20px; color: var(--vl-body); border-bottom: 1px solid var(--vl-line); font-size: 15px; font-weight: 500; }
+  .vlab .vl-mmenu a:last-child { border-bottom: 0; }
+  .vlab .vl-mmenu a:active { background: var(--vl-hover); }
+}
 
 /* ---------- hero ---------- */
 .vlab .vl-hero { padding: 80px 0 0; }
@@ -107,7 +117,13 @@
 /* ---------- metrics + tape ---------- */
 .vlab .vl-metrics { border-top: 1px solid var(--vl-line); margin-top: 72px; background: var(--vl-card); }
 .vlab .vl-metrics-in { display: grid; grid-template-columns: repeat(4, 1fr); }
-@media (max-width: 820px) { .vlab .vl-metrics-in { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 820px) {
+  .vlab .vl-metrics-in { grid-template-columns: repeat(2, 1fr); }
+  /* 2×2 collapse: close the seams the 4-col border pattern leaves open */
+  .vlab .vl-metric { border-bottom: 1px solid var(--vl-line); }
+  .vlab .vl-metric:nth-child(even) { border-right: 0; }
+  .vlab .vl-metric:nth-child(n + 3) { border-bottom: 0; }
+}
 .vlab .vl-metric { padding: 26px 28px 24px; border-right: 1px solid var(--vl-line); }
 .vlab .vl-metric:last-child { border-right: 0; }
 .vlab .vl-metric .v { font-family: var(--font-lab-mono), monospace; font-size: clamp(24px, 2.4vw, 31px); font-weight: 600; color: var(--vl-head); letter-spacing: -0.01em; }
@@ -139,7 +155,10 @@
 /* ---------- sections ---------- */
 .vlab .vl-band { border-top: 1px solid var(--vl-line); }
 .vlab .vl-band.alt { background: var(--vl-bg2); }
-.vlab .vl-sect { padding: 82px 0; }
+/* vertical only — .vl-sect shares the element with .vl-container, whose
+   horizontal padding must survive (shorthand here flushed sections to the
+   viewport edge on mobile and narrow laptops) */
+.vlab .vl-sect { padding-top: 82px; padding-bottom: 82px; }
 .vlab .vl-label { font-family: var(--font-lab-mono), monospace; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vl-accent); font-weight: 600; }
 .vlab .vl-sect h2 { font-family: var(--font-lab-serif), Georgia, serif; font-weight: 500; font-size: 32px; color: var(--vl-head); margin: 14px 0 0; letter-spacing: -0.013em; }
 .vlab .vl-lead { max-width: 640px; margin-top: 22px; font-size: 16.5px; line-height: 1.7; }
@@ -171,7 +190,13 @@
 
 /* account / access */
 .vlab .vl-assets { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 44px; border: 1px solid var(--vl-line); border-radius: 14px; overflow: hidden; background: var(--vl-card); box-shadow: 0 2px 10px rgba(11, 16, 38, 0.04); }
-@media (max-width: 920px) { .vlab .vl-assets { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 920px) {
+  .vlab .vl-assets { grid-template-columns: repeat(2, 1fr); }
+  /* 5 cells in 2 cols: full-width last row, seams closed */
+  .vlab .vl-asset { border-bottom: 1px solid var(--vl-line); }
+  .vlab .vl-asset:nth-child(even) { border-right: 0; }
+  .vlab .vl-asset:nth-child(5) { grid-column: 1 / -1; border-right: 0; border-bottom: 0; }
+}
 .vlab .vl-asset { padding: 26px 24px 22px; border-right: 1px solid var(--vl-line); transition: background 0.2s; }
 .vlab .vl-asset:last-child { border-right: 0; }
 .vlab .vl-asset:hover { background: var(--vl-hover); }
@@ -201,7 +226,7 @@
 .vlab .vl-code .s { color: #7ddba3; }
 .vlab .vl-code .w { color: #fff; }
 .vlab .vl-verified { margin-top: 18px; font-size: 13px; color: var(--vl-soft); display: flex; gap: 10px; align-items: baseline; }
-.vlab .vl-verified .chk { color: var(--vl-pos); font-weight: 600; }
+.vlab .vl-verified .chk { color: var(--vl-pos); font-weight: 600; white-space: nowrap; }
 
 /* platforms */
 .vlab .vl-plist { margin-top: 46px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 76px; }
@@ -247,3 +272,39 @@
 .vlab .vl-fbottom { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--vl-line); display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
 .vlab .vl-fbottom .legal { max-width: 78ch; line-height: 1.65; font-size: 12.5px; }
 .vlab .vl-fbottom .cp { font-family: var(--font-lab-mono), monospace; font-size: 11.5px; white-space: nowrap; }
+
+/* ---------- mobile polish ---------- */
+@media (max-width: 880px) {
+  .vlab .vl-container { padding: 0 20px; }
+  .vlab .vl-nav { height: 62px; gap: 10px; }
+  .vlab .vl-nav img { width: 34px; height: 34px; border-radius: 8px; }
+  .vlab .vl-nav .vl-name { font-size: 16px; }
+  .vlab .vl-btn { padding: 9px 16px; font-size: 13px; }
+  .vlab .vl-hero { padding: 46px 0 0; }
+  .vlab .vl-hero-grid { gap: 38px; }
+  .vlab .vl-hero h1 { font-size: 29px; line-height: 1.26; }
+  .vlab .vl-hero .vl-sub { font-size: 16px; margin-top: 20px; }
+  .vlab .vl-links { margin-top: 28px; gap: 12px; }
+  .vlab .vl-sect { padding-top: 54px; padding-bottom: 54px; }
+  .vlab .vl-sect h2 { font-size: 25px; }
+  .vlab .vl-lead { font-size: 15.5px; }
+  .vlab .vl-chart { padding: 20px 18px 14px; border-radius: 13px; }
+  .vlab .vl-chart-val { font-size: 20px; }
+  .vlab .vl-metric { padding: 20px 20px 18px; }
+  .vlab .vl-tape .vl-fade { width: 44px; }
+  .vlab .vl-cols3 > div { padding: 26px 0 6px; }
+  .vlab .vl-stitem { gap: 18px; padding: 26px 0; }
+  .vlab .vl-stitem .n { font-size: 20px; }
+  .vlab .vl-openbook { padding: 18px 20px; }
+  .vlab .vl-steps { gap: 24px; }
+  .vlab .vl-code { padding: 18px 16px; font-size: 11.5px; line-height: 1.8; }
+  .vlab .vl-mech > div { padding: 22px 20px; }
+  .vlab .vl-footer { padding: 44px 0 48px; }
+  .vlab .vl-fgrid { gap: 32px 24px; }
+}
+@media (max-width: 640px) {
+  /* security / API spec rows: the 150px label column starves the text */
+  .vlab .vl-spec2 { flex-direction: column; gap: 5px; padding: 15px 0; }
+  .vlab .vl-spec2 .m { min-width: 0; }
+  .vlab .vl-fbrand { grid-column: 1 / -1; }
+}
