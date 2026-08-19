@@ -39,6 +39,17 @@ export default async function LabHome() {
   const stocksVal = data.stocks.returnPct;
   const drx = data.drx;
 
+  // Chart subtitles: start date (human month + year) and days running.
+  const monthYear = new Intl.DateTimeFormat(
+    ({ es: "es-MX", en: "en-US", pt: "pt-BR", hi: "hi-IN" } as Record<string, string>)[locale] ?? "es-MX",
+    { month: "short", year: "numeric" }
+  );
+  const fmtStart = (d: Date) =>
+    monthYear.format(d).toUpperCase().replace(".", "").replace(/ /g, "\u00A0"); // nbsp: no partir "JUL 2026" en el wrap
+  const daysSince = (d: Date) => Math.max(1, Math.floor((Date.now() - d.getTime()) / 86400000));
+  const stocksStart = new Date(data.stocks.since);
+  const drxStart = drx && drx.equity.length > 0 ? new Date(drx.equity[0].t) : null;
+
   return (
     <div className={`vlab ${labSerif.variable} ${labMono.variable}`}>
       {/* ---------- NAV ---------- */}
@@ -74,10 +85,12 @@ export default async function LabHome() {
               locale={locale}
               labels={{
                 stocksTitle: t("chartStocksTitle"),
-                stocksSub: t("chartStocksSub"),
+                stocksSub: t("chartStocksSub", { days: daysSince(stocksStart), date: fmtStart(stocksStart) }),
                 stocksNote: t("chartStocksNote", { count: data.picksCount }),
                 drxTitle: t("chartDrxTitle"),
-                drxSub: t("chartDrxSub"),
+                drxSub: drxStart
+                  ? t("chartDrxSub", { days: daysSince(drxStart), date: fmtStart(drxStart) })
+                  : "",
                 drxNote: t("chartDrxNote"),
                 tabStocks: "STOCKS",
                 tabDrx: "DR X",
