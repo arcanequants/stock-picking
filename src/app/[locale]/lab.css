@@ -81,7 +81,11 @@
   .vlab .vl-mmenu a { display: block; padding: 15px 20px; color: var(--vl-body); border-bottom: 1px solid var(--vl-line); font-size: 15px; font-weight: 500; }
   .vlab .vl-mmenu a:last-child { border-bottom: 0; }
   .vlab .vl-mmenu a:active { background: var(--vl-hover); }
+  .vlab .vl-lang-dt { display: none; }
 }
+.vlab .vl-mmenu-lang { display: flex; gap: 8px; padding: 14px 20px 16px; border-top: 1px solid var(--vl-line); }
+.vlab .vl-mmenu-lang button { font-family: var(--font-lab-mono), monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 7px 16px; border: 1px solid var(--vl-line); background: transparent; color: var(--vl-soft); border-radius: 99px; cursor: pointer; }
+.vlab .vl-mmenu-lang button.on { background: var(--vl-btnbg); border-color: var(--vl-btnbg); color: var(--vl-btntx); }
 
 /* ---------- hero ---------- */
 .vlab .vl-hero { padding: 80px 0 0; }
