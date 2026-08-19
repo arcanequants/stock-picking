@@ -28,8 +28,8 @@ export type DrxData = {
   aumUsd: number;
   minCapitalUsd: number;
   equity: EquityPoint[];
-  /** last closes derived from equity labels: [label, delta] */
-  recentCloses: Array<{ label: string; delta: number }>;
+  /** recent closed round-trips (real from the Terminal when available) */
+  recentCloses: Array<{ label: string; delta: number; roiPct?: number }>;
 } | null;
 
 export type StocksSeriesPoint = { date: string; pct: number };
@@ -73,17 +73,31 @@ async function fetchDrx(): Promise<DrxData> {
     const equity = ((strat.equity ?? []) as EquityPoint[]).filter(
       (p) => typeof p?.t === "number" && typeof p?.v === "number"
     );
-    // Recent closes: consecutive labelled points → delta between them.
-    const labelled = equity.filter((p) => p.label && p.label !== "Strategy start");
-    const recentCloses = labelled.slice(-4).map((p, i, arr) => {
-      const prev = i === 0
-        ? equity[Math.max(0, equity.indexOf(p) - 1)]
-        : arr[i - 1];
-      return {
-        label: p.label as string,
-        delta: Math.round((p.v - (prev?.v ?? 0)) * 100) / 100,
-      };
-    });
+    // Recent closes: the Terminal now exposes real closed round-trips per
+    // leader (work order 2026-08-18, shipped). Fall back to deriving them
+    // from equity labels for older payloads.
+    const real = (leader.recentCloses ?? (leader.strategy as Record<string, unknown> | undefined)?.recentCloses) as
+      | Array<{ coin: string; side: string; pnlUsd: number; roiPct?: number }>
+      | undefined;
+    let recentCloses: Array<{ label: string; delta: number; roiPct?: number }>;
+    if (Array.isArray(real) && real.length > 0) {
+      recentCloses = real.slice(0, 5).map((c) => ({
+        label: `${(c.side ?? "").toUpperCase()} ${c.coin}`,
+        delta: Math.round((c.pnlUsd ?? 0) * 100) / 100,
+        roiPct: c.roiPct,
+      }));
+    } else {
+      const labelled = equity.filter((p) => p.label && p.label !== "Strategy start");
+      recentCloses = labelled.slice(-4).map((p, i, arr) => {
+        const prev = i === 0
+          ? equity[Math.max(0, equity.indexOf(p) - 1)]
+          : arr[i - 1];
+        return {
+          label: p.label as string,
+          delta: Math.round((p.v - (prev?.v ?? 0)) * 100) / 100,
+        };
+      });
+    }
     return {
       liveRocPct: (strat.liveRocPct as number) ?? (strat.rocPct as number) ?? 0,
       trades: (strat.trades as number) ?? 0,

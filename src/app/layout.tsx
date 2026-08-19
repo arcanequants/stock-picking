@@ -12,6 +12,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import CookieConsent from "@/components/CookieConsent";
 import AdPixels from "@/components/AdPixels";
+import { ChromeGate, MainGate } from "@/components/ChromeGate";
 import SupabaseAuthListener from "@/components/SupabaseAuthListener";
 import { getAuthState } from "@/lib/auth";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -90,9 +91,10 @@ export default async function RootLayout({
   const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "";
   const isMarketing = pathname.startsWith("/marketing");
-  // The Quant Lab homepage ("/", "/en", "/pt", "/hi") ships its own nav and
-  // footer; it keeps every root provider (theme, intl, pixels, GA).
-  const isLab = /^\/(?:(?:en|pt|hi)\/?)?$/.test(pathname);
+  // Lab-home chrome gating lives in <ChromeGate>/<MainGate> (client,
+  // usePathname): layouts persist across client-side navigations, so a
+  // server-side check here left the global nav mounted when navigating
+  // from an inner page to "/" — two headers.
 
   const locale = await getLocale();
   const messages = await getMessages();
@@ -123,7 +125,7 @@ export default async function RootLayout({
           <SupabaseAuthListener />
           <NextIntlClientProvider messages={messages}>
             {/* Navigation — hidden on marketing dashboard and the Lab home */}
-            {!isMarketing && !isLab && (
+            {!isMarketing && (<ChromeGate>
               <nav className="border-b border-border sticky top-0 backdrop-blur-md z-50 relative" style={{ background: 'var(--nav-bg)' }}>
                 <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-6">
                   <Link href="/" className="flex items-center gap-2 shrink-0 mr-2">
@@ -231,15 +233,15 @@ export default async function RootLayout({
                     />
                   </div>
                 </div>
-              </nav>
+              </nav></ChromeGate>
             )}
 
-            {isMarketing || isLab ? children : (
-              <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
+            {isMarketing ? children : (
+              <MainGate>{children}</MainGate>
             )}
 
             {/* Footer — hidden on marketing dashboard and the Lab home (own footer) */}
-            {!isMarketing && !isLab && (
+            {!isMarketing && (<ChromeGate>
               <footer className="border-t border-border mt-16">
                 <div className="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-text-faint">
                   <div className="flex items-center justify-center gap-2 mb-3">
@@ -285,7 +287,7 @@ export default async function RootLayout({
                   <p className="mt-1">{tFooter("prices")}</p>
                   <p className="mt-1">{tFooter("copyright", { year: new Date().getFullYear() })}</p>
                 </div>
-              </footer>
+              </footer></ChromeGate>
             )}
 
             {!isMarketing && <CookieConsent />}

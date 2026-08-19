@@ -89,8 +89,11 @@ export default function LabTape({ data, labels, locale }: { data: LabData; label
         t2.push(
           <span key={`cl-${c.label}-${c.delta}`} className="vl-it">
             <span className="vl-tag dx">DR X</span>
-            <span>{c.label}</span>
-            <span className={c.delta >= 0 ? "vl-up" : "vl-dn"}>{c.delta >= 0 ? "+" : ""}${Math.abs(c.delta).toFixed(2)}</span>
+            <b>{c.label}</b>
+            {typeof c.roiPct === "number" && (
+              <span className={c.roiPct >= 0 ? "vl-up" : "vl-dn"}>{c.roiPct >= 0 ? "+" : ""}{c.roiPct.toFixed(2)}%</span>
+            )}
+            <span className={c.delta >= 0 ? "vl-up" : "vl-dn"}>{c.delta >= 0 ? "+" : "−"}${Math.abs(c.delta).toFixed(2)}</span>
           </span>
         );
       }
