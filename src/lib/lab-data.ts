@@ -77,14 +77,16 @@ async function fetchDrx(): Promise<DrxData> {
     // leader (work order 2026-08-18, shipped). Fall back to deriving them
     // from equity labels for older payloads.
     const real = (leader.recentCloses ?? (leader.strategy as Record<string, unknown> | undefined)?.recentCloses) as
-      | Array<{ coin: string; side: string; pnlUsd: number; roiPct?: number }>
+      | Array<{ coin: string; side: string; pnlUsd: number; roiPct?: number | null }>
       | undefined;
     let recentCloses: Array<{ label: string; delta: number; roiPct?: number }>;
     if (Array.isArray(real) && real.length > 0) {
       recentCloses = real.slice(0, 5).map((c) => ({
-        label: `${(c.side ?? "").toUpperCase()} ${c.coin}`,
+        // HIP-3 coins arrive dex-prefixed ("xyz:KR200") — show the bare ticker.
+        label: `${(c.side ?? "").toUpperCase()} ${(c.coin ?? "").split(":").pop()}`,
         delta: Math.round((c.pnlUsd ?? 0) * 100) / 100,
-        roiPct: c.roiPct,
+        // roiPct is null when the trip predates the fills window — omit, never 0.
+        roiPct: typeof c.roiPct === "number" ? c.roiPct : undefined,
       }));
     } else {
       const labelled = equity.filter((p) => p.label && p.label !== "Strategy start");
