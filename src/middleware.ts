@@ -1,6 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import createIntlMiddleware from "next-intl/middleware";
+import { hasLocale } from "next-intl";
 import { authCookieOverrides } from "@/lib/auth-session";
 import { routing } from "@/i18n/routing";
 
@@ -110,6 +111,21 @@ export async function middleware(request: NextRequest) {
     return isUnlocalized(pathname)
       ? NextResponse.next()
       : handleI18n(request);
+  }
+
+  // ─── Returning visitor: route "/" to their remembered language ───
+  //
+  // Cookie-only on purpose — never Accept-Language. The cookie is set by an
+  // explicit user action (the switcher or the suggestion banner), so this
+  // never fires for crawlers (no cookies) and the canonical Spanish URLs
+  // keep serving Spanish to every first-time visitor and bot. This is the
+  // SEO-safe half of language auto-detection; the detection half is the
+  // client-side LocaleSuggestBanner.
+  if (pathname === "/") {
+    const pref = request.cookies.get("vd_locale")?.value;
+    if (pref && pref !== routing.defaultLocale && hasLocale(routing.locales, pref)) {
+      return NextResponse.redirect(new URL(`/${pref}`, request.url), 302);
+    }
   }
 
   // ─── Marketing dashboard auth gate ───
