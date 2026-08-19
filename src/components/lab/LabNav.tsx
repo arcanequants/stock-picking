@@ -2,12 +2,19 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+
+const LOCALES = ["es", "en", "pt", "hi"] as const;
 
 /**
  * Lab nav with a mobile hamburger. Below 880px the section links leave the
  * bar (only logo + theme toggle + access button fit) and move into a
  * slide-down panel; the panel closes on tap so anchor scrolling feels native.
+ * Language: the shared dropdown on desktop, an inline row in the panel on
+ * mobile (a dropdown-in-menu is two taps and clips against the panel edge).
  */
 export default function LabNav({
   links,
@@ -19,6 +26,15 @@ export default function LabNav({
   terminal: string;
 }) {
   const [open, setOpen] = useState(false);
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const switchLocale = (code: string) => {
+    setOpen(false);
+    router.replace(pathname, { locale: code });
+  };
+
   return (
     <div className="vl-nav-wrap">
       <div className="vl-container vl-nav">
@@ -28,6 +44,7 @@ export default function LabNav({
           {links.map((l) => (
             <a key={l.href} href={l.href}>{l.label}</a>
           ))}
+          <span className="vl-lang-dt"><LanguageSwitcher /></span>
           <ThemeToggle />
           <a className="vl-btn" href={terminal} target="_blank" rel="noopener">{access}</a>
           <button
@@ -52,6 +69,18 @@ export default function LabNav({
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
           ))}
+          <div className="vl-mmenu-lang">
+            {LOCALES.map((c) => (
+              <button
+                key={c}
+                type="button"
+                className={c === locale ? "on" : ""}
+                onClick={() => switchLocale(c)}
+              >
+                {c.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </div>
