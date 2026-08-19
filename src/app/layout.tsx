@@ -90,6 +90,9 @@ export default async function RootLayout({
   const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "";
   const isMarketing = pathname.startsWith("/marketing");
+  // The Quant Lab homepage ("/", "/en", "/pt", "/hi") ships its own nav and
+  // footer; it keeps every root provider (theme, intl, pixels, GA).
+  const isLab = /^\/(?:(?:en|pt|hi)\/?)?$/.test(pathname);
 
   const locale = await getLocale();
   const messages = await getMessages();
@@ -119,8 +122,8 @@ export default async function RootLayout({
         <ThemeProvider>
           <SupabaseAuthListener />
           <NextIntlClientProvider messages={messages}>
-            {/* Navigation — hidden on marketing dashboard */}
-            {!isMarketing && (
+            {/* Navigation — hidden on marketing dashboard and the Lab home */}
+            {!isMarketing && !isLab && (
               <nav className="border-b border-border sticky top-0 backdrop-blur-md z-50 relative" style={{ background: 'var(--nav-bg)' }}>
                 <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-6">
                   <Link href="/" className="flex items-center gap-2 shrink-0 mr-2">
@@ -231,12 +234,12 @@ export default async function RootLayout({
               </nav>
             )}
 
-            {isMarketing ? children : (
+            {isMarketing || isLab ? children : (
               <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
             )}
 
-            {/* Footer — hidden on marketing dashboard */}
-            {!isMarketing && (
+            {/* Footer — hidden on marketing dashboard and the Lab home (own footer) */}
+            {!isMarketing && !isLab && (
               <footer className="border-t border-border mt-16">
                 <div className="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-text-faint">
                   <div className="flex items-center justify-center gap-2 mb-3">
@@ -254,6 +257,10 @@ export default async function RootLayout({
                   </div>
                   <div className="flex items-center justify-center gap-3 mb-3 text-text-muted flex-wrap text-xs">
                     <Link href="/acciones" className="hover:text-foreground transition-colors">{tFooter("categories")}</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/copy-trading" className="hover:text-foreground transition-colors">Copy Trading</Link>
+                    <span className="text-border">·</span>
+                    <Link href="/outcomes" className="hover:text-foreground transition-colors">Outcomes</Link>
                     <span className="text-border">·</span>
                     <a href="https://terminal.vectorialdata.com" target="_blank" rel="noopener" className="hover:text-foreground transition-colors">Terminal</a>
                     <span className="text-border">·</span>
