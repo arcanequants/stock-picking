@@ -23,8 +23,10 @@ export const routing = defineRouting({
   defaultLocale,
   localePrefix: "as-needed",
   localeDetection: false,
-  localeCookie: {
-    name: "NEXT_LOCALE",
-    maxAge: 60 * 60 * 24 * 365,
-  },
+  // No automatic cookie: next-intl set NEXT_LOCALE on every response, which
+  // made "first visit" undetectable (the suggestion banner never fired) and
+  // would have turned a single visit to /en into a permanent "/" redirect.
+  // The explicit user choice lives in the vd_locale cookie instead — set
+  // only by the switcher and the suggestion banner (src/lib/locale-url.ts).
+  localeCookie: false,
 });

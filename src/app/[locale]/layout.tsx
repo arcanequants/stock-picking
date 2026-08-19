@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
+import LocaleSuggestBanner from "@/components/LocaleSuggestBanner";
 
 /**
  * Guards the [locale] segment. Without the hasLocale check any first path
@@ -27,5 +28,13 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) notFound();
 
   setRequestLocale(locale);
-  return children;
+  // The suggestion banner lives here — not in the root layout — so it only
+  // renders on pages that exist in all four languages. Unlocalized routes
+  // (/account, /admin…) must never offer a switch to a URL that 404s.
+  return (
+    <>
+      <LocaleSuggestBanner />
+      {children}
+    </>
+  );
 }

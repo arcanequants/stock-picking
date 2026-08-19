@@ -1,9 +1,8 @@
 "use client";
 
-import { useLocale } from "next-intl";
-import { useParams } from "next/navigation";
-import { useState, useTransition } from "react";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { splitLocale, switchLocaleHard } from "@/lib/locale-url";
 
 const LOCALES = [
   { code: "es", label: "ES" },
@@ -13,30 +12,12 @@ const LOCALES = [
 ] as const;
 
 export default function LanguageSwitcher() {
-  const locale = useLocale();
-  const router = useRouter();
+  // Locale comes from the URL, not useLocale(): the intl provider sits in
+  // the persistent root layout and goes stale after client-side locale
+  // navigations (it showed "PT" on the Hindi page and built /en/hi URLs).
   const pathname = usePathname();
-  const params = useParams();
+  const { locale } = splitLocale(pathname ?? "/");
   const [open, setOpen] = useState(false);
-  const [isPending, startTransition] = useTransition();
-
-  /**
-   * Switching language is now a navigation, not a cookie flip and a refresh:
-   * each language lives at its own URL, so the reader lands on the same page
-   * in the new language and can share that link. `usePathname` here comes
-   * from the i18n wrappers and returns the path without the locale prefix,
-   * so dynamic routes (/stocks/[ticker]) survive the swap.
-   */
-  const switchLocale = (newLocale: string) => {
-    setOpen(false);
-    startTransition(() => {
-      router.replace(
-        // @ts-expect-error — params of the current dynamic route pass through
-        { pathname, params },
-        { locale: newLocale }
-      );
-    });
-  };
 
   const current = LOCALES.find((l) => l.code === locale) || LOCALES[0];
 
@@ -46,7 +27,6 @@ export default function LanguageSwitcher() {
         onClick={() => setOpen(!open)}
         className="flex items-center gap-1 px-2 py-1.5 rounded-lg text-sm text-text-muted hover:text-foreground hover:bg-card-hover transition-colors font-medium"
         aria-label={`${locale.toUpperCase()}`}
-        disabled={isPending}
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-60">
           <circle cx="12" cy="12" r="10" />
@@ -63,7 +43,7 @@ export default function LanguageSwitcher() {
             {LOCALES.map((l) => (
               <button
                 key={l.code}
-                onClick={() => switchLocale(l.code)}
+                onClick={() => switchLocaleHard(l.code)}
                 className={`block w-full text-left px-3 py-1.5 text-sm transition-colors ${
                   l.code === locale
                     ? "text-brand-text font-semibold bg-brand-subtle"

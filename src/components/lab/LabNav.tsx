@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { splitLocale, switchLocaleHard } from "@/lib/locale-url";
 
 const LOCALES = ["es", "en", "pt", "hi"] as const;
 
@@ -26,14 +26,9 @@ export default function LabNav({
   terminal: string;
 }) {
   const [open, setOpen] = useState(false);
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const switchLocale = (code: string) => {
-    setOpen(false);
-    router.replace(pathname, { locale: code });
-  };
+  // URL-derived locale — the intl context goes stale across client-side
+  // locale switches (see locale-url.ts).
+  const { locale } = splitLocale(usePathname() ?? "/");
 
   return (
     <div className="vl-nav-wrap">
@@ -75,7 +70,7 @@ export default function LabNav({
                 key={c}
                 type="button"
                 className={c === locale ? "on" : ""}
-                onClick={() => switchLocale(c)}
+                onClick={() => switchLocaleHard(c)}
               >
                 {c.toUpperCase()}
               </button>
