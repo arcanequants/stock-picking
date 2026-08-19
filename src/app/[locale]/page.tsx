@@ -9,7 +9,7 @@ import { getLabData } from "@/lib/lab-data";
 import LabHeroChart from "@/components/lab/LabHeroChart";
 import LabTape from "@/components/lab/LabTape";
 import LabMetrics from "@/components/lab/LabMetrics";
-import ThemeToggle from "@/components/ThemeToggle";
+import LabNav from "@/components/lab/LabNav";
 
 const TERMINAL = "https://terminal.vectorialdata.com";
 
@@ -42,22 +42,18 @@ export default async function LabHome() {
   return (
     <div className={`vlab ${labSerif.variable} ${labMono.variable}`}>
       {/* ---------- NAV ---------- */}
-      <div className="vl-nav-wrap">
-        <div className="vl-container vl-nav">
-          <Image src="/logo.png" alt="Vectorial Data" width={42} height={42} />
-          <span className="vl-name">Vectorial Data</span>
-          <nav>
-            <a href="#que-hacemos">{t("navWhat")}</a>
-            <a href="#estrategias">{t("navStrategies")}</a>
-            <a href="#cuenta">{t("navAccount")}</a>
-            <a href="#seguridad">{t("secLabel")}</a>
-            <a href="#plataformas">{t("navPlatforms")}</a>
-            <a href="#registro">{t("navRegistry")}</a>
-            <ThemeToggle />
-            <a className="vl-btn" href={TERMINAL} target="_blank" rel="noopener">{t("navAccess")}</a>
-          </nav>
-        </div>
-      </div>
+      <LabNav
+        links={[
+          { href: "#que-hacemos", label: t("navWhat") },
+          { href: "#estrategias", label: t("navStrategies") },
+          { href: "#cuenta", label: t("navAccount") },
+          { href: "#seguridad", label: t("secLabel") },
+          { href: "#plataformas", label: t("navPlatforms") },
+          { href: "#registro", label: t("navRegistry") },
+        ]}
+        access={t("navAccess")}
+        terminal={TERMINAL}
+      />
 
       {/* ---------- HERO ---------- */}
       <div className="vl-hero">
