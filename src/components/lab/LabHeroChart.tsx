@@ -4,7 +4,8 @@ import { useMemo, useRef, useState } from "react";
 import type { DrxData, StocksSeriesPoint } from "@/lib/lab-data";
 
 /**
- * Hero chart: one strategy at a time (Stocks default, Dr X on click).
+ * Hero chart: one strategy at a time — the best performer opens by default
+ * (founder rule: the first screen always shows the strongest portfolio).
  * Smoothed Catmull-Rom curve, animated draw-in, crosshair tooltip.
  * All data is real: stocks from portfolio snapshots, Dr X from the
  * Terminal's public leaders endpoint (live ROC, open positions included).
@@ -59,7 +60,11 @@ export default function LabHeroChart({
   locale: string;
 }) {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [cur, setCur] = useState<"stocks" | "drx">("stocks");
+  const [cur, setCur] = useState<"stocks" | "drx">(() => {
+    const s = stocksReturnPct ?? -Infinity;
+    const x = drx && drx.equity.length >= 2 ? drx.liveRocPct : -Infinity;
+    return x > s ? "drx" : "stocks";
+  });
   const [hover, setHover] = useState<number | null>(null);
 
   const monthFmt = useMemo(
