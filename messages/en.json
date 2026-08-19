@@ -1355,7 +1355,11 @@
     "sec6T": "AUDITABLE BY MACHINES",
     "sec6D": "The API's full contract is public (OpenAPI 3.1) and every action is signed as typed-data you can read before signing. Paper mode lets you test the entire flow without risking a dollar, and critical flows go through adversarial review before shipping.",
     "sec7T": "WHAT YOU DO RISK",
-    "sec7D": "Custody security doesn't remove market risk: leveraged derivatives can lose all capital, and the underlying protocols carry their own risks. We'd rather tell you here than in the fine print."
+    "sec7D": "Custody security doesn't remove market risk: leveraged derivatives can lose all capital, and the underlying protocols carry their own risks. We'd rather tell you here than in the fine print.",
+    "accTerminalT": "Terminal",
+    "accTerminalD": "Trading: perps, DeFi, outcomes and copy",
+    "accStocksT": "Vectorial Stocks",
+    "accStocksD": "Your picks subscription"
   },
   "CopyLanding": {
     "metaTitle": "Copy Trading on Hyperliquid — follow Dr X or open your book | Vectorial Data",

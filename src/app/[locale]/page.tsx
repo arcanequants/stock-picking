@@ -64,6 +64,10 @@ export default async function LabHome() {
         ]}
         access={t("navAccess")}
         terminal={TERMINAL}
+        accounts={{
+          terminal: { title: t("accTerminalT"), desc: t("accTerminalD") },
+          stocks: { title: t("accStocksT"), desc: t("accStocksD") },
+        }}
       />
 
       {/* ---------- HERO ---------- */}

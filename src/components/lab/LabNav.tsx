@@ -16,19 +16,41 @@ const LOCALES = ["es", "en", "pt", "hi"] as const;
  * Language: the shared dropdown on desktop, an inline row in the panel on
  * mobile (a dropdown-in-menu is two taps and clips against the panel edge).
  */
+type Account = { title: string; desc: string };
+
 export default function LabNav({
   links,
   access,
   terminal,
+  accounts,
 }: {
   links: Array<{ href: string; label: string }>;
   access: string;
   terminal: string;
+  accounts: { terminal: Account; stocks: Account };
 }) {
   const [open, setOpen] = useState(false);
+  const [accOpen, setAccOpen] = useState(false);
   // URL-derived locale — the intl context goes stale across client-side
   // locale switches (see locale-url.ts).
   const { locale } = splitLocale(usePathname() ?? "/");
+
+  // Two products, two sessions: the Terminal (trading, Privy wallet) and
+  // Vectorial Stocks (picks subscription, /portfolio). A single "Access"
+  // destination sent Stocks subscribers to the wrong product, so the button
+  // opens a chooser — founder decision 2026-08-19.
+  const accountMenu = (
+    <div className="vl-accmenu" onClick={() => setAccOpen(false)}>
+      <a href={terminal} target="_blank" rel="noopener">
+        <b>{accounts.terminal.title}</b>
+        <span>{accounts.terminal.desc}</span>
+      </a>
+      <a href="/portfolio">
+        <b>{accounts.stocks.title}</b>
+        <span>{accounts.stocks.desc}</span>
+      </a>
+    </div>
+  );
 
   return (
     <div className="vl-nav-wrap">
@@ -41,7 +63,17 @@ export default function LabNav({
           ))}
           <span className="vl-lang-dt"><LanguageSwitcher /></span>
           <ThemeToggle />
-          <a className="vl-btn" href={terminal} target="_blank" rel="noopener">{access}</a>
+          <span className="vl-acc">
+            <button type="button" className="vl-btn" aria-expanded={accOpen} onClick={() => setAccOpen((o) => !o)}>
+              {access} <span aria-hidden="true">▾</span>
+            </button>
+            {accOpen && (
+              <>
+                <span className="vl-accveil" onClick={() => setAccOpen(false)} />
+                {accountMenu}
+              </>
+            )}
+          </span>
           <button
             type="button"
             className="vl-burger"
