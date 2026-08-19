@@ -1355,7 +1355,11 @@
     "sec6T": "AUDITABLE POR MÁQUINAS",
     "sec6D": "El contrato completo del API es público (OpenAPI 3.1) y cada acción se firma como typed-data que puedes leer antes de firmar. El modo paper permite probar todo el flujo sin arriesgar un dólar, y los flujos críticos pasan revisión adversarial antes de salir a producción.",
     "sec7T": "LO QUE SÍ ARRIESGAS",
-    "sec7D": "La seguridad de custodia no elimina el riesgo de mercado: los derivados con apalancamiento pueden perder todo el capital, y los protocolos subyacentes tienen sus propios riesgos. Preferimos decírtelo aquí, no en la letra chica."
+    "sec7D": "La seguridad de custodia no elimina el riesgo de mercado: los derivados con apalancamiento pueden perder todo el capital, y los protocolos subyacentes tienen sus propios riesgos. Preferimos decírtelo aquí, no en la letra chica.",
+    "accTerminalT": "Terminal",
+    "accTerminalD": "Trading: perps, DeFi, outcomes y copy",
+    "accStocksT": "Vectorial Stocks",
+    "accStocksD": "Tu suscripción de picks"
   },
   "CopyLanding": {
     "metaTitle": "Copy Trading en Hyperliquid — sigue a Dr X o abre tu libro | Vectorial Data",

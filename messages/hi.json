@@ -1355,7 +1355,11 @@
     "sec6T": "मशीनों द्वारा AUDIT योग्य",
     "sec6D": "API का पूरा contract सार्वजनिक है (OpenAPI 3.1) और हर action typed-data के रूप में साइन होता है जिसे आप साइन करने से पहले पढ़ सकते हैं। paper mode पूरे flow को बिना एक डॉलर जोखिम के परखने देता है, और critical flows production से पहले adversarial review से गुज़रते हैं।",
     "sec7T": "जो जोखिम आप सच में लेते हैं",
-    "sec7D": "custody की सुरक्षा बाज़ार का जोखिम नहीं मिटाती: leverage वाले derivatives पूरी पूंजी खो सकते हैं, और नीचे के protocols के अपने जोखिम हैं। हम इसे fine print के बजाय यहीं कहना पसंद करते हैं।"
+    "sec7D": "custody की सुरक्षा बाज़ार का जोखिम नहीं मिटाती: leverage वाले derivatives पूरी पूंजी खो सकते हैं, और नीचे के protocols के अपने जोखिम हैं। हम इसे fine print के बजाय यहीं कहना पसंद करते हैं।",
+    "accTerminalT": "Terminal",
+    "accTerminalD": "Trading: perps, DeFi, outcomes और copy",
+    "accStocksT": "Vectorial Stocks",
+    "accStocksD": "आपकी picks subscription"
   },
   "CopyLanding": {
     "metaTitle": "Hyperliquid पर Copy Trading — Dr X को follow करें या अपना book खोलें | Vectorial Data",
