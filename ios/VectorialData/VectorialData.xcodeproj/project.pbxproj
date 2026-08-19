@@ -46,6 +46,7 @@
 		8C8B2EB9B4AE59BA7DD9E29B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D1FB2EE1932989B11399BB99 /* Localizable.xcstrings */; };
 		8C9EC8A7D0E879F0A491E99F /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4586F5C2A73ABF34E95CF6B7 /* PortfolioView.swift */; };
 		928D6E26021D8AD058F99F4C /* DividendStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945448517C9F82AE56E6CD0 /* DividendStore.swift */; };
+		9E4A1266C17C8983FD2E25C2 /* PicksFreshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F0DCB0E6CDA7FA8F14DC5 /* PicksFreshUITests.swift */; };
 		9ECE9BF8C1C931E240D0A5F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55080DD2AC6AC1F15A0B5AE0 /* HomeView.swift */; };
 		AA0E248DE9CD06AFA04BA575 /* VectorialDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8FFDA09FC877986B464CA /* VectorialDataApp.swift */; };
 		AD5F57B766CF61942F60434D /* WeeklyDigestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7839984778A3BECA5F20ACEE /* WeeklyDigestView.swift */; };
@@ -160,6 +161,7 @@
 		D1FB2EE1932989B11399BB99 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		DCFEA529D0C29E8782D98C20 /* CoachTourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachTourUITests.swift; sourceTree = "<group>"; };
 		E4A65EF70CD74EBC64471D56 /* PortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidget.swift; sourceTree = "<group>"; };
+		EC6F0DCB0E6CDA7FA8F14DC5 /* PicksFreshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicksFreshUITests.swift; sourceTree = "<group>"; };
 		EE55E75F58BEC69030C82856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F275146A3F4915E0F9FDDDC1 /* PickStatusStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickStatusStore.swift; sourceTree = "<group>"; };
 		FD14B2273C28FE958FFBCD3C /* PositionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionDetailView.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				DCFEA529D0C29E8782D98C20 /* CoachTourUITests.swift */,
 				6D335ED94C26510847FA20CF /* NewsWowUITests.swift */,
 				7DEF1EB3A1CEE30B2579246C /* NotificationTapUITests.swift */,
+				EC6F0DCB0E6CDA7FA8F14DC5 /* PicksFreshUITests.swift */,
 			);
 			path = VectorialDataUITests;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				FF5D31F64A41E364002F55B3 /* CoachTourUITests.swift in Sources */,
 				CE4B0ED89C667FD8C2FB4AE6 /* NewsWowUITests.swift in Sources */,
 				1BEC28FE49EE4D46B1862982 /* NotificationTapUITests.swift in Sources */,
+				9E4A1266C17C8983FD2E25C2 /* PicksFreshUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +699,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QMHJWQPS7H;
 				ENABLE_MODULE_VERIFIER = YES;
@@ -711,7 +715,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.2.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -835,7 +839,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QMHJWQPS7H;
 				ENABLE_MODULE_VERIFIER = YES;
@@ -857,7 +861,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.2.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

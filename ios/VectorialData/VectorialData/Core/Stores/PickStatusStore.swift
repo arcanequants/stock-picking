@@ -43,7 +43,10 @@ final class PickStatusStore: ObservableObject {
     }
 
     func load() async {
-        guard !isLoading else { return }
+        // No re-entry guard: skipping while "loading" turned a single hung
+        // request into a permanently frozen list (pull-to-refresh no-oped).
+        // Concurrent loads are benign — same data, last writer wins — and
+        // the URLSession resource timeout bounds any hang to seconds.
         isLoading = true
         defer { isLoading = false }
         do {

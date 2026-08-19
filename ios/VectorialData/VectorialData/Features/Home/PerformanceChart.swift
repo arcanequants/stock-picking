@@ -45,12 +45,14 @@ struct PerformanceChart: View {
         VStack(alignment: .leading, spacing: 4) {
             HStack(alignment: .center) {
                 HStack(spacing: 8) {
-                    Text("VD")
-                        .font(.caption2.weight(.bold))
-                        .foregroundStyle(Color.black)
+                    // Brand mark instead of the generic "VD" monogram —
+                    // same owl as the app icon, with a soft emerald glow.
+                    Image("OwlMark")
+                        .resizable()
+                        .scaledToFit()
                         .frame(width: 26, height: 26)
-                        .background(Color("BrandEmerald"))
                         .clipShape(Circle())
+                        .shadow(color: Color("BrandEmerald").opacity(0.55), radius: 6)
                     VStack(alignment: .leading, spacing: 1) {
                         Text("VECTORIAL")
                             .font(.headline.weight(.bold))

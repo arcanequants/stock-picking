@@ -29,11 +29,10 @@ struct PicksView: View {
                     }
                 }
                 .refreshable { await store.load() }
-                .task {
-                    if store.picks.isEmpty {
-                        await store.load()
-                    }
-                }
+                // Always refresh on tab appearance — the if-empty guard kept
+                // yesterday's list while push notifications announced picks
+                // the user then couldn't find here.
+                .task { await store.load() }
                 // `.task(id:)` re-runs on both the initial value (cold-launch
                 // tap, fired before mount) and subsequent changes, so it's the
                 // single owner of pending-push handling — no separate
@@ -58,13 +57,17 @@ struct PicksView: View {
 
     private func handlePendingPick(_ pickNumber: Int?) async {
         guard let pickNumber else { return }
-        if store.picks.isEmpty {
+        // A push can announce a pick newer than the cached list — reload
+        // whenever we don't have it yet, not only when the list is empty.
+        if !store.picks.contains(where: { $0.pickNumber == pickNumber }) {
             await store.load()
         }
         if let pick = store.picks.first(where: { $0.pickNumber == pickNumber }) {
             navPath = [.pick(pick)]
-            notifications.pendingPickNumber = nil
         }
+        // Always consume the tap: an unknown pick must not leave the flag
+        // armed (it would re-fire forever on every task re-evaluation).
+        notifications.pendingPickNumber = nil
     }
 
     @ViewBuilder

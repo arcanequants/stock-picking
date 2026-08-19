@@ -15,6 +15,12 @@ actor APIClient {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 20
         config.waitsForConnectivity = true
+        // HARD ceiling. With waitsForConnectivity, the request timeout does
+        // not start counting until connectivity exists — a request fired
+        // during a network handoff parks indefinitely (default resource
+        // timeout: 7 DAYS), pinning any `isLoading` flag until the process
+        // dies. Seen in prod: frozen Picks list until force-quit.
+        config.timeoutIntervalForResource = 30
         self.session = URLSession(configuration: config)
         self.decoder = JSONDecoder()
         self.decoder.keyDecodingStrategy = .convertFromSnakeCase
