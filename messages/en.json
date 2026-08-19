@@ -1338,7 +1338,22 @@
     "fRisks": "Risks",
     "fTerms": "Terms",
     "fPrivacy": "Privacy",
-    "fLegal": "Vectorial Data is not a broker-dealer and does not custody third-party funds. Published information is our own research and not a personalized investment recommendation. Past performance does not guarantee future results. Trading leveraged derivatives can result in the total loss of capital. Copy Outcomes is in beta."
+    "fLegal": "Vectorial Data is not a broker-dealer and does not custody third-party funds. Published information is our own research and not a personalized investment recommendation. Past performance does not guarantee future results. Trading leveraged derivatives can result in the total loss of capital. Copy Outcomes is in beta.",
+    "secLabel": "Security",
+    "secTitle": "Don't trust us. You don't have to.",
+    "secLead": "The lab's security isn't a promise: it's architecture. These are the mechanisms, exactly as they work — including what they do NOT cover.",
+    "sec1T": "NO CUSTODY",
+    "sec1D": "Your funds live in your wallet and your exchange account, under your address. There is no Vectorial vault to hack, freeze or bankrupt.",
+    "sec2T": "YOUR WALLET, YOUR KEYS",
+    "sec2D": "Your wallet is self-custodial: any change to it requires your signature. Our server cannot grant itself permissions or move your funds — it is built to be unable to.",
+    "sec3T": "ARMORED WITHDRAWALS",
+    "sec3D": "Every withdrawal requires your passkey (biometrics). And an independent watchdog service co-signs with limits and a destination allowlist: not even our own server can withdraw alone.",
+    "sec4T": "COPY CANNOT WITHDRAW",
+    "sec4D": "Replication runs on an exchange agent key that can only trade — withdrawing is outside its permissions by Hyperliquid's design, not by our promise.",
+    "sec5T": "BOUNDED AGENTS",
+    "sec5D": "Per-agent limits, a kill switch, withdrawal allowlists with 24-hour maturation and an optional human passkey guardian. An agent's private key never passes through our server.",
+    "sec6T": "WHAT YOU DO RISK",
+    "sec6D": "Custody security doesn't remove market risk: leveraged derivatives can lose all capital, and the underlying protocols carry their own risks. We'd rather tell you here than in the fine print."
   },
   "CopyLanding": {
     "metaTitle": "Copy Trading on Hyperliquid — follow Dr X or open your book | Vectorial Data",

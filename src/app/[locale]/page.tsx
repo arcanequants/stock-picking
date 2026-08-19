@@ -50,6 +50,7 @@ export default async function LabHome() {
             <a href="#que-hacemos">{t("navWhat")}</a>
             <a href="#estrategias">{t("navStrategies")}</a>
             <a href="#cuenta">{t("navAccount")}</a>
+            <a href="#seguridad">{t("secLabel")}</a>
             <a href="#plataformas">{t("navPlatforms")}</a>
             <a href="#registro">{t("navRegistry")}</a>
             <ThemeToggle />
@@ -190,8 +191,25 @@ export default async function LabHome() {
         </div>
       </div>
 
+      {/* ---------- SEGURIDAD ---------- */}
+      <div className="vl-band alt" id="seguridad">
+        <div className="vl-container vl-sect">
+          <div className="vl-label">{t("secLabel")}</div>
+          <h2>{t("secTitle")}</h2>
+          <p className="vl-lead">{t("secLead")}</p>
+          <div className="vl-speclist" style={{ marginTop: 38, maxWidth: 860 }}>
+            <div className="vl-spec2"><span className="m">{t("sec1T")}</span><span>{t("sec1D")}</span></div>
+            <div className="vl-spec2"><span className="m">{t("sec2T")}</span><span>{t("sec2D")}</span></div>
+            <div className="vl-spec2"><span className="m">{t("sec3T")}</span><span>{t("sec3D")}</span></div>
+            <div className="vl-spec2"><span className="m">{t("sec4T")}</span><span>{t("sec4D")}</span></div>
+            <div className="vl-spec2"><span className="m">{t("sec5T")}</span><span>{t("sec5D")}</span></div>
+            <div className="vl-spec2"><span className="m">{t("sec6T")}</span><span>{t("sec6D")}</span></div>
+          </div>
+        </div>
+      </div>
+
       {/* ---------- AGENTES ---------- */}
-      <div className="vl-band alt" id="agentes">
+      <div className="vl-band" id="agentes">
         <div className="vl-container vl-sect">
           <div className="vl-label">{t("agLabel")}</div>
           <h2>{t("agTitle")}</h2>
@@ -228,7 +246,7 @@ export default async function LabHome() {
       </div>
 
       {/* ---------- PLATAFORMAS ---------- */}
-      <div className="vl-band" id="plataformas">
+      <div className="vl-band alt" id="plataformas">
         <div className="vl-container vl-sect">
           <div className="vl-label">{t("pLabel")}</div>
           <h2>{t("pTitle")}</h2>

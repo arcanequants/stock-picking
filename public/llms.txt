@@ -82,6 +82,23 @@ No API key needed. Pay USDC on Base per request. HTTP 402 flow.
 - [Events](https://vectorialdata.com/api/v1/x402/events): Portfolio events firehose with AI explanations ($0.002)
 - [Digest](https://vectorialdata.com/api/v1/x402/digest/latest): Latest weekly digest ($0.003)
 
+## Security model (mechanisms, not promises)
+
+- Non-custodial by architecture: user funds live in the user's own wallet and
+  exchange account, under the user's address. There is no Vectorial vault.
+- Self-custodial embedded wallet: any change to the wallet requires the
+  owner's signature; the server cannot grant itself signers.
+- Withdrawals require the user's passkey (biometrics) AND are co-signed by an
+  independent watchdog service enforcing limits and a destination allowlist —
+  the server cannot withdraw alone (2-of-2 quorum).
+- Copy trading runs on Hyperliquid agent keys that can only trade; withdrawing
+  is outside their permissions by exchange design.
+- Agent API is non-custodial (prepare → sign → submit; private keys never
+  reach the server) with per-agent limits, a kill switch, 24h-maturing
+  withdrawal allowlists, and an optional human passkey guardian.
+- Honest limits: custody security does not remove market risk (leveraged
+  derivatives can lose all capital) or underlying-protocol risk.
+
 ## Vectorial Economía (daily macro events)
 
 The single most relevant macro economic event of the day, explained in plain language so a human always leaves with a learning ("aprendizaje"), and structured so bots can download it. One event per day, no-op on empty days (anti-firehose). Descriptive educational information about macro data — not investment advice.

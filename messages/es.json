@@ -1338,7 +1338,22 @@
     "fRisks": "Riesgos",
     "fTerms": "Términos",
     "fPrivacy": "Privacidad",
-    "fLegal": "Vectorial Data no es un intermediario bursátil ni custodia fondos de terceros. La información publicada constituye investigación propia y no es una recomendación personalizada de inversión. Los rendimientos pasados no garantizan resultados futuros. La operación de derivados con apalancamiento puede resultar en la pérdida total del capital. Copy Outcomes se encuentra en beta."
+    "fLegal": "Vectorial Data no es un intermediario bursátil ni custodia fondos de terceros. La información publicada constituye investigación propia y no es una recomendación personalizada de inversión. Los rendimientos pasados no garantizan resultados futuros. La operación de derivados con apalancamiento puede resultar en la pérdida total del capital. Copy Outcomes se encuentra en beta.",
+    "secLabel": "Seguridad",
+    "secTitle": "No confíes en nosotros. No hace falta.",
+    "secLead": "La seguridad del laboratorio no es una promesa: es arquitectura. Estos son los mecanismos, tal cual funcionan — incluido lo que NO cubren.",
+    "sec1T": "NO CUSTODIA",
+    "sec1D": "Tus fondos viven en tu wallet y en tu cuenta del exchange, bajo tu dirección. No existe una caja de Vectorial que hackear, congelar o quebrar.",
+    "sec2T": "TU WALLET, TUS LLAVES",
+    "sec2D": "Tu wallet es de autocustodia: cualquier cambio sobre ella exige tu firma. Nuestro servidor no puede otorgarse permisos ni mover tus fondos — está construido para no poder.",
+    "sec3T": "RETIROS BLINDADOS",
+    "sec3D": "Cada retiro exige tu passkey (biometría). Y un servicio vigilante independiente co-firma con límites y lista de destinos: ni siquiera nuestro propio servidor puede retirar solo.",
+    "sec4T": "EL COPY NO PUEDE RETIRAR",
+    "sec4D": "La réplica opera con una llave de agente del exchange que solo puede tradear — retirar está fuera de sus permisos por diseño de Hyperliquid, no por promesa nuestra.",
+    "sec5T": "AGENTES ACOTADOS",
+    "sec5D": "Límites por agente, kill switch, allowlists de retiro con maduración de 24 horas y guardián humano opcional con passkey. La llave privada de un agente jamás pasa por nuestro servidor.",
+    "sec6T": "LO QUE SÍ ARRIESGAS",
+    "sec6D": "La seguridad de custodia no elimina el riesgo de mercado: los derivados con apalancamiento pueden perder todo el capital, y los protocolos subyacentes tienen sus propios riesgos. Preferimos decírtelo aquí, no en la letra chica."
   },
   "CopyLanding": {
     "metaTitle": "Copy Trading en Hyperliquid — sigue a Dr X o abre tu libro | Vectorial Data",
