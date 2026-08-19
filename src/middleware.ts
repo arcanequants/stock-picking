@@ -177,6 +177,10 @@ export async function middleware(request: NextRequest) {
     ? NextResponse.next({ request })
     : handleI18n(request);
 
+  // Pathname header for layout conditionals (the Lab home renders its own
+  // chrome). The marketing branch above sets it too; this covers the rest.
+  response.headers.set("x-pathname", pathname);
+
   for (const { name, value, options } of pendingCookies) {
     response.cookies.set(name, value, options);
   }

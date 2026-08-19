@@ -43,6 +43,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   /* ── Static pages (no lastmod — stamping build time is noise) ── */
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${BASE}/`, changeFrequency: "daily", priority: 1.0 },
+    { url: `${BASE}/estrategias/stocks`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/copy-trading`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/outcomes`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/portfolio`, changeFrequency: "daily", priority: 0.9 },
     { url: `${BASE}/stocks`, changeFrequency: "daily", priority: 0.9 },
     { url: `${BASE}/picks`, changeFrequency: "daily", priority: 0.9 },

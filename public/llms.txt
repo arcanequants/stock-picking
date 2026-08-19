@@ -1,11 +1,16 @@
 # Vectorial Data
 
-> Stock picking service with a publicly verifiable track record. Every pick is
-> published with full fundamental research and sealed in a SHA-256 hash chain
-> attested on Base (Ethereum L2), so the record cannot be edited after the fact.
-> Picks are opportunistic — published when a company is worth buying, not on a
-> daily schedule. $1/month with a 14-day free trial; delivered through the iOS
-> app, the website, and email.
+> Vectorial Data is a quantitative laboratory: it develops trading strategies
+> and the infrastructure to run them. Two live strategies with publicly
+> verifiable records — Vectorial Stocks (global equities picks, $1/month,
+> every pick attested on Base L2) and Dr X (systematic derivatives on
+> Hyperliquid, followable via non-custodial copy trading). Platforms: the
+> Stocks research portal, a professional trading Terminal
+> (terminal.vectorialdata.com, perps + prediction markets, one self-custodial
+> wallet), open copy trading (any Hyperliquid trader can publish their book),
+> Copy Outcomes on Polymarket (beta), and a 29-endpoint non-custodial Agent
+> API with native MCP so AIs and bots can trade by themselves
+> (terminal.vectorialdata.com/api/agent/v1/docs).
 >
 > Last updated: 2026-07-26
 
@@ -24,7 +29,11 @@
 
 ## Product and access
 
-- [Home](https://vectorialdata.com): What the service is and how it works
+- [Home](https://vectorialdata.com): The quant lab — strategies, platforms, registry
+- [Stocks strategy landing](https://vectorialdata.com/estrategias/stocks): What the equities strategy is and how it works
+- [Copy Trading](https://vectorialdata.com/copy-trading): Follow Dr X or open your own book on Hyperliquid — non-custodial replication
+- [Outcomes](https://vectorialdata.com/outcomes): Polymarket prediction markets + Copy Outcomes (beta)
+- [Agent API docs](https://terminal.vectorialdata.com/api/agent/v1/docs): Self-contained onboarding for AIs/bots (29 endpoints, MCP, paper mode)
 - [Today's pick + history](https://vectorialdata.com/picks): The pick feed (subscriber content; a teaser is public)
 - [Join](https://vectorialdata.com/join): $1/month, 14-day free trial with no card required on the web
 - [iOS app](https://apps.apple.com/us/app/vectorial-data/id6775619461): Picks, portfolio, and the Vectorial Noticias news section with a per-story AI explainer. Trial on iOS is an Apple introductory offer.
