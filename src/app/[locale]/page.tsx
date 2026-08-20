@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
 import { labSerif, labMono } from "@/lib/lab-fonts";
 import { getLabData } from "@/lib/lab-data";
+import { getAuthState } from "@/lib/auth";
 import LabHeroChart from "@/components/lab/LabHeroChart";
 import LabTape from "@/components/lab/LabTape";
 import LabMetrics from "@/components/lab/LabMetrics";
@@ -35,6 +36,12 @@ export default async function LabHome() {
   const t = await getTranslations("Lab");
   const locale = await getLocale();
   const data = await getLabData();
+  // Access menu: a subscriber wants their panel; a visitor gets the full
+  // stocks story (the old homepage, preserved at /estrategias/stocks).
+  const { user } = await getAuthState();
+  const stocksHref = user
+    ? "/portfolio"
+    : locale === "es" ? "/estrategias/stocks" : `/${locale}/estrategias/stocks`;
 
   const stocksVal = data.stocks.returnPct;
   const drx = data.drx;
@@ -65,8 +72,8 @@ export default async function LabHome() {
         access={t("navAccess")}
         terminal={TERMINAL}
         accounts={{
-          terminal: { title: t("accTerminalT"), desc: t("accTerminalD") },
-          stocks: { title: t("accStocksT"), desc: t("accStocksD") },
+          terminal: { title: t("accTerminalT"), desc: t("accTerminalD"), meta: "terminal.vectorialdata.com" },
+          stocks: { title: t("accStocksT"), desc: t("accStocksD"), meta: "vectorialdata.com", href: stocksHref },
         }}
       />
 
