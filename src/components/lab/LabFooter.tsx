@@ -34,14 +34,19 @@ export default async function LabFooter() {
             <a href={TERMINAL} target="_blank" rel="noopener">Terminal</a>
             <Link href="/stocks">Stocks</Link>
             <Link href="/copy-trading">Copy Trading</Link>
-            <Link href="/outcomes">Copy Outcomes<span className="vl-beta" style={{ marginLeft: 6 }}>BETA</span></Link>
             <Link href="/outcomes">Outcomes</Link>
+            <Link href="/outcomes#copy">Copy Outcomes<span className="vl-beta" style={{ marginLeft: 6 }}>BETA</span></Link>
           </div>
           <div className="vl-fcol">
             <h4>{t("fDevs")}</h4>
+            {/* One column, two products — the APIs are not interchangeable. */}
+            <h5>Terminal</h5>
             <a href={`${TERMINAL}/api/agent/v1/docs`} target="_blank" rel="noopener">Agent API</a>
             <a href={`${TERMINAL}/api/agent/v1/openapi.json`} target="_blank" rel="noopener">OpenAPI 3.1</a>
-            <a href={`${TERMINAL}/api/mcp`} target="_blank" rel="noopener">MCP server</a>
+            {/* /api/mcp is POST-only JSON-RPC (405 in a browser) — humans go
+                to the docs, where the MCP connection command lives. */}
+            <a href={`${TERMINAL}/api/agent/v1/docs`} target="_blank" rel="noopener">MCP server</a>
+            <h5>Stocks</h5>
             <Link href="/developers">{t("fDataApi")}</Link>
             <Link href="/verify">{t("fVerify")}</Link>
           </div>
