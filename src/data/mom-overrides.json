@@ -822,5 +822,15 @@
     "one_liner": "MARA es el minero de Bitcoin más grande en bolsa, con 35,577 BTC en el balance (~$2,100 millones). Es la posición más especulativa del portafolio: pierde dinero y todo depende de Bitcoin y de su pivote a IA.",
     "why_short": "Aritmética de valor extremo: toda la empresa vale ~$3,500 millones y solo su Bitcoin vale ~$2,100 — pagas ~$1,400 millones por el minero #1 y sus sitios con energía a gran escala, el activo más escaso del boom de IA. Si Bitcoin rebota o el pivote aterriza, el margen es grande.",
     "risk_short": "Pierde dinero (último trimestre: -27% de ingresos y pérdida de $1.60/acción), vendió medio tesoro para pagar deuda, y Morgan Stanley ve $6 — menos de lo que cotiza. Todo depende de Bitcoin (~$58,500). Posición chica, ojos abiertos."
+  },
+  "HONA": {
+    "one_liner": "Honeywell Aerospace fabrica motores, pantallas de cabina y la turbina que da luz a los aviones — casi cualquier vuelo que has tomado lleva equipo suyo. Se acaba de independizar y compramos su primera caída.",
+    "why_short": "Su primer reporte salió flojo porque no le llegan piezas — no porque falte demanda: los vuelos están en récord y las flotas viejas necesitan sus refacciones por décadas. La acción quedó cerca de su mínimo y los analistas ven ~$218 (+29%).",
+    "risk_short": "Lo que ya le pegó puede repetirse: si sigue faltando material, recortaría su guía otra vez. Además es empresa recién estrenada en bolsa (sin historial propio), no paga dividendo por ahora, y una recesión que frene los vuelos le pegaría a su negocio de refacciones."
+  },
+  "MCHI": {
+    "one_liner": "MCHI no es una empresa: es una canasta con ~580 de las empresas chinas más grandes — Tencent, Alibaba, Xiaomi, BYD y más. Una sola compra = un pedacito de toda China, pagando ~2.3% anual de dividendo.",
+    "why_short": "En enero la bolsa china tocó su máximo en una década — ya demostró que puede correr. Luego corrigió y la canasta quedó ~18% debajo de su máximo del año. Compramos China completa en la corrección, cobrando dividendo mientras esperamos, sin apostar a una sola empresa.",
+    "risk_short": "Es China: el gobierno ya borró valor de sus propias empresas cambiando reglas de un día para otro (2021-2022), y la tensión con EE.UU. golpearía toda la canasta. Además Tencent y Alibaba son ~25% del total, y la crisis inmobiliaria china sigue sin resolverse."
   }
 }
