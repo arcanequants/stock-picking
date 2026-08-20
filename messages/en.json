@@ -180,7 +180,11 @@
     "quotableCountries": "Companies across {count} countries",
     "quotableSectors": "{count} sectors covered",
     "quotableBlockchain": "Every pick blockchain-certified on Base (Ethereum L2)",
-    "quotablePrice": "$1/month subscription with daily email and app delivery"
+    "quotablePrice": "$1/month subscription with daily email and app delivery",
+    "appTitle": "Take it with you",
+    "appSub": "The picks, your live portfolio and a push for every buy — in the app.",
+    "appIosTop": "Download on the",
+    "appAndroidSoon": "Google Play · Coming soon"
   },
   "Join": {
     "title": "Start earning income",
