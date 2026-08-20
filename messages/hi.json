@@ -1385,7 +1385,18 @@
     "leadersText": "अपनी strategy प्रकाशित करें और दूसरों को copy करने दें: शर्तें आप तय करते हैं (success fee, न्यूनतम पूंजी) और 100% फीस आपकी। आपका record exchange पर सत्यापन योग्य है — किसी को आपकी बात पर भरोसा करने की ज़रूरत नहीं।",
     "ctaFollow": "Strategy copy करें",
     "ctaOpenBook": "मेरा book खोलें",
-    "legal": "leverage वाले derivatives की copy trading से पूरी पूंजी का नुकसान हो सकता है। पिछला प्रदर्शन भविष्य के नतीजों की गारंटी नहीं देता। Vectorial Data फंड की custody नहीं करती और व्यक्तिगत निवेश सलाह नहीं देती; execution आपके अपने exchange खाते में होता है।"
+    "legal": "leverage वाले derivatives की copy trading से पूरी पूंजी का नुकसान हो सकता है। पिछला प्रदर्शन भविष्य के नतीजों की गारंटी नहीं देता। Vectorial Data फंड की custody नहीं करती और व्यक्तिगत निवेश सलाह नहीं देती; execution आपके अपने exchange खाते में होता है।",
+    "dirLabel": "डायरेक्टरी",
+    "dirTitle": "आज आप किसे copy कर सकते हैं",
+    "dirNote": "सार्वजनिक record से लाइव डेटा · open book वाले leaders",
+    "cardFollowers": "{count} FOLLOWERS",
+    "cardSuccess": "SUCCESS FEE {pct}%",
+    "cardCta": "Terminal पर copy करें",
+    "slotTitle": "आपकी strategy यहाँ हो सकती है।",
+    "pathsLabel": "शुरू करें",
+    "pathsTitle": "अंदर आने के दो रास्ते",
+    "pathCopyT": "किसी leader को copy करें",
+    "pathCopyD": "अपने email से खाता बनाएँ, capital तय करें और engine हर trade आपके अपने खाते में replicate करता है। जब चाहें रोकें या निकलें — fund हमेशा आपके ही रहते हैं।"
   },
   "OutcomesLanding": {
     "metaTitle": "Outcomes — Polymarket के ज़रिए prediction markets | Vectorial Data",

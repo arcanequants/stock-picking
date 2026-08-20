@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { stocks, transactions } from "@/data/stocks";
 import { getSupabase } from "@/lib/supabase";
 
@@ -188,9 +189,62 @@ async function fetchStocksSeries(): Promise<{
   }
 }
 
+/* ---------- copy leaders directory ---------- */
+
+export type CopyLeader = {
+  name: string;
+  rocPct: number;
+  trades: number;
+  sharpe: number | null;
+  maxDrawdown: number | null;
+  followers: number;
+  minCapitalUsd: number;
+  successFeePct: number | null;
+  equityVals: number[];
+};
+
+/**
+ * Every leader with an open book, for the /copy-trading directory. The
+ * platform is open — whoever publishes a strategy on the Terminal shows
+ * up here automatically, sorted by live ROC.
+ */
+export const getCopyLeaders = cache(async (): Promise<CopyLeader[]> => {
+  try {
+    const res = await fetch(`${TERMINAL}/api/copy/leaders`, {
+      next: { revalidate: 300 },
+    });
+    if (!res.ok) return [];
+    const data = (await res.json()) as { leaders?: Array<Record<string, unknown>> };
+    const out: CopyLeader[] = [];
+    for (const l of data.leaders ?? []) {
+      const name = l.display_name as string;
+      if (!name) continue;
+      const strat = (l.strategy ?? {}) as Record<string, unknown>;
+      const equity = ((strat.equity ?? []) as EquityPoint[]).filter(
+        (p) => typeof p?.v === "number"
+      );
+      out.push({
+        name,
+        rocPct: (strat.liveRocPct as number) ?? (strat.rocPct as number) ?? 0,
+        trades: (strat.trades as number) ?? 0,
+        sharpe: (strat.sharpe as number) ?? null,
+        maxDrawdown: (strat.maxDrawdown as number) ?? null,
+        followers: (l.activeFollowers as number) ?? 0,
+        minCapitalUsd: (l.min_capital_usd as number) ?? 100,
+        successFeePct:
+          typeof l.success_fee_bps === "number" ? l.success_fee_bps / 100 : null,
+        equityVals: equity.map((p) => p.v),
+      });
+    }
+    return out.sort((a, b) => b.rocPct - a.rocPct);
+  } catch {
+    return [];
+  }
+});
+
 /* ---------- main aggregate ---------- */
 
-export async function getLabData(): Promise<LabData> {
+export const getLabData = cache(async (): Promise<LabData> => {
   const [drx, marketsCount, stocksData] = await Promise.all([
     fetchDrx(),
     fetchMarketsCount(),
@@ -241,4 +295,4 @@ export async function getLabData(): Promise<LabData> {
     agedPositions: aged,
     latestPickNumber: transactions[transactions.length - 1]?.id ?? 0,
   };
-}
+});

@@ -2,8 +2,8 @@ import "../lab.css";
 import { localizedAlternates } from "@/lib/hreflang";
 import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
-import { labSerif, labMono } from "@/lib/lab-fonts";
 import { JsonLd, getBreadcrumbSchema } from "@/lib/seo";
+import LabShell from "@/components/lab/LabShell";
 
 const TERMINAL = "https://terminal.vectorialdata.com";
 const SITE = "https://vectorialdata.com";
@@ -27,12 +27,13 @@ export default async function OutcomesLanding() {
   const t = await getTranslations("OutcomesLanding");
 
   return (
-    <div className={`vlab ${labSerif.variable} ${labMono.variable}`} style={{ background: "transparent" }}>
+    <LabShell>
       <JsonLd data={getBreadcrumbSchema([
         { name: "Vectorial Data", url: SITE },
         { name: "Outcomes", url: `${SITE}/outcomes` },
       ])} />
-      <div className="vl-sect" style={{ paddingTop: 28 }}>
+      <div className="vl-container">
+      <div className="vl-sect" style={{ paddingTop: 52 }}>
         <div className="vl-label">{t("label")}</div>
         <h2 style={{ maxWidth: "22ch" }}>{t("title")}</h2>
         <p className="vl-lead">{t("lead")}</p>
@@ -60,6 +61,7 @@ export default async function OutcomesLanding() {
 
         <p className="vl-fine" style={{ marginTop: 48, borderTop: "1px solid var(--vl-line)", paddingTop: 20, maxWidth: "88ch" }}>{t("legal")}</p>
       </div>
-    </div>
+      </div>
+    </LabShell>
   );
 }

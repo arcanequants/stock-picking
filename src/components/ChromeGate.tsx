@@ -11,8 +11,12 @@ import { usePathname } from "next/navigation";
  * SSR), so the chrome toggles on every route change.
  */
 // Includes "es": the middleware rewrites "/" to "/es" internally, and
-// usePathname sees the rewritten path during SSR.
-const isLabPath = (p: string) => /^\/(?:(?:es|en|pt|hi)\/?)?$/.test(p);
+// usePathname sees the rewritten path during SSR. The copy-trading and
+// outcomes landings are lab surfaces too — they ship the lab chrome via
+// LabShell, so the global product nav must stay out of them as well.
+const isLabPath = (p: string) =>
+  /^\/(?:(?:es|en|pt|hi)\/?)?$/.test(p) ||
+  /^\/(?:(?:es|en|pt|hi)\/)?(?:copy-trading|outcomes)\/?$/.test(p);
 
 export function ChromeGate({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
