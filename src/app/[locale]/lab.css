@@ -289,6 +289,8 @@
 .vlab .vl-fbrand .ldg { font-family: var(--font-lab-mono), monospace; font-size: 11px; color: var(--vl-soft); margin-top: 16px; letter-spacing: 0.03em; }
 .vlab .vl-fbrand .ldg b { color: var(--vl-accent); font-weight: 500; }
 .vlab .vl-fcol h4 { font-family: var(--font-lab-mono), monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--vl-head); margin-bottom: 14px; }
+.vlab .vl-fcol h5 { font-family: var(--font-lab-mono), monospace; font-size: 9.5px; font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase; color: var(--vl-accent); opacity: 0.85; margin: 4px 0 8px; }
+.vlab .vl-fcol h5:not(:first-of-type) { margin-top: 14px; }
 .vlab .vl-fcol a { display: block; color: var(--vl-soft); margin-bottom: 9px; font-size: 13.5px; }
 .vlab .vl-fcol a:hover { color: var(--vl-head); }
 .vlab .vl-fbottom { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--vl-line); display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }

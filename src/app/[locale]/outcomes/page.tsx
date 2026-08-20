@@ -49,7 +49,7 @@ export default async function OutcomesLanding() {
         </div>
 
         {/* Copy Outcomes — beta */}
-        <div className="vl-sect" style={{ padding: "60px 0 0" }}>
+        <div className="vl-sect" id="copy" style={{ padding: "60px 0 0", scrollMarginTop: 80 }}>
           <div className="vl-label">Copy Outcomes <span className="vl-beta" style={{ marginLeft: 8 }}>BETA</span></div>
           <h2 style={{ fontSize: 26 }}>{t("betaTitle")}</h2>
           <p className="vl-lead">{t("betaLead")}</p>
