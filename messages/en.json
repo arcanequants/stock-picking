@@ -1385,7 +1385,18 @@
     "leadersText": "Publish your strategy and let others copy it: you set your terms (success fee, minimum capital) and keep 100% of your fees. Your record is verifiable on the exchange — nobody has to take your word for anything.",
     "ctaFollow": "Copy a strategy",
     "ctaOpenBook": "Open my book",
-    "legal": "Copy trading leveraged derivatives can result in the total loss of capital. Past performance does not guarantee future results. Vectorial Data does not custody funds or provide personalized investment advice; execution happens in your own exchange account."
+    "legal": "Copy trading leveraged derivatives can result in the total loss of capital. Past performance does not guarantee future results. Vectorial Data does not custody funds or provide personalized investment advice; execution happens in your own exchange account.",
+    "dirLabel": "Directory",
+    "dirTitle": "Who you can copy today",
+    "dirNote": "live data from the public record · leaders with an open book",
+    "cardFollowers": "{count} FOLLOWERS",
+    "cardSuccess": "SUCCESS FEE {pct}%",
+    "cardCta": "Copy on the Terminal",
+    "slotTitle": "Your strategy could be here.",
+    "pathsLabel": "Get started",
+    "pathsTitle": "Two ways in",
+    "pathCopyT": "Copy a leader",
+    "pathCopyD": "Create your account with your email, allocate capital and the engine replicates every trade in your own account. Pause or leave anytime — the funds never stop being yours."
   },
   "OutcomesLanding": {
     "metaTitle": "Outcomes — prediction markets via Polymarket | Vectorial Data",

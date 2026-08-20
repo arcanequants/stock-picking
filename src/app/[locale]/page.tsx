@@ -11,6 +11,8 @@ import LabHeroChart from "@/components/lab/LabHeroChart";
 import LabTape from "@/components/lab/LabTape";
 import LabMetrics from "@/components/lab/LabMetrics";
 import LabNav from "@/components/lab/LabNav";
+import LabFooter from "@/components/lab/LabFooter";
+import MiniSpark from "@/components/lab/MiniSpark";
 
 const TERMINAL = "https://terminal.vectorialdata.com";
 
@@ -329,78 +331,13 @@ export default async function LabHome() {
       </div>
 
       {/* ---------- FOOTER ---------- */}
-      <footer className="vl-footer">
-        <div className="vl-container">
-          <div className="vl-fgrid">
-            <div className="vl-fbrand">
-              <div className="b"><Image src="/logo.png" alt="" width={38} height={38} />Vectorial Data</div>
-              <p>{t("fTag")}</p>
-              <div className="ldg">{t("fLedger", { verified: data.attestSamplePool.length, total: data.picksCount })}</div>
-            </div>
-            <div className="vl-fcol">
-              <h4>{t("fStrategies")}</h4>
-              <Link href="/estrategias/stocks">Vectorial Stocks</Link>
-              <Link href="/copy-trading">Dr X</Link>
-              <a href={`${TERMINAL}/copy`} target="_blank" rel="noopener">{t("openBookCta")}</a>
-            </div>
-            <div className="vl-fcol">
-              <h4>{t("fPlatforms")}</h4>
-              <a href={TERMINAL} target="_blank" rel="noopener">Terminal</a>
-              <Link href="/stocks">Stocks</Link>
-              <Link href="/copy-trading">Copy Trading</Link>
-              <Link href="/outcomes">Copy Outcomes<span className="vl-beta" style={{ marginLeft: 6 }}>BETA</span></Link>
-              <Link href="/outcomes">Outcomes</Link>
-            </div>
-            <div className="vl-fcol">
-              <h4>{t("fDevs")}</h4>
-              <a href={`${TERMINAL}/api/agent/v1/docs`} target="_blank" rel="noopener">Agent API</a>
-              <a href={`${TERMINAL}/api/agent/v1/openapi.json`} target="_blank" rel="noopener">OpenAPI 3.1</a>
-              <a href={`${TERMINAL}/api/mcp`} target="_blank" rel="noopener">MCP server</a>
-              <Link href="/developers">{t("fDataApi")}</Link>
-              <Link href="/verify">{t("fVerify")}</Link>
-            </div>
-            <div className="vl-fcol">
-              <h4>{t("fCompany")}</h4>
-              <Link href="/metodologia">{t("fMethodology")}</Link>
-              <Link href="/risk-disclosure">{t("fRisks")}</Link>
-              <Link href="/disclosures">Disclosures</Link>
-              <Link href="/terms">{t("fTerms")}</Link>
-              <Link href="/privacy">{t("fPrivacy")}</Link>
-            </div>
-          </div>
-          <div className="vl-fbottom">
-            <p className="legal">{t("fLegal")}</p>
-            <span className="cp">© 2026 VECTORIAL DATA</span>
-          </div>
-        </div>
-      </footer>
+      <LabFooter />
     </div>
   );
 }
 
 /* ---------- small server helpers ---------- */
 
-function MiniSpark({ vals }: { vals: number[] }) {
-  if (vals.length < 2) return <svg viewBox="0 0 200 48" />;
-  const min = Math.min(...vals, 0), max = Math.max(...vals, 1);
-  const pts = vals.map((v, i) => [
-    (200 * i) / (vals.length - 1),
-    44 - ((v - min) / (max - min || 1)) * 40,
-  ] as [number, number]);
-  let d = `M ${pts[0][0]} ${pts[0][1]}`;
-  for (let i = 0; i < pts.length - 1; i++) {
-    const p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1],
-      p3 = pts[Math.min(pts.length - 1, i + 2)];
-    d += ` C ${p1[0] + (p2[0] - p0[0]) / 6} ${p1[1] + (p2[1] - p0[1]) / 6}, ${p2[0] - (p3[0] - p1[0]) / 6} ${p2[1] - (p3[1] - p1[1]) / 6}, ${p2[0]} ${p2[1]}`;
-  }
-  const last = pts[pts.length - 1];
-  return (
-    <svg viewBox="0 0 200 48" preserveAspectRatio="none">
-      <path d={d} fill="none" stroke="var(--vl-accent)" strokeWidth="1.8" strokeLinecap="round" />
-      <circle cx={last[0]} cy={last[1]} r="2.8" fill="#18A8D8" />
-    </svg>
-  );
-}
 
 function AssetCell({ title, sub, icon, cyan }: { title: string; sub: string; icon: string; cyan?: boolean }) {
   const stroke = cyan ? "#18A8D8" : "var(--vl-accent)";

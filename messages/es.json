@@ -1385,7 +1385,18 @@
     "leadersText": "Publica tu estrategia y deja que otros la copien: tú fijas tus términos (comisión de éxito, capital mínimo) y conservas el 100% de tus comisiones. Tu historial es verificable en el exchange — nadie tiene que creerte nada.",
     "ctaFollow": "Copiar una estrategia",
     "ctaOpenBook": "Abrir mi libro",
-    "legal": "El copy trading de derivados con apalancamiento puede resultar en la pérdida total del capital. Rendimientos pasados no garantizan resultados futuros. Vectorial Data no custodia fondos ni ofrece asesoría de inversión personalizada; la ejecución ocurre en tu propia cuenta del exchange."
+    "legal": "El copy trading de derivados con apalancamiento puede resultar en la pérdida total del capital. Rendimientos pasados no garantizan resultados futuros. Vectorial Data no custodia fondos ni ofrece asesoría de inversión personalizada; la ejecución ocurre en tu propia cuenta del exchange.",
+    "dirLabel": "Directorio",
+    "dirTitle": "A quién puedes copiar hoy",
+    "dirNote": "dato en vivo del registro público · líderes con libro abierto",
+    "cardFollowers": "{count} SEGUIDORES",
+    "cardSuccess": "SUCCESS FEE {pct}%",
+    "cardCta": "Copiar en la Terminal",
+    "slotTitle": "Tu estrategia podría estar aquí.",
+    "pathsLabel": "Empieza",
+    "pathsTitle": "Dos maneras de entrar",
+    "pathCopyT": "Copia a un líder",
+    "pathCopyD": "Crea tu cuenta con tu correo, asigna capital y el motor replica cada operación en tu propia cuenta. Pausas o sales cuando quieras — los fondos nunca dejan de ser tuyos."
   },
   "OutcomesLanding": {
     "metaTitle": "Outcomes — mercados de predicción vía Polymarket | Vectorial Data",
