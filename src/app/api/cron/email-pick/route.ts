@@ -75,6 +75,25 @@ export async function GET(request: Request) {
       });
     }
 
+    // Idempotency vs the vercel-deploy webhook: since the deploy hook fires
+    // the approval preview automatically, a manual trigger for the same pick
+    // lands a duplicate in the approval inbox (happened with #144/#145,
+    // 2026-08-20). Skip if a preview already went out unless ?force=1.
+    if (searchParams.get("force") !== "1") {
+      const { data: alreadyPreviewed } = await supabase
+        .from("email_pick_preview_log")
+        .select("pick_number")
+        .eq("pick_number", pickNumber)
+        .limit(1);
+      if (alreadyPreviewed && alreadyPreviewed.length > 0) {
+        return NextResponse.json({
+          message: `Pick #${pickNumber} preview already sent (deploy webhook). Use ?force=1 to resend.`,
+          pick_number: pickNumber,
+          skipped: true,
+        });
+      }
+    }
+
     // Count email subscribers (delivery_channel = 'email' or 'both')
     const { data: emailSubs } = await supabase
       .from("subscribers")
@@ -99,6 +118,15 @@ export async function GET(request: Request) {
       approveUrl,
       recipientCount
     );
+
+    // Log the preview so the deploy webhook (and future manual calls)
+    // see this pick as already previewed — dedupe works both ways.
+    const { error: previewLogError } = await supabase
+      .from("email_pick_preview_log")
+      .insert({ pick_number: pickNumber });
+    if (previewLogError && previewLogError.code !== "23505") {
+      console.error("Failed to log preview:", previewLogError);
+    }
 
     return NextResponse.json({
       success: true,
