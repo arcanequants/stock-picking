@@ -277,7 +277,7 @@ export default async function LabHome() {
             <div className="vl-pitem">
               <h3>Stocks <span>— {t("p1S")}</span></h3>
               <p>{t("p1D")}</p>
-              <Link href="/stocks">vectorialdata.com/stocks →</Link>
+              <Link href="/estrategias/stocks">vectorialdata.com/estrategias/stocks →</Link>
             </div>
             <div className="vl-pitem">
               <h3>Terminal <span>— {t("p2S")}</span></h3>
