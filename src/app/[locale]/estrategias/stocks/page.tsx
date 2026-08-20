@@ -110,6 +110,36 @@ export default async function StocksStrategyLanding() {
         </ScrollReveal>
       </section>
 
+      {/* THE APP — iOS live, Android on the way */}
+      <ScrollReveal>
+        <section className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold">{t("appTitle")}</h2>
+          <p className="text-text-muted mt-3 max-w-xl mx-auto">{t("appSub")}</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-7">
+            <a
+              href="https://apps.apple.com/app/id6775619461"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-3 bg-black text-white dark:bg-white dark:text-black rounded-xl pl-4 pr-5 py-2.5 hover:opacity-85 transition-opacity"
+            >
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+              </svg>
+              <span className="text-left leading-tight">
+                <span className="block text-[11px] opacity-80">{t("appIosTop")}</span>
+                <span className="block text-lg font-semibold -mt-0.5">App Store</span>
+              </span>
+            </a>
+            <span className="inline-flex items-center gap-2 border border-border text-text-muted rounded-xl px-5 py-3.5 text-sm font-medium select-none">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.14-.52.38.38 0 0 0-.52.14l-1.86 3.22a11.4 11.4 0 0 0-9.84 0L5.22 5.92a.38.38 0 0 0-.52-.14.38.38 0 0 0-.14.52L6.4 9.48A10.86 10.86 0 0 0 1 18h22a10.86 10.86 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" />
+              </svg>
+              {t("appAndroidSoon")}
+            </span>
+          </div>
+        </section>
+      </ScrollReveal>
+
       {/* BY THE NUMBERS — quotable facts for AI citations */}
       <ScrollReveal>
         <section className="max-w-3xl mx-auto">

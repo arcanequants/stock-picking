@@ -180,7 +180,11 @@
     "quotableCountries": "{count} देशों की कंपनियां",
     "quotableSectors": "{count} सेक्टर कवर",
     "quotableBlockchain": "हर पिक Base (Ethereum L2) ब्लॉकचेन पर प्रमाणित",
-    "quotablePrice": "$1/माह पर दैनिक ईमेल और ऐप डिलीवरी"
+    "quotablePrice": "$1/माह पर दैनिक ईमेल और ऐप डिलीवरी",
+    "appTitle": "अपनी जेब में ले जाएँ",
+    "appSub": "Picks, आपका लाइव portfolio और हर ख़रीद की notification — app में।",
+    "appIosTop": "Download करें",
+    "appAndroidSoon": "Google Play · जल्द आ रहा है"
   },
   "Join": {
     "title": "आय कमाना शुरू करें",

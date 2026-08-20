@@ -180,7 +180,11 @@
     "quotableCountries": "Empresas em {count} países",
     "quotableSectors": "{count} setores cobertos",
     "quotableBlockchain": "Cada pick certificado em blockchain Base (Ethereum L2)",
-    "quotablePrice": "$1/mês com picks diários por e-mail e no app"
+    "quotablePrice": "$1/mês com picks diários por e-mail e no app",
+    "appTitle": "Leve no bolso",
+    "appSub": "Os picks, seu portfólio ao vivo e uma notificação a cada compra — no app.",
+    "appIosTop": "Baixe na",
+    "appAndroidSoon": "Google Play · Em breve"
   },
   "Join": {
     "title": "Comece a gerar renda",
