@@ -92,12 +92,18 @@
 .vlab .vl-acc { position: relative; display: inline-flex; }
 .vlab .vl-acc .vl-btn { border: 0; cursor: pointer; font-family: inherit; }
 .vlab .vl-accveil { position: fixed; inset: 0; z-index: 49; }
-.vlab .vl-accmenu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 50; min-width: 260px; background: var(--vl-card); border: 1px solid var(--vl-line); border-radius: 12px; box-shadow: 0 18px 44px -16px rgba(11, 16, 38, 0.35); overflow: hidden; }
-.vlab .vl-accmenu a { display: block; padding: 14px 18px; color: var(--vl-body); }
+.vlab .vl-accmenu { position: absolute; right: 0; top: calc(100% + 10px); z-index: 50; min-width: 296px; background: var(--vl-card); border: 1px solid var(--vl-line); border-radius: 14px; box-shadow: 0 24px 56px -20px rgba(11, 16, 38, 0.45), 0 3px 10px rgba(11, 16, 38, 0.08); overflow: hidden; animation: vl-accin 0.16s ease-out; }
+@keyframes vl-accin { from { opacity: 0; transform: translateY(-5px); } }
+.vlab .vl-accmenu a { display: block; padding: 15px 18px 13px; color: var(--vl-body); border-left: 2px solid transparent; transition: background 0.12s, border-color 0.12s; }
 .vlab .vl-accmenu a + a { border-top: 1px solid var(--vl-line); }
-.vlab .vl-accmenu a:hover { background: var(--vl-hover); color: var(--vl-body); }
-.vlab .vl-accmenu b { display: block; color: var(--vl-head); font-size: 14.5px; font-weight: 600; margin-bottom: 3px; }
-.vlab .vl-accmenu span { font-size: 12.5px; color: var(--vl-soft); line-height: 1.45; }
+.vlab .vl-accmenu a:hover { background: var(--vl-hover); color: var(--vl-body); border-left-color: var(--vl-cyan); }
+.vlab .vl-accmenu .t { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.vlab .vl-accmenu .t b { color: var(--vl-head); font-size: 15px; font-weight: 600; }
+.vlab .vl-accmenu .t i { font-style: normal; color: var(--vl-soft); font-size: 13px; transition: color 0.12s, transform 0.12s; }
+.vlab .vl-accmenu a:hover .t i { color: var(--vl-cyan-deep); transform: translateX(2px); }
+.dark .vlab .vl-accmenu a:hover .t i { color: var(--vl-cyan); }
+.vlab .vl-accmenu .d { display: block; font-size: 12.5px; color: var(--vl-soft); line-height: 1.5; margin-top: 3px; }
+.vlab .vl-accmenu .m { display: block; font-family: var(--font-lab-mono), monospace; font-size: 9.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--vl-accent); opacity: 0.75; margin-top: 8px; }
 
 /* ---------- hero ---------- */
 .vlab .vl-hero { padding: 80px 0 0; }

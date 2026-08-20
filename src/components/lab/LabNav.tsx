@@ -16,7 +16,7 @@ const LOCALES = ["es", "en", "pt", "hi"] as const;
  * Language: the shared dropdown on desktop, an inline row in the panel on
  * mobile (a dropdown-in-menu is two taps and clips against the panel edge).
  */
-type Account = { title: string; desc: string };
+type Account = { title: string; desc: string; meta: string; href?: string };
 
 export default function LabNav({
   links,
@@ -42,12 +42,14 @@ export default function LabNav({
   const accountMenu = (
     <div className="vl-accmenu" onClick={() => setAccOpen(false)}>
       <a href={terminal} target="_blank" rel="noopener">
-        <b>{accounts.terminal.title}</b>
-        <span>{accounts.terminal.desc}</span>
+        <span className="t"><b>{accounts.terminal.title}</b><i>↗</i></span>
+        <span className="d">{accounts.terminal.desc}</span>
+        <span className="m">{accounts.terminal.meta}</span>
       </a>
-      <a href="/portfolio">
-        <b>{accounts.stocks.title}</b>
-        <span>{accounts.stocks.desc}</span>
+      <a href={accounts.stocks.href ?? "/portfolio"}>
+        <span className="t"><b>{accounts.stocks.title}</b><i>→</i></span>
+        <span className="d">{accounts.stocks.desc}</span>
+        <span className="m">{accounts.stocks.meta}</span>
       </a>
     </div>
   );
