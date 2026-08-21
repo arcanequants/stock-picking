@@ -832,5 +832,25 @@
     "one_liner": "MCHI no es una empresa: es una canasta con ~580 de las empresas chinas más grandes — Tencent, Alibaba, Xiaomi, BYD y más. Una sola compra = un pedacito de toda China, pagando ~2.3% anual de dividendo.",
     "why_short": "En enero la bolsa china tocó su máximo en una década — ya demostró que puede correr. Luego corrigió y la canasta quedó ~18% debajo de su máximo del año. Compramos China completa en la corrección, cobrando dividendo mientras esperamos, sin apostar a una sola empresa.",
     "risk_short": "Es China: el gobierno ya borró valor de sus propias empresas cambiando reglas de un día para otro (2021-2022), y la tensión con EE.UU. golpearía toda la canasta. Además Tencent y Alibaba son ~25% del total, y la crisis inmobiliaria china sigue sin resolverse."
+  },
+  "WDC": {
+    "one_liner": "Western Digital hace los discos duros donde los centros de datos de la IA guardan todo. Ya vendió TODA su producción de 2026 antes de fabricarla, y la acción cotiza 40% debajo de su máximo del año.",
+    "why_short": "Cuando toda tu producción está vendida por adelantado nadie te pide descuento: sus márgenes se duplicaron (55% contra 25-30% histórico). Solo quedan dos fabricantes en el mundo. Los analistas ven ~$665 (+40%).",
+    "risk_short": "Es de los negocios más cíclicos que existen: la misma escasez que hoy dispara sus márgenes se vuelve exceso si los gigantes de la nube pausan su gasto. Ya subió 10 veces desde su mínimo del año y viene cayendo pese a buenos reportes."
+  },
+  "WPM": {
+    "one_liner": "Wheaton no es minera: le presta a mineras y a cambio compra su oro y plata a un precio fijo bajísimo para siempre. Vale $68,000 millones y tiene 41 empleados.",
+    "why_short": "Cada dólar que sube el metal cae casi íntegro a su utilidad, porque ella compra al mismo precio fijo de siempre. Con la plata arriba de $68 la onza, tuvo su mejor trimestre de la historia y subió el dividendo 18%.",
+    "risk_short": "Es una apuesta al oro y la plata: si los metales corrigen, la acción cae más rápido porque hoy está cara (35 veces utilidades). Compramos cerca de su máximo, no en descuento, y no opera las minas: depende de sus socios."
+  },
+  "EWT": {
+    "one_liner": "EWT no es una empresa: es una canasta con las 87 empresas más grandes de Taiwán, donde se fabrican los chips del mundo. TSMC sola es el 20%, y paga 2.7% anual.",
+    "why_short": "Comprarla es ser dueño de la cadena completa de la IA —quien fabrica los chips, quien los empaqueta, quien enfría los servidores y quien los arma—, no de una sola apuesta. Subió 85% en un año pero lleva 2026 plana: compramos la pausa.",
+    "risk_short": "El riesgo #1 es el conflicto China-Taiwán: no se puede predecir ni diversificar, y golpearía esta canasta antes que a nada más. Además TSMC sola es más de la quinta parte y los chips viven ciclos violentos de subida y bajada."
+  },
+  "EWZ": {
+    "one_liner": "EWZ no es una empresa: es una canasta con las 67 empresas más grandes de Brasil —Nu, Vale, Itaú, Petrobras—. Cotiza a 9.7 veces utilidades y paga 3.86% al año, el rendimiento más alto de nuestro portafolio.",
+    "why_short": "Toda la bolsa brasileña vale una fracción de lo que cuesta la americana, con líderes reales adentro. Y hay catalizador: la tasa de interés (14%) ya empezó a bajar, y ese giro históricamente ha sido el mejor combustible de esa bolsa.",
+    "risk_short": "Ese 3.86% NO es estable: depende de Petrobras y Vale, que pagan según el precio del petróleo y del hierro. Además hay riesgo político (Brasil mete mano en Petrobras), riesgo del real frente al dólar y es un mercado emergente volátil."
   }
 }
