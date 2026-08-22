@@ -11,3 +11,8 @@
 *.aab
 *.keystore
 !debug.keystore
+
+# Release signing — the keystore lives outside the repo (~/secrets/android)
+# and its passwords in keystore.properties. NEITHER is ever committed.
+keystore.properties
+*.jks

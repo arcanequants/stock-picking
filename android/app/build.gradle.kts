@@ -1,3 +1,7 @@
+import java.io.File
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,6 +9,22 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.google.services)
 }
+
+/**
+ * Upload-signing config. The keystore lives OUTSIDE the repo
+ * (~/secrets/android/vd-upload.jks) and its passwords in an untracked
+ * `keystore.properties` next to this file — neither is ever committed.
+ * Absent that file the release build stays unsigned (CI, fresh clones),
+ * so nothing breaks; only the machine holding the key can produce an
+ * uploadable bundle.
+ */
+val keystorePropsFile = rootProject.file("keystore.properties")
+val keystoreProps = Properties()
+if (keystorePropsFile.exists()) {
+    FileInputStream(keystorePropsFile).use { keystoreProps.load(it) }
+}
+val hasUploadKeystore =
+    keystoreProps.getProperty("storeFile")?.let { File(it).exists() } == true
 
 android {
     namespace = "com.vectorialdata.app"
@@ -19,6 +39,17 @@ android {
         vectorDrawables { useSupportLibrary = true }
     }
 
+    signingConfigs {
+        if (hasUploadKeystore) {
+            create("upload") {
+                storeFile = file(keystoreProps.getProperty("storeFile"))
+                storePassword = keystoreProps.getProperty("storePassword")
+                keyAlias = keystoreProps.getProperty("keyAlias")
+                keyPassword = keystoreProps.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
@@ -31,6 +62,9 @@ android {
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             buildConfigField("String", "API_BASE_URL", "\"https://vectorialdata.com\"")
+            if (hasUploadKeystore) {
+                signingConfig = signingConfigs.getByName("upload")
+            }
         }
     }
 
